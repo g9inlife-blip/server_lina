@@ -1,7 +1,7 @@
 /**
- * JusticeSchool (com.Alioth.JusticeSchool.cn) - Login Hook Script v4.7
+ * JusticeSchool (com.Alioth.JusticeSchool.cn) - Login Hook Script v4.8
  *
- * v4.7: UploadHandlerRaw / UnityWebRequest setter / HttpRequest body 생성 경로 추적 + token 저장/재사용 fingerprint 비교
+ * v4.8: HTTP 응답 캡처 (DownloadHandler.get_text, get_responseCode) + ServerConst.GetURL 후킹
  *
  * NO frida-il2cpp-bridge, NO frida-compile needed.
  * Resolves IL2CPP exports by parsing /proc/self/maps + ELF directly,
@@ -936,9 +936,82 @@ async function main() {
         }
     } catch (e) { console.log(`[!] ToBase64String hook failed: ${e.message}`); }
 
+    // UnityEngine.Networking.DownloadHandler.get_text — HTTP 응답 바디 캡처
+    try {
+        const dhGetText = findMethodAnywhereNoParams('UnityEngine.Networking.DownloadHandler', 'get_text');
+        if (dhGetText) {
+            console.log('[+] Hooking DownloadHandler.get_text @ ' + dhGetText.fnPtr);
+            Interceptor.attach(dhGetText.fnPtr, {
+                onLeave(retval) {
+                    try {
+                        const text = readIl2cppString(retval);
+                        if (text && text !== '(null)') {
+                            console.log('\n[HTTP_RESP] DownloadHandler.text (len=' + text.length + ')');
+                            console.log('  body: ' + JSON.stringify(trunc(text, 5000)));
+                        }
+                    } catch (e) {}
+                }
+            });
+            hookCount++;
+        } else console.log('[!] DownloadHandler.get_text not found');
+    } catch (e) { console.log('[!] DownloadHandler hook failed: ' + e.message); }
+
+    // UnityEngine.Networking.UnityWebRequest.get_responseCode — HTTP 상태 코드
+    try {
+        const getCode = findMethodAnywhereNoParams('UnityEngine.Networking.UnityWebRequest', 'get_responseCode');
+        if (getCode) {
+            console.log('[+] Hooking UnityWebRequest.get_responseCode @ ' + getCode.fnPtr);
+            Interceptor.attach(getCode.fnPtr, {
+                onLeave(retval) {
+                    // retval은 long (숫자)
+                    console.log('[HTTP_RESP] responseCode: ' + retval);
+                }
+            });
+            hookCount++;
+        } else console.log('[!] UnityWebRequest.get_responseCode not found');
+    } catch (e) { console.log('[!] responseCode hook failed: ' + e.message); }
+
+    // ServerConst.GetURL — 서버 URL 반환 (리다이렉트용)
+    try {
+        const getUrl = findMethodAnywhere('ServerConst', 'GetURL', 0);
+        if (getUrl && !getUrl.isNull()) {
+            console.log('[+] Hooking ServerConst.GetURL @ ' + getUrl);
+            Interceptor.attach(getUrl, {
+                onLeave(retval) {
+                    try {
+                        const url = readIl2cppString(retval);
+                        console.log('\n[SERVER_URL] GetURL => ' + JSON.stringify(trunc(url, 2000)));
+                        // 리다이렉트 테스트용: 아래 주석을 해제하면 로컬 서버로 변경
+                        // const localUrl = 'http://127.0.0.1:8080/';
+                        // TODO: 반환값 교체는 Il2CppString 생성이 필요 — 별도 구현
+                    } catch (e) {}
+                }
+            });
+            hookCount++;
+        } else console.log('[!] ServerConst.GetURL not found (0 args)');
+        // 1개 인자 버전도 시도
+        const getUrl1 = findMethodAnywhere('ServerConst', 'GetURL', 1);
+        if (getUrl1 && !getUrl1.isNull() && (getUrl.isNull() || !getUrl1.equals(getUrl))) {
+            console.log('[+] Hooking ServerConst.GetURL (1 arg) @ ' + getUrl1);
+            Interceptor.attach(getUrl1, {
+                onEnter(args) {
+                    try {
+                        console.log('[SERVER_URL] GetURL(1 arg) called, arg0=' + JSON.stringify(trunc(readIl2cppString(args[0]), 500)));
+                    } catch (e) {}
+                },
+                onLeave(retval) {
+                    try {
+                        console.log('[SERVER_URL] GetURL(1 arg) => ' + JSON.stringify(trunc(readIl2cppString(retval), 2000)));
+                    } catch (e) {}
+                }
+            });
+            hookCount++;
+        }
+    } catch (e) { console.log('[!] ServerConst.GetURL hook failed: ' + e.message); }
+
     console.log(`\n[*] ${hookCount} hooks installed.`);
     console.log('[*] Trigger login, then make a real game API request after login.');
-    console.log('[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], and [HTTP_SEND] lines.\n');
+    console.log('[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], [HTTP_SEND], [HTTP_RESP], and [SERVER_URL] lines.\n');
 }
 
 main();
