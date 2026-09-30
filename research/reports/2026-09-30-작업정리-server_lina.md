@@ -143,11 +143,13 @@ research/
 - [x] Sign 검증
 - [x] HTTP 요청/응답 캡처
 - [x] 로그인 응답 mock 구현
+- [x] 서버 로컬 테스트 (sign 검증 버그 수정: `keep_blank_values=True`)
 - [ ] 실제 클라이언트로 로컬 서버 테스트
 
 ### Phase 2 — URL 리다이렉트
-- [ ] `ServerConst.GetURL` 후킹으로 로컬 서버 지정
-- [ ] 또는 Frida로 URL 반환값 교체
+- [x] `ServerConst.GetURL` 후킹 코드 추가 (v4.8)
+- [ ] Frida로 URL 리다이렉트 테스트
+- [ ] 로컬 서버로 로그인 시도
 
 ### Phase 3 — KCP 게임 서버
 - [ ] DH64 키교환 구현 (`p=2^64-59`)
@@ -157,7 +159,24 @@ research/
 ### Phase 4 — 게임 로직
 - [ ] 던전/전투/가챠/상점 순서대로
 
-## 7. 참고 자료
+## 7. 서버 테스트 결과 (2026-09-30)
+
+### 테스트 환경
+- Python venv (`/tmp/server_test`)
+- FastAPI TestClient
+
+### 테스트 항목
+- [x] `GET /health` → 200 OK
+- [x] `POST /api/v5/account/login` → sign 검증 통과, 로그인 응답 반환
+- [x] 실제 캡처 데이터로 검증 (sign: `8fdb81dda6d1aab1970e967f0e2dd57e` 일치)
+
+### 발견된 버그
+- **문제**: `urllib.parse.parse_qsl`이 빈 값을 버림
+- **영향**: `method=""`가 사라져서 sign 검증 실패
+- **수정**: `parse_qsl(..., keep_blank_values=True)`
+- **파일**: `app/routes/login.py`
+
+## 8. 참고 자료
 
 - Sign 알고리즘: `research/reports/2026-09-29-Sign-알고리즘-런타임-검증.md`
 - GetDefaultParams: `research/reports/2026-09-29-GetDefaultParams-helper-정적분석.md`
