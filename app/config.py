@@ -2,7 +2,7 @@
 import os
 
 HOST = os.getenv("LINA_HOST", "127.0.0.1")
-PORT = int(os.getenv("LINA_PORT", "8080"))
+PORT = int(os.getenv("LINA_PORT", "8888"))
 
 # 클라이언트 버전 (GetDefaultParams의 v와 일치해야 함)
 APP_VERSION = "3.1.0"
