@@ -1,0 +1,5825 @@
+================================================================================
+### FILE: 00f18c40_TutorialMono__get_m_node.txt
+================================================================================
+Function: TutorialMono$$get_m_node @ 00f18c40
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp606 @ 010aef1c
+
+--- Calls IN ---
+  <- TutorialMono$$RefreshGP @ 00f1964c
+  <- TutorialMono$$TransGuideId @ 00f1921c
+  <- TutorialMono$$CreateGuidePoint @ 00f193d4
+  <- TutorialMono$$ClickNext @ 00f19c6c
+  <- TutorialMono$$Start @ 00f19010
+  <- TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Listing ---
+00f18c40  str x22,[sp, #-0x30]!
+00f18c44  stp x21,x20,[sp, #0x10]
+00f18c48  stp x19,x30,[sp, #0x20]
+00f18c4c  adrp x20,0x3573000
+00f18c50  adrp x21,0x3327000
+00f18c54  ldrb w8,[x20, #0xd]
+00f18c58  ldr x21,[x21, #0x850]
+00f18c5c  mov x19,x0
+00f18c60  tbnz w8,#0x0,0x00f18c9c
+00f18c64  adrp x0,0x336a000
+00f18c68  ldr x0,[x0, #0xce8]
+00f18c6c  bl 0x00b0789c
+00f18c70  adrp x0,0x3348000
+00f18c74  ldr x0,[x0, #0x138]
+00f18c78  bl 0x00b0789c
+00f18c7c  adrp x0,0x3321000
+00f18c80  ldr x0,[x0, #0xca8]
+00f18c84  bl 0x00b0789c
+00f18c88  adrp x0,0x3327000
+00f18c8c  ldr x0,[x0, #0x850]
+00f18c90  bl 0x00b0789c
+00f18c94  mov w8,#0x1
+00f18c98  strb w8,[x20, #0xd]
+00f18c9c  ldr x8,[x21]
+00f18ca0  ldr x8,[x8, #0xb8]
+00f18ca4  ldr x0,[x8]
+00f18ca8  cbz x0,0x00f18cc4
+00f18cac  mov x1,x19
+00f18cb0  ldp x19,x30,[sp, #0x20]
+00f18cb4  ldp x21,x20,[sp, #0x10]
+00f18cb8  mov x2,xzr
+00f18cbc  ldr x22,[sp], #0x30
+00f18cc0  b 0x010aef1c
+00f18cc4  adrp x8,0x3321000
+00f18cc8  ldr x8,[x8, #0xca8]
+00f18ccc  mov x20,x19
+00f18cd0  ldr x21,[x20, #0xc8]!
+00f18cd4  ldr x0,[x8]
+00f18cd8  ldr w8,[x0, #0xe0]
+00f18cdc  cbnz w8,0x00f18ce4
+00f18ce0  bl 0x00b0798c
+00f18ce4  mov x0,x21
+00f18ce8  mov x1,xzr
+00f18cec  mov x2,xzr
+00f18cf0  bl 0x024c8180
+00f18cf4  tbz w0,#0x0,0x00f18d48
+00f18cf8  adrp x22,0x3348000
+00f18cfc  adrp x21,0x336a000
+00f18d00  ldr x22,[x22, #0x138]
+00f18d04  ldr x21,[x21, #0xce8]
+00f18d08  mov x0,x19
+00f18d0c  mov x1,xzr
+00f18d10  bl 0x024e4ed4
+00f18d14  ldr x8,[x22]
+00f18d18  mov x19,x0
+00f18d1c  ldr w9,[x8, #0xe0]
+00f18d20  cbnz w9,0x00f18d2c
+00f18d24  mov x0,x8
+00f18d28  bl 0x00b0798c
+00f18d2c  ldr x1,[x21]
+00f18d30  mov x0,x19
+00f18d34  bl 0x017372ac
+00f18d38  mov x1,x0
+00f18d3c  str x0,[x20]
+00f18d40  mov x0,x20
+00f18d44  bl 0x00b07850
+00f18d48  ldr x0,[x20]
+00f18d4c  ldp x19,x30,[sp, #0x20]
+00f18d50  ldp x21,x20,[sp, #0x10]
+00f18d54  ldr x22,[sp], #0x30
+00f18d58  ret
+
+
+================================================================================
+### FILE: 00f18d5c_TutorialMono__get_m_count.txt
+================================================================================
+Function: TutorialMono$$get_m_count @ 00f18d5c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- TutorialMono$$RefreshGP @ 00f1964c
+  <- TutorialMono$$TransGuideId @ 00f1921c
+  <- TutorialMono$$CreateGuidePoint @ 00f193d4
+  <- TutorialMono$$ClickNext @ 00f19c6c
+  <- TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Listing ---
+00f18d5c  stp x21,x20,[sp, #-0x20]!
+00f18d60  stp x19,x30,[sp, #0x10]
+00f18d64  adrp x20,0x3573000
+00f18d68  adrp x21,0x3327000
+00f18d6c  ldrb w8,[x20, #0xe]
+00f18d70  ldr x21,[x21, #0x850]
+00f18d74  mov x19,x0
+00f18d78  tbnz w8,#0x0,0x00f18d90
+00f18d7c  adrp x0,0x3327000
+00f18d80  ldr x0,[x0, #0x850]
+00f18d84  bl 0x00b0789c
+00f18d88  mov w8,#0x1
+00f18d8c  strb w8,[x20, #0xe]
+00f18d90  ldr x8,[x21]
+00f18d94  ldr x8,[x8, #0xb8]
+00f18d98  ldr x0,[x8, #0x8]
+00f18d9c  cbz x0,0x00f18db4
+00f18da0  mov x1,x19
+00f18da4  ldp x19,x30,[sp, #0x10]
+00f18da8  mov x2,xzr
+00f18dac  ldp x21,x20,[sp], #0x20
+00f18db0  b 0x01060c2c
+00f18db4  ldr x8,[x19, #0xe0]
+00f18db8  cbz x8,0x00f18dcc
+00f18dbc  ldr w0,[x8, #0x18]
+00f18dc0  ldp x19,x30,[sp, #0x10]
+00f18dc4  ldp x21,x20,[sp], #0x20
+00f18dc8  ret
+00f18dcc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f18dd0_TutorialMono__get_m_endAct.txt
+================================================================================
+Function: TutorialMono$$get_m_endAct @ 00f18dd0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp133 @ 010701c8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TutorialMono$$CloseThis @ 00f19f2c
+
+--- Listing ---
+00f18dd0  stp x21,x20,[sp, #-0x20]!
+00f18dd4  stp x19,x30,[sp, #0x10]
+00f18dd8  adrp x20,0x3573000
+00f18ddc  adrp x21,0x3327000
+00f18de0  ldrb w8,[x20, #0xf]
+00f18de4  ldr x21,[x21, #0x850]
+00f18de8  mov x19,x0
+00f18dec  tbnz w8,#0x0,0x00f18e04
+00f18df0  adrp x0,0x3327000
+00f18df4  ldr x0,[x0, #0x850]
+00f18df8  bl 0x00b0789c
+00f18dfc  mov w8,#0x1
+00f18e00  strb w8,[x20, #0xf]
+00f18e04  ldr x8,[x21]
+00f18e08  ldr x8,[x8, #0xb8]
+00f18e0c  ldr x0,[x8, #0x10]
+00f18e10  cbz x0,0x00f18e28
+00f18e14  mov x1,x19
+00f18e18  ldp x19,x30,[sp, #0x10]
+00f18e1c  mov x2,xzr
+00f18e20  ldp x21,x20,[sp], #0x20
+00f18e24  b 0x010701c8
+00f18e28  ldr x0,[x19, #0xe8]
+00f18e2c  ldp x19,x30,[sp, #0x10]
+00f18e30  ldp x21,x20,[sp], #0x20
+00f18e34  ret
+
+
+================================================================================
+### FILE: 00f18e38_TutorialMono__set_m_endAct.txt
+================================================================================
+Function: TutorialMono$$set_m_endAct @ 00f18e38
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- TutorialMono$$SetCloseAct @ 00f19eac
+
+--- Listing ---
+00f18e38  str x22,[sp, #-0x30]!
+00f18e3c  stp x21,x20,[sp, #0x10]
+00f18e40  stp x19,x30,[sp, #0x20]
+00f18e44  adrp x21,0x3573000
+00f18e48  adrp x22,0x3327000
+00f18e4c  ldrb w8,[x21, #0x10]
+00f18e50  ldr x22,[x22, #0x850]
+00f18e54  mov x19,x1
+00f18e58  mov x20,x0
+00f18e5c  tbnz w8,#0x0,0x00f18e74
+00f18e60  adrp x0,0x3327000
+00f18e64  ldr x0,[x0, #0x850]
+00f18e68  bl 0x00b0789c
+00f18e6c  mov w8,#0x1
+00f18e70  strb w8,[x21, #0x10]
+00f18e74  ldr x8,[x22]
+00f18e78  ldr x8,[x8, #0xb8]
+00f18e7c  ldr x0,[x8, #0x18]
+00f18e80  cbz x0,0x00f18ea0
+00f18e84  mov x1,x20
+00f18e88  mov x2,x19
+00f18e8c  ldp x19,x30,[sp, #0x20]
+00f18e90  ldp x21,x20,[sp, #0x10]
+00f18e94  mov x3,xzr
+00f18e98  ldr x22,[sp], #0x30
+00f18e9c  b 0x0106125c
+00f18ea0  str x19,[x20, #0xe8]!
+00f18ea4  mov x0,x20
+00f18ea8  mov x1,x19
+00f18eac  ldp x19,x30,[sp, #0x20]
+00f18eb0  ldp x21,x20,[sp, #0x10]
+00f18eb4  ldr x22,[sp], #0x30
+00f18eb8  b 0x00b07850
+
+
+================================================================================
+### FILE: 00f18ebc_TutorialMono__get_m_guide.txt
+================================================================================
+Function: TutorialMono$$get_m_guide @ 00f18ebc
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp607 @ 010af158
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TutorialMono$$TransGuideId @ 00f1921c
+
+--- Listing ---
+00f18ebc  stp x21,x20,[sp, #-0x20]!
+00f18ec0  stp x19,x30,[sp, #0x10]
+00f18ec4  adrp x20,0x3573000
+00f18ec8  adrp x21,0x3327000
+00f18ecc  ldrb w8,[x20, #0x11]
+00f18ed0  ldr x21,[x21, #0x850]
+00f18ed4  mov x19,x0
+00f18ed8  tbnz w8,#0x0,0x00f18ef0
+00f18edc  adrp x0,0x3327000
+00f18ee0  ldr x0,[x0, #0x850]
+00f18ee4  bl 0x00b0789c
+00f18ee8  mov w8,#0x1
+00f18eec  strb w8,[x20, #0x11]
+00f18ef0  ldr x8,[x21]
+00f18ef4  ldr x8,[x8, #0xb8]
+00f18ef8  ldr x0,[x8, #0x20]
+00f18efc  cbz x0,0x00f18f14
+00f18f00  mov x1,x19
+00f18f04  ldp x19,x30,[sp, #0x10]
+00f18f08  mov x2,xzr
+00f18f0c  ldp x21,x20,[sp], #0x20
+00f18f10  b 0x010af158
+00f18f14  ldr x0,[x19, #0xf0]
+00f18f18  ldp x19,x30,[sp, #0x10]
+00f18f1c  ldp x21,x20,[sp], #0x20
+00f18f20  ret
+
+
+================================================================================
+### FILE: 00f18f24_TutorialMono__set_m_guide.txt
+================================================================================
+Function: TutorialMono$$set_m_guide @ 00f18f24
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- TutorialMono$$TransGuideId @ 00f1921c
+
+--- Listing ---
+00f18f24  str x22,[sp, #-0x30]!
+00f18f28  stp x21,x20,[sp, #0x10]
+00f18f2c  stp x19,x30,[sp, #0x20]
+00f18f30  adrp x21,0x3573000
+00f18f34  adrp x22,0x3327000
+00f18f38  ldrb w8,[x21, #0x12]
+00f18f3c  ldr x22,[x22, #0x850]
+00f18f40  mov x19,x1
+00f18f44  mov x20,x0
+00f18f48  tbnz w8,#0x0,0x00f18f60
+00f18f4c  adrp x0,0x3327000
+00f18f50  ldr x0,[x0, #0x850]
+00f18f54  bl 0x00b0789c
+00f18f58  mov w8,#0x1
+00f18f5c  strb w8,[x21, #0x12]
+00f18f60  ldr x8,[x22]
+00f18f64  ldr x8,[x8, #0xb8]
+00f18f68  ldr x0,[x8, #0x28]
+00f18f6c  cbz x0,0x00f18f8c
+00f18f70  mov x1,x20
+00f18f74  mov x2,x19
+00f18f78  ldp x19,x30,[sp, #0x20]
+00f18f7c  ldp x21,x20,[sp, #0x10]
+00f18f80  mov x3,xzr
+00f18f84  ldr x22,[sp], #0x30
+00f18f88  b 0x0106125c
+00f18f8c  str x19,[x20, #0xf0]!
+00f18f90  mov x0,x20
+00f18f94  mov x1,x19
+00f18f98  ldp x19,x30,[sp, #0x20]
+00f18f9c  ldp x21,x20,[sp, #0x10]
+00f18fa0  ldr x22,[sp], #0x30
+00f18fa4  b 0x00b07850
+
+
+================================================================================
+### FILE: 00f18fa8_TutorialMono__get_LayerType.txt
+================================================================================
+Function: TutorialMono$$get_LayerType @ 00f18fa8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp491 @ 0109f3ac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00f18fa8  stp x21,x20,[sp, #-0x20]!
+00f18fac  stp x19,x30,[sp, #0x10]
+00f18fb0  adrp x20,0x3573000
+00f18fb4  adrp x21,0x3327000
+00f18fb8  ldrb w8,[x20, #0x13]
+00f18fbc  ldr x21,[x21, #0x850]
+00f18fc0  mov x19,x0
+00f18fc4  tbnz w8,#0x0,0x00f18fdc
+00f18fc8  adrp x0,0x3327000
+00f18fcc  ldr x0,[x0, #0x850]
+00f18fd0  bl 0x00b0789c
+00f18fd4  mov w8,#0x1
+00f18fd8  strb w8,[x20, #0x13]
+00f18fdc  ldr x8,[x21]
+00f18fe0  ldr x8,[x8, #0xb8]
+00f18fe4  ldr x0,[x8, #0x30]
+00f18fe8  cbz x0,0x00f19000
+00f18fec  mov x1,x19
+00f18ff0  ldp x19,x30,[sp, #0x10]
+00f18ff4  mov x2,xzr
+00f18ff8  ldp x21,x20,[sp], #0x20
+00f18ffc  b 0x0109f3ac
+00f19000  ldp x19,x30,[sp, #0x10]
+00f19004  mov w0,#0x3
+00f19008  ldp x21,x20,[sp], #0x20
+00f1900c  ret
+
+
+================================================================================
+### FILE: 00f19010_TutorialMono__Start.txt
+================================================================================
+Function: TutorialMono$$Start @ 00f19010
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> TutorialpanelNode$$get_btn_close @ 00ff4da0
+  -> TutorialpanelNode$$get_btn_nextguide @ 00ff4e38
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UIEventListener$$Get @ 00e34224
+  -> TutorialpanelNode$$get_btn_prevguide @ 00ff4dec
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> FUN_00b079b0 @ 00b079b0
+  -> TutorialMono$$get_m_node @ 00f18c40
+
+--- Calls IN ---
+
+--- Listing ---
+00f19010  str x22,[sp, #-0x30]!
+00f19014  stp x21,x20,[sp, #0x10]
+00f19018  stp x19,x30,[sp, #0x20]
+00f1901c  adrp x20,0x3573000
+00f19020  adrp x21,0x3327000
+00f19024  ldrb w8,[x20, #0x14]
+00f19028  ldr x21,[x21, #0x850]
+00f1902c  mov x19,x0
+00f19030  tbnz w8,#0x0,0x00f19078
+00f19034  adrp x0,0x3376000
+00f19038  ldr x0,[x0, #0x60]
+00f1903c  bl 0x00b0789c
+00f19040  adrp x0,0x3381000
+00f19044  ldr x0,[x0, #0xcb0]
+00f19048  bl 0x00b0789c
+00f1904c  adrp x0,0x3327000
+00f19050  ldr x0,[x0, #0x850]
+00f19054  bl 0x00b0789c
+00f19058  adrp x0,0x332d000
+00f1905c  ldr x0,[x0, #0xd38]
+00f19060  bl 0x00b0789c
+00f19064  adrp x0,0x3360000
+00f19068  ldr x0,[x0, #0x750]
+00f1906c  bl 0x00b0789c
+00f19070  mov w8,#0x1
+00f19074  strb w8,[x20, #0x14]
+00f19078  ldr x8,[x21]
+00f1907c  ldr x8,[x8, #0xb8]
+00f19080  ldr x0,[x8, #0x38]
+00f19084  cbz x0,0x00f190a0
+00f19088  mov x1,x19
+00f1908c  ldp x19,x30,[sp, #0x20]
+00f19090  ldp x21,x20,[sp, #0x10]
+00f19094  mov x2,xzr
+00f19098  ldr x22,[sp], #0x30
+00f1909c  b 0x01060dac
+00f190a0  mov x0,x19
+00f190a4  bl 0x00f18c40
+00f190a8  cbz x0,0x00f19218
+00f190ac  mov x1,xzr
+00f190b0  bl 0x00ff4da0
+00f190b4  cbz x0,0x00f19218
+00f190b8  adrp x8,0x332d000
+00f190bc  ldr x8,[x8, #0xd38]
+00f190c0  adrp x22,0x3360000
+00f190c4  ldr x20,[x0, #0x18]
+00f190c8  ldr x8,[x8]
+00f190cc  ldr w9,[x8, #0xe0]
+00f190d0  ldr x22,[x22, #0x750]
+00f190d4  cbnz w9,0x00f190e0
+00f190d8  mov x0,x8
+00f190dc  bl 0x00b0798c
+00f190e0  mov w1,#0x1
+00f190e4  mov x0,x20
+00f190e8  mov x2,xzr
+00f190ec  bl 0x00e34224
+00f190f0  ldr x8,[x22]
+00f190f4  mov x20,x0
+00f190f8  mov x0,x8
+00f190fc  bl 0x00b079a0
+00f19100  cbz x0,0x00f19218
+00f19104  cbz x19,0x00f19218
+00f19108  ldr x8,[x19]
+00f1910c  mov x1,x19
+00f19110  mov x3,xzr
+00f19114  mov x21,x0
+00f19118  ldr x2,[x8, #0x450]
+00f1911c  bl 0x00e35bd0
+00f19120  cbz x20,0x00f19218
+00f19124  str x21,[x20, #0x38]!
+00f19128  mov x0,x20
+00f1912c  mov x1,x21
+00f19130  bl 0x00b07850
+00f19134  mov x0,x19
+00f19138  bl 0x00f18c40
+00f1913c  cbz x0,0x00f19218
+00f19140  mov x1,xzr
+00f19144  bl 0x00ff4e38
+00f19148  cbz x0,0x00f19218
+00f1914c  ldr x0,[x0, #0x18]
+00f19150  mov w1,#0x1
+00f19154  mov x2,xzr
+00f19158  bl 0x00e34224
+00f1915c  ldr x8,[x22]
+00f19160  mov x20,x0
+00f19164  mov x0,x8
+00f19168  bl 0x00b079a0
+00f1916c  cbz x0,0x00f19218
+00f19170  adrp x8,0x3376000
+00f19174  ldr x8,[x8, #0x60]
+00f19178  mov x1,x19
+00f1917c  mov x3,xzr
+00f19180  mov x21,x0
+00f19184  ldr x2,[x8]
+00f19188  bl 0x00e35bd0
+00f1918c  cbz x20,0x00f19218
+00f19190  str x21,[x20, #0x38]!
+00f19194  mov x0,x20
+00f19198  mov x1,x21
+00f1919c  bl 0x00b07850
+00f191a0  mov x0,x19
+00f191a4  bl 0x00f18c40
+00f191a8  cbz x0,0x00f19218
+00f191ac  mov x1,xzr
+00f191b0  bl 0x00ff4dec
+00f191b4  cbz x0,0x00f19218
+00f191b8  ldr x0,[x0, #0x18]
+00f191bc  mov w1,#0x1
+00f191c0  mov x2,xzr
+00f191c4  bl 0x00e34224
+00f191c8  ldr x8,[x22]
+00f191cc  mov x20,x0
+00f191d0  mov x0,x8
+00f191d4  bl 0x00b079a0
+00f191d8  cbz x0,0x00f19218
+00f191dc  adrp x8,0x3381000
+00f191e0  ldr x8,[x8, #0xcb0]
+00f191e4  mov x1,x19
+00f191e8  mov x3,xzr
+00f191ec  mov x21,x0
+00f191f0  ldr x2,[x8]
+00f191f4  bl 0x00e35bd0
+00f191f8  cbz x20,0x00f19218
+00f191fc  str x21,[x20, #0x38]!
+00f19200  mov x0,x20
+00f19204  mov x1,x21
+00f19208  ldp x19,x30,[sp, #0x20]
+00f1920c  ldp x21,x20,[sp, #0x10]
+00f19210  ldr x22,[sp], #0x30
+00f19214  b 0x00b07850
+00f19218  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f1921c_TutorialMono__TransGuideId.txt
+================================================================================
+Function: TutorialMono$$TransGuideId @ 00f1921c
+
+--- Calls OUT ---
+  -> TutorialMono$$RefreshGP @ 00f1964c
+  -> TutorialpanelNode$$get_btn_close @ 00ff4da0
+  -> System.String$$Split @ 01fe0d68
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp12 @ 01060f0c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> TutorialMono$$get_m_count @ 00f18d5c
+  -> TutorialMono$$set_m_guide @ 00f18f24
+  -> TutorialMono$$CreateGuidePoint @ 00f193d4
+  -> Ali$$GetExcelData<object> @ 01736d60
+  -> TutorialMono$$get_m_guide @ 00f18ebc
+  -> TutorialMono$$get_m_node @ 00f18c40
+  -> TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Calls IN ---
+  <- TutorialMono$$DemandOpen @ 00f19e0c
+  <- BaseMono.<>c__DisplayClass49_0$$<CheckForTutorial>b__0 @ 00e22ba8
+  <- XLua.CSObjectWrap.TutorialMonoWrap$$_m_TransGuideId @ 0144a868
+
+--- Listing ---
+00f1921c  stp x23,x22,[sp, #-0x30]!
+00f19220  stp x21,x20,[sp, #0x10]
+00f19224  stp x19,x30,[sp, #0x20]
+00f19228  adrp x22,0x3573000
+00f1922c  adrp x23,0x3327000
+00f19230  ldrb w8,[x22, #0x15]
+00f19234  ldr x23,[x23, #0x850]
+00f19238  mov w20,w2
+00f1923c  mov w21,w1
+00f19240  mov x19,x0
+00f19244  tbnz w8,#0x0,0x00f19274
+00f19248  adrp x0,0x3364000
+00f1924c  ldr x0,[x0, #0x7f0]
+00f19250  bl 0x00b0789c
+00f19254  adrp x0,0x335f000
+00f19258  ldr x0,[x0, #0x20]
+00f1925c  bl 0x00b0789c
+00f19260  adrp x0,0x3327000
+00f19264  ldr x0,[x0, #0x850]
+00f19268  bl 0x00b0789c
+00f1926c  mov w8,#0x1
+00f19270  strb w8,[x22, #0x15]
+00f19274  ldr x8,[x23]
+00f19278  ldr x8,[x8, #0xb8]
+00f1927c  ldr x0,[x8, #0x40]
+00f19280  cbz x0,0x00f192a4
+00f19284  and w3,w20,#0x1
+00f19288  mov x1,x19
+00f1928c  mov w2,w21
+00f19290  ldp x19,x30,[sp, #0x20]
+00f19294  ldp x21,x20,[sp, #0x10]
+00f19298  mov x4,xzr
+00f1929c  ldp x23,x22,[sp], #0x30
+00f192a0  b 0x01060f0c
+00f192a4  adrp x22,0x335f000
+00f192a8  ldr x22,[x22, #0x20]
+00f192ac  str w21,[x19, #0xd0]
+00f192b0  ldr x0,[x22]
+00f192b4  ldr w8,[x0, #0xe0]
+00f192b8  cbnz w8,0x00f192c4
+00f192bc  bl 0x00b0798c
+00f192c0  ldr x0,[x22]
+00f192c4  ldr x8,[x0, #0xb8]
+00f192c8  ldr x0,[x8, #0x10]
+00f192cc  cbz x0,0x00f193d0
+00f192d0  adrp x8,0x3364000
+00f192d4  ldr x8,[x8, #0x7f0]
+00f192d8  mov w1,w21
+00f192dc  ldr x2,[x8]
+00f192e0  bl 0x01736d60
+00f192e4  mov x1,x0
+00f192e8  mov x0,x19
+00f192ec  bl 0x00f18f24
+00f192f0  mov x0,x19
+00f192f4  bl 0x00f18ebc
+00f192f8  cbz x0,0x00f193d0
+00f192fc  ldr x0,[x0, #0x80]
+00f19300  cbz x0,0x00f193d0
+00f19304  mov w1,#0x7c
+00f19308  mov w2,wzr
+00f1930c  mov x3,xzr
+00f19310  bl 0x01fe0d68
+00f19314  mov x1,x0
+00f19318  mov x0,x19
+00f1931c  str x1,[x0, #0xd8]!
+00f19320  bl 0x00b07850
+00f19324  mov x0,x19
+00f19328  bl 0x00f18ebc
+00f1932c  cbz x0,0x00f193d0
+00f19330  ldr x0,[x0, #0x88]
+00f19334  cbz x0,0x00f193d0
+00f19338  mov w1,#0x7c
+00f1933c  mov w2,wzr
+00f19340  mov x3,xzr
+00f19344  bl 0x01fe0d68
+00f19348  mov x1,x0
+00f1934c  mov x0,x19
+00f19350  str x1,[x0, #0xe0]!
+00f19354  bl 0x00b07850
+00f19358  mov x0,x19
+00f1935c  bl 0x00f193d4
+00f19360  mov x0,x19
+00f19364  bl 0x00f1964c
+00f19368  mov x0,x19
+00f1936c  bl 0x00f19774
+00f19370  mov x0,x19
+00f19374  bl 0x00f18c40
+00f19378  cbz x0,0x00f193d0
+00f1937c  mov x1,xzr
+00f19380  bl 0x00ff4da0
+00f19384  cbz x0,0x00f193d0
+00f19388  ldr x21,[x0, #0x18]
+00f1938c  tbz w20,#0x0,0x00f193b0
+00f19390  ldr w20,[x19, #0xd4]
+00f19394  mov x0,x19
+00f19398  bl 0x00f18d5c
+00f1939c  cbz x21,0x00f193d0
+00f193a0  sub w8,w0,#0x1
+00f193a4  cmp w20,w8
+00f193a8  cset w1,eq
+00f193ac  b 0x00f193b8
+00f193b0  cbz x21,0x00f193d0
+00f193b4  mov w1,#0x1
+00f193b8  mov x0,x21
+00f193bc  ldp x19,x30,[sp, #0x20]
+00f193c0  ldp x21,x20,[sp, #0x10]
+00f193c4  mov x2,xzr
+00f193c8  ldp x23,x22,[sp], #0x30
+00f193cc  b 0x024de86c
+00f193d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f193d4_TutorialMono__CreateGuidePoint.txt
+================================================================================
+Function: TutorialMono$$CreateGuidePoint @ 00f193d4
+
+--- Calls OUT ---
+  -> UnityEngine.Transform$$GetChild @ 024f5bec
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> UnityEngine.Transform$$SetParent @ 024f44b4
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> UnityEngine.Object$$Instantiate<object> @ 017a970c
+  -> UnityEngine.Transform$$set_localScale @ 024f4254
+  -> TutorialpanelNode$$get_obj_tutorpt @ 00ff4cbc
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> UnityEngine.Transform$$set_localPosition @ 024f385c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> TutorialMono$$get_m_count @ 00f18d5c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> TutorialMono$$get_m_node @ 00f18c40
+
+--- Calls IN ---
+  <- TutorialMono$$TransGuideId @ 00f1921c
+
+--- Listing ---
+00f193d4  stp x28,x27,[sp, #-0x60]!
+00f193d8  stp x26,x25,[sp, #0x10]
+00f193dc  stp x24,x23,[sp, #0x20]
+00f193e0  stp x22,x21,[sp, #0x30]
+00f193e4  stp x20,x19,[sp, #0x40]
+00f193e8  stp x29,x30,[sp, #0x50]
+00f193ec  adrp x20,0x3573000
+00f193f0  adrp x21,0x3327000
+00f193f4  ldrb w8,[x20, #0x19]
+00f193f8  ldr x21,[x21, #0x850]
+00f193fc  mov x19,x0
+00f19400  tbnz w8,#0x0,0x00f1943c
+00f19404  adrp x0,0x334e000
+00f19408  ldr x0,[x0, #0x120]
+00f1940c  bl 0x00b0789c
+00f19410  adrp x0,0x333f000
+00f19414  ldr x0,[x0, #0x1b8]
+00f19418  bl 0x00b0789c
+00f1941c  adrp x0,0x3321000
+00f19420  ldr x0,[x0, #0xca8]
+00f19424  bl 0x00b0789c
+00f19428  adrp x0,0x3327000
+00f1942c  ldr x0,[x0, #0x850]
+00f19430  bl 0x00b0789c
+00f19434  mov w8,#0x1
+00f19438  strb w8,[x20, #0x19]
+00f1943c  ldr x8,[x21]
+00f19440  ldr x8,[x8, #0xb8]
+00f19444  ldr x0,[x8, #0x60]
+00f19448  cbz x0,0x00f19470
+00f1944c  mov x1,x19
+00f19450  ldp x29,x30,[sp, #0x50]
+00f19454  ldp x20,x19,[sp, #0x40]
+00f19458  ldp x22,x21,[sp, #0x30]
+00f1945c  ldp x24,x23,[sp, #0x20]
+00f19460  ldp x26,x25,[sp, #0x10]
+00f19464  mov x2,xzr
+00f19468  ldp x28,x27,[sp], #0x60
+00f1946c  b 0x01060dac
+00f19470  mov x0,x19
+00f19474  bl 0x00f18c40
+00f19478  cbz x0,0x00f19648
+00f1947c  mov x1,xzr
+00f19480  bl 0x00ff4cbc
+00f19484  cbz x0,0x00f19648
+00f19488  ldr x0,[x0, #0x20]
+00f1948c  cbz x0,0x00f19648
+00f19490  mov w1,wzr
+00f19494  mov x2,xzr
+00f19498  bl 0x024f5bec
+00f1949c  cbz x0,0x00f19648
+00f194a0  mov x1,xzr
+00f194a4  bl 0x024e4ed4
+00f194a8  mov x20,x0
+00f194ac  mov x0,x19
+00f194b0  bl 0x00f18d5c
+00f194b4  cmp w0,#0x1
+00f194b8  b.lt 0x00f1961c
+00f194bc  mov x0,x19
+00f194c0  bl 0x00f18d5c
+00f194c4  sub w8,w0,#0x1
+00f194c8  cmp w8,#0x1
+00f194cc  b.lt 0x00f19600
+00f194d0  adrp x25,0x3321000
+00f194d4  adrp x26,0x333f000
+00f194d8  adrp x27,0x334e000
+00f194dc  adrp x21,0x3368000
+00f194e0  ldr x25,[x25, #0xca8]
+00f194e4  ldr x26,[x26, #0x1b8]
+00f194e8  ldr x27,[x27, #0x120]
+00f194ec  ldr x21,[x21, #0x9b8]
+00f194f0  mov w24,wzr
+00f194f4  adrp x28,0x3570000
+00f194f8  adrp x29,0x3570000
+00f194fc  ldr x0,[x25]
+00f19500  ldr w8,[x0, #0xe0]
+00f19504  cbnz w8,0x00f1950c
+00f19508  bl 0x00b0798c
+00f1950c  ldr x1,[x26]
+00f19510  mov x0,x20
+00f19514  bl 0x017a970c
+00f19518  cbz x0,0x00f19648
+00f1951c  mov x1,xzr
+00f19520  mov x22,x0
+00f19524  bl 0x024de730
+00f19528  mov x23,x0
+00f1952c  mov x0,x19
+00f19530  bl 0x00f18c40
+00f19534  cbz x0,0x00f19648
+00f19538  mov x1,xzr
+00f1953c  bl 0x00ff4cbc
+00f19540  cbz x0,0x00f19648
+00f19544  cbz x23,0x00f19648
+00f19548  ldr x1,[x0, #0x20]
+00f1954c  mov x0,x23
+00f19550  mov x2,xzr
+00f19554  bl 0x024f44b4
+00f19558  ldr x1,[x27]
+00f1955c  mov x0,x22
+00f19560  bl 0x01794e94
+00f19564  ldrb w8,[x28, #0xf0c]
+00f19568  mov x23,x0
+00f1956c  cbnz w8,0x00f19580
+00f19570  mov x0,x21
+00f19574  bl 0x00b0789c
+00f19578  mov w8,#0x1
+00f1957c  strb w8,[x28, #0xf0c]
+00f19580  cbz x23,0x00f19648
+00f19584  ldr x8,[x21]
+00f19588  mov x0,x23
+00f1958c  mov x1,xzr
+00f19590  ldr x8,[x8, #0xb8]
+00f19594  ldp s0,s1,[x8]
+00f19598  ldr s2,[x8, #0x8]
+00f1959c  bl 0x024f385c
+00f195a0  ldr x1,[x27]
+00f195a4  mov x0,x22
+00f195a8  bl 0x01794e94
+00f195ac  ldrb w8,[x29, #0xf0e]
+00f195b0  mov x22,x0
+00f195b4  cbnz w8,0x00f195c8
+00f195b8  mov x0,x21
+00f195bc  bl 0x00b0789c
+00f195c0  mov w8,#0x1
+00f195c4  strb w8,[x29, #0xf0e]
+00f195c8  cbz x22,0x00f19648
+00f195cc  ldr x8,[x21]
+00f195d0  mov x0,x22
+00f195d4  mov x1,xzr
+00f195d8  ldr x8,[x8, #0xb8]
+00f195dc  ldp s0,s1,[x8, #0xc]
+00f195e0  ldr s2,[x8, #0x14]
+00f195e4  bl 0x024f4254
+00f195e8  mov x0,x19
+00f195ec  add w24,w24,#0x1
+00f195f0  bl 0x00f18d5c
+00f195f4  sub w8,w0,#0x1
+00f195f8  cmp w24,w8
+00f195fc  b.lt 0x00f194fc
+00f19600  ldp x29,x30,[sp, #0x50]
+00f19604  ldp x20,x19,[sp, #0x40]
+00f19608  ldp x22,x21,[sp, #0x30]
+00f1960c  ldp x24,x23,[sp, #0x20]
+00f19610  ldp x26,x25,[sp, #0x10]
+00f19614  ldp x28,x27,[sp], #0x60
+00f19618  ret
+00f1961c  cbz x20,0x00f19648
+00f19620  mov x0,x20
+00f19624  ldp x29,x30,[sp, #0x50]
+00f19628  ldp x20,x19,[sp, #0x40]
+00f1962c  ldp x22,x21,[sp, #0x30]
+00f19630  ldp x24,x23,[sp, #0x20]
+00f19634  ldp x26,x25,[sp, #0x10]
+00f19638  mov w1,wzr
+00f1963c  mov x2,xzr
+00f19640  ldp x28,x27,[sp], #0x60
+00f19644  b 0x024de86c
+00f19648  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f1964c_TutorialMono__RefreshGP.txt
+================================================================================
+Function: TutorialMono$$RefreshGP @ 00f1964c
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Transform$$GetChild @ 024f5bec
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> TutorialMono$$get_m_count @ 00f18d5c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> TutorialpanelNode$$get_obj_tutorpt @ 00ff4cbc
+  -> FUN_00b079b0 @ 00b079b0
+  -> TutorialMono$$get_m_node @ 00f18c40
+
+--- Calls IN ---
+  <- TutorialMono$$TransGuideId @ 00f1921c
+  <- TutorialMono$$ClickNext @ 00f19c6c
+  <- TutorialMono$$ClickPrev @ 00f19d68
+
+--- Listing ---
+00f1964c  stp x23,x22,[sp, #-0x30]!
+00f19650  stp x21,x20,[sp, #0x10]
+00f19654  stp x19,x30,[sp, #0x20]
+00f19658  adrp x20,0x3573000
+00f1965c  adrp x21,0x3327000
+00f19660  ldrb w8,[x20, #0x1a]
+00f19664  ldr x21,[x21, #0x850]
+00f19668  mov x19,x0
+00f1966c  tbnz w8,#0x0,0x00f19690
+00f19670  adrp x0,0x3348000
+00f19674  ldr x0,[x0, #0x138]
+00f19678  bl 0x00b0789c
+00f1967c  adrp x0,0x3327000
+00f19680  ldr x0,[x0, #0x850]
+00f19684  bl 0x00b0789c
+00f19688  mov w8,#0x1
+00f1968c  strb w8,[x20, #0x1a]
+00f19690  ldr x8,[x21]
+00f19694  ldr x8,[x8, #0xb8]
+00f19698  ldr x0,[x8, #0x68]
+00f1969c  cbz x0,0x00f196b8
+00f196a0  mov x1,x19
+00f196a4  ldp x19,x30,[sp, #0x20]
+00f196a8  ldp x21,x20,[sp, #0x10]
+00f196ac  mov x2,xzr
+00f196b0  ldp x23,x22,[sp], #0x30
+00f196b4  b 0x01060dac
+00f196b8  mov x0,x19
+00f196bc  bl 0x00f18d5c
+00f196c0  cmp w0,#0x1
+00f196c4  b.lt 0x00f19760
+00f196c8  adrp x22,0x3348000
+00f196cc  ldr x22,[x22, #0x138]
+00f196d0  mov w20,wzr
+00f196d4  ldr w23,[x19, #0xd4]
+00f196d8  mov x0,x19
+00f196dc  bl 0x00f18c40
+00f196e0  cbz x0,0x00f19770
+00f196e4  mov x1,xzr
+00f196e8  bl 0x00ff4cbc
+00f196ec  cbz x0,0x00f19770
+00f196f0  ldr x0,[x0, #0x20]
+00f196f4  cbz x0,0x00f19770
+00f196f8  mov w1,w20
+00f196fc  mov x2,xzr
+00f19700  bl 0x024f5bec
+00f19704  cbz x0,0x00f19770
+00f19708  mov w1,wzr
+00f1970c  mov x2,xzr
+00f19710  bl 0x024f5bec
+00f19714  cbz x0,0x00f19770
+00f19718  mov x1,xzr
+00f1971c  bl 0x024e4ed4
+00f19720  ldr x8,[x22]
+00f19724  mov x21,x0
+00f19728  ldr w9,[x8, #0xe0]
+00f1972c  cbnz w9,0x00f19738
+00f19730  mov x0,x8
+00f19734  bl 0x00b0798c
+00f19738  cmp w20,w23
+00f1973c  cset w1,eq
+00f19740  mov x0,x21
+00f19744  mov x2,xzr
+00f19748  bl 0x00e13880
+00f1974c  mov x0,x19
+00f19750  add w20,w20,#0x1
+00f19754  bl 0x00f18d5c
+00f19758  cmp w20,w0
+00f1975c  b.lt 0x00f196d4
+00f19760  ldp x19,x30,[sp, #0x20]
+00f19764  ldp x21,x20,[sp, #0x10]
+00f19768  ldp x23,x22,[sp], #0x30
+00f1976c  ret
+00f19770  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f19774_TutorialMono__RefreshTutorial.txt
+================================================================================
+Function: TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> TutorialpanelNode$$get_spr_tuspr @ 00ff4bd8
+  -> UnityEngine.GameObject$$get_activeSelf @ 024de8b0
+  -> TutorialpanelNode$$get_lbl_tufulltext @ 00ff4c70
+  -> TutorialpanelNode$$get_btn_prevguide @ 00ff4dec
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Int32$$Parse @ 0214df74
+  -> TutorialpanelNode$$get_lbl_tutext @ 00ff4c24
+  -> AliothExtensions$$SetSprite @ 00e14c70
+  -> UINode$$get_Image @ 00dc0d50
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> TutorialpanelNode$$get_btn_nextguide @ 00ff4e38
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> TutorialMono$$get_m_count @ 00f18d5c
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> FUN_00b079b8 @ 00b079b8
+  -> UINode$$get_Text @ 00dc47dc
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> System.String$$Equals @ 01fde08c
+  -> TutorialMono$$get_m_node @ 00f18c40
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- TutorialMono$$TransGuideId @ 00f1921c
+  <- TutorialMono$$ClickNext @ 00f19c6c
+  <- TutorialMono$$ClickPrev @ 00f19d68
+
+--- Listing ---
+00f19774  str x24,[sp, #-0x40]!
+00f19778  stp x23,x22,[sp, #0x10]
+00f1977c  stp x21,x20,[sp, #0x20]
+00f19780  stp x19,x30,[sp, #0x30]
+00f19784  adrp x20,0x3573000
+00f19788  adrp x21,0x3327000
+00f1978c  ldrb w8,[x20, #0x18]
+00f19790  ldr x21,[x21, #0x850]
+00f19794  mov x19,x0
+00f19798  tbnz w8,#0x0,0x00f197d4
+00f1979c  adrp x0,0x3348000
+00f197a0  ldr x0,[x0, #0x138]
+00f197a4  bl 0x00b0789c
+00f197a8  adrp x0,0x335b000
+00f197ac  ldr x0,[x0, #0x650]
+00f197b0  bl 0x00b0789c
+00f197b4  adrp x0,0x3327000
+00f197b8  ldr x0,[x0, #0x850]
+00f197bc  bl 0x00b0789c
+00f197c0  adrp x0,0x334c000
+00f197c4  ldr x0,[x0, #0x6c8]
+00f197c8  bl 0x00b0789c
+00f197cc  mov w8,#0x1
+00f197d0  strb w8,[x20, #0x18]
+00f197d4  ldr x8,[x21]
+00f197d8  ldr x8,[x8, #0xb8]
+00f197dc  ldr x0,[x8, #0x58]
+00f197e0  cbz x0,0x00f19800
+00f197e4  mov x1,x19
+00f197e8  ldp x19,x30,[sp, #0x30]
+00f197ec  ldp x21,x20,[sp, #0x20]
+00f197f0  ldp x23,x22,[sp, #0x10]
+00f197f4  mov x2,xzr
+00f197f8  ldr x24,[sp], #0x40
+00f197fc  b 0x01060dac
+00f19800  mov x0,x19
+00f19804  bl 0x00f18c40
+00f19808  cbz x0,0x00f19c64
+00f1980c  mov x1,xzr
+00f19810  bl 0x00ff4dec
+00f19814  cbz x0,0x00f19c64
+00f19818  ldr x0,[x0, #0x18]
+00f1981c  cbz x0,0x00f19c64
+00f19820  ldr w8,[x19, #0xd4]
+00f19824  mov x2,xzr
+00f19828  cmp w8,#0x0
+00f1982c  cset w1,gt
+00f19830  bl 0x024de86c
+00f19834  mov x0,x19
+00f19838  bl 0x00f18c40
+00f1983c  cbz x0,0x00f19c64
+00f19840  mov x1,xzr
+00f19844  bl 0x00ff4e38
+00f19848  cbz x0,0x00f19c64
+00f1984c  ldr x20,[x0, #0x18]
+00f19850  ldr w21,[x19, #0xd4]
+00f19854  mov x0,x19
+00f19858  bl 0x00f18d5c
+00f1985c  cbz x20,0x00f19c64
+00f19860  sub w8,w0,#0x1
+00f19864  cmp w21,w8
+00f19868  cset w1,lt
+00f1986c  mov x0,x20
+00f19870  mov x2,xzr
+00f19874  bl 0x024de86c
+00f19878  ldr x8,[x19, #0xd8]
+00f1987c  cbz x8,0x00f19c64
+00f19880  ldrsw x9,[x19, #0xd4]
+00f19884  ldr w10,[x8, #0x18]
+00f19888  cmp w9,w10
+00f1988c  b.cs 0x00f19c68
+00f19890  add x8,x8,x9, LSL #0x3
+00f19894  ldr x0,[x8, #0x20]
+00f19898  adrp x22,0x3348000
+00f1989c  adrp x23,0x335b000
+00f198a0  ldr x22,[x22, #0x138]
+00f198a4  ldr x23,[x23, #0x650]
+00f198a8  mov x1,xzr
+00f198ac  bl 0x01fdf3a0
+00f198b0  tbnz w0,#0x0,0x00f198f0
+00f198b4  ldr x8,[x19, #0xd8]
+00f198b8  cbz x8,0x00f19c64
+00f198bc  ldrsw x9,[x19, #0xd4]
+00f198c0  ldr w10,[x8, #0x18]
+00f198c4  cmp w9,w10
+00f198c8  b.cs 0x00f19c68
+00f198cc  add x8,x8,x9, LSL #0x3
+00f198d0  ldr x0,[x8, #0x20]
+00f198d4  cbz x0,0x00f19c64
+00f198d8  adrp x24,0x334c000
+00f198dc  ldr x24,[x24, #0x6c8]
+00f198e0  mov x2,xzr
+00f198e4  ldr x1,[x24]
+00f198e8  bl 0x01fde08c
+00f198ec  tbz w0,#0x0,0x00f19a34
+00f198f0  mov x0,x19
+00f198f4  bl 0x00f18c40
+00f198f8  cbz x0,0x00f19c64
+00f198fc  mov x1,xzr
+00f19900  bl 0x00ff4c70
+00f19904  cbz x0,0x00f19c64
+00f19908  mov x1,xzr
+00f1990c  bl 0x00dc47dc
+00f19910  ldr x8,[x19, #0xe0]
+00f19914  cbz x8,0x00f19c64
+00f19918  ldrsw x9,[x19, #0xd4]
+00f1991c  ldr w10,[x8, #0x18]
+00f19920  cmp w9,w10
+00f19924  b.cs 0x00f19c68
+00f19928  add x8,x8,x9, LSL #0x3
+00f1992c  mov x20,x0
+00f19930  ldr x0,[x8, #0x20]
+00f19934  mov x1,xzr
+00f19938  bl 0x0214df74
+00f1993c  ldr x23,[x23]
+00f19940  mov w21,w0
+00f19944  ldr x8,[x23, #0x38]
+00f19948  ldr x8,[x8]
+00f1994c  ldrb w9,[x8, #0x132]
+00f19950  tbnz w9,#0x0,0x00f19960
+00f19954  mov x0,x8
+00f19958  bl 0x00b2ac40
+00f1995c  mov x8,x0
+00f19960  ldr w9,[x8, #0xe0]
+00f19964  cbnz w9,0x00f19970
+00f19968  mov x0,x8
+00f1996c  bl 0x00b0798c
+00f19970  ldr x8,[x23, #0x38]
+00f19974  ldr x0,[x8]
+00f19978  ldrb w8,[x0, #0x132]
+00f1997c  tbnz w8,#0x0,0x00f19984
+00f19980  bl 0x00b2ac40
+00f19984  ldr x8,[x22]
+00f19988  ldr x9,[x0, #0xb8]
+00f1998c  ldr w10,[x8, #0xe0]
+00f19990  ldr x22,[x9]
+00f19994  cbnz w10,0x00f199a0
+00f19998  mov x0,x8
+00f1999c  bl 0x00b0798c
+00f199a0  mov x0,x20
+00f199a4  mov w1,w21
+00f199a8  mov x2,x22
+00f199ac  mov x3,xzr
+00f199b0  bl 0x00e14168
+00f199b4  mov x0,x19
+00f199b8  bl 0x00f18c40
+00f199bc  cbz x0,0x00f19c64
+00f199c0  mov x1,xzr
+00f199c4  bl 0x00ff4bd8
+00f199c8  cbz x0,0x00f19c64
+00f199cc  ldr x0,[x0, #0x18]
+00f199d0  cbz x0,0x00f19c64
+00f199d4  mov w1,wzr
+00f199d8  mov x2,xzr
+00f199dc  bl 0x024de86c
+00f199e0  mov x0,x19
+00f199e4  bl 0x00f18c40
+00f199e8  cbz x0,0x00f19c64
+00f199ec  mov x1,xzr
+00f199f0  bl 0x00ff4c24
+00f199f4  cbz x0,0x00f19c64
+00f199f8  ldr x0,[x0, #0x18]
+00f199fc  cbz x0,0x00f19c64
+00f19a00  mov w1,wzr
+00f19a04  mov x2,xzr
+00f19a08  bl 0x024de86c
+00f19a0c  mov x0,x19
+00f19a10  bl 0x00f18c40
+00f19a14  cbz x0,0x00f19c64
+00f19a18  mov x1,xzr
+00f19a1c  bl 0x00ff4c70
+00f19a20  cbz x0,0x00f19c64
+00f19a24  ldr x0,[x0, #0x18]
+00f19a28  cbz x0,0x00f19c64
+00f19a2c  mov w1,#0x1
+00f19a30  b 0x00f19c4c
+00f19a34  mov x0,x19
+00f19a38  bl 0x00f18c40
+00f19a3c  cbz x0,0x00f19c64
+00f19a40  mov x1,xzr
+00f19a44  bl 0x00ff4bd8
+00f19a48  cbz x0,0x00f19c64
+00f19a4c  mov x1,xzr
+00f19a50  bl 0x00dc0d50
+00f19a54  ldr x8,[x19, #0xd8]
+00f19a58  cbz x8,0x00f19c64
+00f19a5c  ldrsw x9,[x19, #0xd4]
+00f19a60  ldr w10,[x8, #0x18]
+00f19a64  cmp w9,w10
+00f19a68  b.cs 0x00f19c68
+00f19a6c  mov x20,x0
+00f19a70  ldr x0,[x22]
+00f19a74  add x8,x8,x9, LSL #0x3
+00f19a78  ldr x21,[x8, #0x20]
+00f19a7c  ldr w9,[x0, #0xe0]
+00f19a80  cbnz w9,0x00f19a88
+00f19a84  bl 0x00b0798c
+00f19a88  fmov s0,0x3f800000
+00f19a8c  mov x0,x20
+00f19a90  mov x1,x21
+00f19a94  mov x2,xzr
+00f19a98  mov w3,wzr
+00f19a9c  mov x4,xzr
+00f19aa0  bl 0x00e14c70
+00f19aa4  mov x0,x19
+00f19aa8  bl 0x00f18c40
+00f19aac  cbz x0,0x00f19c64
+00f19ab0  mov x1,xzr
+00f19ab4  bl 0x00ff4c24
+00f19ab8  cbz x0,0x00f19c64
+00f19abc  ldr x8,[x19, #0xe0]
+00f19ac0  cbz x8,0x00f19c64
+00f19ac4  ldrsw x9,[x19, #0xd4]
+00f19ac8  ldr w10,[x8, #0x18]
+00f19acc  cmp w9,w10
+00f19ad0  b.cs 0x00f19c68
+00f19ad4  add x8,x8,x9, LSL #0x3
+00f19ad8  ldr x8,[x8, #0x20]
+00f19adc  cbz x8,0x00f19c64
+00f19ae0  ldr x1,[x24]
+00f19ae4  ldr x20,[x0, #0x18]
+00f19ae8  mov x0,x8
+00f19aec  mov x2,xzr
+00f19af0  bl 0x01fde08c
+00f19af4  cbz x20,0x00f19c64
+00f19af8  mvn w8,w0
+00f19afc  and w1,w8,#0x1
+00f19b00  mov x0,x20
+00f19b04  mov x2,xzr
+00f19b08  bl 0x024de86c
+00f19b0c  mov x0,x19
+00f19b10  bl 0x00f18c40
+00f19b14  cbz x0,0x00f19c64
+00f19b18  mov x1,xzr
+00f19b1c  bl 0x00ff4c24
+00f19b20  cbz x0,0x00f19c64
+00f19b24  ldr x0,[x0, #0x18]
+00f19b28  cbz x0,0x00f19c64
+00f19b2c  mov x1,xzr
+00f19b30  bl 0x024de8b0
+00f19b34  tbz w0,#0x0,0x00f19bfc
+00f19b38  mov x0,x19
+00f19b3c  bl 0x00f18c40
+00f19b40  cbz x0,0x00f19c64
+00f19b44  mov x1,xzr
+00f19b48  bl 0x00ff4c24
+00f19b4c  cbz x0,0x00f19c64
+00f19b50  mov x1,xzr
+00f19b54  bl 0x00dc47dc
+00f19b58  ldr x8,[x19, #0xe0]
+00f19b5c  cbz x8,0x00f19c64
+00f19b60  ldrsw x9,[x19, #0xd4]
+00f19b64  ldr w10,[x8, #0x18]
+00f19b68  cmp w9,w10
+00f19b6c  b.cs 0x00f19c68
+00f19b70  add x8,x8,x9, LSL #0x3
+00f19b74  mov x20,x0
+00f19b78  ldr x0,[x8, #0x20]
+00f19b7c  mov x1,xzr
+00f19b80  bl 0x0214df74
+00f19b84  ldr x23,[x23]
+00f19b88  mov w21,w0
+00f19b8c  ldr x8,[x23, #0x38]
+00f19b90  ldr x8,[x8]
+00f19b94  ldrb w9,[x8, #0x132]
+00f19b98  tbnz w9,#0x0,0x00f19ba8
+00f19b9c  mov x0,x8
+00f19ba0  bl 0x00b2ac40
+00f19ba4  mov x8,x0
+00f19ba8  ldr w9,[x8, #0xe0]
+00f19bac  cbnz w9,0x00f19bb8
+00f19bb0  mov x0,x8
+00f19bb4  bl 0x00b0798c
+00f19bb8  ldr x8,[x23, #0x38]
+00f19bbc  ldr x0,[x8]
+00f19bc0  ldrb w8,[x0, #0x132]
+00f19bc4  tbnz w8,#0x0,0x00f19bcc
+00f19bc8  bl 0x00b2ac40
+00f19bcc  ldr x8,[x22]
+00f19bd0  ldr x9,[x0, #0xb8]
+00f19bd4  ldr w10,[x8, #0xe0]
+00f19bd8  ldr x22,[x9]
+00f19bdc  cbnz w10,0x00f19be8
+00f19be0  mov x0,x8
+00f19be4  bl 0x00b0798c
+00f19be8  mov x0,x20
+00f19bec  mov w1,w21
+00f19bf0  mov x2,x22
+00f19bf4  mov x3,xzr
+00f19bf8  bl 0x00e14168
+00f19bfc  mov x0,x19
+00f19c00  bl 0x00f18c40
+00f19c04  cbz x0,0x00f19c64
+00f19c08  mov x1,xzr
+00f19c0c  bl 0x00ff4bd8
+00f19c10  cbz x0,0x00f19c64
+00f19c14  ldr x0,[x0, #0x18]
+00f19c18  cbz x0,0x00f19c64
+00f19c1c  mov w1,#0x1
+00f19c20  mov x2,xzr
+00f19c24  bl 0x024de86c
+00f19c28  mov x0,x19
+00f19c2c  bl 0x00f18c40
+00f19c30  cbz x0,0x00f19c64
+00f19c34  mov x1,xzr
+00f19c38  bl 0x00ff4c70
+00f19c3c  cbz x0,0x00f19c64
+00f19c40  ldr x0,[x0, #0x18]
+00f19c44  cbz x0,0x00f19c64
+00f19c48  mov w1,wzr
+00f19c4c  ldp x19,x30,[sp, #0x30]
+00f19c50  ldp x21,x20,[sp, #0x20]
+00f19c54  ldp x23,x22,[sp, #0x10]
+00f19c58  mov x2,xzr
+00f19c5c  ldr x24,[sp], #0x40
+00f19c60  b 0x024de86c
+00f19c64  bl 0x00b079b0
+00f19c68  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00f19c6c_TutorialMono__ClickNext.txt
+================================================================================
+Function: TutorialMono$$ClickNext @ 00f19c6c
+
+--- Calls OUT ---
+  -> TutorialMono$$RefreshGP @ 00f1964c
+  -> TutorialpanelNode$$get_btn_close @ 00ff4da0
+  -> TutorialMono$$get_m_count @ 00f18d5c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> TutorialMono$$get_m_node @ 00f18c40
+  -> TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Calls IN ---
+
+--- Listing ---
+00f19c6c  str x22,[sp, #-0x30]!
+00f19c70  stp x21,x20,[sp, #0x10]
+00f19c74  stp x19,x30,[sp, #0x20]
+00f19c78  adrp x21,0x3573000
+00f19c7c  adrp x22,0x3327000
+00f19c80  ldrb w8,[x21, #0x16]
+00f19c84  ldr x22,[x22, #0x850]
+00f19c88  mov x20,x1
+00f19c8c  mov x19,x0
+00f19c90  tbnz w8,#0x0,0x00f19ca8
+00f19c94  adrp x0,0x3327000
+00f19c98  ldr x0,[x0, #0x850]
+00f19c9c  bl 0x00b0789c
+00f19ca0  mov w8,#0x1
+00f19ca4  strb w8,[x21, #0x16]
+00f19ca8  ldr x8,[x22]
+00f19cac  ldr x8,[x8, #0xb8]
+00f19cb0  ldr x0,[x8, #0x48]
+00f19cb4  cbz x0,0x00f19cd4
+00f19cb8  mov x1,x19
+00f19cbc  mov x2,x20
+00f19cc0  ldp x19,x30,[sp, #0x20]
+00f19cc4  ldp x21,x20,[sp, #0x10]
+00f19cc8  mov x3,xzr
+00f19ccc  ldr x22,[sp], #0x30
+00f19cd0  b 0x0106125c
+00f19cd4  ldr w20,[x19, #0xd4]
+00f19cd8  mov x0,x19
+00f19cdc  bl 0x00f18d5c
+00f19ce0  add w8,w20,#0x1
+00f19ce4  cmp w8,w0
+00f19ce8  b.ne 0x00f19cfc
+00f19cec  ldp x19,x30,[sp, #0x20]
+00f19cf0  ldp x21,x20,[sp, #0x10]
+00f19cf4  ldr x22,[sp], #0x30
+00f19cf8  ret
+00f19cfc  ldr w8,[x19, #0xd4]
+00f19d00  mov x0,x19
+00f19d04  add w20,w8,#0x1
+00f19d08  str w20,[x19, #0xd4]
+00f19d0c  bl 0x00f18d5c
+00f19d10  sub w8,w0,#0x1
+00f19d14  cmp w20,w8
+00f19d18  b.ne 0x00f19d48
+00f19d1c  mov x0,x19
+00f19d20  bl 0x00f18c40
+00f19d24  cbz x0,0x00f19d64
+00f19d28  mov x1,xzr
+00f19d2c  bl 0x00ff4da0
+00f19d30  cbz x0,0x00f19d64
+00f19d34  ldr x0,[x0, #0x18]
+00f19d38  cbz x0,0x00f19d64
+00f19d3c  mov w1,#0x1
+00f19d40  mov x2,xzr
+00f19d44  bl 0x024de86c
+00f19d48  mov x0,x19
+00f19d4c  bl 0x00f1964c
+00f19d50  mov x0,x19
+00f19d54  ldp x19,x30,[sp, #0x20]
+00f19d58  ldp x21,x20,[sp, #0x10]
+00f19d5c  ldr x22,[sp], #0x30
+00f19d60  b 0x00f19774
+00f19d64  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f19d68_TutorialMono__ClickPrev.txt
+================================================================================
+Function: TutorialMono$$ClickPrev @ 00f19d68
+
+--- Calls OUT ---
+  -> TutorialMono$$RefreshGP @ 00f1964c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Calls IN ---
+
+--- Listing ---
+00f19d68  str x22,[sp, #-0x30]!
+00f19d6c  stp x21,x20,[sp, #0x10]
+00f19d70  stp x19,x30,[sp, #0x20]
+00f19d74  adrp x21,0x3573000
+00f19d78  adrp x22,0x3327000
+00f19d7c  ldrb w8,[x21, #0x17]
+00f19d80  ldr x22,[x22, #0x850]
+00f19d84  mov x20,x1
+00f19d88  mov x19,x0
+00f19d8c  tbnz w8,#0x0,0x00f19da4
+00f19d90  adrp x0,0x3327000
+00f19d94  ldr x0,[x0, #0x850]
+00f19d98  bl 0x00b0789c
+00f19d9c  mov w8,#0x1
+00f19da0  strb w8,[x21, #0x17]
+00f19da4  ldr x8,[x22]
+00f19da8  ldr x8,[x8, #0xb8]
+00f19dac  ldr x0,[x8, #0x50]
+00f19db0  cbz x0,0x00f19dd0
+00f19db4  mov x1,x19
+00f19db8  mov x2,x20
+00f19dbc  ldp x19,x30,[sp, #0x20]
+00f19dc0  ldp x21,x20,[sp, #0x10]
+00f19dc4  mov x3,xzr
+00f19dc8  ldr x22,[sp], #0x30
+00f19dcc  b 0x0106125c
+00f19dd0  ldr w8,[x19, #0xd4]
+00f19dd4  cbz w8,0x00f19dfc
+00f19dd8  sub w8,w8,#0x1
+00f19ddc  mov x0,x19
+00f19de0  str w8,[x19, #0xd4]
+00f19de4  bl 0x00f1964c
+00f19de8  mov x0,x19
+00f19dec  ldp x19,x30,[sp, #0x20]
+00f19df0  ldp x21,x20,[sp, #0x10]
+00f19df4  ldr x22,[sp], #0x30
+00f19df8  b 0x00f19774
+00f19dfc  ldp x19,x30,[sp, #0x20]
+00f19e00  ldp x21,x20,[sp, #0x10]
+00f19e04  ldr x22,[sp], #0x30
+00f19e08  ret
+
+
+================================================================================
+### FILE: 00f19e0c_TutorialMono__DemandOpen.txt
+================================================================================
+Function: TutorialMono$$DemandOpen @ 00f19e0c
+
+--- Calls OUT ---
+  -> TutorialMono$$TransGuideId @ 00f1921c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> AliothEngine.GUIScreen$$DemandOpen @ 01671414
+  -> System.Int32$$Parse @ 0214df74
+
+--- Calls IN ---
+
+--- Listing ---
+00f19e0c  str x22,[sp, #-0x30]!
+00f19e10  stp x21,x20,[sp, #0x10]
+00f19e14  stp x19,x30,[sp, #0x20]
+00f19e18  adrp x21,0x3573000
+00f19e1c  adrp x22,0x3327000
+00f19e20  ldrb w8,[x21, #0x1b]
+00f19e24  ldr x22,[x22, #0x850]
+00f19e28  mov x20,x1
+00f19e2c  mov x19,x0
+00f19e30  tbnz w8,#0x0,0x00f19e48
+00f19e34  adrp x0,0x3327000
+00f19e38  ldr x0,[x0, #0x850]
+00f19e3c  bl 0x00b0789c
+00f19e40  mov w8,#0x1
+00f19e44  strb w8,[x21, #0x1b]
+00f19e48  ldr x8,[x22]
+00f19e4c  ldr x8,[x8, #0xb8]
+00f19e50  ldr x0,[x8, #0x70]
+00f19e54  cbz x0,0x00f19e74
+00f19e58  mov x1,x19
+00f19e5c  mov x2,x20
+00f19e60  ldp x19,x30,[sp, #0x20]
+00f19e64  ldp x21,x20,[sp, #0x10]
+00f19e68  mov x3,xzr
+00f19e6c  ldr x22,[sp], #0x30
+00f19e70  b 0x0106125c
+00f19e74  mov x0,x19
+00f19e78  mov x1,x20
+00f19e7c  mov x2,xzr
+00f19e80  bl 0x01671414
+00f19e84  mov x0,x20
+00f19e88  mov x1,xzr
+00f19e8c  bl 0x0214df74
+00f19e90  mov w1,w0
+00f19e94  mov x0,x19
+00f19e98  ldp x19,x30,[sp, #0x20]
+00f19e9c  ldp x21,x20,[sp, #0x10]
+00f19ea0  mov w2,#0x1
+00f19ea4  ldr x22,[sp], #0x30
+00f19ea8  b 0x00f1921c
+
+
+================================================================================
+### FILE: 00f19eac_TutorialMono__SetCloseAct.txt
+================================================================================
+Function: TutorialMono$$SetCloseAct @ 00f19eac
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> TutorialMono$$set_m_endAct @ 00f18e38
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- RoleMono.<>c__DisplayClass154_0$$<PlayBreakAni>b__1 @ 014ae140
+  <- XLua.CSObjectWrap.TutorialMonoWrap$$_m_SetCloseAct @ 0144ac44
+
+--- Listing ---
+00f19eac  str x22,[sp, #-0x30]!
+00f19eb0  stp x21,x20,[sp, #0x10]
+00f19eb4  stp x19,x30,[sp, #0x20]
+00f19eb8  adrp x21,0x3573000
+00f19ebc  adrp x22,0x3327000
+00f19ec0  ldrb w8,[x21, #0x1c]
+00f19ec4  ldr x22,[x22, #0x850]
+00f19ec8  mov x19,x1
+00f19ecc  mov x20,x0
+00f19ed0  tbnz w8,#0x0,0x00f19ee8
+00f19ed4  adrp x0,0x3327000
+00f19ed8  ldr x0,[x0, #0x850]
+00f19edc  bl 0x00b0789c
+00f19ee0  mov w8,#0x1
+00f19ee4  strb w8,[x21, #0x1c]
+00f19ee8  ldr x8,[x22]
+00f19eec  ldr x8,[x8, #0xb8]
+00f19ef0  ldr x0,[x8, #0x78]
+00f19ef4  cbz x0,0x00f19f14
+00f19ef8  mov x1,x20
+00f19efc  mov x2,x19
+00f19f00  ldp x19,x30,[sp, #0x20]
+00f19f04  ldp x21,x20,[sp, #0x10]
+00f19f08  mov x3,xzr
+00f19f0c  ldr x22,[sp], #0x30
+00f19f10  b 0x0106125c
+00f19f14  mov x0,x20
+00f19f18  mov x1,x19
+00f19f1c  ldp x19,x30,[sp, #0x20]
+00f19f20  ldp x21,x20,[sp, #0x10]
+00f19f24  ldr x22,[sp], #0x30
+00f19f28  b 0x00f18e38
+
+
+================================================================================
+### FILE: 00f19f2c_TutorialMono__CloseThis.txt
+================================================================================
+Function: TutorialMono$$CloseThis @ 00f19f2c
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$CloseThis @ 00f2085c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> TutorialMono$$get_m_endAct @ 00f18dd0
+
+--- Calls IN ---
+
+--- Listing ---
+00f19f2c  stp x21,x20,[sp, #-0x20]!
+00f19f30  stp x19,x30,[sp, #0x10]
+00f19f34  adrp x20,0x3573000
+00f19f38  adrp x21,0x3327000
+00f19f3c  ldrb w8,[x20, #0x1d]
+00f19f40  ldr x21,[x21, #0x850]
+00f19f44  mov x19,x0
+00f19f48  tbnz w8,#0x0,0x00f19f60
+00f19f4c  adrp x0,0x3327000
+00f19f50  ldr x0,[x0, #0x850]
+00f19f54  bl 0x00b0789c
+00f19f58  mov w8,#0x1
+00f19f5c  strb w8,[x20, #0x1d]
+00f19f60  ldr x8,[x21]
+00f19f64  ldr x8,[x8, #0xb8]
+00f19f68  ldr x0,[x8, #0x80]
+00f19f6c  cbz x0,0x00f19f84
+00f19f70  mov x1,x19
+00f19f74  ldp x19,x30,[sp, #0x10]
+00f19f78  mov x2,xzr
+00f19f7c  ldp x21,x20,[sp], #0x20
+00f19f80  b 0x01060dac
+00f19f84  mov x0,x19
+00f19f88  mov x1,xzr
+00f19f8c  bl 0x00f2085c
+00f19f90  mov x0,x19
+00f19f94  bl 0x00f18dd0
+00f19f98  cbz x0,0x00f19fc4
+00f19f9c  mov x0,x19
+00f19fa0  bl 0x00f18dd0
+00f19fa4  cbz x0,0x00f19fd0
+00f19fa8  ldr x8,[x0, #0x40]
+00f19fac  ldr x2,[x0, #0x18]
+00f19fb0  ldr x1,[x0, #0x28]
+00f19fb4  ldp x19,x30,[sp, #0x10]
+00f19fb8  mov x0,x8
+00f19fbc  ldp x21,x20,[sp], #0x20
+00f19fc0  br x2
+00f19fc4  ldp x19,x30,[sp, #0x10]
+00f19fc8  ldp x21,x20,[sp], #0x20
+00f19fcc  ret
+00f19fd0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f19fd4_TutorialMono__.ctor.txt
+================================================================================
+Function: TutorialMono$$.ctor @ 00f19fd4
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialMonoWrap$$__CreateInstance @ 0144a6b0
+
+--- Listing ---
+00f19fd4  stp x21,x20,[sp, #-0x20]!
+00f19fd8  stp x19,x30,[sp, #0x10]
+00f19fdc  adrp x21,0x3573000
+00f19fe0  adrp x20,0x3327000
+00f19fe4  ldrb w8,[x21, #0x1e]
+00f19fe8  ldr x20,[x20, #0x850]
+00f19fec  mov x19,x0
+00f19ff0  tbnz w8,#0x0,0x00f1a008
+00f19ff4  adrp x0,0x3327000
+00f19ff8  ldr x0,[x0, #0x850]
+00f19ffc  bl 0x00b0789c
+00f1a000  mov w8,#0x1
+00f1a004  strb w8,[x21, #0x1e]
+00f1a008  mov x0,x19
+00f1a00c  mov x1,xzr
+00f1a010  bl 0x00f1c130
+00f1a014  ldr x8,[x20]
+00f1a018  ldr x8,[x8, #0xb8]
+00f1a01c  ldr x0,[x8, #0x88]
+00f1a020  cbz x0,0x00f1a038
+00f1a024  mov x1,x19
+00f1a028  ldp x19,x30,[sp, #0x10]
+00f1a02c  mov x2,xzr
+00f1a030  ldp x21,x20,[sp], #0x20
+00f1a034  b 0x01060dac
+00f1a038  ldp x19,x30,[sp, #0x10]
+00f1a03c  ldp x21,x20,[sp], #0x20
+00f1a040  ret
+
+
+================================================================================
+### FILE: 00f1a044_TutorialMono____xLuaBaseProxy_get_LayerType.txt
+================================================================================
+Function: TutorialMono$$<>xLuaBaseProxy_get_LayerType @ 00f1a044
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$get_LayerType @ 016711a8
+
+--- Calls IN ---
+
+--- Listing ---
+00f1a044  mov x1,xzr
+00f1a048  b 0x016711a8
+
+
+================================================================================
+### FILE: 00f1a04c_TutorialMono____xLuaBaseProxy_DemandOpen.txt
+================================================================================
+Function: TutorialMono$$<>xLuaBaseProxy_DemandOpen @ 00f1a04c
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$DemandOpen @ 01671414
+
+--- Calls IN ---
+
+--- Listing ---
+00f1a04c  mov x2,xzr
+00f1a050  b 0x01671414
+
+
+================================================================================
+### FILE: 00f1a054_TutorialMono____xLuaBaseProxy_CloseThis.txt
+================================================================================
+Function: TutorialMono$$<>xLuaBaseProxy_CloseThis @ 00f1a054
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$CloseThis @ 00f2085c
+
+--- Calls IN ---
+
+--- Listing ---
+00f1a054  mov x1,xzr
+00f1a058  b 0x00f2085c
+
+
+================================================================================
+### FILE: 00ff4bd8_TutorialpanelNode__get_spr_tuspr.txt
+================================================================================
+Function: TutorialpanelNode$$get_spr_tuspr @ 00ff4bd8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Listing ---
+00ff4bd8  stp x21,x20,[sp, #-0x20]!
+00ff4bdc  stp x19,x30,[sp, #0x10]
+00ff4be0  adrp x20,0x3574000
+00ff4be4  adrp x21,0x335e000
+00ff4be8  ldrb w8,[x20, #0x241]
+00ff4bec  ldr x21,[x21, #0x720]
+00ff4bf0  mov x19,x0
+00ff4bf4  tbnz w8,#0x0,0x00ff4c0c
+00ff4bf8  adrp x0,0x335e000
+00ff4bfc  ldr x0,[x0, #0x720]
+00ff4c00  bl 0x00b0789c
+00ff4c04  mov w8,#0x1
+00ff4c08  strb w8,[x20, #0x241]
+00ff4c0c  ldr x1,[x21]
+00ff4c10  mov x0,x19
+00ff4c14  ldp x19,x30,[sp, #0x10]
+00ff4c18  mov x2,xzr
+00ff4c1c  ldp x21,x20,[sp], #0x20
+00ff4c20  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4c24_TutorialpanelNode__get_lbl_tutext.txt
+================================================================================
+Function: TutorialpanelNode$$get_lbl_tutext @ 00ff4c24
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Listing ---
+00ff4c24  stp x21,x20,[sp, #-0x20]!
+00ff4c28  stp x19,x30,[sp, #0x10]
+00ff4c2c  adrp x20,0x3574000
+00ff4c30  adrp x21,0x3308000
+00ff4c34  ldrb w8,[x20, #0x242]
+00ff4c38  ldr x21,[x21, #0xd00]
+00ff4c3c  mov x19,x0
+00ff4c40  tbnz w8,#0x0,0x00ff4c58
+00ff4c44  adrp x0,0x3308000
+00ff4c48  ldr x0,[x0, #0xd00]
+00ff4c4c  bl 0x00b0789c
+00ff4c50  mov w8,#0x1
+00ff4c54  strb w8,[x20, #0x242]
+00ff4c58  ldr x1,[x21]
+00ff4c5c  mov x0,x19
+00ff4c60  ldp x19,x30,[sp, #0x10]
+00ff4c64  mov x2,xzr
+00ff4c68  ldp x21,x20,[sp], #0x20
+00ff4c6c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4c70_TutorialpanelNode__get_lbl_tufulltext.txt
+================================================================================
+Function: TutorialpanelNode$$get_lbl_tufulltext @ 00ff4c70
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Listing ---
+00ff4c70  stp x21,x20,[sp, #-0x20]!
+00ff4c74  stp x19,x30,[sp, #0x10]
+00ff4c78  adrp x20,0x3574000
+00ff4c7c  adrp x21,0x3344000
+00ff4c80  ldrb w8,[x20, #0x243]
+00ff4c84  ldr x21,[x21, #0x4b0]
+00ff4c88  mov x19,x0
+00ff4c8c  tbnz w8,#0x0,0x00ff4ca4
+00ff4c90  adrp x0,0x3344000
+00ff4c94  ldr x0,[x0, #0x4b0]
+00ff4c98  bl 0x00b0789c
+00ff4c9c  mov w8,#0x1
+00ff4ca0  strb w8,[x20, #0x243]
+00ff4ca4  ldr x1,[x21]
+00ff4ca8  mov x0,x19
+00ff4cac  ldp x19,x30,[sp, #0x10]
+00ff4cb0  mov x2,xzr
+00ff4cb4  ldp x21,x20,[sp], #0x20
+00ff4cb8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4cbc_TutorialpanelNode__get_obj_tutorpt.txt
+================================================================================
+Function: TutorialpanelNode$$get_obj_tutorpt @ 00ff4cbc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TutorialMono$$RefreshGP @ 00f1964c
+  <- TutorialMono$$CreateGuidePoint @ 00f193d4
+
+--- Listing ---
+00ff4cbc  stp x21,x20,[sp, #-0x20]!
+00ff4cc0  stp x19,x30,[sp, #0x10]
+00ff4cc4  adrp x20,0x3574000
+00ff4cc8  adrp x21,0x3378000
+00ff4ccc  ldrb w8,[x20, #0x244]
+00ff4cd0  ldr x21,[x21, #0x980]
+00ff4cd4  mov x19,x0
+00ff4cd8  tbnz w8,#0x0,0x00ff4cf0
+00ff4cdc  adrp x0,0x3378000
+00ff4ce0  ldr x0,[x0, #0x980]
+00ff4ce4  bl 0x00b0789c
+00ff4ce8  mov w8,#0x1
+00ff4cec  strb w8,[x20, #0x244]
+00ff4cf0  ldr x1,[x21]
+00ff4cf4  mov x0,x19
+00ff4cf8  ldp x19,x30,[sp, #0x10]
+00ff4cfc  mov x2,xzr
+00ff4d00  ldp x21,x20,[sp], #0x20
+00ff4d04  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4d08_TutorialpanelNode__get_pt.txt
+================================================================================
+Function: TutorialpanelNode$$get_pt @ 00ff4d08
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00ff4d08  stp x21,x20,[sp, #-0x20]!
+00ff4d0c  stp x19,x30,[sp, #0x10]
+00ff4d10  adrp x20,0x3574000
+00ff4d14  adrp x21,0x3367000
+00ff4d18  ldrb w8,[x20, #0x245]
+00ff4d1c  ldr x21,[x21, #0x7e8]
+00ff4d20  mov x19,x0
+00ff4d24  tbnz w8,#0x0,0x00ff4d3c
+00ff4d28  adrp x0,0x3367000
+00ff4d2c  ldr x0,[x0, #0x7e8]
+00ff4d30  bl 0x00b0789c
+00ff4d34  mov w8,#0x1
+00ff4d38  strb w8,[x20, #0x245]
+00ff4d3c  ldr x1,[x21]
+00ff4d40  mov x0,x19
+00ff4d44  ldp x19,x30,[sp, #0x10]
+00ff4d48  mov x2,xzr
+00ff4d4c  ldp x21,x20,[sp], #0x20
+00ff4d50  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4d54_TutorialpanelNode__get_spr_point_active.txt
+================================================================================
+Function: TutorialpanelNode$$get_spr_point_active @ 00ff4d54
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00ff4d54  stp x21,x20,[sp, #-0x20]!
+00ff4d58  stp x19,x30,[sp, #0x10]
+00ff4d5c  adrp x20,0x3574000
+00ff4d60  adrp x21,0x3346000
+00ff4d64  ldrb w8,[x20, #0x246]
+00ff4d68  ldr x21,[x21, #0x620]
+00ff4d6c  mov x19,x0
+00ff4d70  tbnz w8,#0x0,0x00ff4d88
+00ff4d74  adrp x0,0x3346000
+00ff4d78  ldr x0,[x0, #0x620]
+00ff4d7c  bl 0x00b0789c
+00ff4d80  mov w8,#0x1
+00ff4d84  strb w8,[x20, #0x246]
+00ff4d88  ldr x1,[x21]
+00ff4d8c  mov x0,x19
+00ff4d90  ldp x19,x30,[sp, #0x10]
+00ff4d94  mov x2,xzr
+00ff4d98  ldp x21,x20,[sp], #0x20
+00ff4d9c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4da0_TutorialpanelNode__get_btn_close.txt
+================================================================================
+Function: TutorialpanelNode$$get_btn_close @ 00ff4da0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TutorialMono$$TransGuideId @ 00f1921c
+  <- TutorialMono$$ClickNext @ 00f19c6c
+  <- TutorialMono$$Start @ 00f19010
+
+--- Listing ---
+00ff4da0  stp x21,x20,[sp, #-0x20]!
+00ff4da4  stp x19,x30,[sp, #0x10]
+00ff4da8  adrp x20,0x3574000
+00ff4dac  adrp x21,0x3310000
+00ff4db0  ldrb w8,[x20, #0x247]
+00ff4db4  ldr x21,[x21, #0x1b8]
+00ff4db8  mov x19,x0
+00ff4dbc  tbnz w8,#0x0,0x00ff4dd4
+00ff4dc0  adrp x0,0x3310000
+00ff4dc4  ldr x0,[x0, #0x1b8]
+00ff4dc8  bl 0x00b0789c
+00ff4dcc  mov w8,#0x1
+00ff4dd0  strb w8,[x20, #0x247]
+00ff4dd4  ldr x1,[x21]
+00ff4dd8  mov x0,x19
+00ff4ddc  ldp x19,x30,[sp, #0x10]
+00ff4de0  mov x2,xzr
+00ff4de4  ldp x21,x20,[sp], #0x20
+00ff4de8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4dec_TutorialpanelNode__get_btn_prevguide.txt
+================================================================================
+Function: TutorialpanelNode$$get_btn_prevguide @ 00ff4dec
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TutorialMono$$Start @ 00f19010
+  <- TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Listing ---
+00ff4dec  stp x21,x20,[sp, #-0x20]!
+00ff4df0  stp x19,x30,[sp, #0x10]
+00ff4df4  adrp x20,0x3574000
+00ff4df8  adrp x21,0x3322000
+00ff4dfc  ldrb w8,[x20, #0x248]
+00ff4e00  ldr x21,[x21, #0xd18]
+00ff4e04  mov x19,x0
+00ff4e08  tbnz w8,#0x0,0x00ff4e20
+00ff4e0c  adrp x0,0x3322000
+00ff4e10  ldr x0,[x0, #0xd18]
+00ff4e14  bl 0x00b0789c
+00ff4e18  mov w8,#0x1
+00ff4e1c  strb w8,[x20, #0x248]
+00ff4e20  ldr x1,[x21]
+00ff4e24  mov x0,x19
+00ff4e28  ldp x19,x30,[sp, #0x10]
+00ff4e2c  mov x2,xzr
+00ff4e30  ldp x21,x20,[sp], #0x20
+00ff4e34  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4e38_TutorialpanelNode__get_btn_nextguide.txt
+================================================================================
+Function: TutorialpanelNode$$get_btn_nextguide @ 00ff4e38
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TutorialMono$$Start @ 00f19010
+  <- TutorialMono$$RefreshTutorial @ 00f19774
+
+--- Listing ---
+00ff4e38  stp x21,x20,[sp, #-0x20]!
+00ff4e3c  stp x19,x30,[sp, #0x10]
+00ff4e40  adrp x20,0x3574000
+00ff4e44  adrp x21,0x3340000
+00ff4e48  ldrb w8,[x20, #0x249]
+00ff4e4c  ldr x21,[x21, #0xa90]
+00ff4e50  mov x19,x0
+00ff4e54  tbnz w8,#0x0,0x00ff4e6c
+00ff4e58  adrp x0,0x3340000
+00ff4e5c  ldr x0,[x0, #0xa90]
+00ff4e60  bl 0x00b0789c
+00ff4e64  mov w8,#0x1
+00ff4e68  strb w8,[x20, #0x249]
+00ff4e6c  ldr x1,[x21]
+00ff4e70  mov x0,x19
+00ff4e74  ldp x19,x30,[sp, #0x10]
+00ff4e78  mov x2,xzr
+00ff4e7c  ldp x21,x20,[sp], #0x20
+00ff4e80  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4e84_TutorialpanelNode__.ctor.txt
+================================================================================
+Function: TutorialpanelNode$$.ctor @ 00ff4e84
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00ff4e84  mov x1,xzr
+00ff4e88  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 0105d3d8_Tutorial.CSCallLua__Start.txt
+================================================================================
+Function: Tutorial.CSCallLua$$Start @ 0105d3d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.String$$Concat @ 01fdf4c4
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> XLua.LuaFunction$$Call @ 010f0c10
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.Dictionary<object,-double>$$get_Item @ 019655f0
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b2ac40 @ 00b2ac40
+  -> System.Double$$ToString @ 02138e48
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> System.Int32$$ToString @ 0214dc44
+  -> FUN_00b07978 @ 00b07978
+  -> System.Boolean$$ToString @ 020d8f78
+  -> XLua.LuaTable$$Get<object> @ 017a2130
+  -> XLua.LuaTable$$Get<bool> @ 017a20b8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> FUN_00b079b8 @ 00b079b8
+  -> XLua.LuaEnv$$DoString @ 010eecf8
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> XLua.LuaTable$$Get<int> @ 017a20e0
+  -> System.Collections.Generic.Dictionary<object,-double>$$get_Count @ 019653d0
+  -> XLua.LuaEnv$$.ctor @ 010eda30
+
+--- Calls IN ---
+
+--- Listing ---
+0105d3d8  sub sp,sp,#0x80
+0105d3dc  stp x28,x27,[sp, #0x20]
+0105d3e0  stp x26,x25,[sp, #0x30]
+0105d3e4  stp x24,x23,[sp, #0x40]
+0105d3e8  stp x22,x21,[sp, #0x50]
+0105d3ec  stp x20,x19,[sp, #0x60]
+0105d3f0  stp x29,x30,[sp, #0x70]
+0105d3f4  adrp x21,0x3574000
+0105d3f8  adrp x19,0x3312000
+0105d3fc  ldrb w8,[x21, #0x708]
+0105d400  ldr x19,[x19, #0xf28]
+0105d404  mov x20,x0
+0105d408  tbnz w8,#0x0,0x0105d60c
+0105d40c  adrp x0,0x335b000
+0105d410  ldr x0,[x0, #0x650]
+0105d414  bl 0x00b0789c
+0105d418  adrp x0,0x336b000
+0105d41c  ldr x0,[x0, #0x7d0]
+0105d420  bl 0x00b0789c
+0105d424  adrp x0,0x3341000
+0105d428  ldr x0,[x0, #0x698]
+0105d42c  bl 0x00b0789c
+0105d430  adrp x0,0x3325000
+0105d434  ldr x0,[x0, #0xc80]
+0105d438  bl 0x00b0789c
+0105d43c  adrp x0,0x333d000
+0105d440  ldr x0,[x0, #0x5f8]
+0105d444  bl 0x00b0789c
+0105d448  adrp x0,0x335b000
+0105d44c  ldr x0,[x0, #0x158]
+0105d450  bl 0x00b0789c
+0105d454  adrp x0,0x3312000
+0105d458  ldr x0,[x0, #0xf28]
+0105d45c  bl 0x00b0789c
+0105d460  adrp x0,0x331e000
+0105d464  ldr x0,[x0, #0x6d8]
+0105d468  bl 0x00b0789c
+0105d46c  adrp x0,0x3335000
+0105d470  ldr x0,[x0, #0x370]
+0105d474  bl 0x00b0789c
+0105d478  adrp x0,0x330c000
+0105d47c  ldr x0,[x0, #0x78]
+0105d480  bl 0x00b0789c
+0105d484  adrp x0,0x330e000
+0105d488  ldr x0,[x0, #0x120]
+0105d48c  bl 0x00b0789c
+0105d490  adrp x0,0x3325000
+0105d494  ldr x0,[x0, #0xaf0]
+0105d498  bl 0x00b0789c
+0105d49c  adrp x0,0x3344000
+0105d4a0  ldr x0,[x0, #0xb90]
+0105d4a4  bl 0x00b0789c
+0105d4a8  adrp x0,0x334e000
+0105d4ac  ldr x0,[x0, #0xf50]
+0105d4b0  bl 0x00b0789c
+0105d4b4  adrp x0,0x335d000
+0105d4b8  ldr x0,[x0, #0x5a8]
+0105d4bc  bl 0x00b0789c
+0105d4c0  adrp x0,0x336b000
+0105d4c4  ldr x0,[x0, #0x700]
+0105d4c8  bl 0x00b0789c
+0105d4cc  adrp x0,0x3375000
+0105d4d0  ldr x0,[x0, #0x8c8]
+0105d4d4  bl 0x00b0789c
+0105d4d8  adrp x0,0x3374000
+0105d4dc  ldr x0,[x0, #0x7c0]
+0105d4e0  bl 0x00b0789c
+0105d4e4  adrp x0,0x333f000
+0105d4e8  ldr x0,[x0, #0x630]
+0105d4ec  bl 0x00b0789c
+0105d4f0  adrp x0,0x3308000
+0105d4f4  ldr x0,[x0, #0x9a8]
+0105d4f8  bl 0x00b0789c
+0105d4fc  adrp x0,0x3359000
+0105d500  ldr x0,[x0, #0xd8]
+0105d504  bl 0x00b0789c
+0105d508  adrp x0,0x3337000
+0105d50c  ldr x0,[x0, #0x1e8]
+0105d510  bl 0x00b0789c
+0105d514  adrp x0,0x336b000
+0105d518  ldr x0,[x0, #0x5f8]
+0105d51c  bl 0x00b0789c
+0105d520  adrp x0,0x335e000
+0105d524  ldr x0,[x0, #0x890]
+0105d528  bl 0x00b0789c
+0105d52c  adrp x0,0x334e000
+0105d530  ldr x0,[x0, #0x308]
+0105d534  bl 0x00b0789c
+0105d538  adrp x0,0x3315000
+0105d53c  ldr x0,[x0, #0x68]
+0105d540  bl 0x00b0789c
+0105d544  adrp x0,0x333e000
+0105d548  ldr x0,[x0, #0x440]
+0105d54c  bl 0x00b0789c
+0105d550  adrp x0,0x3359000
+0105d554  ldr x0,[x0, #0x538]
+0105d558  bl 0x00b0789c
+0105d55c  adrp x0,0x334a000
+0105d560  ldr x0,[x0, #0x498]
+0105d564  bl 0x00b0789c
+0105d568  adrp x0,0x3316000
+0105d56c  ldr x0,[x0, #0xcc0]
+0105d570  bl 0x00b0789c
+0105d574  adrp x0,0x3318000
+0105d578  ldr x0,[x0, #0xe20]
+0105d57c  bl 0x00b0789c
+0105d580  adrp x0,0x3331000
+0105d584  ldr x0,[x0, #0xb00]
+0105d588  bl 0x00b0789c
+0105d58c  adrp x0,0x337a000
+0105d590  ldr x0,[x0, #0xaf8]
+0105d594  bl 0x00b0789c
+0105d598  adrp x0,0x3365000
+0105d59c  ldr x0,[x0, #0x830]
+0105d5a0  bl 0x00b0789c
+0105d5a4  adrp x0,0x332d000
+0105d5a8  ldr x0,[x0, #0x1a0]
+0105d5ac  bl 0x00b0789c
+0105d5b0  adrp x0,0x3314000
+0105d5b4  ldr x0,[x0, #0x148]
+0105d5b8  bl 0x00b0789c
+0105d5bc  adrp x0,0x3353000
+0105d5c0  ldr x0,[x0, #0x4c0]
+0105d5c4  bl 0x00b0789c
+0105d5c8  adrp x0,0x3346000
+0105d5cc  ldr x0,[x0, #0x370]
+0105d5d0  bl 0x00b0789c
+0105d5d4  adrp x0,0x3337000
+0105d5d8  ldr x0,[x0, #0xe38]
+0105d5dc  bl 0x00b0789c
+0105d5e0  adrp x0,0x3332000
+0105d5e4  ldr x0,[x0, #0xe28]
+0105d5e8  bl 0x00b0789c
+0105d5ec  adrp x0,0x3357000
+0105d5f0  ldr x0,[x0, #0xce8]
+0105d5f4  bl 0x00b0789c
+0105d5f8  adrp x0,0x3358000
+0105d5fc  ldr x0,[x0, #0xf80]
+0105d600  bl 0x00b0789c
+0105d604  mov w8,#0x1
+0105d608  strb w8,[x21, #0x708]
+0105d60c  ldr x0,[x19]
+0105d610  stp xzr,xzr,[sp, #0x10]
+0105d614  strb wzr,[sp, #0xc]
+0105d618  str xzr,[sp]
+0105d61c  bl 0x00b079a0
+0105d620  cbz x0,0x0105e520
+0105d624  mov x1,xzr
+0105d628  mov x21,x0
+0105d62c  bl 0x010eda30
+0105d630  mov x19,x20
+0105d634  str x21,[x19, #0x18]!
+0105d638  mov x0,x19
+0105d63c  mov x1,x21
+0105d640  bl 0x00b07850
+0105d644  ldr x0,[x19]
+0105d648  cbz x0,0x0105e520
+0105d64c  adrp x8,0x336b000
+0105d650  ldr x8,[x8, #0x5f8]
+0105d654  ldr x1,[x20, #0x20]
+0105d658  mov x3,xzr
+0105d65c  mov x4,xzr
+0105d660  ldr x2,[x8]
+0105d664  bl 0x010eecf8
+0105d668  ldr x8,[x20, #0x18]
+0105d66c  cbz x8,0x0105e520
+0105d670  ldr x0,[x8, #0x18]
+0105d674  cbz x0,0x0105e520
+0105d678  adrp x8,0x3359000
+0105d67c  adrp x9,0x334e000
+0105d680  ldr x8,[x8, #0xd8]
+0105d684  ldr x9,[x9, #0xf50]
+0105d688  adrp x20,0x3337000
+0105d68c  adrp x21,0x336b000
+0105d690  ldr x1,[x8]
+0105d694  ldr x2,[x9]
+0105d698  ldr x20,[x20, #0x1e8]
+0105d69c  ldr x21,[x21, #0x7d0]
+0105d6a0  bl 0x017a20e0
+0105d6a4  str w0,[sp, #0x10]
+0105d6a8  add x0,sp,#0x10
+0105d6ac  mov x1,xzr
+0105d6b0  bl 0x0214dc44
+0105d6b4  ldr x8,[x20]
+0105d6b8  mov x1,x0
+0105d6bc  mov x2,xzr
+0105d6c0  mov x0,x8
+0105d6c4  bl 0x01fd2850
+0105d6c8  ldr x8,[x21]
+0105d6cc  mov x20,x0
+0105d6d0  ldr w9,[x8, #0xe0]
+0105d6d4  cbnz w9,0x0105d6e0
+0105d6d8  mov x0,x8
+0105d6dc  bl 0x00b0798c
+0105d6e0  mov x0,x20
+0105d6e4  mov x1,xzr
+0105d6e8  bl 0x024c0104
+0105d6ec  ldr x8,[x19]
+0105d6f0  cbz x8,0x0105e520
+0105d6f4  ldr x0,[x8, #0x18]
+0105d6f8  cbz x0,0x0105e520
+0105d6fc  adrp x8,0x3316000
+0105d700  adrp x9,0x333f000
+0105d704  ldr x8,[x8, #0xcc0]
+0105d708  ldr x9,[x9, #0x630]
+0105d70c  adrp x20,0x334a000
+0105d710  ldr x1,[x8]
+0105d714  ldr x2,[x9]
+0105d718  ldr x20,[x20, #0x498]
+0105d71c  bl 0x017a2130
+0105d720  ldr x8,[x20]
+0105d724  mov x1,x0
+0105d728  mov x2,xzr
+0105d72c  mov x0,x8
+0105d730  bl 0x01fd2850
+0105d734  mov x1,xzr
+0105d738  bl 0x024c0104
+0105d73c  ldr x8,[x19]
+0105d740  cbz x8,0x0105e520
+0105d744  ldr x0,[x8, #0x18]
+0105d748  cbz x0,0x0105e520
+0105d74c  adrp x8,0x3365000
+0105d750  adrp x9,0x3335000
+0105d754  ldr x8,[x8, #0x830]
+0105d758  ldr x9,[x9, #0x370]
+0105d75c  adrp x20,0x3359000
+0105d760  ldr x1,[x8]
+0105d764  ldr x2,[x9]
+0105d768  ldr x20,[x20, #0x538]
+0105d76c  bl 0x017a20b8
+0105d770  and w8,w0,#0x1
+0105d774  add x0,sp,#0xc
+0105d778  mov x1,xzr
+0105d77c  strb w8,[sp, #0xc]
+0105d780  bl 0x020d8f78
+0105d784  ldr x8,[x20]
+0105d788  mov x1,x0
+0105d78c  mov x2,xzr
+0105d790  mov x0,x8
+0105d794  bl 0x01fd2850
+0105d798  mov x1,xzr
+0105d79c  bl 0x024c0104
+0105d7a0  ldr x8,[x19]
+0105d7a4  cbz x8,0x0105e520
+0105d7a8  ldr x0,[x8, #0x18]
+0105d7ac  cbz x0,0x0105e520
+0105d7b0  adrp x28,0x3314000
+0105d7b4  adrp x8,0x330c000
+0105d7b8  ldr x28,[x28, #0x148]
+0105d7bc  ldr x8,[x8, #0x78]
+0105d7c0  adrp x24,0x3308000
+0105d7c4  ldr x1,[x28]
+0105d7c8  ldr x2,[x8]
+0105d7cc  ldr x24,[x24, #0x9a8]
+0105d7d0  bl 0x017a2130
+0105d7d4  ldr x8,[x24]
+0105d7d8  mov x21,x0
+0105d7dc  mov w1,#0x5
+0105d7e0  mov x0,x8
+0105d7e4  bl 0x00b078f8
+0105d7e8  cbz x0,0x0105e520
+0105d7ec  adrp x27,0x335e000
+0105d7f0  ldr x27,[x27, #0x890]
+0105d7f4  mov x20,x0
+0105d7f8  ldr x1,[x27]
+0105d7fc  cbz x1,0x0105d824
+0105d800  ldr x8,[x20]
+0105d804  mov x0,x1
+0105d808  ldr x8,[x8, #0x40]
+0105d80c  mov x1,x8
+0105d810  bl 0x00b07990
+0105d814  cbz x0,0x0105e528
+0105d818  ldr x8,[x27]
+0105d81c  mov x1,x8
+0105d820  b 0x0105d828
+0105d824  mov x8,xzr
+0105d828  ldr w9,[x20, #0x18]
+0105d82c  cbz w9,0x0105e524
+0105d830  mov x0,x20
+0105d834  str x8,[x0, #0x20]!
+0105d838  bl 0x00b07850
+0105d83c  cbz x21,0x0105e520
+0105d840  add x0,x21,#0x10
+0105d844  mov x1,xzr
+0105d848  bl 0x0214dc44
+0105d84c  mov x22,x0
+0105d850  cbz x0,0x0105d868
+0105d854  ldr x8,[x20]
+0105d858  mov x0,x22
+0105d85c  ldr x1,[x8, #0x40]
+0105d860  bl 0x00b07990
+0105d864  cbz x0,0x0105e528
+0105d868  ldr w8,[x20, #0x18]
+0105d86c  cmp w8,#0x1
+0105d870  b.ls 0x0105e524
+0105d874  adrp x23,0x332d000
+0105d878  ldr x23,[x23, #0x1a0]
+0105d87c  mov x0,x20
+0105d880  str x22,[x0, #0x28]!
+0105d884  mov x1,x22
+0105d888  bl 0x00b07850
+0105d88c  ldr x1,[x23]
+0105d890  cbz x1,0x0105d8b8
+0105d894  ldr x8,[x20]
+0105d898  mov x0,x1
+0105d89c  ldr x8,[x8, #0x40]
+0105d8a0  mov x1,x8
+0105d8a4  bl 0x00b07990
+0105d8a8  cbz x0,0x0105e528
+0105d8ac  ldr x8,[x23]
+0105d8b0  mov x1,x8
+0105d8b4  b 0x0105d8bc
+0105d8b8  mov x8,xzr
+0105d8bc  ldr w9,[x20, #0x18]
+0105d8c0  cmp w9,#0x2
+0105d8c4  b.ls 0x0105e524
+0105d8c8  mov x0,x20
+0105d8cc  str x8,[x0, #0x30]!
+0105d8d0  bl 0x00b07850
+0105d8d4  add x0,x21,#0x14
+0105d8d8  mov x1,xzr
+0105d8dc  bl 0x0214dc44
+0105d8e0  mov x21,x0
+0105d8e4  cbz x0,0x0105d8fc
+0105d8e8  ldr x8,[x20]
+0105d8ec  mov x0,x21
+0105d8f0  ldr x1,[x8, #0x40]
+0105d8f4  bl 0x00b07990
+0105d8f8  cbz x0,0x0105e528
+0105d8fc  ldr w8,[x20, #0x18]
+0105d900  cmp w8,#0x3
+0105d904  b.ls 0x0105e524
+0105d908  adrp x26,0x3318000
+0105d90c  ldr x26,[x26, #0xe20]
+0105d910  mov x0,x20
+0105d914  str x21,[x0, #0x38]!
+0105d918  mov x1,x21
+0105d91c  bl 0x00b07850
+0105d920  ldr x1,[x26]
+0105d924  cbz x1,0x0105d94c
+0105d928  ldr x8,[x20]
+0105d92c  mov x0,x1
+0105d930  ldr x8,[x8, #0x40]
+0105d934  mov x1,x8
+0105d938  bl 0x00b07990
+0105d93c  cbz x0,0x0105e528
+0105d940  ldr x8,[x26]
+0105d944  mov x1,x8
+0105d948  b 0x0105d950
+0105d94c  mov x8,xzr
+0105d950  ldr w9,[x20, #0x18]
+0105d954  cmp w9,#0x4
+0105d958  b.ls 0x0105e524
+0105d95c  mov x0,x20
+0105d960  str x8,[x0, #0x40]!
+0105d964  bl 0x00b07850
+0105d968  mov x0,x20
+0105d96c  mov x1,xzr
+0105d970  bl 0x01fdf4c4
+0105d974  mov x1,xzr
+0105d978  bl 0x024c0104
+0105d97c  ldr x8,[x19]
+0105d980  cbz x8,0x0105e520
+0105d984  ldr x0,[x8, #0x18]
+0105d988  cbz x0,0x0105e520
+0105d98c  adrp x8,0x330e000
+0105d990  ldr x8,[x8, #0x120]
+0105d994  ldr x1,[x28]
+0105d998  ldr x2,[x8]
+0105d99c  bl 0x017a2130
+0105d9a0  ldr x8,[x24]
+0105d9a4  mov x21,x0
+0105d9a8  mov w1,#0x6
+0105d9ac  mov x0,x8
+0105d9b0  bl 0x00b078f8
+0105d9b4  cbz x0,0x0105e520
+0105d9b8  ldr x1,[x27]
+0105d9bc  mov x20,x0
+0105d9c0  cbz x1,0x0105d9e8
+0105d9c4  ldr x8,[x20]
+0105d9c8  mov x0,x1
+0105d9cc  ldr x8,[x8, #0x40]
+0105d9d0  mov x1,x8
+0105d9d4  bl 0x00b07990
+0105d9d8  cbz x0,0x0105e528
+0105d9dc  ldr x8,[x27]
+0105d9e0  mov x1,x8
+0105d9e4  b 0x0105d9ec
+0105d9e8  mov x8,xzr
+0105d9ec  ldr w9,[x20, #0x18]
+0105d9f0  cbz w9,0x0105e524
+0105d9f4  mov x0,x20
+0105d9f8  str x8,[x0, #0x20]!
+0105d9fc  bl 0x00b07850
+0105da00  cbz x21,0x0105e520
+0105da04  adrp x25,0x337a000
+0105da08  adrp x29,0x3325000
+0105da0c  ldr x25,[x25, #0xaf8]
+0105da10  ldr x29,[x29, #0xc80]
+0105da14  mov x0,x21
+0105da18  ldr x1,[x25]
+0105da1c  ldr x2,[x29]
+0105da20  bl 0x019655f0
+0105da24  mov x0,sp
+0105da28  mov x1,xzr
+0105da2c  str d0,[sp]
+0105da30  bl 0x02138e48
+0105da34  mov x22,x0
+0105da38  cbz x0,0x0105da50
+0105da3c  ldr x8,[x20]
+0105da40  mov x0,x22
+0105da44  ldr x1,[x8, #0x40]
+0105da48  bl 0x00b07990
+0105da4c  cbz x0,0x0105e528
+0105da50  ldr w8,[x20, #0x18]
+0105da54  cmp w8,#0x1
+0105da58  b.ls 0x0105e524
+0105da5c  mov x0,x20
+0105da60  str x22,[x0, #0x28]!
+0105da64  mov x1,x22
+0105da68  bl 0x00b07850
+0105da6c  ldr x1,[x23]
+0105da70  cbz x1,0x0105da98
+0105da74  ldr x8,[x20]
+0105da78  mov x0,x1
+0105da7c  ldr x8,[x8, #0x40]
+0105da80  mov x1,x8
+0105da84  bl 0x00b07990
+0105da88  cbz x0,0x0105e528
+0105da8c  ldr x8,[x23]
+0105da90  mov x1,x8
+0105da94  b 0x0105da9c
+0105da98  mov x8,xzr
+0105da9c  ldr w9,[x20, #0x18]
+0105daa0  cmp w9,#0x2
+0105daa4  b.ls 0x0105e524
+0105daa8  adrp x22,0x333e000
+0105daac  ldr x22,[x22, #0x440]
+0105dab0  mov x0,x20
+0105dab4  str x8,[x0, #0x30]!
+0105dab8  bl 0x00b07850
+0105dabc  ldr x1,[x22]
+0105dac0  ldr x2,[x29]
+0105dac4  mov x0,x21
+0105dac8  bl 0x019655f0
+0105dacc  mov x0,sp
+0105dad0  mov x1,xzr
+0105dad4  str d0,[sp]
+0105dad8  bl 0x02138e48
+0105dadc  mov x22,x0
+0105dae0  cbz x0,0x0105daf8
+0105dae4  ldr x8,[x20]
+0105dae8  mov x0,x22
+0105daec  ldr x1,[x8, #0x40]
+0105daf0  bl 0x00b07990
+0105daf4  cbz x0,0x0105e528
+0105daf8  ldr w8,[x20, #0x18]
+0105dafc  cmp w8,#0x3
+0105db00  b.ls 0x0105e524
+0105db04  adrp x29,0x3357000
+0105db08  ldr x29,[x29, #0xce8]
+0105db0c  mov x0,x20
+0105db10  str x22,[x0, #0x38]!
+0105db14  mov x1,x22
+0105db18  bl 0x00b07850
+0105db1c  ldr x1,[x29]
+0105db20  cbz x1,0x0105db48
+0105db24  ldr x8,[x20]
+0105db28  mov x0,x1
+0105db2c  ldr x8,[x8, #0x40]
+0105db30  mov x1,x8
+0105db34  bl 0x00b07990
+0105db38  cbz x0,0x0105e528
+0105db3c  ldr x8,[x29]
+0105db40  mov x1,x8
+0105db44  b 0x0105db4c
+0105db48  mov x8,xzr
+0105db4c  ldr w9,[x20, #0x18]
+0105db50  cmp w9,#0x4
+0105db54  b.ls 0x0105e524
+0105db58  adrp x22,0x3341000
+0105db5c  ldr x22,[x22, #0x698]
+0105db60  mov x0,x20
+0105db64  str x8,[x0, #0x40]!
+0105db68  bl 0x00b07850
+0105db6c  ldr x1,[x22]
+0105db70  mov x0,x21
+0105db74  bl 0x019653d0
+0105db78  str w0,[sp, #0x10]
+0105db7c  add x0,sp,#0x10
+0105db80  mov x1,xzr
+0105db84  bl 0x0214dc44
+0105db88  mov x21,x0
+0105db8c  cbz x0,0x0105dba4
+0105db90  ldr x8,[x20]
+0105db94  mov x0,x21
+0105db98  ldr x1,[x8, #0x40]
+0105db9c  bl 0x00b07990
+0105dba0  cbz x0,0x0105e528
+0105dba4  ldr w8,[x20, #0x18]
+0105dba8  cmp w8,#0x5
+0105dbac  b.ls 0x0105e524
+0105dbb0  mov x0,x20
+0105dbb4  str x21,[x0, #0x48]!
+0105dbb8  mov x1,x21
+0105dbbc  bl 0x00b07850
+0105dbc0  mov x0,x20
+0105dbc4  mov x1,xzr
+0105dbc8  bl 0x01fdf4c4
+0105dbcc  mov x1,xzr
+0105dbd0  bl 0x024c0104
+0105dbd4  ldr x8,[x19]
+0105dbd8  cbz x8,0x0105e520
+0105dbdc  ldr x0,[x8, #0x18]
+0105dbe0  cbz x0,0x0105e520
+0105dbe4  adrp x8,0x336b000
+0105dbe8  ldr x8,[x8, #0x700]
+0105dbec  ldr x1,[x28]
+0105dbf0  ldr x2,[x8]
+0105dbf4  bl 0x017a2130
+0105dbf8  cbz x0,0x0105e520
+0105dbfc  ldr w8,[x0, #0x18]
+0105dc00  adrp x20,0x3331000
+0105dc04  ldr x20,[x20, #0xb00]
+0105dc08  add x0,sp,#0x10
+0105dc0c  mov x1,xzr
+0105dc10  str w8,[sp, #0x10]
+0105dc14  bl 0x0214dc44
+0105dc18  ldr x8,[x20]
+0105dc1c  mov x1,x0
+0105dc20  mov x2,xzr
+0105dc24  mov x0,x8
+0105dc28  bl 0x01fd2850
+0105dc2c  mov x1,xzr
+0105dc30  bl 0x024c0104
+0105dc34  ldr x8,[x19]
+0105dc38  cbz x8,0x0105e520
+0105dc3c  ldr x0,[x8, #0x18]
+0105dc40  cbz x0,0x0105e520
+0105dc44  adrp x8,0x335d000
+0105dc48  ldr x8,[x8, #0x5a8]
+0105dc4c  ldr x1,[x28]
+0105dc50  ldr x2,[x8]
+0105dc54  bl 0x017a2130
+0105dc58  cbz x0,0x0105e520
+0105dc5c  adrp x29,0x333d000
+0105dc60  ldr x8,[x0]
+0105dc64  ldr x29,[x29, #0x5f8]
+0105dc68  mov x20,x0
+0105dc6c  ldrh w9,[x8, #0x12a]
+0105dc70  ldr x1,[x29]
+0105dc74  cbz x9,0x0105dc98
+0105dc78  ldr x10,[x8, #0xb0]
+0105dc7c  add x10,x10,#0x8
+0105dc80  ldur x11,[x10, #-0x8]
+0105dc84  cmp x11,x1
+0105dc88  b.eq 0x0105dca8
+0105dc8c  subs x9,x9,#0x1
+0105dc90  add x10,x10,#0x10
+0105dc94  b.ne 0x0105dc80
+0105dc98  mov w2,#0x3
+0105dc9c  mov x0,x20
+0105dca0  bl 0x00b2ae24
+0105dca4  b 0x0105dcb8
+0105dca8  ldr w9,[x10]
+0105dcac  add w9,w9,#0x3
+0105dcb0  add x8,x8,w9, SXTW  #0x4
+0105dcb4  add x0,x8,#0x138
+0105dcb8  ldp x8,x2,[x0]
+0105dcbc  mov w1,#0x3e8
+0105dcc0  mov x0,x20
+0105dcc4  blr x8
+0105dcc8  ldr x0,[x24]
+0105dccc  mov w1,#0x5
+0105dcd0  bl 0x00b078f8
+0105dcd4  cbz x0,0x0105e520
+0105dcd8  ldr x1,[x27]
+0105dcdc  mov x21,x0
+0105dce0  cbz x1,0x0105dd08
+0105dce4  ldr x8,[x21]
+0105dce8  mov x0,x1
+0105dcec  ldr x8,[x8, #0x40]
+0105dcf0  mov x1,x8
+0105dcf4  bl 0x00b07990
+0105dcf8  cbz x0,0x0105e528
+0105dcfc  ldr x8,[x27]
+0105dd00  mov x1,x8
+0105dd04  b 0x0105dd0c
+0105dd08  mov x8,xzr
+0105dd0c  ldr w9,[x21, #0x18]
+0105dd10  cbz w9,0x0105e524
+0105dd14  mov x0,x21
+0105dd18  str x8,[x0, #0x20]!
+0105dd1c  bl 0x00b07850
+0105dd20  ldr x8,[x20]
+0105dd24  ldr x1,[x29]
+0105dd28  ldrh w9,[x8, #0x12a]
+0105dd2c  cbz x9,0x0105dd50
+0105dd30  ldr x10,[x8, #0xb0]
+0105dd34  add x10,x10,#0x8
+0105dd38  ldur x11,[x10, #-0x8]
+0105dd3c  cmp x11,x1
+0105dd40  b.eq 0x0105dd60
+0105dd44  subs x9,x9,#0x1
+0105dd48  add x10,x10,#0x10
+0105dd4c  b.ne 0x0105dd38
+0105dd50  mov x0,x20
+0105dd54  mov w2,wzr
+0105dd58  bl 0x00b2ae24
+0105dd5c  b 0x0105dd6c
+0105dd60  ldrsw x9,[x10]
+0105dd64  add x8,x8,x9, LSL #0x4
+0105dd68  add x0,x8,#0x138
+0105dd6c  ldp x8,x1,[x0]
+0105dd70  mov x0,x20
+0105dd74  blr x8
+0105dd78  str w0,[sp, #0x10]
+0105dd7c  add x0,sp,#0x10
+0105dd80  mov x1,xzr
+0105dd84  bl 0x0214dc44
+0105dd88  mov x22,x0
+0105dd8c  cbz x0,0x0105dda4
+0105dd90  ldr x8,[x21]
+0105dd94  mov x0,x22
+0105dd98  ldr x1,[x8, #0x40]
+0105dd9c  bl 0x00b07990
+0105dda0  cbz x0,0x0105e528
+0105dda4  ldr w8,[x21, #0x18]
+0105dda8  cmp w8,#0x1
+0105ddac  b.ls 0x0105e524
+0105ddb0  mov x0,x21
+0105ddb4  str x22,[x0, #0x28]!
+0105ddb8  mov x1,x22
+0105ddbc  bl 0x00b07850
+0105ddc0  ldr x1,[x23]
+0105ddc4  cbz x1,0x0105ddec
+0105ddc8  ldr x8,[x21]
+0105ddcc  mov x0,x1
+0105ddd0  ldr x8,[x8, #0x40]
+0105ddd4  mov x1,x8
+0105ddd8  bl 0x00b07990
+0105dddc  cbz x0,0x0105e528
+0105dde0  ldr x8,[x23]
+0105dde4  mov x1,x8
+0105dde8  b 0x0105ddf0
+0105ddec  mov x8,xzr
+0105ddf0  ldr w9,[x21, #0x18]
+0105ddf4  cmp w9,#0x2
+0105ddf8  b.ls 0x0105e524
+0105ddfc  mov x0,x21
+0105de00  str x8,[x0, #0x30]!
+0105de04  bl 0x00b07850
+0105de08  ldr x8,[x20]
+0105de0c  ldr x1,[x29]
+0105de10  ldrh w9,[x8, #0x12a]
+0105de14  cbz x9,0x0105de38
+0105de18  ldr x10,[x8, #0xb0]
+0105de1c  add x10,x10,#0x8
+0105de20  ldur x11,[x10, #-0x8]
+0105de24  cmp x11,x1
+0105de28  b.eq 0x0105de48
+0105de2c  subs x9,x9,#0x1
+0105de30  add x10,x10,#0x10
+0105de34  b.ne 0x0105de20
+0105de38  mov w2,#0x2
+0105de3c  mov x0,x20
+0105de40  bl 0x00b2ae24
+0105de44  b 0x0105de58
+0105de48  ldr w9,[x10]
+0105de4c  add w9,w9,#0x2
+0105de50  add x8,x8,w9, SXTW  #0x4
+0105de54  add x0,x8,#0x138
+0105de58  ldp x8,x1,[x0]
+0105de5c  mov x0,x20
+0105de60  blr x8
+0105de64  str w0,[sp, #0x10]
+0105de68  add x0,sp,#0x10
+0105de6c  mov x1,xzr
+0105de70  bl 0x0214dc44
+0105de74  mov x22,x0
+0105de78  cbz x0,0x0105de90
+0105de7c  ldr x8,[x21]
+0105de80  mov x0,x22
+0105de84  ldr x1,[x8, #0x40]
+0105de88  bl 0x00b07990
+0105de8c  cbz x0,0x0105e528
+0105de90  ldr w8,[x21, #0x18]
+0105de94  cmp w8,#0x3
+0105de98  b.ls 0x0105e524
+0105de9c  mov x0,x21
+0105dea0  str x22,[x0, #0x38]!
+0105dea4  mov x1,x22
+0105dea8  bl 0x00b07850
+0105deac  ldr x1,[x26]
+0105deb0  cbz x1,0x0105ded8
+0105deb4  ldr x8,[x21]
+0105deb8  mov x0,x1
+0105debc  ldr x8,[x8, #0x40]
+0105dec0  mov x1,x8
+0105dec4  bl 0x00b07990
+0105dec8  cbz x0,0x0105e528
+0105decc  ldr x8,[x26]
+0105ded0  mov x1,x8
+0105ded4  b 0x0105dedc
+0105ded8  mov x8,xzr
+0105dedc  ldr w9,[x21, #0x18]
+0105dee0  cmp w9,#0x4
+0105dee4  b.ls 0x0105e524
+0105dee8  adrp x22,0x3332000
+0105deec  ldr x22,[x22, #0xe28]
+0105def0  mov x0,x21
+0105def4  str x8,[x0, #0x40]!
+0105def8  bl 0x00b07850
+0105defc  mov x0,x21
+0105df00  mov x1,xzr
+0105df04  bl 0x01fdf4c4
+0105df08  mov x1,xzr
+0105df0c  bl 0x024c0104
+0105df10  ldr x8,[x20]
+0105df14  ldr x1,[x29]
+0105df18  ldrh w9,[x8, #0x12a]
+0105df1c  cbz x9,0x0105df40
+0105df20  ldr x10,[x8, #0xb0]
+0105df24  add x10,x10,#0x8
+0105df28  ldur x11,[x10, #-0x8]
+0105df2c  cmp x11,x1
+0105df30  b.eq 0x0105df50
+0105df34  subs x9,x9,#0x1
+0105df38  add x10,x10,#0x10
+0105df3c  b.ne 0x0105df28
+0105df40  mov w2,#0x4
+0105df44  mov x0,x20
+0105df48  bl 0x00b2ae24
+0105df4c  b 0x0105df60
+0105df50  ldr w9,[x10]
+0105df54  add w9,w9,#0x4
+0105df58  add x8,x8,w9, SXTW  #0x4
+0105df5c  add x0,x8,#0x138
+0105df60  ldp x8,x3,[x0]
+0105df64  mov w1,#0x1
+0105df68  mov w2,#0x2
+0105df6c  mov x0,x20
+0105df70  blr x8
+0105df74  str w0,[sp, #0x10]
+0105df78  add x0,sp,#0x10
+0105df7c  mov x1,xzr
+0105df80  bl 0x0214dc44
+0105df84  ldr x8,[x22]
+0105df88  mov x1,x0
+0105df8c  mov x2,xzr
+0105df90  mov x0,x8
+0105df94  bl 0x01fd2850
+0105df98  mov x1,xzr
+0105df9c  bl 0x024c0104
+0105dfa0  ldr x8,[x19]
+0105dfa4  cbz x8,0x0105e520
+0105dfa8  ldr x0,[x8, #0x18]
+0105dfac  cbz x0,0x0105e520
+0105dfb0  adrp x8,0x3374000
+0105dfb4  ldr x8,[x8, #0x7c0]
+0105dfb8  ldr x1,[x28]
+0105dfbc  ldr x2,[x8]
+0105dfc0  bl 0x017a2130
+0105dfc4  ldr x8,[x24]
+0105dfc8  mov x21,x0
+0105dfcc  mov w1,#0x5
+0105dfd0  mov x0,x8
+0105dfd4  bl 0x00b078f8
+0105dfd8  cbz x0,0x0105e520
+0105dfdc  ldr x1,[x27]
+0105dfe0  mov x20,x0
+0105dfe4  cbz x1,0x0105e00c
+0105dfe8  ldr x8,[x20]
+0105dfec  mov x0,x1
+0105dff0  ldr x8,[x8, #0x40]
+0105dff4  mov x1,x8
+0105dff8  bl 0x00b07990
+0105dffc  cbz x0,0x0105e528
+0105e000  ldr x8,[x27]
+0105e004  mov x1,x8
+0105e008  b 0x0105e010
+0105e00c  mov x8,xzr
+0105e010  ldr w9,[x20, #0x18]
+0105e014  cbz w9,0x0105e524
+0105e018  mov x0,x20
+0105e01c  str x8,[x0, #0x20]!
+0105e020  bl 0x00b07850
+0105e024  cbz x21,0x0105e520
+0105e028  ldr x1,[x25]
+0105e02c  adrp x25,0x334e000
+0105e030  ldr x25,[x25, #0xf50]
+0105e034  mov x0,x21
+0105e038  ldr x2,[x25]
+0105e03c  bl 0x017a20e0
+0105e040  str w0,[sp, #0x10]
+0105e044  add x0,sp,#0x10
+0105e048  mov x1,xzr
+0105e04c  bl 0x0214dc44
+0105e050  mov x22,x0
+0105e054  cbz x0,0x0105e06c
+0105e058  ldr x8,[x20]
+0105e05c  mov x0,x22
+0105e060  ldr x1,[x8, #0x40]
+0105e064  bl 0x00b07990
+0105e068  cbz x0,0x0105e528
+0105e06c  ldr w8,[x20, #0x18]
+0105e070  cmp w8,#0x1
+0105e074  b.ls 0x0105e524
+0105e078  mov x0,x20
+0105e07c  str x22,[x0, #0x28]!
+0105e080  mov x1,x22
+0105e084  bl 0x00b07850
+0105e088  ldr x1,[x23]
+0105e08c  cbz x1,0x0105e0b4
+0105e090  ldr x8,[x20]
+0105e094  mov x0,x1
+0105e098  ldr x8,[x8, #0x40]
+0105e09c  mov x1,x8
+0105e0a0  bl 0x00b07990
+0105e0a4  cbz x0,0x0105e528
+0105e0a8  ldr x8,[x23]
+0105e0ac  mov x1,x8
+0105e0b0  b 0x0105e0b8
+0105e0b4  mov x8,xzr
+0105e0b8  ldr w9,[x20, #0x18]
+0105e0bc  cmp w9,#0x2
+0105e0c0  b.ls 0x0105e524
+0105e0c4  mov x0,x20
+0105e0c8  str x8,[x0, #0x30]!
+0105e0cc  bl 0x00b07850
+0105e0d0  adrp x8,0x333e000
+0105e0d4  ldr x8,[x8, #0x440]
+0105e0d8  ldr x2,[x25]
+0105e0dc  mov x0,x21
+0105e0e0  ldr x1,[x8]
+0105e0e4  bl 0x017a20e0
+0105e0e8  str w0,[sp, #0x10]
+0105e0ec  add x0,sp,#0x10
+0105e0f0  mov x1,xzr
+0105e0f4  bl 0x0214dc44
+0105e0f8  mov x21,x0
+0105e0fc  cbz x0,0x0105e114
+0105e100  ldr x8,[x20]
+0105e104  mov x0,x21
+0105e108  ldr x1,[x8, #0x40]
+0105e10c  bl 0x00b07990
+0105e110  cbz x0,0x0105e528
+0105e114  ldr w8,[x20, #0x18]
+0105e118  cmp w8,#0x3
+0105e11c  b.ls 0x0105e524
+0105e120  mov x0,x20
+0105e124  str x21,[x0, #0x38]!
+0105e128  mov x1,x21
+0105e12c  bl 0x00b07850
+0105e130  ldr x1,[x26]
+0105e134  cbz x1,0x0105e15c
+0105e138  ldr x8,[x20]
+0105e13c  mov x0,x1
+0105e140  ldr x8,[x8, #0x40]
+0105e144  mov x1,x8
+0105e148  bl 0x00b07990
+0105e14c  cbz x0,0x0105e528
+0105e150  ldr x8,[x26]
+0105e154  mov x1,x8
+0105e158  b 0x0105e160
+0105e15c  mov x8,xzr
+0105e160  ldr w9,[x20, #0x18]
+0105e164  cmp w9,#0x4
+0105e168  b.ls 0x0105e524
+0105e16c  mov x0,x20
+0105e170  str x8,[x0, #0x40]!
+0105e174  bl 0x00b07850
+0105e178  mov x0,x20
+0105e17c  mov x1,xzr
+0105e180  bl 0x01fdf4c4
+0105e184  mov x1,xzr
+0105e188  bl 0x024c0104
+0105e18c  ldr x8,[x19]
+0105e190  cbz x8,0x0105e520
+0105e194  ldr x0,[x8, #0x18]
+0105e198  cbz x0,0x0105e520
+0105e19c  adrp x22,0x3315000
+0105e1a0  adrp x8,0x331e000
+0105e1a4  ldr x22,[x22, #0x68]
+0105e1a8  ldr x8,[x8, #0x6d8]
+0105e1ac  ldr x1,[x22]
+0105e1b0  ldr x2,[x8]
+0105e1b4  bl 0x017a2130
+0105e1b8  cbz x0,0x0105e520
+0105e1bc  ldr x8,[x0, #0x40]
+0105e1c0  ldr x9,[x0, #0x18]
+0105e1c4  ldr x1,[x0, #0x28]
+0105e1c8  mov x0,x8
+0105e1cc  blr x9
+0105e1d0  ldr x8,[x19]
+0105e1d4  cbz x8,0x0105e520
+0105e1d8  ldr x0,[x8, #0x18]
+0105e1dc  cbz x0,0x0105e520
+0105e1e0  adrp x8,0x334e000
+0105e1e4  adrp x9,0x3325000
+0105e1e8  ldr x8,[x8, #0x308]
+0105e1ec  ldr x9,[x9, #0xaf0]
+0105e1f0  ldr x1,[x8]
+0105e1f4  ldr x2,[x9]
+0105e1f8  bl 0x017a2130
+0105e1fc  cbz x0,0x0105e520
+0105e200  adrp x9,0x3346000
+0105e204  ldr x9,[x9, #0x370]
+0105e208  ldr x8,[x0, #0x40]
+0105e20c  ldr x10,[x0, #0x18]
+0105e210  ldr x4,[x0, #0x28]
+0105e214  ldr x2,[x9]
+0105e218  add x3,sp,#0x18
+0105e21c  mov w1,#0x64
+0105e220  mov x0,x8
+0105e224  blr x10
+0105e228  ldr x8,[x24]
+0105e22c  str w0,[sp, #0x14]
+0105e230  mov w1,#0x6
+0105e234  mov x0,x8
+0105e238  bl 0x00b078f8
+0105e23c  cbz x0,0x0105e520
+0105e240  adrp x21,0x3358000
+0105e244  ldr x21,[x21, #0xf80]
+0105e248  mov x20,x0
+0105e24c  ldr x1,[x21]
+0105e250  cbz x1,0x0105e278
+0105e254  ldr x8,[x20]
+0105e258  mov x0,x1
+0105e25c  ldr x8,[x8, #0x40]
+0105e260  mov x1,x8
+0105e264  bl 0x00b07990
+0105e268  cbz x0,0x0105e528
+0105e26c  ldr x8,[x21]
+0105e270  mov x1,x8
+0105e274  b 0x0105e27c
+0105e278  mov x8,xzr
+0105e27c  ldr w9,[x20, #0x18]
+0105e280  cbz w9,0x0105e524
+0105e284  mov x0,x20
+0105e288  str x8,[x0, #0x20]!
+0105e28c  bl 0x00b07850
+0105e290  ldr x8,[sp, #0x18]
+0105e294  cbz x8,0x0105e520
+0105e298  add x0,x8,#0x10
+0105e29c  mov x1,xzr
+0105e2a0  bl 0x0214dc44
+0105e2a4  mov x21,x0
+0105e2a8  cbz x0,0x0105e2c0
+0105e2ac  ldr x8,[x20]
+0105e2b0  mov x0,x21
+0105e2b4  ldr x1,[x8, #0x40]
+0105e2b8  bl 0x00b07990
+0105e2bc  cbz x0,0x0105e528
+0105e2c0  ldr w8,[x20, #0x18]
+0105e2c4  cmp w8,#0x1
+0105e2c8  b.ls 0x0105e524
+0105e2cc  mov x0,x20
+0105e2d0  str x21,[x0, #0x28]!
+0105e2d4  mov x1,x21
+0105e2d8  bl 0x00b07850
+0105e2dc  ldr x1,[x23]
+0105e2e0  cbz x1,0x0105e308
+0105e2e4  ldr x8,[x20]
+0105e2e8  mov x0,x1
+0105e2ec  ldr x8,[x8, #0x40]
+0105e2f0  mov x1,x8
+0105e2f4  bl 0x00b07990
+0105e2f8  cbz x0,0x0105e528
+0105e2fc  ldr x8,[x23]
+0105e300  mov x1,x8
+0105e304  b 0x0105e30c
+0105e308  mov x8,xzr
+0105e30c  ldr w9,[x20, #0x18]
+0105e310  cmp w9,#0x2
+0105e314  b.ls 0x0105e524
+0105e318  mov x0,x20
+0105e31c  str x8,[x0, #0x30]!
+0105e320  bl 0x00b07850
+0105e324  ldr x8,[sp, #0x18]
+0105e328  cbz x8,0x0105e520
+0105e32c  add x0,x8,#0x14
+0105e330  mov x1,xzr
+0105e334  bl 0x0214dc44
+0105e338  mov x21,x0
+0105e33c  cbz x0,0x0105e354
+0105e340  ldr x8,[x20]
+0105e344  mov x0,x21
+0105e348  ldr x1,[x8, #0x40]
+0105e34c  bl 0x00b07990
+0105e350  cbz x0,0x0105e528
+0105e354  ldr w8,[x20, #0x18]
+0105e358  cmp w8,#0x3
+0105e35c  b.ls 0x0105e524
+0105e360  adrp x23,0x3353000
+0105e364  ldr x23,[x23, #0x4c0]
+0105e368  mov x0,x20
+0105e36c  str x21,[x0, #0x38]!
+0105e370  mov x1,x21
+0105e374  bl 0x00b07850
+0105e378  ldr x1,[x23]
+0105e37c  cbz x1,0x0105e3a4
+0105e380  ldr x8,[x20]
+0105e384  mov x0,x1
+0105e388  ldr x8,[x8, #0x40]
+0105e38c  mov x1,x8
+0105e390  bl 0x00b07990
+0105e394  cbz x0,0x0105e528
+0105e398  ldr x8,[x23]
+0105e39c  mov x1,x8
+0105e3a0  b 0x0105e3a8
+0105e3a4  mov x8,xzr
+0105e3a8  ldr w9,[x20, #0x18]
+0105e3ac  cmp w9,#0x4
+0105e3b0  b.ls 0x0105e524
+0105e3b4  mov x0,x20
+0105e3b8  str x8,[x0, #0x40]!
+0105e3bc  bl 0x00b07850
+0105e3c0  add x0,sp,#0x14
+0105e3c4  mov x1,xzr
+0105e3c8  bl 0x0214dc44
+0105e3cc  mov x21,x0
+0105e3d0  cbz x0,0x0105e3e8
+0105e3d4  ldr x8,[x20]
+0105e3d8  mov x0,x21
+0105e3dc  ldr x1,[x8, #0x40]
+0105e3e0  bl 0x00b07990
+0105e3e4  cbz x0,0x0105e528
+0105e3e8  ldr w8,[x20, #0x18]
+0105e3ec  cmp w8,#0x5
+0105e3f0  b.ls 0x0105e524
+0105e3f4  mov x0,x20
+0105e3f8  str x21,[x0, #0x48]!
+0105e3fc  mov x1,x21
+0105e400  bl 0x00b07850
+0105e404  mov x0,x20
+0105e408  mov x1,xzr
+0105e40c  bl 0x01fdf4c4
+0105e410  mov x1,xzr
+0105e414  bl 0x024c0104
+0105e418  ldr x8,[x19]
+0105e41c  cbz x8,0x0105e520
+0105e420  ldr x0,[x8, #0x18]
+0105e424  cbz x0,0x0105e520
+0105e428  adrp x8,0x3337000
+0105e42c  adrp x9,0x3344000
+0105e430  ldr x8,[x8, #0xe38]
+0105e434  ldr x9,[x9, #0xb90]
+0105e438  ldr x1,[x8]
+0105e43c  ldr x2,[x9]
+0105e440  bl 0x017a2130
+0105e444  cbz x0,0x0105e520
+0105e448  ldr x8,[x0, #0x40]
+0105e44c  ldr x9,[x0, #0x18]
+0105e450  ldr x1,[x0, #0x28]
+0105e454  mov x0,x8
+0105e458  blr x9
+0105e45c  cbz x0,0x0105e520
+0105e460  ldr x8,[x0, #0x40]
+0105e464  ldr x9,[x0, #0x18]
+0105e468  ldr x1,[x0, #0x28]
+0105e46c  mov x0,x8
+0105e470  blr x9
+0105e474  ldr x8,[x19]
+0105e478  cbz x8,0x0105e520
+0105e47c  ldr x0,[x8, #0x18]
+0105e480  cbz x0,0x0105e520
+0105e484  adrp x8,0x3375000
+0105e488  ldr x8,[x8, #0x8c8]
+0105e48c  ldr x1,[x22]
+0105e490  adrp x19,0x335b000
+0105e494  ldr x2,[x8]
+0105e498  ldr x19,[x19, #0x650]
+0105e49c  bl 0x017a2130
+0105e4a0  ldr x20,[x19]
+0105e4a4  mov x19,x0
+0105e4a8  ldr x8,[x20, #0x38]
+0105e4ac  ldr x8,[x8]
+0105e4b0  ldrb w9,[x8, #0x132]
+0105e4b4  tbnz w9,#0x0,0x0105e4c4
+0105e4b8  mov x0,x8
+0105e4bc  bl 0x00b2ac40
+0105e4c0  mov x8,x0
+0105e4c4  ldr w9,[x8, #0xe0]
+0105e4c8  cbnz w9,0x0105e4d4
+0105e4cc  mov x0,x8
+0105e4d0  bl 0x00b0798c
+0105e4d4  ldr x8,[x20, #0x38]
+0105e4d8  ldr x0,[x8]
+0105e4dc  ldrb w8,[x0, #0x132]
+0105e4e0  tbnz w8,#0x0,0x0105e4e8
+0105e4e4  bl 0x00b2ac40
+0105e4e8  cbz x19,0x0105e520
+0105e4ec  ldr x8,[x0, #0xb8]
+0105e4f0  mov x0,x19
+0105e4f4  mov x2,xzr
+0105e4f8  ldr x1,[x8]
+0105e4fc  bl 0x010f0c10
+0105e500  ldp x29,x30,[sp, #0x70]
+0105e504  ldp x20,x19,[sp, #0x60]
+0105e508  ldp x22,x21,[sp, #0x50]
+0105e50c  ldp x24,x23,[sp, #0x40]
+0105e510  ldp x26,x25,[sp, #0x30]
+0105e514  ldp x28,x27,[sp, #0x20]
+0105e518  add sp,sp,#0x80
+0105e51c  ret
+0105e520  bl 0x00b079b0
+0105e524  bl 0x00b079b8
+0105e528  bl 0x00b079d4
+0105e52c  mov x1,xzr
+0105e530  bl 0x00b07978
+
+
+================================================================================
+### FILE: 0105e534_Tutorial.CSCallLua__Update.txt
+================================================================================
+Function: Tutorial.CSCallLua$$Update @ 0105e534
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Tick @ 010ef4d4
+
+--- Calls IN ---
+
+--- Listing ---
+0105e534  ldr x0,[x0, #0x18]
+0105e538  cbz x0,0x0105e544
+0105e53c  mov x1,xzr
+0105e540  b 0x010ef4d4
+0105e544  ret
+
+
+================================================================================
+### FILE: 0105e548_Tutorial.CSCallLua__OnDestroy.txt
+================================================================================
+Function: Tutorial.CSCallLua$$OnDestroy @ 0105e548
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Dispose @ 010efa7c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0105e548  str x30,[sp, #-0x10]!
+0105e54c  ldr x0,[x0, #0x18]
+0105e550  cbz x0,0x0105e560
+0105e554  mov x1,xzr
+0105e558  ldr x30,[sp], #0x10
+0105e55c  b 0x010efa7c
+0105e560  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105e564_Tutorial.CSCallLua__.ctor.txt
+================================================================================
+Function: Tutorial.CSCallLua$$.ctor @ 0105e564
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+0105e564  stp x21,x20,[sp, #-0x20]!
+0105e568  stp x19,x30,[sp, #0x10]
+0105e56c  adrp x20,0x3574000
+0105e570  adrp x21,0x332d000
+0105e574  ldrb w8,[x20, #0x709]
+0105e578  ldr x21,[x21, #0x670]
+0105e57c  mov x19,x0
+0105e580  tbnz w8,#0x0,0x0105e598
+0105e584  adrp x0,0x332d000
+0105e588  ldr x0,[x0, #0x670]
+0105e58c  bl 0x00b0789c
+0105e590  mov w8,#0x1
+0105e594  strb w8,[x20, #0x709]
+0105e598  ldr x1,[x21]
+0105e59c  mov x0,x19
+0105e5a0  str x1,[x0, #0x20]!
+0105e5a4  bl 0x00b07850
+0105e5a8  mov x0,x19
+0105e5ac  ldp x19,x30,[sp, #0x10]
+0105e5b0  mov x1,xzr
+0105e5b4  ldp x21,x20,[sp], #0x20
+0105e5b8  b 0x024e45bc
+
+
+================================================================================
+### FILE: 0105e5bc_Tutorial.CSCallLua.DClass__.ctor.txt
+================================================================================
+Function: Tutorial.CSCallLua.DClass$$.ctor @ 0105e5bc
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+0105e5bc  mov x1,xzr
+0105e5c0  b 0x02194104
+
+
+================================================================================
+### FILE: 0105e5c4_Tutorial.CSCallLua.FDelegate__.ctor.txt
+================================================================================
+Function: Tutorial.CSCallLua.FDelegate$$.ctor @ 0105e5c4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aed804 @ 00b079c0
+  -> FUN_008dd798 @ 008dd798
+  -> FUN_00b07910 @ 00b07910
+  -> FUN_008dd6d4 @ 008dd6d4
+  -> FUN_00b07978 @ 00b07978
+  -> thunk_FUN_00afcc14 @ 00b07984
+  -> FUN_008dd754 @ 008dd754
+  -> FUN_008dd73c @ 008dd73c
+
+--- Calls IN ---
+  <- XLua.DelegateBridge$$GetDelegateByType @ 010ce924
+
+--- Listing ---
+0105e5c4  str x22,[sp, #-0x30]!
+0105e5c8  stp x21,x20,[sp, #0x10]
+0105e5cc  stp x19,x30,[sp, #0x20]
+0105e5d0  mov x19,x0
+0105e5d4  mov x0,x2
+0105e5d8  mov x20,x2
+0105e5dc  mov x21,x1
+0105e5e0  bl 0x00b07984
+0105e5e4  str x0,[x19, #0x10]
+0105e5e8  mov x0,x19
+0105e5ec  str x20,[x19, #0x28]
+0105e5f0  str x21,[x0, #0x20]!
+0105e5f4  mov x1,x21
+0105e5f8  bl 0x00b07850
+0105e5fc  ldrb w22,[x20, #0x52]
+0105e600  mov x0,x20
+0105e604  str x19,[x19, #0x40]
+0105e608  bl 0x00b07910
+0105e60c  tbz w0,#0x0,0x0105e62c
+0105e610  ldrb w8,[x20, #0x53]
+0105e614  tbnz w8,#0x4,0x0105e644
+0105e618  cmp w22,#0x3
+0105e61c  b.ne 0x0105e630
+0105e620  adrp x8,0x8dd000
+0105e624  add x8,x8,#0x73c
+0105e628  b 0x0105e660
+0105e62c  cbz x21,0x0105e680
+0105e630  ldr x8,[x19, #0x10]
+0105e634  ldr x9,[x19, #0x20]
+0105e638  str x8,[x19, #0x18]
+0105e63c  str x9,[x19, #0x40]
+0105e640  b 0x0105e664
+0105e644  cmp w22,#0x3
+0105e648  b.ne 0x0105e658
+0105e64c  adrp x8,0x8dd000
+0105e650  add x8,x8,#0x754
+0105e654  b 0x0105e660
+0105e658  adrp x8,0x8dd000
+0105e65c  add x8,x8,#0x798
+0105e660  str x8,[x19, #0x18]
+0105e664  adrp x8,0x8dd000
+0105e668  add x8,x8,#0x6d4
+0105e66c  str x8,[x19, #0x38]
+0105e670  ldp x19,x30,[sp, #0x20]
+0105e674  ldp x21,x20,[sp, #0x10]
+0105e678  ldr x22,[sp], #0x30
+0105e67c  ret
+0105e680  adrp x1,0x26db000
+0105e684  add x1,x1,#0xd9
+0105e688  mov x0,xzr
+0105e68c  bl 0x00b079c0
+0105e690  mov x1,xzr
+0105e694  bl 0x00b07978
+
+
+================================================================================
+### FILE: 0105e698_Tutorial.CSCallLua.FDelegate__Invoke.txt
+================================================================================
+Function: Tutorial.CSCallLua.FDelegate$$Invoke @ 0105e698
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0105e698  ldr x8,[x0, #0x40]
+0105e69c  ldr x5,[x0, #0x18]
+0105e6a0  ldr x4,[x0, #0x28]
+0105e6a4  mov x0,x8
+0105e6a8  br x5
+
+
+================================================================================
+### FILE: 0105e6ac_Tutorial.CSCallLua.FDelegate__BeginInvoke.txt
+================================================================================
+Function: Tutorial.CSCallLua.FDelegate$$BeginInvoke @ 0105e6ac
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf4b4 @ 00b07858
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+
+--- Calls IN ---
+
+--- Listing ---
+0105e6ac  sub sp,sp,#0x70
+0105e6b0  stp x25,x24,[sp, #0x30]
+0105e6b4  stp x23,x22,[sp, #0x40]
+0105e6b8  stp x21,x20,[sp, #0x50]
+0105e6bc  stp x19,x30,[sp, #0x60]
+0105e6c0  adrp x25,0x3574000
+0105e6c4  str w1,[sp, #0x2c]
+0105e6c8  adrp x24,0x3332000
+0105e6cc  ldrb w8,[x25, #0x70a]
+0105e6d0  ldr x24,[x24, #0x38]
+0105e6d4  mov x19,x5
+0105e6d8  mov x20,x4
+0105e6dc  mov x22,x3
+0105e6e0  mov x23,x2
+0105e6e4  mov x21,x0
+0105e6e8  tbnz w8,#0x0,0x0105e700
+0105e6ec  adrp x0,0x3332000
+0105e6f0  ldr x0,[x0, #0x38]
+0105e6f4  bl 0x00b0789c
+0105e6f8  mov w8,#0x1
+0105e6fc  strb w8,[x25, #0x70a]
+0105e700  ldr x0,[x24]
+0105e704  add x1,sp,#0x2c
+0105e708  str xzr,[sp, #0x20]
+0105e70c  bl 0x00b07994
+0105e710  stp x0,x23,[sp, #0x8]
+0105e714  ldr x8,[x22]
+0105e718  add x1,sp,#0x8
+0105e71c  mov x0,x21
+0105e720  mov x2,x20
+0105e724  mov x3,x19
+0105e728  str x8,[sp, #0x18]
+0105e72c  bl 0x00b07858
+0105e730  ldp x19,x30,[sp, #0x60]
+0105e734  ldp x21,x20,[sp, #0x50]
+0105e738  ldp x23,x22,[sp, #0x40]
+0105e73c  ldp x25,x24,[sp, #0x30]
+0105e740  add sp,sp,#0x70
+0105e744  ret
+
+
+================================================================================
+### FILE: 0105e748_Tutorial.CSCallLua.FDelegate__EndInvoke.txt
+================================================================================
+Function: Tutorial.CSCallLua.FDelegate$$EndInvoke @ 0105e748
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf574 @ 00b0785c
+  -> thunk_FUN_00ace8b4 @ 00b07998
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0105e748  str x30,[sp, #-0x10]!
+0105e74c  mov x0,x2
+0105e750  str x1,[sp, #0x8]
+0105e754  add x1,sp,#0x8
+0105e758  bl 0x00b0785c
+0105e75c  cbz x0,0x0105e770
+0105e760  bl 0x00b07998
+0105e764  ldr w0,[x0]
+0105e768  ldr x30,[sp], #0x10
+0105e76c  ret
+0105e770  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105e774_Tutorial.CSCallLua.GetE__.ctor.txt
+================================================================================
+Function: Tutorial.CSCallLua.GetE$$.ctor @ 0105e774
+
+--- Calls OUT ---
+  -> FUN_008dd7e8 @ 008dd7e8
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_008dd830 @ 008dd830
+  -> thunk_FUN_00aed804 @ 00b079c0
+  -> FUN_008dd83c @ 008dd83c
+  -> FUN_008dd864 @ 008dd864
+  -> FUN_00b07910 @ 00b07910
+  -> FUN_00b07978 @ 00b07978
+  -> thunk_FUN_00afcc14 @ 00b07984
+
+--- Calls IN ---
+  <- XLua.DelegateBridge$$GetDelegateByType @ 010ce924
+
+--- Listing ---
+0105e774  str x22,[sp, #-0x30]!
+0105e778  stp x21,x20,[sp, #0x10]
+0105e77c  stp x19,x30,[sp, #0x20]
+0105e780  mov x19,x0
+0105e784  mov x0,x2
+0105e788  mov x20,x2
+0105e78c  mov x21,x1
+0105e790  bl 0x00b07984
+0105e794  str x0,[x19, #0x10]
+0105e798  mov x0,x19
+0105e79c  str x20,[x19, #0x28]
+0105e7a0  str x21,[x0, #0x20]!
+0105e7a4  mov x1,x21
+0105e7a8  bl 0x00b07850
+0105e7ac  ldrb w22,[x20, #0x52]
+0105e7b0  mov x0,x20
+0105e7b4  str x19,[x19, #0x40]
+0105e7b8  bl 0x00b07910
+0105e7bc  tbz w0,#0x0,0x0105e7d8
+0105e7c0  ldrb w8,[x20, #0x53]
+0105e7c4  tbnz w8,#0x4,0x0105e7f0
+0105e7c8  cbnz w22,0x0105e7dc
+0105e7cc  adrp x8,0x8dd000
+0105e7d0  add x8,x8,#0x830
+0105e7d4  b 0x0105e808
+0105e7d8  cbz x21,0x0105e828
+0105e7dc  ldr x8,[x19, #0x10]
+0105e7e0  ldr x9,[x19, #0x20]
+0105e7e4  str x8,[x19, #0x18]
+0105e7e8  str x9,[x19, #0x40]
+0105e7ec  b 0x0105e80c
+0105e7f0  cbz w22,0x0105e800
+0105e7f4  adrp x8,0x8dd000
+0105e7f8  add x8,x8,#0x864
+0105e7fc  b 0x0105e808
+0105e800  adrp x8,0x8dd000
+0105e804  add x8,x8,#0x83c
+0105e808  str x8,[x19, #0x18]
+0105e80c  adrp x8,0x8dd000
+0105e810  add x8,x8,#0x7e8
+0105e814  str x8,[x19, #0x38]
+0105e818  ldp x19,x30,[sp, #0x20]
+0105e81c  ldp x21,x20,[sp, #0x10]
+0105e820  ldr x22,[sp], #0x30
+0105e824  ret
+0105e828  adrp x1,0x26db000
+0105e82c  add x1,x1,#0xd9
+0105e830  mov x0,xzr
+0105e834  bl 0x00b079c0
+0105e838  mov x1,xzr
+0105e83c  bl 0x00b07978
+
+
+================================================================================
+### FILE: 0105e840_Tutorial.CSCallLua.GetE__Invoke.txt
+================================================================================
+Function: Tutorial.CSCallLua.GetE$$Invoke @ 0105e840
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0105e840  ldr x8,[x0, #0x40]
+0105e844  ldr x2,[x0, #0x18]
+0105e848  ldr x1,[x0, #0x28]
+0105e84c  mov x0,x8
+0105e850  br x2
+
+
+================================================================================
+### FILE: 0105e854_Tutorial.CSCallLua.GetE__BeginInvoke.txt
+================================================================================
+Function: Tutorial.CSCallLua.GetE$$BeginInvoke @ 0105e854
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf4b4 @ 00b07858
+
+--- Calls IN ---
+
+--- Listing ---
+0105e854  str x30,[sp, #-0x10]!
+0105e858  mov x3,x2
+0105e85c  mov x2,x1
+0105e860  add x1,sp,#0x8
+0105e864  str xzr,[sp, #0x8]
+0105e868  bl 0x00b07858
+0105e86c  ldr x30,[sp], #0x10
+0105e870  ret
+
+
+================================================================================
+### FILE: 0105e874_Tutorial.CSCallLua.GetE__EndInvoke.txt
+================================================================================
+Function: Tutorial.CSCallLua.GetE$$EndInvoke @ 0105e874
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf574 @ 00b0785c
+
+--- Calls IN ---
+
+--- Listing ---
+0105e874  mov x0,x1
+0105e878  mov x1,xzr
+0105e87c  b 0x00b0785c
+
+
+================================================================================
+### FILE: 0105e880_Tutorial.ByFile__Start.txt
+================================================================================
+Function: Tutorial.ByFile$$Start @ 0105e880
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.LuaEnv$$DoString @ 010eecf8
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.LuaEnv$$.ctor @ 010eda30
+
+--- Calls IN ---
+
+--- Listing ---
+0105e880  stp x21,x20,[sp, #-0x20]!
+0105e884  stp x19,x30,[sp, #0x10]
+0105e888  adrp x20,0x3574000
+0105e88c  adrp x21,0x3312000
+0105e890  ldrb w8,[x20, #0x70c]
+0105e894  ldr x21,[x21, #0xf28]
+0105e898  mov x19,x0
+0105e89c  tbnz w8,#0x0,0x0105e8cc
+0105e8a0  adrp x0,0x3312000
+0105e8a4  ldr x0,[x0, #0xf28]
+0105e8a8  bl 0x00b0789c
+0105e8ac  adrp x0,0x336b000
+0105e8b0  ldr x0,[x0, #0x5f8]
+0105e8b4  bl 0x00b0789c
+0105e8b8  adrp x0,0x3380000
+0105e8bc  ldr x0,[x0, #0x638]
+0105e8c0  bl 0x00b0789c
+0105e8c4  mov w8,#0x1
+0105e8c8  strb w8,[x20, #0x70c]
+0105e8cc  ldr x0,[x21]
+0105e8d0  bl 0x00b079a0
+0105e8d4  cbz x0,0x0105e928
+0105e8d8  mov x1,xzr
+0105e8dc  mov x20,x0
+0105e8e0  bl 0x010eda30
+0105e8e4  str x20,[x19, #0x18]!
+0105e8e8  mov x0,x19
+0105e8ec  mov x1,x20
+0105e8f0  bl 0x00b07850
+0105e8f4  ldr x0,[x19]
+0105e8f8  cbz x0,0x0105e928
+0105e8fc  adrp x8,0x3380000
+0105e900  adrp x9,0x336b000
+0105e904  ldr x8,[x8, #0x638]
+0105e908  ldr x9,[x9, #0x5f8]
+0105e90c  ldp x19,x30,[sp, #0x10]
+0105e910  mov x3,xzr
+0105e914  ldr x1,[x8]
+0105e918  ldr x2,[x9]
+0105e91c  mov x4,xzr
+0105e920  ldp x21,x20,[sp], #0x20
+0105e924  b 0x010eecf8
+0105e928  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105e92c_Tutorial.ByFile__Update.txt
+================================================================================
+Function: Tutorial.ByFile$$Update @ 0105e92c
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Tick @ 010ef4d4
+
+--- Calls IN ---
+
+--- Listing ---
+0105e92c  ldr x0,[x0, #0x18]
+0105e930  cbz x0,0x0105e93c
+0105e934  mov x1,xzr
+0105e938  b 0x010ef4d4
+0105e93c  ret
+
+
+================================================================================
+### FILE: 0105e940_Tutorial.ByFile__OnDestroy.txt
+================================================================================
+Function: Tutorial.ByFile$$OnDestroy @ 0105e940
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Dispose @ 010efa7c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0105e940  str x30,[sp, #-0x10]!
+0105e944  ldr x0,[x0, #0x18]
+0105e948  cbz x0,0x0105e958
+0105e94c  mov x1,xzr
+0105e950  ldr x30,[sp], #0x10
+0105e954  b 0x010efa7c
+0105e958  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105e95c_Tutorial.ByFile__.ctor.txt
+================================================================================
+Function: Tutorial.ByFile$$.ctor @ 0105e95c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+0105e95c  mov x1,xzr
+0105e960  b 0x024e45bc
+
+
+================================================================================
+### FILE: 0105e964_Tutorial.ByString__Start.txt
+================================================================================
+Function: Tutorial.ByString$$Start @ 0105e964
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.LuaEnv$$DoString @ 010eecf8
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.LuaEnv$$.ctor @ 010eda30
+
+--- Calls IN ---
+
+--- Listing ---
+0105e964  stp x21,x20,[sp, #-0x20]!
+0105e968  stp x19,x30,[sp, #0x10]
+0105e96c  adrp x20,0x3574000
+0105e970  adrp x21,0x3312000
+0105e974  ldrb w8,[x20, #0x70d]
+0105e978  ldr x21,[x21, #0xf28]
+0105e97c  mov x19,x0
+0105e980  tbnz w8,#0x0,0x0105e9b0
+0105e984  adrp x0,0x3312000
+0105e988  ldr x0,[x0, #0xf28]
+0105e98c  bl 0x00b0789c
+0105e990  adrp x0,0x336b000
+0105e994  ldr x0,[x0, #0x5f8]
+0105e998  bl 0x00b0789c
+0105e99c  adrp x0,0x332f000
+0105e9a0  ldr x0,[x0, #0x7d8]
+0105e9a4  bl 0x00b0789c
+0105e9a8  mov w8,#0x1
+0105e9ac  strb w8,[x20, #0x70d]
+0105e9b0  ldr x0,[x21]
+0105e9b4  bl 0x00b079a0
+0105e9b8  cbz x0,0x0105ea0c
+0105e9bc  mov x1,xzr
+0105e9c0  mov x20,x0
+0105e9c4  bl 0x010eda30
+0105e9c8  str x20,[x19, #0x18]!
+0105e9cc  mov x0,x19
+0105e9d0  mov x1,x20
+0105e9d4  bl 0x00b07850
+0105e9d8  ldr x0,[x19]
+0105e9dc  cbz x0,0x0105ea0c
+0105e9e0  adrp x8,0x332f000
+0105e9e4  adrp x9,0x336b000
+0105e9e8  ldr x8,[x8, #0x7d8]
+0105e9ec  ldr x9,[x9, #0x5f8]
+0105e9f0  ldp x19,x30,[sp, #0x10]
+0105e9f4  mov x3,xzr
+0105e9f8  ldr x1,[x8]
+0105e9fc  ldr x2,[x9]
+0105ea00  mov x4,xzr
+0105ea04  ldp x21,x20,[sp], #0x20
+0105ea08  b 0x010eecf8
+0105ea0c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105ea10_Tutorial.ByString__Update.txt
+================================================================================
+Function: Tutorial.ByString$$Update @ 0105ea10
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Tick @ 010ef4d4
+
+--- Calls IN ---
+
+--- Listing ---
+0105ea10  ldr x0,[x0, #0x18]
+0105ea14  cbz x0,0x0105ea20
+0105ea18  mov x1,xzr
+0105ea1c  b 0x010ef4d4
+0105ea20  ret
+
+
+================================================================================
+### FILE: 0105ea24_Tutorial.ByString__OnDestroy.txt
+================================================================================
+Function: Tutorial.ByString$$OnDestroy @ 0105ea24
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Dispose @ 010efa7c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0105ea24  str x30,[sp, #-0x10]!
+0105ea28  ldr x0,[x0, #0x18]
+0105ea2c  cbz x0,0x0105ea3c
+0105ea30  mov x1,xzr
+0105ea34  ldr x30,[sp], #0x10
+0105ea38  b 0x010efa7c
+0105ea3c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105ea40_Tutorial.ByString__.ctor.txt
+================================================================================
+Function: Tutorial.ByString$$.ctor @ 0105ea40
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+0105ea40  mov x1,xzr
+0105ea44  b 0x024e45bc
+
+
+================================================================================
+### FILE: 0105ea48_Tutorial.CustomLoader__Start.txt
+================================================================================
+Function: Tutorial.CustomLoader$$Start @ 0105ea48
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.LuaEnv$$DoString @ 010eecf8
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.LuaEnv$$AddLoader @ 010eff90
+  -> XLua.LuaEnv$$.ctor @ 010eda30
+  -> XLua.LuaEnv.CustomLoader$$.ctor @ 010f0828
+
+--- Calls IN ---
+
+--- Listing ---
+0105ea48  stp x23,x22,[sp, #-0x30]!
+0105ea4c  stp x21,x20,[sp, #0x10]
+0105ea50  stp x19,x30,[sp, #0x20]
+0105ea54  adrp x20,0x3574000
+0105ea58  adrp x21,0x3312000
+0105ea5c  ldrb w8,[x20, #0x70e]
+0105ea60  ldr x21,[x21, #0xf28]
+0105ea64  mov x19,x0
+0105ea68  tbnz w8,#0x0,0x0105eabc
+0105ea6c  adrp x0,0x330b000
+0105ea70  ldr x0,[x0, #0x1e0]
+0105ea74  bl 0x00b0789c
+0105ea78  adrp x0,0x3312000
+0105ea7c  ldr x0,[x0, #0xf28]
+0105ea80  bl 0x00b0789c
+0105ea84  adrp x0,0x3344000
+0105ea88  ldr x0,[x0, #0xc50]
+0105ea8c  bl 0x00b0789c
+0105ea90  adrp x0,0x332e000
+0105ea94  ldr x0,[x0, #0xfa0]
+0105ea98  bl 0x00b0789c
+0105ea9c  adrp x0,0x336b000
+0105eaa0  ldr x0,[x0, #0x5f8]
+0105eaa4  bl 0x00b0789c
+0105eaa8  adrp x0,0x3357000
+0105eaac  ldr x0,[x0, #0xa10]
+0105eab0  bl 0x00b0789c
+0105eab4  mov w8,#0x1
+0105eab8  strb w8,[x20, #0x70e]
+0105eabc  ldr x0,[x21]
+0105eac0  bl 0x00b079a0
+0105eac4  cbz x0,0x0105ebb8
+0105eac8  adrp x23,0x332e000
+0105eacc  ldr x23,[x23, #0xfa0]
+0105ead0  mov x1,xzr
+0105ead4  mov x20,x0
+0105ead8  bl 0x010eda30
+0105eadc  str x20,[x19, #0x18]!
+0105eae0  mov x0,x19
+0105eae4  mov x1,x20
+0105eae8  bl 0x00b07850
+0105eaec  ldr x0,[x23]
+0105eaf0  ldr x20,[x19]
+0105eaf4  ldr w8,[x0, #0xe0]
+0105eaf8  cbnz w8,0x0105eb04
+0105eafc  bl 0x00b0798c
+0105eb00  ldr x0,[x23]
+0105eb04  ldr x8,[x0, #0xb8]
+0105eb08  ldr x21,[x8, #0x8]
+0105eb0c  cbnz x21,0x0105eb6c
+0105eb10  adrp x21,0x330b000
+0105eb14  ldr w8,[x0, #0xe0]
+0105eb18  ldr x21,[x21, #0x1e0]
+0105eb1c  cbnz w8,0x0105eb28
+0105eb20  bl 0x00b0798c
+0105eb24  ldr x0,[x23]
+0105eb28  ldr x8,[x0, #0xb8]
+0105eb2c  ldr x0,[x21]
+0105eb30  ldr x22,[x8]
+0105eb34  bl 0x00b079a0
+0105eb38  cbz x0,0x0105ebb8
+0105eb3c  adrp x8,0x3344000
+0105eb40  ldr x8,[x8, #0xc50]
+0105eb44  mov x1,x22
+0105eb48  mov x3,xzr
+0105eb4c  mov x21,x0
+0105eb50  ldr x2,[x8]
+0105eb54  bl 0x010f0828
+0105eb58  ldr x8,[x23]
+0105eb5c  mov x1,x21
+0105eb60  ldr x0,[x8, #0xb8]
+0105eb64  str x21,[x0, #0x8]!
+0105eb68  bl 0x00b07850
+0105eb6c  cbz x20,0x0105ebb8
+0105eb70  mov x0,x20
+0105eb74  mov x1,x21
+0105eb78  mov x2,xzr
+0105eb7c  bl 0x010eff90
+0105eb80  ldr x0,[x19]
+0105eb84  cbz x0,0x0105ebb8
+0105eb88  adrp x8,0x3357000
+0105eb8c  adrp x9,0x336b000
+0105eb90  ldr x8,[x8, #0xa10]
+0105eb94  ldr x9,[x9, #0x5f8]
+0105eb98  ldp x19,x30,[sp, #0x20]
+0105eb9c  ldp x21,x20,[sp, #0x10]
+0105eba0  ldr x1,[x8]
+0105eba4  ldr x2,[x9]
+0105eba8  mov x3,xzr
+0105ebac  mov x4,xzr
+0105ebb0  ldp x23,x22,[sp], #0x30
+0105ebb4  b 0x010eecf8
+0105ebb8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105ebbc_Tutorial.CustomLoader__Update.txt
+================================================================================
+Function: Tutorial.CustomLoader$$Update @ 0105ebbc
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Tick @ 010ef4d4
+
+--- Calls IN ---
+
+--- Listing ---
+0105ebbc  ldr x0,[x0, #0x18]
+0105ebc0  cbz x0,0x0105ebcc
+0105ebc4  mov x1,xzr
+0105ebc8  b 0x010ef4d4
+0105ebcc  ret
+
+
+================================================================================
+### FILE: 0105ebd0_Tutorial.CustomLoader__OnDestroy.txt
+================================================================================
+Function: Tutorial.CustomLoader$$OnDestroy @ 0105ebd0
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Dispose @ 010efa7c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0105ebd0  str x30,[sp, #-0x10]!
+0105ebd4  ldr x0,[x0, #0x18]
+0105ebd8  cbz x0,0x0105ebe8
+0105ebdc  mov x1,xzr
+0105ebe0  ldr x30,[sp], #0x10
+0105ebe4  b 0x010efa7c
+0105ebe8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105ebec_Tutorial.CustomLoader__.ctor.txt
+================================================================================
+Function: Tutorial.CustomLoader$$.ctor @ 0105ebec
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+0105ebec  mov x1,xzr
+0105ebf0  b 0x024e45bc
+
+
+================================================================================
+### FILE: 0105ebf4_Tutorial.CustomLoader.__c__.cctor.txt
+================================================================================
+Function: Tutorial.CustomLoader.<>c$$.cctor @ 0105ebf4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+0105ebf4  str x20,[sp, #-0x20]!
+0105ebf8  stp x19,x30,[sp, #0x10]
+0105ebfc  adrp x19,0x3574000
+0105ec00  adrp x20,0x332e000
+0105ec04  ldrb w8,[x19, #0x70f]
+0105ec08  ldr x20,[x20, #0xfa0]
+0105ec0c  tbnz w8,#0x0,0x0105ec24
+0105ec10  adrp x0,0x332e000
+0105ec14  ldr x0,[x0, #0xfa0]
+0105ec18  bl 0x00b0789c
+0105ec1c  mov w8,#0x1
+0105ec20  strb w8,[x19, #0x70f]
+0105ec24  ldr x0,[x20]
+0105ec28  bl 0x00b079a0
+0105ec2c  cbz x0,0x0105ec60
+0105ec30  mov x1,xzr
+0105ec34  mov x19,x0
+0105ec38  bl 0x02194104
+0105ec3c  ldr x8,[x20]
+0105ec40  mov x1,x19
+0105ec44  ldr x8,[x8, #0xb8]
+0105ec48  str x19,[x8]
+0105ec4c  ldr x8,[x20]
+0105ec50  ldp x19,x30,[sp, #0x10]
+0105ec54  ldr x0,[x8, #0xb8]
+0105ec58  ldr x20,[sp], #0x20
+0105ec5c  b 0x00b07850
+0105ec60  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105ec64_Tutorial.CustomLoader.__c__.ctor.txt
+================================================================================
+Function: Tutorial.CustomLoader.<>c$$.ctor @ 0105ec64
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+0105ec64  mov x1,xzr
+0105ec68  b 0x02194104
+
+
+================================================================================
+### FILE: 0105ec6c_Tutorial.CustomLoader.__c___Start_b__1_0.txt
+================================================================================
+Function: Tutorial.CustomLoader.<>c$$<Start>b__1_0 @ 0105ec6c
+
+--- Calls OUT ---
+  -> System.String$$op_Equality @ 01fd05b0
+  -> System.Text.Encoding$$get_UTF8 @ 01ff8ca0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0105ec6c  stp x21,x20,[sp, #-0x20]!
+0105ec70  stp x19,x30,[sp, #0x10]
+0105ec74  adrp x21,0x3574000
+0105ec78  adrp x20,0x3345000
+0105ec7c  ldrb w8,[x21, #0x710]
+0105ec80  ldr x20,[x20, #0x3d8]
+0105ec84  mov x19,x1
+0105ec88  tbnz w8,#0x0,0x0105ecac
+0105ec8c  adrp x0,0x3345000
+0105ec90  ldr x0,[x0, #0x3d8]
+0105ec94  bl 0x00b0789c
+0105ec98  adrp x0,0x3375000
+0105ec9c  ldr x0,[x0, #0xb08]
+0105eca0  bl 0x00b0789c
+0105eca4  mov w8,#0x1
+0105eca8  strb w8,[x21, #0x710]
+0105ecac  ldr x0,[x19]
+0105ecb0  ldr x1,[x20]
+0105ecb4  mov x2,xzr
+0105ecb8  bl 0x01fd05b0
+0105ecbc  tbz w0,#0x0,0x0105ecf4
+0105ecc0  adrp x8,0x3375000
+0105ecc4  ldr x8,[x8, #0xb08]
+0105ecc8  mov x0,xzr
+0105eccc  ldr x19,[x8]
+0105ecd0  bl 0x01ff8ca0
+0105ecd4  cbz x0,0x0105ed04
+0105ecd8  ldr x8,[x0]
+0105ecdc  mov x1,x19
+0105ece0  ldp x19,x30,[sp, #0x10]
+0105ece4  ldr x3,[x8, #0x268]
+0105ece8  ldr x2,[x8, #0x270]
+0105ecec  ldp x21,x20,[sp], #0x20
+0105ecf0  br x3
+0105ecf4  ldp x19,x30,[sp, #0x10]
+0105ecf8  mov x0,xzr
+0105ecfc  ldp x21,x20,[sp], #0x20
+0105ed00  ret
+0105ed04  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105ed08_Tutorial.BaseClass__BSFunc.txt
+================================================================================
+Function: Tutorial.BaseClass$$BSFunc @ 0105ed08
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialBaseClassWrap$$_m_BSFunc_xlua_st_ @ 0144b704
+
+--- Listing ---
+0105ed08  stp x21,x20,[sp, #-0x20]!
+0105ed0c  stp x19,x30,[sp, #0x10]
+0105ed10  adrp x20,0x3574000
+0105ed14  adrp x19,0x3320000
+0105ed18  ldrb w8,[x20, #0x711]
+0105ed1c  ldr x19,[x19, #0x970]
+0105ed20  tbnz w8,#0x0,0x0105ed50
+0105ed24  adrp x0,0x3320000
+0105ed28  ldr x0,[x0, #0x970]
+0105ed2c  bl 0x00b0789c
+0105ed30  adrp x0,0x336b000
+0105ed34  ldr x0,[x0, #0x7d0]
+0105ed38  bl 0x00b0789c
+0105ed3c  adrp x0,0x3324000
+0105ed40  ldr x0,[x0, #0x638]
+0105ed44  bl 0x00b0789c
+0105ed48  mov w8,#0x1
+0105ed4c  strb w8,[x20, #0x711]
+0105ed50  ldr x0,[x19]
+0105ed54  adrp x21,0x3324000
+0105ed58  adrp x20,0x336b000
+0105ed5c  ldr w8,[x0, #0xe0]
+0105ed60  ldr x21,[x21, #0x638]
+0105ed64  ldr x20,[x20, #0x7d0]
+0105ed68  cbnz w8,0x0105ed74
+0105ed6c  bl 0x00b0798c
+0105ed70  ldr x0,[x19]
+0105ed74  ldr x0,[x0, #0xb8]
+0105ed78  mov x1,xzr
+0105ed7c  bl 0x0214dc44
+0105ed80  ldr x8,[x21]
+0105ed84  mov x1,x0
+0105ed88  mov x2,xzr
+0105ed8c  mov x0,x8
+0105ed90  bl 0x01fd2850
+0105ed94  ldr x8,[x20]
+0105ed98  mov x19,x0
+0105ed9c  ldr w9,[x8, #0xe0]
+0105eda0  cbnz w9,0x0105edac
+0105eda4  mov x0,x8
+0105eda8  bl 0x00b0798c
+0105edac  mov x0,x19
+0105edb0  ldp x19,x30,[sp, #0x10]
+0105edb4  mov x1,xzr
+0105edb8  ldp x21,x20,[sp], #0x20
+0105edbc  b 0x024c0104
+
+
+================================================================================
+### FILE: 0105edc0_Tutorial.BaseClass__BMFunc.txt
+================================================================================
+Function: Tutorial.BaseClass$$BMFunc @ 0105edc0
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialBaseClassWrap$$_m_BMFunc @ 0144b834
+
+--- Listing ---
+0105edc0  str x22,[sp, #-0x30]!
+0105edc4  stp x21,x20,[sp, #0x10]
+0105edc8  stp x19,x30,[sp, #0x20]
+0105edcc  adrp x22,0x3574000
+0105edd0  adrp x21,0x337f000
+0105edd4  adrp x20,0x336b000
+0105edd8  ldrb w8,[x22, #0x712]
+0105eddc  ldr x21,[x21, #0xa88]
+0105ede0  ldr x20,[x20, #0x7d0]
+0105ede4  mov x19,x0
+0105ede8  tbnz w8,#0x0,0x0105ee0c
+0105edec  adrp x0,0x336b000
+0105edf0  ldr x0,[x0, #0x7d0]
+0105edf4  bl 0x00b0789c
+0105edf8  adrp x0,0x337f000
+0105edfc  ldr x0,[x0, #0xa88]
+0105ee00  bl 0x00b0789c
+0105ee04  mov w8,#0x1
+0105ee08  strb w8,[x22, #0x712]
+0105ee0c  ldr w8,[x19, #0x10]
+0105ee10  add x0,sp,#0xc
+0105ee14  mov x1,xzr
+0105ee18  str w8,[sp, #0xc]
+0105ee1c  bl 0x0214dc44
+0105ee20  ldr x8,[x21]
+0105ee24  mov x1,x0
+0105ee28  mov x2,xzr
+0105ee2c  mov x0,x8
+0105ee30  bl 0x01fd2850
+0105ee34  ldr x8,[x20]
+0105ee38  mov x19,x0
+0105ee3c  ldr w9,[x8, #0xe0]
+0105ee40  cbnz w9,0x0105ee4c
+0105ee44  mov x0,x8
+0105ee48  bl 0x00b0798c
+0105ee4c  mov x0,x19
+0105ee50  mov x1,xzr
+0105ee54  bl 0x024c0104
+0105ee58  ldp x19,x30,[sp, #0x20]
+0105ee5c  ldp x21,x20,[sp, #0x10]
+0105ee60  ldr x22,[sp], #0x30
+0105ee64  ret
+
+
+================================================================================
+### FILE: 0105ee68_Tutorial.BaseClass__get_BMF.txt
+================================================================================
+Function: Tutorial.BaseClass$$get_BMF @ 0105ee68
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0105ee68  ldr w0,[x0, #0x10]
+0105ee6c  ret
+
+
+================================================================================
+### FILE: 0105ee70_Tutorial.BaseClass__set_BMF.txt
+================================================================================
+Function: Tutorial.BaseClass$$set_BMF @ 0105ee70
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0105ee70  str w1,[x0, #0x10]
+0105ee74  ret
+
+
+================================================================================
+### FILE: 0105ee78_Tutorial.BaseClass__.ctor.txt
+================================================================================
+Function: Tutorial.BaseClass$$.ctor @ 0105ee78
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialBaseClassWrap$$__CreateInstance @ 0144b54c
+
+--- Listing ---
+0105ee78  mov x1,xzr
+0105ee7c  b 0x02194104
+
+
+================================================================================
+### FILE: 0105ee80_Tutorial.BaseClass__.cctor.txt
+================================================================================
+Function: Tutorial.BaseClass$$.cctor @ 0105ee80
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+0105ee80  str x20,[sp, #-0x20]!
+0105ee84  stp x19,x30,[sp, #0x10]
+0105ee88  adrp x19,0x3574000
+0105ee8c  adrp x20,0x3320000
+0105ee90  ldrb w8,[x19, #0x713]
+0105ee94  ldr x20,[x20, #0x970]
+0105ee98  tbnz w8,#0x0,0x0105eeb0
+0105ee9c  adrp x0,0x3320000
+0105eea0  ldr x0,[x0, #0x970]
+0105eea4  bl 0x00b0789c
+0105eea8  mov w8,#0x1
+0105eeac  strb w8,[x19, #0x713]
+0105eeb0  ldr x8,[x20]
+0105eeb4  mov w9,#0x1
+0105eeb8  ldr x8,[x8, #0xb8]
+0105eebc  str w9,[x8]
+0105eec0  ldp x19,x30,[sp, #0x10]
+0105eec4  ldr x20,[sp], #0x20
+0105eec8  ret
+
+
+================================================================================
+### FILE: 0105eecc_Tutorial.DerivedClass__DMFunc.txt
+================================================================================
+Function: Tutorial.DerivedClass$$DMFunc @ 0105eecc
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_DMFunc @ 0144d5bc
+
+--- Listing ---
+0105eecc  str x22,[sp, #-0x30]!
+0105eed0  stp x21,x20,[sp, #0x10]
+0105eed4  stp x19,x30,[sp, #0x20]
+0105eed8  adrp x22,0x3574000
+0105eedc  adrp x21,0x3352000
+0105eee0  adrp x20,0x336b000
+0105eee4  ldrb w8,[x22, #0x714]
+0105eee8  ldr x21,[x21, #0xb0]
+0105eeec  ldr x20,[x20, #0x7d0]
+0105eef0  mov x19,x0
+0105eef4  tbnz w8,#0x0,0x0105ef18
+0105eef8  adrp x0,0x336b000
+0105eefc  ldr x0,[x0, #0x7d0]
+0105ef00  bl 0x00b0789c
+0105ef04  adrp x0,0x3352000
+0105ef08  ldr x0,[x0, #0xb0]
+0105ef0c  bl 0x00b0789c
+0105ef10  mov w8,#0x1
+0105ef14  strb w8,[x22, #0x714]
+0105ef18  ldr w8,[x19, #0x14]
+0105ef1c  add x0,sp,#0xc
+0105ef20  mov x1,xzr
+0105ef24  str w8,[sp, #0xc]
+0105ef28  bl 0x0214dc44
+0105ef2c  ldr x8,[x21]
+0105ef30  mov x1,x0
+0105ef34  mov x2,xzr
+0105ef38  mov x0,x8
+0105ef3c  bl 0x01fd2850
+0105ef40  ldr x8,[x20]
+0105ef44  mov x19,x0
+0105ef48  ldr w9,[x8, #0xe0]
+0105ef4c  cbnz w9,0x0105ef58
+0105ef50  mov x0,x8
+0105ef54  bl 0x00b0798c
+0105ef58  mov x0,x19
+0105ef5c  mov x1,xzr
+0105ef60  bl 0x024c0104
+0105ef64  ldp x19,x30,[sp, #0x20]
+0105ef68  ldp x21,x20,[sp, #0x10]
+0105ef6c  ldr x22,[sp], #0x30
+0105ef70  ret
+
+
+================================================================================
+### FILE: 0105ef74_Tutorial.DerivedClass__get_DMF.txt
+================================================================================
+Function: Tutorial.DerivedClass$$get_DMF @ 0105ef74
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0105ef74  ldr w0,[x0, #0x14]
+0105ef78  ret
+
+
+================================================================================
+### FILE: 0105ef7c_Tutorial.DerivedClass__set_DMF.txt
+================================================================================
+Function: Tutorial.DerivedClass$$set_DMF @ 0105ef7c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0105ef7c  str w1,[x0, #0x14]
+0105ef80  ret
+
+
+================================================================================
+### FILE: 0105ef84_Tutorial.DerivedClass__ComplexFunc.txt
+================================================================================
+Function: Tutorial.DerivedClass$$ComplexFunc @ 0105ef84
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.String$$Concat @ 01fdf4c4
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> System.Action$$.ctor @ 020d5760
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_ComplexFunc @ 0144d758
+
+--- Listing ---
+0105ef84  sub sp,sp,#0x50
+0105ef88  stp x25,x24,[sp, #0x10]
+0105ef8c  stp x23,x22,[sp, #0x20]
+0105ef90  stp x21,x20,[sp, #0x30]
+0105ef94  stp x19,x30,[sp, #0x40]
+0105ef98  adrp x23,0x3574000
+0105ef9c  stp x1,x2,[sp]
+0105efa0  adrp x24,0x3308000
+0105efa4  ldrb w8,[x23, #0x715]
+0105efa8  ldr x24,[x24, #0x9a8]
+0105efac  mov x19,x6
+0105efb0  mov x22,x5
+0105efb4  mov x20,x4
+0105efb8  mov x21,x3
+0105efbc  tbnz w8,#0x0,0x0105f034
+0105efc0  adrp x0,0x3348000
+0105efc4  ldr x0,[x0, #0xcf8]
+0105efc8  bl 0x00b0789c
+0105efcc  adrp x0,0x336b000
+0105efd0  ldr x0,[x0, #0x7d0]
+0105efd4  bl 0x00b0789c
+0105efd8  adrp x0,0x3308000
+0105efdc  ldr x0,[x0, #0x9a8]
+0105efe0  bl 0x00b0789c
+0105efe4  adrp x0,0x333c000
+0105efe8  ldr x0,[x0, #0x6a0]
+0105efec  bl 0x00b0789c
+0105eff0  adrp x0,0x334f000
+0105eff4  ldr x0,[x0, #0x2b0]
+0105eff8  bl 0x00b0789c
+0105effc  adrp x0,0x334d000
+0105f000  ldr x0,[x0, #0xa10]
+0105f004  bl 0x00b0789c
+0105f008  adrp x0,0x3323000
+0105f00c  ldr x0,[x0, #0xab0]
+0105f010  bl 0x00b0789c
+0105f014  adrp x0,0x3375000
+0105f018  ldr x0,[x0, #0x818]
+0105f01c  bl 0x00b0789c
+0105f020  adrp x0,0x335f000
+0105f024  ldr x0,[x0, #0x3d0]
+0105f028  bl 0x00b0789c
+0105f02c  mov w8,#0x1
+0105f030  strb w8,[x23, #0x715]
+0105f034  ldr x0,[x24]
+0105f038  mov w1,#0x6
+0105f03c  bl 0x00b078f8
+0105f040  cbz x0,0x0105f33c
+0105f044  adrp x24,0x3323000
+0105f048  ldr x24,[x24, #0xab0]
+0105f04c  mov x23,x0
+0105f050  ldr x1,[x24]
+0105f054  cbz x1,0x0105f07c
+0105f058  ldr x8,[x23]
+0105f05c  mov x0,x1
+0105f060  ldr x8,[x8, #0x40]
+0105f064  mov x1,x8
+0105f068  bl 0x00b07990
+0105f06c  cbz x0,0x0105f330
+0105f070  ldr x8,[x24]
+0105f074  mov x1,x8
+0105f078  b 0x0105f080
+0105f07c  mov x8,xzr
+0105f080  ldr w9,[x23, #0x18]
+0105f084  cbz w9,0x0105f32c
+0105f088  mov x0,x23
+0105f08c  str x8,[x0, #0x20]!
+0105f090  bl 0x00b07850
+0105f094  mov x0,sp
+0105f098  mov x1,xzr
+0105f09c  bl 0x0214dc44
+0105f0a0  mov x24,x0
+0105f0a4  cbz x0,0x0105f0bc
+0105f0a8  ldr x8,[x23]
+0105f0ac  mov x0,x24
+0105f0b0  ldr x1,[x8, #0x40]
+0105f0b4  bl 0x00b07990
+0105f0b8  cbz x0,0x0105f330
+0105f0bc  ldr w8,[x23, #0x18]
+0105f0c0  cmp w8,#0x1
+0105f0c4  b.ls 0x0105f32c
+0105f0c8  adrp x25,0x3375000
+0105f0cc  ldr x25,[x25, #0x818]
+0105f0d0  mov x0,x23
+0105f0d4  str x24,[x0, #0x28]!
+0105f0d8  mov x1,x24
+0105f0dc  bl 0x00b07850
+0105f0e0  ldr x1,[x25]
+0105f0e4  cbz x1,0x0105f10c
+0105f0e8  ldr x8,[x23]
+0105f0ec  mov x0,x1
+0105f0f0  ldr x8,[x8, #0x40]
+0105f0f4  mov x1,x8
+0105f0f8  bl 0x00b07990
+0105f0fc  cbz x0,0x0105f330
+0105f100  ldr x8,[x25]
+0105f104  mov x1,x8
+0105f108  b 0x0105f110
+0105f10c  mov x8,xzr
+0105f110  ldr w9,[x23, #0x18]
+0105f114  cmp w9,#0x2
+0105f118  b.ls 0x0105f32c
+0105f11c  mov x0,x23
+0105f120  str x8,[x0, #0x30]!
+0105f124  bl 0x00b07850
+0105f128  ldr x24,[sp, #0x8]
+0105f12c  cbz x24,0x0105f144
+0105f130  ldr x8,[x23]
+0105f134  mov x0,x24
+0105f138  ldr x1,[x8, #0x40]
+0105f13c  bl 0x00b07990
+0105f140  cbz x0,0x0105f330
+0105f144  ldr w8,[x23, #0x18]
+0105f148  cmp w8,#0x3
+0105f14c  b.ls 0x0105f32c
+0105f150  adrp x25,0x335f000
+0105f154  ldr x25,[x25, #0x3d0]
+0105f158  mov x0,x23
+0105f15c  str x24,[x0, #0x38]!
+0105f160  mov x1,x24
+0105f164  bl 0x00b07850
+0105f168  ldr x1,[x25]
+0105f16c  cbz x1,0x0105f194
+0105f170  ldr x8,[x23]
+0105f174  mov x0,x1
+0105f178  ldr x8,[x8, #0x40]
+0105f17c  mov x1,x8
+0105f180  bl 0x00b07990
+0105f184  cbz x0,0x0105f330
+0105f188  ldr x8,[x25]
+0105f18c  mov x1,x8
+0105f190  b 0x0105f198
+0105f194  mov x8,xzr
+0105f198  ldr w9,[x23, #0x18]
+0105f19c  cmp w9,#0x4
+0105f1a0  b.ls 0x0105f32c
+0105f1a4  mov x0,x23
+0105f1a8  str x8,[x0, #0x40]!
+0105f1ac  bl 0x00b07850
+0105f1b0  mov x0,x21
+0105f1b4  mov x1,xzr
+0105f1b8  bl 0x0214dc44
+0105f1bc  mov x24,x0
+0105f1c0  cbz x0,0x0105f1d8
+0105f1c4  ldr x8,[x23]
+0105f1c8  mov x0,x24
+0105f1cc  ldr x1,[x8, #0x40]
+0105f1d0  bl 0x00b07990
+0105f1d4  cbz x0,0x0105f330
+0105f1d8  ldr w8,[x23, #0x18]
+0105f1dc  cmp w8,#0x5
+0105f1e0  b.ls 0x0105f32c
+0105f1e4  adrp x25,0x336b000
+0105f1e8  ldr x25,[x25, #0x7d0]
+0105f1ec  mov x0,x23
+0105f1f0  str x24,[x0, #0x48]!
+0105f1f4  mov x1,x24
+0105f1f8  bl 0x00b07850
+0105f1fc  mov x0,x23
+0105f200  mov x1,xzr
+0105f204  bl 0x01fdf4c4
+0105f208  ldr x8,[x25]
+0105f20c  mov x23,x0
+0105f210  ldr w9,[x8, #0xe0]
+0105f214  cbnz w9,0x0105f220
+0105f218  mov x0,x8
+0105f21c  bl 0x00b0798c
+0105f220  mov x0,x23
+0105f224  mov x1,xzr
+0105f228  bl 0x024c0104
+0105f22c  cbz x22,0x0105f33c
+0105f230  ldr x8,[x22, #0x18]
+0105f234  ldr x0,[x22, #0x40]
+0105f238  ldr x1,[x22, #0x28]
+0105f23c  adrp x23,0x334d000
+0105f240  adrp x22,0x334f000
+0105f244  ldr x23,[x23, #0xa10]
+0105f248  ldr x22,[x22, #0x2b0]
+0105f24c  blr x8
+0105f250  ldr w8,[x21]
+0105f254  ldr w9,[sp]
+0105f258  mov x2,xzr
+0105f25c  mul w8,w9,w8
+0105f260  str w8,[x21]
+0105f264  ldr x1,[sp, #0x8]
+0105f268  ldr x0,[x23]
+0105f26c  bl 0x01fd2850
+0105f270  mov x1,x0
+0105f274  str x0,[x20]
+0105f278  mov x0,x20
+0105f27c  bl 0x00b07850
+0105f280  ldr x0,[x22]
+0105f284  ldr w8,[x0, #0xe0]
+0105f288  cbnz w8,0x0105f294
+0105f28c  bl 0x00b0798c
+0105f290  ldr x0,[x22]
+0105f294  ldr x8,[x0, #0xb8]
+0105f298  ldr x20,[x8, #0x8]
+0105f29c  cbnz x20,0x0105f2fc
+0105f2a0  adrp x20,0x3348000
+0105f2a4  ldr w8,[x0, #0xe0]
+0105f2a8  ldr x20,[x20, #0xcf8]
+0105f2ac  cbnz w8,0x0105f2b8
+0105f2b0  bl 0x00b0798c
+0105f2b4  ldr x0,[x22]
+0105f2b8  ldr x8,[x0, #0xb8]
+0105f2bc  ldr x0,[x20]
+0105f2c0  ldr x21,[x8]
+0105f2c4  bl 0x00b079a0
+0105f2c8  cbz x0,0x0105f33c
+0105f2cc  adrp x8,0x333c000
+0105f2d0  ldr x8,[x8, #0x6a0]
+0105f2d4  mov x1,x21
+0105f2d8  mov x3,xzr
+0105f2dc  mov x20,x0
+0105f2e0  ldr x2,[x8]
+0105f2e4  bl 0x020d5760
+0105f2e8  ldr x8,[x22]
+0105f2ec  mov x1,x20
+0105f2f0  ldr x0,[x8, #0xb8]
+0105f2f4  str x20,[x0, #0x8]!
+0105f2f8  bl 0x00b07850
+0105f2fc  mov x0,x19
+0105f300  mov x1,x20
+0105f304  str x20,[x19]
+0105f308  bl 0x00b07850
+0105f30c  adrp x8,0x26dc000
+0105f310  ldr d0,[x8, #0x138]
+0105f314  ldp x19,x30,[sp, #0x40]
+0105f318  ldp x21,x20,[sp, #0x30]
+0105f31c  ldp x23,x22,[sp, #0x20]
+0105f320  ldp x25,x24,[sp, #0x10]
+0105f324  add sp,sp,#0x50
+0105f328  ret
+0105f32c  bl 0x00b079b8
+0105f330  bl 0x00b079d4
+0105f334  mov x1,xzr
+0105f338  bl 0x00b07978
+0105f33c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105f340_Tutorial.DerivedClass__TestFunc.txt
+================================================================================
+Function: Tutorial.DerivedClass$$TestFunc @ 0105f340
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_TestFunc @ 0144d9fc
+
+--- Listing ---
+0105f340  str x20,[sp, #-0x20]!
+0105f344  stp x19,x30,[sp, #0x10]
+0105f348  adrp x20,0x3574000
+0105f34c  adrp x19,0x336b000
+0105f350  ldrb w8,[x20, #0x716]
+0105f354  ldr x19,[x19, #0x7d0]
+0105f358  tbnz w8,#0x0,0x0105f37c
+0105f35c  adrp x0,0x336b000
+0105f360  ldr x0,[x0, #0x7d0]
+0105f364  bl 0x00b0789c
+0105f368  adrp x0,0x334b000
+0105f36c  ldr x0,[x0, #0xbc0]
+0105f370  bl 0x00b0789c
+0105f374  mov w8,#0x1
+0105f378  strb w8,[x20, #0x716]
+0105f37c  ldr x0,[x19]
+0105f380  adrp x19,0x334b000
+0105f384  ldr w8,[x0, #0xe0]
+0105f388  ldr x19,[x19, #0xbc0]
+0105f38c  cbnz w8,0x0105f394
+0105f390  bl 0x00b0798c
+0105f394  ldr x0,[x19]
+0105f398  ldp x19,x30,[sp, #0x10]
+0105f39c  mov x1,xzr
+0105f3a0  ldr x20,[sp], #0x20
+0105f3a4  b 0x024c0104
+
+
+================================================================================
+### FILE: 0105f3a8_Tutorial.DerivedClass__TestFunc.txt
+================================================================================
+Function: Tutorial.DerivedClass$$TestFunc @ 0105f3a8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_TestFunc @ 0144d9fc
+
+--- Listing ---
+0105f3a8  str x20,[sp, #-0x20]!
+0105f3ac  stp x19,x30,[sp, #0x10]
+0105f3b0  adrp x20,0x3574000
+0105f3b4  adrp x19,0x336b000
+0105f3b8  ldrb w8,[x20, #0x717]
+0105f3bc  ldr x19,[x19, #0x7d0]
+0105f3c0  tbnz w8,#0x0,0x0105f3e4
+0105f3c4  adrp x0,0x336b000
+0105f3c8  ldr x0,[x0, #0x7d0]
+0105f3cc  bl 0x00b0789c
+0105f3d0  adrp x0,0x3382000
+0105f3d4  ldr x0,[x0, #0x5b8]
+0105f3d8  bl 0x00b0789c
+0105f3dc  mov w8,#0x1
+0105f3e0  strb w8,[x20, #0x717]
+0105f3e4  ldr x0,[x19]
+0105f3e8  adrp x19,0x3382000
+0105f3ec  ldr w8,[x0, #0xe0]
+0105f3f0  ldr x19,[x19, #0x5b8]
+0105f3f4  cbnz w8,0x0105f3fc
+0105f3f8  bl 0x00b0798c
+0105f3fc  ldr x0,[x19]
+0105f400  ldp x19,x30,[sp, #0x10]
+0105f404  mov x1,xzr
+0105f408  ldr x20,[sp], #0x20
+0105f40c  b 0x024c0104
+
+
+================================================================================
+### FILE: 0105f410_Tutorial.DerivedClass__op_Addition.txt
+================================================================================
+Function: Tutorial.DerivedClass$$op_Addition @ 0105f410
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> Tutorial.DerivedClass$$.ctor @ 0105f490
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$__AddMeta @ 0144d2c4
+
+--- Listing ---
+0105f410  str x22,[sp, #-0x30]!
+0105f414  stp x21,x20,[sp, #0x10]
+0105f418  stp x19,x30,[sp, #0x20]
+0105f41c  adrp x21,0x3574000
+0105f420  adrp x22,0x3331000
+0105f424  ldrb w8,[x21, #0x718]
+0105f428  ldr x22,[x22, #0xda8]
+0105f42c  mov x19,x1
+0105f430  mov x20,x0
+0105f434  tbnz w8,#0x0,0x0105f44c
+0105f438  adrp x0,0x3331000
+0105f43c  ldr x0,[x0, #0xda8]
+0105f440  bl 0x00b0789c
+0105f444  mov w8,#0x1
+0105f448  strb w8,[x21, #0x718]
+0105f44c  ldr x0,[x22]
+0105f450  bl 0x00b079a0
+0105f454  cbz x0,0x0105f48c
+0105f458  mov x21,x0
+0105f45c  bl 0x0105f490
+0105f460  cbz x20,0x0105f48c
+0105f464  cbz x19,0x0105f48c
+0105f468  ldr w8,[x20, #0x14]
+0105f46c  ldr w9,[x19, #0x14]
+0105f470  mov x0,x21
+0105f474  add w8,w9,w8
+0105f478  str w8,[x21, #0x14]
+0105f47c  ldp x19,x30,[sp, #0x20]
+0105f480  ldp x21,x20,[sp, #0x10]
+0105f484  ldr x22,[sp], #0x30
+0105f488  ret
+0105f48c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105f490_Tutorial.DerivedClass__.ctor.txt
+================================================================================
+Function: Tutorial.DerivedClass$$.ctor @ 0105f490
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- Tutorial.DerivedClass$$op_Addition @ 0105f410
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$__CreateInstance @ 0144d10c
+
+--- Listing ---
+0105f490  str x22,[sp, #-0x30]!
+0105f494  stp x21,x20,[sp, #0x10]
+0105f498  stp x19,x30,[sp, #0x20]
+0105f49c  adrp x20,0x3574000
+0105f4a0  adrp x22,0x334f000
+0105f4a4  ldrb w8,[x20, #0x71f]
+0105f4a8  ldr x22,[x22, #0x2b0]
+0105f4ac  mov x19,x0
+0105f4b0  tbnz w8,#0x0,0x0105f4ec
+0105f4b4  adrp x0,0x3365000
+0105f4b8  ldr x0,[x0, #0x1f8]
+0105f4bc  bl 0x00b0789c
+0105f4c0  adrp x0,0x3320000
+0105f4c4  ldr x0,[x0, #0x970]
+0105f4c8  bl 0x00b0789c
+0105f4cc  adrp x0,0x3320000
+0105f4d0  ldr x0,[x0, #0x5b0]
+0105f4d4  bl 0x00b0789c
+0105f4d8  adrp x0,0x334f000
+0105f4dc  ldr x0,[x0, #0x2b0]
+0105f4e0  bl 0x00b0789c
+0105f4e4  mov w8,#0x1
+0105f4e8  strb w8,[x20, #0x71f]
+0105f4ec  ldr x0,[x22]
+0105f4f0  ldr w8,[x0, #0xe0]
+0105f4f4  cbnz w8,0x0105f500
+0105f4f8  bl 0x00b0798c
+0105f4fc  ldr x0,[x22]
+0105f500  ldr x8,[x0, #0xb8]
+0105f504  ldr x20,[x8, #0x10]
+0105f508  cbnz x20,0x0105f568
+0105f50c  adrp x20,0x3365000
+0105f510  ldr w8,[x0, #0xe0]
+0105f514  ldr x20,[x20, #0x1f8]
+0105f518  cbnz w8,0x0105f524
+0105f51c  bl 0x00b0798c
+0105f520  ldr x0,[x22]
+0105f524  ldr x8,[x0, #0xb8]
+0105f528  ldr x0,[x20]
+0105f52c  ldr x21,[x8]
+0105f530  bl 0x00b079a0
+0105f534  cbz x0,0x0105f5ac
+0105f538  adrp x8,0x3320000
+0105f53c  ldr x8,[x8, #0x5b0]
+0105f540  mov x1,x21
+0105f544  mov x3,xzr
+0105f548  mov x20,x0
+0105f54c  ldr x2,[x8]
+0105f550  bl 0x01909b80
+0105f554  ldr x8,[x22]
+0105f558  mov x1,x20
+0105f55c  ldr x0,[x8, #0xb8]
+0105f560  str x20,[x0, #0x10]!
+0105f564  bl 0x00b07850
+0105f568  cbz x19,0x0105f5ac
+0105f56c  adrp x21,0x3320000
+0105f570  ldr x21,[x21, #0x970]
+0105f574  mov x0,x19
+0105f578  str x20,[x0, #0x18]!
+0105f57c  mov x1,x20
+0105f580  bl 0x00b07850
+0105f584  ldr x0,[x21]
+0105f588  ldr w8,[x0, #0xe0]
+0105f58c  cbnz w8,0x0105f594
+0105f590  bl 0x00b0798c
+0105f594  mov x0,x19
+0105f598  ldp x19,x30,[sp, #0x20]
+0105f59c  ldp x21,x20,[sp, #0x10]
+0105f5a0  mov x1,xzr
+0105f5a4  ldr x22,[sp], #0x30
+0105f5a8  b 0x02194104
+0105f5ac  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105f5b0_Tutorial.DerivedClass__DefaultValueFunc.txt
+================================================================================
+Function: Tutorial.DerivedClass$$DefaultValueFunc @ 0105f5b0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fdf4c4
+  -> System.Int32$$ToString @ 0214dc44
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_DefaultValueFunc @ 0144dc7c
+
+--- Listing ---
+0105f5b0  sub sp,sp,#0x40
+0105f5b4  stp x23,x22,[sp, #0x10]
+0105f5b8  stp x21,x20,[sp, #0x20]
+0105f5bc  stp x19,x30,[sp, #0x30]
+0105f5c0  adrp x20,0x3574000
+0105f5c4  str w1,[sp, #0xc]
+0105f5c8  adrp x22,0x3308000
+0105f5cc  ldrb w8,[x20, #0x719]
+0105f5d0  ldr x22,[x22, #0x9a8]
+0105f5d4  mov x19,x3
+0105f5d8  mov x21,x2
+0105f5dc  tbnz w8,#0x0,0x0105f624
+0105f5e0  adrp x0,0x336b000
+0105f5e4  ldr x0,[x0, #0x7d0]
+0105f5e8  bl 0x00b0789c
+0105f5ec  adrp x0,0x3308000
+0105f5f0  ldr x0,[x0, #0x9a8]
+0105f5f4  bl 0x00b0789c
+0105f5f8  adrp x0,0x3365000
+0105f5fc  ldr x0,[x0, #0xef0]
+0105f600  bl 0x00b0789c
+0105f604  adrp x0,0x3310000
+0105f608  ldr x0,[x0, #0x870]
+0105f60c  bl 0x00b0789c
+0105f610  adrp x0,0x334d000
+0105f614  ldr x0,[x0, #0x1c0]
+0105f618  bl 0x00b0789c
+0105f61c  mov w8,#0x1
+0105f620  strb w8,[x20, #0x719]
+0105f624  ldr x0,[x22]
+0105f628  mov w1,#0x6
+0105f62c  bl 0x00b078f8
+0105f630  cbz x0,0x0105f82c
+0105f634  adrp x22,0x3365000
+0105f638  ldr x22,[x22, #0xef0]
+0105f63c  mov x20,x0
+0105f640  ldr x1,[x22]
+0105f644  cbz x1,0x0105f66c
+0105f648  ldr x8,[x20]
+0105f64c  mov x0,x1
+0105f650  ldr x8,[x8, #0x40]
+0105f654  mov x1,x8
+0105f658  bl 0x00b07990
+0105f65c  cbz x0,0x0105f820
+0105f660  ldr x8,[x22]
+0105f664  mov x1,x8
+0105f668  b 0x0105f670
+0105f66c  mov x8,xzr
+0105f670  ldr w9,[x20, #0x18]
+0105f674  cbz w9,0x0105f81c
+0105f678  mov x0,x20
+0105f67c  str x8,[x0, #0x20]!
+0105f680  bl 0x00b07850
+0105f684  add x0,sp,#0xc
+0105f688  mov x1,xzr
+0105f68c  bl 0x0214dc44
+0105f690  mov x22,x0
+0105f694  cbz x0,0x0105f6ac
+0105f698  ldr x8,[x20]
+0105f69c  mov x0,x22
+0105f6a0  ldr x1,[x8, #0x40]
+0105f6a4  bl 0x00b07990
+0105f6a8  cbz x0,0x0105f820
+0105f6ac  ldr w8,[x20, #0x18]
+0105f6b0  cmp w8,#0x1
+0105f6b4  b.ls 0x0105f81c
+0105f6b8  adrp x23,0x3310000
+0105f6bc  ldr x23,[x23, #0x870]
+0105f6c0  mov x0,x20
+0105f6c4  str x22,[x0, #0x28]!
+0105f6c8  mov x1,x22
+0105f6cc  bl 0x00b07850
+0105f6d0  ldr x1,[x23]
+0105f6d4  cbz x1,0x0105f6fc
+0105f6d8  ldr x8,[x20]
+0105f6dc  mov x0,x1
+0105f6e0  ldr x8,[x8, #0x40]
+0105f6e4  mov x1,x8
+0105f6e8  bl 0x00b07990
+0105f6ec  cbz x0,0x0105f820
+0105f6f0  ldr x8,[x23]
+0105f6f4  mov x1,x8
+0105f6f8  b 0x0105f700
+0105f6fc  mov x8,xzr
+0105f700  ldr w9,[x20, #0x18]
+0105f704  cmp w9,#0x2
+0105f708  b.ls 0x0105f81c
+0105f70c  mov x0,x20
+0105f710  str x8,[x0, #0x30]!
+0105f714  bl 0x00b07850
+0105f718  cbz x21,0x0105f730
+0105f71c  ldr x8,[x20]
+0105f720  mov x0,x21
+0105f724  ldr x1,[x8, #0x40]
+0105f728  bl 0x00b07990
+0105f72c  cbz x0,0x0105f820
+0105f730  ldr w8,[x20, #0x18]
+0105f734  cmp w8,#0x3
+0105f738  b.ls 0x0105f81c
+0105f73c  adrp x22,0x334d000
+0105f740  ldr x22,[x22, #0x1c0]
+0105f744  mov x0,x20
+0105f748  str x21,[x0, #0x38]!
+0105f74c  mov x1,x21
+0105f750  bl 0x00b07850
+0105f754  ldr x1,[x22]
+0105f758  cbz x1,0x0105f780
+0105f75c  ldr x8,[x20]
+0105f760  mov x0,x1
+0105f764  ldr x8,[x8, #0x40]
+0105f768  mov x1,x8
+0105f76c  bl 0x00b07990
+0105f770  cbz x0,0x0105f820
+0105f774  ldr x8,[x22]
+0105f778  mov x1,x8
+0105f77c  b 0x0105f784
+0105f780  mov x8,xzr
+0105f784  ldr w9,[x20, #0x18]
+0105f788  cmp w9,#0x4
+0105f78c  b.ls 0x0105f81c
+0105f790  mov x0,x20
+0105f794  str x8,[x0, #0x40]!
+0105f798  bl 0x00b07850
+0105f79c  cbz x19,0x0105f7b4
+0105f7a0  ldr x8,[x20]
+0105f7a4  mov x0,x19
+0105f7a8  ldr x1,[x8, #0x40]
+0105f7ac  bl 0x00b07990
+0105f7b0  cbz x0,0x0105f820
+0105f7b4  ldr w8,[x20, #0x18]
+0105f7b8  cmp w8,#0x5
+0105f7bc  b.ls 0x0105f81c
+0105f7c0  adrp x21,0x336b000
+0105f7c4  ldr x21,[x21, #0x7d0]
+0105f7c8  mov x0,x20
+0105f7cc  str x19,[x0, #0x48]!
+0105f7d0  mov x1,x19
+0105f7d4  bl 0x00b07850
+0105f7d8  mov x0,x20
+0105f7dc  mov x1,xzr
+0105f7e0  bl 0x01fdf4c4
+0105f7e4  ldr x8,[x21]
+0105f7e8  mov x19,x0
+0105f7ec  ldr w9,[x8, #0xe0]
+0105f7f0  cbnz w9,0x0105f7fc
+0105f7f4  mov x0,x8
+0105f7f8  bl 0x00b0798c
+0105f7fc  mov x0,x19
+0105f800  mov x1,xzr
+0105f804  bl 0x024c0104
+0105f808  ldp x19,x30,[sp, #0x30]
+0105f80c  ldp x21,x20,[sp, #0x20]
+0105f810  ldp x23,x22,[sp, #0x10]
+0105f814  add sp,sp,#0x40
+0105f818  ret
+0105f81c  bl 0x00b079b8
+0105f820  bl 0x00b079d4
+0105f824  mov x1,xzr
+0105f828  bl 0x00b07978
+0105f82c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105f830_Tutorial.DerivedClass__VariableParamsFunc.txt
+================================================================================
+Function: Tutorial.DerivedClass$$VariableParamsFunc @ 0105f830
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> FUN_00b079b8 @ 00b079b8
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_VariableParamsFunc @ 0144e094
+
+--- Listing ---
+0105f830  str x24,[sp, #-0x40]!
+0105f834  stp x23,x22,[sp, #0x10]
+0105f838  stp x21,x20,[sp, #0x20]
+0105f83c  stp x19,x30,[sp, #0x30]
+0105f840  adrp x22,0x3574000
+0105f844  str w1,[sp, #0xc]
+0105f848  adrp x20,0x334b000
+0105f84c  adrp x21,0x336b000
+0105f850  ldrb w8,[x22, #0x71a]
+0105f854  ldr x20,[x20, #0xb10]
+0105f858  ldr x21,[x21, #0x7d0]
+0105f85c  mov x19,x2
+0105f860  tbnz w8,#0x0,0x0105f890
+0105f864  adrp x0,0x336b000
+0105f868  ldr x0,[x0, #0x7d0]
+0105f86c  bl 0x00b0789c
+0105f870  adrp x0,0x3366000
+0105f874  ldr x0,[x0, #0xd08]
+0105f878  bl 0x00b0789c
+0105f87c  adrp x0,0x334b000
+0105f880  ldr x0,[x0, #0xb10]
+0105f884  bl 0x00b0789c
+0105f888  mov w8,#0x1
+0105f88c  strb w8,[x22, #0x71a]
+0105f890  add x0,sp,#0xc
+0105f894  mov x1,xzr
+0105f898  bl 0x0214dc44
+0105f89c  ldr x8,[x20]
+0105f8a0  mov x1,x0
+0105f8a4  mov x2,xzr
+0105f8a8  mov x0,x8
+0105f8ac  bl 0x01fd2850
+0105f8b0  ldr x8,[x21]
+0105f8b4  mov x20,x0
+0105f8b8  ldr w9,[x8, #0xe0]
+0105f8bc  cbnz w9,0x0105f8c8
+0105f8c0  mov x0,x8
+0105f8c4  bl 0x00b0798c
+0105f8c8  mov x0,x20
+0105f8cc  mov x1,xzr
+0105f8d0  bl 0x024c0104
+0105f8d4  cbz x19,0x0105f95c
+0105f8d8  ldr x8,[x19, #0x18]
+0105f8dc  cmp w8,#0x1
+0105f8e0  b.lt 0x0105f944
+0105f8e4  adrp x23,0x3366000
+0105f8e8  ldr x23,[x23, #0xd08]
+0105f8ec  mov x22,xzr
+0105f8f0  and x8,x8,#0xffffffff
+0105f8f4  add x24,x19,#0x20
+0105f8f8  cmp x22,w8, UXTW 
+0105f8fc  b.cs 0x0105f958
+0105f900  ldr x1,[x24, x22, LSL #0x3]
+0105f904  ldr x0,[x23]
+0105f908  mov x2,xzr
+0105f90c  bl 0x01fd2850
+0105f910  ldr x8,[x21]
+0105f914  mov x20,x0
+0105f918  ldr w9,[x8, #0xe0]
+0105f91c  cbnz w9,0x0105f928
+0105f920  mov x0,x8
+0105f924  bl 0x00b0798c
+0105f928  mov x0,x20
+0105f92c  mov x1,xzr
+0105f930  bl 0x024c0104
+0105f934  ldr w8,[x19, #0x18]
+0105f938  add x22,x22,#0x1
+0105f93c  cmp x22,w8, SXTW 
+0105f940  b.lt 0x0105f8f8
+0105f944  ldp x19,x30,[sp, #0x30]
+0105f948  ldp x21,x20,[sp, #0x20]
+0105f94c  ldp x23,x22,[sp, #0x10]
+0105f950  ldr x24,[sp], #0x40
+0105f954  ret
+0105f958  bl 0x00b079b8
+0105f95c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105f960_Tutorial.DerivedClass__EnumTestFunc.txt
+================================================================================
+Function: Tutorial.DerivedClass$$EnumTestFunc @ 0105f960
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Enum$$ToString @ 02186100
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_EnumTestFunc @ 0144e2a4
+
+--- Listing ---
+0105f960  sub sp,sp,#0x50
+0105f964  stp x23,x22,[sp, #0x20]
+0105f968  stp x21,x20,[sp, #0x30]
+0105f96c  stp x19,x30,[sp, #0x40]
+0105f970  adrp x22,0x3574000
+0105f974  adrp x23,0x333a000
+0105f978  adrp x21,0x3381000
+0105f97c  adrp x20,0x336b000
+0105f980  ldrb w8,[x22, #0x71b]
+0105f984  ldr x23,[x23, #0x2f0]
+0105f988  ldr x21,[x21, #0xc98]
+0105f98c  ldr x20,[x20, #0x7d0]
+0105f990  mov w19,w1
+0105f994  tbnz w8,#0x0,0x0105f9c4
+0105f998  adrp x0,0x336b000
+0105f99c  ldr x0,[x0, #0x7d0]
+0105f9a0  bl 0x00b0789c
+0105f9a4  adrp x0,0x333a000
+0105f9a8  ldr x0,[x0, #0x2f0]
+0105f9ac  bl 0x00b0789c
+0105f9b0  adrp x0,0x3381000
+0105f9b4  ldr x0,[x0, #0xc98]
+0105f9b8  bl 0x00b0789c
+0105f9bc  mov w8,#0x1
+0105f9c0  strb w8,[x22, #0x71b]
+0105f9c4  ldr x8,[x23]
+0105f9c8  mov x9,#-0x1
+0105f9cc  add x0,sp,#0x8
+0105f9d0  mov x1,xzr
+0105f9d4  stp x8,x9,[sp, #0x8]
+0105f9d8  str w19,[sp, #0x18]
+0105f9dc  bl 0x02186100
+0105f9e0  ldr x8,[x21]
+0105f9e4  mov x1,x0
+0105f9e8  mov x2,xzr
+0105f9ec  mov x0,x8
+0105f9f0  bl 0x01fd2850
+0105f9f4  ldr x8,[x20]
+0105f9f8  mov x19,x0
+0105f9fc  ldr w9,[x8, #0xe0]
+0105fa00  cbnz w9,0x0105fa0c
+0105fa04  mov x0,x8
+0105fa08  bl 0x00b0798c
+0105fa0c  mov x0,x19
+0105fa10  mov x1,xzr
+0105fa14  bl 0x024c0104
+0105fa18  ldp x19,x30,[sp, #0x40]
+0105fa1c  ldp x21,x20,[sp, #0x30]
+0105fa20  ldp x23,x22,[sp, #0x20]
+0105fa24  mov w0,#0x1
+0105fa28  add sp,sp,#0x50
+0105fa2c  ret
+
+
+================================================================================
+### FILE: 0105fa30_Tutorial.DerivedClass__add_TestEvent.txt
+================================================================================
+Function: Tutorial.DerivedClass$$add_TestEvent @ 0105fa30
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_e_TestEvent @ 0144f434
+
+--- Listing ---
+0105fa30  str x22,[sp, #-0x30]!
+0105fa34  stp x21,x20,[sp, #0x10]
+0105fa38  stp x19,x30,[sp, #0x20]
+0105fa3c  adrp x21,0x3574000
+0105fa40  ldrb w8,[x21, #0x71c]
+0105fa44  mov x19,x1
+0105fa48  mov x20,x0
+0105fa4c  tbnz w8,#0x0,0x0105fa64
+0105fa50  adrp x0,0x3348000
+0105fa54  ldr x0,[x0, #0xcf8]
+0105fa58  bl 0x00b0789c
+0105fa5c  mov w8,#0x1
+0105fa60  strb w8,[x21, #0x71c]
+0105fa64  adrp x22,0x3348000
+0105fa68  ldr x21,[x20, #0x20]!
+0105fa6c  ldr x22,[x22, #0xcf8]
+0105fa70  mov x0,x21
+0105fa74  mov x1,x19
+0105fa78  mov x2,xzr
+0105fa7c  bl 0x02197810
+0105fa80  mov x8,x0
+0105fa84  cbz x0,0x0105fa98
+0105fa88  ldr x1,[x22]
+0105fa8c  ldr x9,[x8]
+0105fa90  cmp x9,x1
+0105fa94  b.ne 0x0105fac4
+0105fa98  mov x0,x20
+0105fa9c  mov x1,x8
+0105faa0  mov x2,x21
+0105faa4  bl 0x00ae526c
+0105faa8  cmp x21,x0
+0105faac  mov x21,x0
+0105fab0  b.ne 0x0105fa70
+0105fab4  ldp x19,x30,[sp, #0x20]
+0105fab8  ldp x21,x20,[sp, #0x10]
+0105fabc  ldr x22,[sp], #0x30
+0105fac0  ret
+0105fac4  mov x0,x8
+0105fac8  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 0105facc_Tutorial.DerivedClass__remove_TestEvent.txt
+================================================================================
+Function: Tutorial.DerivedClass$$remove_TestEvent @ 0105facc
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_e_TestEvent @ 0144f434
+
+--- Listing ---
+0105facc  str x22,[sp, #-0x30]!
+0105fad0  stp x21,x20,[sp, #0x10]
+0105fad4  stp x19,x30,[sp, #0x20]
+0105fad8  adrp x21,0x3574000
+0105fadc  ldrb w8,[x21, #0x71d]
+0105fae0  mov x19,x1
+0105fae4  mov x20,x0
+0105fae8  tbnz w8,#0x0,0x0105fb00
+0105faec  adrp x0,0x3348000
+0105faf0  ldr x0,[x0, #0xcf8]
+0105faf4  bl 0x00b0789c
+0105faf8  mov w8,#0x1
+0105fafc  strb w8,[x21, #0x71d]
+0105fb00  adrp x22,0x3348000
+0105fb04  ldr x21,[x20, #0x20]!
+0105fb08  ldr x22,[x22, #0xcf8]
+0105fb0c  mov x0,x21
+0105fb10  mov x1,x19
+0105fb14  mov x2,xzr
+0105fb18  bl 0x02197a1c
+0105fb1c  mov x8,x0
+0105fb20  cbz x0,0x0105fb34
+0105fb24  ldr x1,[x22]
+0105fb28  ldr x9,[x8]
+0105fb2c  cmp x9,x1
+0105fb30  b.ne 0x0105fb60
+0105fb34  mov x0,x20
+0105fb38  mov x1,x8
+0105fb3c  mov x2,x21
+0105fb40  bl 0x00ae526c
+0105fb44  cmp x21,x0
+0105fb48  mov x21,x0
+0105fb4c  b.ne 0x0105fb0c
+0105fb50  ldp x19,x30,[sp, #0x20]
+0105fb54  ldp x21,x20,[sp, #0x10]
+0105fb58  ldr x22,[sp], #0x30
+0105fb5c  ret
+0105fb60  mov x0,x8
+0105fb64  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 0105fb68_Tutorial.DerivedClass__CallEvent.txt
+================================================================================
+Function: Tutorial.DerivedClass$$CallEvent @ 0105fb68
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_CallEvent @ 0144e4a0
+
+--- Listing ---
+0105fb68  str x30,[sp, #-0x10]!
+0105fb6c  ldr x8,[x0, #0x20]
+0105fb70  cbz x8,0x0105fb88
+0105fb74  ldr x2,[x8, #0x18]
+0105fb78  ldr x0,[x8, #0x40]
+0105fb7c  ldr x1,[x8, #0x28]
+0105fb80  ldr x30,[sp], #0x10
+0105fb84  br x2
+0105fb88  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105fb8c_Tutorial.DerivedClass__TestLong.txt
+================================================================================
+Function: Tutorial.DerivedClass$$TestLong @ 0105fb8c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_TestLong @ 0144e63c
+
+--- Listing ---
+0105fb8c  add x0,x1,#0x1
+0105fb90  ret
+
+
+================================================================================
+### FILE: 0105fb94_Tutorial.DerivedClass__GetCalc.txt
+================================================================================
+Function: Tutorial.DerivedClass$$GetCalc @ 0105fb94
+
+--- Calls OUT ---
+  -> Tutorial.DerivedClass.InnerCalc$$.ctor @ 010d02e8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_GetCalc @ 0144e81c
+
+--- Listing ---
+0105fb94  str x20,[sp, #-0x20]!
+0105fb98  stp x19,x30,[sp, #0x10]
+0105fb9c  adrp x19,0x3574000
+0105fba0  adrp x20,0x3358000
+0105fba4  ldrb w8,[x19, #0x71e]
+0105fba8  ldr x20,[x20, #0xc50]
+0105fbac  tbnz w8,#0x0,0x0105fbc4
+0105fbb0  adrp x0,0x3358000
+0105fbb4  ldr x0,[x0, #0xc50]
+0105fbb8  bl 0x00b0789c
+0105fbbc  mov w8,#0x1
+0105fbc0  strb w8,[x19, #0x71e]
+0105fbc4  ldr x0,[x20]
+0105fbc8  bl 0x00b079a0
+0105fbcc  cbz x0,0x0105fbec
+0105fbd0  mov x1,xzr
+0105fbd4  mov x19,x0
+0105fbd8  bl 0x010d02e8
+0105fbdc  mov x0,x19
+0105fbe0  ldp x19,x30,[sp, #0x10]
+0105fbe4  ldr x20,[sp], #0x20
+0105fbe8  ret
+0105fbec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 010d02e0_Tutorial.DerivedClass.InnerCalc__add.txt
+================================================================================
+Function: Tutorial.DerivedClass.InnerCalc$$add @ 010d02e0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+010d02e0  add w0,w2,w1
+010d02e4  ret
+
+
+================================================================================
+### FILE: 010d02e8_Tutorial.DerivedClass.InnerCalc__.ctor.txt
+================================================================================
+Function: Tutorial.DerivedClass.InnerCalc$$.ctor @ 010d02e8
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- Tutorial.DerivedClass$$GetCalc @ 0105fb94
+
+--- Listing ---
+010d02e8  mov w8,#0x64
+010d02ec  mov x1,xzr
+010d02f0  str w8,[x0, #0x10]
+010d02f4  b 0x02194104
+
+
+================================================================================
+### FILE: 010d02f8_Tutorial.DerivedClass.__c__.cctor.txt
+================================================================================
+Function: Tutorial.DerivedClass.<>c$$.cctor @ 010d02f8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+010d02f8  str x20,[sp, #-0x20]!
+010d02fc  stp x19,x30,[sp, #0x10]
+010d0300  adrp x19,0x3574000
+010d0304  adrp x20,0x334f000
+010d0308  ldrb w8,[x19, #0x99c]
+010d030c  ldr x20,[x20, #0x2b0]
+010d0310  tbnz w8,#0x0,0x010d0328
+010d0314  adrp x0,0x334f000
+010d0318  ldr x0,[x0, #0x2b0]
+010d031c  bl 0x00b0789c
+010d0320  mov w8,#0x1
+010d0324  strb w8,[x19, #0x99c]
+010d0328  ldr x0,[x20]
+010d032c  bl 0x00b079a0
+010d0330  cbz x0,0x010d0364
+010d0334  mov x1,xzr
+010d0338  mov x19,x0
+010d033c  bl 0x02194104
+010d0340  ldr x8,[x20]
+010d0344  mov x1,x19
+010d0348  ldr x8,[x8, #0xb8]
+010d034c  str x19,[x8]
+010d0350  ldr x8,[x20]
+010d0354  ldp x19,x30,[sp, #0x10]
+010d0358  ldr x0,[x8, #0xb8]
+010d035c  ldr x20,[sp], #0x20
+010d0360  b 0x00b07850
+010d0364  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 010d0368_Tutorial.DerivedClass.__c__.ctor.txt
+================================================================================
+Function: Tutorial.DerivedClass.<>c$$.ctor @ 010d0368
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+010d0368  mov x1,xzr
+010d036c  b 0x02194104
+
+
+================================================================================
+### FILE: 010d0370_Tutorial.DerivedClass.__c___ComplexFunc_b__6_0.txt
+================================================================================
+Function: Tutorial.DerivedClass.<>c$$<ComplexFunc>b__6_0 @ 010d0370
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+010d0370  str x20,[sp, #-0x20]!
+010d0374  stp x19,x30,[sp, #0x10]
+010d0378  adrp x20,0x3574000
+010d037c  adrp x19,0x336b000
+010d0380  ldrb w8,[x20, #0x99d]
+010d0384  ldr x19,[x19, #0x7d0]
+010d0388  tbnz w8,#0x0,0x010d03ac
+010d038c  adrp x0,0x336b000
+010d0390  ldr x0,[x0, #0x7d0]
+010d0394  bl 0x00b0789c
+010d0398  adrp x0,0x3324000
+010d039c  ldr x0,[x0, #0x120]
+010d03a0  bl 0x00b0789c
+010d03a4  mov w8,#0x1
+010d03a8  strb w8,[x20, #0x99d]
+010d03ac  ldr x0,[x19]
+010d03b0  adrp x19,0x3324000
+010d03b4  ldr w8,[x0, #0xe0]
+010d03b8  ldr x19,[x19, #0x120]
+010d03bc  cbnz w8,0x010d03c4
+010d03c0  bl 0x00b0798c
+010d03c4  ldr x0,[x19]
+010d03c8  ldp x19,x30,[sp, #0x10]
+010d03cc  mov x1,xzr
+010d03d0  ldr x20,[sp], #0x20
+010d03d4  b 0x024c0104
+
+
+================================================================================
+### FILE: 010d03d8_Tutorial.DerivedClass.__c___.ctor_b__22_0.txt
+================================================================================
+Function: Tutorial.DerivedClass.<>c$$<.ctor>b__22_0 @ 010d03d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+010d03d8  str x22,[sp, #-0x30]!
+010d03dc  stp x21,x20,[sp, #0x10]
+010d03e0  stp x19,x30,[sp, #0x20]
+010d03e4  adrp x21,0x3574000
+010d03e8  adrp x22,0x3360000
+010d03ec  adrp x20,0x336b000
+010d03f0  ldrb w8,[x21, #0x99e]
+010d03f4  ldr x22,[x22, #0x1c8]
+010d03f8  ldr x20,[x20, #0x7d0]
+010d03fc  mov x19,x1
+010d0400  tbnz w8,#0x0,0x010d0424
+010d0404  adrp x0,0x336b000
+010d0408  ldr x0,[x0, #0x7d0]
+010d040c  bl 0x00b0789c
+010d0410  adrp x0,0x3360000
+010d0414  ldr x0,[x0, #0x1c8]
+010d0418  bl 0x00b0789c
+010d041c  mov w8,#0x1
+010d0420  strb w8,[x21, #0x99e]
+010d0424  ldr x0,[x22]
+010d0428  mov x1,x19
+010d042c  mov x2,xzr
+010d0430  bl 0x01fd2850
+010d0434  ldr x8,[x20]
+010d0438  mov x19,x0
+010d043c  ldr w9,[x8, #0xe0]
+010d0440  cbnz w9,0x010d044c
+010d0444  mov x0,x8
+010d0448  bl 0x00b0798c
+010d044c  mov x0,x19
+010d0450  ldp x19,x30,[sp, #0x20]
+010d0454  ldp x21,x20,[sp, #0x10]
+010d0458  mov x1,xzr
+010d045c  ldr x22,[sp], #0x30
+010d0460  b 0x024c0104
+
+
+================================================================================
+### FILE: 010d0464_Tutorial.DerivedClassExtensions__GetSomeData.txt
+================================================================================
+Function: Tutorial.DerivedClassExtensions$$GetSomeData @ 010d0464
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_GetSomeData @ 0144e9dc
+
+--- Listing ---
+010d0464  sub sp,sp,#0x30
+010d0468  stp x21,x20,[sp, #0x10]
+010d046c  stp x19,x30,[sp, #0x20]
+010d0470  adrp x20,0x3574000
+010d0474  ldrb w8,[x20, #0x99f]
+010d0478  mov x19,x0
+010d047c  tbnz w8,#0x0,0x010d04a0
+010d0480  adrp x0,0x336b000
+010d0484  ldr x0,[x0, #0x7d0]
+010d0488  bl 0x00b0789c
+010d048c  adrp x0,0x3339000
+010d0490  ldr x0,[x0, #0x60]
+010d0494  bl 0x00b0789c
+010d0498  mov w8,#0x1
+010d049c  strb w8,[x20, #0x99f]
+010d04a0  str wzr,[sp, #0xc]
+010d04a4  cbz x19,0x010d0518
+010d04a8  ldr w8,[x19, #0x14]
+010d04ac  adrp x20,0x3339000
+010d04b0  adrp x21,0x336b000
+010d04b4  ldr x20,[x20, #0x60]
+010d04b8  ldr x21,[x21, #0x7d0]
+010d04bc  add x0,sp,#0xc
+010d04c0  mov x1,xzr
+010d04c4  str w8,[sp, #0xc]
+010d04c8  bl 0x0214dc44
+010d04cc  ldr x8,[x20]
+010d04d0  mov x1,x0
+010d04d4  mov x2,xzr
+010d04d8  mov x0,x8
+010d04dc  bl 0x01fd2850
+010d04e0  ldr x8,[x21]
+010d04e4  mov x20,x0
+010d04e8  ldr w9,[x8, #0xe0]
+010d04ec  cbnz w9,0x010d04f8
+010d04f0  mov x0,x8
+010d04f4  bl 0x00b0798c
+010d04f8  mov x0,x20
+010d04fc  mov x1,xzr
+010d0500  bl 0x024c0104
+010d0504  ldr w0,[x19, #0x14]
+010d0508  ldp x19,x30,[sp, #0x20]
+010d050c  ldp x21,x20,[sp, #0x10]
+010d0510  add sp,sp,#0x30
+010d0514  ret
+010d0518  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 010d051c_Tutorial.DerivedClassExtensions__GetSomeBaseData.txt
+================================================================================
+Function: Tutorial.DerivedClassExtensions$$GetSomeBaseData @ 010d051c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialBaseClassWrap$$_m_GetSomeBaseData @ 0144b9d0
+
+--- Listing ---
+010d051c  sub sp,sp,#0x30
+010d0520  stp x21,x20,[sp, #0x10]
+010d0524  stp x19,x30,[sp, #0x20]
+010d0528  adrp x20,0x3574000
+010d052c  ldrb w8,[x20, #0x9a0]
+010d0530  mov x19,x0
+010d0534  tbnz w8,#0x0,0x010d0558
+010d0538  adrp x0,0x336b000
+010d053c  ldr x0,[x0, #0x7d0]
+010d0540  bl 0x00b0789c
+010d0544  adrp x0,0x3333000
+010d0548  ldr x0,[x0, #0x6c8]
+010d054c  bl 0x00b0789c
+010d0550  mov w8,#0x1
+010d0554  strb w8,[x20, #0x9a0]
+010d0558  str wzr,[sp, #0xc]
+010d055c  cbz x19,0x010d05d0
+010d0560  ldr w8,[x19, #0x10]
+010d0564  adrp x20,0x3333000
+010d0568  adrp x21,0x336b000
+010d056c  ldr x20,[x20, #0x6c8]
+010d0570  ldr x21,[x21, #0x7d0]
+010d0574  add x0,sp,#0xc
+010d0578  mov x1,xzr
+010d057c  str w8,[sp, #0xc]
+010d0580  bl 0x0214dc44
+010d0584  ldr x8,[x20]
+010d0588  mov x1,x0
+010d058c  mov x2,xzr
+010d0590  mov x0,x8
+010d0594  bl 0x01fd2850
+010d0598  ldr x8,[x21]
+010d059c  mov x20,x0
+010d05a0  ldr w9,[x8, #0xe0]
+010d05a4  cbnz w9,0x010d05b0
+010d05a8  mov x0,x8
+010d05ac  bl 0x00b0798c
+010d05b0  mov x0,x20
+010d05b4  mov x1,xzr
+010d05b8  bl 0x024c0104
+010d05bc  ldr w0,[x19, #0x10]
+010d05c0  ldp x19,x30,[sp, #0x20]
+010d05c4  ldp x21,x20,[sp, #0x10]
+010d05c8  add sp,sp,#0x30
+010d05cc  ret
+010d05d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 010d05d4_Tutorial.DerivedClassExtensions__GenericMethodOfString.txt
+================================================================================
+Function: Tutorial.DerivedClassExtensions$$GenericMethodOfString @ 010d05d4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> Tutorial.DerivedClass$$GenericMethod<object> @ 01776ab4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TutorialDerivedClassWrap$$_m_GenericMethodOfString @ 0144eb8c
+
+--- Listing ---
+010d05d4  str x20,[sp, #-0x20]!
+010d05d8  stp x19,x30,[sp, #0x10]
+010d05dc  adrp x20,0x3574000
+010d05e0  ldrb w8,[x20, #0x9a1]
+010d05e4  mov x19,x0
+010d05e8  tbnz w8,#0x0,0x010d0600
+010d05ec  adrp x0,0x3358000
+010d05f0  ldr x0,[x0, #0x8f8]
+010d05f4  bl 0x00b0789c
+010d05f8  mov w8,#0x1
+010d05fc  strb w8,[x20, #0x9a1]
+010d0600  cbz x19,0x010d0620
+010d0604  adrp x8,0x3358000
+010d0608  ldr x8,[x8, #0x8f8]
+010d060c  mov x0,x19
+010d0610  ldp x19,x30,[sp, #0x10]
+010d0614  ldr x1,[x8]
+010d0618  ldr x20,[sp], #0x20
+010d061c  b 0x01776ab4
+010d0620  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01776ab4_Tutorial.DerivedClass__GenericMethod_object_.txt
+================================================================================
+Function: Tutorial.DerivedClass$$GenericMethod<object> @ 01776ab4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Type$$GetTypeFromHandle @ 0215f900
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> System.String$$Concat @ 01fdebb8
+
+--- Calls IN ---
+  <- Tutorial.DerivedClassExtensions$$GenericMethodOfString @ 010d05d4
+
+--- Listing ---
+01776ab4  str x22,[sp, #-0x30]!
+01776ab8  stp x21,x20,[sp, #0x10]
+01776abc  stp x19,x30,[sp, #0x20]
+01776ac0  adrp x21,0x3578000
+01776ac4  adrp x20,0x3347000
+01776ac8  ldrb w8,[x21, #0xe9]
+01776acc  ldr x20,[x20, #0xd68]
+01776ad0  mov x19,x1
+01776ad4  tbnz w8,#0x0,0x01776b10
+01776ad8  adrp x0,0x336b000
+01776adc  ldr x0,[x0, #0x7d0]
+01776ae0  bl 0x00b0789c
+01776ae4  adrp x0,0x3347000
+01776ae8  ldr x0,[x0, #0xd68]
+01776aec  bl 0x00b0789c
+01776af0  adrp x0,0x3308000
+01776af4  ldr x0,[x0, #0xb10]
+01776af8  bl 0x00b0789c
+01776afc  adrp x0,0x3352000
+01776b00  ldr x0,[x0, #0xbe0]
+01776b04  bl 0x00b0789c
+01776b08  mov w8,#0x1
+01776b0c  strb w8,[x21, #0xe9]
+01776b10  ldr x0,[x20]
+01776b14  ldr x8,[x19, #0x38]
+01776b18  adrp x22,0x3352000
+01776b1c  ldr w9,[x0, #0xe0]
+01776b20  ldr x19,[x8]
+01776b24  ldr x22,[x22, #0xbe0]
+01776b28  cbnz w9,0x01776b30
+01776b2c  bl 0x00b0798c
+01776b30  adrp x21,0x3308000
+01776b34  adrp x20,0x336b000
+01776b38  ldr x21,[x21, #0xb10]
+01776b3c  ldr x20,[x20, #0x7d0]
+01776b40  mov x0,x19
+01776b44  mov x1,xzr
+01776b48  bl 0x0215f900
+01776b4c  ldr x19,[x22]
+01776b50  cbz x0,0x01776b68
+01776b54  ldr x8,[x0]
+01776b58  ldp x9,x1,[x8, #0x168]
+01776b5c  blr x9
+01776b60  mov x1,x0
+01776b64  b 0x01776b6c
+01776b68  mov x1,xzr
+01776b6c  ldr x2,[x21]
+01776b70  mov x0,x19
+01776b74  mov x3,xzr
+01776b78  bl 0x01fdebb8
+01776b7c  ldr x8,[x20]
+01776b80  mov x19,x0
+01776b84  ldr w9,[x8, #0xe0]
+01776b88  cbnz w9,0x01776b94
+01776b8c  mov x0,x8
+01776b90  bl 0x00b0798c
+01776b94  mov x0,x19
+01776b98  ldp x19,x30,[sp, #0x20]
+01776b9c  ldp x21,x20,[sp, #0x10]
+01776ba0  mov x1,xzr
+01776ba4  ldr x22,[sp], #0x30
+01776ba8  b 0x024c0104
+
+

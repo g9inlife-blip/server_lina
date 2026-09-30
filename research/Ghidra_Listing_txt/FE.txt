@@ -1,0 +1,195 @@
+================================================================================
+### FILE: 00cf5234_FeatureSelector__Start.txt
+================================================================================
+Function: FeatureSelector$$Start @ 00cf5234
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.Events.UnityAction<bool>$$.ctor @ 01e680a8
+  -> UnityEngine.Events.UnityEvent<bool>$$AddListener @ 01e69200
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5234  stp x21,x20,[sp, #-0x20]!
+00cf5238  stp x19,x30,[sp, #0x10]
+00cf523c  adrp x20,0x3571000
+00cf5240  adrp x21,0x3351000
+00cf5244  ldrb w8,[x20, #0x9dd]
+00cf5248  ldr x21,[x21, #0xaa8]
+00cf524c  mov x19,x0
+00cf5250  tbnz w8,#0x0,0x00cf528c
+00cf5254  adrp x0,0x3351000
+00cf5258  ldr x0,[x0, #0xaa8]
+00cf525c  bl 0x00b0789c
+00cf5260  adrp x0,0x3328000
+00cf5264  ldr x0,[x0, #0x58]
+00cf5268  bl 0x00b0789c
+00cf526c  adrp x0,0x3355000
+00cf5270  ldr x0,[x0, #0x140]
+00cf5274  bl 0x00b0789c
+00cf5278  adrp x0,0x3321000
+00cf527c  ldr x0,[x0, #0xf98]
+00cf5280  bl 0x00b0789c
+00cf5284  mov w8,#0x1
+00cf5288  strb w8,[x20, #0x9dd]
+00cf528c  ldr x1,[x21]
+00cf5290  mov x0,x19
+00cf5294  bl 0x0176cbf8
+00cf5298  mov x20,x19
+00cf529c  str x0,[x20, #0x18]!
+00cf52a0  mov x1,x0
+00cf52a4  mov x0,x20
+00cf52a8  bl 0x00b07850
+00cf52ac  ldr x8,[x20]
+00cf52b0  cbz x8,0x00cf530c
+00cf52b4  adrp x9,0x3355000
+00cf52b8  ldr x9,[x9, #0x140]
+00cf52bc  ldr x20,[x8, #0x110]
+00cf52c0  ldr x0,[x9]
+00cf52c4  bl 0x00b079a0
+00cf52c8  cbz x0,0x00cf530c
+00cf52cc  adrp x8,0x3328000
+00cf52d0  ldr x8,[x8, #0x58]
+00cf52d4  mov x1,x19
+00cf52d8  mov x3,xzr
+00cf52dc  mov x21,x0
+00cf52e0  ldr x2,[x8]
+00cf52e4  bl 0x01e680a8
+00cf52e8  cbz x20,0x00cf530c
+00cf52ec  adrp x8,0x3321000
+00cf52f0  ldr x8,[x8, #0xf98]
+00cf52f4  ldp x19,x30,[sp, #0x10]
+00cf52f8  mov x0,x20
+00cf52fc  mov x1,x21
+00cf5300  ldr x2,[x8]
+00cf5304  ldp x21,x20,[sp], #0x20
+00cf5308  b 0x01e69200
+00cf530c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf5310_FeatureSelector__.ctor.txt
+================================================================================
+Function: FeatureSelector$$.ctor @ 00cf5310
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5310  mov x1,xzr
+00cf5314  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00cf5318_FeatureSelector___Start_b__2_0.txt
+================================================================================
+Function: FeatureSelector$$<Start>b__2_0 @ 00cf5318
+
+--- Calls OUT ---
+  -> FeatureTab$$Hide @ 00cf5360
+  -> FUN_00b079b0 @ 00b079b0
+  -> FeatureTab$$Show @ 00cf533c
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5318  str x30,[sp, #-0x10]!
+00cf531c  ldr x0,[x0, #0x20]
+00cf5320  cbz x0,0x00cf5338
+00cf5324  tbz w1,#0x0,0x00cf5330
+00cf5328  ldr x30,[sp], #0x10
+00cf532c  b 0x00cf533c
+00cf5330  ldr x30,[sp], #0x10
+00cf5334  b 0x00cf5360
+00cf5338  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf533c_FeatureTab__Show.txt
+================================================================================
+Function: FeatureTab$$Show @ 00cf533c
+
+--- Calls OUT ---
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- FeatureSelector$$<Start>b__2_0 @ 00cf5318
+
+--- Listing ---
+00cf533c  str x30,[sp, #-0x10]!
+00cf5340  mov x1,xzr
+00cf5344  bl 0x024e4ed4
+00cf5348  cbz x0,0x00cf535c
+00cf534c  mov w1,#0x1
+00cf5350  mov x2,xzr
+00cf5354  ldr x30,[sp], #0x10
+00cf5358  b 0x024de86c
+00cf535c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf5360_FeatureTab__Hide.txt
+================================================================================
+Function: FeatureTab$$Hide @ 00cf5360
+
+--- Calls OUT ---
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+
+--- Calls IN ---
+  <- FeatureSelector$$<Start>b__2_0 @ 00cf5318
+
+--- Listing ---
+00cf5360  str x30,[sp, #-0x10]!
+00cf5364  mov x1,xzr
+00cf5368  bl 0x024e4ed4
+00cf536c  cbz x0,0x00cf5380
+00cf5370  mov w1,wzr
+00cf5374  mov x2,xzr
+00cf5378  ldr x30,[sp], #0x10
+00cf537c  b 0x024de86c
+00cf5380  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf5384_FeatureTab__.ctor.txt
+================================================================================
+Function: FeatureTab$$.ctor @ 00cf5384
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+  <- SA.AN.SOCIAL_API.SocialSharingTab$$.ctor @ 00ca512c
+  <- SA.AN.ADVERTISING.GoogleAdMobTab$$.ctor @ 00cba490
+  <- SA.AN.BILLING.BillingTab$$.ctor @ 00cb8a94
+  <- SA.AN.NATIVE_POP_UPS.NativePopUpsTab$$.ctor @ 00cb4ddc
+  <- SA.AN.GOOGLE_PLAY_SERVICES.GooglePlayServicesTab$$.ctor @ 00cb2d3c
+  <- SA.AN.NOTIFICATIONS.NotificationsTab$$.ctor @ 00cb4724
+  <- SA.AN.FACEBOOK.FacebookApiTab$$.ctor @ 00ca8254
+  <- SA.AN.GOOGLE_PLUS_BUTTON.GooglePlusTab$$.ctor @ 00cb81bc
+  <- SA.AN.GOOGLE_RTM.RealTimeMultiplayerTab$$.ctor @ 00cac218
+  <- SA.AN.MORE_INFO.MoreInfoTab$$.ctor @ 00cb70ac
+  <- SA.AN.NATIVE_API.NativeApiTab$$.ctor @ 00cb6f1c
+  <- SA.AN.GOOGLE_QUESTS_EVENTS.QuestsAndEventsTab$$.ctor @ 00cadc68
+  <- SA.AN.GOOGLE_SAVED_GAMES.SavedGamesTab$$.ctor @ 00caa18c
+  <- SA.AN.IN_GAME_BILLING.InGameBillingTab$$.ctor @ 00cb8528
+  <- SA.AN.GOOGLE_PLAY_FRIENDS.FriendsLoadingTab$$.ctor @ 00cb3bf8
+  <- SA.AN.TWITTER.TwitterApiTab$$.ctor @ 00ca3048
+  <- SA.AN.GOOGLE_LEADERBOARD_UI.LeaderboardsUITab$$.ctor @ 00caf684
+
+--- Listing ---
+00cf5384  mov x1,xzr
+00cf5388  b 0x024e45bc
+
+

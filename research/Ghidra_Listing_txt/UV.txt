@@ -1,0 +1,479 @@
+================================================================================
+### FILE: 00dbf640_UVScroller__OnEnable.txt
+================================================================================
+Function: UVScroller$$OnEnable @ 00dbf640
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Renderer$$get_materials @ 024c728c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Object$$op_Implicit @ 024d0ab0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+  -> UnityEngine.Renderer$$get_material @ 024c730c
+
+--- Calls IN ---
+
+--- Listing ---
+00dbf640  str x22,[sp, #-0x30]!
+00dbf644  stp x21,x20,[sp, #0x10]
+00dbf648  stp x19,x30,[sp, #0x20]
+00dbf64c  adrp x21,0x3572000
+00dbf650  adrp x22,0x3309000
+00dbf654  adrp x20,0x3321000
+00dbf658  ldrb w8,[x21, #0x161]
+00dbf65c  ldr x22,[x22, #0x608]
+00dbf660  ldr x20,[x20, #0xca8]
+00dbf664  mov x19,x0
+00dbf668  tbnz w8,#0x0,0x00dbf68c
+00dbf66c  adrp x0,0x3309000
+00dbf670  ldr x0,[x0, #0x608]
+00dbf674  bl 0x00b0789c
+00dbf678  adrp x0,0x3321000
+00dbf67c  ldr x0,[x0, #0xca8]
+00dbf680  bl 0x00b0789c
+00dbf684  mov w8,#0x1
+00dbf688  strb w8,[x21, #0x161]
+00dbf68c  ldr x1,[x22]
+00dbf690  mov x0,x19
+00dbf694  bl 0x0176cbf8
+00dbf698  ldr x8,[x20]
+00dbf69c  mov x20,x0
+00dbf6a0  ldr w9,[x8, #0xe0]
+00dbf6a4  cbnz w9,0x00dbf6b0
+00dbf6a8  mov x0,x8
+00dbf6ac  bl 0x00b0798c
+00dbf6b0  mov x0,x20
+00dbf6b4  mov x1,xzr
+00dbf6b8  bl 0x024d0ab0
+00dbf6bc  tbz w0,#0x0,0x00dbf710
+00dbf6c0  cbz x20,0x00dbf744
+00dbf6c4  ldr w21,[x19, #0x24]
+00dbf6c8  mov x0,x20
+00dbf6cc  mov x1,xzr
+00dbf6d0  bl 0x024c728c
+00dbf6d4  cbz x0,0x00dbf744
+00dbf6d8  ldr w8,[x0, #0x18]
+00dbf6dc  mov x0,x20
+00dbf6e0  cmp w21,w8
+00dbf6e4  b.ge 0x00dbf720
+00dbf6e8  mov x1,xzr
+00dbf6ec  bl 0x024c728c
+00dbf6f0  cbz x0,0x00dbf744
+00dbf6f4  ldrsw x8,[x19, #0x24]
+00dbf6f8  ldr w9,[x0, #0x18]
+00dbf6fc  cmp w8,w9
+00dbf700  b.cs 0x00dbf748
+00dbf704  add x8,x0,x8, LSL #0x3
+00dbf708  ldr x1,[x8, #0x20]
+00dbf70c  b 0x00dbf72c
+00dbf710  ldp x19,x30,[sp, #0x20]
+00dbf714  ldp x21,x20,[sp, #0x10]
+00dbf718  ldr x22,[sp], #0x30
+00dbf71c  ret
+00dbf720  mov x1,xzr
+00dbf724  bl 0x024c730c
+00dbf728  mov x1,x0
+00dbf72c  str x1,[x19, #0x30]!
+00dbf730  mov x0,x19
+00dbf734  ldp x19,x30,[sp, #0x20]
+00dbf738  ldp x21,x20,[sp, #0x10]
+00dbf73c  ldr x22,[sp], #0x30
+00dbf740  b 0x00b07850
+00dbf744  bl 0x00b079b0
+00dbf748  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dbf74c_UVScroller__Update.txt
+================================================================================
+Function: UVScroller$$Update @ 00dbf74c
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$GetTextureOffset @ 024d33d8
+  -> UnityEngine.Material$$get_mainTextureOffset @ 024d332c
+  -> UnityEngine.Material$$set_mainTextureOffset @ 024d3430
+  -> UnityEngine.Material$$SetTextureOffset @ 024d34e4
+  -> UnityEngine.Time$$get_deltaTime @ 024dc048
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> UnityEngine.Time$$get_unscaledDeltaTime @ 024dc160
+
+--- Calls IN ---
+
+--- Listing ---
+00dbf74c  str d10,[sp, #-0x30]!
+00dbf750  stp d9,d8,[sp, #0x10]
+00dbf754  stp x19,x30,[sp, #0x20]
+00dbf758  ldrb w8,[x0, #0x20]
+00dbf75c  mov x19,x0
+00dbf760  cbz w8,0x00dbf770
+00dbf764  mov x0,xzr
+00dbf768  bl 0x024dc160
+00dbf76c  b 0x00dbf778
+00dbf770  mov x0,xzr
+00dbf774  bl 0x024dc048
+00dbf778  ldr x0,[x19, #0x28]
+00dbf77c  ldp s9,s10,[x19, #0x18]
+00dbf780  mov x1,xzr
+00dbf784  mov v8.16B,v0.16B
+00dbf788  bl 0x01fdf3a0
+00dbf78c  ldr x8,[x19, #0x30]
+00dbf790  tbz w0,#0x0,0x00dbf7a8
+00dbf794  cbz x8,0x00dbf880
+00dbf798  mov x0,x8
+00dbf79c  mov x1,xzr
+00dbf7a0  bl 0x024d332c
+00dbf7a4  b 0x00dbf7bc
+00dbf7a8  cbz x8,0x00dbf880
+00dbf7ac  ldr x1,[x19, #0x28]
+00dbf7b0  mov x0,x8
+00dbf7b4  mov x2,xzr
+00dbf7b8  bl 0x024d33d8
+00dbf7bc  ldrb w8,[x19, #0x21]
+00dbf7c0  fmul s2,s8,s9
+00dbf7c4  fmul s3,s8,s10
+00dbf7c8  fadd s9,s2,s0
+00dbf7cc  fadd s8,s3,s1
+00dbf7d0  cbz w8,0x00dbf820
+00dbf7d4  fmov s0,0x3f800000
+00dbf7d8  fcmp s9,s0
+00dbf7dc  fmov s1,0xbf800000
+00dbf7e0  b.le 0x00dbf7f8
+00dbf7e4  fadd s9,s9,s1
+00dbf7e8  fcmp s9,s0
+00dbf7ec  b.gt 0x00dbf7e4
+00dbf7f0  b 0x00dbf7f8
+00dbf7f4  fadd s9,s9,s0
+00dbf7f8  fcmp s9,#0.0
+00dbf7fc  b.mi 0x00dbf7f4
+00dbf800  b 0x00dbf808
+00dbf804  fadd s8,s8,s1
+00dbf808  fcmp s8,s0
+00dbf80c  b.gt 0x00dbf804
+00dbf810  b 0x00dbf818
+00dbf814  fadd s8,s8,s0
+00dbf818  fcmp s8,#0.0
+00dbf81c  b.mi 0x00dbf814
+00dbf820  ldr x0,[x19, #0x28]
+00dbf824  mov x1,xzr
+00dbf828  bl 0x01fdf3a0
+00dbf82c  ldr x8,[x19, #0x30]
+00dbf830  tbz w0,#0x0,0x00dbf858
+00dbf834  cbz x8,0x00dbf880
+00dbf838  mov v0.16B,v9.16B
+00dbf83c  mov v1.16B,v8.16B
+00dbf840  ldp x19,x30,[sp, #0x20]
+00dbf844  ldp d9,d8,[sp, #0x10]
+00dbf848  mov x0,x8
+00dbf84c  mov x1,xzr
+00dbf850  ldr d10,[sp], #0x30
+00dbf854  b 0x024d3430
+00dbf858  cbz x8,0x00dbf880
+00dbf85c  ldr x1,[x19, #0x28]
+00dbf860  mov v0.16B,v9.16B
+00dbf864  mov v1.16B,v8.16B
+00dbf868  ldp x19,x30,[sp, #0x20]
+00dbf86c  ldp d9,d8,[sp, #0x10]
+00dbf870  mov x0,x8
+00dbf874  mov x2,xzr
+00dbf878  ldr d10,[sp], #0x30
+00dbf87c  b 0x024d34e4
+00dbf880  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbf884_UVScroller__.ctor.txt
+================================================================================
+Function: UVScroller$$.ctor @ 00dbf884
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dbf884  adrp x8,0x26db000
+00dbf888  ldr d0,[x8, #0x5c0]
+00dbf88c  mov w8,#0x101
+00dbf890  mov x1,xzr
+00dbf894  strh w8,[x0, #0x20]
+00dbf898  str d0,[x0, #0x18]
+00dbf89c  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00dbf8a0_UVStepper__OnEnable.txt
+================================================================================
+Function: UVStepper$$OnEnable @ 00dbf8a0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbf8a0  str wzr,[x0, #0x40]
+00dbf8a4  ret
+
+
+================================================================================
+### FILE: 00dbf8a8_UVStepper__OnDisable.txt
+================================================================================
+Function: UVStepper$$OnDisable @ 00dbf8a8
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$set_mainTextureOffset @ 024d3430
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Object$$op_Implicit @ 024d0ab0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbf8a8  stp x21,x20,[sp, #-0x20]!
+00dbf8ac  stp x19,x30,[sp, #0x10]
+00dbf8b0  adrp x21,0x3572000
+00dbf8b4  adrp x20,0x3321000
+00dbf8b8  ldrb w8,[x21, #0x162]
+00dbf8bc  ldr x20,[x20, #0xca8]
+00dbf8c0  mov x19,x0
+00dbf8c4  tbnz w8,#0x0,0x00dbf8dc
+00dbf8c8  adrp x0,0x3321000
+00dbf8cc  ldr x0,[x0, #0xca8]
+00dbf8d0  bl 0x00b0789c
+00dbf8d4  mov w8,#0x1
+00dbf8d8  strb w8,[x21, #0x162]
+00dbf8dc  ldr x0,[x20]
+00dbf8e0  ldr x20,[x19, #0x38]
+00dbf8e4  ldr w8,[x0, #0xe0]
+00dbf8e8  cbnz w8,0x00dbf8f0
+00dbf8ec  bl 0x00b0798c
+00dbf8f0  mov x0,x20
+00dbf8f4  mov x1,xzr
+00dbf8f8  bl 0x024d0ab0
+00dbf8fc  tbz w0,#0x0,0x00dbf91c
+00dbf900  ldr x0,[x19, #0x38]
+00dbf904  cbz x0,0x00dbf928
+00dbf908  ldp s0,s1,[x19, #0x44]
+00dbf90c  ldp x19,x30,[sp, #0x10]
+00dbf910  mov x1,xzr
+00dbf914  ldp x21,x20,[sp], #0x20
+00dbf918  b 0x024d3430
+00dbf91c  ldp x19,x30,[sp, #0x10]
+00dbf920  ldp x21,x20,[sp], #0x20
+00dbf924  ret
+00dbf928  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbf92c_UVStepper__InitMaterial.txt
+================================================================================
+Function: UVStepper$$InitMaterial @ 00dbf92c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Renderer$$get_materials @ 024c728c
+  -> UnityEngine.Material$$get_mainTextureOffset @ 024d332c
+  -> UnityEngine.Object$$op_Implicit @ 024d0ab0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Renderer$$get_material @ 024c730c
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- UVStepper$$Start @ 00dbfa68
+
+--- Listing ---
+00dbf92c  stp x21,x20,[sp, #-0x20]!
+00dbf930  stp x19,x30,[sp, #0x10]
+00dbf934  adrp x20,0x3572000
+00dbf938  adrp x21,0x3321000
+00dbf93c  ldrb w8,[x20, #0x163]
+00dbf940  ldr x21,[x21, #0xca8]
+00dbf944  mov x19,x0
+00dbf948  tbnz w8,#0x0,0x00dbf96c
+00dbf94c  adrp x0,0x3309000
+00dbf950  ldr x0,[x0, #0x608]
+00dbf954  bl 0x00b0789c
+00dbf958  adrp x0,0x3321000
+00dbf95c  ldr x0,[x0, #0xca8]
+00dbf960  bl 0x00b0789c
+00dbf964  mov w8,#0x1
+00dbf968  strb w8,[x20, #0x163]
+00dbf96c  ldr x0,[x21]
+00dbf970  ldr x20,[x19, #0x30]
+00dbf974  ldr w8,[x0, #0xe0]
+00dbf978  cbnz w8,0x00dbf980
+00dbf97c  bl 0x00b0798c
+00dbf980  mov x0,x20
+00dbf984  mov x1,xzr
+00dbf988  bl 0x024d0ab0
+00dbf98c  tbz w0,#0x0,0x00dbf998
+00dbf990  ldr x20,[x19, #0x30]
+00dbf994  b 0x00dbf9b0
+00dbf998  adrp x8,0x3309000
+00dbf99c  ldr x8,[x8, #0x608]
+00dbf9a0  mov x0,x19
+00dbf9a4  ldr x1,[x8]
+00dbf9a8  bl 0x0176cbf8
+00dbf9ac  mov x20,x0
+00dbf9b0  ldr x0,[x21]
+00dbf9b4  ldr w8,[x0, #0xe0]
+00dbf9b8  cbnz w8,0x00dbf9c0
+00dbf9bc  bl 0x00b0798c
+00dbf9c0  mov x0,x20
+00dbf9c4  mov x1,xzr
+00dbf9c8  bl 0x024d0ab0
+00dbf9cc  tbz w0,#0x0,0x00dbfa54
+00dbf9d0  cbz x20,0x00dbfa60
+00dbf9d4  ldr w21,[x19, #0x28]
+00dbf9d8  mov x0,x20
+00dbf9dc  mov x1,xzr
+00dbf9e0  bl 0x024c728c
+00dbf9e4  cbz x0,0x00dbfa60
+00dbf9e8  ldr w8,[x0, #0x18]
+00dbf9ec  mov x0,x20
+00dbf9f0  cmp w21,w8
+00dbf9f4  b.ge 0x00dbfa20
+00dbf9f8  mov x1,xzr
+00dbf9fc  bl 0x024c728c
+00dbfa00  cbz x0,0x00dbfa60
+00dbfa04  ldrsw x8,[x19, #0x28]
+00dbfa08  ldr w9,[x0, #0x18]
+00dbfa0c  cmp w8,w9
+00dbfa10  b.cs 0x00dbfa64
+00dbfa14  add x8,x0,x8, LSL #0x3
+00dbfa18  ldr x1,[x8, #0x20]
+00dbfa1c  b 0x00dbfa2c
+00dbfa20  mov x1,xzr
+00dbfa24  bl 0x024c730c
+00dbfa28  mov x1,x0
+00dbfa2c  mov x20,x19
+00dbfa30  str x1,[x20, #0x38]!
+00dbfa34  mov x0,x20
+00dbfa38  bl 0x00b07850
+00dbfa3c  ldr x0,[x20]
+00dbfa40  cbz x0,0x00dbfa60
+00dbfa44  mov x1,xzr
+00dbfa48  bl 0x024d332c
+00dbfa4c  stp s0,s1,[x19, #0x44]
+00dbfa50  str wzr,[x19, #0x4c]
+00dbfa54  ldp x19,x30,[sp, #0x10]
+00dbfa58  ldp x21,x20,[sp], #0x20
+00dbfa5c  ret
+00dbfa60  bl 0x00b079b0
+00dbfa64  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dbfa68_UVStepper__Start.txt
+================================================================================
+Function: UVStepper$$Start @ 00dbfa68
+
+--- Calls OUT ---
+  -> UVStepper$$InitMaterial @ 00dbf92c
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfa68  b 0x00dbf92c
+
+
+================================================================================
+### FILE: 00dbfa6c_UVStepper__Update.txt
+================================================================================
+Function: UVStepper$$Update @ 00dbfa6c
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$get_mainTextureOffset @ 024d332c
+  -> UnityEngine.Material$$set_mainTextureOffset @ 024d3430
+  -> UnityEngine.Time$$get_deltaTime @ 024dc048
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Time$$get_unscaledDeltaTime @ 024dc160
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfa6c  str d8,[sp, #-0x20]!
+00dbfa70  stp x19,x30,[sp, #0x10]
+00dbfa74  ldrb w8,[x0, #0x24]
+00dbfa78  ldr s8,[x0, #0x40]
+00dbfa7c  mov x19,x0
+00dbfa80  mov x0,xzr
+00dbfa84  cbz w8,0x00dbfa90
+00dbfa88  bl 0x024dc160
+00dbfa8c  b 0x00dbfa94
+00dbfa90  bl 0x024dc048
+00dbfa94  ldr s1,[x19, #0x20]
+00dbfa98  fadd s0,s8,s0
+00dbfa9c  str s0,[x19, #0x40]
+00dbfaa0  fcmp s0,s1
+00dbfaa4  b.le 0x00dbfb34
+00dbfaa8  ldr x0,[x19, #0x38]
+00dbfaac  fsub s0,s0,s1
+00dbfab0  str s0,[x19, #0x40]
+00dbfab4  cbz x0,0x00dbfb40
+00dbfab8  mov x1,xzr
+00dbfabc  bl 0x024d332c
+00dbfac0  ldp s2,s3,[x19, #0x18]
+00dbfac4  ldrb w8,[x19, #0x25]
+00dbfac8  fadd s0,s0,s2
+00dbfacc  fadd s1,s1,s3
+00dbfad0  cbz w8,0x00dbfb1c
+00dbfad4  fmov s2,0x3f800000
+00dbfad8  mov v3.16B,v0.16B
+00dbfadc  fcmp s0,s2
+00dbfae0  fmov s0,wzr
+00dbfae4  b.gt 0x00dbfad8
+00dbfae8  mov v0.16B,v3.16B
+00dbfaec  fcmp s3,#0.0
+00dbfaf0  mov v3.16B,v2.16B
+00dbfaf4  b.mi 0x00dbfae8
+00dbfaf8  fmov s2,0x3f800000
+00dbfafc  mov v3.16B,v1.16B
+00dbfb00  fcmp s1,s2
+00dbfb04  fmov s1,wzr
+00dbfb08  b.gt 0x00dbfafc
+00dbfb0c  mov v1.16B,v3.16B
+00dbfb10  fcmp s3,#0.0
+00dbfb14  mov v3.16B,v2.16B
+00dbfb18  b.mi 0x00dbfb0c
+00dbfb1c  ldr x0,[x19, #0x38]
+00dbfb20  cbz x0,0x00dbfb40
+00dbfb24  ldp x19,x30,[sp, #0x10]
+00dbfb28  mov x1,xzr
+00dbfb2c  ldr d8,[sp], #0x20
+00dbfb30  b 0x024d3430
+00dbfb34  ldp x19,x30,[sp, #0x10]
+00dbfb38  ldr d8,[sp], #0x20
+00dbfb3c  ret
+00dbfb40  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbfb44_UVStepper__.ctor.txt
+================================================================================
+Function: UVStepper$$.ctor @ 00dbfb44
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfb44  adrp x8,0x26db000
+00dbfb48  ldr d0,[x8, #0xc38]
+00dbfb4c  mov w8,#0x3f000000
+00dbfb50  mov w9,#0x101
+00dbfb54  mov x1,xzr
+00dbfb58  str w8,[x0, #0x20]
+00dbfb5c  str d0,[x0, #0x18]
+00dbfb60  strh w9,[x0, #0x24]
+00dbfb64  b 0x024e45bc
+
+

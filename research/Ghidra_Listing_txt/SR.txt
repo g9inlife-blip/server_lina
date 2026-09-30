@@ -1,0 +1,832 @@
+================================================================================
+### FILE: 008d50d0_srand48.txt
+================================================================================
+Function: srand48 @ 008d50d0
+
+--- Calls OUT ---
+  -> srand48 @ 037995d8
+
+--- Calls IN ---
+  <- SystemNative_GetNonCryptographicallySecureRandomBytes @ 00a99b28
+
+--- Listing ---
+008d50d0  adrp x16,0x3308000
+008d50d4  ldr x17,[x16, #0x228]
+008d50d8  add x16,x16,#0x228
+008d50dc  br x17
+
+
+================================================================================
+### FILE: 01fbc05c_SR__Format.txt
+================================================================================
+Function: SR$$Format @ 01fbc05c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Format @ 01fdf8dc
+  -> System.Globalization.CultureInfo$$get_InvariantCulture @ 02117234
+
+--- Calls IN ---
+  <- System.ValueTuple<object,-object,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e99030
+  <- System.ValueTuple<object,-object,-object,-object,-object>$$System.IComparable.CompareTo @ 01ea10bc
+  <- System.Net.Security.SslStream$$SetAndVerifySelectionCallback @ 023c595c
+  <- System.Net.Sockets.SocketAsyncEventArgs$$SetBuffer @ 023c4228
+  <- System.Tuple<object,-Memory<byte>,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e4d148
+  <- System.Net.Sockets.Socket$$GetException @ 023b48f4
+  <- System.ValueTuple<object,-object,-object>$$System.IComparable.CompareTo @ 01e98d14
+  <- System.DateTimeParse$$GetDateTimeParseException @ 0213dd4c
+  <- System.TimeZoneInfo$$ValidateTimeZoneInfo @ 020c9f68
+  <- System.ValueTuple<object,-bool,-bool,-object,-object>$$System.IComparable.CompareTo @ 01e9f440
+  <- System.Guid$$.ctor @ 02148f2c
+  <- System.ValueTuple<int,-bool>$$System.Collections.IStructuralComparable.CompareTo @ 01e92690
+  <- System.IO.File$$Move @ 020b1004
+  <- System.Net.FtpControlStream$$QueueOrCreateDataConection @ 023668c8
+  <- System.Numerics.Vector<ushort>$$get_Item @ 01ef8528
+  <- System.Net.FtpControlStream$$GetPortV6 @ 023690c4
+  <- System.ValueTuple<object,-int,-int>$$System.IComparable.CompareTo @ 01e96394
+  <- System.Net.CommandStream$$GenerateException @ 023638bc
+  <- System.ValueTuple<IntPtr,-int,-IntPtr,-int,-IntPtr,-int,-bool,-ValueTuple<bool>>$$System.Collections.IStructuralComparable.CompareTo @ 01ea37f0
+  <- System.TypeInitializationException$$.ctor @ 0216c7e0
+  <- System.ValueTuple<int,-int>$$System.IComparable.CompareTo @ 01e93438
+  <- System.BitConverter$$ToString @ 020d8908
+  <- System.ValueTuple<bool,-bool,-object,-object>$$System.IComparable.CompareTo @ 01e9a288
+  <- System.Text.EncoderReplacementFallback$$.ctor @ 021d90a0
+  <- System.Net.HttpWebRequest$$CreateRequestAbortedException @ 0239503c
+  <- System.ValueTuple<bool,-bool,-object,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e9a614
+  <- System.Text.RegularExpressions.RegexParser$$ScanRegex @ 02339a84
+  <- System.ValueTuple<object,-bool>$$System.Collections.IStructuralComparable.CompareTo @ 01e946d8
+  <- System.String$$SplitInternal @ 01fe1ce4
+  <- System.Collections.Generic.TreeSet<object>$$AddIfNotPresent @ 01e47b60
+  <- System.MissingMethodException$$get_Message @ 02152364
+  <- System.IO.FileLoadException$$ToString @ 020a323c
+  <- System.ArgumentException$$get_Message @ 020d731c
+  <- System.Tuple<object,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e4b428
+  <- System.Text.RegularExpressions.RegexWriter$$EmitFragment @ 02340c10
+  <- System.Collections.ArrayList$$.ctor @ 0212889c
+  <- System.ValueTuple<bool,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e916cc
+  <- System.ValueTuple<int,-int>$$System.Collections.IStructuralComparable.CompareTo @ 01e936d4
+  <- System.Text.UnicodeEncoding$$GetByteCount @ 01ff57f8
+  <- System.IO.FileLoadException$$FormatFileLoadExceptionMessage @ 020a31b8
+  <- System.Text.DecoderReplacementFallback$$.ctor @ 021d658c
+  <- System.Text.RegularExpressions.RegexParser$$ScanCharClass @ 0233b4c0
+  <- System.ValueTuple<object,-object,-int>$$System.Collections.IStructuralComparable.CompareTo @ 01e97bd4
+  <- System.Net.FtpWebRequest$$EndGetResponse @ 0236df40
+  <- System.Collections.Concurrent.ConcurrentDictionary<object,-object>$$ThrowKeyNotFoundException @ 01f835ec
+  <- System.OperatingSystem$$.ctor @ 02172994
+  <- System.Net.Sockets.SocketAsyncEventArgs$$SetBuffer @ 023c408c
+  <- System.Net.FtpControlStream$$GetPortV4 @ 02368ed0
+  <- System.TimeZoneInfo$$TZif_CreateTransitionTimeFromPosixRule @ 020cd78c
+  <- System.Security.Cryptography.CryptoStream$$.ctor @ 02005ebc
+  <- System.ArgumentOutOfRangeException$$get_Message @ 020d76ec
+  <- System.ObjectDisposedException$$get_Message @ 0215f994
+  <- System.ValueTuple<int,-bool>$$System.IComparable.CompareTo @ 01e923f4
+  <- System.ValueTuple<bool>$$System.IComparable.CompareTo @ 01e8fe24
+  <- System.Tuple<int,-int,-int,-bool>$$System.Collections.IStructuralComparable.CompareTo @ 01e4e91c
+  <- System.Tuple<object,-object,-object,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e4f828
+  <- System.ValueTuple<object,-object,-int>$$System.IComparable.CompareTo @ 01e978b8
+  <- System.Text.StringBuilder$$.ctor @ 01fe8168
+  <- System.ValueTuple<object,-int,-int>$$System.Collections.IStructuralComparable.CompareTo @ 01e966a0
+  <- System.ValueTuple<bool>$$System.Collections.IStructuralComparable.CompareTo @ 01e90080
+  <- System.TimeZoneInfo$$System.Runtime.Serialization.IDeserializationCallback.OnDeserialization @ 020d0d64
+  <- System.Text.RegularExpressions.RegexParser$$ScanGroupOpen @ 0233bc18
+  <- System.Numerics.Vector<ulong>$$get_Item @ 01f03630
+  <- System.Collections.Generic.IntrospectiveSortUtilities$$ThrowOrIgnoreBadComparer @ 021307d8
+  <- System.Text.RegularExpressions.RegexParser$$ScanCharEscape @ 0233d77c
+  <- Interop$$GetExceptionForIoErrno @ 01fbba64
+  <- System.ValueTuple<IntPtr,-int,-IntPtr,-int,-bool>$$System.IComparable.CompareTo @ 01e9d57c
+  <- System.Text.RegularExpressions.RegexFCD$$CalculateFC @ 023353ec
+  <- System.Net.FtpWebRequest$$SetException @ 0236d4cc
+  <- System.ThrowHelper$$GetAddingDuplicateWithKeyArgumentException @ 021723e8
+  <- System.ComponentModel.ArrayConverter$$ConvertTo @ 023c7988
+  <- System.Net.Sockets.NetworkStream$$Read @ 023b1058
+  <- System.Text.RegularExpressions.RegexParser$$ScanBasicBackslash @ 0233dd64
+  <- System.MissingMemberException$$get_Message @ 0217318c
+  <- System.Text.StringBuilder$$.ctor @ 01fe7f54
+  <- System.ValueTuple<IntPtr,-int,-IntPtr,-int,-IntPtr,-int,-bool,-ValueTuple<bool>>$$System.IComparable.CompareTo @ 01ea32c8
+  <- System.Net.Security.SslStream$$SetAndVerifyValidationCallback @ 023c5850
+  <- System.ValueTuple<object,-object>$$System.IComparable.CompareTo @ 01e95364
+  <- System.ValueTuple<object>$$System.IComparable.CompareTo @ 01e908d8
+  <- System.ValueTuple$$System.Collections.IStructuralComparable.CompareTo @ 0216f960
+  <- System.ValueTuple<object,-object,-object,-object,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01ea14a8
+  <- System.Collections.Generic.TreeSet<KeyValuePair<object,-object>>$$AddIfNotPresent @ 01e47a5c
+  <- System.ValueTuple<bool,-object>$$System.IComparable.CompareTo @ 01e91428
+  <- System.IO.FileSystem$$CreateDirectory @ 020b35fc
+  <- System.IO.FileNotFoundException$$ToString @ 020a3770
+  <- System.BadImageFormatException$$ToString @ 020d8040
+  <- System.Collections.Generic.SortedDictionary<object,-object>$$get_Item @ 01e0bd64
+  <- System.ValueTuple<object,-object,-object,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e9beac
+  <- System.Text.EncoderFallbackBuffer$$ThrowLastCharRecursive @ 021d84cc
+  <- System.Globalization.CultureNotFoundException$$get_Message @ 020eb628
+  <- System.Tuple<object,-object,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e4dcd0
+  <- System.ValueTuple<object,-bool>$$System.IComparable.CompareTo @ 01e94434
+  <- System.Guid.GuidResult$$GetGuidParseException @ 021493d0
+  <- System.ValueTuple<object,-object,-object,-object>$$System.IComparable.CompareTo @ 01e9bb40
+  <- System.ValueTuple<object,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e95608
+  <- System.Tuple<Guid,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e4aa34
+  <- System.Collections.Generic.SortedDictionary<int,-object>$$get_Item @ 01e0a6c4
+  <- System.Random$$Next @ 02161960
+  <- System.ThrowHelper$$GetKeyNotFoundException @ 021724a4
+  <- System.ValueTuple<IntPtr,-int,-IntPtr,-int,-bool>$$System.Collections.IStructuralComparable.CompareTo @ 01e9d954
+  <- System.Net.FtpControlStream$$TryUpdateResponseUri @ 0236705c
+  <- System.Collections.Generic.TreeSet<KeyValuePair<int,-object>>$$AddIfNotPresent @ 01e47958
+  <- System.MissingFieldException$$get_Message @ 02173078
+  <- System.ValueTuple<object>$$System.Collections.IStructuralComparable.CompareTo @ 01e90b34
+  <- System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs$$CreateException @ 023bd258
+  <- System.String$$SplitInternal @ 01fe0dc8
+  <- System.IO.FileSystem$$RemoveDirectoryInternal @ 020b3d48
+  <- System.IO.FileInfo$$get_Length @ 020b1588
+  <- System.Net.Security.SslClientAuthenticationOptions$$set_EncryptionPolicy @ 023c4e8c
+  <- System.Globalization.TimeSpanParse.TimeSpanResult$$SetFailure @ 020f4e8c
+  <- System.Text.UnicodeEncoding$$GetBytes @ 01ff5d64
+  <- System.Text.RegularExpressions.RegexCharClass$$SetFromProperty @ 02329bfc
+  <- System.Net.Security.SslClientAuthenticationOptions$$set_CertificateRevocationCheckMode @ 023c4dec
+  <- System.ThrowHelper$$ThrowInvalidTypeWithPointersNotSupported @ 0217252c
+  <- System.Net.FtpControlStream$$GetContentLengthFrom213Response @ 023673d8
+  <- System.ValueTuple$$System.IComparable.CompareTo @ 0216f840
+  <- System.ValueTuple<object,-bool,-bool,-object,-object>$$System.Collections.IStructuralComparable.CompareTo @ 01e9f81c
+  <- System.Text.DecoderFallbackBuffer$$ThrowLastBytesRecursive @ 021d583c
+  <- System.Globalization.DateTimeFormatInfo$$GetAllDateTimePatterns @ 020eda4c
+  <- System.Net.Sockets.NetworkStream$$Write @ 023b17b4
+
+--- Listing ---
+01fbc05c  str x22,[sp, #-0x30]!
+01fbc060  stp x21,x20,[sp, #0x10]
+01fbc064  stp x19,x30,[sp, #0x20]
+01fbc068  adrp x21,0x3579000
+01fbc06c  adrp x22,0x3360000
+01fbc070  ldrb w8,[x21, #0x5dd]
+01fbc074  ldr x22,[x22, #0x28]
+01fbc078  mov x19,x1
+01fbc07c  mov x20,x0
+01fbc080  tbnz w8,#0x0,0x01fbc098
+01fbc084  adrp x0,0x3360000
+01fbc088  ldr x0,[x0, #0x28]
+01fbc08c  bl 0x00b0789c
+01fbc090  mov w8,#0x1
+01fbc094  strb w8,[x21, #0x5dd]
+01fbc098  ldr x0,[x22]
+01fbc09c  ldr w8,[x0, #0xe0]
+01fbc0a0  cbnz w8,0x01fbc0a8
+01fbc0a4  bl 0x00b0798c
+01fbc0a8  mov x0,xzr
+01fbc0ac  bl 0x02117234
+01fbc0b0  mov x1,x20
+01fbc0b4  mov x2,x19
+01fbc0b8  ldp x19,x30,[sp, #0x20]
+01fbc0bc  ldp x21,x20,[sp, #0x10]
+01fbc0c0  mov x3,xzr
+01fbc0c4  ldr x22,[sp], #0x30
+01fbc0c8  b 0x01fdf8dc
+
+
+================================================================================
+### FILE: 01fbd0ec_SR__GetString.txt
+================================================================================
+Function: SR$$GetString @ 01fbd0ec
+
+--- Calls OUT ---
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Globalization.CultureInfo$$get_InvariantCulture @ 02117234
+
+--- Calls IN ---
+  <- System.ComponentModel.TypeConverter$$GetConvertToException @ 023068bc
+  <- System.Net.CookieContainer$$Add @ 02382f48
+  <- System.ComponentModel.TypeDescriptor.TypeDescriptionNode.DefaultExtendedTypeDescriptor$$System.ComponentModel.ICustomTypeDescriptor.GetAttributes @ 0230da08
+  <- System.ComponentModel.TypeDescriptor$$GetDescriptor @ 02308ba4
+  <- System.ComponentModel.TypeDescriptor.TypeDescriptionNode.DefaultExtendedTypeDescriptor$$System.ComponentModel.ICustomTypeDescriptor.GetConverter @ 0230dce4
+  <- System.Net.Cookie$$set_Port @ 0237f848
+  <- System.Uri$$CreateHelper @ 02304ee0
+  <- System.Collections.Specialized.NameObjectCollectionBase$$System.Collections.ICollection.CopyTo @ 023142e4
+  <- System.Net.Sockets.TcpClient$$.ctor @ 023c20fc
+  <- System.ComponentModel.TypeDescriptor.TypeDescriptionNode.DefaultTypeDescriptor$$System.ComponentModel.ICustomTypeDescriptor.GetAttributes @ 0230df90
+  <- System.UriParser$$GetComponents @ 0231eb3c
+  <- System.Net.Cookie$$VerifySetDefaults @ 0237ec30
+  <- System.Net.WebHeaderCollection$$Add @ 023752e4
+  <- System.Diagnostics.Process$$GetProcessHandle @ 02344af0
+  <- System.Net.WebHeaderCollection$$CheckBadChars @ 02374ba4
+  <- System.Net.WebHeaderCollection$$Add @ 02375130
+  <- System.ComponentModel.TypeConverter$$GetConvertFromException @ 02306550
+  <- System.ComponentModel.TypeDescriptor.TypeDescriptionNode.DefaultTypeDescriptor$$System.ComponentModel.ICustomTypeDescriptor.GetConverter @ 0230e238
+  <- System.Net.WebHeaderCollection$$ThrowOnRestrictedHeader @ 02374fc8
+  <- System.UriParser$$Resolve @ 0231e938
+  <- System.Diagnostics.Process$$GetProcessTimes @ 023451ec
+  <- System.Net.WebHeaderCollection$$Set @ 023755c8
+  <- System.Net.WebHeaderCollection$$SetInternal @ 023757fc
+  <- System.ComponentModel.EnumConverter$$ConvertTo @ 023d9ec4
+  <- System.Net.NetRes$$GetWebStatusCodeString @ 0237c03c
+  <- System.Uri$$GetHostViaCustomSyntax @ 02300f1c
+  <- System.Uri$$CreateThis @ 022f9ed4
+
+--- Listing ---
+01fbd0ec  str x22,[sp, #-0x30]!
+01fbd0f0  stp x21,x20,[sp, #0x10]
+01fbd0f4  stp x19,x30,[sp, #0x20]
+01fbd0f8  adrp x21,0x3579000
+01fbd0fc  adrp x22,0x3360000
+01fbd100  ldrb w8,[x21, #0x5dc]
+01fbd104  ldr x22,[x22, #0x28]
+01fbd108  mov x19,x1
+01fbd10c  mov x20,x0
+01fbd110  tbnz w8,#0x0,0x01fbd128
+01fbd114  adrp x0,0x3360000
+01fbd118  ldr x0,[x0, #0x28]
+01fbd11c  bl 0x00b0789c
+01fbd120  mov w8,#0x1
+01fbd124  strb w8,[x21, #0x5dc]
+01fbd128  ldr x0,[x22]
+01fbd12c  ldr w8,[x0, #0xe0]
+01fbd130  cbnz w8,0x01fbd138
+01fbd134  bl 0x00b0798c
+01fbd138  mov x0,xzr
+01fbd13c  bl 0x02117234
+01fbd140  mov x1,x20
+01fbd144  mov x2,x19
+01fbd148  ldp x19,x30,[sp, #0x20]
+01fbd14c  ldp x21,x20,[sp, #0x10]
+01fbd150  mov x3,xzr
+01fbd154  ldr x22,[sp], #0x30
+01fbd158  b 0x01fdf988
+
+
+================================================================================
+### FILE: 01fbd15c_SR__GetString.txt
+================================================================================
+Function: SR$$GetString @ 01fbd15c
+
+--- Calls OUT ---
+  -> System.String$$Format @ 01fdf988
+
+--- Calls IN ---
+
+--- Listing ---
+01fbd15c  mov x3,xzr
+01fbd160  b 0x01fdf988
+
+
+================================================================================
+### FILE: 01fbd164_SR__GetString.txt
+================================================================================
+Function: SR$$GetString @ 01fbd164
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- System.ComponentModel.TypeConverter$$GetConvertToException @ 023068bc
+  <- System.Diagnostics.TraceListenerCollection$$System.Collections.IList.set_Item @ 02343948
+  <- System.Diagnostics.Process$$StartWithCreateProcess @ 023468d0
+  <- System.Net.Security.SslStream$$set_Position @ 023c5f5c
+  <- System.Net.CookieCollection.CookieCollectionEnumerator$$System.Collections.IEnumerator.MoveNext @ 02382c18
+  <- System.Net.FileWebRequest$$set_Method @ 02387d50
+  <- System.Diagnostics.Process$$get_StandardOutput @ 02345930
+  <- System.Diagnostics.Process$$EnsureState @ 023449b8
+  <- System.Collections.Specialized.NameObjectCollectionBase$$System.Collections.ICollection.CopyTo @ 023142e4
+  <- System.Net.FileWebRequest$$BeginGetResponse @ 02387e50
+  <- System.Collections.Specialized.NameObjectCollectionBase.NameObjectKeysEnumerator$$get_Current @ 023148a4
+  <- System.Net.WebRequestStream$$WriteAsync @ 023a8a08
+  <- System.UriParser$$GetComponents @ 0231eb3c
+  <- System.Net.Sockets.Socket$$get_DualMode @ 023b55bc
+  <- System.Net.NetRes$$GetWebStatusString @ 0237bfe0
+  <- System.Diagnostics.Process$$StartWithShellExecuteEx @ 02346514
+  <- System.Net.WebRequest$$Create @ 023778e0
+  <- System.Uri$$get_DnsSafeHost @ 022fdb6c
+  <- System.ComponentModel.TypeConverter$$GetConvertFromException @ 02306550
+  <- System.Uri$$get_AbsoluteUri @ 022fc064
+  <- System.UriHelper$$UnescapeString @ 0231de44
+  <- System.Net.NetRes$$GetWebStatusString @ 0237bf24
+  <- System.Uri$$get_UserInfo @ 022fddd4
+  <- System.Collections.Specialized.NameObjectCollectionBase$$BaseAdd @ 02310050
+  <- System.Net.FileWebRequest$$EndGetResponse @ 02388138
+  <- System.Uri$$MakeRelativeUri @ 022feb68
+  <- System.Uri$$get_IsFile @ 022fca24
+  <- System.Uri$$get_Query @ 022fd84c
+  <- System.Uri$$get_Host @ 022fced0
+  <- System.Uri$$get_IsDefaultPort @ 022fc974
+  <- System.UriParser$$Resolve @ 0231e938
+  <- System.Net.ExceptionHelper$$get_PropertyNotSupportedException @ 023703fc
+  <- System.Collections.Specialized.NameObjectCollectionBase.NameObjectKeysEnumerator$$Reset @ 02314814
+  <- System.Diagnostics.Process$$Start @ 023463c4
+  <- System.Diagnostics.TraceListener$$set_IndentSize @ 023430c4
+  <- System.Diagnostics.TraceListenerCollection$$System.Collections.IList.Insert @ 02343c94
+  <- System.Uri$$get_AbsolutePath @ 022fbecc
+  <- System.Net.Sockets.Socket$$SetIPProtectionLevel @ 023b5074
+  <- System.Uri$$get_HostNameType @ 022fc874
+  <- System.Collections.Specialized.NameObjectCollectionBase.NameObjectKeysEnumerator$$MoveNext @ 02314734
+  <- System.Uri$$get_Authority @ 022fc7f8
+  <- System.Collections.Specialized.NameObjectCollectionBase$$BaseSet @ 023103e4
+  <- System.Net.CookieCollection.CookieCollectionEnumerator$$System.Collections.IEnumerator.get_Current @ 02382b6c
+  <- System.Net.WebOperation$$SetDisposed @ 023a6674
+  <- System.Net.Security.SslStream$$Seek @ 023c5ff8
+  <- System.ComponentModel.CollectionConverter$$ConvertTo @ 023c7b50
+  <- System.Uri$$get_IsUnc @ 022fce54
+  <- System.Uri$$get_IsLoopback @ 022fcaec
+  <- System.Uri$$get_PathAndQuery @ 022fcb74
+  <- System.Net.WebHeaderCollection$$Remove @ 02374930
+  <- System.Net.Sockets.TcpClient$$GetStream @ 023c2cb0
+  <- System.Net.ExceptionHelper$$get_PropertyNotImplementedException @ 02371724
+  <- System.Net.Sockets.Socket$$set_DualMode @ 023b56a4
+  <- System.Net.WebHeaderCollection$$Add @ 023752e4
+  <- System.UriHelper$$EscapeString @ 0231d514
+  <- System.Net.Sockets.Socket$$set_DontFragment @ 023b5538
+  <- System.Diagnostics.Process$$GetProcessHandle @ 02344af0
+  <- System.Net.WebHeaderCollection$$CheckBadChars @ 02374ba4
+  <- System.Net.Security.AuthenticatedStream$$.ctor @ 023c4f4c
+  <- System.Uri$$GetComponents @ 02301940
+  <- System.Collections.Specialized.NameObjectCollectionBase$$BaseRemove @ 023104dc
+  <- System.Net.CookieContainer$$CookieCutter @ 02385748
+  <- System.Uri$$get_LocalPath @ 022fc190
+  <- System.Uri$$GetException @ 022fbb48
+  <- System.Net.ExceptionHelper$$get_MethodNotImplementedException @ 023717d0
+  <- System.Uri$$get_Segments @ 022fcc44
+  <- System.Uri$$get_Fragment @ 022fd97c
+  <- System.Diagnostics.Process$$get_StandardError @ 023459cc
+  <- System.Uri$$get_Port @ 022fd780
+  <- System.Diagnostics.TraceListenerCollection$$System.Collections.IList.Add @ 02343a68
+  <- System.Uri$$get_Scheme @ 022fdaac
+
+--- Listing ---
+01fbd164  ret
+
+
+================================================================================
+### FILE: 01fbd168_SR__Format.txt
+================================================================================
+Function: SR$$Format @ 01fbd168
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Format @ 01fdf930
+  -> System.Globalization.CultureInfo$$get_InvariantCulture @ 02117234
+
+--- Calls IN ---
+  <- System.Math$$ThrowMinMaxException<object> @ 017a3ac8
+  <- System.Double$$System.IConvertible.ToDateTime @ 02139e64
+  <- System.DateTime$$System.IConvertible.ToByte @ 02135900
+  <- System.Version$$ToCachedStringBuilder @ 021706e4
+  <- System.Int32$$System.IConvertible.ToDateTime @ 0214eaa4
+  <- System.DateTime$$.ctor @ 021323ac
+  <- System.Globalization.DateTimeFormatInfo$$internalGetMonthName @ 020ed558
+  <- System.DateTime$$System.IConvertible.ToInt64 @ 02135bbc
+  <- System.Text.RegularExpressions.Regex$$InitDefaultMatchTimeout @ 02328140
+  <- System.SByte$$System.IConvertible.ToDateTime @ 02162bc0
+  <- System.Math$$Round @ 0215120c
+  <- System.DateTimeParse$$GetDateTimeParseException @ 0213dd4c
+  <- System.DateTimeOffset$$FromUnixTimeSeconds @ 02137068
+  <- System.Char$$System.IConvertible.ToDecimal @ 020dccac
+  <- System.Text.InternalEncoderBestFitFallbackBuffer$$Fallback @ 021d7900
+  <- System.DateTime$$.ctor @ 021321d4
+  <- System.Single$$System.IConvertible.ToDateTime @ 02164290
+  <- System.Collections.Hashtable$$.ctor @ 0212c68c
+  <- System.Decimal$$Round @ 021afc88
+  <- System.Globalization.DateTimeFormatInfo$$GetDayName @ 020ee030
+  <- System.DateTime$$System.IConvertible.ToInt16 @ 0213598c
+  <- System.Type$$IsEnumDefined @ 021689dc
+  <- System.Text.RegularExpressions.RegexParser$$MakeException @ 0233c6ac
+  <- System.DateTime$$System.IConvertible.ToUInt32 @ 02135b30
+  <- System.Text.UTF32Encoding$$GetByteCount @ 01fed6f4
+  <- System.Text.UTF32Encoding$$GetBytes @ 01fed9cc
+  <- System.Text.EncoderExceptionFallbackBuffer$$Fallback @ 021d7c44
+  <- System.Collections.ListDictionaryInternal$$Add @ 02121778
+  <- System.Char$$System.IConvertible.ToDouble @ 020dcc20
+  <- System.Text.ASCIIEncoding$$GetBytes @ 021d33fc
+  <- System.Single$$System.IConvertible.ToChar @ 02163e14
+  <- System.Random$$Next @ 02161844
+  <- System.Text.UTF8Encoding$$GetBytes @ 01ff260c
+  <- System.Char$$System.IConvertible.ToSingle @ 020dcb94
+  <- System.Math$$ThrowMinMaxException<int> @ 017a3a1c
+  <- System.Globalization.DateTimeFormatInfo$$GetMonthName @ 020ee234
+  <- System.Char$$System.IConvertible.ToBoolean @ 020dc70c
+  <- System.DateTime$$System.IConvertible.ToChar @ 021357e8
+  <- System.DateTime$$System.IConvertible.ToSingle @ 02135cd4
+  <- System.Boolean$$System.IConvertible.ToChar @ 020d98e8
+  <- System.DateTime$$System.IConvertible.ToSByte @ 02135874
+  <- System.Text.ASCIIEncoding$$GetByteCount @ 021d3008
+  <- System.UInt16$$System.IConvertible.ToDateTime @ 0216d798
+  <- System.UInt32$$System.IConvertible.ToDateTime @ 0216e608
+  <- System.Collections.Queue$$.ctor @ 02123990
+  <- System.Int16$$System.IConvertible.ToDateTime @ 0214d970
+  <- System.Text.UnicodeEncoding$$GetByteCount @ 01ff57f8
+  <- System.DateTime$$System.IConvertible.ToDecimal @ 02135dec
+  <- System.Text.EncoderFallbackException$$.ctor @ 021d7f88
+  <- System.Globalization.DateTimeFormatInfo$$GetAbbreviatedDayName @ 020ed7d8
+  <- System.Collections.Hashtable$$Insert @ 0212caa4
+  <- System.Collections.SortedList$$Add @ 02124c30
+  <- System.UInt64$$System.IConvertible.ToDateTime @ 0216f3c8
+  <- System.Text.UTF8Encoding$$GetByteCount @ 01ff1fd8
+  <- System.Byte$$System.IConvertible.ToDateTime @ 020dbbc8
+  <- System.Globalization.DateTimeFormatInfo$$GetAbbreviatedMonthName @ 020ee130
+  <- System.Decimal$$System.IConvertible.ToDateTime @ 021b2870
+  <- System.Int64$$System.IConvertible.ToDateTime @ 02150280
+  <- System.DateTime$$System.IConvertible.ToDouble @ 02135d60
+  <- System.ComponentModel.CharConverter$$ConvertFrom @ 023c9a24
+  <- System.Boolean$$System.IConvertible.ToDateTime @ 020d9e3c
+  <- System.Text.DecoderExceptionFallbackBuffer$$Throw @ 021d51a4
+  <- System.DateTime$$System.IConvertible.ToUInt16 @ 02135a18
+  <- System.Net.IPEndPoint$$Create @ 023628d4
+  <- System.DateTime$$System.IConvertible.ToInt32 @ 02135aa4
+  <- System.Char$$System.IConvertible.ToDateTime @ 020dcd38
+  <- System.Text.UnicodeEncoding$$GetBytes @ 01ff5d64
+  <- System.Text.EncoderExceptionFallbackBuffer$$Fallback @ 021d7d28
+  <- System.Decimal$$System.IConvertible.ToChar @ 021b2418
+  <- System.Text.RegularExpressions.RegexCharClass$$SetFromProperty @ 02329bfc
+  <- System.DateTime$$System.IConvertible.ToUInt64 @ 02135c48
+  <- System.Text.EncoderReplacementFallbackBuffer$$Fallback @ 021d9684
+  <- System.DateTime$$System.IConvertible.ToBoolean @ 0213575c
+  <- System.Double$$System.IConvertible.ToChar @ 021399e8
+  <- System.Net.FtpControlStream$$PipelineCallback @ 02366030
+  <- System.DateTime$$.ctor @ 021325e0
+
+--- Listing ---
+01fbd168  stp x23,x22,[sp, #-0x30]!
+01fbd16c  stp x21,x20,[sp, #0x10]
+01fbd170  stp x19,x30,[sp, #0x20]
+01fbd174  adrp x22,0x3579000
+01fbd178  adrp x23,0x3360000
+01fbd17c  ldrb w8,[x22, #0x5de]
+01fbd180  ldr x23,[x23, #0x28]
+01fbd184  mov x19,x2
+01fbd188  mov x20,x1
+01fbd18c  mov x21,x0
+01fbd190  tbnz w8,#0x0,0x01fbd1a8
+01fbd194  adrp x0,0x3360000
+01fbd198  ldr x0,[x0, #0x28]
+01fbd19c  bl 0x00b0789c
+01fbd1a0  mov w8,#0x1
+01fbd1a4  strb w8,[x22, #0x5de]
+01fbd1a8  ldr x0,[x23]
+01fbd1ac  ldr w8,[x0, #0xe0]
+01fbd1b0  cbnz w8,0x01fbd1b8
+01fbd1b4  bl 0x00b0798c
+01fbd1b8  mov x0,xzr
+01fbd1bc  bl 0x02117234
+01fbd1c0  mov x1,x21
+01fbd1c4  mov x2,x20
+01fbd1c8  mov x3,x19
+01fbd1cc  ldp x19,x30,[sp, #0x20]
+01fbd1d0  ldp x21,x20,[sp, #0x10]
+01fbd1d4  mov x4,xzr
+01fbd1d8  ldp x23,x22,[sp], #0x30
+01fbd1dc  b 0x01fdf930
+
+
+================================================================================
+### FILE: 01fbd1e0_SR__Format.txt
+================================================================================
+Function: SR$$Format @ 01fbd1e0
+
+--- Calls OUT ---
+  -> System.String$$Format @ 01fceed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Globalization.CultureInfo$$get_InvariantCulture @ 02117234
+
+--- Calls IN ---
+  <- System.Net.IPEndPoint$$Create @ 023628d4
+
+--- Listing ---
+01fbd1e0  str x24,[sp, #-0x40]!
+01fbd1e4  stp x23,x22,[sp, #0x10]
+01fbd1e8  stp x21,x20,[sp, #0x20]
+01fbd1ec  stp x19,x30,[sp, #0x30]
+01fbd1f0  adrp x23,0x3579000
+01fbd1f4  adrp x24,0x3360000
+01fbd1f8  ldrb w8,[x23, #0x5df]
+01fbd1fc  ldr x24,[x24, #0x28]
+01fbd200  mov x19,x3
+01fbd204  mov x20,x2
+01fbd208  mov x21,x1
+01fbd20c  mov x22,x0
+01fbd210  tbnz w8,#0x0,0x01fbd228
+01fbd214  adrp x0,0x3360000
+01fbd218  ldr x0,[x0, #0x28]
+01fbd21c  bl 0x00b0789c
+01fbd220  mov w8,#0x1
+01fbd224  strb w8,[x23, #0x5df]
+01fbd228  ldr x0,[x24]
+01fbd22c  ldr w8,[x0, #0xe0]
+01fbd230  cbnz w8,0x01fbd238
+01fbd234  bl 0x00b0798c
+01fbd238  mov x0,xzr
+01fbd23c  bl 0x02117234
+01fbd240  mov x1,x22
+01fbd244  mov x2,x21
+01fbd248  mov x3,x20
+01fbd24c  mov x4,x19
+01fbd250  ldp x19,x30,[sp, #0x30]
+01fbd254  ldp x21,x20,[sp, #0x20]
+01fbd258  ldp x23,x22,[sp, #0x10]
+01fbd25c  mov x5,xzr
+01fbd260  ldr x24,[sp], #0x40
+01fbd264  b 0x01fceed4
+
+
+================================================================================
+### FILE: 01fbd268_SR__GetResourceString.txt
+================================================================================
+Function: SR$$GetResourceString @ 01fbd268
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- System.Globalization.TimeSpanParse.TimeSpanResult$$SetFailure @ 020f4e8c
+  <- System.DateTimeParse$$GetDateTimeParseException @ 0213dd4c
+  <- System.Number$$ThrowOverflowOrFormatException @ 0215a11c
+  <- System.Guid.GuidResult$$GetGuidParseException @ 021493d0
+
+--- Listing ---
+01fbd268  ret
+
+
+================================================================================
+### FILE: 02216264_SR__GetString.txt
+================================================================================
+Function: SR$$GetString @ 02216264
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- System.Threading.ReaderWriterLockSlim$$TryEnterReadLockCore @ 0223cdb4
+  <- System.Threading.ReaderWriterLockSlim$$TryEnterWriteLockCore @ 0223d828
+  <- System.Threading.ReaderWriterLockSlim$$Dispose @ 0223e5a0
+  <- System.Threading.ReaderWriterLockSlim$$ExitReadLock @ 0223def4
+  <- System.Threading.ReaderWriterLockSlim$$ExitWriteLock @ 0223e094
+
+--- Listing ---
+02216264  ret
+
+
+================================================================================
+### FILE: 02216268_SR__Format.txt
+================================================================================
+Function: SR$$Format @ 02216268
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Format @ 01fdf8dc
+  -> System.Globalization.CultureInfo$$get_InvariantCulture @ 02117234
+
+--- Calls IN ---
+  <- System.Linq.Expressions.Strings$$InvalidNullValue @ 022377a0
+  <- System.Linq.Expressions.Strings$$IncorrectNumberOfMethodCallArguments @ 02237908
+  <- System.Linq.Expressions.Strings$$DuplicateVariable @ 02236920
+  <- System.Linq.Expressions.Strings$$UserDefinedOperatorMustNotBeVoid @ 02236a04
+  <- System.Linq.Expressions.Strings$$MethodContainsGenericParameters @ 022370c0
+  <- System.Linq.Expressions.Strings$$ExtensionNodeMustOverrideProperty @ 0223696c
+  <- System.Linq.Expressions.Strings$$ExpressionTypeNotInvocable @ 02236f04
+  <- System.Linq.Expressions.Strings$$UserDefinedOperatorMustBeStatic @ 022369b8
+  <- System.Linq.Expressions.Strings$$UnhandledBinary @ 0223731c
+  <- System.Linq.Expressions.Strings$$MethodIsGeneric @ 0223710c
+  <- System.Linq.Expressions.Strings$$PropertyDoesNotHaveAccessor @ 022371b4
+  <- System.Linq.Expressions.Strings$$TypeIsGeneric @ 02237754
+  <- System.Linq.Expressions.Strings$$MemberNotFieldOrProperty @ 02237074
+  <- System.Linq.Expressions.Strings$$TypeContainsGenericParameters @ 02237708
+  <- System.Linq.Expressions.Strings$$IncorrectTypeForTypeAs @ 02236dc0
+  <- System.Linq.Expressions.Strings$$UnhandledUnary @ 02237368
+
+--- Listing ---
+02216268  str x22,[sp, #-0x30]!
+0221626c  stp x21,x20,[sp, #0x10]
+02216270  stp x19,x30,[sp, #0x20]
+02216274  adrp x21,0x357a000
+02216278  adrp x22,0x3360000
+0221627c  ldrb w8,[x21, #0xa79]
+02216280  ldr x22,[x22, #0x28]
+02216284  mov x19,x1
+02216288  mov x20,x0
+0221628c  tbnz w8,#0x0,0x022162a4
+02216290  adrp x0,0x3360000
+02216294  ldr x0,[x0, #0x28]
+02216298  bl 0x00b0789c
+0221629c  mov w8,#0x1
+022162a0  strb w8,[x21, #0xa79]
+022162a4  ldr x0,[x22]
+022162a8  ldr w8,[x0, #0xe0]
+022162ac  cbnz w8,0x022162b4
+022162b0  bl 0x00b0798c
+022162b4  mov x0,xzr
+022162b8  bl 0x02117234
+022162bc  mov x1,x20
+022162c0  mov x2,x19
+022162c4  ldp x19,x30,[sp, #0x20]
+022162c8  ldp x21,x20,[sp, #0x10]
+022162cc  mov x3,xzr
+022162d0  ldr x22,[sp], #0x30
+022162d4  b 0x01fdf8dc
+
+
+================================================================================
+### FILE: 022162d8_SR__Format.txt
+================================================================================
+Function: SR$$Format @ 022162d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Format @ 01fdf930
+  -> System.Globalization.CultureInfo$$get_InvariantCulture @ 02117234
+
+--- Calls IN ---
+  <- System.Linq.Expressions.Strings$$CoercionOperatorNotDefined @ 02236a50
+  <- System.Linq.Expressions.Strings$$ExpressionTypeDoesNotMatchConstructorParameter @ 0223766c
+  <- System.Linq.Expressions.Strings$$InvalidObjectType @ 022377ec
+  <- System.Linq.Expressions.Strings$$MethodNotPropertyAccessor @ 02237158
+  <- System.Linq.Expressions.Strings$$MustRewriteWithoutMethod @ 022375d0
+  <- System.Linq.Expressions.Strings$$ExpressionTypeDoesNotMatchAssignment @ 02236ea8
+  <- System.Linq.Expressions.Strings$$UserDefinedOpMustHaveValidReturnType @ 02237410
+  <- System.Linq.Expressions.Strings$$OperandTypesDoNotMatchParameters @ 02236bc8
+  <- System.Linq.Expressions.Strings$$PropertyNotDefinedForType @ 0223725c
+  <- System.Linq.Expressions.Strings$$LogicalOperatorMustHaveBooleanOperators @ 0223746c
+  <- System.Linq.Expressions.Strings$$ReferenceEqualityNotDefined @ 02236b6c
+  <- System.Linq.Expressions.Strings$$UnaryOperatorNotDefined @ 02236aac
+  <- System.Linq.Expressions.Strings$$OverloadOperatorTypeDoesNotMatchConversionType @ 02236c24
+  <- System.Linq.Expressions.Strings$$VariableMustNotBeByRef @ 022368c4
+  <- System.Linq.Expressions.Strings$$ExpressionTypeDoesNotMatchParameter @ 022378ac
+  <- System.Linq.Expressions.Strings$$ParameterExpressionNotValidAsDelegate @ 02237200
+  <- System.Linq.Expressions.Strings$$UserDefinedOpMustHaveConsistentTypes @ 022373b4
+  <- System.Linq.Expressions.Strings$$ExpressionTypeDoesNotMatchReturn @ 02236e4c
+
+--- Listing ---
+022162d8  stp x23,x22,[sp, #-0x30]!
+022162dc  stp x21,x20,[sp, #0x10]
+022162e0  stp x19,x30,[sp, #0x20]
+022162e4  adrp x22,0x357a000
+022162e8  adrp x23,0x3360000
+022162ec  ldrb w8,[x22, #0xa7a]
+022162f0  ldr x23,[x23, #0x28]
+022162f4  mov x19,x2
+022162f8  mov x20,x1
+022162fc  mov x21,x0
+02216300  tbnz w8,#0x0,0x02216318
+02216304  adrp x0,0x3360000
+02216308  ldr x0,[x0, #0x28]
+0221630c  bl 0x00b0789c
+02216310  mov w8,#0x1
+02216314  strb w8,[x22, #0xa7a]
+02216318  ldr x0,[x23]
+0221631c  ldr w8,[x0, #0xe0]
+02216320  cbnz w8,0x02216328
+02216324  bl 0x00b0798c
+02216328  mov x0,xzr
+0221632c  bl 0x02117234
+02216330  mov x1,x21
+02216334  mov x2,x20
+02216338  mov x3,x19
+0221633c  ldp x19,x30,[sp, #0x20]
+02216340  ldp x21,x20,[sp, #0x10]
+02216344  mov x4,xzr
+02216348  ldp x23,x22,[sp], #0x30
+0221634c  b 0x01fdf930
+
+
+================================================================================
+### FILE: 02216350_SR__Format.txt
+================================================================================
+Function: SR$$Format @ 02216350
+
+--- Calls OUT ---
+  -> System.String$$Format @ 01fceed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Globalization.CultureInfo$$get_InvariantCulture @ 02117234
+
+--- Calls IN ---
+  <- System.Linq.Expressions.Strings$$MustRewriteToSameNode @ 02237508
+  <- System.Linq.Expressions.Strings$$FieldInfoNotDefinedForType @ 02236f50
+  <- System.Linq.Expressions.Strings$$ExpressionTypeDoesNotMatchMethodParameter @ 02237848
+  <- System.Linq.Expressions.Strings$$InstanceAndMethodTypeMismatch @ 022372b8
+  <- System.Linq.Expressions.Strings$$BinaryOperatorNotDefined @ 02236b08
+  <- System.Linq.Expressions.Strings$$MustRewriteChildToSameType @ 0223756c
+
+--- Listing ---
+02216350  str x24,[sp, #-0x40]!
+02216354  stp x23,x22,[sp, #0x10]
+02216358  stp x21,x20,[sp, #0x20]
+0221635c  stp x19,x30,[sp, #0x30]
+02216360  adrp x23,0x357a000
+02216364  adrp x24,0x3360000
+02216368  ldrb w8,[x23, #0xa7b]
+0221636c  ldr x24,[x24, #0x28]
+02216370  mov x19,x3
+02216374  mov x20,x2
+02216378  mov x21,x1
+0221637c  mov x22,x0
+02216380  tbnz w8,#0x0,0x02216398
+02216384  adrp x0,0x3360000
+02216388  ldr x0,[x0, #0x28]
+0221638c  bl 0x00b0789c
+02216390  mov w8,#0x1
+02216394  strb w8,[x23, #0xa7b]
+02216398  ldr x0,[x24]
+0221639c  ldr w8,[x0, #0xe0]
+022163a0  cbnz w8,0x022163a8
+022163a4  bl 0x00b0798c
+022163a8  mov x0,xzr
+022163ac  bl 0x02117234
+022163b0  mov x1,x22
+022163b4  mov x2,x21
+022163b8  mov x3,x20
+022163bc  mov x4,x19
+022163c0  ldp x19,x30,[sp, #0x30]
+022163c4  ldp x21,x20,[sp, #0x20]
+022163c8  ldp x23,x22,[sp, #0x10]
+022163cc  mov x5,xzr
+022163d0  ldr x24,[sp], #0x40
+022163d4  b 0x01fceed4
+
+
+================================================================================
+### FILE: 0225d900_SR__GetString.txt
+================================================================================
+Function: SR$$GetString @ 0225d900
+
+--- Calls OUT ---
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Globalization.CultureInfo$$get_InvariantCulture @ 02117234
+
+--- Calls IN ---
+  <- System.Xml.XmlConvert$$TryToInt16 @ 022ad0e4
+  <- System.Xml.XmlConvert$$TryToChar @ 022ac980
+  <- System.Xml.XmlConvert$$TryToInt64 @ 022ad434
+  <- System.Xml.XmlConvert$$TryToBoolean @ 022ac66c
+  <- System.Xml.XmlConvert$$CreateException @ 022ab7fc
+  <- System.Xml.XmlConvert$$TryToDecimal @ 022acb8c
+  <- System.Xml.XmlConvert$$TryToInteger @ 022acdb0
+  <- System.Xml.XmlConvert$$TryToUInt16 @ 022ad734
+  <- System.Xml.XmlConvert$$TryToSByte @ 022acf64
+  <- System.Xml.XmlException$$CreateMessage @ 022b3284
+  <- System.Xml.XmlConvert$$TryToInt32 @ 022ad28c
+  <- System.Xml.Res$$GetString @ 022ac420
+  <- System.Xml.XmlConvert$$TryToByte @ 022ad5b4
+  <- System.Xml.XmlConvert$$TryToUInt32 @ 022ad8b4
+  <- System.Xml.XmlConvert$$CreateException @ 022aedb8
+  <- System.Xml.XmlConvert$$TryToUInt64 @ 022ada34
+  <- System.Xml.XmlConvert$$TryToDouble @ 022ae044
+  <- System.Xml.XmlConvert$$TryToSingle @ 022adccc
+  <- System.Xml.XmlConvert$$TryToUri @ 022ae954
+
+--- Listing ---
+0225d900  str x22,[sp, #-0x30]!
+0225d904  stp x21,x20,[sp, #0x10]
+0225d908  stp x19,x30,[sp, #0x20]
+0225d90c  adrp x21,0x357a000
+0225d910  adrp x22,0x3360000
+0225d914  ldrb w8,[x21, #0xced]
+0225d918  ldr x22,[x22, #0x28]
+0225d91c  mov x19,x1
+0225d920  mov x20,x0
+0225d924  tbnz w8,#0x0,0x0225d93c
+0225d928  adrp x0,0x3360000
+0225d92c  ldr x0,[x0, #0x28]
+0225d930  bl 0x00b0789c
+0225d934  mov w8,#0x1
+0225d938  strb w8,[x21, #0xced]
+0225d93c  ldr x0,[x22]
+0225d940  ldr w8,[x0, #0xe0]
+0225d944  cbnz w8,0x0225d94c
+0225d948  bl 0x00b0798c
+0225d94c  mov x0,xzr
+0225d950  bl 0x02117234
+0225d954  mov x1,x20
+0225d958  mov x2,x19
+0225d95c  ldp x19,x30,[sp, #0x20]
+0225d960  ldp x21,x20,[sp, #0x10]
+0225d964  mov x3,xzr
+0225d968  ldr x22,[sp], #0x30
+0225d96c  b 0x01fdf988
+
+
+================================================================================
+### FILE: 0225d970_SR__GetString.txt
+================================================================================
+Function: SR$$GetString @ 0225d970
+
+--- Calls OUT ---
+  -> System.String$$Format @ 01fdf988
+
+--- Calls IN ---
+
+--- Listing ---
+0225d970  mov x3,xzr
+0225d974  b 0x01fdf988
+
+
+================================================================================
+### FILE: 037995d8_srand48.txt
+================================================================================
+Function: srand48 @ 037995d8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- srand48 @ 008d50d0
+
+--- Listing ---
+037995d8  ?? ??
+
+

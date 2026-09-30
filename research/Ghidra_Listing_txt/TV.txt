@@ -1,0 +1,1081 @@
+================================================================================
+### FILE: 00cebcd4_TVAppController__add_DeviceTypeChecked.txt
+================================================================================
+Function: TVAppController$$add_DeviceTypeChecked @ 00cebcd4
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- SA.AN.NATIVE_API.NativeApiTab$$CheckForTV @ 00cb5330
+  <- AnOtherFeaturesPreview$$CheckForTV @ 00cf96c4
+
+--- Listing ---
+00cebcd4  stp x23,x22,[sp, #-0x30]!
+00cebcd8  stp x21,x20,[sp, #0x10]
+00cebcdc  stp x19,x30,[sp, #0x20]
+00cebce0  adrp x20,0x3571000
+00cebce4  adrp x22,0x3322000
+00cebce8  ldrb w8,[x20, #0x95f]
+00cebcec  ldr x22,[x22, #0x88]
+00cebcf0  mov x19,x0
+00cebcf4  tbnz w8,#0x0,0x00cebd18
+00cebcf8  adrp x0,0x3348000
+00cebcfc  ldr x0,[x0, #0xcf8]
+00cebd00  bl 0x00b0789c
+00cebd04  adrp x0,0x3322000
+00cebd08  ldr x0,[x0, #0x88]
+00cebd0c  bl 0x00b0789c
+00cebd10  mov w8,#0x1
+00cebd14  strb w8,[x20, #0x95f]
+00cebd18  ldr x0,[x22]
+00cebd1c  ldr w8,[x0, #0xe0]
+00cebd20  cbnz w8,0x00cebd2c
+00cebd24  bl 0x00b0798c
+00cebd28  ldr x0,[x22]
+00cebd2c  ldr x8,[x0, #0xb8]
+00cebd30  adrp x23,0x3348000
+00cebd34  ldr x20,[x8]
+00cebd38  ldr x23,[x23, #0xcf8]
+00cebd3c  mov x0,x20
+00cebd40  mov x1,x19
+00cebd44  mov x2,xzr
+00cebd48  bl 0x02197810
+00cebd4c  mov x21,x0
+00cebd50  cbz x0,0x00cebd64
+00cebd54  ldr x1,[x23]
+00cebd58  ldr x8,[x21]
+00cebd5c  cmp x8,x1
+00cebd60  b.ne 0x00cebda4
+00cebd64  ldr x0,[x22]
+00cebd68  ldr w8,[x0, #0xe0]
+00cebd6c  cbnz w8,0x00cebd78
+00cebd70  bl 0x00b0798c
+00cebd74  ldr x0,[x22]
+00cebd78  ldr x0,[x0, #0xb8]
+00cebd7c  mov x1,x21
+00cebd80  mov x2,x20
+00cebd84  bl 0x00ae526c
+00cebd88  cmp x20,x0
+00cebd8c  mov x20,x0
+00cebd90  b.ne 0x00cebd3c
+00cebd94  ldp x19,x30,[sp, #0x20]
+00cebd98  ldp x21,x20,[sp, #0x10]
+00cebd9c  ldp x23,x22,[sp], #0x30
+00cebda0  ret
+00cebda4  mov x0,x21
+00cebda8  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00cebdac_TVAppController__remove_DeviceTypeChecked.txt
+================================================================================
+Function: TVAppController$$remove_DeviceTypeChecked @ 00cebdac
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- AnOtherFeaturesPreview$$OnDeviceTypeChecked @ 00cfa1e0
+  <- SA.AN.NATIVE_API.NativeApiTab$$OnDeviceTypeChecked @ 00cb5e4c
+
+--- Listing ---
+00cebdac  stp x23,x22,[sp, #-0x30]!
+00cebdb0  stp x21,x20,[sp, #0x10]
+00cebdb4  stp x19,x30,[sp, #0x20]
+00cebdb8  adrp x20,0x3571000
+00cebdbc  adrp x22,0x3322000
+00cebdc0  ldrb w8,[x20, #0x960]
+00cebdc4  ldr x22,[x22, #0x88]
+00cebdc8  mov x19,x0
+00cebdcc  tbnz w8,#0x0,0x00cebdf0
+00cebdd0  adrp x0,0x3348000
+00cebdd4  ldr x0,[x0, #0xcf8]
+00cebdd8  bl 0x00b0789c
+00cebddc  adrp x0,0x3322000
+00cebde0  ldr x0,[x0, #0x88]
+00cebde4  bl 0x00b0789c
+00cebde8  mov w8,#0x1
+00cebdec  strb w8,[x20, #0x960]
+00cebdf0  ldr x0,[x22]
+00cebdf4  ldr w8,[x0, #0xe0]
+00cebdf8  cbnz w8,0x00cebe04
+00cebdfc  bl 0x00b0798c
+00cebe00  ldr x0,[x22]
+00cebe04  ldr x8,[x0, #0xb8]
+00cebe08  adrp x23,0x3348000
+00cebe0c  ldr x20,[x8]
+00cebe10  ldr x23,[x23, #0xcf8]
+00cebe14  mov x0,x20
+00cebe18  mov x1,x19
+00cebe1c  mov x2,xzr
+00cebe20  bl 0x02197a1c
+00cebe24  mov x21,x0
+00cebe28  cbz x0,0x00cebe3c
+00cebe2c  ldr x1,[x23]
+00cebe30  ldr x8,[x21]
+00cebe34  cmp x8,x1
+00cebe38  b.ne 0x00cebe7c
+00cebe3c  ldr x0,[x22]
+00cebe40  ldr w8,[x0, #0xe0]
+00cebe44  cbnz w8,0x00cebe50
+00cebe48  bl 0x00b0798c
+00cebe4c  ldr x0,[x22]
+00cebe50  ldr x0,[x0, #0xb8]
+00cebe54  mov x1,x21
+00cebe58  mov x2,x20
+00cebe5c  bl 0x00ae526c
+00cebe60  cmp x20,x0
+00cebe64  mov x20,x0
+00cebe68  b.ne 0x00cebe14
+00cebe6c  ldp x19,x30,[sp, #0x20]
+00cebe70  ldp x21,x20,[sp, #0x10]
+00cebe74  ldp x23,x22,[sp], #0x30
+00cebe78  ret
+00cebe7c  mov x0,x21
+00cebe80  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00cebe84_TVAppController__Awake.txt
+================================================================================
+Function: TVAppController$$Awake @ 00cebe84
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$DontDestroyOnLoad @ 024e00c4
+
+--- Calls IN ---
+
+--- Listing ---
+00cebe84  stp x21,x20,[sp, #-0x20]!
+00cebe88  stp x19,x30,[sp, #0x10]
+00cebe8c  adrp x21,0x3571000
+00cebe90  adrp x20,0x3321000
+00cebe94  ldrb w8,[x21, #0x961]
+00cebe98  ldr x20,[x20, #0xca8]
+00cebe9c  mov x19,x0
+00cebea0  tbnz w8,#0x0,0x00cebeb8
+00cebea4  adrp x0,0x3321000
+00cebea8  ldr x0,[x0, #0xca8]
+00cebeac  bl 0x00b0789c
+00cebeb0  mov w8,#0x1
+00cebeb4  strb w8,[x21, #0x961]
+00cebeb8  mov x0,x19
+00cebebc  mov x1,xzr
+00cebec0  bl 0x024e4ed4
+00cebec4  ldr x8,[x20]
+00cebec8  mov x19,x0
+00cebecc  ldr w9,[x8, #0xe0]
+00cebed0  cbnz w9,0x00cebedc
+00cebed4  mov x0,x8
+00cebed8  bl 0x00b0798c
+00cebedc  mov x0,x19
+00cebee0  ldp x19,x30,[sp, #0x10]
+00cebee4  mov x1,xzr
+00cebee8  ldp x21,x20,[sp], #0x20
+00cebeec  b 0x024e00c4
+
+
+================================================================================
+### FILE: 00cebef0_TVAppController__CheckForATVDevice.txt
+================================================================================
+Function: TVAppController$$CheckForATVDevice @ 00cebef0
+
+--- Calls OUT ---
+  -> AN_TVControllerProxy$$AN_CheckForATVDevice @ 00ce1dbc
+
+--- Calls IN ---
+  <- SA.AN.NATIVE_API.NativeApiTab$$CheckForTV @ 00cb5330
+  <- AnOtherFeaturesPreview$$CheckForTV @ 00cf96c4
+
+--- Listing ---
+00cebef0  b 0x00ce1dbc
+
+
+================================================================================
+### FILE: 00cebef4_TVAppController__OnDeviceStateResponce.txt
+================================================================================
+Function: TVAppController$$OnDeviceStateResponce @ 00cebef4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$Equals @ 01fde08c
+
+--- Calls IN ---
+
+--- Listing ---
+00cebef4  stp x21,x20,[sp, #-0x20]!
+00cebef8  stp x19,x30,[sp, #0x10]
+00cebefc  adrp x21,0x3571000
+00cebf00  ldrb w8,[x21, #0x962]
+00cebf04  mov x20,x1
+00cebf08  mov x19,x0
+00cebf0c  tbnz w8,#0x0,0x00cebf30
+00cebf10  adrp x0,0x3322000
+00cebf14  ldr x0,[x0, #0x88]
+00cebf18  bl 0x00b0789c
+00cebf1c  adrp x0,0x3365000
+00cebf20  ldr x0,[x0, #0x868]
+00cebf24  bl 0x00b0789c
+00cebf28  mov w8,#0x1
+00cebf2c  strb w8,[x21, #0x962]
+00cebf30  cbz x20,0x00cebf98
+00cebf34  adrp x8,0x3365000
+00cebf38  ldr x8,[x8, #0x868]
+00cebf3c  adrp x21,0x3322000
+00cebf40  mov x0,x20
+00cebf44  mov x2,xzr
+00cebf48  ldr x1,[x8]
+00cebf4c  ldr x21,[x21, #0x88]
+00cebf50  bl 0x01fde08c
+00cebf54  tbz w0,#0x0,0x00cebf60
+00cebf58  mov w8,#0x1
+00cebf5c  strb w8,[x19, #0x18]
+00cebf60  ldr x0,[x21]
+00cebf64  ldr w8,[x0, #0xe0]
+00cebf68  cbnz w8,0x00cebf74
+00cebf6c  bl 0x00b0798c
+00cebf70  ldr x0,[x21]
+00cebf74  ldr x8,[x0, #0xb8]
+00cebf78  ldr x8,[x8]
+00cebf7c  cbz x8,0x00cebf98
+00cebf80  ldr x2,[x8, #0x18]
+00cebf84  ldr x0,[x8, #0x40]
+00cebf88  ldr x1,[x8, #0x28]
+00cebf8c  ldp x19,x30,[sp, #0x10]
+00cebf90  ldp x21,x20,[sp], #0x20
+00cebf94  br x2
+00cebf98  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cebf9c_TVAppController__get_IsRuningOnTVDevice.txt
+================================================================================
+Function: TVAppController$$get_IsRuningOnTVDevice @ 00cebf9c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00cebf9c  ldrb w0,[x0, #0x18]
+00cebfa0  ret
+
+
+================================================================================
+### FILE: 00cebfa4_TVAppController__.ctor.txt
+================================================================================
+Function: TVAppController$$.ctor @ 00cebfa4
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$.ctor @ 01e0a43c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00cebfa4  stp x21,x20,[sp, #-0x20]!
+00cebfa8  stp x19,x30,[sp, #0x10]
+00cebfac  adrp x20,0x3571000
+00cebfb0  adrp x21,0x330c000
+00cebfb4  ldrb w8,[x20, #0x963]
+00cebfb8  ldr x21,[x21, #0x570]
+00cebfbc  mov x19,x0
+00cebfc0  tbnz w8,#0x0,0x00cebfd8
+00cebfc4  adrp x0,0x330c000
+00cebfc8  ldr x0,[x0, #0x570]
+00cebfcc  bl 0x00b0789c
+00cebfd0  mov w8,#0x1
+00cebfd4  strb w8,[x20, #0x963]
+00cebfd8  ldr x1,[x21]
+00cebfdc  mov x0,x19
+00cebfe0  ldp x19,x30,[sp, #0x10]
+00cebfe4  ldp x21,x20,[sp], #0x20
+00cebfe8  b 0x01e0a43c
+
+
+================================================================================
+### FILE: 00cebfec_TVAppController__.cctor.txt
+================================================================================
+Function: TVAppController$$.cctor @ 00cebfec
+
+--- Calls OUT ---
+  -> FUN_00cf090c @ 00cf090c
+
+--- Calls IN ---
+
+--- Listing ---
+00cebfec  stp x21,x20,[sp, #-0x20]!
+00cebff0  stp x19,x30,[sp, #0x10]
+00cebff4  adrp x20,0x3571000
+00cebff8  adrp x19,0x335c000
+00cebffc  ldrb w8,[x20, #0x964]
+00cec000  b 0x00cf090c
+
+
+================================================================================
+### FILE: 00cec0bc_TVAppController.__c__.cctor.txt
+================================================================================
+Function: TVAppController.<>c$$.cctor @ 00cec0bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00cec0bc  str x20,[sp, #-0x20]!
+00cec0c0  stp x19,x30,[sp, #0x10]
+00cec0c4  adrp x19,0x3571000
+00cec0c8  adrp x20,0x335c000
+00cec0cc  ldrb w8,[x19, #0x965]
+00cec0d0  ldr x20,[x20, #0xb10]
+00cec0d4  tbnz w8,#0x0,0x00cec0ec
+00cec0d8  adrp x0,0x335c000
+00cec0dc  ldr x0,[x0, #0xb10]
+00cec0e0  bl 0x00b0789c
+00cec0e4  mov w8,#0x1
+00cec0e8  strb w8,[x19, #0x965]
+00cec0ec  ldr x0,[x20]
+00cec0f0  bl 0x00b079a0
+00cec0f4  cbz x0,0x00cec128
+00cec0f8  mov x1,xzr
+00cec0fc  mov x19,x0
+00cec100  bl 0x02194104
+00cec104  ldr x8,[x20]
+00cec108  mov x1,x19
+00cec10c  ldr x8,[x8, #0xb8]
+00cec110  str x19,[x8]
+00cec114  ldr x8,[x20]
+00cec118  ldp x19,x30,[sp, #0x10]
+00cec11c  ldr x0,[x8, #0xb8]
+00cec120  ldr x20,[sp], #0x20
+00cec124  b 0x00b07850
+00cec128  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cec12c_TVAppController.__c__.ctor.txt
+================================================================================
+Function: TVAppController.<>c$$.ctor @ 00cec12c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00cec12c  mov x1,xzr
+00cec130  b 0x02194104
+
+
+================================================================================
+### FILE: 00cec134_TVAppController.__c___.cctor_b__10_0.txt
+================================================================================
+Function: TVAppController.<>c$$<.cctor>b__10_0 @ 00cec134
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00cec134  ret
+
+
+================================================================================
+### FILE: 00d46d7c_TvOsCloudExample__Start.txt
+================================================================================
+Function: TvOsCloudExample$$Start @ 00d46d7c
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> iCloudManager$$requestDataForKey @ 00d1c3e8
+  -> iCloudManager$$setString @ 00d1c3dc
+  -> FUN_00b079b0 @ 00b079b0
+  -> iCloudManager$$add_OnCloudDataReceivedAction @ 00d1bfa0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00d46d7c  str x22,[sp, #-0x30]!
+00d46d80  stp x21,x20,[sp, #0x10]
+00d46d84  stp x19,x30,[sp, #0x20]
+00d46d88  adrp x21,0x3571000
+00d46d8c  adrp x20,0x336b000
+00d46d90  ldrb w8,[x21, #0xdd6]
+00d46d94  ldr x20,[x20, #0x7d0]
+00d46d98  mov x19,x0
+00d46d9c  tbnz w8,#0x0,0x00d46e08
+00d46da0  adrp x0,0x3356000
+00d46da4  ldr x0,[x0, #0x988]
+00d46da8  bl 0x00b0789c
+00d46dac  adrp x0,0x336b000
+00d46db0  ldr x0,[x0, #0x7d0]
+00d46db4  bl 0x00b0789c
+00d46db8  adrp x0,0x336d000
+00d46dbc  ldr x0,[x0, #0xdf8]
+00d46dc0  bl 0x00b0789c
+00d46dc4  adrp x0,0x3381000
+00d46dc8  ldr x0,[x0, #0xe10]
+00d46dcc  bl 0x00b0789c
+00d46dd0  adrp x0,0x3342000
+00d46dd4  ldr x0,[x0, #0x7f8]
+00d46dd8  bl 0x00b0789c
+00d46ddc  adrp x0,0x3328000
+00d46de0  ldr x0,[x0, #0xa80]
+00d46de4  bl 0x00b0789c
+00d46de8  adrp x0,0x335f000
+00d46dec  ldr x0,[x0, #0x4d8]
+00d46df0  bl 0x00b0789c
+00d46df4  adrp x0,0x336e000
+00d46df8  ldr x0,[x0, #0xb10]
+00d46dfc  bl 0x00b0789c
+00d46e00  mov w8,#0x1
+00d46e04  strb w8,[x21, #0xdd6]
+00d46e08  ldr x0,[x20]
+00d46e0c  adrp x21,0x3342000
+00d46e10  adrp x20,0x3356000
+00d46e14  ldr w8,[x0, #0xe0]
+00d46e18  ldr x21,[x21, #0x7f8]
+00d46e1c  ldr x20,[x20, #0x988]
+00d46e20  cbnz w8,0x00d46e28
+00d46e24  bl 0x00b0798c
+00d46e28  ldr x0,[x21]
+00d46e2c  mov x1,xzr
+00d46e30  bl 0x024c0104
+00d46e34  ldr x0,[x20]
+00d46e38  bl 0x00b079a0
+00d46e3c  cbz x0,0x00d46ed8
+00d46e40  adrp x8,0x3381000
+00d46e44  ldr x8,[x8, #0xe10]
+00d46e48  adrp x22,0x336e000
+00d46e4c  adrp x21,0x336d000
+00d46e50  mov x1,x19
+00d46e54  ldr x2,[x8]
+00d46e58  ldr x22,[x22, #0xb10]
+00d46e5c  ldr x21,[x21, #0xdf8]
+00d46e60  mov x3,xzr
+00d46e64  mov x20,x0
+00d46e68  bl 0x01909b80
+00d46e6c  ldr x0,[x22]
+00d46e70  ldr w8,[x0, #0xe0]
+00d46e74  cbnz w8,0x00d46e7c
+00d46e78  bl 0x00b0798c
+00d46e7c  mov x0,x20
+00d46e80  mov x1,xzr
+00d46e84  bl 0x00d1bfa0
+00d46e88  ldr x0,[x21]
+00d46e8c  bl 0x01e09dd4
+00d46e90  cbz x0,0x00d46ed8
+00d46e94  adrp x19,0x335f000
+00d46e98  adrp x8,0x3328000
+00d46e9c  ldr x19,[x19, #0x4d8]
+00d46ea0  ldr x8,[x8, #0xa80]
+00d46ea4  mov x3,xzr
+00d46ea8  ldr x1,[x19]
+00d46eac  ldr x2,[x8]
+00d46eb0  bl 0x00d1c3dc
+00d46eb4  ldr x0,[x21]
+00d46eb8  bl 0x01e09dd4
+00d46ebc  cbz x0,0x00d46ed8
+00d46ec0  ldr x1,[x19]
+00d46ec4  ldp x19,x30,[sp, #0x20]
+00d46ec8  ldp x21,x20,[sp, #0x10]
+00d46ecc  mov x2,xzr
+00d46ed0  ldr x22,[sp], #0x30
+00d46ed4  b 0x00d1c3e8
+00d46ed8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d46edc_TvOsCloudExample__OnCloudDataReceivedAction.txt
+================================================================================
+Function: TvOsCloudExample$$OnCloudDataReceivedAction @ 00d46edc
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> iCloudData$$get_stringValue @ 00d1f648
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> System.String$$Concat @ 01fdebb8
+
+--- Calls IN ---
+
+--- Listing ---
+00d46edc  str x22,[sp, #-0x30]!
+00d46ee0  stp x21,x20,[sp, #0x10]
+00d46ee4  stp x19,x30,[sp, #0x20]
+00d46ee8  adrp x20,0x3571000
+00d46eec  adrp x21,0x336b000
+00d46ef0  ldrb w8,[x20, #0xdd7]
+00d46ef4  ldr x21,[x21, #0x7d0]
+00d46ef8  mov x19,x1
+00d46efc  tbnz w8,#0x0,0x00d46f38
+00d46f00  adrp x0,0x336b000
+00d46f04  ldr x0,[x0, #0x7d0]
+00d46f08  bl 0x00b0789c
+00d46f0c  adrp x0,0x3354000
+00d46f10  ldr x0,[x0, #0xb58]
+00d46f14  bl 0x00b0789c
+00d46f18  adrp x0,0x3335000
+00d46f1c  ldr x0,[x0, #0x1e8]
+00d46f20  bl 0x00b0789c
+00d46f24  adrp x0,0x3354000
+00d46f28  ldr x0,[x0, #0xb80]
+00d46f2c  bl 0x00b0789c
+00d46f30  mov w8,#0x1
+00d46f34  strb w8,[x20, #0xdd7]
+00d46f38  ldr x0,[x21]
+00d46f3c  adrp x20,0x3335000
+00d46f40  ldr w8,[x0, #0xe0]
+00d46f44  ldr x20,[x20, #0x1e8]
+00d46f48  cbnz w8,0x00d46f50
+00d46f4c  bl 0x00b0798c
+00d46f50  ldr x0,[x20]
+00d46f54  mov x1,xzr
+00d46f58  bl 0x024c0104
+00d46f5c  cbz x19,0x00d46fe0
+00d46f60  ldrb w8,[x19, #0x20]
+00d46f64  ldr x20,[x19, #0x10]
+00d46f68  cbz w8,0x00d46f88
+00d46f6c  adrp x8,0x3354000
+00d46f70  ldr x8,[x8, #0xb80]
+00d46f74  mov x0,x20
+00d46f78  mov x2,xzr
+00d46f7c  ldr x1,[x8]
+00d46f80  bl 0x01fd2850
+00d46f84  b 0x00d46fb0
+00d46f88  adrp x22,0x3354000
+00d46f8c  ldr x22,[x22, #0xb58]
+00d46f90  mov x0,x19
+00d46f94  mov x1,xzr
+00d46f98  bl 0x00d1f648
+00d46f9c  ldr x1,[x22]
+00d46fa0  mov x2,x0
+00d46fa4  mov x0,x20
+00d46fa8  mov x3,xzr
+00d46fac  bl 0x01fdebb8
+00d46fb0  ldr x8,[x21]
+00d46fb4  mov x19,x0
+00d46fb8  ldr w9,[x8, #0xe0]
+00d46fbc  cbnz w9,0x00d46fc8
+00d46fc0  mov x0,x8
+00d46fc4  bl 0x00b0798c
+00d46fc8  mov x0,x19
+00d46fcc  ldp x19,x30,[sp, #0x20]
+00d46fd0  ldp x21,x20,[sp, #0x10]
+00d46fd4  mov x1,xzr
+00d46fd8  ldr x22,[sp], #0x30
+00d46fdc  b 0x024c0104
+00d46fe0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d46fe4_TvOsCloudExample__.ctor.txt
+================================================================================
+Function: TvOsCloudExample$$.ctor @ 00d46fe4
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d46fe4  mov x1,xzr
+00d46fe8  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d46fec_TvOSInAppsExample__Init.txt
+================================================================================
+Function: TvOSInAppsExample$$Init @ 00d46fec
+
+--- Calls OUT ---
+  -> FUN_00d4a1e8 @ 00d4a1e8
+
+--- Calls IN ---
+
+--- Listing ---
+00d46fec  str x20,[sp, #-0x20]!
+00d46ff0  stp x19,x30,[sp, #0x10]
+00d46ff4  adrp x20,0x3571000
+00d46ff8  adrp x19,0x336b000
+00d46ffc  ldrb w8,[x20, #0xdd8]
+00d47000  b 0x00d4a1e8
+
+
+================================================================================
+### FILE: 00d4705c_TvOSInAppsExample__Buy.txt
+================================================================================
+Function: TvOSInAppsExample$$Buy @ 00d4705c
+
+--- Calls OUT ---
+  -> PaymentManagerExample$$buyItem @ 00d2c62c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d4705c  str x20,[sp, #-0x20]!
+00d47060  stp x19,x30,[sp, #0x10]
+00d47064  adrp x19,0x3571000
+00d47068  adrp x20,0x331f000
+00d4706c  ldrb w8,[x19, #0xdd9]
+00d47070  ldr x20,[x20, #0xaa0]
+00d47074  tbnz w8,#0x0,0x00d4708c
+00d47078  adrp x0,0x331f000
+00d4707c  ldr x0,[x0, #0xaa0]
+00d47080  bl 0x00b0789c
+00d47084  mov w8,#0x1
+00d47088  strb w8,[x19, #0xdd9]
+00d4708c  ldr x0,[x20]
+00d47090  ldp x19,x30,[sp, #0x10]
+00d47094  mov x1,xzr
+00d47098  ldr x20,[sp], #0x20
+00d4709c  b 0x00d2c62c
+
+
+================================================================================
+### FILE: 00d470a0_TvOSInAppsExample__.ctor.txt
+================================================================================
+Function: TvOSInAppsExample$$.ctor @ 00d470a0
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d470a0  mov x1,xzr
+00d470a4  b 0x024e45bc
+
+
+================================================================================
+### FILE: 01059b4c_TV_Old_Movie__get_material.txt
+================================================================================
+Function: TV_Old_Movie$$get_material @ 01059b4c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.Object$$set_hideFlags @ 024e013c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Material$$.ctor @ 024d2b98
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- TV_Old_Movie$$OnRenderImage @ 01059ca0
+
+--- Listing ---
+01059b4c  str x22,[sp, #-0x30]!
+01059b50  stp x21,x20,[sp, #0x10]
+01059b54  stp x19,x30,[sp, #0x20]
+01059b58  adrp x19,0x3574000
+01059b5c  adrp x22,0x3321000
+01059b60  ldrb w8,[x19, #0x701]
+01059b64  ldr x22,[x22, #0xca8]
+01059b68  mov x20,x0
+01059b6c  tbnz w8,#0x0,0x01059b90
+01059b70  adrp x0,0x337f000
+01059b74  ldr x0,[x0, #0x840]
+01059b78  bl 0x00b0789c
+01059b7c  adrp x0,0x3321000
+01059b80  ldr x0,[x0, #0xca8]
+01059b84  bl 0x00b0789c
+01059b88  mov w8,#0x1
+01059b8c  strb w8,[x19, #0x701]
+01059b90  mov x19,x20
+01059b94  ldr x21,[x19, #0x38]!
+01059b98  ldr x0,[x22]
+01059b9c  ldr w8,[x0, #0xe0]
+01059ba0  cbnz w8,0x01059ba8
+01059ba4  bl 0x00b0798c
+01059ba8  mov x0,x21
+01059bac  mov x1,xzr
+01059bb0  mov x2,xzr
+01059bb4  bl 0x024c8180
+01059bb8  tbz w0,#0x0,0x01059c08
+01059bbc  adrp x8,0x337f000
+01059bc0  ldr x8,[x8, #0x840]
+01059bc4  ldr x21,[x20, #0x18]
+01059bc8  ldr x0,[x8]
+01059bcc  bl 0x00b079a0
+01059bd0  cbz x0,0x01059c1c
+01059bd4  mov x1,x21
+01059bd8  mov x2,xzr
+01059bdc  mov x20,x0
+01059be0  bl 0x024d2b98
+01059be4  mov x0,x19
+01059be8  mov x1,x20
+01059bec  str x20,[x19]
+01059bf0  bl 0x00b07850
+01059bf4  ldr x0,[x19]
+01059bf8  cbz x0,0x01059c1c
+01059bfc  mov w1,#0x3d
+01059c00  mov x2,xzr
+01059c04  bl 0x024e013c
+01059c08  ldr x0,[x19]
+01059c0c  ldp x19,x30,[sp, #0x20]
+01059c10  ldp x21,x20,[sp, #0x10]
+01059c14  ldr x22,[sp], #0x30
+01059c18  ret
+01059c1c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01059c20_TV_Old_Movie__Start.txt
+================================================================================
+Function: TV_Old_Movie$$Start @ 01059c20
+
+--- Calls OUT ---
+  -> UnityEngine.Behaviour$$set_enabled @ 024dd2a4
+  -> UnityEngine.SystemInfo$$get_supportsImageEffects @ 024d5ed0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Shader$$Find @ 024d2900
+
+--- Calls IN ---
+
+--- Listing ---
+01059c20  stp x21,x20,[sp, #-0x20]!
+01059c24  stp x19,x30,[sp, #0x10]
+01059c28  adrp x20,0x3574000
+01059c2c  adrp x21,0x3358000
+01059c30  ldrb w8,[x20, #0x702]
+01059c34  ldr x21,[x21, #0xf48]
+01059c38  mov x19,x0
+01059c3c  tbnz w8,#0x0,0x01059c54
+01059c40  adrp x0,0x3358000
+01059c44  ldr x0,[x0, #0xf48]
+01059c48  bl 0x00b0789c
+01059c4c  mov w8,#0x1
+01059c50  strb w8,[x20, #0x702]
+01059c54  ldr x0,[x21]
+01059c58  mov x1,xzr
+01059c5c  bl 0x024d2900
+01059c60  mov x1,x0
+01059c64  mov x0,x19
+01059c68  str x1,[x0, #0x18]!
+01059c6c  bl 0x00b07850
+01059c70  mov x0,xzr
+01059c74  bl 0x024d5ed0
+01059c78  tbz w0,#0x0,0x01059c88
+01059c7c  ldp x19,x30,[sp, #0x10]
+01059c80  ldp x21,x20,[sp], #0x20
+01059c84  ret
+01059c88  mov x0,x19
+01059c8c  ldp x19,x30,[sp, #0x10]
+01059c90  mov w1,wzr
+01059c94  mov x2,xzr
+01059c98  ldp x21,x20,[sp], #0x20
+01059c9c  b 0x024dd2a4
+
+
+================================================================================
+### FILE: 01059ca0_TV_Old_Movie__OnRenderImage.txt
+================================================================================
+Function: TV_Old_Movie$$OnRenderImage @ 01059ca0
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$SetVector @ 024d4248
+  -> UnityEngine.Graphics$$Blit @ 024d0d10
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.Time$$get_deltaTime @ 024dc048
+  -> TV_Old_Movie$$get_material @ 01059b4c
+  -> UnityEngine.Graphics$$Blit @ 024d0b3c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Material$$SetFloat @ 024d4174
+
+--- Calls IN ---
+
+--- Listing ---
+01059ca0  str d8,[sp, #-0x40]!
+01059ca4  str x24,[sp, #0x8]
+01059ca8  stp x23,x22,[sp, #0x10]
+01059cac  stp x21,x20,[sp, #0x20]
+01059cb0  stp x19,x30,[sp, #0x30]
+01059cb4  adrp x23,0x3574000
+01059cb8  adrp x22,0x3321000
+01059cbc  ldrb w8,[x23, #0x703]
+01059cc0  ldr x22,[x22, #0xca8]
+01059cc4  mov x19,x2
+01059cc8  mov x20,x1
+01059ccc  mov x21,x0
+01059cd0  tbnz w8,#0x0,0x01059d48
+01059cd4  adrp x0,0x3333000
+01059cd8  ldr x0,[x0, #0x790]
+01059cdc  bl 0x00b0789c
+01059ce0  adrp x0,0x3321000
+01059ce4  ldr x0,[x0, #0xca8]
+01059ce8  bl 0x00b0789c
+01059cec  adrp x0,0x337c000
+01059cf0  ldr x0,[x0, #0xb10]
+01059cf4  bl 0x00b0789c
+01059cf8  adrp x0,0x3341000
+01059cfc  ldr x0,[x0, #0x2b8]
+01059d00  bl 0x00b0789c
+01059d04  adrp x0,0x335c000
+01059d08  ldr x0,[x0, #0x270]
+01059d0c  bl 0x00b0789c
+01059d10  adrp x0,0x336b000
+01059d14  ldr x0,[x0, #0xdb0]
+01059d18  bl 0x00b0789c
+01059d1c  adrp x0,0x336d000
+01059d20  ldr x0,[x0, #0xab0]
+01059d24  bl 0x00b0789c
+01059d28  adrp x0,0x332d000
+01059d2c  ldr x0,[x0, #0xb40]
+01059d30  bl 0x00b0789c
+01059d34  adrp x0,0x3336000
+01059d38  ldr x0,[x0, #0xff8]
+01059d3c  bl 0x00b0789c
+01059d40  mov w8,#0x1
+01059d44  strb w8,[x23, #0x703]
+01059d48  ldr x0,[x22]
+01059d4c  ldr x22,[x21, #0x18]
+01059d50  ldr w8,[x0, #0xe0]
+01059d54  cbnz w8,0x01059d5c
+01059d58  bl 0x00b0798c
+01059d5c  adrp x24,0x3333000
+01059d60  ldr x24,[x24, #0x790]
+01059d64  mov x0,x22
+01059d68  mov x1,xzr
+01059d6c  mov x2,xzr
+01059d70  bl 0x024de30c
+01059d74  tbz w0,#0x0,0x01059f20
+01059d78  ldr s8,[x21, #0x20]
+01059d7c  mov x0,xzr
+01059d80  bl 0x024dc048
+01059d84  mov w8,#0x42c80000
+01059d88  fadd s0,s8,s0
+01059d8c  fmov s1,w8
+01059d90  fcmp s0,s1
+01059d94  fmov s1,wzr
+01059d98  fcsel s0,s1,s0,gt
+01059d9c  mov x0,x21
+01059da0  str s0,[x21, #0x20]
+01059da4  bl 0x01059b4c
+01059da8  cbz x0,0x01059f54
+01059dac  adrp x8,0x337c000
+01059db0  ldr x8,[x8, #0xb10]
+01059db4  ldr s0,[x21, #0x20]
+01059db8  mov x2,xzr
+01059dbc  ldr x1,[x8]
+01059dc0  bl 0x024d4174
+01059dc4  mov x0,x21
+01059dc8  bl 0x01059b4c
+01059dcc  cbz x0,0x01059f54
+01059dd0  adrp x8,0x335c000
+01059dd4  ldr x8,[x8, #0x270]
+01059dd8  ldr s0,[x21, #0x40]
+01059ddc  mov x2,xzr
+01059de0  ldr x1,[x8]
+01059de4  bl 0x024d4174
+01059de8  mov x0,x21
+01059dec  bl 0x01059b4c
+01059df0  cbz x0,0x01059f54
+01059df4  adrp x8,0x332d000
+01059df8  ldr x8,[x8, #0xb40]
+01059dfc  ldr s0,[x21, #0x44]
+01059e00  mov x2,xzr
+01059e04  ldr x1,[x8]
+01059e08  bl 0x024d4174
+01059e0c  mov x0,x21
+01059e10  bl 0x01059b4c
+01059e14  cbz x0,0x01059f54
+01059e18  adrp x8,0x3341000
+01059e1c  ldr x8,[x8, #0x2b8]
+01059e20  ldr s0,[x21, #0x48]
+01059e24  mov x2,xzr
+01059e28  ldr x1,[x8]
+01059e2c  bl 0x024d4174
+01059e30  mov x0,x21
+01059e34  bl 0x01059b4c
+01059e38  cbz x0,0x01059f54
+01059e3c  adrp x8,0x3336000
+01059e40  ldr x8,[x8, #0xff8]
+01059e44  ldr s0,[x21, #0x4c]
+01059e48  mov x2,xzr
+01059e4c  ldr x1,[x8]
+01059e50  bl 0x024d4174
+01059e54  mov x0,x21
+01059e58  bl 0x01059b4c
+01059e5c  cbz x0,0x01059f54
+01059e60  adrp x8,0x336b000
+01059e64  ldr x8,[x8, #0xdb0]
+01059e68  ldr s0,[x21, #0x50]
+01059e6c  mov x2,xzr
+01059e70  ldr x1,[x8]
+01059e74  bl 0x024d4174
+01059e78  mov x0,x21
+01059e7c  bl 0x01059b4c
+01059e80  cbz x20,0x01059f54
+01059e84  ldr x8,[x20]
+01059e88  mov x22,x0
+01059e8c  mov x0,x20
+01059e90  ldp x9,x1,[x8, #0x178]
+01059e94  blr x9
+01059e98  ldr x8,[x20]
+01059e9c  mov w23,w0
+01059ea0  mov x0,x20
+01059ea4  ldp x9,x1,[x8, #0x198]
+01059ea8  blr x9
+01059eac  cbz x22,0x01059f54
+01059eb0  adrp x8,0x336d000
+01059eb4  ldr x8,[x8, #0xab0]
+01059eb8  scvtf s1,w0
+01059ebc  scvtf s0,w23
+01059ec0  fmov s2,wzr
+01059ec4  ldr x1,[x8]
+01059ec8  fmov s3,wzr
+01059ecc  mov x0,x22
+01059ed0  mov x2,xzr
+01059ed4  bl 0x024d4248
+01059ed8  mov x0,x21
+01059edc  bl 0x01059b4c
+01059ee0  ldr x8,[x24]
+01059ee4  mov x21,x0
+01059ee8  ldr w9,[x8, #0xe0]
+01059eec  cbnz w9,0x01059ef8
+01059ef0  mov x0,x8
+01059ef4  bl 0x00b0798c
+01059ef8  mov x0,x20
+01059efc  mov x1,x19
+01059f00  mov x2,x21
+01059f04  ldp x19,x30,[sp, #0x30]
+01059f08  ldp x21,x20,[sp, #0x20]
+01059f0c  ldp x23,x22,[sp, #0x10]
+01059f10  ldr x24,[sp, #0x8]
+01059f14  mov x3,xzr
+01059f18  ldr d8,[sp], #0x40
+01059f1c  b 0x024d0d10
+01059f20  ldr x0,[x24]
+01059f24  ldr w8,[x0, #0xe0]
+01059f28  cbnz w8,0x01059f30
+01059f2c  bl 0x00b0798c
+01059f30  mov x0,x20
+01059f34  mov x1,x19
+01059f38  ldp x19,x30,[sp, #0x30]
+01059f3c  ldp x21,x20,[sp, #0x20]
+01059f40  ldp x23,x22,[sp, #0x10]
+01059f44  ldr x24,[sp, #0x8]
+01059f48  mov x2,xzr
+01059f4c  ldr d8,[sp], #0x40
+01059f50  b 0x024d0b3c
+01059f54  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01059f58_TV_Old_Movie__Update.txt
+================================================================================
+Function: TV_Old_Movie$$Update @ 01059f58
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+01059f58  ret
+
+
+================================================================================
+### FILE: 01059f5c_TV_Old_Movie__OnDisable.txt
+================================================================================
+Function: TV_Old_Movie$$OnDisable @ 01059f5c
+
+--- Calls OUT ---
+  -> UnityEngine.Object$$DestroyImmediate @ 024dff90
+  -> UnityEngine.Object$$op_Implicit @ 024d0ab0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+01059f5c  stp x21,x20,[sp, #-0x20]!
+01059f60  stp x19,x30,[sp, #0x10]
+01059f64  adrp x20,0x3574000
+01059f68  adrp x21,0x3321000
+01059f6c  ldrb w8,[x20, #0x704]
+01059f70  ldr x21,[x21, #0xca8]
+01059f74  mov x19,x0
+01059f78  tbnz w8,#0x0,0x01059f90
+01059f7c  adrp x0,0x3321000
+01059f80  ldr x0,[x0, #0xca8]
+01059f84  bl 0x00b0789c
+01059f88  mov w8,#0x1
+01059f8c  strb w8,[x20, #0x704]
+01059f90  ldr x0,[x21]
+01059f94  ldr x20,[x19, #0x38]
+01059f98  ldr w8,[x0, #0xe0]
+01059f9c  cbnz w8,0x01059fa4
+01059fa0  bl 0x00b0798c
+01059fa4  mov x0,x20
+01059fa8  mov x1,xzr
+01059fac  bl 0x024d0ab0
+01059fb0  tbz w0,#0x0,0x01059fdc
+01059fb4  ldr x0,[x21]
+01059fb8  ldr x19,[x19, #0x38]
+01059fbc  ldr w8,[x0, #0xe0]
+01059fc0  cbnz w8,0x01059fc8
+01059fc4  bl 0x00b0798c
+01059fc8  mov x0,x19
+01059fcc  ldp x19,x30,[sp, #0x10]
+01059fd0  mov x1,xzr
+01059fd4  ldp x21,x20,[sp], #0x20
+01059fd8  b 0x024dff90
+01059fdc  ldp x19,x30,[sp, #0x10]
+01059fe0  ldp x21,x20,[sp], #0x20
+01059fe4  ret
+
+
+================================================================================
+### FILE: 01059fe8_TV_Old_Movie__.ctor.txt
+================================================================================
+Function: TV_Old_Movie$$.ctor @ 01059fe8
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+01059fe8  adrp x8,0x26dc000
+01059fec  ldr d0,[x8, #0x130]
+01059ff0  mov w8,#0x3f800000
+01059ff4  fmov v1.2S,#0x3f800000
+01059ff8  mov x1,xzr
+01059ffc  str w8,[x0, #0x20]
+0105a000  str d0,[x0, #0x40]
+0105a004  stur d1,[x0, #0x4c]
+0105a008  b 0x024e45bc
+
+

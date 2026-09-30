@@ -1,0 +1,417 @@
+================================================================================
+### FILE: 008d3b30_dlopen.txt
+================================================================================
+Function: dlopen @ 008d3b30
+
+--- Calls OUT ---
+  -> dlopen @ 03799070
+
+--- Calls IN ---
+  <- FUN_00b46dc0 @ 00b46dc0
+  <- FUN_00b46d08 @ 00b46d08
+
+--- Listing ---
+008d3b30  adrp x16,0x3307000
+008d3b34  ldr x17,[x16, #0x758]
+008d3b38  add x16,x16,#0x758
+008d3b3c  br x17
+
+
+================================================================================
+### FILE: 008d3d30_dladdr.txt
+================================================================================
+Function: dladdr @ 008d3d30
+
+--- Calls OUT ---
+  -> dladdr @ 037990e8
+
+--- Calls IN ---
+  <- FUN_00ab0cd8 @ 00ab0cd8
+  <- FUN_00ac72ac @ 00ac72ac
+  <- FUN_00ab0df4 @ 00ab0df4
+  <- FUN_00ab0c94 @ 00ab0c94
+
+--- Listing ---
+008d3d30  adrp x16,0x3307000
+008d3d34  ldr x17,[x16, #0x858]
+008d3d38  add x16,x16,#0x858
+008d3d3c  br x17
+
+
+================================================================================
+### FILE: 008d4b20_dlclose.txt
+================================================================================
+Function: dlclose @ 008d4b20
+
+--- Calls OUT ---
+  -> dlclose @ 03799460
+
+--- Calls IN ---
+  <- FUN_00b46f50 @ 00b46f50
+
+--- Listing ---
+008d4b20  adrp x16,0x3307000
+008d4b24  ldr x17,[x16, #0xf50]
+008d4b28  add x16,x16,#0xf50
+008d4b2c  br x17
+
+
+================================================================================
+### FILE: 008d5470_dlsym.txt
+================================================================================
+Function: dlsym @ 008d5470
+
+--- Calls OUT ---
+  -> dlsym @ 03799698
+
+--- Calls IN ---
+  <- FUN_00b46e38 @ 00b46e38
+
+--- Listing ---
+008d5470  adrp x16,0x3308000
+008d5474  ldr x17,[x16, #0x3f8]
+008d5478  add x16,x16,#0x3f8
+008d547c  br x17
+
+
+================================================================================
+### FILE: 008d58d0_dl_iterate_phdr.txt
+================================================================================
+Function: dl_iterate_phdr @ 008d58d0
+
+--- Calls OUT ---
+  -> dl_iterate_phdr @ 037997f8
+
+--- Calls IN ---
+  <- _Unwind_Find_FDE @ 00ba30a8
+
+--- Listing ---
+008d58d0  adrp x16,0x3308000
+008d58d4  ldr x17,[x16, #0x628]
+008d58d8  add x16,x16,#0x628
+008d58dc  br x17
+
+
+================================================================================
+### FILE: 008d5ac0_dlerror.txt
+================================================================================
+Function: dlerror @ 008d5ac0
+
+--- Calls OUT ---
+  -> dlerror @ 03799890
+
+--- Calls IN ---
+  <- FUN_00b46e38 @ 00b46e38
+  <- FUN_00b46dc0 @ 00b46dc0
+  <- FUN_00b46d08 @ 00b46d08
+
+--- Listing ---
+008d5ac0  adrp x16,0x3308000
+008d5ac4  ldr x17,[x16, #0x720]
+008d5ac8  add x16,x16,#0x720
+008d5acc  br x17
+
+
+================================================================================
+### FILE: 00aec4cc_DllGetActivationFactory.txt
+================================================================================
+Function: DllGetActivationFactory @ 00aec4cc
+
+--- Calls OUT ---
+  -> FUN_00af0710 @ 00af0710
+  -> FUN_00a8ccbc @ 00a8ccbc
+  -> FUN_00aeb31c @ 00aeb31c
+  -> operator.delete @ 008d3ed0
+  -> FUN_00af091c @ 00af091c
+  -> FUN_00aecd80 @ 00aecd80
+  -> FUN_00aace0c @ 00aace0c
+  -> FUN_00b0e30c @ 00b0e30c
+  -> FUN_00acade0 @ 00acade0
+  -> FUN_00b46c78 @ 00b46c78
+  -> FUN_00ab66d4 @ 00ab66d4
+  -> FUN_00b0e2f4 @ 00b0e2f4
+  -> pthread_self @ 00b46d00
+  -> FUN_00a8cd10 @ 00a8cd10
+
+--- Calls IN ---
+
+--- Listing ---
+00aec4cc  sub sp,sp,#0xc0
+00aec4d0  stp x23,x22,[sp, #0x90]
+00aec4d4  stp x21,x20,[sp, #0xa0]
+00aec4d8  stp x19,x30,[sp, #0xb0]
+00aec4dc  mov w20,#0x57
+00aec4e0  movk w20,#0x8007, LSL #16
+00aec4e4  str x0,[sp, #0x88]
+00aec4e8  cbz x0,0x00aec708
+00aec4ec  mov x19,x1
+00aec4f0  cbz x1,0x00aec708
+00aec4f4  adrp x20,0x3582000
+00aec4f8  add x20,x20,#0x480
+00aec4fc  str x20,[sp, #0x80]
+00aec500  bl 0x00b46d00
+00aec504  ldr x8,[x20, #0x40]
+00aec508  adrp x22,0x3582000
+00aec50c  cmp x0,x8
+00aec510  b.eq 0x00aec720
+00aec514  mov x21,x0
+00aec518  mov w9,wzr
+00aec51c  ldaxr w8,[x20]
+00aec520  cmp w8,w9
+00aec524  b.ne 0x00aec53c
+00aec528  add w9,w9,#0x1
+00aec52c  stxr w10,w9,[x20]
+00aec530  cbnz w10,0x00aec540
+00aec534  mov w10,#0x1
+00aec538  b 0x00aec544
+00aec53c  clrex 
+00aec540  mov w10,wzr
+00aec544  cmp w8,#0x2
+00aec548  b.eq 0x00aec554
+00aec54c  mov w9,w8
+00aec550  cbz w10,0x00aec51c
+00aec554  cbz w8,0x00aec57c
+00aec558  mov w23,#0x2
+00aec55c  mov w1,#0x2
+00aec560  mov w2,#0xffffffff
+00aec564  mov x0,x20
+00aec568  bl 0x00b46c78
+00aec56c  ldxr w8,[x20]
+00aec570  stxr w9,w23,[x20]
+00aec574  cbnz w9,0x00aec56c
+00aec578  cbnz w8,0x00aec55c
+00aec57c  adrp x8,0x3582000
+00aec580  str x21,[x8, #0x4c0]
+00aec584  mov w8,#0x1
+00aec588  adrp x20,0x3582000
+00aec58c  ldrb w9,[x20, #0x4d0]
+00aec590  str w8,[x22, #0x4c8]
+00aec594  tbnz w9,#0x0,0x00aec5b0
+00aec598  adrp x0,0x2984000
+    ; [PRE] try { // try from 00aec598 to 00aec5a3 has its CatchHandler @ 00aec790
+00aec59c  add x0,x0,#0x9d5
+00aec5a0  bl 0x00aace0c
+    ; [POST] } // end try from 00aec598 to 00aec5a3
+00aec5a4  tbz w0,#0x0,0x00aec6cc
+00aec5a8  mov w8,#0x1
+00aec5ac  strb w8,[x20, #0x4d0]
+00aec5b0  adrp x0,0x3582000
+    ; [PRE] try { // try from 00aec5b0 to 00aec5bf has its CatchHandler @ 00aec794
+00aec5b4  add x0,x0,#0x468
+00aec5b8  add x1,sp,#0x88
+00aec5bc  bl 0x00af0710
+    ; [POST] } // end try from 00aec5b0 to 00aec5bf
+00aec5c0  adrp x8,0x3582000
+00aec5c4  add x8,x8,#0x470
+00aec5c8  cmp x0,x8
+00aec5cc  b.eq 0x00aec5f0
+00aec5d0  ldr x21,[x0, #0x28]
+00aec5d4  ldr x8,[x21]
+00aec5d8  ldr x8,[x8, #0x8]
+00aec5dc  mov x0,x21
+    ; [PRE] try { // try from 00aec5dc to 00aec5e3 has its CatchHandler @ 00aec78c
+00aec5e0  blr x8
+    ; [POST] } // end try from 00aec5dc to 00aec5e3
+00aec5e4  mov w20,wzr
+00aec5e8  str x21,[x19]
+00aec5ec  b 0x00aec700
+00aec5f0  ldr x0,[sp, #0x88]
+00aec5f4  add x8,sp,#0x48
+    ; [PRE] try { // try from 00aec5f4 to 00aec603 has its CatchHandler @ 00aec788
+00aec5f8  add x1,sp,#0x7c
+00aec5fc  add x20,sp,#0x48
+00aec600  bl 0x00b0e30c
+    ; [POST] } // end try from 00aec5f4 to 00aec603
+00aec604  ldr w8,[sp, #0x50]
+00aec608  add x9,sp,#0x20
+00aec60c  add x0,x9,#0x8
+00aec610  add x1,x20,#0x10
+00aec614  str w8,[sp, #0x20]
+00aec618  bl 0x00a8cd10
+    ; [PRE] try { // try from 00aec618 to 00aec61b has its CatchHandler @ 00aec770
+    ; [POST] } // end try from 00aec618 to 00aec61b
+00aec61c  ldr w8,[sp, #0x70]
+00aec620  str w8,[sp, #0x40]
+00aec624  add x0,sp,#0x20
+    ; [PRE] try { // try from 00aec624 to 00aec62b has its CatchHandler @ 00aec754
+00aec628  bl 0x00acade0
+    ; [POST] } // end try from 00aec624 to 00aec62b
+00aec62c  cbnz w0,0x00aec72c
+00aec630  ldrb w8,[sp, #0x28]
+00aec634  tbz w8,#0x0,0x00aec640
+00aec638  ldr x0,[sp, #0x38]
+00aec63c  bl 0x008d3ed0
+00aec640  ldr x0,[sp, #0x48]
+00aec644  ldr w1,[sp, #0x7c]
+00aec648  add x8,sp,#0x20
+    ; [PRE] try { // try from 00aec648 to 00aec653 has its CatchHandler @ 00aec76c
+00aec64c  add x20,sp,#0x20
+00aec650  bl 0x00aeb31c
+    ; [POST] } // end try from 00aec648 to 00aec653
+00aec654  ldrb w8,[sp, #0x20]
+00aec658  ldr x9,[sp, #0x30]
+00aec65c  orr x10,x20,#0x1
+00aec660  tst w8,#0x1
+00aec664  csel x0,x10,x9,eq
+00aec668  bl 0x00ab66d4
+    ; [PRE] try { // try from 00aec668 to 00aec66b has its CatchHandler @ 00aec740
+    ; [POST] } // end try from 00aec668 to 00aec66b
+00aec66c  mov x21,x0
+00aec670  cbz x0,0x00aec6d8
+00aec674  ldr x0,[sp, #0x88]
+00aec678  add x1,sp,#0x18
+    ; [PRE] try { // try from 00aec678 to 00aec67f has its CatchHandler @ 00aec738
+00aec67c  bl 0x00b0e2f4
+    ; [POST] } // end try from 00aec678 to 00aec67f
+00aec680  mov w20,w0
+00aec684  tbnz w0,#0x1f,0x00aec6e0
+00aec688  blr x21
+    ; [PRE] try { // try from 00aec688 to 00aec6ab has its CatchHandler @ 00aec73c
+00aec68c  ldr x8,[sp, #0x18]
+00aec690  stp x8,x0,[sp]
+00aec694  str x8,[sp, #0x10]
+00aec698  adrp x0,0x3582000
+00aec69c  add x0,x0,#0x468
+00aec6a0  mov x1,sp
+00aec6a4  mov x2,sp
+00aec6a8  bl 0x00af091c
+    ; [POST] } // end try from 00aec688 to 00aec6ab
+00aec6ac  ldr x21,[x0, #0x28]
+00aec6b0  ldr x8,[x21]
+00aec6b4  ldr x8,[x8, #0x8]
+00aec6b8  mov x0,x21
+    ; [PRE] try { // try from 00aec6b8 to 00aec6bf has its CatchHandler @ 00aec734
+00aec6bc  blr x8
+    ; [POST] } // end try from 00aec6b8 to 00aec6bf
+00aec6c0  mov w20,wzr
+00aec6c4  str x21,[x19]
+00aec6c8  b 0x00aec6e0
+00aec6cc  mov w20,#0x1506
+00aec6d0  movk w20,#0x8013, LSL #16
+00aec6d4  b 0x00aec700
+00aec6d8  mov w20,#0x154
+00aec6dc  movk w20,#0x8004, LSL #16
+00aec6e0  ldrb w8,[sp, #0x20]
+00aec6e4  tbz w8,#0x0,0x00aec6f0
+00aec6e8  ldr x0,[sp, #0x30]
+00aec6ec  bl 0x008d3ed0
+00aec6f0  ldrb w8,[sp, #0x58]
+00aec6f4  tbz w8,#0x0,0x00aec700
+00aec6f8  ldr x0,[sp, #0x68]
+00aec6fc  bl 0x008d3ed0
+00aec700  add x0,sp,#0x80
+00aec704  bl 0x00a8ccbc
+00aec708  mov w0,w20
+00aec70c  ldp x19,x30,[sp, #0xb0]
+00aec710  ldp x21,x20,[sp, #0xa0]
+00aec714  ldp x23,x22,[sp, #0x90]
+00aec718  add sp,sp,#0xc0
+00aec71c  ret
+00aec720  ldr w8,[x22, #0x4c8]
+00aec724  add w8,w8,#0x1
+00aec728  b 0x00aec588
+00aec72c  add x0,sp,#0x20
+    ; [PRE] try { // try from 00aec72c to 00aec733 has its CatchHandler @ 00aec754
+00aec730  bl 0x00aecd80
+    ; [POST] } // end try from 00aec72c to 00aec733
+
+
+================================================================================
+### FILE: 00aec7c8_DllCanUnloadNow.txt
+================================================================================
+Function: DllCanUnloadNow @ 00aec7c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00aec7c8  adrp x8,0x3582000
+00aec7cc  ldrb w0,[x8, #0x4d0]
+00aec7d0  ret
+
+
+================================================================================
+### FILE: 03799070_dlopen.txt
+================================================================================
+Function: dlopen @ 03799070
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- dlopen @ 008d3b30
+
+--- Listing ---
+03799070  ?? ??
+
+
+================================================================================
+### FILE: 037990e8_dladdr.txt
+================================================================================
+Function: dladdr @ 037990e8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- dladdr @ 008d3d30
+
+--- Listing ---
+037990e8  ?? ??
+
+
+================================================================================
+### FILE: 03799460_dlclose.txt
+================================================================================
+Function: dlclose @ 03799460
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- dlclose @ 008d4b20
+
+--- Listing ---
+03799460  ?? ??
+
+
+================================================================================
+### FILE: 03799698_dlsym.txt
+================================================================================
+Function: dlsym @ 03799698
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- dlsym @ 008d5470
+
+--- Listing ---
+03799698  ?? ??
+
+
+================================================================================
+### FILE: 037997f8_dl_iterate_phdr.txt
+================================================================================
+Function: dl_iterate_phdr @ 037997f8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- dl_iterate_phdr @ 008d58d0
+
+--- Listing ---
+037997f8  ?? ??
+
+
+================================================================================
+### FILE: 03799890_dlerror.txt
+================================================================================
+Function: dlerror @ 03799890
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- dlerror @ 008d5ac0
+
+--- Listing ---
+03799890  ?? ??
+
+

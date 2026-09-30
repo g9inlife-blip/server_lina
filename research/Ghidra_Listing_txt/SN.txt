@@ -1,0 +1,127 @@
+================================================================================
+### FILE: 008d5610_snprintf.txt
+================================================================================
+Function: snprintf @ 008d5610
+
+--- Calls OUT ---
+  -> snprintf @ 03799710
+
+--- Calls IN ---
+  <- FUN_00ab0cd8 @ 00ab0cd8
+  <- to_string @ 00b881b8
+  <- to_string @ 00b87ff4
+  <- FUN_00a9ae48 @ 00a9ae48
+  <- to_string @ 00b88378
+
+--- Listing ---
+008d5610  adrp x16,0x3308000
+008d5614  ldr x17,[x16, #0x4c8]
+008d5618  add x16,x16,#0x4c8
+008d561c  br x17
+
+
+================================================================================
+### FILE: 00b47a88_snextc.txt
+================================================================================
+Function: snextc @ 00b47a88
+FuncComment: std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::snextc()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47a88  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::snextc()
+00b47a8c  stp x29,x30,[sp, #0x10]
+00b47a90  add x29,sp,#0x10
+00b47a94  ldp x9,x8,[x0, #0x18]
+00b47a98  mov x19,x0
+00b47a9c  cmp x9,x8
+00b47aa0  b.eq 0x00b47abc
+00b47aa4  add x9,x9,#0x1
+00b47aa8  str x9,[x19, #0x18]
+00b47aac  cmp x9,x8
+00b47ab0  b.eq 0x00b47ae0
+00b47ab4  ldrb w0,[x9]
+00b47ab8  b 0x00b47af8
+00b47abc  ldr x8,[x19]
+00b47ac0  mov x0,x19
+00b47ac4  ldr x8,[x8, #0x50]
+00b47ac8  blr x8
+00b47acc  cmn w0,#0x1
+00b47ad0  b.eq 0x00b47af8
+00b47ad4  ldp x9,x8,[x19, #0x18]
+00b47ad8  cmp x9,x8
+00b47adc  b.ne 0x00b47ab4
+00b47ae0  ldr x8,[x19]
+00b47ae4  ldp x29,x30,[sp, #0x10]
+00b47ae8  mov x0,x19
+00b47aec  ldr x1,[x8, #0x48]
+00b47af0  ldr x19,[sp], #0x20
+00b47af4  br x1
+00b47af8  ldp x29,x30,[sp, #0x10]
+00b47afc  ldr x19,[sp], #0x20
+00b47b00  ret
+
+
+================================================================================
+### FILE: 00b47ee8_snextc.txt
+================================================================================
+Function: snextc @ 00b47ee8
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::snextc()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47ee8  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::snextc()
+00b47eec  stp x29,x30,[sp, #0x10]
+00b47ef0  add x29,sp,#0x10
+00b47ef4  ldp x8,x9,[x0, #0x18]
+00b47ef8  mov x19,x0
+00b47efc  cmp x8,x9
+00b47f00  b.eq 0x00b47f1c
+00b47f04  add x9,x8,#0x4
+00b47f08  str x9,[x19, #0x18]
+00b47f0c  ldr w0,[x8]
+00b47f10  cmn w0,#0x1
+00b47f14  b.ne 0x00b47f34
+00b47f18  b 0x00b47f44
+00b47f1c  ldr x8,[x19]
+00b47f20  mov x0,x19
+00b47f24  ldr x8,[x8, #0x50]
+00b47f28  blr x8
+00b47f2c  cmn w0,#0x1
+00b47f30  b.eq 0x00b47f44
+00b47f34  ldp x8,x9,[x19, #0x18]
+00b47f38  cmp x8,x9
+00b47f3c  b.eq 0x00b47f50
+00b47f40  ldr w0,[x8]
+00b47f44  ldp x29,x30,[sp, #0x10]
+00b47f48  ldr x19,[sp], #0x20
+00b47f4c  ret
+00b47f50  ldr x8,[x19]
+00b47f54  ldp x29,x30,[sp, #0x10]
+00b47f58  mov x0,x19
+00b47f5c  ldr x1,[x8, #0x48]
+00b47f60  ldr x19,[sp], #0x20
+00b47f64  br x1
+
+
+================================================================================
+### FILE: 03799710_snprintf.txt
+================================================================================
+Function: snprintf @ 03799710
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- snprintf @ 008d5610
+
+--- Listing ---
+03799710  ?? ??
+
+

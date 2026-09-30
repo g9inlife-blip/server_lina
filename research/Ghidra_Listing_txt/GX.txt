@@ -1,0 +1,120 @@
+================================================================================
+### FILE: 00b8bdd4___gxx_personality_v0.txt
+================================================================================
+Function: __gxx_personality_v0 @ 00b8bdd4
+
+--- Calls OUT ---
+  -> _Unwind_SetGR @ 008d3f40
+  -> FUN_00b8c590 @ 00b8c590
+  -> FUN_00b8bf74 @ 00b8bf74
+  -> _Unwind_SetIP @ 008d5130
+
+--- Calls IN ---
+
+--- Listing ---
+00b8bdd4  sub sp,sp,#0x60
+00b8bdd8  stp x22,x21,[sp, #0x30]
+00b8bddc  stp x20,x19,[sp, #0x40]
+00b8bde0  stp x29,x30,[sp, #0x50]
+00b8bde4  add x29,sp,#0x50
+00b8bde8  cmp w0,#0x1
+00b8bdec  mov w0,#0x3
+00b8bdf0  b.ne 0x00b8bf54
+00b8bdf4  mov x20,x3
+00b8bdf8  cbz x3,0x00b8bf54
+00b8bdfc  mov x19,x4
+00b8be00  cbz x4,0x00b8bf54
+00b8be04  and x21,x2,#-0x100
+00b8be08  tbnz w1,#0x0,0x00b8be18
+00b8be0c  tbnz w1,#0x1,0x00b8be74
+00b8be10  mov w0,#0x3
+00b8be14  b 0x00b8bf54
+00b8be18  mov x22,#0x2b00
+00b8be1c  movk x22,#0x432b, LSL #16
+00b8be20  movk x22,#0x4e47, LSL #32
+00b8be24  movk x22,#0x434c, LSL #48
+00b8be28  cmp x21,x22
+00b8be2c  cset w2,eq
+00b8be30  mov x0,sp
+00b8be34  mov x3,x20
+00b8be38  mov x4,x19
+00b8be3c  bl 0x00b8bf74
+00b8be40  ldr w0,[sp, #0x28]
+00b8be44  cmp w0,#0x6
+00b8be48  b.ne 0x00b8bf54
+00b8be4c  cmp x21,x22
+00b8be50  b.ne 0x00b8bf54
+00b8be54  ldr x8,[sp]
+00b8be58  mov w0,#0x6
+00b8be5c  stur w8,[x20, #-0x2c]
+00b8be60  ldur q0,[sp, #0x8]
+00b8be64  stur q0,[x20, #-0x28]
+00b8be68  ldur q0,[sp, #0x18]
+00b8be6c  stur q0,[x20, #-0x18]
+00b8be70  b 0x00b8bf54
+00b8be74  mov x8,#0x2b00
+00b8be78  movk x8,#0x432b, LSL #16
+00b8be7c  movk x8,#0x4e47, LSL #32
+00b8be80  movk x8,#0x434c, LSL #48
+00b8be84  cmp x21,x8
+00b8be88  tbnz w1,#0x2,0x00b8bed8
+00b8be8c  cset w2,eq
+00b8be90  mov x0,sp
+00b8be94  mov x3,x20
+00b8be98  mov x4,x19
+00b8be9c  bl 0x00b8bf74
+00b8bea0  ldr w0,[sp, #0x28]
+00b8bea4  cmp w0,#0x6
+00b8bea8  b.ne 0x00b8bf54
+00b8beac  mov x0,x19
+00b8beb0  mov w1,wzr
+00b8beb4  mov x2,x20
+00b8beb8  bl 0x008d3f40
+00b8bebc  ldr x2,[sp]
+00b8bec0  mov w1,#0x1
+00b8bec4  mov x0,x19
+00b8bec8  bl 0x008d3f40
+00b8becc  ldr x1,[sp, #0x18]
+00b8bed0  mov x0,x19
+00b8bed4  b 0x00b8bf4c
+00b8bed8  b.ne 0x00b8befc
+00b8bedc  ldursw x21,[x20, #-0x2c]
+00b8bee0  str x21,[sp]
+00b8bee4  ldur q0,[x20, #-0x28]
+00b8bee8  stur q0,[sp, #0x8]
+00b8beec  ldur q0,[x20, #-0x18]
+00b8bef0  stur q0,[sp, #0x18]
+00b8bef4  fmov x22,d0
+00b8bef8  b 0x00b8bf24
+00b8befc  mov x0,sp
+00b8bf00  mov w2,wzr
+00b8bf04  mov x3,x20
+00b8bf08  mov x4,x19
+00b8bf0c  bl 0x00b8bf74
+00b8bf10  ldr w8,[sp, #0x28]
+00b8bf14  cmp w8,#0x6
+00b8bf18  b.ne 0x00b8bf68
+00b8bf1c  ldr x22,[sp, #0x18]
+00b8bf20  ldr x21,[sp]
+00b8bf24  mov x0,x19
+00b8bf28  mov w1,wzr
+00b8bf2c  mov x2,x20
+00b8bf30  bl 0x008d3f40
+00b8bf34  mov w1,#0x1
+00b8bf38  mov x0,x19
+00b8bf3c  mov x2,x21
+00b8bf40  bl 0x008d3f40
+00b8bf44  mov x0,x19
+00b8bf48  mov x1,x22
+00b8bf4c  bl 0x008d5130
+00b8bf50  mov w0,#0x7
+00b8bf54  ldp x29,x30,[sp, #0x50]
+00b8bf58  ldp x20,x19,[sp, #0x40]
+00b8bf5c  ldp x22,x21,[sp, #0x30]
+00b8bf60  add sp,sp,#0x60
+00b8bf64  ret
+00b8bf68  mov w0,wzr
+00b8bf6c  mov x1,x20
+00b8bf70  bl 0x00b8c590
+
+

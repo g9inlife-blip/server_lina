@@ -1,0 +1,370 @@
+================================================================================
+### FILE: 00da59c4_OrderedDictionaryEnumerator__.ctor.txt
+================================================================================
+Function: OrderedDictionaryEnumerator$$.ctor @ 00da59c4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00da59c4  str x20,[sp, #-0x20]!
+00da59c8  stp x19,x30,[sp, #0x10]
+00da59cc  mov x19,x1
+00da59d0  mov x1,xzr
+00da59d4  mov x20,x0
+00da59d8  bl 0x02194104
+00da59dc  str x19,[x20, #0x10]!
+00da59e0  mov x1,x19
+00da59e4  ldp x19,x30,[sp, #0x10]
+00da59e8  mov x0,x20
+00da59ec  ldr x20,[sp], #0x20
+00da59f0  b 0x00b07850
+
+
+================================================================================
+### FILE: 00da76dc_OrderedDictionaryEnumerator__get_Current.txt
+================================================================================
+Function: OrderedDictionaryEnumerator$$get_Current @ 00da76dc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> OrderedDictionaryEnumerator$$get_Entry @ 00da7740
+
+--- Calls IN ---
+
+--- Listing ---
+00da76dc  sub sp,sp,#0x30
+00da76e0  stp x21,x20,[sp, #0x10]
+00da76e4  stp x19,x30,[sp, #0x20]
+00da76e8  adrp x21,0x3572000
+00da76ec  adrp x20,0x3328000
+00da76f0  ldrb w8,[x21, #0x87]
+00da76f4  ldr x20,[x20, #0x938]
+00da76f8  mov x19,x0
+00da76fc  tbnz w8,#0x0,0x00da7714
+00da7700  adrp x0,0x3328000
+00da7704  ldr x0,[x0, #0x938]
+00da7708  bl 0x00b0789c
+00da770c  mov w8,#0x1
+00da7710  strb w8,[x21, #0x87]
+00da7714  mov x0,x19
+00da7718  bl 0x00da7740
+00da771c  ldr x8,[x20]
+00da7720  stp x0,x1,[sp]
+00da7724  mov x1,sp
+00da7728  mov x0,x8
+00da772c  bl 0x00b07994
+00da7730  ldp x19,x30,[sp, #0x20]
+00da7734  ldp x21,x20,[sp, #0x10]
+00da7738  add sp,sp,#0x30
+00da773c  ret
+
+
+================================================================================
+### FILE: 00da7740_OrderedDictionaryEnumerator__get_Entry.txt
+================================================================================
+Function: OrderedDictionaryEnumerator$$get_Entry @ 00da7740
+
+--- Calls OUT ---
+  -> System.Collections.DictionaryEntry$$.ctor @ 02120ee8
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- OrderedDictionaryEnumerator$$get_Current @ 00da76dc
+
+--- Listing ---
+00da7740  sub sp,sp,#0x30
+00da7744  str x20,[sp, #0x10]
+00da7748  stp x19,x30,[sp, #0x20]
+00da774c  adrp x20,0x3572000
+00da7750  ldrb w8,[x20, #0x88]
+00da7754  mov x19,x0
+00da7758  tbnz w8,#0x0,0x00da7788
+00da775c  adrp x0,0x3331000
+00da7760  ldr x0,[x0, #0xd28]
+00da7764  bl 0x00b0789c
+00da7768  adrp x0,0x335c000
+00da776c  ldr x0,[x0, #0x6b0]
+00da7770  bl 0x00b0789c
+00da7774  adrp x0,0x3359000
+00da7778  ldr x0,[x0, #0x320]
+00da777c  bl 0x00b0789c
+00da7780  mov w8,#0x1
+00da7784  strb w8,[x20, #0x88]
+00da7788  ldr x19,[x19, #0x10]
+00da778c  cbz x19,0x00da7824
+00da7790  adrp x10,0x3331000
+00da7794  ldr x8,[x19]
+00da7798  ldr x10,[x10, #0xd28]
+00da779c  ldrh w9,[x8, #0x12a]
+00da77a0  ldr x1,[x10]
+00da77a4  cbz x9,0x00da77c8
+00da77a8  ldr x10,[x8, #0xb0]
+00da77ac  add x10,x10,#0x8
+00da77b0  ldur x11,[x10, #-0x8]
+00da77b4  cmp x11,x1
+00da77b8  b.eq 0x00da77d8
+00da77bc  subs x9,x9,#0x1
+00da77c0  add x10,x10,#0x10
+00da77c4  b.ne 0x00da77b0
+00da77c8  mov x0,x19
+00da77cc  mov w2,wzr
+00da77d0  bl 0x00b2ae24
+00da77d4  b 0x00da77e4
+00da77d8  ldrsw x9,[x10]
+00da77dc  add x8,x8,x9, LSL #0x4
+00da77e0  add x0,x8,#0x138
+00da77e4  ldp x8,x1,[x0]
+00da77e8  mov x0,x19
+00da77ec  blr x8
+00da77f0  mov x2,x0
+00da77f4  mov x3,x1
+00da77f8  mov x0,sp
+00da77fc  mov x1,x2
+00da7800  mov x2,x3
+00da7804  mov x3,xzr
+00da7808  stp xzr,xzr,[sp]
+00da780c  bl 0x02120ee8
+00da7810  ldp x0,x1,[sp]
+00da7814  ldp x19,x30,[sp, #0x20]
+00da7818  ldr x20,[sp, #0x10]
+00da781c  add sp,sp,#0x30
+00da7820  ret
+00da7824  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da7828_OrderedDictionaryEnumerator__get_Key.txt
+================================================================================
+Function: OrderedDictionaryEnumerator$$get_Key @ 00da7828
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00da7828  str x20,[sp, #-0x20]!
+00da782c  stp x19,x30,[sp, #0x10]
+00da7830  adrp x20,0x3572000
+00da7834  ldrb w8,[x20, #0x89]
+00da7838  mov x19,x0
+00da783c  tbnz w8,#0x0,0x00da7860
+00da7840  adrp x0,0x3331000
+00da7844  ldr x0,[x0, #0xd28]
+00da7848  bl 0x00b0789c
+00da784c  adrp x0,0x335c000
+00da7850  ldr x0,[x0, #0x6b0]
+00da7854  bl 0x00b0789c
+00da7858  mov w8,#0x1
+00da785c  strb w8,[x20, #0x89]
+00da7860  ldr x19,[x19, #0x10]
+00da7864  cbz x19,0x00da78d0
+00da7868  adrp x10,0x3331000
+00da786c  ldr x8,[x19]
+00da7870  ldr x10,[x10, #0xd28]
+00da7874  ldrh w9,[x8, #0x12a]
+00da7878  ldr x1,[x10]
+00da787c  cbz x9,0x00da78a0
+00da7880  ldr x10,[x8, #0xb0]
+00da7884  add x10,x10,#0x8
+00da7888  ldur x11,[x10, #-0x8]
+00da788c  cmp x11,x1
+00da7890  b.eq 0x00da78b0
+00da7894  subs x9,x9,#0x1
+00da7898  add x10,x10,#0x10
+00da789c  b.ne 0x00da7888
+00da78a0  mov x0,x19
+00da78a4  mov w2,wzr
+00da78a8  bl 0x00b2ae24
+00da78ac  b 0x00da78bc
+00da78b0  ldrsw x9,[x10]
+00da78b4  add x8,x8,x9, LSL #0x4
+00da78b8  add x0,x8,#0x138
+00da78bc  ldp x2,x1,[x0]
+00da78c0  mov x0,x19
+00da78c4  ldp x19,x30,[sp, #0x10]
+00da78c8  ldr x20,[sp], #0x20
+00da78cc  br x2
+00da78d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da78d4_OrderedDictionaryEnumerator__get_Value.txt
+================================================================================
+Function: OrderedDictionaryEnumerator$$get_Value @ 00da78d4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00da78d4  str x20,[sp, #-0x20]!
+00da78d8  stp x19,x30,[sp, #0x10]
+00da78dc  adrp x20,0x3572000
+00da78e0  ldrb w8,[x20, #0x8a]
+00da78e4  mov x19,x0
+00da78e8  tbnz w8,#0x0,0x00da790c
+00da78ec  adrp x0,0x3331000
+00da78f0  ldr x0,[x0, #0xd28]
+00da78f4  bl 0x00b0789c
+00da78f8  adrp x0,0x3359000
+00da78fc  ldr x0,[x0, #0x320]
+00da7900  bl 0x00b0789c
+00da7904  mov w8,#0x1
+00da7908  strb w8,[x20, #0x8a]
+00da790c  ldr x19,[x19, #0x10]
+00da7910  cbz x19,0x00da7984
+00da7914  adrp x10,0x3331000
+00da7918  ldr x8,[x19]
+00da791c  ldr x10,[x10, #0xd28]
+00da7920  ldrh w9,[x8, #0x12a]
+00da7924  ldr x1,[x10]
+00da7928  cbz x9,0x00da794c
+00da792c  ldr x10,[x8, #0xb0]
+00da7930  add x10,x10,#0x8
+00da7934  ldur x11,[x10, #-0x8]
+00da7938  cmp x11,x1
+00da793c  b.eq 0x00da795c
+00da7940  subs x9,x9,#0x1
+00da7944  add x10,x10,#0x10
+00da7948  b.ne 0x00da7934
+00da794c  mov x0,x19
+00da7950  mov w2,wzr
+00da7954  bl 0x00b2ae24
+00da7958  b 0x00da7968
+00da795c  ldrsw x9,[x10]
+00da7960  add x8,x8,x9, LSL #0x4
+00da7964  add x0,x8,#0x138
+00da7968  ldp x8,x1,[x0]
+00da796c  mov x0,x19
+00da7970  blr x8
+00da7974  ldp x19,x30,[sp, #0x10]
+00da7978  mov x0,x1
+00da797c  ldr x20,[sp], #0x20
+00da7980  ret
+00da7984  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da7988_OrderedDictionaryEnumerator__MoveNext.txt
+================================================================================
+Function: OrderedDictionaryEnumerator$$MoveNext @ 00da7988
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00da7988  str x20,[sp, #-0x20]!
+00da798c  stp x19,x30,[sp, #0x10]
+00da7990  adrp x20,0x3572000
+00da7994  ldrb w8,[x20, #0x8b]
+00da7998  mov x19,x0
+00da799c  tbnz w8,#0x0,0x00da79b4
+00da79a0  adrp x0,0x3364000
+00da79a4  ldr x0,[x0, #0xeb0]
+00da79a8  bl 0x00b0789c
+00da79ac  mov w8,#0x1
+00da79b0  strb w8,[x20, #0x8b]
+00da79b4  ldr x19,[x19, #0x10]
+00da79b8  cbz x19,0x00da7a24
+00da79bc  adrp x10,0x3364000
+00da79c0  ldr x8,[x19]
+00da79c4  ldr x10,[x10, #0xeb0]
+00da79c8  ldrh w9,[x8, #0x12a]
+00da79cc  ldr x1,[x10]
+00da79d0  cbz x9,0x00da79f4
+00da79d4  ldr x10,[x8, #0xb0]
+00da79d8  add x10,x10,#0x8
+00da79dc  ldur x11,[x10, #-0x8]
+00da79e0  cmp x11,x1
+00da79e4  b.eq 0x00da7a04
+00da79e8  subs x9,x9,#0x1
+00da79ec  add x10,x10,#0x10
+00da79f0  b.ne 0x00da79dc
+00da79f4  mov x0,x19
+00da79f8  mov w2,wzr
+00da79fc  bl 0x00b2ae24
+00da7a00  b 0x00da7a10
+00da7a04  ldrsw x9,[x10]
+00da7a08  add x8,x8,x9, LSL #0x4
+00da7a0c  add x0,x8,#0x138
+00da7a10  ldp x2,x1,[x0]
+00da7a14  mov x0,x19
+00da7a18  ldp x19,x30,[sp, #0x10]
+00da7a1c  ldr x20,[sp], #0x20
+00da7a20  br x2
+00da7a24  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da7a28_OrderedDictionaryEnumerator__Reset.txt
+================================================================================
+Function: OrderedDictionaryEnumerator$$Reset @ 00da7a28
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00da7a28  str x20,[sp, #-0x20]!
+00da7a2c  stp x19,x30,[sp, #0x10]
+00da7a30  adrp x20,0x3572000
+00da7a34  ldrb w8,[x20, #0x8c]
+00da7a38  mov x19,x0
+00da7a3c  tbnz w8,#0x0,0x00da7a54
+00da7a40  adrp x0,0x3364000
+00da7a44  ldr x0,[x0, #0xeb0]
+00da7a48  bl 0x00b0789c
+00da7a4c  mov w8,#0x1
+00da7a50  strb w8,[x20, #0x8c]
+00da7a54  ldr x19,[x19, #0x10]
+00da7a58  cbz x19,0x00da7ac8
+00da7a5c  adrp x10,0x3364000
+00da7a60  ldr x8,[x19]
+00da7a64  ldr x10,[x10, #0xeb0]
+00da7a68  ldrh w9,[x8, #0x12a]
+00da7a6c  ldr x1,[x10]
+00da7a70  cbz x9,0x00da7a94
+00da7a74  ldr x10,[x8, #0xb0]
+00da7a78  add x10,x10,#0x8
+00da7a7c  ldur x11,[x10, #-0x8]
+00da7a80  cmp x11,x1
+00da7a84  b.eq 0x00da7aa4
+00da7a88  subs x9,x9,#0x1
+00da7a8c  add x10,x10,#0x10
+00da7a90  b.ne 0x00da7a7c
+00da7a94  mov w2,#0x2
+00da7a98  mov x0,x19
+00da7a9c  bl 0x00b2ae24
+00da7aa0  b 0x00da7ab4
+00da7aa4  ldr w9,[x10]
+00da7aa8  add w9,w9,#0x2
+00da7aac  add x8,x8,w9, SXTW  #0x4
+00da7ab0  add x0,x8,#0x138
+00da7ab4  ldp x2,x1,[x0]
+00da7ab8  mov x0,x19
+00da7abc  ldp x19,x30,[sp, #0x10]
+00da7ac0  ldr x20,[sp], #0x20
+00da7ac4  br x2
+00da7ac8  bl 0x00b079b0
+
+

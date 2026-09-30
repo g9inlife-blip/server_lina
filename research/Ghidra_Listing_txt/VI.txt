@@ -1,0 +1,1065 @@
+================================================================================
+### FILE: 00ff5e70_VideoplayerpanelNode__get_obj_mask.txt
+================================================================================
+Function: VideoplayerpanelNode$$get_obj_mask @ 00ff5e70
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00ff5e70  stp x21,x20,[sp, #-0x20]!
+00ff5e74  stp x19,x30,[sp, #0x10]
+00ff5e78  adrp x20,0x3574000
+00ff5e7c  adrp x21,0x3355000
+00ff5e80  ldrb w8,[x20, #0x27f]
+00ff5e84  ldr x21,[x21, #0xdd8]
+00ff5e88  mov x19,x0
+00ff5e8c  tbnz w8,#0x0,0x00ff5ea4
+00ff5e90  adrp x0,0x3355000
+00ff5e94  ldr x0,[x0, #0xdd8]
+00ff5e98  bl 0x00b0789c
+00ff5e9c  mov w8,#0x1
+00ff5ea0  strb w8,[x20, #0x27f]
+00ff5ea4  ldr x1,[x21]
+00ff5ea8  mov x0,x19
+00ff5eac  ldp x19,x30,[sp, #0x10]
+00ff5eb0  mov x2,xzr
+00ff5eb4  ldp x21,x20,[sp], #0x20
+00ff5eb8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff5ebc_VideoplayerpanelNode__get_Video_Raw_Image.txt
+================================================================================
+Function: VideoplayerpanelNode$$get_Video_Raw_Image @ 00ff5ebc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- VideoPlayerPanelMono$$Start @ 010407e4
+
+--- Listing ---
+00ff5ebc  stp x21,x20,[sp, #-0x20]!
+00ff5ec0  stp x19,x30,[sp, #0x10]
+00ff5ec4  adrp x20,0x3574000
+00ff5ec8  adrp x21,0x337c000
+00ff5ecc  ldrb w8,[x20, #0x280]
+00ff5ed0  ldr x21,[x21, #0x660]
+00ff5ed4  mov x19,x0
+00ff5ed8  tbnz w8,#0x0,0x00ff5ef0
+00ff5edc  adrp x0,0x337c000
+00ff5ee0  ldr x0,[x0, #0x660]
+00ff5ee4  bl 0x00b0789c
+00ff5ee8  mov w8,#0x1
+00ff5eec  strb w8,[x20, #0x280]
+00ff5ef0  ldr x1,[x21]
+00ff5ef4  mov x0,x19
+00ff5ef8  ldp x19,x30,[sp, #0x10]
+00ff5efc  mov x2,xzr
+00ff5f00  ldp x21,x20,[sp], #0x20
+00ff5f04  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff5f08_VideoplayerpanelNode__get_btn_skip.txt
+================================================================================
+Function: VideoplayerpanelNode$$get_btn_skip @ 00ff5f08
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- VideoPlayerPanelMono$$Start @ 010407e4
+
+--- Listing ---
+00ff5f08  stp x21,x20,[sp, #-0x20]!
+00ff5f0c  stp x19,x30,[sp, #0x10]
+00ff5f10  adrp x20,0x3574000
+00ff5f14  adrp x21,0x3358000
+00ff5f18  ldrb w8,[x20, #0x281]
+00ff5f1c  ldr x21,[x21, #0xd80]
+00ff5f20  mov x19,x0
+00ff5f24  tbnz w8,#0x0,0x00ff5f3c
+00ff5f28  adrp x0,0x3358000
+00ff5f2c  ldr x0,[x0, #0xd80]
+00ff5f30  bl 0x00b0789c
+00ff5f34  mov w8,#0x1
+00ff5f38  strb w8,[x20, #0x281]
+00ff5f3c  ldr x1,[x21]
+00ff5f40  mov x0,x19
+00ff5f44  ldp x19,x30,[sp, #0x10]
+00ff5f48  mov x2,xzr
+00ff5f4c  ldp x21,x20,[sp], #0x20
+00ff5f50  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff5f54_VideoplayerpanelNode__.ctor.txt
+================================================================================
+Function: VideoplayerpanelNode$$.ctor @ 00ff5f54
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00ff5f54  mov x1,xzr
+00ff5f58  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 01040754_VideoPlayerPanelMono__get_LayerType.txt
+================================================================================
+Function: VideoPlayerPanelMono$$get_LayerType @ 01040754
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+01040754  mov w0,#0x8
+01040758  ret
+
+
+================================================================================
+### FILE: 0104075c_VideoPlayerPanelMono__get_BackgroundName.txt
+================================================================================
+Function: VideoPlayerPanelMono$$get_BackgroundName @ 0104075c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+0104075c  str x20,[sp, #-0x20]!
+01040760  stp x19,x30,[sp, #0x10]
+01040764  adrp x19,0x3574000
+01040768  adrp x20,0x3348000
+0104076c  ldrb w8,[x19, #0x5c1]
+01040770  ldr x20,[x20, #0xcc0]
+01040774  tbnz w8,#0x0,0x0104078c
+01040778  adrp x0,0x3348000
+0104077c  ldr x0,[x0, #0xcc0]
+01040780  bl 0x00b0789c
+01040784  mov w8,#0x1
+01040788  strb w8,[x19, #0x5c1]
+0104078c  ldr x0,[x20]
+01040790  ldp x19,x30,[sp, #0x10]
+01040794  ldr x20,[sp], #0x20
+01040798  ret
+
+
+================================================================================
+### FILE: 0104079c_VideoPlayerPanelMono__get_m_node.txt
+================================================================================
+Function: VideoPlayerPanelMono$$get_m_node @ 0104079c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GUIScreenBaseMono$$GetNode<object> @ 01794be4
+
+--- Calls IN ---
+  <- VideoPlayerPanelMono$$Start @ 010407e4
+
+--- Listing ---
+0104079c  stp x21,x20,[sp, #-0x20]!
+010407a0  stp x19,x30,[sp, #0x10]
+010407a4  adrp x20,0x3574000
+010407a8  adrp x21,0x3362000
+010407ac  ldrb w8,[x20, #0x5c2]
+010407b0  ldr x21,[x21, #0x650]
+010407b4  mov x19,x0
+010407b8  tbnz w8,#0x0,0x010407d0
+010407bc  adrp x0,0x3362000
+010407c0  ldr x0,[x0, #0x650]
+010407c4  bl 0x00b0789c
+010407c8  mov w8,#0x1
+010407cc  strb w8,[x20, #0x5c2]
+010407d0  ldr x1,[x21]
+010407d4  mov x0,x19
+010407d8  ldp x19,x30,[sp, #0x10]
+010407dc  ldp x21,x20,[sp], #0x20
+010407e0  b 0x01794be4
+
+
+================================================================================
+### FILE: 010407e4_VideoPlayerPanelMono__Start.txt
+================================================================================
+Function: VideoPlayerPanelMono$$Start @ 010407e4
+
+--- Calls OUT ---
+  -> UnityEngine.Behaviour$$set_enabled @ 024dd2a4
+  -> UnityEngine.Video.VideoPlayer$$add_loopPointReached @ 026d92fc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> VideoplayerpanelNode$$get_Video_Raw_Image @ 00ff5ebc
+  -> UnityEngine.Video.VideoPlayer$$set_playOnAwake @ 026d8ee0
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Video.VideoPlayer$$add_prepareCompleted @ 026d91c4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Video.VideoPlayer.EventHandler$$.ctor @ 026d9714
+  -> UIEventListener$$Get @ 00e34224
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> VideoplayerpanelNode$$get_btn_skip @ 00ff5f08
+  -> UnityEngine.Video.VideoPlayer$$add_started @ 026d9434
+  -> VideoPlayerPanelMono$$get_m_node @ 0104079c
+
+--- Calls IN ---
+
+--- Listing ---
+010407e4  stp x23,x22,[sp, #-0x30]!
+010407e8  stp x21,x20,[sp, #0x10]
+010407ec  stp x19,x30,[sp, #0x20]
+010407f0  adrp x20,0x3574000
+010407f4  ldrb w8,[x20, #0x5c3]
+010407f8  mov x19,x0
+010407fc  tbnz w8,#0x0,0x01040874
+01040800  adrp x0,0x3323000
+01040804  ldr x0,[x0, #0x438]
+01040808  bl 0x00b0789c
+0104080c  adrp x0,0x3370000
+01040810  ldr x0,[x0, #0x480]
+01040814  bl 0x00b0789c
+01040818  adrp x0,0x331d000
+0104081c  ldr x0,[x0, #0xba0]
+01040820  bl 0x00b0789c
+01040824  adrp x0,0x332d000
+01040828  ldr x0,[x0, #0xd38]
+0104082c  bl 0x00b0789c
+01040830  adrp x0,0x337b000
+01040834  ldr x0,[x0, #0x2a0]
+01040838  bl 0x00b0789c
+0104083c  adrp x0,0x331d000
+01040840  ldr x0,[x0, #0xaa0]
+01040844  bl 0x00b0789c
+01040848  adrp x0,0x3316000
+0104084c  ldr x0,[x0, #0x808]
+01040850  bl 0x00b0789c
+01040854  adrp x0,0x3309000
+01040858  ldr x0,[x0, #0xb50]
+0104085c  bl 0x00b0789c
+01040860  adrp x0,0x3360000
+01040864  ldr x0,[x0, #0x750]
+01040868  bl 0x00b0789c
+0104086c  mov w8,#0x1
+01040870  strb w8,[x20, #0x5c3]
+01040874  mov x0,x19
+01040878  bl 0x0104079c
+0104087c  cbz x0,0x01040a8c
+01040880  mov x1,xzr
+01040884  bl 0x00ff5ebc
+01040888  cbz x0,0x01040a8c
+0104088c  ldr x0,[x0, #0x18]
+01040890  cbz x0,0x01040a8c
+01040894  adrp x8,0x331d000
+01040898  ldr x8,[x8, #0xba0]
+0104089c  ldr x1,[x8]
+010408a0  bl 0x01794e94
+010408a4  mov x20,x19
+010408a8  str x0,[x20, #0xc8]!
+010408ac  mov x1,x0
+010408b0  mov x0,x20
+010408b4  bl 0x00b07850
+010408b8  ldr x0,[x20]
+010408bc  cbz x0,0x01040a8c
+010408c0  adrp x23,0x3323000
+010408c4  ldr x23,[x23, #0x438]
+010408c8  mov w1,wzr
+010408cc  mov x2,xzr
+010408d0  bl 0x026d8ee0
+010408d4  ldr x0,[x23]
+010408d8  ldr x21,[x20]
+010408dc  bl 0x00b079a0
+010408e0  cbz x0,0x01040a8c
+010408e4  adrp x8,0x3309000
+010408e8  ldr x8,[x8, #0xb50]
+010408ec  mov x1,x19
+010408f0  mov x3,xzr
+010408f4  mov x22,x0
+010408f8  ldr x2,[x8]
+010408fc  bl 0x026d9714
+01040900  cbz x21,0x01040a8c
+01040904  mov x0,x21
+01040908  mov x1,x22
+0104090c  mov x2,xzr
+01040910  bl 0x026d92fc
+01040914  ldr x0,[x23]
+01040918  ldr x21,[x20]
+0104091c  bl 0x00b079a0
+01040920  cbz x0,0x01040a8c
+01040924  adrp x8,0x331d000
+01040928  ldr x8,[x8, #0xaa0]
+0104092c  mov x1,x19
+01040930  mov x3,xzr
+01040934  mov x22,x0
+01040938  ldr x2,[x8]
+0104093c  bl 0x026d9714
+01040940  cbz x21,0x01040a8c
+01040944  mov x0,x21
+01040948  mov x1,x22
+0104094c  mov x2,xzr
+01040950  bl 0x026d9434
+01040954  ldr x0,[x23]
+01040958  ldr x20,[x20]
+0104095c  bl 0x00b079a0
+01040960  cbz x0,0x01040a8c
+01040964  adrp x8,0x3316000
+01040968  ldr x8,[x8, #0x808]
+0104096c  mov x1,x19
+01040970  mov x3,xzr
+01040974  mov x21,x0
+01040978  ldr x2,[x8]
+0104097c  bl 0x026d9714
+01040980  cbz x20,0x01040a8c
+01040984  mov x0,x20
+01040988  mov x1,x21
+0104098c  mov x2,xzr
+01040990  bl 0x026d91c4
+01040994  mov x0,x19
+01040998  bl 0x0104079c
+0104099c  cbz x0,0x01040a8c
+010409a0  mov x1,xzr
+010409a4  bl 0x00ff5ebc
+010409a8  cbz x0,0x01040a8c
+010409ac  ldr x0,[x0, #0x18]
+010409b0  cbz x0,0x01040a8c
+010409b4  adrp x8,0x3370000
+010409b8  ldr x8,[x8, #0x480]
+010409bc  ldr x1,[x8]
+010409c0  bl 0x01794e94
+010409c4  mov x20,x19
+010409c8  str x0,[x20, #0xd0]!
+010409cc  mov x1,x0
+010409d0  mov x0,x20
+010409d4  bl 0x00b07850
+010409d8  ldr x0,[x20]
+010409dc  cbz x0,0x01040a8c
+010409e0  mov w1,wzr
+010409e4  mov x2,xzr
+010409e8  bl 0x024dd2a4
+010409ec  mov x0,x19
+010409f0  bl 0x0104079c
+010409f4  cbz x0,0x01040a8c
+010409f8  mov x1,xzr
+010409fc  bl 0x00ff5f08
+01040a00  cbz x0,0x01040a8c
+01040a04  adrp x8,0x332d000
+01040a08  ldr x8,[x8, #0xd38]
+01040a0c  adrp x21,0x3360000
+01040a10  ldr x20,[x0, #0x18]
+01040a14  ldr x8,[x8]
+01040a18  ldr w9,[x8, #0xe0]
+01040a1c  ldr x21,[x21, #0x750]
+01040a20  cbnz w9,0x01040a2c
+01040a24  mov x0,x8
+01040a28  bl 0x00b0798c
+01040a2c  mov w1,#0x1
+01040a30  mov x0,x20
+01040a34  mov x2,xzr
+01040a38  bl 0x00e34224
+01040a3c  ldr x8,[x21]
+01040a40  mov x20,x0
+01040a44  mov x0,x8
+01040a48  bl 0x00b079a0
+01040a4c  cbz x0,0x01040a8c
+01040a50  adrp x8,0x337b000
+01040a54  ldr x8,[x8, #0x2a0]
+01040a58  mov x1,x19
+01040a5c  mov x3,xzr
+01040a60  mov x21,x0
+01040a64  ldr x2,[x8]
+01040a68  bl 0x00e35bd0
+01040a6c  cbz x20,0x01040a8c
+01040a70  str x21,[x20, #0x38]!
+01040a74  mov x0,x20
+01040a78  mov x1,x21
+01040a7c  ldp x19,x30,[sp, #0x20]
+01040a80  ldp x21,x20,[sp, #0x10]
+01040a84  ldp x23,x22,[sp], #0x30
+01040a88  b 0x00b07850
+01040a8c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01040a90_VideoPlayerPanelMono__OnOpened.txt
+================================================================================
+Function: VideoPlayerPanelMono$$OnOpened @ 01040a90
+
+--- Calls OUT ---
+  -> VideoPlayerPanelMono$$ReadyPlay @ 01040aac
+  -> AliothEngine.GUIScreen$$OnOpened @ 01671af8
+
+--- Calls IN ---
+
+--- Listing ---
+01040a90  stp x19,x30,[sp, #-0x10]!
+01040a94  mov x1,xzr
+01040a98  mov x19,x0
+01040a9c  bl 0x01671af8
+01040aa0  mov x0,x19
+01040aa4  ldp x19,x30,[sp], #0x10
+01040aa8  b 0x01040aac
+
+
+================================================================================
+### FILE: 01040aac_VideoPlayerPanelMono__ReadyPlay.txt
+================================================================================
+Function: VideoPlayerPanelMono$$ReadyPlay @ 01040aac
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> AliothExtensions$$ResNameByLanguage @ 00e06004
+  -> ResManager$$LoadRes @ 00e29078
+  -> Ali$$get_resManager @ 00e02500
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Type$$GetTypeFromHandle @ 0215f900
+  -> LoadEvent$$.ctor @ 00e26a18
+  -> AliothEngine.SingletonScriptableObject<object>$$get_Instance @ 01e09560
+  -> LoadEvent$$ParamSet @ 00e27018
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- VideoPlayerPanelMono$$OnOpened @ 01040a90
+
+--- Listing ---
+01040aac  stp x23,x22,[sp, #-0x30]!
+01040ab0  stp x21,x20,[sp, #0x10]
+01040ab4  stp x19,x30,[sp, #0x20]
+01040ab8  adrp x20,0x3574000
+01040abc  adrp x21,0x333f000
+01040ac0  ldrb w8,[x20, #0x5c4]
+01040ac4  ldr x21,[x21, #0x50]
+01040ac8  mov x19,x0
+01040acc  tbnz w8,#0x0,0x01040b5c
+01040ad0  adrp x0,0x3346000
+01040ad4  ldr x0,[x0, #0xd90]
+01040ad8  bl 0x00b0789c
+01040adc  adrp x0,0x335f000
+01040ae0  ldr x0,[x0, #0x20]
+01040ae4  bl 0x00b0789c
+01040ae8  adrp x0,0x3348000
+01040aec  ldr x0,[x0, #0x138]
+01040af0  bl 0x00b0789c
+01040af4  adrp x0,0x335b000
+01040af8  ldr x0,[x0, #0x650]
+01040afc  bl 0x00b0789c
+01040b00  adrp x0,0x3336000
+01040b04  ldr x0,[x0, #0xd0]
+01040b08  bl 0x00b0789c
+01040b0c  adrp x0,0x333f000
+01040b10  ldr x0,[x0, #0x50]
+01040b14  bl 0x00b0789c
+01040b18  adrp x0,0x3347000
+01040b1c  ldr x0,[x0, #0xd68]
+01040b20  bl 0x00b0789c
+01040b24  adrp x0,0x334b000
+01040b28  ldr x0,[x0, #0xb38]
+01040b2c  bl 0x00b0789c
+01040b30  adrp x0,0x3377000
+01040b34  ldr x0,[x0, #0x4b8]
+01040b38  bl 0x00b0789c
+01040b3c  adrp x0,0x334e000
+01040b40  ldr x0,[x0, #0x460]
+01040b44  bl 0x00b0789c
+01040b48  adrp x0,0x3317000
+01040b4c  ldr x0,[x0, #0x9c8]
+01040b50  bl 0x00b0789c
+01040b54  mov w8,#0x1
+01040b58  strb w8,[x20, #0x5c4]
+01040b5c  ldr x0,[x21]
+01040b60  bl 0x01e09560
+01040b64  cbz x0,0x01040d00
+01040b68  adrp x8,0x3348000
+01040b6c  ldr x8,[x8, #0x138]
+01040b70  adrp x23,0x334e000
+01040b74  adrp x22,0x3317000
+01040b78  adrp x21,0x335b000
+01040b7c  ldr x8,[x8]
+01040b80  ldr w20,[x0, #0x18]
+01040b84  ldr w9,[x8, #0xe0]
+01040b88  ldr x23,[x23, #0x460]
+01040b8c  ldr x22,[x22, #0x9c8]
+01040b90  ldr x21,[x21, #0x650]
+01040b94  cbnz w9,0x01040ba0
+01040b98  mov x0,x8
+01040b9c  bl 0x00b0798c
+01040ba0  ldr x0,[x23]
+01040ba4  mov x1,xzr
+01040ba8  bl 0x00e06004
+01040bac  ldr x21,[x21]
+01040bb0  mov x8,x0
+01040bb4  cmp w20,#0xbba
+01040bb8  ldr x9,[x21, #0x38]
+01040bbc  ldr x0,[x9]
+01040bc0  ldr x9,[x22]
+01040bc4  ldrb w10,[x0, #0x132]
+01040bc8  csel x20,x9,x8,eq
+01040bcc  tbnz w10,#0x0,0x01040bd4
+01040bd0  bl 0x00b2ac40
+01040bd4  ldr w8,[x0, #0xe0]
+01040bd8  cbnz w8,0x01040be0
+01040bdc  bl 0x00b0798c
+01040be0  ldr x8,[x21, #0x38]
+01040be4  adrp x21,0x3336000
+01040be8  ldr x0,[x8]
+01040bec  ldrb w8,[x0, #0x132]
+01040bf0  ldr x21,[x21, #0xd0]
+01040bf4  tbnz w8,#0x0,0x01040bfc
+01040bf8  bl 0x00b2ac40
+01040bfc  ldr x8,[x0, #0xb8]
+01040c00  ldr x0,[x21]
+01040c04  ldr x22,[x8]
+01040c08  bl 0x00b079a0
+01040c0c  cbz x0,0x01040d00
+01040c10  adrp x23,0x3346000
+01040c14  ldr x23,[x23, #0xd90]
+01040c18  mov x1,x22
+01040c1c  mov x2,xzr
+01040c20  mov x21,x0
+01040c24  bl 0x00e26a18
+01040c28  ldr x0,[x23]
+01040c2c  bl 0x00b079a0
+01040c30  cbz x0,0x01040d00
+01040c34  adrp x8,0x3377000
+01040c38  ldr x8,[x8, #0x4b8]
+01040c3c  adrp x23,0x335f000
+01040c40  mov x1,x19
+01040c44  mov x3,xzr
+01040c48  ldr x2,[x8]
+01040c4c  ldr x23,[x23, #0x20]
+01040c50  mov x22,x0
+01040c54  bl 0x01909b80
+01040c58  mov x0,x21
+01040c5c  mov x1,x22
+01040c60  mov x2,xzr
+01040c64  mov x3,xzr
+01040c68  mov w4,wzr
+01040c6c  mov x5,xzr
+01040c70  bl 0x00e27018
+01040c74  ldr x0,[x23]
+01040c78  ldr w8,[x0, #0xe0]
+01040c7c  cbnz w8,0x01040c88
+01040c80  bl 0x00b0798c
+01040c84  ldr x0,[x23]
+01040c88  ldr x8,[x0, #0xb8]
+01040c8c  ldr x0,[x8, #0x10]
+01040c90  cbz x0,0x01040d00
+01040c94  adrp x19,0x334b000
+01040c98  adrp x22,0x3347000
+01040c9c  ldr x19,[x19, #0xb38]
+01040ca0  ldr x22,[x22, #0xd68]
+01040ca4  mov x1,xzr
+01040ca8  bl 0x00e02500
+01040cac  ldr x8,[x22]
+01040cb0  ldr x22,[x19]
+01040cb4  mov x19,x0
+01040cb8  ldr w9,[x8, #0xe0]
+01040cbc  cbnz w9,0x01040cc8
+01040cc0  mov x0,x8
+01040cc4  bl 0x00b0798c
+01040cc8  mov x0,x22
+01040ccc  mov x1,xzr
+01040cd0  bl 0x0215f900
+01040cd4  cbz x19,0x01040d00
+01040cd8  mov x4,x0
+01040cdc  mov x0,x19
+01040ce0  mov x1,x20
+01040ce4  mov x2,x21
+01040ce8  ldp x19,x30,[sp, #0x20]
+01040cec  ldp x21,x20,[sp, #0x10]
+01040cf0  mov w3,#0x1
+01040cf4  mov x5,xzr
+01040cf8  ldp x23,x22,[sp], #0x30
+01040cfc  b 0x00e29078
+01040d00  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01040d04_VideoPlayerPanelMono__LoadVideoClipEnd.txt
+================================================================================
+Function: VideoPlayerPanelMono$$LoadVideoClipEnd @ 01040d04
+
+--- Calls OUT ---
+  -> VideoPlayerPanelMono$$Exit @ 01040ecc
+  -> UnityEngine.Video.VideoPlayer$$set_clip @ 026d8d48
+  -> LoadEvent$$get_m_AssetHolder @ 00e2731c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> AliothEngine.AssetHolder$$get_asset @ 01662150
+  -> UnityEngine.Video.VideoPlayer$$Prepare @ 026d8ea4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> Ali$$get_soundManager @ 00e0293c
+  -> SoundManager$$BGMMute @ 00e310e0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+01040d04  str x22,[sp, #-0x30]!
+01040d08  stp x21,x20,[sp, #0x10]
+01040d0c  stp x19,x30,[sp, #0x20]
+01040d10  adrp x21,0x3574000
+01040d14  ldrb w8,[x21, #0x5c5]
+01040d18  mov x20,x1
+01040d1c  mov x19,x0
+01040d20  tbnz w8,#0x0,0x01040d50
+01040d24  adrp x0,0x335f000
+01040d28  ldr x0,[x0, #0x20]
+01040d2c  bl 0x00b0789c
+01040d30  adrp x0,0x3321000
+01040d34  ldr x0,[x0, #0xca8]
+01040d38  bl 0x00b0789c
+01040d3c  adrp x0,0x3367000
+01040d40  ldr x0,[x0, #0x640]
+01040d44  bl 0x00b0789c
+01040d48  mov w8,#0x1
+01040d4c  strb w8,[x21, #0x5c5]
+01040d50  cbz x20,0x01040ec8
+01040d54  mov x0,x20
+01040d58  mov x1,xzr
+01040d5c  bl 0x00e2731c
+01040d60  cbz x0,0x01040e4c
+01040d64  mov x0,x20
+01040d68  mov x1,xzr
+01040d6c  bl 0x00e2731c
+01040d70  cbz x0,0x01040ec8
+01040d74  adrp x22,0x3321000
+01040d78  ldr x22,[x22, #0xca8]
+01040d7c  mov x1,xzr
+01040d80  bl 0x01662150
+01040d84  ldr x8,[x22]
+01040d88  mov x21,x0
+01040d8c  ldr w9,[x8, #0xe0]
+01040d90  cbnz w9,0x01040d9c
+01040d94  mov x0,x8
+01040d98  bl 0x00b0798c
+01040d9c  mov x0,x21
+01040da0  mov x1,xzr
+01040da4  mov x2,xzr
+01040da8  bl 0x024de30c
+01040dac  tbz w0,#0x0,0x01040e4c
+01040db0  mov x0,x20
+01040db4  mov x1,xzr
+01040db8  bl 0x00e2731c
+01040dbc  cbz x0,0x01040ec8
+01040dc0  mov x1,xzr
+01040dc4  bl 0x01662150
+01040dc8  ldr x8,[x22]
+01040dcc  mov x21,x0
+01040dd0  ldr w9,[x8, #0xe0]
+01040dd4  cbnz w9,0x01040de0
+01040dd8  mov x0,x8
+01040ddc  bl 0x00b0798c
+01040de0  adrp x22,0x3367000
+01040de4  ldr x22,[x22, #0x640]
+01040de8  cbz x21,0x01040e00
+01040dec  ldr x8,[x22]
+01040df0  ldr x9,[x21]
+01040df4  cmp x9,x8
+01040df8  csel x0,x21,xzr,eq
+01040dfc  b 0x01040e04
+01040e00  mov x0,xzr
+01040e04  mov x1,xzr
+01040e08  mov x2,xzr
+01040e0c  bl 0x024de30c
+01040e10  tbz w0,#0x0,0x01040e4c
+01040e14  ldr x21,[x19, #0xc8]
+01040e18  mov x0,x20
+01040e1c  mov x1,xzr
+01040e20  bl 0x00e2731c
+01040e24  cbz x0,0x01040ec8
+01040e28  mov x1,xzr
+01040e2c  bl 0x01662150
+01040e30  cbz x21,0x01040ec8
+01040e34  cbz x0,0x01040e60
+01040e38  ldr x8,[x22]
+01040e3c  ldr x9,[x0]
+01040e40  cmp x9,x8
+01040e44  csel x1,x0,xzr,eq
+01040e48  b 0x01040e64
+01040e4c  mov x0,x19
+01040e50  ldp x19,x30,[sp, #0x20]
+01040e54  ldp x21,x20,[sp, #0x10]
+01040e58  ldr x22,[sp], #0x30
+01040e5c  b 0x01040ecc
+01040e60  mov x1,xzr
+01040e64  mov x0,x21
+01040e68  mov x2,xzr
+01040e6c  bl 0x026d8d48
+01040e70  ldr x0,[x19, #0xc8]
+01040e74  cbz x0,0x01040ec8
+01040e78  adrp x19,0x335f000
+01040e7c  ldr x19,[x19, #0x20]
+01040e80  mov x1,xzr
+01040e84  bl 0x026d8ea4
+01040e88  ldr x0,[x19]
+01040e8c  ldr w8,[x0, #0xe0]
+01040e90  cbnz w8,0x01040e9c
+01040e94  bl 0x00b0798c
+01040e98  ldr x0,[x19]
+01040e9c  ldr x8,[x0, #0xb8]
+01040ea0  ldr x0,[x8, #0x10]
+01040ea4  cbz x0,0x01040ec8
+01040ea8  mov x1,xzr
+01040eac  bl 0x00e0293c
+01040eb0  cbz x0,0x01040ec8
+01040eb4  ldp x19,x30,[sp, #0x20]
+01040eb8  ldp x21,x20,[sp, #0x10]
+01040ebc  mov x1,xzr
+01040ec0  ldr x22,[sp], #0x30
+01040ec4  b 0x00e310e0
+01040ec8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01040ecc_VideoPlayerPanelMono__Exit.txt
+================================================================================
+Function: VideoPlayerPanelMono$$Exit @ 01040ecc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> SoundManager$$BGM_No_Mute @ 00e31160
+  -> UnityEngine.Video.VideoPlayer$$remove_prepareCompleted @ 026d9260
+  -> UnityEngine.Video.VideoPlayer$$remove_started @ 026d94d0
+  -> Ali$$get_soundManager @ 00e0293c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Video.VideoPlayer$$remove_loopPointReached @ 026d9398
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SoundManager$$ReplayBGM @ 00e31060
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Video.VideoPlayer.EventHandler$$.ctor @ 026d9714
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.Video.VideoPlayer$$Stop @ 026d8f9c
+
+--- Calls IN ---
+  <- VideoPlayerPanelMono$$OnClickSkip @ 0104126c
+  <- VideoPlayerPanelMono$$LoadVideoClipEnd @ 01040d04
+  <- VideoPlayerPanelMono$$PlayOpeningEnd @ 010411f8
+
+--- Listing ---
+01040ecc  str x22,[sp, #-0x30]!
+01040ed0  stp x21,x20,[sp, #0x10]
+01040ed4  stp x19,x30,[sp, #0x20]
+01040ed8  adrp x21,0x3574000
+01040edc  adrp x20,0x3321000
+01040ee0  ldrb w8,[x21, #0x5c9]
+01040ee4  ldr x20,[x20, #0xca8]
+01040ee8  mov x19,x0
+01040eec  tbnz w8,#0x0,0x01040f40
+01040ef0  adrp x0,0x335f000
+01040ef4  ldr x0,[x0, #0x20]
+01040ef8  bl 0x00b0789c
+01040efc  adrp x0,0x3323000
+01040f00  ldr x0,[x0, #0x438]
+01040f04  bl 0x00b0789c
+01040f08  adrp x0,0x3321000
+01040f0c  ldr x0,[x0, #0xca8]
+01040f10  bl 0x00b0789c
+01040f14  adrp x0,0x331d000
+01040f18  ldr x0,[x0, #0xaa0]
+01040f1c  bl 0x00b0789c
+01040f20  adrp x0,0x3316000
+01040f24  ldr x0,[x0, #0x808]
+01040f28  bl 0x00b0789c
+01040f2c  adrp x0,0x3309000
+01040f30  ldr x0,[x0, #0xb50]
+01040f34  bl 0x00b0789c
+01040f38  mov w8,#0x1
+01040f3c  strb w8,[x21, #0x5c9]
+01040f40  ldr x0,[x20]
+01040f44  ldr x20,[x19, #0xc8]
+01040f48  ldr w8,[x0, #0xe0]
+01040f4c  cbnz w8,0x01040f54
+01040f50  bl 0x00b0798c
+01040f54  mov x0,x20
+01040f58  mov x1,xzr
+01040f5c  mov x2,xzr
+01040f60  bl 0x024de30c
+01040f64  tbz w0,#0x0,0x01041040
+01040f68  adrp x22,0x3323000
+01040f6c  ldr x22,[x22, #0x438]
+01040f70  ldr x20,[x19, #0xc8]
+01040f74  ldr x0,[x22]
+01040f78  bl 0x00b079a0
+01040f7c  cbz x0,0x010410e8
+01040f80  adrp x8,0x3309000
+01040f84  ldr x8,[x8, #0xb50]
+01040f88  mov x1,x19
+01040f8c  mov x3,xzr
+01040f90  mov x21,x0
+01040f94  ldr x2,[x8]
+01040f98  bl 0x026d9714
+01040f9c  cbz x20,0x010410e8
+01040fa0  mov x0,x20
+01040fa4  mov x1,x21
+01040fa8  mov x2,xzr
+01040fac  bl 0x026d9398
+01040fb0  ldr x0,[x22]
+01040fb4  ldr x20,[x19, #0xc8]
+01040fb8  bl 0x00b079a0
+01040fbc  cbz x0,0x010410e8
+01040fc0  adrp x8,0x331d000
+01040fc4  ldr x8,[x8, #0xaa0]
+01040fc8  mov x1,x19
+01040fcc  mov x3,xzr
+01040fd0  mov x21,x0
+01040fd4  ldr x2,[x8]
+01040fd8  bl 0x026d9714
+01040fdc  cbz x20,0x010410e8
+01040fe0  mov x0,x20
+01040fe4  mov x1,x21
+01040fe8  mov x2,xzr
+01040fec  bl 0x026d94d0
+01040ff0  ldr x0,[x22]
+01040ff4  ldr x20,[x19, #0xc8]
+01040ff8  bl 0x00b079a0
+01040ffc  cbz x0,0x010410e8
+01041000  adrp x8,0x3316000
+01041004  ldr x8,[x8, #0x808]
+01041008  mov x1,x19
+0104100c  mov x3,xzr
+01041010  mov x21,x0
+01041014  ldr x2,[x8]
+01041018  bl 0x026d9714
+0104101c  cbz x20,0x010410e8
+01041020  mov x0,x20
+01041024  mov x1,x21
+01041028  mov x2,xzr
+0104102c  bl 0x026d9260
+01041030  ldr x0,[x19, #0xc8]
+01041034  cbz x0,0x010410e8
+01041038  mov x1,xzr
+0104103c  bl 0x026d8f9c
+01041040  adrp x20,0x335f000
+01041044  ldr x20,[x20, #0x20]
+01041048  ldr x0,[x20]
+0104104c  ldr w8,[x0, #0xe0]
+01041050  cbnz w8,0x0104105c
+01041054  bl 0x00b0798c
+01041058  ldr x0,[x20]
+0104105c  ldr x8,[x0, #0xb8]
+01041060  ldr x0,[x8, #0x10]
+01041064  cbz x0,0x010410e8
+01041068  mov x1,xzr
+0104106c  bl 0x00e0293c
+01041070  cbz x0,0x010410e8
+01041074  mov x1,xzr
+01041078  bl 0x00e31160
+0104107c  ldr x8,[x20]
+01041080  ldr x8,[x8, #0xb8]
+01041084  ldr x0,[x8, #0x10]
+01041088  cbz x0,0x010410e8
+0104108c  mov x1,xzr
+01041090  bl 0x00e0293c
+01041094  cbz x0,0x010410e8
+01041098  mov x1,xzr
+0104109c  bl 0x00e31060
+010410a0  ldr x8,[x19]
+010410a4  mov x0,x19
+010410a8  ldr x9,[x8, #0x458]
+010410ac  ldr x1,[x8, #0x460]
+010410b0  blr x9
+010410b4  ldr x8,[x19, #0xd8]
+010410b8  cbz x8,0x010410d8
+010410bc  ldr x2,[x8, #0x18]
+010410c0  ldr x0,[x8, #0x40]
+010410c4  ldr x1,[x8, #0x28]
+010410c8  ldp x19,x30,[sp, #0x20]
+010410cc  ldp x21,x20,[sp, #0x10]
+010410d0  ldr x22,[sp], #0x30
+010410d4  br x2
+010410d8  ldp x19,x30,[sp, #0x20]
+010410dc  ldp x21,x20,[sp, #0x10]
+010410e0  ldr x22,[sp], #0x30
+010410e4  ret
+010410e8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 010410ec_VideoPlayerPanelMono__OnPlayStarted.txt
+================================================================================
+Function: VideoPlayerPanelMono$$OnPlayStarted @ 010410ec
+
+--- Calls OUT ---
+  -> UnityEngine.Behaviour$$set_enabled @ 024dd2a4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+010410ec  stp x21,x20,[sp, #-0x20]!
+010410f0  stp x19,x30,[sp, #0x10]
+010410f4  adrp x21,0x3574000
+010410f8  adrp x20,0x336b000
+010410fc  ldrb w8,[x21, #0x5c6]
+01041100  ldr x20,[x20, #0x7d0]
+01041104  mov x19,x0
+01041108  tbnz w8,#0x0,0x0104112c
+0104110c  adrp x0,0x336b000
+01041110  ldr x0,[x0, #0x7d0]
+01041114  bl 0x00b0789c
+01041118  adrp x0,0x331a000
+0104111c  ldr x0,[x0, #0x508]
+01041120  bl 0x00b0789c
+01041124  mov w8,#0x1
+01041128  strb w8,[x21, #0x5c6]
+0104112c  ldr x0,[x20]
+01041130  adrp x20,0x331a000
+01041134  ldr w8,[x0, #0xe0]
+01041138  ldr x20,[x20, #0x508]
+0104113c  cbnz w8,0x01041144
+01041140  bl 0x00b0798c
+01041144  ldr x0,[x20]
+01041148  mov x1,xzr
+0104114c  bl 0x024c0104
+01041150  ldr x0,[x19, #0xd0]
+01041154  cbz x0,0x0104116c
+01041158  ldp x19,x30,[sp, #0x10]
+0104115c  mov w1,#0x1
+01041160  mov x2,xzr
+01041164  ldp x21,x20,[sp], #0x20
+01041168  b 0x024dd2a4
+0104116c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01041170_VideoPlayerPanelMono__OnPrepareCompleted.txt
+================================================================================
+Function: VideoPlayerPanelMono$$OnPrepareCompleted @ 01041170
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Video.VideoPlayer$$Play @ 026d8f24
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+01041170  stp x21,x20,[sp, #-0x20]!
+01041174  stp x19,x30,[sp, #0x10]
+01041178  adrp x21,0x3574000
+0104117c  adrp x20,0x336b000
+01041180  ldrb w8,[x21, #0x5c7]
+01041184  ldr x20,[x20, #0x7d0]
+01041188  mov x19,x0
+0104118c  tbnz w8,#0x0,0x010411b0
+01041190  adrp x0,0x336b000
+01041194  ldr x0,[x0, #0x7d0]
+01041198  bl 0x00b0789c
+0104119c  adrp x0,0x3318000
+010411a0  ldr x0,[x0, #0x950]
+010411a4  bl 0x00b0789c
+010411a8  mov w8,#0x1
+010411ac  strb w8,[x21, #0x5c7]
+010411b0  mov w8,#0x1
+010411b4  strb w8,[x19, #0x4a]
+010411b8  ldr x0,[x20]
+010411bc  adrp x20,0x3318000
+010411c0  ldr w8,[x0, #0xe0]
+010411c4  ldr x20,[x20, #0x950]
+010411c8  cbnz w8,0x010411d0
+010411cc  bl 0x00b0798c
+010411d0  ldr x0,[x20]
+010411d4  mov x1,xzr
+010411d8  bl 0x024c0104
+010411dc  ldr x0,[x19, #0xc8]
+010411e0  cbz x0,0x010411f4
+010411e4  ldp x19,x30,[sp, #0x10]
+010411e8  mov x1,xzr
+010411ec  ldp x21,x20,[sp], #0x20
+010411f0  b 0x026d8f24
+010411f4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 010411f8_VideoPlayerPanelMono__PlayOpeningEnd.txt
+================================================================================
+Function: VideoPlayerPanelMono$$PlayOpeningEnd @ 010411f8
+
+--- Calls OUT ---
+  -> VideoPlayerPanelMono$$Exit @ 01040ecc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+010411f8  stp x21,x20,[sp, #-0x20]!
+010411fc  stp x19,x30,[sp, #0x10]
+01041200  adrp x21,0x3574000
+01041204  adrp x20,0x336b000
+01041208  ldrb w8,[x21, #0x5c8]
+0104120c  ldr x20,[x20, #0x7d0]
+01041210  mov x19,x0
+01041214  tbnz w8,#0x0,0x01041238
+01041218  adrp x0,0x336b000
+0104121c  ldr x0,[x0, #0x7d0]
+01041220  bl 0x00b0789c
+01041224  adrp x0,0x3327000
+01041228  ldr x0,[x0, #0x430]
+0104122c  bl 0x00b0789c
+01041230  mov w8,#0x1
+01041234  strb w8,[x21, #0x5c8]
+01041238  ldr x0,[x20]
+0104123c  adrp x20,0x3327000
+01041240  ldr w8,[x0, #0xe0]
+01041244  ldr x20,[x20, #0x430]
+01041248  cbnz w8,0x01041250
+0104124c  bl 0x00b0798c
+01041250  ldr x0,[x20]
+01041254  mov x1,xzr
+01041258  bl 0x024c0104
+0104125c  mov x0,x19
+01041260  ldp x19,x30,[sp, #0x10]
+01041264  ldp x21,x20,[sp], #0x20
+01041268  b 0x01040ecc
+
+
+================================================================================
+### FILE: 0104126c_VideoPlayerPanelMono__OnClickSkip.txt
+================================================================================
+Function: VideoPlayerPanelMono$$OnClickSkip @ 0104126c
+
+--- Calls OUT ---
+  -> VideoPlayerPanelMono$$Exit @ 01040ecc
+
+--- Calls IN ---
+
+--- Listing ---
+0104126c  b 0x01040ecc
+
+
+================================================================================
+### FILE: 01041270_VideoPlayerPanelMono__.ctor.txt
+================================================================================
+Function: VideoPlayerPanelMono$$.ctor @ 01041270
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+
+--- Calls IN ---
+
+--- Listing ---
+01041270  mov x1,xzr
+01041274  b 0x00f1c130
+
+

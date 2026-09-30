@@ -1,0 +1,48 @@
+================================================================================
+### FILE: 00b47b04_sbumpc.txt
+================================================================================
+Function: sbumpc @ 00b47b04
+FuncComment: std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::sbumpc()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47b04  ldp x8,x9,[x0, #0x18]
+    ; [PLATE] std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::sbumpc()
+00b47b08  cmp x8,x9
+00b47b0c  b.eq 0x00b47b20
+00b47b10  add x9,x8,#0x1
+00b47b14  str x9,[x0, #0x18]
+00b47b18  ldrb w0,[x8]
+00b47b1c  ret
+00b47b20  ldr x8,[x0]
+00b47b24  ldr x1,[x8, #0x50]
+00b47b28  br x1
+
+
+================================================================================
+### FILE: 00b47f68_sbumpc.txt
+================================================================================
+Function: sbumpc @ 00b47f68
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::sbumpc()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47f68  ldp x8,x9,[x0, #0x18]
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::sbumpc()
+00b47f6c  cmp x8,x9
+00b47f70  b.eq 0x00b47f84
+00b47f74  add x9,x8,#0x4
+00b47f78  str x9,[x0, #0x18]
+00b47f7c  ldr w0,[x8]
+00b47f80  ret
+00b47f84  ldr x8,[x0]
+00b47f88  ldr x1,[x8, #0x50]
+00b47f8c  br x1
+
+

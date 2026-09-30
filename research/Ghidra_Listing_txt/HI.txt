@@ -1,0 +1,4611 @@
+================================================================================
+### FILE: 00dbe920_HierarchyColors__.ctor.txt
+================================================================================
+Function: HierarchyColors$$.ctor @ 00dbe920
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dbe920  mov x1,xzr
+00dbe924  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00dbe928_HierarchyColors.HierarchyPatterns__.ctor.txt
+================================================================================
+Function: HierarchyColors.HierarchyPatterns$$.ctor @ 00dbe928
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbe928  sub sp,sp,#0x30
+00dbe92c  str x20,[sp, #0x10]
+00dbe930  stp x19,x30,[sp, #0x20]
+00dbe934  mov w20,#0xcccd
+00dbe938  fmov v0.4S,#0x3f800000
+00dbe93c  movk w20,#0x3d4c, LSL #16
+00dbe940  mov x1,xzr
+00dbe944  mov x19,x0
+00dbe948  str q0,[sp]
+00dbe94c  stur q0,[x0, #0x18]
+00dbe950  str w20,[x0, #0x28]
+00dbe954  bl 0x02194104
+00dbe958  ldr q0,[sp]
+00dbe95c  str w20,[x19, #0x28]
+00dbe960  ldr x20,[sp, #0x10]
+00dbe964  stur q0,[x19, #0x18]
+00dbe968  ldp x19,x30,[sp, #0x20]
+00dbe96c  add sp,sp,#0x30
+00dbe970  ret
+
+
+================================================================================
+### FILE: 00fc158c_HistigmapanelNode__get_obj_stigmahole.txt
+================================================================================
+Function: HistigmapanelNode$$get_obj_stigmahole @ 00fc158c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc158c  stp x21,x20,[sp, #-0x20]!
+00fc1590  stp x19,x30,[sp, #0x10]
+00fc1594  adrp x20,0x3573000
+00fc1598  adrp x21,0x3381000
+00fc159c  ldrb w8,[x20, #0xbd1]
+00fc15a0  ldr x21,[x21, #0x5b8]
+00fc15a4  mov x19,x0
+00fc15a8  tbnz w8,#0x0,0x00fc15c0
+00fc15ac  adrp x0,0x3381000
+00fc15b0  ldr x0,[x0, #0x5b8]
+00fc15b4  bl 0x00b0789c
+00fc15b8  mov w8,#0x1
+00fc15bc  strb w8,[x20, #0xbd1]
+00fc15c0  ldr x1,[x21]
+00fc15c4  mov x0,x19
+00fc15c8  ldp x19,x30,[sp, #0x10]
+00fc15cc  mov x2,xzr
+00fc15d0  ldp x21,x20,[sp], #0x20
+00fc15d4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc15d8_HistigmapanelNode__get_spr_bodyBack.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_bodyBack @ 00fc15d8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc15d8  stp x21,x20,[sp, #-0x20]!
+00fc15dc  stp x19,x30,[sp, #0x10]
+00fc15e0  adrp x20,0x3573000
+00fc15e4  adrp x21,0x3350000
+00fc15e8  ldrb w8,[x20, #0xbd2]
+00fc15ec  ldr x21,[x21, #0x328]
+00fc15f0  mov x19,x0
+00fc15f4  tbnz w8,#0x0,0x00fc160c
+00fc15f8  adrp x0,0x3350000
+00fc15fc  ldr x0,[x0, #0x328]
+00fc1600  bl 0x00b0789c
+00fc1604  mov w8,#0x1
+00fc1608  strb w8,[x20, #0xbd2]
+00fc160c  ldr x1,[x21]
+00fc1610  mov x0,x19
+00fc1614  ldp x19,x30,[sp, #0x10]
+00fc1618  mov x2,xzr
+00fc161c  ldp x21,x20,[sp], #0x20
+00fc1620  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1624_HistigmapanelNode__get_ui_eff_naked_parent.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_naked_parent @ 00fc1624
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1624  stp x21,x20,[sp, #-0x20]!
+00fc1628  stp x19,x30,[sp, #0x10]
+00fc162c  adrp x20,0x3573000
+00fc1630  adrp x21,0x3330000
+00fc1634  ldrb w8,[x20, #0xbd3]
+00fc1638  ldr x21,[x21, #0xe68]
+00fc163c  mov x19,x0
+00fc1640  tbnz w8,#0x0,0x00fc1658
+00fc1644  adrp x0,0x3330000
+00fc1648  ldr x0,[x0, #0xe68]
+00fc164c  bl 0x00b0789c
+00fc1650  mov w8,#0x1
+00fc1654  strb w8,[x20, #0xbd3]
+00fc1658  ldr x1,[x21]
+00fc165c  mov x0,x19
+00fc1660  ldp x19,x30,[sp, #0x10]
+00fc1664  mov x2,xzr
+00fc1668  ldp x21,x20,[sp], #0x20
+00fc166c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1670_HistigmapanelNode__get_ui_eff_naked.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_naked @ 00fc1670
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1670  stp x21,x20,[sp, #-0x20]!
+00fc1674  stp x19,x30,[sp, #0x10]
+00fc1678  adrp x20,0x3573000
+00fc167c  adrp x21,0x333c000
+00fc1680  ldrb w8,[x20, #0xbd4]
+00fc1684  ldr x21,[x21, #0x5d8]
+00fc1688  mov x19,x0
+00fc168c  tbnz w8,#0x0,0x00fc16a4
+00fc1690  adrp x0,0x333c000
+00fc1694  ldr x0,[x0, #0x5d8]
+00fc1698  bl 0x00b0789c
+00fc169c  mov w8,#0x1
+00fc16a0  strb w8,[x20, #0xbd4]
+00fc16a4  ldr x1,[x21]
+00fc16a8  mov x0,x19
+00fc16ac  ldp x19,x30,[sp, #0x10]
+00fc16b0  mov x2,xzr
+00fc16b4  ldp x21,x20,[sp], #0x20
+00fc16b8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc16bc_HistigmapanelNode__get_obj_holeeff.txt
+================================================================================
+Function: HistigmapanelNode$$get_obj_holeeff @ 00fc16bc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc16bc  stp x21,x20,[sp, #-0x20]!
+00fc16c0  stp x19,x30,[sp, #0x10]
+00fc16c4  adrp x20,0x3573000
+00fc16c8  adrp x21,0x337c000
+00fc16cc  ldrb w8,[x20, #0xbd5]
+00fc16d0  ldr x21,[x21, #0xe30]
+00fc16d4  mov x19,x0
+00fc16d8  tbnz w8,#0x0,0x00fc16f0
+00fc16dc  adrp x0,0x337c000
+00fc16e0  ldr x0,[x0, #0xe30]
+00fc16e4  bl 0x00b0789c
+00fc16e8  mov w8,#0x1
+00fc16ec  strb w8,[x20, #0xbd5]
+00fc16f0  ldr x1,[x21]
+00fc16f4  mov x0,x19
+00fc16f8  ldp x19,x30,[sp, #0x10]
+00fc16fc  mov x2,xzr
+00fc1700  ldp x21,x20,[sp], #0x20
+00fc1704  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1708_HistigmapanelNode__get_hole0.txt
+================================================================================
+Function: HistigmapanelNode$$get_hole0 @ 00fc1708
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1708  stp x21,x20,[sp, #-0x20]!
+00fc170c  stp x19,x30,[sp, #0x10]
+00fc1710  adrp x20,0x3573000
+00fc1714  adrp x21,0x3358000
+00fc1718  ldrb w8,[x20, #0xbd6]
+00fc171c  ldr x21,[x21, #0xd60]
+00fc1720  mov x19,x0
+00fc1724  tbnz w8,#0x0,0x00fc173c
+00fc1728  adrp x0,0x3358000
+00fc172c  ldr x0,[x0, #0xd60]
+00fc1730  bl 0x00b0789c
+00fc1734  mov w8,#0x1
+00fc1738  strb w8,[x20, #0xbd6]
+00fc173c  ldr x1,[x21]
+00fc1740  mov x0,x19
+00fc1744  ldp x19,x30,[sp, #0x10]
+00fc1748  mov x2,xzr
+00fc174c  ldp x21,x20,[sp], #0x20
+00fc1750  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1754_HistigmapanelNode__get_spr_stigmalvmark_ray_dic_0.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmalvmark_ray_dic_0 @ 00fc1754
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1754  stp x21,x20,[sp, #-0x20]!
+00fc1758  stp x19,x30,[sp, #0x10]
+00fc175c  adrp x20,0x3573000
+00fc1760  adrp x21,0x332d000
+00fc1764  ldrb w8,[x20, #0xbd7]
+00fc1768  ldr x21,[x21, #0x3e8]
+00fc176c  mov x19,x0
+00fc1770  tbnz w8,#0x0,0x00fc1788
+00fc1774  adrp x0,0x332d000
+00fc1778  ldr x0,[x0, #0x3e8]
+00fc177c  bl 0x00b0789c
+00fc1780  mov w8,#0x1
+00fc1784  strb w8,[x20, #0xbd7]
+00fc1788  ldr x1,[x21]
+00fc178c  mov x0,x19
+00fc1790  ldp x19,x30,[sp, #0x10]
+00fc1794  mov x2,xzr
+00fc1798  ldp x21,x20,[sp], #0x20
+00fc179c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc17a0_HistigmapanelNode__get_spr_stigmaicon_dic_0.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmaicon_dic_0 @ 00fc17a0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc17a0  stp x21,x20,[sp, #-0x20]!
+00fc17a4  stp x19,x30,[sp, #0x10]
+00fc17a8  adrp x20,0x3573000
+00fc17ac  adrp x21,0x334e000
+00fc17b0  ldrb w8,[x20, #0xbd8]
+00fc17b4  ldr x21,[x21, #0xb10]
+00fc17b8  mov x19,x0
+00fc17bc  tbnz w8,#0x0,0x00fc17d4
+00fc17c0  adrp x0,0x334e000
+00fc17c4  ldr x0,[x0, #0xb10]
+00fc17c8  bl 0x00b0789c
+00fc17cc  mov w8,#0x1
+00fc17d0  strb w8,[x20, #0xbd8]
+00fc17d4  ldr x1,[x21]
+00fc17d8  mov x0,x19
+00fc17dc  ldp x19,x30,[sp, #0x10]
+00fc17e0  mov x2,xzr
+00fc17e4  ldp x21,x20,[sp], #0x20
+00fc17e8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc17ec_HistigmapanelNode__get_lbl_holeexp_dic_0.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holeexp_dic_0 @ 00fc17ec
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc17ec  stp x21,x20,[sp, #-0x20]!
+00fc17f0  stp x19,x30,[sp, #0x10]
+00fc17f4  adrp x20,0x3573000
+00fc17f8  adrp x21,0x335e000
+00fc17fc  ldrb w8,[x20, #0xbd9]
+00fc1800  ldr x21,[x21, #0x4b8]
+00fc1804  mov x19,x0
+00fc1808  tbnz w8,#0x0,0x00fc1820
+00fc180c  adrp x0,0x335e000
+00fc1810  ldr x0,[x0, #0x4b8]
+00fc1814  bl 0x00b0789c
+00fc1818  mov w8,#0x1
+00fc181c  strb w8,[x20, #0xbd9]
+00fc1820  ldr x1,[x21]
+00fc1824  mov x0,x19
+00fc1828  ldp x19,x30,[sp, #0x10]
+00fc182c  mov x2,xzr
+00fc1830  ldp x21,x20,[sp], #0x20
+00fc1834  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1838_HistigmapanelNode__get_ui_eff_ebisetup_dic_0.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_ebisetup_dic_0 @ 00fc1838
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1838  stp x21,x20,[sp, #-0x20]!
+00fc183c  stp x19,x30,[sp, #0x10]
+00fc1840  adrp x20,0x3573000
+00fc1844  adrp x21,0x334f000
+00fc1848  ldrb w8,[x20, #0xbda]
+00fc184c  ldr x21,[x21, #0x2a8]
+00fc1850  mov x19,x0
+00fc1854  tbnz w8,#0x0,0x00fc186c
+00fc1858  adrp x0,0x334f000
+00fc185c  ldr x0,[x0, #0x2a8]
+00fc1860  bl 0x00b0789c
+00fc1864  mov w8,#0x1
+00fc1868  strb w8,[x20, #0xbda]
+00fc186c  ldr x1,[x21]
+00fc1870  mov x0,x19
+00fc1874  ldp x19,x30,[sp, #0x10]
+00fc1878  mov x2,xzr
+00fc187c  ldp x21,x20,[sp], #0x20
+00fc1880  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1884_HistigmapanelNode__get_ui_eff_stigmataplus_0.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_stigmataplus_0 @ 00fc1884
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1884  stp x21,x20,[sp, #-0x20]!
+00fc1888  stp x19,x30,[sp, #0x10]
+00fc188c  adrp x20,0x3573000
+00fc1890  adrp x21,0x330d000
+00fc1894  ldrb w8,[x20, #0xbdb]
+00fc1898  ldr x21,[x21, #0x8b8]
+00fc189c  mov x19,x0
+00fc18a0  tbnz w8,#0x0,0x00fc18b8
+00fc18a4  adrp x0,0x330d000
+00fc18a8  ldr x0,[x0, #0x8b8]
+00fc18ac  bl 0x00b0789c
+00fc18b0  mov w8,#0x1
+00fc18b4  strb w8,[x20, #0xbdb]
+00fc18b8  ldr x1,[x21]
+00fc18bc  mov x0,x19
+00fc18c0  ldp x19,x30,[sp, #0x10]
+00fc18c4  mov x2,xzr
+00fc18c8  ldp x21,x20,[sp], #0x20
+00fc18cc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc18d0_HistigmapanelNode__get_hole1.txt
+================================================================================
+Function: HistigmapanelNode$$get_hole1 @ 00fc18d0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc18d0  stp x21,x20,[sp, #-0x20]!
+00fc18d4  stp x19,x30,[sp, #0x10]
+00fc18d8  adrp x20,0x3573000
+00fc18dc  adrp x21,0x3350000
+00fc18e0  ldrb w8,[x20, #0xbdc]
+00fc18e4  ldr x21,[x21, #0x190]
+00fc18e8  mov x19,x0
+00fc18ec  tbnz w8,#0x0,0x00fc1904
+00fc18f0  adrp x0,0x3350000
+00fc18f4  ldr x0,[x0, #0x190]
+00fc18f8  bl 0x00b0789c
+00fc18fc  mov w8,#0x1
+00fc1900  strb w8,[x20, #0xbdc]
+00fc1904  ldr x1,[x21]
+00fc1908  mov x0,x19
+00fc190c  ldp x19,x30,[sp, #0x10]
+00fc1910  mov x2,xzr
+00fc1914  ldp x21,x20,[sp], #0x20
+00fc1918  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc191c_HistigmapanelNode__get_spr_stigmalvmark_ray_dic_1.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmalvmark_ray_dic_1 @ 00fc191c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc191c  stp x21,x20,[sp, #-0x20]!
+00fc1920  stp x19,x30,[sp, #0x10]
+00fc1924  adrp x20,0x3573000
+00fc1928  adrp x21,0x3327000
+00fc192c  ldrb w8,[x20, #0xbdd]
+00fc1930  ldr x21,[x21, #0x18]
+00fc1934  mov x19,x0
+00fc1938  tbnz w8,#0x0,0x00fc1950
+00fc193c  adrp x0,0x3327000
+00fc1940  ldr x0,[x0, #0x18]
+00fc1944  bl 0x00b0789c
+00fc1948  mov w8,#0x1
+00fc194c  strb w8,[x20, #0xbdd]
+00fc1950  ldr x1,[x21]
+00fc1954  mov x0,x19
+00fc1958  ldp x19,x30,[sp, #0x10]
+00fc195c  mov x2,xzr
+00fc1960  ldp x21,x20,[sp], #0x20
+00fc1964  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1968_HistigmapanelNode__get_spr_stigmaicon_dic_1.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmaicon_dic_1 @ 00fc1968
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1968  stp x21,x20,[sp, #-0x20]!
+00fc196c  stp x19,x30,[sp, #0x10]
+00fc1970  adrp x20,0x3573000
+00fc1974  adrp x21,0x3350000
+00fc1978  ldrb w8,[x20, #0xbde]
+00fc197c  ldr x21,[x21, #0x790]
+00fc1980  mov x19,x0
+00fc1984  tbnz w8,#0x0,0x00fc199c
+00fc1988  adrp x0,0x3350000
+00fc198c  ldr x0,[x0, #0x790]
+00fc1990  bl 0x00b0789c
+00fc1994  mov w8,#0x1
+00fc1998  strb w8,[x20, #0xbde]
+00fc199c  ldr x1,[x21]
+00fc19a0  mov x0,x19
+00fc19a4  ldp x19,x30,[sp, #0x10]
+00fc19a8  mov x2,xzr
+00fc19ac  ldp x21,x20,[sp], #0x20
+00fc19b0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc19b4_HistigmapanelNode__get_lbl_holeexp_dic_1.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holeexp_dic_1 @ 00fc19b4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc19b4  stp x21,x20,[sp, #-0x20]!
+00fc19b8  stp x19,x30,[sp, #0x10]
+00fc19bc  adrp x20,0x3573000
+00fc19c0  adrp x21,0x334c000
+00fc19c4  ldrb w8,[x20, #0xbdf]
+00fc19c8  ldr x21,[x21, #0x230]
+00fc19cc  mov x19,x0
+00fc19d0  tbnz w8,#0x0,0x00fc19e8
+00fc19d4  adrp x0,0x334c000
+00fc19d8  ldr x0,[x0, #0x230]
+00fc19dc  bl 0x00b0789c
+00fc19e0  mov w8,#0x1
+00fc19e4  strb w8,[x20, #0xbdf]
+00fc19e8  ldr x1,[x21]
+00fc19ec  mov x0,x19
+00fc19f0  ldp x19,x30,[sp, #0x10]
+00fc19f4  mov x2,xzr
+00fc19f8  ldp x21,x20,[sp], #0x20
+00fc19fc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1a00_HistigmapanelNode__get_ui_eff_ebisetup_dic_1.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_ebisetup_dic_1 @ 00fc1a00
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1a00  stp x21,x20,[sp, #-0x20]!
+00fc1a04  stp x19,x30,[sp, #0x10]
+00fc1a08  adrp x20,0x3573000
+00fc1a0c  adrp x21,0x3351000
+00fc1a10  ldrb w8,[x20, #0xbe0]
+00fc1a14  ldr x21,[x21, #0xa70]
+00fc1a18  mov x19,x0
+00fc1a1c  tbnz w8,#0x0,0x00fc1a34
+00fc1a20  adrp x0,0x3351000
+00fc1a24  ldr x0,[x0, #0xa70]
+00fc1a28  bl 0x00b0789c
+00fc1a2c  mov w8,#0x1
+00fc1a30  strb w8,[x20, #0xbe0]
+00fc1a34  ldr x1,[x21]
+00fc1a38  mov x0,x19
+00fc1a3c  ldp x19,x30,[sp, #0x10]
+00fc1a40  mov x2,xzr
+00fc1a44  ldp x21,x20,[sp], #0x20
+00fc1a48  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1a4c_HistigmapanelNode__get_ui_eff_stigmataplus_1.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_stigmataplus_1 @ 00fc1a4c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1a4c  stp x21,x20,[sp, #-0x20]!
+00fc1a50  stp x19,x30,[sp, #0x10]
+00fc1a54  adrp x20,0x3573000
+00fc1a58  adrp x21,0x3346000
+00fc1a5c  ldrb w8,[x20, #0xbe1]
+00fc1a60  ldr x21,[x21, #0xa0]
+00fc1a64  mov x19,x0
+00fc1a68  tbnz w8,#0x0,0x00fc1a80
+00fc1a6c  adrp x0,0x3346000
+00fc1a70  ldr x0,[x0, #0xa0]
+00fc1a74  bl 0x00b0789c
+00fc1a78  mov w8,#0x1
+00fc1a7c  strb w8,[x20, #0xbe1]
+00fc1a80  ldr x1,[x21]
+00fc1a84  mov x0,x19
+00fc1a88  ldp x19,x30,[sp, #0x10]
+00fc1a8c  mov x2,xzr
+00fc1a90  ldp x21,x20,[sp], #0x20
+00fc1a94  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1a98_HistigmapanelNode__get_hole2.txt
+================================================================================
+Function: HistigmapanelNode$$get_hole2 @ 00fc1a98
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1a98  stp x21,x20,[sp, #-0x20]!
+00fc1a9c  stp x19,x30,[sp, #0x10]
+00fc1aa0  adrp x20,0x3573000
+00fc1aa4  adrp x21,0x336d000
+00fc1aa8  ldrb w8,[x20, #0xbe2]
+00fc1aac  ldr x21,[x21, #0xf20]
+00fc1ab0  mov x19,x0
+00fc1ab4  tbnz w8,#0x0,0x00fc1acc
+00fc1ab8  adrp x0,0x336d000
+00fc1abc  ldr x0,[x0, #0xf20]
+00fc1ac0  bl 0x00b0789c
+00fc1ac4  mov w8,#0x1
+00fc1ac8  strb w8,[x20, #0xbe2]
+00fc1acc  ldr x1,[x21]
+00fc1ad0  mov x0,x19
+00fc1ad4  ldp x19,x30,[sp, #0x10]
+00fc1ad8  mov x2,xzr
+00fc1adc  ldp x21,x20,[sp], #0x20
+00fc1ae0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1ae4_HistigmapanelNode__get_spr_stigmalvmark_ray_dic_2.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmalvmark_ray_dic_2 @ 00fc1ae4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1ae4  stp x21,x20,[sp, #-0x20]!
+00fc1ae8  stp x19,x30,[sp, #0x10]
+00fc1aec  adrp x20,0x3573000
+00fc1af0  adrp x21,0x3379000
+00fc1af4  ldrb w8,[x20, #0xbe3]
+00fc1af8  ldr x21,[x21, #0xa0]
+00fc1afc  mov x19,x0
+00fc1b00  tbnz w8,#0x0,0x00fc1b18
+00fc1b04  adrp x0,0x3379000
+00fc1b08  ldr x0,[x0, #0xa0]
+00fc1b0c  bl 0x00b0789c
+00fc1b10  mov w8,#0x1
+00fc1b14  strb w8,[x20, #0xbe3]
+00fc1b18  ldr x1,[x21]
+00fc1b1c  mov x0,x19
+00fc1b20  ldp x19,x30,[sp, #0x10]
+00fc1b24  mov x2,xzr
+00fc1b28  ldp x21,x20,[sp], #0x20
+00fc1b2c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1b30_HistigmapanelNode__get_spr_stigmaicon_dic_2.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmaicon_dic_2 @ 00fc1b30
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1b30  stp x21,x20,[sp, #-0x20]!
+00fc1b34  stp x19,x30,[sp, #0x10]
+00fc1b38  adrp x20,0x3573000
+00fc1b3c  adrp x21,0x3337000
+00fc1b40  ldrb w8,[x20, #0xbe4]
+00fc1b44  ldr x21,[x21, #0xc98]
+00fc1b48  mov x19,x0
+00fc1b4c  tbnz w8,#0x0,0x00fc1b64
+00fc1b50  adrp x0,0x3337000
+00fc1b54  ldr x0,[x0, #0xc98]
+00fc1b58  bl 0x00b0789c
+00fc1b5c  mov w8,#0x1
+00fc1b60  strb w8,[x20, #0xbe4]
+00fc1b64  ldr x1,[x21]
+00fc1b68  mov x0,x19
+00fc1b6c  ldp x19,x30,[sp, #0x10]
+00fc1b70  mov x2,xzr
+00fc1b74  ldp x21,x20,[sp], #0x20
+00fc1b78  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1b7c_HistigmapanelNode__get_lbl_holeexp_dic_2.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holeexp_dic_2 @ 00fc1b7c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1b7c  stp x21,x20,[sp, #-0x20]!
+00fc1b80  stp x19,x30,[sp, #0x10]
+00fc1b84  adrp x20,0x3573000
+00fc1b88  adrp x21,0x3354000
+00fc1b8c  ldrb w8,[x20, #0xbe5]
+00fc1b90  ldr x21,[x21, #0x9d0]
+00fc1b94  mov x19,x0
+00fc1b98  tbnz w8,#0x0,0x00fc1bb0
+00fc1b9c  adrp x0,0x3354000
+00fc1ba0  ldr x0,[x0, #0x9d0]
+00fc1ba4  bl 0x00b0789c
+00fc1ba8  mov w8,#0x1
+00fc1bac  strb w8,[x20, #0xbe5]
+00fc1bb0  ldr x1,[x21]
+00fc1bb4  mov x0,x19
+00fc1bb8  ldp x19,x30,[sp, #0x10]
+00fc1bbc  mov x2,xzr
+00fc1bc0  ldp x21,x20,[sp], #0x20
+00fc1bc4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1bc8_HistigmapanelNode__get_ui_eff_ebisetup_dic_2.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_ebisetup_dic_2 @ 00fc1bc8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1bc8  stp x21,x20,[sp, #-0x20]!
+00fc1bcc  stp x19,x30,[sp, #0x10]
+00fc1bd0  adrp x20,0x3573000
+00fc1bd4  adrp x21,0x3314000
+00fc1bd8  ldrb w8,[x20, #0xbe6]
+00fc1bdc  ldr x21,[x21, #0x5b0]
+00fc1be0  mov x19,x0
+00fc1be4  tbnz w8,#0x0,0x00fc1bfc
+00fc1be8  adrp x0,0x3314000
+00fc1bec  ldr x0,[x0, #0x5b0]
+00fc1bf0  bl 0x00b0789c
+00fc1bf4  mov w8,#0x1
+00fc1bf8  strb w8,[x20, #0xbe6]
+00fc1bfc  ldr x1,[x21]
+00fc1c00  mov x0,x19
+00fc1c04  ldp x19,x30,[sp, #0x10]
+00fc1c08  mov x2,xzr
+00fc1c0c  ldp x21,x20,[sp], #0x20
+00fc1c10  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1c14_HistigmapanelNode__get_ui_eff_stigmataplus_2.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_stigmataplus_2 @ 00fc1c14
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1c14  stp x21,x20,[sp, #-0x20]!
+00fc1c18  stp x19,x30,[sp, #0x10]
+00fc1c1c  adrp x20,0x3573000
+00fc1c20  adrp x21,0x3320000
+00fc1c24  ldrb w8,[x20, #0xbe7]
+00fc1c28  ldr x21,[x21, #0xf78]
+00fc1c2c  mov x19,x0
+00fc1c30  tbnz w8,#0x0,0x00fc1c48
+00fc1c34  adrp x0,0x3320000
+00fc1c38  ldr x0,[x0, #0xf78]
+00fc1c3c  bl 0x00b0789c
+00fc1c40  mov w8,#0x1
+00fc1c44  strb w8,[x20, #0xbe7]
+00fc1c48  ldr x1,[x21]
+00fc1c4c  mov x0,x19
+00fc1c50  ldp x19,x30,[sp, #0x10]
+00fc1c54  mov x2,xzr
+00fc1c58  ldp x21,x20,[sp], #0x20
+00fc1c5c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1c60_HistigmapanelNode__get_hole3.txt
+================================================================================
+Function: HistigmapanelNode$$get_hole3 @ 00fc1c60
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1c60  stp x21,x20,[sp, #-0x20]!
+00fc1c64  stp x19,x30,[sp, #0x10]
+00fc1c68  adrp x20,0x3573000
+00fc1c6c  adrp x21,0x331b000
+00fc1c70  ldrb w8,[x20, #0xbe8]
+00fc1c74  ldr x21,[x21, #0xe28]
+00fc1c78  mov x19,x0
+00fc1c7c  tbnz w8,#0x0,0x00fc1c94
+00fc1c80  adrp x0,0x331b000
+00fc1c84  ldr x0,[x0, #0xe28]
+00fc1c88  bl 0x00b0789c
+00fc1c8c  mov w8,#0x1
+00fc1c90  strb w8,[x20, #0xbe8]
+00fc1c94  ldr x1,[x21]
+00fc1c98  mov x0,x19
+00fc1c9c  ldp x19,x30,[sp, #0x10]
+00fc1ca0  mov x2,xzr
+00fc1ca4  ldp x21,x20,[sp], #0x20
+00fc1ca8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1cac_HistigmapanelNode__get_spr_stigmalvmark_ray_dic_3.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmalvmark_ray_dic_3 @ 00fc1cac
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1cac  stp x21,x20,[sp, #-0x20]!
+00fc1cb0  stp x19,x30,[sp, #0x10]
+00fc1cb4  adrp x20,0x3573000
+00fc1cb8  adrp x21,0x3338000
+00fc1cbc  ldrb w8,[x20, #0xbe9]
+00fc1cc0  ldr x21,[x21, #0xca0]
+00fc1cc4  mov x19,x0
+00fc1cc8  tbnz w8,#0x0,0x00fc1ce0
+00fc1ccc  adrp x0,0x3338000
+00fc1cd0  ldr x0,[x0, #0xca0]
+00fc1cd4  bl 0x00b0789c
+00fc1cd8  mov w8,#0x1
+00fc1cdc  strb w8,[x20, #0xbe9]
+00fc1ce0  ldr x1,[x21]
+00fc1ce4  mov x0,x19
+00fc1ce8  ldp x19,x30,[sp, #0x10]
+00fc1cec  mov x2,xzr
+00fc1cf0  ldp x21,x20,[sp], #0x20
+00fc1cf4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1cf8_HistigmapanelNode__get_spr_stigmaicon_dic_3.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmaicon_dic_3 @ 00fc1cf8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1cf8  stp x21,x20,[sp, #-0x20]!
+00fc1cfc  stp x19,x30,[sp, #0x10]
+00fc1d00  adrp x20,0x3573000
+00fc1d04  adrp x21,0x335d000
+00fc1d08  ldrb w8,[x20, #0xbea]
+00fc1d0c  ldr x21,[x21, #0x88]
+00fc1d10  mov x19,x0
+00fc1d14  tbnz w8,#0x0,0x00fc1d2c
+00fc1d18  adrp x0,0x335d000
+00fc1d1c  ldr x0,[x0, #0x88]
+00fc1d20  bl 0x00b0789c
+00fc1d24  mov w8,#0x1
+00fc1d28  strb w8,[x20, #0xbea]
+00fc1d2c  ldr x1,[x21]
+00fc1d30  mov x0,x19
+00fc1d34  ldp x19,x30,[sp, #0x10]
+00fc1d38  mov x2,xzr
+00fc1d3c  ldp x21,x20,[sp], #0x20
+00fc1d40  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1d44_HistigmapanelNode__get_lbl_holeexp_dic_3.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holeexp_dic_3 @ 00fc1d44
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1d44  stp x21,x20,[sp, #-0x20]!
+00fc1d48  stp x19,x30,[sp, #0x10]
+00fc1d4c  adrp x20,0x3573000
+00fc1d50  adrp x21,0x332a000
+00fc1d54  ldrb w8,[x20, #0xbeb]
+00fc1d58  ldr x21,[x21, #0x698]
+00fc1d5c  mov x19,x0
+00fc1d60  tbnz w8,#0x0,0x00fc1d78
+00fc1d64  adrp x0,0x332a000
+00fc1d68  ldr x0,[x0, #0x698]
+00fc1d6c  bl 0x00b0789c
+00fc1d70  mov w8,#0x1
+00fc1d74  strb w8,[x20, #0xbeb]
+00fc1d78  ldr x1,[x21]
+00fc1d7c  mov x0,x19
+00fc1d80  ldp x19,x30,[sp, #0x10]
+00fc1d84  mov x2,xzr
+00fc1d88  ldp x21,x20,[sp], #0x20
+00fc1d8c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1d90_HistigmapanelNode__get_ui_eff_ebisetup_dic_3.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_ebisetup_dic_3 @ 00fc1d90
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1d90  stp x21,x20,[sp, #-0x20]!
+00fc1d94  stp x19,x30,[sp, #0x10]
+00fc1d98  adrp x20,0x3573000
+00fc1d9c  adrp x21,0x3313000
+00fc1da0  ldrb w8,[x20, #0xbec]
+00fc1da4  ldr x21,[x21, #0x608]
+00fc1da8  mov x19,x0
+00fc1dac  tbnz w8,#0x0,0x00fc1dc4
+00fc1db0  adrp x0,0x3313000
+00fc1db4  ldr x0,[x0, #0x608]
+00fc1db8  bl 0x00b0789c
+00fc1dbc  mov w8,#0x1
+00fc1dc0  strb w8,[x20, #0xbec]
+00fc1dc4  ldr x1,[x21]
+00fc1dc8  mov x0,x19
+00fc1dcc  ldp x19,x30,[sp, #0x10]
+00fc1dd0  mov x2,xzr
+00fc1dd4  ldp x21,x20,[sp], #0x20
+00fc1dd8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1ddc_HistigmapanelNode__get_ui_eff_stigmataplus_3.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_stigmataplus_3 @ 00fc1ddc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1ddc  stp x21,x20,[sp, #-0x20]!
+00fc1de0  stp x19,x30,[sp, #0x10]
+00fc1de4  adrp x20,0x3573000
+00fc1de8  adrp x21,0x3323000
+00fc1dec  ldrb w8,[x20, #0xbed]
+00fc1df0  ldr x21,[x21, #0x3e8]
+00fc1df4  mov x19,x0
+00fc1df8  tbnz w8,#0x0,0x00fc1e10
+00fc1dfc  adrp x0,0x3323000
+00fc1e00  ldr x0,[x0, #0x3e8]
+00fc1e04  bl 0x00b0789c
+00fc1e08  mov w8,#0x1
+00fc1e0c  strb w8,[x20, #0xbed]
+00fc1e10  ldr x1,[x21]
+00fc1e14  mov x0,x19
+00fc1e18  ldp x19,x30,[sp, #0x10]
+00fc1e1c  mov x2,xzr
+00fc1e20  ldp x21,x20,[sp], #0x20
+00fc1e24  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1e28_HistigmapanelNode__get_hole4.txt
+================================================================================
+Function: HistigmapanelNode$$get_hole4 @ 00fc1e28
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1e28  stp x21,x20,[sp, #-0x20]!
+00fc1e2c  stp x19,x30,[sp, #0x10]
+00fc1e30  adrp x20,0x3573000
+00fc1e34  adrp x21,0x3348000
+00fc1e38  ldrb w8,[x20, #0xbee]
+00fc1e3c  ldr x21,[x21, #0x1d8]
+00fc1e40  mov x19,x0
+00fc1e44  tbnz w8,#0x0,0x00fc1e5c
+00fc1e48  adrp x0,0x3348000
+00fc1e4c  ldr x0,[x0, #0x1d8]
+00fc1e50  bl 0x00b0789c
+00fc1e54  mov w8,#0x1
+00fc1e58  strb w8,[x20, #0xbee]
+00fc1e5c  ldr x1,[x21]
+00fc1e60  mov x0,x19
+00fc1e64  ldp x19,x30,[sp, #0x10]
+00fc1e68  mov x2,xzr
+00fc1e6c  ldp x21,x20,[sp], #0x20
+00fc1e70  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1e74_HistigmapanelNode__get_spr_stigmalvmark_ray_dic_4.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmalvmark_ray_dic_4 @ 00fc1e74
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1e74  stp x21,x20,[sp, #-0x20]!
+00fc1e78  stp x19,x30,[sp, #0x10]
+00fc1e7c  adrp x20,0x3573000
+00fc1e80  adrp x21,0x3312000
+00fc1e84  ldrb w8,[x20, #0xbef]
+00fc1e88  ldr x21,[x21, #0xaa8]
+00fc1e8c  mov x19,x0
+00fc1e90  tbnz w8,#0x0,0x00fc1ea8
+00fc1e94  adrp x0,0x3312000
+00fc1e98  ldr x0,[x0, #0xaa8]
+00fc1e9c  bl 0x00b0789c
+00fc1ea0  mov w8,#0x1
+00fc1ea4  strb w8,[x20, #0xbef]
+00fc1ea8  ldr x1,[x21]
+00fc1eac  mov x0,x19
+00fc1eb0  ldp x19,x30,[sp, #0x10]
+00fc1eb4  mov x2,xzr
+00fc1eb8  ldp x21,x20,[sp], #0x20
+00fc1ebc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1ec0_HistigmapanelNode__get_spr_stigmaicon_dic_4.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmaicon_dic_4 @ 00fc1ec0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1ec0  stp x21,x20,[sp, #-0x20]!
+00fc1ec4  stp x19,x30,[sp, #0x10]
+00fc1ec8  adrp x20,0x3573000
+00fc1ecc  adrp x21,0x330c000
+00fc1ed0  ldrb w8,[x20, #0xbf0]
+00fc1ed4  ldr x21,[x21, #0x430]
+00fc1ed8  mov x19,x0
+00fc1edc  tbnz w8,#0x0,0x00fc1ef4
+00fc1ee0  adrp x0,0x330c000
+00fc1ee4  ldr x0,[x0, #0x430]
+00fc1ee8  bl 0x00b0789c
+00fc1eec  mov w8,#0x1
+00fc1ef0  strb w8,[x20, #0xbf0]
+00fc1ef4  ldr x1,[x21]
+00fc1ef8  mov x0,x19
+00fc1efc  ldp x19,x30,[sp, #0x10]
+00fc1f00  mov x2,xzr
+00fc1f04  ldp x21,x20,[sp], #0x20
+00fc1f08  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1f0c_HistigmapanelNode__get_lbl_holeexp_dic_4.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holeexp_dic_4 @ 00fc1f0c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1f0c  stp x21,x20,[sp, #-0x20]!
+00fc1f10  stp x19,x30,[sp, #0x10]
+00fc1f14  adrp x20,0x3573000
+00fc1f18  adrp x21,0x3311000
+00fc1f1c  ldrb w8,[x20, #0xbf1]
+00fc1f20  ldr x21,[x21, #0x998]
+00fc1f24  mov x19,x0
+00fc1f28  tbnz w8,#0x0,0x00fc1f40
+00fc1f2c  adrp x0,0x3311000
+00fc1f30  ldr x0,[x0, #0x998]
+00fc1f34  bl 0x00b0789c
+00fc1f38  mov w8,#0x1
+00fc1f3c  strb w8,[x20, #0xbf1]
+00fc1f40  ldr x1,[x21]
+00fc1f44  mov x0,x19
+00fc1f48  ldp x19,x30,[sp, #0x10]
+00fc1f4c  mov x2,xzr
+00fc1f50  ldp x21,x20,[sp], #0x20
+00fc1f54  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1f58_HistigmapanelNode__get_ui_eff_ebisetup_dic_4.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_ebisetup_dic_4 @ 00fc1f58
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1f58  stp x21,x20,[sp, #-0x20]!
+00fc1f5c  stp x19,x30,[sp, #0x10]
+00fc1f60  adrp x20,0x3573000
+00fc1f64  adrp x21,0x3331000
+00fc1f68  ldrb w8,[x20, #0xbf2]
+00fc1f6c  ldr x21,[x21, #0xac0]
+00fc1f70  mov x19,x0
+00fc1f74  tbnz w8,#0x0,0x00fc1f8c
+00fc1f78  adrp x0,0x3331000
+00fc1f7c  ldr x0,[x0, #0xac0]
+00fc1f80  bl 0x00b0789c
+00fc1f84  mov w8,#0x1
+00fc1f88  strb w8,[x20, #0xbf2]
+00fc1f8c  ldr x1,[x21]
+00fc1f90  mov x0,x19
+00fc1f94  ldp x19,x30,[sp, #0x10]
+00fc1f98  mov x2,xzr
+00fc1f9c  ldp x21,x20,[sp], #0x20
+00fc1fa0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1fa4_HistigmapanelNode__get_ui_eff_stigmataplus_4.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_stigmataplus_4 @ 00fc1fa4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1fa4  stp x21,x20,[sp, #-0x20]!
+00fc1fa8  stp x19,x30,[sp, #0x10]
+00fc1fac  adrp x20,0x3573000
+00fc1fb0  adrp x21,0x336d000
+00fc1fb4  ldrb w8,[x20, #0xbf3]
+00fc1fb8  ldr x21,[x21, #0x868]
+00fc1fbc  mov x19,x0
+00fc1fc0  tbnz w8,#0x0,0x00fc1fd8
+00fc1fc4  adrp x0,0x336d000
+00fc1fc8  ldr x0,[x0, #0x868]
+00fc1fcc  bl 0x00b0789c
+00fc1fd0  mov w8,#0x1
+00fc1fd4  strb w8,[x20, #0xbf3]
+00fc1fd8  ldr x1,[x21]
+00fc1fdc  mov x0,x19
+00fc1fe0  ldp x19,x30,[sp, #0x10]
+00fc1fe4  mov x2,xzr
+00fc1fe8  ldp x21,x20,[sp], #0x20
+00fc1fec  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc1ff0_HistigmapanelNode__get_hole5.txt
+================================================================================
+Function: HistigmapanelNode$$get_hole5 @ 00fc1ff0
+
+--- Calls OUT ---
+  -> FUN_00fd9c34 @ 00fd9c34
+
+--- Calls IN ---
+
+--- Listing ---
+00fc1ff0  stp x21,x20,[sp, #-0x20]!
+00fc1ff4  stp x19,x30,[sp, #0x10]
+00fc1ff8  adrp x20,0x3573000
+00fc1ffc  adrp x21,0x3348000
+00fc2000  ldrb w8,[x20, #0xbf4]
+00fc2004  b 0x00fd9c34
+
+
+================================================================================
+### FILE: 00fc203c_HistigmapanelNode__get_spr_stigmalvmark_ray_dic_5.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmalvmark_ray_dic_5 @ 00fc203c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc203c  stp x21,x20,[sp, #-0x20]!
+00fc2040  stp x19,x30,[sp, #0x10]
+00fc2044  adrp x20,0x3573000
+00fc2048  adrp x21,0x3344000
+00fc204c  ldrb w8,[x20, #0xbf5]
+00fc2050  ldr x21,[x21, #0x118]
+00fc2054  mov x19,x0
+00fc2058  tbnz w8,#0x0,0x00fc2070
+00fc205c  adrp x0,0x3344000
+00fc2060  ldr x0,[x0, #0x118]
+00fc2064  bl 0x00b0789c
+00fc2068  mov w8,#0x1
+00fc206c  strb w8,[x20, #0xbf5]
+00fc2070  ldr x1,[x21]
+00fc2074  mov x0,x19
+00fc2078  ldp x19,x30,[sp, #0x10]
+00fc207c  mov x2,xzr
+00fc2080  ldp x21,x20,[sp], #0x20
+00fc2084  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2088_HistigmapanelNode__get_spr_stigmaicon_dic_5.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_stigmaicon_dic_5 @ 00fc2088
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2088  stp x21,x20,[sp, #-0x20]!
+00fc208c  stp x19,x30,[sp, #0x10]
+00fc2090  adrp x20,0x3573000
+00fc2094  adrp x21,0x334d000
+00fc2098  ldrb w8,[x20, #0xbf6]
+00fc209c  ldr x21,[x21, #0x548]
+00fc20a0  mov x19,x0
+00fc20a4  tbnz w8,#0x0,0x00fc20bc
+00fc20a8  adrp x0,0x334d000
+00fc20ac  ldr x0,[x0, #0x548]
+00fc20b0  bl 0x00b0789c
+00fc20b4  mov w8,#0x1
+00fc20b8  strb w8,[x20, #0xbf6]
+00fc20bc  ldr x1,[x21]
+00fc20c0  mov x0,x19
+00fc20c4  ldp x19,x30,[sp, #0x10]
+00fc20c8  mov x2,xzr
+00fc20cc  ldp x21,x20,[sp], #0x20
+00fc20d0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc20d4_HistigmapanelNode__get_lbl_holeexp_dic_5.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holeexp_dic_5 @ 00fc20d4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc20d4  stp x21,x20,[sp, #-0x20]!
+00fc20d8  stp x19,x30,[sp, #0x10]
+00fc20dc  adrp x20,0x3573000
+00fc20e0  adrp x21,0x3311000
+00fc20e4  ldrb w8,[x20, #0xbf7]
+00fc20e8  ldr x21,[x21, #0xa78]
+00fc20ec  mov x19,x0
+00fc20f0  tbnz w8,#0x0,0x00fc2108
+00fc20f4  adrp x0,0x3311000
+00fc20f8  ldr x0,[x0, #0xa78]
+00fc20fc  bl 0x00b0789c
+00fc2100  mov w8,#0x1
+00fc2104  strb w8,[x20, #0xbf7]
+00fc2108  ldr x1,[x21]
+00fc210c  mov x0,x19
+00fc2110  ldp x19,x30,[sp, #0x10]
+00fc2114  mov x2,xzr
+00fc2118  ldp x21,x20,[sp], #0x20
+00fc211c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2120_HistigmapanelNode__get_ui_eff_ebisetup_dic_5.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_ebisetup_dic_5 @ 00fc2120
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2120  stp x21,x20,[sp, #-0x20]!
+00fc2124  stp x19,x30,[sp, #0x10]
+00fc2128  adrp x20,0x3573000
+00fc212c  adrp x21,0x3352000
+00fc2130  ldrb w8,[x20, #0xbf8]
+00fc2134  ldr x21,[x21, #0x338]
+00fc2138  mov x19,x0
+00fc213c  tbnz w8,#0x0,0x00fc2154
+00fc2140  adrp x0,0x3352000
+00fc2144  ldr x0,[x0, #0x338]
+00fc2148  bl 0x00b0789c
+00fc214c  mov w8,#0x1
+00fc2150  strb w8,[x20, #0xbf8]
+00fc2154  ldr x1,[x21]
+00fc2158  mov x0,x19
+00fc215c  ldp x19,x30,[sp, #0x10]
+00fc2160  mov x2,xzr
+00fc2164  ldp x21,x20,[sp], #0x20
+00fc2168  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc216c_HistigmapanelNode__get_ui_eff_stigmataplus_5.txt
+================================================================================
+Function: HistigmapanelNode$$get_ui_eff_stigmataplus_5 @ 00fc216c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc216c  stp x21,x20,[sp, #-0x20]!
+00fc2170  stp x19,x30,[sp, #0x10]
+00fc2174  adrp x20,0x3573000
+00fc2178  adrp x21,0x331f000
+00fc217c  ldrb w8,[x20, #0xbf9]
+00fc2180  ldr x21,[x21, #0x178]
+00fc2184  mov x19,x0
+00fc2188  tbnz w8,#0x0,0x00fc21a0
+00fc218c  adrp x0,0x331f000
+00fc2190  ldr x0,[x0, #0x178]
+00fc2194  bl 0x00b0789c
+00fc2198  mov w8,#0x1
+00fc219c  strb w8,[x20, #0xbf9]
+00fc21a0  ldr x1,[x21]
+00fc21a4  mov x0,x19
+00fc21a8  ldp x19,x30,[sp, #0x10]
+00fc21ac  mov x2,xzr
+00fc21b0  ldp x21,x20,[sp], #0x20
+00fc21b4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc21b8_HistigmapanelNode__get_stiholeselect.txt
+================================================================================
+Function: HistigmapanelNode$$get_stiholeselect @ 00fc21b8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc21b8  stp x21,x20,[sp, #-0x20]!
+00fc21bc  stp x19,x30,[sp, #0x10]
+00fc21c0  adrp x20,0x3573000
+00fc21c4  adrp x21,0x337c000
+00fc21c8  ldrb w8,[x20, #0xbfa]
+00fc21cc  ldr x21,[x21, #0x3d8]
+00fc21d0  mov x19,x0
+00fc21d4  tbnz w8,#0x0,0x00fc21ec
+00fc21d8  adrp x0,0x337c000
+00fc21dc  ldr x0,[x0, #0x3d8]
+00fc21e0  bl 0x00b0789c
+00fc21e4  mov w8,#0x1
+00fc21e8  strb w8,[x20, #0xbfa]
+00fc21ec  ldr x1,[x21]
+00fc21f0  mov x0,x19
+00fc21f4  ldp x19,x30,[sp, #0x10]
+00fc21f8  mov x2,xzr
+00fc21fc  ldp x21,x20,[sp], #0x20
+00fc2200  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2204_HistigmapanelNode__get_obj_holedesc.txt
+================================================================================
+Function: HistigmapanelNode$$get_obj_holedesc @ 00fc2204
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2204  stp x21,x20,[sp, #-0x20]!
+00fc2208  stp x19,x30,[sp, #0x10]
+00fc220c  adrp x20,0x3573000
+00fc2210  adrp x21,0x3315000
+00fc2214  ldrb w8,[x20, #0xbfb]
+00fc2218  ldr x21,[x21, #0x50]
+00fc221c  mov x19,x0
+00fc2220  tbnz w8,#0x0,0x00fc2238
+00fc2224  adrp x0,0x3315000
+00fc2228  ldr x0,[x0, #0x50]
+00fc222c  bl 0x00b0789c
+00fc2230  mov w8,#0x1
+00fc2234  strb w8,[x20, #0xbfb]
+00fc2238  ldr x1,[x21]
+00fc223c  mov x0,x19
+00fc2240  ldp x19,x30,[sp, #0x10]
+00fc2244  mov x2,xzr
+00fc2248  ldp x21,x20,[sp], #0x20
+00fc224c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2250_HistigmapanelNode__get_lbl_selectholesti.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_selectholesti @ 00fc2250
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2250  stp x21,x20,[sp, #-0x20]!
+00fc2254  stp x19,x30,[sp, #0x10]
+00fc2258  adrp x20,0x3573000
+00fc225c  adrp x21,0x3370000
+00fc2260  ldrb w8,[x20, #0xbfc]
+00fc2264  ldr x21,[x21, #0x290]
+00fc2268  mov x19,x0
+00fc226c  tbnz w8,#0x0,0x00fc2284
+00fc2270  adrp x0,0x3370000
+00fc2274  ldr x0,[x0, #0x290]
+00fc2278  bl 0x00b0789c
+00fc227c  mov w8,#0x1
+00fc2280  strb w8,[x20, #0xbfc]
+00fc2284  ldr x1,[x21]
+00fc2288  mov x0,x19
+00fc228c  ldp x19,x30,[sp, #0x10]
+00fc2290  mov x2,xzr
+00fc2294  ldp x21,x20,[sp], #0x20
+00fc2298  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc229c_HistigmapanelNode__get_lbl_selectholep.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_selectholep @ 00fc229c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc229c  stp x21,x20,[sp, #-0x20]!
+00fc22a0  stp x19,x30,[sp, #0x10]
+00fc22a4  adrp x20,0x3573000
+00fc22a8  adrp x21,0x330e000
+00fc22ac  ldrb w8,[x20, #0xbfd]
+00fc22b0  ldr x21,[x21, #0xec8]
+00fc22b4  mov x19,x0
+00fc22b8  tbnz w8,#0x0,0x00fc22d0
+00fc22bc  adrp x0,0x330e000
+00fc22c0  ldr x0,[x0, #0xec8]
+00fc22c4  bl 0x00b0789c
+00fc22c8  mov w8,#0x1
+00fc22cc  strb w8,[x20, #0xbfd]
+00fc22d0  ldr x1,[x21]
+00fc22d4  mov x0,x19
+00fc22d8  ldp x19,x30,[sp, #0x10]
+00fc22dc  mov x2,xzr
+00fc22e0  ldp x21,x20,[sp], #0x20
+00fc22e4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc22e8_HistigmapanelNode__get_lbl_selectholeopen.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_selectholeopen @ 00fc22e8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc22e8  stp x21,x20,[sp, #-0x20]!
+00fc22ec  stp x19,x30,[sp, #0x10]
+00fc22f0  adrp x20,0x3573000
+00fc22f4  adrp x21,0x336e000
+00fc22f8  ldrb w8,[x20, #0xbfe]
+00fc22fc  ldr x21,[x21, #0x620]
+00fc2300  mov x19,x0
+00fc2304  tbnz w8,#0x0,0x00fc231c
+00fc2308  adrp x0,0x336e000
+00fc230c  ldr x0,[x0, #0x620]
+00fc2310  bl 0x00b0789c
+00fc2314  mov w8,#0x1
+00fc2318  strb w8,[x20, #0xbfe]
+00fc231c  ldr x1,[x21]
+00fc2320  mov x0,x19
+00fc2324  ldp x19,x30,[sp, #0x10]
+00fc2328  mov x2,xzr
+00fc232c  ldp x21,x20,[sp], #0x20
+00fc2330  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2334_HistigmapanelNode__get_rightShow.txt
+================================================================================
+Function: HistigmapanelNode$$get_rightShow @ 00fc2334
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2334  stp x21,x20,[sp, #-0x20]!
+00fc2338  stp x19,x30,[sp, #0x10]
+00fc233c  adrp x20,0x3573000
+00fc2340  adrp x21,0x334e000
+00fc2344  ldrb w8,[x20, #0xbff]
+00fc2348  ldr x21,[x21, #0x598]
+00fc234c  mov x19,x0
+00fc2350  tbnz w8,#0x0,0x00fc2368
+00fc2354  adrp x0,0x334e000
+00fc2358  ldr x0,[x0, #0x598]
+00fc235c  bl 0x00b0789c
+00fc2360  mov w8,#0x1
+00fc2364  strb w8,[x20, #0xbff]
+00fc2368  ldr x1,[x21]
+00fc236c  mov x0,x19
+00fc2370  ldp x19,x30,[sp, #0x10]
+00fc2374  mov x2,xzr
+00fc2378  ldp x21,x20,[sp], #0x20
+00fc237c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2380_HistigmapanelNode__get_lbl_nameShow.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_nameShow @ 00fc2380
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2380  stp x21,x20,[sp, #-0x20]!
+00fc2384  stp x19,x30,[sp, #0x10]
+00fc2388  adrp x20,0x3573000
+00fc238c  adrp x21,0x3333000
+00fc2390  ldrb w8,[x20, #0xc00]
+00fc2394  ldr x21,[x21, #0xe0]
+00fc2398  mov x19,x0
+00fc239c  tbnz w8,#0x0,0x00fc23b4
+00fc23a0  adrp x0,0x3333000
+00fc23a4  ldr x0,[x0, #0xe0]
+00fc23a8  bl 0x00b0789c
+00fc23ac  mov w8,#0x1
+00fc23b0  strb w8,[x20, #0xc00]
+00fc23b4  ldr x1,[x21]
+00fc23b8  mov x0,x19
+00fc23bc  ldp x19,x30,[sp, #0x10]
+00fc23c0  mov x2,xzr
+00fc23c4  ldp x21,x20,[sp], #0x20
+00fc23c8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc23cc_HistigmapanelNode__get_noactive.txt
+================================================================================
+Function: HistigmapanelNode$$get_noactive @ 00fc23cc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc23cc  stp x21,x20,[sp, #-0x20]!
+00fc23d0  stp x19,x30,[sp, #0x10]
+00fc23d4  adrp x20,0x3573000
+00fc23d8  adrp x21,0x332d000
+00fc23dc  ldrb w8,[x20, #0xc01]
+00fc23e0  ldr x21,[x21, #0x8e8]
+00fc23e4  mov x19,x0
+00fc23e8  tbnz w8,#0x0,0x00fc2400
+00fc23ec  adrp x0,0x332d000
+00fc23f0  ldr x0,[x0, #0x8e8]
+00fc23f4  bl 0x00b0789c
+00fc23f8  mov w8,#0x1
+00fc23fc  strb w8,[x20, #0xc01]
+00fc2400  ldr x1,[x21]
+00fc2404  mov x0,x19
+00fc2408  ldp x19,x30,[sp, #0x10]
+00fc240c  mov x2,xzr
+00fc2410  ldp x21,x20,[sp], #0x20
+00fc2414  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2418_HistigmapanelNode__get_lbl_skillName.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_skillName @ 00fc2418
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2418  stp x21,x20,[sp, #-0x20]!
+00fc241c  stp x19,x30,[sp, #0x10]
+00fc2420  adrp x20,0x3573000
+00fc2424  adrp x21,0x3379000
+00fc2428  ldrb w8,[x20, #0xc02]
+00fc242c  ldr x21,[x21, #0xef8]
+00fc2430  mov x19,x0
+00fc2434  tbnz w8,#0x0,0x00fc244c
+00fc2438  adrp x0,0x3379000
+00fc243c  ldr x0,[x0, #0xef8]
+00fc2440  bl 0x00b0789c
+00fc2444  mov w8,#0x1
+00fc2448  strb w8,[x20, #0xc02]
+00fc244c  ldr x1,[x21]
+00fc2450  mov x0,x19
+00fc2454  ldp x19,x30,[sp, #0x10]
+00fc2458  mov x2,xzr
+00fc245c  ldp x21,x20,[sp], #0x20
+00fc2460  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2464_HistigmapanelNode__get_lbl_skillDesc.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_skillDesc @ 00fc2464
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2464  stp x21,x20,[sp, #-0x20]!
+00fc2468  stp x19,x30,[sp, #0x10]
+00fc246c  adrp x20,0x3573000
+00fc2470  adrp x21,0x330d000
+00fc2474  ldrb w8,[x20, #0xc03]
+00fc2478  ldr x21,[x21, #0x148]
+00fc247c  mov x19,x0
+00fc2480  tbnz w8,#0x0,0x00fc2498
+00fc2484  adrp x0,0x330d000
+00fc2488  ldr x0,[x0, #0x148]
+00fc248c  bl 0x00b0789c
+00fc2490  mov w8,#0x1
+00fc2494  strb w8,[x20, #0xc03]
+00fc2498  ldr x1,[x21]
+00fc249c  mov x0,x19
+00fc24a0  ldp x19,x30,[sp, #0x10]
+00fc24a4  mov x2,xzr
+00fc24a8  ldp x21,x20,[sp], #0x20
+00fc24ac  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc24b0_HistigmapanelNode__get_obj_stigmaprops.txt
+================================================================================
+Function: HistigmapanelNode$$get_obj_stigmaprops @ 00fc24b0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc24b0  stp x21,x20,[sp, #-0x20]!
+00fc24b4  stp x19,x30,[sp, #0x10]
+00fc24b8  adrp x20,0x3573000
+00fc24bc  adrp x21,0x3367000
+00fc24c0  ldrb w8,[x20, #0xc04]
+00fc24c4  ldr x21,[x21, #0x760]
+00fc24c8  mov x19,x0
+00fc24cc  tbnz w8,#0x0,0x00fc24e4
+00fc24d0  adrp x0,0x3367000
+00fc24d4  ldr x0,[x0, #0x760]
+00fc24d8  bl 0x00b0789c
+00fc24dc  mov w8,#0x1
+00fc24e0  strb w8,[x20, #0xc04]
+00fc24e4  ldr x1,[x21]
+00fc24e8  mov x0,x19
+00fc24ec  ldp x19,x30,[sp, #0x10]
+00fc24f0  mov x2,xzr
+00fc24f4  ldp x21,x20,[sp], #0x20
+00fc24f8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc24fc_HistigmapanelNode__get_spr_base_plus_dic_0.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_base_plus_dic_0 @ 00fc24fc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc24fc  stp x21,x20,[sp, #-0x20]!
+00fc2500  stp x19,x30,[sp, #0x10]
+00fc2504  adrp x20,0x3573000
+00fc2508  adrp x21,0x3326000
+00fc250c  ldrb w8,[x20, #0xc05]
+00fc2510  ldr x21,[x21, #0xc48]
+00fc2514  mov x19,x0
+00fc2518  tbnz w8,#0x0,0x00fc2530
+00fc251c  adrp x0,0x3326000
+00fc2520  ldr x0,[x0, #0xc48]
+00fc2524  bl 0x00b0789c
+00fc2528  mov w8,#0x1
+00fc252c  strb w8,[x20, #0xc05]
+00fc2530  ldr x1,[x21]
+00fc2534  mov x0,x19
+00fc2538  ldp x19,x30,[sp, #0x10]
+00fc253c  mov x2,xzr
+00fc2540  ldp x21,x20,[sp], #0x20
+00fc2544  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2548_HistigmapanelNode__get_lbl_holestig_dic_0.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holestig_dic_0 @ 00fc2548
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2548  stp x21,x20,[sp, #-0x20]!
+00fc254c  stp x19,x30,[sp, #0x10]
+00fc2550  adrp x20,0x3573000
+00fc2554  adrp x21,0x3324000
+00fc2558  ldrb w8,[x20, #0xc06]
+00fc255c  ldr x21,[x21, #0x850]
+00fc2560  mov x19,x0
+00fc2564  tbnz w8,#0x0,0x00fc257c
+00fc2568  adrp x0,0x3324000
+00fc256c  ldr x0,[x0, #0x850]
+00fc2570  bl 0x00b0789c
+00fc2574  mov w8,#0x1
+00fc2578  strb w8,[x20, #0xc06]
+00fc257c  ldr x1,[x21]
+00fc2580  mov x0,x19
+00fc2584  ldp x19,x30,[sp, #0x10]
+00fc2588  mov x2,xzr
+00fc258c  ldp x21,x20,[sp], #0x20
+00fc2590  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2594_HistigmapanelNode__get_lbl_holep_dic_0.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holep_dic_0 @ 00fc2594
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2594  stp x21,x20,[sp, #-0x20]!
+00fc2598  stp x19,x30,[sp, #0x10]
+00fc259c  adrp x20,0x3573000
+00fc25a0  adrp x21,0x3366000
+00fc25a4  ldrb w8,[x20, #0xc07]
+00fc25a8  ldr x21,[x21, #0x938]
+00fc25ac  mov x19,x0
+00fc25b0  tbnz w8,#0x0,0x00fc25c8
+00fc25b4  adrp x0,0x3366000
+00fc25b8  ldr x0,[x0, #0x938]
+00fc25bc  bl 0x00b0789c
+00fc25c0  mov w8,#0x1
+00fc25c4  strb w8,[x20, #0xc07]
+00fc25c8  ldr x1,[x21]
+00fc25cc  mov x0,x19
+00fc25d0  ldp x19,x30,[sp, #0x10]
+00fc25d4  mov x2,xzr
+00fc25d8  ldp x21,x20,[sp], #0x20
+00fc25dc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc25e0_HistigmapanelNode__get_spr_base_plus_dic_1.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_base_plus_dic_1 @ 00fc25e0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc25e0  stp x21,x20,[sp, #-0x20]!
+00fc25e4  stp x19,x30,[sp, #0x10]
+00fc25e8  adrp x20,0x3573000
+00fc25ec  adrp x21,0x3326000
+00fc25f0  ldrb w8,[x20, #0xc08]
+00fc25f4  ldr x21,[x21, #0xe70]
+00fc25f8  mov x19,x0
+00fc25fc  tbnz w8,#0x0,0x00fc2614
+00fc2600  adrp x0,0x3326000
+00fc2604  ldr x0,[x0, #0xe70]
+00fc2608  bl 0x00b0789c
+00fc260c  mov w8,#0x1
+00fc2610  strb w8,[x20, #0xc08]
+00fc2614  ldr x1,[x21]
+00fc2618  mov x0,x19
+00fc261c  ldp x19,x30,[sp, #0x10]
+00fc2620  mov x2,xzr
+00fc2624  ldp x21,x20,[sp], #0x20
+00fc2628  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc262c_HistigmapanelNode__get_lbl_holestig_dic_1.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holestig_dic_1 @ 00fc262c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc262c  stp x21,x20,[sp, #-0x20]!
+00fc2630  stp x19,x30,[sp, #0x10]
+00fc2634  adrp x20,0x3573000
+00fc2638  adrp x21,0x332a000
+00fc263c  ldrb w8,[x20, #0xc09]
+00fc2640  ldr x21,[x21, #0xb90]
+00fc2644  mov x19,x0
+00fc2648  tbnz w8,#0x0,0x00fc2660
+00fc264c  adrp x0,0x332a000
+00fc2650  ldr x0,[x0, #0xb90]
+00fc2654  bl 0x00b0789c
+00fc2658  mov w8,#0x1
+00fc265c  strb w8,[x20, #0xc09]
+00fc2660  ldr x1,[x21]
+00fc2664  mov x0,x19
+00fc2668  ldp x19,x30,[sp, #0x10]
+00fc266c  mov x2,xzr
+00fc2670  ldp x21,x20,[sp], #0x20
+00fc2674  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2678_HistigmapanelNode__get_lbl_holep_dic_1.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holep_dic_1 @ 00fc2678
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2678  stp x21,x20,[sp, #-0x20]!
+00fc267c  stp x19,x30,[sp, #0x10]
+00fc2680  adrp x20,0x3573000
+00fc2684  adrp x21,0x3328000
+00fc2688  ldrb w8,[x20, #0xc0a]
+00fc268c  ldr x21,[x21, #0x80]
+00fc2690  mov x19,x0
+00fc2694  tbnz w8,#0x0,0x00fc26ac
+00fc2698  adrp x0,0x3328000
+00fc269c  ldr x0,[x0, #0x80]
+00fc26a0  bl 0x00b0789c
+00fc26a4  mov w8,#0x1
+00fc26a8  strb w8,[x20, #0xc0a]
+00fc26ac  ldr x1,[x21]
+00fc26b0  mov x0,x19
+00fc26b4  ldp x19,x30,[sp, #0x10]
+00fc26b8  mov x2,xzr
+00fc26bc  ldp x21,x20,[sp], #0x20
+00fc26c0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc26c4_HistigmapanelNode__get_spr_base_plus_dic_2.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_base_plus_dic_2 @ 00fc26c4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc26c4  stp x21,x20,[sp, #-0x20]!
+00fc26c8  stp x19,x30,[sp, #0x10]
+00fc26cc  adrp x20,0x3573000
+00fc26d0  adrp x21,0x330a000
+00fc26d4  ldrb w8,[x20, #0xc0b]
+00fc26d8  ldr x21,[x21, #0xfe8]
+00fc26dc  mov x19,x0
+00fc26e0  tbnz w8,#0x0,0x00fc26f8
+00fc26e4  adrp x0,0x330a000
+00fc26e8  ldr x0,[x0, #0xfe8]
+00fc26ec  bl 0x00b0789c
+00fc26f0  mov w8,#0x1
+00fc26f4  strb w8,[x20, #0xc0b]
+00fc26f8  ldr x1,[x21]
+00fc26fc  mov x0,x19
+00fc2700  ldp x19,x30,[sp, #0x10]
+00fc2704  mov x2,xzr
+00fc2708  ldp x21,x20,[sp], #0x20
+00fc270c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2710_HistigmapanelNode__get_lbl_holestig_dic_2.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holestig_dic_2 @ 00fc2710
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2710  stp x21,x20,[sp, #-0x20]!
+00fc2714  stp x19,x30,[sp, #0x10]
+00fc2718  adrp x20,0x3573000
+00fc271c  adrp x21,0x3331000
+00fc2720  ldrb w8,[x20, #0xc0c]
+00fc2724  ldr x21,[x21, #0xba8]
+00fc2728  mov x19,x0
+00fc272c  tbnz w8,#0x0,0x00fc2744
+00fc2730  adrp x0,0x3331000
+00fc2734  ldr x0,[x0, #0xba8]
+00fc2738  bl 0x00b0789c
+00fc273c  mov w8,#0x1
+00fc2740  strb w8,[x20, #0xc0c]
+00fc2744  ldr x1,[x21]
+00fc2748  mov x0,x19
+00fc274c  ldp x19,x30,[sp, #0x10]
+00fc2750  mov x2,xzr
+00fc2754  ldp x21,x20,[sp], #0x20
+00fc2758  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc275c_HistigmapanelNode__get_lbl_holep_dic_2.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holep_dic_2 @ 00fc275c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc275c  stp x21,x20,[sp, #-0x20]!
+00fc2760  stp x19,x30,[sp, #0x10]
+00fc2764  adrp x20,0x3573000
+00fc2768  adrp x21,0x337e000
+00fc276c  ldrb w8,[x20, #0xc0d]
+00fc2770  ldr x21,[x21, #0xce8]
+00fc2774  mov x19,x0
+00fc2778  tbnz w8,#0x0,0x00fc2790
+00fc277c  adrp x0,0x337e000
+00fc2780  ldr x0,[x0, #0xce8]
+00fc2784  bl 0x00b0789c
+00fc2788  mov w8,#0x1
+00fc278c  strb w8,[x20, #0xc0d]
+00fc2790  ldr x1,[x21]
+00fc2794  mov x0,x19
+00fc2798  ldp x19,x30,[sp, #0x10]
+00fc279c  mov x2,xzr
+00fc27a0  ldp x21,x20,[sp], #0x20
+00fc27a4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc27a8_HistigmapanelNode__get_spr_base_plus_dic_3.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_base_plus_dic_3 @ 00fc27a8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc27a8  stp x21,x20,[sp, #-0x20]!
+00fc27ac  stp x19,x30,[sp, #0x10]
+00fc27b0  adrp x20,0x3573000
+00fc27b4  adrp x21,0x3380000
+00fc27b8  ldrb w8,[x20, #0xc0e]
+00fc27bc  ldr x21,[x21, #0x8d0]
+00fc27c0  mov x19,x0
+00fc27c4  tbnz w8,#0x0,0x00fc27dc
+00fc27c8  adrp x0,0x3380000
+00fc27cc  ldr x0,[x0, #0x8d0]
+00fc27d0  bl 0x00b0789c
+00fc27d4  mov w8,#0x1
+00fc27d8  strb w8,[x20, #0xc0e]
+00fc27dc  ldr x1,[x21]
+00fc27e0  mov x0,x19
+00fc27e4  ldp x19,x30,[sp, #0x10]
+00fc27e8  mov x2,xzr
+00fc27ec  ldp x21,x20,[sp], #0x20
+00fc27f0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc27f4_HistigmapanelNode__get_lbl_holestig_dic_3.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holestig_dic_3 @ 00fc27f4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc27f4  stp x21,x20,[sp, #-0x20]!
+00fc27f8  stp x19,x30,[sp, #0x10]
+00fc27fc  adrp x20,0x3573000
+00fc2800  adrp x21,0x3377000
+00fc2804  ldrb w8,[x20, #0xc0f]
+00fc2808  ldr x21,[x21, #0x1b8]
+00fc280c  mov x19,x0
+00fc2810  tbnz w8,#0x0,0x00fc2828
+00fc2814  adrp x0,0x3377000
+00fc2818  ldr x0,[x0, #0x1b8]
+00fc281c  bl 0x00b0789c
+00fc2820  mov w8,#0x1
+00fc2824  strb w8,[x20, #0xc0f]
+00fc2828  ldr x1,[x21]
+00fc282c  mov x0,x19
+00fc2830  ldp x19,x30,[sp, #0x10]
+00fc2834  mov x2,xzr
+00fc2838  ldp x21,x20,[sp], #0x20
+00fc283c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2840_HistigmapanelNode__get_lbl_holep_dic_3.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holep_dic_3 @ 00fc2840
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2840  stp x21,x20,[sp, #-0x20]!
+00fc2844  stp x19,x30,[sp, #0x10]
+00fc2848  adrp x20,0x3573000
+00fc284c  adrp x21,0x3332000
+00fc2850  ldrb w8,[x20, #0xc10]
+00fc2854  ldr x21,[x21, #0x738]
+00fc2858  mov x19,x0
+00fc285c  tbnz w8,#0x0,0x00fc2874
+00fc2860  adrp x0,0x3332000
+00fc2864  ldr x0,[x0, #0x738]
+00fc2868  bl 0x00b0789c
+00fc286c  mov w8,#0x1
+00fc2870  strb w8,[x20, #0xc10]
+00fc2874  ldr x1,[x21]
+00fc2878  mov x0,x19
+00fc287c  ldp x19,x30,[sp, #0x10]
+00fc2880  mov x2,xzr
+00fc2884  ldp x21,x20,[sp], #0x20
+00fc2888  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc288c_HistigmapanelNode__get_spr_base_plus_dic_4.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_base_plus_dic_4 @ 00fc288c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc288c  stp x21,x20,[sp, #-0x20]!
+00fc2890  stp x19,x30,[sp, #0x10]
+00fc2894  adrp x20,0x3573000
+00fc2898  adrp x21,0x335a000
+00fc289c  ldrb w8,[x20, #0xc11]
+00fc28a0  ldr x21,[x21, #0x6d8]
+00fc28a4  mov x19,x0
+00fc28a8  tbnz w8,#0x0,0x00fc28c0
+00fc28ac  adrp x0,0x335a000
+00fc28b0  ldr x0,[x0, #0x6d8]
+00fc28b4  bl 0x00b0789c
+00fc28b8  mov w8,#0x1
+00fc28bc  strb w8,[x20, #0xc11]
+00fc28c0  ldr x1,[x21]
+00fc28c4  mov x0,x19
+00fc28c8  ldp x19,x30,[sp, #0x10]
+00fc28cc  mov x2,xzr
+00fc28d0  ldp x21,x20,[sp], #0x20
+00fc28d4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc28d8_HistigmapanelNode__get_lbl_holestig_dic_4.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holestig_dic_4 @ 00fc28d8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc28d8  stp x21,x20,[sp, #-0x20]!
+00fc28dc  stp x19,x30,[sp, #0x10]
+00fc28e0  adrp x20,0x3573000
+00fc28e4  adrp x21,0x3353000
+00fc28e8  ldrb w8,[x20, #0xc12]
+00fc28ec  ldr x21,[x21, #0x358]
+00fc28f0  mov x19,x0
+00fc28f4  tbnz w8,#0x0,0x00fc290c
+00fc28f8  adrp x0,0x3353000
+00fc28fc  ldr x0,[x0, #0x358]
+00fc2900  bl 0x00b0789c
+00fc2904  mov w8,#0x1
+00fc2908  strb w8,[x20, #0xc12]
+00fc290c  ldr x1,[x21]
+00fc2910  mov x0,x19
+00fc2914  ldp x19,x30,[sp, #0x10]
+00fc2918  mov x2,xzr
+00fc291c  ldp x21,x20,[sp], #0x20
+00fc2920  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2924_HistigmapanelNode__get_lbl_holep_dic_4.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holep_dic_4 @ 00fc2924
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2924  stp x21,x20,[sp, #-0x20]!
+00fc2928  stp x19,x30,[sp, #0x10]
+00fc292c  adrp x20,0x3573000
+00fc2930  adrp x21,0x3345000
+00fc2934  ldrb w8,[x20, #0xc13]
+00fc2938  ldr x21,[x21, #0xd68]
+00fc293c  mov x19,x0
+00fc2940  tbnz w8,#0x0,0x00fc2958
+00fc2944  adrp x0,0x3345000
+00fc2948  ldr x0,[x0, #0xd68]
+00fc294c  bl 0x00b0789c
+00fc2950  mov w8,#0x1
+00fc2954  strb w8,[x20, #0xc13]
+00fc2958  ldr x1,[x21]
+00fc295c  mov x0,x19
+00fc2960  ldp x19,x30,[sp, #0x10]
+00fc2964  mov x2,xzr
+00fc2968  ldp x21,x20,[sp], #0x20
+00fc296c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2970_HistigmapanelNode__get_spr_base_plus_dic_5.txt
+================================================================================
+Function: HistigmapanelNode$$get_spr_base_plus_dic_5 @ 00fc2970
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2970  stp x21,x20,[sp, #-0x20]!
+00fc2974  stp x19,x30,[sp, #0x10]
+00fc2978  adrp x20,0x3573000
+00fc297c  adrp x21,0x335e000
+00fc2980  ldrb w8,[x20, #0xc14]
+00fc2984  ldr x21,[x21, #0x668]
+00fc2988  mov x19,x0
+00fc298c  tbnz w8,#0x0,0x00fc29a4
+00fc2990  adrp x0,0x335e000
+00fc2994  ldr x0,[x0, #0x668]
+00fc2998  bl 0x00b0789c
+00fc299c  mov w8,#0x1
+00fc29a0  strb w8,[x20, #0xc14]
+00fc29a4  ldr x1,[x21]
+00fc29a8  mov x0,x19
+00fc29ac  ldp x19,x30,[sp, #0x10]
+00fc29b0  mov x2,xzr
+00fc29b4  ldp x21,x20,[sp], #0x20
+00fc29b8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc29bc_HistigmapanelNode__get_lbl_holestig_dic_5.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holestig_dic_5 @ 00fc29bc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc29bc  stp x21,x20,[sp, #-0x20]!
+00fc29c0  stp x19,x30,[sp, #0x10]
+00fc29c4  adrp x20,0x3573000
+00fc29c8  adrp x21,0x3315000
+00fc29cc  ldrb w8,[x20, #0xc15]
+00fc29d0  ldr x21,[x21, #0xe10]
+00fc29d4  mov x19,x0
+00fc29d8  tbnz w8,#0x0,0x00fc29f0
+00fc29dc  adrp x0,0x3315000
+00fc29e0  ldr x0,[x0, #0xe10]
+00fc29e4  bl 0x00b0789c
+00fc29e8  mov w8,#0x1
+00fc29ec  strb w8,[x20, #0xc15]
+00fc29f0  ldr x1,[x21]
+00fc29f4  mov x0,x19
+00fc29f8  ldp x19,x30,[sp, #0x10]
+00fc29fc  mov x2,xzr
+00fc2a00  ldp x21,x20,[sp], #0x20
+00fc2a04  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2a08_HistigmapanelNode__get_lbl_holep_dic_5.txt
+================================================================================
+Function: HistigmapanelNode$$get_lbl_holep_dic_5 @ 00fc2a08
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2a08  stp x21,x20,[sp, #-0x20]!
+00fc2a0c  stp x19,x30,[sp, #0x10]
+00fc2a10  adrp x20,0x3573000
+00fc2a14  adrp x21,0x3335000
+00fc2a18  ldrb w8,[x20, #0xc16]
+00fc2a1c  ldr x21,[x21, #0xca8]
+00fc2a20  mov x19,x0
+00fc2a24  tbnz w8,#0x0,0x00fc2a3c
+00fc2a28  adrp x0,0x3335000
+00fc2a2c  ldr x0,[x0, #0xca8]
+00fc2a30  bl 0x00b0789c
+00fc2a34  mov w8,#0x1
+00fc2a38  strb w8,[x20, #0xc16]
+00fc2a3c  ldr x1,[x21]
+00fc2a40  mov x0,x19
+00fc2a44  ldp x19,x30,[sp, #0x10]
+00fc2a48  mov x2,xzr
+00fc2a4c  ldp x21,x20,[sp], #0x20
+00fc2a50  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2a54_HistigmapanelNode__get_btn_uninstall.txt
+================================================================================
+Function: HistigmapanelNode$$get_btn_uninstall @ 00fc2a54
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2a54  stp x21,x20,[sp, #-0x20]!
+00fc2a58  stp x19,x30,[sp, #0x10]
+00fc2a5c  adrp x20,0x3573000
+00fc2a60  adrp x21,0x332f000
+00fc2a64  ldrb w8,[x20, #0xc17]
+00fc2a68  ldr x21,[x21]
+00fc2a6c  mov x19,x0
+00fc2a70  tbnz w8,#0x0,0x00fc2a88
+00fc2a74  adrp x0,0x332f000
+00fc2a78  ldr x0,[x0]
+00fc2a7c  bl 0x00b0789c
+00fc2a80  mov w8,#0x1
+00fc2a84  strb w8,[x20, #0xc17]
+00fc2a88  ldr x1,[x21]
+00fc2a8c  mov x0,x19
+00fc2a90  ldp x19,x30,[sp, #0x10]
+00fc2a94  mov x2,xzr
+00fc2a98  ldp x21,x20,[sp], #0x20
+00fc2a9c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2aa0_HistigmapanelNode__get_btn_suitstigma.txt
+================================================================================
+Function: HistigmapanelNode$$get_btn_suitstigma @ 00fc2aa0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2aa0  stp x21,x20,[sp, #-0x20]!
+00fc2aa4  stp x19,x30,[sp, #0x10]
+00fc2aa8  adrp x20,0x3573000
+00fc2aac  adrp x21,0x3378000
+00fc2ab0  ldrb w8,[x20, #0xc18]
+00fc2ab4  ldr x21,[x21, #0xb80]
+00fc2ab8  mov x19,x0
+00fc2abc  tbnz w8,#0x0,0x00fc2ad4
+00fc2ac0  adrp x0,0x3378000
+00fc2ac4  ldr x0,[x0, #0xb80]
+00fc2ac8  bl 0x00b0789c
+00fc2acc  mov w8,#0x1
+00fc2ad0  strb w8,[x20, #0xc18]
+00fc2ad4  ldr x1,[x21]
+00fc2ad8  mov x0,x19
+00fc2adc  ldp x19,x30,[sp, #0x10]
+00fc2ae0  mov x2,xzr
+00fc2ae4  ldp x21,x20,[sp], #0x20
+00fc2ae8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2aec_HistigmapanelNode__get_btn_caststigma.txt
+================================================================================
+Function: HistigmapanelNode$$get_btn_caststigma @ 00fc2aec
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2aec  stp x21,x20,[sp, #-0x20]!
+00fc2af0  stp x19,x30,[sp, #0x10]
+00fc2af4  adrp x20,0x3573000
+00fc2af8  adrp x21,0x334a000
+00fc2afc  ldrb w8,[x20, #0xc19]
+00fc2b00  ldr x21,[x21, #0xf88]
+00fc2b04  mov x19,x0
+00fc2b08  tbnz w8,#0x0,0x00fc2b20
+00fc2b0c  adrp x0,0x334a000
+00fc2b10  ldr x0,[x0, #0xf88]
+00fc2b14  bl 0x00b0789c
+00fc2b18  mov w8,#0x1
+00fc2b1c  strb w8,[x20, #0xc19]
+00fc2b20  ldr x1,[x21]
+00fc2b24  mov x0,x19
+00fc2b28  ldp x19,x30,[sp, #0x10]
+00fc2b2c  mov x2,xzr
+00fc2b30  ldp x21,x20,[sp], #0x20
+00fc2b34  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2b38_HistigmapanelNode__get_rightChange.txt
+================================================================================
+Function: HistigmapanelNode$$get_rightChange @ 00fc2b38
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2b38  stp x21,x20,[sp, #-0x20]!
+00fc2b3c  stp x19,x30,[sp, #0x10]
+00fc2b40  adrp x20,0x3573000
+00fc2b44  adrp x21,0x3333000
+00fc2b48  ldrb w8,[x20, #0xc1a]
+00fc2b4c  ldr x21,[x21, #0x468]
+00fc2b50  mov x19,x0
+00fc2b54  tbnz w8,#0x0,0x00fc2b6c
+00fc2b58  adrp x0,0x3333000
+00fc2b5c  ldr x0,[x0, #0x468]
+00fc2b60  bl 0x00b0789c
+00fc2b64  mov w8,#0x1
+00fc2b68  strb w8,[x20, #0xc1a]
+00fc2b6c  ldr x1,[x21]
+00fc2b70  mov x0,x19
+00fc2b74  ldp x19,x30,[sp, #0x10]
+00fc2b78  mov x2,xzr
+00fc2b7c  ldp x21,x20,[sp], #0x20
+00fc2b80  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2b84_HistigmapanelNode__get_btn_closeChange.txt
+================================================================================
+Function: HistigmapanelNode$$get_btn_closeChange @ 00fc2b84
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2b84  stp x21,x20,[sp, #-0x20]!
+00fc2b88  stp x19,x30,[sp, #0x10]
+00fc2b8c  adrp x20,0x3573000
+00fc2b90  adrp x21,0x3366000
+00fc2b94  ldrb w8,[x20, #0xc1b]
+00fc2b98  ldr x21,[x21, #0xec0]
+00fc2b9c  mov x19,x0
+00fc2ba0  tbnz w8,#0x0,0x00fc2bb8
+00fc2ba4  adrp x0,0x3366000
+00fc2ba8  ldr x0,[x0, #0xec0]
+00fc2bac  bl 0x00b0789c
+00fc2bb0  mov w8,#0x1
+00fc2bb4  strb w8,[x20, #0xc1b]
+00fc2bb8  ldr x1,[x21]
+00fc2bbc  mov x0,x19
+00fc2bc0  ldp x19,x30,[sp, #0x10]
+00fc2bc4  mov x2,xzr
+00fc2bc8  ldp x21,x20,[sp], #0x20
+00fc2bcc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2bd0_HistigmapanelNode__get_ScrollView.txt
+================================================================================
+Function: HistigmapanelNode$$get_ScrollView @ 00fc2bd0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2bd0  stp x21,x20,[sp, #-0x20]!
+00fc2bd4  stp x19,x30,[sp, #0x10]
+00fc2bd8  adrp x20,0x3573000
+00fc2bdc  adrp x21,0x3374000
+00fc2be0  ldrb w8,[x20, #0xc1c]
+00fc2be4  ldr x21,[x21, #0x8b0]
+00fc2be8  mov x19,x0
+00fc2bec  tbnz w8,#0x0,0x00fc2c04
+00fc2bf0  adrp x0,0x3374000
+00fc2bf4  ldr x0,[x0, #0x8b0]
+00fc2bf8  bl 0x00b0789c
+00fc2bfc  mov w8,#0x1
+00fc2c00  strb w8,[x20, #0xc1c]
+00fc2c04  ldr x1,[x21]
+00fc2c08  mov x0,x19
+00fc2c0c  ldp x19,x30,[sp, #0x10]
+00fc2c10  mov x2,xzr
+00fc2c14  ldp x21,x20,[sp], #0x20
+00fc2c18  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2c1c_HistigmapanelNode__get_changeStigmaGrid.txt
+================================================================================
+Function: HistigmapanelNode$$get_changeStigmaGrid @ 00fc2c1c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2c1c  stp x21,x20,[sp, #-0x20]!
+00fc2c20  stp x19,x30,[sp, #0x10]
+00fc2c24  adrp x20,0x3573000
+00fc2c28  adrp x21,0x3376000
+00fc2c2c  ldrb w8,[x20, #0xc1d]
+00fc2c30  ldr x21,[x21, #0xdb0]
+00fc2c34  mov x19,x0
+00fc2c38  tbnz w8,#0x0,0x00fc2c50
+00fc2c3c  adrp x0,0x3376000
+00fc2c40  ldr x0,[x0, #0xdb0]
+00fc2c44  bl 0x00b0789c
+00fc2c48  mov w8,#0x1
+00fc2c4c  strb w8,[x20, #0xc1d]
+00fc2c50  ldr x1,[x21]
+00fc2c54  mov x0,x19
+00fc2c58  ldp x19,x30,[sp, #0x10]
+00fc2c5c  mov x2,xzr
+00fc2c60  ldp x21,x20,[sp], #0x20
+00fc2c64  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2c68_HistigmapanelNode__get_btn_change.txt
+================================================================================
+Function: HistigmapanelNode$$get_btn_change @ 00fc2c68
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2c68  stp x21,x20,[sp, #-0x20]!
+00fc2c6c  stp x19,x30,[sp, #0x10]
+00fc2c70  adrp x20,0x3573000
+00fc2c74  adrp x21,0x3380000
+00fc2c78  ldrb w8,[x20, #0xc1e]
+00fc2c7c  ldr x21,[x21, #0x9f0]
+00fc2c80  mov x19,x0
+00fc2c84  tbnz w8,#0x0,0x00fc2c9c
+00fc2c88  adrp x0,0x3380000
+00fc2c8c  ldr x0,[x0, #0x9f0]
+00fc2c90  bl 0x00b0789c
+00fc2c94  mov w8,#0x1
+00fc2c98  strb w8,[x20, #0xc1e]
+00fc2c9c  ldr x1,[x21]
+00fc2ca0  mov x0,x19
+00fc2ca4  ldp x19,x30,[sp, #0x10]
+00fc2ca8  mov x2,xzr
+00fc2cac  ldp x21,x20,[sp], #0x20
+00fc2cb0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2cb4_HistigmapanelNode__get_btn_unload.txt
+================================================================================
+Function: HistigmapanelNode$$get_btn_unload @ 00fc2cb4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2cb4  stp x21,x20,[sp, #-0x20]!
+00fc2cb8  stp x19,x30,[sp, #0x10]
+00fc2cbc  adrp x20,0x3573000
+00fc2cc0  adrp x21,0x3310000
+00fc2cc4  ldrb w8,[x20, #0xc1f]
+00fc2cc8  ldr x21,[x21, #0x558]
+00fc2ccc  mov x19,x0
+00fc2cd0  tbnz w8,#0x0,0x00fc2ce8
+00fc2cd4  adrp x0,0x3310000
+00fc2cd8  ldr x0,[x0, #0x558]
+00fc2cdc  bl 0x00b0789c
+00fc2ce0  mov w8,#0x1
+00fc2ce4  strb w8,[x20, #0xc1f]
+00fc2ce8  ldr x1,[x21]
+00fc2cec  mov x0,x19
+00fc2cf0  ldp x19,x30,[sp, #0x10]
+00fc2cf4  mov x2,xzr
+00fc2cf8  ldp x21,x20,[sp], #0x20
+00fc2cfc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2d00_HistigmapanelNode__get_chooseTips.txt
+================================================================================
+Function: HistigmapanelNode$$get_chooseTips @ 00fc2d00
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2d00  stp x21,x20,[sp, #-0x20]!
+00fc2d04  stp x19,x30,[sp, #0x10]
+00fc2d08  adrp x20,0x3573000
+00fc2d0c  adrp x21,0x334b000
+00fc2d10  ldrb w8,[x20, #0xc20]
+00fc2d14  ldr x21,[x21, #0xa28]
+00fc2d18  mov x19,x0
+00fc2d1c  tbnz w8,#0x0,0x00fc2d34
+00fc2d20  adrp x0,0x334b000
+00fc2d24  ldr x0,[x0, #0xa28]
+00fc2d28  bl 0x00b0789c
+00fc2d2c  mov w8,#0x1
+00fc2d30  strb w8,[x20, #0xc20]
+00fc2d34  ldr x1,[x21]
+00fc2d38  mov x0,x19
+00fc2d3c  ldp x19,x30,[sp, #0x10]
+00fc2d40  mov x2,xzr
+00fc2d44  ldp x21,x20,[sp], #0x20
+00fc2d48  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2d4c_HistigmapanelNode__get_DownHeroPartParent.txt
+================================================================================
+Function: HistigmapanelNode$$get_DownHeroPartParent @ 00fc2d4c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2d4c  stp x21,x20,[sp, #-0x20]!
+00fc2d50  stp x19,x30,[sp, #0x10]
+00fc2d54  adrp x20,0x3573000
+00fc2d58  adrp x21,0x336f000
+00fc2d5c  ldrb w8,[x20, #0xc21]
+00fc2d60  ldr x21,[x21, #0xca0]
+00fc2d64  mov x19,x0
+00fc2d68  tbnz w8,#0x0,0x00fc2d80
+00fc2d6c  adrp x0,0x336f000
+00fc2d70  ldr x0,[x0, #0xca0]
+00fc2d74  bl 0x00b0789c
+00fc2d78  mov w8,#0x1
+00fc2d7c  strb w8,[x20, #0xc21]
+00fc2d80  ldr x1,[x21]
+00fc2d84  mov x0,x19
+00fc2d88  ldp x19,x30,[sp, #0x10]
+00fc2d8c  mov x2,xzr
+00fc2d90  ldp x21,x20,[sp], #0x20
+00fc2d94  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2d98_HistigmapanelNode__.ctor.txt
+================================================================================
+Function: HistigmapanelNode$$.ctor @ 00fc2d98
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fc2d98  mov x1,xzr
+00fc2d9c  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 00fc2da0_HitnumNode__get_obj_control.txt
+================================================================================
+Function: HitnumNode$$get_obj_control @ 00fc2da0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum.<GetHitNumPos>d__60$$MoveNext @ 00e7ba2c
+
+--- Listing ---
+00fc2da0  stp x21,x20,[sp, #-0x20]!
+00fc2da4  stp x19,x30,[sp, #0x10]
+00fc2da8  adrp x20,0x3573000
+00fc2dac  adrp x21,0x3339000
+00fc2db0  ldrb w8,[x20, #0xc22]
+00fc2db4  ldr x21,[x21, #0x408]
+00fc2db8  mov x19,x0
+00fc2dbc  tbnz w8,#0x0,0x00fc2dd4
+00fc2dc0  adrp x0,0x3339000
+00fc2dc4  ldr x0,[x0, #0x408]
+00fc2dc8  bl 0x00b0789c
+00fc2dcc  mov w8,#0x1
+00fc2dd0  strb w8,[x20, #0xc22]
+00fc2dd4  ldr x1,[x21]
+00fc2dd8  mov x0,x19
+00fc2ddc  ldp x19,x30,[sp, #0x10]
+00fc2de0  mov x2,xzr
+00fc2de4  ldp x21,x20,[sp], #0x20
+00fc2de8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2dec_HitnumNode__get_lbl_efflabel.txt
+================================================================================
+Function: HitnumNode$$get_lbl_efflabel @ 00fc2dec
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$Init @ 00e78580
+  <- BattleHitNum$$ShowHitNum @ 00e7944c
+
+--- Listing ---
+00fc2dec  stp x21,x20,[sp, #-0x20]!
+00fc2df0  stp x19,x30,[sp, #0x10]
+00fc2df4  adrp x20,0x3573000
+00fc2df8  adrp x21,0x337a000
+00fc2dfc  ldrb w8,[x20, #0xc23]
+00fc2e00  ldr x21,[x21, #0x6e0]
+00fc2e04  mov x19,x0
+00fc2e08  tbnz w8,#0x0,0x00fc2e20
+00fc2e0c  adrp x0,0x337a000
+00fc2e10  ldr x0,[x0, #0x6e0]
+00fc2e14  bl 0x00b0789c
+00fc2e18  mov w8,#0x1
+00fc2e1c  strb w8,[x20, #0xc23]
+00fc2e20  ldr x1,[x21]
+00fc2e24  mov x0,x19
+00fc2e28  ldp x19,x30,[sp, #0x10]
+00fc2e2c  mov x2,xzr
+00fc2e30  ldp x21,x20,[sp], #0x20
+00fc2e34  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2e38_HitnumNode__get_lbl_buff.txt
+================================================================================
+Function: HitnumNode$$get_lbl_buff @ 00fc2e38
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$Init @ 00e78580
+  <- BattleHitNum$$ShowHitNum @ 00e7944c
+
+--- Listing ---
+00fc2e38  stp x21,x20,[sp, #-0x20]!
+00fc2e3c  stp x19,x30,[sp, #0x10]
+00fc2e40  adrp x20,0x3573000
+00fc2e44  adrp x21,0x3353000
+00fc2e48  ldrb w8,[x20, #0xc24]
+00fc2e4c  ldr x21,[x21, #0xab0]
+00fc2e50  mov x19,x0
+00fc2e54  tbnz w8,#0x0,0x00fc2e6c
+00fc2e58  adrp x0,0x3353000
+00fc2e5c  ldr x0,[x0, #0xab0]
+00fc2e60  bl 0x00b0789c
+00fc2e64  mov w8,#0x1
+00fc2e68  strb w8,[x20, #0xc24]
+00fc2e6c  ldr x1,[x21]
+00fc2e70  mov x0,x19
+00fc2e74  ldp x19,x30,[sp, #0x10]
+00fc2e78  mov x2,xzr
+00fc2e7c  ldp x21,x20,[sp], #0x20
+00fc2e80  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2e84_HitnumNode__get_spr_buff.txt
+================================================================================
+Function: HitnumNode$$get_spr_buff @ 00fc2e84
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$ShowHitNum @ 00e7944c
+
+--- Listing ---
+00fc2e84  stp x21,x20,[sp, #-0x20]!
+00fc2e88  stp x19,x30,[sp, #0x10]
+00fc2e8c  adrp x20,0x3573000
+00fc2e90  adrp x21,0x3356000
+00fc2e94  ldrb w8,[x20, #0xc25]
+00fc2e98  ldr x21,[x21, #0x538]
+00fc2e9c  mov x19,x0
+00fc2ea0  tbnz w8,#0x0,0x00fc2eb8
+00fc2ea4  adrp x0,0x3356000
+00fc2ea8  ldr x0,[x0, #0x538]
+00fc2eac  bl 0x00b0789c
+00fc2eb0  mov w8,#0x1
+00fc2eb4  strb w8,[x20, #0xc25]
+00fc2eb8  ldr x1,[x21]
+00fc2ebc  mov x0,x19
+00fc2ec0  ldp x19,x30,[sp, #0x10]
+00fc2ec4  mov x2,xzr
+00fc2ec8  ldp x21,x20,[sp], #0x20
+00fc2ecc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2ed0_HitnumNode__get_lbl_debuff.txt
+================================================================================
+Function: HitnumNode$$get_lbl_debuff @ 00fc2ed0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$Init @ 00e78580
+  <- BattleHitNum$$ShowHitNum @ 00e7944c
+
+--- Listing ---
+00fc2ed0  stp x21,x20,[sp, #-0x20]!
+00fc2ed4  stp x19,x30,[sp, #0x10]
+00fc2ed8  adrp x20,0x3573000
+00fc2edc  adrp x21,0x3375000
+00fc2ee0  ldrb w8,[x20, #0xc26]
+00fc2ee4  ldr x21,[x21, #0x2b8]
+00fc2ee8  mov x19,x0
+00fc2eec  tbnz w8,#0x0,0x00fc2f04
+00fc2ef0  adrp x0,0x3375000
+00fc2ef4  ldr x0,[x0, #0x2b8]
+00fc2ef8  bl 0x00b0789c
+00fc2efc  mov w8,#0x1
+00fc2f00  strb w8,[x20, #0xc26]
+00fc2f04  ldr x1,[x21]
+00fc2f08  mov x0,x19
+00fc2f0c  ldp x19,x30,[sp, #0x10]
+00fc2f10  mov x2,xzr
+00fc2f14  ldp x21,x20,[sp], #0x20
+00fc2f18  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2f1c_HitnumNode__get_spr_debuff.txt
+================================================================================
+Function: HitnumNode$$get_spr_debuff @ 00fc2f1c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$ShowHitNum @ 00e7944c
+
+--- Listing ---
+00fc2f1c  stp x21,x20,[sp, #-0x20]!
+00fc2f20  stp x19,x30,[sp, #0x10]
+00fc2f24  adrp x20,0x3573000
+00fc2f28  adrp x21,0x3384000
+00fc2f2c  ldrb w8,[x20, #0xc27]
+00fc2f30  ldr x21,[x21, #0x150]
+00fc2f34  mov x19,x0
+00fc2f38  tbnz w8,#0x0,0x00fc2f50
+00fc2f3c  adrp x0,0x3384000
+00fc2f40  ldr x0,[x0, #0x150]
+00fc2f44  bl 0x00b0789c
+00fc2f48  mov w8,#0x1
+00fc2f4c  strb w8,[x20, #0xc27]
+00fc2f50  ldr x1,[x21]
+00fc2f54  mov x0,x19
+00fc2f58  ldp x19,x30,[sp, #0x10]
+00fc2f5c  mov x2,xzr
+00fc2f60  ldp x21,x20,[sp], #0x20
+00fc2f64  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2f68_HitnumNode__get_obj_value.txt
+================================================================================
+Function: HitnumNode$$get_obj_value @ 00fc2f68
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$Init @ 00e78580
+  <- BattleHitNum$$FixValue2Pos @ 00e7ad28
+  <- BattleHitNum$$UpdateHitFloat @ 00e789a4
+  <- BattleHitNum$$ShowHitNum @ 00e7944c
+  <- BattleHitNum$$FadeIn @ 00e79ec8
+  <- BattleHitNum.<WaitFixPos>d__57$$MoveNext @ 00e7b620
+
+--- Listing ---
+00fc2f68  stp x21,x20,[sp, #-0x20]!
+00fc2f6c  stp x19,x30,[sp, #0x10]
+00fc2f70  adrp x20,0x3573000
+00fc2f74  adrp x21,0x3337000
+00fc2f78  ldrb w8,[x20, #0xc28]
+00fc2f7c  ldr x21,[x21, #0x738]
+00fc2f80  mov x19,x0
+00fc2f84  tbnz w8,#0x0,0x00fc2f9c
+00fc2f88  adrp x0,0x3337000
+00fc2f8c  ldr x0,[x0, #0x738]
+00fc2f90  bl 0x00b0789c
+00fc2f94  mov w8,#0x1
+00fc2f98  strb w8,[x20, #0xc28]
+00fc2f9c  ldr x1,[x21]
+00fc2fa0  mov x0,x19
+00fc2fa4  ldp x19,x30,[sp, #0x10]
+00fc2fa8  mov x2,xzr
+00fc2fac  ldp x21,x20,[sp], #0x20
+00fc2fb0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc2fb4_HitnumNode__get_valueGrid.txt
+================================================================================
+Function: HitnumNode$$get_valueGrid @ 00fc2fb4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$UpdateHitFloat @ 00e789a4
+  <- BattleHitNum$$FadeOut @ 00e7ae50
+  <- BattleHitNum$$FadeIn @ 00e79ec8
+
+--- Listing ---
+00fc2fb4  stp x21,x20,[sp, #-0x20]!
+00fc2fb8  stp x19,x30,[sp, #0x10]
+00fc2fbc  adrp x20,0x3573000
+00fc2fc0  adrp x21,0x3333000
+00fc2fc4  ldrb w8,[x20, #0xc29]
+00fc2fc8  ldr x21,[x21, #0x9d0]
+00fc2fcc  mov x19,x0
+00fc2fd0  tbnz w8,#0x0,0x00fc2fe8
+00fc2fd4  adrp x0,0x3333000
+00fc2fd8  ldr x0,[x0, #0x9d0]
+00fc2fdc  bl 0x00b0789c
+00fc2fe0  mov w8,#0x1
+00fc2fe4  strb w8,[x20, #0xc29]
+00fc2fe8  ldr x1,[x21]
+00fc2fec  mov x0,x19
+00fc2ff0  ldp x19,x30,[sp, #0x10]
+00fc2ff4  mov x2,xzr
+00fc2ff8  ldp x21,x20,[sp], #0x20
+00fc2ffc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3000_HitnumNode__get_spr_value0.txt
+================================================================================
+Function: HitnumNode$$get_spr_value0 @ 00fc3000
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc3000  stp x21,x20,[sp, #-0x20]!
+00fc3004  stp x19,x30,[sp, #0x10]
+00fc3008  adrp x20,0x3573000
+00fc300c  adrp x21,0x332b000
+00fc3010  ldrb w8,[x20, #0xc2a]
+00fc3014  ldr x21,[x21, #0x340]
+00fc3018  mov x19,x0
+00fc301c  tbnz w8,#0x0,0x00fc3034
+00fc3020  adrp x0,0x332b000
+00fc3024  ldr x0,[x0, #0x340]
+00fc3028  bl 0x00b0789c
+00fc302c  mov w8,#0x1
+00fc3030  strb w8,[x20, #0xc2a]
+00fc3034  ldr x1,[x21]
+00fc3038  mov x0,x19
+00fc303c  ldp x19,x30,[sp, #0x10]
+00fc3040  mov x2,xzr
+00fc3044  ldp x21,x20,[sp], #0x20
+00fc3048  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc304c_HitnumNode__get_spr_value1.txt
+================================================================================
+Function: HitnumNode$$get_spr_value1 @ 00fc304c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc304c  stp x21,x20,[sp, #-0x20]!
+00fc3050  stp x19,x30,[sp, #0x10]
+00fc3054  adrp x20,0x3573000
+00fc3058  adrp x21,0x330d000
+00fc305c  ldrb w8,[x20, #0xc2b]
+00fc3060  ldr x21,[x21, #0xe98]
+00fc3064  mov x19,x0
+00fc3068  tbnz w8,#0x0,0x00fc3080
+00fc306c  adrp x0,0x330d000
+00fc3070  ldr x0,[x0, #0xe98]
+00fc3074  bl 0x00b0789c
+00fc3078  mov w8,#0x1
+00fc307c  strb w8,[x20, #0xc2b]
+00fc3080  ldr x1,[x21]
+00fc3084  mov x0,x19
+00fc3088  ldp x19,x30,[sp, #0x10]
+00fc308c  mov x2,xzr
+00fc3090  ldp x21,x20,[sp], #0x20
+00fc3094  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3098_HitnumNode__get_spr_value2.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2 @ 00fc3098
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc3098  stp x21,x20,[sp, #-0x20]!
+00fc309c  stp x19,x30,[sp, #0x10]
+00fc30a0  adrp x20,0x3573000
+00fc30a4  adrp x21,0x3337000
+00fc30a8  ldrb w8,[x20, #0xc2c]
+00fc30ac  ldr x21,[x21, #0x6c0]
+00fc30b0  mov x19,x0
+00fc30b4  tbnz w8,#0x0,0x00fc30cc
+00fc30b8  adrp x0,0x3337000
+00fc30bc  ldr x0,[x0, #0x6c0]
+00fc30c0  bl 0x00b0789c
+00fc30c4  mov w8,#0x1
+00fc30c8  strb w8,[x20, #0xc2c]
+00fc30cc  ldr x1,[x21]
+00fc30d0  mov x0,x19
+00fc30d4  ldp x19,x30,[sp, #0x10]
+00fc30d8  mov x2,xzr
+00fc30dc  ldp x21,x20,[sp], #0x20
+00fc30e0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc30e4_HitnumNode__get_spr_value3.txt
+================================================================================
+Function: HitnumNode$$get_spr_value3 @ 00fc30e4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc30e4  stp x21,x20,[sp, #-0x20]!
+00fc30e8  stp x19,x30,[sp, #0x10]
+00fc30ec  adrp x20,0x3573000
+00fc30f0  adrp x21,0x3372000
+00fc30f4  ldrb w8,[x20, #0xc2d]
+00fc30f8  ldr x21,[x21, #0x760]
+00fc30fc  mov x19,x0
+00fc3100  tbnz w8,#0x0,0x00fc3118
+00fc3104  adrp x0,0x3372000
+00fc3108  ldr x0,[x0, #0x760]
+00fc310c  bl 0x00b0789c
+00fc3110  mov w8,#0x1
+00fc3114  strb w8,[x20, #0xc2d]
+00fc3118  ldr x1,[x21]
+00fc311c  mov x0,x19
+00fc3120  ldp x19,x30,[sp, #0x10]
+00fc3124  mov x2,xzr
+00fc3128  ldp x21,x20,[sp], #0x20
+00fc312c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3130_HitnumNode__get_spr_value4.txt
+================================================================================
+Function: HitnumNode$$get_spr_value4 @ 00fc3130
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc3130  stp x21,x20,[sp, #-0x20]!
+00fc3134  stp x19,x30,[sp, #0x10]
+00fc3138  adrp x20,0x3573000
+00fc313c  adrp x21,0x3328000
+00fc3140  ldrb w8,[x20, #0xc2e]
+00fc3144  ldr x21,[x21, #0x8f8]
+00fc3148  mov x19,x0
+00fc314c  tbnz w8,#0x0,0x00fc3164
+00fc3150  adrp x0,0x3328000
+00fc3154  ldr x0,[x0, #0x8f8]
+00fc3158  bl 0x00b0789c
+00fc315c  mov w8,#0x1
+00fc3160  strb w8,[x20, #0xc2e]
+00fc3164  ldr x1,[x21]
+00fc3168  mov x0,x19
+00fc316c  ldp x19,x30,[sp, #0x10]
+00fc3170  mov x2,xzr
+00fc3174  ldp x21,x20,[sp], #0x20
+00fc3178  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc317c_HitnumNode__get_spr_value5.txt
+================================================================================
+Function: HitnumNode$$get_spr_value5 @ 00fc317c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc317c  stp x21,x20,[sp, #-0x20]!
+00fc3180  stp x19,x30,[sp, #0x10]
+00fc3184  adrp x20,0x3573000
+00fc3188  adrp x21,0x3381000
+00fc318c  ldrb w8,[x20, #0xc2f]
+00fc3190  ldr x21,[x21, #0x950]
+00fc3194  mov x19,x0
+00fc3198  tbnz w8,#0x0,0x00fc31b0
+00fc319c  adrp x0,0x3381000
+00fc31a0  ldr x0,[x0, #0x950]
+00fc31a4  bl 0x00b0789c
+00fc31a8  mov w8,#0x1
+00fc31ac  strb w8,[x20, #0xc2f]
+00fc31b0  ldr x1,[x21]
+00fc31b4  mov x0,x19
+00fc31b8  ldp x19,x30,[sp, #0x10]
+00fc31bc  mov x2,xzr
+00fc31c0  ldp x21,x20,[sp], #0x20
+00fc31c4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc31c8_HitnumNode__get_spr_value6.txt
+================================================================================
+Function: HitnumNode$$get_spr_value6 @ 00fc31c8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc31c8  stp x21,x20,[sp, #-0x20]!
+00fc31cc  stp x19,x30,[sp, #0x10]
+00fc31d0  adrp x20,0x3573000
+00fc31d4  adrp x21,0x3370000
+00fc31d8  ldrb w8,[x20, #0xc30]
+00fc31dc  ldr x21,[x21, #0x9e0]
+00fc31e0  mov x19,x0
+00fc31e4  tbnz w8,#0x0,0x00fc31fc
+00fc31e8  adrp x0,0x3370000
+00fc31ec  ldr x0,[x0, #0x9e0]
+00fc31f0  bl 0x00b0789c
+00fc31f4  mov w8,#0x1
+00fc31f8  strb w8,[x20, #0xc30]
+00fc31fc  ldr x1,[x21]
+00fc3200  mov x0,x19
+00fc3204  ldp x19,x30,[sp, #0x10]
+00fc3208  mov x2,xzr
+00fc320c  ldp x21,x20,[sp], #0x20
+00fc3210  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3214_HitnumNode__get_spr_value7.txt
+================================================================================
+Function: HitnumNode$$get_spr_value7 @ 00fc3214
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc3214  stp x21,x20,[sp, #-0x20]!
+00fc3218  stp x19,x30,[sp, #0x10]
+00fc321c  adrp x20,0x3573000
+00fc3220  adrp x21,0x3329000
+00fc3224  ldrb w8,[x20, #0xc31]
+00fc3228  ldr x21,[x21, #0x810]
+00fc322c  mov x19,x0
+00fc3230  tbnz w8,#0x0,0x00fc3248
+00fc3234  adrp x0,0x3329000
+00fc3238  ldr x0,[x0, #0x810]
+00fc323c  bl 0x00b0789c
+00fc3240  mov w8,#0x1
+00fc3244  strb w8,[x20, #0xc31]
+00fc3248  ldr x1,[x21]
+00fc324c  mov x0,x19
+00fc3250  ldp x19,x30,[sp, #0x10]
+00fc3254  mov x2,xzr
+00fc3258  ldp x21,x20,[sp], #0x20
+00fc325c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3260_HitnumNode__get_spr_value8.txt
+================================================================================
+Function: HitnumNode$$get_spr_value8 @ 00fc3260
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc3260  stp x21,x20,[sp, #-0x20]!
+00fc3264  stp x19,x30,[sp, #0x10]
+00fc3268  adrp x20,0x3573000
+00fc326c  adrp x21,0x3322000
+00fc3270  ldrb w8,[x20, #0xc32]
+00fc3274  ldr x21,[x21, #0x4a8]
+00fc3278  mov x19,x0
+00fc327c  tbnz w8,#0x0,0x00fc3294
+00fc3280  adrp x0,0x3322000
+00fc3284  ldr x0,[x0, #0x4a8]
+00fc3288  bl 0x00b0789c
+00fc328c  mov w8,#0x1
+00fc3290  strb w8,[x20, #0xc32]
+00fc3294  ldr x1,[x21]
+00fc3298  mov x0,x19
+00fc329c  ldp x19,x30,[sp, #0x10]
+00fc32a0  mov x2,xzr
+00fc32a4  ldp x21,x20,[sp], #0x20
+00fc32a8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc32ac_HitnumNode__get_spr_value9.txt
+================================================================================
+Function: HitnumNode$$get_spr_value9 @ 00fc32ac
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc32ac  stp x21,x20,[sp, #-0x20]!
+00fc32b0  stp x19,x30,[sp, #0x10]
+00fc32b4  adrp x20,0x3573000
+00fc32b8  adrp x21,0x3363000
+00fc32bc  ldrb w8,[x20, #0xc33]
+00fc32c0  ldr x21,[x21, #0xb20]
+00fc32c4  mov x19,x0
+00fc32c8  tbnz w8,#0x0,0x00fc32e0
+00fc32cc  adrp x0,0x3363000
+00fc32d0  ldr x0,[x0, #0xb20]
+00fc32d4  bl 0x00b0789c
+00fc32d8  mov w8,#0x1
+00fc32dc  strb w8,[x20, #0xc33]
+00fc32e0  ldr x1,[x21]
+00fc32e4  mov x0,x19
+00fc32e8  ldp x19,x30,[sp, #0x10]
+00fc32ec  mov x2,xzr
+00fc32f0  ldp x21,x20,[sp], #0x20
+00fc32f4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc32f8_HitnumNode__get_spr_valueType.txt
+================================================================================
+Function: HitnumNode$$get_spr_valueType @ 00fc32f8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$UpdateHitFloat @ 00e789a4
+  <- BattleHitNum$$FadeOut @ 00e7ae50
+  <- BattleHitNum$$FadeIn @ 00e79ec8
+
+--- Listing ---
+00fc32f8  stp x21,x20,[sp, #-0x20]!
+00fc32fc  stp x19,x30,[sp, #0x10]
+00fc3300  adrp x20,0x3573000
+00fc3304  adrp x21,0x3313000
+00fc3308  ldrb w8,[x20, #0xc34]
+00fc330c  ldr x21,[x21, #0x258]
+00fc3310  mov x19,x0
+00fc3314  tbnz w8,#0x0,0x00fc332c
+00fc3318  adrp x0,0x3313000
+00fc331c  ldr x0,[x0, #0x258]
+00fc3320  bl 0x00b0789c
+00fc3324  mov w8,#0x1
+00fc3328  strb w8,[x20, #0xc34]
+00fc332c  ldr x1,[x21]
+00fc3330  mov x0,x19
+00fc3334  ldp x19,x30,[sp, #0x10]
+00fc3338  mov x2,xzr
+00fc333c  ldp x21,x20,[sp], #0x20
+00fc3340  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3344_HitnumNode__get_spr_crit.txt
+================================================================================
+Function: HitnumNode$$get_spr_crit @ 00fc3344
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$UpdateHitFloat @ 00e789a4
+
+--- Listing ---
+00fc3344  stp x21,x20,[sp, #-0x20]!
+00fc3348  stp x19,x30,[sp, #0x10]
+00fc334c  adrp x20,0x3573000
+00fc3350  adrp x21,0x337c000
+00fc3354  ldrb w8,[x20, #0xc35]
+00fc3358  ldr x21,[x21, #0x630]
+00fc335c  mov x19,x0
+00fc3360  tbnz w8,#0x0,0x00fc3378
+00fc3364  adrp x0,0x337c000
+00fc3368  ldr x0,[x0, #0x630]
+00fc336c  bl 0x00b0789c
+00fc3370  mov w8,#0x1
+00fc3374  strb w8,[x20, #0xc35]
+00fc3378  ldr x1,[x21]
+00fc337c  mov x0,x19
+00fc3380  ldp x19,x30,[sp, #0x10]
+00fc3384  mov x2,xzr
+00fc3388  ldp x21,x20,[sp], #0x20
+00fc338c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3390_HitnumNode__get_obj_value2.txt
+================================================================================
+Function: HitnumNode$$get_obj_value2 @ 00fc3390
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$Init @ 00e78580
+  <- BattleHitNum$$FadeIn2 @ 00e7a878
+  <- BattleHitNum$$FixValue2Pos @ 00e7ad28
+  <- BattleHitNum$$UpdateAbsorbShow @ 00e7a378
+  <- BattleHitNum$$UpdateHitFloat @ 00e789a4
+  <- BattleHitNum$$ShowHitNum @ 00e7944c
+  <- BattleHitNum.<WaitFixPos>d__57$$MoveNext @ 00e7b620
+
+--- Listing ---
+00fc3390  stp x21,x20,[sp, #-0x20]!
+00fc3394  stp x19,x30,[sp, #0x10]
+00fc3398  adrp x20,0x3573000
+00fc339c  adrp x21,0x3339000
+00fc33a0  ldrb w8,[x20, #0xc36]
+00fc33a4  ldr x21,[x21, #0xd78]
+00fc33a8  mov x19,x0
+00fc33ac  tbnz w8,#0x0,0x00fc33c4
+00fc33b0  adrp x0,0x3339000
+00fc33b4  ldr x0,[x0, #0xd78]
+00fc33b8  bl 0x00b0789c
+00fc33bc  mov w8,#0x1
+00fc33c0  strb w8,[x20, #0xc36]
+00fc33c4  ldr x1,[x21]
+00fc33c8  mov x0,x19
+00fc33cc  ldp x19,x30,[sp, #0x10]
+00fc33d0  mov x2,xzr
+00fc33d4  ldp x21,x20,[sp], #0x20
+00fc33d8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc33dc_HitnumNode__get_valueGrid2.txt
+================================================================================
+Function: HitnumNode$$get_valueGrid2 @ 00fc33dc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$FadeIn2 @ 00e7a878
+  <- BattleHitNum$$UpdateAbsorbShow @ 00e7a378
+  <- BattleHitNum$$FadeOut @ 00e7ae50
+
+--- Listing ---
+00fc33dc  stp x21,x20,[sp, #-0x20]!
+00fc33e0  stp x19,x30,[sp, #0x10]
+00fc33e4  adrp x20,0x3573000
+00fc33e8  adrp x21,0x3382000
+00fc33ec  ldrb w8,[x20, #0xc37]
+00fc33f0  ldr x21,[x21, #0x8b0]
+00fc33f4  mov x19,x0
+00fc33f8  tbnz w8,#0x0,0x00fc3410
+00fc33fc  adrp x0,0x3382000
+00fc3400  ldr x0,[x0, #0x8b0]
+00fc3404  bl 0x00b0789c
+00fc3408  mov w8,#0x1
+00fc340c  strb w8,[x20, #0xc37]
+00fc3410  ldr x1,[x21]
+00fc3414  mov x0,x19
+00fc3418  ldp x19,x30,[sp, #0x10]
+00fc341c  mov x2,xzr
+00fc3420  ldp x21,x20,[sp], #0x20
+00fc3424  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3428_HitnumNode__get_spr_value2_0.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_0 @ 00fc3428
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc3428  stp x21,x20,[sp, #-0x20]!
+00fc342c  stp x19,x30,[sp, #0x10]
+00fc3430  adrp x20,0x3573000
+00fc3434  adrp x21,0x3371000
+00fc3438  ldrb w8,[x20, #0xc38]
+00fc343c  ldr x21,[x21, #0x88]
+00fc3440  mov x19,x0
+00fc3444  tbnz w8,#0x0,0x00fc345c
+00fc3448  adrp x0,0x3371000
+00fc344c  ldr x0,[x0, #0x88]
+00fc3450  bl 0x00b0789c
+00fc3454  mov w8,#0x1
+00fc3458  strb w8,[x20, #0xc38]
+00fc345c  ldr x1,[x21]
+00fc3460  mov x0,x19
+00fc3464  ldp x19,x30,[sp, #0x10]
+00fc3468  mov x2,xzr
+00fc346c  ldp x21,x20,[sp], #0x20
+00fc3470  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3474_HitnumNode__get_spr_value2_1.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_1 @ 00fc3474
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc3474  stp x21,x20,[sp, #-0x20]!
+00fc3478  stp x19,x30,[sp, #0x10]
+00fc347c  adrp x20,0x3573000
+00fc3480  adrp x21,0x337b000
+00fc3484  ldrb w8,[x20, #0xc39]
+00fc3488  ldr x21,[x21, #0x7c8]
+00fc348c  mov x19,x0
+00fc3490  tbnz w8,#0x0,0x00fc34a8
+00fc3494  adrp x0,0x337b000
+00fc3498  ldr x0,[x0, #0x7c8]
+00fc349c  bl 0x00b0789c
+00fc34a0  mov w8,#0x1
+00fc34a4  strb w8,[x20, #0xc39]
+00fc34a8  ldr x1,[x21]
+00fc34ac  mov x0,x19
+00fc34b0  ldp x19,x30,[sp, #0x10]
+00fc34b4  mov x2,xzr
+00fc34b8  ldp x21,x20,[sp], #0x20
+00fc34bc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc34c0_HitnumNode__get_spr_value2_2.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_2 @ 00fc34c0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc34c0  stp x21,x20,[sp, #-0x20]!
+00fc34c4  stp x19,x30,[sp, #0x10]
+00fc34c8  adrp x20,0x3573000
+00fc34cc  adrp x21,0x332e000
+00fc34d0  ldrb w8,[x20, #0xc3a]
+00fc34d4  ldr x21,[x21, #0xce8]
+00fc34d8  mov x19,x0
+00fc34dc  tbnz w8,#0x0,0x00fc34f4
+00fc34e0  adrp x0,0x332e000
+00fc34e4  ldr x0,[x0, #0xce8]
+00fc34e8  bl 0x00b0789c
+00fc34ec  mov w8,#0x1
+00fc34f0  strb w8,[x20, #0xc3a]
+00fc34f4  ldr x1,[x21]
+00fc34f8  mov x0,x19
+00fc34fc  ldp x19,x30,[sp, #0x10]
+00fc3500  mov x2,xzr
+00fc3504  ldp x21,x20,[sp], #0x20
+00fc3508  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc350c_HitnumNode__get_spr_value2_3.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_3 @ 00fc350c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc350c  stp x21,x20,[sp, #-0x20]!
+00fc3510  stp x19,x30,[sp, #0x10]
+00fc3514  adrp x20,0x3573000
+00fc3518  adrp x21,0x334c000
+00fc351c  ldrb w8,[x20, #0xc3b]
+00fc3520  ldr x21,[x21, #0x908]
+00fc3524  mov x19,x0
+00fc3528  tbnz w8,#0x0,0x00fc3540
+00fc352c  adrp x0,0x334c000
+00fc3530  ldr x0,[x0, #0x908]
+00fc3534  bl 0x00b0789c
+00fc3538  mov w8,#0x1
+00fc353c  strb w8,[x20, #0xc3b]
+00fc3540  ldr x1,[x21]
+00fc3544  mov x0,x19
+00fc3548  ldp x19,x30,[sp, #0x10]
+00fc354c  mov x2,xzr
+00fc3550  ldp x21,x20,[sp], #0x20
+00fc3554  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3558_HitnumNode__get_spr_value2_4.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_4 @ 00fc3558
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc3558  stp x21,x20,[sp, #-0x20]!
+00fc355c  stp x19,x30,[sp, #0x10]
+00fc3560  adrp x20,0x3573000
+00fc3564  adrp x21,0x3320000
+00fc3568  ldrb w8,[x20, #0xc3c]
+00fc356c  ldr x21,[x21, #0xb40]
+00fc3570  mov x19,x0
+00fc3574  tbnz w8,#0x0,0x00fc358c
+00fc3578  adrp x0,0x3320000
+00fc357c  ldr x0,[x0, #0xb40]
+00fc3580  bl 0x00b0789c
+00fc3584  mov w8,#0x1
+00fc3588  strb w8,[x20, #0xc3c]
+00fc358c  ldr x1,[x21]
+00fc3590  mov x0,x19
+00fc3594  ldp x19,x30,[sp, #0x10]
+00fc3598  mov x2,xzr
+00fc359c  ldp x21,x20,[sp], #0x20
+00fc35a0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc35a4_HitnumNode__get_spr_value2_5.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_5 @ 00fc35a4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc35a4  stp x21,x20,[sp, #-0x20]!
+00fc35a8  stp x19,x30,[sp, #0x10]
+00fc35ac  adrp x20,0x3573000
+00fc35b0  adrp x21,0x3383000
+00fc35b4  ldrb w8,[x20, #0xc3d]
+00fc35b8  ldr x21,[x21, #0xcf8]
+00fc35bc  mov x19,x0
+00fc35c0  tbnz w8,#0x0,0x00fc35d8
+00fc35c4  adrp x0,0x3383000
+00fc35c8  ldr x0,[x0, #0xcf8]
+00fc35cc  bl 0x00b0789c
+00fc35d0  mov w8,#0x1
+00fc35d4  strb w8,[x20, #0xc3d]
+00fc35d8  ldr x1,[x21]
+00fc35dc  mov x0,x19
+00fc35e0  ldp x19,x30,[sp, #0x10]
+00fc35e4  mov x2,xzr
+00fc35e8  ldp x21,x20,[sp], #0x20
+00fc35ec  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc35f0_HitnumNode__get_spr_value2_6.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_6 @ 00fc35f0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc35f0  stp x21,x20,[sp, #-0x20]!
+00fc35f4  stp x19,x30,[sp, #0x10]
+00fc35f8  adrp x20,0x3573000
+00fc35fc  adrp x21,0x3330000
+00fc3600  ldrb w8,[x20, #0xc3e]
+00fc3604  ldr x21,[x21, #0xc58]
+00fc3608  mov x19,x0
+00fc360c  tbnz w8,#0x0,0x00fc3624
+00fc3610  adrp x0,0x3330000
+00fc3614  ldr x0,[x0, #0xc58]
+00fc3618  bl 0x00b0789c
+00fc361c  mov w8,#0x1
+00fc3620  strb w8,[x20, #0xc3e]
+00fc3624  ldr x1,[x21]
+00fc3628  mov x0,x19
+00fc362c  ldp x19,x30,[sp, #0x10]
+00fc3630  mov x2,xzr
+00fc3634  ldp x21,x20,[sp], #0x20
+00fc3638  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc363c_HitnumNode__get_spr_value2_7.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_7 @ 00fc363c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc363c  stp x21,x20,[sp, #-0x20]!
+00fc3640  stp x19,x30,[sp, #0x10]
+00fc3644  adrp x20,0x3573000
+00fc3648  adrp x21,0x335b000
+00fc364c  ldrb w8,[x20, #0xc3f]
+00fc3650  ldr x21,[x21, #0xce8]
+00fc3654  mov x19,x0
+00fc3658  tbnz w8,#0x0,0x00fc3670
+00fc365c  adrp x0,0x335b000
+00fc3660  ldr x0,[x0, #0xce8]
+00fc3664  bl 0x00b0789c
+00fc3668  mov w8,#0x1
+00fc366c  strb w8,[x20, #0xc3f]
+00fc3670  ldr x1,[x21]
+00fc3674  mov x0,x19
+00fc3678  ldp x19,x30,[sp, #0x10]
+00fc367c  mov x2,xzr
+00fc3680  ldp x21,x20,[sp], #0x20
+00fc3684  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3688_HitnumNode__get_spr_value2_8.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_8 @ 00fc3688
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc3688  stp x21,x20,[sp, #-0x20]!
+00fc368c  stp x19,x30,[sp, #0x10]
+00fc3690  adrp x20,0x3573000
+00fc3694  adrp x21,0x3374000
+00fc3698  ldrb w8,[x20, #0xc40]
+00fc369c  ldr x21,[x21, #0xab0]
+00fc36a0  mov x19,x0
+00fc36a4  tbnz w8,#0x0,0x00fc36bc
+00fc36a8  adrp x0,0x3374000
+00fc36ac  ldr x0,[x0, #0xab0]
+00fc36b0  bl 0x00b0789c
+00fc36b4  mov w8,#0x1
+00fc36b8  strb w8,[x20, #0xc40]
+00fc36bc  ldr x1,[x21]
+00fc36c0  mov x0,x19
+00fc36c4  ldp x19,x30,[sp, #0x10]
+00fc36c8  mov x2,xzr
+00fc36cc  ldp x21,x20,[sp], #0x20
+00fc36d0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc36d4_HitnumNode__get_spr_value2_9.txt
+================================================================================
+Function: HitnumNode$$get_spr_value2_9 @ 00fc36d4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc36d4  stp x21,x20,[sp, #-0x20]!
+00fc36d8  stp x19,x30,[sp, #0x10]
+00fc36dc  adrp x20,0x3573000
+00fc36e0  adrp x21,0x3379000
+00fc36e4  ldrb w8,[x20, #0xc41]
+00fc36e8  ldr x21,[x21, #0xf90]
+00fc36ec  mov x19,x0
+00fc36f0  tbnz w8,#0x0,0x00fc3708
+00fc36f4  adrp x0,0x3379000
+00fc36f8  ldr x0,[x0, #0xf90]
+00fc36fc  bl 0x00b0789c
+00fc3700  mov w8,#0x1
+00fc3704  strb w8,[x20, #0xc41]
+00fc3708  ldr x1,[x21]
+00fc370c  mov x0,x19
+00fc3710  ldp x19,x30,[sp, #0x10]
+00fc3714  mov x2,xzr
+00fc3718  ldp x21,x20,[sp], #0x20
+00fc371c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc3720_HitnumNode__get_spr_valueType2.txt
+================================================================================
+Function: HitnumNode$$get_spr_valueType2 @ 00fc3720
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$FadeIn2 @ 00e7a878
+  <- BattleHitNum$$UpdateAbsorbShow @ 00e7a378
+  <- BattleHitNum$$FadeOut @ 00e7ae50
+
+--- Listing ---
+00fc3720  stp x21,x20,[sp, #-0x20]!
+00fc3724  stp x19,x30,[sp, #0x10]
+00fc3728  adrp x20,0x3573000
+00fc372c  adrp x21,0x3345000
+00fc3730  ldrb w8,[x20, #0xc42]
+00fc3734  ldr x21,[x21, #0x1d8]
+00fc3738  mov x19,x0
+00fc373c  tbnz w8,#0x0,0x00fc3754
+00fc3740  adrp x0,0x3345000
+00fc3744  ldr x0,[x0, #0x1d8]
+00fc3748  bl 0x00b0789c
+00fc374c  mov w8,#0x1
+00fc3750  strb w8,[x20, #0xc42]
+00fc3754  ldr x1,[x21]
+00fc3758  mov x0,x19
+00fc375c  ldp x19,x30,[sp, #0x10]
+00fc3760  mov x2,xzr
+00fc3764  ldp x21,x20,[sp], #0x20
+00fc3768  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc376c_HitnumNode__get_spr_crit2.txt
+================================================================================
+Function: HitnumNode$$get_spr_crit2 @ 00fc376c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleHitNum$$UpdateAbsorbShow @ 00e7a378
+
+--- Listing ---
+00fc376c  stp x21,x20,[sp, #-0x20]!
+00fc3770  stp x19,x30,[sp, #0x10]
+00fc3774  adrp x20,0x3573000
+00fc3778  adrp x21,0x3332000
+00fc377c  ldrb w8,[x20, #0xc43]
+00fc3780  ldr x21,[x21, #0x1a0]
+00fc3784  mov x19,x0
+00fc3788  tbnz w8,#0x0,0x00fc37a0
+00fc378c  adrp x0,0x3332000
+00fc3790  ldr x0,[x0, #0x1a0]
+00fc3794  bl 0x00b0789c
+00fc3798  mov w8,#0x1
+00fc379c  strb w8,[x20, #0xc43]
+00fc37a0  ldr x1,[x21]
+00fc37a4  mov x0,x19
+00fc37a8  ldp x19,x30,[sp, #0x10]
+00fc37ac  mov x2,xzr
+00fc37b0  ldp x21,x20,[sp], #0x20
+00fc37b4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc37b8_HitnumNode__.ctor.txt
+================================================================================
+Function: HitnumNode$$.ctor @ 00fc37b8
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fc37b8  mov x1,xzr
+00fc37bc  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 01003ad4_HighLightShowMono__get_m_currentGuideId.txt
+================================================================================
+Function: HighLightShowMono$$get_m_currentGuideId @ 01003ad4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- HighLightShowMono$$Start @ 01003ca4
+  <- HighLightShowMono$$OnDestroy @ 010040dc
+  <- HighLightShowMono$$GuideClick @ 01003f30
+  <- XLua.CSObjectWrap.HighLightShowMonoWrap$$_g_get_m_currentGuideId @ 012c8844
+
+--- Listing ---
+01003ad4  stp x21,x20,[sp, #-0x20]!
+01003ad8  stp x19,x30,[sp, #0x10]
+01003adc  adrp x20,0x3574000
+01003ae0  adrp x21,0x332d000
+01003ae4  ldrb w8,[x20, #0x3f2]
+01003ae8  ldr x21,[x21, #0x270]
+01003aec  mov x19,x0
+01003af0  tbnz w8,#0x0,0x01003b08
+01003af4  adrp x0,0x332d000
+01003af8  ldr x0,[x0, #0x270]
+01003afc  bl 0x00b0789c
+01003b00  mov w8,#0x1
+01003b04  strb w8,[x20, #0x3f2]
+01003b08  ldr x8,[x21]
+01003b0c  ldr x8,[x8, #0xb8]
+01003b10  ldr x0,[x8]
+01003b14  cbz x0,0x01003b2c
+01003b18  mov x1,x19
+01003b1c  ldp x19,x30,[sp, #0x10]
+01003b20  mov x2,xzr
+01003b24  ldp x21,x20,[sp], #0x20
+01003b28  b 0x01060c2c
+01003b2c  ldr w0,[x19, #0x38]
+01003b30  ldp x19,x30,[sp, #0x10]
+01003b34  ldp x21,x20,[sp], #0x20
+01003b38  ret
+
+
+================================================================================
+### FILE: 01003b3c_HighLightShowMono__set_m_currentGuideId.txt
+================================================================================
+Function: HighLightShowMono$$set_m_currentGuideId @ 01003b3c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HighLightShowMonoWrap$$_s_set_m_currentGuideId @ 012c89f8
+  <- NoviceGuidePanelMono.<HighLightShow>d__39$$MoveNext @ 01007f98
+
+--- Listing ---
+01003b3c  str x22,[sp, #-0x30]!
+01003b40  stp x21,x20,[sp, #0x10]
+01003b44  stp x19,x30,[sp, #0x20]
+01003b48  adrp x21,0x3574000
+01003b4c  adrp x22,0x332d000
+01003b50  ldrb w8,[x21, #0x3f3]
+01003b54  ldr x22,[x22, #0x270]
+01003b58  mov w19,w1
+01003b5c  mov x20,x0
+01003b60  tbnz w8,#0x0,0x01003b78
+01003b64  adrp x0,0x332d000
+01003b68  ldr x0,[x0, #0x270]
+01003b6c  bl 0x00b0789c
+01003b70  mov w8,#0x1
+01003b74  strb w8,[x21, #0x3f3]
+01003b78  ldr x8,[x22]
+01003b7c  ldr x8,[x8, #0xb8]
+01003b80  ldr x0,[x8, #0x8]
+01003b84  cbz x0,0x01003ba4
+01003b88  mov x1,x20
+01003b8c  mov w2,w19
+01003b90  ldp x19,x30,[sp, #0x20]
+01003b94  ldp x21,x20,[sp, #0x10]
+01003b98  mov x3,xzr
+01003b9c  ldr x22,[sp], #0x30
+01003ba0  b 0x0106155c
+01003ba4  str w19,[x20, #0x38]
+01003ba8  ldp x19,x30,[sp, #0x20]
+01003bac  ldp x21,x20,[sp, #0x10]
+01003bb0  ldr x22,[sp], #0x30
+01003bb4  ret
+
+
+================================================================================
+### FILE: 01003bb8_HighLightShowMono__get_m_eff.txt
+================================================================================
+Function: HighLightShowMono$$get_m_eff @ 01003bb8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- HighLightShowMono$$Start @ 01003ca4
+  <- HighLightShowMono$$OnDestroy @ 010040dc
+
+--- Listing ---
+01003bb8  stp x21,x20,[sp, #-0x20]!
+01003bbc  stp x19,x30,[sp, #0x10]
+01003bc0  adrp x20,0x3574000
+01003bc4  adrp x21,0x332d000
+01003bc8  ldrb w8,[x20, #0x3f4]
+01003bcc  ldr x21,[x21, #0x270]
+01003bd0  mov x19,x0
+01003bd4  tbnz w8,#0x0,0x01003bec
+01003bd8  adrp x0,0x332d000
+01003bdc  ldr x0,[x0, #0x270]
+01003be0  bl 0x00b0789c
+01003be4  mov w8,#0x1
+01003be8  strb w8,[x20, #0x3f4]
+01003bec  ldr x8,[x21]
+01003bf0  ldr x8,[x8, #0xb8]
+01003bf4  ldr x0,[x8, #0x10]
+01003bf8  cbz x0,0x01003c10
+01003bfc  mov x1,x19
+01003c00  ldp x19,x30,[sp, #0x10]
+01003c04  mov x2,xzr
+01003c08  ldp x21,x20,[sp], #0x20
+01003c0c  b 0x0106088c
+01003c10  ldr x0,[x19, #0x40]
+01003c14  ldp x19,x30,[sp, #0x10]
+01003c18  ldp x21,x20,[sp], #0x20
+01003c1c  ret
+
+
+================================================================================
+### FILE: 01003c20_HighLightShowMono__set_m_eff.txt
+================================================================================
+Function: HighLightShowMono$$set_m_eff @ 01003c20
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- HighLightShowMono$$Start @ 01003ca4
+
+--- Listing ---
+01003c20  str x22,[sp, #-0x30]!
+01003c24  stp x21,x20,[sp, #0x10]
+01003c28  stp x19,x30,[sp, #0x20]
+01003c2c  adrp x21,0x3574000
+01003c30  adrp x22,0x332d000
+01003c34  ldrb w8,[x21, #0x3f5]
+01003c38  ldr x22,[x22, #0x270]
+01003c3c  mov x19,x1
+01003c40  mov x20,x0
+01003c44  tbnz w8,#0x0,0x01003c5c
+01003c48  adrp x0,0x332d000
+01003c4c  ldr x0,[x0, #0x270]
+01003c50  bl 0x00b0789c
+01003c54  mov w8,#0x1
+01003c58  strb w8,[x21, #0x3f5]
+01003c5c  ldr x8,[x22]
+01003c60  ldr x8,[x8, #0xb8]
+01003c64  ldr x0,[x8, #0x18]
+01003c68  cbz x0,0x01003c88
+01003c6c  mov x1,x20
+01003c70  mov x2,x19
+01003c74  ldp x19,x30,[sp, #0x20]
+01003c78  ldp x21,x20,[sp, #0x10]
+01003c7c  mov x3,xzr
+01003c80  ldr x22,[sp], #0x30
+01003c84  b 0x0106125c
+01003c88  str x19,[x20, #0x40]!
+01003c8c  mov x0,x20
+01003c90  mov x1,x19
+01003c94  ldp x19,x30,[sp, #0x20]
+01003c98  ldp x21,x20,[sp, #0x10]
+01003c9c  ldr x22,[sp], #0x30
+01003ca0  b 0x00b07850
+
+
+================================================================================
+### FILE: 01003ca4_HighLightShowMono__Start.txt
+================================================================================
+Function: HighLightShowMono$$Start @ 01003ca4
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> System.String$$Split @ 01fe0d68
+  -> UnityEngine.Transform$$set_localScale @ 024f4254
+  -> FUN_00b079b0 @ 00b079b0
+  -> HighLightShowMono$$get_m_eff @ 01003bb8
+  -> HighLightShowMono$$get_m_currentGuideId @ 01003ad4
+  -> BaseMono$$PlayUISpineAni @ 00e1edec
+  -> HighLightShowMono$$set_m_eff @ 01003c20
+  -> UnityEngine.Transform$$set_localPosition @ 024f385c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> Ali$$GetExcelData<object> @ 01736d60
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> BaseMono$$AddChildSync @ 00e1e300
+  -> System.Single$$Parse @ 02163590
+
+--- Calls IN ---
+
+--- Listing ---
+01003ca4  str d8,[sp, #-0x40]!
+01003ca8  stp x23,x22,[sp, #0x10]
+01003cac  stp x21,x20,[sp, #0x20]
+01003cb0  stp x19,x30,[sp, #0x30]
+01003cb4  adrp x20,0x3574000
+01003cb8  adrp x21,0x332d000
+01003cbc  ldrb w8,[x20, #0x3f6]
+01003cc0  ldr x21,[x21, #0x270]
+01003cc4  mov x19,x0
+01003cc8  tbnz w8,#0x0,0x01003d10
+01003ccc  adrp x0,0x333d000
+01003cd0  ldr x0,[x0, #0x430]
+01003cd4  bl 0x00b0789c
+01003cd8  adrp x0,0x335f000
+01003cdc  ldr x0,[x0, #0x20]
+01003ce0  bl 0x00b0789c
+01003ce4  adrp x0,0x332d000
+01003ce8  ldr x0,[x0, #0x270]
+01003cec  bl 0x00b0789c
+01003cf0  adrp x0,0x334c000
+01003cf4  ldr x0,[x0, #0x4b0]
+01003cf8  bl 0x00b0789c
+01003cfc  adrp x0,0x332f000
+01003d00  ldr x0,[x0, #0xff0]
+01003d04  bl 0x00b0789c
+01003d08  mov w8,#0x1
+01003d0c  strb w8,[x20, #0x3f6]
+01003d10  ldr x8,[x21]
+01003d14  ldr x8,[x8, #0xb8]
+01003d18  ldr x0,[x8, #0x20]
+01003d1c  cbz x0,0x01003d3c
+01003d20  mov x1,x19
+01003d24  ldp x19,x30,[sp, #0x30]
+01003d28  ldp x21,x20,[sp, #0x20]
+01003d2c  ldp x23,x22,[sp, #0x10]
+01003d30  mov x2,xzr
+01003d34  ldr d8,[sp], #0x40
+01003d38  b 0x01060dac
+01003d3c  adrp x21,0x335f000
+01003d40  ldr x21,[x21, #0x20]
+01003d44  ldr x0,[x21]
+01003d48  ldr w8,[x0, #0xe0]
+01003d4c  cbnz w8,0x01003d58
+01003d50  bl 0x00b0798c
+01003d54  ldr x0,[x21]
+01003d58  ldr x8,[x0, #0xb8]
+01003d5c  mov x0,x19
+01003d60  ldr x20,[x8, #0x10]
+01003d64  bl 0x01003ad4
+01003d68  cbz x20,0x01003f28
+01003d6c  adrp x22,0x333d000
+01003d70  ldr x22,[x22, #0x430]
+01003d74  mov w1,w0
+01003d78  mov x0,x20
+01003d7c  ldr x2,[x22]
+01003d80  bl 0x01736d60
+01003d84  cbz x0,0x01003f28
+01003d88  ldr s0,[x0, #0xd0]
+01003d8c  mov x20,x0
+01003d90  fcmp s0,#0.0
+01003d94  b.le 0x01003da0
+01003d98  ldr w8,[x20, #0x80]
+01003d9c  cbz w8,0x01003db4
+01003da0  ldp x19,x30,[sp, #0x30]
+01003da4  ldp x21,x20,[sp, #0x20]
+01003da8  ldp x23,x22,[sp, #0x10]
+01003dac  ldr d8,[sp], #0x40
+01003db0  ret
+01003db4  adrp x23,0x334c000
+01003db8  ldr x23,[x23, #0x4b0]
+01003dbc  mov x0,x19
+01003dc0  mov x1,xzr
+01003dc4  bl 0x024e4ed4
+01003dc8  ldr x1,[x23]
+01003dcc  mov x2,x0
+01003dd0  mov x0,x19
+01003dd4  mov x3,xzr
+01003dd8  bl 0x00e1e300
+01003ddc  mov x1,x0
+01003de0  mov x0,x19
+01003de4  bl 0x01003c20
+01003de8  mov x0,x19
+01003dec  bl 0x01003bb8
+01003df0  cbz x0,0x01003f28
+01003df4  mov x1,xzr
+01003df8  bl 0x024de730
+01003dfc  cbz x0,0x01003f28
+01003e00  ldr s0,[x20, #0xd0]
+01003e04  fmov s2,0x3f800000
+01003e08  mov x1,xzr
+01003e0c  mov v1.16B,v0.16B
+01003e10  bl 0x024f4254
+01003e14  ldr x0,[x21]
+01003e18  ldr w8,[x0, #0xe0]
+01003e1c  cbnz w8,0x01003e28
+01003e20  bl 0x00b0798c
+01003e24  ldr x0,[x21]
+01003e28  ldr x8,[x0, #0xb8]
+01003e2c  mov x0,x19
+01003e30  ldr x20,[x8, #0x10]
+01003e34  bl 0x01003ad4
+01003e38  cbz x20,0x01003f28
+01003e3c  ldr x2,[x22]
+01003e40  mov w1,w0
+01003e44  mov x0,x20
+01003e48  bl 0x01736d60
+01003e4c  cbz x0,0x01003f28
+01003e50  mov x20,x0
+01003e54  ldr x0,[x0, #0xc8]
+01003e58  mov x1,xzr
+01003e5c  bl 0x01fdf3a0
+01003e60  tbnz w0,#0x0,0x01003ee8
+01003e64  ldr x0,[x20, #0xc8]
+01003e68  cbz x0,0x01003f28
+01003e6c  mov w1,#0x7c
+01003e70  mov w2,wzr
+01003e74  mov x3,xzr
+01003e78  bl 0x01fe0d68
+01003e7c  mov x21,x0
+01003e80  mov x0,x19
+01003e84  bl 0x01003bb8
+01003e88  cbz x0,0x01003f28
+01003e8c  mov x1,xzr
+01003e90  bl 0x024de730
+01003e94  cbz x21,0x01003f28
+01003e98  ldr w8,[x21, #0x18]
+01003e9c  cbz w8,0x01003f2c
+01003ea0  mov x20,x0
+01003ea4  ldr x0,[x21, #0x20]
+01003ea8  mov x1,xzr
+01003eac  bl 0x02163590
+01003eb0  ldr w8,[x21, #0x18]
+01003eb4  cmp w8,#0x1
+01003eb8  b.ls 0x01003f2c
+01003ebc  ldr x0,[x21, #0x28]
+01003ec0  mov x1,xzr
+01003ec4  mov v8.16B,v0.16B
+01003ec8  bl 0x02163590
+01003ecc  cbz x20,0x01003f28
+01003ed0  mov v1.16B,v0.16B
+01003ed4  fmov s2,wzr
+01003ed8  mov x0,x20
+01003edc  mov v0.16B,v8.16B
+01003ee0  mov x1,xzr
+01003ee4  bl 0x024f385c
+01003ee8  adrp x20,0x332f000
+01003eec  ldr x20,[x20, #0xff0]
+01003ef0  mov x0,x19
+01003ef4  bl 0x01003bb8
+01003ef8  ldr x3,[x20]
+01003efc  mov x1,x0
+01003f00  mov x0,x19
+01003f04  ldp x19,x30,[sp, #0x30]
+01003f08  ldp x21,x20,[sp, #0x20]
+01003f0c  ldp x23,x22,[sp, #0x10]
+01003f10  mov w4,#0x1
+01003f14  mov w2,wzr
+01003f18  mov x5,xzr
+01003f1c  mov x6,xzr
+01003f20  ldr d8,[sp], #0x40
+01003f24  b 0x00e1edec
+01003f28  bl 0x00b079b0
+01003f2c  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 01003f30_HighLightShowMono__GuideClick.txt
+================================================================================
+Function: HighLightShowMono$$GuideClick @ 01003f30
+
+--- Calls OUT ---
+  -> Ali$$Notify @ 00e039c4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> HighLightShowMono$$get_m_currentGuideId @ 01003ad4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> UnityEngine.Object$$Destroy @ 024dfed4
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HighLightShowMonoWrap$$_m_GuideClick @ 012c84e0
+
+--- Listing ---
+01003f30  str x22,[sp, #-0x30]!
+01003f34  stp x21,x20,[sp, #0x10]
+01003f38  stp x19,x30,[sp, #0x20]
+01003f3c  adrp x20,0x3574000
+01003f40  adrp x21,0x332d000
+01003f44  ldrb w8,[x20, #0x3f7]
+01003f48  ldr x21,[x21, #0x270]
+01003f4c  mov x19,x0
+01003f50  tbnz w8,#0x0,0x01003fa4
+01003f54  adrp x0,0x335f000
+01003f58  ldr x0,[x0, #0x20]
+01003f5c  bl 0x00b0789c
+01003f60  adrp x0,0x332d000
+01003f64  ldr x0,[x0, #0x270]
+01003f68  bl 0x00b0789c
+01003f6c  adrp x0,0x3332000
+01003f70  ldr x0,[x0, #0x38]
+01003f74  bl 0x00b0789c
+01003f78  adrp x0,0x3370000
+01003f7c  ldr x0,[x0, #0x778]
+01003f80  bl 0x00b0789c
+01003f84  adrp x0,0x3321000
+01003f88  ldr x0,[x0, #0xca8]
+01003f8c  bl 0x00b0789c
+01003f90  adrp x0,0x332c000
+01003f94  ldr x0,[x0, #0xa98]
+01003f98  bl 0x00b0789c
+01003f9c  mov w8,#0x1
+01003fa0  strb w8,[x20, #0x3f7]
+01003fa4  ldr x8,[x21]
+01003fa8  ldr x8,[x8, #0xb8]
+01003fac  ldr x0,[x8, #0x28]
+01003fb0  cbz x0,0x01003fcc
+01003fb4  mov x1,x19
+01003fb8  ldp x19,x30,[sp, #0x20]
+01003fbc  ldp x21,x20,[sp, #0x10]
+01003fc0  mov x2,xzr
+01003fc4  ldr x22,[sp], #0x30
+01003fc8  b 0x01060dac
+01003fcc  ldrb w8,[x19, #0x48]
+01003fd0  cbnz w8,0x010040b8
+01003fd4  adrp x8,0x3321000
+01003fd8  ldr x8,[x8, #0xca8]
+01003fdc  mov w9,#0x1
+01003fe0  strb w9,[x19, #0x48]
+01003fe4  adrp x20,0x335f000
+01003fe8  ldr x0,[x8]
+01003fec  ldr w8,[x0, #0xe0]
+01003ff0  ldr x20,[x20, #0x20]
+01003ff4  cbnz w8,0x01003ffc
+01003ff8  bl 0x00b0798c
+01003ffc  adrp x21,0x3370000
+01004000  adrp x22,0x3332000
+01004004  ldr x21,[x21, #0x778]
+01004008  ldr x22,[x22, #0x38]
+0100400c  mov x0,x19
+01004010  mov x1,xzr
+01004014  bl 0x024dfed4
+01004018  ldr x0,[x20]
+0100401c  ldr w8,[x0, #0xe0]
+01004020  cbnz w8,0x0100402c
+01004024  bl 0x00b0798c
+01004028  ldr x0,[x20]
+0100402c  ldr x8,[x0, #0xb8]
+01004030  ldr x0,[x21]
+01004034  mov w1,#0x1
+01004038  ldr x20,[x8, #0x10]
+0100403c  bl 0x00b078f8
+01004040  mov x21,x0
+01004044  mov x0,x19
+01004048  bl 0x01003ad4
+0100404c  ldr x8,[x22]
+01004050  str w0,[sp, #0xc]
+01004054  add x1,sp,#0xc
+01004058  mov x0,x8
+0100405c  bl 0x00b07994
+01004060  cbz x21,0x010040c8
+01004064  mov x19,x0
+01004068  cbz x0,0x01004080
+0100406c  ldr x8,[x21]
+01004070  mov x0,x19
+01004074  ldr x1,[x8, #0x40]
+01004078  bl 0x00b07990
+0100407c  cbz x0,0x010040d0
+01004080  ldr w8,[x21, #0x18]
+01004084  cbz w8,0x010040cc
+01004088  mov x0,x21
+0100408c  str x19,[x0, #0x20]!
+01004090  mov x1,x19
+01004094  bl 0x00b07850
+01004098  cbz x20,0x010040c8
+0100409c  adrp x8,0x332c000
+010040a0  ldr x8,[x8, #0xa98]
+010040a4  mov x0,x20
+010040a8  mov x2,x21
+010040ac  mov x3,xzr
+010040b0  ldr x1,[x8]
+010040b4  bl 0x00e039c4
+010040b8  ldp x19,x30,[sp, #0x20]
+010040bc  ldp x21,x20,[sp, #0x10]
+010040c0  ldr x22,[sp], #0x30
+010040c4  ret
+010040c8  bl 0x00b079b0
+010040cc  bl 0x00b079b8
+010040d0  bl 0x00b079d4
+010040d4  mov x1,xzr
+010040d8  bl 0x00b07978
+
+
+================================================================================
+### FILE: 010040dc_HighLightShowMono__OnDestroy.txt
+================================================================================
+Function: HighLightShowMono$$OnDestroy @ 010040dc
+
+--- Calls OUT ---
+  -> Ali$$Notify @ 00e039c4
+  -> BaseMono$$DestroyEnhance @ 00e1e854
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> BaseMono$$OnDestroy @ 00e1d958
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> HighLightShowMono$$get_m_eff @ 01003bb8
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> HighLightShowMono$$get_m_currentGuideId @ 01003ad4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+
+--- Listing ---
+010040dc  str x22,[sp, #-0x30]!
+010040e0  stp x21,x20,[sp, #0x10]
+010040e4  stp x19,x30,[sp, #0x20]
+010040e8  adrp x20,0x3574000
+010040ec  adrp x21,0x332d000
+010040f0  ldrb w8,[x20, #0x3f8]
+010040f4  ldr x21,[x21, #0x270]
+010040f8  mov x19,x0
+010040fc  tbnz w8,#0x0,0x01004150
+01004100  adrp x0,0x335f000
+01004104  ldr x0,[x0, #0x20]
+01004108  bl 0x00b0789c
+0100410c  adrp x0,0x332d000
+01004110  ldr x0,[x0, #0x270]
+01004114  bl 0x00b0789c
+01004118  adrp x0,0x3332000
+0100411c  ldr x0,[x0, #0x38]
+01004120  bl 0x00b0789c
+01004124  adrp x0,0x3370000
+01004128  ldr x0,[x0, #0x778]
+0100412c  bl 0x00b0789c
+01004130  adrp x0,0x3321000
+01004134  ldr x0,[x0, #0xca8]
+01004138  bl 0x00b0789c
+0100413c  adrp x0,0x3315000
+01004140  ldr x0,[x0, #0x3f0]
+01004144  bl 0x00b0789c
+01004148  mov w8,#0x1
+0100414c  strb w8,[x20, #0x3f8]
+01004150  ldr x8,[x21]
+01004154  ldr x8,[x8, #0xb8]
+01004158  ldr x0,[x8, #0x30]
+0100415c  cbz x0,0x01004178
+01004160  mov x1,x19
+01004164  ldp x19,x30,[sp, #0x20]
+01004168  ldp x21,x20,[sp, #0x10]
+0100416c  mov x2,xzr
+01004170  ldr x22,[sp], #0x30
+01004174  b 0x01060dac
+01004178  adrp x20,0x3321000
+0100417c  ldr x20,[x20, #0xca8]
+01004180  mov x0,x19
+01004184  mov x1,xzr
+01004188  bl 0x00e1d958
+0100418c  mov x0,x19
+01004190  bl 0x01003bb8
+01004194  ldr x8,[x20]
+01004198  mov x20,x0
+0100419c  ldr w9,[x8, #0xe0]
+010041a0  cbnz w9,0x010041ac
+010041a4  mov x0,x8
+010041a8  bl 0x00b0798c
+010041ac  mov x0,x20
+010041b0  mov x1,xzr
+010041b4  mov x2,xzr
+010041b8  bl 0x024de30c
+010041bc  tbz w0,#0x0,0x010041d8
+010041c0  mov x0,x19
+010041c4  bl 0x01003bb8
+010041c8  mov x1,x0
+010041cc  mov x0,x19
+010041d0  mov x2,xzr
+010041d4  bl 0x00e1e854
+010041d8  ldrb w8,[x19, #0x48]
+010041dc  cbnz w8,0x01004298
+010041e0  adrp x20,0x335f000
+010041e4  ldr x20,[x20, #0x20]
+010041e8  adrp x21,0x3370000
+010041ec  adrp x22,0x3332000
+010041f0  ldr x0,[x20]
+010041f4  ldr w8,[x0, #0xe0]
+010041f8  ldr x21,[x21, #0x778]
+010041fc  ldr x22,[x22, #0x38]
+01004200  cbnz w8,0x0100420c
+01004204  bl 0x00b0798c
+01004208  ldr x0,[x20]
+0100420c  ldr x8,[x0, #0xb8]
+01004210  ldr x0,[x21]
+01004214  mov w1,#0x1
+01004218  ldr x20,[x8, #0x10]
+0100421c  bl 0x00b078f8
+01004220  mov x21,x0
+01004224  mov x0,x19
+01004228  bl 0x01003ad4
+0100422c  ldr x8,[x22]
+01004230  str w0,[sp, #0xc]
+01004234  add x1,sp,#0xc
+01004238  mov x0,x8
+0100423c  bl 0x00b07994
+01004240  cbz x21,0x010042a8
+01004244  mov x19,x0
+01004248  cbz x0,0x01004260
+0100424c  ldr x8,[x21]
+01004250  mov x0,x19
+01004254  ldr x1,[x8, #0x40]
+01004258  bl 0x00b07990
+0100425c  cbz x0,0x010042b0
+01004260  ldr w8,[x21, #0x18]
+01004264  cbz w8,0x010042ac
+01004268  mov x0,x21
+0100426c  str x19,[x0, #0x20]!
+01004270  mov x1,x19
+01004274  bl 0x00b07850
+01004278  cbz x20,0x010042a8
+0100427c  adrp x8,0x3315000
+01004280  ldr x8,[x8, #0x3f0]
+01004284  mov x0,x20
+01004288  mov x2,x21
+0100428c  mov x3,xzr
+01004290  ldr x1,[x8]
+01004294  bl 0x00e039c4
+01004298  ldp x19,x30,[sp, #0x20]
+0100429c  ldp x21,x20,[sp, #0x10]
+010042a0  ldr x22,[sp], #0x30
+010042a4  ret
+010042a8  bl 0x00b079b0
+010042ac  bl 0x00b079b8
+010042b0  bl 0x00b079d4
+010042b4  mov x1,xzr
+010042b8  bl 0x00b07978
+
+
+================================================================================
+### FILE: 010042bc_HighLightShowMono__.ctor.txt
+================================================================================
+Function: HighLightShowMono$$.ctor @ 010042bc
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> BaseMono$$.ctor @ 00e1c6b4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HighLightShowMonoWrap$$__CreateInstance @ 012c8328
+
+--- Listing ---
+010042bc  stp x21,x20,[sp, #-0x20]!
+010042c0  stp x19,x30,[sp, #0x10]
+010042c4  adrp x21,0x3574000
+010042c8  adrp x20,0x332d000
+010042cc  ldrb w8,[x21, #0x3f9]
+010042d0  ldr x20,[x20, #0x270]
+010042d4  mov x19,x0
+010042d8  tbnz w8,#0x0,0x010042f0
+010042dc  adrp x0,0x332d000
+010042e0  ldr x0,[x0, #0x270]
+010042e4  bl 0x00b0789c
+010042e8  mov w8,#0x1
+010042ec  strb w8,[x21, #0x3f9]
+010042f0  mov x0,x19
+010042f4  mov x1,xzr
+010042f8  bl 0x00e1c6b4
+010042fc  ldr x8,[x20]
+01004300  ldr x8,[x8, #0xb8]
+01004304  ldr x0,[x8, #0x38]
+01004308  cbz x0,0x01004320
+0100430c  mov x1,x19
+01004310  ldp x19,x30,[sp, #0x10]
+01004314  mov x2,xzr
+01004318  ldp x21,x20,[sp], #0x20
+0100431c  b 0x01060dac
+01004320  ldp x19,x30,[sp, #0x10]
+01004324  ldp x21,x20,[sp], #0x20
+01004328  ret
+
+
+================================================================================
+### FILE: 0100432c_HighLightShowMono____xLuaBaseProxy_OnDestroy.txt
+================================================================================
+Function: HighLightShowMono$$<>xLuaBaseProxy_OnDestroy @ 0100432c
+
+--- Calls OUT ---
+  -> BaseMono$$OnDestroy @ 00e1d958
+
+--- Calls IN ---
+
+--- Listing ---
+0100432c  mov x1,xzr
+01004330  b 0x00e1d958
+
+

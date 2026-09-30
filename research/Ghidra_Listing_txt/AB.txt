@@ -1,0 +1,106 @@
+================================================================================
+### FILE: 008d51e0_abort.txt
+================================================================================
+Function: abort @ 008d51e0
+
+--- Calls OUT ---
+  -> abort @ 03799608
+
+--- Calls IN ---
+  <- FUN_00b3cc60 @ 00b3cc60
+  <- FUN_00b3eef8 @ 00b3eef8
+  <- FUN_00b3eb14 @ 00b3eb14
+  <- FUN_00ba2110 @ 00ba2110
+  <- FUN_00b3ee1c @ 00b3ee1c
+  <- FUN_00ba0508 @ 00ba0508
+  <- FUN_00ba1c64 @ 00ba1c64
+  <- FUN_00b386bc @ 00b386bc
+  <- FUN_00b32f10 @ 00b32f10
+  <- FUN_00b3dedc @ 00b3dedc
+  <- FUN_00b3ecec @ 00b3ecec
+  <- FUN_00ab5014 @ 00ab5014
+  <- FUN_00b3eab0 @ 00b3eab0
+  <- FUN_00b36414 @ 00b36414
+  <- FUN_00a8d9b4 @ 00a8d9b4
+  <- FUN_00b34174 @ 00b34174
+  <- FUN_00b35298 @ 00b35298
+  <- FUN_00b34a20 @ 00b34a20
+  <- FUN_00b3f07c @ 00b3f07c
+  <- FUN_00b46c70 @ 00b46c70
+  <- FUN_00b38560 @ 00b38560
+  <- FUN_00b3f724 @ 00b3f724
+  <- FUN_00b8c938 @ 00b8c938
+  <- FUN_00b38664 @ 00b38664
+  <- FUN_00b3be40 @ 00b3be40
+  <- FUN_00b3aa88 @ 00b3aa88
+  <- FUN_00b34960 @ 00b34960
+  <- FUN_00b3bc28 @ 00b3bc28
+  <- FUN_00ba0010 @ 00ba0010
+  <- FUN_00b346a4 @ 00b346a4
+  <- FUN_00b3b06c @ 00b3b06c
+  <- FUN_00b3df94 @ 00b3df94
+  <- FUN_00ba10ec @ 00ba10ec
+  <- FUN_00b3f6a4 @ 00b3f6a4
+  <- FUN_00aa03ec @ 00aa03ec
+  <- FUN_00ba285c @ 00ba285c
+  <- FUN_00b32320 @ 00b32320
+  <- FUN_00b3cb74 @ 00b3cb74
+  <- FUN_00b9fb28 @ 00b9fb28
+  <- FUN_00b3dd2c @ 00b3dd2c
+  <- FUN_00ba1d24 @ 00ba1d24
+  <- FUN_00b3eb74 @ 00b3eb74
+  <- FUN_00b88b70 @ 00b88b70
+  <- _Unwind_GetGR @ 00b9fd68
+  <- FUN_00b9fdc0 @ 00b9fdc0
+  <- FUN_00b3e054 @ 00b3e054
+  <- FUN_00b9ff98 @ 00b9ff98
+  <- FUN_00b3d1d0 @ 00b3d1d0
+  <- FUN_00b3ed20 @ 00b3ed20
+  <- FUN_00b3c72c @ 00b3c72c
+  <- FUN_00ba0ee0 @ 00ba0ee0
+  <- FUN_00b326c4 @ 00b326c4
+  <- FUN_00b9fd2c @ 00b9fd2c
+  <- FUN_00b37520 @ 00b37520
+  <- FUN_00b3268c @ 00b3268c
+  <- FUN_00b3ccfc @ 00b3ccfc
+  <- FUN_00ba1214 @ 00ba1214
+  <- FUN_00b38810 @ 00b38810
+  <- FUN_00ba1c04 @ 00ba1c04
+  <- FUN_00b31e78 @ 00b31e78
+  <- FUN_00b3ef68 @ 00b3ef68
+  <- FUN_00ba092c @ 00ba092c
+  <- _Unwind_SetGR @ 00b9fed4
+  <- FUN_00b376b8 @ 00b376b8
+  <- FUN_00b32ec8 @ 00b32ec8
+  <- FUN_00b36868 @ 00b36868
+  <- __deregister_frame_info_bases @ 00ba2f80
+  <- FUN_00b366e0 @ 00b366e0
+  <- FUN_00b3d320 @ 00b3d320
+  <- _Unwind_Resume @ 00ba1724
+  <- FUN_00ba1cc4 @ 00ba1cc4
+  <- FUN_00b3c4d0 @ 00b3c4d0
+  <- FUN_00b8e9ec @ 00b8e9ec
+  <- _Unwind_Resume_or_Rethrow @ 00ba1820
+  <- FUN_00b3e480 @ 00b3e480
+
+--- Listing ---
+008d51e0  adrp x16,0x3308000
+008d51e4  ldr x17,[x16, #0x2b0]
+008d51e8  add x16,x16,#0x2b0
+008d51ec  br x17
+
+
+================================================================================
+### FILE: 03799608_abort.txt
+================================================================================
+Function: abort @ 03799608
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- abort @ 008d51e0
+
+--- Listing ---
+03799608  ?? ??
+
+

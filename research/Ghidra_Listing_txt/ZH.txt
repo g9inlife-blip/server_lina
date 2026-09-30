@@ -1,0 +1,3208 @@
+================================================================================
+### FILE: 00f979b0_ZhuxiaoPanelMono__get_Node.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$get_Node @ 00f979b0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp685 @ 010b9a74
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$RefreshAgreeIcon @ 00f98be8
+  <- ZhuxiaoPanelMono$$OnClickZhuxiao_3 @ 00f98d80
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+  <- ZhuxiaoPanelMono.<RefreshShow>d__30$$MoveNext @ 00f99528
+  <- ZhuxiaoPanelMono$$ShowLoginTips @ 00f9899c
+
+--- Listing ---
+00f979b0  str x22,[sp, #-0x30]!
+00f979b4  stp x21,x20,[sp, #0x10]
+00f979b8  stp x19,x30,[sp, #0x20]
+00f979bc  adrp x20,0x3573000
+00f979c0  adrp x21,0x332e000
+00f979c4  ldrb w8,[x20, #0x4d2]
+00f979c8  ldr x21,[x21, #0x778]
+00f979cc  mov x19,x0
+00f979d0  tbnz w8,#0x0,0x00f97a0c
+00f979d4  adrp x0,0x335f000
+00f979d8  ldr x0,[x0, #0x500]
+00f979dc  bl 0x00b0789c
+00f979e0  adrp x0,0x3348000
+00f979e4  ldr x0,[x0, #0x138]
+00f979e8  bl 0x00b0789c
+00f979ec  adrp x0,0x3321000
+00f979f0  ldr x0,[x0, #0xca8]
+00f979f4  bl 0x00b0789c
+00f979f8  adrp x0,0x332e000
+00f979fc  ldr x0,[x0, #0x778]
+00f97a00  bl 0x00b0789c
+00f97a04  mov w8,#0x1
+00f97a08  strb w8,[x20, #0x4d2]
+00f97a0c  ldr x8,[x21]
+00f97a10  ldr x8,[x8, #0xb8]
+00f97a14  ldr x0,[x8]
+00f97a18  cbz x0,0x00f97a34
+00f97a1c  mov x1,x19
+00f97a20  ldp x19,x30,[sp, #0x20]
+00f97a24  ldp x21,x20,[sp, #0x10]
+00f97a28  mov x2,xzr
+00f97a2c  ldr x22,[sp], #0x30
+00f97a30  b 0x010b9a74
+00f97a34  adrp x8,0x3321000
+00f97a38  ldr x8,[x8, #0xca8]
+00f97a3c  mov x20,x19
+00f97a40  ldr x21,[x20, #0xc8]!
+00f97a44  ldr x0,[x8]
+00f97a48  ldr w8,[x0, #0xe0]
+00f97a4c  cbnz w8,0x00f97a54
+00f97a50  bl 0x00b0798c
+00f97a54  mov x0,x21
+00f97a58  mov x1,xzr
+00f97a5c  mov x2,xzr
+00f97a60  bl 0x024c8180
+00f97a64  tbz w0,#0x0,0x00f97ab8
+00f97a68  adrp x22,0x3348000
+00f97a6c  adrp x21,0x335f000
+00f97a70  ldr x22,[x22, #0x138]
+00f97a74  ldr x21,[x21, #0x500]
+00f97a78  mov x0,x19
+00f97a7c  mov x1,xzr
+00f97a80  bl 0x024e4ed4
+00f97a84  ldr x8,[x22]
+00f97a88  mov x19,x0
+00f97a8c  ldr w9,[x8, #0xe0]
+00f97a90  cbnz w9,0x00f97a9c
+00f97a94  mov x0,x8
+00f97a98  bl 0x00b0798c
+00f97a9c  ldr x1,[x21]
+00f97aa0  mov x0,x19
+00f97aa4  bl 0x017372ac
+00f97aa8  mov x1,x0
+00f97aac  str x0,[x20]
+00f97ab0  mov x0,x20
+00f97ab4  bl 0x00b07850
+00f97ab8  ldr x0,[x20]
+00f97abc  ldp x19,x30,[sp, #0x20]
+00f97ac0  ldp x21,x20,[sp, #0x10]
+00f97ac4  ldr x22,[sp], #0x30
+00f97ac8  ret
+
+
+================================================================================
+### FILE: 00f97acc_ZhuxiaoPanelMono__get_LayerType.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$get_LayerType @ 00f97acc
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp491 @ 0109f3ac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00f97acc  stp x21,x20,[sp, #-0x20]!
+00f97ad0  stp x19,x30,[sp, #0x10]
+00f97ad4  adrp x20,0x3573000
+00f97ad8  adrp x21,0x332e000
+00f97adc  ldrb w8,[x20, #0x4d3]
+00f97ae0  ldr x21,[x21, #0x778]
+00f97ae4  mov x19,x0
+00f97ae8  tbnz w8,#0x0,0x00f97b00
+00f97aec  adrp x0,0x332e000
+00f97af0  ldr x0,[x0, #0x778]
+00f97af4  bl 0x00b0789c
+00f97af8  mov w8,#0x1
+00f97afc  strb w8,[x20, #0x4d3]
+00f97b00  ldr x8,[x21]
+00f97b04  ldr x8,[x8, #0xb8]
+00f97b08  ldr x0,[x8, #0x8]
+00f97b0c  cbz x0,0x00f97b24
+00f97b10  mov x1,x19
+00f97b14  ldp x19,x30,[sp, #0x10]
+00f97b18  mov x2,xzr
+00f97b1c  ldp x21,x20,[sp], #0x20
+00f97b20  b 0x0109f3ac
+00f97b24  ldp x19,x30,[sp, #0x10]
+00f97b28  mov w0,#0x3
+00f97b2c  ldp x21,x20,[sp], #0x20
+00f97b30  ret
+
+
+================================================================================
+### FILE: 00f97b34_ZhuxiaoPanelMono__get_progress.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$get_progress @ 00f97b34
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+
+--- Listing ---
+00f97b34  stp x21,x20,[sp, #-0x20]!
+00f97b38  stp x19,x30,[sp, #0x10]
+00f97b3c  adrp x20,0x3573000
+00f97b40  adrp x21,0x332e000
+00f97b44  ldrb w8,[x20, #0x4d4]
+00f97b48  ldr x21,[x21, #0x778]
+00f97b4c  mov x19,x0
+00f97b50  tbnz w8,#0x0,0x00f97b68
+00f97b54  adrp x0,0x332e000
+00f97b58  ldr x0,[x0, #0x778]
+00f97b5c  bl 0x00b0789c
+00f97b60  mov w8,#0x1
+00f97b64  strb w8,[x20, #0x4d4]
+00f97b68  ldr x8,[x21]
+00f97b6c  ldr x8,[x8, #0xb8]
+00f97b70  ldr x0,[x8, #0x10]
+00f97b74  cbz x0,0x00f97b8c
+00f97b78  mov x1,x19
+00f97b7c  ldp x19,x30,[sp, #0x10]
+00f97b80  mov x2,xzr
+00f97b84  ldp x21,x20,[sp], #0x20
+00f97b88  b 0x01060c2c
+00f97b8c  ldr w0,[x19, #0xd0]
+00f97b90  ldp x19,x30,[sp, #0x10]
+00f97b94  ldp x21,x20,[sp], #0x20
+00f97b98  ret
+
+
+================================================================================
+### FILE: 00f97b9c_ZhuxiaoPanelMono__set_progress.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$set_progress @ 00f97b9c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$OnClickOK_1 @ 00f99394
+  <- ZhuxiaoPanelMono$$LogoutBack @ 00f98124
+  <- ZhuxiaoPanelMono$$OnClickOK_2 @ 00f99160
+
+--- Listing ---
+00f97b9c  str x22,[sp, #-0x30]!
+00f97ba0  stp x21,x20,[sp, #0x10]
+00f97ba4  stp x19,x30,[sp, #0x20]
+00f97ba8  adrp x21,0x3573000
+00f97bac  adrp x22,0x332e000
+00f97bb0  ldrb w8,[x21, #0x4d5]
+00f97bb4  ldr x22,[x22, #0x778]
+00f97bb8  mov w19,w1
+00f97bbc  mov x20,x0
+00f97bc0  tbnz w8,#0x0,0x00f97bd8
+00f97bc4  adrp x0,0x332e000
+00f97bc8  ldr x0,[x0, #0x778]
+00f97bcc  bl 0x00b0789c
+00f97bd0  mov w8,#0x1
+00f97bd4  strb w8,[x21, #0x4d5]
+00f97bd8  ldr x8,[x22]
+00f97bdc  ldr x8,[x8, #0xb8]
+00f97be0  ldr x0,[x8, #0x18]
+00f97be4  cbz x0,0x00f97c04
+00f97be8  mov x1,x20
+00f97bec  mov w2,w19
+00f97bf0  ldp x19,x30,[sp, #0x20]
+00f97bf4  ldp x21,x20,[sp, #0x10]
+00f97bf8  mov x3,xzr
+00f97bfc  ldr x22,[sp], #0x30
+00f97c00  b 0x0106155c
+00f97c04  str w19,[x20, #0xd0]
+00f97c08  ldp x19,x30,[sp, #0x20]
+00f97c0c  ldp x21,x20,[sp, #0x10]
+00f97c10  ldr x22,[sp], #0x30
+00f97c14  ret
+
+
+================================================================================
+### FILE: 00f97c18_ZhuxiaoPanelMono__get_IsLogin.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$get_IsLogin @ 00f97c18
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_g_get_IsLogin @ 0152a210
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+  <- ZhuxiaoPanelMono$$Start @ 00f98430
+
+--- Listing ---
+00f97c18  stp x21,x20,[sp, #-0x20]!
+00f97c1c  stp x19,x30,[sp, #0x10]
+00f97c20  adrp x20,0x3573000
+00f97c24  adrp x21,0x332e000
+00f97c28  ldrb w8,[x20, #0x4d6]
+00f97c2c  ldr x21,[x21, #0x778]
+00f97c30  mov x19,x0
+00f97c34  tbnz w8,#0x0,0x00f97c4c
+00f97c38  adrp x0,0x332e000
+00f97c3c  ldr x0,[x0, #0x778]
+00f97c40  bl 0x00b0789c
+00f97c44  mov w8,#0x1
+00f97c48  strb w8,[x20, #0x4d6]
+00f97c4c  ldr x8,[x21]
+00f97c50  ldr x8,[x8, #0xb8]
+00f97c54  ldr x0,[x8, #0x20]
+00f97c58  cbz x0,0x00f97c70
+00f97c5c  mov x1,x19
+00f97c60  ldp x19,x30,[sp, #0x10]
+00f97c64  mov x2,xzr
+00f97c68  ldp x21,x20,[sp], #0x20
+00f97c6c  b 0x01060aac
+00f97c70  ldrb w0,[x19, #0xd4]
+00f97c74  ldp x19,x30,[sp, #0x10]
+00f97c78  ldp x21,x20,[sp], #0x20
+00f97c7c  ret
+
+
+================================================================================
+### FILE: 00f97c80_ZhuxiaoPanelMono__set_IsLogin.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$set_IsLogin @ 00f97c80
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp15 @ 010613e4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_s_set_IsLogin @ 0152a738
+  <- ZhuxiaoPanelMono$$LoginInit @ 00f97fb8
+
+--- Listing ---
+00f97c80  str x22,[sp, #-0x30]!
+00f97c84  stp x21,x20,[sp, #0x10]
+00f97c88  stp x19,x30,[sp, #0x20]
+00f97c8c  adrp x21,0x3573000
+00f97c90  adrp x22,0x332e000
+00f97c94  ldrb w8,[x21, #0x4d7]
+00f97c98  ldr x22,[x22, #0x778]
+00f97c9c  mov w20,w1
+00f97ca0  mov x19,x0
+00f97ca4  tbnz w8,#0x0,0x00f97cbc
+00f97ca8  adrp x0,0x332e000
+00f97cac  ldr x0,[x0, #0x778]
+00f97cb0  bl 0x00b0789c
+00f97cb4  mov w8,#0x1
+00f97cb8  strb w8,[x21, #0x4d7]
+00f97cbc  ldr x8,[x22]
+00f97cc0  ldr x8,[x8, #0xb8]
+00f97cc4  ldr x0,[x8, #0x28]
+00f97cc8  cbz x0,0x00f97ce8
+00f97ccc  and w2,w20,#0x1
+00f97cd0  mov x1,x19
+00f97cd4  ldp x19,x30,[sp, #0x20]
+00f97cd8  ldp x21,x20,[sp, #0x10]
+00f97cdc  mov x3,xzr
+00f97ce0  ldr x22,[sp], #0x30
+00f97ce4  b 0x010613e4
+00f97ce8  and w8,w20,#0x1
+00f97cec  strb w8,[x19, #0xd4]
+00f97cf0  ldp x19,x30,[sp, #0x20]
+00f97cf4  ldp x21,x20,[sp, #0x10]
+00f97cf8  ldr x22,[sp], #0x30
+00f97cfc  ret
+
+
+================================================================================
+### FILE: 00f97d00_ZhuxiaoPanelMono__get_LogoutExTime.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$get_LogoutExTime @ 00f97d00
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp323 @ 01088da4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_g_get_LogoutExTime @ 0152a3c4
+  <- ZhuxiaoPanelMono$$ShowLoginTips @ 00f9899c
+
+--- Listing ---
+00f97d00  stp x21,x20,[sp, #-0x20]!
+00f97d04  stp x19,x30,[sp, #0x10]
+00f97d08  adrp x20,0x3573000
+00f97d0c  adrp x21,0x332e000
+00f97d10  ldrb w8,[x20, #0x4d8]
+00f97d14  ldr x21,[x21, #0x778]
+00f97d18  mov x19,x0
+00f97d1c  tbnz w8,#0x0,0x00f97d34
+00f97d20  adrp x0,0x332e000
+00f97d24  ldr x0,[x0, #0x778]
+00f97d28  bl 0x00b0789c
+00f97d2c  mov w8,#0x1
+00f97d30  strb w8,[x20, #0x4d8]
+00f97d34  ldr x8,[x21]
+00f97d38  ldr x8,[x8, #0xb8]
+00f97d3c  ldr x0,[x8, #0x30]
+00f97d40  cbz x0,0x00f97d58
+00f97d44  mov x1,x19
+00f97d48  ldp x19,x30,[sp, #0x10]
+00f97d4c  mov x2,xzr
+00f97d50  ldp x21,x20,[sp], #0x20
+00f97d54  b 0x01088da4
+00f97d58  ldr x0,[x19, #0xd8]
+00f97d5c  ldp x19,x30,[sp, #0x10]
+00f97d60  ldp x21,x20,[sp], #0x20
+00f97d64  ret
+
+
+================================================================================
+### FILE: 00f97d68_ZhuxiaoPanelMono__set_LogoutExTime.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$set_LogoutExTime @ 00f97d68
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp324 @ 01088f24
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_s_set_LogoutExTime @ 0152a8f8
+  <- ZhuxiaoPanelMono$$LoginInit @ 00f97fb8
+
+--- Listing ---
+00f97d68  str x22,[sp, #-0x30]!
+00f97d6c  stp x21,x20,[sp, #0x10]
+00f97d70  stp x19,x30,[sp, #0x20]
+00f97d74  adrp x21,0x3573000
+00f97d78  adrp x22,0x332e000
+00f97d7c  ldrb w8,[x21, #0x4d9]
+00f97d80  ldr x22,[x22, #0x778]
+00f97d84  mov x19,x1
+00f97d88  mov x20,x0
+00f97d8c  tbnz w8,#0x0,0x00f97da4
+00f97d90  adrp x0,0x332e000
+00f97d94  ldr x0,[x0, #0x778]
+00f97d98  bl 0x00b0789c
+00f97d9c  mov w8,#0x1
+00f97da0  strb w8,[x21, #0x4d9]
+00f97da4  ldr x8,[x22]
+00f97da8  ldr x8,[x8, #0xb8]
+00f97dac  ldr x0,[x8, #0x38]
+00f97db0  cbz x0,0x00f97dd0
+00f97db4  mov x1,x20
+00f97db8  mov x2,x19
+00f97dbc  ldp x19,x30,[sp, #0x20]
+00f97dc0  ldp x21,x20,[sp, #0x10]
+00f97dc4  mov x3,xzr
+00f97dc8  ldr x22,[sp], #0x30
+00f97dcc  b 0x01088f24
+00f97dd0  str x19,[x20, #0xd8]
+00f97dd4  ldp x19,x30,[sp, #0x20]
+00f97dd8  ldp x21,x20,[sp, #0x10]
+00f97ddc  ldr x22,[sp], #0x30
+00f97de0  ret
+
+
+================================================================================
+### FILE: 00f97de4_ZhuxiaoPanelMono__get_LoginGameAct.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$get_LoginGameAct @ 00f97de4
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp686 @ 010b9cb0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_g_get_LoginGameAct @ 0152a578
+  <- ZhuxiaoPanelMono$$OnClickLogin_5 @ 00f98f88
+
+--- Listing ---
+00f97de4  stp x21,x20,[sp, #-0x20]!
+00f97de8  stp x19,x30,[sp, #0x10]
+00f97dec  adrp x20,0x3573000
+00f97df0  adrp x21,0x332e000
+00f97df4  ldrb w8,[x20, #0x4da]
+00f97df8  ldr x21,[x21, #0x778]
+00f97dfc  mov x19,x0
+00f97e00  tbnz w8,#0x0,0x00f97e18
+00f97e04  adrp x0,0x332e000
+00f97e08  ldr x0,[x0, #0x778]
+00f97e0c  bl 0x00b0789c
+00f97e10  mov w8,#0x1
+00f97e14  strb w8,[x20, #0x4da]
+00f97e18  ldr x8,[x21]
+00f97e1c  ldr x8,[x8, #0xb8]
+00f97e20  ldr x0,[x8, #0x40]
+00f97e24  cbz x0,0x00f97e3c
+00f97e28  mov x1,x19
+00f97e2c  ldp x19,x30,[sp, #0x10]
+00f97e30  mov x2,xzr
+00f97e34  ldp x21,x20,[sp], #0x20
+00f97e38  b 0x010b9cb0
+00f97e3c  ldr x0,[x19, #0xe0]
+00f97e40  ldp x19,x30,[sp, #0x10]
+00f97e44  ldp x21,x20,[sp], #0x20
+00f97e48  ret
+
+
+================================================================================
+### FILE: 00f97e4c_ZhuxiaoPanelMono__set_LoginGameAct.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$set_LoginGameAct @ 00f97e4c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_s_set_LoginGameAct @ 0152aabc
+  <- ZhuxiaoPanelMono$$LoginInit @ 00f97fb8
+
+--- Listing ---
+00f97e4c  str x22,[sp, #-0x30]!
+00f97e50  stp x21,x20,[sp, #0x10]
+00f97e54  stp x19,x30,[sp, #0x20]
+00f97e58  adrp x21,0x3573000
+00f97e5c  adrp x22,0x332e000
+00f97e60  ldrb w8,[x21, #0x4db]
+00f97e64  ldr x22,[x22, #0x778]
+00f97e68  mov x19,x1
+00f97e6c  mov x20,x0
+00f97e70  tbnz w8,#0x0,0x00f97e88
+00f97e74  adrp x0,0x332e000
+00f97e78  ldr x0,[x0, #0x778]
+00f97e7c  bl 0x00b0789c
+00f97e80  mov w8,#0x1
+00f97e84  strb w8,[x21, #0x4db]
+00f97e88  ldr x8,[x22]
+00f97e8c  ldr x8,[x8, #0xb8]
+00f97e90  ldr x0,[x8, #0x48]
+00f97e94  cbz x0,0x00f97eb4
+00f97e98  mov x1,x20
+00f97e9c  mov x2,x19
+00f97ea0  ldp x19,x30,[sp, #0x20]
+00f97ea4  ldp x21,x20,[sp, #0x10]
+00f97ea8  mov x3,xzr
+00f97eac  ldr x22,[sp], #0x30
+00f97eb0  b 0x0106125c
+00f97eb4  str x19,[x20, #0xe0]!
+00f97eb8  mov x0,x20
+00f97ebc  mov x1,x19
+00f97ec0  ldp x19,x30,[sp, #0x20]
+00f97ec4  ldp x21,x20,[sp, #0x10]
+00f97ec8  ldr x22,[sp], #0x30
+00f97ecc  b 0x00b07850
+
+
+================================================================================
+### FILE: 00f97ed0_ZhuxiaoPanelMono__get_IsAgree.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$get_IsAgree @ 00f97ed0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$RefreshAgreeIcon @ 00f98be8
+  <- ZhuxiaoPanelMono$$OnClickTongyi_2 @ 00f99278
+  <- ZhuxiaoPanelMono$$OnClickOK_2 @ 00f99160
+
+--- Listing ---
+00f97ed0  stp x21,x20,[sp, #-0x20]!
+00f97ed4  stp x19,x30,[sp, #0x10]
+00f97ed8  adrp x20,0x3573000
+00f97edc  adrp x21,0x332e000
+00f97ee0  ldrb w8,[x20, #0x4dc]
+00f97ee4  ldr x21,[x21, #0x778]
+00f97ee8  mov x19,x0
+00f97eec  tbnz w8,#0x0,0x00f97f04
+00f97ef0  adrp x0,0x332e000
+00f97ef4  ldr x0,[x0, #0x778]
+00f97ef8  bl 0x00b0789c
+00f97efc  mov w8,#0x1
+00f97f00  strb w8,[x20, #0x4dc]
+00f97f04  ldr x8,[x21]
+00f97f08  ldr x8,[x8, #0xb8]
+00f97f0c  ldr x0,[x8, #0x50]
+00f97f10  cbz x0,0x00f97f28
+00f97f14  mov x1,x19
+00f97f18  ldp x19,x30,[sp, #0x10]
+00f97f1c  mov x2,xzr
+00f97f20  ldp x21,x20,[sp], #0x20
+00f97f24  b 0x01060aac
+00f97f28  ldrb w0,[x19, #0xe8]
+00f97f2c  ldp x19,x30,[sp, #0x10]
+00f97f30  ldp x21,x20,[sp], #0x20
+00f97f34  ret
+
+
+================================================================================
+### FILE: 00f97f38_ZhuxiaoPanelMono__set_IsAgree.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$set_IsAgree @ 00f97f38
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp15 @ 010613e4
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+  <- ZhuxiaoPanelMono$$OnClickTongyi_2 @ 00f99278
+
+--- Listing ---
+00f97f38  str x22,[sp, #-0x30]!
+00f97f3c  stp x21,x20,[sp, #0x10]
+00f97f40  stp x19,x30,[sp, #0x20]
+00f97f44  adrp x21,0x3573000
+00f97f48  adrp x22,0x332e000
+00f97f4c  ldrb w8,[x21, #0x4dd]
+00f97f50  ldr x22,[x22, #0x778]
+00f97f54  mov w20,w1
+00f97f58  mov x19,x0
+00f97f5c  tbnz w8,#0x0,0x00f97f74
+00f97f60  adrp x0,0x332e000
+00f97f64  ldr x0,[x0, #0x778]
+00f97f68  bl 0x00b0789c
+00f97f6c  mov w8,#0x1
+00f97f70  strb w8,[x21, #0x4dd]
+00f97f74  ldr x8,[x22]
+00f97f78  ldr x8,[x8, #0xb8]
+00f97f7c  ldr x0,[x8, #0x58]
+00f97f80  cbz x0,0x00f97fa0
+00f97f84  and w2,w20,#0x1
+00f97f88  mov x1,x19
+00f97f8c  ldp x19,x30,[sp, #0x20]
+00f97f90  ldp x21,x20,[sp, #0x10]
+00f97f94  mov x3,xzr
+00f97f98  ldr x22,[sp], #0x30
+00f97f9c  b 0x010613e4
+00f97fa0  and w8,w20,#0x1
+00f97fa4  strb w8,[x19, #0xe8]
+00f97fa8  ldp x19,x30,[sp, #0x20]
+00f97fac  ldp x21,x20,[sp, #0x10]
+00f97fb0  ldr x22,[sp], #0x30
+00f97fb4  ret
+
+
+================================================================================
+### FILE: 00f97fb8_ZhuxiaoPanelMono__LoginInit.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$LoginInit @ 00f97fb8
+
+--- Calls OUT ---
+  -> ZhuxiaoPanelMono$$set_LogoutExTime @ 00f97d68
+  -> ZhuxiaoPanelMono$$set_IsLogin @ 00f97c80
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp687 @ 010b9e60
+  -> ZhuxiaoPanelMono$$set_LoginGameAct @ 00f97e4c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_m_LoginInit @ 01529920
+  <- LoginManager.<>c__DisplayClass36_0$$<LoginGameServer>b__0 @ 00dd7e5c
+
+--- Listing ---
+00f97fb8  stp x23,x22,[sp, #-0x30]!
+00f97fbc  stp x21,x20,[sp, #0x10]
+00f97fc0  stp x19,x30,[sp, #0x20]
+00f97fc4  adrp x22,0x3573000
+00f97fc8  adrp x23,0x332e000
+00f97fcc  ldrb w8,[x22, #0x4de]
+00f97fd0  ldr x23,[x23, #0x778]
+00f97fd4  mov x20,x2
+00f97fd8  mov x21,x1
+00f97fdc  mov x19,x0
+00f97fe0  tbnz w8,#0x0,0x00f97ff8
+00f97fe4  adrp x0,0x332e000
+00f97fe8  ldr x0,[x0, #0x778]
+00f97fec  bl 0x00b0789c
+00f97ff0  mov w8,#0x1
+00f97ff4  strb w8,[x22, #0x4de]
+00f97ff8  ldr x8,[x23]
+00f97ffc  ldr x8,[x8, #0xb8]
+00f98000  ldr x0,[x8, #0x60]
+00f98004  cbz x0,0x00f98028
+00f98008  mov x1,x19
+00f9800c  mov x2,x21
+00f98010  mov x3,x20
+00f98014  ldp x19,x30,[sp, #0x20]
+00f98018  ldp x21,x20,[sp, #0x10]
+00f9801c  mov x4,xzr
+00f98020  ldp x23,x22,[sp], #0x30
+00f98024  b 0x010b9e60
+00f98028  mov x0,x19
+00f9802c  mov x1,x21
+00f98030  bl 0x00f97e4c
+00f98034  mov x0,x19
+00f98038  mov x1,x20
+00f9803c  bl 0x00f97d68
+00f98040  mov x0,x19
+00f98044  ldp x19,x30,[sp, #0x20]
+00f98048  ldp x21,x20,[sp, #0x10]
+00f9804c  mov w1,#0x1
+00f98050  ldp x23,x22,[sp], #0x30
+00f98054  b 0x00f97c80
+
+
+================================================================================
+### FILE: 00f98058_ZhuxiaoPanelMono__RegisterCallBack.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$RegisterCallBack @ 00f98058
+
+--- Calls OUT ---
+  -> BaseMono$$RegisterDataProccessCallBack @ 00e1a5c0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> Ali.OnProccessRequestFinish$$.ctor @ 00e110fc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GUIScreenBaseMono$$RegisterCallBack @ 00f21d5c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00f98058  stp x21,x20,[sp, #-0x20]!
+00f9805c  stp x19,x30,[sp, #0x10]
+00f98060  adrp x20,0x3573000
+00f98064  adrp x21,0x332e000
+00f98068  ldrb w8,[x20, #0x4df]
+00f9806c  ldr x21,[x21, #0x778]
+00f98070  mov x19,x0
+00f98074  tbnz w8,#0x0,0x00f980a4
+00f98078  adrp x0,0x335c000
+00f9807c  ldr x0,[x0, #0x918]
+00f98080  bl 0x00b0789c
+00f98084  adrp x0,0x3374000
+00f98088  ldr x0,[x0, #0x230]
+00f9808c  bl 0x00b0789c
+00f98090  adrp x0,0x332e000
+00f98094  ldr x0,[x0, #0x778]
+00f98098  bl 0x00b0789c
+00f9809c  mov w8,#0x1
+00f980a0  strb w8,[x20, #0x4df]
+00f980a4  ldr x8,[x21]
+00f980a8  ldr x8,[x8, #0xb8]
+00f980ac  ldr x0,[x8, #0x68]
+00f980b0  cbz x0,0x00f980c8
+00f980b4  mov x1,x19
+00f980b8  ldp x19,x30,[sp, #0x10]
+00f980bc  mov x2,xzr
+00f980c0  ldp x21,x20,[sp], #0x20
+00f980c4  b 0x01060dac
+00f980c8  adrp x20,0x335c000
+00f980cc  ldr x20,[x20, #0x918]
+00f980d0  mov x0,x19
+00f980d4  mov x1,xzr
+00f980d8  bl 0x00f21d5c
+00f980dc  ldr x0,[x20]
+00f980e0  bl 0x00b079a0
+00f980e4  cbz x0,0x00f98120
+00f980e8  adrp x8,0x3374000
+00f980ec  ldr x8,[x8, #0x230]
+00f980f0  mov x1,x19
+00f980f4  mov x3,xzr
+00f980f8  mov x20,x0
+00f980fc  ldr x2,[x8]
+00f98100  bl 0x00e110fc
+00f98104  mov x0,x19
+00f98108  ldp x19,x30,[sp, #0x10]
+00f9810c  mov w1,#0x8b
+00f98110  mov x2,x20
+00f98114  mov x3,xzr
+00f98118  ldp x21,x20,[sp], #0x20
+00f9811c  b 0x00e1a5c0
+00f98120  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f98124_ZhuxiaoPanelMono__LogoutBack.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$LogoutBack @ 00f98124
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> ZhuxiaoPanelMono$$PartManage @ 00f981ac
+  -> ZhuxiaoPanelMono$$set_progress @ 00f97b9c
+
+--- Calls IN ---
+
+--- Listing ---
+00f98124  str x22,[sp, #-0x30]!
+00f98128  stp x21,x20,[sp, #0x10]
+00f9812c  stp x19,x30,[sp, #0x20]
+00f98130  adrp x21,0x3573000
+00f98134  adrp x22,0x332e000
+00f98138  ldrb w8,[x21, #0x4e0]
+00f9813c  ldr x22,[x22, #0x778]
+00f98140  mov x20,x1
+00f98144  mov x19,x0
+00f98148  tbnz w8,#0x0,0x00f98160
+00f9814c  adrp x0,0x332e000
+00f98150  ldr x0,[x0, #0x778]
+00f98154  bl 0x00b0789c
+00f98158  mov w8,#0x1
+00f9815c  strb w8,[x21, #0x4e0]
+00f98160  ldr x8,[x22]
+00f98164  ldr x8,[x8, #0xb8]
+00f98168  ldr x0,[x8, #0x70]
+00f9816c  cbz x0,0x00f9818c
+00f98170  mov x1,x19
+00f98174  mov x2,x20
+00f98178  ldp x19,x30,[sp, #0x20]
+00f9817c  ldp x21,x20,[sp, #0x10]
+00f98180  mov x3,xzr
+00f98184  ldr x22,[sp], #0x30
+00f98188  b 0x0106125c
+00f9818c  mov w1,#0x4
+00f98190  mov x0,x19
+00f98194  bl 0x00f97b9c
+00f98198  mov x0,x19
+00f9819c  ldp x19,x30,[sp, #0x20]
+00f981a0  ldp x21,x20,[sp, #0x10]
+00f981a4  ldr x22,[sp], #0x30
+00f981a8  b 0x00f981ac
+
+
+================================================================================
+### FILE: 00f981ac_ZhuxiaoPanelMono__PartManage.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$PartManage @ 00f981ac
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> ZhuxiaoPanelMono$$RefreshAgreeIcon @ 00f98be8
+  -> ZhuxiaopanelNode$$get_inp_3 @ 00ffc3ac
+  -> ZhuxiaopanelNode$$get_loginTips_5 @ 00ffc528
+  -> ZhuxiaopanelNode$$get_tips_1 @ 00ffc14c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> ZhuxiaoPanelMono$$get_Node @ 00f979b0
+  -> FUN_00b079b0 @ 00b079b0
+  -> ZhuxiaoPanelMono$$set_IsAgree @ 00f97f38
+  -> ZhuxiaoPanelMono$$get_progress @ 00f97b34
+  -> ZhuxiaopanelNode$$get_endTips_4 @ 00ffc490
+  -> ZhuxiaoPanelMono$$get_IsLogin @ 00f97c18
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.MonoBehaviour$$StartCoroutine @ 024e4070
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> ZhuxiaopanelNode$$get_xieyi_2 @ 00ffc230
+  -> ZhuxiaoPanelMono$$RefreshShow @ 00f98cac
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$OnClickOK_1 @ 00f99394
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_m_PartManage @ 01529b24
+  <- ZhuxiaoPanelMono$$LogoutBack @ 00f98124
+  <- ZhuxiaoPanelMono$$Start @ 00f98430
+  <- ZhuxiaoPanelMono$$OnClickOK_2 @ 00f99160
+
+--- Listing ---
+00f981ac  str x22,[sp, #-0x30]!
+00f981b0  stp x21,x20,[sp, #0x10]
+00f981b4  stp x19,x30,[sp, #0x20]
+00f981b8  adrp x20,0x3573000
+00f981bc  adrp x21,0x332e000
+00f981c0  ldrb w8,[x20, #0x4e2]
+00f981c4  ldr x21,[x21, #0x778]
+00f981c8  mov x19,x0
+00f981cc  tbnz w8,#0x0,0x00f981f0
+00f981d0  adrp x0,0x3348000
+00f981d4  ldr x0,[x0, #0x138]
+00f981d8  bl 0x00b0789c
+00f981dc  adrp x0,0x332e000
+00f981e0  ldr x0,[x0, #0x778]
+00f981e4  bl 0x00b0789c
+00f981e8  mov w8,#0x1
+00f981ec  strb w8,[x20, #0x4e2]
+00f981f0  ldr x8,[x21]
+00f981f4  ldr x8,[x8, #0xb8]
+00f981f8  ldr x0,[x8, #0x80]
+00f981fc  cbz x0,0x00f98218
+00f98200  mov x1,x19
+00f98204  ldp x19,x30,[sp, #0x20]
+00f98208  ldp x21,x20,[sp, #0x10]
+00f9820c  mov x2,xzr
+00f98210  ldr x22,[sp], #0x30
+00f98214  b 0x01060dac
+00f98218  mov x0,x19
+00f9821c  bl 0x00f979b0
+00f98220  cbz x0,0x00f9842c
+00f98224  mov x1,xzr
+00f98228  bl 0x00ffc14c
+00f9822c  cbz x0,0x00f9842c
+00f98230  adrp x22,0x3348000
+00f98234  ldr x20,[x0, #0x18]
+00f98238  ldr x22,[x22, #0x138]
+00f9823c  mov x0,x19
+00f98240  bl 0x00f97c18
+00f98244  tbz w0,#0x0,0x00f98250
+00f98248  mov w21,wzr
+00f9824c  b 0x00f98260
+00f98250  mov x0,x19
+00f98254  bl 0x00f97b34
+00f98258  cmp w0,#0x1
+00f9825c  cset w21,eq
+00f98260  ldr x0,[x22]
+00f98264  ldr w8,[x0, #0xe0]
+00f98268  cbnz w8,0x00f98270
+00f9826c  bl 0x00b0798c
+00f98270  mov x0,x20
+00f98274  mov w1,w21
+00f98278  mov x2,xzr
+00f9827c  bl 0x00e13880
+00f98280  mov x0,x19
+00f98284  bl 0x00f979b0
+00f98288  cbz x0,0x00f9842c
+00f9828c  mov x1,xzr
+00f98290  bl 0x00ffc230
+00f98294  cbz x0,0x00f9842c
+00f98298  ldr x20,[x0, #0x18]
+00f9829c  mov x0,x19
+00f982a0  bl 0x00f97c18
+00f982a4  tbz w0,#0x0,0x00f982b0
+00f982a8  mov w21,wzr
+00f982ac  b 0x00f982c0
+00f982b0  mov x0,x19
+00f982b4  bl 0x00f97b34
+00f982b8  cmp w0,#0x2
+00f982bc  cset w21,eq
+00f982c0  ldr x0,[x22]
+00f982c4  ldr w8,[x0, #0xe0]
+00f982c8  cbnz w8,0x00f982d0
+00f982cc  bl 0x00b0798c
+00f982d0  mov x0,x20
+00f982d4  mov w1,w21
+00f982d8  mov x2,xzr
+00f982dc  bl 0x00e13880
+00f982e0  mov x0,x19
+00f982e4  bl 0x00f979b0
+00f982e8  cbz x0,0x00f9842c
+00f982ec  mov x1,xzr
+00f982f0  bl 0x00ffc3ac
+00f982f4  cbz x0,0x00f9842c
+00f982f8  ldr x20,[x0, #0x18]
+00f982fc  mov x0,x19
+00f98300  bl 0x00f97c18
+00f98304  tbz w0,#0x0,0x00f98310
+00f98308  mov w21,wzr
+00f9830c  b 0x00f98320
+00f98310  mov x0,x19
+00f98314  bl 0x00f97b34
+00f98318  cmp w0,#0x3
+00f9831c  cset w21,eq
+00f98320  ldr x0,[x22]
+00f98324  ldr w8,[x0, #0xe0]
+00f98328  cbnz w8,0x00f98330
+00f9832c  bl 0x00b0798c
+00f98330  mov x0,x20
+00f98334  mov w1,w21
+00f98338  mov x2,xzr
+00f9833c  bl 0x00e13880
+00f98340  mov x0,x19
+00f98344  bl 0x00f979b0
+00f98348  cbz x0,0x00f9842c
+00f9834c  mov x1,xzr
+00f98350  bl 0x00ffc490
+00f98354  cbz x0,0x00f9842c
+00f98358  ldr x20,[x0, #0x18]
+00f9835c  mov x0,x19
+00f98360  bl 0x00f97c18
+00f98364  tbz w0,#0x0,0x00f98370
+00f98368  mov w21,wzr
+00f9836c  b 0x00f98380
+00f98370  mov x0,x19
+00f98374  bl 0x00f97b34
+00f98378  cmp w0,#0x4
+00f9837c  cset w21,eq
+00f98380  ldr x0,[x22]
+00f98384  ldr w8,[x0, #0xe0]
+00f98388  cbnz w8,0x00f98390
+00f9838c  bl 0x00b0798c
+00f98390  mov x0,x20
+00f98394  mov w1,w21
+00f98398  mov x2,xzr
+00f9839c  bl 0x00e13880
+00f983a0  mov x0,x19
+00f983a4  bl 0x00f979b0
+00f983a8  cbz x0,0x00f9842c
+00f983ac  mov x1,xzr
+00f983b0  bl 0x00ffc528
+00f983b4  cbz x0,0x00f9842c
+00f983b8  ldr x20,[x0, #0x18]
+00f983bc  mov x0,x19
+00f983c0  bl 0x00f97c18
+00f983c4  and w1,w0,#0x1
+00f983c8  mov x0,x20
+00f983cc  mov x2,xzr
+00f983d0  bl 0x00e13880
+00f983d4  mov x0,x19
+00f983d8  bl 0x00f97b34
+00f983dc  cmp w0,#0x2
+00f983e0  b.ne 0x00f9841c
+00f983e4  mov x0,x19
+00f983e8  mov w1,wzr
+00f983ec  bl 0x00f97f38
+00f983f0  mov x0,x19
+00f983f4  bl 0x00f98be8
+00f983f8  mov x0,x19
+00f983fc  bl 0x00f98cac
+00f98400  mov x1,x0
+00f98404  mov x0,x19
+00f98408  ldp x19,x30,[sp, #0x20]
+00f9840c  ldp x21,x20,[sp, #0x10]
+00f98410  mov x2,xzr
+00f98414  ldr x22,[sp], #0x30
+00f98418  b 0x024e4070
+00f9841c  ldp x19,x30,[sp, #0x20]
+00f98420  ldp x21,x20,[sp, #0x10]
+00f98424  ldr x22,[sp], #0x30
+00f98428  ret
+00f9842c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f98430_ZhuxiaoPanelMono__Start.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$Start @ 00f98430
+
+--- Calls OUT ---
+  -> ZhuxiaoPanelMono$$get_IsLogin @ 00f97c18
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+  -> ZhuxiaoPanelMono$$PartManage @ 00f981ac
+  -> ZhuxiaoPanelMono$$ShowLoginTips @ 00f9899c
+
+--- Calls IN ---
+
+--- Listing ---
+00f98430  stp x21,x20,[sp, #-0x20]!
+00f98434  stp x19,x30,[sp, #0x10]
+00f98438  adrp x20,0x3573000
+00f9843c  adrp x21,0x332e000
+00f98440  ldrb w8,[x20, #0x4e1]
+00f98444  ldr x21,[x21, #0x778]
+00f98448  mov x19,x0
+00f9844c  tbnz w8,#0x0,0x00f98464
+00f98450  adrp x0,0x332e000
+00f98454  ldr x0,[x0, #0x778]
+00f98458  bl 0x00b0789c
+00f9845c  mov w8,#0x1
+00f98460  strb w8,[x20, #0x4e1]
+00f98464  ldr x8,[x21]
+00f98468  ldr x8,[x8, #0xb8]
+00f9846c  ldr x0,[x8, #0x78]
+00f98470  cbz x0,0x00f98488
+00f98474  mov x1,x19
+00f98478  ldp x19,x30,[sp, #0x10]
+00f9847c  mov x2,xzr
+00f98480  ldp x21,x20,[sp], #0x20
+00f98484  b 0x01060dac
+00f98488  mov x0,x19
+00f9848c  bl 0x00f984c0
+00f98490  mov x0,x19
+00f98494  bl 0x00f981ac
+00f98498  mov x0,x19
+00f9849c  bl 0x00f97c18
+00f984a0  tbz w0,#0x0,0x00f984b4
+00f984a4  mov x0,x19
+00f984a8  ldp x19,x30,[sp, #0x10]
+00f984ac  ldp x21,x20,[sp], #0x20
+00f984b0  b 0x00f9899c
+00f984b4  ldp x19,x30,[sp, #0x10]
+00f984b8  ldp x21,x20,[sp], #0x20
+00f984bc  ret
+
+
+================================================================================
+### FILE: 00f984c0_ZhuxiaoPanelMono__InitClickEvent.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> ZhuxiaoPanelMono$$get_Node @ 00f979b0
+  -> ZhuxiaopanelNode$$get_mask @ 00ffc100
+  -> ZhuxiaopanelNode$$get_btn_ok_2 @ 00ffc2c8
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> FUN_00b079b0 @ 00b079b0
+  -> ZhuxiaopanelNode$$get_btn_zhuxiao_3 @ 00ffc3f8
+  -> ZhuxiaopanelNode$$get_btn_exit_5 @ 00ffc5c0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> ZhuxiaopanelNode$$get_btn_ok_4 @ 00ffc4dc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UIEventListener$$Get @ 00e34224
+  -> ZhuxiaopanelNode$$get_btn_login_5 @ 00ffc60c
+  -> ZhuxiaopanelNode$$get_btn_tongyi_2 @ 00ffc314
+  -> ZhuxiaopanelNode$$get_btn_ok_1 @ 00ffc1e4
+  -> ZhuxiaopanelNode$$get_btn_cancel_1 @ 00ffc198
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_m_InitClickEvent @ 01529e80
+  <- ZhuxiaoPanelMono$$Start @ 00f98430
+
+--- Listing ---
+00f984c0  str x22,[sp, #-0x30]!
+00f984c4  stp x21,x20,[sp, #0x10]
+00f984c8  stp x19,x30,[sp, #0x20]
+00f984cc  adrp x20,0x3573000
+00f984d0  adrp x21,0x332e000
+00f984d4  ldrb w8,[x20, #0x4e4]
+00f984d8  ldr x21,[x21, #0x778]
+00f984dc  mov x19,x0
+00f984e0  tbnz w8,#0x0,0x00f98570
+00f984e4  adrp x0,0x332d000
+00f984e8  ldr x0,[x0, #0xd38]
+00f984ec  bl 0x00b0789c
+00f984f0  adrp x0,0x3360000
+00f984f4  ldr x0,[x0, #0x750]
+00f984f8  bl 0x00b0789c
+00f984fc  adrp x0,0x335b000
+00f98500  ldr x0,[x0, #0x968]
+00f98504  bl 0x00b0789c
+00f98508  adrp x0,0x3308000
+00f9850c  ldr x0,[x0, #0xc98]
+00f98510  bl 0x00b0789c
+00f98514  adrp x0,0x3323000
+00f98518  ldr x0,[x0, #0x998]
+00f9851c  bl 0x00b0789c
+00f98520  adrp x0,0x330b000
+00f98524  ldr x0,[x0, #0x4f8]
+00f98528  bl 0x00b0789c
+00f9852c  adrp x0,0x3349000
+00f98530  ldr x0,[x0, #0x808]
+00f98534  bl 0x00b0789c
+00f98538  adrp x0,0x3379000
+00f9853c  ldr x0,[x0, #0xa50]
+00f98540  bl 0x00b0789c
+00f98544  adrp x0,0x331a000
+00f98548  ldr x0,[x0, #0x228]
+00f9854c  bl 0x00b0789c
+00f98550  adrp x0,0x3356000
+00f98554  ldr x0,[x0, #0x4a8]
+00f98558  bl 0x00b0789c
+00f9855c  adrp x0,0x332e000
+00f98560  ldr x0,[x0, #0x778]
+00f98564  bl 0x00b0789c
+00f98568  mov w8,#0x1
+00f9856c  strb w8,[x20, #0x4e4]
+00f98570  ldr x8,[x21]
+00f98574  ldr x8,[x8, #0xb8]
+00f98578  ldr x0,[x8, #0x90]
+00f9857c  cbz x0,0x00f98598
+00f98580  mov x1,x19
+00f98584  ldp x19,x30,[sp, #0x20]
+00f98588  ldp x21,x20,[sp, #0x10]
+00f9858c  mov x2,xzr
+00f98590  ldr x22,[sp], #0x30
+00f98594  b 0x01060dac
+00f98598  mov x0,x19
+00f9859c  bl 0x00f979b0
+00f985a0  cbz x0,0x00f98998
+00f985a4  mov x1,xzr
+00f985a8  bl 0x00ffc100
+00f985ac  cbz x0,0x00f98998
+00f985b0  adrp x8,0x332d000
+00f985b4  ldr x8,[x8, #0xd38]
+00f985b8  adrp x22,0x3360000
+00f985bc  ldr x20,[x0, #0x18]
+00f985c0  ldr x8,[x8]
+00f985c4  ldr w9,[x8, #0xe0]
+00f985c8  ldr x22,[x22, #0x750]
+00f985cc  cbnz w9,0x00f985d8
+00f985d0  mov x0,x8
+00f985d4  bl 0x00b0798c
+00f985d8  mov x0,x20
+00f985dc  mov w1,wzr
+00f985e0  mov x2,xzr
+00f985e4  bl 0x00e34224
+00f985e8  ldr x8,[x22]
+00f985ec  mov x20,x0
+00f985f0  mov x0,x8
+00f985f4  bl 0x00b079a0
+00f985f8  cbz x0,0x00f98998
+00f985fc  cbz x19,0x00f98998
+00f98600  ldr x8,[x19]
+00f98604  mov x1,x19
+00f98608  mov x3,xzr
+00f9860c  mov x21,x0
+00f98610  ldr x2,[x8, #0x450]
+00f98614  bl 0x00e35bd0
+00f98618  cbz x20,0x00f98998
+00f9861c  str x21,[x20, #0x38]!
+00f98620  mov x0,x20
+00f98624  mov x1,x21
+00f98628  bl 0x00b07850
+00f9862c  mov x0,x19
+00f98630  bl 0x00f979b0
+00f98634  cbz x0,0x00f98998
+00f98638  mov x1,xzr
+00f9863c  bl 0x00ffc1e4
+00f98640  cbz x0,0x00f98998
+00f98644  ldr x0,[x0, #0x18]
+00f98648  mov w1,#0x1
+00f9864c  mov x2,xzr
+00f98650  bl 0x00e34224
+00f98654  ldr x8,[x22]
+00f98658  mov x20,x0
+00f9865c  mov x0,x8
+00f98660  bl 0x00b079a0
+00f98664  cbz x0,0x00f98998
+00f98668  adrp x8,0x330b000
+00f9866c  ldr x8,[x8, #0x4f8]
+00f98670  mov x1,x19
+00f98674  mov x3,xzr
+00f98678  mov x21,x0
+00f9867c  ldr x2,[x8]
+00f98680  bl 0x00e35bd0
+00f98684  cbz x20,0x00f98998
+00f98688  str x21,[x20, #0x38]!
+00f9868c  mov x0,x20
+00f98690  mov x1,x21
+00f98694  bl 0x00b07850
+00f98698  mov x0,x19
+00f9869c  bl 0x00f979b0
+00f986a0  cbz x0,0x00f98998
+00f986a4  mov x1,xzr
+00f986a8  bl 0x00ffc2c8
+00f986ac  cbz x0,0x00f98998
+00f986b0  ldr x0,[x0, #0x18]
+00f986b4  mov w1,#0x1
+00f986b8  mov x2,xzr
+00f986bc  bl 0x00e34224
+00f986c0  ldr x8,[x22]
+00f986c4  mov x20,x0
+00f986c8  mov x0,x8
+00f986cc  bl 0x00b079a0
+00f986d0  cbz x0,0x00f98998
+00f986d4  adrp x8,0x3349000
+00f986d8  ldr x8,[x8, #0x808]
+00f986dc  mov x1,x19
+00f986e0  mov x3,xzr
+00f986e4  mov x21,x0
+00f986e8  ldr x2,[x8]
+00f986ec  bl 0x00e35bd0
+00f986f0  cbz x20,0x00f98998
+00f986f4  str x21,[x20, #0x38]!
+00f986f8  mov x0,x20
+00f986fc  mov x1,x21
+00f98700  bl 0x00b07850
+00f98704  mov x0,x19
+00f98708  bl 0x00f979b0
+00f9870c  cbz x0,0x00f98998
+00f98710  mov x1,xzr
+00f98714  bl 0x00ffc4dc
+00f98718  cbz x0,0x00f98998
+00f9871c  ldr x0,[x0, #0x18]
+00f98720  mov w1,#0x1
+00f98724  mov x2,xzr
+00f98728  bl 0x00e34224
+00f9872c  ldr x8,[x22]
+00f98730  mov x20,x0
+00f98734  mov x0,x8
+00f98738  bl 0x00b079a0
+00f9873c  cbz x0,0x00f98998
+00f98740  adrp x8,0x3379000
+00f98744  ldr x8,[x8, #0xa50]
+00f98748  mov x1,x19
+00f9874c  mov x3,xzr
+00f98750  mov x21,x0
+00f98754  ldr x2,[x8]
+00f98758  bl 0x00e35bd0
+00f9875c  cbz x20,0x00f98998
+00f98760  str x21,[x20, #0x38]!
+00f98764  mov x0,x20
+00f98768  mov x1,x21
+00f9876c  bl 0x00b07850
+00f98770  mov x0,x19
+00f98774  bl 0x00f979b0
+00f98778  cbz x0,0x00f98998
+00f9877c  mov x1,xzr
+00f98780  bl 0x00ffc198
+00f98784  cbz x0,0x00f98998
+00f98788  ldr x0,[x0, #0x18]
+00f9878c  mov w1,#0x1
+00f98790  mov x2,xzr
+00f98794  bl 0x00e34224
+00f98798  ldr x8,[x22]
+00f9879c  mov x20,x0
+00f987a0  mov x0,x8
+00f987a4  bl 0x00b079a0
+00f987a8  cbz x0,0x00f98998
+00f987ac  adrp x8,0x335b000
+00f987b0  ldr x8,[x8, #0x968]
+00f987b4  mov x1,x19
+00f987b8  mov x3,xzr
+00f987bc  mov x21,x0
+00f987c0  ldr x2,[x8]
+00f987c4  bl 0x00e35bd0
+00f987c8  cbz x20,0x00f98998
+00f987cc  str x21,[x20, #0x38]!
+00f987d0  mov x0,x20
+00f987d4  mov x1,x21
+00f987d8  bl 0x00b07850
+00f987dc  mov x0,x19
+00f987e0  bl 0x00f979b0
+00f987e4  cbz x0,0x00f98998
+00f987e8  mov x1,xzr
+00f987ec  bl 0x00ffc5c0
+00f987f0  cbz x0,0x00f98998
+00f987f4  ldr x0,[x0, #0x18]
+00f987f8  mov w1,#0x1
+00f987fc  mov x2,xzr
+00f98800  bl 0x00e34224
+00f98804  ldr x8,[x22]
+00f98808  mov x20,x0
+00f9880c  mov x0,x8
+00f98810  bl 0x00b079a0
+00f98814  cbz x0,0x00f98998
+00f98818  adrp x8,0x3308000
+00f9881c  ldr x8,[x8, #0xc98]
+00f98820  mov x1,x19
+00f98824  mov x3,xzr
+00f98828  mov x21,x0
+00f9882c  ldr x2,[x8]
+00f98830  bl 0x00e35bd0
+00f98834  cbz x20,0x00f98998
+00f98838  str x21,[x20, #0x38]!
+00f9883c  mov x0,x20
+00f98840  mov x1,x21
+00f98844  bl 0x00b07850
+00f98848  mov x0,x19
+00f9884c  bl 0x00f979b0
+00f98850  cbz x0,0x00f98998
+00f98854  mov x1,xzr
+00f98858  bl 0x00ffc60c
+00f9885c  cbz x0,0x00f98998
+00f98860  ldr x0,[x0, #0x18]
+00f98864  mov w1,#0x1
+00f98868  mov x2,xzr
+00f9886c  bl 0x00e34224
+00f98870  ldr x8,[x22]
+00f98874  mov x20,x0
+00f98878  mov x0,x8
+00f9887c  bl 0x00b079a0
+00f98880  cbz x0,0x00f98998
+00f98884  adrp x8,0x3323000
+00f98888  ldr x8,[x8, #0x998]
+00f9888c  mov x1,x19
+00f98890  mov x3,xzr
+00f98894  mov x21,x0
+00f98898  ldr x2,[x8]
+00f9889c  bl 0x00e35bd0
+00f988a0  cbz x20,0x00f98998
+00f988a4  str x21,[x20, #0x38]!
+00f988a8  mov x0,x20
+00f988ac  mov x1,x21
+00f988b0  bl 0x00b07850
+00f988b4  mov x0,x19
+00f988b8  bl 0x00f979b0
+00f988bc  cbz x0,0x00f98998
+00f988c0  mov x1,xzr
+00f988c4  bl 0x00ffc314
+00f988c8  cbz x0,0x00f98998
+00f988cc  ldr x0,[x0, #0x18]
+00f988d0  mov w1,#0x1
+00f988d4  mov x2,xzr
+00f988d8  bl 0x00e34224
+00f988dc  ldr x8,[x22]
+00f988e0  mov x20,x0
+00f988e4  mov x0,x8
+00f988e8  bl 0x00b079a0
+00f988ec  cbz x0,0x00f98998
+00f988f0  adrp x8,0x331a000
+00f988f4  ldr x8,[x8, #0x228]
+00f988f8  mov x1,x19
+00f988fc  mov x3,xzr
+00f98900  mov x21,x0
+00f98904  ldr x2,[x8]
+00f98908  bl 0x00e35bd0
+00f9890c  cbz x20,0x00f98998
+00f98910  str x21,[x20, #0x38]!
+00f98914  mov x0,x20
+00f98918  mov x1,x21
+00f9891c  bl 0x00b07850
+00f98920  mov x0,x19
+00f98924  bl 0x00f979b0
+00f98928  cbz x0,0x00f98998
+00f9892c  mov x1,xzr
+00f98930  bl 0x00ffc3f8
+00f98934  cbz x0,0x00f98998
+00f98938  ldr x0,[x0, #0x18]
+00f9893c  mov w1,#0x1
+00f98940  mov x2,xzr
+00f98944  bl 0x00e34224
+00f98948  ldr x8,[x22]
+00f9894c  mov x20,x0
+00f98950  mov x0,x8
+00f98954  bl 0x00b079a0
+00f98958  cbz x0,0x00f98998
+00f9895c  adrp x8,0x3356000
+00f98960  ldr x8,[x8, #0x4a8]
+00f98964  mov x1,x19
+00f98968  mov x3,xzr
+00f9896c  mov x21,x0
+00f98970  ldr x2,[x8]
+00f98974  bl 0x00e35bd0
+00f98978  cbz x20,0x00f98998
+00f9897c  str x21,[x20, #0x38]!
+00f98980  mov x0,x20
+00f98984  mov x1,x21
+00f98988  ldp x19,x30,[sp, #0x20]
+00f9898c  ldp x21,x20,[sp, #0x10]
+00f98990  ldr x22,[sp], #0x30
+00f98994  b 0x00b07850
+00f98998  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f9899c_ZhuxiaoPanelMono__ShowLoginTips.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$ShowLoginTips @ 00f9899c
+
+--- Calls OUT ---
+  -> ZhuxiaopanelNode$$get_lbl_loginTips @ 00ffc574
+  -> System.TimeSpan$$get_Days @ 02167b04
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> ZhuxiaoPanelMono$$get_Node @ 00f979b0
+  -> System.TimeSpan$$get_Hours @ 02167b30
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> System.TimeSpan$$get_Minutes @ 02167b78
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> System.TimeSpan$$.ctor @ 02167920
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> ZhuxiaoPanelMono$$get_LogoutExTime @ 00f97d00
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> FUN_00b079b8 @ 00b079b8
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> FUN_00b078f8 @ 00b078f8
+  -> UINode$$get_TextMesh @ 00dc488c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$Start @ 00f98430
+
+--- Listing ---
+00f9899c  sub sp,sp,#0x40
+00f989a0  str x22,[sp, #0x10]
+00f989a4  stp x21,x20,[sp, #0x20]
+00f989a8  stp x19,x30,[sp, #0x30]
+00f989ac  adrp x21,0x3573000
+00f989b0  adrp x20,0x332e000
+00f989b4  ldrb w8,[x21, #0x4ee]
+00f989b8  ldr x20,[x20, #0x778]
+00f989bc  mov x19,x0
+00f989c0  tbnz w8,#0x0,0x00f989fc
+00f989c4  adrp x0,0x3348000
+00f989c8  ldr x0,[x0, #0x138]
+00f989cc  bl 0x00b0789c
+00f989d0  adrp x0,0x3332000
+00f989d4  ldr x0,[x0, #0x38]
+00f989d8  bl 0x00b0789c
+00f989dc  adrp x0,0x3370000
+00f989e0  ldr x0,[x0, #0x778]
+00f989e4  bl 0x00b0789c
+00f989e8  adrp x0,0x332e000
+00f989ec  ldr x0,[x0, #0x778]
+00f989f0  bl 0x00b0789c
+00f989f4  mov w8,#0x1
+00f989f8  strb w8,[x21, #0x4ee]
+00f989fc  ldr x8,[x20]
+00f98a00  str xzr,[sp, #0x18]
+00f98a04  ldr x8,[x8, #0xb8]
+00f98a08  ldr x0,[x8, #0xe0]
+00f98a0c  cbz x0,0x00f98a20
+00f98a10  mov x1,x19
+00f98a14  mov x2,xzr
+00f98a18  bl 0x01060dac
+00f98a1c  b 0x00f98bc0
+00f98a20  mov x0,x19
+00f98a24  bl 0x00f97d00
+00f98a28  mov x3,x0
+00f98a2c  add x0,sp,#0x18
+00f98a30  mov w1,wzr
+00f98a34  mov w2,wzr
+00f98a38  mov x4,xzr
+00f98a3c  bl 0x02167920
+00f98a40  mov x0,x19
+00f98a44  bl 0x00f979b0
+00f98a48  cbz x0,0x00f98bd4
+00f98a4c  mov x1,xzr
+00f98a50  bl 0x00ffc574
+00f98a54  cbz x0,0x00f98bd4
+00f98a58  adrp x19,0x3370000
+00f98a5c  adrp x22,0x3332000
+00f98a60  ldr x19,[x19, #0x778]
+00f98a64  ldr x22,[x22, #0x38]
+00f98a68  mov x1,xzr
+00f98a6c  bl 0x00dc488c
+00f98a70  ldr x8,[x19]
+00f98a74  mov x19,x0
+00f98a78  mov w1,#0x3
+00f98a7c  mov x0,x8
+00f98a80  bl 0x00b078f8
+00f98a84  mov x20,x0
+00f98a88  add x0,sp,#0x18
+00f98a8c  mov x1,xzr
+00f98a90  bl 0x02167b04
+00f98a94  ldr x8,[x22]
+00f98a98  str w0,[sp, #0xc]
+00f98a9c  add x1,sp,#0xc
+00f98aa0  mov x0,x8
+00f98aa4  bl 0x00b07994
+00f98aa8  cbz x20,0x00f98bd4
+00f98aac  mov x21,x0
+00f98ab0  cbz x0,0x00f98ac8
+00f98ab4  ldr x8,[x20]
+00f98ab8  mov x0,x21
+00f98abc  ldr x1,[x8, #0x40]
+00f98ac0  bl 0x00b07990
+00f98ac4  cbz x0,0x00f98bdc
+00f98ac8  ldr w8,[x20, #0x18]
+00f98acc  cbz w8,0x00f98bd8
+00f98ad0  mov x0,x20
+00f98ad4  str x21,[x0, #0x20]!
+00f98ad8  mov x1,x21
+00f98adc  bl 0x00b07850
+00f98ae0  add x0,sp,#0x18
+00f98ae4  mov x1,xzr
+00f98ae8  bl 0x02167b30
+00f98aec  ldr x8,[x22]
+00f98af0  str w0,[sp, #0x8]
+00f98af4  add x1,sp,#0x8
+00f98af8  mov x0,x8
+00f98afc  bl 0x00b07994
+00f98b00  mov x21,x0
+00f98b04  cbz x0,0x00f98b1c
+00f98b08  ldr x8,[x20]
+00f98b0c  mov x0,x21
+00f98b10  ldr x1,[x8, #0x40]
+00f98b14  bl 0x00b07990
+00f98b18  cbz x0,0x00f98bdc
+00f98b1c  ldr w8,[x20, #0x18]
+00f98b20  cmp w8,#0x1
+00f98b24  b.ls 0x00f98bd8
+00f98b28  mov x0,x20
+00f98b2c  str x21,[x0, #0x28]!
+00f98b30  mov x1,x21
+00f98b34  bl 0x00b07850
+00f98b38  add x0,sp,#0x18
+00f98b3c  mov x1,xzr
+00f98b40  bl 0x02167b78
+00f98b44  ldr x8,[x22]
+00f98b48  str w0,[sp, #0x4]
+00f98b4c  add x1,sp,#0x4
+00f98b50  mov x0,x8
+00f98b54  bl 0x00b07994
+00f98b58  mov x21,x0
+00f98b5c  cbz x0,0x00f98b74
+00f98b60  ldr x8,[x20]
+00f98b64  mov x0,x21
+00f98b68  ldr x1,[x8, #0x40]
+00f98b6c  bl 0x00b07990
+00f98b70  cbz x0,0x00f98bdc
+00f98b74  ldr w8,[x20, #0x18]
+00f98b78  cmp w8,#0x2
+00f98b7c  b.ls 0x00f98bd8
+00f98b80  adrp x22,0x3348000
+00f98b84  ldr x22,[x22, #0x138]
+00f98b88  mov x0,x20
+00f98b8c  str x21,[x0, #0x30]!
+00f98b90  mov x1,x21
+00f98b94  bl 0x00b07850
+00f98b98  ldr x0,[x22]
+00f98b9c  ldr w8,[x0, #0xe0]
+00f98ba0  cbnz w8,0x00f98ba8
+00f98ba4  bl 0x00b0798c
+00f98ba8  mov w1,#0x3378
+00f98bac  movk w1,#0x4ca, LSL #16
+00f98bb0  mov x0,x19
+00f98bb4  mov x2,x20
+00f98bb8  mov x3,xzr
+00f98bbc  bl 0x00e14168
+00f98bc0  ldp x19,x30,[sp, #0x30]
+00f98bc4  ldp x21,x20,[sp, #0x20]
+00f98bc8  ldr x22,[sp, #0x10]
+00f98bcc  add sp,sp,#0x40
+00f98bd0  ret
+00f98bd4  bl 0x00b079b0
+00f98bd8  bl 0x00b079b8
+00f98bdc  bl 0x00b079d4
+00f98be0  mov x1,xzr
+00f98be4  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00f98be8_ZhuxiaoPanelMono__RefreshAgreeIcon.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$RefreshAgreeIcon @ 00f98be8
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> ZhuxiaoPanelMono$$get_IsAgree @ 00f97ed0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> ZhuxiaopanelNode$$get_spr_tongyi @ 00ffc360
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> ZhuxiaoPanelMono$$get_Node @ 00f979b0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+  <- ZhuxiaoPanelMono$$OnClickTongyi_2 @ 00f99278
+
+--- Listing ---
+00f98be8  stp x21,x20,[sp, #-0x20]!
+00f98bec  stp x19,x30,[sp, #0x10]
+00f98bf0  adrp x20,0x3573000
+00f98bf4  adrp x21,0x332e000
+00f98bf8  ldrb w8,[x20, #0x4ed]
+00f98bfc  ldr x21,[x21, #0x778]
+00f98c00  mov x19,x0
+00f98c04  tbnz w8,#0x0,0x00f98c28
+00f98c08  adrp x0,0x3348000
+00f98c0c  ldr x0,[x0, #0x138]
+00f98c10  bl 0x00b0789c
+00f98c14  adrp x0,0x332e000
+00f98c18  ldr x0,[x0, #0x778]
+00f98c1c  bl 0x00b0789c
+00f98c20  mov w8,#0x1
+00f98c24  strb w8,[x20, #0x4ed]
+00f98c28  ldr x8,[x21]
+00f98c2c  ldr x8,[x8, #0xb8]
+00f98c30  ldr x0,[x8, #0xd8]
+00f98c34  cbz x0,0x00f98c4c
+00f98c38  mov x1,x19
+00f98c3c  ldp x19,x30,[sp, #0x10]
+00f98c40  mov x2,xzr
+00f98c44  ldp x21,x20,[sp], #0x20
+00f98c48  b 0x01060dac
+00f98c4c  mov x0,x19
+00f98c50  bl 0x00f979b0
+00f98c54  cbz x0,0x00f98ca8
+00f98c58  mov x1,xzr
+00f98c5c  bl 0x00ffc360
+00f98c60  cbz x0,0x00f98ca8
+00f98c64  adrp x21,0x3348000
+00f98c68  ldr x20,[x0, #0x18]
+00f98c6c  ldr x21,[x21, #0x138]
+00f98c70  mov x0,x19
+00f98c74  bl 0x00f97ed0
+00f98c78  ldr x8,[x21]
+00f98c7c  mov w19,w0
+00f98c80  ldr w9,[x8, #0xe0]
+00f98c84  cbnz w9,0x00f98c90
+00f98c88  mov x0,x8
+00f98c8c  bl 0x00b0798c
+00f98c90  and w1,w19,#0x1
+00f98c94  ldp x19,x30,[sp, #0x10]
+00f98c98  mov x0,x20
+00f98c9c  mov x2,xzr
+00f98ca0  ldp x21,x20,[sp], #0x20
+00f98ca4  b 0x00e13880
+00f98ca8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f98cac_ZhuxiaoPanelMono__RefreshShow.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$RefreshShow @ 00f98cac
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp55 @ 01066218
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$_m_RefreshShow @ 01529cc0
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+
+--- Listing ---
+00f98cac  stp x21,x20,[sp, #-0x20]!
+00f98cb0  stp x19,x30,[sp, #0x10]
+00f98cb4  adrp x20,0x3573000
+00f98cb8  adrp x21,0x332e000
+00f98cbc  ldrb w8,[x20, #0x4e3]
+00f98cc0  ldr x21,[x21, #0x778]
+00f98cc4  mov x19,x0
+00f98cc8  tbnz w8,#0x0,0x00f98cec
+00f98ccc  adrp x0,0x336b000
+00f98cd0  ldr x0,[x0, #0x678]
+00f98cd4  bl 0x00b0789c
+00f98cd8  adrp x0,0x332e000
+00f98cdc  ldr x0,[x0, #0x778]
+00f98ce0  bl 0x00b0789c
+00f98ce4  mov w8,#0x1
+00f98ce8  strb w8,[x20, #0x4e3]
+00f98cec  ldr x8,[x21]
+00f98cf0  ldr x8,[x8, #0xb8]
+00f98cf4  ldr x0,[x8, #0x88]
+00f98cf8  cbz x0,0x00f98d10
+00f98cfc  mov x1,x19
+00f98d00  ldp x19,x30,[sp, #0x10]
+00f98d04  mov x2,xzr
+00f98d08  ldp x21,x20,[sp], #0x20
+00f98d0c  b 0x01066218
+00f98d10  adrp x8,0x336b000
+00f98d14  ldr x8,[x8, #0x678]
+00f98d18  ldr x0,[x8]
+00f98d1c  bl 0x00b079a0
+00f98d20  cbz x0,0x00f98d54
+00f98d24  mov x1,xzr
+00f98d28  mov x20,x0
+00f98d2c  bl 0x02194104
+00f98d30  mov x0,x20
+00f98d34  str wzr,[x20, #0x10]
+00f98d38  str x19,[x0, #0x20]!
+00f98d3c  mov x1,x19
+00f98d40  bl 0x00b07850
+00f98d44  ldp x19,x30,[sp, #0x10]
+00f98d48  mov x0,x20
+00f98d4c  ldp x21,x20,[sp], #0x20
+00f98d50  ret
+00f98d54  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f98d58_ZhuxiaoPanelMono._RefreshShow_d__30__.ctor.txt
+================================================================================
+Function: ZhuxiaoPanelMono.<RefreshShow>d__30$$.ctor @ 00f98d58
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00f98d58  str x20,[sp, #-0x20]!
+00f98d5c  stp x19,x30,[sp, #0x10]
+00f98d60  mov w19,w1
+00f98d64  mov x1,xzr
+00f98d68  mov x20,x0
+00f98d6c  bl 0x02194104
+00f98d70  str w19,[x20, #0x10]
+00f98d74  ldp x19,x30,[sp, #0x10]
+00f98d78  ldr x20,[sp], #0x20
+00f98d7c  ret
+
+
+================================================================================
+### FILE: 00f98d80_ZhuxiaoPanelMono__OnClickZhuxiao_3.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$OnClickZhuxiao_3 @ 00f98d80
+
+--- Calls OUT ---
+  -> BaseMono$$TextTips @ 00e1b538
+  -> ZhuxiaoPanelMono$$get_Node @ 00f979b0
+  -> FUN_00b079b0 @ 00b079b0
+  -> UINode$$get_InputField @ 00dc495c
+  -> ZhuxiaopanelNode$$get_inp_uid @ 00ffc444
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> ProtocolGame_SendRequest$$Logout @ 00de3ac4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> Ali$$Word @ 00e0581c
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> System.String$$Equals @ 01fde08c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00f98d80  stp x23,x22,[sp, #-0x30]!
+00f98d84  stp x21,x20,[sp, #0x10]
+00f98d88  stp x19,x30,[sp, #0x20]
+00f98d8c  adrp x21,0x3573000
+00f98d90  adrp x22,0x332e000
+00f98d94  ldrb w8,[x21, #0x4e5]
+00f98d98  ldr x22,[x22, #0x778]
+00f98d9c  mov x20,x1
+00f98da0  mov x19,x0
+00f98da4  tbnz w8,#0x0,0x00f98dd4
+00f98da8  adrp x0,0x335f000
+00f98dac  ldr x0,[x0, #0x20]
+00f98db0  bl 0x00b0789c
+00f98db4  adrp x0,0x335b000
+00f98db8  ldr x0,[x0, #0x650]
+00f98dbc  bl 0x00b0789c
+00f98dc0  adrp x0,0x332e000
+00f98dc4  ldr x0,[x0, #0x778]
+00f98dc8  bl 0x00b0789c
+00f98dcc  mov w8,#0x1
+00f98dd0  strb w8,[x21, #0x4e5]
+00f98dd4  ldr x8,[x22]
+00f98dd8  ldr x8,[x8, #0xb8]
+00f98ddc  ldr x0,[x8, #0x98]
+00f98de0  cbz x0,0x00f98e00
+00f98de4  mov x1,x19
+00f98de8  mov x2,x20
+00f98dec  ldp x19,x30,[sp, #0x20]
+00f98df0  ldp x21,x20,[sp, #0x10]
+00f98df4  mov x3,xzr
+00f98df8  ldp x23,x22,[sp], #0x30
+00f98dfc  b 0x0106125c
+00f98e00  mov x0,x19
+00f98e04  bl 0x00f979b0
+00f98e08  cbz x0,0x00f98f84
+00f98e0c  mov x1,xzr
+00f98e10  bl 0x00ffc444
+00f98e14  cbz x0,0x00f98f84
+00f98e18  mov x1,xzr
+00f98e1c  bl 0x00dc495c
+00f98e20  cbz x0,0x00f98f84
+00f98e24  ldr x0,[x0, #0x218]
+00f98e28  adrp x22,0x335b000
+00f98e2c  ldr x22,[x22, #0x650]
+00f98e30  mov w21,#0x337b
+00f98e34  mov x1,xzr
+00f98e38  movk w21,#0x4ca, LSL #16
+00f98e3c  bl 0x01fdf3a0
+00f98e40  tbnz w0,#0x0,0x00f98f18
+00f98e44  adrp x20,0x335f000
+00f98e48  ldr x20,[x20, #0x20]
+00f98e4c  ldr x8,[x20]
+00f98e50  ldr w9,[x8, #0xe0]
+00f98e54  cbnz w9,0x00f98e64
+00f98e58  mov x0,x8
+00f98e5c  bl 0x00b0798c
+00f98e60  ldr x8,[x20]
+00f98e64  ldr x23,[x22]
+00f98e68  ldr x8,[x8, #0xb8]
+00f98e6c  ldr x9,[x23, #0x38]
+00f98e70  ldr x20,[x8, #0x10]
+00f98e74  ldr x0,[x9]
+00f98e78  ldrb w9,[x0, #0x132]
+00f98e7c  tbnz w9,#0x0,0x00f98e84
+00f98e80  bl 0x00b2ac40
+00f98e84  ldr w8,[x0, #0xe0]
+00f98e88  cbnz w8,0x00f98e90
+00f98e8c  bl 0x00b0798c
+00f98e90  ldr x8,[x23, #0x38]
+00f98e94  ldr x0,[x8]
+00f98e98  ldrb w8,[x0, #0x132]
+00f98e9c  tbnz w8,#0x0,0x00f98ea4
+00f98ea0  bl 0x00b2ac40
+00f98ea4  cbz x20,0x00f98f84
+00f98ea8  ldr x8,[x0, #0xb8]
+00f98eac  mov w1,#0x337b
+00f98eb0  movk w1,#0x4ca, LSL #16
+00f98eb4  mov x0,x20
+00f98eb8  ldr x2,[x8]
+00f98ebc  mov x3,xzr
+00f98ec0  bl 0x00e0581c
+00f98ec4  mov x20,x0
+00f98ec8  mov x0,x19
+00f98ecc  bl 0x00f979b0
+00f98ed0  cbz x0,0x00f98f84
+00f98ed4  mov x1,xzr
+00f98ed8  bl 0x00ffc444
+00f98edc  cbz x0,0x00f98f84
+00f98ee0  mov x1,xzr
+00f98ee4  bl 0x00dc495c
+00f98ee8  cbz x0,0x00f98f84
+00f98eec  cbz x20,0x00f98f84
+00f98ef0  ldr x1,[x0, #0x218]
+00f98ef4  mov x0,x20
+00f98ef8  mov x2,xzr
+00f98efc  bl 0x01fde08c
+00f98f00  tbz w0,#0x0,0x00f98f18
+00f98f04  ldp x19,x30,[sp, #0x20]
+00f98f08  ldp x21,x20,[sp, #0x10]
+00f98f0c  mov x0,xzr
+00f98f10  ldp x23,x22,[sp], #0x30
+00f98f14  b 0x00de3ac4
+00f98f18  ldr x20,[x22]
+00f98f1c  ldr x8,[x20, #0x38]
+00f98f20  ldr x0,[x8]
+00f98f24  ldrb w8,[x0, #0x132]
+00f98f28  tbnz w8,#0x0,0x00f98f30
+00f98f2c  bl 0x00b2ac40
+00f98f30  ldr w8,[x0, #0xe0]
+00f98f34  cbnz w8,0x00f98f3c
+00f98f38  bl 0x00b0798c
+00f98f3c  ldr x8,[x20, #0x38]
+00f98f40  ldr x0,[x8]
+00f98f44  ldrb w8,[x0, #0x132]
+00f98f48  tbnz w8,#0x0,0x00f98f50
+00f98f4c  bl 0x00b2ac40
+00f98f50  ldr x8,[x0, #0xb8]
+00f98f54  add w1,w21,#0x3
+00f98f58  mov x0,x19
+00f98f5c  ldp x19,x30,[sp, #0x20]
+00f98f60  ldr x6,[x8]
+00f98f64  ldp x21,x20,[sp, #0x10]
+00f98f68  mov w4,#0xffffffff
+00f98f6c  mov w2,wzr
+00f98f70  mov x3,xzr
+00f98f74  mov w5,wzr
+00f98f78  mov x7,xzr
+00f98f7c  ldp x23,x22,[sp], #0x30
+00f98f80  b 0x00e1b538
+00f98f84  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f98f88_ZhuxiaoPanelMono__OnClickLogin_5.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$OnClickLogin_5 @ 00f98f88
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> ZhuxiaoPanelMono$$get_LoginGameAct @ 00f97de4
+
+--- Calls IN ---
+
+--- Listing ---
+00f98f88  str x22,[sp, #-0x30]!
+00f98f8c  stp x21,x20,[sp, #0x10]
+00f98f90  stp x19,x30,[sp, #0x20]
+00f98f94  adrp x21,0x3573000
+00f98f98  adrp x22,0x332e000
+00f98f9c  ldrb w8,[x21, #0x4e6]
+00f98fa0  ldr x22,[x22, #0x778]
+00f98fa4  mov x20,x1
+00f98fa8  mov x19,x0
+00f98fac  tbnz w8,#0x0,0x00f98fc4
+00f98fb0  adrp x0,0x332e000
+00f98fb4  ldr x0,[x0, #0x778]
+00f98fb8  bl 0x00b0789c
+00f98fbc  mov w8,#0x1
+00f98fc0  strb w8,[x21, #0x4e6]
+00f98fc4  ldr x8,[x22]
+00f98fc8  ldr x8,[x8, #0xb8]
+00f98fcc  ldr x0,[x8, #0xa0]
+00f98fd0  cbz x0,0x00f98ff0
+00f98fd4  mov x1,x19
+00f98fd8  mov x2,x20
+00f98fdc  ldp x19,x30,[sp, #0x20]
+00f98fe0  ldp x21,x20,[sp, #0x10]
+00f98fe4  mov x3,xzr
+00f98fe8  ldr x22,[sp], #0x30
+00f98fec  b 0x0106125c
+00f98ff0  ldr x8,[x19]
+00f98ff4  mov x0,x19
+00f98ff8  ldr x9,[x8, #0x458]
+00f98ffc  ldr x1,[x8, #0x460]
+00f99000  blr x9
+00f99004  mov x0,x19
+00f99008  bl 0x00f97de4
+00f9900c  cbz x0,0x00f99034
+00f99010  ldr x8,[x0, #0x40]
+00f99014  ldr x3,[x0, #0x18]
+00f99018  ldr x2,[x0, #0x28]
+00f9901c  ldp x19,x30,[sp, #0x20]
+00f99020  ldp x21,x20,[sp, #0x10]
+00f99024  mov x0,x8
+00f99028  mov x1,xzr
+00f9902c  ldr x22,[sp], #0x30
+00f99030  br x3
+00f99034  ldp x19,x30,[sp, #0x20]
+00f99038  ldp x21,x20,[sp, #0x10]
+00f9903c  ldr x22,[sp], #0x30
+00f99040  ret
+
+
+================================================================================
+### FILE: 00f99044_ZhuxiaoPanelMono__OnClickExit_5.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$OnClickExit_5 @ 00f99044
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> UnityEngine.Application$$Quit @ 024f2938
+
+--- Calls IN ---
+
+--- Listing ---
+00f99044  str x22,[sp, #-0x30]!
+00f99048  stp x21,x20,[sp, #0x10]
+00f9904c  stp x19,x30,[sp, #0x20]
+00f99050  adrp x21,0x3573000
+00f99054  adrp x22,0x332e000
+00f99058  ldrb w8,[x21, #0x4e7]
+00f9905c  ldr x22,[x22, #0x778]
+00f99060  mov x19,x1
+00f99064  mov x20,x0
+00f99068  tbnz w8,#0x0,0x00f99080
+00f9906c  adrp x0,0x332e000
+00f99070  ldr x0,[x0, #0x778]
+00f99074  bl 0x00b0789c
+00f99078  mov w8,#0x1
+00f9907c  strb w8,[x21, #0x4e7]
+00f99080  ldr x8,[x22]
+00f99084  ldr x8,[x8, #0xb8]
+00f99088  ldr x0,[x8, #0xa8]
+00f9908c  cbz x0,0x00f990ac
+00f99090  mov x1,x20
+00f99094  mov x2,x19
+00f99098  ldp x19,x30,[sp, #0x20]
+00f9909c  ldp x21,x20,[sp, #0x10]
+00f990a0  mov x3,xzr
+00f990a4  ldr x22,[sp], #0x30
+00f990a8  b 0x0106125c
+00f990ac  ldp x19,x30,[sp, #0x20]
+00f990b0  ldp x21,x20,[sp, #0x10]
+00f990b4  ldr x22,[sp], #0x30
+00f990b8  b 0x024f2938
+
+
+================================================================================
+### FILE: 00f990bc_ZhuxiaoPanelMono__OnClickOK_4.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$OnClickOK_4 @ 00f990bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SDKManager$$LogOut @ 00dec3fc
+
+--- Calls IN ---
+
+--- Listing ---
+00f990bc  str x22,[sp, #-0x30]!
+00f990c0  stp x21,x20,[sp, #0x10]
+00f990c4  stp x19,x30,[sp, #0x20]
+00f990c8  adrp x21,0x3573000
+00f990cc  adrp x22,0x332e000
+00f990d0  ldrb w8,[x21, #0x4e8]
+00f990d4  ldr x22,[x22, #0x778]
+00f990d8  mov x19,x1
+00f990dc  mov x20,x0
+00f990e0  tbnz w8,#0x0,0x00f99104
+00f990e4  adrp x0,0x334a000
+00f990e8  ldr x0,[x0, #0x550]
+00f990ec  bl 0x00b0789c
+00f990f0  adrp x0,0x332e000
+00f990f4  ldr x0,[x0, #0x778]
+00f990f8  bl 0x00b0789c
+00f990fc  mov w8,#0x1
+00f99100  strb w8,[x21, #0x4e8]
+00f99104  ldr x8,[x22]
+00f99108  ldr x8,[x8, #0xb8]
+00f9910c  ldr x0,[x8, #0xb0]
+00f99110  cbz x0,0x00f99130
+00f99114  mov x1,x20
+00f99118  mov x2,x19
+00f9911c  ldp x19,x30,[sp, #0x20]
+00f99120  ldp x21,x20,[sp, #0x10]
+00f99124  mov x3,xzr
+00f99128  ldr x22,[sp], #0x30
+00f9912c  b 0x0106125c
+00f99130  adrp x8,0x334a000
+00f99134  ldr x8,[x8, #0x550]
+00f99138  ldr x0,[x8]
+00f9913c  bl 0x01e0894c
+00f99140  cbz x0,0x00f9915c
+00f99144  ldp x19,x30,[sp, #0x20]
+00f99148  ldp x21,x20,[sp, #0x10]
+00f9914c  mov w1,#0x1
+00f99150  mov x2,xzr
+00f99154  ldr x22,[sp], #0x30
+00f99158  b 0x00dec3fc
+00f9915c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f99160_ZhuxiaoPanelMono__OnClickOK_2.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$OnClickOK_2 @ 00f99160
+
+--- Calls OUT ---
+  -> BaseMono$$TextTips @ 00e1b538
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> ZhuxiaoPanelMono$$get_IsAgree @ 00f97ed0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> ZhuxiaoPanelMono$$PartManage @ 00f981ac
+  -> ZhuxiaoPanelMono$$set_progress @ 00f97b9c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00f99160  str x22,[sp, #-0x30]!
+00f99164  stp x21,x20,[sp, #0x10]
+00f99168  stp x19,x30,[sp, #0x20]
+00f9916c  adrp x21,0x3573000
+00f99170  adrp x22,0x332e000
+00f99174  ldrb w8,[x21, #0x4e9]
+00f99178  ldr x22,[x22, #0x778]
+00f9917c  mov x20,x1
+00f99180  mov x19,x0
+00f99184  tbnz w8,#0x0,0x00f991a8
+00f99188  adrp x0,0x335b000
+00f9918c  ldr x0,[x0, #0x650]
+00f99190  bl 0x00b0789c
+00f99194  adrp x0,0x332e000
+00f99198  ldr x0,[x0, #0x778]
+00f9919c  bl 0x00b0789c
+00f991a0  mov w8,#0x1
+00f991a4  strb w8,[x21, #0x4e9]
+00f991a8  ldr x8,[x22]
+00f991ac  ldr x8,[x8, #0xb8]
+00f991b0  ldr x0,[x8, #0xb8]
+00f991b4  cbz x0,0x00f991d4
+00f991b8  mov x1,x19
+00f991bc  mov x2,x20
+00f991c0  ldp x19,x30,[sp, #0x20]
+00f991c4  ldp x21,x20,[sp, #0x10]
+00f991c8  mov x3,xzr
+00f991cc  ldr x22,[sp], #0x30
+00f991d0  b 0x0106125c
+00f991d4  mov x0,x19
+00f991d8  bl 0x00f97ed0
+00f991dc  tbz w0,#0x0,0x00f99200
+00f991e0  mov w1,#0x3
+00f991e4  mov x0,x19
+00f991e8  bl 0x00f97b9c
+00f991ec  mov x0,x19
+00f991f0  ldp x19,x30,[sp, #0x20]
+00f991f4  ldp x21,x20,[sp, #0x10]
+00f991f8  ldr x22,[sp], #0x30
+00f991fc  b 0x00f981ac
+00f99200  adrp x8,0x335b000
+00f99204  ldr x8,[x8, #0x650]
+00f99208  ldr x20,[x8]
+00f9920c  ldr x8,[x20, #0x38]
+00f99210  ldr x0,[x8]
+00f99214  ldrb w8,[x0, #0x132]
+00f99218  tbnz w8,#0x0,0x00f99220
+00f9921c  bl 0x00b2ac40
+00f99220  ldr w8,[x0, #0xe0]
+00f99224  cbnz w8,0x00f9922c
+00f99228  bl 0x00b0798c
+00f9922c  ldr x8,[x20, #0x38]
+00f99230  ldr x0,[x8]
+00f99234  ldrb w8,[x0, #0x132]
+00f99238  tbnz w8,#0x0,0x00f99240
+00f9923c  bl 0x00b2ac40
+00f99240  ldr x8,[x0, #0xb8]
+00f99244  mov x0,x19
+00f99248  ldp x19,x30,[sp, #0x20]
+00f9924c  ldp x21,x20,[sp, #0x10]
+00f99250  ldr x6,[x8]
+00f99254  mov w1,#0x3372
+00f99258  movk w1,#0x4ca, LSL #16
+00f9925c  mov w4,#0xffffffff
+00f99260  mov w2,wzr
+00f99264  mov x3,xzr
+00f99268  mov w5,wzr
+00f9926c  mov x7,xzr
+00f99270  ldr x22,[sp], #0x30
+00f99274  b 0x00e1b538
+
+
+================================================================================
+### FILE: 00f99278_ZhuxiaoPanelMono__OnClickTongyi_2.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$OnClickTongyi_2 @ 00f99278
+
+--- Calls OUT ---
+  -> ZhuxiaoPanelMono$$get_IsAgree @ 00f97ed0
+  -> ZhuxiaoPanelMono$$RefreshAgreeIcon @ 00f98be8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> ZhuxiaoPanelMono$$set_IsAgree @ 00f97f38
+
+--- Calls IN ---
+
+--- Listing ---
+00f99278  str x22,[sp, #-0x30]!
+00f9927c  stp x21,x20,[sp, #0x10]
+00f99280  stp x19,x30,[sp, #0x20]
+00f99284  adrp x21,0x3573000
+00f99288  adrp x22,0x332e000
+00f9928c  ldrb w8,[x21, #0x4ea]
+00f99290  ldr x22,[x22, #0x778]
+00f99294  mov x20,x1
+00f99298  mov x19,x0
+00f9929c  tbnz w8,#0x0,0x00f992b4
+00f992a0  adrp x0,0x332e000
+00f992a4  ldr x0,[x0, #0x778]
+00f992a8  bl 0x00b0789c
+00f992ac  mov w8,#0x1
+00f992b0  strb w8,[x21, #0x4ea]
+00f992b4  ldr x8,[x22]
+00f992b8  ldr x8,[x8, #0xb8]
+00f992bc  ldr x0,[x8, #0xc0]
+00f992c0  cbz x0,0x00f992e0
+00f992c4  mov x1,x19
+00f992c8  mov x2,x20
+00f992cc  ldp x19,x30,[sp, #0x20]
+00f992d0  ldp x21,x20,[sp, #0x10]
+00f992d4  mov x3,xzr
+00f992d8  ldr x22,[sp], #0x30
+00f992dc  b 0x0106125c
+00f992e0  mov x0,x19
+00f992e4  bl 0x00f97ed0
+00f992e8  mvn w8,w0
+00f992ec  and w1,w8,#0x1
+00f992f0  mov x0,x19
+00f992f4  bl 0x00f97f38
+00f992f8  mov x0,x19
+00f992fc  ldp x19,x30,[sp, #0x20]
+00f99300  ldp x21,x20,[sp, #0x10]
+00f99304  ldr x22,[sp], #0x30
+00f99308  b 0x00f98be8
+
+
+================================================================================
+### FILE: 00f9930c_ZhuxiaoPanelMono__OnClickCancel_1.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$OnClickCancel_1 @ 00f9930c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+
+--- Listing ---
+00f9930c  str x22,[sp, #-0x30]!
+00f99310  stp x21,x20,[sp, #0x10]
+00f99314  stp x19,x30,[sp, #0x20]
+00f99318  adrp x21,0x3573000
+00f9931c  adrp x22,0x332e000
+00f99320  ldrb w8,[x21, #0x4eb]
+00f99324  ldr x22,[x22, #0x778]
+00f99328  mov x20,x1
+00f9932c  mov x19,x0
+00f99330  tbnz w8,#0x0,0x00f99348
+00f99334  adrp x0,0x332e000
+00f99338  ldr x0,[x0, #0x778]
+00f9933c  bl 0x00b0789c
+00f99340  mov w8,#0x1
+00f99344  strb w8,[x21, #0x4eb]
+00f99348  ldr x8,[x22]
+00f9934c  ldr x8,[x8, #0xb8]
+00f99350  ldr x0,[x8, #0xc8]
+00f99354  cbz x0,0x00f99374
+00f99358  mov x1,x19
+00f9935c  mov x2,x20
+00f99360  ldp x19,x30,[sp, #0x20]
+00f99364  ldp x21,x20,[sp, #0x10]
+00f99368  mov x3,xzr
+00f9936c  ldr x22,[sp], #0x30
+00f99370  b 0x0106125c
+00f99374  ldr x8,[x19]
+00f99378  mov x0,x19
+00f9937c  ldp x19,x30,[sp, #0x20]
+00f99380  ldp x21,x20,[sp, #0x10]
+00f99384  ldr x2,[x8, #0x458]
+00f99388  ldr x1,[x8, #0x460]
+00f9938c  ldr x22,[sp], #0x30
+00f99390  br x2
+
+
+================================================================================
+### FILE: 00f99394_ZhuxiaoPanelMono__OnClickOK_1.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$OnClickOK_1 @ 00f99394
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> ZhuxiaoPanelMono$$PartManage @ 00f981ac
+  -> Ali$$TargetRetailConfirm @ 00e003f0
+  -> FUN_00b079b0 @ 00b079b0
+  -> ZhuxiaoPanelMono$$set_progress @ 00f97b9c
+
+--- Calls IN ---
+
+--- Listing ---
+00f99394  str x22,[sp, #-0x30]!
+00f99398  stp x21,x20,[sp, #0x10]
+00f9939c  stp x19,x30,[sp, #0x20]
+00f993a0  adrp x21,0x3573000
+00f993a4  adrp x22,0x332e000
+00f993a8  ldrb w8,[x21, #0x4ec]
+00f993ac  ldr x22,[x22, #0x778]
+00f993b0  mov x20,x1
+00f993b4  mov x19,x0
+00f993b8  tbnz w8,#0x0,0x00f993dc
+00f993bc  adrp x0,0x335f000
+00f993c0  ldr x0,[x0, #0x20]
+00f993c4  bl 0x00b0789c
+00f993c8  adrp x0,0x332e000
+00f993cc  ldr x0,[x0, #0x778]
+00f993d0  bl 0x00b0789c
+00f993d4  mov w8,#0x1
+00f993d8  strb w8,[x21, #0x4ec]
+00f993dc  ldr x8,[x22]
+00f993e0  ldr x8,[x8, #0xb8]
+00f993e4  ldr x0,[x8, #0xd0]
+00f993e8  cbz x0,0x00f99408
+00f993ec  mov x1,x19
+00f993f0  mov x2,x20
+00f993f4  ldp x19,x30,[sp, #0x20]
+00f993f8  ldp x21,x20,[sp, #0x10]
+00f993fc  mov x3,xzr
+00f99400  ldr x22,[sp], #0x30
+00f99404  b 0x0106125c
+00f99408  adrp x20,0x335f000
+00f9940c  ldr x20,[x20, #0x20]
+00f99410  ldr x0,[x20]
+00f99414  ldr w8,[x0, #0xe0]
+00f99418  cbnz w8,0x00f99424
+00f9941c  bl 0x00b0798c
+00f99420  ldr x0,[x20]
+00f99424  ldr x8,[x0, #0xb8]
+00f99428  ldr x0,[x8, #0x10]
+00f9942c  cbz x0,0x00f99498
+00f99430  mov w1,#0x3e9
+00f99434  mov x2,xzr
+00f99438  bl 0x00e003f0
+00f9943c  tbnz w0,#0x0,0x00f99470
+00f99440  ldr x0,[x20]
+00f99444  ldr w8,[x0, #0xe0]
+00f99448  cbnz w8,0x00f99454
+00f9944c  bl 0x00b0798c
+00f99450  ldr x0,[x20]
+00f99454  ldr x8,[x0, #0xb8]
+00f99458  ldr x0,[x8, #0x10]
+00f9945c  cbz x0,0x00f99498
+00f99460  mov w1,#0x7
+00f99464  mov x2,xzr
+00f99468  bl 0x00e003f0
+00f9946c  tbz w0,#0x0,0x00f99478
+00f99470  mov w1,#0x2
+00f99474  b 0x00f9947c
+00f99478  mov w1,#0x3
+00f9947c  mov x0,x19
+00f99480  bl 0x00f97b9c
+00f99484  mov x0,x19
+00f99488  ldp x19,x30,[sp, #0x20]
+00f9948c  ldp x21,x20,[sp, #0x10]
+00f99490  ldr x22,[sp], #0x30
+00f99494  b 0x00f981ac
+00f99498  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f9949c_ZhuxiaoPanelMono__.ctor.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$.ctor @ 00f9949c
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ZhuxiaoPanelMonoWrap$$__CreateInstance @ 01529768
+
+--- Listing ---
+00f9949c  stp x21,x20,[sp, #-0x20]!
+00f994a0  stp x19,x30,[sp, #0x10]
+00f994a4  adrp x21,0x3573000
+00f994a8  adrp x20,0x332e000
+00f994ac  ldrb w8,[x21, #0x4ef]
+00f994b0  ldr x20,[x20, #0x778]
+00f994b4  mov x19,x0
+00f994b8  tbnz w8,#0x0,0x00f994d0
+00f994bc  adrp x0,0x332e000
+00f994c0  ldr x0,[x0, #0x778]
+00f994c4  bl 0x00b0789c
+00f994c8  mov w8,#0x1
+00f994cc  strb w8,[x21, #0x4ef]
+00f994d0  mov w8,#0x1
+00f994d4  mov x0,x19
+00f994d8  mov x1,xzr
+00f994dc  str w8,[x19, #0xd0]
+00f994e0  bl 0x00f1c130
+00f994e4  ldr x8,[x20]
+00f994e8  ldr x8,[x8, #0xb8]
+00f994ec  ldr x0,[x8, #0xe8]
+00f994f0  cbz x0,0x00f99508
+00f994f4  mov x1,x19
+00f994f8  ldp x19,x30,[sp, #0x10]
+00f994fc  mov x2,xzr
+00f99500  ldp x21,x20,[sp], #0x20
+00f99504  b 0x01060dac
+00f99508  ldp x19,x30,[sp, #0x10]
+00f9950c  ldp x21,x20,[sp], #0x20
+00f99510  ret
+
+
+================================================================================
+### FILE: 00f99514_ZhuxiaoPanelMono____xLuaBaseProxy_get_LayerType.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$<>xLuaBaseProxy_get_LayerType @ 00f99514
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$get_LayerType @ 016711a8
+
+--- Calls IN ---
+
+--- Listing ---
+00f99514  mov x1,xzr
+00f99518  b 0x016711a8
+
+
+================================================================================
+### FILE: 00f9951c_ZhuxiaoPanelMono____xLuaBaseProxy_RegisterCallBack.txt
+================================================================================
+Function: ZhuxiaoPanelMono$$<>xLuaBaseProxy_RegisterCallBack @ 00f9951c
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$RegisterCallBack @ 00f21d5c
+
+--- Calls IN ---
+
+--- Listing ---
+00f9951c  mov x1,xzr
+00f99520  b 0x00f21d5c
+
+
+================================================================================
+### FILE: 00f99524_ZhuxiaoPanelMono._RefreshShow_d__30__System.IDisposable.Dispose.txt
+================================================================================
+Function: ZhuxiaoPanelMono.<RefreshShow>d__30$$System.IDisposable.Dispose @ 00f99524
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00f99524  ret
+
+
+================================================================================
+### FILE: 00f99528_ZhuxiaoPanelMono._RefreshShow_d__30__MoveNext.txt
+================================================================================
+Function: ZhuxiaoPanelMono.<RefreshShow>d__30$$MoveNext @ 00f99528
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> ZhuxiaoPanelMono$$get_Node @ 00f979b0
+  -> ZhuxiaopanelNode$$get_xieyi_2 @ 00ffc230
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00f99528  str x22,[sp, #-0x30]!
+00f9952c  stp x21,x20,[sp, #0x10]
+00f99530  stp x19,x30,[sp, #0x20]
+00f99534  adrp x20,0x3573000
+00f99538  ldrb w8,[x20, #0x4f0]
+00f9953c  mov x19,x0
+00f99540  tbnz w8,#0x0,0x00f99564
+00f99544  adrp x0,0x335f000
+00f99548  ldr x0,[x0, #0x20]
+00f9954c  bl 0x00b0789c
+00f99550  adrp x0,0x3348000
+00f99554  ldr x0,[x0, #0x138]
+00f99558  bl 0x00b0789c
+00f9955c  mov w8,#0x1
+00f99560  strb w8,[x20, #0x4f0]
+00f99564  ldr w8,[x19, #0x10]
+00f99568  adrp x21,0x3348000
+00f9956c  ldr x20,[x19, #0x20]
+00f99570  ldr x21,[x21, #0x138]
+00f99574  cmp w8,#0x2
+00f99578  b.eq 0x00f99678
+00f9957c  adrp x22,0x335f000
+00f99580  ldr x22,[x22, #0x20]
+00f99584  cmp w8,#0x1
+00f99588  b.eq 0x00f995cc
+00f9958c  cbnz w8,0x00f996ec
+00f99590  mov w8,#0xffffffff
+00f99594  str w8,[x19, #0x10]
+00f99598  ldr x0,[x22]
+00f9959c  ldr w8,[x0, #0xe0]
+00f995a0  cbnz w8,0x00f995ac
+00f995a4  bl 0x00b0798c
+00f995a8  ldr x0,[x22]
+00f995ac  ldr x8,[x0, #0xb8]
+00f995b0  ldr x1,[x8, #0x8]
+00f995b4  str x1,[x19, #0x18]!
+00f995b8  mov x0,x19
+00f995bc  bl 0x00b07850
+00f995c0  mov w0,#0x1
+00f995c4  stur w0,[x19, #-0x8]
+00f995c8  b 0x00f996f0
+00f995cc  mov w8,#0xffffffff
+00f995d0  str w8,[x19, #0x10]
+00f995d4  cbz x20,0x00f99700
+00f995d8  mov x0,x20
+00f995dc  bl 0x00f979b0
+00f995e0  cbz x0,0x00f99700
+00f995e4  mov x1,xzr
+00f995e8  bl 0x00ffc230
+00f995ec  cbz x0,0x00f99700
+00f995f0  ldr x8,[x21]
+00f995f4  ldr x21,[x0, #0x18]
+00f995f8  ldr w9,[x8, #0xe0]
+00f995fc  cbnz w9,0x00f99608
+00f99600  mov x0,x8
+00f99604  bl 0x00b0798c
+00f99608  mov x0,x21
+00f9960c  mov w1,wzr
+00f99610  mov x2,xzr
+00f99614  bl 0x00e13880
+00f99618  mov x0,x20
+00f9961c  bl 0x00f979b0
+00f99620  cbz x0,0x00f99700
+00f99624  mov x1,xzr
+00f99628  bl 0x00ffc230
+00f9962c  cbz x0,0x00f99700
+00f99630  ldr x0,[x0, #0x18]
+00f99634  mov w1,#0x1
+00f99638  mov x2,xzr
+00f9963c  bl 0x00e13880
+00f99640  ldr x0,[x22]
+00f99644  ldr w8,[x0, #0xe0]
+00f99648  cbnz w8,0x00f99654
+00f9964c  bl 0x00b0798c
+00f99650  ldr x0,[x22]
+00f99654  ldr x8,[x0, #0xb8]
+00f99658  ldr x1,[x8, #0x8]
+00f9965c  str x1,[x19, #0x18]!
+00f99660  mov x0,x19
+00f99664  bl 0x00b07850
+00f99668  mov w8,#0x2
+00f9966c  stur w8,[x19, #-0x8]
+00f99670  mov w0,#0x1
+00f99674  b 0x00f996f0
+00f99678  mov w8,#0xffffffff
+00f9967c  str w8,[x19, #0x10]
+00f99680  cbz x20,0x00f99700
+00f99684  mov x0,x20
+00f99688  bl 0x00f979b0
+00f9968c  cbz x0,0x00f99700
+00f99690  mov x1,xzr
+00f99694  bl 0x00ffc230
+00f99698  cbz x0,0x00f99700
+00f9969c  ldr x8,[x21]
+00f996a0  ldr x19,[x0, #0x18]
+00f996a4  ldr w9,[x8, #0xe0]
+00f996a8  cbnz w9,0x00f996b4
+00f996ac  mov x0,x8
+00f996b0  bl 0x00b0798c
+00f996b4  mov x0,x19
+00f996b8  mov w1,wzr
+00f996bc  mov x2,xzr
+00f996c0  bl 0x00e13880
+00f996c4  mov x0,x20
+00f996c8  bl 0x00f979b0
+00f996cc  cbz x0,0x00f99700
+00f996d0  mov x1,xzr
+00f996d4  bl 0x00ffc230
+00f996d8  cbz x0,0x00f99700
+00f996dc  ldr x0,[x0, #0x18]
+00f996e0  mov w1,#0x1
+00f996e4  mov x2,xzr
+00f996e8  bl 0x00e13880
+00f996ec  mov w0,wzr
+00f996f0  ldp x19,x30,[sp, #0x20]
+00f996f4  ldp x21,x20,[sp, #0x10]
+00f996f8  ldr x22,[sp], #0x30
+00f996fc  ret
+00f99700  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f99704_ZhuxiaoPanelMono._RefreshShow_d__30__System.Collections.Generic.IEnumerator_System.Object_.get_Current.txt
+================================================================================
+Function: ZhuxiaoPanelMono.<RefreshShow>d__30$$System.Collections.Generic.IEnumerator<System.Object>.get_Current @ 00f99704
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00f99704  ldr x0,[x0, #0x18]
+00f99708  ret
+
+
+================================================================================
+### FILE: 00f9970c_ZhuxiaoPanelMono._RefreshShow_d__30__System.Collections.IEnumerator.Reset.txt
+================================================================================
+Function: ZhuxiaoPanelMono.<RefreshShow>d__30$$System.Collections.IEnumerator.Reset @ 00f9970c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> System.NotSupportedException$$.ctor @ 021525a8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_008d74f8 @ 008d74f8
+  -> FUN_00b07978 @ 00b07978
+
+--- Calls IN ---
+
+--- Listing ---
+00f9970c  stp x19,x30,[sp, #-0x10]!
+00f99710  adrp x0,0x335a000
+00f99714  ldr x0,[x0, #0xb88]
+00f99718  bl 0x00b078a0
+00f9971c  bl 0x00b079a0
+00f99720  mov x19,x0
+00f99724  bl 0x008d74f8
+00f99728  mov x0,x19
+00f9972c  mov x1,xzr
+00f99730  bl 0x021525a8
+00f99734  adrp x0,0x337a000
+00f99738  ldr x0,[x0, #0x850]
+00f9973c  bl 0x00b078a0
+00f99740  mov x1,x0
+00f99744  mov x0,x19
+00f99748  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00f9974c_ZhuxiaoPanelMono._RefreshShow_d__30__System.Collections.IEnumerator.get_Current.txt
+================================================================================
+Function: ZhuxiaoPanelMono.<RefreshShow>d__30$$System.Collections.IEnumerator.get_Current @ 00f9974c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00f9974c  ldr x0,[x0, #0x18]
+00f99750  ret
+
+
+================================================================================
+### FILE: 00ffc100_ZhuxiaopanelNode__get_mask.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_mask @ 00ffc100
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Listing ---
+00ffc100  stp x21,x20,[sp, #-0x20]!
+00ffc104  stp x19,x30,[sp, #0x10]
+00ffc108  adrp x20,0x3574000
+00ffc10c  adrp x21,0x337b000
+00ffc110  ldrb w8,[x20, #0x3c9]
+00ffc114  ldr x21,[x21, #0x2b8]
+00ffc118  mov x19,x0
+00ffc11c  tbnz w8,#0x0,0x00ffc134
+00ffc120  adrp x0,0x337b000
+00ffc124  ldr x0,[x0, #0x2b8]
+00ffc128  bl 0x00b0789c
+00ffc12c  mov w8,#0x1
+00ffc130  strb w8,[x20, #0x3c9]
+00ffc134  ldr x1,[x21]
+00ffc138  mov x0,x19
+00ffc13c  ldp x19,x30,[sp, #0x10]
+00ffc140  mov x2,xzr
+00ffc144  ldp x21,x20,[sp], #0x20
+00ffc148  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc14c_ZhuxiaopanelNode__get_tips_1.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_tips_1 @ 00ffc14c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+
+--- Listing ---
+00ffc14c  stp x21,x20,[sp, #-0x20]!
+00ffc150  stp x19,x30,[sp, #0x10]
+00ffc154  adrp x20,0x3574000
+00ffc158  adrp x21,0x332b000
+00ffc15c  ldrb w8,[x20, #0x3ca]
+00ffc160  ldr x21,[x21, #0x560]
+00ffc164  mov x19,x0
+00ffc168  tbnz w8,#0x0,0x00ffc180
+00ffc16c  adrp x0,0x332b000
+00ffc170  ldr x0,[x0, #0x560]
+00ffc174  bl 0x00b0789c
+00ffc178  mov w8,#0x1
+00ffc17c  strb w8,[x20, #0x3ca]
+00ffc180  ldr x1,[x21]
+00ffc184  mov x0,x19
+00ffc188  ldp x19,x30,[sp, #0x10]
+00ffc18c  mov x2,xzr
+00ffc190  ldp x21,x20,[sp], #0x20
+00ffc194  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc198_ZhuxiaopanelNode__get_btn_cancel_1.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_btn_cancel_1 @ 00ffc198
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Listing ---
+00ffc198  stp x21,x20,[sp, #-0x20]!
+00ffc19c  stp x19,x30,[sp, #0x10]
+00ffc1a0  adrp x20,0x3574000
+00ffc1a4  adrp x21,0x3321000
+00ffc1a8  ldrb w8,[x20, #0x3cb]
+00ffc1ac  ldr x21,[x21, #0xc8]
+00ffc1b0  mov x19,x0
+00ffc1b4  tbnz w8,#0x0,0x00ffc1cc
+00ffc1b8  adrp x0,0x3321000
+00ffc1bc  ldr x0,[x0, #0xc8]
+00ffc1c0  bl 0x00b0789c
+00ffc1c4  mov w8,#0x1
+00ffc1c8  strb w8,[x20, #0x3cb]
+00ffc1cc  ldr x1,[x21]
+00ffc1d0  mov x0,x19
+00ffc1d4  ldp x19,x30,[sp, #0x10]
+00ffc1d8  mov x2,xzr
+00ffc1dc  ldp x21,x20,[sp], #0x20
+00ffc1e0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc1e4_ZhuxiaopanelNode__get_btn_ok_1.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_btn_ok_1 @ 00ffc1e4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Listing ---
+00ffc1e4  stp x21,x20,[sp, #-0x20]!
+00ffc1e8  stp x19,x30,[sp, #0x10]
+00ffc1ec  adrp x20,0x3574000
+00ffc1f0  adrp x21,0x336a000
+00ffc1f4  ldrb w8,[x20, #0x3cc]
+00ffc1f8  ldr x21,[x21, #0x2c0]
+00ffc1fc  mov x19,x0
+00ffc200  tbnz w8,#0x0,0x00ffc218
+00ffc204  adrp x0,0x336a000
+00ffc208  ldr x0,[x0, #0x2c0]
+00ffc20c  bl 0x00b0789c
+00ffc210  mov w8,#0x1
+00ffc214  strb w8,[x20, #0x3cc]
+00ffc218  ldr x1,[x21]
+00ffc21c  mov x0,x19
+00ffc220  ldp x19,x30,[sp, #0x10]
+00ffc224  mov x2,xzr
+00ffc228  ldp x21,x20,[sp], #0x20
+00ffc22c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc230_ZhuxiaopanelNode__get_xieyi_2.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_xieyi_2 @ 00ffc230
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+  <- ZhuxiaoPanelMono.<RefreshShow>d__30$$MoveNext @ 00f99528
+
+--- Listing ---
+00ffc230  stp x21,x20,[sp, #-0x20]!
+00ffc234  stp x19,x30,[sp, #0x10]
+00ffc238  adrp x20,0x3574000
+00ffc23c  adrp x21,0x3384000
+00ffc240  ldrb w8,[x20, #0x3cd]
+00ffc244  ldr x21,[x21, #0x698]
+00ffc248  mov x19,x0
+00ffc24c  tbnz w8,#0x0,0x00ffc264
+00ffc250  adrp x0,0x3384000
+00ffc254  ldr x0,[x0, #0x698]
+00ffc258  bl 0x00b0789c
+00ffc25c  mov w8,#0x1
+00ffc260  strb w8,[x20, #0x3cd]
+00ffc264  ldr x1,[x21]
+00ffc268  mov x0,x19
+00ffc26c  ldp x19,x30,[sp, #0x10]
+00ffc270  mov x2,xzr
+00ffc274  ldp x21,x20,[sp], #0x20
+00ffc278  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc27c_ZhuxiaopanelNode__get_ScrollView.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_ScrollView @ 00ffc27c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00ffc27c  stp x21,x20,[sp, #-0x20]!
+00ffc280  stp x19,x30,[sp, #0x10]
+00ffc284  adrp x20,0x3574000
+00ffc288  adrp x21,0x3374000
+00ffc28c  ldrb w8,[x20, #0x3ce]
+00ffc290  ldr x21,[x21, #0x8b0]
+00ffc294  mov x19,x0
+00ffc298  tbnz w8,#0x0,0x00ffc2b0
+00ffc29c  adrp x0,0x3374000
+00ffc2a0  ldr x0,[x0, #0x8b0]
+00ffc2a4  bl 0x00b0789c
+00ffc2a8  mov w8,#0x1
+00ffc2ac  strb w8,[x20, #0x3ce]
+00ffc2b0  ldr x1,[x21]
+00ffc2b4  mov x0,x19
+00ffc2b8  ldp x19,x30,[sp, #0x10]
+00ffc2bc  mov x2,xzr
+00ffc2c0  ldp x21,x20,[sp], #0x20
+00ffc2c4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc2c8_ZhuxiaopanelNode__get_btn_ok_2.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_btn_ok_2 @ 00ffc2c8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Listing ---
+00ffc2c8  stp x21,x20,[sp, #-0x20]!
+00ffc2cc  stp x19,x30,[sp, #0x10]
+00ffc2d0  adrp x20,0x3574000
+00ffc2d4  adrp x21,0x331d000
+00ffc2d8  ldrb w8,[x20, #0x3cf]
+00ffc2dc  ldr x21,[x21, #0x550]
+00ffc2e0  mov x19,x0
+00ffc2e4  tbnz w8,#0x0,0x00ffc2fc
+00ffc2e8  adrp x0,0x331d000
+00ffc2ec  ldr x0,[x0, #0x550]
+00ffc2f0  bl 0x00b0789c
+00ffc2f4  mov w8,#0x1
+00ffc2f8  strb w8,[x20, #0x3cf]
+00ffc2fc  ldr x1,[x21]
+00ffc300  mov x0,x19
+00ffc304  ldp x19,x30,[sp, #0x10]
+00ffc308  mov x2,xzr
+00ffc30c  ldp x21,x20,[sp], #0x20
+00ffc310  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc314_ZhuxiaopanelNode__get_btn_tongyi_2.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_btn_tongyi_2 @ 00ffc314
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Listing ---
+00ffc314  stp x21,x20,[sp, #-0x20]!
+00ffc318  stp x19,x30,[sp, #0x10]
+00ffc31c  adrp x20,0x3574000
+00ffc320  adrp x21,0x330c000
+00ffc324  ldrb w8,[x20, #0x3d0]
+00ffc328  ldr x21,[x21, #0x1c0]
+00ffc32c  mov x19,x0
+00ffc330  tbnz w8,#0x0,0x00ffc348
+00ffc334  adrp x0,0x330c000
+00ffc338  ldr x0,[x0, #0x1c0]
+00ffc33c  bl 0x00b0789c
+00ffc340  mov w8,#0x1
+00ffc344  strb w8,[x20, #0x3d0]
+00ffc348  ldr x1,[x21]
+00ffc34c  mov x0,x19
+00ffc350  ldp x19,x30,[sp, #0x10]
+00ffc354  mov x2,xzr
+00ffc358  ldp x21,x20,[sp], #0x20
+00ffc35c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc360_ZhuxiaopanelNode__get_spr_tongyi.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_spr_tongyi @ 00ffc360
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$RefreshAgreeIcon @ 00f98be8
+
+--- Listing ---
+00ffc360  stp x21,x20,[sp, #-0x20]!
+00ffc364  stp x19,x30,[sp, #0x10]
+00ffc368  adrp x20,0x3574000
+00ffc36c  adrp x21,0x3373000
+00ffc370  ldrb w8,[x20, #0x3d1]
+00ffc374  ldr x21,[x21, #0x6d0]
+00ffc378  mov x19,x0
+00ffc37c  tbnz w8,#0x0,0x00ffc394
+00ffc380  adrp x0,0x3373000
+00ffc384  ldr x0,[x0, #0x6d0]
+00ffc388  bl 0x00b0789c
+00ffc38c  mov w8,#0x1
+00ffc390  strb w8,[x20, #0x3d1]
+00ffc394  ldr x1,[x21]
+00ffc398  mov x0,x19
+00ffc39c  ldp x19,x30,[sp, #0x10]
+00ffc3a0  mov x2,xzr
+00ffc3a4  ldp x21,x20,[sp], #0x20
+00ffc3a8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc3ac_ZhuxiaopanelNode__get_inp_3.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_inp_3 @ 00ffc3ac
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+
+--- Listing ---
+00ffc3ac  stp x21,x20,[sp, #-0x20]!
+00ffc3b0  stp x19,x30,[sp, #0x10]
+00ffc3b4  adrp x20,0x3574000
+00ffc3b8  adrp x21,0x3312000
+00ffc3bc  ldrb w8,[x20, #0x3d2]
+00ffc3c0  ldr x21,[x21, #0x3c8]
+00ffc3c4  mov x19,x0
+00ffc3c8  tbnz w8,#0x0,0x00ffc3e0
+00ffc3cc  adrp x0,0x3312000
+00ffc3d0  ldr x0,[x0, #0x3c8]
+00ffc3d4  bl 0x00b0789c
+00ffc3d8  mov w8,#0x1
+00ffc3dc  strb w8,[x20, #0x3d2]
+00ffc3e0  ldr x1,[x21]
+00ffc3e4  mov x0,x19
+00ffc3e8  ldp x19,x30,[sp, #0x10]
+00ffc3ec  mov x2,xzr
+00ffc3f0  ldp x21,x20,[sp], #0x20
+00ffc3f4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc3f8_ZhuxiaopanelNode__get_btn_zhuxiao_3.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_btn_zhuxiao_3 @ 00ffc3f8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Listing ---
+00ffc3f8  stp x21,x20,[sp, #-0x20]!
+00ffc3fc  stp x19,x30,[sp, #0x10]
+00ffc400  adrp x20,0x3574000
+00ffc404  adrp x21,0x3339000
+00ffc408  ldrb w8,[x20, #0x3d3]
+00ffc40c  ldr x21,[x21, #0xf40]
+00ffc410  mov x19,x0
+00ffc414  tbnz w8,#0x0,0x00ffc42c
+00ffc418  adrp x0,0x3339000
+00ffc41c  ldr x0,[x0, #0xf40]
+00ffc420  bl 0x00b0789c
+00ffc424  mov w8,#0x1
+00ffc428  strb w8,[x20, #0x3d3]
+00ffc42c  ldr x1,[x21]
+00ffc430  mov x0,x19
+00ffc434  ldp x19,x30,[sp, #0x10]
+00ffc438  mov x2,xzr
+00ffc43c  ldp x21,x20,[sp], #0x20
+00ffc440  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc444_ZhuxiaopanelNode__get_inp_uid.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_inp_uid @ 00ffc444
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$OnClickZhuxiao_3 @ 00f98d80
+
+--- Listing ---
+00ffc444  stp x21,x20,[sp, #-0x20]!
+00ffc448  stp x19,x30,[sp, #0x10]
+00ffc44c  adrp x20,0x3574000
+00ffc450  adrp x21,0x336b000
+00ffc454  ldrb w8,[x20, #0x3d4]
+00ffc458  ldr x21,[x21, #0x380]
+00ffc45c  mov x19,x0
+00ffc460  tbnz w8,#0x0,0x00ffc478
+00ffc464  adrp x0,0x336b000
+00ffc468  ldr x0,[x0, #0x380]
+00ffc46c  bl 0x00b0789c
+00ffc470  mov w8,#0x1
+00ffc474  strb w8,[x20, #0x3d4]
+00ffc478  ldr x1,[x21]
+00ffc47c  mov x0,x19
+00ffc480  ldp x19,x30,[sp, #0x10]
+00ffc484  mov x2,xzr
+00ffc488  ldp x21,x20,[sp], #0x20
+00ffc48c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc490_ZhuxiaopanelNode__get_endTips_4.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_endTips_4 @ 00ffc490
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+
+--- Listing ---
+00ffc490  stp x21,x20,[sp, #-0x20]!
+00ffc494  stp x19,x30,[sp, #0x10]
+00ffc498  adrp x20,0x3574000
+00ffc49c  adrp x21,0x3336000
+00ffc4a0  ldrb w8,[x20, #0x3d5]
+00ffc4a4  ldr x21,[x21, #0x430]
+00ffc4a8  mov x19,x0
+00ffc4ac  tbnz w8,#0x0,0x00ffc4c4
+00ffc4b0  adrp x0,0x3336000
+00ffc4b4  ldr x0,[x0, #0x430]
+00ffc4b8  bl 0x00b0789c
+00ffc4bc  mov w8,#0x1
+00ffc4c0  strb w8,[x20, #0x3d5]
+00ffc4c4  ldr x1,[x21]
+00ffc4c8  mov x0,x19
+00ffc4cc  ldp x19,x30,[sp, #0x10]
+00ffc4d0  mov x2,xzr
+00ffc4d4  ldp x21,x20,[sp], #0x20
+00ffc4d8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc4dc_ZhuxiaopanelNode__get_btn_ok_4.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_btn_ok_4 @ 00ffc4dc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Listing ---
+00ffc4dc  stp x21,x20,[sp, #-0x20]!
+00ffc4e0  stp x19,x30,[sp, #0x10]
+00ffc4e4  adrp x20,0x3574000
+00ffc4e8  adrp x21,0x3324000
+00ffc4ec  ldrb w8,[x20, #0x3d6]
+00ffc4f0  ldr x21,[x21, #0x368]
+00ffc4f4  mov x19,x0
+00ffc4f8  tbnz w8,#0x0,0x00ffc510
+00ffc4fc  adrp x0,0x3324000
+00ffc500  ldr x0,[x0, #0x368]
+00ffc504  bl 0x00b0789c
+00ffc508  mov w8,#0x1
+00ffc50c  strb w8,[x20, #0x3d6]
+00ffc510  ldr x1,[x21]
+00ffc514  mov x0,x19
+00ffc518  ldp x19,x30,[sp, #0x10]
+00ffc51c  mov x2,xzr
+00ffc520  ldp x21,x20,[sp], #0x20
+00ffc524  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc528_ZhuxiaopanelNode__get_loginTips_5.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_loginTips_5 @ 00ffc528
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$PartManage @ 00f981ac
+
+--- Listing ---
+00ffc528  stp x21,x20,[sp, #-0x20]!
+00ffc52c  stp x19,x30,[sp, #0x10]
+00ffc530  adrp x20,0x3574000
+00ffc534  adrp x21,0x332a000
+00ffc538  ldrb w8,[x20, #0x3d7]
+00ffc53c  ldr x21,[x21, #0x90]
+00ffc540  mov x19,x0
+00ffc544  tbnz w8,#0x0,0x00ffc55c
+00ffc548  adrp x0,0x332a000
+00ffc54c  ldr x0,[x0, #0x90]
+00ffc550  bl 0x00b0789c
+00ffc554  mov w8,#0x1
+00ffc558  strb w8,[x20, #0x3d7]
+00ffc55c  ldr x1,[x21]
+00ffc560  mov x0,x19
+00ffc564  ldp x19,x30,[sp, #0x10]
+00ffc568  mov x2,xzr
+00ffc56c  ldp x21,x20,[sp], #0x20
+00ffc570  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc574_ZhuxiaopanelNode__get_lbl_loginTips.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_lbl_loginTips @ 00ffc574
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$ShowLoginTips @ 00f9899c
+
+--- Listing ---
+00ffc574  stp x21,x20,[sp, #-0x20]!
+00ffc578  stp x19,x30,[sp, #0x10]
+00ffc57c  adrp x20,0x3574000
+00ffc580  adrp x21,0x3348000
+00ffc584  ldrb w8,[x20, #0x3d8]
+00ffc588  ldr x21,[x21, #0x5c8]
+00ffc58c  mov x19,x0
+00ffc590  tbnz w8,#0x0,0x00ffc5a8
+00ffc594  adrp x0,0x3348000
+00ffc598  ldr x0,[x0, #0x5c8]
+00ffc59c  bl 0x00b0789c
+00ffc5a0  mov w8,#0x1
+00ffc5a4  strb w8,[x20, #0x3d8]
+00ffc5a8  ldr x1,[x21]
+00ffc5ac  mov x0,x19
+00ffc5b0  ldp x19,x30,[sp, #0x10]
+00ffc5b4  mov x2,xzr
+00ffc5b8  ldp x21,x20,[sp], #0x20
+00ffc5bc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc5c0_ZhuxiaopanelNode__get_btn_exit_5.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_btn_exit_5 @ 00ffc5c0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Listing ---
+00ffc5c0  stp x21,x20,[sp, #-0x20]!
+00ffc5c4  stp x19,x30,[sp, #0x10]
+00ffc5c8  adrp x20,0x3574000
+00ffc5cc  adrp x21,0x3346000
+00ffc5d0  ldrb w8,[x20, #0x3d9]
+00ffc5d4  ldr x21,[x21, #0x198]
+00ffc5d8  mov x19,x0
+00ffc5dc  tbnz w8,#0x0,0x00ffc5f4
+00ffc5e0  adrp x0,0x3346000
+00ffc5e4  ldr x0,[x0, #0x198]
+00ffc5e8  bl 0x00b0789c
+00ffc5ec  mov w8,#0x1
+00ffc5f0  strb w8,[x20, #0x3d9]
+00ffc5f4  ldr x1,[x21]
+00ffc5f8  mov x0,x19
+00ffc5fc  ldp x19,x30,[sp, #0x10]
+00ffc600  mov x2,xzr
+00ffc604  ldp x21,x20,[sp], #0x20
+00ffc608  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc60c_ZhuxiaopanelNode__get_btn_login_5.txt
+================================================================================
+Function: ZhuxiaopanelNode$$get_btn_login_5 @ 00ffc60c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ZhuxiaoPanelMono$$InitClickEvent @ 00f984c0
+
+--- Listing ---
+00ffc60c  stp x21,x20,[sp, #-0x20]!
+00ffc610  stp x19,x30,[sp, #0x10]
+00ffc614  adrp x20,0x3574000
+00ffc618  adrp x21,0x3321000
+00ffc61c  ldrb w8,[x20, #0x3da]
+00ffc620  ldr x21,[x21, #0xe10]
+00ffc624  mov x19,x0
+00ffc628  tbnz w8,#0x0,0x00ffc640
+00ffc62c  adrp x0,0x3321000
+00ffc630  ldr x0,[x0, #0xe10]
+00ffc634  bl 0x00b0789c
+00ffc638  mov w8,#0x1
+00ffc63c  strb w8,[x20, #0x3da]
+00ffc640  ldr x1,[x21]
+00ffc644  mov x0,x19
+00ffc648  ldp x19,x30,[sp, #0x10]
+00ffc64c  mov x2,xzr
+00ffc650  ldp x21,x20,[sp], #0x20
+00ffc654  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ffc658_ZhuxiaopanelNode__.ctor.txt
+================================================================================
+Function: ZhuxiaopanelNode$$.ctor @ 00ffc658
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00ffc658  mov x1,xzr
+00ffc65c  b 0x00dc0e00
+
+

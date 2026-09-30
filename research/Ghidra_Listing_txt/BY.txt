@@ -1,0 +1,116 @@
+================================================================================
+### FILE: 00d34114_ByteBuffer__.ctor.txt
+================================================================================
+Function: ByteBuffer$$.ctor @ 00d34114
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d34114  str x20,[sp, #-0x20]!
+00d34118  stp x19,x30,[sp, #0x10]
+00d3411c  mov x19,x1
+00d34120  mov x1,xzr
+00d34124  mov x20,x0
+00d34128  bl 0x02194104
+00d3412c  str x19,[x20, #0x10]!
+00d34130  mov x1,x19
+00d34134  ldp x19,x30,[sp, #0x10]
+00d34138  mov x0,x20
+00d3413c  ldr x20,[sp], #0x20
+00d34140  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d34144_ByteBuffer__readInt.txt
+================================================================================
+Function: ByteBuffer$$readInt @ 00d34144
+
+--- Calls OUT ---
+  -> System.BitConverter$$ToInt32 @ 020d85fc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ClickManagerExample$$HandleActionDataReceived @ 00d33fd8
+
+--- Listing ---
+00d34144  stp x21,x20,[sp, #-0x20]!
+00d34148  stp x19,x30,[sp, #0x10]
+00d3414c  adrp x21,0x3571000
+00d34150  adrp x20,0x3334000
+00d34154  ldrb w8,[x21, #0xd41]
+00d34158  ldr x20,[x20, #0x1f0]
+00d3415c  mov x19,x0
+00d34160  tbnz w8,#0x0,0x00d34178
+00d34164  adrp x0,0x3334000
+00d34168  ldr x0,[x0, #0x1f0]
+00d3416c  bl 0x00b0789c
+00d34170  mov w8,#0x1
+00d34174  strb w8,[x21, #0xd41]
+00d34178  ldr x0,[x20]
+00d3417c  ldr x20,[x19, #0x10]
+00d34180  ldr w21,[x19, #0x18]
+00d34184  ldr w8,[x0, #0xe0]
+00d34188  cbnz w8,0x00d34190
+00d3418c  bl 0x00b0798c
+00d34190  mov x0,x20
+00d34194  mov w1,w21
+00d34198  mov x2,xzr
+00d3419c  bl 0x020d85fc
+00d341a0  ldr w8,[x19, #0x18]
+00d341a4  add w8,w8,#0x4
+00d341a8  str w8,[x19, #0x18]
+00d341ac  ldp x19,x30,[sp, #0x10]
+00d341b0  ldp x21,x20,[sp], #0x20
+00d341b4  ret
+
+
+================================================================================
+### FILE: 00d341b8_ByteBuffer__readFloat.txt
+================================================================================
+Function: ByteBuffer$$readFloat @ 00d341b8
+
+--- Calls OUT ---
+  -> System.BitConverter$$ToSingle @ 020d8830
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ClickManagerExample$$HandleActionDataReceived @ 00d33fd8
+
+--- Listing ---
+00d341b8  stp x21,x20,[sp, #-0x20]!
+00d341bc  stp x19,x30,[sp, #0x10]
+00d341c0  adrp x21,0x3571000
+00d341c4  adrp x20,0x3334000
+00d341c8  ldrb w8,[x21, #0xd42]
+00d341cc  ldr x20,[x20, #0x1f0]
+00d341d0  mov x19,x0
+00d341d4  tbnz w8,#0x0,0x00d341ec
+00d341d8  adrp x0,0x3334000
+00d341dc  ldr x0,[x0, #0x1f0]
+00d341e0  bl 0x00b0789c
+00d341e4  mov w8,#0x1
+00d341e8  strb w8,[x21, #0xd42]
+00d341ec  ldr x0,[x20]
+00d341f0  ldr x20,[x19, #0x10]
+00d341f4  ldr w21,[x19, #0x18]
+00d341f8  ldr w8,[x0, #0xe0]
+00d341fc  cbnz w8,0x00d34204
+00d34200  bl 0x00b0798c
+00d34204  mov x0,x20
+00d34208  mov w1,w21
+00d3420c  mov x2,xzr
+00d34210  bl 0x020d8830
+00d34214  ldr w8,[x19, #0x18]
+00d34218  add w8,w8,#0x4
+00d3421c  str w8,[x19, #0x18]
+00d34220  ldp x19,x30,[sp, #0x10]
+00d34224  ldp x21,x20,[sp], #0x20
+00d34228  ret
+
+

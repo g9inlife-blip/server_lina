@@ -1,0 +1,122 @@
+================================================================================
+### FILE: 0100a7d4_OLBattleMainMono__Start.txt
+================================================================================
+Function: OLBattleMainMono$$Start @ 0100a7d4
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+0100a7d4  stp x21,x20,[sp, #-0x20]!
+0100a7d8  stp x19,x30,[sp, #0x10]
+0100a7dc  adrp x20,0x3574000
+0100a7e0  adrp x21,0x3347000
+0100a7e4  ldrb w8,[x20, #0x42c]
+0100a7e8  ldr x21,[x21, #0x2b0]
+0100a7ec  mov x19,x0
+0100a7f0  tbnz w8,#0x0,0x0100a808
+0100a7f4  adrp x0,0x3347000
+0100a7f8  ldr x0,[x0, #0x2b0]
+0100a7fc  bl 0x00b0789c
+0100a800  mov w8,#0x1
+0100a804  strb w8,[x20, #0x42c]
+0100a808  ldr x8,[x21]
+0100a80c  ldr x8,[x8, #0xb8]
+0100a810  ldr x0,[x8]
+0100a814  cbz x0,0x0100a82c
+0100a818  mov x1,x19
+0100a81c  ldp x19,x30,[sp, #0x10]
+0100a820  mov x2,xzr
+0100a824  ldp x21,x20,[sp], #0x20
+0100a828  b 0x01060dac
+0100a82c  ldp x19,x30,[sp, #0x10]
+0100a830  ldp x21,x20,[sp], #0x20
+0100a834  ret
+
+
+================================================================================
+### FILE: 0100a838_OLBattleMainMono__Update.txt
+================================================================================
+Function: OLBattleMainMono$$Update @ 0100a838
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+0100a838  stp x21,x20,[sp, #-0x20]!
+0100a83c  stp x19,x30,[sp, #0x10]
+0100a840  adrp x20,0x3574000
+0100a844  adrp x21,0x3347000
+0100a848  ldrb w8,[x20, #0x42d]
+0100a84c  ldr x21,[x21, #0x2b0]
+0100a850  mov x19,x0
+0100a854  tbnz w8,#0x0,0x0100a86c
+0100a858  adrp x0,0x3347000
+0100a85c  ldr x0,[x0, #0x2b0]
+0100a860  bl 0x00b0789c
+0100a864  mov w8,#0x1
+0100a868  strb w8,[x20, #0x42d]
+0100a86c  ldr x8,[x21]
+0100a870  ldr x8,[x8, #0xb8]
+0100a874  ldr x0,[x8, #0x8]
+0100a878  cbz x0,0x0100a890
+0100a87c  mov x1,x19
+0100a880  ldp x19,x30,[sp, #0x10]
+0100a884  mov x2,xzr
+0100a888  ldp x21,x20,[sp], #0x20
+0100a88c  b 0x01060dac
+0100a890  ldp x19,x30,[sp, #0x10]
+0100a894  ldp x21,x20,[sp], #0x20
+0100a898  ret
+
+
+================================================================================
+### FILE: 0100a89c_OLBattleMainMono__.ctor.txt
+================================================================================
+Function: OLBattleMainMono$$.ctor @ 0100a89c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.OLBattleMainMonoWrap$$__CreateInstance @ 01301054
+
+--- Listing ---
+0100a89c  stp x21,x20,[sp, #-0x20]!
+0100a8a0  stp x19,x30,[sp, #0x10]
+0100a8a4  adrp x21,0x3574000
+0100a8a8  adrp x20,0x3347000
+0100a8ac  ldrb w8,[x21, #0x42e]
+0100a8b0  ldr x20,[x20, #0x2b0]
+0100a8b4  mov x19,x0
+0100a8b8  tbnz w8,#0x0,0x0100a8d0
+0100a8bc  adrp x0,0x3347000
+0100a8c0  ldr x0,[x0, #0x2b0]
+0100a8c4  bl 0x00b0789c
+0100a8c8  mov w8,#0x1
+0100a8cc  strb w8,[x21, #0x42e]
+0100a8d0  mov x0,x19
+0100a8d4  mov x1,xzr
+0100a8d8  bl 0x024e45bc
+0100a8dc  ldr x8,[x20]
+0100a8e0  ldr x8,[x8, #0xb8]
+0100a8e4  ldr x0,[x8, #0x10]
+0100a8e8  cbz x0,0x0100a900
+0100a8ec  mov x1,x19
+0100a8f0  ldp x19,x30,[sp, #0x10]
+0100a8f4  mov x2,xzr
+0100a8f8  ldp x21,x20,[sp], #0x20
+0100a8fc  b 0x01060dac
+0100a900  ldp x19,x30,[sp, #0x10]
+0100a904  ldp x21,x20,[sp], #0x20
+0100a908  ret
+
+

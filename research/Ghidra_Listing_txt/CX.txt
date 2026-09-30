@@ -1,0 +1,2383 @@
+================================================================================
+### FILE: 008d39b0___cxa_decrement_exception_refcount.txt
+================================================================================
+Function: __cxa_decrement_exception_refcount @ 008d39b0
+
+--- Calls OUT ---
+  -> __cxa_decrement_exception_refcount @ 00b8b51c
+
+--- Calls IN ---
+  <- rethrow_nested @ 00b47380
+  <- operator= @ 00b4728c
+  <- ~exception_ptr @ 00b47274
+  <- ~nested_exception @ 00b4732c
+  <- ~nested_exception @ 00b47348
+
+--- Listing ---
+008d39b0  adrp x16,0x3307000
+008d39b4  ldr x17,[x16, #0x698]
+008d39b8  add x16,x16,#0x698
+008d39bc  br x17
+
+
+================================================================================
+### FILE: 008d3d60___cxa_increment_exception_refcount.txt
+================================================================================
+Function: __cxa_increment_exception_refcount @ 008d3d60
+
+--- Calls OUT ---
+  -> __cxa_increment_exception_refcount @ 00b8b69c
+
+--- Calls IN ---
+  <- operator= @ 00b4728c
+  <- rethrow_nested @ 00b47380
+  <- exception_ptr @ 00b4727c
+
+--- Listing ---
+008d3d60  adrp x16,0x3307000
+008d3d64  ldr x17,[x16, #0x870]
+008d3d68  add x16,x16,#0x870
+008d3d6c  br x17
+
+
+================================================================================
+### FILE: 008d3de0___cxa_atexit.txt
+================================================================================
+Function: __cxa_atexit @ 008d3de0
+
+--- Calls OUT ---
+  -> __cxa_atexit @ 03799118
+
+--- Calls IN ---
+  <- _INIT_18 @ 008d6994
+  <- _INIT_23 @ 008d6bc4
+  <- entry @ 008d5cc0
+  <- FUN_008d6ff8 @ 008d6ff8
+  <- __r @ 00b789ec
+  <- __months @ 00b781b0
+  <- FUN_00b8a5a4 @ 00b8a5a4
+  <- _INIT_4 @ 008d5f78
+  <- __weeks @ 00b77cec
+  <- __c @ 00b78954
+  <- _INIT_19 @ 008d6a18
+  <- _INIT_7 @ 008d62d8
+  <- _INIT_12 @ 008d6538
+  <- __X @ 00b78824
+  <- FUN_00b53a58 @ 00b53a58
+  <- _INIT_20 @ 008d6b34
+  <- _INIT_2 @ 008d5d94
+  <- future_category @ 00b8a390
+  <- _INIT_11 @ 008d6500
+  <- _INIT_3 @ 008d5f14
+  <- iostream_category @ 00b53574
+  <- _INIT_21 @ 008d6b68
+  <- _INIT_17 @ 008d6934
+  <- _INIT_1 @ 008d5d08
+  <- __r @ 00b78a84
+  <- _INIT_8 @ 008d6330
+  <- _INIT_6 @ 008d6070
+  <- __weeks @ 00b77adc
+  <- ~promise @ 00b8ac98
+  <- __X @ 00b7878c
+  <- _INIT_16 @ 008d68f0
+  <- _INIT_15 @ 008d67bc
+  <- FUN_00a8d830 @ 00a8d830
+  <- __am_pm @ 00b78464
+  <- __x @ 00b786f4
+  <- _INIT_14 @ 008d66c8
+  <- __c @ 00b788bc
+  <- __x @ 00b7865c
+  <- _INIT_10 @ 008d63cc
+  <- __months @ 00b77efc
+  <- __am_pm @ 00b78560
+  <- _INIT_5 @ 008d6018
+  <- _INIT_13 @ 008d66a4
+  <- _INIT_9 @ 008d63a8
+
+--- Listing ---
+008d3de0  adrp x16,0x3307000
+008d3de4  ldr x17,[x16, #0x8b0]
+008d3de8  add x16,x16,#0x8b0
+008d3dec  br x17
+
+
+================================================================================
+### FILE: 008d3ef0___cxa_guard_acquire.txt
+================================================================================
+Function: __cxa_guard_acquire @ 008d3ef0
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 00b8ba34
+
+--- Calls IN ---
+  <- do_toupper @ 00b71e34
+  <- do_get @ 00b56900
+  <- __r @ 00b789ec
+  <- FUN_00b8a5a4 @ 00b8a5a4
+  <- __global @ 00b703a0
+  <- do_put @ 00b5daf0
+  <- do_tolower @ 00b71f0c
+  <- __weeks @ 00b77cec
+  <- FUN_00b468e8 @ 00b468e8
+  <- FUN_00aae558 @ 00aae558
+  <- FUN_00b80088 @ 00b80088
+  <- __throw_system_error @ 00b89578
+  <- FUN_00b46464 @ 00b46464
+  <- __X @ 00b78824
+  <- generic_category @ 00b88c64
+  <- __widen_and_group_float @ 00b5ef2c
+  <- future_category @ 00b8a390
+  <- FUN_00b80348 @ 00b80348
+  <- do_tolower @ 00b72480
+  <- FUN_00b88ce4 @ 00b88ce4
+  <- do_get @ 00b59ca4
+  <- iostream_category @ 00b53574
+  <- do_put @ 00b5f94c
+  <- __widen_and_group_float @ 00b5cc74
+  <- FUN_00aeb3b0 @ 00aeb3b0
+  <- __r @ 00b78a84
+  <- FUN_00b6bcd0 @ 00b6bcd0
+  <- do_tolower @ 00b723dc
+  <- codecvt @ 00b73450
+  <- do_toupper @ 00b71d8c
+  <- do_put @ 00b5f510
+  <- FUN_00b46fb0 @ 00b46fb0
+  <- do_put @ 00b5e874
+  <- __weeks @ 00b77adc
+  <- __X @ 00b7878c
+  <- FUN_00a8ca2c @ 00a8ca2c
+  <- do_put @ 00b67e5c
+  <- do_toupper @ 00b72260
+  <- FUN_00b801e8 @ 00b801e8
+  <- do_put @ 00b5e5ec
+  <- __am_pm @ 00b78464
+  <- __c @ 00b788bc
+  <- do_put @ 00b5d674
+  <- do_put @ 00b68f60
+  <- do_tolower @ 00b71fb4
+  <- __x @ 00b7865c
+  <- __months @ 00b77efc
+  <- do_put @ 00b5bf30
+  <- do_put @ 00b5c198
+  <- __thread_local_data @ 00b89824
+  <- __cloc @ 00b571bc
+  <- __months @ 00b781b0
+  <- do_put @ 00b5e368
+  <- __c @ 00b78954
+  <- do_toupper @ 00b72304
+  <- FUN_00b7fc7c @ 00b7fc7c
+  <- do_put @ 00b5c69c
+  <- system_category @ 00b88dbc
+  <- FUN_00b53a58 @ 00b53a58
+  <- do_put @ 00b5eaf8
+  <- FUN_00b7ff20 @ 00b7ff20
+  <- FUN_00b80448 @ 00b80448
+  <- do_put @ 00b5c41c
+  <- ~promise @ 00b8ac98
+  <- do_put @ 00b5d248
+  <- FUN_00a8d830 @ 00a8d830
+  <- do_put @ 00b5b6b4
+  <- __x @ 00b786f4
+  <- ~codecvt @ 00b7eae8
+  <- FUN_00b7fb40 @ 00b7fb40
+  <- ~__time_put @ 00b7c8a0
+  <- FUN_00b80548 @ 00b80548
+  <- FUN_00b7fdb8 @ 00b7fdb8
+  <- FUN_00b6a07c @ 00b6a07c
+  <- classic @ 00b6c424
+  <- __am_pm @ 00b78560
+
+--- Listing ---
+008d3ef0  adrp x16,0x3307000
+008d3ef4  ldr x17,[x16, #0x938]
+008d3ef8  add x16,x16,#0x938
+008d3efc  br x17
+
+
+================================================================================
+### FILE: 008d40b0___cxa_rethrow_primary_exception.txt
+================================================================================
+Function: __cxa_rethrow_primary_exception @ 008d40b0
+
+--- Calls OUT ---
+  -> __cxa_rethrow_primary_exception @ 00b8b72c
+
+--- Calls IN ---
+  <- rethrow_exception @ 00b473d4
+
+--- Listing ---
+008d40b0  adrp x16,0x3307000
+008d40b4  ldr x17,[x16, #0xa18]
+008d40b8  add x16,x16,#0xa18
+008d40bc  br x17
+
+
+================================================================================
+### FILE: 008d40c0___cxa_allocate_exception.txt
+================================================================================
+Function: __cxa_allocate_exception @ 008d40c0
+
+--- Calls OUT ---
+  -> __cxa_allocate_exception @ 00b8b1ec
+
+--- Calls IN ---
+  <- stol @ 00b85734
+  <- FUN_00af4fc0 @ 00af4fc0
+  <- __cxa_call_unexpected @ 00b8c5bc
+  <- stoull @ 00b860ac
+  <- stod @ 00b8683c
+  <- FUN_00b8a5a4 @ 00b8a5a4
+  <- operator.new @ 00b81bb8
+  <- stof @ 00b86654
+  <- stold @ 00b86ddc
+  <- stold @ 00b86c04
+  <- __throw_bad_alloc @ 00b81aac
+  <- __throw_system_error @ 00b89578
+  <- FUN_00a8cdc8 @ 00a8cdc8
+  <- FUN_00aecc58 @ 00aecc58
+  <- stof @ 00b86474
+  <- FUN_00aecc80 @ 00aecc80
+  <- FUN_00b53a58 @ 00b53a58
+  <- stoi @ 00b8530c
+  <- FUN_00afd988 @ 00afd988
+  <- stoull @ 00b8628c
+  <- FUN_00afe5bc @ 00afe5bc
+  <- FUN_00b70e70 @ 00b70e70
+  <- __throw_runtime_error @ 00b659d4
+  <- stoul @ 00b8591c
+  <- stol @ 00b85554
+  <- stoi @ 00b850cc
+  <- System.Xml.XmlTextReaderImpl$$InvalidCharRecovery @ 0227435c
+  <- FUN_00a8f55c @ 00a8f55c
+  <- stoul @ 00b85afc
+  <- stod @ 00b86a1c
+  <- operator.new @ 00b81ae0
+  <- stoll @ 00b85ec4
+  <- System.Xml.XmlTextReaderImpl$$OpenUrl @ 0226d658
+  <- FUN_00b8ae60 @ 00b8ae60
+  <- stoll @ 00b85ce4
+
+--- Listing ---
+008d40c0  adrp x16,0x3307000
+008d40c4  ldr x17,[x16, #0xa20]
+008d40c8  add x16,x16,#0xa20
+008d40cc  br x17
+
+
+================================================================================
+### FILE: 008d42d0___cxa_guard_abort.txt
+================================================================================
+Function: __cxa_guard_abort @ 008d42d0
+
+--- Calls OUT ---
+  -> __cxa_guard_abort @ 00b8bc3c
+
+--- Calls IN ---
+
+--- Listing ---
+008d42d0  adrp x16,0x3307000
+008d42d4  ldr x17,[x16, #0xb28]
+008d42d8  add x16,x16,#0xb28
+008d42dc  br x17
+
+
+================================================================================
+### FILE: 008d4520___cxa_demangle.txt
+================================================================================
+Function: __cxa_demangle @ 008d4520
+
+--- Calls OUT ---
+  -> __cxa_demangle @ 00b8ec68
+
+--- Calls IN ---
+  <- FUN_00b8eb2c @ 00b8eb2c
+
+--- Listing ---
+008d4520  adrp x16,0x3307000
+008d4524  ldr x17,[x16, #0xc50]
+008d4528  add x16,x16,#0xc50
+008d452c  br x17
+
+
+================================================================================
+### FILE: 008d4580___cxa_finalize.txt
+================================================================================
+Function: __cxa_finalize @ 008d4580
+
+--- Calls OUT ---
+  -> __cxa_finalize @ 03799308
+
+--- Calls IN ---
+  <- _FINI_1 @ 008d6fd8
+
+--- Listing ---
+008d4580  adrp x16,0x3307000
+008d4584  ldr x17,[x16, #0xc80]
+008d4588  add x16,x16,#0xc80
+008d458c  br x17
+
+
+================================================================================
+### FILE: 008d4680___cxa_rethrow.txt
+================================================================================
+Function: __cxa_rethrow @ 008d4680
+
+--- Calls OUT ---
+  -> __cxa_rethrow @ 00b8b5b8
+
+--- Calls IN ---
+  <- __set_badbit_and_consider_rethrow @ 00b4f0a4
+  <- FUN_00b6dfe4 @ 00b6dfe4
+  <- __cxa_call_unexpected @ 00b8c5bc
+  <- __set_failbit_and_consider_rethrow @ 00b508bc
+
+--- Listing ---
+008d4680  adrp x16,0x3307000
+008d4684  ldr x17,[x16, #0xd00]
+008d4688  add x16,x16,#0xd00
+008d468c  br x17
+
+
+================================================================================
+### FILE: 008d47a0___cxa_current_primary_exception.txt
+================================================================================
+Function: __cxa_current_primary_exception @ 008d47a0
+
+--- Calls OUT ---
+  -> __cxa_current_primary_exception @ 00b8b6b8
+
+--- Calls IN ---
+  <- nested_exception @ 00b472d4
+  <- current_exception @ 00b47308
+
+--- Listing ---
+008d47a0  adrp x16,0x3307000
+008d47a4  ldr x17,[x16, #0xd90]
+008d47a8  add x16,x16,#0xd90
+008d47ac  br x17
+
+
+================================================================================
+### FILE: 008d49d0___cxa_end_catch.txt
+================================================================================
+Function: __cxa_end_catch @ 008d49d0
+
+--- Calls OUT ---
+  -> __cxa_end_catch @ 00b8b440
+
+--- Calls IN ---
+  <- FUN_00b6dfe4 @ 00b6dfe4
+  <- __cxa_call_unexpected @ 00b8c5bc
+  <- System.Xml.XmlTextReaderImpl$$OpenUrl @ 0226d658
+
+--- Listing ---
+008d49d0  adrp x16,0x3307000
+008d49d4  ldr x17,[x16, #0xea8]
+008d49d8  add x16,x16,#0xea8
+008d49dc  br x17
+
+
+================================================================================
+### FILE: 008d4ce0___cxa_call_unexpected.txt
+================================================================================
+Function: __cxa_call_unexpected @ 008d4ce0
+
+--- Calls OUT ---
+  -> __cxa_call_unexpected @ 00b8c5bc
+
+--- Calls IN ---
+  <- FUN_00b8b324 @ 00b8b324
+  <- FUN_00b8b84c @ 00b8b84c
+
+--- Listing ---
+008d4ce0  adrp x16,0x3308000
+008d4ce4  ldr x17,[x16, #0x30]
+008d4ce8  add x16,x16,#0x30
+008d4cec  br x17
+
+
+================================================================================
+### FILE: 008d5180___cxa_free_exception.txt
+================================================================================
+Function: __cxa_free_exception @ 008d5180
+
+--- Calls OUT ---
+  -> __cxa_free_exception @ 00b8b238
+
+--- Calls IN ---
+
+--- Listing ---
+008d5180  adrp x16,0x3308000
+008d5184  ldr x17,[x16, #0x280]
+008d5188  add x16,x16,#0x280
+008d518c  br x17
+
+
+================================================================================
+### FILE: 008d5200___cxa_get_globals_fast.txt
+================================================================================
+Function: __cxa_get_globals_fast @ 008d5200
+
+--- Calls OUT ---
+  -> __cxa_get_globals_fast @ 00b8b990
+
+--- Calls IN ---
+  <- FUN_00b8eb2c @ 00b8eb2c
+  <- __cxa_call_unexpected @ 00b8c5bc
+  <- __cxa_end_catch @ 00b8b440
+  <- __cxa_current_primary_exception @ 00b8b6b8
+  <- terminate @ 00b8bce8
+  <- __cxa_uncaught_exception @ 00b8b8b8
+  <- __cxa_uncaught_exceptions @ 00b8b8e0
+  <- __cxa_current_exception_type @ 00b8b56c
+
+--- Listing ---
+008d5200  adrp x16,0x3308000
+008d5204  ldr x17,[x16, #0x2c0]
+008d5208  add x16,x16,#0x2c0
+008d520c  br x17
+
+
+================================================================================
+### FILE: 008d52e0___cxa_throw.txt
+================================================================================
+Function: __cxa_throw @ 008d52e0
+
+--- Calls OUT ---
+  -> __cxa_throw @ 00b8b28c
+
+--- Calls IN ---
+  <- stol @ 00b85734
+  <- FUN_00af4fc0 @ 00af4fc0
+  <- __cxa_call_unexpected @ 00b8c5bc
+  <- stoull @ 00b860ac
+  <- stod @ 00b8683c
+  <- FUN_00b8a5a4 @ 00b8a5a4
+  <- operator.new @ 00b81bb8
+  <- stof @ 00b86654
+  <- stold @ 00b86ddc
+  <- stold @ 00b86c04
+  <- __throw_bad_alloc @ 00b81aac
+  <- __throw_system_error @ 00b89578
+  <- FUN_00a8cdc8 @ 00a8cdc8
+  <- FUN_00aecc58 @ 00aecc58
+  <- stof @ 00b86474
+  <- FUN_00aecc80 @ 00aecc80
+  <- FUN_00b53a58 @ 00b53a58
+  <- stoi @ 00b8530c
+  <- FUN_00afd988 @ 00afd988
+  <- stoull @ 00b8628c
+  <- FUN_00afe5bc @ 00afe5bc
+  <- FUN_00b70e70 @ 00b70e70
+  <- __throw_runtime_error @ 00b659d4
+  <- stoul @ 00b8591c
+  <- stol @ 00b85554
+  <- stoi @ 00b850cc
+  <- System.Xml.XmlTextReaderImpl$$InvalidCharRecovery @ 0227435c
+  <- FUN_00a8f55c @ 00a8f55c
+  <- stoul @ 00b85afc
+  <- stod @ 00b86a1c
+  <- operator.new @ 00b81ae0
+  <- stoll @ 00b85ec4
+  <- System.Xml.XmlTextReaderImpl$$OpenUrl @ 0226d658
+  <- FUN_00b8ae60 @ 00b8ae60
+  <- stoll @ 00b85ce4
+
+--- Listing ---
+008d52e0  adrp x16,0x3308000
+008d52e4  ldr x17,[x16, #0x330]
+008d52e8  add x16,x16,#0x330
+008d52ec  br x17
+
+
+================================================================================
+### FILE: 008d5400___cxa_uncaught_exceptions.txt
+================================================================================
+Function: __cxa_uncaught_exceptions @ 008d5400
+
+--- Calls OUT ---
+  -> __cxa_uncaught_exceptions @ 00b8b8e0
+
+--- Calls IN ---
+  <- uncaught_exception @ 00b47254
+  <- uncaught_exceptions @ 00b47270
+
+--- Listing ---
+008d5400  adrp x16,0x3308000
+008d5404  ldr x17,[x16, #0x3c0]
+008d5408  add x16,x16,#0x3c0
+008d540c  br x17
+
+
+================================================================================
+### FILE: 008d55b0___cxa_begin_catch.txt
+================================================================================
+Function: __cxa_begin_catch @ 008d55b0
+
+--- Calls OUT ---
+  -> __cxa_begin_catch @ 00b8b3ac
+
+--- Calls IN ---
+  <- FUN_00b6dfe4 @ 00b6dfe4
+  <- __cxa_call_unexpected @ 00b8c5bc
+  <- FUN_00b8c590 @ 00b8c590
+  <- FUN_008d7014 @ 008d7014
+  <- FUN_00b8b384 @ 00b8b384
+  <- System.Xml.XmlTextReaderImpl$$OpenUrl @ 0226d658
+
+--- Listing ---
+008d55b0  adrp x16,0x3308000
+008d55b4  ldr x17,[x16, #0x498]
+008d55b8  add x16,x16,#0x498
+008d55bc  br x17
+
+
+================================================================================
+### FILE: 008d5a60___cxa_get_globals.txt
+================================================================================
+Function: __cxa_get_globals @ 008d5a60
+
+--- Calls OUT ---
+  -> __cxa_get_globals @ 00b8b900
+
+--- Calls IN ---
+  <- __cxa_rethrow_primary_exception @ 00b8b72c
+  <- __cxa_throw @ 00b8b28c
+  <- __cxa_begin_catch @ 00b8b3ac
+  <- __cxa_rethrow @ 00b8b5b8
+
+--- Listing ---
+008d5a60  adrp x16,0x3308000
+008d5a64  ldr x17,[x16, #0x6f0]
+008d5a68  add x16,x16,#0x6f0
+008d5a6c  br x17
+
+
+================================================================================
+### FILE: 008d5bc0___cxa_guard_release.txt
+================================================================================
+Function: __cxa_guard_release @ 008d5bc0
+
+--- Calls OUT ---
+  -> __cxa_guard_release @ 00b8bb94
+
+--- Calls IN ---
+  <- do_toupper @ 00b71e34
+  <- do_get @ 00b56900
+  <- __r @ 00b789ec
+  <- FUN_00b8a5a4 @ 00b8a5a4
+  <- __global @ 00b703a0
+  <- do_put @ 00b5daf0
+  <- do_tolower @ 00b71f0c
+  <- __weeks @ 00b77cec
+  <- FUN_00b468e8 @ 00b468e8
+  <- FUN_00aae558 @ 00aae558
+  <- FUN_00b80088 @ 00b80088
+  <- __throw_system_error @ 00b89578
+  <- FUN_00b46464 @ 00b46464
+  <- __X @ 00b78824
+  <- generic_category @ 00b88c64
+  <- __widen_and_group_float @ 00b5ef2c
+  <- future_category @ 00b8a390
+  <- FUN_00b80348 @ 00b80348
+  <- do_tolower @ 00b72480
+  <- FUN_00b88ce4 @ 00b88ce4
+  <- do_get @ 00b59ca4
+  <- iostream_category @ 00b53574
+  <- do_put @ 00b5f94c
+  <- __widen_and_group_float @ 00b5cc74
+  <- FUN_00aeb3b0 @ 00aeb3b0
+  <- __r @ 00b78a84
+  <- FUN_00b6bcd0 @ 00b6bcd0
+  <- do_tolower @ 00b723dc
+  <- codecvt @ 00b73450
+  <- do_toupper @ 00b71d8c
+  <- do_put @ 00b5e874
+  <- do_put @ 00b5f510
+  <- __weeks @ 00b77adc
+  <- FUN_00b46fb0 @ 00b46fb0
+  <- __X @ 00b7878c
+  <- do_put @ 00b67e5c
+  <- do_toupper @ 00b72260
+  <- FUN_00a8ca2c @ 00a8ca2c
+  <- FUN_00b801e8 @ 00b801e8
+  <- do_put @ 00b5e5ec
+  <- __am_pm @ 00b78464
+  <- __c @ 00b788bc
+  <- do_put @ 00b5d674
+  <- do_put @ 00b68f60
+  <- do_tolower @ 00b71fb4
+  <- __x @ 00b7865c
+  <- __months @ 00b77efc
+  <- do_put @ 00b5bf30
+  <- do_put @ 00b5c198
+  <- __thread_local_data @ 00b89824
+  <- __cloc @ 00b571bc
+  <- __months @ 00b781b0
+  <- do_put @ 00b5e368
+  <- __c @ 00b78954
+  <- do_toupper @ 00b72304
+  <- FUN_00b7fc7c @ 00b7fc7c
+  <- do_put @ 00b5c69c
+  <- system_category @ 00b88dbc
+  <- FUN_00b53a58 @ 00b53a58
+  <- do_put @ 00b5eaf8
+  <- FUN_00b7ff20 @ 00b7ff20
+  <- FUN_00b80448 @ 00b80448
+  <- do_put @ 00b5c41c
+  <- ~promise @ 00b8ac98
+  <- do_put @ 00b5d248
+  <- FUN_00a8d830 @ 00a8d830
+  <- do_put @ 00b5b6b4
+  <- __x @ 00b786f4
+  <- ~codecvt @ 00b7eae8
+  <- FUN_00b7fb40 @ 00b7fb40
+  <- ~__time_put @ 00b7c8a0
+  <- FUN_00b80548 @ 00b80548
+  <- FUN_00b7fdb8 @ 00b7fdb8
+  <- FUN_00b6a07c @ 00b6a07c
+  <- classic @ 00b6c424
+  <- __am_pm @ 00b78560
+
+--- Listing ---
+008d5bc0  adrp x16,0x3308000
+008d5bc4  ldr x17,[x16, #0x7a0]
+008d5bc8  add x16,x16,#0x7a0
+008d5bcc  br x17
+
+
+================================================================================
+### FILE: 00b8b1ec___cxa_allocate_exception.txt
+================================================================================
+Function: __cxa_allocate_exception @ 00b8b1ec
+
+--- Calls OUT ---
+  -> FUN_00b8cab4 @ 00b8cab4
+  -> terminate @ 008d3b90
+  -> memset @ 008d4dd0
+
+--- Calls IN ---
+  <- __cxa_allocate_exception @ 008d40c0
+
+--- Listing ---
+00b8b1ec  stp x20,x19,[sp, #-0x20]!
+00b8b1f0  stp x29,x30,[sp, #0x10]
+00b8b1f4  add x29,sp,#0x10
+00b8b1f8  add x8,x0,#0x8f
+00b8b1fc  and x19,x8,#-0x10
+00b8b200  mov x0,x19
+    ; [PRE] try { // try from 00b8b200 to 00b8b207 has its CatchHandler @ 00b8b234
+00b8b204  bl 0x00b8cab4
+    ; [POST] } // end try from 00b8b200 to 00b8b207
+00b8b208  mov x20,x0
+00b8b20c  cbz x0,0x00b8b230
+00b8b210  mov x0,x20
+00b8b214  mov w1,wzr
+00b8b218  mov x2,x19
+00b8b21c  bl 0x008d4dd0
+00b8b220  ldp x29,x30,[sp, #0x10]
+00b8b224  add x0,x20,#0x80
+00b8b228  ldp x20,x19,[sp], #0x20
+00b8b22c  ret
+00b8b230  bl 0x008d3b90
+
+
+================================================================================
+### FILE: 00b8b238___cxa_free_exception.txt
+================================================================================
+Function: __cxa_free_exception @ 00b8b238
+
+--- Calls OUT ---
+  -> FUN_00b8cc70 @ 00b8cc70
+
+--- Calls IN ---
+  <- __cxa_free_exception @ 008d5180
+
+--- Listing ---
+00b8b238  stp x29,x30,[sp, #-0x10]!
+00b8b23c  mov x29,sp
+00b8b240  sub x0,x0,#0x80
+00b8b244  bl 0x00b8cc70
+    ; [PRE] try { // try from 00b8b244 to 00b8b247 has its CatchHandler @ 00b8b250
+    ; [POST] } // end try from 00b8b244 to 00b8b247
+00b8b248  ldp x29,x30,[sp], #0x10
+00b8b24c  ret
+
+
+================================================================================
+### FILE: 00b8b254___cxa_allocate_dependent_exception.txt
+================================================================================
+Function: __cxa_allocate_dependent_exception @ 00b8b254
+
+--- Calls OUT ---
+  -> FUN_00b8cab4 @ 00b8cab4
+  -> terminate @ 008d3b90
+
+--- Calls IN ---
+
+--- Listing ---
+00b8b254  stp x29,x30,[sp, #-0x10]!
+00b8b258  mov x29,sp
+00b8b25c  mov w0,#0x80
+00b8b260  bl 0x00b8cab4
+00b8b264  cbz x0,0x00b8b284
+00b8b268  movi v0.2D,#0x0
+00b8b26c  stp q0,q0,[x0, #0x60]
+00b8b270  stp q0,q0,[x0, #0x40]
+00b8b274  stp q0,q0,[x0, #0x20]
+00b8b278  stp q0,q0,[x0]
+00b8b27c  ldp x29,x30,[sp], #0x10
+00b8b280  ret
+00b8b284  bl 0x008d3b90
+
+
+================================================================================
+### FILE: 00b8b288___cxa_free_dependent_exception.txt
+================================================================================
+Function: __cxa_free_dependent_exception @ 00b8b288
+
+--- Calls OUT ---
+  -> FUN_00b8cc70 @ 00b8cc70
+
+--- Calls IN ---
+
+--- Listing ---
+00b8b288  b 0x00b8cc70
+
+
+================================================================================
+### FILE: 00b8b28c___cxa_throw.txt
+================================================================================
+Function: __cxa_throw @ 00b8b28c
+
+--- Calls OUT ---
+  -> FUN_00b8b324 @ 00b8b324
+  -> get_terminate @ 008d3e20
+  -> FUN_00b8b384 @ 00b8b384
+  -> _Unwind_RaiseException @ 008d51d0
+  -> __cxa_get_globals @ 008d5a60
+  -> get_unexpected @ 008d4650
+  -> FUN_00b8b300 @ 00b8b300
+
+--- Calls IN ---
+  <- __cxa_throw @ 008d52e0
+
+--- Listing ---
+00b8b28c  stp x22,x21,[sp, #-0x30]!
+00b8b290  stp x20,x19,[sp, #0x10]
+00b8b294  stp x29,x30,[sp, #0x20]
+00b8b298  add x29,sp,#0x20
+00b8b29c  mov x19,x2
+00b8b2a0  mov x20,x1
+00b8b2a4  mov x21,x0
+00b8b2a8  bl 0x008d5a60
+00b8b2ac  mov x22,x0
+00b8b2b0  bl 0x008d4650
+00b8b2b4  stur x0,[x21, #-0x68]
+00b8b2b8  bl 0x008d3e20
+00b8b2bc  stp x20,x19,[x21, #-0x78]
+00b8b2c0  sub x19,x21,#0x20
+00b8b2c4  stur x0,[x21, #-0x60]
+00b8b2c8  mov x0,x19
+00b8b2cc  bl 0x00b8b300
+00b8b2d0  mov w8,#0x1
+00b8b2d4  str x8,[x21, #-0x80]!
+00b8b2d8  ldr w8,[x22, #0x8]
+00b8b2dc  adrp x9,0xb8b000
+00b8b2e0  add x9,x9,#0x324
+00b8b2e4  mov x0,x19
+00b8b2e8  add w8,w8,#0x1
+00b8b2ec  str w8,[x22, #0x8]
+00b8b2f0  str x9,[x21, #0x68]
+00b8b2f4  bl 0x008d51d0
+00b8b2f8  mov x0,x21
+00b8b2fc  bl 0x00b8b384
+
+
+================================================================================
+### FILE: 00b8b3a4___cxa_get_exception_ptr.txt
+================================================================================
+Function: __cxa_get_exception_ptr @ 00b8b3a4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8b3a4  ldur x0,[x0, #-0x10]
+00b8b3a8  ret
+
+
+================================================================================
+### FILE: 00b8b3ac___cxa_begin_catch.txt
+================================================================================
+Function: __cxa_begin_catch @ 00b8b3ac
+
+--- Calls OUT ---
+  -> terminate @ 008d3b90
+  -> __cxa_get_globals @ 008d5a60
+
+--- Calls IN ---
+  <- __cxa_begin_catch @ 008d55b0
+
+--- Listing ---
+00b8b3ac  stp x20,x19,[sp, #-0x20]!
+00b8b3b0  stp x29,x30,[sp, #0x10]
+00b8b3b4  add x29,sp,#0x10
+00b8b3b8  ldr x20,[x0]
+00b8b3bc  mov x19,x0
+00b8b3c0  bl 0x008d5a60
+    ; [PRE] try { // try from 00b8b3c0 to 00b8b3c3 has its CatchHandler @ 00b8b43c
+    ; [POST] } // end try from 00b8b3c0 to 00b8b3c3
+00b8b3c4  mov x8,#0x2b2b
+00b8b3c8  movk x8,#0x4743, LSL #16
+00b8b3cc  movk x8,#0x4c4e, LSL #32
+00b8b3d0  movk x8,#0x43, LSL #48
+00b8b3d4  cmp x8,x20, LSR #0x8
+00b8b3d8  sub x8,x19,#0x60
+00b8b3dc  b.ne 0x00b8b41c
+00b8b3e0  ldur w9,[x19, #-0x30]
+00b8b3e4  cmp w9,#0x0
+00b8b3e8  cneg w9,w9,mi
+00b8b3ec  add w9,w9,#0x1
+00b8b3f0  stur w9,[x19, #-0x30]
+00b8b3f4  ldr x9,[x0]
+00b8b3f8  cmp x9,x8
+00b8b3fc  b.eq 0x00b8b408
+00b8b400  stur x9,[x19, #-0x38]
+00b8b404  str x8,[x0]
+00b8b408  ldr w8,[x0, #0x8]
+00b8b40c  sub w8,w8,#0x1
+00b8b410  str w8,[x0, #0x8]
+00b8b414  ldur x0,[x19, #-0x10]
+00b8b418  b 0x00b8b42c
+00b8b41c  ldr x9,[x0]
+00b8b420  cbnz x9,0x00b8b438
+00b8b424  str x8,[x0]
+00b8b428  add x0,x19,#0x20
+00b8b42c  ldp x29,x30,[sp, #0x10]
+00b8b430  ldp x20,x19,[sp], #0x20
+00b8b434  ret
+00b8b438  bl 0x008d3b90
+
+
+================================================================================
+### FILE: 00b8b440___cxa_end_catch.txt
+================================================================================
+Function: __cxa_end_catch @ 00b8b440
+
+--- Calls OUT ---
+  -> _Unwind_DeleteException @ 008d4400
+  -> FUN_00b8cc70 @ 00b8cc70
+  -> __cxa_get_globals_fast @ 008d5200
+
+--- Calls IN ---
+  <- __cxa_end_catch @ 008d49d0
+
+--- Listing ---
+00b8b440  stp x20,x19,[sp, #-0x20]!
+00b8b444  stp x29,x30,[sp, #0x10]
+00b8b448  add x29,sp,#0x10
+00b8b44c  bl 0x008d5200
+00b8b450  ldr x19,[x0]
+00b8b454  cbz x19,0x00b8b4f0
+00b8b458  mov x20,x0
+00b8b45c  mov x0,x19
+00b8b460  ldr x8,[x0, #0x60]!
+00b8b464  mov x9,#0x2b2b
+00b8b468  movk x9,#0x4743, LSL #16
+00b8b46c  movk x9,#0x4c4e, LSL #32
+00b8b470  movk x9,#0x43, LSL #48
+00b8b474  cmp x9,x8, LSR #0x8
+00b8b478  b.ne 0x00b8b4e8
+00b8b47c  ldr w8,[x19, #0x30]
+00b8b480  tbnz w8,#0x1f,0x00b8b4fc
+00b8b484  subs w8,w8,#0x1
+00b8b488  str w8,[x19, #0x30]
+00b8b48c  b.ne 0x00b8b4f0
+00b8b490  ldr x8,[x19, #0x28]
+00b8b494  str x8,[x20]
+00b8b498  ldrb w8,[x19, #0x60]
+00b8b49c  cmp x8,#0x1
+00b8b4a0  b.ne 0x00b8b4b8
+00b8b4a4  ldr x8,[x19]
+00b8b4a8  mov x0,x19
+00b8b4ac  sub x20,x8,#0x80
+00b8b4b0  bl 0x00b8cc70
+00b8b4b4  mov x19,x20
+00b8b4b8  add x0,x19,#0x80
+00b8b4bc  ldaxr x8,[x19]
+00b8b4c0  subs x8,x8,#0x1
+00b8b4c4  stlxr w9,x8,[x19]
+00b8b4c8  cbnz w9,0x00b8b4bc
+00b8b4cc  b.ne 0x00b8b4f0
+00b8b4d0  ldr x8,[x19, #0x10]
+00b8b4d4  cbz x8,0x00b8b4dc
+00b8b4d8  blr x8
+    ; [PRE] try { // try from 00b8b4d8 to 00b8b4db has its CatchHandler @ 00b8b514
+    ; [POST] } // end try from 00b8b4d8 to 00b8b4db
+00b8b4dc  mov x0,x19
+    ; [PRE] try { // try from 00b8b4dc to 00b8b4e3 has its CatchHandler @ 00b8b518
+00b8b4e0  bl 0x00b8cc70
+    ; [POST] } // end try from 00b8b4dc to 00b8b4e3
+00b8b4e4  b 0x00b8b4f0
+00b8b4e8  bl 0x008d4400
+00b8b4ec  str xzr,[x20]
+00b8b4f0  ldp x29,x30,[sp, #0x10]
+00b8b4f4  ldp x20,x19,[sp], #0x20
+00b8b4f8  ret
+00b8b4fc  adds w8,w8,#0x1
+00b8b500  str w8,[x19, #0x30]
+00b8b504  b.cc 0x00b8b4f0
+00b8b508  ldr x8,[x19, #0x28]
+00b8b50c  str x8,[x20]
+00b8b510  b 0x00b8b4f0
+
+
+================================================================================
+### FILE: 00b8b51c___cxa_decrement_exception_refcount.txt
+================================================================================
+Function: __cxa_decrement_exception_refcount @ 00b8b51c
+
+--- Calls OUT ---
+  -> FUN_00b8cc70 @ 00b8cc70
+
+--- Calls IN ---
+  <- __cxa_decrement_exception_refcount @ 008d39b0
+
+--- Listing ---
+00b8b51c  str x19,[sp, #-0x20]!
+00b8b520  stp x29,x30,[sp, #0x10]
+00b8b524  add x29,sp,#0x10
+00b8b528  cbz x0,0x00b8b558
+00b8b52c  sub x19,x0,#0x80
+00b8b530  ldaxr x8,[x19]
+00b8b534  subs x8,x8,#0x1
+00b8b538  stlxr w9,x8,[x19]
+00b8b53c  cbnz w9,0x00b8b530
+00b8b540  b.ne 0x00b8b558
+00b8b544  ldur x8,[x0, #-0x70]
+00b8b548  cbz x8,0x00b8b550
+00b8b54c  blr x8
+    ; [PRE] try { // try from 00b8b54c to 00b8b54f has its CatchHandler @ 00b8b564
+    ; [POST] } // end try from 00b8b54c to 00b8b54f
+00b8b550  mov x0,x19
+    ; [PRE] try { // try from 00b8b550 to 00b8b557 has its CatchHandler @ 00b8b568
+00b8b554  bl 0x00b8cc70
+    ; [POST] } // end try from 00b8b550 to 00b8b557
+00b8b558  ldp x29,x30,[sp, #0x10]
+00b8b55c  ldr x19,[sp], #0x20
+00b8b560  ret
+
+
+================================================================================
+### FILE: 00b8b56c___cxa_current_exception_type.txt
+================================================================================
+Function: __cxa_current_exception_type @ 00b8b56c
+
+--- Calls OUT ---
+  -> __cxa_get_globals_fast @ 008d5200
+
+--- Calls IN ---
+
+--- Listing ---
+00b8b56c  stp x29,x30,[sp, #-0x10]!
+00b8b570  mov x29,sp
+00b8b574  bl 0x008d5200
+00b8b578  cbz x0,0x00b8b5a4
+00b8b57c  ldr x8,[x0]
+00b8b580  cbz x8,0x00b8b5ac
+00b8b584  ldr x9,[x8, #0x60]
+00b8b588  mov x10,#0x2b2b
+00b8b58c  movk x10,#0x4743, LSL #16
+00b8b590  movk x10,#0x4c4e, LSL #32
+00b8b594  movk x10,#0x43, LSL #48
+00b8b598  cmp x10,x9, LSR #0x8
+00b8b59c  b.ne 0x00b8b5ac
+00b8b5a0  ldr x0,[x8, #0x8]
+00b8b5a4  ldp x29,x30,[sp], #0x10
+00b8b5a8  ret
+00b8b5ac  mov x0,xzr
+00b8b5b0  ldp x29,x30,[sp], #0x10
+00b8b5b4  ret
+
+
+================================================================================
+### FILE: 00b8b5b8___cxa_rethrow.txt
+================================================================================
+Function: __cxa_rethrow @ 00b8b5b8
+
+--- Calls OUT ---
+  -> terminate @ 008d3b90
+  -> _Unwind_RaiseException @ 008d51d0
+  -> __cxa_get_globals @ 008d5a60
+  -> FUN_00b8bd68 @ 00b8bd68
+
+--- Calls IN ---
+  <- __cxa_rethrow @ 008d4680
+
+--- Listing ---
+00b8b5b8  str x23,[sp, #-0x40]!
+00b8b5bc  stp x22,x21,[sp, #0x10]
+00b8b5c0  stp x20,x19,[sp, #0x20]
+00b8b5c4  stp x29,x30,[sp, #0x30]
+00b8b5c8  add x29,sp,#0x30
+00b8b5cc  bl 0x008d5a60
+00b8b5d0  ldr x20,[x0]
+00b8b5d4  cbz x20,0x00b8b694
+00b8b5d8  mov x19,x20
+00b8b5dc  ldr x8,[x19, #0x60]!
+00b8b5e0  mov x21,#0x2b00
+00b8b5e4  movk x21,#0x432b, LSL #16
+00b8b5e8  movk x21,#0x4e47, LSL #32
+00b8b5ec  movk x21,#0x434c, LSL #48
+00b8b5f0  and x22,x8,#-0x100
+00b8b5f4  cmp x22,x21
+00b8b5f8  b.ne 0x00b8b618
+00b8b5fc  ldr w8,[x20, #0x30]
+00b8b600  neg w8,w8
+00b8b604  str w8,[x20, #0x30]
+00b8b608  ldr w8,[x0, #0x8]
+00b8b60c  add w8,w8,#0x1
+00b8b610  str w8,[x0, #0x8]
+00b8b614  b 0x00b8b61c
+00b8b618  str xzr,[x0]
+00b8b61c  mov x0,x19
+00b8b620  bl 0x008d51d0
+00b8b624  ldr x23,[x19]
+00b8b628  bl 0x008d5a60
+    ; [PRE] try { // try from 00b8b628 to 00b8b62b has its CatchHandler @ 00b8b698
+    ; [POST] } // end try from 00b8b628 to 00b8b62b
+00b8b62c  and x8,x23,#-0x100
+00b8b630  cmp x8,x21
+00b8b634  sub x8,x19,#0x60
+00b8b638  b.ne 0x00b8b680
+00b8b63c  ldur w9,[x19, #-0x30]
+00b8b640  cmp w9,#0x0
+00b8b644  cneg w9,w9,mi
+00b8b648  add w9,w9,#0x1
+00b8b64c  stur w9,[x19, #-0x30]
+00b8b650  ldr x9,[x0]
+00b8b654  cmp x9,x8
+00b8b658  b.eq 0x00b8b664
+00b8b65c  stur x9,[x19, #-0x38]
+00b8b660  str x8,[x0]
+00b8b664  ldr w8,[x0, #0x8]
+00b8b668  sub w8,w8,#0x1
+00b8b66c  str w8,[x0, #0x8]
+00b8b670  cmp x22,x21
+00b8b674  b.ne 0x00b8b694
+00b8b678  ldr x0,[x20, #0x20]
+00b8b67c  bl 0x00b8bd68
+00b8b680  ldr x9,[x0]
+00b8b684  cbnz x9,0x00b8b694
+00b8b688  str x8,[x0]
+00b8b68c  cmp x22,x21
+00b8b690  b.eq 0x00b8b678
+00b8b694  bl 0x008d3b90
+
+
+================================================================================
+### FILE: 00b8b69c___cxa_increment_exception_refcount.txt
+================================================================================
+Function: __cxa_increment_exception_refcount @ 00b8b69c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __cxa_increment_exception_refcount @ 008d3d60
+
+--- Listing ---
+00b8b69c  cbz x0,0x00b8b6b4
+00b8b6a0  sub x8,x0,#0x80
+00b8b6a4  ldaxr x9,[x8]
+00b8b6a8  add x9,x9,#0x1
+00b8b6ac  stlxr w10,x9,[x8]
+00b8b6b0  cbnz w10,0x00b8b6a4
+00b8b6b4  ret
+
+
+================================================================================
+### FILE: 00b8b6b8___cxa_current_primary_exception.txt
+================================================================================
+Function: __cxa_current_primary_exception @ 00b8b6b8
+
+--- Calls OUT ---
+  -> __cxa_get_globals_fast @ 008d5200
+
+--- Calls IN ---
+  <- __cxa_current_primary_exception @ 008d47a0
+
+--- Listing ---
+00b8b6b8  stp x29,x30,[sp, #-0x10]!
+00b8b6bc  mov x29,sp
+00b8b6c0  bl 0x008d5200
+    ; [PRE] try { // try from 00b8b6c0 to 00b8b6c3 has its CatchHandler @ 00b8b728
+    ; [POST] } // end try from 00b8b6c0 to 00b8b6c3
+00b8b6c4  cbz x0,0x00b8b714
+00b8b6c8  ldr x8,[x0]
+00b8b6cc  cbz x8,0x00b8b71c
+00b8b6d0  ldr x9,[x8, #0x60]
+00b8b6d4  mov x10,#0x2b2b
+00b8b6d8  movk x10,#0x4743, LSL #16
+00b8b6dc  movk x10,#0x4c4e, LSL #32
+00b8b6e0  movk x10,#0x43, LSL #48
+00b8b6e4  cmp x10,x9, LSR #0x8
+00b8b6e8  b.ne 0x00b8b71c
+00b8b6ec  and x9,x9,#0xff
+00b8b6f0  cmp x9,#0x1
+00b8b6f4  b.ne 0x00b8b700
+00b8b6f8  ldr x8,[x8]
+00b8b6fc  sub x8,x8,#0x80
+00b8b700  add x0,x8,#0x80
+00b8b704  ldaxr x9,[x8]
+00b8b708  add x9,x9,#0x1
+00b8b70c  stlxr w10,x9,[x8]
+00b8b710  cbnz w10,0x00b8b704
+00b8b714  ldp x29,x30,[sp], #0x10
+00b8b718  ret
+00b8b71c  mov x0,xzr
+00b8b720  ldp x29,x30,[sp], #0x10
+00b8b724  ret
+
+
+================================================================================
+### FILE: 00b8b72c___cxa_rethrow_primary_exception.txt
+================================================================================
+Function: __cxa_rethrow_primary_exception @ 00b8b72c
+
+--- Calls OUT ---
+  -> get_terminate @ 008d3e20
+  -> FUN_00b8cab4 @ 00b8cab4
+  -> FUN_00b8b84c @ 00b8b84c
+  -> terminate @ 008d3b90
+  -> _Unwind_RaiseException @ 008d51d0
+  -> __cxa_get_globals @ 008d5a60
+  -> get_unexpected @ 008d4650
+
+--- Calls IN ---
+  <- __cxa_rethrow_primary_exception @ 008d40b0
+
+--- Listing ---
+00b8b72c  str x21,[sp, #-0x30]!
+00b8b730  stp x20,x19,[sp, #0x10]
+00b8b734  stp x29,x30,[sp, #0x20]
+00b8b738  add x29,sp,#0x20
+00b8b73c  cbz x0,0x00b8b834
+00b8b740  mov x20,x0
+00b8b744  mov w0,#0x80
+00b8b748  bl 0x00b8cab4
+00b8b74c  cbz x0,0x00b8b844
+00b8b750  mov x19,x0
+00b8b754  sub x8,x20,#0x80
+00b8b758  movi v0.2D,#0x0
+00b8b75c  stp q0,q0,[x0, #0x60]
+00b8b760  stp q0,q0,[x0, #0x40]
+00b8b764  stp q0,q0,[x0, #0x20]
+00b8b768  stp q0,q0,[x0]
+00b8b76c  str x20,[x0]
+00b8b770  ldaxr x9,[x8]
+00b8b774  add x9,x9,#0x1
+00b8b778  stlxr w10,x9,[x8]
+00b8b77c  cbnz w10,0x00b8b770
+00b8b780  ldur x8,[x20, #-0x78]
+00b8b784  mov x21,#0x2b01
+00b8b788  movk x21,#0x432b, LSL #16
+00b8b78c  movk x21,#0x4e47, LSL #32
+00b8b790  movk x21,#0x434c, LSL #48
+00b8b794  str x8,[x19, #0x8]
+00b8b798  bl 0x008d4650
+00b8b79c  str x0,[x19, #0x18]
+00b8b7a0  bl 0x008d3e20
+00b8b7a4  mov x20,x19
+00b8b7a8  str x0,[x19, #0x20]
+00b8b7ac  str x21,[sp, #0x8]
+00b8b7b0  str x21,[x20, #0x60]!
+00b8b7b4  bl 0x008d5a60
+00b8b7b8  ldr w8,[x0, #0x8]
+00b8b7bc  adrp x9,0xb8b000
+00b8b7c0  add x9,x9,#0x84c
+00b8b7c4  add w8,w8,#0x1
+00b8b7c8  str w8,[x0, #0x8]
+00b8b7cc  mov x0,x20
+00b8b7d0  str x9,[x20, #0x8]
+00b8b7d4  bl 0x008d51d0
+00b8b7d8  ldr x20,[x20]
+00b8b7dc  bl 0x008d5a60
+    ; [PRE] try { // try from 00b8b7dc to 00b8b7df has its CatchHandler @ 00b8b848
+    ; [POST] } // end try from 00b8b7dc to 00b8b7df
+00b8b7e0  and x8,x20,#-0x100
+00b8b7e4  sub x9,x21,#0x1
+00b8b7e8  cmp x8,x9
+00b8b7ec  b.ne 0x00b8b828
+00b8b7f0  ldr w8,[x19, #0x30]
+00b8b7f4  cmp w8,#0x0
+00b8b7f8  cneg w8,w8,mi
+00b8b7fc  add w8,w8,#0x1
+00b8b800  str w8,[x19, #0x30]
+00b8b804  ldr x8,[x0]
+00b8b808  cmp x8,x19
+00b8b80c  b.eq 0x00b8b818
+00b8b810  str x8,[x19, #0x28]
+00b8b814  str x19,[x0]
+00b8b818  ldr w8,[x0, #0x8]
+00b8b81c  sub w8,w8,#0x1
+00b8b820  str w8,[x0, #0x8]
+00b8b824  b 0x00b8b834
+00b8b828  ldr x8,[x0]
+00b8b82c  cbnz x8,0x00b8b844
+00b8b830  str x19,[x0]
+00b8b834  ldp x29,x30,[sp, #0x20]
+00b8b838  ldp x20,x19,[sp, #0x10]
+00b8b83c  ldr x21,[sp], #0x30
+00b8b840  ret
+00b8b844  bl 0x008d3b90
+
+
+================================================================================
+### FILE: 00b8b8b8___cxa_uncaught_exception.txt
+================================================================================
+Function: __cxa_uncaught_exception @ 00b8b8b8
+
+--- Calls OUT ---
+  -> __cxa_get_globals_fast @ 008d5200
+
+--- Calls IN ---
+
+--- Listing ---
+00b8b8b8  stp x29,x30,[sp, #-0x10]!
+00b8b8bc  mov x29,sp
+00b8b8c0  bl 0x008d5200
+    ; [PRE] try { // try from 00b8b8c0 to 00b8b8c3 has its CatchHandler @ 00b8b8dc
+    ; [POST] } // end try from 00b8b8c0 to 00b8b8c3
+00b8b8c4  cbz x0,0x00b8b8d4
+00b8b8c8  ldr w8,[x0, #0x8]
+00b8b8cc  cmp w8,#0x0
+00b8b8d0  cset w0,ne
+00b8b8d4  ldp x29,x30,[sp], #0x10
+00b8b8d8  ret
+
+
+================================================================================
+### FILE: 00b8b8e0___cxa_uncaught_exceptions.txt
+================================================================================
+Function: __cxa_uncaught_exceptions @ 00b8b8e0
+
+--- Calls OUT ---
+  -> __cxa_get_globals_fast @ 008d5200
+
+--- Calls IN ---
+  <- __cxa_uncaught_exceptions @ 008d5400
+
+--- Listing ---
+00b8b8e0  stp x29,x30,[sp, #-0x10]!
+00b8b8e4  mov x29,sp
+00b8b8e8  bl 0x008d5200
+    ; [PRE] try { // try from 00b8b8e8 to 00b8b8eb has its CatchHandler @ 00b8b8fc
+    ; [POST] } // end try from 00b8b8e8 to 00b8b8eb
+00b8b8ec  cbz x0,0x00b8b8f4
+00b8b8f0  ldr w0,[x0, #0x8]
+00b8b8f4  ldp x29,x30,[sp], #0x10
+00b8b8f8  ret
+
+
+================================================================================
+### FILE: 00b8b900___cxa_get_globals.txt
+================================================================================
+Function: __cxa_get_globals @ 00b8b900
+
+--- Calls OUT ---
+  -> pthread_once @ 008d4dc0
+  -> pthread_setspecific @ 008d52f0
+  -> FUN_00b8e9ec @ 00b8e9ec
+  -> FUN_00b8b9cc @ 00b8b9cc
+  -> FUN_00b8cc14 @ 00b8cc14
+  -> pthread_getspecific @ 008d48d0
+
+--- Calls IN ---
+  <- __cxa_get_globals @ 008d5a60
+
+--- Listing ---
+00b8b900  stp x20,x19,[sp, #-0x20]!
+00b8b904  stp x29,x30,[sp, #0x10]
+00b8b908  add x29,sp,#0x10
+00b8b90c  adrp x0,0x3585000
+00b8b910  adrp x1,0xb8b000
+00b8b914  add x0,x0,#0xd3c
+00b8b918  add x1,x1,#0x9cc
+00b8b91c  bl 0x008d4dc0
+00b8b920  cbnz w0,0x00b8b96c
+00b8b924  adrp x20,0x3585000
+00b8b928  ldr w0,[x20, #0xd38]
+00b8b92c  bl 0x008d48d0
+00b8b930  mov x19,x0
+00b8b934  cbnz x0,0x00b8b95c
+00b8b938  mov w0,#0x1
+00b8b93c  mov w1,#0x10
+00b8b940  bl 0x00b8cc14
+00b8b944  cbz x0,0x00b8b978
+00b8b948  mov x19,x0
+00b8b94c  ldr w0,[x20, #0xd38]
+00b8b950  mov x1,x19
+00b8b954  bl 0x008d52f0
+00b8b958  cbnz w0,0x00b8b984
+00b8b95c  ldp x29,x30,[sp, #0x10]
+00b8b960  mov x0,x19
+00b8b964  ldp x20,x19,[sp], #0x20
+00b8b968  ret
+00b8b96c  adrp x0,0x2a0a000
+00b8b970  add x0,x0,#0x839
+00b8b974  bl 0x00b8e9ec
+00b8b978  adrp x0,0x2a0a000
+00b8b97c  add x0,x0,#0x7e3
+00b8b980  bl 0x00b8e9ec
+00b8b984  adrp x0,0x2a0a000
+00b8b988  add x0,x0,#0x804
+00b8b98c  bl 0x00b8e9ec
+
+
+================================================================================
+### FILE: 00b8b990___cxa_get_globals_fast.txt
+================================================================================
+Function: __cxa_get_globals_fast @ 00b8b990
+
+--- Calls OUT ---
+  -> pthread_once @ 008d4dc0
+  -> FUN_00b8e9ec @ 00b8e9ec
+  -> FUN_00b8b9cc @ 00b8b9cc
+  -> pthread_getspecific @ 008d48d0
+
+--- Calls IN ---
+  <- __cxa_get_globals_fast @ 008d5200
+
+--- Listing ---
+00b8b990  stp x29,x30,[sp, #-0x10]!
+00b8b994  mov x29,sp
+00b8b998  adrp x0,0x3585000
+00b8b99c  adrp x1,0xb8b000
+00b8b9a0  add x0,x0,#0xd3c
+00b8b9a4  add x1,x1,#0x9cc
+00b8b9a8  bl 0x008d4dc0
+00b8b9ac  cbnz w0,0x00b8b9c0
+00b8b9b0  adrp x8,0x3585000
+00b8b9b4  ldr w0,[x8, #0xd38]
+00b8b9b8  ldp x29,x30,[sp], #0x10
+00b8b9bc  b 0x008d48d0
+00b8b9c0  adrp x0,0x2a0a000
+00b8b9c4  add x0,x0,#0x839
+00b8b9c8  bl 0x00b8e9ec
+
+
+================================================================================
+### FILE: 00b8ba34___cxa_guard_acquire.txt
+================================================================================
+Function: __cxa_guard_acquire @ 00b8ba34
+
+--- Calls OUT ---
+  -> pthread_mutex_unlock @ 008d4a20
+  -> syscall @ 008d3ea0
+  -> FUN_00b8e9ec @ 00b8e9ec
+  -> pthread_mutex_lock @ 008d3d40
+  -> pthread_cond_wait @ 008d4360
+
+--- Calls IN ---
+  <- __cxa_guard_acquire @ 008d3ef0
+
+--- Listing ---
+00b8ba34  str x23,[sp, #-0x40]!
+00b8ba38  stp x22,x21,[sp, #0x10]
+00b8ba3c  stp x20,x19,[sp, #0x20]
+00b8ba40  stp x29,x30,[sp, #0x30]
+00b8ba44  add x29,sp,#0x30
+00b8ba48  ldarb w8,[x0]
+00b8ba4c  tst w8,#0xff
+00b8ba50  b.eq 0x00b8ba5c
+00b8ba54  mov w19,wzr
+00b8ba58  b 0x00b8bb0c
+00b8ba5c  mov x19,x0
+00b8ba60  adrp x0,0x3585000
+00b8ba64  add x0,x0,#0xd40
+00b8ba68  bl 0x008d3d40
+00b8ba6c  cbnz w0,0x00b8bb24
+00b8ba70  ldrb w8,[x19, #0x1]
+00b8ba74  tbnz w8,#0x1,0x00b8ba80
+00b8ba78  mov w23,wzr
+00b8ba7c  b 0x00b8ba9c
+00b8ba80  ldr w21,[x19, #0x4]
+00b8ba84  mov w0,#0xb2
+    ; [PRE] try { // try from 00b8ba84 to 00b8ba8b has its CatchHandler @ 00b8bb58
+00b8ba88  bl 0x008d3ea0
+    ; [POST] } // end try from 00b8ba84 to 00b8ba8b
+00b8ba8c  mov x20,x0
+00b8ba90  cmp w21,w20
+00b8ba94  b.eq 0x00b8bb4c
+00b8ba98  mov w23,#0x1
+00b8ba9c  adrp x21,0x3585000
+00b8baa0  adrp x22,0x3585000
+00b8baa4  add x21,x21,#0xd68
+00b8baa8  add x22,x22,#0xd40
+00b8baac  ldrb w8,[x19, #0x1]
+00b8bab0  tbz w8,#0x1,0x00b8bacc
+00b8bab4  orr w8,w8,#0x4
+00b8bab8  strb w8,[x19, #0x1]
+00b8babc  mov x0,x21
+    ; [PRE] try { // try from 00b8babc to 00b8bac7 has its CatchHandler @ 00b8bb60
+00b8bac0  mov x1,x22
+00b8bac4  bl 0x008d4360
+    ; [POST] } // end try from 00b8babc to 00b8bac7
+00b8bac8  b 0x00b8baac
+00b8bacc  cmp w8,#0x1
+00b8bad0  b.ne 0x00b8badc
+00b8bad4  mov w19,wzr
+00b8bad8  b 0x00b8bafc
+00b8badc  cbnz w23,0x00b8baec
+00b8bae0  mov w0,#0xb2
+    ; [PRE] try { // try from 00b8bae0 to 00b8bae7 has its CatchHandler @ 00b8bb58
+00b8bae4  bl 0x008d3ea0
+    ; [POST] } // end try from 00b8bae0 to 00b8bae7
+00b8bae8  mov x20,x0
+00b8baec  mov w8,#0x2
+00b8baf0  str w20,[x19, #0x4]
+00b8baf4  strb w8,[x19, #0x1]
+00b8baf8  mov w19,#0x1
+00b8bafc  adrp x0,0x3585000
+    ; [PRE] try { // try from 00b8bafc to 00b8bb07 has its CatchHandler @ 00b8bb5c
+00b8bb00  add x0,x0,#0xd40
+00b8bb04  bl 0x008d4a20
+    ; [POST] } // end try from 00b8bafc to 00b8bb07
+00b8bb08  cbnz w0,0x00b8bb38
+00b8bb0c  mov w0,w19
+00b8bb10  ldp x29,x30,[sp, #0x30]
+00b8bb14  ldp x20,x19,[sp, #0x20]
+00b8bb18  ldp x22,x21,[sp, #0x10]
+00b8bb1c  ldr x23,[sp], #0x40
+00b8bb20  ret
+00b8bb24  adrp x0,0x2a0a000
+00b8bb28  adrp x1,0x2a0a000
+00b8bb2c  add x0,x0,#0x923
+00b8bb30  add x1,x1,#0x8d9
+00b8bb34  bl 0x00b8e9ec
+00b8bb38  adrp x0,0x2a0a000
+    ; [PRE] try { // try from 00b8bb38 to 00b8bb4b has its CatchHandler @ 00b8bb5c
+00b8bb3c  adrp x1,0x2a0a000
+00b8bb40  add x0,x0,#0x93e
+00b8bb44  add x1,x1,#0x8d9
+00b8bb48  bl 0x00b8e9ec
+    ; [POST] } // end try from 00b8bb38 to 00b8bb4b
+00b8bb4c  adrp x0,0x2a0a000
+    ; [PRE] try { // try from 00b8bb4c to 00b8bb57 has its CatchHandler @ 00b8bb58
+00b8bb50  add x0,x0,#0x8ed
+00b8bb54  bl 0x00b8e9ec
+    ; [POST] } // end try from 00b8bb4c to 00b8bb57
+
+
+================================================================================
+### FILE: 00b8bb94___cxa_guard_release.txt
+================================================================================
+Function: __cxa_guard_release @ 00b8bb94
+
+--- Calls OUT ---
+  -> pthread_mutex_unlock @ 008d4a20
+  -> FUN_00b8e9ec @ 00b8e9ec
+  -> pthread_cond_broadcast @ 008d48e0
+  -> pthread_mutex_lock @ 008d3d40
+
+--- Calls IN ---
+  <- __cxa_guard_release @ 008d5bc0
+
+--- Listing ---
+00b8bb94  str x21,[sp, #-0x30]!
+00b8bb98  stp x20,x19,[sp, #0x10]
+00b8bb9c  stp x29,x30,[sp, #0x20]
+00b8bba0  add x29,sp,#0x20
+00b8bba4  mov w21,#0x1
+00b8bba8  mov x19,x0
+00b8bbac  stlrb w21,[x0]
+00b8bbb0  adrp x0,0x3585000
+00b8bbb4  add x0,x0,#0xd40
+00b8bbb8  bl 0x008d3d40
+00b8bbbc  cbnz w0,0x00b8bbfc
+00b8bbc0  ldrb w20,[x19, #0x1]
+00b8bbc4  strb w21,[x19, #0x1]
+00b8bbc8  adrp x0,0x3585000
+    ; [PRE] try { // try from 00b8bbc8 to 00b8bbd3 has its CatchHandler @ 00b8bc38
+00b8bbcc  add x0,x0,#0xd40
+00b8bbd0  bl 0x008d4a20
+    ; [POST] } // end try from 00b8bbc8 to 00b8bbd3
+00b8bbd4  cbnz w0,0x00b8bc10
+00b8bbd8  tbz w20,#0x2,0x00b8bbec
+00b8bbdc  adrp x0,0x3585000
+00b8bbe0  add x0,x0,#0xd68
+00b8bbe4  bl 0x008d48e0
+00b8bbe8  cbnz w0,0x00b8bc24
+00b8bbec  ldp x29,x30,[sp, #0x20]
+00b8bbf0  ldp x20,x19,[sp, #0x10]
+00b8bbf4  ldr x21,[sp], #0x30
+00b8bbf8  ret
+00b8bbfc  adrp x0,0x2a0a000
+00b8bc00  adrp x1,0x2a0a000
+00b8bc04  add x0,x0,#0x923
+00b8bc08  add x1,x1,#0x959
+00b8bc0c  bl 0x00b8e9ec
+00b8bc10  adrp x0,0x2a0a000
+    ; [PRE] try { // try from 00b8bc10 to 00b8bc23 has its CatchHandler @ 00b8bc38
+00b8bc14  adrp x1,0x2a0a000
+00b8bc18  add x0,x0,#0x93e
+00b8bc1c  add x1,x1,#0x959
+00b8bc20  bl 0x00b8e9ec
+    ; [POST] } // end try from 00b8bc10 to 00b8bc23
+00b8bc24  adrp x0,0x2a0a000
+00b8bc28  adrp x1,0x2a0a000
+00b8bc2c  add x0,x0,#0x96d
+00b8bc30  add x1,x1,#0x959
+00b8bc34  bl 0x00b8e9ec
+
+
+================================================================================
+### FILE: 00b8bc3c___cxa_guard_abort.txt
+================================================================================
+Function: __cxa_guard_abort @ 00b8bc3c
+
+--- Calls OUT ---
+  -> pthread_mutex_unlock @ 008d4a20
+  -> FUN_00b8e9ec @ 00b8e9ec
+  -> pthread_cond_broadcast @ 008d48e0
+  -> pthread_mutex_lock @ 008d3d40
+
+--- Calls IN ---
+  <- __cxa_guard_abort @ 008d42d0
+
+--- Listing ---
+00b8bc3c  stp x20,x19,[sp, #-0x20]!
+00b8bc40  stp x29,x30,[sp, #0x10]
+00b8bc44  add x29,sp,#0x10
+00b8bc48  mov x19,x0
+00b8bc4c  adrp x0,0x3585000
+00b8bc50  add x0,x0,#0xd40
+00b8bc54  bl 0x008d3d40
+00b8bc58  cbnz w0,0x00b8bc98
+00b8bc5c  ldrb w20,[x19, #0x1]
+00b8bc60  str wzr,[x19, #0x4]
+00b8bc64  strb wzr,[x19, #0x1]
+00b8bc68  adrp x0,0x3585000
+    ; [PRE] try { // try from 00b8bc68 to 00b8bc73 has its CatchHandler @ 00b8bcd4
+00b8bc6c  add x0,x0,#0xd40
+00b8bc70  bl 0x008d4a20
+    ; [POST] } // end try from 00b8bc68 to 00b8bc73
+00b8bc74  cbnz w0,0x00b8bcac
+00b8bc78  tbz w20,#0x2,0x00b8bc8c
+00b8bc7c  adrp x0,0x3585000
+00b8bc80  add x0,x0,#0xd68
+00b8bc84  bl 0x008d48e0
+00b8bc88  cbnz w0,0x00b8bcc0
+00b8bc8c  ldp x29,x30,[sp, #0x10]
+00b8bc90  ldp x20,x19,[sp], #0x20
+00b8bc94  ret
+00b8bc98  adrp x0,0x2a0a000
+00b8bc9c  adrp x1,0x2a0a000
+00b8bca0  add x0,x0,#0x923
+00b8bca4  add x1,x1,#0x984
+00b8bca8  bl 0x00b8e9ec
+00b8bcac  adrp x0,0x2a0a000
+    ; [PRE] try { // try from 00b8bcac to 00b8bcbf has its CatchHandler @ 00b8bcd4
+00b8bcb0  adrp x1,0x2a0a000
+00b8bcb4  add x0,x0,#0x93e
+00b8bcb8  add x1,x1,#0x984
+00b8bcbc  bl 0x00b8e9ec
+    ; [POST] } // end try from 00b8bcac to 00b8bcbf
+00b8bcc0  adrp x0,0x2a0a000
+00b8bcc4  adrp x1,0x2a0a000
+00b8bcc8  add x0,x0,#0x96d
+00b8bccc  add x1,x1,#0x984
+00b8bcd0  bl 0x00b8e9ec
+
+
+================================================================================
+### FILE: 00b8c5bc___cxa_call_unexpected.txt
+================================================================================
+Function: __cxa_call_unexpected @ 00b8c5bc
+
+--- Calls OUT ---
+  -> __cxa_throw @ 008d52e0
+  -> __cxa_rethrow @ 008d4680
+  -> get_terminate @ 008d3e20
+  -> FUN_00b8c938 @ 00b8c938
+  -> ~exception @ 00b8e4f4
+  -> FUN_00b8bd68 @ 00b8bd68
+  -> _Unwind_Resume @ 008d4870
+  -> __getExceptionClass @ 008d5c20
+  -> __cxa_get_globals_fast @ 008d5200
+  -> __cxa_end_catch @ 008d49d0
+  -> FUN_00b8c590 @ 00b8c590
+  -> __cxa_allocate_exception @ 008d40c0
+  -> __cxa_begin_catch @ 008d55b0
+  -> FUN_00b8bd28 @ 00b8bd28
+  -> __isOurExceptionClass @ 008d54f0
+  -> ~exception @ 008d4b00
+  -> get_unexpected @ 008d4650
+
+--- Calls IN ---
+  <- __cxa_call_unexpected @ 008d4ce0
+
+--- Listing ---
+00b8c5bc  sub sp,sp,#0xa0
+00b8c5c0  stp x28,x27,[sp, #0x40]
+00b8c5c4  stp x26,x25,[sp, #0x50]
+00b8c5c8  stp x24,x23,[sp, #0x60]
+00b8c5cc  stp x22,x21,[sp, #0x70]
+00b8c5d0  stp x20,x19,[sp, #0x80]
+00b8c5d4  stp x29,x30,[sp, #0x90]
+00b8c5d8  add x29,sp,#0x90
+00b8c5dc  cbnz x0,0x00b8c5e8
+00b8c5e0  mov x1,xzr
+00b8c5e4  bl 0x00b8c590
+00b8c5e8  mov x19,x0
+00b8c5ec  bl 0x008d55b0
+00b8c5f0  mov x0,x19
+00b8c5f4  bl 0x008d54f0
+00b8c5f8  mov w21,w0
+00b8c5fc  tbz w0,#0x0,0x00b8c620
+00b8c600  ldur w8,[x19, #-0x2c]
+00b8c604  ldur x22,[x19, #-0x20]
+00b8c608  ldp x0,x20,[x19, #-0x48]
+00b8c60c  sub x24,x19,#0x60
+00b8c610  mvn w8,w8
+00b8c614  str x22,[sp, #0x30]
+00b8c618  sxtw x25,w8
+00b8c61c  b 0x00b8c630
+00b8c620  bl 0x008d3e20
+00b8c624  mov x20,x0
+00b8c628  bl 0x008d4650
+00b8c62c  mov x24,xzr
+00b8c630  bl 0x00b8bd28
+    ; [PRE] try { // try from 00b8c630 to 00b8c633 has its CatchHandler @ 00b8c634
+    ; [POST] } // end try from 00b8c630 to 00b8c633
+00b8c634  bl 0x008d55b0
+    ; [PRE] catch(type#1 @ 00000000) { ... } // from try @ 00b8c630 with catch @ 00b8c634
+00b8c638  tbz w21,#0x0,0x00b8c888
+00b8c63c  add x8,x22,#0x1
+00b8c640  str x8,[sp, #0x30]
+00b8c644  ldrb w1,[x22]
+00b8c648  add x0,sp,#0x30
+    ; [PRE] try { // try from 00b8c648 to 00b8c64f has its CatchHandler @ 00b8c910
+00b8c64c  bl 0x00b8c938
+    ; [POST] } // end try from 00b8c648 to 00b8c64f
+00b8c650  ldr x8,[sp, #0x30]
+00b8c654  add x9,x8,#0x1
+00b8c658  str x9,[sp, #0x30]
+00b8c65c  ldrb w8,[x8]
+00b8c660  cmp x8,#0xff
+00b8c664  str x8,[sp, #0x20]
+00b8c668  b.eq 0x00b8c8f8
+00b8c66c  mov x23,x9
+00b8c670  mov x8,xzr
+00b8c674  mov x27,xzr
+00b8c678  ldrb w9,[x23], #0x1
+00b8c67c  and x10,x9,#0x7f
+00b8c680  lsl x10,x10,x8
+00b8c684  orr x27,x10,x27
+00b8c688  add x8,x8,#0x7
+00b8c68c  tbnz w9,#0x7,0x00b8c678
+00b8c690  str x23,[sp, #0x30]
+00b8c694  bl 0x008d5200
+    ; [PRE] try { // try from 00b8c694 to 00b8c69b has its CatchHandler @ 00b8c90c
+00b8c698  str x0,[sp]
+    ; [POST] } // end try from 00b8c694 to 00b8c69b
+00b8c69c  ldr x8,[sp]
+00b8c6a0  ldr x8,[x8]
+00b8c6a4  cbz x8,0x00b8c8f8
+00b8c6a8  mov x26,x8
+00b8c6ac  add x21,x8,#0x60
+00b8c6b0  mov x0,x21
+    ; [PRE] try { // try from 00b8c6b0 to 00b8c6b7 has its CatchHandler @ 00b8c908
+00b8c6b4  bl 0x008d54f0
+    ; [POST] } // end try from 00b8c6b0 to 00b8c6b7
+00b8c6b8  cmp x26,x24
+00b8c6bc  add x8,x23,x27
+00b8c6c0  str x8,[sp, #0x18]
+00b8c6c4  b.eq 0x00b8c7b0
+00b8c6c8  eor w8,w0,#0x1
+00b8c6cc  tbnz w8,#0x0,0x00b8c7b0
+00b8c6d0  ldr x8,[x26, #0x8]
+00b8c6d4  str x8,[sp, #0x10]
+00b8c6d8  mov x0,x21
+    ; [PRE] try { // try from 00b8c6d8 to 00b8c6df has its CatchHandler @ 00b8c904
+00b8c6dc  bl 0x008d5c20
+    ; [POST] } // end try from 00b8c6d8 to 00b8c6df
+00b8c6e0  mov x8,#0x2b01
+00b8c6e4  movk x8,#0x432b, LSL #16
+00b8c6e8  movk x8,#0x4e47, LSL #32
+00b8c6ec  movk x8,#0x434c, LSL #48
+00b8c6f0  cmp x0,x8
+00b8c6f4  b.ne 0x00b8c700
+00b8c6f8  ldr x8,[x26]
+00b8c6fc  b 0x00b8c704
+00b8c700  add x8,x26,#0x80
+00b8c704  ldr x10,[sp, #0x20]
+00b8c708  str x8,[sp, #0x8]
+00b8c70c  mov x9,xzr
+00b8c710  mov x8,xzr
+00b8c714  and x28,x10,#0xf
+00b8c718  mov w10,#0x1c1d
+00b8c71c  lsr w10,w10,w28
+00b8c720  add x24,x25,x27
+00b8c724  and w22,w10,#0x1
+00b8c728  b 0x00b8c734
+00b8c72c  add x9,x9,#0x7
+00b8c730  add x24,x24,#0x1
+00b8c734  ldrb w10,[x23, x24, LSL ]
+00b8c738  and x11,x10,#0x7f
+00b8c73c  lsl x11,x11,x9
+00b8c740  orr x8,x11,x8
+00b8c744  tbnz w10,#0x7,0x00b8c72c
+00b8c748  cbz x8,0x00b8c7b0
+00b8c74c  ldr x9,[sp, #0x18]
+00b8c750  cmp w28,#0xc
+00b8c754  str x9,[sp, #0x38]
+00b8c758  b.hi 0x00b8c874
+00b8c75c  cbz w22,0x00b8c874
+00b8c760  adrp x9,0x2a0a000
+00b8c764  add x9,x9,#0xa28
+00b8c768  ldr x9,[x9, x28, LSL #0x3]
+00b8c76c  lsl x9,x8,x9
+00b8c770  ldp x8,x1,[sp, #0x18]
+00b8c774  sub x8,x8,x9
+00b8c778  str x8,[sp, #0x38]
+00b8c77c  add x0,sp,#0x38
+    ; [PRE] try { // try from 00b8c77c to 00b8c79b has its CatchHandler @ 00b8c914
+00b8c780  bl 0x00b8c938
+00b8c784  ldp x8,x1,[sp, #0x8]
+00b8c788  str x8,[sp, #0x38]
+00b8c78c  ldr x8,[x0]
+00b8c790  ldr x8,[x8, #0x20]
+00b8c794  add x2,sp,#0x38
+00b8c798  blr x8
+    ; [POST] } // end try from 00b8c77c to 00b8c79b
+00b8c79c  tbnz w0,#0x0,0x00b8c8c4
+00b8c7a0  mov x9,xzr
+00b8c7a4  mov x8,xzr
+00b8c7a8  add x24,x24,#0x1
+00b8c7ac  b 0x00b8c734
+00b8c7b0  adrp x12,0x3364000
+00b8c7b4  ldr x12,[x12, #0x918]
+00b8c7b8  ldp x21,x10,[sp, #0x18]
+00b8c7bc  adrp x22,0x332a000
+00b8c7c0  mov w11,#0x747
+00b8c7c4  add x12,x12,#0x10
+00b8c7c8  str x12,[sp, #0x28]
+00b8c7cc  add w10,w10,#0x6
+00b8c7d0  ldr x22,[x22, #0xce0]
+00b8c7d4  and x24,x10,#0xf
+00b8c7d8  add x25,x25,x27
+00b8c7dc  adrp x27,0x2a0a000
+00b8c7e0  lsr w10,w11,w24
+00b8c7e4  mov x9,xzr
+00b8c7e8  mov x8,xzr
+00b8c7ec  add x27,x27,#0xa90
+00b8c7f0  add x28,sp,#0x28
+00b8c7f4  and w26,w10,#0x1
+00b8c7f8  b 0x00b8c804
+00b8c7fc  add x9,x9,#0x7
+00b8c800  add x25,x25,#0x1
+00b8c804  ldrb w10,[x23, x25, LSL ]
+00b8c808  and x11,x10,#0x7f
+00b8c80c  lsl x11,x11,x9
+00b8c810  orr x8,x11,x8
+00b8c814  tbnz w10,#0x7,0x00b8c7fc
+00b8c818  cbz x8,0x00b8c880
+00b8c81c  cmp w24,#0xa
+00b8c820  str x21,[sp, #0x38]
+00b8c824  b.hi 0x00b8c874
+00b8c828  cbz w26,0x00b8c874
+00b8c82c  ldr x9,[x27, x24, LSL #0x3]
+00b8c830  lsl x8,x8,x9
+00b8c834  sub x8,x21,x8
+00b8c838  str x8,[sp, #0x38]
+00b8c83c  add x0,sp,#0x38
+    ; [PRE] try { // try from 00b8c83c to 00b8c85f has its CatchHandler @ 00b8c91c
+00b8c840  ldr x1,[sp, #0x20]
+00b8c844  bl 0x00b8c938
+00b8c848  str x28,[sp, #0x38]
+00b8c84c  ldr x8,[x0]
+00b8c850  ldr x8,[x8, #0x20]
+00b8c854  add x2,sp,#0x38
+00b8c858  mov x1,x22
+00b8c85c  blr x8
+    ; [POST] } // end try from 00b8c83c to 00b8c85f
+00b8c860  tbnz w0,#0x0,0x00b8c894
+00b8c864  mov x9,xzr
+00b8c868  mov x8,xzr
+00b8c86c  add x25,x25,#0x1
+00b8c870  b 0x00b8c804
+00b8c874  mov w0,#0x1
+00b8c878  mov x1,x19
+00b8c87c  bl 0x00b8c590
+00b8c880  add x0,sp,#0x28
+00b8c884  bl 0x008d4b00
+00b8c888  bl 0x008d49d0
+00b8c88c  mov x0,x20
+00b8c890  bl 0x00b8bd68
+00b8c894  bl 0x008d49d0
+    ; [PRE] try { // try from 00b8c894 to 00b8c897 has its CatchHandler @ 00b8c900
+    ; [POST] } // end try from 00b8c894 to 00b8c897
+00b8c898  mov w0,#0x8
+00b8c89c  bl 0x008d40c0
+00b8c8a0  adrp x8,0x3364000
+00b8c8a4  ldr x8,[x8, #0x918]
+00b8c8a8  add x8,x8,#0x10
+00b8c8ac  str x8,[x0]
+00b8c8b0  adrp x1,0x332a000
+    ; [PRE] try { // try from 00b8c8b0 to 00b8c8c3 has its CatchHandler @ 00b8c900
+00b8c8b4  adrp x2,0x3347000
+00b8c8b8  ldr x1,[x1, #0xce0]
+00b8c8bc  ldr x2,[x2, #0x870]
+00b8c8c0  bl 0x008d52e0
+    ; [POST] } // end try from 00b8c8b0 to 00b8c8c3
+00b8c8c4  ldr w8,[x26, #0x30]
+00b8c8c8  ldr x9,[sp]
+00b8c8cc  neg w8,w8
+00b8c8d0  str w8,[x26, #0x30]
+00b8c8d4  ldr w8,[x9, #0x8]
+00b8c8d8  add w8,w8,#0x1
+00b8c8dc  str w8,[x9, #0x8]
+00b8c8e0  bl 0x008d49d0
+    ; [PRE] try { // try from 00b8c8e0 to 00b8c8f3 has its CatchHandler @ 00b8c904
+00b8c8e4  bl 0x008d49d0
+00b8c8e8  mov x0,x21
+00b8c8ec  bl 0x008d55b0
+00b8c8f0  bl 0x008d4680
+    ; [POST] } // end try from 00b8c8e0 to 00b8c8f3
+00b8c8f4  b 0x00b8c8c4
+00b8c8f8  mov x0,x20
+00b8c8fc  bl 0x00b8bd68
+00b8c900  b 0x00b8c91c
+    ; [PRE] catch(type#1 @ 00000000) { ... } // from try @ 00b8c894 with catch @ 00b8c900 | catch(type#1 @ 00000000) { ... } // from try @ 00b8c8b0 with catch @ 00b8c900
+00b8c91c  mov x19,x0
+    ; [PRE] catch(type#1 @ 00000000) { ... } // from try @ 00b8c83c with catch @ 00b8c91c
+00b8c920  add x0,sp,#0x28
+00b8c924  bl 0x008d4b00
+00b8c928  bl 0x008d49d0
+    ; [PRE] try { // try from 00b8c928 to 00b8c92b has its CatchHandler @ 00b8c934
+    ; [POST] } // end try from 00b8c928 to 00b8c92b
+00b8c92c  mov x0,x19
+00b8c930  bl 0x008d4870
+
+
+================================================================================
+### FILE: 00b8ca8c___cxa_pure_virtual.txt
+================================================================================
+Function: __cxa_pure_virtual @ 00b8ca8c
+
+--- Calls OUT ---
+  -> FUN_00b8e9ec @ 00b8e9ec
+
+--- Calls IN ---
+
+--- Listing ---
+00b8ca8c  stp x29,x30,[sp, #-0x10]!
+00b8ca90  mov x29,sp
+00b8ca94  adrp x0,0x2a0a000
+00b8ca98  add x0,x0,#0xae8
+00b8ca9c  bl 0x00b8e9ec
+
+
+================================================================================
+### FILE: 00b8caa0___cxa_deleted_virtual.txt
+================================================================================
+Function: __cxa_deleted_virtual @ 00b8caa0
+
+--- Calls OUT ---
+  -> FUN_00b8e9ec @ 00b8e9ec
+
+--- Calls IN ---
+
+--- Listing ---
+00b8caa0  stp x29,x30,[sp, #-0x10]!
+00b8caa4  mov x29,sp
+00b8caa8  adrp x0,0x2a0a000
+00b8caac  add x0,x0,#0xb06
+00b8cab0  bl 0x00b8e9ec
+
+
+================================================================================
+### FILE: 00b8ec68___cxa_demangle.txt
+================================================================================
+Function: __cxa_demangle @ 00b8ec68
+
+--- Calls OUT ---
+  -> __strlen_chk @ 008d5c80
+  -> FUN_00b92750 @ 00b92750
+  -> malloc @ 008d56a0
+  -> free @ 008d3ca0
+  -> strlen @ 008d39a0
+  -> FUN_00b8f3a4 @ 00b8f3a4
+  -> terminate @ 008d3b90
+  -> FUN_00b8feec @ 00b8feec
+  -> realloc @ 008d4c90
+  -> FUN_00b9dac0 @ 00b9dac0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- __cxa_demangle @ 008d4520
+
+--- Listing ---
+00b8ec68  stp x28,x27,[sp, #-0x60]!
+00b8ec6c  stp x26,x25,[sp, #0x10]
+00b8ec70  stp x24,x23,[sp, #0x20]
+00b8ec74  stp x22,x21,[sp, #0x30]
+00b8ec78  stp x20,x19,[sp, #0x40]
+00b8ec7c  stp x29,x30,[sp, #0x50]
+00b8ec80  add x29,sp,#0x50
+00b8ec84  sub sp,sp,#0x1, LSL #12
+00b8ec88  sub sp,sp,#0x340
+00b8ec8c  mrs x25,tpidr_el0
+00b8ec90  ldr x8,[x25, #0x28]
+00b8ec94  mov x19,x3
+00b8ec98  stur x8,[x29, #-0x60]
+00b8ec9c  cbz x0,0x00b8ecb4
+00b8eca0  mov x20,x2
+00b8eca4  mov x21,x1
+00b8eca8  mov x22,x0
+00b8ecac  cbz x1,0x00b8ecc8
+00b8ecb0  cbnz x20,0x00b8ecc8
+00b8ecb4  mov x20,xzr
+00b8ecb8  cbz x19,0x00b8f0c8
+00b8ecbc  mov w8,#0xfffffffd
+00b8ecc0  str w8,[x19]
+00b8ecc4  b 0x00b8f0c8
+00b8ecc8  mov x0,x22
+00b8eccc  bl 0x008d39a0
+00b8ecd0  add x8,x22,x0
+00b8ecd4  add x9,sp,#0x40
+00b8ecd8  mov w10,#0x1
+00b8ecdc  movi v0.2D,#0x0
+00b8ece0  stp x22,x8,[sp, #0x40]
+00b8ece4  add x28,x9,#0x28
+00b8ece8  add x8,x9,#0x128
+00b8ecec  str q0,[sp, #0x320]
+00b8ecf0  movi v0.2D,#-0x1
+00b8ecf4  add x27,x9,#0x140
+00b8ecf8  add x11,x9,#0x240
+00b8ecfc  add x24,x9,#0x258
+00b8ed00  strh w10,[sp, #0x310]
+00b8ed04  add x10,x9,#0x298
+00b8ed08  stp x28,x8,[sp, #0x58]
+00b8ed0c  add x12,x9,#0x2b0
+00b8ed10  add x8,x9,#0x2d0
+00b8ed14  add x22,x9,#0x2e0
+00b8ed18  strb wzr,[sp, #0x312]
+00b8ed1c  stp x27,x27,[sp, #0x168]
+00b8ed20  str x10,[sp, #0x290]
+00b8ed24  str x28,[sp, #0x50]
+00b8ed28  str x11,[sp, #0x178]
+00b8ed2c  str x24,[sp, #0x280]
+00b8ed30  str x24,[sp, #0x288]
+00b8ed34  str x12,[sp, #0x2d8]
+00b8ed38  str x12,[sp, #0x18]
+00b8ed3c  str x12,[sp, #0x2e0]
+00b8ed40  str x8,[sp, #0x2e8]
+00b8ed44  str x22,[sp, #0x1320]
+00b8ed48  str d0,[sp, #0x38]
+00b8ed4c  adrp x0,0x2a0b000
+    ; [PRE] try { // try from 00b8ed4c to 00b8f29f has its CatchHandler @ 00b8f318
+00b8ed50  add x0,x0,#0x74d
+00b8ed54  mov w1,#0x3
+00b8ed58  bl 0x008d5c80
+00b8ed5c  ldp x8,x9,[sp, #0x40]
+00b8ed60  sub x9,x9,x8
+00b8ed64  cmp x0,x9
+00b8ed68  b.hi 0x00b8eda4
+00b8ed6c  cbz x0,0x00b8edf8
+00b8ed70  adrp x9,0x2a0b000
+00b8ed74  add x9,x9,#0x74d
+00b8ed78  mov x10,x0
+00b8ed7c  mov x11,x8
+00b8ed80  ldrb w12,[x9]
+00b8ed84  ldrb w13,[x11]
+00b8ed88  cmp w12,w13
+00b8ed8c  b.ne 0x00b8eda4
+00b8ed90  add x9,x9,#0x1
+00b8ed94  subs x10,x10,#0x1
+00b8ed98  add x11,x11,#0x1
+00b8ed9c  b.ne 0x00b8ed80
+00b8eda0  b 0x00b8edf8
+00b8eda4  adrp x0,0x2a0b000
+00b8eda8  add x0,x0,#0x74c
+00b8edac  mov w1,#0x4
+00b8edb0  bl 0x008d5c80
+00b8edb4  ldp x8,x9,[sp, #0x40]
+00b8edb8  sub x9,x9,x8
+00b8edbc  cmp x0,x9
+00b8edc0  b.hi 0x00b8eebc
+00b8edc4  cbz x0,0x00b8edf8
+00b8edc8  adrp x9,0x2a0b000
+00b8edcc  add x9,x9,#0x74c
+00b8edd0  mov x10,x0
+00b8edd4  mov x11,x8
+00b8edd8  ldrb w12,[x9]
+00b8eddc  ldrb w13,[x11]
+00b8ede0  cmp w12,w13
+00b8ede4  b.ne 0x00b8eebc
+00b8ede8  add x9,x9,#0x1
+00b8edec  subs x10,x10,#0x1
+00b8edf0  add x11,x11,#0x1
+00b8edf4  b.ne 0x00b8edd8
+00b8edf8  add x8,x8,x0
+00b8edfc  str x8,[sp, #0x40]
+00b8ee00  add x0,sp,#0x40
+00b8ee04  bl 0x00b8f3a4
+00b8ee08  mov x23,x0
+00b8ee0c  cbz x0,0x00b8f038
+00b8ee10  str x20,[sp, #0x10]
+00b8ee14  mov x20,x24
+00b8ee18  mov x24,x27
+00b8ee1c  ldp x27,x26,[sp, #0x40]
+00b8ee20  cmp x26,x27
+00b8ee24  b.eq 0x00b8eea0
+00b8ee28  ldrb w8,[x27]
+00b8ee2c  cmp w8,#0x2e
+00b8ee30  b.ne 0x00b8f100
+00b8ee34  str x28,[sp, #0x8]
+00b8ee38  ldr x28,[sp, #0x1320]
+00b8ee3c  ldr x8,[x28, #0x8]
+00b8ee40  add x9,x8,#0x30
+00b8ee44  cmp x9,#0xff0
+00b8ee48  b.cc 0x00b8ee68
+00b8ee4c  mov w0,#0x1000
+00b8ee50  bl 0x008d56a0
+00b8ee54  cbz x0,0x00b8f314
+00b8ee58  mov x8,xzr
+00b8ee5c  stp x28,xzr,[x0]
+00b8ee60  mov x28,x0
+00b8ee64  str x0,[sp, #0x1320]
+00b8ee68  adrp x10,0x3306000
+00b8ee6c  add x9,x8,#0x30
+00b8ee70  add x8,x28,x8
+00b8ee74  add x10,x10,#0xde0
+00b8ee78  orr w11,wzr,#0x1010101
+00b8ee7c  str x9,[x28, #0x8]
+00b8ee80  str x10,[x8, #0x10]!
+00b8ee84  str w11,[x8, #0x8]
+00b8ee88  stp x23,x27,[x8, #0x10]
+00b8ee8c  str x26,[x8, #0x20]
+00b8ee90  ldr x9,[sp, #0x48]
+00b8ee94  ldr x28,[sp, #0x8]
+00b8ee98  mov x23,x8
+00b8ee9c  str x9,[sp, #0x40]
+00b8eea0  mov x27,x24
+00b8eea4  mov x24,x20
+00b8eea8  ldr x20,[sp, #0x10]
+00b8eeac  cbz x23,0x00b8f038
+00b8eeb0  cbz x21,0x00b8f250
+00b8eeb4  ldr x26,[x20]
+00b8eeb8  b 0x00b8f264
+00b8eebc  adrp x0,0x2a0b000
+00b8eec0  add x0,x0,#0x74b
+00b8eec4  mov w1,#0x5
+00b8eec8  bl 0x008d5c80
+00b8eecc  ldp x8,x9,[sp, #0x40]
+00b8eed0  sub x9,x9,x8
+00b8eed4  cmp x0,x9
+00b8eed8  b.hi 0x00b8ef14
+00b8eedc  cbz x0,0x00b8ef68
+00b8eee0  adrp x9,0x2a0b000
+00b8eee4  add x9,x9,#0x74b
+00b8eee8  mov x10,x0
+00b8eeec  mov x11,x8
+00b8eef0  ldrb w12,[x9]
+00b8eef4  ldrb w13,[x11]
+00b8eef8  cmp w12,w13
+00b8eefc  b.ne 0x00b8ef14
+00b8ef00  add x9,x9,#0x1
+00b8ef04  subs x10,x10,#0x1
+00b8ef08  add x11,x11,#0x1
+00b8ef0c  b.ne 0x00b8eef0
+00b8ef10  b 0x00b8ef68
+00b8ef14  adrp x0,0x2a0b000
+00b8ef18  add x0,x0,#0x74a
+00b8ef1c  mov w1,#0x6
+00b8ef20  bl 0x008d5c80
+00b8ef24  ldp x8,x9,[sp, #0x40]
+00b8ef28  sub x9,x9,x8
+00b8ef2c  cmp x0,x9
+00b8ef30  b.hi 0x00b8f01c
+00b8ef34  cbz x0,0x00b8ef68
+00b8ef38  adrp x9,0x2a0b000
+00b8ef3c  add x9,x9,#0x74a
+00b8ef40  mov x10,x0
+00b8ef44  mov x11,x8
+00b8ef48  ldrb w12,[x9]
+00b8ef4c  ldrb w13,[x11]
+00b8ef50  cmp w12,w13
+00b8ef54  b.ne 0x00b8f01c
+00b8ef58  add x9,x9,#0x1
+00b8ef5c  subs x10,x10,#0x1
+00b8ef60  add x11,x11,#0x1
+00b8ef64  b.ne 0x00b8ef48
+00b8ef68  add x8,x8,x0
+00b8ef6c  str x8,[sp, #0x40]
+00b8ef70  add x0,sp,#0x40
+00b8ef74  bl 0x00b8f3a4
+00b8ef78  str x0,[sp, #0x10]
+00b8ef7c  ldr x8,[sp, #0x10]
+00b8ef80  cbz x8,0x00b8f038
+00b8ef84  adrp x0,0x2a0b000
+00b8ef88  add x0,x0,#0x750
+00b8ef8c  mov w1,#0xe
+00b8ef90  bl 0x008d5c80
+00b8ef94  ldp x9,x8,[sp, #0x40]
+00b8ef98  sub x10,x8,x9
+00b8ef9c  cmp x0,x10
+00b8efa0  b.hi 0x00b8f038
+00b8efa4  cbz x0,0x00b8efd8
+00b8efa8  adrp x10,0x2a0b000
+00b8efac  add x10,x10,#0x750
+00b8efb0  mov x11,x0
+00b8efb4  mov x12,x9
+00b8efb8  ldrb w13,[x10]
+00b8efbc  ldrb w14,[x12]
+00b8efc0  cmp w13,w14
+00b8efc4  b.ne 0x00b8f038
+00b8efc8  add x10,x10,#0x1
+00b8efcc  subs x11,x11,#0x1
+00b8efd0  add x12,x12,#0x1
+00b8efd4  b.ne 0x00b8efb8
+00b8efd8  add x9,x9,x0
+00b8efdc  cmp x9,x8
+00b8efe0  str x9,[sp, #0x40]
+00b8efe4  b.eq 0x00b8f114
+00b8efe8  ldrb w10,[x9]
+00b8efec  cmp w10,#0x5f
+00b8eff0  b.ne 0x00b8f128
+00b8eff4  add x11,x9,#0x1
+00b8eff8  mov w10,#0x1
+00b8effc  mov x9,x11
+00b8f000  str x11,[sp, #0x40]
+00b8f004  cmp x8,x11
+00b8f008  b.ne 0x00b8f138
+00b8f00c  mov x11,xzr
+00b8f010  mov x13,xzr
+00b8f014  mov x12,x8
+00b8f018  b 0x00b8f194
+00b8f01c  add x0,sp,#0x40
+00b8f020  bl 0x00b8feec
+00b8f024  ldp x9,x8,[sp, #0x40]
+00b8f028  mov x23,x0
+00b8f02c  cmp x8,x9
+00b8f030  b.ne 0x00b8f038
+00b8f034  cbnz x23,0x00b8eeb0
+00b8f038  mov w8,#0xfffffffe
+00b8f03c  cbz x19,0x00b8f044
+00b8f040  str w8,[x19]
+00b8f044  ldr x0,[sp, #0x1320]
+00b8f048  cmp w8,#0x0
+00b8f04c  csel x20,x21,xzr,eq
+00b8f050  cbnz x0,0x00b8f060
+00b8f054  b 0x00b8f07c
+00b8f058  mov x0,x8
+00b8f05c  cbz x0,0x00b8f07c
+00b8f060  ldr x8,[x0]
+00b8f064  cmp x22,x0
+00b8f068  str x8,[sp, #0x1320]
+00b8f06c  b.eq 0x00b8f058
+00b8f070  bl 0x008d3ca0
+00b8f074  ldr x0,[sp, #0x1320]
+00b8f078  cbnz x0,0x00b8f060
+00b8f07c  stp xzr,xzr,[x22]
+00b8f080  ldr x0,[sp, #0x2d8]
+00b8f084  ldr x8,[sp, #0x18]
+00b8f088  str x22,[sp, #0x1320]
+00b8f08c  cmp x0,x8
+00b8f090  b.eq 0x00b8f098
+00b8f094  bl 0x008d3ca0
+00b8f098  ldr x0,[sp, #0x280]
+00b8f09c  cmp x0,x24
+00b8f0a0  b.eq 0x00b8f0a8
+00b8f0a4  bl 0x008d3ca0
+00b8f0a8  ldr x0,[sp, #0x168]
+00b8f0ac  cmp x0,x27
+00b8f0b0  b.eq 0x00b8f0b8
+00b8f0b4  bl 0x008d3ca0
+00b8f0b8  ldr x0,[sp, #0x50]
+00b8f0bc  cmp x0,x28
+00b8f0c0  b.eq 0x00b8f0c8
+00b8f0c4  bl 0x008d3ca0
+00b8f0c8  ldr x8,[x25, #0x28]
+00b8f0cc  ldur x9,[x29, #-0x60]
+00b8f0d0  cmp x8,x9
+00b8f0d4  b.ne 0x00b8f310
+00b8f0d8  mov x0,x20
+00b8f0dc  add sp,sp,#0x1, LSL #12
+00b8f0e0  add sp,sp,#0x340
+00b8f0e4  ldp x29,x30,[sp, #0x50]
+00b8f0e8  ldp x20,x19,[sp, #0x40]
+00b8f0ec  ldp x22,x21,[sp, #0x30]
+00b8f0f0  ldp x24,x23,[sp, #0x20]
+00b8f0f4  ldp x26,x25,[sp, #0x10]
+00b8f0f8  ldp x28,x27,[sp], #0x60
+00b8f0fc  ret
+00b8f100  mov w8,#0xfffffffe
+00b8f104  mov x27,x24
+00b8f108  mov x24,x20
+00b8f10c  cbnz x19,0x00b8f040
+00b8f110  b 0x00b8f044
+00b8f114  mov x12,x9
+00b8f118  mov x9,x8
+00b8f11c  cmp x8,x9
+00b8f120  b.eq 0x00b8f1c0
+00b8f124  b 0x00b8f1ac
+00b8f128  mov w10,wzr
+00b8f12c  mov x11,x9
+00b8f130  cmp x8,x11
+00b8f134  b.eq 0x00b8f00c
+00b8f138  ldrb w12,[x9]
+00b8f13c  sub w12,w12,#0x30
+00b8f140  cmp w12,#0x9
+00b8f144  b.hi 0x00b8f17c
+00b8f148  add x12,x9,#0x1
+00b8f14c  mov x9,x12
+00b8f150  cmp x8,x12
+00b8f154  str x12,[sp, #0x40]
+00b8f158  b.eq 0x00b8f18c
+00b8f15c  mov x12,x9
+00b8f160  ldrb w13,[x12], #0x1
+00b8f164  sub w13,w13,#0x30
+00b8f168  cmp w13,#0xa
+00b8f16c  b.cc 0x00b8f14c
+00b8f170  sub x12,x12,#0x1
+00b8f174  mov x13,x12
+00b8f178  b 0x00b8f194
+00b8f17c  mov x13,xzr
+00b8f180  mov x12,x11
+00b8f184  mov x11,xzr
+00b8f188  b 0x00b8f194
+00b8f18c  mov x12,x8
+00b8f190  mov x13,x8
+00b8f194  cmp x11,x13
+00b8f198  cset w11,eq
+00b8f19c  and w10,w10,w11
+00b8f1a0  tbnz w10,#0x0,0x00b8f038
+00b8f1a4  cmp x8,x9
+00b8f1a8  b.eq 0x00b8f1c0
+00b8f1ac  ldrb w9,[x9]
+00b8f1b0  cmp w9,#0x2e
+00b8f1b4  b.ne 0x00b8f1c0
+00b8f1b8  str x8,[sp, #0x40]
+00b8f1bc  b 0x00b8f1c8
+00b8f1c0  cmp x8,x12
+00b8f1c4  b.ne 0x00b8f038
+00b8f1c8  ldr x23,[sp, #0x1320]
+00b8f1cc  ldr x26,[x23, #0x8]
+00b8f1d0  add x8,x26,#0x30
+00b8f1d4  cmp x8,#0xff0
+00b8f1d8  b.cc 0x00b8f1f8
+00b8f1dc  mov w0,#0x1000
+00b8f1e0  bl 0x008d56a0
+00b8f1e4  cbz x0,0x00b8f314
+00b8f1e8  mov x26,xzr
+00b8f1ec  stp x23,xzr,[x0]
+00b8f1f0  mov x23,x0
+00b8f1f4  str x0,[sp, #0x1320]
+00b8f1f8  add x8,x26,#0x30
+00b8f1fc  str x8,[x23, #0x8]
+00b8f200  adrp x0,0x2a0b000
+00b8f204  add x0,x0,#0x75e
+00b8f208  mov w1,#0x22
+00b8f20c  bl 0x008d5c80
+00b8f210  adrp x9,0x2a0b000
+00b8f214  add x8,x23,x26
+00b8f218  add x9,x9,#0x75e
+00b8f21c  mov x12,x9
+00b8f220  add x9,x9,x0
+00b8f224  add x23,x8,#0x10
+00b8f228  stp x12,x9,[x23, #0x10]
+00b8f22c  ldr x8,[sp, #0x10]
+00b8f230  mov w10,#0x114
+00b8f234  adrp x11,0x3305000
+00b8f238  movk w10,#0x101, LSL #16
+00b8f23c  add x11,x11,#0x6a0
+00b8f240  str w10,[x23, #0x8]
+00b8f244  str x11,[x23]
+00b8f248  str x8,[x23, #0x20]
+00b8f24c  cbnz x21,0x00b8eeb4
+00b8f250  mov w0,#0x400
+00b8f254  mov w26,#0x400
+00b8f258  bl 0x008d56a0
+00b8f25c  mov x21,x0
+00b8f260  cbz x0,0x00b8f304
+00b8f264  stp xzr,x26,[sp, #0x28]
+00b8f268  str x21,[sp, #0x20]
+00b8f26c  ldr x8,[x23]
+00b8f270  ldr x8,[x8, #0x20]
+00b8f274  add x1,sp,#0x20
+00b8f278  mov x0,x23
+00b8f27c  blr x8
+00b8f280  ldrb w8,[x23, #0x9]
+00b8f284  cmp w8,#0x1
+00b8f288  b.eq 0x00b8f2a0
+00b8f28c  ldr x8,[x23]
+00b8f290  ldr x8,[x8, #0x28]
+00b8f294  add x1,sp,#0x20
+00b8f298  mov x0,x23
+00b8f29c  blr x8
+    ; [POST] } // end try from 00b8ed4c to 00b8f29f
+00b8f2a0  ldp x8,x10,[sp, #0x28]
+00b8f2a4  add x9,x8,#0x1
+00b8f2a8  cmp x9,x10
+00b8f2ac  b.cs 0x00b8f2b8
+00b8f2b0  ldr x0,[sp, #0x20]
+00b8f2b4  b 0x00b8f2e0
+00b8f2b8  ldr x0,[sp, #0x20]
+00b8f2bc  lsl x8,x10,#0x1
+00b8f2c0  cmp x8,x9
+00b8f2c4  csel x1,x9,x8,cc
+00b8f2c8  str x1,[sp, #0x30]
+00b8f2cc  bl 0x008d4c90
+00b8f2d0  str x0,[sp, #0x20]
+00b8f2d4  cbz x0,0x00b8f314
+00b8f2d8  ldr x8,[sp, #0x28]
+00b8f2dc  add x9,x8,#0x1
+00b8f2e0  str x9,[sp, #0x28]
+00b8f2e4  strb wzr,[x0, x8, LSL ]
+00b8f2e8  cbz x20,0x00b8f2f4
+00b8f2ec  ldr x8,[sp, #0x28]
+00b8f2f0  str x8,[x20]
+00b8f2f4  ldr x21,[sp, #0x20]
+00b8f2f8  mov w8,wzr
+00b8f2fc  cbnz x19,0x00b8f040
+00b8f300  b 0x00b8f044
+00b8f304  mov w8,#0xffffffff
+00b8f308  cbnz x19,0x00b8f040
+00b8f30c  b 0x00b8f044
+00b8f310  bl 0x008d4c50
+00b8f314  bl 0x008d3b90
+
+
+================================================================================
+### FILE: 03799118___cxa_atexit.txt
+================================================================================
+Function: __cxa_atexit @ 03799118
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __cxa_atexit @ 008d3de0
+
+--- Listing ---
+03799118  ?? ??
+
+
+================================================================================
+### FILE: 03799308___cxa_finalize.txt
+================================================================================
+Function: __cxa_finalize @ 03799308
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __cxa_finalize @ 008d4580
+
+--- Listing ---
+03799308  ?? ??
+
+

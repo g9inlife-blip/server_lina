@@ -1,0 +1,109 @@
+================================================================================
+### FILE: 008d5700_has_facet.txt
+================================================================================
+Function: has_facet @ 008d5700
+
+--- Calls OUT ---
+  -> has_facet @ 00b709f4
+
+--- Calls IN ---
+  <- FUN_00af50cc @ 00af50cc
+
+--- Listing ---
+008d5700  adrp x16,0x3308000
+008d5704  ldr x17,[x16, #0x540]
+008d5708  add x16,x16,#0x540
+008d570c  br x17
+
+
+================================================================================
+### FILE: 00b709f4_has_facet.txt
+================================================================================
+Function: has_facet @ 00b709f4
+FuncComment: std::__ndk1::locale::has_facet(std::__ndk1::locale::id&) const
+
+--- Calls OUT ---
+  -> FUN_00b7f6ec @ 00b7f6ec
+  -> __call_once @ 008d4f80
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- has_facet @ 008d5700
+
+--- Listing ---
+00b709f4  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::locale::has_facet(std::__ndk1::locale::id&) const
+00b709f8  str x21,[sp, #0x30]
+00b709fc  stp x20,x19,[sp, #0x40]
+00b70a00  stp x29,x30,[sp, #0x50]
+00b70a04  add x29,sp,#0x50
+00b70a08  mrs x20,tpidr_el0
+00b70a0c  adrp x9,0x3364000
+00b70a10  ldr x8,[x20, #0x28]
+00b70a14  ldr x9,[x9, #0xf88]
+00b70a18  movi v0.2D,#0x0
+00b70a1c  mov x19,x1
+00b70a20  str x8,[sp, #0x28]
+00b70a24  mov v0.D[0x0],x9
+00b70a28  ldr x21,[x0]
+00b70a2c  str x1,[sp]
+00b70a30  stur q0,[sp, #0x8]
+00b70a34  ldar x8,[x1]
+00b70a38  cmn x8,#0x1
+00b70a3c  b.eq 0x00b70a60
+00b70a40  adrp x2,0xb7f000
+00b70a44  mov x8,sp
+00b70a48  add x9,sp,#0x20
+00b70a4c  add x2,x2,#0x6ec
+00b70a50  add x1,sp,#0x18
+00b70a54  mov x0,x19
+00b70a58  stp x9,x8,[sp, #0x18]
+00b70a5c  bl 0x008d4f80
+00b70a60  ldrsw x9,[x19, #0x8]
+00b70a64  ldp x8,x10,[x21, #0x10]
+00b70a68  sub x9,x9,#0x1
+00b70a6c  sub x10,x10,x8
+00b70a70  cmp x9,x10, ASR #0x3
+00b70a74  b.cs 0x00b70a88
+00b70a78  ldr x8,[x8, x9, LSL #0x3]
+00b70a7c  cmp x8,#0x0
+00b70a80  cset w0,ne
+00b70a84  b 0x00b70a8c
+00b70a88  mov w0,wzr
+00b70a8c  ldr x8,[x20, #0x28]
+00b70a90  ldr x9,[sp, #0x28]
+00b70a94  cmp x8,x9
+00b70a98  b.ne 0x00b70ab0
+00b70a9c  ldp x29,x30,[sp, #0x50]
+00b70aa0  ldp x20,x19,[sp, #0x40]
+00b70aa4  ldr x21,[sp, #0x30]
+00b70aa8  add sp,sp,#0x60
+00b70aac  ret
+00b70ab0  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b89764_hardware_concurrency.txt
+================================================================================
+Function: hardware_concurrency @ 00b89764
+FuncComment: std::__ndk1::thread::hardware_concurrency()
+
+--- Calls OUT ---
+  -> sysconf @ 008d4390
+
+--- Calls IN ---
+
+--- Listing ---
+00b89764  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::thread::hardware_concurrency()
+00b89768  mov x29,sp
+00b8976c  mov w0,#0x61
+    ; [PRE] try { // try from 00b8976c to 00b89773 has its CatchHandler @ 00b89784
+00b89770  bl 0x008d4390
+    ; [POST] } // end try from 00b8976c to 00b89773
+00b89774  cmp x0,#0x0
+00b89778  csel w0,w0,wzr,gt
+00b8977c  ldp x29,x30,[sp], #0x10
+00b89780  ret
+
+

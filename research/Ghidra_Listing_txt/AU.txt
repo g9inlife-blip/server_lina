@@ -1,0 +1,1947 @@
+================================================================================
+### FILE: 00d99fe8_AudioSourceSettings__CreateSource.txt
+================================================================================
+Function: AudioSourceSettings$$CreateSource @ 00d99fe8
+
+--- Calls OUT ---
+  -> AudioSourceSettings$$ApplySettings @ 00d9a054
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$AddComponent<object> @ 01794da8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- Safari2SoundManger.SoundGroupSource$$.ctor @ 00d9c8a0
+  <- SoundEffect$$Awake @ 00d9dc6c
+
+--- Listing ---
+00d99fe8  stp x21,x20,[sp, #-0x20]!
+00d99fec  stp x19,x30,[sp, #0x10]
+00d99ff0  adrp x21,0x3571000
+00d99ff4  ldrb w8,[x21, #0xff6]
+00d99ff8  mov x20,x1
+00d99ffc  mov x19,x0
+00d9a000  tbnz w8,#0x0,0x00d9a018
+00d9a004  adrp x0,0x333b000
+00d9a008  ldr x0,[x0, #0xc50]
+00d9a00c  bl 0x00b0789c
+00d9a010  mov w8,#0x1
+00d9a014  strb w8,[x21, #0xff6]
+00d9a018  cbz x20,0x00d9a050
+00d9a01c  adrp x8,0x333b000
+00d9a020  ldr x8,[x8, #0xc50]
+00d9a024  mov x0,x20
+00d9a028  ldr x1,[x8]
+00d9a02c  bl 0x01794da8
+00d9a030  mov x20,x0
+00d9a034  mov x0,x19
+00d9a038  mov x1,x20
+00d9a03c  bl 0x00d9a054
+00d9a040  ldp x19,x30,[sp, #0x10]
+00d9a044  mov x0,x20
+00d9a048  ldp x21,x20,[sp], #0x20
+00d9a04c  ret
+00d9a050  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a054_AudioSourceSettings__ApplySettings.txt
+================================================================================
+Function: AudioSourceSettings$$ApplySettings @ 00d9a054
+
+--- Calls OUT ---
+  -> UnityEngine.AudioSource$$set_volume @ 024bb940
+  -> UnityEngine.AudioSource$$set_dopplerLevel @ 024bc294
+  -> UnityEngine.AudioSource$$set_bypassReverbZones @ 024bc250
+  -> UnityEngine.AudioSource$$set_loop @ 024bc0a8
+  -> UnityEngine.AudioSource$$set_bypassListenerEffects @ 024bc20c
+  -> UnityEngine.AudioSource$$set_bypassEffects @ 024bc1c8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.AudioSource$$set_outputAudioMixerGroup @ 024bbb9c
+  -> UnityEngine.AudioSource$$set_maxDistance @ 024bc370
+  -> UnityEngine.AudioSource$$set_spatialBlend @ 024bc020
+  -> UnityEngine.AudioSource$$set_playOnAwake @ 024bc0ec
+  -> UnityEngine.AudioSource$$set_reverbZoneMix @ 024bc17c
+  -> UnityEngine.AudioSource$$set_minDistance @ 024bc324
+  -> UnityEngine.AudioSource$$set_rolloffMode @ 024bc3bc
+
+--- Calls IN ---
+  <- AudioSourceSettings$$CreateSource @ 00d99fe8
+
+--- Listing ---
+00d9a054  str d8,[sp, #-0x20]!
+00d9a058  str x20,[sp, #0x8]
+00d9a05c  stp x19,x30,[sp, #0x10]
+00d9a060  cbz x1,0x00d9a158
+00d9a064  mov x19,x1
+00d9a068  mov x20,x0
+00d9a06c  mov x0,x1
+00d9a070  mov w1,wzr
+00d9a074  mov x2,xzr
+00d9a078  bl 0x024bc0ec
+00d9a07c  mov x0,x19
+00d9a080  mov w1,wzr
+00d9a084  mov x2,xzr
+00d9a088  bl 0x024bc0a8
+00d9a08c  ldr x1,[x20, #0x18]
+00d9a090  mov x0,x19
+00d9a094  mov x2,xzr
+00d9a098  bl 0x024bbb9c
+00d9a09c  ldr w1,[x20, #0x20]
+00d9a0a0  mov x0,x19
+00d9a0a4  mov x2,xzr
+00d9a0a8  bl 0x024bc3bc
+00d9a0ac  ldr s0,[x20, #0x24]
+00d9a0b0  mov x0,x19
+00d9a0b4  mov x1,xzr
+00d9a0b8  bl 0x024bc324
+00d9a0bc  ldr s0,[x20, #0x28]
+00d9a0c0  mov x0,x19
+00d9a0c4  mov x1,xzr
+00d9a0c8  bl 0x024bc370
+00d9a0cc  fmov s0,wzr
+00d9a0d0  mov x0,x19
+00d9a0d4  mov x1,xzr
+00d9a0d8  fmov s8,wzr
+00d9a0dc  bl 0x024bc294
+00d9a0e0  ldrb w8,[x20, #0x2c]
+00d9a0e4  fmov s0,0x3f800000
+00d9a0e8  mov x0,x19
+00d9a0ec  mov x1,xzr
+00d9a0f0  cmp w8,#0x0
+00d9a0f4  fcsel s0,s8,s0,eq
+00d9a0f8  bl 0x024bc020
+00d9a0fc  ldrb w1,[x20, #0x2d]
+00d9a100  mov x0,x19
+00d9a104  mov x2,xzr
+00d9a108  bl 0x024bc1c8
+00d9a10c  ldrb w1,[x20, #0x2e]
+00d9a110  mov x0,x19
+00d9a114  mov x2,xzr
+00d9a118  bl 0x024bc20c
+00d9a11c  ldrb w1,[x20, #0x2f]
+00d9a120  mov x0,x19
+00d9a124  mov x2,xzr
+00d9a128  bl 0x024bc250
+00d9a12c  ldr s0,[x20, #0x30]
+00d9a130  mov x0,x19
+00d9a134  mov x1,xzr
+00d9a138  bl 0x024bc17c
+00d9a13c  ldr s0,[x20, #0x34]
+00d9a140  mov x0,x19
+00d9a144  ldp x19,x30,[sp, #0x10]
+00d9a148  ldr x20,[sp, #0x8]
+00d9a14c  mov x1,xzr
+00d9a150  ldr d8,[sp], #0x20
+00d9a154  b 0x024bb940
+00d9a158  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a15c_AudioSourceSettings__.ctor.txt
+================================================================================
+Function: AudioSourceSettings$$.ctor @ 00d9a15c
+
+--- Calls OUT ---
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a15c  adrp x9,0x26db000
+00d9a160  ldr d0,[x9, #0xa28]
+00d9a164  mov w8,#0x1
+00d9a168  fmov v1.2S,#0x3f800000
+00d9a16c  mov x1,xzr
+00d9a170  str w8,[x0, #0x20]
+00d9a174  strb w8,[x0, #0x2c]
+00d9a178  stur d0,[x0, #0x24]
+00d9a17c  str d1,[x0, #0x30]
+00d9a180  b 0x024e277c
+
+
+================================================================================
+### FILE: 00dc00e4_AutoSrollText__get_isDirty.txt
+================================================================================
+Function: AutoSrollText$$get_isDirty @ 00dc00e4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc00e4  ldrb w0,[x0, #0x60]
+00dc00e8  ret
+
+
+================================================================================
+### FILE: 00dc00ec_AutoSrollText__set_isDirty.txt
+================================================================================
+Function: AutoSrollText$$set_isDirty @ 00dc00ec
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc00ec  and w8,w1,#0x1
+00dc00f0  strb w8,[x0, #0x60]
+00dc00f4  ret
+
+
+================================================================================
+### FILE: 00dc00f8_AutoSrollText__get_TextContent.txt
+================================================================================
+Function: AutoSrollText$$get_TextContent @ 00dc00f8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoSrollText$$Refresh @ 00dc03bc
+
+--- Listing ---
+00dc00f8  stp x21,x20,[sp, #-0x20]!
+00dc00fc  stp x19,x30,[sp, #0x10]
+00dc0100  adrp x20,0x3572000
+00dc0104  adrp x21,0x3321000
+00dc0108  ldrb w8,[x20, #0x169]
+00dc010c  ldr x21,[x21, #0xca8]
+00dc0110  mov x19,x0
+00dc0114  tbnz w8,#0x0,0x00dc0138
+00dc0118  adrp x0,0x3321000
+00dc011c  ldr x0,[x0, #0xca8]
+00dc0120  bl 0x00b0789c
+00dc0124  adrp x0,0x332c000
+00dc0128  ldr x0,[x0, #0x2c0]
+00dc012c  bl 0x00b0789c
+00dc0130  mov w8,#0x1
+00dc0134  strb w8,[x20, #0x169]
+00dc0138  ldr x0,[x21]
+00dc013c  ldr x20,[x19, #0x20]
+00dc0140  ldr w8,[x0, #0xe0]
+00dc0144  cbnz w8,0x00dc014c
+00dc0148  bl 0x00b0798c
+00dc014c  mov x0,x20
+00dc0150  mov x1,xzr
+00dc0154  mov x2,xzr
+00dc0158  bl 0x024de30c
+00dc015c  tbz w0,#0x0,0x00dc0178
+00dc0160  ldr x0,[x19, #0x20]
+00dc0164  cbz x0,0x00dc01d8
+00dc0168  ldr x8,[x0]
+00dc016c  ldr x2,[x8, #0x5d8]
+00dc0170  ldr x1,[x8, #0x5e0]
+00dc0174  b 0x00dc01b4
+00dc0178  ldr x0,[x21]
+00dc017c  ldr x20,[x19, #0x18]
+00dc0180  ldr w8,[x0, #0xe0]
+00dc0184  cbnz w8,0x00dc018c
+00dc0188  bl 0x00b0798c
+00dc018c  mov x0,x20
+00dc0190  mov x1,xzr
+00dc0194  mov x2,xzr
+00dc0198  bl 0x024de30c
+00dc019c  tbz w0,#0x0,0x00dc01c0
+00dc01a0  ldr x0,[x19, #0x18]
+00dc01a4  cbz x0,0x00dc01d8
+00dc01a8  ldr x8,[x0]
+00dc01ac  ldr x2,[x8, #0x548]
+00dc01b0  ldr x1,[x8, #0x550]
+00dc01b4  ldp x19,x30,[sp, #0x10]
+00dc01b8  ldp x21,x20,[sp], #0x20
+00dc01bc  br x2
+00dc01c0  adrp x8,0x332c000
+00dc01c4  ldr x8,[x8, #0x2c0]
+00dc01c8  ldp x19,x30,[sp, #0x10]
+00dc01cc  ldr x0,[x8]
+00dc01d0  ldp x21,x20,[sp], #0x20
+00dc01d4  ret
+00dc01d8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc01dc_AutoSrollText__set_TextContent.txt
+================================================================================
+Function: AutoSrollText$$set_TextContent @ 00dc01dc
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> AliothExtensions$$SetTextExt @ 00e13af0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- BoxShopMonoNew$$ShowShopItemWidget @ 00e9817c
+
+--- Listing ---
+00dc01dc  str x22,[sp, #-0x30]!
+00dc01e0  stp x21,x20,[sp, #0x10]
+00dc01e4  stp x19,x30,[sp, #0x20]
+00dc01e8  adrp x21,0x3572000
+00dc01ec  adrp x22,0x3321000
+00dc01f0  ldrb w8,[x21, #0x16a]
+00dc01f4  ldr x22,[x22, #0xca8]
+00dc01f8  mov x20,x1
+00dc01fc  mov x19,x0
+00dc0200  tbnz w8,#0x0,0x00dc0224
+00dc0204  adrp x0,0x3348000
+00dc0208  ldr x0,[x0, #0x138]
+00dc020c  bl 0x00b0789c
+00dc0210  adrp x0,0x3321000
+00dc0214  ldr x0,[x0, #0xca8]
+00dc0218  bl 0x00b0789c
+00dc021c  mov w8,#0x1
+00dc0220  strb w8,[x21, #0x16a]
+00dc0224  ldr x0,[x22]
+00dc0228  ldr x21,[x19, #0x20]
+00dc022c  ldr w8,[x0, #0xe0]
+00dc0230  cbnz w8,0x00dc0238
+00dc0234  bl 0x00b0798c
+00dc0238  mov x0,x21
+00dc023c  mov x1,xzr
+00dc0240  mov x2,xzr
+00dc0244  bl 0x024de30c
+00dc0248  tbz w0,#0x0,0x00dc026c
+00dc024c  ldr x0,[x19, #0x20]
+00dc0250  cbz x0,0x00dc02f4
+00dc0254  ldr x8,[x0]
+00dc0258  mov x1,x20
+00dc025c  ldr x9,[x8, #0x5e8]
+00dc0260  ldr x2,[x8, #0x5f0]
+00dc0264  blr x9
+00dc0268  b 0x00dc02dc
+00dc026c  ldr x0,[x22]
+00dc0270  ldr x21,[x19, #0x18]
+00dc0274  ldr w8,[x0, #0xe0]
+00dc0278  cbnz w8,0x00dc0280
+00dc027c  bl 0x00b0798c
+00dc0280  mov x0,x21
+00dc0284  mov x1,xzr
+00dc0288  mov x2,xzr
+00dc028c  bl 0x024de30c
+00dc0290  tbz w0,#0x0,0x00dc02dc
+00dc0294  ldr x0,[x19, #0x18]
+00dc0298  cbz x0,0x00dc02f4
+00dc029c  ldr x8,[x0]
+00dc02a0  adrp x21,0x3348000
+00dc02a4  mov x1,x20
+00dc02a8  ldr x9,[x8, #0x558]
+00dc02ac  ldr x2,[x8, #0x560]
+00dc02b0  ldr x21,[x21, #0x138]
+00dc02b4  blr x9
+00dc02b8  ldr x0,[x21]
+00dc02bc  ldr x21,[x19, #0x18]
+00dc02c0  ldr w8,[x0, #0xe0]
+00dc02c4  cbnz w8,0x00dc02cc
+00dc02c8  bl 0x00b0798c
+00dc02cc  mov x0,x21
+00dc02d0  mov x1,x20
+00dc02d4  mov x2,xzr
+00dc02d8  bl 0x00e13af0
+00dc02dc  mov w8,#0x1
+00dc02e0  strb w8,[x19, #0x60]
+00dc02e4  ldp x19,x30,[sp, #0x20]
+00dc02e8  ldp x21,x20,[sp, #0x10]
+00dc02ec  ldr x22,[sp], #0x30
+00dc02f0  ret
+00dc02f4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc02f8_AutoSrollText__Awake.txt
+================================================================================
+Function: AutoSrollText$$Awake @ 00dc02f8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00dc02f8  stp x23,x22,[sp, #-0x30]!
+00dc02fc  stp x21,x20,[sp, #0x10]
+00dc0300  stp x19,x30,[sp, #0x20]
+00dc0304  adrp x22,0x3572000
+00dc0308  adrp x23,0x3378000
+00dc030c  adrp x21,0x332c000
+00dc0310  adrp x20,0x332d000
+00dc0314  ldrb w8,[x22, #0x16b]
+00dc0318  ldr x23,[x23, #0x1e8]
+00dc031c  ldr x21,[x21, #0xd88]
+00dc0320  ldr x20,[x20, #0x198]
+00dc0324  mov x19,x0
+00dc0328  tbnz w8,#0x0,0x00dc0358
+00dc032c  adrp x0,0x332d000
+00dc0330  ldr x0,[x0, #0x198]
+00dc0334  bl 0x00b0789c
+00dc0338  adrp x0,0x332c000
+00dc033c  ldr x0,[x0, #0xd88]
+00dc0340  bl 0x00b0789c
+00dc0344  adrp x0,0x3378000
+00dc0348  ldr x0,[x0, #0x1e8]
+00dc034c  bl 0x00b0789c
+00dc0350  mov w8,#0x1
+00dc0354  strb w8,[x22, #0x16b]
+00dc0358  ldr x1,[x23]
+00dc035c  mov x0,x19
+00dc0360  bl 0x0176cbf8
+00dc0364  mov x1,x0
+00dc0368  mov x0,x19
+00dc036c  str x1,[x0, #0x20]!
+00dc0370  bl 0x00b07850
+00dc0374  ldr x1,[x21]
+00dc0378  mov x0,x19
+00dc037c  bl 0x0176cbf8
+00dc0380  mov x1,x0
+00dc0384  mov x0,x19
+00dc0388  str x1,[x0, #0x18]!
+00dc038c  bl 0x00b07850
+00dc0390  ldr x1,[x20]
+00dc0394  mov x0,x19
+00dc0398  bl 0x0176cbf8
+00dc039c  str x0,[x19, #0x40]!
+00dc03a0  mov x1,x0
+00dc03a4  mov x0,x19
+00dc03a8  ldp x19,x30,[sp, #0x20]
+00dc03ac  ldp x21,x20,[sp, #0x10]
+00dc03b0  ldp x23,x22,[sp], #0x30
+00dc03b4  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dc03b8_AutoSrollText__Start.txt
+================================================================================
+Function: AutoSrollText$$Start @ 00dc03b8
+
+--- Calls OUT ---
+  -> AutoSrollText$$Refresh @ 00dc03bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dc03b8  b 0x00dc03bc
+
+
+================================================================================
+### FILE: 00dc03bc_AutoSrollText__Refresh.txt
+================================================================================
+Function: AutoSrollText$$Refresh @ 00dc03bc
+
+--- Calls OUT ---
+  -> UnityEngine.RectTransform$$set_anchoredPosition @ 024f64b4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AutoSrollText$$get_TextContent @ 00dc00f8
+  -> UnityEngine.RectTransform$$get_anchoredPosition @ 024f6424
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> AliothExtensions$$SetTextExt @ 00e13af0
+  -> UnityEngine.Component$$GetComponentsInChildren<object> @ 0176d068
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoSrollText$$Update @ 00dc0664
+  <- AutoSrollText$$Start @ 00dc03b8
+
+--- Listing ---
+00dc03bc  stp x25,x24,[sp, #-0x40]!
+00dc03c0  stp x23,x22,[sp, #0x10]
+00dc03c4  stp x21,x20,[sp, #0x20]
+00dc03c8  stp x19,x30,[sp, #0x30]
+00dc03cc  adrp x20,0x3572000
+00dc03d0  adrp x21,0x3321000
+00dc03d4  ldrb w8,[x20, #0x16c]
+00dc03d8  ldr x21,[x21, #0xca8]
+00dc03dc  mov x19,x0
+00dc03e0  tbnz w8,#0x0,0x00dc041c
+00dc03e4  adrp x0,0x3348000
+00dc03e8  ldr x0,[x0, #0x138]
+00dc03ec  bl 0x00b0789c
+00dc03f0  adrp x0,0x337f000
+00dc03f4  ldr x0,[x0, #0x1a8]
+00dc03f8  bl 0x00b0789c
+00dc03fc  adrp x0,0x3383000
+00dc0400  ldr x0,[x0, #0x618]
+00dc0404  bl 0x00b0789c
+00dc0408  adrp x0,0x3321000
+00dc040c  ldr x0,[x0, #0xca8]
+00dc0410  bl 0x00b0789c
+00dc0414  mov w8,#0x1
+00dc0418  strb w8,[x20, #0x16c]
+00dc041c  ldr x0,[x21]
+00dc0420  ldr x20,[x19, #0x20]
+00dc0424  ldr w8,[x0, #0xe0]
+00dc0428  cbnz w8,0x00dc0430
+00dc042c  bl 0x00b0798c
+00dc0430  mov x0,x20
+00dc0434  mov x1,xzr
+00dc0438  mov x2,xzr
+00dc043c  bl 0x024de30c
+00dc0440  tbz w0,#0x0,0x00dc045c
+00dc0444  ldr x0,[x19, #0x20]
+00dc0448  cbz x0,0x00dc0660
+00dc044c  ldr x8,[x0]
+00dc0450  ldr x9,[x8, #0x628]
+00dc0454  ldr x1,[x8, #0x630]
+00dc0458  b 0x00dc0498
+00dc045c  ldr x0,[x21]
+00dc0460  ldr x20,[x19, #0x18]
+00dc0464  ldr w8,[x0, #0xe0]
+00dc0468  cbnz w8,0x00dc0470
+00dc046c  bl 0x00b0798c
+00dc0470  mov x0,x20
+00dc0474  mov x1,xzr
+00dc0478  mov x2,xzr
+00dc047c  bl 0x024de30c
+00dc0480  tbz w0,#0x0,0x00dc04a0
+00dc0484  ldr x0,[x19, #0x18]
+00dc0488  cbz x0,0x00dc0660
+00dc048c  ldr x8,[x0]
+00dc0490  ldr x9,[x8, #0x678]
+00dc0494  ldr x1,[x8, #0x680]
+00dc0498  blr x9
+00dc049c  str s0,[x19, #0x5c]
+00dc04a0  ldr x0,[x19, #0x40]
+00dc04a4  cbz x0,0x00dc0660
+00dc04a8  mov x1,xzr
+00dc04ac  bl 0x024f6424
+00dc04b0  ldr x0,[x19, #0x40]
+00dc04b4  str wzr,[x19, #0x54]
+00dc04b8  str s1,[x19, #0x58]
+00dc04bc  cbz x0,0x00dc0660
+00dc04c0  fmov s0,wzr
+00dc04c4  mov x1,xzr
+00dc04c8  bl 0x024f64b4
+00dc04cc  str wzr,[x19, #0x50]
+00dc04d0  ldr x0,[x21]
+00dc04d4  ldr x20,[x19, #0x20]
+00dc04d8  ldr w8,[x0, #0xe0]
+00dc04dc  cbnz w8,0x00dc04e4
+00dc04e0  bl 0x00b0798c
+00dc04e4  mov x0,x20
+00dc04e8  mov x1,xzr
+00dc04ec  mov x2,xzr
+00dc04f0  bl 0x024de30c
+00dc04f4  tbz w0,#0x0,0x00dc0580
+00dc04f8  ldr x0,[x19, #0x40]
+00dc04fc  cbz x0,0x00dc0660
+00dc0500  adrp x8,0x3383000
+00dc0504  ldr x8,[x8, #0x618]
+00dc0508  ldr x1,[x8]
+00dc050c  bl 0x0176d068
+00dc0510  mov x20,x19
+00dc0514  str x0,[x20, #0x30]!
+00dc0518  mov x1,x0
+00dc051c  mov x0,x20
+00dc0520  bl 0x00b07850
+00dc0524  ldr x22,[x20]
+00dc0528  cbz x22,0x00dc0660
+00dc052c  ldr w8,[x22, #0x18]
+00dc0530  cmp w8,#0x1
+00dc0534  b.lt 0x00dc0580
+00dc0538  mov w23,wzr
+00dc053c  cmp w23,w8
+00dc0540  b.cs 0x00dc065c
+00dc0544  add x8,x22,w23, SXTW  #0x3
+00dc0548  ldr x20,[x8, #0x20]
+00dc054c  mov x0,x19
+00dc0550  bl 0x00dc00f8
+00dc0554  cbz x20,0x00dc0660
+00dc0558  ldr x8,[x20]
+00dc055c  mov x1,x0
+00dc0560  mov x0,x20
+00dc0564  ldr x9,[x8, #0x5e8]
+00dc0568  ldr x2,[x8, #0x5f0]
+00dc056c  blr x9
+00dc0570  ldr w8,[x22, #0x18]
+00dc0574  add w23,w23,#0x1
+00dc0578  cmp w23,w8
+00dc057c  b.lt 0x00dc053c
+00dc0580  ldr x0,[x21]
+00dc0584  ldr x20,[x19, #0x18]
+00dc0588  ldr w8,[x0, #0xe0]
+00dc058c  cbnz w8,0x00dc0594
+00dc0590  bl 0x00b0798c
+00dc0594  mov x0,x20
+00dc0598  mov x1,xzr
+00dc059c  mov x2,xzr
+00dc05a0  bl 0x024de30c
+00dc05a4  tbz w0,#0x0,0x00dc0648
+00dc05a8  ldr x0,[x19, #0x40]
+00dc05ac  cbz x0,0x00dc0660
+00dc05b0  adrp x8,0x337f000
+00dc05b4  ldr x8,[x8, #0x1a8]
+00dc05b8  ldr x1,[x8]
+00dc05bc  bl 0x0176d068
+00dc05c0  mov x20,x19
+00dc05c4  str x0,[x20, #0x38]!
+00dc05c8  mov x1,x0
+00dc05cc  mov x0,x20
+00dc05d0  bl 0x00b07850
+00dc05d4  ldr x22,[x20]
+00dc05d8  cbz x22,0x00dc0660
+00dc05dc  ldr x8,[x22, #0x18]
+00dc05e0  cmp w8,#0x1
+00dc05e4  b.lt 0x00dc0648
+00dc05e8  adrp x24,0x3348000
+00dc05ec  ldr x24,[x24, #0x138]
+00dc05f0  mov x23,xzr
+00dc05f4  and x8,x8,#0xffffffff
+00dc05f8  add x25,x22,#0x20
+00dc05fc  cmp x23,w8, UXTW 
+00dc0600  b.cs 0x00dc065c
+00dc0604  ldr x20,[x25, x23, LSL #0x3]
+00dc0608  mov x0,x19
+00dc060c  bl 0x00dc00f8
+00dc0610  ldr x8,[x24]
+00dc0614  mov x21,x0
+00dc0618  ldr w9,[x8, #0xe0]
+00dc061c  cbnz w9,0x00dc0628
+00dc0620  mov x0,x8
+00dc0624  bl 0x00b0798c
+00dc0628  mov x0,x20
+00dc062c  mov x1,x21
+00dc0630  mov x2,xzr
+00dc0634  bl 0x00e13af0
+00dc0638  ldr w8,[x22, #0x18]
+00dc063c  add x23,x23,#0x1
+00dc0640  cmp x23,w8, SXTW 
+00dc0644  b.lt 0x00dc05fc
+00dc0648  ldp x19,x30,[sp, #0x30]
+00dc064c  ldp x21,x20,[sp, #0x20]
+00dc0650  ldp x23,x22,[sp, #0x10]
+00dc0654  ldp x25,x24,[sp], #0x40
+00dc0658  ret
+00dc065c  bl 0x00b079b8
+00dc0660  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc0664_AutoSrollText__Update.txt
+================================================================================
+Function: AutoSrollText$$Update @ 00dc0664
+
+--- Calls OUT ---
+  -> fmodf @ 008d4270
+  -> UnityEngine.RectTransform$$set_anchoredPosition @ 024f64b4
+  -> UnityEngine.Time$$get_deltaTime @ 024dc048
+  -> FUN_00b079b0 @ 00b079b0
+  -> AutoSrollText$$Refresh @ 00dc03bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dc0664  stp d9,d8,[sp, #-0x20]!
+00dc0668  stp x19,x30,[sp, #0x10]
+00dc066c  ldrb w8,[x0, #0x60]
+00dc0670  mov x19,x0
+00dc0674  cbz w8,0x00dc0684
+00dc0678  mov x0,x19
+00dc067c  bl 0x00dc03bc
+00dc0680  strb wzr,[x19, #0x60]
+00dc0684  ldr s0,[x19, #0x50]
+00dc0688  ldp s8,s1,[x19, #0x58]
+00dc068c  fneg s0,s0
+00dc0690  bl 0x008d4270
+00dc0694  ldr x0,[x19, #0x40]
+00dc0698  stp s0,s8,[x19, #0x48]
+00dc069c  cbz x0,0x00dc06e4
+00dc06a0  ldr s1,[x19, #0x54]
+00dc06a4  mov x1,xzr
+00dc06a8  fadd s0,s1,s0
+00dc06ac  fadd s1,s8,s8
+00dc06b0  bl 0x024f64b4
+00dc06b4  ldr s8,[x19, #0x50]
+00dc06b8  ldr s9,[x19, #0x28]
+00dc06bc  mov x0,xzr
+00dc06c0  bl 0x024dc048
+00dc06c4  fmov s1,0x41a00000
+00dc06c8  fmul s1,s9,s1
+00dc06cc  fmul s0,s1,s0
+00dc06d0  fadd s0,s8,s0
+00dc06d4  str s0,[x19, #0x50]
+00dc06d8  ldp x19,x30,[sp, #0x10]
+00dc06dc  ldp d9,d8,[sp], #0x20
+00dc06e0  ret
+00dc06e4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc06e8_AutoSrollText__.ctor.txt
+================================================================================
+Function: AutoSrollText$$.ctor @ 00dc06e8
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dc06e8  mov w8,#0x40400000
+00dc06ec  mov x1,xzr
+00dc06f0  str w8,[x0, #0x28]
+00dc06f4  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00e65fa0_AutoActionItemMono__get_p_index.txt
+================================================================================
+Function: AutoActionItemMono$$get_p_index @ 00e65fa0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00e65fa0  ldr w0,[x0, #0x38]
+00e65fa4  ret
+
+
+================================================================================
+### FILE: 00e65fa8_AutoActionItemMono__set_p_index.txt
+================================================================================
+Function: AutoActionItemMono$$set_p_index @ 00e65fa8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00e65fa8  str w1,[x0, #0x38]
+00e65fac  ret
+
+
+================================================================================
+### FILE: 00e65fb0_AutoActionItemMono__get_p_node.txt
+================================================================================
+Function: AutoActionItemMono$$get_p_node @ 00e65fb0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00e65fb0  ldr x0,[x0, #0x40]
+00e65fb4  ret
+
+
+================================================================================
+### FILE: 00e65fb8_AutoActionItemMono__set_p_node.txt
+================================================================================
+Function: AutoActionItemMono$$set_p_node @ 00e65fb8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+00e65fb8  str x1,[x0, #0x40]!
+00e65fbc  b 0x00b07850
+
+
+================================================================================
+### FILE: 00e65fc0_AutoActionItemMono__get_p_news.txt
+================================================================================
+Function: AutoActionItemMono$$get_p_news @ 00e65fc0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00e65fc0  ldr x0,[x0, #0x48]
+00e65fc4  ret
+
+
+================================================================================
+### FILE: 00e65fc8_AutoActionItemMono__set_p_news.txt
+================================================================================
+Function: AutoActionItemMono$$set_p_news @ 00e65fc8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+00e65fc8  str x1,[x0, #0x48]!
+00e65fcc  b 0x00b07850
+
+
+================================================================================
+### FILE: 00e65fd0_AutoActionItemMono__get_auto_dead.txt
+================================================================================
+Function: AutoActionItemMono$$get_auto_dead @ 00e65fd0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.String$$Format @ 01fd0378
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoActionItemMono$$Refresh @ 00e6691c
+
+--- Listing ---
+00e65fd0  sub sp,sp,#0x30
+00e65fd4  stp x21,x20,[sp, #0x10]
+00e65fd8  stp x19,x30,[sp, #0x20]
+00e65fdc  adrp x21,0x3572000
+00e65fe0  adrp x20,0x3321000
+00e65fe4  ldrb w8,[x21, #0x98c]
+00e65fe8  ldr x20,[x20, #0xca8]
+00e65fec  mov x19,x0
+00e65ff0  tbnz w8,#0x0,0x00e66020
+00e65ff4  adrp x0,0x3332000
+00e65ff8  ldr x0,[x0, #0x38]
+00e65ffc  bl 0x00b0789c
+00e66000  adrp x0,0x3321000
+00e66004  ldr x0,[x0, #0xca8]
+00e66008  bl 0x00b0789c
+00e6600c  adrp x0,0x330d000
+00e66010  ldr x0,[x0, #0x848]
+00e66014  bl 0x00b0789c
+00e66018  mov w8,#0x1
+00e6601c  strb w8,[x21, #0x98c]
+00e66020  ldr x0,[x20]
+00e66024  ldr x20,[x19, #0x40]
+00e66028  ldr w8,[x0, #0xe0]
+00e6602c  cbnz w8,0x00e66034
+00e66030  bl 0x00b0798c
+00e66034  mov x0,x20
+00e66038  mov x1,xzr
+00e6603c  mov x2,xzr
+00e66040  bl 0x024de30c
+00e66044  mov w8,w0
+00e66048  mov x0,xzr
+00e6604c  tbz w8,#0x0,0x00e660a0
+00e66050  adrp x8,0x3332000
+00e66054  ldr x8,[x8, #0x38]
+00e66058  ldr x20,[x19, #0x40]
+00e6605c  ldr w9,[x19, #0x38]
+00e66060  adrp x19,0x330d000
+00e66064  ldr x0,[x8]
+00e66068  ldr x19,[x19, #0x848]
+00e6606c  add x1,sp,#0xc
+00e66070  str w9,[sp, #0xc]
+00e66074  bl 0x00b07994
+00e66078  ldr x8,[x19]
+00e6607c  mov x1,x0
+00e66080  mov x2,xzr
+00e66084  mov x0,x8
+00e66088  bl 0x01fd0378
+00e6608c  cbz x20,0x00e660b0
+00e66090  mov x1,x0
+00e66094  mov x0,x20
+00e66098  mov x2,xzr
+00e6609c  bl 0x00dc06f8
+00e660a0  ldp x19,x30,[sp, #0x20]
+00e660a4  ldp x21,x20,[sp, #0x10]
+00e660a8  add sp,sp,#0x30
+00e660ac  ret
+00e660b0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e660b4_AutoActionItemMono__get_auto_live.txt
+================================================================================
+Function: AutoActionItemMono$$get_auto_live @ 00e660b4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.String$$Format @ 01fd0378
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoActionItemMono$$Refresh @ 00e6691c
+
+--- Listing ---
+00e660b4  sub sp,sp,#0x30
+00e660b8  stp x21,x20,[sp, #0x10]
+00e660bc  stp x19,x30,[sp, #0x20]
+00e660c0  adrp x21,0x3572000
+00e660c4  adrp x20,0x3321000
+00e660c8  ldrb w8,[x21, #0x98d]
+00e660cc  ldr x20,[x20, #0xca8]
+00e660d0  mov x19,x0
+00e660d4  tbnz w8,#0x0,0x00e66104
+00e660d8  adrp x0,0x3332000
+00e660dc  ldr x0,[x0, #0x38]
+00e660e0  bl 0x00b0789c
+00e660e4  adrp x0,0x3321000
+00e660e8  ldr x0,[x0, #0xca8]
+00e660ec  bl 0x00b0789c
+00e660f0  adrp x0,0x3377000
+00e660f4  ldr x0,[x0, #0x1c0]
+00e660f8  bl 0x00b0789c
+00e660fc  mov w8,#0x1
+00e66100  strb w8,[x21, #0x98d]
+00e66104  ldr x0,[x20]
+00e66108  ldr x20,[x19, #0x40]
+00e6610c  ldr w8,[x0, #0xe0]
+00e66110  cbnz w8,0x00e66118
+00e66114  bl 0x00b0798c
+00e66118  mov x0,x20
+00e6611c  mov x1,xzr
+00e66120  mov x2,xzr
+00e66124  bl 0x024de30c
+00e66128  mov w8,w0
+00e6612c  mov x0,xzr
+00e66130  tbz w8,#0x0,0x00e66184
+00e66134  adrp x8,0x3332000
+00e66138  ldr x8,[x8, #0x38]
+00e6613c  ldr x20,[x19, #0x40]
+00e66140  ldr w9,[x19, #0x38]
+00e66144  adrp x19,0x3377000
+00e66148  ldr x0,[x8]
+00e6614c  ldr x19,[x19, #0x1c0]
+00e66150  add x1,sp,#0xc
+00e66154  str w9,[sp, #0xc]
+00e66158  bl 0x00b07994
+00e6615c  ldr x8,[x19]
+00e66160  mov x1,x0
+00e66164  mov x2,xzr
+00e66168  mov x0,x8
+00e6616c  bl 0x01fd0378
+00e66170  cbz x20,0x00e66194
+00e66174  mov x1,x0
+00e66178  mov x0,x20
+00e6617c  mov x2,xzr
+00e66180  bl 0x00dc06f8
+00e66184  ldp x19,x30,[sp, #0x20]
+00e66188  ldp x21,x20,[sp, #0x10]
+00e6618c  add sp,sp,#0x30
+00e66190  ret
+00e66194  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e66198_AutoActionItemMono__get_auto_head_dead.txt
+================================================================================
+Function: AutoActionItemMono$$get_auto_head_dead @ 00e66198
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.String$$Format @ 01fd0378
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoActionItemMono$$RefreshHead @ 00e6681c
+
+--- Listing ---
+00e66198  sub sp,sp,#0x30
+00e6619c  stp x21,x20,[sp, #0x10]
+00e661a0  stp x19,x30,[sp, #0x20]
+00e661a4  adrp x21,0x3572000
+00e661a8  adrp x20,0x3321000
+00e661ac  ldrb w8,[x21, #0x98e]
+00e661b0  ldr x20,[x20, #0xca8]
+00e661b4  mov x19,x0
+00e661b8  tbnz w8,#0x0,0x00e661e8
+00e661bc  adrp x0,0x3332000
+00e661c0  ldr x0,[x0, #0x38]
+00e661c4  bl 0x00b0789c
+00e661c8  adrp x0,0x3321000
+00e661cc  ldr x0,[x0, #0xca8]
+00e661d0  bl 0x00b0789c
+00e661d4  adrp x0,0x3314000
+00e661d8  ldr x0,[x0, #0x78]
+00e661dc  bl 0x00b0789c
+00e661e0  mov w8,#0x1
+00e661e4  strb w8,[x21, #0x98e]
+00e661e8  ldr x0,[x20]
+00e661ec  ldr x20,[x19, #0x40]
+00e661f0  ldr w8,[x0, #0xe0]
+00e661f4  cbnz w8,0x00e661fc
+00e661f8  bl 0x00b0798c
+00e661fc  mov x0,x20
+00e66200  mov x1,xzr
+00e66204  mov x2,xzr
+00e66208  bl 0x024de30c
+00e6620c  mov w8,w0
+00e66210  mov x0,xzr
+00e66214  tbz w8,#0x0,0x00e66268
+00e66218  adrp x8,0x3332000
+00e6621c  ldr x8,[x8, #0x38]
+00e66220  ldr x20,[x19, #0x40]
+00e66224  ldr w9,[x19, #0x38]
+00e66228  adrp x19,0x3314000
+00e6622c  ldr x0,[x8]
+00e66230  ldr x19,[x19, #0x78]
+00e66234  add x1,sp,#0xc
+00e66238  str w9,[sp, #0xc]
+00e6623c  bl 0x00b07994
+00e66240  ldr x8,[x19]
+00e66244  mov x1,x0
+00e66248  mov x2,xzr
+00e6624c  mov x0,x8
+00e66250  bl 0x01fd0378
+00e66254  cbz x20,0x00e66278
+00e66258  mov x1,x0
+00e6625c  mov x0,x20
+00e66260  mov x2,xzr
+00e66264  bl 0x00dc06f8
+00e66268  ldp x19,x30,[sp, #0x20]
+00e6626c  ldp x21,x20,[sp, #0x10]
+00e66270  add sp,sp,#0x30
+00e66274  ret
+00e66278  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e6627c_AutoActionItemMono__get_btn_open.txt
+================================================================================
+Function: AutoActionItemMono$$get_btn_open @ 00e6627c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.String$$Format @ 01fd0378
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoActionItemMono$$Refresh @ 00e6691c
+
+--- Listing ---
+00e6627c  sub sp,sp,#0x30
+00e66280  stp x21,x20,[sp, #0x10]
+00e66284  stp x19,x30,[sp, #0x20]
+00e66288  adrp x21,0x3572000
+00e6628c  adrp x20,0x3321000
+00e66290  ldrb w8,[x21, #0x98f]
+00e66294  ldr x20,[x20, #0xca8]
+00e66298  mov x19,x0
+00e6629c  tbnz w8,#0x0,0x00e662cc
+00e662a0  adrp x0,0x3332000
+00e662a4  ldr x0,[x0, #0x38]
+00e662a8  bl 0x00b0789c
+00e662ac  adrp x0,0x3321000
+00e662b0  ldr x0,[x0, #0xca8]
+00e662b4  bl 0x00b0789c
+00e662b8  adrp x0,0x3317000
+00e662bc  ldr x0,[x0, #0xec0]
+00e662c0  bl 0x00b0789c
+00e662c4  mov w8,#0x1
+00e662c8  strb w8,[x21, #0x98f]
+00e662cc  ldr x0,[x20]
+00e662d0  ldr x20,[x19, #0x40]
+00e662d4  ldr w8,[x0, #0xe0]
+00e662d8  cbnz w8,0x00e662e0
+00e662dc  bl 0x00b0798c
+00e662e0  mov x0,x20
+00e662e4  mov x1,xzr
+00e662e8  mov x2,xzr
+00e662ec  bl 0x024de30c
+00e662f0  mov w8,w0
+00e662f4  mov x0,xzr
+00e662f8  tbz w8,#0x0,0x00e6634c
+00e662fc  adrp x8,0x3332000
+00e66300  ldr x8,[x8, #0x38]
+00e66304  ldr x20,[x19, #0x40]
+00e66308  ldr w9,[x19, #0x38]
+00e6630c  adrp x19,0x3317000
+00e66310  ldr x0,[x8]
+00e66314  ldr x19,[x19, #0xec0]
+00e66318  add x1,sp,#0xc
+00e6631c  str w9,[sp, #0xc]
+00e66320  bl 0x00b07994
+00e66324  ldr x8,[x19]
+00e66328  mov x1,x0
+00e6632c  mov x2,xzr
+00e66330  mov x0,x8
+00e66334  bl 0x01fd0378
+00e66338  cbz x20,0x00e6635c
+00e6633c  mov x1,x0
+00e66340  mov x0,x20
+00e66344  mov x2,xzr
+00e66348  bl 0x00dc06f8
+00e6634c  ldp x19,x30,[sp, #0x20]
+00e66350  ldp x21,x20,[sp, #0x10]
+00e66354  add sp,sp,#0x30
+00e66358  ret
+00e6635c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e66360_AutoActionItemMono__get_btn_close.txt
+================================================================================
+Function: AutoActionItemMono$$get_btn_close @ 00e66360
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.String$$Format @ 01fd0378
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoActionItemMono$$Refresh @ 00e6691c
+
+--- Listing ---
+00e66360  sub sp,sp,#0x30
+00e66364  stp x21,x20,[sp, #0x10]
+00e66368  stp x19,x30,[sp, #0x20]
+00e6636c  adrp x21,0x3572000
+00e66370  adrp x20,0x3321000
+00e66374  ldrb w8,[x21, #0x990]
+00e66378  ldr x20,[x20, #0xca8]
+00e6637c  mov x19,x0
+00e66380  tbnz w8,#0x0,0x00e663b0
+00e66384  adrp x0,0x3332000
+00e66388  ldr x0,[x0, #0x38]
+00e6638c  bl 0x00b0789c
+00e66390  adrp x0,0x3321000
+00e66394  ldr x0,[x0, #0xca8]
+00e66398  bl 0x00b0789c
+00e6639c  adrp x0,0x335e000
+00e663a0  ldr x0,[x0, #0x990]
+00e663a4  bl 0x00b0789c
+00e663a8  mov w8,#0x1
+00e663ac  strb w8,[x21, #0x990]
+00e663b0  ldr x0,[x20]
+00e663b4  ldr x20,[x19, #0x40]
+00e663b8  ldr w8,[x0, #0xe0]
+00e663bc  cbnz w8,0x00e663c4
+00e663c0  bl 0x00b0798c
+00e663c4  mov x0,x20
+00e663c8  mov x1,xzr
+00e663cc  mov x2,xzr
+00e663d0  bl 0x024de30c
+00e663d4  mov w8,w0
+00e663d8  mov x0,xzr
+00e663dc  tbz w8,#0x0,0x00e66430
+00e663e0  adrp x8,0x3332000
+00e663e4  ldr x8,[x8, #0x38]
+00e663e8  ldr x20,[x19, #0x40]
+00e663ec  ldr w9,[x19, #0x38]
+00e663f0  adrp x19,0x335e000
+00e663f4  ldr x0,[x8]
+00e663f8  ldr x19,[x19, #0x990]
+00e663fc  add x1,sp,#0xc
+00e66400  str w9,[sp, #0xc]
+00e66404  bl 0x00b07994
+00e66408  ldr x8,[x19]
+00e6640c  mov x1,x0
+00e66410  mov x2,xzr
+00e66414  mov x0,x8
+00e66418  bl 0x01fd0378
+00e6641c  cbz x20,0x00e66440
+00e66420  mov x1,x0
+00e66424  mov x0,x20
+00e66428  mov x2,xzr
+00e6642c  bl 0x00dc06f8
+00e66430  ldp x19,x30,[sp, #0x20]
+00e66434  ldp x21,x20,[sp, #0x10]
+00e66438  add sp,sp,#0x30
+00e6643c  ret
+00e66440  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e66444_AutoActionItemMono__get_auto_head.txt
+================================================================================
+Function: AutoActionItemMono$$get_auto_head @ 00e66444
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.String$$Format @ 01fd0378
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoActionItemMono$$RefreshHead @ 00e6681c
+
+--- Listing ---
+00e66444  sub sp,sp,#0x30
+00e66448  stp x21,x20,[sp, #0x10]
+00e6644c  stp x19,x30,[sp, #0x20]
+00e66450  adrp x21,0x3572000
+00e66454  adrp x20,0x3321000
+00e66458  ldrb w8,[x21, #0x991]
+00e6645c  ldr x20,[x20, #0xca8]
+00e66460  mov x19,x0
+00e66464  tbnz w8,#0x0,0x00e66494
+00e66468  adrp x0,0x3332000
+00e6646c  ldr x0,[x0, #0x38]
+00e66470  bl 0x00b0789c
+00e66474  adrp x0,0x3321000
+00e66478  ldr x0,[x0, #0xca8]
+00e6647c  bl 0x00b0789c
+00e66480  adrp x0,0x335d000
+00e66484  ldr x0,[x0, #0xcc8]
+00e66488  bl 0x00b0789c
+00e6648c  mov w8,#0x1
+00e66490  strb w8,[x21, #0x991]
+00e66494  ldr x0,[x20]
+00e66498  ldr x20,[x19, #0x40]
+00e6649c  ldr w8,[x0, #0xe0]
+00e664a0  cbnz w8,0x00e664a8
+00e664a4  bl 0x00b0798c
+00e664a8  mov x0,x20
+00e664ac  mov x1,xzr
+00e664b0  mov x2,xzr
+00e664b4  bl 0x024de30c
+00e664b8  mov w8,w0
+00e664bc  mov x0,xzr
+00e664c0  tbz w8,#0x0,0x00e66514
+00e664c4  adrp x8,0x3332000
+00e664c8  ldr x8,[x8, #0x38]
+00e664cc  ldr x20,[x19, #0x40]
+00e664d0  ldr w9,[x19, #0x38]
+00e664d4  adrp x19,0x335d000
+00e664d8  ldr x0,[x8]
+00e664dc  ldr x19,[x19, #0xcc8]
+00e664e0  add x1,sp,#0xc
+00e664e4  str w9,[sp, #0xc]
+00e664e8  bl 0x00b07994
+00e664ec  ldr x8,[x19]
+00e664f0  mov x1,x0
+00e664f4  mov x2,xzr
+00e664f8  mov x0,x8
+00e664fc  bl 0x01fd0378
+00e66500  cbz x20,0x00e66524
+00e66504  mov x1,x0
+00e66508  mov x0,x20
+00e6650c  mov x2,xzr
+00e66510  bl 0x00dc06f8
+00e66514  ldp x19,x30,[sp, #0x20]
+00e66518  ldp x21,x20,[sp, #0x10]
+00e6651c  add sp,sp,#0x30
+00e66520  ret
+00e66524  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e66528_AutoActionItemMono__get_headLocked.txt
+================================================================================
+Function: AutoActionItemMono$$get_headLocked @ 00e66528
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.String$$Format @ 01fd0378
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoActionItemMono$$Init @ 00e666f4
+
+--- Listing ---
+00e66528  sub sp,sp,#0x30
+00e6652c  stp x21,x20,[sp, #0x10]
+00e66530  stp x19,x30,[sp, #0x20]
+00e66534  adrp x21,0x3572000
+00e66538  adrp x20,0x3321000
+00e6653c  ldrb w8,[x21, #0x992]
+00e66540  ldr x20,[x20, #0xca8]
+00e66544  mov x19,x0
+00e66548  tbnz w8,#0x0,0x00e66578
+00e6654c  adrp x0,0x3332000
+00e66550  ldr x0,[x0, #0x38]
+00e66554  bl 0x00b0789c
+00e66558  adrp x0,0x3321000
+00e6655c  ldr x0,[x0, #0xca8]
+00e66560  bl 0x00b0789c
+00e66564  adrp x0,0x3332000
+00e66568  ldr x0,[x0, #0x728]
+00e6656c  bl 0x00b0789c
+00e66570  mov w8,#0x1
+00e66574  strb w8,[x21, #0x992]
+00e66578  ldr x0,[x20]
+00e6657c  ldr x20,[x19, #0x40]
+00e66580  ldr w8,[x0, #0xe0]
+00e66584  cbnz w8,0x00e6658c
+00e66588  bl 0x00b0798c
+00e6658c  mov x0,x20
+00e66590  mov x1,xzr
+00e66594  mov x2,xzr
+00e66598  bl 0x024de30c
+00e6659c  mov w8,w0
+00e665a0  mov x0,xzr
+00e665a4  tbz w8,#0x0,0x00e665f8
+00e665a8  adrp x8,0x3332000
+00e665ac  ldr x8,[x8, #0x38]
+00e665b0  ldr x20,[x19, #0x40]
+00e665b4  ldr w9,[x19, #0x38]
+00e665b8  adrp x19,0x3332000
+00e665bc  ldr x0,[x8]
+00e665c0  ldr x19,[x19, #0x728]
+00e665c4  add x1,sp,#0xc
+00e665c8  str w9,[sp, #0xc]
+00e665cc  bl 0x00b07994
+00e665d0  ldr x8,[x19]
+00e665d4  mov x1,x0
+00e665d8  mov x2,xzr
+00e665dc  mov x0,x8
+00e665e0  bl 0x01fd0378
+00e665e4  cbz x20,0x00e66608
+00e665e8  mov x1,x0
+00e665ec  mov x0,x20
+00e665f0  mov x2,xzr
+00e665f4  bl 0x00dc06f8
+00e665f8  ldp x19,x30,[sp, #0x20]
+00e665fc  ldp x21,x20,[sp, #0x10]
+00e66600  add sp,sp,#0x30
+00e66604  ret
+00e66608  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e6660c_AutoActionItemMono__get_IsLocked.txt
+================================================================================
+Function: AutoActionItemMono$$get_IsLocked @ 00e6660c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> Ali$$get_battleManager @ 00e027f4
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> BattleManager$$get_IsCVC @ 01175a08
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoActionItemMono$$OnClickChange @ 00e66c6c
+  <- AutoActionItemMono$$Init @ 00e666f4
+
+--- Listing ---
+00e6660c  str x20,[sp, #-0x20]!
+00e66610  stp x19,x30,[sp, #0x10]
+00e66614  adrp x19,0x3572000
+00e66618  adrp x20,0x335f000
+00e6661c  ldrb w8,[x19, #0x993]
+00e66620  ldr x20,[x20, #0x20]
+00e66624  tbnz w8,#0x0,0x00e66648
+00e66628  adrp x0,0x335f000
+00e6662c  ldr x0,[x0, #0x20]
+00e66630  bl 0x00b0789c
+00e66634  adrp x0,0x3321000
+00e66638  ldr x0,[x0, #0xca8]
+00e6663c  bl 0x00b0789c
+00e66640  mov w8,#0x1
+00e66644  strb w8,[x19, #0x993]
+00e66648  ldr x0,[x20]
+00e6664c  ldr w8,[x0, #0xe0]
+00e66650  cbnz w8,0x00e6665c
+00e66654  bl 0x00b0798c
+00e66658  ldr x0,[x20]
+00e6665c  ldr x8,[x0, #0xb8]
+00e66660  ldr x0,[x8, #0x10]
+00e66664  cbz x0,0x00e666f0
+00e66668  adrp x19,0x3321000
+00e6666c  ldr x19,[x19, #0xca8]
+00e66670  mov x1,xzr
+00e66674  bl 0x00e027f4
+00e66678  ldr x8,[x19]
+00e6667c  mov x19,x0
+00e66680  ldr w9,[x8, #0xe0]
+00e66684  cbnz w9,0x00e66690
+00e66688  mov x0,x8
+00e6668c  bl 0x00b0798c
+00e66690  mov x0,x19
+00e66694  mov x1,xzr
+00e66698  mov x2,xzr
+00e6669c  bl 0x024de30c
+00e666a0  tbz w0,#0x0,0x00e666e0
+00e666a4  ldr x0,[x20]
+00e666a8  ldr w8,[x0, #0xe0]
+00e666ac  cbnz w8,0x00e666b8
+00e666b0  bl 0x00b0798c
+00e666b4  ldr x0,[x20]
+00e666b8  ldr x8,[x0, #0xb8]
+00e666bc  ldr x0,[x8, #0x10]
+00e666c0  cbz x0,0x00e666f0
+00e666c4  mov x1,xzr
+00e666c8  bl 0x00e027f4
+00e666cc  cbz x0,0x00e666f0
+00e666d0  ldp x19,x30,[sp, #0x10]
+00e666d4  mov x1,xzr
+00e666d8  ldr x20,[sp], #0x20
+00e666dc  b 0x01175a08
+00e666e0  ldp x19,x30,[sp, #0x10]
+00e666e4  mov w0,wzr
+00e666e8  ldr x20,[sp], #0x20
+00e666ec  ret
+00e666f0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e666f4_AutoActionItemMono__Init.txt
+================================================================================
+Function: AutoActionItemMono$$Init @ 00e666f4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> AutoActionItemMono$$get_headLocked @ 00e66528
+  -> AutoActionItemMono$$Refresh @ 00e6691c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> AutoActionItemMono$$get_IsLocked @ 00e6660c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> AutoActionItemMono$$RefreshHead @ 00e6681c
+
+--- Calls IN ---
+  <- BattleMainMono$$RefreshActionBtn @ 00e7e740
+
+--- Listing ---
+00e666f4  str x24,[sp, #-0x40]!
+00e666f8  stp x23,x22,[sp, #0x10]
+00e666fc  stp x21,x20,[sp, #0x20]
+00e66700  stp x19,x30,[sp, #0x30]
+00e66704  adrp x24,0x3572000
+00e66708  adrp x23,0x3348000
+00e6670c  ldrb w8,[x24, #0x994]
+00e66710  ldr x23,[x23, #0x138]
+00e66714  mov x21,x3
+00e66718  mov x20,x2
+00e6671c  mov w22,w1
+00e66720  mov x19,x0
+00e66724  tbnz w8,#0x0,0x00e6673c
+00e66728  adrp x0,0x3348000
+00e6672c  ldr x0,[x0, #0x138]
+00e66730  bl 0x00b0789c
+00e66734  mov w8,#0x1
+00e66738  strb w8,[x24, #0x994]
+00e6673c  mov x0,x19
+00e66740  str w22,[x19, #0x38]
+00e66744  str x20,[x0, #0x40]!
+00e66748  mov x1,x20
+00e6674c  bl 0x00b07850
+00e66750  mov x20,x19
+00e66754  str x21,[x20, #0x48]!
+00e66758  mov x0,x20
+00e6675c  mov x1,x21
+00e66760  bl 0x00b07850
+00e66764  mov x0,x19
+00e66768  mov x1,xzr
+00e6676c  bl 0x024e4ed4
+00e66770  ldr x8,[x23]
+00e66774  ldr x22,[x20]
+00e66778  mov x21,x0
+00e6677c  ldr w9,[x8, #0xe0]
+00e66780  cbnz w9,0x00e6678c
+00e66784  mov x0,x8
+00e66788  bl 0x00b0798c
+00e6678c  cmp x22,#0x0
+00e66790  cset w1,ne
+00e66794  mov x0,x21
+00e66798  mov x2,xzr
+00e6679c  bl 0x00e13880
+00e667a0  ldr x8,[x20]
+00e667a4  cbz x8,0x00e66804
+00e667a8  mov x0,x19
+00e667ac  bl 0x00e66528
+00e667b0  cbz x0,0x00e66818
+00e667b4  ldr x20,[x0, #0x18]
+00e667b8  bl 0x00e6660c
+00e667bc  ldr x8,[x23]
+00e667c0  mov w21,w0
+00e667c4  ldr w9,[x8, #0xe0]
+00e667c8  cbnz w9,0x00e667d4
+00e667cc  mov x0,x8
+00e667d0  bl 0x00b0798c
+00e667d4  and w1,w21,#0x1
+00e667d8  mov x0,x20
+00e667dc  mov x2,xzr
+00e667e0  bl 0x00e13880
+00e667e4  mov x0,x19
+00e667e8  bl 0x00e6681c
+00e667ec  mov x0,x19
+00e667f0  ldp x19,x30,[sp, #0x30]
+00e667f4  ldp x21,x20,[sp, #0x20]
+00e667f8  ldp x23,x22,[sp, #0x10]
+00e667fc  ldr x24,[sp], #0x40
+00e66800  b 0x00e6691c
+00e66804  ldp x19,x30,[sp, #0x30]
+00e66808  ldp x21,x20,[sp, #0x20]
+00e6680c  ldp x23,x22,[sp, #0x10]
+00e66810  ldr x24,[sp], #0x40
+00e66814  ret
+00e66818  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e6681c_AutoActionItemMono__RefreshHead.txt
+================================================================================
+Function: AutoActionItemMono$$RefreshHead @ 00e6681c
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetSprite @ 00e14c70
+  -> UINode$$get_Image @ 00dc0d50
+  -> BaseData$$get_icon @ 00df3224
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> AutoActionItemMono$$get_auto_head_dead @ 00e66198
+  -> AutoActionItemMono$$get_auto_head @ 00e66444
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> RoleNews$$get_actorShow @ 00fe1980
+
+--- Calls IN ---
+  <- AutoActionItemMono$$Init @ 00e666f4
+
+--- Listing ---
+00e6681c  stp x21,x20,[sp, #-0x20]!
+00e66820  stp x19,x30,[sp, #0x10]
+00e66824  adrp x20,0x3572000
+00e66828  ldrb w8,[x20, #0x996]
+00e6682c  mov x19,x0
+00e66830  tbnz w8,#0x0,0x00e66848
+00e66834  adrp x0,0x3348000
+00e66838  ldr x0,[x0, #0x138]
+00e6683c  bl 0x00b0789c
+00e66840  mov w8,#0x1
+00e66844  strb w8,[x20, #0x996]
+00e66848  mov x0,x19
+00e6684c  bl 0x00e66444
+00e66850  cbz x0,0x00e66918
+00e66854  mov x1,xzr
+00e66858  bl 0x00dc0d50
+00e6685c  ldr x8,[x19, #0x48]
+00e66860  cbz x8,0x00e66918
+00e66864  mov x20,x0
+00e66868  mov x0,x8
+00e6686c  mov x1,xzr
+00e66870  bl 0x00fe1980
+00e66874  cbz x0,0x00e66918
+00e66878  adrp x21,0x3348000
+00e6687c  ldr x21,[x21, #0x138]
+00e66880  mov x1,xzr
+00e66884  bl 0x00df3224
+00e66888  ldr x8,[x21]
+00e6688c  mov x21,x0
+00e66890  ldr w9,[x8, #0xe0]
+00e66894  cbnz w9,0x00e668a0
+00e66898  mov x0,x8
+00e6689c  bl 0x00b0798c
+00e668a0  fmov s0,wzr
+00e668a4  mov x0,x20
+00e668a8  mov x1,x21
+00e668ac  mov x2,xzr
+00e668b0  mov w3,wzr
+00e668b4  mov x4,xzr
+00e668b8  bl 0x00e14c70
+00e668bc  mov x0,x19
+00e668c0  bl 0x00e66198
+00e668c4  cbz x0,0x00e66918
+00e668c8  mov x1,xzr
+00e668cc  bl 0x00dc0d50
+00e668d0  ldr x8,[x19, #0x48]
+00e668d4  cbz x8,0x00e66918
+00e668d8  mov x19,x0
+00e668dc  mov x0,x8
+00e668e0  mov x1,xzr
+00e668e4  bl 0x00fe1980
+00e668e8  cbz x0,0x00e66918
+00e668ec  mov x1,xzr
+00e668f0  bl 0x00df3224
+00e668f4  mov x1,x0
+00e668f8  mov x0,x19
+00e668fc  ldp x19,x30,[sp, #0x10]
+00e66900  fmov s0,wzr
+00e66904  mov x2,xzr
+00e66908  mov w3,wzr
+00e6690c  mov x4,xzr
+00e66910  ldp x21,x20,[sp], #0x20
+00e66914  b 0x00e14c70
+00e66918  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e6691c_AutoActionItemMono__Refresh.txt
+================================================================================
+Function: AutoActionItemMono$$Refresh @ 00e6691c
+
+--- Calls OUT ---
+  -> RoleNews$$get_AutoUniqueSkill @ 00fe5be4
+  -> AutoActionItemMono$$get_btn_open @ 00e6627c
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> AutoActionItemMono$$get_btn_close @ 00e66360
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> RoleNews$$get_isLive @ 00fdfa60
+  -> AutoActionItemMono$$get_auto_dead @ 00e65fd0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AutoActionItemMono$$get_auto_live @ 00e660b4
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AutoActionItemMono$$RoleDead @ 00e66bc4
+  <- AutoActionItemMono$$OnClickChange @ 00e66c6c
+  <- AutoActionItemMono$$Init @ 00e666f4
+
+--- Listing ---
+00e6691c  str x22,[sp, #-0x30]!
+00e66920  stp x21,x20,[sp, #0x10]
+00e66924  stp x19,x30,[sp, #0x20]
+00e66928  adrp x20,0x3572000
+00e6692c  ldrb w8,[x20, #0x995]
+00e66930  mov x19,x0
+00e66934  tbnz w8,#0x0,0x00e6694c
+00e66938  adrp x0,0x3348000
+00e6693c  ldr x0,[x0, #0x138]
+00e66940  bl 0x00b0789c
+00e66944  mov w8,#0x1
+00e66948  strb w8,[x20, #0x995]
+00e6694c  mov x0,x19
+00e66950  bl 0x00e660b4
+00e66954  cbz x0,0x00e66a70
+00e66958  mov x8,x0
+00e6695c  ldr x0,[x19, #0x48]
+00e66960  cbz x0,0x00e66a70
+00e66964  adrp x22,0x3348000
+00e66968  ldr x20,[x8, #0x18]
+00e6696c  ldr x22,[x22, #0x138]
+00e66970  mov x1,xzr
+00e66974  bl 0x00fdfa60
+00e66978  ldr x8,[x22]
+00e6697c  mov w21,w0
+00e66980  ldr w9,[x8, #0xe0]
+00e66984  cbnz w9,0x00e66990
+00e66988  mov x0,x8
+00e6698c  bl 0x00b0798c
+00e66990  and w1,w21,#0x1
+00e66994  mov x0,x20
+00e66998  mov x2,xzr
+00e6699c  bl 0x00e13880
+00e669a0  mov x0,x19
+00e669a4  bl 0x00e65fd0
+00e669a8  cbz x0,0x00e66a70
+00e669ac  ldr x8,[x19, #0x48]
+00e669b0  cbz x8,0x00e66a70
+00e669b4  ldr x20,[x0, #0x18]
+00e669b8  mov x0,x8
+00e669bc  mov x1,xzr
+00e669c0  bl 0x00fdfa60
+00e669c4  mvn w8,w0
+00e669c8  and w1,w8,#0x1
+00e669cc  mov x0,x20
+00e669d0  mov x2,xzr
+00e669d4  bl 0x00e13880
+00e669d8  ldr x0,[x19, #0x48]
+00e669dc  cbz x0,0x00e66a70
+00e669e0  mov x1,xzr
+00e669e4  bl 0x00fdfa60
+00e669e8  tbz w0,#0x0,0x00e66a60
+00e669ec  ldr x0,[x19, #0x48]
+00e669f0  cbz x0,0x00e66a70
+00e669f4  mov x1,xzr
+00e669f8  bl 0x00fe5be4
+00e669fc  mov w20,w0
+00e66a00  mov x0,x19
+00e66a04  bl 0x00e66360
+00e66a08  cbz x0,0x00e66a70
+00e66a0c  ldr x8,[x22]
+00e66a10  ldr x21,[x0, #0x18]
+00e66a14  ldr w9,[x8, #0xe0]
+00e66a18  cbnz w9,0x00e66a24
+00e66a1c  mov x0,x8
+00e66a20  bl 0x00b0798c
+00e66a24  and w1,w20,#0x1
+00e66a28  mov x0,x21
+00e66a2c  mov x2,xzr
+00e66a30  bl 0x00e13880
+00e66a34  mov x0,x19
+00e66a38  bl 0x00e6627c
+00e66a3c  cbz x0,0x00e66a70
+00e66a40  ldr x0,[x0, #0x18]
+00e66a44  mvn w8,w20
+00e66a48  ldp x19,x30,[sp, #0x20]
+00e66a4c  ldp x21,x20,[sp, #0x10]
+00e66a50  and w1,w8,#0x1
+00e66a54  mov x2,xzr
+00e66a58  ldr x22,[sp], #0x30
+00e66a5c  b 0x00e13880
+00e66a60  ldp x19,x30,[sp, #0x20]
+00e66a64  ldp x21,x20,[sp, #0x10]
+00e66a68  ldr x22,[sp], #0x30
+00e66a6c  ret
+00e66a70  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e66a74_AutoActionItemMono__Start.txt
+================================================================================
+Function: AutoActionItemMono$$Start @ 00e66a74
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UIEventListener$$Get @ 00e34224
+  -> BaseMono$$AddNotifyListener @ 00e1cfa8
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> FUN_00b079b0 @ 00b079b0
+  -> Ali.NotifyDelegate$$.ctor @ 00e10f80
+
+--- Calls IN ---
+
+--- Listing ---
+00e66a74  str x22,[sp, #-0x30]!
+00e66a78  stp x21,x20,[sp, #0x10]
+00e66a7c  stp x19,x30,[sp, #0x20]
+00e66a80  adrp x21,0x3572000
+00e66a84  adrp x20,0x332d000
+00e66a88  ldrb w8,[x21, #0x997]
+00e66a8c  ldr x20,[x20, #0xd38]
+00e66a90  mov x19,x0
+00e66a94  tbnz w8,#0x0,0x00e66ae8
+00e66a98  adrp x0,0x333c000
+00e66a9c  ldr x0,[x0, #0x320]
+00e66aa0  bl 0x00b0789c
+00e66aa4  adrp x0,0x3369000
+00e66aa8  ldr x0,[x0, #0xe18]
+00e66aac  bl 0x00b0789c
+00e66ab0  adrp x0,0x333a000
+00e66ab4  ldr x0,[x0, #0x628]
+00e66ab8  bl 0x00b0789c
+00e66abc  adrp x0,0x332d000
+00e66ac0  ldr x0,[x0, #0xd38]
+00e66ac4  bl 0x00b0789c
+00e66ac8  adrp x0,0x3360000
+00e66acc  ldr x0,[x0, #0x750]
+00e66ad0  bl 0x00b0789c
+00e66ad4  adrp x0,0x3313000
+00e66ad8  ldr x0,[x0, #0x7c0]
+00e66adc  bl 0x00b0789c
+00e66ae0  mov w8,#0x1
+00e66ae4  strb w8,[x21, #0x997]
+00e66ae8  adrp x21,0x3360000
+00e66aec  ldr x21,[x21, #0x750]
+00e66af0  mov x0,x19
+00e66af4  mov x1,xzr
+00e66af8  bl 0x024e4ed4
+00e66afc  ldr x8,[x20]
+00e66b00  mov x20,x0
+00e66b04  ldr w9,[x8, #0xe0]
+00e66b08  cbnz w9,0x00e66b14
+00e66b0c  mov x0,x8
+00e66b10  bl 0x00b0798c
+00e66b14  mov w1,#0x1
+00e66b18  mov x0,x20
+00e66b1c  mov x2,xzr
+00e66b20  bl 0x00e34224
+00e66b24  ldr x8,[x21]
+00e66b28  mov x20,x0
+00e66b2c  mov x0,x8
+00e66b30  bl 0x00b079a0
+00e66b34  cbz x0,0x00e66bc0
+00e66b38  adrp x8,0x333c000
+00e66b3c  ldr x8,[x8, #0x320]
+00e66b40  mov x1,x19
+00e66b44  mov x3,xzr
+00e66b48  mov x21,x0
+00e66b4c  ldr x2,[x8]
+00e66b50  bl 0x00e35bd0
+00e66b54  cbz x20,0x00e66bc0
+00e66b58  adrp x22,0x333a000
+00e66b5c  ldr x22,[x22, #0x628]
+00e66b60  str x21,[x20, #0x38]!
+00e66b64  mov x0,x20
+00e66b68  mov x1,x21
+00e66b6c  bl 0x00b07850
+00e66b70  ldr x0,[x22]
+00e66b74  bl 0x00b079a0
+00e66b78  cbz x0,0x00e66bc0
+00e66b7c  adrp x8,0x3369000
+00e66b80  ldr x8,[x8, #0xe18]
+00e66b84  adrp x21,0x3313000
+00e66b88  mov x1,x19
+00e66b8c  mov x3,xzr
+00e66b90  ldr x2,[x8]
+00e66b94  ldr x21,[x21, #0x7c0]
+00e66b98  mov x20,x0
+00e66b9c  bl 0x00e10f80
+00e66ba0  ldr x1,[x21]
+00e66ba4  mov x0,x19
+00e66ba8  mov x2,x20
+00e66bac  ldp x19,x30,[sp, #0x20]
+00e66bb0  ldp x21,x20,[sp, #0x10]
+00e66bb4  mov x3,xzr
+00e66bb8  ldr x22,[sp], #0x30
+00e66bbc  b 0x00e1cfa8
+00e66bc0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e66bc4_AutoActionItemMono__RoleDead.txt
+================================================================================
+Function: AutoActionItemMono$$RoleDead @ 00e66bc4
+
+--- Calls OUT ---
+  -> AutoActionItemMono$$Refresh @ 00e6691c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00e66bc4  stp x21,x20,[sp, #-0x20]!
+00e66bc8  stp x19,x30,[sp, #0x10]
+00e66bcc  adrp x21,0x3572000
+00e66bd0  ldrb w8,[x21, #0x998]
+00e66bd4  mov x20,x1
+00e66bd8  mov x19,x0
+00e66bdc  tbnz w8,#0x0,0x00e66bf4
+00e66be0  adrp x0,0x3376000
+00e66be4  ldr x0,[x0, #0x698]
+00e66be8  bl 0x00b0789c
+00e66bec  mov w8,#0x1
+00e66bf0  strb w8,[x21, #0x998]
+00e66bf4  cbz x20,0x00e66c64
+00e66bf8  ldr w8,[x20, #0x18]
+00e66bfc  cbz w8,0x00e66c68
+00e66c00  ldr x8,[x20, #0x20]
+00e66c04  cbz x8,0x00e66c48
+00e66c08  adrp x9,0x3376000
+00e66c0c  ldr x9,[x9, #0x698]
+00e66c10  ldr x10,[x8]
+00e66c14  ldr x9,[x9]
+00e66c18  ldrb w12,[x10, #0x12c]
+00e66c1c  ldrb w11,[x9, #0x12c]
+00e66c20  cmp w12,w11
+00e66c24  b.cc 0x00e66c48
+00e66c28  ldr x10,[x10, #0xc8]
+00e66c2c  add x10,x10,x11, LSL #0x3
+00e66c30  ldur x10,[x10, #-0x8]
+00e66c34  cmp x10,x9
+00e66c38  b.ne 0x00e66c48
+00e66c3c  ldr x9,[x19, #0x48]
+00e66c40  cmp x8,x9
+00e66c44  b.eq 0x00e66c54
+00e66c48  ldp x19,x30,[sp, #0x10]
+00e66c4c  ldp x21,x20,[sp], #0x20
+00e66c50  ret
+00e66c54  mov x0,x19
+00e66c58  ldp x19,x30,[sp, #0x10]
+00e66c5c  ldp x21,x20,[sp], #0x20
+00e66c60  b 0x00e6691c
+00e66c64  bl 0x00b079b0
+00e66c68  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00e66c6c_AutoActionItemMono__OnClickChange.txt
+================================================================================
+Function: AutoActionItemMono$$OnClickChange @ 00e66c6c
+
+--- Calls OUT ---
+  -> RoleNews$$get_FirstActorID @ 00fe0b6c
+  -> AutoActionItemMono$$Refresh @ 00e6691c
+  -> RoleNews$$get_isLive @ 00fdfa60
+  -> AutoActionItemMono$$get_IsLocked @ 00e6660c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> DataCenter$$SaveUniqueStrategy @ 016e930c
+  -> FUN_00b079b0 @ 00b079b0
+  -> DataCenter$$GetUniqueStrategy @ 016e9234
+
+--- Calls IN ---
+
+--- Listing ---
+00e66c6c  stp x21,x20,[sp, #-0x20]!
+00e66c70  stp x19,x30,[sp, #0x10]
+00e66c74  adrp x20,0x3572000
+00e66c78  ldrb w8,[x20, #0x999]
+00e66c7c  mov x19,x0
+00e66c80  tbnz w8,#0x0,0x00e66c98
+00e66c84  adrp x0,0x3347000
+00e66c88  ldr x0,[x0, #0x410]
+00e66c8c  bl 0x00b0789c
+00e66c90  mov w8,#0x1
+00e66c94  strb w8,[x20, #0x999]
+00e66c98  ldr x0,[x19, #0x48]
+00e66c9c  cbz x0,0x00e66cb4
+00e66ca0  mov x1,xzr
+00e66ca4  bl 0x00fdfa60
+00e66ca8  tbz w0,#0x0,0x00e66cb4
+00e66cac  bl 0x00e6660c
+00e66cb0  tbz w0,#0x0,0x00e66cc0
+00e66cb4  ldp x19,x30,[sp, #0x10]
+00e66cb8  ldp x21,x20,[sp], #0x20
+00e66cbc  ret
+00e66cc0  adrp x21,0x3347000
+00e66cc4  ldr x21,[x21, #0x410]
+00e66cc8  ldr x0,[x21]
+00e66ccc  bl 0x01e0894c
+00e66cd0  ldr x8,[x19, #0x48]
+00e66cd4  cbz x8,0x00e66d50
+00e66cd8  mov x20,x0
+00e66cdc  mov x0,x8
+00e66ce0  mov x1,xzr
+00e66ce4  bl 0x00fe0b6c
+00e66ce8  cbz x20,0x00e66d50
+00e66cec  mov w1,w0
+00e66cf0  mov x0,x20
+00e66cf4  mov x2,xzr
+00e66cf8  bl 0x016e9234
+00e66cfc  ldr x8,[x21]
+00e66d00  mov w20,w0
+00e66d04  mov x0,x8
+00e66d08  bl 0x01e0894c
+00e66d0c  ldr x8,[x19, #0x48]
+00e66d10  cbz x8,0x00e66d50
+00e66d14  mov x21,x0
+00e66d18  mov x0,x8
+00e66d1c  mov x1,xzr
+00e66d20  bl 0x00fe0b6c
+00e66d24  cbz x21,0x00e66d50
+00e66d28  mvn w8,w20
+00e66d2c  mov w1,w0
+00e66d30  and w2,w8,#0x1
+00e66d34  mov x0,x21
+00e66d38  mov x3,xzr
+00e66d3c  bl 0x016e930c
+00e66d40  mov x0,x19
+00e66d44  ldp x19,x30,[sp, #0x10]
+00e66d48  ldp x21,x20,[sp], #0x20
+00e66d4c  b 0x00e6691c
+00e66d50  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e66d54_AutoActionItemMono__.ctor.txt
+================================================================================
+Function: AutoActionItemMono$$.ctor @ 00e66d54
+
+--- Calls OUT ---
+  -> BaseMono$$.ctor @ 00e1c6b4
+
+--- Calls IN ---
+
+--- Listing ---
+00e66d54  mov x1,xzr
+00e66d58  b 0x00e1c6b4
+
+

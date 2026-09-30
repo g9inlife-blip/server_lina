@@ -1,0 +1,1824 @@
+================================================================================
+### FILE: 00e427c0_YPCShareSDK__get_loginUseGuest.txt
+================================================================================
+Function: YPCShareSDK$$get_loginUseGuest @ 00e427c0
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+
+--- Listing ---
+00e427c0  stp x21,x20,[sp, #-0x20]!
+00e427c4  stp x19,x30,[sp, #0x10]
+00e427c8  adrp x21,0x3572000
+00e427cc  adrp x20,0x3381000
+00e427d0  ldrb w8,[x21, #0x85c]
+00e427d4  ldr x20,[x20, #0x2a8]
+00e427d8  mov x19,x0
+00e427dc  tbnz w8,#0x0,0x00e427f4
+00e427e0  adrp x0,0x3381000
+00e427e4  ldr x0,[x0, #0x2a8]
+00e427e8  bl 0x00b0789c
+00e427ec  mov w8,#0x1
+00e427f0  strb w8,[x21, #0x85c]
+00e427f4  ldr x0,[x20]
+00e427f8  ldr w8,[x0, #0xe0]
+00e427fc  cbnz w8,0x00e42808
+00e42800  bl 0x00b0798c
+00e42804  ldr x0,[x20]
+00e42808  ldr x8,[x0, #0xb8]
+00e4280c  ldr x0,[x8, #0x10]
+00e42810  cbz x0,0x00e42828
+00e42814  mov x1,x19
+00e42818  ldp x19,x30,[sp, #0x10]
+00e4281c  mov x2,xzr
+00e42820  ldp x21,x20,[sp], #0x20
+00e42824  b 0x01060aac
+00e42828  ldp x19,x30,[sp, #0x10]
+00e4282c  mov w0,#0x1
+00e42830  ldp x21,x20,[sp], #0x20
+00e42834  ret
+
+
+================================================================================
+### FILE: 00e42838_YPCShareSDK__Awake.txt
+================================================================================
+Function: YPCShareSDK$$Awake @ 00e42838
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> YPCShareSDK$$Init @ 00e428f4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$Awake @ 01e090dc
+  -> UnityEngine.Object$$set_name @ 024df584
+
+--- Calls IN ---
+
+--- Listing ---
+00e42838  stp x21,x20,[sp, #-0x20]!
+00e4283c  stp x19,x30,[sp, #0x10]
+00e42840  adrp x21,0x3572000
+00e42844  adrp x20,0x3381000
+00e42848  ldrb w8,[x21, #0x85d]
+00e4284c  ldr x20,[x20, #0x2a8]
+00e42850  mov x19,x0
+00e42854  tbnz w8,#0x0,0x00e42884
+00e42858  adrp x0,0x3377000
+00e4285c  ldr x0,[x0, #0x838]
+00e42860  bl 0x00b0789c
+00e42864  adrp x0,0x3381000
+00e42868  ldr x0,[x0, #0x2a8]
+00e4286c  bl 0x00b0789c
+00e42870  adrp x0,0x333d000
+00e42874  ldr x0,[x0, #0xa98]
+00e42878  bl 0x00b0789c
+00e4287c  mov w8,#0x1
+00e42880  strb w8,[x21, #0x85d]
+00e42884  ldr x0,[x20]
+00e42888  ldr w8,[x0, #0xe0]
+00e4288c  cbnz w8,0x00e42898
+00e42890  bl 0x00b0798c
+00e42894  ldr x0,[x20]
+00e42898  ldr x8,[x0, #0xb8]
+00e4289c  ldr x0,[x8, #0x18]
+00e428a0  cbz x0,0x00e428b8
+00e428a4  mov x1,x19
+00e428a8  ldp x19,x30,[sp, #0x10]
+00e428ac  mov x2,xzr
+00e428b0  ldp x21,x20,[sp], #0x20
+00e428b4  b 0x01060dac
+00e428b8  adrp x8,0x333d000
+00e428bc  ldr x8,[x8, #0xa98]
+00e428c0  adrp x20,0x3377000
+00e428c4  mov x0,x19
+00e428c8  mov x2,xzr
+00e428cc  ldr x1,[x8]
+00e428d0  ldr x20,[x20, #0x838]
+00e428d4  bl 0x024df584
+00e428d8  ldr x1,[x20]
+00e428dc  mov x0,x19
+00e428e0  bl 0x01e090dc
+00e428e4  mov x0,x19
+00e428e8  ldp x19,x30,[sp, #0x10]
+00e428ec  ldp x21,x20,[sp], #0x20
+00e428f0  b 0x00e428f4
+
+
+================================================================================
+### FILE: 00e428f4_YPCShareSDK__Init.txt
+================================================================================
+Function: YPCShareSDK$$Init @ 00e428f4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- YPCShareSDK$$Awake @ 00e42838
+  <- XLua.CSObjectWrap.YPCShareSDKWrap$$_m_Init @ 015289d0
+
+--- Listing ---
+00e428f4  stp x21,x20,[sp, #-0x20]!
+00e428f8  stp x19,x30,[sp, #0x10]
+00e428fc  adrp x21,0x3572000
+00e42900  adrp x20,0x3381000
+00e42904  ldrb w8,[x21, #0x85f]
+00e42908  ldr x20,[x20, #0x2a8]
+00e4290c  mov x19,x0
+00e42910  tbnz w8,#0x0,0x00e42928
+00e42914  adrp x0,0x3381000
+00e42918  ldr x0,[x0, #0x2a8]
+00e4291c  bl 0x00b0789c
+00e42920  mov w8,#0x1
+00e42924  strb w8,[x21, #0x85f]
+00e42928  ldr x0,[x20]
+00e4292c  ldr w8,[x0, #0xe0]
+00e42930  cbnz w8,0x00e4293c
+00e42934  bl 0x00b0798c
+00e42938  ldr x0,[x20]
+00e4293c  ldr x8,[x0, #0xb8]
+00e42940  ldr x0,[x8, #0x28]
+00e42944  cbz x0,0x00e4295c
+00e42948  mov x1,x19
+00e4294c  ldp x19,x30,[sp, #0x10]
+00e42950  mov x2,xzr
+00e42954  ldp x21,x20,[sp], #0x20
+00e42958  b 0x01060dac
+00e4295c  ldp x19,x30,[sp, #0x10]
+00e42960  ldp x21,x20,[sp], #0x20
+00e42964  ret
+
+
+================================================================================
+### FILE: 00e42968_YPCShareSDK__FirebaseEvent.txt
+================================================================================
+Function: YPCShareSDK$$FirebaseEvent @ 00e42968
+
+--- Calls OUT ---
+  -> System.String$$op_Equality @ 01fd05b0
+  -> Ali$$Notify @ 00e039c4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> YPCShareSDK$$GetLoginState @ 00e42c70
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+  <- YPCShareSDK$$OnLoginSucess @ 00e42ff4
+
+--- Listing ---
+00e42968  sub sp,sp,#0x40
+00e4296c  stp x23,x22,[sp, #0x10]
+00e42970  stp x21,x20,[sp, #0x20]
+00e42974  stp x19,x30,[sp, #0x30]
+00e42978  adrp x21,0x3572000
+00e4297c  adrp x20,0x3381000
+00e42980  ldrb w8,[x21, #0x85e]
+00e42984  ldr x20,[x20, #0x2a8]
+00e42988  mov x19,x0
+00e4298c  tbnz w8,#0x0,0x00e42a10
+00e42990  adrp x0,0x335f000
+00e42994  ldr x0,[x0, #0x20]
+00e42998  bl 0x00b0789c
+00e4299c  adrp x0,0x3332000
+00e429a0  ldr x0,[x0, #0x38]
+00e429a4  bl 0x00b0789c
+00e429a8  adrp x0,0x3370000
+00e429ac  ldr x0,[x0, #0x778]
+00e429b0  bl 0x00b0789c
+00e429b4  adrp x0,0x331a000
+00e429b8  ldr x0,[x0, #0xf40]
+00e429bc  bl 0x00b0789c
+00e429c0  adrp x0,0x3381000
+00e429c4  ldr x0,[x0, #0x2a8]
+00e429c8  bl 0x00b0789c
+00e429cc  adrp x0,0x3369000
+00e429d0  ldr x0,[x0, #0xab8]
+00e429d4  bl 0x00b0789c
+00e429d8  adrp x0,0x3365000
+00e429dc  ldr x0,[x0, #0xa10]
+00e429e0  bl 0x00b0789c
+00e429e4  adrp x0,0x3329000
+00e429e8  ldr x0,[x0, #0x48]
+00e429ec  bl 0x00b0789c
+00e429f0  adrp x0,0x3351000
+00e429f4  ldr x0,[x0, #0xc00]
+00e429f8  bl 0x00b0789c
+00e429fc  adrp x0,0x3375000
+00e42a00  ldr x0,[x0, #0x998]
+00e42a04  bl 0x00b0789c
+00e42a08  mov w8,#0x1
+00e42a0c  strb w8,[x21, #0x85e]
+00e42a10  ldr x0,[x20]
+00e42a14  ldr w8,[x0, #0xe0]
+00e42a18  cbnz w8,0x00e42a24
+00e42a1c  bl 0x00b0798c
+00e42a20  ldr x0,[x20]
+00e42a24  ldr x8,[x0, #0xb8]
+00e42a28  ldr x0,[x8, #0x20]
+00e42a2c  cbz x0,0x00e42a4c
+00e42a30  mov x1,x19
+00e42a34  ldp x19,x30,[sp, #0x30]
+00e42a38  ldp x21,x20,[sp, #0x20]
+00e42a3c  ldp x23,x22,[sp, #0x10]
+00e42a40  mov x2,xzr
+00e42a44  add sp,sp,#0x40
+00e42a48  b 0x01060dac
+00e42a4c  adrp x8,0x331a000
+00e42a50  ldr x8,[x8, #0xf40]
+00e42a54  ldr x0,[x8]
+00e42a58  bl 0x01e0894c
+00e42a5c  cbz x0,0x00e42c5c
+00e42a60  adrp x19,0x3329000
+00e42a64  adrp x23,0x335f000
+00e42a68  adrp x20,0x3370000
+00e42a6c  adrp x21,0x3332000
+00e42a70  adrp x22,0x3375000
+00e42a74  ldr x19,[x19, #0x48]
+00e42a78  ldr x23,[x23, #0x20]
+00e42a7c  ldr x20,[x20, #0x778]
+00e42a80  ldr x21,[x21, #0x38]
+00e42a84  ldr x22,[x22, #0x998]
+00e42a88  bl 0x00e42c70
+00e42a8c  ldr x1,[x19]
+00e42a90  mov x2,xzr
+00e42a94  mov x19,x0
+00e42a98  bl 0x01fd05b0
+00e42a9c  tbz w0,#0x0,0x00e42ae0
+00e42aa0  ldr x0,[x23]
+00e42aa4  ldr w8,[x0, #0xe0]
+00e42aa8  cbnz w8,0x00e42ab4
+00e42aac  bl 0x00b0798c
+00e42ab0  ldr x0,[x23]
+00e42ab4  ldr x8,[x0, #0xb8]
+00e42ab8  ldr x0,[x20]
+00e42abc  mov w1,#0x1
+00e42ac0  ldr x19,[x8, #0x10]
+00e42ac4  bl 0x00b078f8
+00e42ac8  mov x20,x0
+00e42acc  ldr x0,[x21]
+00e42ad0  mov w8,#0x6917
+00e42ad4  movk w8,#0x478, LSL #16
+00e42ad8  add w8,w8,#0x2
+00e42adc  b 0x00e42bec
+00e42ae0  adrp x8,0x3369000
+00e42ae4  ldr x8,[x8, #0xab8]
+00e42ae8  mov x0,x19
+00e42aec  mov x2,xzr
+00e42af0  ldr x1,[x8]
+00e42af4  bl 0x01fd05b0
+00e42af8  tbz w0,#0x0,0x00e42b38
+00e42afc  ldr x0,[x23]
+00e42b00  ldr w8,[x0, #0xe0]
+00e42b04  cbnz w8,0x00e42b10
+00e42b08  bl 0x00b0798c
+00e42b0c  ldr x0,[x23]
+00e42b10  ldr x8,[x0, #0xb8]
+00e42b14  ldr x0,[x20]
+00e42b18  mov w1,#0x1
+00e42b1c  ldr x19,[x8, #0x10]
+00e42b20  bl 0x00b078f8
+00e42b24  mov x20,x0
+00e42b28  ldr x0,[x21]
+00e42b2c  mov w8,#0x6917
+00e42b30  movk w8,#0x478, LSL #16
+00e42b34  b 0x00e42bec
+00e42b38  adrp x8,0x3351000
+00e42b3c  ldr x8,[x8, #0xc00]
+00e42b40  mov x0,x19
+00e42b44  mov x2,xzr
+00e42b48  ldr x1,[x8]
+00e42b4c  bl 0x01fd05b0
+00e42b50  tbz w0,#0x0,0x00e42b94
+00e42b54  ldr x0,[x23]
+00e42b58  ldr w8,[x0, #0xe0]
+00e42b5c  cbnz w8,0x00e42b68
+00e42b60  bl 0x00b0798c
+00e42b64  ldr x0,[x23]
+00e42b68  ldr x8,[x0, #0xb8]
+00e42b6c  ldr x0,[x20]
+00e42b70  mov w1,#0x1
+00e42b74  ldr x19,[x8, #0x10]
+00e42b78  bl 0x00b078f8
+00e42b7c  mov x20,x0
+00e42b80  ldr x0,[x21]
+00e42b84  mov w8,#0x6917
+00e42b88  movk w8,#0x478, LSL #16
+00e42b8c  add w8,w8,#0x1
+00e42b90  b 0x00e42bec
+00e42b94  adrp x8,0x3365000
+00e42b98  ldr x8,[x8, #0xa10]
+00e42b9c  mov x0,x19
+00e42ba0  mov x2,xzr
+00e42ba4  ldr x1,[x8]
+00e42ba8  bl 0x01fd05b0
+00e42bac  tbz w0,#0x0,0x00e42c48
+00e42bb0  ldr x0,[x23]
+00e42bb4  ldr w8,[x0, #0xe0]
+00e42bb8  cbnz w8,0x00e42bc4
+00e42bbc  bl 0x00b0798c
+00e42bc0  ldr x0,[x23]
+00e42bc4  ldr x8,[x0, #0xb8]
+00e42bc8  ldr x0,[x20]
+00e42bcc  mov w1,#0x1
+00e42bd0  ldr x19,[x8, #0x10]
+00e42bd4  bl 0x00b078f8
+00e42bd8  mov x20,x0
+00e42bdc  ldr x0,[x21]
+00e42be0  mov w8,#0x6917
+00e42be4  movk w8,#0x478, LSL #16
+00e42be8  add w8,w8,#0x3
+00e42bec  add x1,sp,#0xc
+00e42bf0  str w8,[sp, #0xc]
+00e42bf4  bl 0x00b07994
+00e42bf8  cbz x20,0x00e42c5c
+00e42bfc  mov x21,x0
+00e42c00  cbz x0,0x00e42c18
+00e42c04  ldr x8,[x20]
+00e42c08  mov x0,x21
+00e42c0c  ldr x1,[x8, #0x40]
+00e42c10  bl 0x00b07990
+00e42c14  cbz x0,0x00e42c64
+00e42c18  ldr w8,[x20, #0x18]
+00e42c1c  cbz w8,0x00e42c60
+00e42c20  mov x0,x20
+00e42c24  str x21,[x0, #0x20]!
+00e42c28  mov x1,x21
+00e42c2c  bl 0x00b07850
+00e42c30  cbz x19,0x00e42c5c
+00e42c34  ldr x1,[x22]
+00e42c38  mov x0,x19
+00e42c3c  mov x2,x20
+00e42c40  mov x3,xzr
+00e42c44  bl 0x00e039c4
+00e42c48  ldp x19,x30,[sp, #0x30]
+00e42c4c  ldp x21,x20,[sp, #0x20]
+00e42c50  ldp x23,x22,[sp, #0x10]
+00e42c54  add sp,sp,#0x40
+00e42c58  ret
+00e42c5c  bl 0x00b079b0
+00e42c60  bl 0x00b079b8
+00e42c64  bl 0x00b079d4
+00e42c68  mov x1,xzr
+00e42c6c  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00e42c70_YPCShareSDK__GetLoginState.txt
+================================================================================
+Function: YPCShareSDK$$GetLoginState @ 00e42c70
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp19 @ 01061abc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- YPCShareSDK$$FirebaseEvent @ 00e42968
+  <- XLua.CSObjectWrap.YPCShareSDKWrap$$_m_GetLoginState @ 01529040
+
+--- Listing ---
+00e42c70  stp x21,x20,[sp, #-0x20]!
+00e42c74  stp x19,x30,[sp, #0x10]
+00e42c78  adrp x21,0x3572000
+00e42c7c  adrp x20,0x3381000
+00e42c80  ldrb w8,[x21, #0x863]
+00e42c84  ldr x20,[x20, #0x2a8]
+00e42c88  mov x19,x0
+00e42c8c  tbnz w8,#0x0,0x00e42ca4
+00e42c90  adrp x0,0x3381000
+00e42c94  ldr x0,[x0, #0x2a8]
+00e42c98  bl 0x00b0789c
+00e42c9c  mov w8,#0x1
+00e42ca0  strb w8,[x21, #0x863]
+00e42ca4  ldr x0,[x20]
+00e42ca8  ldr w8,[x0, #0xe0]
+00e42cac  cbnz w8,0x00e42cb8
+00e42cb0  bl 0x00b0798c
+00e42cb4  ldr x0,[x20]
+00e42cb8  ldr x8,[x0, #0xb8]
+00e42cbc  ldr x0,[x8, #0x48]
+00e42cc0  cbz x0,0x00e42cd8
+00e42cc4  mov x1,x19
+00e42cc8  ldp x19,x30,[sp, #0x10]
+00e42ccc  mov x2,xzr
+00e42cd0  ldp x21,x20,[sp], #0x20
+00e42cd4  b 0x01061abc
+00e42cd8  ldp x19,x30,[sp, #0x10]
+00e42cdc  ldp x21,x20,[sp], #0x20
+00e42ce0  ret
+
+
+================================================================================
+### FILE: 00e42ce4_YPCShareSDK__Login.txt
+================================================================================
+Function: YPCShareSDK$$Login @ 00e42ce4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.YPCShareSDKWrap$$_m_Login @ 01528b6c
+
+--- Listing ---
+00e42ce4  stp x21,x20,[sp, #-0x20]!
+00e42ce8  stp x19,x30,[sp, #0x10]
+00e42cec  adrp x21,0x3572000
+00e42cf0  adrp x20,0x3381000
+00e42cf4  ldrb w8,[x21, #0x860]
+00e42cf8  ldr x20,[x20, #0x2a8]
+00e42cfc  mov x19,x0
+00e42d00  tbnz w8,#0x0,0x00e42d24
+00e42d04  adrp x0,0x336b000
+00e42d08  ldr x0,[x0, #0xd18]
+00e42d0c  bl 0x00b0789c
+00e42d10  adrp x0,0x3381000
+00e42d14  ldr x0,[x0, #0x2a8]
+00e42d18  bl 0x00b0789c
+00e42d1c  mov w8,#0x1
+00e42d20  strb w8,[x21, #0x860]
+00e42d24  ldr x0,[x20]
+00e42d28  ldr w8,[x0, #0xe0]
+00e42d2c  cbnz w8,0x00e42d38
+00e42d30  bl 0x00b0798c
+00e42d34  ldr x0,[x20]
+00e42d38  ldr x8,[x0, #0xb8]
+00e42d3c  ldr x0,[x8, #0x30]
+00e42d40  cbz x0,0x00e42d58
+00e42d44  mov x1,x19
+00e42d48  ldp x19,x30,[sp, #0x10]
+00e42d4c  mov x2,xzr
+00e42d50  ldp x21,x20,[sp], #0x20
+00e42d54  b 0x01060dac
+00e42d58  adrp x8,0x336b000
+00e42d5c  ldr x8,[x8, #0xd18]
+00e42d60  ldr x8,[x8]
+00e42d64  ldr x8,[x8, #0xb8]
+00e42d68  ldr x0,[x8]
+00e42d6c  cbz x0,0x00e42d84
+00e42d70  ldp x19,x30,[sp, #0x10]
+00e42d74  mov w1,#0x1
+00e42d78  mov x2,xzr
+00e42d7c  ldp x21,x20,[sp], #0x20
+00e42d80  b 0x00dec19c
+00e42d84  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e42d88_YPCShareSDK__LoginOut.txt
+================================================================================
+Function: YPCShareSDK$$LoginOut @ 00e42d88
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.YPCShareSDKWrap$$_m_LoginOut @ 01528d08
+
+--- Listing ---
+00e42d88  stp x21,x20,[sp, #-0x20]!
+00e42d8c  stp x19,x30,[sp, #0x10]
+00e42d90  adrp x21,0x3572000
+00e42d94  adrp x20,0x3381000
+00e42d98  ldrb w8,[x21, #0x861]
+00e42d9c  ldr x20,[x20, #0x2a8]
+00e42da0  mov x19,x0
+00e42da4  tbnz w8,#0x0,0x00e42dbc
+00e42da8  adrp x0,0x3381000
+00e42dac  ldr x0,[x0, #0x2a8]
+00e42db0  bl 0x00b0789c
+00e42db4  mov w8,#0x1
+00e42db8  strb w8,[x21, #0x861]
+00e42dbc  ldr x0,[x20]
+00e42dc0  ldr w8,[x0, #0xe0]
+00e42dc4  cbnz w8,0x00e42dd0
+00e42dc8  bl 0x00b0798c
+00e42dcc  ldr x0,[x20]
+00e42dd0  ldr x8,[x0, #0xb8]
+00e42dd4  ldr x0,[x8, #0x38]
+00e42dd8  cbz x0,0x00e42df0
+00e42ddc  mov x1,x19
+00e42de0  ldp x19,x30,[sp, #0x10]
+00e42de4  mov x2,xzr
+00e42de8  ldp x21,x20,[sp], #0x20
+00e42dec  b 0x01060dac
+00e42df0  ldp x19,x30,[sp, #0x10]
+00e42df4  ldp x21,x20,[sp], #0x20
+00e42df8  ret
+
+
+================================================================================
+### FILE: 00e42dfc_YPCShareSDK__ShowGuestBindDialog.txt
+================================================================================
+Function: YPCShareSDK$$ShowGuestBindDialog @ 00e42dfc
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.YPCShareSDKWrap$$_m_ShowGuestBindDialog @ 01528ea4
+  <- SysSettingPanelMono$$OnClickBinding_en @ 00f78c80
+
+--- Listing ---
+00e42dfc  stp x21,x20,[sp, #-0x20]!
+00e42e00  stp x19,x30,[sp, #0x10]
+00e42e04  adrp x21,0x3572000
+00e42e08  adrp x20,0x3381000
+00e42e0c  ldrb w8,[x21, #0x862]
+00e42e10  ldr x20,[x20, #0x2a8]
+00e42e14  mov x19,x0
+00e42e18  tbnz w8,#0x0,0x00e42e3c
+00e42e1c  adrp x0,0x336b000
+00e42e20  ldr x0,[x0, #0xd18]
+00e42e24  bl 0x00b0789c
+00e42e28  adrp x0,0x3381000
+00e42e2c  ldr x0,[x0, #0x2a8]
+00e42e30  bl 0x00b0789c
+00e42e34  mov w8,#0x1
+00e42e38  strb w8,[x21, #0x862]
+00e42e3c  ldr x0,[x20]
+00e42e40  ldr w8,[x0, #0xe0]
+00e42e44  cbnz w8,0x00e42e50
+00e42e48  bl 0x00b0798c
+00e42e4c  ldr x0,[x20]
+00e42e50  ldr x8,[x0, #0xb8]
+00e42e54  ldr x0,[x8, #0x40]
+00e42e58  cbz x0,0x00e42e70
+00e42e5c  mov x1,x19
+00e42e60  ldp x19,x30,[sp, #0x10]
+00e42e64  mov x2,xzr
+00e42e68  ldp x21,x20,[sp], #0x20
+00e42e6c  b 0x01060dac
+00e42e70  adrp x8,0x336b000
+00e42e74  ldr x8,[x8, #0xd18]
+00e42e78  ldr x8,[x8]
+00e42e7c  ldr x8,[x8, #0xb8]
+00e42e80  ldr x0,[x8]
+00e42e84  cbz x0,0x00e42e9c
+00e42e88  ldp x19,x30,[sp, #0x10]
+00e42e8c  mov w1,#0x1
+00e42e90  mov x2,xzr
+00e42e94  ldp x21,x20,[sp], #0x20
+00e42e98  b 0x00dec19c
+00e42e9c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e42ea0_YPCShareSDK__GetUserInfo.txt
+================================================================================
+Function: YPCShareSDK$$GetUserInfo @ 00e42ea0
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp19 @ 01061abc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.YPCShareSDKWrap$$_m_GetUserInfo @ 015291f4
+
+--- Listing ---
+00e42ea0  stp x21,x20,[sp, #-0x20]!
+00e42ea4  stp x19,x30,[sp, #0x10]
+00e42ea8  adrp x21,0x3572000
+00e42eac  adrp x20,0x3381000
+00e42eb0  ldrb w8,[x21, #0x864]
+00e42eb4  ldr x20,[x20, #0x2a8]
+00e42eb8  mov x19,x0
+00e42ebc  tbnz w8,#0x0,0x00e42ed4
+00e42ec0  adrp x0,0x3381000
+00e42ec4  ldr x0,[x0, #0x2a8]
+00e42ec8  bl 0x00b0789c
+00e42ecc  mov w8,#0x1
+00e42ed0  strb w8,[x21, #0x864]
+00e42ed4  ldr x0,[x20]
+00e42ed8  ldr w8,[x0, #0xe0]
+00e42edc  cbnz w8,0x00e42ee8
+00e42ee0  bl 0x00b0798c
+00e42ee4  ldr x0,[x20]
+00e42ee8  ldr x8,[x0, #0xb8]
+00e42eec  ldr x0,[x8, #0x50]
+00e42ef0  cbz x0,0x00e42f08
+00e42ef4  mov x1,x19
+00e42ef8  ldp x19,x30,[sp, #0x10]
+00e42efc  mov x2,xzr
+00e42f00  ldp x21,x20,[sp], #0x20
+00e42f04  b 0x01061abc
+00e42f08  ldp x19,x30,[sp, #0x10]
+00e42f0c  ldp x21,x20,[sp], #0x20
+00e42f10  ret
+
+
+================================================================================
+### FILE: 00e42f14_YPCShareSDK__OnLoginStart.txt
+================================================================================
+Function: YPCShareSDK$$OnLoginStart @ 00e42f14
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00e42f14  str x22,[sp, #-0x30]!
+00e42f18  stp x21,x20,[sp, #0x10]
+00e42f1c  stp x19,x30,[sp, #0x20]
+00e42f20  adrp x22,0x3572000
+00e42f24  adrp x21,0x3381000
+00e42f28  ldrb w8,[x22, #0x865]
+00e42f2c  ldr x21,[x21, #0x2a8]
+00e42f30  mov x19,x1
+00e42f34  mov x20,x0
+00e42f38  tbnz w8,#0x0,0x00e42f68
+00e42f3c  adrp x0,0x336b000
+00e42f40  ldr x0,[x0, #0x7d0]
+00e42f44  bl 0x00b0789c
+00e42f48  adrp x0,0x3381000
+00e42f4c  ldr x0,[x0, #0x2a8]
+00e42f50  bl 0x00b0789c
+00e42f54  adrp x0,0x3373000
+00e42f58  ldr x0,[x0, #0xa28]
+00e42f5c  bl 0x00b0789c
+00e42f60  mov w8,#0x1
+00e42f64  strb w8,[x22, #0x865]
+00e42f68  ldr x0,[x21]
+00e42f6c  ldr w8,[x0, #0xe0]
+00e42f70  cbnz w8,0x00e42f7c
+00e42f74  bl 0x00b0798c
+00e42f78  ldr x0,[x21]
+00e42f7c  ldr x8,[x0, #0xb8]
+00e42f80  ldr x0,[x8, #0x58]
+00e42f84  cbz x0,0x00e42fa4
+00e42f88  mov x1,x20
+00e42f8c  mov x2,x19
+00e42f90  ldp x19,x30,[sp, #0x20]
+00e42f94  ldp x21,x20,[sp, #0x10]
+00e42f98  mov x3,xzr
+00e42f9c  ldr x22,[sp], #0x30
+00e42fa0  b 0x0106125c
+00e42fa4  adrp x8,0x3373000
+00e42fa8  ldr x8,[x8, #0xa28]
+00e42fac  adrp x20,0x336b000
+00e42fb0  mov x1,x19
+00e42fb4  mov x2,xzr
+00e42fb8  ldr x0,[x8]
+00e42fbc  ldr x20,[x20, #0x7d0]
+00e42fc0  bl 0x01fd2850
+00e42fc4  ldr x8,[x20]
+00e42fc8  mov x19,x0
+00e42fcc  ldr w9,[x8, #0xe0]
+00e42fd0  cbnz w9,0x00e42fdc
+00e42fd4  mov x0,x8
+00e42fd8  bl 0x00b0798c
+00e42fdc  mov x0,x19
+00e42fe0  ldp x19,x30,[sp, #0x20]
+00e42fe4  ldp x21,x20,[sp, #0x10]
+00e42fe8  mov x1,xzr
+00e42fec  ldr x22,[sp], #0x30
+00e42ff0  b 0x024c0104
+
+
+================================================================================
+### FILE: 00e42ff4_YPCShareSDK__OnLoginSucess.txt
+================================================================================
+Function: YPCShareSDK$$OnLoginSucess @ 00e42ff4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Split @ 01fe0d68
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.String$$Concat @ 01fd2850
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> FUN_00b079b8 @ 00b079b8
+  -> YPCShareSDK$$FirebaseEvent @ 00e42968
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> ProtocolGame_HttpRequest$$V4_POST_Login @ 00dd5b48
+  -> System.String$$Concat @ 01fdebb8
+
+--- Calls IN ---
+
+--- Listing ---
+00e42ff4  str x22,[sp, #-0x30]!
+00e42ff8  stp x21,x20,[sp, #0x10]
+00e42ffc  stp x19,x30,[sp, #0x20]
+00e43000  adrp x22,0x3572000
+00e43004  adrp x21,0x3381000
+00e43008  ldrb w8,[x22, #0x866]
+00e4300c  ldr x21,[x21, #0x2a8]
+00e43010  mov x19,x1
+00e43014  mov x20,x0
+00e43018  tbnz w8,#0x0,0x00e4306c
+00e4301c  adrp x0,0x336b000
+00e43020  ldr x0,[x0, #0x7d0]
+00e43024  bl 0x00b0789c
+00e43028  adrp x0,0x336b000
+00e4302c  ldr x0,[x0, #0xd18]
+00e43030  bl 0x00b0789c
+00e43034  adrp x0,0x3381000
+00e43038  ldr x0,[x0, #0x2a8]
+00e4303c  bl 0x00b0789c
+00e43040  adrp x0,0x3318000
+00e43044  ldr x0,[x0, #0xd40]
+00e43048  bl 0x00b0789c
+00e4304c  adrp x0,0x3346000
+00e43050  ldr x0,[x0, #0xc28]
+00e43054  bl 0x00b0789c
+00e43058  adrp x0,0x332c000
+00e4305c  ldr x0,[x0, #0x2c0]
+00e43060  bl 0x00b0789c
+00e43064  mov w8,#0x1
+00e43068  strb w8,[x22, #0x866]
+00e4306c  ldr x0,[x21]
+00e43070  ldr w8,[x0, #0xe0]
+00e43074  cbnz w8,0x00e43080
+00e43078  bl 0x00b0798c
+00e4307c  ldr x0,[x21]
+00e43080  ldr x8,[x0, #0xb8]
+00e43084  ldr x0,[x8, #0x60]
+00e43088  cbz x0,0x00e430a8
+00e4308c  mov x1,x20
+00e43090  mov x2,x19
+00e43094  ldp x19,x30,[sp, #0x20]
+00e43098  ldp x21,x20,[sp, #0x10]
+00e4309c  mov x3,xzr
+00e430a0  ldr x22,[sp], #0x30
+00e430a4  b 0x0106125c
+00e430a8  adrp x21,0x336b000
+00e430ac  ldr x21,[x21, #0xd18]
+00e430b0  mov x0,x20
+00e430b4  bl 0x00e42968
+00e430b8  ldr x8,[x21]
+00e430bc  ldr x8,[x8, #0xb8]
+00e430c0  ldr x0,[x8]
+00e430c4  cbz x0,0x00e431a0
+00e430c8  adrp x20,0x3318000
+00e430cc  adrp x21,0x336b000
+00e430d0  ldr x20,[x20, #0xd40]
+00e430d4  ldr x21,[x21, #0x7d0]
+00e430d8  mov w1,wzr
+00e430dc  mov x2,xzr
+00e430e0  bl 0x00dec19c
+00e430e4  ldr x0,[x20]
+00e430e8  mov x1,x19
+00e430ec  mov x2,xzr
+00e430f0  bl 0x01fd2850
+00e430f4  ldr x8,[x21]
+00e430f8  mov x20,x0
+00e430fc  ldr w9,[x8, #0xe0]
+00e43100  cbnz w9,0x00e4310c
+00e43104  mov x0,x8
+00e43108  bl 0x00b0798c
+00e4310c  mov x0,x20
+00e43110  mov x1,xzr
+00e43114  bl 0x024c0104
+00e43118  cbz x19,0x00e431a0
+00e4311c  mov w1,#0x2c
+00e43120  mov x0,x19
+00e43124  mov w2,wzr
+00e43128  mov x3,xzr
+00e4312c  bl 0x01fe0d68
+00e43130  cbz x0,0x00e431a0
+00e43134  ldr w8,[x0, #0x18]
+00e43138  mov x19,x0
+00e4313c  cbz w8,0x00e4319c
+00e43140  cmp w8,#0x1
+00e43144  b.eq 0x00e4319c
+00e43148  adrp x8,0x3346000
+00e4314c  ldr x8,[x8, #0xc28]
+00e43150  ldp x1,x2,[x19, #0x20]
+00e43154  mov x3,xzr
+00e43158  ldr x0,[x8]
+00e4315c  bl 0x01fdebb8
+00e43160  mov x1,xzr
+00e43164  bl 0x024c0104
+00e43168  ldr w8,[x19, #0x18]
+00e4316c  cmp w8,#0x1
+00e43170  b.eq 0x00e4319c
+00e43174  cbz w8,0x00e4319c
+00e43178  adrp x8,0x332c000
+00e4317c  ldr x8,[x8, #0x2c0]
+00e43180  ldp x1,x0,[x19, #0x20]
+00e43184  ldp x19,x30,[sp, #0x20]
+00e43188  ldp x21,x20,[sp, #0x10]
+00e4318c  ldr x2,[x8]
+00e43190  mov x3,xzr
+00e43194  ldr x22,[sp], #0x30
+00e43198  b 0x00dd5b48
+00e4319c  bl 0x00b079b8
+00e431a0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e431a4_YPCShareSDK__OnLoginCannel.txt
+================================================================================
+Function: YPCShareSDK$$OnLoginCannel @ 00e431a4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.String$$Concat @ 01fd2850
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> LoginManager$$LoginCanel @ 00dd6adc
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00e431a4  str x22,[sp, #-0x30]!
+00e431a8  stp x21,x20,[sp, #0x10]
+00e431ac  stp x19,x30,[sp, #0x20]
+00e431b0  adrp x22,0x3572000
+00e431b4  adrp x21,0x3381000
+00e431b8  ldrb w8,[x22, #0x867]
+00e431bc  ldr x21,[x21, #0x2a8]
+00e431c0  mov x19,x1
+00e431c4  mov x20,x0
+00e431c8  tbnz w8,#0x0,0x00e43210
+00e431cc  adrp x0,0x336b000
+00e431d0  ldr x0,[x0, #0x7d0]
+00e431d4  bl 0x00b0789c
+00e431d8  adrp x0,0x333c000
+00e431dc  ldr x0,[x0, #0x8f8]
+00e431e0  bl 0x00b0789c
+00e431e4  adrp x0,0x336b000
+00e431e8  ldr x0,[x0, #0xd18]
+00e431ec  bl 0x00b0789c
+00e431f0  adrp x0,0x3381000
+00e431f4  ldr x0,[x0, #0x2a8]
+00e431f8  bl 0x00b0789c
+00e431fc  adrp x0,0x334b000
+00e43200  ldr x0,[x0, #0x4e0]
+00e43204  bl 0x00b0789c
+00e43208  mov w8,#0x1
+00e4320c  strb w8,[x22, #0x867]
+00e43210  ldr x0,[x21]
+00e43214  ldr w8,[x0, #0xe0]
+00e43218  cbnz w8,0x00e43224
+00e4321c  bl 0x00b0798c
+00e43220  ldr x0,[x21]
+00e43224  ldr x8,[x0, #0xb8]
+00e43228  ldr x0,[x8, #0x68]
+00e4322c  cbz x0,0x00e4324c
+00e43230  mov x1,x20
+00e43234  mov x2,x19
+00e43238  ldp x19,x30,[sp, #0x20]
+00e4323c  ldp x21,x20,[sp, #0x10]
+00e43240  mov x3,xzr
+00e43244  ldr x22,[sp], #0x30
+00e43248  b 0x0106125c
+00e4324c  adrp x8,0x336b000
+00e43250  ldr x8,[x8, #0xd18]
+00e43254  ldr x8,[x8]
+00e43258  ldr x8,[x8, #0xb8]
+00e4325c  ldr x0,[x8]
+00e43260  cbz x0,0x00e432dc
+00e43264  adrp x21,0x334b000
+00e43268  adrp x22,0x336b000
+00e4326c  adrp x20,0x333c000
+00e43270  ldr x21,[x21, #0x4e0]
+00e43274  ldr x22,[x22, #0x7d0]
+00e43278  ldr x20,[x20, #0x8f8]
+00e4327c  mov w1,wzr
+00e43280  mov x2,xzr
+00e43284  bl 0x00dec19c
+00e43288  ldr x0,[x21]
+00e4328c  mov x1,x19
+00e43290  mov x2,xzr
+00e43294  bl 0x01fd2850
+00e43298  ldr x8,[x22]
+00e4329c  mov x19,x0
+00e432a0  ldr w9,[x8, #0xe0]
+00e432a4  cbnz w9,0x00e432b0
+00e432a8  mov x0,x8
+00e432ac  bl 0x00b0798c
+00e432b0  mov x0,x19
+00e432b4  mov x1,xzr
+00e432b8  bl 0x024c0104
+00e432bc  ldr x0,[x20]
+00e432c0  bl 0x01e0894c
+00e432c4  cbz x0,0x00e432dc
+00e432c8  ldp x19,x30,[sp, #0x20]
+00e432cc  ldp x21,x20,[sp, #0x10]
+00e432d0  mov x1,xzr
+00e432d4  ldr x22,[sp], #0x30
+00e432d8  b 0x00dd6adc
+00e432dc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e432e0_YPCShareSDK__OnLoginError.txt
+================================================================================
+Function: YPCShareSDK$$OnLoginError @ 00e432e0
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.String$$Concat @ 01fd2850
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> LoginManager$$HandleLoginFailed @ 00dd71e8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00e432e0  str x22,[sp, #-0x30]!
+00e432e4  stp x21,x20,[sp, #0x10]
+00e432e8  stp x19,x30,[sp, #0x20]
+00e432ec  adrp x22,0x3572000
+00e432f0  adrp x21,0x3381000
+00e432f4  ldrb w8,[x22, #0x868]
+00e432f8  ldr x21,[x21, #0x2a8]
+00e432fc  mov x19,x1
+00e43300  mov x20,x0
+00e43304  tbnz w8,#0x0,0x00e4334c
+00e43308  adrp x0,0x336b000
+00e4330c  ldr x0,[x0, #0x7d0]
+00e43310  bl 0x00b0789c
+00e43314  adrp x0,0x333c000
+00e43318  ldr x0,[x0, #0x8f8]
+00e4331c  bl 0x00b0789c
+00e43320  adrp x0,0x336b000
+00e43324  ldr x0,[x0, #0xd18]
+00e43328  bl 0x00b0789c
+00e4332c  adrp x0,0x3381000
+00e43330  ldr x0,[x0, #0x2a8]
+00e43334  bl 0x00b0789c
+00e43338  adrp x0,0x333f000
+00e4333c  ldr x0,[x0, #0x2e8]
+00e43340  bl 0x00b0789c
+00e43344  mov w8,#0x1
+00e43348  strb w8,[x22, #0x868]
+00e4334c  ldr x0,[x21]
+00e43350  ldr w8,[x0, #0xe0]
+00e43354  cbnz w8,0x00e43360
+00e43358  bl 0x00b0798c
+00e4335c  ldr x0,[x21]
+00e43360  ldr x8,[x0, #0xb8]
+00e43364  ldr x0,[x8, #0x70]
+00e43368  cbz x0,0x00e43388
+00e4336c  mov x1,x20
+00e43370  mov x2,x19
+00e43374  ldp x19,x30,[sp, #0x20]
+00e43378  ldp x21,x20,[sp, #0x10]
+00e4337c  mov x3,xzr
+00e43380  ldr x22,[sp], #0x30
+00e43384  b 0x0106125c
+00e43388  adrp x8,0x336b000
+00e4338c  ldr x8,[x8, #0xd18]
+00e43390  ldr x8,[x8]
+00e43394  ldr x8,[x8, #0xb8]
+00e43398  ldr x0,[x8]
+00e4339c  cbz x0,0x00e43424
+00e433a0  adrp x20,0x333f000
+00e433a4  adrp x22,0x336b000
+00e433a8  adrp x21,0x333c000
+00e433ac  ldr x20,[x20, #0x2e8]
+00e433b0  ldr x22,[x22, #0x7d0]
+00e433b4  ldr x21,[x21, #0x8f8]
+00e433b8  mov w1,wzr
+00e433bc  mov x2,xzr
+00e433c0  bl 0x00dec19c
+00e433c4  ldr x0,[x20]
+00e433c8  mov x1,x19
+00e433cc  mov x2,xzr
+00e433d0  bl 0x01fd2850
+00e433d4  ldr x8,[x22]
+00e433d8  mov x20,x0
+00e433dc  ldr w9,[x8, #0xe0]
+00e433e0  cbnz w9,0x00e433ec
+00e433e4  mov x0,x8
+00e433e8  bl 0x00b0798c
+00e433ec  mov x0,x20
+00e433f0  mov x1,xzr
+00e433f4  bl 0x024c0104
+00e433f8  ldr x0,[x21]
+00e433fc  bl 0x01e0894c
+00e43400  cbz x0,0x00e43424
+00e43404  mov x1,x19
+00e43408  ldp x19,x30,[sp, #0x20]
+00e4340c  ldp x21,x20,[sp, #0x10]
+00e43410  mov w3,#0x1
+00e43414  mov w2,wzr
+00e43418  mov x4,xzr
+00e4341c  ldr x22,[sp], #0x30
+00e43420  b 0x00dd71e8
+00e43424  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e43428_YPCShareSDK__OnLoginOutSucess.txt
+================================================================================
+Function: YPCShareSDK$$OnLoginOutSucess @ 00e43428
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> Ali$$GameLogout @ 00e09168
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.String$$Concat @ 01fd2850
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00e43428  str x22,[sp, #-0x30]!
+00e4342c  stp x21,x20,[sp, #0x10]
+00e43430  stp x19,x30,[sp, #0x20]
+00e43434  adrp x22,0x3572000
+00e43438  adrp x21,0x3381000
+00e4343c  ldrb w8,[x22, #0x869]
+00e43440  ldr x21,[x21, #0x2a8]
+00e43444  mov x19,x1
+00e43448  mov x20,x0
+00e4344c  tbnz w8,#0x0,0x00e43494
+00e43450  adrp x0,0x335f000
+00e43454  ldr x0,[x0, #0x20]
+00e43458  bl 0x00b0789c
+00e4345c  adrp x0,0x336b000
+00e43460  ldr x0,[x0, #0x7d0]
+00e43464  bl 0x00b0789c
+00e43468  adrp x0,0x336b000
+00e4346c  ldr x0,[x0, #0xd18]
+00e43470  bl 0x00b0789c
+00e43474  adrp x0,0x3381000
+00e43478  ldr x0,[x0, #0x2a8]
+00e4347c  bl 0x00b0789c
+00e43480  adrp x0,0x3329000
+00e43484  ldr x0,[x0, #0x8f8]
+00e43488  bl 0x00b0789c
+00e4348c  mov w8,#0x1
+00e43490  strb w8,[x22, #0x869]
+00e43494  ldr x0,[x21]
+00e43498  ldr w8,[x0, #0xe0]
+00e4349c  cbnz w8,0x00e434a8
+00e434a0  bl 0x00b0798c
+00e434a4  ldr x0,[x21]
+00e434a8  ldr x8,[x0, #0xb8]
+00e434ac  ldr x0,[x8, #0x78]
+00e434b0  cbz x0,0x00e434d0
+00e434b4  mov x1,x20
+00e434b8  mov x2,x19
+00e434bc  ldp x19,x30,[sp, #0x20]
+00e434c0  ldp x21,x20,[sp, #0x10]
+00e434c4  mov x3,xzr
+00e434c8  ldr x22,[sp], #0x30
+00e434cc  b 0x0106125c
+00e434d0  adrp x8,0x336b000
+00e434d4  ldr x8,[x8, #0xd18]
+00e434d8  ldr x8,[x8]
+00e434dc  ldr x8,[x8, #0xb8]
+00e434e0  ldr x0,[x8]
+00e434e4  cbz x0,0x00e43568
+00e434e8  adrp x22,0x335f000
+00e434ec  adrp x21,0x3329000
+00e434f0  adrp x20,0x336b000
+00e434f4  ldr x22,[x22, #0x20]
+00e434f8  ldr x21,[x21, #0x8f8]
+00e434fc  ldr x20,[x20, #0x7d0]
+00e43500  mov w1,wzr
+00e43504  mov x2,xzr
+00e43508  bl 0x00dec19c
+00e4350c  ldr x0,[x22]
+00e43510  ldr w8,[x0, #0xe0]
+00e43514  cbnz w8,0x00e4351c
+00e43518  bl 0x00b0798c
+00e4351c  mov w0,#0x1
+00e43520  mov x1,xzr
+00e43524  bl 0x00e09168
+00e43528  ldr x0,[x21]
+00e4352c  mov x1,x19
+00e43530  mov x2,xzr
+00e43534  bl 0x01fd2850
+00e43538  ldr x8,[x20]
+00e4353c  mov x19,x0
+00e43540  ldr w9,[x8, #0xe0]
+00e43544  cbnz w9,0x00e43550
+00e43548  mov x0,x8
+00e4354c  bl 0x00b0798c
+00e43550  mov x0,x19
+00e43554  ldp x19,x30,[sp, #0x20]
+00e43558  ldp x21,x20,[sp, #0x10]
+00e4355c  mov x1,xzr
+00e43560  ldr x22,[sp], #0x30
+00e43564  b 0x024c0104
+00e43568  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e4356c_YPCShareSDK__OnLoginOutError.txt
+================================================================================
+Function: YPCShareSDK$$OnLoginOutError @ 00e4356c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00e4356c  str x22,[sp, #-0x30]!
+00e43570  stp x21,x20,[sp, #0x10]
+00e43574  stp x19,x30,[sp, #0x20]
+00e43578  adrp x22,0x3572000
+00e4357c  adrp x21,0x3381000
+00e43580  ldrb w8,[x22, #0x86a]
+00e43584  ldr x21,[x21, #0x2a8]
+00e43588  mov x19,x1
+00e4358c  mov x20,x0
+00e43590  tbnz w8,#0x0,0x00e435cc
+00e43594  adrp x0,0x336b000
+00e43598  ldr x0,[x0, #0x7d0]
+00e4359c  bl 0x00b0789c
+00e435a0  adrp x0,0x336b000
+00e435a4  ldr x0,[x0, #0xd18]
+00e435a8  bl 0x00b0789c
+00e435ac  adrp x0,0x3381000
+00e435b0  ldr x0,[x0, #0x2a8]
+00e435b4  bl 0x00b0789c
+00e435b8  adrp x0,0x333b000
+00e435bc  ldr x0,[x0, #0xd90]
+00e435c0  bl 0x00b0789c
+00e435c4  mov w8,#0x1
+00e435c8  strb w8,[x22, #0x86a]
+00e435cc  ldr x0,[x21]
+00e435d0  ldr w8,[x0, #0xe0]
+00e435d4  cbnz w8,0x00e435e0
+00e435d8  bl 0x00b0798c
+00e435dc  ldr x0,[x21]
+00e435e0  ldr x8,[x0, #0xb8]
+00e435e4  ldr x0,[x8, #0x80]
+00e435e8  cbz x0,0x00e43608
+00e435ec  mov x1,x20
+00e435f0  mov x2,x19
+00e435f4  ldp x19,x30,[sp, #0x20]
+00e435f8  ldp x21,x20,[sp, #0x10]
+00e435fc  mov x3,xzr
+00e43600  ldr x22,[sp], #0x30
+00e43604  b 0x0106125c
+00e43608  adrp x8,0x336b000
+00e4360c  ldr x8,[x8, #0xd18]
+00e43610  ldr x8,[x8]
+00e43614  ldr x8,[x8, #0xb8]
+00e43618  ldr x0,[x8]
+00e4361c  cbz x0,0x00e4367c
+00e43620  adrp x20,0x333b000
+00e43624  adrp x21,0x336b000
+00e43628  ldr x20,[x20, #0xd90]
+00e4362c  ldr x21,[x21, #0x7d0]
+00e43630  mov w1,wzr
+00e43634  mov x2,xzr
+00e43638  bl 0x00dec19c
+00e4363c  ldr x0,[x20]
+00e43640  mov x1,x19
+00e43644  mov x2,xzr
+00e43648  bl 0x01fd2850
+00e4364c  ldr x8,[x21]
+00e43650  mov x19,x0
+00e43654  ldr w9,[x8, #0xe0]
+00e43658  cbnz w9,0x00e43664
+00e4365c  mov x0,x8
+00e43660  bl 0x00b0798c
+00e43664  mov x0,x19
+00e43668  ldp x19,x30,[sp, #0x20]
+00e4366c  ldp x21,x20,[sp, #0x10]
+00e43670  mov x1,xzr
+00e43674  ldr x22,[sp], #0x30
+00e43678  b 0x024c0104
+00e4367c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e43680_YPCShareSDK__OnBindStart.txt
+================================================================================
+Function: YPCShareSDK$$OnBindStart @ 00e43680
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00e43680  str x22,[sp, #-0x30]!
+00e43684  stp x21,x20,[sp, #0x10]
+00e43688  stp x19,x30,[sp, #0x20]
+00e4368c  adrp x22,0x3572000
+00e43690  adrp x21,0x3381000
+00e43694  ldrb w8,[x22, #0x86b]
+00e43698  ldr x21,[x21, #0x2a8]
+00e4369c  mov x19,x1
+00e436a0  mov x20,x0
+00e436a4  tbnz w8,#0x0,0x00e436d4
+00e436a8  adrp x0,0x336b000
+00e436ac  ldr x0,[x0, #0x7d0]
+00e436b0  bl 0x00b0789c
+00e436b4  adrp x0,0x3381000
+00e436b8  ldr x0,[x0, #0x2a8]
+00e436bc  bl 0x00b0789c
+00e436c0  adrp x0,0x3373000
+00e436c4  ldr x0,[x0, #0xa28]
+00e436c8  bl 0x00b0789c
+00e436cc  mov w8,#0x1
+00e436d0  strb w8,[x22, #0x86b]
+00e436d4  ldr x0,[x21]
+00e436d8  ldr w8,[x0, #0xe0]
+00e436dc  cbnz w8,0x00e436e8
+00e436e0  bl 0x00b0798c
+00e436e4  ldr x0,[x21]
+00e436e8  ldr x8,[x0, #0xb8]
+00e436ec  ldr x0,[x8, #0x88]
+00e436f0  cbz x0,0x00e43710
+00e436f4  mov x1,x20
+00e436f8  mov x2,x19
+00e436fc  ldp x19,x30,[sp, #0x20]
+00e43700  ldp x21,x20,[sp, #0x10]
+00e43704  mov x3,xzr
+00e43708  ldr x22,[sp], #0x30
+00e4370c  b 0x0106125c
+00e43710  adrp x8,0x3373000
+00e43714  ldr x8,[x8, #0xa28]
+00e43718  adrp x20,0x336b000
+00e4371c  mov x1,x19
+00e43720  mov x2,xzr
+00e43724  ldr x0,[x8]
+00e43728  ldr x20,[x20, #0x7d0]
+00e4372c  bl 0x01fd2850
+00e43730  ldr x8,[x20]
+00e43734  mov x19,x0
+00e43738  ldr w9,[x8, #0xe0]
+00e4373c  cbnz w9,0x00e43748
+00e43740  mov x0,x8
+00e43744  bl 0x00b0798c
+00e43748  mov x0,x19
+00e4374c  ldp x19,x30,[sp, #0x20]
+00e43750  ldp x21,x20,[sp, #0x10]
+00e43754  mov x1,xzr
+00e43758  ldr x22,[sp], #0x30
+00e4375c  b 0x024c0104
+
+
+================================================================================
+### FILE: 00e43760_YPCShareSDK__OnBindSucess.txt
+================================================================================
+Function: YPCShareSDK$$OnBindSucess @ 00e43760
+
+--- Calls OUT ---
+  -> Ali$$Notify @ 00e039c4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.String$$Concat @ 01fd2850
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00e43760  str x22,[sp, #-0x30]!
+00e43764  stp x21,x20,[sp, #0x10]
+00e43768  stp x19,x30,[sp, #0x20]
+00e4376c  adrp x22,0x3572000
+00e43770  adrp x21,0x3381000
+00e43774  ldrb w8,[x22, #0x86c]
+00e43778  ldr x21,[x21, #0x2a8]
+00e4377c  mov x19,x1
+00e43780  mov x20,x0
+00e43784  tbnz w8,#0x0,0x00e437e4
+00e43788  adrp x0,0x335f000
+00e4378c  ldr x0,[x0, #0x20]
+00e43790  bl 0x00b0789c
+00e43794  adrp x0,0x335b000
+00e43798  ldr x0,[x0, #0x650]
+00e4379c  bl 0x00b0789c
+00e437a0  adrp x0,0x336b000
+00e437a4  ldr x0,[x0, #0x7d0]
+00e437a8  bl 0x00b0789c
+00e437ac  adrp x0,0x336b000
+00e437b0  ldr x0,[x0, #0xd18]
+00e437b4  bl 0x00b0789c
+00e437b8  adrp x0,0x3381000
+00e437bc  ldr x0,[x0, #0x2a8]
+00e437c0  bl 0x00b0789c
+00e437c4  adrp x0,0x332f000
+00e437c8  ldr x0,[x0, #0xe78]
+00e437cc  bl 0x00b0789c
+00e437d0  adrp x0,0x334f000
+00e437d4  ldr x0,[x0, #0xf0]
+00e437d8  bl 0x00b0789c
+00e437dc  mov w8,#0x1
+00e437e0  strb w8,[x22, #0x86c]
+00e437e4  ldr x0,[x21]
+00e437e8  ldr w8,[x0, #0xe0]
+00e437ec  cbnz w8,0x00e437f8
+00e437f0  bl 0x00b0798c
+00e437f4  ldr x0,[x21]
+00e437f8  ldr x8,[x0, #0xb8]
+00e437fc  ldr x0,[x8, #0x90]
+00e43800  cbz x0,0x00e43820
+00e43804  mov x1,x20
+00e43808  mov x2,x19
+00e4380c  ldp x19,x30,[sp, #0x20]
+00e43810  ldp x21,x20,[sp, #0x10]
+00e43814  mov x3,xzr
+00e43818  ldr x22,[sp], #0x30
+00e4381c  b 0x0106125c
+00e43820  adrp x8,0x336b000
+00e43824  ldr x8,[x8, #0xd18]
+00e43828  ldr x8,[x8]
+00e4382c  ldr x8,[x8, #0xb8]
+00e43830  ldr x0,[x8]
+00e43834  cbz x0,0x00e43920
+00e43838  adrp x21,0x332f000
+00e4383c  adrp x22,0x336b000
+00e43840  adrp x20,0x335f000
+00e43844  ldr x21,[x21, #0xe78]
+00e43848  ldr x22,[x22, #0x7d0]
+00e4384c  ldr x20,[x20, #0x20]
+00e43850  mov w1,wzr
+00e43854  mov x2,xzr
+00e43858  bl 0x00dec19c
+00e4385c  ldr x0,[x21]
+00e43860  mov x1,x19
+00e43864  mov x2,xzr
+00e43868  bl 0x01fd2850
+00e4386c  ldr x8,[x22]
+00e43870  mov x19,x0
+00e43874  ldr w9,[x8, #0xe0]
+00e43878  cbnz w9,0x00e43884
+00e4387c  mov x0,x8
+00e43880  bl 0x00b0798c
+00e43884  adrp x21,0x335b000
+00e43888  ldr x21,[x21, #0x650]
+00e4388c  mov x0,x19
+00e43890  mov x1,xzr
+00e43894  bl 0x024c0104
+00e43898  ldr x8,[x20]
+00e4389c  ldr w9,[x8, #0xe0]
+00e438a0  cbnz w9,0x00e438b0
+00e438a4  mov x0,x8
+00e438a8  bl 0x00b0798c
+00e438ac  ldr x8,[x20]
+00e438b0  ldr x20,[x21]
+00e438b4  ldr x8,[x8, #0xb8]
+00e438b8  ldr x9,[x20, #0x38]
+00e438bc  ldr x19,[x8, #0x10]
+00e438c0  ldr x0,[x9]
+00e438c4  ldrb w9,[x0, #0x132]
+00e438c8  tbnz w9,#0x0,0x00e438d0
+00e438cc  bl 0x00b2ac40
+00e438d0  ldr w8,[x0, #0xe0]
+00e438d4  cbnz w8,0x00e438dc
+00e438d8  bl 0x00b0798c
+00e438dc  ldr x8,[x20, #0x38]
+00e438e0  ldr x0,[x8]
+00e438e4  ldrb w8,[x0, #0x132]
+00e438e8  tbnz w8,#0x0,0x00e438f0
+00e438ec  bl 0x00b2ac40
+00e438f0  cbz x19,0x00e43920
+00e438f4  adrp x9,0x334f000
+00e438f8  ldr x8,[x0, #0xb8]
+00e438fc  ldr x9,[x9, #0xf0]
+00e43900  mov x0,x19
+00e43904  ldp x19,x30,[sp, #0x20]
+00e43908  ldr x2,[x8]
+00e4390c  ldr x1,[x9]
+00e43910  ldp x21,x20,[sp, #0x10]
+00e43914  mov x3,xzr
+00e43918  ldr x22,[sp], #0x30
+00e4391c  b 0x00e039c4
+00e43920  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e43924_YPCShareSDK__OnBindCannel.txt
+================================================================================
+Function: YPCShareSDK$$OnBindCannel @ 00e43924
+
+--- Calls OUT ---
+  -> Ali$$Notify @ 00e039c4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.String$$Concat @ 01fd2850
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00e43924  str x22,[sp, #-0x30]!
+00e43928  stp x21,x20,[sp, #0x10]
+00e4392c  stp x19,x30,[sp, #0x20]
+00e43930  adrp x22,0x3572000
+00e43934  adrp x21,0x3381000
+00e43938  ldrb w8,[x22, #0x86d]
+00e4393c  ldr x21,[x21, #0x2a8]
+00e43940  mov x19,x1
+00e43944  mov x20,x0
+00e43948  tbnz w8,#0x0,0x00e439a8
+00e4394c  adrp x0,0x335f000
+00e43950  ldr x0,[x0, #0x20]
+00e43954  bl 0x00b0789c
+00e43958  adrp x0,0x335b000
+00e4395c  ldr x0,[x0, #0x650]
+00e43960  bl 0x00b0789c
+00e43964  adrp x0,0x336b000
+00e43968  ldr x0,[x0, #0x7d0]
+00e4396c  bl 0x00b0789c
+00e43970  adrp x0,0x336b000
+00e43974  ldr x0,[x0, #0xd18]
+00e43978  bl 0x00b0789c
+00e4397c  adrp x0,0x3381000
+00e43980  ldr x0,[x0, #0x2a8]
+00e43984  bl 0x00b0789c
+00e43988  adrp x0,0x334f000
+00e4398c  ldr x0,[x0, #0xf0]
+00e43990  bl 0x00b0789c
+00e43994  adrp x0,0x331d000
+00e43998  ldr x0,[x0, #0x120]
+00e4399c  bl 0x00b0789c
+00e439a0  mov w8,#0x1
+00e439a4  strb w8,[x22, #0x86d]
+00e439a8  ldr x0,[x21]
+00e439ac  ldr w8,[x0, #0xe0]
+00e439b0  cbnz w8,0x00e439bc
+00e439b4  bl 0x00b0798c
+00e439b8  ldr x0,[x21]
+00e439bc  ldr x8,[x0, #0xb8]
+00e439c0  ldr x0,[x8, #0x98]
+00e439c4  cbz x0,0x00e439e4
+00e439c8  mov x1,x20
+00e439cc  mov x2,x19
+00e439d0  ldp x19,x30,[sp, #0x20]
+00e439d4  ldp x21,x20,[sp, #0x10]
+00e439d8  mov x3,xzr
+00e439dc  ldr x22,[sp], #0x30
+00e439e0  b 0x0106125c
+00e439e4  adrp x8,0x336b000
+00e439e8  ldr x8,[x8, #0xd18]
+00e439ec  ldr x8,[x8]
+00e439f0  ldr x8,[x8, #0xb8]
+00e439f4  ldr x0,[x8]
+00e439f8  cbz x0,0x00e43ae4
+00e439fc  adrp x21,0x331d000
+00e43a00  adrp x22,0x336b000
+00e43a04  adrp x20,0x335f000
+00e43a08  ldr x21,[x21, #0x120]
+00e43a0c  ldr x22,[x22, #0x7d0]
+00e43a10  ldr x20,[x20, #0x20]
+00e43a14  mov w1,wzr
+00e43a18  mov x2,xzr
+00e43a1c  bl 0x00dec19c
+00e43a20  ldr x0,[x21]
+00e43a24  mov x1,x19
+00e43a28  mov x2,xzr
+00e43a2c  bl 0x01fd2850
+00e43a30  ldr x8,[x22]
+00e43a34  mov x19,x0
+00e43a38  ldr w9,[x8, #0xe0]
+00e43a3c  cbnz w9,0x00e43a48
+00e43a40  mov x0,x8
+00e43a44  bl 0x00b0798c
+00e43a48  adrp x21,0x335b000
+00e43a4c  ldr x21,[x21, #0x650]
+00e43a50  mov x0,x19
+00e43a54  mov x1,xzr
+00e43a58  bl 0x024c0104
+00e43a5c  ldr x8,[x20]
+00e43a60  ldr w9,[x8, #0xe0]
+00e43a64  cbnz w9,0x00e43a74
+00e43a68  mov x0,x8
+00e43a6c  bl 0x00b0798c
+00e43a70  ldr x8,[x20]
+00e43a74  ldr x20,[x21]
+00e43a78  ldr x8,[x8, #0xb8]
+00e43a7c  ldr x9,[x20, #0x38]
+00e43a80  ldr x19,[x8, #0x10]
+00e43a84  ldr x0,[x9]
+00e43a88  ldrb w9,[x0, #0x132]
+00e43a8c  tbnz w9,#0x0,0x00e43a94
+00e43a90  bl 0x00b2ac40
+00e43a94  ldr w8,[x0, #0xe0]
+00e43a98  cbnz w8,0x00e43aa0
+00e43a9c  bl 0x00b0798c
+00e43aa0  ldr x8,[x20, #0x38]
+00e43aa4  ldr x0,[x8]
+00e43aa8  ldrb w8,[x0, #0x132]
+00e43aac  tbnz w8,#0x0,0x00e43ab4
+00e43ab0  bl 0x00b2ac40
+00e43ab4  cbz x19,0x00e43ae4
+00e43ab8  adrp x9,0x334f000
+00e43abc  ldr x8,[x0, #0xb8]
+00e43ac0  ldr x9,[x9, #0xf0]
+00e43ac4  mov x0,x19
+00e43ac8  ldp x19,x30,[sp, #0x20]
+00e43acc  ldr x2,[x8]
+00e43ad0  ldr x1,[x9]
+00e43ad4  ldp x21,x20,[sp, #0x10]
+00e43ad8  mov x3,xzr
+00e43adc  ldr x22,[sp], #0x30
+00e43ae0  b 0x00e039c4
+00e43ae4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e43ae8_YPCShareSDK__OnBindError.txt
+================================================================================
+Function: YPCShareSDK$$OnBindError @ 00e43ae8
+
+--- Calls OUT ---
+  -> Ali$$TipsError @ 00e0ee8c
+  -> Ali$$Notify @ 00e039c4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.String$$Concat @ 01fd2850
+  -> SDKManager$$SetLoading @ 00dec19c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00e43ae8  stp x23,x22,[sp, #-0x30]!
+00e43aec  stp x21,x20,[sp, #0x10]
+00e43af0  stp x19,x30,[sp, #0x20]
+00e43af4  adrp x22,0x3572000
+00e43af8  adrp x21,0x3381000
+00e43afc  ldrb w8,[x22, #0x86e]
+00e43b00  ldr x21,[x21, #0x2a8]
+00e43b04  mov x19,x1
+00e43b08  mov x20,x0
+00e43b0c  tbnz w8,#0x0,0x00e43b6c
+00e43b10  adrp x0,0x335f000
+00e43b14  ldr x0,[x0, #0x20]
+00e43b18  bl 0x00b0789c
+00e43b1c  adrp x0,0x335b000
+00e43b20  ldr x0,[x0, #0x650]
+00e43b24  bl 0x00b0789c
+00e43b28  adrp x0,0x336b000
+00e43b2c  ldr x0,[x0, #0x7d0]
+00e43b30  bl 0x00b0789c
+00e43b34  adrp x0,0x336b000
+00e43b38  ldr x0,[x0, #0xd18]
+00e43b3c  bl 0x00b0789c
+00e43b40  adrp x0,0x3381000
+00e43b44  ldr x0,[x0, #0x2a8]
+00e43b48  bl 0x00b0789c
+00e43b4c  adrp x0,0x3355000
+00e43b50  ldr x0,[x0, #0xe20]
+00e43b54  bl 0x00b0789c
+00e43b58  adrp x0,0x334f000
+00e43b5c  ldr x0,[x0, #0xf0]
+00e43b60  bl 0x00b0789c
+00e43b64  mov w8,#0x1
+00e43b68  strb w8,[x22, #0x86e]
+00e43b6c  ldr x0,[x21]
+00e43b70  ldr w8,[x0, #0xe0]
+00e43b74  cbnz w8,0x00e43b80
+00e43b78  bl 0x00b0798c
+00e43b7c  ldr x0,[x21]
+00e43b80  ldr x8,[x0, #0xb8]
+00e43b84  ldr x0,[x8, #0xa0]
+00e43b88  cbz x0,0x00e43ba8
+00e43b8c  mov x1,x20
+00e43b90  mov x2,x19
+00e43b94  ldp x19,x30,[sp, #0x20]
+00e43b98  ldp x21,x20,[sp, #0x10]
+00e43b9c  mov x3,xzr
+00e43ba0  ldp x23,x22,[sp], #0x30
+00e43ba4  b 0x0106125c
+00e43ba8  adrp x8,0x336b000
+00e43bac  ldr x8,[x8, #0xd18]
+00e43bb0  ldr x8,[x8]
+00e43bb4  ldr x8,[x8, #0xb8]
+00e43bb8  ldr x0,[x8]
+00e43bbc  cbz x0,0x00e43cc8
+00e43bc0  adrp x21,0x335f000
+00e43bc4  adrp x20,0x335b000
+00e43bc8  ldr x21,[x21, #0x20]
+00e43bcc  ldr x20,[x20, #0x650]
+00e43bd0  mov w1,wzr
+00e43bd4  mov x2,xzr
+00e43bd8  bl 0x00dec19c
+00e43bdc  ldr x8,[x21]
+00e43be0  ldr w9,[x8, #0xe0]
+00e43be4  cbnz w9,0x00e43bf4
+00e43be8  mov x0,x8
+00e43bec  bl 0x00b0798c
+00e43bf0  ldr x8,[x21]
+00e43bf4  ldr x22,[x20]
+00e43bf8  ldr x8,[x8, #0xb8]
+00e43bfc  ldr x9,[x22, #0x38]
+00e43c00  ldr x20,[x8, #0x10]
+00e43c04  ldr x0,[x9]
+00e43c08  ldrb w9,[x0, #0x132]
+00e43c0c  tbnz w9,#0x0,0x00e43c14
+00e43c10  bl 0x00b2ac40
+00e43c14  ldr w8,[x0, #0xe0]
+00e43c18  cbnz w8,0x00e43c20
+00e43c1c  bl 0x00b0798c
+00e43c20  ldr x8,[x22, #0x38]
+00e43c24  ldr x0,[x8]
+00e43c28  ldrb w8,[x0, #0x132]
+00e43c2c  tbnz w8,#0x0,0x00e43c34
+00e43c30  bl 0x00b2ac40
+00e43c34  cbz x20,0x00e43cc8
+00e43c38  adrp x9,0x334f000
+00e43c3c  ldr x8,[x0, #0xb8]
+00e43c40  ldr x9,[x9, #0xf0]
+00e43c44  adrp x22,0x3355000
+00e43c48  adrp x23,0x336b000
+00e43c4c  ldr x2,[x8]
+00e43c50  ldr x1,[x9]
+00e43c54  ldr x22,[x22, #0xe20]
+00e43c58  ldr x23,[x23, #0x7d0]
+00e43c5c  mov x0,x20
+00e43c60  mov x3,xzr
+00e43c64  bl 0x00e039c4
+00e43c68  ldr x0,[x22]
+00e43c6c  mov x1,x19
+00e43c70  mov x2,xzr
+00e43c74  bl 0x01fd2850
+00e43c78  ldr x8,[x23]
+00e43c7c  mov x20,x0
+00e43c80  ldr w9,[x8, #0xe0]
+00e43c84  cbnz w9,0x00e43c90
+00e43c88  mov x0,x8
+00e43c8c  bl 0x00b0798c
+00e43c90  mov x0,x20
+00e43c94  mov x1,xzr
+00e43c98  bl 0x024c0104
+00e43c9c  ldr x8,[x21]
+00e43ca0  ldr x8,[x8, #0xb8]
+00e43ca4  ldr x0,[x8, #0x10]
+00e43ca8  cbz x0,0x00e43cc8
+00e43cac  mov x1,x19
+00e43cb0  ldp x19,x30,[sp, #0x20]
+00e43cb4  ldp x21,x20,[sp, #0x10]
+00e43cb8  mov w2,wzr
+00e43cbc  mov x3,xzr
+00e43cc0  ldp x23,x22,[sp], #0x30
+00e43cc4  b 0x00e0ee8c
+00e43cc8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e43ccc_YPCShareSDK__.ctor.txt
+================================================================================
+Function: YPCShareSDK$$.ctor @ 00e43ccc
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$.ctor @ 01e09460
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.YPCShareSDKWrap$$__CreateInstance @ 01528818
+
+--- Listing ---
+00e43ccc  str x22,[sp, #-0x30]!
+00e43cd0  stp x21,x20,[sp, #0x10]
+00e43cd4  stp x19,x30,[sp, #0x20]
+00e43cd8  adrp x21,0x3572000
+00e43cdc  adrp x22,0x3378000
+00e43ce0  adrp x20,0x3381000
+00e43ce4  ldrb w8,[x21, #0x86f]
+00e43ce8  ldr x22,[x22, #0x3d8]
+00e43cec  ldr x20,[x20, #0x2a8]
+00e43cf0  mov x19,x0
+00e43cf4  tbnz w8,#0x0,0x00e43d18
+00e43cf8  adrp x0,0x3378000
+00e43cfc  ldr x0,[x0, #0x3d8]
+00e43d00  bl 0x00b0789c
+00e43d04  adrp x0,0x3381000
+00e43d08  ldr x0,[x0, #0x2a8]
+00e43d0c  bl 0x00b0789c
+00e43d10  mov w8,#0x1
+00e43d14  strb w8,[x21, #0x86f]
+00e43d18  ldr x1,[x22]
+00e43d1c  mov x0,x19
+00e43d20  bl 0x01e09460
+00e43d24  ldr x0,[x20]
+00e43d28  ldr w8,[x0, #0xe0]
+00e43d2c  cbnz w8,0x00e43d38
+00e43d30  bl 0x00b0798c
+00e43d34  ldr x0,[x20]
+00e43d38  ldr x8,[x0, #0xb8]
+00e43d3c  ldr x0,[x8, #0xa8]
+00e43d40  cbz x0,0x00e43d5c
+00e43d44  mov x1,x19
+00e43d48  ldp x19,x30,[sp, #0x20]
+00e43d4c  ldp x21,x20,[sp, #0x10]
+00e43d50  mov x2,xzr
+00e43d54  ldr x22,[sp], #0x30
+00e43d58  b 0x01060dac
+00e43d5c  ldp x19,x30,[sp, #0x20]
+00e43d60  ldp x21,x20,[sp, #0x10]
+00e43d64  ldr x22,[sp], #0x30
+00e43d68  ret
+
+
+================================================================================
+### FILE: 00e43d6c_YPCShareSDK__.cctor.txt
+================================================================================
+Function: YPCShareSDK$$.cctor @ 00e43d6c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00e43d6c  str x22,[sp, #-0x30]!
+00e43d70  stp x21,x20,[sp, #0x10]
+00e43d74  stp x19,x30,[sp, #0x20]
+00e43d78  adrp x22,0x3572000
+00e43d7c  adrp x21,0x3345000
+00e43d80  adrp x19,0x3381000
+00e43d84  adrp x20,0x333b000
+00e43d88  ldrb w8,[x22, #0x870]
+00e43d8c  ldr x21,[x21, #0xdb8]
+00e43d90  ldr x19,[x19, #0x2a8]
+00e43d94  ldr x20,[x20, #0xda8]
+00e43d98  tbnz w8,#0x0,0x00e43dc8
+00e43d9c  adrp x0,0x3381000
+00e43da0  ldr x0,[x0, #0x2a8]
+00e43da4  bl 0x00b0789c
+00e43da8  adrp x0,0x3345000
+00e43dac  ldr x0,[x0, #0xdb8]
+00e43db0  bl 0x00b0789c
+00e43db4  adrp x0,0x333b000
+00e43db8  ldr x0,[x0, #0xda8]
+00e43dbc  bl 0x00b0789c
+00e43dc0  mov w8,#0x1
+00e43dc4  strb w8,[x22, #0x870]
+00e43dc8  ldr x8,[x19]
+00e43dcc  ldr x9,[x21]
+00e43dd0  ldr x8,[x8, #0xb8]
+00e43dd4  str x9,[x8]
+00e43dd8  ldr x8,[x19]
+00e43ddc  ldr x1,[x21]
+00e43de0  ldr x0,[x8, #0xb8]
+00e43de4  bl 0x00b07850
+00e43de8  ldr x8,[x19]
+00e43dec  ldr x1,[x20]
+00e43df0  ldr x0,[x8, #0xb8]
+00e43df4  str x1,[x0, #0x8]!
+00e43df8  ldp x19,x30,[sp, #0x20]
+00e43dfc  ldp x21,x20,[sp, #0x10]
+00e43e00  ldr x22,[sp], #0x30
+00e43e04  b 0x00b07850
+
+

@@ -1,0 +1,147 @@
+================================================================================
+### FILE: 01794040_GCFreeEnumeratorFix__Each_object_.txt
+================================================================================
+Function: GCFreeEnumeratorFix$$Each<object> @ 01794040
+
+--- Calls OUT ---
+  -> GCFreeEnumeratorFix.GCFreeEnumerator<object>$$.ctor @ 01af1a68
+
+--- Calls IN ---
+
+--- Listing ---
+01794040  stp xzr,xzr,[x8]
+01794044  str xzr,[x8, #0x10]
+01794048  ldr x9,[x1, #0x38]
+0179404c  mov x1,x0
+01794050  mov x0,x8
+01794054  ldr x2,[x9, #0x8]
+01794058  b 0x01af1a68
+
+
+================================================================================
+### FILE: 01af1a40_GCFreeEnumeratorFix.GCFreeEnumerator_object___get_Current.txt
+================================================================================
+Function: GCFreeEnumeratorFix.GCFreeEnumerator<object>$$get_Current @ 01af1a40
+
+--- Calls OUT ---
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+01af1a40  stp x19,x30,[sp, #-0x10]!
+01af1a44  ldr x8,[x1, #0x20]
+01af1a48  mov x19,x0
+01af1a4c  ldrb w9,[x8, #0x132]
+01af1a50  tbnz w9,#0x0,0x01af1a5c
+01af1a54  mov x0,x8
+01af1a58  bl 0x00b2ac40
+01af1a5c  ldr x0,[x19, #0x10]
+01af1a60  ldp x19,x30,[sp], #0x10
+01af1a64  ret
+
+
+================================================================================
+### FILE: 01af1a68_GCFreeEnumeratorFix.GCFreeEnumerator_object___.ctor.txt
+================================================================================
+Function: GCFreeEnumeratorFix.GCFreeEnumerator<object>$$.ctor @ 01af1a68
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- FUN_00989850 @ 00989850
+  <- GCFreeEnumeratorFix$$Each<object> @ 01794040
+
+--- Listing ---
+01af1a68  sub sp,sp,#0x60
+01af1a6c  stp x21,x20,[sp, #0x40]
+01af1a70  stp x19,x30,[sp, #0x50]
+01af1a74  cbz x1,0x01af1b0c
+01af1a78  ldr x8,[x2, #0x20]
+01af1a7c  mov x21,x2
+01af1a80  mov x20,x1
+01af1a84  mov x19,x0
+01af1a88  ldrh w9,[x8, #0x132]
+01af1a8c  tbnz w9,#0x0,0x01af1aa4
+01af1a90  mov x0,x8
+01af1a94  bl 0x00b2ac40
+01af1a98  ldr x8,[x21, #0x20]
+01af1a9c  ldrh w9,[x8, #0x132]
+01af1aa0  b 0x01af1aa8
+01af1aa4  mov x0,x8
+01af1aa8  ldr x10,[x0, #0xc0]
+01af1aac  ldr x10,[x10, #0x10]
+01af1ab0  ldr x21,[x10, #0x8]
+01af1ab4  tbnz w9,#0x0,0x01af1ac4
+01af1ab8  mov x0,x8
+01af1abc  bl 0x00b2ac40
+01af1ac0  mov x8,x0
+01af1ac4  ldr x8,[x8, #0xc0]
+01af1ac8  mov x0,x20
+01af1acc  ldr x1,[x8, #0x10]
+01af1ad0  add x8,sp,#0x8
+01af1ad4  blr x21
+01af1ad8  ldr x8,[sp, #0x18]
+01af1adc  ldur q0,[sp, #0x8]
+01af1ae0  mov x0,x19
+01af1ae4  mov x1,xzr
+01af1ae8  str x8,[sp, #0x30]
+01af1aec  str q0,[sp, #0x20]
+01af1af0  str x8,[x19, #0x10]
+01af1af4  str q0,[x19]
+01af1af8  bl 0x00b07850
+01af1afc  ldp x19,x30,[sp, #0x50]
+01af1b00  ldp x21,x20,[sp, #0x40]
+01af1b04  add sp,sp,#0x60
+01af1b08  ret
+01af1b0c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01af1b10_GCFreeEnumeratorFix.GCFreeEnumerator_object___GetEnumerator.txt
+================================================================================
+Function: GCFreeEnumeratorFix.GCFreeEnumerator<object>$$GetEnumerator @ 01af1b10
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+01af1b10  ldr x9,[x0, #0x10]
+01af1b14  ldr q0,[x0]
+01af1b18  str x9,[x8, #0x10]
+01af1b1c  str q0,[x8]
+01af1b20  ret
+
+
+================================================================================
+### FILE: 01af1b24_GCFreeEnumeratorFix.GCFreeEnumerator_object___MoveNext.txt
+================================================================================
+Function: GCFreeEnumeratorFix.GCFreeEnumerator<object>$$MoveNext @ 01af1b24
+
+--- Calls OUT ---
+  -> System.Collections.Generic.List.Enumerator<object>$$MoveNext @ 01a070ec
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- FUN_0098986c @ 0098986c
+
+--- Listing ---
+01af1b24  stp x19,x30,[sp, #-0x10]!
+01af1b28  ldr x8,[x1, #0x20]
+01af1b2c  mov x19,x0
+01af1b30  ldrb w9,[x8, #0x132]
+01af1b34  tbnz w9,#0x0,0x01af1b44
+01af1b38  mov x0,x8
+01af1b3c  bl 0x00b2ac40
+01af1b40  mov x8,x0
+01af1b44  ldr x8,[x8, #0xc0]
+01af1b48  mov x0,x19
+01af1b4c  ldr x1,[x8, #0x18]
+01af1b50  ldp x19,x30,[sp], #0x10
+01af1b54  b 0x01a070ec
+
+

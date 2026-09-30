@@ -1,0 +1,3277 @@
+================================================================================
+### FILE: 00d9a184_ButtonSoundMapping__.ctor.txt
+================================================================================
+Function: ButtonSoundMapping$$.ctor @ 00d9a184
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a184  mov x1,xzr
+00d9a188  b 0x02194104
+
+
+================================================================================
+### FILE: 00faa704_BuyenergypanelNode__get_btn_chargeenergy.txt
+================================================================================
+Function: BuyenergypanelNode$$get_btn_chargeenergy @ 00faa704
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$CheckTypeStatus @ 0100c704
+
+--- Listing ---
+00faa704  stp x21,x20,[sp, #-0x20]!
+00faa708  stp x19,x30,[sp, #0x10]
+00faa70c  adrp x20,0x3573000
+00faa710  adrp x21,0x3367000
+00faa714  ldrb w8,[x20, #0x73b]
+00faa718  ldr x21,[x21, #0x468]
+00faa71c  mov x19,x0
+00faa720  tbnz w8,#0x0,0x00faa738
+00faa724  adrp x0,0x3367000
+00faa728  ldr x0,[x0, #0x468]
+00faa72c  bl 0x00b0789c
+00faa730  mov w8,#0x1
+00faa734  strb w8,[x20, #0x73b]
+00faa738  ldr x1,[x21]
+00faa73c  mov x0,x19
+00faa740  ldp x19,x30,[sp, #0x10]
+00faa744  mov x2,xzr
+00faa748  ldp x21,x20,[sp], #0x20
+00faa74c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa750_BuyenergypanelNode__get_btn_closebuyenergy.txt
+================================================================================
+Function: BuyenergypanelNode$$get_btn_closebuyenergy @ 00faa750
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$Start @ 0100b9ec
+
+--- Listing ---
+00faa750  stp x21,x20,[sp, #-0x20]!
+00faa754  stp x19,x30,[sp, #0x10]
+00faa758  adrp x20,0x3573000
+00faa75c  adrp x21,0x3342000
+00faa760  ldrb w8,[x20, #0x73c]
+00faa764  ldr x21,[x21, #0x980]
+00faa768  mov x19,x0
+00faa76c  tbnz w8,#0x0,0x00faa784
+00faa770  adrp x0,0x3342000
+00faa774  ldr x0,[x0, #0x980]
+00faa778  bl 0x00b0789c
+00faa77c  mov w8,#0x1
+00faa780  strb w8,[x20, #0x73c]
+00faa784  ldr x1,[x21]
+00faa788  mov x0,x19
+00faa78c  ldp x19,x30,[sp, #0x10]
+00faa790  mov x2,xzr
+00faa794  ldp x21,x20,[sp], #0x20
+00faa798  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa79c_BuyenergypanelNode__get_btn_crystalbuy.txt
+================================================================================
+Function: BuyenergypanelNode$$get_btn_crystalbuy @ 00faa79c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+  <- BuyEnergyMono$$ClickEnergyType @ 0100cbe4
+
+--- Listing ---
+00faa79c  stp x21,x20,[sp, #-0x20]!
+00faa7a0  stp x19,x30,[sp, #0x10]
+00faa7a4  adrp x20,0x3573000
+00faa7a8  adrp x21,0x3338000
+00faa7ac  ldrb w8,[x20, #0x73d]
+00faa7b0  ldr x21,[x21, #0x518]
+00faa7b4  mov x19,x0
+00faa7b8  tbnz w8,#0x0,0x00faa7d0
+00faa7bc  adrp x0,0x3338000
+00faa7c0  ldr x0,[x0, #0x518]
+00faa7c4  bl 0x00b0789c
+00faa7c8  mov w8,#0x1
+00faa7cc  strb w8,[x20, #0x73d]
+00faa7d0  ldr x1,[x21]
+00faa7d4  mov x0,x19
+00faa7d8  ldp x19,x30,[sp, #0x10]
+00faa7dc  mov x2,xzr
+00faa7e0  ldp x21,x20,[sp], #0x20
+00faa7e4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa7e8_BuyenergypanelNode__get_equipItemParent.txt
+================================================================================
+Function: BuyenergypanelNode$$get_equipItemParent @ 00faa7e8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Listing ---
+00faa7e8  stp x21,x20,[sp, #-0x20]!
+00faa7ec  stp x19,x30,[sp, #0x10]
+00faa7f0  adrp x20,0x3573000
+00faa7f4  adrp x21,0x3340000
+00faa7f8  ldrb w8,[x20, #0x73e]
+00faa7fc  ldr x21,[x21, #0xd0]
+00faa800  mov x19,x0
+00faa804  tbnz w8,#0x0,0x00faa81c
+00faa808  adrp x0,0x3340000
+00faa80c  ldr x0,[x0, #0xd0]
+00faa810  bl 0x00b0789c
+00faa814  mov w8,#0x1
+00faa818  strb w8,[x20, #0x73e]
+00faa81c  ldr x1,[x21]
+00faa820  mov x0,x19
+00faa824  ldp x19,x30,[sp, #0x10]
+00faa828  mov x2,xzr
+00faa82c  ldp x21,x20,[sp], #0x20
+00faa830  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa834_BuyenergypanelNode__get_lbl_itemname.txt
+================================================================================
+Function: BuyenergypanelNode$$get_lbl_itemname @ 00faa834
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Listing ---
+00faa834  stp x21,x20,[sp, #-0x20]!
+00faa838  stp x19,x30,[sp, #0x10]
+00faa83c  adrp x20,0x3573000
+00faa840  adrp x21,0x3360000
+00faa844  ldrb w8,[x20, #0x73f]
+00faa848  ldr x21,[x21, #0xce0]
+00faa84c  mov x19,x0
+00faa850  tbnz w8,#0x0,0x00faa868
+00faa854  adrp x0,0x3360000
+00faa858  ldr x0,[x0, #0xce0]
+00faa85c  bl 0x00b0789c
+00faa860  mov w8,#0x1
+00faa864  strb w8,[x20, #0x73f]
+00faa868  ldr x1,[x21]
+00faa86c  mov x0,x19
+00faa870  ldp x19,x30,[sp, #0x10]
+00faa874  mov x2,xzr
+00faa878  ldp x21,x20,[sp], #0x20
+00faa87c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa880_BuyenergypanelNode__get_lbl_itemnumber.txt
+================================================================================
+Function: BuyenergypanelNode$$get_lbl_itemnumber @ 00faa880
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Listing ---
+00faa880  stp x21,x20,[sp, #-0x20]!
+00faa884  stp x19,x30,[sp, #0x10]
+00faa888  adrp x20,0x3573000
+00faa88c  adrp x21,0x3384000
+00faa890  ldrb w8,[x20, #0x740]
+00faa894  ldr x21,[x21, #0xca0]
+00faa898  mov x19,x0
+00faa89c  tbnz w8,#0x0,0x00faa8b4
+00faa8a0  adrp x0,0x3384000
+00faa8a4  ldr x0,[x0, #0xca0]
+00faa8a8  bl 0x00b0789c
+00faa8ac  mov w8,#0x1
+00faa8b0  strb w8,[x20, #0x740]
+00faa8b4  ldr x1,[x21]
+00faa8b8  mov x0,x19
+00faa8bc  ldp x19,x30,[sp, #0x10]
+00faa8c0  mov x2,xzr
+00faa8c4  ldp x21,x20,[sp], #0x20
+00faa8c8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa8cc_BuyenergypanelNode__get_lbl_itemdesc.txt
+================================================================================
+Function: BuyenergypanelNode$$get_lbl_itemdesc @ 00faa8cc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Listing ---
+00faa8cc  stp x21,x20,[sp, #-0x20]!
+00faa8d0  stp x19,x30,[sp, #0x10]
+00faa8d4  adrp x20,0x3573000
+00faa8d8  adrp x21,0x3379000
+00faa8dc  ldrb w8,[x20, #0x741]
+00faa8e0  ldr x21,[x21, #0x68]
+00faa8e4  mov x19,x0
+00faa8e8  tbnz w8,#0x0,0x00faa900
+00faa8ec  adrp x0,0x3379000
+00faa8f0  ldr x0,[x0, #0x68]
+00faa8f4  bl 0x00b0789c
+00faa8f8  mov w8,#0x1
+00faa8fc  strb w8,[x20, #0x741]
+00faa900  ldr x1,[x21]
+00faa904  mov x0,x19
+00faa908  ldp x19,x30,[sp, #0x10]
+00faa90c  mov x2,xzr
+00faa910  ldp x21,x20,[sp], #0x20
+00faa914  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa918_BuyenergypanelNode__get_spr_line.txt
+================================================================================
+Function: BuyenergypanelNode$$get_spr_line @ 00faa918
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00faa918  stp x21,x20,[sp, #-0x20]!
+00faa91c  stp x19,x30,[sp, #0x10]
+00faa920  adrp x20,0x3573000
+00faa924  adrp x21,0x3316000
+00faa928  ldrb w8,[x20, #0x742]
+00faa92c  ldr x21,[x21, #0xb48]
+00faa930  mov x19,x0
+00faa934  tbnz w8,#0x0,0x00faa94c
+00faa938  adrp x0,0x3316000
+00faa93c  ldr x0,[x0, #0xb48]
+00faa940  bl 0x00b0789c
+00faa944  mov w8,#0x1
+00faa948  strb w8,[x20, #0x742]
+00faa94c  ldr x1,[x21]
+00faa950  mov x0,x19
+00faa954  ldp x19,x30,[sp, #0x10]
+00faa958  mov x2,xzr
+00faa95c  ldp x21,x20,[sp], #0x20
+00faa960  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa964_BuyenergypanelNode__get_spr_choose.txt
+================================================================================
+Function: BuyenergypanelNode$$get_spr_choose @ 00faa964
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$ClickEnergyType @ 0100cbe4
+
+--- Listing ---
+00faa964  stp x21,x20,[sp, #-0x20]!
+00faa968  stp x19,x30,[sp, #0x10]
+00faa96c  adrp x20,0x3573000
+00faa970  adrp x21,0x3345000
+00faa974  ldrb w8,[x20, #0x743]
+00faa978  ldr x21,[x21, #0x230]
+00faa97c  mov x19,x0
+00faa980  tbnz w8,#0x0,0x00faa998
+00faa984  adrp x0,0x3345000
+00faa988  ldr x0,[x0, #0x230]
+00faa98c  bl 0x00b0789c
+00faa990  mov w8,#0x1
+00faa994  strb w8,[x20, #0x743]
+00faa998  ldr x1,[x21]
+00faa99c  mov x0,x19
+00faa9a0  ldp x19,x30,[sp, #0x10]
+00faa9a4  mov x2,xzr
+00faa9a8  ldp x21,x20,[sp], #0x20
+00faa9ac  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa9b0_BuyenergypanelNode__get_btn_batterybuy.txt
+================================================================================
+Function: BuyenergypanelNode$$get_btn_batterybuy @ 00faa9b0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+  <- BuyEnergyMono$$ClickChargeEnergy @ 0100cdd4
+  <- BuyEnergyMono$$ClickEnergyType @ 0100cbe4
+
+--- Listing ---
+00faa9b0  stp x21,x20,[sp, #-0x20]!
+00faa9b4  stp x19,x30,[sp, #0x10]
+00faa9b8  adrp x20,0x3573000
+00faa9bc  adrp x21,0x3317000
+00faa9c0  ldrb w8,[x20, #0x744]
+00faa9c4  ldr x21,[x21, #0xd38]
+00faa9c8  mov x19,x0
+00faa9cc  tbnz w8,#0x0,0x00faa9e4
+00faa9d0  adrp x0,0x3317000
+00faa9d4  ldr x0,[x0, #0xd38]
+00faa9d8  bl 0x00b0789c
+00faa9dc  mov w8,#0x1
+00faa9e0  strb w8,[x20, #0x744]
+00faa9e4  ldr x1,[x21]
+00faa9e8  mov x0,x19
+00faa9ec  ldp x19,x30,[sp, #0x10]
+00faa9f0  mov x2,xzr
+00faa9f4  ldp x21,x20,[sp], #0x20
+00faa9f8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa9fc_BuyenergypanelNode__get_equipItemParent_1.txt
+================================================================================
+Function: BuyenergypanelNode$$get_equipItemParent_1 @ 00faa9fc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Listing ---
+00faa9fc  stp x21,x20,[sp, #-0x20]!
+00faaa00  stp x19,x30,[sp, #0x10]
+00faaa04  adrp x20,0x3573000
+00faaa08  adrp x21,0x333e000
+00faaa0c  ldrb w8,[x20, #0x745]
+00faaa10  ldr x21,[x21, #0xe80]
+00faaa14  mov x19,x0
+00faaa18  tbnz w8,#0x0,0x00faaa30
+00faaa1c  adrp x0,0x333e000
+00faaa20  ldr x0,[x0, #0xe80]
+00faaa24  bl 0x00b0789c
+00faaa28  mov w8,#0x1
+00faaa2c  strb w8,[x20, #0x745]
+00faaa30  ldr x1,[x21]
+00faaa34  mov x0,x19
+00faaa38  ldp x19,x30,[sp, #0x10]
+00faaa3c  mov x2,xzr
+00faaa40  ldp x21,x20,[sp], #0x20
+00faaa44  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faaa48_BuyenergypanelNode__get_lbl_itemname_1.txt
+================================================================================
+Function: BuyenergypanelNode$$get_lbl_itemname_1 @ 00faaa48
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Listing ---
+00faaa48  stp x21,x20,[sp, #-0x20]!
+00faaa4c  stp x19,x30,[sp, #0x10]
+00faaa50  adrp x20,0x3573000
+00faaa54  adrp x21,0x337f000
+00faaa58  ldrb w8,[x20, #0x746]
+00faaa5c  ldr x21,[x21, #0x740]
+00faaa60  mov x19,x0
+00faaa64  tbnz w8,#0x0,0x00faaa7c
+00faaa68  adrp x0,0x337f000
+00faaa6c  ldr x0,[x0, #0x740]
+00faaa70  bl 0x00b0789c
+00faaa74  mov w8,#0x1
+00faaa78  strb w8,[x20, #0x746]
+00faaa7c  ldr x1,[x21]
+00faaa80  mov x0,x19
+00faaa84  ldp x19,x30,[sp, #0x10]
+00faaa88  mov x2,xzr
+00faaa8c  ldp x21,x20,[sp], #0x20
+00faaa90  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faaa94_BuyenergypanelNode__get_lbl_itemnumber_1.txt
+================================================================================
+Function: BuyenergypanelNode$$get_lbl_itemnumber_1 @ 00faaa94
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Listing ---
+00faaa94  stp x21,x20,[sp, #-0x20]!
+00faaa98  stp x19,x30,[sp, #0x10]
+00faaa9c  adrp x20,0x3573000
+00faaaa0  adrp x21,0x337a000
+00faaaa4  ldrb w8,[x20, #0x747]
+00faaaa8  ldr x21,[x21, #0x468]
+00faaaac  mov x19,x0
+00faaab0  tbnz w8,#0x0,0x00faaac8
+00faaab4  adrp x0,0x337a000
+00faaab8  ldr x0,[x0, #0x468]
+00faaabc  bl 0x00b0789c
+00faaac0  mov w8,#0x1
+00faaac4  strb w8,[x20, #0x747]
+00faaac8  ldr x1,[x21]
+00faaacc  mov x0,x19
+00faaad0  ldp x19,x30,[sp, #0x10]
+00faaad4  mov x2,xzr
+00faaad8  ldp x21,x20,[sp], #0x20
+00faaadc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faaae0_BuyenergypanelNode__get_lbl_itemdesc_1.txt
+================================================================================
+Function: BuyenergypanelNode$$get_lbl_itemdesc_1 @ 00faaae0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Listing ---
+00faaae0  stp x21,x20,[sp, #-0x20]!
+00faaae4  stp x19,x30,[sp, #0x10]
+00faaae8  adrp x20,0x3573000
+00faaaec  adrp x21,0x331f000
+00faaaf0  ldrb w8,[x20, #0x748]
+00faaaf4  ldr x21,[x21, #0xbe0]
+00faaaf8  mov x19,x0
+00faaafc  tbnz w8,#0x0,0x00faab14
+00faab00  adrp x0,0x331f000
+00faab04  ldr x0,[x0, #0xbe0]
+00faab08  bl 0x00b0789c
+00faab0c  mov w8,#0x1
+00faab10  strb w8,[x20, #0x748]
+00faab14  ldr x1,[x21]
+00faab18  mov x0,x19
+00faab1c  ldp x19,x30,[sp, #0x10]
+00faab20  mov x2,xzr
+00faab24  ldp x21,x20,[sp], #0x20
+00faab28  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faab2c_BuyenergypanelNode__get_spr_line_1.txt
+================================================================================
+Function: BuyenergypanelNode$$get_spr_line_1 @ 00faab2c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00faab2c  stp x21,x20,[sp, #-0x20]!
+00faab30  stp x19,x30,[sp, #0x10]
+00faab34  adrp x20,0x3573000
+00faab38  adrp x21,0x3356000
+00faab3c  ldrb w8,[x20, #0x749]
+00faab40  ldr x21,[x21, #0xd30]
+00faab44  mov x19,x0
+00faab48  tbnz w8,#0x0,0x00faab60
+00faab4c  adrp x0,0x3356000
+00faab50  ldr x0,[x0, #0xd30]
+00faab54  bl 0x00b0789c
+00faab58  mov w8,#0x1
+00faab5c  strb w8,[x20, #0x749]
+00faab60  ldr x1,[x21]
+00faab64  mov x0,x19
+00faab68  ldp x19,x30,[sp, #0x10]
+00faab6c  mov x2,xzr
+00faab70  ldp x21,x20,[sp], #0x20
+00faab74  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faab78_BuyenergypanelNode__get_spr_choose_1.txt
+================================================================================
+Function: BuyenergypanelNode$$get_spr_choose_1 @ 00faab78
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$ClickEnergyType @ 0100cbe4
+
+--- Listing ---
+00faab78  stp x21,x20,[sp, #-0x20]!
+00faab7c  stp x19,x30,[sp, #0x10]
+00faab80  adrp x20,0x3573000
+00faab84  adrp x21,0x336d000
+00faab88  ldrb w8,[x20, #0x74a]
+00faab8c  ldr x21,[x21, #0x100]
+00faab90  mov x19,x0
+00faab94  tbnz w8,#0x0,0x00faabac
+00faab98  adrp x0,0x336d000
+00faab9c  ldr x0,[x0, #0x100]
+00faaba0  bl 0x00b0789c
+00faaba4  mov w8,#0x1
+00faaba8  strb w8,[x20, #0x74a]
+00faabac  ldr x1,[x21]
+00faabb0  mov x0,x19
+00faabb4  ldp x19,x30,[sp, #0x10]
+00faabb8  mov x2,xzr
+00faabbc  ldp x21,x20,[sp], #0x20
+00faabc0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faabc4_BuyenergypanelNode__get_lbl_energyTime.txt
+================================================================================
+Function: BuyenergypanelNode$$get_lbl_energyTime @ 00faabc4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$Update @ 0100c910
+
+--- Listing ---
+00faabc4  stp x21,x20,[sp, #-0x20]!
+00faabc8  stp x19,x30,[sp, #0x10]
+00faabcc  adrp x20,0x3573000
+00faabd0  adrp x21,0x3352000
+00faabd4  ldrb w8,[x20, #0x74b]
+00faabd8  ldr x21,[x21, #0x238]
+00faabdc  mov x19,x0
+00faabe0  tbnz w8,#0x0,0x00faabf8
+00faabe4  adrp x0,0x3352000
+00faabe8  ldr x0,[x0, #0x238]
+00faabec  bl 0x00b0789c
+00faabf0  mov w8,#0x1
+00faabf4  strb w8,[x20, #0x74b]
+00faabf8  ldr x1,[x21]
+00faabfc  mov x0,x19
+00faac00  ldp x19,x30,[sp, #0x10]
+00faac04  mov x2,xzr
+00faac08  ldp x21,x20,[sp], #0x20
+00faac0c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faac10_BuyenergypanelNode__.ctor.txt
+================================================================================
+Function: BuyenergypanelNode$$.ctor @ 00faac10
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00faac10  mov x1,xzr
+00faac14  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 0100b308_BuyEnergyMono__get_m_node.txt
+================================================================================
+Function: BuyEnergyMono$$get_m_node @ 0100b308
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp698 @ 010bb690
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+  <- BuyEnergyMono$$Start @ 0100b9ec
+  <- BuyEnergyMono$$CheckTypeStatus @ 0100c704
+  <- BuyEnergyMono$$ClickChargeEnergy @ 0100cdd4
+  <- BuyEnergyMono$$Update @ 0100c910
+  <- BuyEnergyMono$$ClickEnergyType @ 0100cbe4
+
+--- Listing ---
+0100b308  str x22,[sp, #-0x30]!
+0100b30c  stp x21,x20,[sp, #0x10]
+0100b310  stp x19,x30,[sp, #0x20]
+0100b314  adrp x20,0x3574000
+0100b318  adrp x21,0x3320000
+0100b31c  ldrb w8,[x20, #0x437]
+0100b320  ldr x21,[x21, #0x5b8]
+0100b324  mov x19,x0
+0100b328  tbnz w8,#0x0,0x0100b364
+0100b32c  adrp x0,0x333d000
+0100b330  ldr x0,[x0, #0x420]
+0100b334  bl 0x00b0789c
+0100b338  adrp x0,0x3348000
+0100b33c  ldr x0,[x0, #0x138]
+0100b340  bl 0x00b0789c
+0100b344  adrp x0,0x3320000
+0100b348  ldr x0,[x0, #0x5b8]
+0100b34c  bl 0x00b0789c
+0100b350  adrp x0,0x3321000
+0100b354  ldr x0,[x0, #0xca8]
+0100b358  bl 0x00b0789c
+0100b35c  mov w8,#0x1
+0100b360  strb w8,[x20, #0x437]
+0100b364  ldr x8,[x21]
+0100b368  ldr x8,[x8, #0xb8]
+0100b36c  ldr x0,[x8]
+0100b370  cbz x0,0x0100b38c
+0100b374  mov x1,x19
+0100b378  ldp x19,x30,[sp, #0x20]
+0100b37c  ldp x21,x20,[sp, #0x10]
+0100b380  mov x2,xzr
+0100b384  ldr x22,[sp], #0x30
+0100b388  b 0x010bb690
+0100b38c  adrp x8,0x3321000
+0100b390  ldr x8,[x8, #0xca8]
+0100b394  mov x20,x19
+0100b398  ldr x21,[x20, #0xc8]!
+0100b39c  ldr x0,[x8]
+0100b3a0  ldr w8,[x0, #0xe0]
+0100b3a4  cbnz w8,0x0100b3ac
+0100b3a8  bl 0x00b0798c
+0100b3ac  mov x0,x21
+0100b3b0  mov x1,xzr
+0100b3b4  mov x2,xzr
+0100b3b8  bl 0x024c8180
+0100b3bc  tbz w0,#0x0,0x0100b410
+0100b3c0  adrp x22,0x3348000
+0100b3c4  adrp x21,0x333d000
+0100b3c8  ldr x22,[x22, #0x138]
+0100b3cc  ldr x21,[x21, #0x420]
+0100b3d0  mov x0,x19
+0100b3d4  mov x1,xzr
+0100b3d8  bl 0x024e4ed4
+0100b3dc  ldr x8,[x22]
+0100b3e0  mov x19,x0
+0100b3e4  ldr w9,[x8, #0xe0]
+0100b3e8  cbnz w9,0x0100b3f4
+0100b3ec  mov x0,x8
+0100b3f0  bl 0x00b0798c
+0100b3f4  ldr x1,[x21]
+0100b3f8  mov x0,x19
+0100b3fc  bl 0x017372ac
+0100b400  mov x1,x0
+0100b404  str x0,[x20]
+0100b408  mov x0,x20
+0100b40c  bl 0x00b07850
+0100b410  ldr x0,[x20]
+0100b414  ldp x19,x30,[sp, #0x20]
+0100b418  ldp x21,x20,[sp, #0x10]
+0100b41c  ldr x22,[sp], #0x30
+0100b420  ret
+
+
+================================================================================
+### FILE: 0100b424_BuyEnergyMono__get_selectbtn.txt
+================================================================================
+Function: BuyEnergyMono$$get_selectbtn @ 0100b424
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$CheckTypeStatus @ 0100c704
+  <- BuyEnergyMono$$ClickChargeEnergy @ 0100cdd4
+
+--- Listing ---
+0100b424  stp x21,x20,[sp, #-0x20]!
+0100b428  stp x19,x30,[sp, #0x10]
+0100b42c  adrp x20,0x3574000
+0100b430  adrp x21,0x3320000
+0100b434  ldrb w8,[x20, #0x438]
+0100b438  ldr x21,[x21, #0x5b8]
+0100b43c  mov x19,x0
+0100b440  tbnz w8,#0x0,0x0100b458
+0100b444  adrp x0,0x3320000
+0100b448  ldr x0,[x0, #0x5b8]
+0100b44c  bl 0x00b0789c
+0100b450  mov w8,#0x1
+0100b454  strb w8,[x20, #0x438]
+0100b458  ldr x8,[x21]
+0100b45c  ldr x8,[x8, #0xb8]
+0100b460  ldr x0,[x8, #0x8]
+0100b464  cbz x0,0x0100b47c
+0100b468  mov x1,x19
+0100b46c  ldp x19,x30,[sp, #0x10]
+0100b470  mov x2,xzr
+0100b474  ldp x21,x20,[sp], #0x20
+0100b478  b 0x0106088c
+0100b47c  ldr x0,[x19, #0xd0]
+0100b480  ldp x19,x30,[sp, #0x10]
+0100b484  ldp x21,x20,[sp], #0x20
+0100b488  ret
+
+
+================================================================================
+### FILE: 0100b48c_BuyEnergyMono__set_selectbtn.txt
+================================================================================
+Function: BuyEnergyMono$$set_selectbtn @ 0100b48c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$ClickEnergyType @ 0100cbe4
+
+--- Listing ---
+0100b48c  str x22,[sp, #-0x30]!
+0100b490  stp x21,x20,[sp, #0x10]
+0100b494  stp x19,x30,[sp, #0x20]
+0100b498  adrp x21,0x3574000
+0100b49c  adrp x22,0x3320000
+0100b4a0  ldrb w8,[x21, #0x439]
+0100b4a4  ldr x22,[x22, #0x5b8]
+0100b4a8  mov x19,x1
+0100b4ac  mov x20,x0
+0100b4b0  tbnz w8,#0x0,0x0100b4c8
+0100b4b4  adrp x0,0x3320000
+0100b4b8  ldr x0,[x0, #0x5b8]
+0100b4bc  bl 0x00b0789c
+0100b4c0  mov w8,#0x1
+0100b4c4  strb w8,[x21, #0x439]
+0100b4c8  ldr x8,[x22]
+0100b4cc  ldr x8,[x8, #0xb8]
+0100b4d0  ldr x0,[x8, #0x10]
+0100b4d4  cbz x0,0x0100b4f4
+0100b4d8  mov x1,x20
+0100b4dc  mov x2,x19
+0100b4e0  ldp x19,x30,[sp, #0x20]
+0100b4e4  ldp x21,x20,[sp, #0x10]
+0100b4e8  mov x3,xzr
+0100b4ec  ldr x22,[sp], #0x30
+0100b4f0  b 0x0106125c
+0100b4f4  str x19,[x20, #0xd0]!
+0100b4f8  mov x0,x20
+0100b4fc  mov x1,x19
+0100b500  ldp x19,x30,[sp, #0x20]
+0100b504  ldp x21,x20,[sp, #0x10]
+0100b508  ldr x22,[sp], #0x30
+0100b50c  b 0x00b07850
+
+
+================================================================================
+### FILE: 0100b510_BuyEnergyMono__get_m_needID1.txt
+================================================================================
+Function: BuyEnergyMono$$get_m_needID1 @ 0100b510
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+  <- BuyEnergyMono$$ClickChargeEnergy @ 0100cdd4
+
+--- Listing ---
+0100b510  stp x21,x20,[sp, #-0x20]!
+0100b514  stp x19,x30,[sp, #0x10]
+0100b518  adrp x20,0x3574000
+0100b51c  adrp x21,0x3320000
+0100b520  ldrb w8,[x20, #0x43a]
+0100b524  ldr x21,[x21, #0x5b8]
+0100b528  mov x19,x0
+0100b52c  tbnz w8,#0x0,0x0100b544
+0100b530  adrp x0,0x3320000
+0100b534  ldr x0,[x0, #0x5b8]
+0100b538  bl 0x00b0789c
+0100b53c  mov w8,#0x1
+0100b540  strb w8,[x20, #0x43a]
+0100b544  ldr x8,[x21]
+0100b548  ldr x8,[x8, #0xb8]
+0100b54c  ldr x0,[x8, #0x18]
+0100b550  cbz x0,0x0100b568
+0100b554  mov x1,x19
+0100b558  ldp x19,x30,[sp, #0x10]
+0100b55c  mov x2,xzr
+0100b560  ldp x21,x20,[sp], #0x20
+0100b564  b 0x01060c2c
+0100b568  ldr w0,[x19, #0xe0]
+0100b56c  ldp x19,x30,[sp, #0x10]
+0100b570  ldp x21,x20,[sp], #0x20
+0100b574  ret
+
+
+================================================================================
+### FILE: 0100b578_BuyEnergyMono__set_m_needID1.txt
+================================================================================
+Function: BuyEnergyMono$$set_m_needID1 @ 0100b578
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$Start @ 0100b9ec
+
+--- Listing ---
+0100b578  str x22,[sp, #-0x30]!
+0100b57c  stp x21,x20,[sp, #0x10]
+0100b580  stp x19,x30,[sp, #0x20]
+0100b584  adrp x21,0x3574000
+0100b588  adrp x22,0x3320000
+0100b58c  ldrb w8,[x21, #0x43b]
+0100b590  ldr x22,[x22, #0x5b8]
+0100b594  mov w19,w1
+0100b598  mov x20,x0
+0100b59c  tbnz w8,#0x0,0x0100b5b4
+0100b5a0  adrp x0,0x3320000
+0100b5a4  ldr x0,[x0, #0x5b8]
+0100b5a8  bl 0x00b0789c
+0100b5ac  mov w8,#0x1
+0100b5b0  strb w8,[x21, #0x43b]
+0100b5b4  ldr x8,[x22]
+0100b5b8  ldr x8,[x8, #0xb8]
+0100b5bc  ldr x0,[x8, #0x20]
+0100b5c0  cbz x0,0x0100b5e0
+0100b5c4  mov x1,x20
+0100b5c8  mov w2,w19
+0100b5cc  ldp x19,x30,[sp, #0x20]
+0100b5d0  ldp x21,x20,[sp, #0x10]
+0100b5d4  mov x3,xzr
+0100b5d8  ldr x22,[sp], #0x30
+0100b5dc  b 0x0106155c
+0100b5e0  str w19,[x20, #0xe0]
+0100b5e4  ldp x19,x30,[sp, #0x20]
+0100b5e8  ldp x21,x20,[sp, #0x10]
+0100b5ec  ldr x22,[sp], #0x30
+0100b5f0  ret
+
+
+================================================================================
+### FILE: 0100b5f4_BuyEnergyMono__get_m_needCount1.txt
+================================================================================
+Function: BuyEnergyMono$$get_m_needCount1 @ 0100b5f4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+  <- BuyEnergyMono$$ClickChargeEnergy @ 0100cdd4
+
+--- Listing ---
+0100b5f4  stp x21,x20,[sp, #-0x20]!
+0100b5f8  stp x19,x30,[sp, #0x10]
+0100b5fc  adrp x20,0x3574000
+0100b600  adrp x21,0x3320000
+0100b604  ldrb w8,[x20, #0x43c]
+0100b608  ldr x21,[x21, #0x5b8]
+0100b60c  mov x19,x0
+0100b610  tbnz w8,#0x0,0x0100b628
+0100b614  adrp x0,0x3320000
+0100b618  ldr x0,[x0, #0x5b8]
+0100b61c  bl 0x00b0789c
+0100b620  mov w8,#0x1
+0100b624  strb w8,[x20, #0x43c]
+0100b628  ldr x8,[x21]
+0100b62c  ldr x8,[x8, #0xb8]
+0100b630  ldr x0,[x8, #0x28]
+0100b634  cbz x0,0x0100b64c
+0100b638  mov x1,x19
+0100b63c  ldp x19,x30,[sp, #0x10]
+0100b640  mov x2,xzr
+0100b644  ldp x21,x20,[sp], #0x20
+0100b648  b 0x01060c2c
+0100b64c  ldr w0,[x19, #0xe4]
+0100b650  ldp x19,x30,[sp, #0x10]
+0100b654  ldp x21,x20,[sp], #0x20
+0100b658  ret
+
+
+================================================================================
+### FILE: 0100b65c_BuyEnergyMono__set_m_needCount1.txt
+================================================================================
+Function: BuyEnergyMono$$set_m_needCount1 @ 0100b65c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$Start @ 0100b9ec
+
+--- Listing ---
+0100b65c  str x22,[sp, #-0x30]!
+0100b660  stp x21,x20,[sp, #0x10]
+0100b664  stp x19,x30,[sp, #0x20]
+0100b668  adrp x21,0x3574000
+0100b66c  adrp x22,0x3320000
+0100b670  ldrb w8,[x21, #0x43d]
+0100b674  ldr x22,[x22, #0x5b8]
+0100b678  mov w19,w1
+0100b67c  mov x20,x0
+0100b680  tbnz w8,#0x0,0x0100b698
+0100b684  adrp x0,0x3320000
+0100b688  ldr x0,[x0, #0x5b8]
+0100b68c  bl 0x00b0789c
+0100b690  mov w8,#0x1
+0100b694  strb w8,[x21, #0x43d]
+0100b698  ldr x8,[x22]
+0100b69c  ldr x8,[x8, #0xb8]
+0100b6a0  ldr x0,[x8, #0x30]
+0100b6a4  cbz x0,0x0100b6c4
+0100b6a8  mov x1,x20
+0100b6ac  mov w2,w19
+0100b6b0  ldp x19,x30,[sp, #0x20]
+0100b6b4  ldp x21,x20,[sp, #0x10]
+0100b6b8  mov x3,xzr
+0100b6bc  ldr x22,[sp], #0x30
+0100b6c0  b 0x0106155c
+0100b6c4  str w19,[x20, #0xe4]
+0100b6c8  ldp x19,x30,[sp, #0x20]
+0100b6cc  ldp x21,x20,[sp, #0x10]
+0100b6d0  ldr x22,[sp], #0x30
+0100b6d4  ret
+
+
+================================================================================
+### FILE: 0100b6d8_BuyEnergyMono__get_m_create1.txt
+================================================================================
+Function: BuyEnergyMono$$get_m_create1 @ 0100b6d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Listing ---
+0100b6d8  stp x21,x20,[sp, #-0x20]!
+0100b6dc  stp x19,x30,[sp, #0x10]
+0100b6e0  adrp x20,0x3574000
+0100b6e4  adrp x21,0x3320000
+0100b6e8  ldrb w8,[x20, #0x43e]
+0100b6ec  ldr x21,[x21, #0x5b8]
+0100b6f0  mov x19,x0
+0100b6f4  tbnz w8,#0x0,0x0100b70c
+0100b6f8  adrp x0,0x3320000
+0100b6fc  ldr x0,[x0, #0x5b8]
+0100b700  bl 0x00b0789c
+0100b704  mov w8,#0x1
+0100b708  strb w8,[x20, #0x43e]
+0100b70c  ldr x8,[x21]
+0100b710  ldr x8,[x8, #0xb8]
+0100b714  ldr x0,[x8, #0x38]
+0100b718  cbz x0,0x0100b730
+0100b71c  mov x1,x19
+0100b720  ldp x19,x30,[sp, #0x10]
+0100b724  mov x2,xzr
+0100b728  ldp x21,x20,[sp], #0x20
+0100b72c  b 0x01060c2c
+0100b730  ldr w0,[x19, #0xe8]
+0100b734  ldp x19,x30,[sp, #0x10]
+0100b738  ldp x21,x20,[sp], #0x20
+0100b73c  ret
+
+
+================================================================================
+### FILE: 0100b740_BuyEnergyMono__set_m_create1.txt
+================================================================================
+Function: BuyEnergyMono$$set_m_create1 @ 0100b740
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$Start @ 0100b9ec
+
+--- Listing ---
+0100b740  str x22,[sp, #-0x30]!
+0100b744  stp x21,x20,[sp, #0x10]
+0100b748  stp x19,x30,[sp, #0x20]
+0100b74c  adrp x21,0x3574000
+0100b750  adrp x22,0x3320000
+0100b754  ldrb w8,[x21, #0x43f]
+0100b758  ldr x22,[x22, #0x5b8]
+0100b75c  mov w19,w1
+0100b760  mov x20,x0
+0100b764  tbnz w8,#0x0,0x0100b77c
+0100b768  adrp x0,0x3320000
+0100b76c  ldr x0,[x0, #0x5b8]
+0100b770  bl 0x00b0789c
+0100b774  mov w8,#0x1
+0100b778  strb w8,[x21, #0x43f]
+0100b77c  ldr x8,[x22]
+0100b780  ldr x8,[x8, #0xb8]
+0100b784  ldr x0,[x8, #0x40]
+0100b788  cbz x0,0x0100b7a8
+0100b78c  mov x1,x20
+0100b790  mov w2,w19
+0100b794  ldp x19,x30,[sp, #0x20]
+0100b798  ldp x21,x20,[sp, #0x10]
+0100b79c  mov x3,xzr
+0100b7a0  ldr x22,[sp], #0x30
+0100b7a4  b 0x0106155c
+0100b7a8  str w19,[x20, #0xe8]
+0100b7ac  ldp x19,x30,[sp, #0x20]
+0100b7b0  ldp x21,x20,[sp, #0x10]
+0100b7b4  ldr x22,[sp], #0x30
+0100b7b8  ret
+
+
+================================================================================
+### FILE: 0100b7bc_BuyEnergyMono__get_m_needID2.txt
+================================================================================
+Function: BuyEnergyMono$$get_m_needID2 @ 0100b7bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+  <- BuyEnergyMono$$ClickChargeEnergy @ 0100cdd4
+
+--- Listing ---
+0100b7bc  stp x21,x20,[sp, #-0x20]!
+0100b7c0  stp x19,x30,[sp, #0x10]
+0100b7c4  adrp x20,0x3574000
+0100b7c8  adrp x21,0x3320000
+0100b7cc  ldrb w8,[x20, #0x440]
+0100b7d0  ldr x21,[x21, #0x5b8]
+0100b7d4  mov x19,x0
+0100b7d8  tbnz w8,#0x0,0x0100b7f0
+0100b7dc  adrp x0,0x3320000
+0100b7e0  ldr x0,[x0, #0x5b8]
+0100b7e4  bl 0x00b0789c
+0100b7e8  mov w8,#0x1
+0100b7ec  strb w8,[x20, #0x440]
+0100b7f0  ldr x8,[x21]
+0100b7f4  ldr x8,[x8, #0xb8]
+0100b7f8  ldr x0,[x8, #0x48]
+0100b7fc  cbz x0,0x0100b814
+0100b800  mov x1,x19
+0100b804  ldp x19,x30,[sp, #0x10]
+0100b808  mov x2,xzr
+0100b80c  ldp x21,x20,[sp], #0x20
+0100b810  b 0x01060c2c
+0100b814  ldr w0,[x19, #0xec]
+0100b818  ldp x19,x30,[sp, #0x10]
+0100b81c  ldp x21,x20,[sp], #0x20
+0100b820  ret
+
+
+================================================================================
+### FILE: 0100b824_BuyEnergyMono__set_m_needID2.txt
+================================================================================
+Function: BuyEnergyMono$$set_m_needID2 @ 0100b824
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$Start @ 0100b9ec
+
+--- Listing ---
+0100b824  str x22,[sp, #-0x30]!
+0100b828  stp x21,x20,[sp, #0x10]
+0100b82c  stp x19,x30,[sp, #0x20]
+0100b830  adrp x21,0x3574000
+0100b834  adrp x22,0x3320000
+0100b838  ldrb w8,[x21, #0x441]
+0100b83c  ldr x22,[x22, #0x5b8]
+0100b840  mov w19,w1
+0100b844  mov x20,x0
+0100b848  tbnz w8,#0x0,0x0100b860
+0100b84c  adrp x0,0x3320000
+0100b850  ldr x0,[x0, #0x5b8]
+0100b854  bl 0x00b0789c
+0100b858  mov w8,#0x1
+0100b85c  strb w8,[x21, #0x441]
+0100b860  ldr x8,[x22]
+0100b864  ldr x8,[x8, #0xb8]
+0100b868  ldr x0,[x8, #0x50]
+0100b86c  cbz x0,0x0100b88c
+0100b870  mov x1,x20
+0100b874  mov w2,w19
+0100b878  ldp x19,x30,[sp, #0x20]
+0100b87c  ldp x21,x20,[sp, #0x10]
+0100b880  mov x3,xzr
+0100b884  ldr x22,[sp], #0x30
+0100b888  b 0x0106155c
+0100b88c  str w19,[x20, #0xec]
+0100b890  ldp x19,x30,[sp, #0x20]
+0100b894  ldp x21,x20,[sp, #0x10]
+0100b898  ldr x22,[sp], #0x30
+0100b89c  ret
+
+
+================================================================================
+### FILE: 0100b8a0_BuyEnergyMono__get_m_needCount2.txt
+================================================================================
+Function: BuyEnergyMono$$get_m_needCount2 @ 0100b8a0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+  <- BuyEnergyMono$$ClickChargeEnergy @ 0100cdd4
+
+--- Listing ---
+0100b8a0  stp x21,x20,[sp, #-0x20]!
+0100b8a4  stp x19,x30,[sp, #0x10]
+0100b8a8  adrp x20,0x3574000
+0100b8ac  adrp x21,0x3320000
+0100b8b0  ldrb w8,[x20, #0x442]
+0100b8b4  ldr x21,[x21, #0x5b8]
+0100b8b8  mov x19,x0
+0100b8bc  tbnz w8,#0x0,0x0100b8d4
+0100b8c0  adrp x0,0x3320000
+0100b8c4  ldr x0,[x0, #0x5b8]
+0100b8c8  bl 0x00b0789c
+0100b8cc  mov w8,#0x1
+0100b8d0  strb w8,[x20, #0x442]
+0100b8d4  ldr x8,[x21]
+0100b8d8  ldr x8,[x8, #0xb8]
+0100b8dc  ldr x0,[x8, #0x58]
+0100b8e0  cbz x0,0x0100b8f8
+0100b8e4  mov x1,x19
+0100b8e8  ldp x19,x30,[sp, #0x10]
+0100b8ec  mov x2,xzr
+0100b8f0  ldp x21,x20,[sp], #0x20
+0100b8f4  b 0x01060c2c
+0100b8f8  ldr w0,[x19, #0xf0]
+0100b8fc  ldp x19,x30,[sp, #0x10]
+0100b900  ldp x21,x20,[sp], #0x20
+0100b904  ret
+
+
+================================================================================
+### FILE: 0100b908_BuyEnergyMono__set_m_needCount2.txt
+================================================================================
+Function: BuyEnergyMono$$set_m_needCount2 @ 0100b908
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- BuyEnergyMono$$Start @ 0100b9ec
+
+--- Listing ---
+0100b908  str x22,[sp, #-0x30]!
+0100b90c  stp x21,x20,[sp, #0x10]
+0100b910  stp x19,x30,[sp, #0x20]
+0100b914  adrp x21,0x3574000
+0100b918  adrp x22,0x3320000
+0100b91c  ldrb w8,[x21, #0x443]
+0100b920  ldr x22,[x22, #0x5b8]
+0100b924  mov w19,w1
+0100b928  mov x20,x0
+0100b92c  tbnz w8,#0x0,0x0100b944
+0100b930  adrp x0,0x3320000
+0100b934  ldr x0,[x0, #0x5b8]
+0100b938  bl 0x00b0789c
+0100b93c  mov w8,#0x1
+0100b940  strb w8,[x21, #0x443]
+0100b944  ldr x8,[x22]
+0100b948  ldr x8,[x8, #0xb8]
+0100b94c  ldr x0,[x8, #0x60]
+0100b950  cbz x0,0x0100b970
+0100b954  mov x1,x20
+0100b958  mov w2,w19
+0100b95c  ldp x19,x30,[sp, #0x20]
+0100b960  ldp x21,x20,[sp, #0x10]
+0100b964  mov x3,xzr
+0100b968  ldr x22,[sp], #0x30
+0100b96c  b 0x0106155c
+0100b970  str w19,[x20, #0xf0]
+0100b974  ldp x19,x30,[sp, #0x20]
+0100b978  ldp x21,x20,[sp, #0x10]
+0100b97c  ldr x22,[sp], #0x30
+0100b980  ret
+
+
+================================================================================
+### FILE: 0100b984_BuyEnergyMono__get_LayerType.txt
+================================================================================
+Function: BuyEnergyMono$$get_LayerType @ 0100b984
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp491 @ 0109f3ac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+0100b984  stp x21,x20,[sp, #-0x20]!
+0100b988  stp x19,x30,[sp, #0x10]
+0100b98c  adrp x20,0x3574000
+0100b990  adrp x21,0x3320000
+0100b994  ldrb w8,[x20, #0x444]
+0100b998  ldr x21,[x21, #0x5b8]
+0100b99c  mov x19,x0
+0100b9a0  tbnz w8,#0x0,0x0100b9b8
+0100b9a4  adrp x0,0x3320000
+0100b9a8  ldr x0,[x0, #0x5b8]
+0100b9ac  bl 0x00b0789c
+0100b9b0  mov w8,#0x1
+0100b9b4  strb w8,[x20, #0x444]
+0100b9b8  ldr x8,[x21]
+0100b9bc  ldr x8,[x8, #0xb8]
+0100b9c0  ldr x0,[x8, #0x68]
+0100b9c4  cbz x0,0x0100b9dc
+0100b9c8  mov x1,x19
+0100b9cc  ldp x19,x30,[sp, #0x10]
+0100b9d0  mov x2,xzr
+0100b9d4  ldp x21,x20,[sp], #0x20
+0100b9d8  b 0x0109f3ac
+0100b9dc  ldp x19,x30,[sp, #0x10]
+0100b9e0  mov w0,#0x3
+0100b9e4  ldp x21,x20,[sp], #0x20
+0100b9e8  ret
+
+
+================================================================================
+### FILE: 0100b9ec_BuyEnergyMono__Start.txt
+================================================================================
+Function: BuyEnergyMono$$Start @ 0100b9ec
+
+--- Calls OUT ---
+  -> BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+  -> System.Func<object,-bool>$$.ctor @ 01ae8650
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Linq.Enumerable$$Where<object> @ 0178f7b0
+  -> Ali.OnProccessRequestFinish$$.ctor @ 00e110fc
+  -> BuyEnergyMono$$set_m_create1 @ 0100b740
+  -> FUN_00b079b0 @ 00b079b0
+  -> Ali$$GetExcelDic<object> @ 01737100
+  -> System.Int32$$Parse @ 0214df74
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BaseMono$$RegisterDataProccessCallBack @ 00e1a5c0
+  -> BuyEnergyMono$$set_m_needCount1 @ 0100b65c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BuyEnergyMono$$get_m_node @ 0100b308
+  -> Ali$$GetExcelData<object> @ 01736d60
+  -> System.Linq.Enumerable$$FirstOrDefault<object> @ 01781400
+  -> System.Collections.Generic.Dictionary<int,-object>$$get_Values @ 0192da04
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> BuyEnergyMono$$set_m_needID2 @ 0100b824
+  -> BuyEnergyMono$$CheckTypeStatus @ 0100c704
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> System.Linq.Enumerable$$FirstOrDefault<KeyValuePair<int,-int>> @ 017806cc
+  -> BuyenergypanelNode$$get_btn_closebuyenergy @ 00faa750
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> BaseData$$SplitToDict<int,-int> @ 0176a600
+  -> BuyEnergyMono$$set_m_needCount2 @ 0100b908
+  -> UIEventListener$$Get @ 00e34224
+  -> BuyEnergyMono$$set_m_needID1 @ 0100b578
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.BuyEnergyMonoWrap$$_m_Start @ 012282a8
+
+--- Listing ---
+0100b9ec  str x24,[sp, #-0x40]!
+0100b9f0  stp x23,x22,[sp, #0x10]
+0100b9f4  stp x21,x20,[sp, #0x20]
+0100b9f8  stp x19,x30,[sp, #0x30]
+0100b9fc  adrp x20,0x3574000
+0100ba00  adrp x21,0x3320000
+0100ba04  ldrb w8,[x20, #0x445]
+0100ba08  ldr x21,[x21, #0x5b8]
+0100ba0c  mov x19,x0
+0100ba10  tbnz w8,#0x0,0x0100bb00
+0100ba14  adrp x0,0x330d000
+0100ba18  ldr x0,[x0, #0x6f0]
+0100ba1c  bl 0x00b0789c
+0100ba20  adrp x0,0x330a000
+0100ba24  ldr x0,[x0, #0xf60]
+0100ba28  bl 0x00b0789c
+0100ba2c  adrp x0,0x335f000
+0100ba30  ldr x0,[x0, #0x20]
+0100ba34  bl 0x00b0789c
+0100ba38  adrp x0,0x3367000
+0100ba3c  ldr x0,[x0, #0xba0]
+0100ba40  bl 0x00b0789c
+0100ba44  adrp x0,0x331c000
+0100ba48  ldr x0,[x0, #0x540]
+0100ba4c  bl 0x00b0789c
+0100ba50  adrp x0,0x3341000
+0100ba54  ldr x0,[x0, #0x1c8]
+0100ba58  bl 0x00b0789c
+0100ba5c  adrp x0,0x3320000
+0100ba60  ldr x0,[x0, #0x5b8]
+0100ba64  bl 0x00b0789c
+0100ba68  adrp x0,0x337e000
+0100ba6c  ldr x0,[x0, #0x4c0]
+0100ba70  bl 0x00b0789c
+0100ba74  adrp x0,0x3359000
+0100ba78  ldr x0,[x0, #0x8f0]
+0100ba7c  bl 0x00b0789c
+0100ba80  adrp x0,0x3324000
+0100ba84  ldr x0,[x0, #0x6b0]
+0100ba88  bl 0x00b0789c
+0100ba8c  adrp x0,0x3343000
+0100ba90  ldr x0,[x0, #0x1c8]
+0100ba94  bl 0x00b0789c
+0100ba98  adrp x0,0x3334000
+0100ba9c  ldr x0,[x0, #0x218]
+0100baa0  bl 0x00b0789c
+0100baa4  adrp x0,0x3316000
+0100baa8  ldr x0,[x0, #0xac0]
+0100baac  bl 0x00b0789c
+0100bab0  adrp x0,0x3347000
+0100bab4  ldr x0,[x0, #0x5e8]
+0100bab8  bl 0x00b0789c
+0100babc  adrp x0,0x335c000
+0100bac0  ldr x0,[x0, #0x918]
+0100bac4  bl 0x00b0789c
+0100bac8  adrp x0,0x3353000
+0100bacc  ldr x0,[x0, #0x568]
+0100bad0  bl 0x00b0789c
+0100bad4  adrp x0,0x3355000
+0100bad8  ldr x0,[x0, #0xb98]
+0100badc  bl 0x00b0789c
+0100bae0  adrp x0,0x332d000
+0100bae4  ldr x0,[x0, #0xd38]
+0100bae8  bl 0x00b0789c
+0100baec  adrp x0,0x3360000
+0100baf0  ldr x0,[x0, #0x750]
+0100baf4  bl 0x00b0789c
+0100baf8  mov w8,#0x1
+0100bafc  strb w8,[x20, #0x445]
+0100bb00  ldr x8,[x21]
+0100bb04  ldr x8,[x8, #0xb8]
+0100bb08  ldr x0,[x8, #0x70]
+0100bb0c  cbz x0,0x0100bb2c
+0100bb10  mov x1,x19
+0100bb14  ldp x19,x30,[sp, #0x30]
+0100bb18  ldp x21,x20,[sp, #0x20]
+0100bb1c  ldp x23,x22,[sp, #0x10]
+0100bb20  mov x2,xzr
+0100bb24  ldr x24,[sp], #0x40
+0100bb28  b 0x01060dac
+0100bb2c  adrp x22,0x335f000
+0100bb30  ldr x22,[x22, #0x20]
+0100bb34  ldr x0,[x22]
+0100bb38  ldr w8,[x0, #0xe0]
+0100bb3c  cbnz w8,0x0100bb48
+0100bb40  bl 0x00b0798c
+0100bb44  ldr x0,[x22]
+0100bb48  ldr x8,[x0, #0xb8]
+0100bb4c  ldr x0,[x8, #0x10]
+0100bb50  cbz x0,0x0100be38
+0100bb54  adrp x23,0x330d000
+0100bb58  ldr x23,[x23, #0x6f0]
+0100bb5c  mov w24,#0x5387
+0100bb60  movk w24,#0x59a, LSL #16
+0100bb64  add w1,w24,#0x5
+0100bb68  ldr x2,[x23]
+0100bb6c  bl 0x01736d60
+0100bb70  cbz x0,0x0100be38
+0100bb74  adrp x8,0x3367000
+0100bb78  ldr x8,[x8, #0xba0]
+0100bb7c  ldr x0,[x0, #0x80]
+0100bb80  adrp x20,0x3359000
+0100bb84  mov w1,#0x7c
+0100bb88  ldr x3,[x8]
+0100bb8c  ldr x20,[x20, #0x8f0]
+0100bb90  mov w2,#0x2a
+0100bb94  bl 0x0176a600
+0100bb98  ldr x1,[x20]
+0100bb9c  bl 0x017806cc
+0100bba0  mov w1,#0x20c2
+0100bba4  mov x20,x0
+0100bba8  lsr x21,x0,#0x20
+0100bbac  movk w1,#0x290, LSL #16
+0100bbb0  mov x0,x19
+0100bbb4  bl 0x0100b578
+0100bbb8  mov x0,x19
+0100bbbc  mov w1,w20
+0100bbc0  bl 0x0100b65c
+0100bbc4  mov x0,x19
+0100bbc8  mov w1,w21
+0100bbcc  bl 0x0100b740
+0100bbd0  ldr x8,[x22]
+0100bbd4  ldr x8,[x8, #0xb8]
+0100bbd8  ldr x0,[x8, #0x10]
+0100bbdc  cbz x0,0x0100be38
+0100bbe0  ldr x2,[x23]
+0100bbe4  add w1,w24,#0x6
+0100bbe8  bl 0x01736d60
+0100bbec  cbz x0,0x0100be38
+0100bbf0  ldr x0,[x0, #0x80]
+0100bbf4  mov x1,xzr
+0100bbf8  bl 0x0214df74
+0100bbfc  mov w1,w0
+0100bc00  mov x0,x19
+0100bc04  bl 0x0100b824
+0100bc08  mov w1,#0x1
+0100bc0c  mov x0,x19
+0100bc10  bl 0x0100b908
+0100bc14  ldr x8,[x22]
+0100bc18  ldr x8,[x8, #0xb8]
+0100bc1c  ldr x0,[x8, #0x10]
+0100bc20  cbz x0,0x0100be38
+0100bc24  ldr x2,[x23]
+0100bc28  mov w1,#0x5387
+0100bc2c  movk w1,#0x59a, LSL #16
+0100bc30  bl 0x01736d60
+0100bc34  cbz x0,0x0100be38
+0100bc38  ldr x0,[x0, #0x80]
+0100bc3c  mov x1,xzr
+0100bc40  bl 0x0214df74
+0100bc44  str w0,[x19, #0xd8]
+0100bc48  ldr x8,[x22]
+0100bc4c  ldr x8,[x8, #0xb8]
+0100bc50  ldr x0,[x8, #0x10]
+0100bc54  cbz x0,0x0100be38
+0100bc58  adrp x8,0x330a000
+0100bc5c  ldr x8,[x8, #0xf60]
+0100bc60  ldr x1,[x8]
+0100bc64  bl 0x01737100
+0100bc68  cbz x0,0x0100be38
+0100bc6c  adrp x8,0x337e000
+0100bc70  ldr x8,[x8, #0x4c0]
+0100bc74  adrp x23,0x3355000
+0100bc78  ldr x1,[x8]
+0100bc7c  ldr x23,[x23, #0xb98]
+0100bc80  bl 0x0192da04
+0100bc84  ldr x8,[x23]
+0100bc88  mov x20,x0
+0100bc8c  ldr w9,[x8, #0xe0]
+0100bc90  cbnz w9,0x0100bca0
+0100bc94  mov x0,x8
+0100bc98  bl 0x00b0798c
+0100bc9c  ldr x8,[x23]
+0100bca0  ldr x9,[x8, #0xb8]
+0100bca4  ldr x21,[x9, #0x8]
+0100bca8  cbnz x21,0x0100bd0c
+0100bcac  adrp x21,0x3334000
+0100bcb0  ldr w9,[x8, #0xe0]
+0100bcb4  ldr x21,[x21, #0x218]
+0100bcb8  cbnz w9,0x0100bcc8
+0100bcbc  mov x0,x8
+0100bcc0  bl 0x00b0798c
+0100bcc4  ldr x8,[x23]
+0100bcc8  ldr x8,[x8, #0xb8]
+0100bccc  ldr x0,[x21]
+0100bcd0  ldr x22,[x8]
+0100bcd4  bl 0x00b079a0
+0100bcd8  cbz x0,0x0100be38
+0100bcdc  adrp x8,0x3353000
+0100bce0  ldr x8,[x8, #0x568]
+0100bce4  mov x1,x22
+0100bce8  mov x3,xzr
+0100bcec  mov x21,x0
+0100bcf0  ldr x2,[x8]
+0100bcf4  bl 0x01ae8650
+0100bcf8  ldr x8,[x23]
+0100bcfc  mov x1,x21
+0100bd00  ldr x0,[x8, #0xb8]
+0100bd04  str x21,[x0, #0x8]!
+0100bd08  bl 0x00b07850
+0100bd0c  adrp x8,0x3343000
+0100bd10  ldr x8,[x8, #0x1c8]
+0100bd14  adrp x22,0x3324000
+0100bd18  mov x0,x20
+0100bd1c  mov x1,x21
+0100bd20  ldr x2,[x8]
+0100bd24  ldr x22,[x22, #0x6b0]
+0100bd28  bl 0x0178f7b0
+0100bd2c  ldr x1,[x22]
+0100bd30  bl 0x01781400
+0100bd34  cbz x0,0x0100be38
+0100bd38  ldr w8,[x0, #0x78]
+0100bd3c  adrp x20,0x335c000
+0100bd40  ldr x20,[x20, #0x918]
+0100bd44  mov x0,x19
+0100bd48  str w8,[x19, #0xdc]
+0100bd4c  bl 0x0100be3c
+0100bd50  mov x0,x19
+0100bd54  bl 0x0100c704
+0100bd58  ldr x0,[x20]
+0100bd5c  bl 0x00b079a0
+0100bd60  cbz x0,0x0100be38
+0100bd64  adrp x8,0x331c000
+0100bd68  ldr x8,[x8, #0x540]
+0100bd6c  mov x1,x19
+0100bd70  mov x3,xzr
+0100bd74  mov x20,x0
+0100bd78  ldr x2,[x8]
+0100bd7c  bl 0x00e110fc
+0100bd80  mov w1,#0x36
+0100bd84  mov x0,x19
+0100bd88  mov x2,x20
+0100bd8c  mov x3,xzr
+0100bd90  bl 0x00e1a5c0
+0100bd94  mov x0,x19
+0100bd98  bl 0x0100b308
+0100bd9c  cbz x0,0x0100be38
+0100bda0  mov x1,xzr
+0100bda4  bl 0x00faa750
+0100bda8  cbz x0,0x0100be38
+0100bdac  adrp x8,0x332d000
+0100bdb0  ldr x8,[x8, #0xd38]
+0100bdb4  adrp x21,0x3360000
+0100bdb8  ldr x20,[x0, #0x18]
+0100bdbc  ldr x8,[x8]
+0100bdc0  ldr w9,[x8, #0xe0]
+0100bdc4  ldr x21,[x21, #0x750]
+0100bdc8  cbnz w9,0x0100bdd4
+0100bdcc  mov x0,x8
+0100bdd0  bl 0x00b0798c
+0100bdd4  mov w1,#0x1
+0100bdd8  mov x0,x20
+0100bddc  mov x2,xzr
+0100bde0  bl 0x00e34224
+0100bde4  ldr x8,[x21]
+0100bde8  mov x20,x0
+0100bdec  mov x0,x8
+0100bdf0  bl 0x00b079a0
+0100bdf4  cbz x0,0x0100be38
+0100bdf8  adrp x8,0x3341000
+0100bdfc  ldr x8,[x8, #0x1c8]
+0100be00  mov x1,x19
+0100be04  mov x3,xzr
+0100be08  mov x21,x0
+0100be0c  ldr x2,[x8]
+0100be10  bl 0x00e35bd0
+0100be14  cbz x20,0x0100be38
+0100be18  str x21,[x20, #0x38]!
+0100be1c  mov x0,x20
+0100be20  mov x1,x21
+0100be24  ldp x19,x30,[sp, #0x30]
+0100be28  ldp x21,x20,[sp, #0x20]
+0100be2c  ldp x23,x22,[sp, #0x10]
+0100be30  ldr x24,[sp], #0x40
+0100be34  b 0x00b07850
+0100be38  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0100be3c_BuyEnergyMono__RefreshChargeItems.txt
+================================================================================
+Function: BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+
+--- Calls OUT ---
+  -> BuyEnergyMono$$get_m_needCount1 @ 0100b5f4
+  -> BuyEnergyMono$$get_m_create1 @ 0100b6d8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BaseMono$$BtnState @ 00e21270
+  -> BaseData$$get_NameByQualityWord @ 00df35ac
+  -> BuyenergypanelNode$$get_lbl_itemname @ 00faa834
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BuyenergypanelNode$$get_lbl_itemnumber @ 00faa880
+  -> BuyEnergyMono$$get_m_node @ 0100b308
+  -> BuyenergypanelNode$$get_btn_batterybuy @ 00faa9b0
+  -> DataCenter$$GetXCount @ 016defb0
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> Ali$$Word @ 00e0581c
+  -> BuyenergypanelNode$$get_lbl_itemdesc @ 00faa8cc
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> FUN_00b078f8 @ 00b078f8
+  -> Ali$$GetExcelData<object> @ 01736d60
+  -> BuyenergypanelNode$$get_lbl_itemnumber_1 @ 00faaa94
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> BuyEnergyMono$$get_m_needID2 @ 0100b7bc
+  -> BuyenergypanelNode$$get_equipItemParent @ 00faa7e8
+  -> BaseMono$$EquipItemShow @ 00e21920
+  -> BuyEnergyMono$$get_m_needCount2 @ 0100b8a0
+  -> FUN_00b07978 @ 00b07978
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> BuyenergypanelNode$$get_btn_crystalbuy @ 00faa79c
+  -> BuyenergypanelNode$$get_equipItemParent_1 @ 00faa9fc
+  -> BuyenergypanelNode$$get_lbl_itemdesc_1 @ 00faaae0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> AliothExtensions$$SetTextExt @ 00e13af0
+  -> UIEventListener$$Get @ 00e34224
+  -> UINode$$get_Text @ 00dc47dc
+  -> BuyEnergyMono$$get_m_needID1 @ 0100b510
+  -> FUN_00b079b8 @ 00b079b8
+  -> BuyenergypanelNode$$get_lbl_itemname_1 @ 00faaa48
+
+--- Calls IN ---
+  <- BuyEnergyMono$$CEBack @ 0100d0a0
+  <- BuyEnergyMono$$Start @ 0100b9ec
+
+--- Listing ---
+0100be3c  sub sp,sp,#0x80
+0100be40  stp x28,x27,[sp, #0x20]
+0100be44  stp x26,x25,[sp, #0x30]
+0100be48  stp x24,x23,[sp, #0x40]
+0100be4c  stp x22,x21,[sp, #0x50]
+0100be50  stp x20,x19,[sp, #0x60]
+0100be54  stp x29,x30,[sp, #0x70]
+0100be58  adrp x20,0x3574000
+0100be5c  adrp x21,0x3320000
+0100be60  ldrb w8,[x20, #0x447]
+0100be64  ldr x21,[x21, #0x5b8]
+0100be68  mov x19,x0
+0100be6c  tbnz w8,#0x0,0x0100bef0
+0100be70  adrp x0,0x335c000
+0100be74  ldr x0,[x0, #0x400]
+0100be78  bl 0x00b0789c
+0100be7c  adrp x0,0x335f000
+0100be80  ldr x0,[x0, #0x20]
+0100be84  bl 0x00b0789c
+0100be88  adrp x0,0x3348000
+0100be8c  ldr x0,[x0, #0x138]
+0100be90  bl 0x00b0789c
+0100be94  adrp x0,0x330d000
+0100be98  ldr x0,[x0, #0x4c0]
+0100be9c  bl 0x00b0789c
+0100bea0  adrp x0,0x3320000
+0100bea4  ldr x0,[x0, #0x5b8]
+0100bea8  bl 0x00b0789c
+0100beac  adrp x0,0x3332000
+0100beb0  ldr x0,[x0, #0x38]
+0100beb4  bl 0x00b0789c
+0100beb8  adrp x0,0x3370000
+0100bebc  ldr x0,[x0, #0x778]
+0100bec0  bl 0x00b0789c
+0100bec4  adrp x0,0x3347000
+0100bec8  ldr x0,[x0, #0x410]
+0100becc  bl 0x00b0789c
+0100bed0  adrp x0,0x332d000
+0100bed4  ldr x0,[x0, #0xd38]
+0100bed8  bl 0x00b0789c
+0100bedc  adrp x0,0x3360000
+0100bee0  ldr x0,[x0, #0x750]
+0100bee4  bl 0x00b0789c
+0100bee8  mov w8,#0x1
+0100beec  strb w8,[x20, #0x447]
+0100bef0  ldr x8,[x21]
+0100bef4  ldr x8,[x8, #0xb8]
+0100bef8  ldr x0,[x8, #0x80]
+0100befc  cbz x0,0x0100bf28
+0100bf00  mov x1,x19
+0100bf04  ldp x29,x30,[sp, #0x70]
+0100bf08  ldp x20,x19,[sp, #0x60]
+0100bf0c  ldp x22,x21,[sp, #0x50]
+0100bf10  ldp x24,x23,[sp, #0x40]
+0100bf14  ldp x26,x25,[sp, #0x30]
+0100bf18  ldp x28,x27,[sp, #0x20]
+0100bf1c  mov x2,xzr
+0100bf20  add sp,sp,#0x80
+0100bf24  b 0x01060dac
+0100bf28  adrp x28,0x335f000
+0100bf2c  ldr x28,[x28, #0x20]
+0100bf30  ldr x0,[x28]
+0100bf34  ldr w8,[x0, #0xe0]
+0100bf38  cbnz w8,0x0100bf44
+0100bf3c  bl 0x00b0798c
+0100bf40  ldr x0,[x28]
+0100bf44  ldr x8,[x0, #0xb8]
+0100bf48  mov x0,x19
+0100bf4c  ldr x20,[x8, #0x10]
+0100bf50  bl 0x0100b510
+0100bf54  cbz x20,0x0100c6f0
+0100bf58  adrp x8,0x335c000
+0100bf5c  ldr x8,[x8, #0x400]
+0100bf60  mov w1,w0
+0100bf64  mov x0,x20
+0100bf68  ldr x2,[x8]
+0100bf6c  bl 0x01736d60
+0100bf70  mov x21,x0
+0100bf74  mov x0,x19
+0100bf78  bl 0x0100b308
+0100bf7c  cbz x0,0x0100c6f0
+0100bf80  mov x1,xzr
+0100bf84  bl 0x00faa7e8
+0100bf88  cbz x0,0x0100c6f0
+0100bf8c  ldr x20,[x0, #0x18]
+0100bf90  mov x0,x19
+0100bf94  bl 0x0100b510
+0100bf98  mov w2,w0
+0100bf9c  mov x0,x19
+0100bfa0  mov x1,x20
+0100bfa4  mov w3,wzr
+0100bfa8  mov w4,wzr
+0100bfac  mov w5,wzr
+0100bfb0  mov x6,xzr
+0100bfb4  mov w7,wzr
+0100bfb8  str xzr,[sp, #0x8]
+0100bfbc  str wzr,[sp]
+0100bfc0  bl 0x00e21920
+0100bfc4  mov x20,x0
+0100bfc8  mov x0,x19
+0100bfcc  bl 0x0100b308
+0100bfd0  cbz x0,0x0100c6f0
+0100bfd4  mov x1,xzr
+0100bfd8  bl 0x00faa834
+0100bfdc  cbz x0,0x0100c6f0
+0100bfe0  mov x1,xzr
+0100bfe4  bl 0x00dc47dc
+0100bfe8  cbz x21,0x0100c6f0
+0100bfec  adrp x23,0x3348000
+0100bff0  adrp x29,0x3347000
+0100bff4  ldr x23,[x23, #0x138]
+0100bff8  ldr x29,[x29, #0x410]
+0100bffc  mov x22,x0
+0100c000  mov x0,x21
+0100c004  mov x1,xzr
+0100c008  bl 0x00df35ac
+0100c00c  ldr x8,[x23]
+0100c010  mov x21,x0
+0100c014  ldr w9,[x8, #0xe0]
+0100c018  cbnz w9,0x0100c024
+0100c01c  mov x0,x8
+0100c020  bl 0x00b0798c
+0100c024  mov x0,x22
+0100c028  mov x1,x21
+0100c02c  mov x2,xzr
+0100c030  bl 0x00e13af0
+0100c034  ldr x0,[x29]
+0100c038  bl 0x01e0894c
+0100c03c  mov x21,x0
+0100c040  mov x0,x19
+0100c044  bl 0x0100b510
+0100c048  cbz x21,0x0100c6f0
+0100c04c  mov w1,w0
+0100c050  mov x0,x21
+0100c054  mov w2,wzr
+0100c058  mov x3,xzr
+0100c05c  bl 0x016defb0
+0100c060  mov w21,w0
+0100c064  mov x0,x19
+0100c068  bl 0x0100b308
+0100c06c  cbz x0,0x0100c6f0
+0100c070  mov x1,xzr
+0100c074  bl 0x00faa880
+0100c078  cbz x0,0x0100c6f0
+0100c07c  adrp x25,0x3370000
+0100c080  adrp x27,0x3332000
+0100c084  ldr x25,[x25, #0x778]
+0100c088  ldr x27,[x27, #0x38]
+0100c08c  mov x1,xzr
+0100c090  bl 0x00dc47dc
+0100c094  ldr x8,[x25]
+0100c098  mov x22,x0
+0100c09c  mov w1,#0x1
+0100c0a0  mov x0,x8
+0100c0a4  bl 0x00b078f8
+0100c0a8  mov x23,x0
+0100c0ac  ldr x0,[x27]
+0100c0b0  add x1,sp,#0x1c
+0100c0b4  str w21,[sp, #0x1c]
+0100c0b8  bl 0x00b07994
+0100c0bc  cbz x23,0x0100c6f0
+0100c0c0  mov x24,x0
+0100c0c4  cbz x0,0x0100c0dc
+0100c0c8  ldr x8,[x23]
+0100c0cc  mov x0,x24
+0100c0d0  ldr x1,[x8, #0x40]
+0100c0d4  bl 0x00b07990
+0100c0d8  cbz x0,0x0100c6f8
+0100c0dc  ldr w8,[x23, #0x18]
+0100c0e0  cbz w8,0x0100c6f4
+0100c0e4  mov x0,x23
+0100c0e8  str x24,[x0, #0x20]!
+0100c0ec  mov x1,x24
+0100c0f0  bl 0x00b07850
+0100c0f4  mov w1,#0xb016
+0100c0f8  movk w1,#0x4c6, LSL #16
+0100c0fc  mov x0,x22
+0100c100  mov x2,x23
+0100c104  mov x3,xzr
+0100c108  bl 0x00e14168
+0100c10c  mov x0,x19
+0100c110  bl 0x0100b308
+0100c114  cbz x0,0x0100c6f0
+0100c118  mov x1,xzr
+0100c11c  bl 0x00faa8cc
+0100c120  cbz x0,0x0100c6f0
+0100c124  mov x1,xzr
+0100c128  bl 0x00dc47dc
+0100c12c  ldr x8,[x28]
+0100c130  mov x22,x0
+0100c134  mov w1,#0x2
+0100c138  ldr x8,[x8, #0xb8]
+0100c13c  ldr x23,[x8, #0x10]
+0100c140  ldr x8,[x25]
+0100c144  mov x0,x8
+0100c148  bl 0x00b078f8
+0100c14c  mov x24,x0
+0100c150  mov x0,x19
+0100c154  bl 0x0100b5f4
+0100c158  ldr x8,[x27]
+0100c15c  str w0,[sp, #0x18]
+0100c160  add x1,sp,#0x18
+0100c164  mov x0,x8
+0100c168  bl 0x00b07994
+0100c16c  cbz x24,0x0100c6f0
+0100c170  mov x25,x0
+0100c174  cbz x0,0x0100c18c
+0100c178  ldr x8,[x24]
+0100c17c  mov x0,x25
+0100c180  ldr x1,[x8, #0x40]
+0100c184  bl 0x00b07990
+0100c188  cbz x0,0x0100c6f8
+0100c18c  ldr w8,[x24, #0x18]
+0100c190  cbz w8,0x0100c6f4
+0100c194  mov x0,x24
+0100c198  str x25,[x0, #0x20]!
+0100c19c  mov x1,x25
+0100c1a0  bl 0x00b07850
+0100c1a4  mov x0,x19
+0100c1a8  bl 0x0100b6d8
+0100c1ac  ldr x8,[x27]
+0100c1b0  str w0,[sp, #0x14]
+0100c1b4  add x1,sp,#0x14
+0100c1b8  mov x0,x8
+0100c1bc  bl 0x00b07994
+0100c1c0  mov x25,x0
+0100c1c4  cbz x0,0x0100c1dc
+0100c1c8  ldr x8,[x24]
+0100c1cc  mov x0,x25
+0100c1d0  ldr x1,[x8, #0x40]
+0100c1d4  bl 0x00b07990
+0100c1d8  cbz x0,0x0100c6f8
+0100c1dc  ldr w8,[x24, #0x18]
+0100c1e0  cmp w8,#0x1
+0100c1e4  b.ls 0x0100c6f4
+0100c1e8  mov x0,x24
+0100c1ec  str x25,[x0, #0x28]!
+0100c1f0  mov x1,x25
+0100c1f4  bl 0x00b07850
+0100c1f8  cbz x23,0x0100c6f0
+0100c1fc  mov w1,#0x20d3
+0100c200  movk w1,#0x4c9, LSL #16
+0100c204  mov x0,x23
+0100c208  mov x2,x24
+0100c20c  mov x3,xzr
+0100c210  bl 0x00e0581c
+0100c214  mov x1,x0
+0100c218  mov x0,x22
+0100c21c  mov x2,xzr
+0100c220  bl 0x00e13af0
+0100c224  cbz x20,0x0100c6f0
+0100c228  mov x0,x20
+0100c22c  mov x1,xzr
+0100c230  bl 0x024e4ed4
+0100c234  mov x20,x0
+0100c238  mov x0,x19
+0100c23c  bl 0x0100b5f4
+0100c240  cmp w0,w21
+0100c244  cset w2,le
+0100c248  fmov s0,wzr
+0100c24c  fmov s1,wzr
+0100c250  fmov s2,wzr
+0100c254  fmov s3,wzr
+0100c258  mov w3,#0x1
+0100c25c  mov x0,x19
+0100c260  mov x1,x20
+0100c264  mov x4,xzr
+0100c268  bl 0x00e21270
+0100c26c  mov x0,x19
+0100c270  bl 0x0100b5f4
+0100c274  mov w20,w0
+0100c278  mov x0,x19
+0100c27c  bl 0x0100b308
+0100c280  cbz x0,0x0100c6f0
+0100c284  mov x1,xzr
+0100c288  mov x24,x29
+0100c28c  bl 0x00faa79c
+0100c290  cbz x0,0x0100c6f0
+0100c294  adrp x26,0x332d000
+0100c298  ldr x26,[x26, #0xd38]
+0100c29c  ldr x22,[x0, #0x18]
+0100c2a0  ldr x8,[x26]
+0100c2a4  ldr w9,[x8, #0xe0]
+0100c2a8  cbnz w9,0x0100c2b4
+0100c2ac  mov x0,x8
+0100c2b0  bl 0x00b0798c
+0100c2b4  adrp x23,0x3360000
+0100c2b8  adrp x29,0x330d000
+0100c2bc  ldr x23,[x23, #0x750]
+0100c2c0  ldr x29,[x29, #0x4c0]
+0100c2c4  cmp w20,w21
+0100c2c8  b.le 0x0100c2ec
+0100c2cc  mov w1,#0x1
+0100c2d0  mov x0,x22
+0100c2d4  mov x2,xzr
+0100c2d8  bl 0x00e34224
+0100c2dc  cbz x0,0x0100c6f0
+0100c2e0  str xzr,[x0, #0x38]!
+0100c2e4  mov x1,xzr
+0100c2e8  b 0x0100c334
+0100c2ec  mov x0,x22
+0100c2f0  mov w1,wzr
+0100c2f4  mov x2,xzr
+0100c2f8  bl 0x00e34224
+0100c2fc  ldr x8,[x23]
+0100c300  mov x20,x0
+0100c304  mov x0,x8
+0100c308  bl 0x00b079a0
+0100c30c  cbz x0,0x0100c6f0
+0100c310  ldr x2,[x29]
+0100c314  mov x1,x19
+0100c318  mov x3,xzr
+0100c31c  mov x21,x0
+0100c320  bl 0x00e35bd0
+0100c324  cbz x20,0x0100c6f0
+0100c328  str x21,[x20, #0x38]!
+0100c32c  mov x0,x20
+0100c330  mov x1,x21
+0100c334  bl 0x00b07850
+0100c338  ldr x0,[x28]
+0100c33c  ldr w8,[x0, #0xe0]
+0100c340  cbnz w8,0x0100c350
+0100c344  mov x20,x28
+0100c348  bl 0x00b0798c
+0100c34c  ldr x0,[x28]
+0100c350  ldr x8,[x0, #0xb8]
+0100c354  mov x0,x19
+0100c358  ldr x20,[x8, #0x10]
+0100c35c  bl 0x0100b7bc
+0100c360  cbz x20,0x0100c6f0
+0100c364  adrp x8,0x335c000
+0100c368  ldr x8,[x8, #0x400]
+0100c36c  mov w1,w0
+0100c370  mov x0,x20
+0100c374  ldr x2,[x8]
+0100c378  bl 0x01736d60
+0100c37c  mov x22,x0
+0100c380  mov x0,x19
+0100c384  bl 0x0100b308
+0100c388  cbz x0,0x0100c6f0
+0100c38c  mov x1,xzr
+0100c390  bl 0x00faa9fc
+0100c394  cbz x0,0x0100c6f0
+0100c398  ldr x20,[x0, #0x18]
+0100c39c  mov x0,x19
+0100c3a0  bl 0x0100b7bc
+0100c3a4  mov w2,w0
+0100c3a8  mov x0,x19
+0100c3ac  mov x1,x20
+0100c3b0  mov w3,wzr
+0100c3b4  mov w4,wzr
+0100c3b8  mov w5,wzr
+0100c3bc  mov x6,xzr
+0100c3c0  mov w7,wzr
+0100c3c4  str xzr,[sp, #0x8]
+0100c3c8  str wzr,[sp]
+0100c3cc  bl 0x00e21920
+0100c3d0  mov x20,x0
+0100c3d4  mov x0,x19
+0100c3d8  bl 0x0100b308
+0100c3dc  cbz x0,0x0100c6f0
+0100c3e0  mov x1,xzr
+0100c3e4  bl 0x00faaa48
+0100c3e8  cbz x0,0x0100c6f0
+0100c3ec  mov x1,xzr
+0100c3f0  bl 0x00dc47dc
+0100c3f4  cbz x22,0x0100c6f0
+0100c3f8  mov x21,x0
+0100c3fc  mov x0,x22
+0100c400  mov x1,xzr
+0100c404  bl 0x00df35ac
+0100c408  adrp x8,0x3348000
+0100c40c  ldr x8,[x8, #0x138]
+0100c410  mov x23,x0
+0100c414  ldr x8,[x8]
+0100c418  ldr w9,[x8, #0xe0]
+0100c41c  cbnz w9,0x0100c428
+0100c420  mov x0,x8
+0100c424  bl 0x00b0798c
+0100c428  mov x0,x21
+0100c42c  mov x1,x23
+0100c430  mov x2,xzr
+0100c434  bl 0x00e13af0
+0100c438  ldr x0,[x24]
+0100c43c  bl 0x01e0894c
+0100c440  mov x21,x0
+0100c444  mov x0,x19
+0100c448  bl 0x0100b7bc
+0100c44c  cbz x21,0x0100c6f0
+0100c450  mov w1,w0
+0100c454  mov x0,x21
+0100c458  mov w2,wzr
+0100c45c  mov x3,xzr
+0100c460  bl 0x016defb0
+0100c464  mov w21,w0
+0100c468  mov x0,x19
+0100c46c  bl 0x0100b308
+0100c470  cbz x0,0x0100c6f0
+0100c474  mov x1,xzr
+0100c478  bl 0x00faaa94
+0100c47c  cbz x0,0x0100c6f0
+0100c480  mov x1,xzr
+0100c484  bl 0x00dc47dc
+0100c488  adrp x8,0x3370000
+0100c48c  ldr x8,[x8, #0x778]
+0100c490  mov x23,x0
+0100c494  mov w1,#0x1
+0100c498  ldr x8,[x8]
+0100c49c  mov x0,x8
+0100c4a0  bl 0x00b078f8
+0100c4a4  mov x24,x0
+0100c4a8  ldr x0,[x27]
+0100c4ac  add x1,sp,#0x1c
+0100c4b0  str w21,[sp, #0x1c]
+0100c4b4  bl 0x00b07994
+0100c4b8  cbz x24,0x0100c6f0
+0100c4bc  mov x25,x0
+0100c4c0  cbz x0,0x0100c4d8
+0100c4c4  ldr x8,[x24]
+0100c4c8  mov x0,x25
+0100c4cc  ldr x1,[x8, #0x40]
+0100c4d0  bl 0x00b07990
+0100c4d4  cbz x0,0x0100c6f8
+0100c4d8  ldr w8,[x24, #0x18]
+0100c4dc  cbz w8,0x0100c6f4
+0100c4e0  mov x0,x24
+0100c4e4  str x25,[x0, #0x20]!
+0100c4e8  mov x1,x25
+0100c4ec  bl 0x00b07850
+0100c4f0  mov w1,#0xb016
+0100c4f4  movk w1,#0x4c6, LSL #16
+0100c4f8  mov x0,x23
+0100c4fc  mov x2,x24
+0100c500  mov x3,xzr
+0100c504  bl 0x00e14168
+0100c508  mov x0,x19
+0100c50c  bl 0x0100b308
+0100c510  cbz x0,0x0100c6f0
+0100c514  mov x1,xzr
+0100c518  bl 0x00faaae0
+0100c51c  cbz x0,0x0100c6f0
+0100c520  mov x1,xzr
+0100c524  bl 0x00dc47dc
+0100c528  ldr x8,[x28]
+0100c52c  mov x23,x0
+0100c530  mov w1,#0x1
+0100c534  ldr x8,[x8, #0xb8]
+0100c538  ldr x24,[x8, #0x10]
+0100c53c  adrp x8,0x3370000
+0100c540  ldr x8,[x8, #0x778]
+0100c544  ldr x8,[x8]
+0100c548  mov x0,x8
+0100c54c  bl 0x00b078f8
+0100c550  mov x25,x0
+0100c554  ldr w8,[x22, #0x88]
+0100c558  ldr x0,[x27]
+0100c55c  add x1,sp,#0x18
+0100c560  str w8,[sp, #0x18]
+0100c564  bl 0x00b07994
+0100c568  cbz x25,0x0100c6f0
+0100c56c  mov x22,x0
+0100c570  cbz x0,0x0100c588
+0100c574  ldr x8,[x25]
+0100c578  mov x0,x22
+0100c57c  ldr x1,[x8, #0x40]
+0100c580  bl 0x00b07990
+0100c584  cbz x0,0x0100c6f8
+0100c588  ldr w8,[x25, #0x18]
+0100c58c  cbz w8,0x0100c6f4
+0100c590  mov x0,x25
+0100c594  str x22,[x0, #0x20]!
+0100c598  mov x1,x22
+0100c59c  bl 0x00b07850
+0100c5a0  cbz x24,0x0100c6f0
+0100c5a4  mov w8,#0x20d3
+0100c5a8  movk w8,#0x4c9, LSL #16
+0100c5ac  add w1,w8,#0x1
+0100c5b0  mov x0,x24
+0100c5b4  mov x2,x25
+0100c5b8  mov x3,xzr
+0100c5bc  bl 0x00e0581c
+0100c5c0  mov x1,x0
+0100c5c4  mov x0,x23
+0100c5c8  mov x2,xzr
+0100c5cc  bl 0x00e13af0
+0100c5d0  cbz x20,0x0100c6f0
+0100c5d4  mov x0,x20
+0100c5d8  mov x1,xzr
+0100c5dc  bl 0x024e4ed4
+0100c5e0  mov x20,x0
+0100c5e4  mov x0,x19
+0100c5e8  bl 0x0100b8a0
+0100c5ec  cmp w0,w21
+0100c5f0  cset w2,le
+0100c5f4  fmov s0,wzr
+0100c5f8  fmov s1,wzr
+0100c5fc  fmov s2,wzr
+0100c600  fmov s3,wzr
+0100c604  mov w3,#0x1
+0100c608  mov x0,x19
+0100c60c  mov x1,x20
+0100c610  mov x4,xzr
+0100c614  bl 0x00e21270
+0100c618  mov x0,x19
+0100c61c  bl 0x0100b8a0
+0100c620  mov w20,w0
+0100c624  mov x0,x19
+0100c628  bl 0x0100b308
+0100c62c  cbz x0,0x0100c6f0
+0100c630  mov x1,xzr
+0100c634  bl 0x00faa9b0
+0100c638  cbz x0,0x0100c6f0
+0100c63c  ldr x8,[x26]
+0100c640  ldr x22,[x0, #0x18]
+0100c644  ldr w9,[x8, #0xe0]
+0100c648  cbnz w9,0x0100c654
+0100c64c  mov x0,x8
+0100c650  bl 0x00b0798c
+0100c654  cmp w20,w21
+0100c658  b.le 0x0100c67c
+0100c65c  mov w1,#0x1
+0100c660  mov x0,x22
+0100c664  mov x2,xzr
+0100c668  bl 0x00e34224
+0100c66c  cbz x0,0x0100c6f0
+0100c670  str xzr,[x0, #0x38]!
+0100c674  mov x1,xzr
+0100c678  b 0x0100c6cc
+0100c67c  mov x0,x22
+0100c680  mov w1,wzr
+0100c684  mov x2,xzr
+0100c688  bl 0x00e34224
+0100c68c  adrp x8,0x3360000
+0100c690  ldr x8,[x8, #0x750]
+0100c694  mov x20,x0
+0100c698  ldr x8,[x8]
+0100c69c  mov x0,x8
+0100c6a0  bl 0x00b079a0
+0100c6a4  cbz x0,0x0100c6f0
+0100c6a8  ldr x2,[x29]
+0100c6ac  mov x1,x19
+0100c6b0  mov x3,xzr
+0100c6b4  mov x21,x0
+0100c6b8  bl 0x00e35bd0
+0100c6bc  cbz x20,0x0100c6f0
+0100c6c0  str x21,[x20, #0x38]!
+0100c6c4  mov x0,x20
+0100c6c8  mov x1,x21
+0100c6cc  bl 0x00b07850
+0100c6d0  ldp x29,x30,[sp, #0x70]
+0100c6d4  ldp x20,x19,[sp, #0x60]
+0100c6d8  ldp x22,x21,[sp, #0x50]
+0100c6dc  ldp x24,x23,[sp, #0x40]
+0100c6e0  ldp x26,x25,[sp, #0x30]
+0100c6e4  ldp x28,x27,[sp, #0x20]
+0100c6e8  add sp,sp,#0x80
+0100c6ec  ret
+0100c6f0  bl 0x00b079b0
+0100c6f4  bl 0x00b079b8
+0100c6f8  bl 0x00b079d4
+0100c6fc  mov x1,xzr
+0100c700  bl 0x00b07978
+
+
+================================================================================
+### FILE: 0100c704_BuyEnergyMono__CheckTypeStatus.txt
+================================================================================
+Function: BuyEnergyMono$$CheckTypeStatus @ 0100c704
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> FUN_00b079b0 @ 00b079b0
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> BuyEnergyMono$$get_selectbtn @ 0100b424
+  -> BaseMono$$BtnState @ 00e21270
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BuyEnergyMono$$get_m_node @ 0100b308
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UIEventListener$$Get @ 00e34224
+  -> BuyenergypanelNode$$get_btn_chargeenergy @ 00faa704
+
+--- Calls IN ---
+  <- BuyEnergyMono$$Start @ 0100b9ec
+  <- BuyEnergyMono$$ClickEnergyType @ 0100cbe4
+
+--- Listing ---
+0100c704  stp x21,x20,[sp, #-0x20]!
+0100c708  stp x19,x30,[sp, #0x10]
+0100c70c  adrp x20,0x3574000
+0100c710  adrp x21,0x3320000
+0100c714  ldrb w8,[x20, #0x448]
+0100c718  ldr x21,[x21, #0x5b8]
+0100c71c  mov x19,x0
+0100c720  tbnz w8,#0x0,0x0100c768
+0100c724  adrp x0,0x3361000
+0100c728  ldr x0,[x0, #0xb68]
+0100c72c  bl 0x00b0789c
+0100c730  adrp x0,0x3320000
+0100c734  ldr x0,[x0, #0x5b8]
+0100c738  bl 0x00b0789c
+0100c73c  adrp x0,0x3321000
+0100c740  ldr x0,[x0, #0xca8]
+0100c744  bl 0x00b0789c
+0100c748  adrp x0,0x332d000
+0100c74c  ldr x0,[x0, #0xd38]
+0100c750  bl 0x00b0789c
+0100c754  adrp x0,0x3360000
+0100c758  ldr x0,[x0, #0x750]
+0100c75c  bl 0x00b0789c
+0100c760  mov w8,#0x1
+0100c764  strb w8,[x20, #0x448]
+0100c768  ldr x8,[x21]
+0100c76c  ldr x8,[x8, #0xb8]
+0100c770  ldr x0,[x8, #0x88]
+0100c774  cbz x0,0x0100c78c
+0100c778  mov x1,x19
+0100c77c  ldp x19,x30,[sp, #0x10]
+0100c780  mov x2,xzr
+0100c784  ldp x21,x20,[sp], #0x20
+0100c788  b 0x01060dac
+0100c78c  adrp x20,0x3321000
+0100c790  ldr x20,[x20, #0xca8]
+0100c794  mov x0,x19
+0100c798  bl 0x0100b424
+0100c79c  ldr x8,[x20]
+0100c7a0  mov x20,x0
+0100c7a4  ldr w9,[x8, #0xe0]
+0100c7a8  cbnz w9,0x0100c7b4
+0100c7ac  mov x0,x8
+0100c7b0  bl 0x00b0798c
+0100c7b4  mov x0,x20
+0100c7b8  mov x1,xzr
+0100c7bc  mov x2,xzr
+0100c7c0  bl 0x024de30c
+0100c7c4  mov w20,w0
+0100c7c8  mov x0,x19
+0100c7cc  bl 0x0100b308
+0100c7d0  cbz x0,0x0100c90c
+0100c7d4  mov x1,xzr
+0100c7d8  bl 0x00faa704
+0100c7dc  cbz x0,0x0100c90c
+0100c7e0  adrp x21,0x332d000
+0100c7e4  ldr x1,[x0, #0x18]
+0100c7e8  ldr x21,[x21, #0xd38]
+0100c7ec  fmov s0,wzr
+0100c7f0  fmov s1,wzr
+0100c7f4  fmov s2,wzr
+0100c7f8  fmov s3,wzr
+0100c7fc  tbz w20,#0x0,0x0100c8a0
+0100c800  mov w2,#0x1
+0100c804  mov x0,x19
+0100c808  mov w3,wzr
+0100c80c  mov x4,xzr
+0100c810  bl 0x00e21270
+0100c814  mov x0,x19
+0100c818  bl 0x0100b308
+0100c81c  cbz x0,0x0100c90c
+0100c820  mov x1,xzr
+0100c824  bl 0x00faa704
+0100c828  cbz x0,0x0100c90c
+0100c82c  ldr x8,[x21]
+0100c830  adrp x21,0x3360000
+0100c834  ldr x20,[x0, #0x18]
+0100c838  ldr w9,[x8, #0xe0]
+0100c83c  ldr x21,[x21, #0x750]
+0100c840  cbnz w9,0x0100c84c
+0100c844  mov x0,x8
+0100c848  bl 0x00b0798c
+0100c84c  mov w1,#0x1
+0100c850  mov x0,x20
+0100c854  mov x2,xzr
+0100c858  bl 0x00e34224
+0100c85c  ldr x8,[x21]
+0100c860  mov x20,x0
+0100c864  mov x0,x8
+0100c868  bl 0x00b079a0
+0100c86c  cbz x0,0x0100c90c
+0100c870  adrp x8,0x3361000
+0100c874  ldr x8,[x8, #0xb68]
+0100c878  mov x1,x19
+0100c87c  mov x3,xzr
+0100c880  mov x21,x0
+0100c884  ldr x2,[x8]
+0100c888  bl 0x00e35bd0
+0100c88c  cbz x20,0x0100c90c
+0100c890  str x21,[x20, #0x38]!
+0100c894  mov x0,x20
+0100c898  mov x1,x21
+0100c89c  b 0x0100c900
+0100c8a0  mov x0,x19
+0100c8a4  mov w2,wzr
+0100c8a8  mov w3,wzr
+0100c8ac  mov x4,xzr
+0100c8b0  bl 0x00e21270
+0100c8b4  mov x0,x19
+0100c8b8  bl 0x0100b308
+0100c8bc  cbz x0,0x0100c90c
+0100c8c0  mov x1,xzr
+0100c8c4  bl 0x00faa704
+0100c8c8  cbz x0,0x0100c90c
+0100c8cc  ldr x8,[x21]
+0100c8d0  ldr x19,[x0, #0x18]
+0100c8d4  ldr w9,[x8, #0xe0]
+0100c8d8  cbnz w9,0x0100c8e4
+0100c8dc  mov x0,x8
+0100c8e0  bl 0x00b0798c
+0100c8e4  mov w1,#0x1
+0100c8e8  mov x0,x19
+0100c8ec  mov x2,xzr
+0100c8f0  bl 0x00e34224
+0100c8f4  cbz x0,0x0100c90c
+0100c8f8  str xzr,[x0, #0x38]!
+0100c8fc  mov x1,xzr
+0100c900  ldp x19,x30,[sp, #0x10]
+0100c904  ldp x21,x20,[sp], #0x20
+0100c908  b 0x00b07850
+0100c90c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0100c910_BuyEnergyMono__Update.txt
+================================================================================
+Function: BuyEnergyMono$$Update @ 0100c910
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> AliothEngine.GUIScreen$$Update @ 0167158c
+  -> System.TimeSpan$$get_Minutes @ 02167b78
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> DataCenter$$get_EnergyNextTime @ 016decdc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> System.DateTime$$op_Subtraction @ 021356d4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UserInfo$$get_Energy @ 00dd2ce4
+  -> System.Int32$$ToString @ 0214dcd8
+  -> BuyEnergyMono$$get_m_node @ 0100b308
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> UINode$$get_Text @ 00dc47dc
+  -> BuyenergypanelNode$$get_lbl_energyTime @ 00faabc4
+  -> System.TimeSpan$$get_Seconds @ 02167bc0
+  -> System.TimeSpan$$get_TotalSeconds @ 02167c88
+
+--- Calls IN ---
+
+--- Listing ---
+0100c910  sub sp,sp,#0x40
+0100c914  str x22,[sp, #0x10]
+0100c918  stp x21,x20,[sp, #0x20]
+0100c91c  stp x19,x30,[sp, #0x30]
+0100c920  adrp x21,0x3574000
+0100c924  adrp x20,0x3320000
+0100c928  ldrb w8,[x21, #0x446]
+0100c92c  ldr x20,[x20, #0x5b8]
+0100c930  mov x19,x0
+0100c934  tbnz w8,#0x0,0x0100c994
+0100c938  adrp x0,0x3348000
+0100c93c  ldr x0,[x0, #0x138]
+0100c940  bl 0x00b0789c
+0100c944  adrp x0,0x3320000
+0100c948  ldr x0,[x0, #0x5b8]
+0100c94c  bl 0x00b0789c
+0100c950  adrp x0,0x336f000
+0100c954  ldr x0,[x0, #0xdc8]
+0100c958  bl 0x00b0789c
+0100c95c  adrp x0,0x3370000
+0100c960  ldr x0,[x0, #0x778]
+0100c964  bl 0x00b0789c
+0100c968  adrp x0,0x3347000
+0100c96c  ldr x0,[x0, #0x410]
+0100c970  bl 0x00b0789c
+0100c974  adrp x0,0x3321000
+0100c978  ldr x0,[x0, #0xf68]
+0100c97c  bl 0x00b0789c
+0100c980  adrp x0,0x334f000
+0100c984  ldr x0,[x0, #0x100]
+0100c988  bl 0x00b0789c
+0100c98c  mov w8,#0x1
+0100c990  strb w8,[x21, #0x446]
+0100c994  ldr x8,[x20]
+0100c998  str xzr,[sp, #0x18]
+0100c99c  str wzr,[sp, #0xc]
+0100c9a0  ldr x8,[x8, #0xb8]
+0100c9a4  ldr x0,[x8, #0x78]
+0100c9a8  cbz x0,0x0100c9bc
+0100c9ac  mov x1,x19
+0100c9b0  mov x2,xzr
+0100c9b4  bl 0x01060dac
+0100c9b8  b 0x0100cbbc
+0100c9bc  adrp x22,0x3347000
+0100c9c0  ldr x22,[x22, #0x410]
+0100c9c4  mov x0,x19
+0100c9c8  mov x1,xzr
+0100c9cc  bl 0x0167158c
+0100c9d0  ldr x0,[x22]
+0100c9d4  bl 0x01e0894c
+0100c9d8  cbz x0,0x0100cbd0
+0100c9dc  mov x1,xzr
+0100c9e0  bl 0x016decdc
+0100c9e4  ldr x8,[x22]
+0100c9e8  mov x20,x0
+0100c9ec  mov x0,x8
+0100c9f0  bl 0x01e0894c
+0100c9f4  cbz x0,0x0100cbd0
+0100c9f8  adrp x8,0x336f000
+0100c9fc  ldr x8,[x8, #0xdc8]
+0100ca00  ldr x21,[x0, #0x118]
+0100ca04  ldr x8,[x8]
+0100ca08  ldr w9,[x8, #0xe0]
+0100ca0c  cbnz w9,0x0100ca18
+0100ca10  mov x0,x8
+0100ca14  bl 0x00b0798c
+0100ca18  mov x0,x20
+0100ca1c  mov x1,x21
+0100ca20  mov x2,xzr
+0100ca24  bl 0x021356d4
+0100ca28  ldr x8,[x22]
+0100ca2c  str x0,[sp, #0x18]
+0100ca30  mov x0,x8
+0100ca34  bl 0x01e0894c
+0100ca38  cbz x0,0x0100cbd0
+0100ca3c  ldr x0,[x0, #0x28]
+0100ca40  cbz x0,0x0100cbd0
+0100ca44  mov x1,xzr
+0100ca48  bl 0x00dd2ce4
+0100ca4c  ldr w8,[x19, #0xdc]
+0100ca50  cmp w0,w8
+0100ca54  b.ge 0x0100ca6c
+0100ca58  add x0,sp,#0x18
+0100ca5c  mov x1,xzr
+0100ca60  bl 0x02167c88
+0100ca64  fcmp d0,#0.0
+0100ca68  b.hi 0x0100ca94
+0100ca6c  adrp x20,0x3321000
+0100ca70  ldr x20,[x20, #0xf68]
+0100ca74  ldr x0,[x20]
+0100ca78  ldr w8,[x0, #0xe0]
+0100ca7c  cbnz w8,0x0100ca88
+0100ca80  bl 0x00b0798c
+0100ca84  ldr x0,[x20]
+0100ca88  ldr x8,[x0, #0xb8]
+0100ca8c  ldr x8,[x8]
+0100ca90  str x8,[sp, #0x18]
+0100ca94  mov x0,x19
+0100ca98  bl 0x0100b308
+0100ca9c  cbz x0,0x0100cbd0
+0100caa0  mov x1,xzr
+0100caa4  bl 0x00faabc4
+0100caa8  cbz x0,0x0100cbd0
+0100caac  adrp x19,0x3370000
+0100cab0  adrp x22,0x334f000
+0100cab4  ldr x19,[x19, #0x778]
+0100cab8  ldr x22,[x22, #0x100]
+0100cabc  mov x1,xzr
+0100cac0  bl 0x00dc47dc
+0100cac4  ldr x8,[x19]
+0100cac8  mov x19,x0
+0100cacc  mov w1,#0x2
+0100cad0  mov x0,x8
+0100cad4  bl 0x00b078f8
+0100cad8  mov x20,x0
+0100cadc  add x0,sp,#0x18
+0100cae0  mov x1,xzr
+0100cae4  bl 0x02167b78
+0100cae8  ldr x1,[x22]
+0100caec  str w0,[sp, #0xc]
+0100caf0  add x0,sp,#0xc
+0100caf4  mov x2,xzr
+0100caf8  bl 0x0214dcd8
+0100cafc  cbz x20,0x0100cbd0
+0100cb00  mov x21,x0
+0100cb04  cbz x0,0x0100cb1c
+0100cb08  ldr x8,[x20]
+0100cb0c  mov x0,x21
+0100cb10  ldr x1,[x8, #0x40]
+0100cb14  bl 0x00b07990
+0100cb18  cbz x0,0x0100cbd8
+0100cb1c  ldr w8,[x20, #0x18]
+0100cb20  cbz w8,0x0100cbd4
+0100cb24  mov x0,x20
+0100cb28  str x21,[x0, #0x20]!
+0100cb2c  mov x1,x21
+0100cb30  bl 0x00b07850
+0100cb34  add x0,sp,#0x18
+0100cb38  mov x1,xzr
+0100cb3c  bl 0x02167bc0
+0100cb40  ldr x1,[x22]
+0100cb44  str w0,[sp, #0xc]
+0100cb48  add x0,sp,#0xc
+0100cb4c  mov x2,xzr
+0100cb50  bl 0x0214dcd8
+0100cb54  mov x21,x0
+0100cb58  cbz x0,0x0100cb70
+0100cb5c  ldr x8,[x20]
+0100cb60  mov x0,x21
+0100cb64  ldr x1,[x8, #0x40]
+0100cb68  bl 0x00b07990
+0100cb6c  cbz x0,0x0100cbd8
+0100cb70  ldr w8,[x20, #0x18]
+0100cb74  cmp w8,#0x1
+0100cb78  b.ls 0x0100cbd4
+0100cb7c  adrp x22,0x3348000
+0100cb80  ldr x22,[x22, #0x138]
+0100cb84  mov x0,x20
+0100cb88  str x21,[x0, #0x28]!
+0100cb8c  mov x1,x21
+0100cb90  bl 0x00b07850
+0100cb94  ldr x0,[x22]
+0100cb98  ldr w8,[x0, #0xe0]
+0100cb9c  cbnz w8,0x0100cba4
+0100cba0  bl 0x00b0798c
+0100cba4  mov w1,#0x20d6
+0100cba8  movk w1,#0x4c9, LSL #16
+0100cbac  mov x0,x19
+0100cbb0  mov x2,x20
+0100cbb4  mov x3,xzr
+0100cbb8  bl 0x00e14168
+0100cbbc  ldp x19,x30,[sp, #0x30]
+0100cbc0  ldp x21,x20,[sp, #0x20]
+0100cbc4  ldr x22,[sp, #0x10]
+0100cbc8  add sp,sp,#0x40
+0100cbcc  ret
+0100cbd0  bl 0x00b079b0
+0100cbd4  bl 0x00b079b8
+0100cbd8  bl 0x00b079d4
+0100cbdc  mov x1,xzr
+0100cbe0  bl 0x00b07978
+
+
+================================================================================
+### FILE: 0100cbe4_BuyEnergyMono__ClickEnergyType.txt
+================================================================================
+Function: BuyEnergyMono$$ClickEnergyType @ 0100cbe4
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> BuyEnergyMono$$CheckTypeStatus @ 0100c704
+  -> BuyEnergyMono$$set_selectbtn @ 0100b48c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> BuyenergypanelNode$$get_btn_crystalbuy @ 00faa79c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BuyenergypanelNode$$get_spr_choose_1 @ 00faab78
+  -> BuyEnergyMono$$get_m_node @ 0100b308
+  -> BuyenergypanelNode$$get_btn_batterybuy @ 00faa9b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> BuyenergypanelNode$$get_spr_choose @ 00faa964
+
+--- Calls IN ---
+
+--- Listing ---
+0100cbe4  str x22,[sp, #-0x30]!
+0100cbe8  stp x21,x20,[sp, #0x10]
+0100cbec  stp x19,x30,[sp, #0x20]
+0100cbf0  adrp x21,0x3574000
+0100cbf4  adrp x22,0x3320000
+0100cbf8  ldrb w8,[x21, #0x449]
+0100cbfc  ldr x22,[x22, #0x5b8]
+0100cc00  mov x20,x1
+0100cc04  mov x19,x0
+0100cc08  tbnz w8,#0x0,0x0100cc38
+0100cc0c  adrp x0,0x3348000
+0100cc10  ldr x0,[x0, #0x138]
+0100cc14  bl 0x00b0789c
+0100cc18  adrp x0,0x3320000
+0100cc1c  ldr x0,[x0, #0x5b8]
+0100cc20  bl 0x00b0789c
+0100cc24  adrp x0,0x3321000
+0100cc28  ldr x0,[x0, #0xca8]
+0100cc2c  bl 0x00b0789c
+0100cc30  mov w8,#0x1
+0100cc34  strb w8,[x21, #0x449]
+0100cc38  ldr x8,[x22]
+0100cc3c  ldr x8,[x8, #0xb8]
+0100cc40  ldr x0,[x8, #0x90]
+0100cc44  cbz x0,0x0100cc64
+0100cc48  mov x1,x19
+0100cc4c  mov x2,x20
+0100cc50  ldp x19,x30,[sp, #0x20]
+0100cc54  ldp x21,x20,[sp, #0x10]
+0100cc58  mov x3,xzr
+0100cc5c  ldr x22,[sp], #0x30
+0100cc60  b 0x0106125c
+0100cc64  mov x0,x19
+0100cc68  bl 0x0100b308
+0100cc6c  cbz x0,0x0100cdd0
+0100cc70  mov x1,xzr
+0100cc74  bl 0x00faa9b0
+0100cc78  cbz x0,0x0100cdd0
+0100cc7c  adrp x8,0x3321000
+0100cc80  ldr x8,[x8, #0xca8]
+0100cc84  ldr x21,[x0, #0x18]
+0100cc88  ldr x8,[x8]
+0100cc8c  ldr w9,[x8, #0xe0]
+0100cc90  cbnz w9,0x0100cc9c
+0100cc94  mov x0,x8
+0100cc98  bl 0x00b0798c
+0100cc9c  mov x0,x20
+0100cca0  mov x1,x21
+0100cca4  mov x2,xzr
+0100cca8  bl 0x024c8180
+0100ccac  mov w20,w0
+0100ccb0  mov x0,x19
+0100ccb4  bl 0x0100b308
+0100ccb8  cbz x0,0x0100cdd0
+0100ccbc  adrp x21,0x3348000
+0100ccc0  ldr x21,[x21, #0x138]
+0100ccc4  mov x1,xzr
+0100ccc8  tbz w20,#0x0,0x0100cd40
+0100cccc  bl 0x00faa9b0
+0100ccd0  cbz x0,0x0100cdd0
+0100ccd4  ldr x1,[x0, #0x18]
+0100ccd8  mov x0,x19
+0100ccdc  bl 0x0100b48c
+0100cce0  mov x0,x19
+0100cce4  bl 0x0100b308
+0100cce8  cbz x0,0x0100cdd0
+0100ccec  mov x1,xzr
+0100ccf0  bl 0x00faa964
+0100ccf4  cbz x0,0x0100cdd0
+0100ccf8  ldr x8,[x21]
+0100ccfc  ldr x20,[x0, #0x18]
+0100cd00  ldr w9,[x8, #0xe0]
+0100cd04  cbnz w9,0x0100cd10
+0100cd08  mov x0,x8
+0100cd0c  bl 0x00b0798c
+0100cd10  mov x0,x20
+0100cd14  mov w1,wzr
+0100cd18  mov x2,xzr
+0100cd1c  bl 0x00e13880
+0100cd20  mov x0,x19
+0100cd24  bl 0x0100b308
+0100cd28  cbz x0,0x0100cdd0
+0100cd2c  mov x1,xzr
+0100cd30  bl 0x00faab78
+0100cd34  cbz x0,0x0100cdd0
+0100cd38  mov w1,#0x1
+0100cd3c  b 0x0100cdb0
+0100cd40  bl 0x00faa79c
+0100cd44  cbz x0,0x0100cdd0
+0100cd48  ldr x1,[x0, #0x18]
+0100cd4c  mov x0,x19
+0100cd50  bl 0x0100b48c
+0100cd54  mov x0,x19
+0100cd58  bl 0x0100b308
+0100cd5c  cbz x0,0x0100cdd0
+0100cd60  mov x1,xzr
+0100cd64  bl 0x00faa964
+0100cd68  cbz x0,0x0100cdd0
+0100cd6c  ldr x8,[x21]
+0100cd70  ldr x20,[x0, #0x18]
+0100cd74  ldr w9,[x8, #0xe0]
+0100cd78  cbnz w9,0x0100cd84
+0100cd7c  mov x0,x8
+0100cd80  bl 0x00b0798c
+0100cd84  mov w1,#0x1
+0100cd88  mov x0,x20
+0100cd8c  mov x2,xzr
+0100cd90  bl 0x00e13880
+0100cd94  mov x0,x19
+0100cd98  bl 0x0100b308
+0100cd9c  cbz x0,0x0100cdd0
+0100cda0  mov x1,xzr
+0100cda4  bl 0x00faab78
+0100cda8  cbz x0,0x0100cdd0
+0100cdac  mov w1,wzr
+0100cdb0  ldr x0,[x0, #0x18]
+0100cdb4  mov x2,xzr
+0100cdb8  bl 0x00e13880
+0100cdbc  mov x0,x19
+0100cdc0  ldp x19,x30,[sp, #0x20]
+0100cdc4  ldp x21,x20,[sp, #0x10]
+0100cdc8  ldr x22,[sp], #0x30
+0100cdcc  b 0x0100c704
+0100cdd0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0100cdd4_BuyEnergyMono__ClickChargeEnergy.txt
+================================================================================
+Function: BuyEnergyMono$$ClickChargeEnergy @ 0100cdd4
+
+--- Calls OUT ---
+  -> BuyEnergyMono$$get_m_needCount1 @ 0100b5f4
+  -> BaseMono$$TextTips @ 00e1b538
+  -> BuyEnergyMono$$get_m_needID2 @ 0100b7bc
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> BuyEnergyMono$$get_m_needCount2 @ 0100b8a0
+  -> FUN_00b07978 @ 00b07978
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> Ali$$GetBaseData @ 00e035d4
+  -> BuyEnergyMono$$get_selectbtn @ 0100b424
+  -> ProtocolGame_SendRequest$$ChargeEnergy @ 00de06a0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BaseData$$get_NameByQualityWord @ 00df35ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> DataCenter$$GetXCount @ 016defb0
+  -> BuyenergypanelNode$$get_btn_batterybuy @ 00faa9b0
+  -> BuyEnergyMono$$get_m_node @ 0100b308
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b078f8 @ 00b078f8
+  -> BuyEnergyMono$$get_m_needID1 @ 0100b510
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+
+--- Listing ---
+0100cdd4  str x24,[sp, #-0x40]!
+0100cdd8  stp x23,x22,[sp, #0x10]
+0100cddc  stp x21,x20,[sp, #0x20]
+0100cde0  stp x19,x30,[sp, #0x30]
+0100cde4  adrp x21,0x3574000
+0100cde8  adrp x22,0x3320000
+0100cdec  ldrb w8,[x21, #0x44a]
+0100cdf0  ldr x22,[x22, #0x5b8]
+0100cdf4  mov x20,x1
+0100cdf8  mov x19,x0
+0100cdfc  tbnz w8,#0x0,0x0100ce44
+0100ce00  adrp x0,0x335f000
+0100ce04  ldr x0,[x0, #0x20]
+0100ce08  bl 0x00b0789c
+0100ce0c  adrp x0,0x3320000
+0100ce10  ldr x0,[x0, #0x5b8]
+0100ce14  bl 0x00b0789c
+0100ce18  adrp x0,0x3370000
+0100ce1c  ldr x0,[x0, #0x778]
+0100ce20  bl 0x00b0789c
+0100ce24  adrp x0,0x3321000
+0100ce28  ldr x0,[x0, #0xca8]
+0100ce2c  bl 0x00b0789c
+0100ce30  adrp x0,0x3347000
+0100ce34  ldr x0,[x0, #0x410]
+0100ce38  bl 0x00b0789c
+0100ce3c  mov w8,#0x1
+0100ce40  strb w8,[x21, #0x44a]
+0100ce44  ldr x8,[x22]
+0100ce48  ldr x8,[x8, #0xb8]
+0100ce4c  ldr x0,[x8, #0x98]
+0100ce50  cbz x0,0x0100ce74
+0100ce54  mov x1,x19
+0100ce58  mov x2,x20
+0100ce5c  ldp x19,x30,[sp, #0x30]
+0100ce60  ldp x21,x20,[sp, #0x20]
+0100ce64  ldp x23,x22,[sp, #0x10]
+0100ce68  mov x3,xzr
+0100ce6c  ldr x24,[sp], #0x40
+0100ce70  b 0x0106125c
+0100ce74  mov x0,x19
+0100ce78  bl 0x0100b424
+0100ce7c  mov x20,x0
+0100ce80  mov x0,x19
+0100ce84  bl 0x0100b308
+0100ce88  cbz x0,0x0100d08c
+0100ce8c  mov x1,xzr
+0100ce90  bl 0x00faa9b0
+0100ce94  cbz x0,0x0100d08c
+0100ce98  adrp x8,0x3321000
+0100ce9c  ldr x8,[x8, #0xca8]
+0100cea0  adrp x24,0x3347000
+0100cea4  ldr x21,[x0, #0x18]
+0100cea8  ldr x8,[x8]
+0100ceac  ldr w9,[x8, #0xe0]
+0100ceb0  ldr x24,[x24, #0x410]
+0100ceb4  cbnz w9,0x0100cec0
+0100ceb8  mov x0,x8
+0100cebc  bl 0x00b0798c
+0100cec0  adrp x23,0x3370000
+0100cec4  adrp x22,0x335f000
+0100cec8  ldr x23,[x23, #0x778]
+0100cecc  ldr x22,[x22, #0x20]
+0100ced0  mov x0,x20
+0100ced4  mov x1,x21
+0100ced8  mov x2,xzr
+0100cedc  bl 0x024c8180
+0100cee0  ldr x8,[x24]
+0100cee4  mov w21,w0
+0100cee8  mov x0,x8
+0100ceec  bl 0x01e0894c
+0100cef0  mov x20,x0
+0100cef4  mov x0,x19
+0100cef8  tbz w21,#0x0,0x0100cf6c
+0100cefc  bl 0x0100b7bc
+0100cf00  cbz x20,0x0100d08c
+0100cf04  mov w1,w0
+0100cf08  mov x0,x20
+0100cf0c  mov w2,wzr
+0100cf10  mov x3,xzr
+0100cf14  bl 0x016defb0
+0100cf18  mov w20,w0
+0100cf1c  mov x0,x19
+0100cf20  bl 0x0100b8a0
+0100cf24  cmp w20,w0
+0100cf28  b.ge 0x0100d064
+0100cf2c  ldr x0,[x23]
+0100cf30  mov w1,#0x1
+0100cf34  bl 0x00b078f8
+0100cf38  ldr x8,[x22]
+0100cf3c  mov x20,x0
+0100cf40  ldr w9,[x8, #0xe0]
+0100cf44  cbnz w9,0x0100cf54
+0100cf48  mov x0,x8
+0100cf4c  bl 0x00b0798c
+0100cf50  ldr x8,[x22]
+0100cf54  ldr x8,[x8, #0xb8]
+0100cf58  mov x0,x19
+0100cf5c  ldr x21,[x8, #0x10]
+0100cf60  bl 0x0100b7bc
+0100cf64  cbnz x21,0x0100cfd8
+0100cf68  b 0x0100d08c
+0100cf6c  bl 0x0100b510
+0100cf70  cbz x20,0x0100d08c
+0100cf74  mov w1,w0
+0100cf78  mov x0,x20
+0100cf7c  mov w2,wzr
+0100cf80  mov x3,xzr
+0100cf84  bl 0x016defb0
+0100cf88  mov w20,w0
+0100cf8c  mov x0,x19
+0100cf90  bl 0x0100b5f4
+0100cf94  cmp w20,w0
+0100cf98  b.ge 0x0100d070
+0100cf9c  ldr x0,[x23]
+0100cfa0  mov w1,#0x1
+0100cfa4  bl 0x00b078f8
+0100cfa8  ldr x8,[x22]
+0100cfac  mov x20,x0
+0100cfb0  ldr w9,[x8, #0xe0]
+0100cfb4  cbnz w9,0x0100cfc4
+0100cfb8  mov x0,x8
+0100cfbc  bl 0x00b0798c
+0100cfc0  ldr x8,[x22]
+0100cfc4  ldr x8,[x8, #0xb8]
+0100cfc8  mov x0,x19
+0100cfcc  ldr x21,[x8, #0x10]
+0100cfd0  bl 0x0100b510
+0100cfd4  cbz x21,0x0100d08c
+0100cfd8  mov w1,w0
+0100cfdc  mov x0,x21
+0100cfe0  mov x2,xzr
+0100cfe4  bl 0x00e035d4
+0100cfe8  cbz x0,0x0100d08c
+0100cfec  mov x1,xzr
+0100cff0  bl 0x00df35ac
+0100cff4  cbz x20,0x0100d08c
+0100cff8  mov x21,x0
+0100cffc  cbz x0,0x0100d014
+0100d000  ldr x8,[x20]
+0100d004  mov x0,x21
+0100d008  ldr x1,[x8, #0x40]
+0100d00c  bl 0x00b07990
+0100d010  cbz x0,0x0100d094
+0100d014  ldr w8,[x20, #0x18]
+0100d018  cbz w8,0x0100d090
+0100d01c  mov x0,x20
+0100d020  str x21,[x0, #0x20]!
+0100d024  mov x1,x21
+0100d028  bl 0x00b07850
+0100d02c  mov x0,x19
+0100d030  mov x6,x20
+0100d034  ldp x19,x30,[sp, #0x30]
+0100d038  ldp x21,x20,[sp, #0x20]
+0100d03c  ldp x23,x22,[sp, #0x10]
+0100d040  mov w1,#0x368e
+0100d044  movk w1,#0x4c8, LSL #16
+0100d048  mov w4,#0xffffffff
+0100d04c  mov w2,wzr
+0100d050  mov x3,xzr
+0100d054  mov w5,wzr
+0100d058  mov x7,xzr
+0100d05c  ldr x24,[sp], #0x40
+0100d060  b 0x00e1b538
+0100d064  mov x0,x19
+0100d068  bl 0x0100b7bc
+0100d06c  b 0x0100d074
+0100d070  mov w0,wzr
+0100d074  ldp x19,x30,[sp, #0x30]
+0100d078  ldp x21,x20,[sp, #0x20]
+0100d07c  ldp x23,x22,[sp, #0x10]
+0100d080  mov x1,xzr
+0100d084  ldr x24,[sp], #0x40
+0100d088  b 0x00de06a0
+0100d08c  bl 0x00b079b0
+0100d090  bl 0x00b079b8
+0100d094  bl 0x00b079d4
+0100d098  mov x1,xzr
+0100d09c  bl 0x00b07978
+
+
+================================================================================
+### FILE: 0100d0a0_BuyEnergyMono__CEBack.txt
+================================================================================
+Function: BuyEnergyMono$$CEBack @ 0100d0a0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BuyEnergyMono$$RefreshChargeItems @ 0100be3c
+  -> BaseMono$$Notify @ 00e1d098
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+0100d0a0  str x22,[sp, #-0x30]!
+0100d0a4  stp x21,x20,[sp, #0x10]
+0100d0a8  stp x19,x30,[sp, #0x20]
+0100d0ac  adrp x21,0x3574000
+0100d0b0  adrp x22,0x3320000
+0100d0b4  ldrb w8,[x21, #0x44b]
+0100d0b8  ldr x22,[x22, #0x5b8]
+0100d0bc  mov x20,x1
+0100d0c0  mov x19,x0
+0100d0c4  tbnz w8,#0x0,0x0100d100
+0100d0c8  adrp x0,0x3320000
+0100d0cc  ldr x0,[x0, #0x5b8]
+0100d0d0  bl 0x00b0789c
+0100d0d4  adrp x0,0x3332000
+0100d0d8  ldr x0,[x0, #0x38]
+0100d0dc  bl 0x00b0789c
+0100d0e0  adrp x0,0x3370000
+0100d0e4  ldr x0,[x0, #0x778]
+0100d0e8  bl 0x00b0789c
+0100d0ec  adrp x0,0x3324000
+0100d0f0  ldr x0,[x0, #0x288]
+0100d0f4  bl 0x00b0789c
+0100d0f8  mov w8,#0x1
+0100d0fc  strb w8,[x21, #0x44b]
+0100d100  ldr x8,[x22]
+0100d104  ldr x8,[x8, #0xb8]
+0100d108  ldr x0,[x8, #0xa0]
+0100d10c  cbz x0,0x0100d12c
+0100d110  mov x1,x19
+0100d114  mov x2,x20
+0100d118  ldp x19,x30,[sp, #0x20]
+0100d11c  ldp x21,x20,[sp, #0x10]
+0100d120  mov x3,xzr
+0100d124  ldr x22,[sp], #0x30
+0100d128  b 0x0106125c
+0100d12c  adrp x8,0x3370000
+0100d130  ldr x8,[x8, #0x778]
+0100d134  adrp x21,0x3332000
+0100d138  mov w1,#0x1
+0100d13c  ldr x0,[x8]
+0100d140  ldr x21,[x21, #0x38]
+0100d144  bl 0x00b078f8
+0100d148  mov x20,x0
+0100d14c  ldr x0,[x21]
+0100d150  mov w8,#0x20d5
+0100d154  movk w8,#0x4c9, LSL #16
+0100d158  add x1,sp,#0xc
+0100d15c  str w8,[sp, #0xc]
+0100d160  bl 0x00b07994
+0100d164  cbz x20,0x0100d1cc
+0100d168  mov x21,x0
+0100d16c  cbz x0,0x0100d184
+0100d170  ldr x8,[x20]
+0100d174  mov x0,x21
+0100d178  ldr x1,[x8, #0x40]
+0100d17c  bl 0x00b07990
+0100d180  cbz x0,0x0100d1d4
+0100d184  ldr w8,[x20, #0x18]
+0100d188  cbz w8,0x0100d1d0
+0100d18c  adrp x22,0x3324000
+0100d190  ldr x22,[x22, #0x288]
+0100d194  mov x0,x20
+0100d198  str x21,[x0, #0x20]!
+0100d19c  mov x1,x21
+0100d1a0  bl 0x00b07850
+0100d1a4  ldr x0,[x22]
+0100d1a8  mov x1,x20
+0100d1ac  mov x2,xzr
+0100d1b0  bl 0x00e1d098
+0100d1b4  mov x0,x19
+0100d1b8  bl 0x0100be3c
+0100d1bc  ldp x19,x30,[sp, #0x20]
+0100d1c0  ldp x21,x20,[sp, #0x10]
+0100d1c4  ldr x22,[sp], #0x30
+0100d1c8  ret
+0100d1cc  bl 0x00b079b0
+0100d1d0  bl 0x00b079b8
+0100d1d4  bl 0x00b079d4
+0100d1d8  mov x1,xzr
+0100d1dc  bl 0x00b07978
+
+
+================================================================================
+### FILE: 0100d1e0_BuyEnergyMono__CloseBuyEnergy.txt
+================================================================================
+Function: BuyEnergyMono$$CloseBuyEnergy @ 0100d1e0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+
+--- Listing ---
+0100d1e0  str x22,[sp, #-0x30]!
+0100d1e4  stp x21,x20,[sp, #0x10]
+0100d1e8  stp x19,x30,[sp, #0x20]
+0100d1ec  adrp x21,0x3574000
+0100d1f0  adrp x22,0x3320000
+0100d1f4  ldrb w8,[x21, #0x44c]
+0100d1f8  ldr x22,[x22, #0x5b8]
+0100d1fc  mov x20,x1
+0100d200  mov x19,x0
+0100d204  tbnz w8,#0x0,0x0100d21c
+0100d208  adrp x0,0x3320000
+0100d20c  ldr x0,[x0, #0x5b8]
+0100d210  bl 0x00b0789c
+0100d214  mov w8,#0x1
+0100d218  strb w8,[x21, #0x44c]
+0100d21c  ldr x8,[x22]
+0100d220  ldr x8,[x8, #0xb8]
+0100d224  ldr x0,[x8, #0xa8]
+0100d228  cbz x0,0x0100d248
+0100d22c  mov x1,x19
+0100d230  mov x2,x20
+0100d234  ldp x19,x30,[sp, #0x20]
+0100d238  ldp x21,x20,[sp, #0x10]
+0100d23c  mov x3,xzr
+0100d240  ldr x22,[sp], #0x30
+0100d244  b 0x0106125c
+0100d248  ldr x8,[x19]
+0100d24c  mov x0,x19
+0100d250  ldp x19,x30,[sp, #0x20]
+0100d254  ldp x21,x20,[sp, #0x10]
+0100d258  ldr x2,[x8, #0x458]
+0100d25c  ldr x1,[x8, #0x460]
+0100d260  ldr x22,[sp], #0x30
+0100d264  br x2
+
+
+================================================================================
+### FILE: 0100d268_BuyEnergyMono__.ctor.txt
+================================================================================
+Function: BuyEnergyMono$$.ctor @ 0100d268
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.BuyEnergyMonoWrap$$__CreateInstance @ 012280f0
+
+--- Listing ---
+0100d268  stp x21,x20,[sp, #-0x20]!
+0100d26c  stp x19,x30,[sp, #0x10]
+0100d270  adrp x21,0x3574000
+0100d274  adrp x20,0x3320000
+0100d278  ldrb w8,[x21, #0x44d]
+0100d27c  ldr x20,[x20, #0x5b8]
+0100d280  mov x19,x0
+0100d284  tbnz w8,#0x0,0x0100d29c
+0100d288  adrp x0,0x3320000
+0100d28c  ldr x0,[x0, #0x5b8]
+0100d290  bl 0x00b0789c
+0100d294  mov w8,#0x1
+0100d298  strb w8,[x21, #0x44d]
+0100d29c  mov x0,x19
+0100d2a0  mov x1,xzr
+0100d2a4  bl 0x00f1c130
+0100d2a8  ldr x8,[x20]
+0100d2ac  ldr x8,[x8, #0xb8]
+0100d2b0  ldr x0,[x8, #0xb0]
+0100d2b4  cbz x0,0x0100d2cc
+0100d2b8  mov x1,x19
+0100d2bc  ldp x19,x30,[sp, #0x10]
+0100d2c0  mov x2,xzr
+0100d2c4  ldp x21,x20,[sp], #0x20
+0100d2c8  b 0x01060dac
+0100d2cc  ldp x19,x30,[sp, #0x10]
+0100d2d0  ldp x21,x20,[sp], #0x20
+0100d2d4  ret
+
+
+================================================================================
+### FILE: 0100d2d8_BuyEnergyMono____xLuaBaseProxy_get_LayerType.txt
+================================================================================
+Function: BuyEnergyMono$$<>xLuaBaseProxy_get_LayerType @ 0100d2d8
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$get_LayerType @ 016711a8
+
+--- Calls IN ---
+
+--- Listing ---
+0100d2d8  mov x1,xzr
+0100d2dc  b 0x016711a8
+
+
+================================================================================
+### FILE: 0100d2e0_BuyEnergyMono____xLuaBaseProxy_Update.txt
+================================================================================
+Function: BuyEnergyMono$$<>xLuaBaseProxy_Update @ 0100d2e0
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$Update @ 0167158c
+
+--- Calls IN ---
+
+--- Listing ---
+0100d2e0  mov x1,xzr
+0100d2e4  b 0x0167158c
+
+
+================================================================================
+### FILE: 0100d2e8_BuyEnergyMono.__c__.cctor.txt
+================================================================================
+Function: BuyEnergyMono.<>c$$.cctor @ 0100d2e8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+0100d2e8  str x20,[sp, #-0x20]!
+0100d2ec  stp x19,x30,[sp, #0x10]
+0100d2f0  adrp x19,0x3574000
+0100d2f4  adrp x20,0x3355000
+0100d2f8  ldrb w8,[x19, #0x44e]
+0100d2fc  ldr x20,[x20, #0xb98]
+0100d300  tbnz w8,#0x0,0x0100d318
+0100d304  adrp x0,0x3355000
+0100d308  ldr x0,[x0, #0xb98]
+0100d30c  bl 0x00b0789c
+0100d310  mov w8,#0x1
+0100d314  strb w8,[x19, #0x44e]
+0100d318  ldr x0,[x20]
+0100d31c  bl 0x00b079a0
+0100d320  cbz x0,0x0100d354
+0100d324  mov x1,xzr
+0100d328  mov x19,x0
+0100d32c  bl 0x02194104
+0100d330  ldr x8,[x20]
+0100d334  mov x1,x19
+0100d338  ldr x8,[x8, #0xb8]
+0100d33c  str x19,[x8]
+0100d340  ldr x8,[x20]
+0100d344  ldp x19,x30,[sp, #0x10]
+0100d348  ldr x0,[x8, #0xb8]
+0100d34c  ldr x20,[sp], #0x20
+0100d350  b 0x00b07850
+0100d354  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0100d358_BuyEnergyMono.__c__.ctor.txt
+================================================================================
+Function: BuyEnergyMono.<>c$$.ctor @ 0100d358
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+0100d358  mov x1,xzr
+0100d35c  b 0x02194104
+
+
+================================================================================
+### FILE: 0100d360_BuyEnergyMono.__c___Start_b__31_0.txt
+================================================================================
+Function: BuyEnergyMono.<>c$$<Start>b__31_0 @ 0100d360
+
+--- Calls OUT ---
+  -> UserInfo$$get_Level @ 00dd1ba0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0100d360  str x20,[sp, #-0x20]!
+0100d364  stp x19,x30,[sp, #0x10]
+0100d368  adrp x20,0x3574000
+0100d36c  ldrb w8,[x20, #0x44f]
+0100d370  mov x19,x1
+0100d374  tbnz w8,#0x0,0x0100d38c
+0100d378  adrp x0,0x3347000
+0100d37c  ldr x0,[x0, #0x410]
+0100d380  bl 0x00b0789c
+0100d384  mov w8,#0x1
+0100d388  strb w8,[x20, #0x44f]
+0100d38c  cbz x19,0x0100d3cc
+0100d390  adrp x8,0x3347000
+0100d394  ldr x8,[x8, #0x410]
+0100d398  ldr w19,[x19, #0x74]
+0100d39c  ldr x0,[x8]
+0100d3a0  bl 0x01e0894c
+0100d3a4  cbz x0,0x0100d3cc
+0100d3a8  ldr x0,[x0, #0x28]
+0100d3ac  cbz x0,0x0100d3cc
+0100d3b0  mov x1,xzr
+0100d3b4  bl 0x00dd1ba0
+0100d3b8  cmp w19,w0
+0100d3bc  ldp x19,x30,[sp, #0x10]
+0100d3c0  cset w0,eq
+0100d3c4  ldr x20,[sp], #0x20
+0100d3c8  ret
+0100d3cc  bl 0x00b079b0
+
+

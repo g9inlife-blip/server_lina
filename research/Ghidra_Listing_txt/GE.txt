@@ -1,0 +1,5033 @@
+================================================================================
+### FILE: 008d3b10_get.txt
+================================================================================
+Function: get @ 008d3b10
+
+--- Calls OUT ---
+  -> get @ 00b4a060
+
+--- Calls IN ---
+  <- get @ 00b49f98
+
+--- Listing ---
+008d3b10  adrp x16,0x3307000
+008d3b14  ldr x17,[x16, #0x748]
+008d3b18  add x16,x16,#0x748
+008d3b1c  br x17
+
+
+================================================================================
+### FILE: 008d3cb0_getnameinfo.txt
+================================================================================
+Function: getnameinfo @ 008d3cb0
+
+--- Calls OUT ---
+  -> getnameinfo @ 037990c8
+
+--- Calls IN ---
+  <- FUN_00ae5ec8 @ 00ae5ec8
+
+--- Listing ---
+008d3cb0  adrp x16,0x3307000
+008d3cb4  ldr x17,[x16, #0x818]
+008d3cb8  add x16,x16,#0x818
+008d3cbc  br x17
+
+
+================================================================================
+### FILE: 008d3e20_get_terminate.txt
+================================================================================
+Function: get_terminate @ 008d3e20
+
+--- Calls OUT ---
+  -> get_terminate @ 00b8bd58
+
+--- Calls IN ---
+  <- __cxa_call_unexpected @ 00b8c5bc
+  <- __cxa_rethrow_primary_exception @ 00b8b72c
+  <- __cxa_throw @ 00b8b28c
+
+--- Listing ---
+008d3e20  adrp x16,0x3307000
+008d3e24  ldr x17,[x16, #0x8d0]
+008d3e28  add x16,x16,#0x8d0
+008d3e2c  br x17
+
+
+================================================================================
+### FILE: 008d3ec0_get.txt
+================================================================================
+Function: get @ 008d3ec0
+
+--- Calls OUT ---
+  -> get @ 00b4a350
+
+--- Calls IN ---
+  <- get @ 00b4a298
+
+--- Listing ---
+008d3ec0  adrp x16,0x3307000
+008d3ec4  ldr x17,[x16, #0x920]
+008d3ec8  add x16,x16,#0x920
+008d3ecc  br x17
+
+
+================================================================================
+### FILE: 008d3f80_get_new_handler.txt
+================================================================================
+Function: get_new_handler @ 008d3f80
+
+--- Calls OUT ---
+  -> get_new_handler @ 00b8bdc4
+
+--- Calls IN ---
+  <- operator.new @ 00b81ae0
+  <- operator.new @ 00b81bb8
+
+--- Listing ---
+008d3f80  adrp x16,0x3307000
+008d3f84  ldr x17,[x16, #0x980]
+008d3f88  add x16,x16,#0x980
+008d3f8c  br x17
+
+
+================================================================================
+### FILE: 008d4150_get.txt
+================================================================================
+Function: get @ 008d4150
+
+--- Calls OUT ---
+  -> get @ 00b4d7ac
+
+--- Calls IN ---
+  <- get @ 00b4d6f4
+
+--- Listing ---
+008d4150  adrp x16,0x3307000
+008d4154  ldr x17,[x16, #0xa68]
+008d4158  add x16,x16,#0xa68
+008d415c  br x17
+
+
+================================================================================
+### FILE: 008d4190_gettimeofday.txt
+================================================================================
+Function: gettimeofday @ 008d4190
+
+--- Calls OUT ---
+  -> gettimeofday @ 037991f8
+
+--- Calls IN ---
+  <- FUN_00a8db6c @ 00a8db6c
+  <- FUN_00a8dc34 @ 00a8dc34
+
+--- Listing ---
+008d4190  adrp x16,0x3307000
+008d4194  ldr x17,[x16, #0xa88]
+008d4198  add x16,x16,#0xa88
+008d419c  br x17
+
+
+================================================================================
+### FILE: 008d41f0___get_percent.txt
+================================================================================
+Function: __get_percent @ 008d41f0
+
+--- Calls OUT ---
+  -> __get_percent @ 00b613c4
+
+--- Calls IN ---
+  <- do_get @ 00b607c4
+
+--- Listing ---
+008d41f0  adrp x16,0x3307000
+008d41f4  ldr x17,[x16, #0xab8]
+008d41f8  add x16,x16,#0xab8
+008d41fc  br x17
+
+
+================================================================================
+### FILE: 008d42b0_gethostname.txt
+================================================================================
+Function: gethostname @ 008d42b0
+
+--- Calls OUT ---
+  -> gethostname @ 03799240
+
+--- Calls IN ---
+  <- FUN_00ae6010 @ 00ae6010
+  <- FUN_00ae60d0 @ 00ae60d0
+  <- FUN_00a8d2c8 @ 00a8d2c8
+
+--- Listing ---
+008d42b0  adrp x16,0x3307000
+008d42b4  ldr x17,[x16, #0xb18]
+008d42b8  add x16,x16,#0xb18
+008d42bc  br x17
+
+
+================================================================================
+### FILE: 008d4310_get.txt
+================================================================================
+Function: get @ 008d4310
+
+--- Calls OUT ---
+  -> get @ 00b49e00
+
+--- Calls IN ---
+  <- get @ 00b49f64
+
+--- Listing ---
+008d4310  adrp x16,0x3307000
+008d4314  ldr x17,[x16, #0xb48]
+008d4318  add x16,x16,#0xb48
+008d431c  br x17
+
+
+================================================================================
+### FILE: 008d4430___get_white_space.txt
+================================================================================
+Function: __get_white_space @ 008d4430
+
+--- Calls OUT ---
+  -> __get_white_space @ 00b61034
+
+--- Calls IN ---
+  <- do_get @ 00b607c4
+
+--- Listing ---
+008d4430  adrp x16,0x3307000
+008d4434  ldr x17,[x16, #0xbd8]
+008d4438  add x16,x16,#0xbd8
+008d443c  br x17
+
+
+================================================================================
+### FILE: 008d4560___get_percent.txt
+================================================================================
+Function: __get_percent @ 008d4560
+
+--- Calls OUT ---
+  -> __get_percent @ 00b6312c
+
+--- Calls IN ---
+  <- do_get @ 00b6250c
+
+--- Listing ---
+008d4560  adrp x16,0x3307000
+008d4564  ldr x17,[x16, #0xc70]
+008d4568  add x16,x16,#0xc70
+008d456c  br x17
+
+
+================================================================================
+### FILE: 008d45d0_getpeername.txt
+================================================================================
+Function: getpeername @ 008d45d0
+
+--- Calls OUT ---
+  -> getpeername @ 03799320
+
+--- Calls IN ---
+  <- FUN_00ae694c @ 00ae694c
+
+--- Listing ---
+008d45d0  adrp x16,0x3307000
+008d45d4  ldr x17,[x16, #0xca8]
+008d45d8  add x16,x16,#0xca8
+008d45dc  br x17
+
+
+================================================================================
+### FILE: 008d4650_get_unexpected.txt
+================================================================================
+Function: get_unexpected @ 008d4650
+
+--- Calls OUT ---
+  -> get_unexpected @ 00b8bcd8
+
+--- Calls IN ---
+  <- __cxa_call_unexpected @ 00b8c5bc
+  <- __cxa_rethrow_primary_exception @ 00b8b72c
+  <- __cxa_throw @ 00b8b28c
+
+--- Listing ---
+008d4650  adrp x16,0x3307000
+008d4654  ldr x17,[x16, #0xce8]
+008d4658  add x16,x16,#0xce8
+008d465c  br x17
+
+
+================================================================================
+### FILE: 008d47b0_getline.txt
+================================================================================
+Function: getline @ 008d47b0
+
+--- Calls OUT ---
+  -> getline @ 00b4da2c
+
+--- Calls IN ---
+  <- getline @ 00b4d964
+
+--- Listing ---
+008d47b0  adrp x16,0x3307000
+008d47b4  ldr x17,[x16, #0xd98]
+008d47b8  add x16,x16,#0xd98
+008d47bc  br x17
+
+
+================================================================================
+### FILE: 008d4b10_getcwd.txt
+================================================================================
+Function: getcwd @ 008d4b10
+
+--- Calls OUT ---
+  -> getcwd @ 03799458
+
+--- Calls IN ---
+  <- FUN_00aca404 @ 00aca404
+
+--- Listing ---
+008d4b10  adrp x16,0x3307000
+008d4b14  ldr x17,[x16, #0xf48]
+008d4b18  add x16,x16,#0xf48
+008d4b1c  br x17
+
+
+================================================================================
+### FILE: 008d4cd0_getegid.txt
+================================================================================
+Function: getegid @ 008d4cd0
+
+--- Calls OUT ---
+  -> getegid @ 037994c8
+
+--- Calls IN ---
+  <- SystemNative_GetEGid @ 00a99ce8
+
+--- Listing ---
+008d4cd0  adrp x16,0x3308000
+008d4cd4  ldr x17,[x16, #0x28]
+008d4cd8  add x16,x16,#0x28
+008d4cdc  br x17
+
+
+================================================================================
+### FILE: 008d4cf0_get.txt
+================================================================================
+Function: get @ 008d4cf0
+
+--- Calls OUT ---
+  -> get @ 00b4d254
+
+--- Calls IN ---
+  <- get @ 00b4d3bc
+
+--- Listing ---
+008d4cf0  adrp x16,0x3308000
+008d4cf4  ldr x17,[x16, #0x38]
+008d4cf8  add x16,x16,#0x38
+008d4cfc  br x17
+
+
+================================================================================
+### FILE: 008d4da0_getline.txt
+================================================================================
+Function: getline @ 008d4da0
+
+--- Calls OUT ---
+  -> getline @ 00b4a5cc
+
+--- Calls IN ---
+  <- getline @ 00b4a504
+
+--- Listing ---
+008d4da0  adrp x16,0x3308000
+008d4da4  ldr x17,[x16, #0x90]
+008d4da8  add x16,x16,#0x90
+008d4dac  br x17
+
+
+================================================================================
+### FILE: 008d4ec0___get_white_space.txt
+================================================================================
+Function: __get_white_space @ 008d4ec0
+
+--- Calls OUT ---
+  -> __get_white_space @ 00b62d6c
+
+--- Calls IN ---
+  <- do_get @ 00b6250c
+
+--- Listing ---
+008d4ec0  adrp x16,0x3308000
+008d4ec4  ldr x17,[x16, #0x120]
+008d4ec8  add x16,x16,#0x120
+008d4ecc  br x17
+
+
+================================================================================
+### FILE: 008d4fc0_getpid.txt
+================================================================================
+Function: getpid @ 008d4fc0
+
+--- Calls OUT ---
+  -> getpid @ 03799598
+
+--- Calls IN ---
+  <- getpid @ 00aca7d8
+  <- FUN_00ab0f94 @ 00ab0f94
+  <- FUN_00aca7dc @ 00aca7dc
+
+--- Listing ---
+008d4fc0  adrp x16,0x3308000
+008d4fc4  ldr x17,[x16, #0x1a0]
+008d4fc8  add x16,x16,#0x1a0
+008d4fcc  br x17
+
+
+================================================================================
+### FILE: 008d5080_getenv.txt
+================================================================================
+Function: getenv @ 008d5080
+
+--- Calls OUT ---
+  -> getenv @ 037995c0
+
+--- Calls IN ---
+  <- FUN_00b3d788 @ 00b3d788
+  <- FUN_00b3d320 @ 00b3d320
+  <- FUN_00b326c4 @ 00b326c4
+  <- FUN_00b3d484 @ 00b3d484
+  <- FUN_00b37520 @ 00b37520
+  <- FUN_00ab0938 @ 00ab0938
+  <- FUN_00b35f40 @ 00b35f40
+  <- FUN_00b3d20c @ 00b3d20c
+  <- FUN_00b32820 @ 00b32820
+  <- FUN_00b3f07c @ 00b3f07c
+  <- FUN_00ab0e40 @ 00ab0e40
+  <- FUN_00a8d528 @ 00a8d528
+
+--- Listing ---
+008d5080  adrp x16,0x3308000
+008d5084  ldr x17,[x16, #0x200]
+008d5088  add x16,x16,#0x200
+008d508c  br x17
+
+
+================================================================================
+### FILE: 008d5330_getaddrinfo.txt
+================================================================================
+Function: getaddrinfo @ 008d5330
+
+--- Calls OUT ---
+  -> getaddrinfo @ 03799648
+
+--- Calls IN ---
+  <- FUN_00ae5a3c @ 00ae5a3c
+
+--- Listing ---
+008d5330  adrp x16,0x3308000
+008d5334  ldr x17,[x16, #0x358]
+008d5338  add x16,x16,#0x358
+008d533c  br x17
+
+
+================================================================================
+### FILE: 008d5370_get.txt
+================================================================================
+Function: get @ 008d5370
+
+--- Calls OUT ---
+  -> get @ 00b4d4b8
+
+--- Calls IN ---
+  <- get @ 00b4d3f0
+
+--- Listing ---
+008d5370  adrp x16,0x3308000
+008d5374  ldr x17,[x16, #0x378]
+008d5378  add x16,x16,#0x378
+008d537c  br x17
+
+
+================================================================================
+### FILE: 008d5390_get.txt
+================================================================================
+Function: get @ 008d5390
+
+--- Calls OUT ---
+  -> get @ 00b5fbc4
+
+--- Calls IN ---
+  <- do_get_date @ 00b60114
+  <- do_get @ 00b607c4
+  <- do_get_time @ 00b600b0
+
+--- Listing ---
+008d5390  adrp x16,0x3308000
+008d5394  ldr x17,[x16, #0x388]
+008d5398  add x16,x16,#0x388
+008d539c  br x17
+
+
+================================================================================
+### FILE: 008d5480_getsockname.txt
+================================================================================
+Function: getsockname @ 008d5480
+
+--- Calls OUT ---
+  -> getsockname @ 037996a0
+
+--- Calls IN ---
+  <- FUN_00ae6774 @ 00ae6774
+
+--- Listing ---
+008d5480  adrp x16,0x3308000
+008d5484  ldr x17,[x16, #0x400]
+008d5488  add x16,x16,#0x400
+008d548c  br x17
+
+
+================================================================================
+### FILE: 008d5620_getloc.txt
+================================================================================
+Function: getloc @ 008d5620
+
+--- Calls OUT ---
+  -> getloc @ 00b4882c
+
+--- Calls IN ---
+  <- do_get_weekday @ 00b61edc
+  <- do_put @ 00b5c198
+  <- do_get @ 00b56900
+  <- do_get_monthname @ 00b603d8
+  <- do_get @ 00b607c4
+  <- do_put @ 00b5e368
+  <- __stage2_float_prep @ 00b5acb8
+  <- do_get @ 00b6250c
+  <- FUN_00af2f4c @ 00af2f4c
+  <- do_get @ 00b643b8
+  <- __stage2_int_prep @ 00b5b2ec
+  <- do_put @ 00b5daf0
+  <- __stage2_float_prep @ 00b5a4c8
+  <- FUN_00af5340 @ 00af5340
+  <- put @ 00b636a4
+  <- do_put @ 00b5c69c
+  <- get @ 00b5fbc4
+  <- do_get @ 00b540ec
+  <- do_put @ 00b5eaf8
+  <- do_get @ 00b65a24
+  <- do_get @ 00b59ca4
+  <- do_put @ 00b5f94c
+  <- do_get_weekday @ 00b60194
+  <- put @ 00b63b34
+  <- do_get_monthname @ 00b62120
+  <- do_put @ 00b68bac
+  <- do_get_year @ 00b6235c
+  <- do_put @ 00b5c41c
+  <- do_put @ 00b5e874
+  <- do_put @ 00b5f510
+  <- do_get @ 00b66114
+  <- do_put @ 00b5d248
+  <- do_get @ 00b6784c
+  <- do_put @ 00b67e5c
+  <- do_put @ 00b5e5ec
+  <- do_put @ 00b5b6b4
+  <- __stage2_int_prep @ 00b5ab00
+  <- do_put @ 00b5d8d8
+  <- do_get_year @ 00b60614
+  <- do_get @ 00b5723c
+  <- do_put @ 00b5d674
+  <- do_put @ 00b68f60
+  <- get @ 00b618d4
+  <- do_put @ 00b5bf30
+  <- do_put @ 00b69bf0
+  <- do_put @ 00b5b4a4
+
+--- Listing ---
+008d5620  adrp x16,0x3308000
+008d5624  ldr x17,[x16, #0x4d0]
+008d5628  add x16,x16,#0x4d0
+008d562c  br x17
+
+
+================================================================================
+### FILE: 008d5770_geteuid.txt
+================================================================================
+Function: geteuid @ 008d5770
+
+--- Calls OUT ---
+  -> geteuid @ 03799778
+
+--- Calls IN ---
+  <- SystemNative_GetEUid @ 00a99ce4
+
+--- Listing ---
+008d5770  adrp x16,0x3308000
+008d5774  ldr x17,[x16, #0x578]
+008d5778  add x16,x16,#0x578
+008d577c  br x17
+
+
+================================================================================
+### FILE: 008d5940_getsockopt.txt
+================================================================================
+Function: getsockopt @ 008d5940
+
+--- Calls OUT ---
+  -> getsockopt @ 03799810
+
+--- Calls IN ---
+  <- FUN_00ae659c @ 00ae659c
+  <- FUN_00ae7650 @ 00ae7650
+  <- FUN_00ae7ac8 @ 00ae7ac8
+
+--- Listing ---
+008d5940  adrp x16,0x3308000
+008d5944  ldr x17,[x16, #0x660]
+008d5948  add x16,x16,#0x660
+008d594c  br x17
+
+
+================================================================================
+### FILE: 008d5c20___getExceptionClass.txt
+================================================================================
+Function: __getExceptionClass @ 008d5c20
+
+--- Calls OUT ---
+  -> __getExceptionClass @ 00b8b1c4
+
+--- Calls IN ---
+  <- FUN_00b8eb2c @ 00b8eb2c
+  <- __cxa_call_unexpected @ 00b8c5bc
+  <- FUN_00b8bf74 @ 00b8bf74
+
+--- Listing ---
+008d5c20  adrp x16,0x3308000
+008d5c24  ldr x17,[x16, #0x7d0]
+008d5c28  add x16,x16,#0x7d0
+008d5c2c  br x17
+
+
+================================================================================
+### FILE: 008d5c70_get.txt
+================================================================================
+Function: get @ 008d5c70
+
+--- Calls OUT ---
+  -> get @ 00b618d4
+
+--- Calls IN ---
+  <- do_get_time @ 00b61df8
+  <- do_get @ 00b6250c
+  <- do_get_date @ 00b61e58
+
+--- Listing ---
+008d5c70  adrp x16,0x3308000
+008d5c74  ldr x17,[x16, #0x7f8]
+008d5c78  add x16,x16,#0x7f8
+008d5c7c  br x17
+
+
+================================================================================
+### FILE: 00aafb6c_getpid.txt
+================================================================================
+Function: getpid @ 00aafb6c
+
+--- Calls OUT ---
+  -> getpid @ 00aca7d8
+
+--- Calls IN ---
+  <- Microsoft.Win32.SafeHandles.SafeProcessHandle$$ReleaseHandle @ 02253a04
+  <- Microsoft.Win32.NativeMethods$$CloseProcess @ 022539d4
+
+--- Listing ---
+00aafb6c  b 0x00aca7d8
+
+
+================================================================================
+### FILE: 00aafc18_getpid.txt
+================================================================================
+Function: getpid @ 00aafc18
+
+--- Calls OUT ---
+  -> getpid @ 00aca7d8
+
+--- Calls IN ---
+  <- Microsoft.Win32.NativeMethods$$GetProcessTimes @ 022538c4
+  <- Microsoft.Win32.NativeMethods$$GetCurrentProcessId @ 022539d0
+  <- Microsoft.Win32.NativeMethods$$GetProcessTimes @ 022538c8
+
+--- Listing ---
+00aafc18  b 0x00aca7d8
+
+
+================================================================================
+### FILE: 00aca7d8_getpid.txt
+================================================================================
+Function: getpid @ 00aca7d8
+
+--- Calls OUT ---
+  -> getpid @ 008d4fc0
+
+--- Calls IN ---
+  <- getpid @ 00aafc18
+  <- getpid @ 00aafb6c
+  <- FUN_00aafb70 @ 00aafb70
+
+--- Listing ---
+00aca7d8  b 0x008d4fc0
+
+
+================================================================================
+### FILE: 00b47a2c_getloc.txt
+================================================================================
+Function: getloc @ 00b47a2c
+FuncComment: std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::getloc() const
+
+--- Calls OUT ---
+  -> locale @ 008d52c0
+
+--- Calls IN ---
+
+--- Listing ---
+00b47a2c  add x1,x0,#0x8
+    ; [PLATE] std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::getloc() const
+00b47a30  mov x0,x8
+00b47a34  b 0x008d52c0
+
+
+================================================================================
+### FILE: 00b47e88_getloc.txt
+================================================================================
+Function: getloc @ 00b47e88
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::getloc() const
+
+--- Calls OUT ---
+  -> locale @ 008d52c0
+
+--- Calls IN ---
+
+--- Listing ---
+00b47e88  add x1,x0,#0x8
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::getloc() const
+00b47e8c  mov x0,x8
+00b47e90  b 0x008d52c0
+
+
+================================================================================
+### FILE: 00b4882c_getloc.txt
+================================================================================
+Function: getloc @ 00b4882c
+FuncComment: std::__ndk1::ios_base::getloc() const
+
+--- Calls OUT ---
+  -> locale @ 008d52c0
+
+--- Calls IN ---
+  <- getloc @ 008d5620
+
+--- Listing ---
+00b4882c  add x1,x0,#0x30
+    ; [PLATE] std::__ndk1::ios_base::getloc() const
+00b48830  mov x0,x8
+00b48834  b 0x008d52c0
+
+
+================================================================================
+### FILE: 00b49e00_get.txt
+================================================================================
+Function: get @ 00b49e00
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get()
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+
+--- Calls IN ---
+  <- get @ 008d4310
+
+--- Listing ---
+00b49e00  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get()
+00b49e04  stp x29,x30,[sp, #0x10]
+00b49e08  add x29,sp,#0x10
+00b49e0c  ldr x8,[x0]
+00b49e10  str xzr,[x0, #0x8]
+00b49e14  ldur x8,[x8, #-0x18]
+00b49e18  add x9,x0,x8
+00b49e1c  ldr w10,[x9, #0x20]
+00b49e20  cbz w10,0x00b49e50
+00b49e24  ldr x8,[x9, #0x28]
+00b49e28  cmp x8,#0x0
+00b49e2c  ldr w8,[x9, #0x24]
+00b49e30  cset w11,eq
+00b49e34  orr w10,w10,w11
+00b49e38  orr w10,w10,#0x4
+00b49e3c  tst w10,w8
+00b49e40  str w10,[x9, #0x20]
+00b49e44  b.ne 0x00b49f04
+00b49e48  mov w8,#0xffffffff
+00b49e4c  b 0x00b49eec
+00b49e50  mov x19,x0
+00b49e54  ldr x0,[x9, #0x88]
+00b49e58  cbz x0,0x00b49e74
+00b49e5c  bl 0x00af5708
+00b49e60  ldr x8,[x19]
+00b49e64  ldur x8,[x8, #-0x18]
+00b49e68  add x9,x19,x8
+00b49e6c  ldr w9,[x9, #0x20]
+00b49e70  cbnz w9,0x00b49e48
+00b49e74  add x8,x19,x8
+00b49e78  ldr x0,[x8, #0x28]
+00b49e7c  ldp x8,x9,[x0, #0x18]
+00b49e80  cmp x8,x9
+00b49e84  b.eq 0x00b49e98
+00b49e88  add x9,x8,#0x1
+00b49e8c  str x9,[x0, #0x18]
+00b49e90  ldrb w8,[x8]
+00b49e94  b 0x00b49eb0
+00b49e98  ldr x8,[x0]
+00b49e9c  ldr x8,[x8, #0x50]
+00b49ea0  blr x8
+    ; [PRE] try { // try from 00b49ea0 to 00b49ea3 has its CatchHandler @ 00b49f10
+    ; [POST] } // end try from 00b49ea0 to 00b49ea3
+00b49ea4  mov w8,w0
+00b49ea8  cmn w0,#0x1
+00b49eac  b.eq 0x00b49efc
+00b49eb0  mov w10,#0x1
+00b49eb4  mov w9,wzr
+00b49eb8  str x10,[x19, #0x8]
+00b49ebc  ldr x10,[x19]
+00b49ec0  ldur x10,[x10, #-0x18]
+00b49ec4  add x10,x19,x10
+00b49ec8  ldr x12,[x10, #0x28]
+00b49ecc  ldp w11,w13,[x10, #0x20]
+00b49ed0  cmp x12,#0x0
+00b49ed4  orr w9,w11,w9
+00b49ed8  cset w11,eq
+00b49edc  orr w9,w9,w11
+00b49ee0  tst w9,w13
+00b49ee4  str w9,[x10, #0x20]
+00b49ee8  b.ne 0x00b49f04
+00b49eec  ldp x29,x30,[sp, #0x10]
+00b49ef0  mov w0,w8
+00b49ef4  ldr x19,[sp], #0x20
+00b49ef8  ret
+00b49efc  mov w9,#0x6
+00b49f00  b 0x00b49ebc
+00b49f04  adrp x0,0x2a07000
+00b49f08  add x0,x0,#0xcf4
+00b49f0c  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b49f64_get.txt
+================================================================================
+Function: get @ 00b49f64
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(char&)
+
+--- Calls OUT ---
+  -> get @ 008d4310
+
+--- Calls IN ---
+
+--- Listing ---
+00b49f64  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(char&)
+00b49f68  stp x29,x30,[sp, #0x10]
+00b49f6c  add x29,sp,#0x10
+00b49f70  mov x20,x1
+00b49f74  mov x19,x0
+00b49f78  bl 0x008d4310
+00b49f7c  cmn w0,#0x1
+00b49f80  b.eq 0x00b49f88
+00b49f84  strb w0,[x20]
+00b49f88  ldp x29,x30,[sp, #0x10]
+00b49f8c  mov x0,x19
+00b49f90  ldp x20,x19,[sp], #0x20
+00b49f94  ret
+
+
+================================================================================
+### FILE: 00b49f98_get.txt
+================================================================================
+Function: get @ 00b49f98
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(char*, long)
+
+--- Calls OUT ---
+  -> get @ 008d3b10
+  -> ~locale @ 008d3a30
+  -> locale @ 008d52c0
+  -> use_facet @ 008d44d0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b49f98  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(char*, long)
+00b49f9c  str x23,[sp, #0x10]
+00b49fa0  stp x22,x21,[sp, #0x20]
+00b49fa4  stp x20,x19,[sp, #0x30]
+00b49fa8  stp x29,x30,[sp, #0x40]
+00b49fac  add x29,sp,#0x40
+00b49fb0  mrs x23,tpidr_el0
+00b49fb4  ldr x8,[x23, #0x28]
+00b49fb8  mov x20,x1
+00b49fbc  mov x21,x0
+00b49fc0  mov x19,x2
+00b49fc4  str x8,[sp, #0x8]
+00b49fc8  ldr x8,[x0]
+00b49fcc  ldur x8,[x8, #-0x18]
+00b49fd0  add x8,x0,x8
+00b49fd4  add x1,x8,#0x30
+00b49fd8  mov x0,sp
+00b49fdc  bl 0x008d52c0
+00b49fe0  adrp x1,0x3384000
+    ; [PRE] try { // try from 00b49fe0 to 00b49fff has its CatchHandler @ 00b4a04c
+00b49fe4  ldr x1,[x1, #0xc8]
+00b49fe8  mov x0,sp
+00b49fec  bl 0x008d44d0
+00b49ff0  ldr x8,[x0]
+00b49ff4  ldr x8,[x8, #0x38]
+00b49ff8  mov w1,#0xa
+00b49ffc  blr x8
+    ; [POST] } // end try from 00b49fe0 to 00b49fff
+00b4a000  mov w22,w0
+00b4a004  mov x0,sp
+00b4a008  bl 0x008d3a30
+00b4a00c  mov x0,x21
+00b4a010  mov x1,x20
+00b4a014  mov x2,x19
+00b4a018  mov w3,w22
+00b4a01c  bl 0x008d3b10
+00b4a020  ldr x8,[x23, #0x28]
+00b4a024  ldr x9,[sp, #0x8]
+00b4a028  cmp x8,x9
+00b4a02c  b.ne 0x00b4a048
+00b4a030  ldp x29,x30,[sp, #0x40]
+00b4a034  ldp x20,x19,[sp, #0x30]
+00b4a038  ldp x22,x21,[sp, #0x20]
+00b4a03c  ldr x23,[sp, #0x10]
+00b4a040  add sp,sp,#0x50
+00b4a044  ret
+00b4a048  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b4a060_get.txt
+================================================================================
+Function: get @ 00b4a060
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(char*, long, char)
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+
+--- Calls IN ---
+  <- get @ 008d3b10
+
+--- Listing ---
+00b4a060  str x25,[sp, #-0x50]!
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(char*, long, char)
+00b4a064  stp x24,x23,[sp, #0x10]
+00b4a068  stp x22,x21,[sp, #0x20]
+00b4a06c  stp x20,x19,[sp, #0x30]
+00b4a070  stp x29,x30,[sp, #0x40]
+00b4a074  add x29,sp,#0x40
+00b4a078  ldr x8,[x0]
+00b4a07c  str xzr,[x0, #0x8]
+00b4a080  mov x20,x2
+00b4a084  mov x19,x0
+00b4a088  ldur x8,[x8, #-0x18]
+00b4a08c  mov x21,x1
+00b4a090  add x9,x0,x8
+00b4a094  ldr w10,[x9, #0x20]
+00b4a098  cbz w10,0x00b4a0c4
+00b4a09c  ldr x8,[x9, #0x28]
+00b4a0a0  cmp x8,#0x0
+00b4a0a4  ldr w8,[x9, #0x24]
+00b4a0a8  cset w11,eq
+00b4a0ac  orr w10,w10,w11
+00b4a0b0  orr w10,w10,#0x4
+00b4a0b4  tst w10,w8
+00b4a0b8  str w10,[x9, #0x20]
+00b4a0bc  b.eq 0x00b4a208
+00b4a0c0  b 0x00b4a230
+00b4a0c4  ldr x0,[x9, #0x88]
+00b4a0c8  mov w22,w3
+00b4a0cc  cbz x0,0x00b4a0e8
+00b4a0d0  bl 0x00af5708
+00b4a0d4  ldr x8,[x19]
+00b4a0d8  ldur x8,[x8, #-0x18]
+00b4a0dc  add x9,x19,x8
+00b4a0e0  ldr w9,[x9, #0x20]
+00b4a0e4  cbnz w9,0x00b4a208
+00b4a0e8  subs x23,x20,#0x1
+00b4a0ec  b.lt 0x00b4a19c
+00b4a0f0  ldr x9,[x19, #0x8]
+00b4a0f4  cmp x9,x23
+00b4a0f8  b.ge 0x00b4a1a4
+00b4a0fc  add x24,x19,#0x28
+00b4a100  ldr x0,[x24, x8, LSL #0x0]
+00b4a104  ldp x8,x9,[x0, #0x18]
+00b4a108  cmp x8,x9
+00b4a10c  b.eq 0x00b4a118
+00b4a110  ldrb w0,[x8]
+00b4a114  b 0x00b4a12c
+00b4a118  ldr x8,[x0]
+00b4a11c  ldr x8,[x8, #0x48]
+00b4a120  blr x8
+    ; [PRE] try { // try from 00b4a120 to 00b4a123 has its CatchHandler @ 00b4a244
+    ; [POST] } // end try from 00b4a120 to 00b4a123
+00b4a124  cmn w0,#0x1
+00b4a128  b.eq 0x00b4a1c0
+00b4a12c  and w8,w0,#0xff
+00b4a130  cmp w8,w22, UXTB 
+00b4a134  b.eq 0x00b4a1ac
+00b4a138  mov x25,x21
+00b4a13c  strb w0,[x25], #0x1
+00b4a140  ldp x9,x8,[x19]
+00b4a144  add x8,x8,#0x1
+00b4a148  str x8,[x19, #0x8]
+00b4a14c  ldur x9,[x9, #-0x18]
+00b4a150  ldr x0,[x24, x9, LSL #0x0]
+00b4a154  ldp x9,x10,[x0, #0x18]
+00b4a158  cmp x9,x10
+00b4a15c  b.eq 0x00b4a174
+00b4a160  add x9,x9,#0x1
+00b4a164  str x9,[x0, #0x18]
+00b4a168  cmp x8,x23
+00b4a16c  b.lt 0x00b4a18c
+00b4a170  b 0x00b4a1b4
+00b4a174  ldr x8,[x0]
+00b4a178  ldr x8,[x8, #0x50]
+00b4a17c  blr x8
+    ; [PRE] try { // try from 00b4a17c to 00b4a17f has its CatchHandler @ 00b4a23c
+    ; [POST] } // end try from 00b4a17c to 00b4a17f
+00b4a180  ldr x8,[x19, #0x8]
+00b4a184  cmp x8,x23
+00b4a188  b.ge 0x00b4a1b4
+00b4a18c  ldr x8,[x19]
+00b4a190  mov x21,x25
+00b4a194  ldur x8,[x8, #-0x18]
+00b4a198  b 0x00b4a100
+00b4a19c  mov w8,#0x4
+00b4a1a0  b 0x00b4a1d8
+00b4a1a4  mov w8,wzr
+00b4a1a8  b 0x00b4a1c8
+00b4a1ac  mov w8,wzr
+00b4a1b0  b 0x00b4a1c4
+00b4a1b4  mov w8,wzr
+00b4a1b8  add x21,x21,#0x1
+00b4a1bc  b 0x00b4a1c4
+00b4a1c0  mov w8,#0x2
+00b4a1c4  ldr x9,[x19, #0x8]
+00b4a1c8  orr w10,w8,#0x4
+00b4a1cc  cmp x9,#0x0
+00b4a1d0  csel w8,w10,w8,eq
+00b4a1d4  strb wzr,[x21]
+00b4a1d8  ldr x9,[x19]
+00b4a1dc  ldur x9,[x9, #-0x18]
+00b4a1e0  add x9,x19,x9
+00b4a1e4  ldr x11,[x9, #0x28]
+00b4a1e8  ldp w10,w12,[x9, #0x20]
+00b4a1ec  cmp x11,#0x0
+00b4a1f0  orr w8,w10,w8
+00b4a1f4  cset w10,eq
+00b4a1f8  orr w8,w8,w10
+00b4a1fc  tst w8,w12
+00b4a200  str w8,[x9, #0x20]
+00b4a204  b.ne 0x00b4a230
+00b4a208  cmp x20,#0x1
+00b4a20c  b.lt 0x00b4a214
+00b4a210  strb wzr,[x21]
+00b4a214  mov x0,x19
+00b4a218  ldp x29,x30,[sp, #0x40]
+00b4a21c  ldp x20,x19,[sp, #0x30]
+00b4a220  ldp x22,x21,[sp, #0x20]
+00b4a224  ldp x24,x23,[sp, #0x10]
+00b4a228  ldr x25,[sp], #0x50
+00b4a22c  ret
+00b4a230  adrp x0,0x2a07000
+00b4a234  add x0,x0,#0xcf4
+00b4a238  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4a298_get.txt
+================================================================================
+Function: get @ 00b4a298
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >&)
+
+--- Calls OUT ---
+  -> ~locale @ 008d3a30
+  -> get @ 008d3ec0
+  -> locale @ 008d52c0
+  -> use_facet @ 008d44d0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b4a298  sub sp,sp,#0x40
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >&)
+00b4a29c  stp x22,x21,[sp, #0x10]
+00b4a2a0  stp x20,x19,[sp, #0x20]
+00b4a2a4  stp x29,x30,[sp, #0x30]
+00b4a2a8  add x29,sp,#0x30
+00b4a2ac  mrs x22,tpidr_el0
+00b4a2b0  ldr x8,[x22, #0x28]
+00b4a2b4  mov x19,x1
+00b4a2b8  mov x20,x0
+00b4a2bc  str x8,[sp, #0x8]
+00b4a2c0  ldr x8,[x0]
+00b4a2c4  ldur x8,[x8, #-0x18]
+00b4a2c8  add x8,x0,x8
+00b4a2cc  add x1,x8,#0x30
+00b4a2d0  mov x0,sp
+00b4a2d4  bl 0x008d52c0
+00b4a2d8  adrp x1,0x3384000
+    ; [PRE] try { // try from 00b4a2d8 to 00b4a2f7 has its CatchHandler @ 00b4a33c
+00b4a2dc  ldr x1,[x1, #0xc8]
+00b4a2e0  mov x0,sp
+00b4a2e4  bl 0x008d44d0
+00b4a2e8  ldr x8,[x0]
+00b4a2ec  ldr x8,[x8, #0x38]
+00b4a2f0  mov w1,#0xa
+00b4a2f4  blr x8
+    ; [POST] } // end try from 00b4a2d8 to 00b4a2f7
+00b4a2f8  mov w21,w0
+00b4a2fc  mov x0,sp
+00b4a300  bl 0x008d3a30
+00b4a304  mov x0,x20
+00b4a308  mov x1,x19
+00b4a30c  mov w2,w21
+00b4a310  bl 0x008d3ec0
+00b4a314  ldr x8,[x22, #0x28]
+00b4a318  ldr x9,[sp, #0x8]
+00b4a31c  cmp x8,x9
+00b4a320  b.ne 0x00b4a338
+00b4a324  ldp x29,x30,[sp, #0x30]
+00b4a328  ldp x20,x19,[sp, #0x20]
+00b4a32c  ldp x22,x21,[sp, #0x10]
+00b4a330  add sp,sp,#0x40
+00b4a334  ret
+00b4a338  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b4a350_get.txt
+================================================================================
+Function: get @ 00b4a350
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >&, char)
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+
+--- Calls IN ---
+  <- get @ 008d3ec0
+
+--- Listing ---
+00b4a350  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::get(std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >&, char)
+00b4a354  stp x20,x19,[sp, #0x10]
+00b4a358  stp x29,x30,[sp, #0x20]
+00b4a35c  add x29,sp,#0x20
+00b4a360  ldr x8,[x0]
+00b4a364  str xzr,[x0, #0x8]
+00b4a368  mov x19,x0
+00b4a36c  ldur x8,[x8, #-0x18]
+00b4a370  add x9,x0,x8
+00b4a374  ldr w10,[x9, #0x20]
+00b4a378  cbz w10,0x00b4a3a4
+00b4a37c  ldr x8,[x9, #0x28]
+00b4a380  cmp x8,#0x0
+00b4a384  ldr w8,[x9, #0x24]
+00b4a388  cset w11,eq
+00b4a38c  orr w10,w10,w11
+00b4a390  orr w10,w10,#0x4
+00b4a394  tst w10,w8
+00b4a398  str w10,[x9, #0x20]
+00b4a39c  b.eq 0x00b4a4d0
+00b4a3a0  b 0x00b4a4e4
+00b4a3a4  ldr x0,[x9, #0x88]
+00b4a3a8  mov w20,w2
+00b4a3ac  mov x21,x1
+00b4a3b0  cbz x0,0x00b4a3cc
+00b4a3b4  bl 0x00af5708
+00b4a3b8  ldr x8,[x19]
+00b4a3bc  ldur x8,[x8, #-0x18]
+00b4a3c0  add x9,x19,x8
+00b4a3c4  ldr w9,[x9, #0x20]
+00b4a3c8  cbnz w9,0x00b4a4d0
+00b4a3cc  add x22,x19,#0x28
+00b4a3d0  b 0x00b4a3e0
+00b4a3d4  add x9,x9,#0x1
+00b4a3d8  str x9,[x0, #0x18]
+00b4a3dc  ldur x8,[x8, #-0x18]
+00b4a3e0  ldr x0,[x22, x8, LSL #0x0]
+00b4a3e4  ldp x8,x9,[x0, #0x18]
+00b4a3e8  cmp x8,x9
+00b4a3ec  b.eq 0x00b4a3f8
+00b4a3f0  ldrb w0,[x8]
+00b4a3f4  b 0x00b4a40c
+00b4a3f8  ldr x8,[x0]
+00b4a3fc  ldr x8,[x8, #0x48]
+00b4a400  blr x8
+    ; [PRE] try { // try from 00b4a400 to 00b4a403 has its CatchHandler @ 00b4a4f0
+    ; [POST] } // end try from 00b4a400 to 00b4a403
+00b4a404  cmn w0,#0x1
+00b4a408  b.eq 0x00b4a490
+00b4a40c  and w8,w0,#0xff
+00b4a410  cmp w8,w20, UXTB 
+00b4a414  b.eq 0x00b4a488
+00b4a418  ldp x8,x9,[x21, #0x30]
+00b4a41c  cmp x8,x9
+00b4a420  b.eq 0x00b4a434
+00b4a424  add x9,x8,#0x1
+00b4a428  str x9,[x21, #0x30]
+00b4a42c  strb w0,[x8]
+00b4a430  b 0x00b4a450
+00b4a434  ldr x8,[x21]
+00b4a438  and w1,w0,#0xff
+00b4a43c  ldr x8,[x8, #0x68]
+00b4a440  mov x0,x21
+    ; [PRE] try { // try from 00b4a440 to 00b4a47b has its CatchHandler @ 00b4a4f4
+00b4a444  blr x8
+00b4a448  cmn w0,#0x1
+00b4a44c  b.eq 0x00b4a488
+00b4a450  ldp x8,x9,[x19]
+00b4a454  add x9,x9,#0x1
+00b4a458  str x9,[x19, #0x8]
+00b4a45c  ldur x9,[x8, #-0x18]
+00b4a460  ldr x0,[x22, x9, LSL #0x0]
+00b4a464  ldp x9,x10,[x0, #0x18]
+00b4a468  cmp x9,x10
+00b4a46c  b.ne 0x00b4a3d4
+00b4a470  ldr x8,[x0]
+00b4a474  ldr x8,[x8, #0x50]
+00b4a478  blr x8
+    ; [POST] } // end try from 00b4a440 to 00b4a47b
+00b4a47c  ldr x8,[x19]
+00b4a480  ldur x8,[x8, #-0x18]
+00b4a484  b 0x00b4a3e0
+00b4a488  mov w8,wzr
+00b4a48c  b 0x00b4a494
+00b4a490  mov w8,#0x2
+00b4a494  ldp x9,x10,[x19]
+00b4a498  orr w11,w8,#0x4
+00b4a49c  ldur x9,[x9, #-0x18]
+00b4a4a0  cmp x10,#0x0
+00b4a4a4  csel w8,w11,w8,eq
+00b4a4a8  add x9,x19,x9
+00b4a4ac  ldr x12,[x9, #0x28]
+00b4a4b0  ldp w10,w11,[x9, #0x20]
+00b4a4b4  cmp x12,#0x0
+00b4a4b8  orr w8,w10,w8
+00b4a4bc  cset w10,eq
+00b4a4c0  orr w8,w8,w10
+00b4a4c4  tst w8,w11
+00b4a4c8  str w8,[x9, #0x20]
+00b4a4cc  b.ne 0x00b4a4e4
+00b4a4d0  mov x0,x19
+00b4a4d4  ldp x29,x30,[sp, #0x20]
+00b4a4d8  ldp x20,x19,[sp, #0x10]
+00b4a4dc  ldp x22,x21,[sp], #0x30
+00b4a4e0  ret
+00b4a4e4  adrp x0,0x2a07000
+00b4a4e8  add x0,x0,#0xcf4
+00b4a4ec  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4a504_getline.txt
+================================================================================
+Function: getline @ 00b4a504
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::getline(char*, long)
+
+--- Calls OUT ---
+  -> getline @ 008d4da0
+  -> ~locale @ 008d3a30
+  -> locale @ 008d52c0
+  -> use_facet @ 008d44d0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b4a504  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::getline(char*, long)
+00b4a508  str x23,[sp, #0x10]
+00b4a50c  stp x22,x21,[sp, #0x20]
+00b4a510  stp x20,x19,[sp, #0x30]
+00b4a514  stp x29,x30,[sp, #0x40]
+00b4a518  add x29,sp,#0x40
+00b4a51c  mrs x23,tpidr_el0
+00b4a520  ldr x8,[x23, #0x28]
+00b4a524  mov x20,x1
+00b4a528  mov x21,x0
+00b4a52c  mov x19,x2
+00b4a530  str x8,[sp, #0x8]
+00b4a534  ldr x8,[x0]
+00b4a538  ldur x8,[x8, #-0x18]
+00b4a53c  add x8,x0,x8
+00b4a540  add x1,x8,#0x30
+00b4a544  mov x0,sp
+00b4a548  bl 0x008d52c0
+00b4a54c  adrp x1,0x3384000
+    ; [PRE] try { // try from 00b4a54c to 00b4a56b has its CatchHandler @ 00b4a5b8
+00b4a550  ldr x1,[x1, #0xc8]
+00b4a554  mov x0,sp
+00b4a558  bl 0x008d44d0
+00b4a55c  ldr x8,[x0]
+00b4a560  ldr x8,[x8, #0x38]
+00b4a564  mov w1,#0xa
+00b4a568  blr x8
+    ; [POST] } // end try from 00b4a54c to 00b4a56b
+00b4a56c  mov w22,w0
+00b4a570  mov x0,sp
+00b4a574  bl 0x008d3a30
+00b4a578  mov x0,x21
+00b4a57c  mov x1,x20
+00b4a580  mov x2,x19
+00b4a584  mov w3,w22
+00b4a588  bl 0x008d4da0
+00b4a58c  ldr x8,[x23, #0x28]
+00b4a590  ldr x9,[sp, #0x8]
+00b4a594  cmp x8,x9
+00b4a598  b.ne 0x00b4a5b4
+00b4a59c  ldp x29,x30,[sp, #0x40]
+00b4a5a0  ldp x20,x19,[sp, #0x30]
+00b4a5a4  ldp x22,x21,[sp, #0x20]
+00b4a5a8  ldr x23,[sp, #0x10]
+00b4a5ac  add sp,sp,#0x50
+00b4a5b0  ret
+00b4a5b4  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b4a5cc_getline.txt
+================================================================================
+Function: getline @ 00b4a5cc
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::getline(char*, long, char)
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+
+--- Calls IN ---
+  <- getline @ 008d4da0
+
+--- Listing ---
+00b4a5cc  str x25,[sp, #-0x50]!
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::getline(char*, long, char)
+00b4a5d0  stp x24,x23,[sp, #0x10]
+00b4a5d4  stp x22,x21,[sp, #0x20]
+00b4a5d8  stp x20,x19,[sp, #0x30]
+00b4a5dc  stp x29,x30,[sp, #0x40]
+00b4a5e0  add x29,sp,#0x40
+00b4a5e4  ldr x8,[x0]
+00b4a5e8  str xzr,[x0, #0x8]
+00b4a5ec  mov x20,x2
+00b4a5f0  mov x19,x0
+00b4a5f4  ldur x8,[x8, #-0x18]
+00b4a5f8  mov x21,x1
+00b4a5fc  add x9,x0,x8
+00b4a600  ldr w10,[x9, #0x20]
+00b4a604  cbz w10,0x00b4a694
+00b4a608  ldr x8,[x9, #0x28]
+00b4a60c  cmp x8,#0x0
+00b4a610  ldr w8,[x9, #0x24]
+00b4a614  cset w11,eq
+00b4a618  orr w10,w10,w11
+00b4a61c  orr w10,w10,#0x4
+00b4a620  tst w10,w8
+00b4a624  str w10,[x9, #0x20]
+00b4a628  b.ne 0x00b4a7c8
+00b4a62c  mov w8,wzr
+00b4a630  cmp x20,#0x1
+00b4a634  b.lt 0x00b4a63c
+00b4a638  strb wzr,[x21]
+00b4a63c  ldp x9,x10,[x19]
+00b4a640  orr w11,w8,#0x4
+00b4a644  ldur x9,[x9, #-0x18]
+00b4a648  cmp x10,#0x0
+00b4a64c  csel w8,w11,w8,eq
+00b4a650  add x9,x19,x9
+00b4a654  ldr x12,[x9, #0x28]
+00b4a658  ldp w10,w11,[x9, #0x20]
+00b4a65c  cmp x12,#0x0
+00b4a660  orr w8,w10,w8
+00b4a664  cset w10,eq
+00b4a668  orr w8,w8,w10
+00b4a66c  tst w8,w11
+00b4a670  str w8,[x9, #0x20]
+00b4a674  b.ne 0x00b4a7c8
+00b4a678  mov x0,x19
+00b4a67c  ldp x29,x30,[sp, #0x40]
+00b4a680  ldp x20,x19,[sp, #0x30]
+00b4a684  ldp x22,x21,[sp, #0x20]
+00b4a688  ldp x24,x23,[sp, #0x10]
+00b4a68c  ldr x25,[sp], #0x50
+00b4a690  ret
+00b4a694  ldr x0,[x9, #0x88]
+00b4a698  mov w22,w3
+00b4a69c  cbz x0,0x00b4a6b8
+00b4a6a0  bl 0x00af5708
+00b4a6a4  ldr x8,[x19]
+00b4a6a8  ldur x8,[x8, #-0x18]
+00b4a6ac  add x9,x19,x8
+00b4a6b0  ldr w9,[x9, #0x20]
+00b4a6b4  cbnz w9,0x00b4a62c
+00b4a6b8  add x23,x19,#0x28
+00b4a6bc  sub x24,x20,#0x1
+00b4a6c0  b 0x00b4a6e0
+00b4a6c4  add x9,x9,#0x1
+00b4a6c8  str x9,[x0, #0x18]
+00b4a6cc  ldr x9,[x19, #0x8]
+00b4a6d0  mov x21,x25
+00b4a6d4  add x9,x9,#0x1
+00b4a6d8  str x9,[x19, #0x8]
+00b4a6dc  ldur x8,[x8, #-0x18]
+00b4a6e0  ldr x0,[x23, x8, LSL #0x0]
+00b4a6e4  ldp x8,x9,[x0, #0x18]
+00b4a6e8  cmp x8,x9
+00b4a6ec  b.eq 0x00b4a6f8
+00b4a6f0  ldrb w0,[x8]
+00b4a6f4  b 0x00b4a70c
+00b4a6f8  ldr x8,[x0]
+00b4a6fc  ldr x8,[x8, #0x48]
+00b4a700  blr x8
+    ; [PRE] try { // try from 00b4a700 to 00b4a703 has its CatchHandler @ 00b4a7e0
+    ; [POST] } // end try from 00b4a700 to 00b4a703
+00b4a704  cmn w0,#0x1
+00b4a708  b.eq 0x00b4a790
+00b4a70c  and w8,w0,#0xff
+00b4a710  cmp w8,w22, UXTB 
+00b4a714  b.eq 0x00b4a758
+00b4a718  ldr x8,[x19, #0x8]
+00b4a71c  cmp x8,x24
+00b4a720  b.ge 0x00b4a780
+00b4a724  mov x25,x21
+00b4a728  strb w0,[x25], #0x1
+00b4a72c  ldr x8,[x19]
+00b4a730  ldur x9,[x8, #-0x18]
+00b4a734  ldr x0,[x23, x9, LSL #0x0]
+00b4a738  ldp x9,x10,[x0, #0x18]
+00b4a73c  cmp x9,x10
+00b4a740  b.ne 0x00b4a6c4
+00b4a744  ldr x8,[x0]
+00b4a748  ldr x8,[x8, #0x50]
+00b4a74c  blr x8
+    ; [PRE] try { // try from 00b4a74c to 00b4a74f has its CatchHandler @ 00b4a7d8
+    ; [POST] } // end try from 00b4a74c to 00b4a74f
+00b4a750  ldr x8,[x19]
+00b4a754  b 0x00b4a6cc
+00b4a758  ldr x8,[x19]
+00b4a75c  ldur x8,[x8, #-0x18]
+00b4a760  add x8,x19,x8
+00b4a764  ldr x0,[x8, #0x28]
+00b4a768  ldp x8,x9,[x0, #0x18]
+00b4a76c  cmp x8,x9
+00b4a770  b.eq 0x00b4a7a0
+00b4a774  add x8,x8,#0x1
+00b4a778  str x8,[x0, #0x18]
+00b4a77c  b 0x00b4a7ac
+00b4a780  mov w8,#0x4
+00b4a784  cmp x20,#0x1
+00b4a788  b.ge 0x00b4a638
+00b4a78c  b 0x00b4a63c
+00b4a790  mov w8,#0x2
+00b4a794  cmp x20,#0x1
+00b4a798  b.ge 0x00b4a638
+00b4a79c  b 0x00b4a63c
+00b4a7a0  ldr x8,[x0]
+00b4a7a4  ldr x8,[x8, #0x50]
+00b4a7a8  blr x8
+    ; [PRE] try { // try from 00b4a7a8 to 00b4a7ab has its CatchHandler @ 00b4a7d4
+    ; [POST] } // end try from 00b4a7a8 to 00b4a7ab
+00b4a7ac  ldr x9,[x19, #0x8]
+00b4a7b0  mov w8,wzr
+00b4a7b4  add x9,x9,#0x1
+00b4a7b8  str x9,[x19, #0x8]
+00b4a7bc  cmp x20,#0x1
+00b4a7c0  b.ge 0x00b4a638
+00b4a7c4  b 0x00b4a63c
+00b4a7c8  adrp x0,0x2a07000
+00b4a7cc  add x0,x0,#0xcf4
+00b4a7d0  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4d254_get.txt
+================================================================================
+Function: get @ 00b4d254
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get()
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+  <- get @ 008d4cf0
+
+--- Listing ---
+00b4d254  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get()
+00b4d258  stp x29,x30,[sp, #0x10]
+00b4d25c  add x29,sp,#0x10
+00b4d260  ldr x8,[x0]
+00b4d264  str xzr,[x0, #0x8]
+00b4d268  ldur x8,[x8, #-0x18]
+00b4d26c  add x9,x0,x8
+00b4d270  ldr w10,[x9, #0x20]
+00b4d274  cbz w10,0x00b4d2a4
+00b4d278  ldr x8,[x9, #0x28]
+00b4d27c  cmp x8,#0x0
+00b4d280  ldr w8,[x9, #0x24]
+00b4d284  cset w11,eq
+00b4d288  orr w10,w10,w11
+00b4d28c  orr w10,w10,#0x4
+00b4d290  tst w10,w8
+00b4d294  str w10,[x9, #0x20]
+00b4d298  b.ne 0x00b4d35c
+00b4d29c  mov w8,#0xffffffff
+00b4d2a0  b 0x00b4d34c
+00b4d2a4  mov x19,x0
+00b4d2a8  ldr x0,[x9, #0x88]
+00b4d2ac  cbz x0,0x00b4d2c8
+00b4d2b0  bl 0x008d5a30
+00b4d2b4  ldr x8,[x19]
+00b4d2b8  ldur x8,[x8, #-0x18]
+00b4d2bc  add x9,x19,x8
+00b4d2c0  ldr w9,[x9, #0x20]
+00b4d2c4  cbnz w9,0x00b4d29c
+00b4d2c8  add x8,x19,x8
+00b4d2cc  ldr x0,[x8, #0x28]
+00b4d2d0  ldp x8,x9,[x0, #0x18]
+00b4d2d4  cmp x8,x9
+00b4d2d8  b.eq 0x00b4d300
+00b4d2dc  add x9,x8,#0x4
+00b4d2e0  str x9,[x0, #0x18]
+00b4d2e4  ldr w8,[x8]
+00b4d2e8  cmn w8,#0x1
+00b4d2ec  b.eq 0x00b4d318
+00b4d2f0  mov w10,#0x1
+00b4d2f4  mov w9,wzr
+00b4d2f8  str x10,[x19, #0x8]
+00b4d2fc  b 0x00b4d31c
+00b4d300  ldr x8,[x0]
+00b4d304  ldr x8,[x8, #0x50]
+00b4d308  blr x8
+    ; [PRE] try { // try from 00b4d308 to 00b4d30b has its CatchHandler @ 00b4d368
+    ; [POST] } // end try from 00b4d308 to 00b4d30b
+00b4d30c  mov w8,w0
+00b4d310  cmn w8,#0x1
+00b4d314  b.ne 0x00b4d2f0
+00b4d318  mov w9,#0x6
+00b4d31c  ldr x10,[x19]
+00b4d320  ldur x10,[x10, #-0x18]
+00b4d324  add x10,x19,x10
+00b4d328  ldr x12,[x10, #0x28]
+00b4d32c  ldp w11,w13,[x10, #0x20]
+00b4d330  cmp x12,#0x0
+00b4d334  orr w9,w11,w9
+00b4d338  cset w11,eq
+00b4d33c  orr w9,w9,w11
+00b4d340  tst w9,w13
+00b4d344  str w9,[x10, #0x20]
+00b4d348  b.ne 0x00b4d35c
+00b4d34c  ldp x29,x30,[sp, #0x10]
+00b4d350  mov w0,w8
+00b4d354  ldr x19,[sp], #0x20
+00b4d358  ret
+00b4d35c  adrp x0,0x2a07000
+00b4d360  add x0,x0,#0xcf4
+00b4d364  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4d3bc_get.txt
+================================================================================
+Function: get @ 00b4d3bc
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(wchar_t&)
+
+--- Calls OUT ---
+  -> get @ 008d4cf0
+
+--- Calls IN ---
+
+--- Listing ---
+00b4d3bc  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(wchar_t&)
+00b4d3c0  stp x29,x30,[sp, #0x10]
+00b4d3c4  add x29,sp,#0x10
+00b4d3c8  mov x20,x1
+00b4d3cc  mov x19,x0
+00b4d3d0  bl 0x008d4cf0
+00b4d3d4  cmn w0,#0x1
+00b4d3d8  b.eq 0x00b4d3e0
+00b4d3dc  str w0,[x20]
+00b4d3e0  ldp x29,x30,[sp, #0x10]
+00b4d3e4  mov x0,x19
+00b4d3e8  ldp x20,x19,[sp], #0x20
+00b4d3ec  ret
+
+
+================================================================================
+### FILE: 00b4d3f0_get.txt
+================================================================================
+Function: get @ 00b4d3f0
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(wchar_t*, long)
+
+--- Calls OUT ---
+  -> ~locale @ 008d3a30
+  -> locale @ 008d52c0
+  -> get @ 008d5370
+  -> use_facet @ 008d44d0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b4d3f0  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(wchar_t*, long)
+00b4d3f4  str x23,[sp, #0x10]
+00b4d3f8  stp x22,x21,[sp, #0x20]
+00b4d3fc  stp x20,x19,[sp, #0x30]
+00b4d400  stp x29,x30,[sp, #0x40]
+00b4d404  add x29,sp,#0x40
+00b4d408  mrs x23,tpidr_el0
+00b4d40c  ldr x8,[x23, #0x28]
+00b4d410  mov x20,x1
+00b4d414  mov x21,x0
+00b4d418  mov x19,x2
+00b4d41c  str x8,[sp, #0x8]
+00b4d420  ldr x8,[x0]
+00b4d424  ldur x8,[x8, #-0x18]
+00b4d428  add x8,x0,x8
+00b4d42c  add x1,x8,#0x30
+00b4d430  mov x0,sp
+00b4d434  bl 0x008d52c0
+00b4d438  adrp x1,0x3360000
+    ; [PRE] try { // try from 00b4d438 to 00b4d457 has its CatchHandler @ 00b4d4a4
+00b4d43c  ldr x1,[x1, #0x810]
+00b4d440  mov x0,sp
+00b4d444  bl 0x008d44d0
+00b4d448  ldr x8,[x0]
+00b4d44c  ldr x8,[x8, #0x58]
+00b4d450  mov w1,#0xa
+00b4d454  blr x8
+    ; [POST] } // end try from 00b4d438 to 00b4d457
+00b4d458  mov w22,w0
+00b4d45c  mov x0,sp
+00b4d460  bl 0x008d3a30
+00b4d464  mov x0,x21
+00b4d468  mov x1,x20
+00b4d46c  mov x2,x19
+00b4d470  mov w3,w22
+00b4d474  bl 0x008d5370
+00b4d478  ldr x8,[x23, #0x28]
+00b4d47c  ldr x9,[sp, #0x8]
+00b4d480  cmp x8,x9
+00b4d484  b.ne 0x00b4d4a0
+00b4d488  ldp x29,x30,[sp, #0x40]
+00b4d48c  ldp x20,x19,[sp, #0x30]
+00b4d490  ldp x22,x21,[sp, #0x20]
+00b4d494  ldr x23,[sp, #0x10]
+00b4d498  add sp,sp,#0x50
+00b4d49c  ret
+00b4d4a0  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b4d4b8_get.txt
+================================================================================
+Function: get @ 00b4d4b8
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(wchar_t*, long, wchar_t)
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+  <- get @ 008d5370
+
+--- Listing ---
+00b4d4b8  str x25,[sp, #-0x50]!
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(wchar_t*, long, wchar_t)
+00b4d4bc  stp x24,x23,[sp, #0x10]
+00b4d4c0  stp x22,x21,[sp, #0x20]
+00b4d4c4  stp x20,x19,[sp, #0x30]
+00b4d4c8  stp x29,x30,[sp, #0x40]
+00b4d4cc  add x29,sp,#0x40
+00b4d4d0  ldr x8,[x0]
+00b4d4d4  str xzr,[x0, #0x8]
+00b4d4d8  mov x20,x2
+00b4d4dc  mov x19,x0
+00b4d4e0  ldur x8,[x8, #-0x18]
+00b4d4e4  mov x21,x1
+00b4d4e8  add x9,x0,x8
+00b4d4ec  ldr w10,[x9, #0x20]
+00b4d4f0  cbz w10,0x00b4d51c
+00b4d4f4  ldr x8,[x9, #0x28]
+00b4d4f8  cmp x8,#0x0
+00b4d4fc  ldr w8,[x9, #0x24]
+00b4d500  cset w11,eq
+00b4d504  orr w10,w10,w11
+00b4d508  orr w10,w10,#0x4
+00b4d50c  tst w10,w8
+00b4d510  str w10,[x9, #0x20]
+00b4d514  b.eq 0x00b4d664
+00b4d518  b 0x00b4d68c
+00b4d51c  ldr x0,[x9, #0x88]
+00b4d520  mov w22,w3
+00b4d524  cbz x0,0x00b4d540
+00b4d528  bl 0x008d5a30
+00b4d52c  ldr x8,[x19]
+00b4d530  ldur x8,[x8, #-0x18]
+00b4d534  add x9,x19,x8
+00b4d538  ldr w9,[x9, #0x20]
+00b4d53c  cbnz w9,0x00b4d664
+00b4d540  subs x23,x20,#0x1
+00b4d544  b.lt 0x00b4d5f8
+00b4d548  ldr x9,[x19, #0x8]
+00b4d54c  cmp x9,x23
+00b4d550  b.ge 0x00b4d600
+00b4d554  add x24,x19,#0x28
+00b4d558  ldr x0,[x24, x8, LSL #0x0]
+00b4d55c  ldp x8,x9,[x0, #0x18]
+00b4d560  cmp x8,x9
+00b4d564  b.eq 0x00b4d578
+00b4d568  ldr w0,[x8]
+00b4d56c  cmn w0,#0x1
+00b4d570  b.ne 0x00b4d58c
+00b4d574  b 0x00b4d608
+00b4d578  ldr x8,[x0]
+00b4d57c  ldr x8,[x8, #0x48]
+00b4d580  blr x8
+    ; [PRE] try { // try from 00b4d580 to 00b4d583 has its CatchHandler @ 00b4d6a0
+    ; [POST] } // end try from 00b4d580 to 00b4d583
+00b4d584  cmn w0,#0x1
+00b4d588  b.eq 0x00b4d608
+00b4d58c  cmp w0,w22
+00b4d590  b.eq 0x00b4d610
+00b4d594  mov x25,x21
+00b4d598  str w0,[x25], #0x4
+00b4d59c  ldp x9,x8,[x19]
+00b4d5a0  add x8,x8,#0x1
+00b4d5a4  str x8,[x19, #0x8]
+00b4d5a8  ldur x9,[x9, #-0x18]
+00b4d5ac  ldr x0,[x24, x9, LSL #0x0]
+00b4d5b0  ldp x9,x10,[x0, #0x18]
+00b4d5b4  cmp x9,x10
+00b4d5b8  b.eq 0x00b4d5d0
+00b4d5bc  add x9,x9,#0x4
+00b4d5c0  str x9,[x0, #0x18]
+00b4d5c4  cmp x8,x23
+00b4d5c8  b.lt 0x00b4d5e8
+00b4d5cc  b 0x00b4d618
+00b4d5d0  ldr x8,[x0]
+00b4d5d4  ldr x8,[x8, #0x50]
+00b4d5d8  blr x8
+    ; [PRE] try { // try from 00b4d5d8 to 00b4d5db has its CatchHandler @ 00b4d698
+    ; [POST] } // end try from 00b4d5d8 to 00b4d5db
+00b4d5dc  ldr x8,[x19, #0x8]
+00b4d5e0  cmp x8,x23
+00b4d5e4  b.ge 0x00b4d618
+00b4d5e8  ldr x8,[x19]
+00b4d5ec  mov x21,x25
+00b4d5f0  ldur x8,[x8, #-0x18]
+00b4d5f4  b 0x00b4d558
+00b4d5f8  mov w8,#0x4
+00b4d5fc  b 0x00b4d634
+00b4d600  mov w8,wzr
+00b4d604  b 0x00b4d624
+00b4d608  mov w8,#0x2
+00b4d60c  b 0x00b4d620
+00b4d610  mov w8,wzr
+00b4d614  b 0x00b4d620
+00b4d618  mov w8,wzr
+00b4d61c  add x21,x21,#0x4
+00b4d620  ldr x9,[x19, #0x8]
+00b4d624  orr w10,w8,#0x4
+00b4d628  cmp x9,#0x0
+00b4d62c  csel w8,w10,w8,eq
+00b4d630  str wzr,[x21]
+00b4d634  ldr x9,[x19]
+00b4d638  ldur x9,[x9, #-0x18]
+00b4d63c  add x9,x19,x9
+00b4d640  ldr x11,[x9, #0x28]
+00b4d644  ldp w10,w12,[x9, #0x20]
+00b4d648  cmp x11,#0x0
+00b4d64c  orr w8,w10,w8
+00b4d650  cset w10,eq
+00b4d654  orr w8,w8,w10
+00b4d658  tst w8,w12
+00b4d65c  str w8,[x9, #0x20]
+00b4d660  b.ne 0x00b4d68c
+00b4d664  cmp x20,#0x1
+00b4d668  b.lt 0x00b4d670
+00b4d66c  str wzr,[x21]
+00b4d670  mov x0,x19
+00b4d674  ldp x29,x30,[sp, #0x40]
+00b4d678  ldp x20,x19,[sp, #0x30]
+00b4d67c  ldp x22,x21,[sp, #0x20]
+00b4d680  ldp x24,x23,[sp, #0x10]
+00b4d684  ldr x25,[sp], #0x50
+00b4d688  ret
+00b4d68c  adrp x0,0x2a07000
+00b4d690  add x0,x0,#0xcf4
+00b4d694  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4d6f4_get.txt
+================================================================================
+Function: get @ 00b4d6f4
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >&)
+
+--- Calls OUT ---
+  -> get @ 008d4150
+  -> ~locale @ 008d3a30
+  -> locale @ 008d52c0
+  -> use_facet @ 008d44d0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b4d6f4  sub sp,sp,#0x40
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >&)
+00b4d6f8  stp x22,x21,[sp, #0x10]
+00b4d6fc  stp x20,x19,[sp, #0x20]
+00b4d700  stp x29,x30,[sp, #0x30]
+00b4d704  add x29,sp,#0x30
+00b4d708  mrs x22,tpidr_el0
+00b4d70c  ldr x8,[x22, #0x28]
+00b4d710  mov x19,x1
+00b4d714  mov x20,x0
+00b4d718  str x8,[sp, #0x8]
+00b4d71c  ldr x8,[x0]
+00b4d720  ldur x8,[x8, #-0x18]
+00b4d724  add x8,x0,x8
+00b4d728  add x1,x8,#0x30
+00b4d72c  mov x0,sp
+00b4d730  bl 0x008d52c0
+00b4d734  adrp x1,0x3360000
+    ; [PRE] try { // try from 00b4d734 to 00b4d753 has its CatchHandler @ 00b4d798
+00b4d738  ldr x1,[x1, #0x810]
+00b4d73c  mov x0,sp
+00b4d740  bl 0x008d44d0
+00b4d744  ldr x8,[x0]
+00b4d748  ldr x8,[x8, #0x58]
+00b4d74c  mov w1,#0xa
+00b4d750  blr x8
+    ; [POST] } // end try from 00b4d734 to 00b4d753
+00b4d754  mov w21,w0
+00b4d758  mov x0,sp
+00b4d75c  bl 0x008d3a30
+00b4d760  mov x0,x20
+00b4d764  mov x1,x19
+00b4d768  mov w2,w21
+00b4d76c  bl 0x008d4150
+00b4d770  ldr x8,[x22, #0x28]
+00b4d774  ldr x9,[sp, #0x8]
+00b4d778  cmp x8,x9
+00b4d77c  b.ne 0x00b4d794
+00b4d780  ldp x29,x30,[sp, #0x30]
+00b4d784  ldp x20,x19,[sp, #0x20]
+00b4d788  ldp x22,x21,[sp, #0x10]
+00b4d78c  add sp,sp,#0x40
+00b4d790  ret
+00b4d794  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b4d7ac_get.txt
+================================================================================
+Function: get @ 00b4d7ac
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >&, wchar_t)
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+  <- get @ 008d4150
+
+--- Listing ---
+00b4d7ac  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::get(std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >&, wchar_t)
+00b4d7b0  stp x20,x19,[sp, #0x10]
+00b4d7b4  stp x29,x30,[sp, #0x20]
+00b4d7b8  add x29,sp,#0x20
+00b4d7bc  ldr x8,[x0]
+00b4d7c0  str xzr,[x0, #0x8]
+00b4d7c4  mov x19,x0
+00b4d7c8  ldur x8,[x8, #-0x18]
+00b4d7cc  add x9,x0,x8
+00b4d7d0  ldr w10,[x9, #0x20]
+00b4d7d4  cbz w10,0x00b4d800
+00b4d7d8  ldr x8,[x9, #0x28]
+00b4d7dc  cmp x8,#0x0
+00b4d7e0  ldr w8,[x9, #0x24]
+00b4d7e4  cset w11,eq
+00b4d7e8  orr w10,w10,w11
+00b4d7ec  orr w10,w10,#0x4
+00b4d7f0  tst w10,w8
+00b4d7f4  str w10,[x9, #0x20]
+00b4d7f8  b.eq 0x00b4d930
+00b4d7fc  b 0x00b4d944
+00b4d800  ldr x0,[x9, #0x88]
+00b4d804  mov w20,w2
+00b4d808  mov x21,x1
+00b4d80c  cbz x0,0x00b4d828
+00b4d810  bl 0x008d5a30
+00b4d814  ldr x8,[x19]
+00b4d818  ldur x8,[x8, #-0x18]
+00b4d81c  add x9,x19,x8
+00b4d820  ldr w9,[x9, #0x20]
+00b4d824  cbnz w9,0x00b4d930
+00b4d828  add x22,x19,#0x28
+00b4d82c  b 0x00b4d83c
+00b4d830  add x9,x9,#0x4
+00b4d834  str x9,[x0, #0x18]
+00b4d838  ldur x8,[x8, #-0x18]
+00b4d83c  ldr x0,[x22, x8, LSL #0x0]
+00b4d840  ldp x8,x9,[x0, #0x18]
+00b4d844  cmp x8,x9
+00b4d848  b.eq 0x00b4d87c
+00b4d84c  ldr w1,[x8]
+00b4d850  cmn w1,#0x1
+00b4d854  b.eq 0x00b4d8f0
+00b4d858  cmp w1,w20
+00b4d85c  b.eq 0x00b4d8e8
+00b4d860  ldp x8,x9,[x21, #0x30]
+00b4d864  cmp x8,x9
+00b4d868  b.eq 0x00b4d898
+00b4d86c  add x9,x8,#0x4
+00b4d870  str x9,[x21, #0x30]
+00b4d874  str w1,[x8]
+00b4d878  b 0x00b4d8b0
+00b4d87c  ldr x8,[x0]
+00b4d880  ldr x8,[x8, #0x48]
+00b4d884  blr x8
+    ; [PRE] try { // try from 00b4d884 to 00b4d88b has its CatchHandler @ 00b4d950
+00b4d888  mov w1,w0
+    ; [POST] } // end try from 00b4d884 to 00b4d88b
+00b4d88c  cmn w1,#0x1
+00b4d890  b.ne 0x00b4d858
+00b4d894  b 0x00b4d8f0
+00b4d898  ldr x8,[x21]
+00b4d89c  ldr x8,[x8, #0x68]
+00b4d8a0  mov x0,x21
+    ; [PRE] try { // try from 00b4d8a0 to 00b4d8db has its CatchHandler @ 00b4d954
+00b4d8a4  blr x8
+00b4d8a8  cmn w0,#0x1
+00b4d8ac  b.eq 0x00b4d8e8
+00b4d8b0  ldp x8,x9,[x19]
+00b4d8b4  add x9,x9,#0x1
+00b4d8b8  str x9,[x19, #0x8]
+00b4d8bc  ldur x9,[x8, #-0x18]
+00b4d8c0  ldr x0,[x22, x9, LSL #0x0]
+00b4d8c4  ldp x9,x10,[x0, #0x18]
+00b4d8c8  cmp x9,x10
+00b4d8cc  b.ne 0x00b4d830
+00b4d8d0  ldr x8,[x0]
+00b4d8d4  ldr x8,[x8, #0x50]
+00b4d8d8  blr x8
+    ; [POST] } // end try from 00b4d8a0 to 00b4d8db
+00b4d8dc  ldr x8,[x19]
+00b4d8e0  ldur x8,[x8, #-0x18]
+00b4d8e4  b 0x00b4d83c
+00b4d8e8  mov w8,wzr
+00b4d8ec  b 0x00b4d8f4
+00b4d8f0  mov w8,#0x2
+00b4d8f4  ldp x9,x10,[x19]
+00b4d8f8  orr w11,w8,#0x4
+00b4d8fc  ldur x9,[x9, #-0x18]
+00b4d900  cmp x10,#0x0
+00b4d904  csel w8,w11,w8,eq
+00b4d908  add x9,x19,x9
+00b4d90c  ldr x12,[x9, #0x28]
+00b4d910  ldp w10,w11,[x9, #0x20]
+00b4d914  cmp x12,#0x0
+00b4d918  orr w8,w10,w8
+00b4d91c  cset w10,eq
+00b4d920  orr w8,w8,w10
+00b4d924  tst w8,w11
+00b4d928  str w8,[x9, #0x20]
+00b4d92c  b.ne 0x00b4d944
+00b4d930  mov x0,x19
+00b4d934  ldp x29,x30,[sp, #0x20]
+00b4d938  ldp x20,x19,[sp, #0x10]
+00b4d93c  ldp x22,x21,[sp], #0x30
+00b4d940  ret
+00b4d944  adrp x0,0x2a07000
+00b4d948  add x0,x0,#0xcf4
+00b4d94c  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4d964_getline.txt
+================================================================================
+Function: getline @ 00b4d964
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::getline(wchar_t*, long)
+
+--- Calls OUT ---
+  -> getline @ 008d47b0
+  -> ~locale @ 008d3a30
+  -> locale @ 008d52c0
+  -> use_facet @ 008d44d0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b4d964  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::getline(wchar_t*, long)
+00b4d968  str x23,[sp, #0x10]
+00b4d96c  stp x22,x21,[sp, #0x20]
+00b4d970  stp x20,x19,[sp, #0x30]
+00b4d974  stp x29,x30,[sp, #0x40]
+00b4d978  add x29,sp,#0x40
+00b4d97c  mrs x23,tpidr_el0
+00b4d980  ldr x8,[x23, #0x28]
+00b4d984  mov x20,x1
+00b4d988  mov x21,x0
+00b4d98c  mov x19,x2
+00b4d990  str x8,[sp, #0x8]
+00b4d994  ldr x8,[x0]
+00b4d998  ldur x8,[x8, #-0x18]
+00b4d99c  add x8,x0,x8
+00b4d9a0  add x1,x8,#0x30
+00b4d9a4  mov x0,sp
+00b4d9a8  bl 0x008d52c0
+00b4d9ac  adrp x1,0x3360000
+    ; [PRE] try { // try from 00b4d9ac to 00b4d9cb has its CatchHandler @ 00b4da18
+00b4d9b0  ldr x1,[x1, #0x810]
+00b4d9b4  mov x0,sp
+00b4d9b8  bl 0x008d44d0
+00b4d9bc  ldr x8,[x0]
+00b4d9c0  ldr x8,[x8, #0x58]
+00b4d9c4  mov w1,#0xa
+00b4d9c8  blr x8
+    ; [POST] } // end try from 00b4d9ac to 00b4d9cb
+00b4d9cc  mov w22,w0
+00b4d9d0  mov x0,sp
+00b4d9d4  bl 0x008d3a30
+00b4d9d8  mov x0,x21
+00b4d9dc  mov x1,x20
+00b4d9e0  mov x2,x19
+00b4d9e4  mov w3,w22
+00b4d9e8  bl 0x008d47b0
+00b4d9ec  ldr x8,[x23, #0x28]
+00b4d9f0  ldr x9,[sp, #0x8]
+00b4d9f4  cmp x8,x9
+00b4d9f8  b.ne 0x00b4da14
+00b4d9fc  ldp x29,x30,[sp, #0x40]
+00b4da00  ldp x20,x19,[sp, #0x30]
+00b4da04  ldp x22,x21,[sp, #0x20]
+00b4da08  ldr x23,[sp, #0x10]
+00b4da0c  add sp,sp,#0x50
+00b4da10  ret
+00b4da14  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b4da2c_getline.txt
+================================================================================
+Function: getline @ 00b4da2c
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::getline(wchar_t*, long, wchar_t)
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+  <- getline @ 008d47b0
+
+--- Listing ---
+00b4da2c  str x25,[sp, #-0x50]!
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::getline(wchar_t*, long, wchar_t)
+00b4da30  stp x24,x23,[sp, #0x10]
+00b4da34  stp x22,x21,[sp, #0x20]
+00b4da38  stp x20,x19,[sp, #0x30]
+00b4da3c  stp x29,x30,[sp, #0x40]
+00b4da40  add x29,sp,#0x40
+00b4da44  ldr x8,[x0]
+00b4da48  str xzr,[x0, #0x8]
+00b4da4c  mov x20,x2
+00b4da50  mov x19,x0
+00b4da54  ldur x8,[x8, #-0x18]
+00b4da58  mov x21,x1
+00b4da5c  add x9,x0,x8
+00b4da60  ldr w10,[x9, #0x20]
+00b4da64  cbz w10,0x00b4daf4
+00b4da68  ldr x8,[x9, #0x28]
+00b4da6c  cmp x8,#0x0
+00b4da70  ldr w8,[x9, #0x24]
+00b4da74  cset w11,eq
+00b4da78  orr w10,w10,w11
+00b4da7c  orr w10,w10,#0x4
+00b4da80  tst w10,w8
+00b4da84  str w10,[x9, #0x20]
+00b4da88  b.ne 0x00b4dc24
+00b4da8c  mov w8,wzr
+00b4da90  cmp x20,#0x1
+00b4da94  b.lt 0x00b4da9c
+00b4da98  str wzr,[x21]
+00b4da9c  ldp x9,x10,[x19]
+00b4daa0  orr w11,w8,#0x4
+00b4daa4  ldur x9,[x9, #-0x18]
+00b4daa8  cmp x10,#0x0
+00b4daac  csel w8,w11,w8,eq
+00b4dab0  add x9,x19,x9
+00b4dab4  ldr x12,[x9, #0x28]
+00b4dab8  ldp w10,w11,[x9, #0x20]
+00b4dabc  cmp x12,#0x0
+00b4dac0  orr w8,w10,w8
+00b4dac4  cset w10,eq
+00b4dac8  orr w8,w8,w10
+00b4dacc  tst w8,w11
+00b4dad0  str w8,[x9, #0x20]
+00b4dad4  b.ne 0x00b4dc24
+00b4dad8  mov x0,x19
+00b4dadc  ldp x29,x30,[sp, #0x40]
+00b4dae0  ldp x20,x19,[sp, #0x30]
+00b4dae4  ldp x22,x21,[sp, #0x20]
+00b4dae8  ldp x24,x23,[sp, #0x10]
+00b4daec  ldr x25,[sp], #0x50
+00b4daf0  ret
+00b4daf4  ldr x0,[x9, #0x88]
+00b4daf8  mov w22,w3
+00b4dafc  cbz x0,0x00b4db18
+00b4db00  bl 0x008d5a30
+00b4db04  ldr x8,[x19]
+00b4db08  ldur x8,[x8, #-0x18]
+00b4db0c  add x9,x19,x8
+00b4db10  ldr w9,[x9, #0x20]
+00b4db14  cbnz w9,0x00b4da8c
+00b4db18  add x23,x19,#0x28
+00b4db1c  sub x24,x20,#0x1
+00b4db20  b 0x00b4db3c
+00b4db24  add x10,x10,#0x4
+00b4db28  str x10,[x0, #0x18]
+00b4db2c  add x8,x8,#0x1
+00b4db30  str x8,[x19, #0x8]
+00b4db34  ldur x8,[x9, #-0x18]
+00b4db38  mov x21,x25
+00b4db3c  ldr x0,[x23, x8, LSL #0x0]
+00b4db40  ldp x8,x9,[x0, #0x18]
+00b4db44  cmp x8,x9
+00b4db48  b.eq 0x00b4dba0
+00b4db4c  ldr w0,[x8]
+00b4db50  cmn w0,#0x1
+00b4db54  b.eq 0x00b4dbb4
+00b4db58  cmp w0,w22
+00b4db5c  b.eq 0x00b4dbc4
+00b4db60  ldr x8,[x19, #0x8]
+00b4db64  cmp x8,x24
+00b4db68  b.ge 0x00b4dbec
+00b4db6c  mov x25,x21
+00b4db70  str w0,[x25], #0x4
+00b4db74  ldr x9,[x19]
+00b4db78  ldur x10,[x9, #-0x18]
+00b4db7c  ldr x0,[x23, x10, LSL #0x0]
+00b4db80  ldp x10,x11,[x0, #0x18]
+00b4db84  cmp x10,x11
+00b4db88  b.ne 0x00b4db24
+00b4db8c  ldr x8,[x0]
+00b4db90  ldr x8,[x8, #0x50]
+00b4db94  blr x8
+    ; [PRE] try { // try from 00b4db94 to 00b4db97 has its CatchHandler @ 00b4dc34
+    ; [POST] } // end try from 00b4db94 to 00b4db97
+00b4db98  ldp x9,x8,[x19]
+00b4db9c  b 0x00b4db2c
+00b4dba0  ldr x8,[x0]
+00b4dba4  ldr x8,[x8, #0x48]
+00b4dba8  blr x8
+    ; [PRE] try { // try from 00b4dba8 to 00b4dbab has its CatchHandler @ 00b4dc3c
+    ; [POST] } // end try from 00b4dba8 to 00b4dbab
+00b4dbac  cmn w0,#0x1
+00b4dbb0  b.ne 0x00b4db58
+00b4dbb4  mov w8,#0x2
+00b4dbb8  cmp x20,#0x1
+00b4dbbc  b.ge 0x00b4da98
+00b4dbc0  b 0x00b4da9c
+00b4dbc4  ldr x8,[x19]
+00b4dbc8  ldur x8,[x8, #-0x18]
+00b4dbcc  add x8,x19,x8
+00b4dbd0  ldr x0,[x8, #0x28]
+00b4dbd4  ldp x8,x9,[x0, #0x18]
+00b4dbd8  cmp x8,x9
+00b4dbdc  b.eq 0x00b4dbfc
+00b4dbe0  add x8,x8,#0x4
+00b4dbe4  str x8,[x0, #0x18]
+00b4dbe8  b 0x00b4dc08
+00b4dbec  mov w8,#0x4
+00b4dbf0  cmp x20,#0x1
+00b4dbf4  b.ge 0x00b4da98
+00b4dbf8  b 0x00b4da9c
+00b4dbfc  ldr x8,[x0]
+00b4dc00  ldr x8,[x8, #0x50]
+00b4dc04  blr x8
+    ; [PRE] try { // try from 00b4dc04 to 00b4dc07 has its CatchHandler @ 00b4dc30
+    ; [POST] } // end try from 00b4dc04 to 00b4dc07
+00b4dc08  ldr x9,[x19, #0x8]
+00b4dc0c  mov w8,wzr
+00b4dc10  add x9,x9,#0x1
+00b4dc14  str x9,[x19, #0x8]
+00b4dc18  cmp x20,#0x1
+00b4dc1c  b.ge 0x00b4da98
+00b4dc20  b 0x00b4da9c
+00b4dc24  adrp x0,0x2a07000
+00b4dc28  add x0,x0,#0xcf4
+00b4dc2c  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b5fbc4_get.txt
+================================================================================
+Function: get @ 00b5fbc4
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::get(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, std::__ndk1::ios_base&, unsigned int&, tm*, char const*, char const*) const
+
+--- Calls OUT ---
+  -> getloc @ 008d5620
+  -> FUN_00af4fc0 @ 00af4fc0
+  -> FUN_00b7f6ec @ 00b7f6ec
+  -> __call_once @ 008d4f80
+  -> __stack_chk_fail @ 008d4c50
+  -> __release_shared @ 008d54a0
+
+--- Calls IN ---
+  <- get @ 008d5390
+
+--- Listing ---
+00b5fbc4  sub sp,sp,#0xb0
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::get(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, std::__ndk1::ios_base&, unsigned int&, tm*, char const*, char const*) const
+00b5fbc8  stp x28,x27,[sp, #0x50]
+00b5fbcc  stp x26,x25,[sp, #0x60]
+00b5fbd0  stp x24,x23,[sp, #0x70]
+00b5fbd4  stp x22,x21,[sp, #0x80]
+00b5fbd8  stp x20,x19,[sp, #0x90]
+00b5fbdc  stp x29,x30,[sp, #0xa0]
+00b5fbe0  add x29,sp,#0xa0
+00b5fbe4  mrs x8,tpidr_el0
+00b5fbe8  stp x8,x5,[sp, #0x8]
+00b5fbec  ldr x8,[x8, #0x28]
+00b5fbf0  mov x25,x0
+00b5fbf4  mov x0,x3
+00b5fbf8  mov x22,x7
+00b5fbfc  str x8,[sp, #0x48]
+00b5fc00  add x8,sp,#0x18
+00b5fc04  mov x27,x6
+00b5fc08  mov x19,x4
+00b5fc0c  mov x24,x3
+00b5fc10  mov x21,x2
+00b5fc14  mov x20,x1
+00b5fc18  bl 0x008d5620
+00b5fc1c  adrp x26,0x3384000
+00b5fc20  adrp x8,0x3364000
+00b5fc24  ldr x23,[sp, #0x18]
+00b5fc28  ldr x26,[x26, #0xc8]
+00b5fc2c  ldr x8,[x8, #0xf88]
+00b5fc30  movi v0.2D,#0x0
+00b5fc34  str x26,[sp, #0x20]
+00b5fc38  mov v0.D[0x0],x8
+00b5fc3c  stur q0,[sp, #0x28]
+00b5fc40  ldar x8,[x26]
+00b5fc44  cmn x8,#0x1
+00b5fc48  b.eq 0x00b5fc70
+00b5fc4c  add x8,sp,#0x20
+00b5fc50  add x9,sp,#0x40
+00b5fc54  stp x9,x8,[sp, #0x38]
+00b5fc58  adrp x0,0x3384000
+    ; [PRE] try { // try from 00b5fc58 to 00b5fc6f has its CatchHandler @ 00b60090
+00b5fc5c  ldr x0,[x0, #0xc8]
+00b5fc60  adrp x2,0xb7f000
+00b5fc64  add x2,x2,#0x6ec
+00b5fc68  add x1,sp,#0x38
+00b5fc6c  bl 0x008d4f80
+    ; [POST] } // end try from 00b5fc58 to 00b5fc6f
+00b5fc70  ldrsw x9,[x26, #0x8]
+00b5fc74  ldp x8,x10,[x23, #0x10]
+00b5fc78  sub x9,x9,#0x1
+00b5fc7c  sub x10,x10,x8
+00b5fc80  cmp x9,x10, ASR #0x3
+00b5fc84  b.cs 0x00b60088
+00b5fc88  ldr x26,[x8, x9, LSL #0x3]
+00b5fc8c  cbz x26,0x00b60088
+00b5fc90  ldr x0,[sp, #0x18]
+00b5fc94  bl 0x008d54a0
+00b5fc98  cmp x27,x22
+00b5fc9c  str wzr,[x19]
+00b5fca0  b.ne 0x00b5fcc0
+00b5fca4  b 0x00b5ffd4
+00b5fca8  mov w8,#0x4
+00b5fcac  str w8,[x19]
+00b5fcb0  cmp x27,x22
+00b5fcb4  b.eq 0x00b5ffd4
+00b5fcb8  ldr w8,[x19]
+00b5fcbc  cbnz w8,0x00b5ffd4
+00b5fcc0  cbz x20,0x00b5fcd0
+00b5fcc4  ldp x8,x9,[x20, #0x18]
+00b5fcc8  cmp x8,x9
+00b5fccc  b.eq 0x00b5fd00
+00b5fcd0  cbz x21,0x00b5fd1c
+00b5fcd4  ldp x8,x9,[x21, #0x18]
+00b5fcd8  cmp x8,x9
+00b5fcdc  b.ne 0x00b5fcf8
+00b5fce0  ldr x8,[x21]
+00b5fce4  mov x0,x21
+00b5fce8  ldr x8,[x8, #0x48]
+00b5fcec  blr x8
+00b5fcf0  cmn w0,#0x1
+00b5fcf4  b.eq 0x00b5fd1c
+00b5fcf8  cbz x20,0x00b5fd24
+00b5fcfc  b 0x00b5ffcc
+00b5fd00  ldr x8,[x20]
+00b5fd04  mov x0,x20
+00b5fd08  ldr x8,[x8, #0x48]
+00b5fd0c  blr x8
+00b5fd10  cmn w0,#0x1
+00b5fd14  csel x20,xzr,x20,eq
+00b5fd18  cbnz x21,0x00b5fcd4
+00b5fd1c  mov x21,xzr
+00b5fd20  cbz x20,0x00b5ffcc
+00b5fd24  ldr x8,[x26]
+00b5fd28  ldrb w1,[x27]
+00b5fd2c  mov x0,x26
+00b5fd30  mov w2,wzr
+00b5fd34  ldr x8,[x8, #0x48]
+00b5fd38  blr x8
+00b5fd3c  and w8,w0,#0xff
+00b5fd40  cmp w8,#0x25
+00b5fd44  b.ne 0x00b5fdb8
+00b5fd48  add x23,x27,#0x1
+00b5fd4c  cmp x23,x22
+00b5fd50  b.eq 0x00b5ffcc
+00b5fd54  ldr x8,[x26]
+00b5fd58  ldrb w1,[x23]
+00b5fd5c  mov x0,x26
+00b5fd60  mov w2,wzr
+00b5fd64  ldr x8,[x8, #0x48]
+00b5fd68  blr x8
+00b5fd6c  and w8,w0,#0xff
+00b5fd70  mov w28,w0
+00b5fd74  cmp w8,#0x45
+00b5fd78  b.eq 0x00b5fd84
+00b5fd7c  cmp w8,#0x30
+00b5fd80  b.ne 0x00b5fde4
+00b5fd84  add x8,x27,#0x2
+00b5fd88  cmp x8,x22
+00b5fd8c  b.eq 0x00b5ffcc
+00b5fd90  ldr x9,[x26]
+00b5fd94  ldrb w1,[x8]
+00b5fd98  mov x0,x26
+00b5fd9c  mov w2,wzr
+00b5fda0  ldr x9,[x9, #0x48]
+00b5fda4  blr x9
+00b5fda8  mov w7,w28
+00b5fdac  mov w28,w0
+00b5fdb0  mov w27,#0x2
+00b5fdb4  b 0x00b5fdec
+00b5fdb8  ldrsb w9,[x27]
+00b5fdbc  tbnz w9,#0x1f,0x00b5fdd0
+00b5fdc0  ldr x8,[x26, #0x10]
+00b5fdc4  and x9,x9,#0xff
+00b5fdc8  ldr x9,[x8, x9, LSL #0x3]
+00b5fdcc  tbnz w9,#0x0,0x00b5fe28
+00b5fdd0  ldp x8,x9,[x20, #0x18]
+00b5fdd4  cmp x8,x9
+00b5fdd8  b.eq 0x00b5fe58
+00b5fddc  ldrb w1,[x8]
+00b5fde0  b 0x00b5fe6c
+00b5fde4  mov w7,wzr
+00b5fde8  mov w27,#0x1
+00b5fdec  ldr x8,[x25]
+00b5fdf0  ldr x5,[sp, #0x10]
+00b5fdf4  mov x0,x25
+00b5fdf8  mov x1,x20
+00b5fdfc  ldr x8,[x8, #0x48]
+00b5fe00  mov x2,x21
+00b5fe04  mov x3,x24
+00b5fe08  mov x4,x19
+00b5fe0c  mov w6,w28
+00b5fe10  blr x8
+00b5fe14  mov x20,x0
+00b5fe18  add x27,x23,x27
+00b5fe1c  cmp x27,x22
+00b5fe20  b.ne 0x00b5fcb8
+00b5fe24  b 0x00b5ffd4
+00b5fe28  add x9,x27,#0x1
+00b5fe2c  cmp x22,x9
+00b5fe30  b.eq 0x00b5fed4
+00b5fe34  mov x28,x9
+00b5fe38  ldrsb w9,[x9]
+00b5fe3c  add x27,x27,#0x1
+00b5fe40  tbnz w9,#0x1f,0x00b5fee0
+00b5fe44  and x9,x9,#0xff
+00b5fe48  ldr x10,[x8, x9, LSL #0x3]
+00b5fe4c  add x9,x28,#0x1
+00b5fe50  tbnz w10,#0x0,0x00b5fe2c
+00b5fe54  b 0x00b5fef4
+00b5fe58  ldr x8,[x20]
+00b5fe5c  mov x0,x20
+00b5fe60  ldr x8,[x8, #0x48]
+00b5fe64  blr x8
+00b5fe68  mov w1,w0
+00b5fe6c  ldr x8,[x26]
+00b5fe70  mov x0,x26
+00b5fe74  ldr x8,[x8, #0x18]
+00b5fe78  blr x8
+00b5fe7c  ldr x8,[x26]
+00b5fe80  ldrb w1,[x27]
+00b5fe84  and w23,w0,#0xff
+00b5fe88  mov x0,x26
+00b5fe8c  ldr x8,[x8, #0x18]
+00b5fe90  blr x8
+00b5fe94  cmp w23,w0, UXTB 
+00b5fe98  b.ne 0x00b5fca8
+00b5fe9c  ldp x8,x9,[x20, #0x18]
+00b5fea0  cmp x8,x9
+00b5fea4  b.eq 0x00b5feb4
+00b5fea8  add x8,x8,#0x1
+00b5feac  str x8,[x20, #0x18]
+00b5feb0  b 0x00b5fec4
+00b5feb4  ldr x8,[x20]
+00b5feb8  mov x0,x20
+00b5febc  ldr x8,[x8, #0x50]
+00b5fec0  blr x8
+00b5fec4  add x27,x27,#0x1
+00b5fec8  cmp x27,x22
+00b5fecc  b.ne 0x00b5fcb8
+00b5fed0  b 0x00b5ffd4
+00b5fed4  mov x28,x22
+00b5fed8  cbnz x20,0x00b5fef8
+00b5fedc  b 0x00b5ff1c
+00b5fee0  mov x28,x27
+00b5fee4  cbnz x20,0x00b5fef8
+00b5fee8  b 0x00b5ff1c
+00b5feec  add x8,x8,#0x1
+00b5fef0  str x8,[x20, #0x18]
+00b5fef4  cbz x20,0x00b5ff1c
+00b5fef8  ldp x8,x9,[x20, #0x18]
+00b5fefc  cmp x8,x9
+00b5ff00  b.ne 0x00b5ff1c
+00b5ff04  ldr x8,[x20]
+00b5ff08  mov x0,x20
+00b5ff0c  ldr x8,[x8, #0x48]
+00b5ff10  blr x8
+00b5ff14  cmn w0,#0x1
+00b5ff18  csel x20,xzr,x20,eq
+00b5ff1c  cbz x21,0x00b5ff4c
+00b5ff20  ldp x8,x9,[x21, #0x18]
+00b5ff24  cmp x8,x9
+00b5ff28  b.ne 0x00b5ff44
+00b5ff2c  ldr x8,[x21]
+00b5ff30  mov x0,x21
+00b5ff34  ldr x8,[x8, #0x48]
+00b5ff38  blr x8
+00b5ff3c  cmn w0,#0x1
+00b5ff40  b.eq 0x00b5ff4c
+00b5ff44  cbz x20,0x00b5ff54
+00b5ff48  b 0x00b5ffbc
+00b5ff4c  mov x21,xzr
+00b5ff50  cbz x20,0x00b5ffbc
+00b5ff54  ldp x8,x9,[x20, #0x18]
+00b5ff58  cmp x8,x9
+00b5ff5c  b.eq 0x00b5ff70
+00b5ff60  ldrb w0,[x8]
+00b5ff64  sxtb w8,w0
+00b5ff68  tbz w8,#0x1f,0x00b5ff88
+00b5ff6c  b 0x00b5ffbc
+00b5ff70  ldr x8,[x20]
+00b5ff74  mov x0,x20
+00b5ff78  ldr x8,[x8, #0x48]
+00b5ff7c  blr x8
+00b5ff80  sxtb w8,w0
+00b5ff84  tbnz w8,#0x1f,0x00b5ffbc
+00b5ff88  ldr x8,[x26, #0x10]
+00b5ff8c  and w9,w0,#0xff
+00b5ff90  ldr x8,[x8, w9, UXTW #0x3]
+00b5ff94  tbz w8,#0x0,0x00b5ffbc
+00b5ff98  ldp x8,x9,[x20, #0x18]
+00b5ff9c  cmp x8,x9
+00b5ffa0  b.ne 0x00b5feec
+00b5ffa4  ldr x8,[x20]
+00b5ffa8  mov x0,x20
+00b5ffac  ldr x8,[x8, #0x50]
+00b5ffb0  blr x8
+00b5ffb4  cbnz x20,0x00b5fef8
+00b5ffb8  b 0x00b5ff1c
+00b5ffbc  mov x27,x28
+00b5ffc0  cmp x27,x22
+00b5ffc4  b.ne 0x00b5fcb8
+00b5ffc8  b 0x00b5ffd4
+00b5ffcc  mov w8,#0x4
+00b5ffd0  str w8,[x19]
+00b5ffd4  cbz x20,0x00b5fff0
+00b5ffd8  ldp x8,x9,[x20, #0x18]
+00b5ffdc  ldr x22,[sp, #0x8]
+00b5ffe0  cmp x8,x9
+00b5ffe4  b.eq 0x00b5fffc
+00b5ffe8  cbnz x21,0x00b60018
+00b5ffec  b 0x00b60080
+00b5fff0  ldr x22,[sp, #0x8]
+00b5fff4  cbnz x21,0x00b60018
+00b5fff8  b 0x00b60080
+00b5fffc  ldr x8,[x20]
+00b60000  mov x0,x20
+00b60004  ldr x8,[x8, #0x48]
+00b60008  blr x8
+00b6000c  cmn w0,#0x1
+00b60010  csel x20,xzr,x20,eq
+00b60014  cbz x21,0x00b60080
+00b60018  ldp x8,x9,[x21, #0x18]
+00b6001c  cmp x8,x9
+00b60020  b.ne 0x00b6003c
+00b60024  ldr x8,[x21]
+00b60028  mov x0,x21
+00b6002c  ldr x8,[x8, #0x48]
+00b60030  blr x8
+00b60034  cmn w0,#0x1
+00b60038  b.eq 0x00b60080
+00b6003c  cbz x20,0x00b6004c
+00b60040  ldr w8,[x19]
+00b60044  orr w8,w8,#0x2
+00b60048  str w8,[x19]
+00b6004c  ldr x8,[x22, #0x28]
+00b60050  ldr x9,[sp, #0x48]
+00b60054  cmp x8,x9
+00b60058  b.ne 0x00b6008c
+00b6005c  mov x0,x20
+00b60060  ldp x29,x30,[sp, #0xa0]
+00b60064  ldp x20,x19,[sp, #0x90]
+00b60068  ldp x22,x21,[sp, #0x80]
+00b6006c  ldp x24,x23,[sp, #0x70]
+00b60070  ldp x26,x25,[sp, #0x60]
+00b60074  ldp x28,x27,[sp, #0x50]
+00b60078  add sp,sp,#0xb0
+00b6007c  ret
+00b60080  cbnz x20,0x00b6004c
+00b60084  b 0x00b60040
+00b60088  bl 0x00af4fc0
+    ; [PRE] try { // try from 00b60088 to 00b6008b has its CatchHandler @ 00b60090
+    ; [POST] } // end try from 00b60088 to 00b6008b
+00b6008c  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b60324___get_weekdayname.txt
+================================================================================
+Function: __get_weekdayname @ 00b60324
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_weekdayname(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b543b4 @ 00b543b4
+
+--- Calls IN ---
+
+--- Listing ---
+00b60324  stp x24,x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_weekdayname(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b60328  stp x22,x21,[sp, #0x10]
+00b6032c  stp x20,x19,[sp, #0x20]
+00b60330  stp x29,x30,[sp, #0x30]
+00b60334  add x29,sp,#0x30
+00b60338  ldr x8,[x0, #0x10]!
+00b6033c  mov x20,x5
+00b60340  mov x21,x4
+00b60344  mov x22,x3
+00b60348  ldr x8,[x8]
+00b6034c  mov x23,x2
+00b60350  mov x19,x1
+00b60354  blr x8
+00b60358  mov x24,x0
+00b6035c  add x3,x0,#0x150
+00b60360  mov x0,x23
+00b60364  mov x1,x22
+00b60368  mov x2,x24
+00b6036c  mov x4,x20
+00b60370  mov x5,x21
+00b60374  mov w6,wzr
+00b60378  bl 0x00b543b4
+00b6037c  sub x8,x0,x24
+00b60380  cmp x8,#0x14f
+00b60384  b.gt 0x00b603c4
+00b60388  mov x10,#0x4925
+00b6038c  orr x9,xzr,#-0x5555555555555556
+00b60390  movk x10,#0x2492, LSL #16
+00b60394  asr x8,x8,#0x3
+00b60398  movk x9,#0xaaab
+00b6039c  movk x10,#0x9249, LSL #32
+00b603a0  movk x10,#0x4924, LSL #48
+00b603a4  mul x8,x8,x9
+00b603a8  smulh x9,x8,x10
+00b603ac  lsr x10,x9,#0x3f
+00b603b0  lsr x9,x9,#0x1
+00b603b4  add w9,w9,w10
+00b603b8  sub w9,w9,w9, LSL #0x3
+00b603bc  add w8,w8,w9
+00b603c0  str w8,[x19]
+00b603c4  ldp x29,x30,[sp, #0x30]
+00b603c8  ldp x20,x19,[sp, #0x20]
+00b603cc  ldp x22,x21,[sp, #0x10]
+00b603d0  ldp x24,x23,[sp], #0x40
+00b603d4  ret
+
+
+================================================================================
+### FILE: 00b60564___get_monthname.txt
+================================================================================
+Function: __get_monthname @ 00b60564
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_monthname(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b543b4 @ 00b543b4
+
+--- Calls IN ---
+
+--- Listing ---
+00b60564  stp x24,x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_monthname(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b60568  stp x22,x21,[sp, #0x10]
+00b6056c  stp x20,x19,[sp, #0x20]
+00b60570  stp x29,x30,[sp, #0x30]
+00b60574  add x29,sp,#0x30
+00b60578  ldr x8,[x0, #0x10]!
+00b6057c  mov x20,x5
+00b60580  mov x21,x4
+00b60584  mov x22,x3
+00b60588  ldr x8,[x8, #0x8]
+00b6058c  mov x23,x2
+00b60590  mov x19,x1
+00b60594  blr x8
+00b60598  mov x24,x0
+00b6059c  add x3,x0,#0x240
+00b605a0  mov x0,x23
+00b605a4  mov x1,x22
+00b605a8  mov x2,x24
+00b605ac  mov x4,x20
+00b605b0  mov x5,x21
+00b605b4  mov w6,wzr
+00b605b8  bl 0x00b543b4
+00b605bc  sub x8,x0,x24
+00b605c0  cmp x8,#0x23f
+00b605c4  b.gt 0x00b60600
+00b605c8  orr x9,xzr,#-0x5555555555555556
+00b605cc  orr x10,xzr,#-0x5555555555555556
+00b605d0  asr x8,x8,#0x3
+00b605d4  movk x9,#0xaaab
+00b605d8  movk x10,#0xaaab
+00b605dc  movk x10,#0x2aaa, LSL #48
+00b605e0  mul x8,x8,x9
+00b605e4  smulh x9,x8,x10
+00b605e8  lsr x10,x9,#0x3f
+00b605ec  lsr x9,x9,#0x1
+00b605f0  add w9,w9,w10
+00b605f4  mov w10,#0xc
+00b605f8  msub w8,w9,w10,w8
+00b605fc  str w8,[x19]
+00b60600  ldp x29,x30,[sp, #0x30]
+00b60604  ldp x20,x19,[sp, #0x20]
+00b60608  ldp x22,x21,[sp, #0x10]
+00b6060c  ldp x24,x23,[sp], #0x40
+00b60610  ret
+
+
+================================================================================
+### FILE: 00b60760___get_year.txt
+================================================================================
+Function: __get_year @ 00b60760
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_year(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b60760  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_year(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b60764  stp x29,x30,[sp, #0x10]
+00b60768  add x29,sp,#0x10
+00b6076c  mov x20,x4
+00b60770  mov x0,x2
+00b60774  mov x19,x1
+00b60778  mov w4,#0x4
+00b6077c  mov x1,x3
+00b60780  mov x2,x20
+00b60784  mov x3,x5
+00b60788  bl 0x00b61588
+00b6078c  ldrb w8,[x20]
+00b60790  tbnz w8,#0x2,0x00b607b8
+00b60794  cmp w0,#0x44
+00b60798  b.gt 0x00b607a4
+00b6079c  add w8,w0,#0x7d0
+00b607a0  b 0x00b607b0
+00b607a4  add w8,w0,#0x76c
+00b607a8  cmp w0,#0x64
+00b607ac  csel w8,w8,w0,lt
+00b607b0  sub w8,w8,#0x76c
+00b607b4  str w8,[x19]
+00b607b8  ldp x29,x30,[sp, #0x10]
+00b607bc  ldp x20,x19,[sp], #0x20
+00b607c0  ret
+
+
+================================================================================
+### FILE: 00b60e18___get_day.txt
+================================================================================
+Function: __get_day @ 00b60e18
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_day(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b60e18  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_day(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b60e1c  stp x29,x30,[sp, #0x10]
+00b60e20  add x29,sp,#0x10
+00b60e24  mov x19,x4
+00b60e28  mov x0,x2
+00b60e2c  mov x20,x1
+00b60e30  mov w4,#0x2
+00b60e34  mov x1,x3
+00b60e38  mov x2,x19
+00b60e3c  mov x3,x5
+00b60e40  bl 0x00b61588
+00b60e44  ldr w8,[x19]
+00b60e48  sub w9,w0,#0x1
+00b60e4c  cmp w9,#0x1e
+00b60e50  b.hi 0x00b60e60
+00b60e54  tbnz w8,#0x2,0x00b60e60
+00b60e58  str w0,[x20]
+00b60e5c  b 0x00b60e68
+00b60e60  orr w8,w8,#0x4
+00b60e64  str w8,[x19]
+00b60e68  ldp x29,x30,[sp, #0x10]
+00b60e6c  ldp x20,x19,[sp], #0x20
+00b60e70  ret
+
+
+================================================================================
+### FILE: 00b60e74___get_hour.txt
+================================================================================
+Function: __get_hour @ 00b60e74
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_hour(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b60e74  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_hour(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b60e78  stp x29,x30,[sp, #0x10]
+00b60e7c  add x29,sp,#0x10
+00b60e80  mov x19,x4
+00b60e84  mov x0,x2
+00b60e88  mov x20,x1
+00b60e8c  mov w4,#0x2
+00b60e90  mov x1,x3
+00b60e94  mov x2,x19
+00b60e98  mov x3,x5
+00b60e9c  bl 0x00b61588
+00b60ea0  ldr w8,[x19]
+00b60ea4  cmp w0,#0x17
+00b60ea8  b.gt 0x00b60eb8
+00b60eac  tbnz w8,#0x2,0x00b60eb8
+00b60eb0  str w0,[x20]
+00b60eb4  b 0x00b60ec0
+00b60eb8  orr w8,w8,#0x4
+00b60ebc  str w8,[x19]
+00b60ec0  ldp x29,x30,[sp, #0x10]
+00b60ec4  ldp x20,x19,[sp], #0x20
+00b60ec8  ret
+
+
+================================================================================
+### FILE: 00b60ecc___get_12_hour.txt
+================================================================================
+Function: __get_12_hour @ 00b60ecc
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_12_hour(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b60ecc  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_12_hour(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b60ed0  stp x29,x30,[sp, #0x10]
+00b60ed4  add x29,sp,#0x10
+00b60ed8  mov x19,x4
+00b60edc  mov x0,x2
+00b60ee0  mov x20,x1
+00b60ee4  mov w4,#0x2
+00b60ee8  mov x1,x3
+00b60eec  mov x2,x19
+00b60ef0  mov x3,x5
+00b60ef4  bl 0x00b61588
+00b60ef8  ldr w8,[x19]
+00b60efc  sub w9,w0,#0x1
+00b60f00  cmp w9,#0xb
+00b60f04  b.hi 0x00b60f14
+00b60f08  tbnz w8,#0x2,0x00b60f14
+00b60f0c  str w0,[x20]
+00b60f10  b 0x00b60f1c
+00b60f14  orr w8,w8,#0x4
+00b60f18  str w8,[x19]
+00b60f1c  ldp x29,x30,[sp, #0x10]
+00b60f20  ldp x20,x19,[sp], #0x20
+00b60f24  ret
+
+
+================================================================================
+### FILE: 00b60f28___get_day_year_num.txt
+================================================================================
+Function: __get_day_year_num @ 00b60f28
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_day_year_num(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b60f28  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_day_year_num(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b60f2c  stp x29,x30,[sp, #0x10]
+00b60f30  add x29,sp,#0x10
+00b60f34  mov x19,x4
+00b60f38  mov x0,x2
+00b60f3c  mov x20,x1
+00b60f40  mov w4,#0x3
+00b60f44  mov x1,x3
+00b60f48  mov x2,x19
+00b60f4c  mov x3,x5
+00b60f50  bl 0x00b61588
+00b60f54  ldr w8,[x19]
+00b60f58  cmp w0,#0x16d
+00b60f5c  b.gt 0x00b60f6c
+00b60f60  tbnz w8,#0x2,0x00b60f6c
+00b60f64  str w0,[x20]
+00b60f68  b 0x00b60f74
+00b60f6c  orr w8,w8,#0x4
+00b60f70  str w8,[x19]
+00b60f74  ldp x29,x30,[sp, #0x10]
+00b60f78  ldp x20,x19,[sp], #0x20
+00b60f7c  ret
+
+
+================================================================================
+### FILE: 00b60f80___get_month.txt
+================================================================================
+Function: __get_month @ 00b60f80
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_month(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b60f80  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_month(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b60f84  stp x29,x30,[sp, #0x10]
+00b60f88  add x29,sp,#0x10
+00b60f8c  mov x19,x4
+00b60f90  mov x0,x2
+00b60f94  mov x20,x1
+00b60f98  mov w4,#0x2
+00b60f9c  mov x1,x3
+00b60fa0  mov x2,x19
+00b60fa4  mov x3,x5
+00b60fa8  bl 0x00b61588
+00b60fac  ldr w8,[x19]
+00b60fb0  cmp w0,#0xc
+00b60fb4  b.gt 0x00b60fc8
+00b60fb8  tbnz w8,#0x2,0x00b60fc8
+00b60fbc  sub w8,w0,#0x1
+00b60fc0  str w8,[x20]
+00b60fc4  b 0x00b60fd0
+00b60fc8  orr w8,w8,#0x4
+00b60fcc  str w8,[x19]
+00b60fd0  ldp x29,x30,[sp, #0x10]
+00b60fd4  ldp x20,x19,[sp], #0x20
+00b60fd8  ret
+
+
+================================================================================
+### FILE: 00b60fdc___get_minute.txt
+================================================================================
+Function: __get_minute @ 00b60fdc
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_minute(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b60fdc  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_minute(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b60fe0  stp x29,x30,[sp, #0x10]
+00b60fe4  add x29,sp,#0x10
+00b60fe8  mov x19,x4
+00b60fec  mov x0,x2
+00b60ff0  mov x20,x1
+00b60ff4  mov w4,#0x2
+00b60ff8  mov x1,x3
+00b60ffc  mov x2,x19
+00b61000  mov x3,x5
+00b61004  bl 0x00b61588
+00b61008  ldr w8,[x19]
+00b6100c  cmp w0,#0x3b
+00b61010  b.gt 0x00b61020
+00b61014  tbnz w8,#0x2,0x00b61020
+00b61018  str w0,[x20]
+00b6101c  b 0x00b61028
+00b61020  orr w8,w8,#0x4
+00b61024  str w8,[x19]
+00b61028  ldp x29,x30,[sp, #0x10]
+00b6102c  ldp x20,x19,[sp], #0x20
+00b61030  ret
+
+
+================================================================================
+### FILE: 00b61034___get_white_space.txt
+================================================================================
+Function: __get_white_space @ 00b61034
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_white_space(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __get_white_space @ 008d4430
+
+--- Listing ---
+00b61034  str x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_white_space(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b61038  stp x22,x21,[sp, #0x10]
+00b6103c  stp x20,x19,[sp, #0x20]
+00b61040  stp x29,x30,[sp, #0x30]
+00b61044  add x29,sp,#0x30
+00b61048  mov x22,x4
+00b6104c  mov x19,x3
+00b61050  mov x20,x2
+00b61054  mov x21,x1
+00b61058  ldr x23,[x21]
+00b6105c  cbnz x23,0x00b61074
+00b61060  b 0x00b610a8
+00b61064  add x8,x8,#0x1
+00b61068  str x8,[x0, #0x18]
+00b6106c  ldr x23,[x21]
+00b61070  cbz x23,0x00b610a8
+00b61074  ldp x8,x9,[x23, #0x18]
+00b61078  cmp x8,x9
+00b6107c  b.ne 0x00b610a8
+00b61080  ldr x8,[x23]
+00b61084  mov x0,x23
+00b61088  ldr x8,[x8, #0x48]
+00b6108c  blr x8
+00b61090  cmn w0,#0x1
+00b61094  b.eq 0x00b610a0
+00b61098  ldr x23,[x21]
+00b6109c  b 0x00b610a8
+00b610a0  mov x23,xzr
+00b610a4  str xzr,[x21]
+00b610a8  cbz x20,0x00b610d8
+00b610ac  ldp x8,x9,[x20, #0x18]
+00b610b0  cmp x8,x9
+00b610b4  b.ne 0x00b610d0
+00b610b8  ldr x8,[x20]
+00b610bc  mov x0,x20
+00b610c0  ldr x8,[x8, #0x48]
+00b610c4  blr x8
+00b610c8  cmn w0,#0x1
+00b610cc  b.eq 0x00b610d8
+00b610d0  cbz x23,0x00b610e0
+00b610d4  b 0x00b6114c
+00b610d8  mov x20,xzr
+00b610dc  cbz x23,0x00b6114c
+00b610e0  ldr x0,[x21]
+00b610e4  ldp x8,x9,[x0, #0x18]
+00b610e8  cmp x8,x9
+00b610ec  b.eq 0x00b61100
+00b610f0  ldrb w0,[x8]
+00b610f4  sxtb w8,w0
+00b610f8  tbz w8,#0x1f,0x00b61114
+00b610fc  b 0x00b6114c
+00b61100  ldr x8,[x0]
+00b61104  ldr x8,[x8, #0x48]
+00b61108  blr x8
+00b6110c  sxtb w8,w0
+00b61110  tbnz w8,#0x1f,0x00b6114c
+00b61114  ldr x8,[x22, #0x10]
+00b61118  and w9,w0,#0xff
+00b6111c  ldr x8,[x8, w9, UXTW #0x3]
+00b61120  tbz w8,#0x0,0x00b6114c
+00b61124  ldr x0,[x21]
+00b61128  ldp x8,x9,[x0, #0x18]
+00b6112c  cmp x8,x9
+00b61130  b.ne 0x00b61064
+00b61134  ldr x8,[x0]
+00b61138  ldr x8,[x8, #0x50]
+00b6113c  blr x8
+00b61140  ldr x23,[x21]
+00b61144  cbnz x23,0x00b61074
+00b61148  b 0x00b610a8
+00b6114c  ldr x22,[x21]
+00b61150  cbz x22,0x00b61160
+00b61154  ldp x8,x9,[x22, #0x18]
+00b61158  cmp x8,x9
+00b6115c  b.eq 0x00b611ac
+00b61160  cbz x20,0x00b611cc
+00b61164  ldp x8,x9,[x20, #0x18]
+00b61168  cmp x8,x9
+00b6116c  b.ne 0x00b61188
+00b61170  ldr x8,[x20]
+00b61174  mov x0,x20
+00b61178  ldr x8,[x8, #0x48]
+00b6117c  blr x8
+00b61180  cmn w0,#0x1
+00b61184  b.eq 0x00b611cc
+00b61188  cbz x22,0x00b61198
+00b6118c  ldr w8,[x19]
+00b61190  orr w8,w8,#0x2
+00b61194  str w8,[x19]
+00b61198  ldp x29,x30,[sp, #0x30]
+00b6119c  ldp x20,x19,[sp, #0x20]
+00b611a0  ldp x22,x21,[sp, #0x10]
+00b611a4  ldr x23,[sp], #0x40
+00b611a8  ret
+00b611ac  ldr x8,[x22]
+00b611b0  mov x0,x22
+00b611b4  ldr x8,[x8, #0x48]
+00b611b8  blr x8
+00b611bc  cmn w0,#0x1
+00b611c0  b.eq 0x00b611d4
+00b611c4  ldr x22,[x21]
+00b611c8  cbnz x20,0x00b61164
+00b611cc  cbnz x22,0x00b61198
+00b611d0  b 0x00b6118c
+00b611d4  mov x22,xzr
+00b611d8  str xzr,[x21]
+00b611dc  cbnz x20,0x00b61164
+00b611e0  b 0x00b611cc
+
+
+================================================================================
+### FILE: 00b611e4___get_am_pm.txt
+================================================================================
+Function: __get_am_pm @ 00b611e4
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_am_pm(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b543b4 @ 00b543b4
+
+--- Calls IN ---
+
+--- Listing ---
+00b611e4  stp x24,x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_am_pm(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b611e8  stp x22,x21,[sp, #0x10]
+00b611ec  stp x20,x19,[sp, #0x20]
+00b611f0  stp x29,x30,[sp, #0x30]
+00b611f4  add x29,sp,#0x30
+00b611f8  ldr x8,[x0, #0x10]!
+00b611fc  mov x21,x5
+00b61200  mov x20,x4
+00b61204  mov x23,x3
+00b61208  ldr x8,[x8, #0x10]
+00b6120c  mov x24,x2
+00b61210  mov x19,x1
+00b61214  blr x8
+00b61218  ldrb w8,[x0]
+00b6121c  mov x22,x0
+00b61220  tbnz w8,#0x0,0x00b61278
+00b61224  lsr x8,x8,#0x1
+00b61228  ldrb w9,[x22, #0x18]
+00b6122c  tbz w9,#0x0,0x00b61284
+00b61230  ldr x9,[x22, #0x20]
+00b61234  cmn x8,x9
+00b61238  b.eq 0x00b61290
+00b6123c  add x3,x22,#0x30
+00b61240  mov x0,x24
+00b61244  mov x1,x23
+00b61248  mov x2,x22
+00b6124c  mov x4,x21
+00b61250  mov x5,x20
+00b61254  mov w6,wzr
+00b61258  bl 0x00b543b4
+00b6125c  ldr w8,[x19]
+00b61260  sub x9,x0,x22
+00b61264  cmp w8,#0xc
+00b61268  b.ne 0x00b612a0
+00b6126c  cbnz x9,0x00b612a0
+00b61270  str wzr,[x19]
+00b61274  b 0x00b612b8
+00b61278  ldr x8,[x22, #0x8]
+00b6127c  ldrb w9,[x22, #0x18]
+00b61280  tbnz w9,#0x0,0x00b61230
+00b61284  lsr x9,x9,#0x1
+00b61288  cmn x8,x9
+00b6128c  b.ne 0x00b6123c
+00b61290  ldr w8,[x20]
+00b61294  orr w8,w8,#0x4
+00b61298  str w8,[x20]
+00b6129c  b 0x00b612b8
+00b612a0  cmp w8,#0xb
+00b612a4  b.gt 0x00b612b8
+00b612a8  cmp x9,#0x18
+00b612ac  b.ne 0x00b612b8
+00b612b0  add w8,w8,#0xc
+00b612b4  str w8,[x19]
+00b612b8  ldp x29,x30,[sp, #0x30]
+00b612bc  ldp x20,x19,[sp, #0x20]
+00b612c0  ldp x22,x21,[sp, #0x10]
+00b612c4  ldp x24,x23,[sp], #0x40
+00b612c8  ret
+
+
+================================================================================
+### FILE: 00b612cc___get_second.txt
+================================================================================
+Function: __get_second @ 00b612cc
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_second(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b612cc  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_second(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b612d0  stp x29,x30,[sp, #0x10]
+00b612d4  add x29,sp,#0x10
+00b612d8  mov x19,x4
+00b612dc  mov x0,x2
+00b612e0  mov x20,x1
+00b612e4  mov w4,#0x2
+00b612e8  mov x1,x3
+00b612ec  mov x2,x19
+00b612f0  mov x3,x5
+00b612f4  bl 0x00b61588
+00b612f8  ldr w8,[x19]
+00b612fc  cmp w0,#0x3c
+00b61300  b.gt 0x00b61310
+00b61304  tbnz w8,#0x2,0x00b61310
+00b61308  str w0,[x20]
+00b6130c  b 0x00b61318
+00b61310  orr w8,w8,#0x4
+00b61314  str w8,[x19]
+00b61318  ldp x29,x30,[sp, #0x10]
+00b6131c  ldp x20,x19,[sp], #0x20
+00b61320  ret
+
+
+================================================================================
+### FILE: 00b61324___get_weekday.txt
+================================================================================
+Function: __get_weekday @ 00b61324
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_weekday(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b61324  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_weekday(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b61328  stp x29,x30,[sp, #0x10]
+00b6132c  add x29,sp,#0x10
+00b61330  mov x19,x4
+00b61334  mov x0,x2
+00b61338  mov x20,x1
+00b6133c  mov w4,#0x1
+00b61340  mov x1,x3
+00b61344  mov x2,x19
+00b61348  mov x3,x5
+00b6134c  bl 0x00b61588
+00b61350  ldr w8,[x19]
+00b61354  cmp w0,#0x6
+00b61358  b.gt 0x00b61368
+00b6135c  tbnz w8,#0x2,0x00b61368
+00b61360  str w0,[x20]
+00b61364  b 0x00b61370
+00b61368  orr w8,w8,#0x4
+00b6136c  str w8,[x19]
+00b61370  ldp x29,x30,[sp, #0x10]
+00b61374  ldp x20,x19,[sp], #0x20
+00b61378  ret
+
+
+================================================================================
+### FILE: 00b6137c___get_year4.txt
+================================================================================
+Function: __get_year4 @ 00b6137c
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_year4(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b61588 @ 00b61588
+
+--- Calls IN ---
+
+--- Listing ---
+00b6137c  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_year4(int&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b61380  stp x29,x30,[sp, #0x10]
+00b61384  add x29,sp,#0x10
+00b61388  mov x20,x4
+00b6138c  mov x0,x2
+00b61390  mov x19,x1
+00b61394  mov w4,#0x4
+00b61398  mov x1,x3
+00b6139c  mov x2,x20
+00b613a0  mov x3,x5
+00b613a4  bl 0x00b61588
+00b613a8  ldrb w8,[x20]
+00b613ac  tbnz w8,#0x2,0x00b613b8
+00b613b0  sub w8,w0,#0x76c
+00b613b4  str w8,[x19]
+00b613b8  ldp x29,x30,[sp, #0x10]
+00b613bc  ldp x20,x19,[sp], #0x20
+00b613c0  ret
+
+
+================================================================================
+### FILE: 00b613c4___get_percent.txt
+================================================================================
+Function: __get_percent @ 00b613c4
+FuncComment: std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_percent(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __get_percent @ 008d41f0
+
+--- Listing ---
+00b613c4  str x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<char, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> > >::__get_percent(std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >&, std::__ndk1::istreambuf_iterator<char, std::__ndk1::char_traits<char> >, unsigned int&, std::__ndk1::ctype<char> const&) const
+00b613c8  stp x22,x21,[sp, #0x10]
+00b613cc  stp x20,x19,[sp, #0x20]
+00b613d0  stp x29,x30,[sp, #0x30]
+00b613d4  add x29,sp,#0x30
+00b613d8  ldr x23,[x1]
+00b613dc  mov x22,x4
+00b613e0  mov x19,x3
+00b613e4  mov x21,x1
+00b613e8  mov x20,x2
+00b613ec  cbz x23,0x00b613fc
+00b613f0  ldp x8,x9,[x23, #0x18]
+00b613f4  cmp x8,x9
+00b613f8  b.eq 0x00b6142c
+00b613fc  cbz x20,0x00b6144c
+00b61400  ldp x8,x9,[x20, #0x18]
+00b61404  cmp x8,x9
+00b61408  b.ne 0x00b61424
+00b6140c  ldr x8,[x20]
+00b61410  mov x0,x20
+00b61414  ldr x8,[x8, #0x48]
+00b61418  blr x8
+00b6141c  cmn w0,#0x1
+00b61420  b.eq 0x00b6144c
+00b61424  cbnz x23,0x00b6146c
+00b61428  b 0x00b61454
+00b6142c  ldr x8,[x23]
+00b61430  mov x0,x23
+00b61434  ldr x8,[x8, #0x48]
+00b61438  blr x8
+00b6143c  cmn w0,#0x1
+00b61440  b.eq 0x00b61524
+00b61444  ldr x23,[x21]
+00b61448  cbnz x20,0x00b61400
+00b6144c  cbz x23,0x00b6146c
+00b61450  mov x20,xzr
+00b61454  ldr x0,[x21]
+00b61458  ldp x8,x9,[x0, #0x18]
+00b6145c  cmp x8,x9
+00b61460  b.eq 0x00b61478
+00b61464  ldrb w1,[x8]
+00b61468  b 0x00b61488
+00b6146c  ldr w8,[x19]
+00b61470  orr w8,w8,#0x6
+00b61474  b 0x00b61570
+00b61478  ldr x8,[x0]
+00b6147c  ldr x8,[x8, #0x48]
+00b61480  blr x8
+00b61484  mov w1,w0
+00b61488  ldr x8,[x22]
+00b6148c  mov x0,x22
+00b61490  mov w2,wzr
+00b61494  ldr x8,[x8, #0x48]
+00b61498  blr x8
+00b6149c  and w8,w0,#0xff
+00b614a0  cmp w8,#0x25
+00b614a4  b.ne 0x00b614c4
+00b614a8  ldr x22,[x21]
+00b614ac  ldp x8,x9,[x22, #0x18]
+00b614b0  cmp x8,x9
+00b614b4  b.eq 0x00b614d0
+00b614b8  add x8,x8,#0x1
+00b614bc  str x8,[x22, #0x18]
+00b614c0  b 0x00b614e8
+00b614c4  ldr w8,[x19]
+00b614c8  orr w8,w8,#0x4
+00b614cc  b 0x00b61570
+00b614d0  ldr x8,[x22]
+00b614d4  mov x0,x22
+00b614d8  ldr x8,[x8, #0x50]
+00b614dc  blr x8
+00b614e0  ldr x22,[x21]
+00b614e4  cbz x22,0x00b614f4
+00b614e8  ldp x8,x9,[x22, #0x18]
+00b614ec  cmp x8,x9
+00b614f0  b.eq 0x00b61534
+00b614f4  cbz x20,0x00b61564
+00b614f8  ldp x8,x9,[x20, #0x18]
+00b614fc  cmp x8,x9
+00b61500  b.ne 0x00b6151c
+00b61504  ldr x8,[x20]
+00b61508  mov x0,x20
+00b6150c  ldr x8,[x8, #0x48]
+00b61510  blr x8
+00b61514  cmn w0,#0x1
+00b61518  b.eq 0x00b61564
+00b6151c  cbnz x22,0x00b61568
+00b61520  b 0x00b61574
+00b61524  mov x23,xzr
+00b61528  str xzr,[x21]
+00b6152c  cbnz x20,0x00b61400
+00b61530  b 0x00b6144c
+00b61534  ldr x8,[x22]
+00b61538  mov x0,x22
+00b6153c  ldr x8,[x8, #0x48]
+00b61540  blr x8
+00b61544  cmn w0,#0x1
+00b61548  b.eq 0x00b61558
+00b6154c  ldr x22,[x21]
+00b61550  cbnz x20,0x00b614f8
+00b61554  b 0x00b61564
+00b61558  mov x22,xzr
+00b6155c  str xzr,[x21]
+00b61560  cbnz x20,0x00b614f8
+00b61564  cbnz x22,0x00b61574
+00b61568  ldr w8,[x19]
+00b6156c  orr w8,w8,#0x2
+00b61570  str w8,[x19]
+00b61574  ldp x29,x30,[sp, #0x30]
+00b61578  ldp x20,x19,[sp, #0x20]
+00b6157c  ldp x22,x21,[sp, #0x10]
+00b61580  ldr x23,[sp], #0x40
+00b61584  ret
+
+
+================================================================================
+### FILE: 00b618d4_get.txt
+================================================================================
+Function: get @ 00b618d4
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::get(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, std::__ndk1::ios_base&, unsigned int&, tm*, wchar_t const*, wchar_t const*) const
+
+--- Calls OUT ---
+  -> getloc @ 008d5620
+  -> FUN_00af4fc0 @ 00af4fc0
+  -> FUN_00b7f6ec @ 00b7f6ec
+  -> __call_once @ 008d4f80
+  -> __release_shared @ 008d54a0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- get @ 008d5c70
+
+--- Listing ---
+00b618d4  sub sp,sp,#0xb0
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::get(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, std::__ndk1::ios_base&, unsigned int&, tm*, wchar_t const*, wchar_t const*) const
+00b618d8  stp x28,x27,[sp, #0x50]
+00b618dc  stp x26,x25,[sp, #0x60]
+00b618e0  stp x24,x23,[sp, #0x70]
+00b618e4  stp x22,x21,[sp, #0x80]
+00b618e8  stp x20,x19,[sp, #0x90]
+00b618ec  stp x29,x30,[sp, #0xa0]
+00b618f0  add x29,sp,#0xa0
+00b618f4  mrs x8,tpidr_el0
+00b618f8  stp x8,x5,[sp, #0x8]
+00b618fc  ldr x8,[x8, #0x28]
+00b61900  mov x25,x0
+00b61904  mov x0,x3
+00b61908  mov x22,x7
+00b6190c  str x8,[sp, #0x48]
+00b61910  add x8,sp,#0x18
+00b61914  mov x27,x6
+00b61918  mov x19,x4
+00b6191c  mov x24,x3
+00b61920  mov x20,x2
+00b61924  mov x21,x1
+00b61928  bl 0x008d5620
+00b6192c  adrp x26,0x3360000
+00b61930  adrp x8,0x3364000
+00b61934  ldr x23,[sp, #0x18]
+00b61938  ldr x26,[x26, #0x810]
+00b6193c  ldr x8,[x8, #0xf88]
+00b61940  movi v0.2D,#0x0
+00b61944  str x26,[sp, #0x20]
+00b61948  mov v0.D[0x0],x8
+00b6194c  stur q0,[sp, #0x28]
+00b61950  ldar x8,[x26]
+00b61954  cmn x8,#0x1
+00b61958  b.eq 0x00b61980
+00b6195c  add x8,sp,#0x20
+00b61960  add x9,sp,#0x40
+00b61964  stp x9,x8,[sp, #0x38]
+00b61968  adrp x0,0x3360000
+    ; [PRE] try { // try from 00b61968 to 00b6197f has its CatchHandler @ 00b61dd8
+00b6196c  ldr x0,[x0, #0x810]
+00b61970  adrp x2,0xb7f000
+00b61974  add x2,x2,#0x6ec
+00b61978  add x1,sp,#0x38
+00b6197c  bl 0x008d4f80
+    ; [POST] } // end try from 00b61968 to 00b6197f
+00b61980  ldrsw x9,[x26, #0x8]
+00b61984  ldp x8,x10,[x23, #0x10]
+00b61988  sub x9,x9,#0x1
+00b6198c  sub x10,x10,x8
+00b61990  cmp x9,x10, ASR #0x3
+00b61994  b.cs 0x00b61dd0
+00b61998  ldr x26,[x8, x9, LSL #0x3]
+00b6199c  cbz x26,0x00b61dd0
+00b619a0  ldr x0,[sp, #0x18]
+00b619a4  bl 0x008d54a0
+00b619a8  cmp x27,x22
+00b619ac  str wzr,[x19]
+00b619b0  b.eq 0x00b61d0c
+00b619b4  cbz x21,0x00b619cc
+00b619b8  ldp x8,x9,[x21, #0x18]
+00b619bc  cmp x8,x9
+00b619c0  b.eq 0x00b619dc
+00b619c4  ldr w0,[x8]
+00b619c8  b 0x00b619ec
+00b619cc  mov w23,#0x1
+00b619d0  cbnz x20,0x00b619fc
+00b619d4  tbz w23,#0x0,0x00b61a34
+00b619d8  b 0x00b61d04
+00b619dc  ldr x8,[x21]
+00b619e0  mov x0,x21
+00b619e4  ldr x8,[x8, #0x48]
+00b619e8  blr x8
+00b619ec  cmn w0,#0x1
+00b619f0  cset w23,eq
+00b619f4  csel x21,xzr,x21,eq
+00b619f8  cbz x20,0x00b619d4
+00b619fc  ldp x8,x9,[x20, #0x18]
+00b61a00  cmp x8,x9
+00b61a04  b.eq 0x00b61a10
+00b61a08  ldr w0,[x8]
+00b61a0c  b 0x00b61a20
+00b61a10  ldr x8,[x20]
+00b61a14  mov x0,x20
+00b61a18  ldr x8,[x8, #0x48]
+00b61a1c  blr x8
+00b61a20  cmn w0,#0x1
+00b61a24  cset w8,eq
+00b61a28  eor w8,w23,w8
+00b61a2c  csel x20,xzr,x20,eq
+00b61a30  tbz w8,#0x0,0x00b61d04
+00b61a34  ldr x8,[x26]
+00b61a38  ldr w1,[x27]
+00b61a3c  mov x0,x26
+00b61a40  mov w2,wzr
+00b61a44  ldr x8,[x8, #0x68]
+00b61a48  blr x8
+00b61a4c  and w8,w0,#0xff
+00b61a50  cmp w8,#0x25
+00b61a54  b.ne 0x00b61ac8
+00b61a58  add x23,x27,#0x4
+00b61a5c  cmp x23,x22
+00b61a60  b.eq 0x00b61d04
+00b61a64  ldr x8,[x26]
+00b61a68  ldr w1,[x23]
+00b61a6c  mov x0,x26
+00b61a70  mov w2,wzr
+00b61a74  ldr x8,[x8, #0x68]
+00b61a78  blr x8
+00b61a7c  and w8,w0,#0xff
+00b61a80  mov w28,w0
+00b61a84  cmp w8,#0x45
+00b61a88  b.eq 0x00b61a94
+00b61a8c  cmp w8,#0x30
+00b61a90  b.ne 0x00b61b2c
+00b61a94  add x8,x27,#0x8
+00b61a98  cmp x8,x22
+00b61a9c  b.eq 0x00b61d04
+00b61aa0  ldr x9,[x26]
+00b61aa4  ldr w1,[x8]
+00b61aa8  mov x0,x26
+00b61aac  mov w2,wzr
+00b61ab0  ldr x8,[x9, #0x68]
+00b61ab4  blr x8
+00b61ab8  mov w7,w28
+00b61abc  mov w28,w0
+00b61ac0  mov w27,#0x2
+00b61ac4  b 0x00b61b34
+00b61ac8  ldr x8,[x26]
+00b61acc  ldr w2,[x27]
+00b61ad0  mov w1,#0x1
+00b61ad4  mov x0,x26
+00b61ad8  ldr x8,[x8, #0x18]
+00b61adc  blr x8
+00b61ae0  tbz w0,#0x0,0x00b61b18
+00b61ae4  add x23,x27,#0x4
+00b61ae8  cmp x22,x23
+00b61aec  b.eq 0x00b61b78
+00b61af0  ldr w2,[x23], #0x4
+00b61af4  ldr x8,[x26]
+00b61af8  mov w1,#0x1
+00b61afc  mov x0,x26
+00b61b00  ldr x8,[x8, #0x18]
+00b61b04  blr x8
+00b61b08  tbnz w0,#0x0,0x00b61ae8
+00b61b0c  sub x27,x23,#0x4
+00b61b10  cbnz x21,0x00b61b98
+00b61b14  b 0x00b61bdc
+00b61b18  ldp x8,x9,[x21, #0x18]
+00b61b1c  cmp x8,x9
+00b61b20  b.eq 0x00b61c74
+00b61b24  ldr w1,[x8]
+00b61b28  b 0x00b61c88
+00b61b2c  mov w7,wzr
+00b61b30  mov w27,#0x1
+00b61b34  ldr x8,[x25]
+00b61b38  ldr x5,[sp, #0x10]
+00b61b3c  mov x0,x25
+00b61b40  mov x1,x21
+00b61b44  ldr x8,[x8, #0x48]
+00b61b48  mov x2,x20
+00b61b4c  mov x3,x24
+00b61b50  mov x4,x19
+00b61b54  mov w6,w28
+00b61b58  blr x8
+00b61b5c  mov x21,x0
+00b61b60  add x27,x23,x27, LSL #0x2
+00b61b64  cmp x27,x22
+00b61b68  b.eq 0x00b61d0c
+00b61b6c  ldr w8,[x19]
+00b61b70  cbz w8,0x00b619b4
+00b61b74  b 0x00b61d0c
+00b61b78  mov x27,x22
+00b61b7c  cbnz x21,0x00b61b98
+00b61b80  b 0x00b61bdc
+00b61b84  ldr x8,[x21]
+00b61b88  mov x0,x21
+00b61b8c  ldr x8,[x8, #0x50]
+00b61b90  blr x8
+00b61b94  cbz x21,0x00b61bdc
+00b61b98  ldp x8,x9,[x21, #0x18]
+00b61b9c  cmp x8,x9
+00b61ba0  b.eq 0x00b61bac
+00b61ba4  ldr w0,[x8]
+00b61ba8  b 0x00b61bbc
+00b61bac  ldr x8,[x21]
+00b61bb0  mov x0,x21
+00b61bb4  ldr x8,[x8, #0x48]
+00b61bb8  blr x8
+00b61bbc  cmn w0,#0x1
+00b61bc0  cset w23,eq
+00b61bc4  csel x21,xzr,x21,eq
+00b61bc8  cbnz x20,0x00b61be4
+00b61bcc  b 0x00b61c1c
+00b61bd0  add x8,x8,#0x4
+00b61bd4  str x8,[x21, #0x18]
+00b61bd8  cbnz x21,0x00b61b98
+00b61bdc  mov w23,#0x1
+00b61be0  cbz x20,0x00b61c1c
+00b61be4  ldp x8,x9,[x20, #0x18]
+00b61be8  cmp x8,x9
+00b61bec  b.eq 0x00b61c04
+00b61bf0  ldr w0,[x8]
+00b61bf4  cmn w0,#0x1
+00b61bf8  b.eq 0x00b61c1c
+00b61bfc  cbnz w23,0x00b61c24
+00b61c00  b 0x00b61cd8
+00b61c04  ldr x8,[x20]
+00b61c08  mov x0,x20
+00b61c0c  ldr x8,[x8, #0x48]
+00b61c10  blr x8
+00b61c14  cmn w0,#0x1
+00b61c18  b.ne 0x00b61bfc
+00b61c1c  mov x20,xzr
+00b61c20  tbnz w23,#0x0,0x00b61cd8
+00b61c24  ldp x8,x9,[x21, #0x18]
+00b61c28  cmp x8,x9
+00b61c2c  b.eq 0x00b61c38
+00b61c30  ldr w2,[x8]
+00b61c34  b 0x00b61c4c
+00b61c38  ldr x8,[x21]
+00b61c3c  mov x0,x21
+00b61c40  ldr x8,[x8, #0x48]
+00b61c44  blr x8
+00b61c48  mov w2,w0
+00b61c4c  ldr x8,[x26]
+00b61c50  mov w1,#0x1
+00b61c54  mov x0,x26
+00b61c58  ldr x8,[x8, #0x18]
+00b61c5c  blr x8
+00b61c60  tbz w0,#0x0,0x00b61cd8
+00b61c64  ldp x8,x9,[x21, #0x18]
+00b61c68  cmp x8,x9
+00b61c6c  b.ne 0x00b61bd0
+00b61c70  b 0x00b61b84
+00b61c74  ldr x8,[x21]
+00b61c78  mov x0,x21
+00b61c7c  ldr x8,[x8, #0x48]
+00b61c80  blr x8
+00b61c84  mov w1,w0
+00b61c88  ldr x8,[x26]
+00b61c8c  mov x0,x26
+00b61c90  ldr x8,[x8, #0x38]
+00b61c94  blr x8
+00b61c98  ldr x8,[x26]
+00b61c9c  ldr w1,[x27]
+00b61ca0  mov w28,w0
+00b61ca4  mov x0,x26
+00b61ca8  ldr x8,[x8, #0x38]
+00b61cac  blr x8
+00b61cb0  cmp w28,w0
+00b61cb4  b.ne 0x00b61cd0
+00b61cb8  ldp x8,x9,[x21, #0x18]
+00b61cbc  cmp x8,x9
+00b61cc0  b.eq 0x00b61ce4
+00b61cc4  add x8,x8,#0x4
+00b61cc8  str x8,[x21, #0x18]
+00b61ccc  b 0x00b61cf4
+00b61cd0  mov w8,#0x4
+00b61cd4  str w8,[x19]
+00b61cd8  cmp x27,x22
+00b61cdc  b.ne 0x00b61b6c
+00b61ce0  b 0x00b61d0c
+00b61ce4  ldr x8,[x21]
+00b61ce8  mov x0,x21
+00b61cec  ldr x8,[x8, #0x50]
+00b61cf0  blr x8
+00b61cf4  add x27,x27,#0x4
+00b61cf8  cmp x27,x22
+00b61cfc  b.ne 0x00b61b6c
+00b61d00  b 0x00b61d0c
+00b61d04  mov w8,#0x4
+00b61d08  str w8,[x19]
+00b61d0c  cbz x21,0x00b61d24
+00b61d10  ldp x8,x9,[x21, #0x18]
+00b61d14  cmp x8,x9
+00b61d18  b.eq 0x00b61d38
+00b61d1c  ldr w0,[x8]
+00b61d20  b 0x00b61d48
+00b61d24  mov w22,#0x1
+00b61d28  cbnz x20,0x00b61d58
+00b61d2c  ldr x9,[sp, #0x8]
+00b61d30  tbnz w22,#0x0,0x00b61d90
+00b61d34  b 0x00b61d9c
+00b61d38  ldr x8,[x21]
+00b61d3c  mov x0,x21
+00b61d40  ldr x8,[x8, #0x48]
+00b61d44  blr x8
+00b61d48  cmn w0,#0x1
+00b61d4c  cset w22,eq
+00b61d50  csel x21,xzr,x21,eq
+00b61d54  cbz x20,0x00b61d2c
+00b61d58  ldp x8,x9,[x20, #0x18]
+00b61d5c  cmp x8,x9
+00b61d60  b.eq 0x00b61d6c
+00b61d64  ldr w0,[x8]
+00b61d68  b 0x00b61d7c
+00b61d6c  ldr x8,[x20]
+00b61d70  mov x0,x20
+00b61d74  ldr x8,[x8, #0x48]
+00b61d78  blr x8
+00b61d7c  ldr x9,[sp, #0x8]
+00b61d80  cmn w0,#0x1
+00b61d84  cset w8,eq
+00b61d88  eor w8,w22,w8
+00b61d8c  tbnz w8,#0x0,0x00b61d9c
+00b61d90  ldr w8,[x19]
+00b61d94  orr w8,w8,#0x2
+00b61d98  str w8,[x19]
+00b61d9c  ldr x8,[x9, #0x28]
+00b61da0  ldr x9,[sp, #0x48]
+00b61da4  cmp x8,x9
+00b61da8  b.ne 0x00b61dd4
+00b61dac  mov x0,x21
+00b61db0  ldp x29,x30,[sp, #0xa0]
+00b61db4  ldp x20,x19,[sp, #0x90]
+00b61db8  ldp x22,x21,[sp, #0x80]
+00b61dbc  ldp x24,x23,[sp, #0x70]
+00b61dc0  ldp x26,x25,[sp, #0x60]
+00b61dc4  ldp x28,x27,[sp, #0x50]
+00b61dc8  add sp,sp,#0xb0
+00b61dcc  ret
+00b61dd0  bl 0x00af4fc0
+    ; [PRE] try { // try from 00b61dd0 to 00b61dd3 has its CatchHandler @ 00b61dd8
+    ; [POST] } // end try from 00b61dd0 to 00b61dd3
+00b61dd4  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b6206c___get_weekdayname.txt
+================================================================================
+Function: __get_weekdayname @ 00b6206c
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_weekdayname(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b57504 @ 00b57504
+
+--- Calls IN ---
+
+--- Listing ---
+00b6206c  stp x24,x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_weekdayname(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b62070  stp x22,x21,[sp, #0x10]
+00b62074  stp x20,x19,[sp, #0x20]
+00b62078  stp x29,x30,[sp, #0x30]
+00b6207c  add x29,sp,#0x30
+00b62080  ldr x8,[x0, #0x10]!
+00b62084  mov x20,x5
+00b62088  mov x21,x4
+00b6208c  mov x22,x3
+00b62090  ldr x8,[x8]
+00b62094  mov x23,x2
+00b62098  mov x19,x1
+00b6209c  blr x8
+00b620a0  mov x24,x0
+00b620a4  add x3,x0,#0x150
+00b620a8  mov x0,x23
+00b620ac  mov x1,x22
+00b620b0  mov x2,x24
+00b620b4  mov x4,x20
+00b620b8  mov x5,x21
+00b620bc  mov w6,wzr
+00b620c0  bl 0x00b57504
+00b620c4  sub x8,x0,x24
+00b620c8  cmp x8,#0x14f
+00b620cc  b.gt 0x00b6210c
+00b620d0  mov x10,#0x4925
+00b620d4  orr x9,xzr,#-0x5555555555555556
+00b620d8  movk x10,#0x2492, LSL #16
+00b620dc  asr x8,x8,#0x3
+00b620e0  movk x9,#0xaaab
+00b620e4  movk x10,#0x9249, LSL #32
+00b620e8  movk x10,#0x4924, LSL #48
+00b620ec  mul x8,x8,x9
+00b620f0  smulh x9,x8,x10
+00b620f4  lsr x10,x9,#0x3f
+00b620f8  lsr x9,x9,#0x1
+00b620fc  add w9,w9,w10
+00b62100  sub w9,w9,w9, LSL #0x3
+00b62104  add w8,w8,w9
+00b62108  str w8,[x19]
+00b6210c  ldp x29,x30,[sp, #0x30]
+00b62110  ldp x20,x19,[sp, #0x20]
+00b62114  ldp x22,x21,[sp, #0x10]
+00b62118  ldp x24,x23,[sp], #0x40
+00b6211c  ret
+
+
+================================================================================
+### FILE: 00b622ac___get_monthname.txt
+================================================================================
+Function: __get_monthname @ 00b622ac
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_monthname(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b57504 @ 00b57504
+
+--- Calls IN ---
+
+--- Listing ---
+00b622ac  stp x24,x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_monthname(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b622b0  stp x22,x21,[sp, #0x10]
+00b622b4  stp x20,x19,[sp, #0x20]
+00b622b8  stp x29,x30,[sp, #0x30]
+00b622bc  add x29,sp,#0x30
+00b622c0  ldr x8,[x0, #0x10]!
+00b622c4  mov x20,x5
+00b622c8  mov x21,x4
+00b622cc  mov x22,x3
+00b622d0  ldr x8,[x8, #0x8]
+00b622d4  mov x23,x2
+00b622d8  mov x19,x1
+00b622dc  blr x8
+00b622e0  mov x24,x0
+00b622e4  add x3,x0,#0x240
+00b622e8  mov x0,x23
+00b622ec  mov x1,x22
+00b622f0  mov x2,x24
+00b622f4  mov x4,x20
+00b622f8  mov x5,x21
+00b622fc  mov w6,wzr
+00b62300  bl 0x00b57504
+00b62304  sub x8,x0,x24
+00b62308  cmp x8,#0x23f
+00b6230c  b.gt 0x00b62348
+00b62310  orr x9,xzr,#-0x5555555555555556
+00b62314  orr x10,xzr,#-0x5555555555555556
+00b62318  asr x8,x8,#0x3
+00b6231c  movk x9,#0xaaab
+00b62320  movk x10,#0xaaab
+00b62324  movk x10,#0x2aaa, LSL #48
+00b62328  mul x8,x8,x9
+00b6232c  smulh x9,x8,x10
+00b62330  lsr x10,x9,#0x3f
+00b62334  lsr x9,x9,#0x1
+00b62338  add w9,w9,w10
+00b6233c  mov w10,#0xc
+00b62340  msub w8,w9,w10,w8
+00b62344  str w8,[x19]
+00b62348  ldp x29,x30,[sp, #0x30]
+00b6234c  ldp x20,x19,[sp, #0x20]
+00b62350  ldp x22,x21,[sp, #0x10]
+00b62354  ldp x24,x23,[sp], #0x40
+00b62358  ret
+
+
+================================================================================
+### FILE: 00b624a8___get_year.txt
+================================================================================
+Function: __get_year @ 00b624a8
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_year(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b624a8  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_year(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b624ac  stp x29,x30,[sp, #0x10]
+00b624b0  add x29,sp,#0x10
+00b624b4  mov x20,x4
+00b624b8  mov x0,x2
+00b624bc  mov x19,x1
+00b624c0  mov w4,#0x4
+00b624c4  mov x1,x3
+00b624c8  mov x2,x20
+00b624cc  mov x3,x5
+00b624d0  bl 0x00b63318
+00b624d4  ldrb w8,[x20]
+00b624d8  tbnz w8,#0x2,0x00b62500
+00b624dc  cmp w0,#0x44
+00b624e0  b.gt 0x00b624ec
+00b624e4  add w8,w0,#0x7d0
+00b624e8  b 0x00b624f8
+00b624ec  add w8,w0,#0x76c
+00b624f0  cmp w0,#0x64
+00b624f4  csel w8,w8,w0,lt
+00b624f8  sub w8,w8,#0x76c
+00b624fc  str w8,[x19]
+00b62500  ldp x29,x30,[sp, #0x10]
+00b62504  ldp x20,x19,[sp], #0x20
+00b62508  ret
+
+
+================================================================================
+### FILE: 00b62b50___get_day.txt
+================================================================================
+Function: __get_day @ 00b62b50
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_day(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b62b50  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_day(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b62b54  stp x29,x30,[sp, #0x10]
+00b62b58  add x29,sp,#0x10
+00b62b5c  mov x19,x4
+00b62b60  mov x0,x2
+00b62b64  mov x20,x1
+00b62b68  mov w4,#0x2
+00b62b6c  mov x1,x3
+00b62b70  mov x2,x19
+00b62b74  mov x3,x5
+00b62b78  bl 0x00b63318
+00b62b7c  ldr w8,[x19]
+00b62b80  sub w9,w0,#0x1
+00b62b84  cmp w9,#0x1e
+00b62b88  b.hi 0x00b62b98
+00b62b8c  tbnz w8,#0x2,0x00b62b98
+00b62b90  str w0,[x20]
+00b62b94  b 0x00b62ba0
+00b62b98  orr w8,w8,#0x4
+00b62b9c  str w8,[x19]
+00b62ba0  ldp x29,x30,[sp, #0x10]
+00b62ba4  ldp x20,x19,[sp], #0x20
+00b62ba8  ret
+
+
+================================================================================
+### FILE: 00b62bac___get_hour.txt
+================================================================================
+Function: __get_hour @ 00b62bac
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_hour(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b62bac  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_hour(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b62bb0  stp x29,x30,[sp, #0x10]
+00b62bb4  add x29,sp,#0x10
+00b62bb8  mov x19,x4
+00b62bbc  mov x0,x2
+00b62bc0  mov x20,x1
+00b62bc4  mov w4,#0x2
+00b62bc8  mov x1,x3
+00b62bcc  mov x2,x19
+00b62bd0  mov x3,x5
+00b62bd4  bl 0x00b63318
+00b62bd8  ldr w8,[x19]
+00b62bdc  cmp w0,#0x17
+00b62be0  b.gt 0x00b62bf0
+00b62be4  tbnz w8,#0x2,0x00b62bf0
+00b62be8  str w0,[x20]
+00b62bec  b 0x00b62bf8
+00b62bf0  orr w8,w8,#0x4
+00b62bf4  str w8,[x19]
+00b62bf8  ldp x29,x30,[sp, #0x10]
+00b62bfc  ldp x20,x19,[sp], #0x20
+00b62c00  ret
+
+
+================================================================================
+### FILE: 00b62c04___get_12_hour.txt
+================================================================================
+Function: __get_12_hour @ 00b62c04
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_12_hour(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b62c04  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_12_hour(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b62c08  stp x29,x30,[sp, #0x10]
+00b62c0c  add x29,sp,#0x10
+00b62c10  mov x19,x4
+00b62c14  mov x0,x2
+00b62c18  mov x20,x1
+00b62c1c  mov w4,#0x2
+00b62c20  mov x1,x3
+00b62c24  mov x2,x19
+00b62c28  mov x3,x5
+00b62c2c  bl 0x00b63318
+00b62c30  ldr w8,[x19]
+00b62c34  sub w9,w0,#0x1
+00b62c38  cmp w9,#0xb
+00b62c3c  b.hi 0x00b62c4c
+00b62c40  tbnz w8,#0x2,0x00b62c4c
+00b62c44  str w0,[x20]
+00b62c48  b 0x00b62c54
+00b62c4c  orr w8,w8,#0x4
+00b62c50  str w8,[x19]
+00b62c54  ldp x29,x30,[sp, #0x10]
+00b62c58  ldp x20,x19,[sp], #0x20
+00b62c5c  ret
+
+
+================================================================================
+### FILE: 00b62c60___get_day_year_num.txt
+================================================================================
+Function: __get_day_year_num @ 00b62c60
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_day_year_num(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b62c60  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_day_year_num(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b62c64  stp x29,x30,[sp, #0x10]
+00b62c68  add x29,sp,#0x10
+00b62c6c  mov x19,x4
+00b62c70  mov x0,x2
+00b62c74  mov x20,x1
+00b62c78  mov w4,#0x3
+00b62c7c  mov x1,x3
+00b62c80  mov x2,x19
+00b62c84  mov x3,x5
+00b62c88  bl 0x00b63318
+00b62c8c  ldr w8,[x19]
+00b62c90  cmp w0,#0x16d
+00b62c94  b.gt 0x00b62ca4
+00b62c98  tbnz w8,#0x2,0x00b62ca4
+00b62c9c  str w0,[x20]
+00b62ca0  b 0x00b62cac
+00b62ca4  orr w8,w8,#0x4
+00b62ca8  str w8,[x19]
+00b62cac  ldp x29,x30,[sp, #0x10]
+00b62cb0  ldp x20,x19,[sp], #0x20
+00b62cb4  ret
+
+
+================================================================================
+### FILE: 00b62cb8___get_month.txt
+================================================================================
+Function: __get_month @ 00b62cb8
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_month(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b62cb8  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_month(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b62cbc  stp x29,x30,[sp, #0x10]
+00b62cc0  add x29,sp,#0x10
+00b62cc4  mov x19,x4
+00b62cc8  mov x0,x2
+00b62ccc  mov x20,x1
+00b62cd0  mov w4,#0x2
+00b62cd4  mov x1,x3
+00b62cd8  mov x2,x19
+00b62cdc  mov x3,x5
+00b62ce0  bl 0x00b63318
+00b62ce4  ldr w8,[x19]
+00b62ce8  cmp w0,#0xc
+00b62cec  b.gt 0x00b62d00
+00b62cf0  tbnz w8,#0x2,0x00b62d00
+00b62cf4  sub w8,w0,#0x1
+00b62cf8  str w8,[x20]
+00b62cfc  b 0x00b62d08
+00b62d00  orr w8,w8,#0x4
+00b62d04  str w8,[x19]
+00b62d08  ldp x29,x30,[sp, #0x10]
+00b62d0c  ldp x20,x19,[sp], #0x20
+00b62d10  ret
+
+
+================================================================================
+### FILE: 00b62d14___get_minute.txt
+================================================================================
+Function: __get_minute @ 00b62d14
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_minute(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b62d14  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_minute(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b62d18  stp x29,x30,[sp, #0x10]
+00b62d1c  add x29,sp,#0x10
+00b62d20  mov x19,x4
+00b62d24  mov x0,x2
+00b62d28  mov x20,x1
+00b62d2c  mov w4,#0x2
+00b62d30  mov x1,x3
+00b62d34  mov x2,x19
+00b62d38  mov x3,x5
+00b62d3c  bl 0x00b63318
+00b62d40  ldr w8,[x19]
+00b62d44  cmp w0,#0x3b
+00b62d48  b.gt 0x00b62d58
+00b62d4c  tbnz w8,#0x2,0x00b62d58
+00b62d50  str w0,[x20]
+00b62d54  b 0x00b62d60
+00b62d58  orr w8,w8,#0x4
+00b62d5c  str w8,[x19]
+00b62d60  ldp x29,x30,[sp, #0x10]
+00b62d64  ldp x20,x19,[sp], #0x20
+00b62d68  ret
+
+
+================================================================================
+### FILE: 00b62d6c___get_white_space.txt
+================================================================================
+Function: __get_white_space @ 00b62d6c
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_white_space(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __get_white_space @ 008d4ec0
+
+--- Listing ---
+00b62d6c  str x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_white_space(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b62d70  stp x22,x21,[sp, #0x10]
+00b62d74  stp x20,x19,[sp, #0x20]
+00b62d78  stp x29,x30,[sp, #0x30]
+00b62d7c  add x29,sp,#0x30
+00b62d80  mov x22,x4
+00b62d84  mov x19,x3
+00b62d88  mov x20,x2
+00b62d8c  mov x21,x1
+00b62d90  ldr x0,[x21]
+00b62d94  cbnz x0,0x00b62dac
+00b62d98  b 0x00b62df0
+00b62d9c  add x8,x8,#0x4
+00b62da0  str x8,[x0, #0x18]
+00b62da4  ldr x0,[x21]
+00b62da8  cbz x0,0x00b62df0
+00b62dac  ldp x8,x9,[x0, #0x18]
+00b62db0  cmp x8,x9
+00b62db4  b.eq 0x00b62dd8
+00b62db8  ldr w0,[x8]
+00b62dbc  cmn w0,#0x1
+00b62dc0  b.eq 0x00b62dec
+00b62dc4  ldr x8,[x21]
+00b62dc8  cmp x8,#0x0
+00b62dcc  cset w23,eq
+00b62dd0  cbnz x20,0x00b62df8
+00b62dd4  b 0x00b62e30
+00b62dd8  ldr x8,[x0]
+00b62ddc  ldr x8,[x8, #0x48]
+00b62de0  blr x8
+00b62de4  cmn w0,#0x1
+00b62de8  b.ne 0x00b62dc4
+00b62dec  str xzr,[x21]
+00b62df0  mov w23,#0x1
+00b62df4  cbz x20,0x00b62e30
+00b62df8  ldp x8,x9,[x20, #0x18]
+00b62dfc  cmp x8,x9
+00b62e00  b.eq 0x00b62e18
+00b62e04  ldr w0,[x8]
+00b62e08  cmn w0,#0x1
+00b62e0c  b.eq 0x00b62e30
+00b62e10  cbnz w23,0x00b62e38
+00b62e14  b 0x00b62ea0
+00b62e18  ldr x8,[x20]
+00b62e1c  mov x0,x20
+00b62e20  ldr x8,[x8, #0x48]
+00b62e24  blr x8
+00b62e28  cmn w0,#0x1
+00b62e2c  b.ne 0x00b62e10
+00b62e30  mov x20,xzr
+00b62e34  tbnz w23,#0x0,0x00b62ea0
+00b62e38  ldr x0,[x21]
+00b62e3c  ldp x8,x9,[x0, #0x18]
+00b62e40  cmp x8,x9
+00b62e44  b.eq 0x00b62e50
+00b62e48  ldr w2,[x8]
+00b62e4c  b 0x00b62e60
+00b62e50  ldr x8,[x0]
+00b62e54  ldr x8,[x8, #0x48]
+00b62e58  blr x8
+00b62e5c  mov w2,w0
+00b62e60  ldr x8,[x22]
+00b62e64  mov w1,#0x1
+00b62e68  mov x0,x22
+00b62e6c  ldr x8,[x8, #0x18]
+00b62e70  blr x8
+00b62e74  tbz w0,#0x0,0x00b62ea0
+00b62e78  ldr x0,[x21]
+00b62e7c  ldp x8,x9,[x0, #0x18]
+00b62e80  cmp x8,x9
+00b62e84  b.ne 0x00b62d9c
+00b62e88  ldr x8,[x0]
+00b62e8c  ldr x8,[x8, #0x50]
+00b62e90  blr x8
+00b62e94  ldr x0,[x21]
+00b62e98  cbnz x0,0x00b62dac
+00b62e9c  b 0x00b62df0
+00b62ea0  ldr x0,[x21]
+00b62ea4  cbz x0,0x00b62ef0
+00b62ea8  ldp x8,x9,[x0, #0x18]
+00b62eac  cmp x8,x9
+00b62eb0  b.eq 0x00b62ed8
+00b62eb4  ldr w0,[x8]
+00b62eb8  cmn w0,#0x1
+00b62ebc  b.eq 0x00b62eec
+00b62ec0  ldr x8,[x21]
+00b62ec4  cmp x8,#0x0
+00b62ec8  cset w21,eq
+00b62ecc  cbnz x20,0x00b62ef8
+00b62ed0  tbnz w21,#0x0,0x00b62f2c
+00b62ed4  b 0x00b62f38
+00b62ed8  ldr x8,[x0]
+00b62edc  ldr x8,[x8, #0x48]
+00b62ee0  blr x8
+00b62ee4  cmn w0,#0x1
+00b62ee8  b.ne 0x00b62ec0
+00b62eec  str xzr,[x21]
+00b62ef0  mov w21,#0x1
+00b62ef4  cbz x20,0x00b62ed0
+00b62ef8  ldp x8,x9,[x20, #0x18]
+00b62efc  cmp x8,x9
+00b62f00  b.eq 0x00b62f0c
+00b62f04  ldr w0,[x8]
+00b62f08  b 0x00b62f1c
+00b62f0c  ldr x8,[x20]
+00b62f10  mov x0,x20
+00b62f14  ldr x8,[x8, #0x48]
+00b62f18  blr x8
+00b62f1c  cmn w0,#0x1
+00b62f20  cset w8,eq
+00b62f24  eor w8,w21,w8
+00b62f28  tbnz w8,#0x0,0x00b62f38
+00b62f2c  ldr w8,[x19]
+00b62f30  orr w8,w8,#0x2
+00b62f34  str w8,[x19]
+00b62f38  ldp x29,x30,[sp, #0x30]
+00b62f3c  ldp x20,x19,[sp, #0x20]
+00b62f40  ldp x22,x21,[sp, #0x10]
+00b62f44  ldr x23,[sp], #0x40
+00b62f48  ret
+
+
+================================================================================
+### FILE: 00b62f4c___get_am_pm.txt
+================================================================================
+Function: __get_am_pm @ 00b62f4c
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_am_pm(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b57504 @ 00b57504
+
+--- Calls IN ---
+
+--- Listing ---
+00b62f4c  stp x24,x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_am_pm(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b62f50  stp x22,x21,[sp, #0x10]
+00b62f54  stp x20,x19,[sp, #0x20]
+00b62f58  stp x29,x30,[sp, #0x30]
+00b62f5c  add x29,sp,#0x30
+00b62f60  ldr x8,[x0, #0x10]!
+00b62f64  mov x21,x5
+00b62f68  mov x20,x4
+00b62f6c  mov x23,x3
+00b62f70  ldr x8,[x8, #0x10]
+00b62f74  mov x24,x2
+00b62f78  mov x19,x1
+00b62f7c  blr x8
+00b62f80  ldrb w8,[x0]
+00b62f84  mov x22,x0
+00b62f88  tbnz w8,#0x0,0x00b62fe0
+00b62f8c  lsr x8,x8,#0x1
+00b62f90  ldrb w9,[x22, #0x18]
+00b62f94  tbz w9,#0x0,0x00b62fec
+00b62f98  ldr x9,[x22, #0x20]
+00b62f9c  cmn x8,x9
+00b62fa0  b.eq 0x00b62ff8
+00b62fa4  add x3,x22,#0x30
+00b62fa8  mov x0,x24
+00b62fac  mov x1,x23
+00b62fb0  mov x2,x22
+00b62fb4  mov x4,x21
+00b62fb8  mov x5,x20
+00b62fbc  mov w6,wzr
+00b62fc0  bl 0x00b57504
+00b62fc4  ldr w8,[x19]
+00b62fc8  sub x9,x0,x22
+00b62fcc  cmp w8,#0xc
+00b62fd0  b.ne 0x00b63008
+00b62fd4  cbnz x9,0x00b63008
+00b62fd8  str wzr,[x19]
+00b62fdc  b 0x00b63020
+00b62fe0  ldr x8,[x22, #0x8]
+00b62fe4  ldrb w9,[x22, #0x18]
+00b62fe8  tbnz w9,#0x0,0x00b62f98
+00b62fec  lsr x9,x9,#0x1
+00b62ff0  cmn x8,x9
+00b62ff4  b.ne 0x00b62fa4
+00b62ff8  ldr w8,[x20]
+00b62ffc  orr w8,w8,#0x4
+00b63000  str w8,[x20]
+00b63004  b 0x00b63020
+00b63008  cmp w8,#0xb
+00b6300c  b.gt 0x00b63020
+00b63010  cmp x9,#0x18
+00b63014  b.ne 0x00b63020
+00b63018  add w8,w8,#0xc
+00b6301c  str w8,[x19]
+00b63020  ldp x29,x30,[sp, #0x30]
+00b63024  ldp x20,x19,[sp, #0x20]
+00b63028  ldp x22,x21,[sp, #0x10]
+00b6302c  ldp x24,x23,[sp], #0x40
+00b63030  ret
+
+
+================================================================================
+### FILE: 00b63034___get_second.txt
+================================================================================
+Function: __get_second @ 00b63034
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_second(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b63034  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_second(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b63038  stp x29,x30,[sp, #0x10]
+00b6303c  add x29,sp,#0x10
+00b63040  mov x19,x4
+00b63044  mov x0,x2
+00b63048  mov x20,x1
+00b6304c  mov w4,#0x2
+00b63050  mov x1,x3
+00b63054  mov x2,x19
+00b63058  mov x3,x5
+00b6305c  bl 0x00b63318
+00b63060  ldr w8,[x19]
+00b63064  cmp w0,#0x3c
+00b63068  b.gt 0x00b63078
+00b6306c  tbnz w8,#0x2,0x00b63078
+00b63070  str w0,[x20]
+00b63074  b 0x00b63080
+00b63078  orr w8,w8,#0x4
+00b6307c  str w8,[x19]
+00b63080  ldp x29,x30,[sp, #0x10]
+00b63084  ldp x20,x19,[sp], #0x20
+00b63088  ret
+
+
+================================================================================
+### FILE: 00b6308c___get_weekday.txt
+================================================================================
+Function: __get_weekday @ 00b6308c
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_weekday(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b6308c  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_weekday(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b63090  stp x29,x30,[sp, #0x10]
+00b63094  add x29,sp,#0x10
+00b63098  mov x19,x4
+00b6309c  mov x0,x2
+00b630a0  mov x20,x1
+00b630a4  mov w4,#0x1
+00b630a8  mov x1,x3
+00b630ac  mov x2,x19
+00b630b0  mov x3,x5
+00b630b4  bl 0x00b63318
+00b630b8  ldr w8,[x19]
+00b630bc  cmp w0,#0x6
+00b630c0  b.gt 0x00b630d0
+00b630c4  tbnz w8,#0x2,0x00b630d0
+00b630c8  str w0,[x20]
+00b630cc  b 0x00b630d8
+00b630d0  orr w8,w8,#0x4
+00b630d4  str w8,[x19]
+00b630d8  ldp x29,x30,[sp, #0x10]
+00b630dc  ldp x20,x19,[sp], #0x20
+00b630e0  ret
+
+
+================================================================================
+### FILE: 00b630e4___get_year4.txt
+================================================================================
+Function: __get_year4 @ 00b630e4
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_year4(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+  -> FUN_00b63318 @ 00b63318
+
+--- Calls IN ---
+
+--- Listing ---
+00b630e4  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_year4(int&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b630e8  stp x29,x30,[sp, #0x10]
+00b630ec  add x29,sp,#0x10
+00b630f0  mov x20,x4
+00b630f4  mov x0,x2
+00b630f8  mov x19,x1
+00b630fc  mov w4,#0x4
+00b63100  mov x1,x3
+00b63104  mov x2,x20
+00b63108  mov x3,x5
+00b6310c  bl 0x00b63318
+00b63110  ldrb w8,[x20]
+00b63114  tbnz w8,#0x2,0x00b63120
+00b63118  sub w8,w0,#0x76c
+00b6311c  str w8,[x19]
+00b63120  ldp x29,x30,[sp, #0x10]
+00b63124  ldp x20,x19,[sp], #0x20
+00b63128  ret
+
+
+================================================================================
+### FILE: 00b6312c___get_percent.txt
+================================================================================
+Function: __get_percent @ 00b6312c
+FuncComment: std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_percent(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __get_percent @ 008d4560
+
+--- Listing ---
+00b6312c  str x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::time_get<wchar_t, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> > >::__get_percent(std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >&, std::__ndk1::istreambuf_iterator<wchar_t, std::__ndk1::char_traits<wchar_t> >, unsigned int&, std::__ndk1::ctype<wchar_t> const&) const
+00b63130  stp x22,x21,[sp, #0x10]
+00b63134  stp x20,x19,[sp, #0x20]
+00b63138  stp x29,x30,[sp, #0x30]
+00b6313c  add x29,sp,#0x30
+00b63140  ldr x0,[x1]
+00b63144  mov x22,x4
+00b63148  mov x19,x3
+00b6314c  mov x20,x1
+00b63150  mov x21,x2
+00b63154  cbz x0,0x00b631a4
+00b63158  ldp x8,x9,[x0, #0x18]
+00b6315c  cmp x8,x9
+00b63160  b.eq 0x00b6318c
+00b63164  ldr w0,[x8]
+00b63168  cmn w0,#0x1
+00b6316c  b.eq 0x00b631a0
+00b63170  ldr x8,[x20]
+00b63174  cmp x8,#0x0
+00b63178  cset w23,eq
+00b6317c  cbnz x21,0x00b631ac
+00b63180  tbnz w23,#0x0,0x00b631fc
+00b63184  mov x21,xzr
+00b63188  b 0x00b631e4
+00b6318c  ldr x8,[x0]
+00b63190  ldr x8,[x8, #0x48]
+00b63194  blr x8
+00b63198  cmn w0,#0x1
+00b6319c  b.ne 0x00b63170
+00b631a0  str xzr,[x20]
+00b631a4  mov w23,#0x1
+00b631a8  cbz x21,0x00b63180
+00b631ac  ldp x8,x9,[x21, #0x18]
+00b631b0  cmp x8,x9
+00b631b4  b.eq 0x00b631c0
+00b631b8  ldr w0,[x8]
+00b631bc  b 0x00b631d0
+00b631c0  ldr x8,[x21]
+00b631c4  mov x0,x21
+00b631c8  ldr x8,[x8, #0x48]
+00b631cc  blr x8
+00b631d0  cmn w0,#0x1
+00b631d4  cset w8,eq
+00b631d8  eor w8,w23,w8
+00b631dc  csel x21,xzr,x21,eq
+00b631e0  tbz w8,#0x0,0x00b631fc
+00b631e4  ldr x0,[x20]
+00b631e8  ldp x8,x9,[x0, #0x18]
+00b631ec  cmp x8,x9
+00b631f0  b.eq 0x00b63208
+00b631f4  ldr w1,[x8]
+00b631f8  b 0x00b63218
+00b631fc  ldr w8,[x19]
+00b63200  orr w8,w8,#0x6
+00b63204  b 0x00b63300
+00b63208  ldr x8,[x0]
+00b6320c  ldr x8,[x8, #0x48]
+00b63210  blr x8
+00b63214  mov w1,w0
+00b63218  ldr x8,[x22]
+00b6321c  mov x0,x22
+00b63220  mov w2,wzr
+00b63224  ldr x8,[x8, #0x68]
+00b63228  blr x8
+00b6322c  and w8,w0,#0xff
+00b63230  cmp w8,#0x25
+00b63234  b.ne 0x00b63254
+00b63238  ldr x0,[x20]
+00b6323c  ldp x8,x9,[x0, #0x18]
+00b63240  cmp x8,x9
+00b63244  b.eq 0x00b63260
+00b63248  add x8,x8,#0x4
+00b6324c  str x8,[x0, #0x18]
+00b63250  b 0x00b63274
+00b63254  ldr w8,[x19]
+00b63258  orr w8,w8,#0x4
+00b6325c  b 0x00b63300
+00b63260  ldr x8,[x0]
+00b63264  ldr x8,[x8, #0x50]
+00b63268  blr x8
+00b6326c  ldr x0,[x20]
+00b63270  cbz x0,0x00b632c8
+00b63274  ldp x8,x9,[x0, #0x18]
+00b63278  cmp x8,x9
+00b6327c  b.eq 0x00b632b0
+00b63280  ldr w0,[x8]
+00b63284  cmn w0,#0x1
+00b63288  b.eq 0x00b632c4
+00b6328c  ldr x8,[x20]
+00b63290  cmp x8,#0x0
+00b63294  cset w20,eq
+00b63298  cbz x21,0x00b632d0
+00b6329c  ldp x8,x9,[x21, #0x18]
+00b632a0  cmp x8,x9
+00b632a4  b.eq 0x00b632d8
+00b632a8  ldr w0,[x8]
+00b632ac  b 0x00b632e8
+00b632b0  ldr x8,[x0]
+00b632b4  ldr x8,[x8, #0x48]
+00b632b8  blr x8
+00b632bc  cmn w0,#0x1
+00b632c0  b.ne 0x00b6328c
+00b632c4  str xzr,[x20]
+00b632c8  mov w20,#0x1
+00b632cc  cbnz x21,0x00b6329c
+00b632d0  tbnz w20,#0x0,0x00b632f8
+00b632d4  b 0x00b63304
+00b632d8  ldr x8,[x21]
+00b632dc  mov x0,x21
+00b632e0  ldr x8,[x8, #0x48]
+00b632e4  blr x8
+00b632e8  cmn w0,#0x1
+00b632ec  cset w8,eq
+00b632f0  eor w8,w20,w8
+00b632f4  tbnz w8,#0x0,0x00b63304
+00b632f8  ldr w8,[x19]
+00b632fc  orr w8,w8,#0x2
+00b63300  str w8,[x19]
+00b63304  ldp x29,x30,[sp, #0x30]
+00b63308  ldp x20,x19,[sp, #0x20]
+00b6330c  ldp x22,x21,[sp, #0x10]
+00b63310  ldr x23,[sp], #0x40
+00b63314  ret
+
+
+================================================================================
+### FILE: 00b70ab4___get.txt
+================================================================================
+Function: __get @ 00b70ab4
+FuncComment: std::__ndk1::locale::id::__get()
+
+--- Calls OUT ---
+  -> FUN_00b7f6ec @ 00b7f6ec
+  -> __call_once @ 008d4f80
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b70ab4  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::locale::id::__get()
+00b70ab8  stp x20,x19,[sp, #0x30]
+00b70abc  stp x29,x30,[sp, #0x40]
+00b70ac0  add x29,sp,#0x40
+00b70ac4  mrs x20,tpidr_el0
+00b70ac8  adrp x9,0x3364000
+00b70acc  ldr x8,[x20, #0x28]
+00b70ad0  ldr x9,[x9, #0xf88]
+00b70ad4  movi v0.2D,#0x0
+00b70ad8  mov x19,x0
+00b70adc  stur x8,[x29, #-0x18]
+00b70ae0  mov v0.D[0x0],x9
+00b70ae4  str x0,[sp]
+00b70ae8  stur q0,[sp, #0x8]
+00b70aec  ldar x8,[x0]
+00b70af0  cmn x8,#0x1
+00b70af4  b.eq 0x00b70b18
+00b70af8  adrp x2,0xb7f000
+00b70afc  mov x8,sp
+00b70b00  add x9,sp,#0x20
+00b70b04  add x2,x2,#0x6ec
+00b70b08  add x1,sp,#0x18
+00b70b0c  mov x0,x19
+00b70b10  stp x9,x8,[sp, #0x18]
+00b70b14  bl 0x008d4f80
+00b70b18  ldrsw x8,[x19, #0x8]
+00b70b1c  ldr x9,[x20, #0x28]
+00b70b20  ldur x10,[x29, #-0x18]
+00b70b24  cmp x9,x10
+00b70b28  b.ne 0x00b70b40
+00b70b2c  ldp x29,x30,[sp, #0x40]
+00b70b30  ldp x20,x19,[sp, #0x30]
+00b70b34  sub x0,x8,#0x1
+00b70b38  add sp,sp,#0x50
+00b70b3c  ret
+00b70b40  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b77a9c___get_base.txt
+================================================================================
+Function: __get_base @ 00b77a9c
+FuncComment: std::__ndk1::__num_get_base::__get_base(std::__ndk1::ios_base&)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b77a9c  ldr w8,[x0, #0x8]
+    ; [PLATE] std::__ndk1::__num_get_base::__get_base(std::__ndk1::ios_base&)
+00b77aa0  mov w9,#0x4a
+00b77aa4  ands w8,w8,w9
+00b77aa8  b.eq 0x00b77ac4
+00b77aac  cmp w8,#0x40
+00b77ab0  b.eq 0x00b77acc
+00b77ab4  cmp w8,#0x8
+00b77ab8  b.ne 0x00b77ad4
+00b77abc  mov w0,#0x10
+00b77ac0  ret
+00b77ac4  mov w0,wzr
+00b77ac8  ret
+00b77acc  mov w0,#0x8
+00b77ad0  ret
+00b77ad4  mov w0,#0xa
+00b77ad8  ret
+
+
+================================================================================
+### FILE: 00b81220___get_deleter.txt
+================================================================================
+Function: __get_deleter @ 00b81220
+FuncComment: std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b81220  mov x0,xzr
+    ; [PLATE] std::__ndk1::__shared_weak_count::__get_deleter(std::type_info const&) const
+00b81224  ret
+
+
+================================================================================
+### FILE: 00b81294___get_sp_mut.txt
+================================================================================
+Function: __get_sp_mut @ 00b81294
+FuncComment: std::__ndk1::__get_sp_mut(void const*)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b81294  mov x10,#0x2d69
+    ; [PLATE] std::__ndk1::__get_sp_mut(void const*)
+00b81298  lsl w9,w0,#0x3
+00b8129c  movk x10,#0xeb38, LSL #16
+00b812a0  lsr x8,x0,#0x20
+00b812a4  movk x10,#0xea08, LSL #32
+00b812a8  add x9,x9,#0x8
+00b812ac  movk x10,#0x9ddf, LSL #48
+00b812b0  eor x9,x9,x8
+00b812b4  mul x9,x9,x10
+00b812b8  eor x8,x9,x8
+00b812bc  eor x8,x8,x9, LSR #0x2f
+00b812c0  mul x8,x8,x10
+00b812c4  mov w9,#0x2d69
+00b812c8  lsr x10,x8,#0x2f
+00b812cc  movk w9,#0xeb38, LSL #16
+00b812d0  eor w8,w10,w8
+00b812d4  mul w8,w8,w9
+00b812d8  adrp x9,0x3570000
+00b812dc  and x8,x8,#0xf
+00b812e0  add x9,x9,#0xa68
+00b812e4  add x0,x9,x8, LSL #0x3
+00b812e8  ret
+
+
+================================================================================
+### FILE: 00b812f8_get_pointer_safety.txt
+================================================================================
+Function: get_pointer_safety @ 00b812f8
+FuncComment: std::__ndk1::get_pointer_safety()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b812f8  mov x0,xzr
+    ; [PLATE] std::__ndk1::get_pointer_safety()
+00b812fc  ret
+
+
+================================================================================
+### FILE: 00b88c64_generic_category.txt
+================================================================================
+Function: generic_category @ 00b88c64
+FuncComment: std::__ndk1::generic_category()
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b88c64  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::generic_category()
+00b88c68  mov x29,sp
+00b88c6c  adrp x8,0x3585000
+00b88c70  add x8,x8,#0xd00
+00b88c74  ldarb w8,[x8]
+00b88c78  tbz w8,#0x0,0x00b88c8c
+00b88c7c  adrp x0,0x3585000
+00b88c80  add x0,x0,#0xcf8
+00b88c84  ldp x29,x30,[sp], #0x10
+00b88c88  ret
+00b88c8c  adrp x0,0x3585000
+00b88c90  add x0,x0,#0xd00
+00b88c94  bl 0x008d3ef0
+00b88c98  cbz w0,0x00b88c7c
+00b88c9c  adrp x9,0x3304000
+00b88ca0  adrp x0,0x3585000
+00b88ca4  adrp x8,0x3585000
+00b88ca8  add x9,x9,#0x560
+00b88cac  add x0,x0,#0xd00
+00b88cb0  str x9,[x8, #0xcf8]
+00b88cb4  bl 0x008d5bc0
+00b88cb8  b 0x00b88c7c
+
+
+================================================================================
+### FILE: 00b8abf8_get.txt
+================================================================================
+Function: get @ 00b8abf8
+FuncComment: std::__ndk1::future<void>::get()
+
+--- Calls OUT ---
+  -> copy @ 008d5b40
+  -> __release_shared @ 008d54a0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8abf8  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::future<void>::get()
+00b8abfc  stp x29,x30,[sp, #0x10]
+00b8ac00  add x29,sp,#0x10
+00b8ac04  ldr x19,[x0]
+00b8ac08  str xzr,[x0]
+00b8ac0c  mov x0,x19
+    ; [PRE] try { // try from 00b8ac0c to 00b8ac13 has its CatchHandler @ 00b8ac34
+00b8ac10  bl 0x008d5b40
+    ; [POST] } // end try from 00b8ac0c to 00b8ac13
+00b8ac14  cbz x19,0x00b8ac28
+00b8ac18  ldp x29,x30,[sp, #0x10]
+00b8ac1c  mov x0,x19
+00b8ac20  ldp x20,x19,[sp], #0x20
+00b8ac24  b 0x008d54a0
+00b8ac28  ldp x29,x30,[sp, #0x10]
+00b8ac2c  ldp x20,x19,[sp], #0x20
+00b8ac30  ret
+
+
+================================================================================
+### FILE: 00b8aee0_get_future.txt
+================================================================================
+Function: get_future @ 00b8aee0
+FuncComment: std::__ndk1::promise<void>::get_future()
+
+--- Calls OUT ---
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> unlock @ 008d5170
+  -> __add_shared @ 008d5b10
+  -> lock @ 008d3fc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8aee0  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::promise<void>::get_future()
+00b8aee4  stp x29,x30,[sp, #0x10]
+00b8aee8  add x29,sp,#0x10
+00b8aeec  ldr x20,[x0]
+00b8aef0  cbz x20,0x00b8af30
+00b8aef4  add x19,x20,#0x18
+00b8aef8  mov x0,x19
+00b8aefc  str x20,[x8]
+00b8af00  bl 0x008d3fc0
+00b8af04  ldrb w8,[x20, #0x70]
+00b8af08  tbnz w8,#0x1,0x00b8af38
+00b8af0c  mov x0,x20
+00b8af10  bl 0x008d5b10
+00b8af14  ldr w8,[x20, #0x70]
+00b8af18  mov x0,x19
+00b8af1c  orr w8,w8,#0x2
+00b8af20  str w8,[x20, #0x70]
+00b8af24  ldp x29,x30,[sp, #0x10]
+00b8af28  ldp x20,x19,[sp], #0x20
+00b8af2c  b 0x008d5170
+00b8af30  mov w0,#0x3
+00b8af34  bl 0x00b8a5a4
+00b8af38  mov w0,#0x1
+    ; [PRE] try { // try from 00b8af38 to 00b8af3f has its CatchHandler @ 00b8af40
+00b8af3c  bl 0x00b8a5a4
+    ; [POST] } // end try from 00b8af38 to 00b8af3f
+
+
+================================================================================
+### FILE: 00b8b1c4___getExceptionClass.txt
+================================================================================
+Function: __getExceptionClass @ 00b8b1c4
+FuncComment: __cxxabiv1::__getExceptionClass(_Unwind_Exception const*)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __getExceptionClass @ 008d5c20
+
+--- Listing ---
+00b8b1c4  ldr x0,[x0]
+    ; [PLATE] __cxxabiv1::__getExceptionClass(_Unwind_Exception const*)
+00b8b1c8  ret
+
+
+================================================================================
+### FILE: 00b8bcd8_get_unexpected.txt
+================================================================================
+Function: get_unexpected @ 00b8bcd8
+FuncComment: std::get_unexpected()
+
+--- Calls OUT ---
+  -> FUN_00b8ec4c @ 00b8ec4c
+
+--- Calls IN ---
+  <- get_unexpected @ 008d4650
+
+--- Listing ---
+00b8bcd8  adrp x8,0x337b000
+    ; [PLATE] std::get_unexpected()
+00b8bcdc  ldr x8,[x8, #0xfa0]
+00b8bce0  ldar x0,[x8]
+00b8bce4  ret
+
+
+================================================================================
+### FILE: 00b8bd58_get_terminate.txt
+================================================================================
+Function: get_terminate @ 00b8bd58
+FuncComment: std::get_terminate()
+
+--- Calls OUT ---
+  -> FUN_00b8eb2c @ 00b8eb2c
+
+--- Calls IN ---
+  <- get_terminate @ 008d3e20
+
+--- Listing ---
+00b8bd58  adrp x8,0x3382000
+    ; [PLATE] std::get_terminate()
+00b8bd5c  ldr x8,[x8, #0x1b0]
+00b8bd60  ldar x0,[x8]
+00b8bd64  ret
+
+
+================================================================================
+### FILE: 00b8bdc4_get_new_handler.txt
+================================================================================
+Function: get_new_handler @ 00b8bdc4
+FuncComment: std::get_new_handler()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- get_new_handler @ 008d3f80
+
+--- Listing ---
+00b8bdc4  adrp x8,0x333d000
+    ; [PLATE] std::get_new_handler()
+00b8bdc8  ldr x8,[x8, #0x678]
+00b8bdcc  ldar x0,[x8]
+00b8bdd0  ret
+
+
+================================================================================
+### FILE: 037990c8_getnameinfo.txt
+================================================================================
+Function: getnameinfo @ 037990c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- getnameinfo @ 008d3cb0
+
+--- Listing ---
+037990c8  ?? ??
+
+
+================================================================================
+### FILE: 037991f8_gettimeofday.txt
+================================================================================
+Function: gettimeofday @ 037991f8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- gettimeofday @ 008d4190
+
+--- Listing ---
+037991f8  ?? ??
+
+
+================================================================================
+### FILE: 03799240_gethostname.txt
+================================================================================
+Function: gethostname @ 03799240
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- gethostname @ 008d42b0
+
+--- Listing ---
+03799240  ?? ??
+
+
+================================================================================
+### FILE: 03799320_getpeername.txt
+================================================================================
+Function: getpeername @ 03799320
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- getpeername @ 008d45d0
+
+--- Listing ---
+03799320  ?? ??
+
+
+================================================================================
+### FILE: 03799458_getcwd.txt
+================================================================================
+Function: getcwd @ 03799458
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- getcwd @ 008d4b10
+
+--- Listing ---
+03799458  ?? ??
+
+
+================================================================================
+### FILE: 037994c8_getegid.txt
+================================================================================
+Function: getegid @ 037994c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- getegid @ 008d4cd0
+
+--- Listing ---
+037994c8  ?? ??
+
+
+================================================================================
+### FILE: 03799598_getpid.txt
+================================================================================
+Function: getpid @ 03799598
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- getpid @ 008d4fc0
+
+--- Listing ---
+03799598  ?? ??
+
+
+================================================================================
+### FILE: 037995c0_getenv.txt
+================================================================================
+Function: getenv @ 037995c0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- getenv @ 008d5080
+
+--- Listing ---
+037995c0  ?? ??
+
+
+================================================================================
+### FILE: 03799648_getaddrinfo.txt
+================================================================================
+Function: getaddrinfo @ 03799648
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- getaddrinfo @ 008d5330
+
+--- Listing ---
+03799648  ?? ??
+
+
+================================================================================
+### FILE: 037996a0_getsockname.txt
+================================================================================
+Function: getsockname @ 037996a0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- getsockname @ 008d5480
+
+--- Listing ---
+037996a0  ?? ??
+
+
+================================================================================
+### FILE: 03799778_geteuid.txt
+================================================================================
+Function: geteuid @ 03799778
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- geteuid @ 008d5770
+
+--- Listing ---
+03799778  ?? ??
+
+
+================================================================================
+### FILE: 03799810_getsockopt.txt
+================================================================================
+Function: getsockopt @ 03799810
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- getsockopt @ 008d5940
+
+--- Listing ---
+03799810  ?? ??
+
+

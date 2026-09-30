@@ -1,0 +1,36 @@
+================================================================================
+### FILE: 00b47dbc_gbump.txt
+================================================================================
+Function: gbump @ 00b47dbc
+FuncComment: std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::gbump(int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47dbc  ldr x8,[x0, #0x18]
+    ; [PLATE] std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::gbump(int)
+00b47dc0  add x8,x8,w1, SXTW 
+00b47dc4  str x8,[x0, #0x18]
+00b47dc8  ret
+
+
+================================================================================
+### FILE: 00b48214_gbump.txt
+================================================================================
+Function: gbump @ 00b48214
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::gbump(int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48214  ldr x8,[x0, #0x18]
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::gbump(int)
+00b48218  add x8,x8,w1, SXTW  #0x2
+00b4821c  str x8,[x0, #0x18]
+00b48220  ret
+
+

@@ -1,0 +1,114 @@
+================================================================================
+### FILE: 008d5bb0___dynamic_cast.txt
+================================================================================
+Function: __dynamic_cast @ 008d5bb0
+
+--- Calls OUT ---
+  -> __dynamic_cast @ 00b8d8ec
+
+--- Calls IN ---
+  <- FUN_00b8d324 @ 00b8d324
+  <- FUN_00b8d28c @ 00b8d28c
+  <- FUN_00b8d644 @ 00b8d644
+  <- FUN_00b8d78c @ 00b8d78c
+  <- FUN_00b8cf6c @ 00b8cf6c
+
+--- Listing ---
+008d5bb0  adrp x16,0x3308000
+008d5bb4  ldr x17,[x16, #0x798]
+008d5bb8  add x16,x16,#0x798
+008d5bbc  br x17
+
+
+================================================================================
+### FILE: 00b8d8ec___dynamic_cast.txt
+================================================================================
+Function: __dynamic_cast @ 00b8d8ec
+
+--- Calls OUT ---
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- __dynamic_cast @ 008d5bb0
+
+--- Listing ---
+00b8d8ec  sub sp,sp,#0x80
+00b8d8f0  stp x20,x19,[sp, #0x60]
+00b8d8f4  stp x29,x30,[sp, #0x70]
+00b8d8f8  add x29,sp,#0x70
+00b8d8fc  mrs x20,tpidr_el0
+00b8d900  ldr x9,[x20, #0x28]
+00b8d904  mov x8,x0
+00b8d908  movi v0.2D,#0x0
+00b8d90c  stur x9,[x29, #-0x18]
+00b8d910  ldr x9,[x0]
+00b8d914  ldp x10,x0,[x9, #-0x10]
+00b8d918  stp x2,x8,[sp, #0x8]
+00b8d91c  stp x1,x3,[sp, #0x18]
+00b8d920  stur q0,[sp, #0x38]
+00b8d924  stur q0,[sp, #0x28]
+00b8d928  stur q0,[sp, #0x47]
+00b8d92c  ldr x9,[x0, #0x8]
+00b8d930  ldr x11,[x2, #0x8]
+00b8d934  add x19,x8,x10
+00b8d938  cmp x9,x11
+00b8d93c  b.eq 0x00b8d98c
+00b8d940  ldr x8,[x0]
+00b8d944  add x1,sp,#0x8
+00b8d948  mov w3,#0x1
+00b8d94c  mov x2,x19
+00b8d950  ldr x8,[x8, #0x30]
+00b8d954  mov w4,wzr
+00b8d958  blr x8
+00b8d95c  ldr w8,[sp, #0x44]
+00b8d960  cmp w8,#0x1
+00b8d964  b.eq 0x00b8d9c4
+00b8d968  cbnz w8,0x00b8d9fc
+00b8d96c  ldp w9,w8,[sp, #0x3c]
+00b8d970  ldr w10,[sp, #0x48]
+00b8d974  ldr x11,[sp, #0x30]
+00b8d978  cmp w8,#0x1
+00b8d97c  ccmp w9,#0x1,#0x0,eq
+00b8d980  ccmp w10,#0x1,#0x0,eq
+00b8d984  csel x0,x11,xzr,eq
+00b8d988  b 0x00b8da00
+00b8d98c  mov w8,#0x1
+00b8d990  str w8,[sp, #0x50]
+00b8d994  ldr x8,[x0]
+00b8d998  add x1,sp,#0x8
+00b8d99c  mov w4,#0x1
+00b8d9a0  mov x2,x19
+00b8d9a4  ldr x8,[x8, #0x28]
+00b8d9a8  mov x3,x19
+00b8d9ac  mov w5,wzr
+00b8d9b0  blr x8
+00b8d9b4  ldr w8,[sp, #0x38]
+00b8d9b8  cmp w8,#0x1
+00b8d9bc  csel x0,x19,xzr,eq
+00b8d9c0  b 0x00b8da00
+00b8d9c4  ldr w8,[sp, #0x38]
+00b8d9c8  cmp w8,#0x1
+00b8d9cc  b.eq 0x00b8d9f4
+00b8d9d0  ldr w8,[sp, #0x48]
+00b8d9d4  mov x0,xzr
+00b8d9d8  cbnz w8,0x00b8da00
+00b8d9dc  ldr w8,[sp, #0x3c]
+00b8d9e0  cmp w8,#0x1
+00b8d9e4  b.ne 0x00b8da00
+00b8d9e8  ldr w8,[sp, #0x40]
+00b8d9ec  cmp w8,#0x1
+00b8d9f0  b.ne 0x00b8da00
+00b8d9f4  ldr x0,[sp, #0x28]
+00b8d9f8  b 0x00b8da00
+00b8d9fc  mov x0,xzr
+00b8da00  ldr x8,[x20, #0x28]
+00b8da04  ldur x9,[x29, #-0x18]
+00b8da08  cmp x8,x9
+00b8da0c  b.ne 0x00b8da20
+00b8da10  ldp x29,x30,[sp, #0x70]
+00b8da14  ldp x20,x19,[sp, #0x60]
+00b8da18  add sp,sp,#0x80
+00b8da1c  ret
+00b8da20  bl 0x008d4c50
+
+

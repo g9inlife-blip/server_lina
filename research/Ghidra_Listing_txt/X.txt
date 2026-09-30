@@ -1,0 +1,212 @@
+================================================================================
+### FILE: 00b7865c___x.txt
+================================================================================
+Function: __x @ 00b7865c
+FuncComment: std::__ndk1::__time_get_c_storage<char>::__x() const
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> __cxa_atexit @ 008d3de0
+  -> FUN_00a8d568 @ 00a8d568
+  -> FUN_00a8d368 @ 00a8d368
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b7865c  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__time_get_c_storage<char>::__x() const
+00b78660  stp x29,x30,[sp, #0x10]
+00b78664  add x29,sp,#0x10
+00b78668  adrp x8,0x3584000
+00b7866c  add x8,x8,#0xde8
+00b78670  ldarb w8,[x8]
+00b78674  tbz w8,#0x0,0x00b7868c
+00b78678  ldp x29,x30,[sp, #0x10]
+00b7867c  adrp x0,0x3584000
+00b78680  add x0,x0,#0xdd0
+00b78684  ldr x19,[sp], #0x20
+00b78688  ret
+00b7868c  adrp x0,0x3584000
+00b78690  add x0,x0,#0xde8
+00b78694  bl 0x008d3ef0
+00b78698  cbz w0,0x00b78678
+00b7869c  adrp x0,0x3584000
+    ; [PRE] try { // try from 00b7869c to 00b786af has its CatchHandler @ 00b786dc
+00b786a0  adrp x1,0x2a08000
+00b786a4  add x0,x0,#0xdd0
+00b786a8  add x1,x1,#0x436
+00b786ac  bl 0x00a8d368
+    ; [POST] } // end try from 00b7869c to 00b786af
+00b786b0  adrp x0,0x334a000
+00b786b4  ldr x0,[x0, #0x48]
+00b786b8  adrp x1,0x3584000
+00b786bc  adrp x2,0x31a4000
+00b786c0  add x1,x1,#0xdd0
+00b786c4  add x2,x2,#0x660
+00b786c8  bl 0x008d3de0
+00b786cc  adrp x0,0x3584000
+00b786d0  add x0,x0,#0xde8
+00b786d4  bl 0x008d5bc0
+00b786d8  b 0x00b78678
+
+
+================================================================================
+### FILE: 00b786f4___x.txt
+================================================================================
+Function: __x @ 00b786f4
+FuncComment: std::__ndk1::__time_get_c_storage<wchar_t>::__x() const
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> ~basic_string @ 00b83500
+  -> __cxa_atexit @ 008d3de0
+  -> basic_string<decltype(nullptr)> @ 008d4a10
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b786f4  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__time_get_c_storage<wchar_t>::__x() const
+00b786f8  stp x29,x30,[sp, #0x10]
+00b786fc  add x29,sp,#0x10
+00b78700  adrp x8,0x3584000
+00b78704  add x8,x8,#0xe08
+00b78708  ldarb w8,[x8]
+00b7870c  tbz w8,#0x0,0x00b78724
+00b78710  ldp x29,x30,[sp, #0x10]
+00b78714  adrp x0,0x3584000
+00b78718  add x0,x0,#0xdf0
+00b7871c  ldr x19,[sp], #0x20
+00b78720  ret
+00b78724  adrp x0,0x3584000
+00b78728  add x0,x0,#0xe08
+00b7872c  bl 0x008d3ef0
+00b78730  cbz w0,0x00b78710
+00b78734  adrp x0,0x3584000
+    ; [PRE] try { // try from 00b78734 to 00b78747 has its CatchHandler @ 00b78774
+00b78738  adrp x1,0x2a08000
+00b7873c  add x0,x0,#0xdf0
+00b78740  add x1,x1,#0xf44
+00b78744  bl 0x008d4a10
+    ; [POST] } // end try from 00b78734 to 00b78747
+00b78748  adrp x0,0x335b000
+00b7874c  ldr x0,[x0, #0xdd8]
+00b78750  adrp x1,0x3584000
+00b78754  adrp x2,0x31a4000
+00b78758  add x1,x1,#0xdf0
+00b7875c  add x2,x2,#0x660
+00b78760  bl 0x008d3de0
+00b78764  adrp x0,0x3584000
+00b78768  add x0,x0,#0xe08
+00b7876c  bl 0x008d5bc0
+00b78770  b 0x00b78710
+
+
+================================================================================
+### FILE: 00b7878c___X.txt
+================================================================================
+Function: __X @ 00b7878c
+FuncComment: std::__ndk1::__time_get_c_storage<char>::__X() const
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> __cxa_atexit @ 008d3de0
+  -> FUN_00a8d568 @ 00a8d568
+  -> FUN_00a8d368 @ 00a8d368
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b7878c  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__time_get_c_storage<char>::__X() const
+00b78790  stp x29,x30,[sp, #0x10]
+00b78794  add x29,sp,#0x10
+00b78798  adrp x8,0x3584000
+00b7879c  add x8,x8,#0xe28
+00b787a0  ldarb w8,[x8]
+00b787a4  tbz w8,#0x0,0x00b787bc
+00b787a8  ldp x29,x30,[sp, #0x10]
+00b787ac  adrp x0,0x3584000
+00b787b0  add x0,x0,#0xe10
+00b787b4  ldr x19,[sp], #0x20
+00b787b8  ret
+00b787bc  adrp x0,0x3584000
+00b787c0  add x0,x0,#0xe28
+00b787c4  bl 0x008d3ef0
+00b787c8  cbz w0,0x00b787a8
+00b787cc  adrp x0,0x3584000
+    ; [PRE] try { // try from 00b787cc to 00b787df has its CatchHandler @ 00b7880c
+00b787d0  adrp x1,0x2a08000
+00b787d4  add x0,x0,#0xe10
+00b787d8  add x1,x1,#0x43f
+00b787dc  bl 0x00a8d368
+    ; [POST] } // end try from 00b787cc to 00b787df
+00b787e0  adrp x0,0x334a000
+00b787e4  ldr x0,[x0, #0x48]
+00b787e8  adrp x1,0x3584000
+00b787ec  adrp x2,0x31a4000
+00b787f0  add x1,x1,#0xe10
+00b787f4  add x2,x2,#0x660
+00b787f8  bl 0x008d3de0
+00b787fc  adrp x0,0x3584000
+00b78800  add x0,x0,#0xe28
+00b78804  bl 0x008d5bc0
+00b78808  b 0x00b787a8
+
+
+================================================================================
+### FILE: 00b78824___X.txt
+================================================================================
+Function: __X @ 00b78824
+FuncComment: std::__ndk1::__time_get_c_storage<wchar_t>::__X() const
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> ~basic_string @ 00b83500
+  -> __cxa_atexit @ 008d3de0
+  -> basic_string<decltype(nullptr)> @ 008d4a10
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b78824  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__time_get_c_storage<wchar_t>::__X() const
+00b78828  stp x29,x30,[sp, #0x10]
+00b7882c  add x29,sp,#0x10
+00b78830  adrp x8,0x3584000
+00b78834  add x8,x8,#0xe48
+00b78838  ldarb w8,[x8]
+00b7883c  tbz w8,#0x0,0x00b78854
+00b78840  ldp x29,x30,[sp, #0x10]
+00b78844  adrp x0,0x3584000
+00b78848  add x0,x0,#0xe30
+00b7884c  ldr x19,[sp], #0x20
+00b78850  ret
+00b78854  adrp x0,0x3584000
+00b78858  add x0,x0,#0xe48
+00b7885c  bl 0x008d3ef0
+00b78860  cbz w0,0x00b78840
+00b78864  adrp x0,0x3584000
+    ; [PRE] try { // try from 00b78864 to 00b78877 has its CatchHandler @ 00b788a4
+00b78868  adrp x1,0x2a08000
+00b7886c  add x0,x0,#0xe30
+00b78870  add x1,x1,#0xf68
+00b78874  bl 0x008d4a10
+    ; [POST] } // end try from 00b78864 to 00b78877
+00b78878  adrp x0,0x335b000
+00b7887c  ldr x0,[x0, #0xdd8]
+00b78880  adrp x1,0x3584000
+00b78884  adrp x2,0x31a4000
+00b78888  add x1,x1,#0xe30
+00b7888c  add x2,x2,#0x660
+00b78890  bl 0x008d3de0
+00b78894  adrp x0,0x3584000
+00b78898  add x0,x0,#0xe48
+00b7889c  bl 0x008d5bc0
+00b788a0  b 0x00b78840
+
+

@@ -1,0 +1,394 @@
+================================================================================
+### FILE: 008d4260_atol.txt
+================================================================================
+Function: atol @ 008d4260
+
+--- Calls OUT ---
+  -> atol @ 03799220
+
+--- Calls IN ---
+  <- FUN_00b32820 @ 00b32820
+
+--- Listing ---
+008d4260  adrp x16,0x3307000
+008d4264  ldr x17,[x16, #0xaf0]
+008d4268  add x16,x16,#0xaf0
+008d426c  br x17
+
+
+================================================================================
+### FILE: 008d44c0_atan2.txt
+================================================================================
+Function: atan2 @ 008d44c0
+
+--- Calls OUT ---
+  -> atan2 @ 037992d0
+
+--- Calls IN ---
+  <- Spine.IkConstraint$$Apply @ 00d6cb98
+  <- Spine.PathConstraint$$AddCurvePosition @ 00d6f47c
+  <- Spine.IkConstraint$$Apply @ 00d6cd0c
+  <- System.Math$$Atan2 @ 02151650
+  <- UnityEngine.Mathf$$Atan2 @ 024ef588
+
+--- Listing ---
+008d44c0  adrp x16,0x3307000
+008d44c4  ldr x17,[x16, #0xc20]
+008d44c8  add x16,x16,#0xc20
+008d44cc  br x17
+
+
+================================================================================
+### FILE: 008d4af0_atan.txt
+================================================================================
+Function: atan @ 008d4af0
+
+--- Calls OUT ---
+  -> atan @ 03799450
+
+--- Calls IN ---
+  <- UnityEngine.Mathf$$Atan @ 024ef524
+  <- System.Math$$Atan @ 0215164c
+
+--- Listing ---
+008d4af0  adrp x16,0x3307000
+008d4af4  ldr x17,[x16, #0xf38]
+008d4af8  add x16,x16,#0xf38
+008d4afc  br x17
+
+
+================================================================================
+### FILE: 008d5240_atan2f.txt
+================================================================================
+Function: atan2f @ 008d5240
+
+--- Calls OUT ---
+  -> atan2f @ 03799618
+
+--- Calls IN ---
+  <- Spine.Unity.BoneFollower$$LateUpdate @ 00d8dacc
+  <- Spine.Unity.Modules.SkeletonRagdoll2D$$UpdateSpineSkeleton @ 00bf1a04
+  <- AliothEngine.Extensions.QuaternionExtensions$$GetLog @ 016b1864
+  <- Spine.Unity.Modules.SkeletonRagdoll$$UpdateSpineSkeleton @ 00beef3c
+  <- XLua.CSObjectWrap.UnityEngineMathfWrap$$_m_Atan2_xlua_st_ @ 0148724c
+  <- Spine.Unity.SkeletonExtensions$$GetQuaternion @ 00be5098
+  <- AliothEngine.Utils.Utility$$GetSignedAngle @ 0169df94
+  <- UnityEngine.UIElements.UIR.MeshBuilder$$RectClipTriangle @ 026bf800
+
+--- Listing ---
+008d5240  adrp x16,0x3308000
+008d5244  ldr x17,[x16, #0x2e0]
+008d5248  add x16,x16,#0x2e0
+008d524c  br x17
+
+
+================================================================================
+### FILE: 008d55f0_atoi.txt
+================================================================================
+Function: atoi @ 008d55f0
+
+--- Calls OUT ---
+  -> atoi @ 03799708
+
+--- Calls IN ---
+  <- FUN_00b3d320 @ 00b3d320
+  <- FUN_00ab0938 @ 00ab0938
+  <- FUN_00b1252c @ 00b1252c
+  <- FUN_00b32820 @ 00b32820
+
+--- Listing ---
+008d55f0  adrp x16,0x3308000
+008d55f4  ldr x17,[x16, #0x4b8]
+008d55f8  add x16,x16,#0x4b8
+008d55fc  br x17
+
+
+================================================================================
+### FILE: 008d5a50_atanf.txt
+================================================================================
+Function: atanf @ 008d5a50
+
+--- Calls OUT ---
+  -> atanf @ 03799860
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.UnityEngineMathfWrap$$_m_Atan_xlua_st_ @ 01487134
+  <- UnityEngine.Experimental.GlobalIllumination.LightmapperUtils$$ExtractInnerCone @ 02503c8c
+
+--- Listing ---
+008d5a50  adrp x16,0x3308000
+008d5a54  ldr x17,[x16, #0x6e8]
+008d5a58  add x16,x16,#0x6e8
+008d5a5c  br x17
+
+
+================================================================================
+### FILE: 00b82308_at.txt
+================================================================================
+Function: at @ 00b82308
+FuncComment: std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::at(unsigned long) const
+
+--- Calls OUT ---
+  -> FUN_00a8f54c @ 00a8f54c
+
+--- Calls IN ---
+
+--- Listing ---
+00b82308  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::at(unsigned long) const
+00b8230c  mov x29,sp
+00b82310  ldrb w8,[x0]
+00b82314  tbnz w8,#0x0,0x00b82328
+00b82318  lsr x9,x8,#0x1
+00b8231c  cmp x9,x1
+00b82320  b.hi 0x00b82334
+00b82324  b 0x00b82350
+00b82328  ldr x9,[x0, #0x8]
+00b8232c  cmp x9,x1
+00b82330  b.ls 0x00b82350
+00b82334  tbnz w8,#0x0,0x00b82340
+00b82338  add x8,x0,#0x1
+00b8233c  b 0x00b82344
+00b82340  ldr x8,[x0, #0x10]
+00b82344  add x0,x8,x1
+00b82348  ldp x29,x30,[sp], #0x10
+00b8234c  ret
+00b82350  bl 0x00a8f54c
+
+
+================================================================================
+### FILE: 00b82354_at.txt
+================================================================================
+Function: at @ 00b82354
+FuncComment: std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::at(unsigned long)
+
+--- Calls OUT ---
+  -> FUN_00a8f54c @ 00a8f54c
+
+--- Calls IN ---
+
+--- Listing ---
+00b82354  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::at(unsigned long)
+00b82358  mov x29,sp
+00b8235c  ldrb w8,[x0]
+00b82360  tbnz w8,#0x0,0x00b82374
+00b82364  lsr x9,x8,#0x1
+00b82368  cmp x9,x1
+00b8236c  b.hi 0x00b82380
+00b82370  b 0x00b8239c
+00b82374  ldr x9,[x0, #0x8]
+00b82378  cmp x9,x1
+00b8237c  b.ls 0x00b8239c
+00b82380  tbnz w8,#0x0,0x00b8238c
+00b82384  add x8,x0,#0x1
+00b82388  b 0x00b82390
+00b8238c  ldr x8,[x0, #0x10]
+00b82390  add x0,x8,x1
+00b82394  ldp x29,x30,[sp], #0x10
+00b82398  ret
+00b8239c  bl 0x00a8f54c
+
+
+================================================================================
+### FILE: 00b83930_at.txt
+================================================================================
+Function: at @ 00b83930
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::at(unsigned long) const
+
+--- Calls OUT ---
+  -> FUN_00a8f54c @ 00a8f54c
+
+--- Calls IN ---
+
+--- Listing ---
+00b83930  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::at(unsigned long) const
+00b83934  mov x29,sp
+00b83938  ldrb w8,[x0]
+00b8393c  tbnz w8,#0x0,0x00b83950
+00b83940  lsr x9,x8,#0x1
+00b83944  cmp x9,x1
+00b83948  b.hi 0x00b8395c
+00b8394c  b 0x00b83978
+00b83950  ldr x9,[x0, #0x8]
+00b83954  cmp x9,x1
+00b83958  b.ls 0x00b83978
+00b8395c  tbnz w8,#0x0,0x00b83968
+00b83960  add x8,x0,#0x4
+00b83964  b 0x00b8396c
+00b83968  ldr x8,[x0, #0x10]
+00b8396c  add x0,x8,x1, LSL #0x2
+00b83970  ldp x29,x30,[sp], #0x10
+00b83974  ret
+00b83978  bl 0x00a8f54c
+
+
+================================================================================
+### FILE: 00b8397c_at.txt
+================================================================================
+Function: at @ 00b8397c
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::at(unsigned long)
+
+--- Calls OUT ---
+  -> FUN_00a8f54c @ 00a8f54c
+
+--- Calls IN ---
+
+--- Listing ---
+00b8397c  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::at(unsigned long)
+00b83980  mov x29,sp
+00b83984  ldrb w8,[x0]
+00b83988  tbnz w8,#0x0,0x00b8399c
+00b8398c  lsr x9,x8,#0x1
+00b83990  cmp x9,x1
+00b83994  b.hi 0x00b839a8
+00b83998  b 0x00b839c4
+00b8399c  ldr x9,[x0, #0x8]
+00b839a0  cmp x9,x1
+00b839a4  b.ls 0x00b839c4
+00b839a8  tbnz w8,#0x0,0x00b839b4
+00b839ac  add x8,x0,#0x4
+00b839b0  b 0x00b839b8
+00b839b4  ldr x8,[x0, #0x10]
+00b839b8  add x0,x8,x1, LSL #0x2
+00b839bc  ldp x29,x30,[sp], #0x10
+00b839c0  ret
+00b839c4  bl 0x00a8f54c
+
+
+================================================================================
+### FILE: 00d98640_AttributesSample__Awake.txt
+================================================================================
+Function: AttributesSample$$Awake @ 00d98640
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d98640  ret
+
+
+================================================================================
+### FILE: 00d98644_AttributesSample__.ctor.txt
+================================================================================
+Function: AttributesSample$$.ctor @ 00d98644
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d98644  stp x21,x20,[sp, #-0x20]!
+00d98648  stp x19,x30,[sp, #0x10]
+00d9864c  adrp x20,0x3571000
+00d98650  adrp x21,0x3351000
+00d98654  ldrb w8,[x20, #0xfde]
+00d98658  ldr x21,[x21, #0x460]
+00d9865c  mov x19,x0
+00d98660  tbnz w8,#0x0,0x00d98678
+00d98664  adrp x0,0x3351000
+00d98668  ldr x0,[x0, #0x460]
+00d9866c  bl 0x00b0789c
+00d98670  mov w8,#0x1
+00d98674  strb w8,[x20, #0xfde]
+00d98678  ldr x1,[x21]
+00d9867c  mov x0,x19
+00d98680  str x1,[x0, #0x18]!
+00d98684  bl 0x00b07850
+00d98688  mov x0,x19
+00d9868c  ldp x19,x30,[sp, #0x10]
+00d98690  mov x1,xzr
+00d98694  ldp x21,x20,[sp], #0x20
+00d98698  b 0x024e45bc
+
+
+================================================================================
+### FILE: 03799220_atol.txt
+================================================================================
+Function: atol @ 03799220
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- atol @ 008d4260
+
+--- Listing ---
+03799220  ?? ??
+
+
+================================================================================
+### FILE: 037992d0_atan2.txt
+================================================================================
+Function: atan2 @ 037992d0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- atan2 @ 008d44c0
+
+--- Listing ---
+037992d0  ?? ??
+
+
+================================================================================
+### FILE: 03799450_atan.txt
+================================================================================
+Function: atan @ 03799450
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- atan @ 008d4af0
+
+--- Listing ---
+03799450  ?? ??
+
+
+================================================================================
+### FILE: 03799618_atan2f.txt
+================================================================================
+Function: atan2f @ 03799618
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- atan2f @ 008d5240
+
+--- Listing ---
+03799618  ?? ??
+
+
+================================================================================
+### FILE: 03799708_atoi.txt
+================================================================================
+Function: atoi @ 03799708
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- atoi @ 008d55f0
+
+--- Listing ---
+03799708  ?? ??
+
+
+================================================================================
+### FILE: 03799860_atanf.txt
+================================================================================
+Function: atanf @ 03799860
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- atanf @ 008d5a50
+
+--- Listing ---
+03799860  ?? ??
+
+

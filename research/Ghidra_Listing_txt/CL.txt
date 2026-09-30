@@ -1,0 +1,1950 @@
+================================================================================
+### FILE: 008d3a50_clock_gettime.txt
+================================================================================
+Function: clock_gettime @ 008d3a50
+
+--- Calls OUT ---
+  -> clock_gettime @ 03799038
+
+--- Calls IN ---
+  <- FUN_00a8db0c @ 00a8db0c
+  <- FUN_00b46f7c @ 00b46f7c
+  <- FUN_00b46fb0 @ 00b46fb0
+  <- FUN_00b3ee1c @ 00b3ee1c
+  <- FUN_00a8db6c @ 00a8db6c
+
+--- Listing ---
+008d3a50  adrp x16,0x3307000
+008d3a54  ldr x17,[x16, #0x6e8]
+008d3a58  add x16,x16,#0x6e8
+008d3a5c  br x17
+
+
+================================================================================
+### FILE: 008d4970_clear.txt
+================================================================================
+Function: clear @ 008d4970
+
+--- Calls OUT ---
+  -> clear @ 00b53a1c
+
+--- Calls IN ---
+  <- FUN_00af5674 @ 00af5674
+  <- FUN_00af2f10 @ 00af2f10
+  <- FUN_00af5708 @ 00af5708
+  <- FUN_00af2f4c @ 00af2f4c
+  <- il2cpp_stats_dump_to_file @ 00af2c04
+  <- FUN_00af5340 @ 00af5340
+
+--- Listing ---
+008d4970  adrp x16,0x3307000
+008d4974  ldr x17,[x16, #0xe78]
+008d4978  add x16,x16,#0xe78
+008d497c  br x17
+
+
+================================================================================
+### FILE: 008d4df0_clock.txt
+================================================================================
+Function: clock @ 008d4df0
+
+--- Calls OUT ---
+  -> clock @ 03799520
+
+--- Calls IN ---
+  <- FUN_00b35cc8 @ 00b35cc8
+  <- FUN_00b3575c @ 00b3575c
+  <- FUN_00b3630c @ 00b3630c
+  <- FUN_00b35570 @ 00b35570
+  <- FUN_00b35f40 @ 00b35f40
+  <- FUN_00b32820 @ 00b32820
+  <- FUN_00b36b5c @ 00b36b5c
+  <- FUN_00b358d8 @ 00b358d8
+  <- FUN_00b35b2c @ 00b35b2c
+
+--- Listing ---
+008d4df0  adrp x16,0x3308000
+008d4df4  ldr x17,[x16, #0xb8]
+008d4df8  add x16,x16,#0xb8
+008d4dfc  br x17
+
+
+================================================================================
+### FILE: 008d4f50_clock_getres.txt
+================================================================================
+Function: clock_getres @ 008d4f50
+
+--- Calls OUT ---
+  -> clock_getres @ 03799580
+
+--- Calls IN ---
+  <- FUN_00a8db6c @ 00a8db6c
+
+--- Listing ---
+008d4f50  adrp x16,0x3308000
+008d4f54  ldr x17,[x16, #0x168]
+008d4f58  add x16,x16,#0x168
+008d4f5c  br x17
+
+
+================================================================================
+### FILE: 008d5100_CloseZStream.txt
+================================================================================
+Function: CloseZStream @ 008d5100
+
+--- Calls OUT ---
+  -> CloseZStream @ 00b00fd4
+
+--- Calls IN ---
+  <- System.IO.Compression.DeflateStreamNative$$CloseZStream @ 02317b2c
+  <- System.IO.Compression.DeflateStreamNative.SafeDeflateStreamHandle$$ReleaseHandle @ 02317b98
+
+--- Listing ---
+008d5100  adrp x16,0x3308000
+008d5104  ldr x17,[x16, #0x240]
+008d5108  add x16,x16,#0x240
+008d510c  br x17
+
+
+================================================================================
+### FILE: 008d51f0_close.txt
+================================================================================
+Function: close @ 008d51f0
+
+--- Calls OUT ---
+  -> close @ 03799610
+
+--- Calls IN ---
+  <- FUN_00b3dd2c @ 00b3dd2c
+  <- SystemNative_GetNonCryptographicallySecureRandomBytes @ 00a99b28
+  <- FUN_00ae6b50 @ 00ae6b50
+  <- FUN_00ae6168 @ 00ae6168
+  <- FUN_00aa998c @ 00aa998c
+  <- FUN_00b3db1c @ 00b3db1c
+  <- FUN_00b3dbbc @ 00b3dbbc
+  <- FUN_00ae62e8 @ 00ae62e8
+  <- FUN_00aa96b8 @ 00aa96b8
+  <- FUN_00ae83b4 @ 00ae83b4
+
+--- Listing ---
+008d51f0  adrp x16,0x3308000
+008d51f4  ldr x17,[x16, #0x2b8]
+008d51f8  add x16,x16,#0x2b8
+008d51fc  br x17
+
+
+================================================================================
+### FILE: 008d53b0_closelog.txt
+================================================================================
+Function: closelog @ 008d53b0
+
+--- Calls OUT ---
+  -> closelog @ 03799660
+
+--- Calls IN ---
+  <- FUN_00b8e9ec @ 00b8e9ec
+
+--- Listing ---
+008d53b0  adrp x16,0x3308000
+008d53b4  ldr x17,[x16, #0x398]
+008d53b8  add x16,x16,#0x398
+008d53bc  br x17
+
+
+================================================================================
+### FILE: 008d5cb0_closedir.txt
+================================================================================
+Function: closedir @ 008d5cb0
+
+--- Calls OUT ---
+  -> closedir @ 03799918
+
+--- Calls IN ---
+  <- SystemNative_ReadDirR @ 00a995a0
+  <- SystemNative_CloseDir @ 00a99748
+
+--- Listing ---
+008d5cb0  adrp x16,0x3308000
+008d5cb4  ldr x17,[x16, #0x818]
+008d5cb8  add x16,x16,#0x818
+008d5cbc  br x17
+
+
+================================================================================
+### FILE: 00b00fd4_CloseZStream.txt
+================================================================================
+Function: CloseZStream @ 00b00fd4
+
+--- Calls OUT ---
+  -> FUN_00b4203c @ 00b4203c
+  -> FUN_00b01214 @ 00b01214
+  -> free @ 008d3ca0
+  -> FUN_00b43eac @ 00b43eac
+  -> FUN_00b44350 @ 00b44350
+
+--- Calls IN ---
+  <- CloseZStream @ 008d5100
+
+--- Listing ---
+00b00fd4  str x20,[sp, #-0x20]!
+00b00fd8  stp x19,x30,[sp, #0x10]
+00b00fdc  cbz x0,0x00b0102c
+00b00fe0  mov x19,x0
+00b00fe4  ldrb w8,[x0, #0x20]
+00b00fe8  ldr x0,[x0]
+00b00fec  cbz w8,0x00b01034
+00b00ff0  ldr x8,[x0, #0x10]
+00b00ff4  cbz x8,0x00b01050
+00b00ff8  mov w1,#0x4
+00b00ffc  bl 0x00b44350
+00b01000  ldrb w8,[x19, #0x20]
+00b01004  mov w20,w0
+00b01008  cbz w8,0x00b0101c
+00b0100c  mov x0,x19
+00b01010  bl 0x00b01214
+00b01014  cbz w20,0x00b01024
+00b01018  b 0x00b01040
+00b0101c  mov w0,wzr
+00b01020  cbnz w20,0x00b01040
+00b01024  ldr x0,[x19]
+00b01028  b 0x00b00ff8
+00b0102c  mov w20,#0xfffffff6
+00b01030  b 0x00b01074
+00b01034  bl 0x00b4203c
+00b01038  mov w20,wzr
+00b0103c  b 0x00b0105c
+00b01040  cmp w20,#0x1
+00b01044  b.ne 0x00b01054
+00b01048  mov w20,w0
+00b0104c  b 0x00b01054
+00b01050  mov w20,wzr
+00b01054  ldr x0,[x19]
+00b01058  bl 0x00b43eac
+00b0105c  ldr x0,[x19, #0x8]
+00b01060  bl 0x008d3ca0
+00b01064  ldr x0,[x19]
+00b01068  bl 0x008d3ca0
+00b0106c  mov x0,x19
+00b01070  bl 0x008d3ca0
+00b01074  ldp x19,x30,[sp, #0x10]
+00b01078  mov w0,w20
+00b0107c  ldr x20,[sp], #0x20
+00b01080  ret
+
+
+================================================================================
+### FILE: 00b53a1c_clear.txt
+================================================================================
+Function: clear @ 00b53a1c
+FuncComment: std::__ndk1::ios_base::clear(unsigned int)
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+  <- clear @ 008d4970
+
+--- Listing ---
+00b53a1c  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::ios_base::clear(unsigned int)
+00b53a20  mov x29,sp
+00b53a24  ldr x8,[x0, #0x28]
+00b53a28  ldr w9,[x0, #0x24]
+00b53a2c  cmp x8,#0x0
+00b53a30  cset w8,eq
+00b53a34  orr w8,w8,w1
+00b53a38  tst w9,w8
+00b53a3c  str w8,[x0, #0x20]
+00b53a40  b.ne 0x00b53a4c
+00b53a44  ldp x29,x30,[sp], #0x10
+00b53a48  ret
+00b53a4c  adrp x0,0x2a07000
+00b53a50  add x0,x0,#0xcf4
+00b53a54  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b571bc___cloc.txt
+================================================================================
+Function: __cloc @ 00b571bc
+FuncComment: std::__ndk1::__cloc()
+
+--- Calls OUT ---
+  -> newlocale @ 008d49c0
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b571bc  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__cloc()
+00b571c0  stp x29,x30,[sp, #0x10]
+00b571c4  add x29,sp,#0x10
+00b571c8  adrp x8,0x3584000
+00b571cc  add x8,x8,#0xcb0
+00b571d0  ldarb w8,[x8]
+00b571d4  adrp x19,0x3584000
+00b571d8  tbz w8,#0x0,0x00b571ec
+00b571dc  ldr x0,[x19, #0xca8]
+00b571e0  ldp x29,x30,[sp, #0x10]
+00b571e4  ldr x19,[sp], #0x20
+00b571e8  ret
+00b571ec  adrp x0,0x3584000
+00b571f0  add x0,x0,#0xcb0
+00b571f4  bl 0x008d3ef0
+00b571f8  cbz w0,0x00b571dc
+00b571fc  adrp x1,0x2a0b000
+    ; [PRE] try { // try from 00b571fc to 00b5720f has its CatchHandler @ 00b57224
+00b57200  add x1,x1,#0xd5d
+00b57204  mov w0,#0x1fbf
+00b57208  mov x2,xzr
+00b5720c  bl 0x008d49c0
+    ; [POST] } // end try from 00b571fc to 00b5720f
+00b57210  str x0,[x19, #0xca8]
+00b57214  adrp x0,0x3584000
+00b57218  add x0,x0,#0xcb0
+00b5721c  bl 0x008d5bc0
+00b57220  b 0x00b571dc
+
+
+================================================================================
+### FILE: 00b6c424_classic.txt
+================================================================================
+Function: classic @ 00b6c424
+FuncComment: std::__ndk1::locale::classic()
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> FUN_00b6a07c @ 00b6a07c
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b6c424  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::locale::classic()
+00b6c428  stp x29,x30,[sp, #0x10]
+00b6c42c  add x29,sp,#0x10
+00b6c430  adrp x8,0x3584000
+00b6c434  add x8,x8,#0xcc8
+00b6c438  ldarb w8,[x8]
+00b6c43c  adrp x20,0x3584000
+00b6c440  tbz w8,#0x0,0x00b6c454
+00b6c444  ldr x0,[x20, #0xcc0]
+00b6c448  ldp x29,x30,[sp, #0x10]
+00b6c44c  ldp x20,x19,[sp], #0x20
+00b6c450  ret
+00b6c454  adrp x0,0x3584000
+00b6c458  add x0,x0,#0xcc8
+00b6c45c  bl 0x008d3ef0
+00b6c460  cbz w0,0x00b6c444
+00b6c464  adrp x19,0x3585000
+    ; [PRE] try { // try from 00b6c464 to 00b6c477 has its CatchHandler @ 00b6c49c
+00b6c468  add x19,x19,#0x8e0
+00b6c46c  mov w1,#0x1
+00b6c470  mov x0,x19
+00b6c474  bl 0x00b6a07c
+    ; [POST] } // end try from 00b6c464 to 00b6c477
+00b6c478  adrp x9,0x3584000
+00b6c47c  adrp x0,0x3584000
+00b6c480  adrp x8,0x3584000
+00b6c484  add x9,x9,#0xcb8
+00b6c488  add x0,x0,#0xcc8
+00b6c48c  str x19,[x8, #0xcb8]
+00b6c490  str x9,[x20, #0xcc0]
+00b6c494  bl 0x008d5bc0
+00b6c498  b 0x00b6c444
+
+
+================================================================================
+### FILE: 00b71cb0_classic_table.txt
+================================================================================
+Function: classic_table @ 00b71cb0
+FuncComment: std::__ndk1::ctype<char>::classic_table()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b71cb0  adrp x0,0x2a08000
+    ; [PLATE] std::__ndk1::ctype<char>::classic_table()
+00b71cb4  add x0,x0,#0x718
+00b71cb8  ret
+
+
+================================================================================
+### FILE: 00d33bbc_ClickManagerExample__Awake.txt
+================================================================================
+Function: ClickManagerExample$$Awake @ 00d33bbc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Action<object,-object>$$.ctor @ 019104fc
+  -> FUN_00b079b0 @ 00b079b0
+  -> GameCenter_RTM$$add_ActionDataReceived @ 00d0e63c
+
+--- Calls IN ---
+
+--- Listing ---
+00d33bbc  stp x21,x20,[sp, #-0x20]!
+00d33bc0  stp x19,x30,[sp, #0x10]
+00d33bc4  adrp x20,0x3571000
+00d33bc8  adrp x21,0x3362000
+00d33bcc  ldrb w8,[x20, #0xd32]
+00d33bd0  ldr x21,[x21, #0x2d8]
+00d33bd4  mov x19,x0
+00d33bd8  tbnz w8,#0x0,0x00d33c08
+00d33bdc  adrp x0,0x3362000
+00d33be0  ldr x0,[x0, #0x2d8]
+00d33be4  bl 0x00b0789c
+00d33be8  adrp x0,0x330d000
+00d33bec  ldr x0,[x0, #0x580]
+00d33bf0  bl 0x00b0789c
+00d33bf4  adrp x0,0x331e000
+00d33bf8  ldr x0,[x0, #0xe78]
+00d33bfc  bl 0x00b0789c
+00d33c00  mov w8,#0x1
+00d33c04  strb w8,[x20, #0xd32]
+00d33c08  ldr x0,[x21]
+00d33c0c  bl 0x00b079a0
+00d33c10  cbz x0,0x00d33c5c
+00d33c14  adrp x8,0x330d000
+00d33c18  ldr x8,[x8, #0x580]
+00d33c1c  adrp x21,0x331e000
+00d33c20  mov x1,x19
+00d33c24  mov x3,xzr
+00d33c28  ldr x2,[x8]
+00d33c2c  ldr x21,[x21, #0xe78]
+00d33c30  mov x20,x0
+00d33c34  bl 0x019104fc
+00d33c38  ldr x0,[x21]
+00d33c3c  ldr w8,[x0, #0xe0]
+00d33c40  cbnz w8,0x00d33c48
+00d33c44  bl 0x00b0798c
+00d33c48  ldp x19,x30,[sp, #0x10]
+00d33c4c  mov x0,x20
+00d33c50  mov x1,xzr
+00d33c54  ldp x21,x20,[sp], #0x20
+00d33c58  b 0x00d0e63c
+00d33c5c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d33c60_ClickManagerExample__Update.txt
+================================================================================
+Function: ClickManagerExample$$Update @ 00d33c60
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.Camera$$ScreenToWorldPoint @ 024d81c0
+  -> PTPGameController$$createGreenSphere @ 00d33d40
+  -> ObjectCreatePackage$$.ctor @ 00d33f70
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> NetworkManagerExample$$send @ 00d34464
+  -> UnityEngine.Input$$get_mousePosition @ 0252f9e0
+  -> UnityEngine.Camera$$get_main @ 024d83dc
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Input$$GetMouseButtonDown @ 0252f7d8
+
+--- Calls IN ---
+
+--- Listing ---
+00d33c60  stp d9,d8,[sp, #-0x30]!
+00d33c64  str x20,[sp, #0x10]
+00d33c68  stp x19,x30,[sp, #0x20]
+00d33c6c  adrp x19,0x3571000
+00d33c70  ldrb w8,[x19, #0xd33]
+00d33c74  tbnz w8,#0x0,0x00d33c98
+00d33c78  adrp x0,0x3342000
+00d33c7c  ldr x0,[x0, #0xf0]
+00d33c80  bl 0x00b0789c
+00d33c84  adrp x0,0x337f000
+00d33c88  ldr x0,[x0, #0x418]
+00d33c8c  bl 0x00b0789c
+00d33c90  mov w8,#0x1
+00d33c94  strb w8,[x19, #0xd33]
+00d33c98  mov w0,wzr
+00d33c9c  mov x1,xzr
+00d33ca0  bl 0x0252f7d8
+00d33ca4  tbz w0,#0x0,0x00d33d2c
+00d33ca8  mov x0,xzr
+00d33cac  bl 0x024d83dc
+00d33cb0  mov x19,x0
+00d33cb4  mov x0,xzr
+00d33cb8  bl 0x0252f9e0
+00d33cbc  cbz x19,0x00d33d3c
+00d33cc0  adrp x20,0x337f000
+00d33cc4  ldr x20,[x20, #0x418]
+00d33cc8  mov x0,x19
+00d33ccc  mov x1,xzr
+00d33cd0  bl 0x024d81c0
+00d33cd4  ldr x8,[x20]
+00d33cd8  ldr x8,[x8, #0xb8]
+00d33cdc  ldr x0,[x8]
+00d33ce0  cbz x0,0x00d33d3c
+00d33ce4  adrp x19,0x3342000
+00d33ce8  ldr x19,[x19, #0xf0]
+00d33cec  fmov s2,0x3f800000
+00d33cf0  mov v8.16B,v0.16B
+00d33cf4  mov v9.16B,v1.16B
+00d33cf8  bl 0x00d33d40
+00d33cfc  ldr x0,[x19]
+00d33d00  bl 0x00b079a0
+00d33d04  cbz x0,0x00d33d3c
+00d33d08  mov v0.16B,v8.16B
+00d33d0c  mov v1.16B,v9.16B
+00d33d10  mov x19,x0
+00d33d14  bl 0x00d33f70
+00d33d18  mov x0,x19
+00d33d1c  ldp x19,x30,[sp, #0x20]
+00d33d20  ldr x20,[sp, #0x10]
+00d33d24  ldp d9,d8,[sp], #0x30
+00d33d28  b 0x00d34464
+00d33d2c  ldp x19,x30,[sp, #0x20]
+00d33d30  ldr x20,[sp, #0x10]
+00d33d34  ldp d9,d8,[sp], #0x30
+00d33d38  ret
+00d33d3c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d33fd8_ClickManagerExample__HandleActionDataReceived.txt
+================================================================================
+Function: ClickManagerExample$$HandleActionDataReceived @ 00d33fd8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> ISN_Logger$$Log @ 00d198ec
+  -> ByteBuffer$$readInt @ 00d34144
+  -> ByteBuffer$$readFloat @ 00d341b8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> PTPGameController$$createRedSphere @ 00d3422c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d33fd8  str d8,[sp, #-0x30]!
+00d33fdc  stp x21,x20,[sp, #0x10]
+00d33fe0  stp x19,x30,[sp, #0x20]
+00d33fe4  adrp x21,0x3571000
+00d33fe8  adrp x20,0x332f000
+00d33fec  ldrb w8,[x21, #0xd34]
+00d33ff0  ldr x20,[x20, #0xf0]
+00d33ff4  mov x19,x2
+00d33ff8  tbnz w8,#0x0,0x00d34034
+00d33ffc  adrp x0,0x332f000
+00d34000  ldr x0,[x0, #0xf0]
+00d34004  bl 0x00b0789c
+00d34008  adrp x0,0x337f000
+00d3400c  ldr x0,[x0, #0x418]
+00d34010  bl 0x00b0789c
+00d34014  adrp x0,0x336c000
+00d34018  ldr x0,[x0, #0x500]
+00d3401c  bl 0x00b0789c
+00d34020  adrp x0,0x3367000
+00d34024  ldr x0,[x0, #0xe18]
+00d34028  bl 0x00b0789c
+00d3402c  mov w8,#0x1
+00d34030  strb w8,[x21, #0xd34]
+00d34034  ldr x0,[x20]
+00d34038  str wzr,[sp, #0xc]
+00d3403c  bl 0x00b079a0
+00d34040  cbz x0,0x00d34110
+00d34044  mov x1,xzr
+00d34048  mov x20,x0
+00d3404c  bl 0x02194104
+00d34050  mov x0,x20
+00d34054  str x19,[x0, #0x10]!
+00d34058  mov x1,x19
+00d3405c  bl 0x00b07850
+00d34060  mov x0,x20
+00d34064  bl 0x00d34144
+00d34068  cmp w0,#0x1
+00d3406c  str w0,[sp, #0xc]
+00d34070  b.ne 0x00d340cc
+00d34074  adrp x8,0x336c000
+00d34078  ldr x8,[x8, #0x500]
+00d3407c  adrp x19,0x337f000
+00d34080  mov w1,#0x3
+00d34084  mov x2,xzr
+00d34088  ldr x0,[x8]
+00d3408c  ldr x19,[x19, #0x418]
+00d34090  bl 0x00d198ec
+00d34094  mov x0,x20
+00d34098  bl 0x00d341b8
+00d3409c  mov x0,x20
+00d340a0  mov v8.16B,v0.16B
+00d340a4  bl 0x00d341b8
+00d340a8  ldr x8,[x19]
+00d340ac  ldr x8,[x8, #0xb8]
+00d340b0  ldr x0,[x8]
+00d340b4  cbz x0,0x00d34110
+00d340b8  mov v1.16B,v0.16B
+00d340bc  fmov s2,0x3f800000
+00d340c0  mov v0.16B,v8.16B
+00d340c4  bl 0x00d3422c
+00d340c8  b 0x00d34100
+00d340cc  adrp x19,0x3367000
+00d340d0  ldr x19,[x19, #0xe18]
+00d340d4  add x0,sp,#0xc
+00d340d8  mov x1,xzr
+00d340dc  bl 0x0214dc44
+00d340e0  ldr x8,[x19]
+00d340e4  mov x1,x0
+00d340e8  mov x2,xzr
+00d340ec  mov x0,x8
+00d340f0  bl 0x01fd2850
+00d340f4  mov w1,#0x3
+00d340f8  mov x2,xzr
+00d340fc  bl 0x00d198ec
+00d34100  ldp x19,x30,[sp, #0x20]
+00d34104  ldp x21,x20,[sp, #0x10]
+00d34108  ldr d8,[sp], #0x30
+00d3410c  ret
+00d34110  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d3445c_ClickManagerExample__.ctor.txt
+================================================================================
+Function: ClickManagerExample$$.ctor @ 00d3445c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d3445c  mov x1,xzr
+00d34460  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d37394_CloudKitUseExample__OnGUI.txt
+================================================================================
+Function: CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Calls OUT ---
+  -> CK_Database$$add_ActionRecordFetchComplete @ 00d1e6ec
+  -> BaseIOSFeaturePreview$$UpdateToStartPos @ 00d2bb70
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> CK_Record$$SetObject @ 00d1f224
+  -> CK_Database$$FetchRecordWithID @ 00d1ee34
+  -> CK_RecordID$$.ctor @ 00d1f168
+  -> UnityEngine.GUI$$Label @ 02511944
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GUI$$Button @ 025130fc
+  -> CK_Database$$SaveRecrod @ 00d1eb0c
+  -> CK_Database$$add_ActionRecordSaved @ 00d1e58c
+  -> CK_Database$$add_ActionRecordDeleted @ 00d1e84c
+  -> CK_Database$$add_ActionQueryComplete @ 00d1e9ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> CK_Database$$PerformQuery @ 00d1ee54
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CK_Record$$.ctor @ 00d1efe0
+  -> CK_Database$$DeleteRecordWithID @ 00d1ee44
+  -> UnityEngine.Rect$$.ctor @ 024daef0
+  -> UnityEngine.Screen$$get_width @ 024d265c
+  -> CK_Query$$.ctor @ 00d1ef8c
+
+--- Calls IN ---
+
+--- Listing ---
+00d37394  sub sp,sp,#0x90
+00d37398  stp d9,d8,[sp, #0x20]
+00d3739c  stp x28,x27,[sp, #0x30]
+00d373a0  stp x26,x25,[sp, #0x40]
+00d373a4  stp x24,x23,[sp, #0x50]
+00d373a8  stp x22,x21,[sp, #0x60]
+00d373ac  stp x20,x19,[sp, #0x70]
+00d373b0  stp x29,x30,[sp, #0x80]
+00d373b4  adrp x20,0x3571000
+00d373b8  adrp x22,0x3362000
+00d373bc  ldrb w8,[x20, #0xd59]
+00d373c0  ldr x22,[x22, #0xe80]
+00d373c4  mov x19,x0
+00d373c8  tbnz w8,#0x0,0x00d3750c
+00d373cc  adrp x0,0x3366000
+00d373d0  ldr x0,[x0, #0x750]
+00d373d4  bl 0x00b0789c
+00d373d8  adrp x0,0x330b000
+00d373dc  ldr x0,[x0, #0x410]
+00d373e0  bl 0x00b0789c
+00d373e4  adrp x0,0x337d000
+00d373e8  ldr x0,[x0, #0x748]
+00d373ec  bl 0x00b0789c
+00d373f0  adrp x0,0x331d000
+00d373f4  ldr x0,[x0, #0x198]
+00d373f8  bl 0x00b0789c
+00d373fc  adrp x0,0x336a000
+00d37400  ldr x0,[x0, #0xd20]
+00d37404  bl 0x00b0789c
+00d37408  adrp x0,0x3330000
+00d3740c  ldr x0,[x0, #0xf20]
+00d37410  bl 0x00b0789c
+00d37414  adrp x0,0x335c000
+00d37418  ldr x0,[x0, #0x168]
+00d3741c  bl 0x00b0789c
+00d37420  adrp x0,0x3350000
+00d37424  ldr x0,[x0, #0xdd8]
+00d37428  bl 0x00b0789c
+00d3742c  adrp x0,0x334f000
+00d37430  ldr x0,[x0, #0xc40]
+00d37434  bl 0x00b0789c
+00d37438  adrp x0,0x332a000
+00d3743c  ldr x0,[x0, #0x930]
+00d37440  bl 0x00b0789c
+00d37444  adrp x0,0x3329000
+00d37448  ldr x0,[x0, #0xc90]
+00d3744c  bl 0x00b0789c
+00d37450  adrp x0,0x3362000
+00d37454  ldr x0,[x0, #0xe80]
+00d37458  bl 0x00b0789c
+00d3745c  adrp x0,0x3320000
+00d37460  ldr x0,[x0, #0xd20]
+00d37464  bl 0x00b0789c
+00d37468  adrp x0,0x337e000
+00d3746c  ldr x0,[x0, #0x7a0]
+00d37470  bl 0x00b0789c
+00d37474  adrp x0,0x3340000
+00d37478  ldr x0,[x0, #0x10]
+00d3747c  bl 0x00b0789c
+00d37480  adrp x0,0x337f000
+00d37484  ldr x0,[x0, #0xd00]
+00d37488  bl 0x00b0789c
+00d3748c  adrp x0,0x330a000
+00d37490  ldr x0,[x0, #0x7b0]
+00d37494  bl 0x00b0789c
+00d37498  adrp x0,0x335c000
+00d3749c  ldr x0,[x0, #0xc58]
+00d374a0  bl 0x00b0789c
+00d374a4  adrp x0,0x3334000
+00d374a8  ldr x0,[x0]
+00d374ac  bl 0x00b0789c
+00d374b0  adrp x0,0x330c000
+00d374b4  ldr x0,[x0, #0xda0]
+00d374b8  bl 0x00b0789c
+00d374bc  adrp x0,0x330c000
+00d374c0  ldr x0,[x0, #0xb58]
+00d374c4  bl 0x00b0789c
+00d374c8  adrp x0,0x3319000
+00d374cc  ldr x0,[x0, #0x7f0]
+00d374d0  bl 0x00b0789c
+00d374d4  adrp x0,0x3331000
+00d374d8  ldr x0,[x0, #0x3e0]
+00d374dc  bl 0x00b0789c
+00d374e0  adrp x0,0x3383000
+00d374e4  ldr x0,[x0, #0x9c0]
+00d374e8  bl 0x00b0789c
+00d374ec  adrp x0,0x331f000
+00d374f0  ldr x0,[x0, #0x930]
+00d374f4  bl 0x00b0789c
+00d374f8  adrp x0,0x3365000
+00d374fc  ldr x0,[x0, #0x868]
+00d37500  bl 0x00b0789c
+00d37504  mov w8,#0x1
+00d37508  strb w8,[x20, #0xd59]
+00d3750c  adrp x25,0x331f000
+00d37510  adrp x21,0x330c000
+00d37514  ldr x25,[x25, #0x930]
+00d37518  ldr x21,[x21, #0xda0]
+00d3751c  mov x0,x19
+00d37520  mov x1,xzr
+00d37524  bl 0x00d2bb70
+00d37528  ldp s8,s9,[x19, #0x28]
+00d3752c  mov x0,xzr
+00d37530  bl 0x024d265c
+00d37534  mov w8,#0x42200000
+00d37538  scvtf s2,w0
+00d3753c  add x0,sp,#0x10
+00d37540  fmov s3,w8
+00d37544  mov v0.16B,v9.16B
+00d37548  mov v1.16B,v8.16B
+00d3754c  mov x1,xzr
+00d37550  stp xzr,xzr,[sp, #0x10]
+00d37554  bl 0x024daef0
+00d37558  ldr x0,[x22]
+00d3755c  ldr x20,[x19, #0x18]
+00d37560  ldr w8,[x0, #0xe0]
+00d37564  cbnz w8,0x00d3756c
+00d37568  bl 0x00b0798c
+00d3756c  adrp x28,0x3320000
+00d37570  adrp x29,0x3334000
+00d37574  ldr x28,[x28, #0xd20]
+00d37578  ldr x29,[x29]
+00d3757c  ldp s0,s1,[sp, #0x10]
+00d37580  ldp s2,s3,[sp, #0x18]
+00d37584  ldr x0,[x25]
+00d37588  adrp x26,0x336a000
+00d3758c  adrp x24,0x3365000
+00d37590  adrp x27,0x3366000
+00d37594  ldr x26,[x26, #0xd20]
+00d37598  ldr x24,[x24, #0x868]
+00d3759c  ldr x27,[x27, #0x750]
+00d375a0  mov x1,x20
+00d375a4  mov x2,xzr
+00d375a8  bl 0x02511944
+00d375ac  ldr s1,[x19, #0x40]
+00d375b0  ldp s2,s0,[x19, #0x28]
+00d375b4  ldp s3,s4,[x19, #0x20]
+00d375b8  mov x0,sp
+00d375bc  mov x1,xzr
+00d375c0  fadd s1,s2,s1
+00d375c4  scvtf s2,s3
+00d375c8  scvtf s3,s4
+00d375cc  str s1,[x19, #0x28]
+00d375d0  stp xzr,xzr,[sp]
+00d375d4  bl 0x024daef0
+00d375d8  ldp s0,s1,[sp]
+00d375dc  ldp s2,s3,[sp, #0x8]
+00d375e0  ldr x0,[x21]
+00d375e4  mov x1,xzr
+00d375e8  bl 0x025130fc
+00d375ec  tbz w0,#0x0,0x00d37700
+00d375f0  ldr x0,[x26]
+00d375f4  mov x22,x26
+00d375f8  bl 0x00b079a0
+00d375fc  cbz x0,0x00d37a98
+00d37600  ldr x1,[x24]
+00d37604  adrp x20,0x3330000
+00d37608  ldr x20,[x20, #0xf20]
+00d3760c  mov x2,xzr
+00d37610  mov x21,x0
+00d37614  mov x26,x28
+00d37618  bl 0x00d1f168
+00d3761c  ldr x0,[x20]
+00d37620  bl 0x00b079a0
+00d37624  cbz x0,0x00d37a98
+00d37628  adrp x28,0x330a000
+00d3762c  ldr x28,[x28, #0x7b0]
+00d37630  mov x24,x29
+00d37634  ldr x2,[x29]
+00d37638  adrp x29,0x337f000
+00d3763c  adrp x23,0x3319000
+00d37640  adrp x25,0x3340000
+00d37644  ldr x29,[x29, #0xd00]
+00d37648  ldr x23,[x23, #0x7f0]
+00d3764c  ldr x25,[x25, #0x10]
+00d37650  mov x1,x21
+00d37654  mov x3,xzr
+00d37658  mov x20,x0
+00d3765c  bl 0x00d1efe0
+00d37660  ldr x1,[x28]
+00d37664  ldr x2,[x29]
+00d37668  mov x0,x20
+00d3766c  mov x3,xzr
+00d37670  bl 0x00d1f224
+00d37674  ldr x1,[x23]
+00d37678  ldr x2,[x25]
+00d3767c  mov x0,x20
+00d37680  mov x3,xzr
+00d37684  bl 0x00d1f224
+00d37688  ldr x0,[x26]
+00d3768c  mov x28,x26
+00d37690  bl 0x01e09dd4
+00d37694  cbz x0,0x00d37a98
+00d37698  ldr x21,[x0, #0x18]
+00d3769c  cbz x21,0x00d37a98
+00d376a0  mov x0,x21
+00d376a4  mov x1,x20
+00d376a8  mov x2,xzr
+00d376ac  bl 0x00d1eb0c
+00d376b0  ldr x0,[x27]
+00d376b4  bl 0x00b079a0
+00d376b8  cbz x0,0x00d37a98
+00d376bc  adrp x8,0x3329000
+00d376c0  ldr x8,[x8, #0xc90]
+00d376c4  mov x1,x19
+00d376c8  mov x3,xzr
+00d376cc  mov x20,x0
+00d376d0  ldr x2,[x8]
+00d376d4  mov x29,x24
+00d376d8  mov x26,x22
+00d376dc  bl 0x01909b80
+00d376e0  mov x0,x21
+00d376e4  mov x1,x20
+00d376e8  mov x2,xzr
+00d376ec  bl 0x00d1e58c
+00d376f0  adrp x24,0x3365000
+00d376f4  adrp x22,0x3362000
+00d376f8  ldr x24,[x24, #0x868]
+00d376fc  ldr x22,[x22, #0xe80]
+00d37700  ldp s1,s0,[x19, #0x28]
+00d37704  ldr s2,[x19, #0x38]
+00d37708  ldp s3,s4,[x19, #0x20]
+00d3770c  adrp x20,0x337e000
+00d37710  ldr x20,[x20, #0x7a0]
+00d37714  fadd s0,s0,s2
+00d37718  scvtf s2,s3
+00d3771c  scvtf s3,s4
+00d37720  add x0,sp,#0x10
+00d37724  mov x1,xzr
+00d37728  str s0,[x19, #0x2c]
+00d3772c  stp xzr,xzr,[sp, #0x10]
+00d37730  bl 0x024daef0
+00d37734  ldr x0,[x22]
+00d37738  ldr w8,[x0, #0xe0]
+00d3773c  cbnz w8,0x00d37744
+00d37740  bl 0x00b0798c
+00d37744  ldp s0,s1,[sp, #0x10]
+00d37748  ldp s2,s3,[sp, #0x18]
+00d3774c  ldr x0,[x20]
+00d37750  mov x1,xzr
+00d37754  bl 0x025130fc
+00d37758  tbz w0,#0x0,0x00d377dc
+00d3775c  ldr x0,[x26]
+00d37760  bl 0x00b079a0
+00d37764  cbz x0,0x00d37a98
+00d37768  ldr x1,[x24]
+00d3776c  mov x2,xzr
+00d37770  mov x21,x0
+00d37774  bl 0x00d1f168
+00d37778  ldr x0,[x28]
+00d3777c  bl 0x01e09dd4
+00d37780  cbz x0,0x00d37a98
+00d37784  ldr x20,[x0, #0x18]
+00d37788  cbz x20,0x00d37a98
+00d3778c  adrp x23,0x330b000
+00d37790  ldr x23,[x23, #0x410]
+00d37794  mov x0,x20
+00d37798  mov x1,x21
+00d3779c  mov x2,xzr
+00d377a0  bl 0x00d1ee44
+00d377a4  ldr x0,[x23]
+00d377a8  bl 0x00b079a0
+00d377ac  cbz x0,0x00d37a98
+00d377b0  adrp x8,0x3350000
+00d377b4  ldr x8,[x8, #0xdd8]
+00d377b8  mov x1,x19
+00d377bc  mov x3,xzr
+00d377c0  mov x21,x0
+00d377c4  ldr x2,[x8]
+00d377c8  bl 0x01909b80
+00d377cc  mov x0,x20
+00d377d0  mov x1,x21
+00d377d4  mov x2,xzr
+00d377d8  bl 0x00d1e84c
+00d377dc  ldp s1,s0,[x19, #0x28]
+00d377e0  ldr s2,[x19, #0x38]
+00d377e4  ldp s3,s4,[x19, #0x20]
+00d377e8  adrp x20,0x3383000
+00d377ec  ldr x20,[x20, #0x9c0]
+00d377f0  fadd s0,s0,s2
+00d377f4  scvtf s2,s3
+00d377f8  scvtf s3,s4
+00d377fc  add x0,sp,#0x10
+00d37800  mov x1,xzr
+00d37804  str s0,[x19, #0x2c]
+00d37808  stp xzr,xzr,[sp, #0x10]
+00d3780c  bl 0x024daef0
+00d37810  ldr x0,[x22]
+00d37814  ldr w8,[x0, #0xe0]
+00d37818  cbnz w8,0x00d37820
+00d3781c  bl 0x00b0798c
+00d37820  ldp s0,s1,[sp, #0x10]
+00d37824  ldp s2,s3,[sp, #0x18]
+00d37828  ldr x0,[x20]
+00d3782c  mov x1,xzr
+00d37830  bl 0x025130fc
+00d37834  tbz w0,#0x0,0x00d378b0
+00d37838  ldr x0,[x26]
+00d3783c  bl 0x00b079a0
+00d37840  cbz x0,0x00d37a98
+00d37844  ldr x1,[x24]
+00d37848  mov x2,xzr
+00d3784c  mov x21,x0
+00d37850  bl 0x00d1f168
+00d37854  ldr x0,[x28]
+00d37858  bl 0x01e09dd4
+00d3785c  cbz x0,0x00d37a98
+00d37860  ldr x20,[x0, #0x18]
+00d37864  cbz x20,0x00d37a98
+00d37868  mov x0,x20
+00d3786c  mov x1,x21
+00d37870  mov x2,xzr
+00d37874  bl 0x00d1ee34
+00d37878  ldr x0,[x27]
+00d3787c  bl 0x00b079a0
+00d37880  cbz x0,0x00d37a98
+00d37884  adrp x8,0x334f000
+00d37888  ldr x8,[x8, #0xc40]
+00d3788c  mov x1,x19
+00d37890  mov x3,xzr
+00d37894  mov x21,x0
+00d37898  ldr x2,[x8]
+00d3789c  bl 0x01909b80
+00d378a0  mov x0,x20
+00d378a4  mov x1,x21
+00d378a8  mov x2,xzr
+00d378ac  bl 0x00d1e6ec
+00d378b0  ldp s1,s0,[x19, #0x28]
+00d378b4  ldr s2,[x19, #0x38]
+00d378b8  ldp s3,s4,[x19, #0x20]
+00d378bc  adrp x20,0x330c000
+00d378c0  ldr x20,[x20, #0xb58]
+00d378c4  fadd s0,s0,s2
+00d378c8  scvtf s2,s3
+00d378cc  scvtf s3,s4
+00d378d0  add x0,sp,#0x10
+00d378d4  mov x1,xzr
+00d378d8  str s0,[x19, #0x2c]
+00d378dc  stp xzr,xzr,[sp, #0x10]
+00d378e0  bl 0x024daef0
+00d378e4  ldr x0,[x22]
+00d378e8  ldr w8,[x0, #0xe0]
+00d378ec  cbnz w8,0x00d378f4
+00d378f0  bl 0x00b0798c
+00d378f4  ldp s0,s1,[sp, #0x10]
+00d378f8  ldp s2,s3,[sp, #0x18]
+00d378fc  ldr x0,[x20]
+00d37900  mov x1,xzr
+00d37904  bl 0x025130fc
+00d37908  tbz w0,#0x0,0x00d37984
+00d3790c  ldr x0,[x26]
+00d37910  bl 0x00b079a0
+00d37914  cbz x0,0x00d37a98
+00d37918  ldr x1,[x24]
+00d3791c  mov x2,xzr
+00d37920  mov x21,x0
+00d37924  bl 0x00d1f168
+00d37928  ldr x0,[x28]
+00d3792c  bl 0x01e09dd4
+00d37930  cbz x0,0x00d37a98
+00d37934  ldr x20,[x0, #0x18]
+00d37938  cbz x20,0x00d37a98
+00d3793c  mov x0,x20
+00d37940  mov x1,x21
+00d37944  mov x2,xzr
+00d37948  bl 0x00d1ee34
+00d3794c  ldr x0,[x27]
+00d37950  bl 0x00b079a0
+00d37954  cbz x0,0x00d37a98
+00d37958  adrp x8,0x332a000
+00d3795c  ldr x8,[x8, #0x930]
+00d37960  mov x1,x19
+00d37964  mov x3,xzr
+00d37968  mov x21,x0
+00d3796c  ldr x2,[x8]
+00d37970  bl 0x01909b80
+00d37974  mov x0,x20
+00d37978  mov x1,x21
+00d3797c  mov x2,xzr
+00d37980  bl 0x00d1e6ec
+00d37984  ldp s1,s0,[x19, #0x28]
+00d37988  ldr s2,[x19, #0x38]
+00d3798c  ldp s3,s4,[x19, #0x20]
+00d37990  adrp x20,0x335c000
+00d37994  ldr x20,[x20, #0xc58]
+00d37998  fadd s0,s0,s2
+00d3799c  scvtf s2,s3
+00d379a0  scvtf s3,s4
+00d379a4  add x0,sp,#0x10
+00d379a8  mov x1,xzr
+00d379ac  str s0,[x19, #0x2c]
+00d379b0  stp xzr,xzr,[sp, #0x10]
+00d379b4  bl 0x024daef0
+00d379b8  ldr x0,[x22]
+00d379bc  ldr w8,[x0, #0xe0]
+00d379c0  cbnz w8,0x00d379c8
+00d379c4  bl 0x00b0798c
+00d379c8  ldp s0,s1,[sp, #0x10]
+00d379cc  ldp s2,s3,[sp, #0x18]
+00d379d0  ldr x0,[x20]
+00d379d4  mov x1,xzr
+00d379d8  bl 0x025130fc
+00d379dc  tbz w0,#0x0,0x00d37a74
+00d379e0  ldr x0,[x28]
+00d379e4  bl 0x01e09dd4
+00d379e8  cbz x0,0x00d37a98
+00d379ec  adrp x8,0x331d000
+00d379f0  ldr x8,[x8, #0x198]
+00d379f4  ldr x20,[x0, #0x18]
+00d379f8  ldr x0,[x8]
+00d379fc  bl 0x00b079a0
+00d37a00  cbz x0,0x00d37a98
+00d37a04  adrp x8,0x3331000
+00d37a08  ldr x8,[x8, #0x3e0]
+00d37a0c  ldr x2,[x29]
+00d37a10  adrp x22,0x337d000
+00d37a14  mov x3,xzr
+00d37a18  ldr x1,[x8]
+00d37a1c  ldr x22,[x22, #0x748]
+00d37a20  mov x21,x0
+00d37a24  bl 0x00d1ef8c
+00d37a28  ldr x0,[x22]
+00d37a2c  bl 0x00b079a0
+00d37a30  cbz x0,0x00d37a98
+00d37a34  adrp x8,0x335c000
+00d37a38  ldr x8,[x8, #0x168]
+00d37a3c  mov x1,x19
+00d37a40  mov x3,xzr
+00d37a44  mov x22,x0
+00d37a48  ldr x2,[x8]
+00d37a4c  bl 0x01909b80
+00d37a50  cbz x20,0x00d37a98
+00d37a54  mov x0,x20
+00d37a58  mov x1,x22
+00d37a5c  mov x2,xzr
+00d37a60  bl 0x00d1e9ac
+00d37a64  mov x0,x20
+00d37a68  mov x1,x21
+00d37a6c  mov x2,xzr
+00d37a70  bl 0x00d1ee54
+00d37a74  ldp x29,x30,[sp, #0x80]
+00d37a78  ldp x20,x19,[sp, #0x70]
+00d37a7c  ldp x22,x21,[sp, #0x60]
+00d37a80  ldp x24,x23,[sp, #0x50]
+00d37a84  ldp x26,x25,[sp, #0x40]
+00d37a88  ldp x28,x27,[sp, #0x30]
+00d37a8c  ldp d9,d8,[sp, #0x20]
+00d37a90  add sp,sp,#0x90
+00d37a94  ret
+00d37a98  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d37a9c_CloudKitUseExample__Database_ActionQueryComplete.txt
+================================================================================
+Function: CloudKitUseExample$$Database_ActionQueryComplete @ 00d37a9c
+
+--- Calls OUT ---
+  -> System.Collections.Generic.List.Enumerator<object>$$Dispose @ 01a070e8
+  -> CK_Record$$GetObject @ 00d1f2f0
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> ISN_Logger$$Log @ 00d198ec
+  -> System.String$$Concat @ 01fdf3bc
+  -> System.Collections.Generic.List<object>$$GetEnumerator @ 01c01338
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List.Enumerator<object>$$MoveNext @ 01a070ec
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> SA.Common.Models.Result$$get_IsSucceeded @ 00c88a30
+
+--- Calls IN ---
+
+--- Listing ---
+00d37a9c  sub sp,sp,#0x90
+00d37aa0  str x26,[sp, #0x40]
+00d37aa4  stp x25,x24,[sp, #0x50]
+00d37aa8  stp x23,x22,[sp, #0x60]
+00d37aac  stp x21,x20,[sp, #0x70]
+00d37ab0  stp x19,x30,[sp, #0x80]
+00d37ab4  adrp x20,0x3571000
+00d37ab8  ldrb w8,[x20, #0xd5a]
+00d37abc  mov x19,x1
+00d37ac0  tbnz w8,#0x0,0x00d37b50
+00d37ac4  adrp x0,0x336b000
+00d37ac8  ldr x0,[x0, #0x7d0]
+00d37acc  bl 0x00b0789c
+00d37ad0  adrp x0,0x335b000
+00d37ad4  ldr x0,[x0, #0xd90]
+00d37ad8  bl 0x00b0789c
+00d37adc  adrp x0,0x3365000
+00d37ae0  ldr x0,[x0, #0x7b0]
+00d37ae4  bl 0x00b0789c
+00d37ae8  adrp x0,0x334b000
+00d37aec  ldr x0,[x0, #0xbf8]
+00d37af0  bl 0x00b0789c
+00d37af4  adrp x0,0x333b000
+00d37af8  ldr x0,[x0, #0xff0]
+00d37afc  bl 0x00b0789c
+00d37b00  adrp x0,0x337d000
+00d37b04  ldr x0,[x0, #0xb90]
+00d37b08  bl 0x00b0789c
+00d37b0c  adrp x0,0x3354000
+00d37b10  ldr x0,[x0, #0xb58]
+00d37b14  bl 0x00b0789c
+00d37b18  adrp x0,0x3319000
+00d37b1c  ldr x0,[x0, #0x7f0]
+00d37b20  bl 0x00b0789c
+00d37b24  adrp x0,0x3331000
+00d37b28  ldr x0,[x0, #0x7b8]
+00d37b2c  bl 0x00b0789c
+00d37b30  adrp x0,0x3374000
+00d37b34  ldr x0,[x0, #0x180]
+00d37b38  bl 0x00b0789c
+00d37b3c  adrp x0,0x3335000
+00d37b40  ldr x0,[x0, #0x5a8]
+00d37b44  bl 0x00b0789c
+00d37b48  mov w8,#0x1
+00d37b4c  strb w8,[x20, #0xd5a]
+00d37b50  str wzr,[sp, #0x4c]
+00d37b54  stp xzr,xzr,[sp, #0x28]
+00d37b58  str xzr,[sp, #0x20]
+00d37b5c  cbz x19,0x00d37d44
+00d37b60  mov x0,x19
+00d37b64  mov x1,xzr
+00d37b68  bl 0x00c88a30
+00d37b6c  tbz w0,#0x0,0x00d37cd0
+00d37b70  ldr x8,[x19, #0x20]
+00d37b74  cbz x8,0x00d37d44
+00d37b78  ldr w8,[x8, #0x18]
+00d37b7c  adrp x20,0x3335000
+00d37b80  ldr x20,[x20, #0x5a8]
+00d37b84  add x0,sp,#0x4c
+00d37b88  mov x1,xzr
+00d37b8c  str w8,[sp, #0x4c]
+00d37b90  bl 0x0214dc44
+00d37b94  ldr x8,[x20]
+00d37b98  mov x1,x0
+00d37b9c  mov x2,xzr
+00d37ba0  mov x0,x8
+00d37ba4  bl 0x01fd2850
+00d37ba8  mov w1,#0x3
+00d37bac  mov x2,xzr
+00d37bb0  bl 0x00d198ec
+00d37bb4  ldr x0,[x19, #0x20]
+00d37bb8  cbz x0,0x00d37d44
+00d37bbc  adrp x8,0x333b000
+00d37bc0  ldr x8,[x8, #0xff0]
+00d37bc4  adrp x23,0x3365000
+00d37bc8  adrp x24,0x336b000
+00d37bcc  ldr x23,[x23, #0x7b0]
+00d37bd0  ldr x24,[x24, #0x7d0]
+00d37bd4  ldr x1,[x8]
+00d37bd8  adrp x25,0x3319000
+00d37bdc  adrp x26,0x3331000
+00d37be0  adrp x22,0x335b000
+00d37be4  ldr x25,[x25, #0x7f0]
+00d37be8  ldr x26,[x26, #0x7b8]
+00d37bec  ldr x22,[x22, #0xd90]
+00d37bf0  add x8,sp,#0x8
+00d37bf4  bl 0x01c01338
+00d37bf8  ldur q0,[sp, #0x8]
+00d37bfc  ldr x8,[sp, #0x18]
+00d37c00  str q0,[sp, #0x20]
+00d37c04  str x8,[sp, #0x30]
+00d37c08  ldr x1,[x23]
+00d37c0c  add x0,sp,#0x20
+    ; [PRE] try { // try from 00d37c0c to 00d37c13 has its CatchHandler @ 00d37c9c
+00d37c10  bl 0x01a070ec
+    ; [POST] } // end try from 00d37c0c to 00d37c13
+00d37c14  tbz w0,#0x0,0x00d37c78
+00d37c18  ldr x20,[sp, #0x30]
+00d37c1c  cbz x20,0x00d37c88
+00d37c20  ldr x8,[x20, #0x10]
+00d37c24  cbz x8,0x00d37c8c
+00d37c28  ldr x0,[x24]
+00d37c2c  ldr x21,[x8, #0x18]
+00d37c30  ldr w9,[x0, #0xe0]
+00d37c34  cbnz w9,0x00d37c3c
+00d37c38  bl 0x00b0798c
+    ; [PRE] try { // try from 00d37c38 to 00d37c47 has its CatchHandler @ 00d37ca0
+00d37c3c  mov x0,x21
+00d37c40  mov x1,xzr
+00d37c44  bl 0x024c0104
+    ; [POST] } // end try from 00d37c38 to 00d37c47
+00d37c48  ldr x1,[x25]
+00d37c4c  mov x0,x20
+    ; [PRE] try { // try from 00d37c4c to 00d37c5b has its CatchHandler @ 00d37c98
+00d37c50  mov x2,xzr
+00d37c54  bl 0x00d1f2f0
+00d37c58  mov x1,x0
+    ; [POST] } // end try from 00d37c4c to 00d37c5b
+00d37c5c  ldr x0,[x26]
+00d37c60  mov x2,xzr
+    ; [PRE] try { // try from 00d37c60 to 00d37c73 has its CatchHandler @ 00d37ca4
+00d37c64  bl 0x01fd2850
+00d37c68  mov w1,#0x3
+00d37c6c  mov x2,xzr
+00d37c70  bl 0x00d198ec
+    ; [POST] } // end try from 00d37c60 to 00d37c73
+00d37c74  b 0x00d37c08
+00d37c78  ldr x1,[x22]
+00d37c7c  add x0,sp,#0x20
+00d37c80  bl 0x01a070e8
+00d37c84  b 0x00d37d28
+00d37c88  bl 0x00b079b0
+    ; [PRE] try { // try from 00d37c88 to 00d37c8b has its CatchHandler @ 00d37c94
+    ; [POST] } // end try from 00d37c88 to 00d37c8b
+00d37c8c  bl 0x00b079b0
+    ; [PRE] try { // try from 00d37c8c to 00d37c8f has its CatchHandler @ 00d37c90
+    ; [POST] } // end try from 00d37c8c to 00d37c8f
+00d37cd0  ldr x8,[x19, #0x10]
+00d37cd4  cbz x8,0x00d37d44
+00d37cd8  ldr w8,[x8, #0x10]
+00d37cdc  add x0,sp,#0x4c
+00d37ce0  mov x1,xzr
+00d37ce4  str w8,[sp, #0x4c]
+00d37ce8  bl 0x0214dc44
+00d37cec  ldr x8,[x19, #0x10]
+00d37cf0  cbz x8,0x00d37d44
+00d37cf4  adrp x9,0x3374000
+00d37cf8  adrp x10,0x3354000
+00d37cfc  ldr x9,[x9, #0x180]
+00d37d00  ldr x10,[x10, #0xb58]
+00d37d04  mov x1,x0
+00d37d08  ldr x3,[x8, #0x18]
+00d37d0c  ldr x0,[x9]
+00d37d10  ldr x2,[x10]
+00d37d14  mov x4,xzr
+00d37d18  bl 0x01fdf3bc
+00d37d1c  mov w1,#0x3
+00d37d20  mov x2,xzr
+00d37d24  bl 0x00d198ec
+00d37d28  ldp x19,x30,[sp, #0x80]
+00d37d2c  ldp x21,x20,[sp, #0x70]
+00d37d30  ldp x23,x22,[sp, #0x60]
+00d37d34  ldp x25,x24,[sp, #0x50]
+00d37d38  ldr x26,[sp, #0x40]
+00d37d3c  add sp,sp,#0x90
+00d37d40  ret
+00d37d44  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d37d80_CloudKitUseExample__Database_ActionRecordFetchComplete.txt
+================================================================================
+Function: CloudKitUseExample$$Database_ActionRecordFetchComplete @ 00d37d80
+
+--- Calls OUT ---
+  -> ISN_Logger$$Log @ 00d198ec
+  -> System.String$$Concat @ 01fdf3bc
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> CK_Record$$GetObject @ 00d1f2f0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Result$$get_IsSucceeded @ 00c88a30
+  -> CK_Database$$remove_ActionRecordFetchComplete @ 00d1e79c
+
+--- Calls IN ---
+
+--- Listing ---
+00d37d80  str x22,[sp, #-0x30]!
+00d37d84  stp x21,x20,[sp, #0x10]
+00d37d88  stp x19,x30,[sp, #0x20]
+00d37d8c  adrp x21,0x3571000
+00d37d90  ldrb w8,[x21, #0xd5b]
+00d37d94  mov x19,x1
+00d37d98  mov x20,x0
+00d37d9c  tbnz w8,#0x0,0x00d37dfc
+00d37da0  adrp x0,0x3366000
+00d37da4  ldr x0,[x0, #0x750]
+00d37da8  bl 0x00b0789c
+00d37dac  adrp x0,0x334f000
+00d37db0  ldr x0,[x0, #0xc40]
+00d37db4  bl 0x00b0789c
+00d37db8  adrp x0,0x3354000
+00d37dbc  ldr x0,[x0, #0xb58]
+00d37dc0  bl 0x00b0789c
+00d37dc4  adrp x0,0x3319000
+00d37dc8  ldr x0,[x0, #0x7f0]
+00d37dcc  bl 0x00b0789c
+00d37dd0  adrp x0,0x3331000
+00d37dd4  ldr x0,[x0, #0x7b8]
+00d37dd8  bl 0x00b0789c
+00d37ddc  adrp x0,0x3374000
+00d37de0  ldr x0,[x0, #0x180]
+00d37de4  bl 0x00b0789c
+00d37de8  adrp x0,0x3324000
+00d37dec  ldr x0,[x0, #0x548]
+00d37df0  bl 0x00b0789c
+00d37df4  mov w8,#0x1
+00d37df8  strb w8,[x21, #0xd5b]
+00d37dfc  str wzr,[sp, #0xc]
+00d37e00  cbz x19,0x00d37f18
+00d37e04  adrp x8,0x3366000
+00d37e08  ldr x8,[x8, #0x750]
+00d37e0c  ldr x21,[x19, #0x20]
+00d37e10  ldr x0,[x8]
+00d37e14  bl 0x00b079a0
+00d37e18  cbz x0,0x00d37f18
+00d37e1c  adrp x8,0x334f000
+00d37e20  ldr x8,[x8, #0xc40]
+00d37e24  mov x1,x20
+00d37e28  mov x3,xzr
+00d37e2c  mov x22,x0
+00d37e30  ldr x2,[x8]
+00d37e34  bl 0x01909b80
+00d37e38  cbz x21,0x00d37f18
+00d37e3c  mov x0,x21
+00d37e40  mov x1,x22
+00d37e44  mov x2,xzr
+00d37e48  bl 0x00d1e79c
+00d37e4c  mov x0,x19
+00d37e50  mov x1,xzr
+00d37e54  bl 0x00c88a30
+00d37e58  tbz w0,#0x0,0x00d37eb0
+00d37e5c  adrp x8,0x3324000
+00d37e60  ldr x8,[x8, #0x548]
+00d37e64  mov w1,#0x3
+00d37e68  mov x2,xzr
+00d37e6c  ldr x0,[x8]
+00d37e70  bl 0x00d198ec
+00d37e74  ldr x0,[x19, #0x18]
+00d37e78  cbz x0,0x00d37f18
+00d37e7c  adrp x8,0x3319000
+00d37e80  ldr x8,[x8, #0x7f0]
+00d37e84  adrp x19,0x3331000
+00d37e88  mov x2,xzr
+00d37e8c  ldr x1,[x8]
+00d37e90  ldr x19,[x19, #0x7b8]
+00d37e94  bl 0x00d1f2f0
+00d37e98  ldr x8,[x19]
+00d37e9c  mov x1,x0
+00d37ea0  mov x2,xzr
+00d37ea4  mov x0,x8
+00d37ea8  bl 0x01fd2850
+00d37eac  b 0x00d37efc
+00d37eb0  ldr x8,[x19, #0x10]
+00d37eb4  cbz x8,0x00d37f18
+00d37eb8  ldr w8,[x8, #0x10]
+00d37ebc  add x0,sp,#0xc
+00d37ec0  mov x1,xzr
+00d37ec4  str w8,[sp, #0xc]
+00d37ec8  bl 0x0214dc44
+00d37ecc  ldr x8,[x19, #0x10]
+00d37ed0  cbz x8,0x00d37f18
+00d37ed4  adrp x9,0x3374000
+00d37ed8  adrp x10,0x3354000
+00d37edc  ldr x9,[x9, #0x180]
+00d37ee0  ldr x10,[x10, #0xb58]
+00d37ee4  mov x1,x0
+00d37ee8  ldr x3,[x8, #0x18]
+00d37eec  ldr x0,[x9]
+00d37ef0  ldr x2,[x10]
+00d37ef4  mov x4,xzr
+00d37ef8  bl 0x01fdf3bc
+00d37efc  mov w1,#0x3
+00d37f00  mov x2,xzr
+00d37f04  bl 0x00d198ec
+00d37f08  ldp x19,x30,[sp, #0x20]
+00d37f0c  ldp x21,x20,[sp, #0x10]
+00d37f10  ldr x22,[sp], #0x30
+00d37f14  ret
+00d37f18  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d37f1c_CloudKitUseExample__Database_ActionRecordFetchForUpdateComplete.txt
+================================================================================
+Function: CloudKitUseExample$$Database_ActionRecordFetchForUpdateComplete @ 00d37f1c
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> CK_Record$$SetObject @ 00d1f224
+  -> CK_Record$$GetObject @ 00d1f2f0
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> CK_Database$$SaveRecrod @ 00d1eb0c
+  -> CK_Database$$remove_ActionRecordFetchComplete @ 00d1e79c
+  -> CK_Database$$add_ActionRecordSaved @ 00d1e58c
+  -> ISN_Logger$$Log @ 00d198ec
+  -> System.String$$Concat @ 01fdf3bc
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA.Common.Models.Result$$get_IsSucceeded @ 00c88a30
+
+--- Calls IN ---
+
+--- Listing ---
+00d37f1c  str x24,[sp, #-0x40]!
+00d37f20  stp x23,x22,[sp, #0x10]
+00d37f24  stp x21,x20,[sp, #0x20]
+00d37f28  stp x19,x30,[sp, #0x30]
+00d37f2c  adrp x21,0x3571000
+00d37f30  ldrb w8,[x21, #0xd5c]
+00d37f34  mov x20,x1
+00d37f38  mov x19,x0
+00d37f3c  tbnz w8,#0x0,0x00d37fcc
+00d37f40  adrp x0,0x3366000
+00d37f44  ldr x0,[x0, #0x750]
+00d37f48  bl 0x00b0789c
+00d37f4c  adrp x0,0x332a000
+00d37f50  ldr x0,[x0, #0x930]
+00d37f54  bl 0x00b0789c
+00d37f58  adrp x0,0x3329000
+00d37f5c  ldr x0,[x0, #0xc90]
+00d37f60  bl 0x00b0789c
+00d37f64  adrp x0,0x3320000
+00d37f68  ldr x0,[x0, #0xd20]
+00d37f6c  bl 0x00b0789c
+00d37f70  adrp x0,0x333e000
+00d37f74  ldr x0,[x0, #0x368]
+00d37f78  bl 0x00b0789c
+00d37f7c  adrp x0,0x3354000
+00d37f80  ldr x0,[x0, #0xb58]
+00d37f84  bl 0x00b0789c
+00d37f88  adrp x0,0x3319000
+00d37f8c  ldr x0,[x0, #0x7f0]
+00d37f90  bl 0x00b0789c
+00d37f94  adrp x0,0x3358000
+00d37f98  ldr x0,[x0, #0x8]
+00d37f9c  bl 0x00b0789c
+00d37fa0  adrp x0,0x3331000
+00d37fa4  ldr x0,[x0, #0x7b8]
+00d37fa8  bl 0x00b0789c
+00d37fac  adrp x0,0x3374000
+00d37fb0  ldr x0,[x0, #0x180]
+00d37fb4  bl 0x00b0789c
+00d37fb8  adrp x0,0x3324000
+00d37fbc  ldr x0,[x0, #0x548]
+00d37fc0  bl 0x00b0789c
+00d37fc4  mov w8,#0x1
+00d37fc8  strb w8,[x21, #0xd5c]
+00d37fcc  str wzr,[sp, #0xc]
+00d37fd0  cbz x20,0x00d381a8
+00d37fd4  adrp x23,0x3366000
+00d37fd8  ldr x23,[x23, #0x750]
+00d37fdc  ldr x21,[x20, #0x20]
+00d37fe0  ldr x0,[x23]
+00d37fe4  bl 0x00b079a0
+00d37fe8  cbz x0,0x00d381a8
+00d37fec  adrp x8,0x332a000
+00d37ff0  ldr x8,[x8, #0x930]
+00d37ff4  mov x1,x19
+00d37ff8  mov x3,xzr
+00d37ffc  mov x22,x0
+00d38000  ldr x2,[x8]
+00d38004  bl 0x01909b80
+00d38008  cbz x21,0x00d381a8
+00d3800c  mov x0,x21
+00d38010  mov x1,x22
+00d38014  mov x2,xzr
+00d38018  bl 0x00d1e79c
+00d3801c  mov x0,x20
+00d38020  mov x1,xzr
+00d38024  bl 0x00c88a30
+00d38028  tbz w0,#0x0,0x00d3813c
+00d3802c  adrp x8,0x3324000
+00d38030  ldr x8,[x8, #0x548]
+00d38034  mov w1,#0x3
+00d38038  mov x2,xzr
+00d3803c  ldr x0,[x8]
+00d38040  bl 0x00d198ec
+00d38044  ldr x0,[x20, #0x18]
+00d38048  cbz x0,0x00d381a8
+00d3804c  adrp x21,0x3319000
+00d38050  ldr x21,[x21, #0x7f0]
+00d38054  adrp x22,0x3331000
+00d38058  adrp x24,0x333e000
+00d3805c  mov x2,xzr
+00d38060  ldr x1,[x21]
+00d38064  ldr x22,[x22, #0x7b8]
+00d38068  ldr x24,[x24, #0x368]
+00d3806c  bl 0x00d1f2f0
+00d38070  ldr x8,[x22]
+00d38074  mov x1,x0
+00d38078  mov x2,xzr
+00d3807c  mov x0,x8
+00d38080  bl 0x01fd2850
+00d38084  mov w1,#0x3
+00d38088  mov x2,xzr
+00d3808c  bl 0x00d198ec
+00d38090  ldr x0,[x24]
+00d38094  mov w1,#0x3
+00d38098  mov x2,xzr
+00d3809c  bl 0x00d198ec
+00d380a0  ldr x20,[x20, #0x18]
+00d380a4  cbz x20,0x00d381a8
+00d380a8  adrp x8,0x3358000
+00d380ac  ldr x8,[x8, #0x8]
+00d380b0  ldr x1,[x21]
+00d380b4  adrp x21,0x3320000
+00d380b8  mov x0,x20
+00d380bc  ldr x2,[x8]
+00d380c0  ldr x21,[x21, #0xd20]
+00d380c4  mov x3,xzr
+00d380c8  bl 0x00d1f224
+00d380cc  ldr x0,[x21]
+00d380d0  bl 0x01e09dd4
+00d380d4  cbz x0,0x00d381a8
+00d380d8  ldr x0,[x0, #0x18]
+00d380dc  cbz x0,0x00d381a8
+00d380e0  mov x1,x20
+00d380e4  mov x2,xzr
+00d380e8  bl 0x00d1eb0c
+00d380ec  ldr x0,[x21]
+00d380f0  bl 0x01e09dd4
+00d380f4  cbz x0,0x00d381a8
+00d380f8  ldr x20,[x0, #0x18]
+00d380fc  ldr x0,[x23]
+00d38100  bl 0x00b079a0
+00d38104  cbz x0,0x00d381a8
+00d38108  adrp x8,0x3329000
+00d3810c  ldr x8,[x8, #0xc90]
+00d38110  mov x1,x19
+00d38114  mov x3,xzr
+00d38118  mov x21,x0
+00d3811c  ldr x2,[x8]
+00d38120  bl 0x01909b80
+00d38124  cbz x20,0x00d381a8
+00d38128  mov x0,x20
+00d3812c  mov x1,x21
+00d38130  mov x2,xzr
+00d38134  bl 0x00d1e58c
+00d38138  b 0x00d38194
+00d3813c  ldr x8,[x20, #0x10]
+00d38140  cbz x8,0x00d381a8
+00d38144  ldr w8,[x8, #0x10]
+00d38148  add x0,sp,#0xc
+00d3814c  mov x1,xzr
+00d38150  str w8,[sp, #0xc]
+00d38154  bl 0x0214dc44
+00d38158  ldr x8,[x20, #0x10]
+00d3815c  cbz x8,0x00d381a8
+00d38160  adrp x9,0x3374000
+00d38164  adrp x10,0x3354000
+00d38168  ldr x9,[x9, #0x180]
+00d3816c  ldr x10,[x10, #0xb58]
+00d38170  mov x1,x0
+00d38174  ldr x3,[x8, #0x18]
+00d38178  ldr x0,[x9]
+00d3817c  ldr x2,[x10]
+00d38180  mov x4,xzr
+00d38184  bl 0x01fdf3bc
+00d38188  mov w1,#0x3
+00d3818c  mov x2,xzr
+00d38190  bl 0x00d198ec
+00d38194  ldp x19,x30,[sp, #0x30]
+00d38198  ldp x21,x20,[sp, #0x20]
+00d3819c  ldp x23,x22,[sp, #0x10]
+00d381a0  ldr x24,[sp], #0x40
+00d381a4  ret
+00d381a8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d381ac_CloudKitUseExample__Database_ActionRecordDeleted.txt
+================================================================================
+Function: CloudKitUseExample$$Database_ActionRecordDeleted @ 00d381ac
+
+--- Calls OUT ---
+  -> ISN_Logger$$Log @ 00d198ec
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> System.String$$Concat @ 01fdf3bc
+  -> CK_Database$$remove_ActionRecordDeleted @ 00d1e8fc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Result$$get_IsSucceeded @ 00c88a30
+
+--- Calls IN ---
+
+--- Listing ---
+00d381ac  str x22,[sp, #-0x30]!
+00d381b0  stp x21,x20,[sp, #0x10]
+00d381b4  stp x19,x30,[sp, #0x20]
+00d381b8  adrp x21,0x3571000
+00d381bc  ldrb w8,[x21, #0xd5d]
+00d381c0  mov x19,x1
+00d381c4  mov x20,x0
+00d381c8  tbnz w8,#0x0,0x00d38210
+00d381cc  adrp x0,0x330b000
+00d381d0  ldr x0,[x0, #0x410]
+00d381d4  bl 0x00b0789c
+00d381d8  adrp x0,0x3350000
+00d381dc  ldr x0,[x0, #0xdd8]
+00d381e0  bl 0x00b0789c
+00d381e4  adrp x0,0x334d000
+00d381e8  ldr x0,[x0, #0xd80]
+00d381ec  bl 0x00b0789c
+00d381f0  adrp x0,0x3354000
+00d381f4  ldr x0,[x0, #0xb58]
+00d381f8  bl 0x00b0789c
+00d381fc  adrp x0,0x330f000
+00d38200  ldr x0,[x0, #0x300]
+00d38204  bl 0x00b0789c
+00d38208  mov w8,#0x1
+00d3820c  strb w8,[x21, #0xd5d]
+00d38210  str wzr,[sp, #0xc]
+00d38214  cbz x19,0x00d382e8
+00d38218  adrp x8,0x330b000
+00d3821c  ldr x8,[x8, #0x410]
+00d38220  ldr x21,[x19, #0x20]
+00d38224  ldr x0,[x8]
+00d38228  bl 0x00b079a0
+00d3822c  cbz x0,0x00d382e8
+00d38230  adrp x8,0x3350000
+00d38234  ldr x8,[x8, #0xdd8]
+00d38238  mov x1,x20
+00d3823c  mov x3,xzr
+00d38240  mov x22,x0
+00d38244  ldr x2,[x8]
+00d38248  bl 0x01909b80
+00d3824c  cbz x21,0x00d382e8
+00d38250  mov x0,x21
+00d38254  mov x1,x22
+00d38258  mov x2,xzr
+00d3825c  bl 0x00d1e8fc
+00d38260  mov x0,x19
+00d38264  mov x1,xzr
+00d38268  bl 0x00c88a30
+00d3826c  tbz w0,#0x0,0x00d38280
+00d38270  adrp x8,0x334d000
+00d38274  ldr x8,[x8, #0xd80]
+00d38278  ldr x0,[x8]
+00d3827c  b 0x00d382cc
+00d38280  ldr x8,[x19, #0x10]
+00d38284  cbz x8,0x00d382e8
+00d38288  ldr w8,[x8, #0x10]
+00d3828c  add x0,sp,#0xc
+00d38290  mov x1,xzr
+00d38294  str w8,[sp, #0xc]
+00d38298  bl 0x0214dc44
+00d3829c  ldr x8,[x19, #0x10]
+00d382a0  cbz x8,0x00d382e8
+00d382a4  adrp x9,0x330f000
+00d382a8  adrp x10,0x3354000
+00d382ac  ldr x9,[x9, #0x300]
+00d382b0  ldr x10,[x10, #0xb58]
+00d382b4  mov x1,x0
+00d382b8  ldr x3,[x8, #0x18]
+00d382bc  ldr x0,[x9]
+00d382c0  ldr x2,[x10]
+00d382c4  mov x4,xzr
+00d382c8  bl 0x01fdf3bc
+00d382cc  mov w1,#0x3
+00d382d0  mov x2,xzr
+00d382d4  bl 0x00d198ec
+00d382d8  ldp x19,x30,[sp, #0x20]
+00d382dc  ldp x21,x20,[sp, #0x10]
+00d382e0  ldr x22,[sp], #0x30
+00d382e4  ret
+00d382e8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d382ec_CloudKitUseExample__Database_ActionRecordSaved.txt
+================================================================================
+Function: CloudKitUseExample$$Database_ActionRecordSaved @ 00d382ec
+
+--- Calls OUT ---
+  -> ISN_Logger$$Log @ 00d198ec
+  -> System.String$$Concat @ 01fdf3bc
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> CK_Database$$remove_ActionRecordSaved @ 00d1e63c
+  -> CK_Record$$GetObject @ 00d1f2f0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Result$$get_IsSucceeded @ 00c88a30
+
+--- Calls IN ---
+
+--- Listing ---
+00d382ec  str x22,[sp, #-0x30]!
+00d382f0  stp x21,x20,[sp, #0x10]
+00d382f4  stp x19,x30,[sp, #0x20]
+00d382f8  adrp x21,0x3571000
+00d382fc  ldrb w8,[x21, #0xd5e]
+00d38300  mov x19,x1
+00d38304  mov x20,x0
+00d38308  tbnz w8,#0x0,0x00d38368
+00d3830c  adrp x0,0x3366000
+00d38310  ldr x0,[x0, #0x750]
+00d38314  bl 0x00b0789c
+00d38318  adrp x0,0x3329000
+00d3831c  ldr x0,[x0, #0xc90]
+00d38320  bl 0x00b0789c
+00d38324  adrp x0,0x3328000
+00d38328  ldr x0,[x0, #0x988]
+00d3832c  bl 0x00b0789c
+00d38330  adrp x0,0x3354000
+00d38334  ldr x0,[x0, #0xb58]
+00d38338  bl 0x00b0789c
+00d3833c  adrp x0,0x3319000
+00d38340  ldr x0,[x0, #0x7f0]
+00d38344  bl 0x00b0789c
+00d38348  adrp x0,0x332b000
+00d3834c  ldr x0,[x0, #0x4d0]
+00d38350  bl 0x00b0789c
+00d38354  adrp x0,0x3331000
+00d38358  ldr x0,[x0, #0x7b8]
+00d3835c  bl 0x00b0789c
+00d38360  mov w8,#0x1
+00d38364  strb w8,[x21, #0xd5e]
+00d38368  str wzr,[sp, #0xc]
+00d3836c  cbz x19,0x00d38484
+00d38370  adrp x8,0x3366000
+00d38374  ldr x8,[x8, #0x750]
+00d38378  ldr x21,[x19, #0x20]
+00d3837c  ldr x0,[x8]
+00d38380  bl 0x00b079a0
+00d38384  cbz x0,0x00d38484
+00d38388  adrp x8,0x3329000
+00d3838c  ldr x8,[x8, #0xc90]
+00d38390  mov x1,x20
+00d38394  mov x3,xzr
+00d38398  mov x22,x0
+00d3839c  ldr x2,[x8]
+00d383a0  bl 0x01909b80
+00d383a4  cbz x21,0x00d38484
+00d383a8  mov x0,x21
+00d383ac  mov x1,x22
+00d383b0  mov x2,xzr
+00d383b4  bl 0x00d1e63c
+00d383b8  mov x0,x19
+00d383bc  mov x1,xzr
+00d383c0  bl 0x00c88a30
+00d383c4  tbz w0,#0x0,0x00d3841c
+00d383c8  adrp x8,0x332b000
+00d383cc  ldr x8,[x8, #0x4d0]
+00d383d0  mov w1,#0x3
+00d383d4  mov x2,xzr
+00d383d8  ldr x0,[x8]
+00d383dc  bl 0x00d198ec
+00d383e0  ldr x0,[x19, #0x18]
+00d383e4  cbz x0,0x00d38484
+00d383e8  adrp x8,0x3319000
+00d383ec  ldr x8,[x8, #0x7f0]
+00d383f0  adrp x19,0x3331000
+00d383f4  mov x2,xzr
+00d383f8  ldr x1,[x8]
+00d383fc  ldr x19,[x19, #0x7b8]
+00d38400  bl 0x00d1f2f0
+00d38404  ldr x8,[x19]
+00d38408  mov x1,x0
+00d3840c  mov x2,xzr
+00d38410  mov x0,x8
+00d38414  bl 0x01fd2850
+00d38418  b 0x00d38468
+00d3841c  ldr x8,[x19, #0x10]
+00d38420  cbz x8,0x00d38484
+00d38424  ldr w8,[x8, #0x10]
+00d38428  add x0,sp,#0xc
+00d3842c  mov x1,xzr
+00d38430  str w8,[sp, #0xc]
+00d38434  bl 0x0214dc44
+00d38438  ldr x8,[x19, #0x10]
+00d3843c  cbz x8,0x00d38484
+00d38440  adrp x9,0x3328000
+00d38444  adrp x10,0x3354000
+00d38448  ldr x9,[x9, #0x988]
+00d3844c  ldr x10,[x10, #0xb58]
+00d38450  mov x1,x0
+00d38454  ldr x3,[x8, #0x18]
+00d38458  ldr x0,[x9]
+00d3845c  ldr x2,[x10]
+00d38460  mov x4,xzr
+00d38464  bl 0x01fdf3bc
+00d38468  mov w1,#0x3
+00d3846c  mov x2,xzr
+00d38470  bl 0x00d198ec
+00d38474  ldp x19,x30,[sp, #0x20]
+00d38478  ldp x21,x20,[sp, #0x10]
+00d3847c  ldr x22,[sp], #0x30
+00d38480  ret
+00d38484  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d38488_CloudKitUseExample__.ctor.txt
+================================================================================
+Function: CloudKitUseExample$$.ctor @ 00d38488
+
+--- Calls OUT ---
+  -> BaseIOSFeaturePreview$$.ctor @ 00d2bbd8
+
+--- Calls IN ---
+
+--- Listing ---
+00d38488  mov x1,xzr
+00d3848c  b 0x00d2bbd8
+
+
+================================================================================
+### FILE: 03799038_clock_gettime.txt
+================================================================================
+Function: clock_gettime @ 03799038
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- clock_gettime @ 008d3a50
+
+--- Listing ---
+03799038  ?? ??
+
+
+================================================================================
+### FILE: 03799520_clock.txt
+================================================================================
+Function: clock @ 03799520
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- clock @ 008d4df0
+
+--- Listing ---
+03799520  ?? ??
+
+
+================================================================================
+### FILE: 03799580_clock_getres.txt
+================================================================================
+Function: clock_getres @ 03799580
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- clock_getres @ 008d4f50
+
+--- Listing ---
+03799580  ?? ??
+
+
+================================================================================
+### FILE: 03799610_close.txt
+================================================================================
+Function: close @ 03799610
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- close @ 008d51f0
+
+--- Listing ---
+03799610  ?? ??
+
+
+================================================================================
+### FILE: 03799660_closelog.txt
+================================================================================
+Function: closelog @ 03799660
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- closelog @ 008d53b0
+
+--- Listing ---
+03799660  ?? ??
+
+
+================================================================================
+### FILE: 03799918_closedir.txt
+================================================================================
+Function: closedir @ 03799918
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- closedir @ 008d5cb0
+
+--- Listing ---
+03799918  ?? ??
+
+

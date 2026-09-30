@@ -1,0 +1,743 @@
+================================================================================
+### FILE: 010095f8_UpdateClickPostion__SetFollower.txt
+================================================================================
+Function: UpdateClickPostion$$SetFollower @ 010095f8
+
+--- Calls OUT ---
+  -> UpdateClickPostion$$set_m_tf @ 01009fec
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UpdateClickPostion$$Update @ 0100a324
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.UpdateClickPostionWrap$$_m_SetFollower @ 014fc204
+  <- NoviceGuidePanelMono.<HighLightShow>d__39$$MoveNext @ 01007f98
+
+--- Listing ---
+010095f8  str x22,[sp, #-0x30]!
+010095fc  stp x21,x20,[sp, #0x10]
+01009600  stp x19,x30,[sp, #0x20]
+01009604  adrp x21,0x3574000
+01009608  adrp x22,0x332a000
+0100960c  ldrb w8,[x21, #0x42a]
+01009610  ldr x22,[x22, #0x140]
+01009614  mov x20,x1
+01009618  mov x19,x0
+0100961c  tbnz w8,#0x0,0x01009640
+01009620  adrp x0,0x334e000
+01009624  ldr x0,[x0, #0x120]
+01009628  bl 0x00b0789c
+0100962c  adrp x0,0x332a000
+01009630  ldr x0,[x0, #0x140]
+01009634  bl 0x00b0789c
+01009638  mov w8,#0x1
+0100963c  strb w8,[x21, #0x42a]
+01009640  ldr x8,[x22]
+01009644  ldr x8,[x8, #0xb8]
+01009648  ldr x0,[x8, #0x48]
+0100964c  cbz x0,0x0100966c
+01009650  mov x1,x19
+01009654  mov x2,x20
+01009658  ldp x19,x30,[sp, #0x20]
+0100965c  ldp x21,x20,[sp, #0x10]
+01009660  mov x3,xzr
+01009664  ldr x22,[sp], #0x30
+01009668  b 0x0106125c
+0100966c  cbz x20,0x010096a4
+01009670  adrp x8,0x334e000
+01009674  ldr x8,[x8, #0x120]
+01009678  mov x0,x20
+0100967c  ldr x1,[x8]
+01009680  bl 0x01794e94
+01009684  mov x1,x0
+01009688  mov x0,x19
+0100968c  bl 0x01009fec
+01009690  mov x0,x19
+01009694  ldp x19,x30,[sp, #0x20]
+01009698  ldp x21,x20,[sp, #0x10]
+0100969c  ldr x22,[sp], #0x30
+010096a0  b 0x0100a324
+010096a4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01009f84_UpdateClickPostion__get_m_tf.txt
+================================================================================
+Function: UpdateClickPostion$$get_m_tf @ 01009f84
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp696 @ 010bb234
+
+--- Calls IN ---
+  <- UpdateClickPostion$$Update @ 0100a324
+
+--- Listing ---
+01009f84  stp x21,x20,[sp, #-0x20]!
+01009f88  stp x19,x30,[sp, #0x10]
+01009f8c  adrp x20,0x3574000
+01009f90  adrp x21,0x332a000
+01009f94  ldrb w8,[x20, #0x421]
+01009f98  ldr x21,[x21, #0x140]
+01009f9c  mov x19,x0
+01009fa0  tbnz w8,#0x0,0x01009fb8
+01009fa4  adrp x0,0x332a000
+01009fa8  ldr x0,[x0, #0x140]
+01009fac  bl 0x00b0789c
+01009fb0  mov w8,#0x1
+01009fb4  strb w8,[x20, #0x421]
+01009fb8  ldr x8,[x21]
+01009fbc  ldr x8,[x8, #0xb8]
+01009fc0  ldr x0,[x8]
+01009fc4  cbz x0,0x01009fdc
+01009fc8  mov x1,x19
+01009fcc  ldp x19,x30,[sp, #0x10]
+01009fd0  mov x2,xzr
+01009fd4  ldp x21,x20,[sp], #0x20
+01009fd8  b 0x010bb234
+01009fdc  ldr x0,[x19, #0x18]
+01009fe0  ldp x19,x30,[sp, #0x10]
+01009fe4  ldp x21,x20,[sp], #0x20
+01009fe8  ret
+
+
+================================================================================
+### FILE: 01009fec_UpdateClickPostion__set_m_tf.txt
+================================================================================
+Function: UpdateClickPostion$$set_m_tf @ 01009fec
+
+--- Calls OUT ---
+  -> FUN_0100f208 @ 0100f208
+
+--- Calls IN ---
+  <- UpdateClickPostion$$SetFollower @ 010095f8
+
+--- Listing ---
+01009fec  str x22,[sp, #-0x30]!
+01009ff0  stp x21,x20,[sp, #0x10]
+01009ff4  stp x19,x30,[sp, #0x20]
+01009ff8  adrp x21,0x3574000
+01009ffc  adrp x22,0x332a000
+0100a000  ldrb w8,[x21, #0x422]
+0100a004  b 0x0100f208
+
+
+================================================================================
+### FILE: 0100a070_UpdateClickPostion__get_m_InstanceID.txt
+================================================================================
+Function: UpdateClickPostion$$get_m_InstanceID @ 0100a070
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- UpdateClickPostion$$Update @ 0100a324
+
+--- Listing ---
+0100a070  stp x21,x20,[sp, #-0x20]!
+0100a074  stp x19,x30,[sp, #0x10]
+0100a078  adrp x20,0x3574000
+0100a07c  adrp x21,0x332a000
+0100a080  ldrb w8,[x20, #0x423]
+0100a084  ldr x21,[x21, #0x140]
+0100a088  mov x19,x0
+0100a08c  tbnz w8,#0x0,0x0100a0a4
+0100a090  adrp x0,0x332a000
+0100a094  ldr x0,[x0, #0x140]
+0100a098  bl 0x00b0789c
+0100a09c  mov w8,#0x1
+0100a0a0  strb w8,[x20, #0x423]
+0100a0a4  ldr x8,[x21]
+0100a0a8  ldr x8,[x8, #0xb8]
+0100a0ac  ldr x0,[x8, #0x10]
+0100a0b0  cbz x0,0x0100a0c8
+0100a0b4  mov x1,x19
+0100a0b8  ldp x19,x30,[sp, #0x10]
+0100a0bc  mov x2,xzr
+0100a0c0  ldp x21,x20,[sp], #0x20
+0100a0c4  b 0x01060c2c
+0100a0c8  ldr w0,[x19, #0x20]
+0100a0cc  ldp x19,x30,[sp, #0x10]
+0100a0d0  ldp x21,x20,[sp], #0x20
+0100a0d4  ret
+
+
+================================================================================
+### FILE: 0100a0d8_UpdateClickPostion__set_m_InstanceID.txt
+================================================================================
+Function: UpdateClickPostion$$set_m_InstanceID @ 0100a0d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- UpdateClickPostion$$Update @ 0100a324
+
+--- Listing ---
+0100a0d8  str x22,[sp, #-0x30]!
+0100a0dc  stp x21,x20,[sp, #0x10]
+0100a0e0  stp x19,x30,[sp, #0x20]
+0100a0e4  adrp x21,0x3574000
+0100a0e8  adrp x22,0x332a000
+0100a0ec  ldrb w8,[x21, #0x424]
+0100a0f0  ldr x22,[x22, #0x140]
+0100a0f4  mov w19,w1
+0100a0f8  mov x20,x0
+0100a0fc  tbnz w8,#0x0,0x0100a114
+0100a100  adrp x0,0x332a000
+0100a104  ldr x0,[x0, #0x140]
+0100a108  bl 0x00b0789c
+0100a10c  mov w8,#0x1
+0100a110  strb w8,[x21, #0x424]
+0100a114  ldr x8,[x22]
+0100a118  ldr x8,[x8, #0xb8]
+0100a11c  ldr x0,[x8, #0x18]
+0100a120  cbz x0,0x0100a140
+0100a124  mov x1,x20
+0100a128  mov w2,w19
+0100a12c  ldp x19,x30,[sp, #0x20]
+0100a130  ldp x21,x20,[sp, #0x10]
+0100a134  mov x3,xzr
+0100a138  ldr x22,[sp], #0x30
+0100a13c  b 0x0106155c
+0100a140  str w19,[x20, #0x20]
+0100a144  ldp x19,x30,[sp, #0x20]
+0100a148  ldp x21,x20,[sp, #0x10]
+0100a14c  ldr x22,[sp], #0x30
+0100a150  ret
+
+
+================================================================================
+### FILE: 0100a154_UpdateClickPostion__get_m_centerPivot.txt
+================================================================================
+Function: UpdateClickPostion$$get_m_centerPivot @ 0100a154
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp47 @ 010652b4
+
+--- Calls IN ---
+  <- UpdateClickPostion$$Update @ 0100a324
+
+--- Listing ---
+0100a154  stp x21,x20,[sp, #-0x20]!
+0100a158  stp x19,x30,[sp, #0x10]
+0100a15c  adrp x20,0x3574000
+0100a160  adrp x21,0x332a000
+0100a164  ldrb w8,[x20, #0x425]
+0100a168  ldr x21,[x21, #0x140]
+0100a16c  mov x19,x0
+0100a170  tbnz w8,#0x0,0x0100a188
+0100a174  adrp x0,0x332a000
+0100a178  ldr x0,[x0, #0x140]
+0100a17c  bl 0x00b0789c
+0100a180  mov w8,#0x1
+0100a184  strb w8,[x20, #0x425]
+0100a188  ldr x8,[x21]
+0100a18c  ldr x8,[x8, #0xb8]
+0100a190  ldr x0,[x8, #0x20]
+0100a194  cbz x0,0x0100a1a8
+0100a198  mov x1,x19
+0100a19c  mov x2,xzr
+0100a1a0  bl 0x010652b4
+0100a1a4  b 0x0100a1ac
+0100a1a8  ldp s0,s1,[x19, #0x30]
+0100a1ac  ldp x19,x30,[sp, #0x10]
+0100a1b0  ldp x21,x20,[sp], #0x20
+0100a1b4  ret
+
+
+================================================================================
+### FILE: 0100a1b8_UpdateClickPostion__set_m_centerPivot.txt
+================================================================================
+Function: UpdateClickPostion$$set_m_centerPivot @ 0100a1b8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp23 @ 01062220
+
+--- Calls IN ---
+  <- UpdateClickPostion$$Update @ 0100a324
+
+--- Listing ---
+0100a1b8  stp d9,d8,[sp, #-0x30]!
+0100a1bc  stp x21,x20,[sp, #0x10]
+0100a1c0  stp x19,x30,[sp, #0x20]
+0100a1c4  adrp x20,0x3574000
+0100a1c8  adrp x21,0x332a000
+0100a1cc  ldrb w8,[x20, #0x426]
+0100a1d0  ldr x21,[x21, #0x140]
+0100a1d4  mov v8.16B,v1.16B
+0100a1d8  mov v9.16B,v0.16B
+0100a1dc  mov x19,x0
+0100a1e0  tbnz w8,#0x0,0x0100a1f8
+0100a1e4  adrp x0,0x332a000
+0100a1e8  ldr x0,[x0, #0x140]
+0100a1ec  bl 0x00b0789c
+0100a1f0  mov w8,#0x1
+0100a1f4  strb w8,[x20, #0x426]
+0100a1f8  ldr x8,[x21]
+0100a1fc  ldr x8,[x8, #0xb8]
+0100a200  ldr x0,[x8, #0x28]
+0100a204  cbz x0,0x0100a228
+0100a208  mov x1,x19
+0100a20c  ldp x19,x30,[sp, #0x20]
+0100a210  ldp x21,x20,[sp, #0x10]
+0100a214  mov v0.16B,v9.16B
+0100a218  mov v1.16B,v8.16B
+0100a21c  mov x2,xzr
+0100a220  ldp d9,d8,[sp], #0x30
+0100a224  b 0x01062220
+0100a228  stp s9,s8,[x19, #0x30]
+0100a22c  ldp x19,x30,[sp, #0x20]
+0100a230  ldp x21,x20,[sp, #0x10]
+0100a234  ldp d9,d8,[sp], #0x30
+0100a238  ret
+
+
+================================================================================
+### FILE: 0100a23c_UpdateClickPostion__get_m_sizeDelta.txt
+================================================================================
+Function: UpdateClickPostion$$get_m_sizeDelta @ 0100a23c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp47 @ 010652b4
+
+--- Calls IN ---
+  <- UpdateClickPostion$$Update @ 0100a324
+
+--- Listing ---
+0100a23c  stp x21,x20,[sp, #-0x20]!
+0100a240  stp x19,x30,[sp, #0x10]
+0100a244  adrp x20,0x3574000
+0100a248  adrp x21,0x332a000
+0100a24c  ldrb w8,[x20, #0x427]
+0100a250  ldr x21,[x21, #0x140]
+0100a254  mov x19,x0
+0100a258  tbnz w8,#0x0,0x0100a270
+0100a25c  adrp x0,0x332a000
+0100a260  ldr x0,[x0, #0x140]
+0100a264  bl 0x00b0789c
+0100a268  mov w8,#0x1
+0100a26c  strb w8,[x20, #0x427]
+0100a270  ldr x8,[x21]
+0100a274  ldr x8,[x8, #0xb8]
+0100a278  ldr x0,[x8, #0x30]
+0100a27c  cbz x0,0x0100a290
+0100a280  mov x1,x19
+0100a284  mov x2,xzr
+0100a288  bl 0x010652b4
+0100a28c  b 0x0100a294
+0100a290  ldp s0,s1,[x19, #0x38]
+0100a294  ldp x19,x30,[sp, #0x10]
+0100a298  ldp x21,x20,[sp], #0x20
+0100a29c  ret
+
+
+================================================================================
+### FILE: 0100a2a0_UpdateClickPostion__set_m_sizeDelta.txt
+================================================================================
+Function: UpdateClickPostion$$set_m_sizeDelta @ 0100a2a0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp23 @ 01062220
+
+--- Calls IN ---
+  <- UpdateClickPostion$$Update @ 0100a324
+
+--- Listing ---
+0100a2a0  stp d9,d8,[sp, #-0x30]!
+0100a2a4  stp x21,x20,[sp, #0x10]
+0100a2a8  stp x19,x30,[sp, #0x20]
+0100a2ac  adrp x20,0x3574000
+0100a2b0  adrp x21,0x332a000
+0100a2b4  ldrb w8,[x20, #0x428]
+0100a2b8  ldr x21,[x21, #0x140]
+0100a2bc  mov v8.16B,v1.16B
+0100a2c0  mov v9.16B,v0.16B
+0100a2c4  mov x19,x0
+0100a2c8  tbnz w8,#0x0,0x0100a2e0
+0100a2cc  adrp x0,0x332a000
+0100a2d0  ldr x0,[x0, #0x140]
+0100a2d4  bl 0x00b0789c
+0100a2d8  mov w8,#0x1
+0100a2dc  strb w8,[x20, #0x428]
+0100a2e0  ldr x8,[x21]
+0100a2e4  ldr x8,[x8, #0xb8]
+0100a2e8  ldr x0,[x8, #0x38]
+0100a2ec  cbz x0,0x0100a310
+0100a2f0  mov x1,x19
+0100a2f4  ldp x19,x30,[sp, #0x20]
+0100a2f8  ldp x21,x20,[sp, #0x10]
+0100a2fc  mov v0.16B,v9.16B
+0100a300  mov v1.16B,v8.16B
+0100a304  mov x2,xzr
+0100a308  ldp d9,d8,[sp], #0x30
+0100a30c  b 0x01062220
+0100a310  stp s9,s8,[x19, #0x38]
+0100a314  ldp x19,x30,[sp, #0x20]
+0100a318  ldp x21,x20,[sp, #0x10]
+0100a31c  ldp d9,d8,[sp], #0x30
+0100a320  ret
+
+
+================================================================================
+### FILE: 0100a324_UpdateClickPostion__Update.txt
+================================================================================
+Function: UpdateClickPostion$$Update @ 0100a324
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> UpdateClickPostion$$get_m_sizeDelta @ 0100a23c
+  -> UpdateClickPostion$$get_m_centerPivot @ 0100a154
+  -> UnityEngine.RectTransform$$set_sizeDelta @ 024f65d0
+  -> UnityEngine.Transform$$get_localPosition @ 024f37bc
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UpdateClickPostion$$get_m_InstanceID @ 0100a070
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UpdateClickPostion$$set_m_InstanceID @ 0100a0d8
+  -> UnityEngine.RectTransform$$get_sizeDelta @ 024f6540
+  -> UnityEngine.Transform$$set_position @ 024f3724
+  -> UnityEngine.RectTransform$$get_pivot @ 024f665c
+  -> UpdateClickPostion$$get_m_tf @ 01009f84
+  -> UnityEngine.Transform$$get_parent @ 024f42ec
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> UnityEngine.GameObject$$get_activeInHierarchy @ 024de8ec
+  -> UpdateClickPostion$$set_m_centerPivot @ 0100a1b8
+  -> UnityEngine.Component$$SendMessage @ 024e56ac
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> UnityEngine.Transform$$set_localPosition @ 024f385c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UpdateClickPostion$$set_m_sizeDelta @ 0100a2a0
+  -> UnityEngine.Transform$$get_position @ 024f3684
+  -> UnityEngine.Object$$GetInstanceID @ 024df0fc
+
+--- Calls IN ---
+  <- UpdateClickPostion$$SetFollower @ 010095f8
+
+--- Listing ---
+0100a324  str d10,[sp, #-0x40]!
+0100a328  stp d9,d8,[sp, #0x10]
+0100a32c  stp x21,x20,[sp, #0x20]
+0100a330  stp x19,x30,[sp, #0x30]
+0100a334  adrp x20,0x3574000
+0100a338  adrp x21,0x332a000
+0100a33c  ldrb w8,[x20, #0x429]
+0100a340  ldr x21,[x21, #0x140]
+0100a344  mov x19,x0
+0100a348  tbnz w8,#0x0,0x0100a384
+0100a34c  adrp x0,0x3321000
+0100a350  ldr x0,[x0, #0xca8]
+0100a354  bl 0x00b0789c
+0100a358  adrp x0,0x3335000
+0100a35c  ldr x0,[x0, #0x6e8]
+0100a360  bl 0x00b0789c
+0100a364  adrp x0,0x332a000
+0100a368  ldr x0,[x0, #0x140]
+0100a36c  bl 0x00b0789c
+0100a370  adrp x0,0x332a000
+0100a374  ldr x0,[x0, #0x508]
+0100a378  bl 0x00b0789c
+0100a37c  mov w8,#0x1
+0100a380  strb w8,[x20, #0x429]
+0100a384  ldr x8,[x21]
+0100a388  ldr x8,[x8, #0xb8]
+0100a38c  ldr x0,[x8, #0x40]
+0100a390  cbz x0,0x0100a3b0
+0100a394  mov x1,x19
+0100a398  ldp x19,x30,[sp, #0x30]
+0100a39c  ldp x21,x20,[sp, #0x20]
+0100a3a0  ldp d9,d8,[sp, #0x10]
+0100a3a4  mov x2,xzr
+0100a3a8  ldr d10,[sp], #0x40
+0100a3ac  b 0x01060dac
+0100a3b0  mov x0,x19
+0100a3b4  mov x1,xzr
+0100a3b8  bl 0x024e4ed4
+0100a3bc  cbz x0,0x0100a760
+0100a3c0  mov x1,xzr
+0100a3c4  bl 0x024de8ec
+0100a3c8  tbz w0,#0x0,0x0100a74c
+0100a3cc  adrp x20,0x3321000
+0100a3d0  ldr x20,[x20, #0xca8]
+0100a3d4  mov x0,x19
+0100a3d8  bl 0x01009f84
+0100a3dc  ldr x8,[x20]
+0100a3e0  mov x20,x0
+0100a3e4  ldr w9,[x8, #0xe0]
+0100a3e8  cbnz w9,0x0100a3f4
+0100a3ec  mov x0,x8
+0100a3f0  bl 0x00b0798c
+0100a3f4  mov x0,x20
+0100a3f8  mov x1,xzr
+0100a3fc  mov x2,xzr
+0100a400  bl 0x024de30c
+0100a404  tbz w0,#0x0,0x0100a74c
+0100a408  mov x0,x19
+0100a40c  bl 0x01009f84
+0100a410  cbz x0,0x0100a760
+0100a414  mov x1,xzr
+0100a418  bl 0x024f3684
+0100a41c  mov x0,x19
+0100a420  mov x1,xzr
+0100a424  mov v8.16B,v0.16B
+0100a428  mov v9.16B,v1.16B
+0100a42c  mov v10.16B,v2.16B
+0100a430  bl 0x024e4e98
+0100a434  cbz x0,0x0100a760
+0100a438  mov x1,xzr
+0100a43c  bl 0x024f3684
+0100a440  adrp x8,0x26db000
+0100a444  fsub s0,s8,s0
+0100a448  fsub s1,s9,s1
+0100a44c  fsub s2,s10,s2
+0100a450  ldr s10,[x8, #0x294]
+0100a454  fmul s0,s0,s0
+0100a458  fmul s1,s1,s1
+0100a45c  fadd s0,s0,s1
+0100a460  fmul s1,s2,s2
+0100a464  fadd s0,s1,s0
+0100a468  fcmp s0,s10
+0100a46c  b.pl 0x0100a4d8
+0100a470  mov x0,x19
+0100a474  bl 0x0100a070
+0100a478  mov w20,w0
+0100a47c  mov x0,x19
+0100a480  bl 0x01009f84
+0100a484  cbz x0,0x0100a760
+0100a488  mov x1,xzr
+0100a48c  bl 0x024df0fc
+0100a490  cmp w20,w0
+0100a494  b.ne 0x0100a4d8
+0100a498  mov x0,x19
+0100a49c  bl 0x0100a23c
+0100a4a0  mov x0,x19
+0100a4a4  mov v8.16B,v0.16B
+0100a4a8  mov v9.16B,v1.16B
+0100a4ac  bl 0x01009f84
+0100a4b0  cbz x0,0x0100a760
+0100a4b4  mov x1,xzr
+0100a4b8  bl 0x024f6540
+0100a4bc  fsub s0,s8,s0
+0100a4c0  fsub s1,s9,s1
+0100a4c4  fmul s0,s0,s0
+0100a4c8  fmul s1,s1,s1
+0100a4cc  fadd s0,s0,s1
+0100a4d0  fcmp s0,s10
+0100a4d4  b.mi 0x0100a74c
+0100a4d8  mov x0,x19
+0100a4dc  bl 0x01009f84
+0100a4e0  cbz x0,0x0100a760
+0100a4e4  mov x1,xzr
+0100a4e8  bl 0x024df0fc
+0100a4ec  mov w1,w0
+0100a4f0  mov x0,x19
+0100a4f4  bl 0x0100a0d8
+0100a4f8  mov x0,x19
+0100a4fc  mov x1,xzr
+0100a500  bl 0x024e4e98
+0100a504  mov x20,x0
+0100a508  mov x0,x19
+0100a50c  bl 0x01009f84
+0100a510  cbz x0,0x0100a760
+0100a514  mov x1,xzr
+0100a518  bl 0x024f3684
+0100a51c  cbz x20,0x0100a760
+0100a520  mov x0,x20
+0100a524  mov x1,xzr
+0100a528  bl 0x024f3724
+0100a52c  mov x0,x19
+0100a530  mov x1,xzr
+0100a534  bl 0x024e4e98
+0100a538  cbz x0,0x0100a760
+0100a53c  mov x1,xzr
+0100a540  bl 0x024f37bc
+0100a544  mov x0,x19
+0100a548  mov x1,xzr
+0100a54c  mov v8.16B,v0.16B
+0100a550  mov v9.16B,v1.16B
+0100a554  bl 0x024e4e98
+0100a558  cbz x0,0x0100a760
+0100a55c  fmov s2,wzr
+0100a560  mov v0.16B,v8.16B
+0100a564  mov v1.16B,v9.16B
+0100a568  mov x1,xzr
+0100a56c  bl 0x024f385c
+0100a570  mov x0,x19
+0100a574  bl 0x01009f84
+0100a578  cbz x0,0x0100a760
+0100a57c  mov x1,xzr
+0100a580  bl 0x024f6540
+0100a584  mov x0,x19
+0100a588  bl 0x0100a2a0
+0100a58c  mov x0,x19
+0100a590  mov x1,xzr
+0100a594  bl 0x024e4e98
+0100a598  cbz x0,0x0100a760
+0100a59c  adrp x21,0x3335000
+0100a5a0  ldr x21,[x21, #0x6e8]
+0100a5a4  ldr x9,[x0]
+0100a5a8  ldr x8,[x21]
+0100a5ac  cmp x9,x8
+0100a5b0  b.ne 0x0100a760
+0100a5b4  mov x1,xzr
+0100a5b8  bl 0x024f665c
+0100a5bc  mov x0,x19
+0100a5c0  mov v8.16B,v0.16B
+0100a5c4  mov v9.16B,v1.16B
+0100a5c8  bl 0x01009f84
+0100a5cc  cbz x0,0x0100a760
+0100a5d0  mov x1,xzr
+0100a5d4  bl 0x024f665c
+0100a5d8  fsub s0,s8,s0
+0100a5dc  fsub s1,s9,s1
+0100a5e0  mov x0,x19
+0100a5e4  bl 0x0100a1b8
+0100a5e8  mov x0,x19
+0100a5ec  mov x1,xzr
+0100a5f0  bl 0x024e4e98
+0100a5f4  mov x20,x0
+0100a5f8  mov x0,x19
+0100a5fc  bl 0x0100a23c
+0100a600  cbz x20,0x0100a760
+0100a604  ldr x8,[x21]
+0100a608  ldr x9,[x20]
+0100a60c  cmp x9,x8
+0100a610  b.ne 0x0100a760
+0100a614  mov x0,x20
+0100a618  mov x1,xzr
+0100a61c  bl 0x024f65d0
+0100a620  mov x0,x19
+0100a624  bl 0x0100a154
+0100a628  adrp x20,0x3570000
+0100a62c  ldrb w8,[x20, #0xffd]
+0100a630  mov v8.16B,v0.16B
+0100a634  mov v9.16B,v1.16B
+0100a638  cbnz w8,0x0100a650
+0100a63c  adrp x0,0x3365000
+0100a640  ldr x0,[x0, #0x108]
+0100a644  bl 0x00b0789c
+0100a648  mov w8,#0x1
+0100a64c  strb w8,[x20, #0xffd]
+0100a650  adrp x8,0x3365000
+0100a654  ldr x8,[x8, #0x108]
+0100a658  ldr x8,[x8]
+0100a65c  ldr x8,[x8, #0xb8]
+0100a660  ldp s0,s1,[x8]
+0100a664  fsub s0,s8,s0
+0100a668  fsub s1,s9,s1
+0100a66c  fmul s0,s0,s0
+0100a670  fmul s1,s1,s1
+0100a674  fadd s0,s0,s1
+0100a678  fcmp s0,s10
+0100a67c  b.mi 0x0100a70c
+0100a680  mov x0,x19
+0100a684  mov x1,xzr
+0100a688  bl 0x024e4e98
+0100a68c  cbz x0,0x0100a760
+0100a690  mov x1,xzr
+0100a694  bl 0x024f37bc
+0100a698  mov x0,x19
+0100a69c  mov v8.16B,v0.16B
+0100a6a0  stp s0,s1,[x19, #0x24]
+0100a6a4  str s2,[x19, #0x2c]
+0100a6a8  bl 0x0100a23c
+0100a6ac  mov x0,x19
+0100a6b0  mov v9.16B,v0.16B
+0100a6b4  bl 0x0100a154
+0100a6b8  ldr s10,[x19, #0x28]
+0100a6bc  fmul s0,s9,s0
+0100a6c0  fadd s0,s8,s0
+0100a6c4  mov x0,x19
+0100a6c8  str s0,[x19, #0x24]
+0100a6cc  bl 0x0100a23c
+0100a6d0  mov x0,x19
+0100a6d4  mov v8.16B,v1.16B
+0100a6d8  bl 0x0100a154
+0100a6dc  fmul s0,s8,s1
+0100a6e0  fadd s0,s10,s0
+0100a6e4  mov x0,x19
+0100a6e8  mov x1,xzr
+0100a6ec  str s0,[x19, #0x28]
+0100a6f0  str wzr,[x19, #0x2c]
+0100a6f4  bl 0x024e4e98
+0100a6f8  cbz x0,0x0100a760
+0100a6fc  ldp s1,s2,[x19, #0x28]
+0100a700  ldr s0,[x19, #0x24]
+0100a704  mov x1,xzr
+0100a708  bl 0x024f385c
+0100a70c  mov x0,x19
+0100a710  mov x1,xzr
+0100a714  bl 0x024e4e98
+0100a718  cbz x0,0x0100a760
+0100a71c  mov x1,xzr
+0100a720  bl 0x024f42ec
+0100a724  cbz x0,0x0100a760
+0100a728  adrp x8,0x332a000
+0100a72c  ldr x8,[x8, #0x508]
+0100a730  ldp x19,x30,[sp, #0x30]
+0100a734  ldp x21,x20,[sp, #0x20]
+0100a738  ldp d9,d8,[sp, #0x10]
+0100a73c  ldr x1,[x8]
+0100a740  mov x2,xzr
+0100a744  ldr d10,[sp], #0x40
+0100a748  b 0x024e56ac
+0100a74c  ldp x19,x30,[sp, #0x30]
+0100a750  ldp x21,x20,[sp, #0x20]
+0100a754  ldp d9,d8,[sp, #0x10]
+0100a758  ldr d10,[sp], #0x40
+0100a75c  ret
+0100a760  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0100a764_UpdateClickPostion__.ctor.txt
+================================================================================
+Function: UpdateClickPostion$$.ctor @ 0100a764
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.UpdateClickPostionWrap$$__CreateInstance @ 014fc04c
+
+--- Listing ---
+0100a764  stp x21,x20,[sp, #-0x20]!
+0100a768  stp x19,x30,[sp, #0x10]
+0100a76c  adrp x21,0x3574000
+0100a770  adrp x20,0x332a000
+0100a774  ldrb w8,[x21, #0x42b]
+0100a778  ldr x20,[x20, #0x140]
+0100a77c  mov x19,x0
+0100a780  tbnz w8,#0x0,0x0100a798
+0100a784  adrp x0,0x332a000
+0100a788  ldr x0,[x0, #0x140]
+0100a78c  bl 0x00b0789c
+0100a790  mov w8,#0x1
+0100a794  strb w8,[x21, #0x42b]
+0100a798  mov x0,x19
+0100a79c  mov x1,xzr
+0100a7a0  bl 0x024e45bc
+0100a7a4  ldr x8,[x20]
+0100a7a8  ldr x8,[x8, #0xb8]
+0100a7ac  ldr x0,[x8, #0x50]
+0100a7b0  cbz x0,0x0100a7c8
+0100a7b4  mov x1,x19
+0100a7b8  ldp x19,x30,[sp, #0x10]
+0100a7bc  mov x2,xzr
+0100a7c0  ldp x21,x20,[sp], #0x20
+0100a7c4  b 0x01060dac
+0100a7c8  ldp x19,x30,[sp, #0x10]
+0100a7cc  ldp x21,x20,[sp], #0x20
+0100a7d0  ret
+
+

@@ -1,0 +1,4223 @@
+================================================================================
+### FILE: 00def460_CvData__get_actorId.txt
+================================================================================
+Function: CvData$$get_actorId @ 00def460
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def460  ldr w0,[x0, #0x74]
+00def464  ret
+
+
+================================================================================
+### FILE: 00def468_CvData__get_showIcon.txt
+================================================================================
+Function: CvData$$get_showIcon @ 00def468
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def468  ldr x0,[x0, #0x78]
+00def46c  ret
+
+
+================================================================================
+### FILE: 00def470_CvData__get_nameId1.txt
+================================================================================
+Function: CvData$$get_nameId1 @ 00def470
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def470  ldr w0,[x0, #0x80]
+00def474  ret
+
+
+================================================================================
+### FILE: 00def478_CvData__get_voteSound.txt
+================================================================================
+Function: CvData$$get_voteSound @ 00def478
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def478  ldr w0,[x0, #0x84]
+00def47c  ret
+
+
+================================================================================
+### FILE: 00def480_CvData__get_rankCV.txt
+================================================================================
+Function: CvData$$get_rankCV @ 00def480
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def480  ldr x0,[x0, #0x88]
+00def484  ret
+
+
+================================================================================
+### FILE: 00def488_CvData__get_rankRole.txt
+================================================================================
+Function: CvData$$get_rankRole @ 00def488
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def488  ldr x0,[x0, #0x90]
+00def48c  ret
+
+
+================================================================================
+### FILE: 00def490_CvData__get_race.txt
+================================================================================
+Function: CvData$$get_race @ 00def490
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def490  ldr w0,[x0, #0x98]
+00def494  ret
+
+
+================================================================================
+### FILE: 00def498_CvData__get_age.txt
+================================================================================
+Function: CvData$$get_age @ 00def498
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def498  ldr w0,[x0, #0x9c]
+00def49c  ret
+
+
+================================================================================
+### FILE: 00def4a0_CvData__get_gender.txt
+================================================================================
+Function: CvData$$get_gender @ 00def4a0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4a0  ldr w0,[x0, #0xa0]
+00def4a4  ret
+
+
+================================================================================
+### FILE: 00def4a8_CvData__get_birthday.txt
+================================================================================
+Function: CvData$$get_birthday @ 00def4a8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4a8  ldr w0,[x0, #0xa4]
+00def4ac  ret
+
+
+================================================================================
+### FILE: 00def4b0_CvData__get_taste.txt
+================================================================================
+Function: CvData$$get_taste @ 00def4b0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4b0  ldr w0,[x0, #0xa8]
+00def4b4  ret
+
+
+================================================================================
+### FILE: 00def4b8_CvData__get_character.txt
+================================================================================
+Function: CvData$$get_character @ 00def4b8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4b8  ldr w0,[x0, #0xac]
+00def4bc  ret
+
+
+================================================================================
+### FILE: 00def4c0_CvData__get_like.txt
+================================================================================
+Function: CvData$$get_like @ 00def4c0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4c0  ldr w0,[x0, #0xb0]
+00def4c4  ret
+
+
+================================================================================
+### FILE: 00def4c8_CvData__get_hate.txt
+================================================================================
+Function: CvData$$get_hate @ 00def4c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4c8  ldr w0,[x0, #0xb4]
+00def4cc  ret
+
+
+================================================================================
+### FILE: 00def4d0_CvData__get_characterBackground.txt
+================================================================================
+Function: CvData$$get_characterBackground @ 00def4d0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4d0  ldr w0,[x0, #0xb8]
+00def4d4  ret
+
+
+================================================================================
+### FILE: 00def4d8_CvData__get_HeroFigure.txt
+================================================================================
+Function: CvData$$get_HeroFigure @ 00def4d8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4d8  ldr x0,[x0, #0xc0]
+00def4dc  ret
+
+
+================================================================================
+### FILE: 00def4e0_CvData__get_Show.txt
+================================================================================
+Function: CvData$$get_Show @ 00def4e0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4e0  ldr x0,[x0, #0xc8]
+00def4e4  ret
+
+
+================================================================================
+### FILE: 00def4e8_CvData__get_soundIds.txt
+================================================================================
+Function: CvData$$get_soundIds @ 00def4e8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def4e8  ldr x0,[x0, #0xd0]
+00def4ec  ret
+
+
+================================================================================
+### FILE: 00def4f0_CvData__.ctor.txt
+================================================================================
+Function: CvData$$.ctor @ 00def4f0
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CvDataWrap$$__CreateInstance @ 0123c88c
+
+--- Listing ---
+00def4f0  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00def4f4_CvRecord__.ctor.txt
+================================================================================
+Function: CvRecord$$.ctor @ 00def4f4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00def4f4  stp x21,x20,[sp, #-0x20]!
+00def4f8  stp x19,x30,[sp, #0x10]
+00def4fc  adrp x20,0x3572000
+00def500  adrp x21,0x3380000
+00def504  ldrb w8,[x20, #0x435]
+00def508  ldr x21,[x21, #0xfe0]
+00def50c  mov x19,x0
+00def510  tbnz w8,#0x0,0x00def534
+00def514  adrp x0,0x334e000
+00def518  ldr x0,[x0, #0x3c0]
+00def51c  bl 0x00b0789c
+00def520  adrp x0,0x3380000
+00def524  ldr x0,[x0, #0xfe0]
+00def528  bl 0x00b0789c
+00def52c  mov w8,#0x1
+00def530  strb w8,[x20, #0x435]
+00def534  ldr x0,[x21]
+00def538  bl 0x00b079a0
+00def53c  cbz x0,0x00def578
+00def540  adrp x8,0x334e000
+00def544  ldr x8,[x8, #0x3c0]
+00def548  mov x20,x0
+00def54c  ldr x1,[x8]
+00def550  bl 0x01bffe10
+00def554  mov x0,x19
+00def558  str x20,[x0, #0x18]!
+00def55c  mov x1,x20
+00def560  bl 0x00b07850
+00def564  mov x0,x19
+00def568  ldp x19,x30,[sp, #0x10]
+00def56c  mov x1,xzr
+00def570  ldp x21,x20,[sp], #0x20
+00def574  b 0x024e277c
+00def578  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f2fca4_CVHeroDetailPanelMono__get_m_node.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$get_m_node @ 00f2fca4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp625 @ 010b1750
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+  <- CVHeroDetailPanelMono$$<ShowDetail>b__13_0 @ 00f30cb8
+
+--- Listing ---
+00f2fca4  str x22,[sp, #-0x30]!
+00f2fca8  stp x21,x20,[sp, #0x10]
+00f2fcac  stp x19,x30,[sp, #0x20]
+00f2fcb0  adrp x20,0x3573000
+00f2fcb4  adrp x21,0x337d000
+00f2fcb8  ldrb w8,[x20, #0x107]
+00f2fcbc  ldr x21,[x21, #0x5f8]
+00f2fcc0  mov x19,x0
+00f2fcc4  tbnz w8,#0x0,0x00f2fd00
+00f2fcc8  adrp x0,0x330e000
+00f2fccc  ldr x0,[x0, #0x3a0]
+00f2fcd0  bl 0x00b0789c
+00f2fcd4  adrp x0,0x3348000
+00f2fcd8  ldr x0,[x0, #0x138]
+00f2fcdc  bl 0x00b0789c
+00f2fce0  adrp x0,0x337d000
+00f2fce4  ldr x0,[x0, #0x5f8]
+00f2fce8  bl 0x00b0789c
+00f2fcec  adrp x0,0x3321000
+00f2fcf0  ldr x0,[x0, #0xca8]
+00f2fcf4  bl 0x00b0789c
+00f2fcf8  mov w8,#0x1
+00f2fcfc  strb w8,[x20, #0x107]
+00f2fd00  ldr x8,[x21]
+00f2fd04  ldr x8,[x8, #0xb8]
+00f2fd08  ldr x0,[x8]
+00f2fd0c  cbz x0,0x00f2fd28
+00f2fd10  mov x1,x19
+00f2fd14  ldp x19,x30,[sp, #0x20]
+00f2fd18  ldp x21,x20,[sp, #0x10]
+00f2fd1c  mov x2,xzr
+00f2fd20  ldr x22,[sp], #0x30
+00f2fd24  b 0x010b1750
+00f2fd28  adrp x8,0x3321000
+00f2fd2c  ldr x8,[x8, #0xca8]
+00f2fd30  mov x20,x19
+00f2fd34  ldr x21,[x20, #0xc8]!
+00f2fd38  ldr x0,[x8]
+00f2fd3c  ldr w8,[x0, #0xe0]
+00f2fd40  cbnz w8,0x00f2fd48
+00f2fd44  bl 0x00b0798c
+00f2fd48  mov x0,x21
+00f2fd4c  mov x1,xzr
+00f2fd50  mov x2,xzr
+00f2fd54  bl 0x024c8180
+00f2fd58  tbz w0,#0x0,0x00f2fdac
+00f2fd5c  adrp x22,0x3348000
+00f2fd60  adrp x21,0x330e000
+00f2fd64  ldr x22,[x22, #0x138]
+00f2fd68  ldr x21,[x21, #0x3a0]
+00f2fd6c  mov x0,x19
+00f2fd70  mov x1,xzr
+00f2fd74  bl 0x024e4ed4
+00f2fd78  ldr x8,[x22]
+00f2fd7c  mov x19,x0
+00f2fd80  ldr w9,[x8, #0xe0]
+00f2fd84  cbnz w9,0x00f2fd90
+00f2fd88  mov x0,x8
+00f2fd8c  bl 0x00b0798c
+00f2fd90  ldr x1,[x21]
+00f2fd94  mov x0,x19
+00f2fd98  bl 0x017372ac
+00f2fd9c  mov x1,x0
+00f2fda0  str x0,[x20]
+00f2fda4  mov x0,x20
+00f2fda8  bl 0x00b07850
+00f2fdac  ldr x0,[x20]
+00f2fdb0  ldp x19,x30,[sp, #0x20]
+00f2fdb4  ldp x21,x20,[sp, #0x10]
+00f2fdb8  ldr x22,[sp], #0x30
+00f2fdbc  ret
+
+
+================================================================================
+### FILE: 00f2fdc0_CVHeroDetailPanelMono__get_LayerType.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$get_LayerType @ 00f2fdc0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp491 @ 0109f3ac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00f2fdc0  stp x21,x20,[sp, #-0x20]!
+00f2fdc4  stp x19,x30,[sp, #0x10]
+00f2fdc8  adrp x20,0x3573000
+00f2fdcc  adrp x21,0x337d000
+00f2fdd0  ldrb w8,[x20, #0x108]
+00f2fdd4  ldr x21,[x21, #0x5f8]
+00f2fdd8  mov x19,x0
+00f2fddc  tbnz w8,#0x0,0x00f2fdf4
+00f2fde0  adrp x0,0x337d000
+00f2fde4  ldr x0,[x0, #0x5f8]
+00f2fde8  bl 0x00b0789c
+00f2fdec  mov w8,#0x1
+00f2fdf0  strb w8,[x20, #0x108]
+00f2fdf4  ldr x8,[x21]
+00f2fdf8  ldr x8,[x8, #0xb8]
+00f2fdfc  ldr x0,[x8, #0x8]
+00f2fe00  cbz x0,0x00f2fe18
+00f2fe04  mov x1,x19
+00f2fe08  ldp x19,x30,[sp, #0x10]
+00f2fe0c  mov x2,xzr
+00f2fe10  ldp x21,x20,[sp], #0x20
+00f2fe14  b 0x0109f3ac
+00f2fe18  ldp x19,x30,[sp, #0x10]
+00f2fe1c  mov w0,#0x1
+00f2fe20  ldp x21,x20,[sp], #0x20
+00f2fe24  ret
+
+
+================================================================================
+### FILE: 00f2fe28_CVHeroDetailPanelMono__get_TitleId.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$get_TitleId @ 00f2fe28
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+
+--- Listing ---
+00f2fe28  stp x21,x20,[sp, #-0x20]!
+00f2fe2c  stp x19,x30,[sp, #0x10]
+00f2fe30  adrp x20,0x3573000
+00f2fe34  adrp x21,0x337d000
+00f2fe38  ldrb w8,[x20, #0x109]
+00f2fe3c  ldr x21,[x21, #0x5f8]
+00f2fe40  mov x19,x0
+00f2fe44  tbnz w8,#0x0,0x00f2fe5c
+00f2fe48  adrp x0,0x337d000
+00f2fe4c  ldr x0,[x0, #0x5f8]
+00f2fe50  bl 0x00b0789c
+00f2fe54  mov w8,#0x1
+00f2fe58  strb w8,[x20, #0x109]
+00f2fe5c  ldr x8,[x21]
+00f2fe60  ldr x8,[x8, #0xb8]
+00f2fe64  ldr x0,[x8, #0x10]
+00f2fe68  cbz x0,0x00f2fe80
+00f2fe6c  mov x1,x19
+00f2fe70  ldp x19,x30,[sp, #0x10]
+00f2fe74  mov x2,xzr
+00f2fe78  ldp x21,x20,[sp], #0x20
+00f2fe7c  b 0x01060c2c
+00f2fe80  ldp x19,x30,[sp, #0x10]
+00f2fe84  mov w0,#0xb013
+00f2fe88  movk w0,#0x4c6, LSL #16
+00f2fe8c  ldp x21,x20,[sp], #0x20
+00f2fe90  ret
+
+
+================================================================================
+### FILE: 00f2fe94_CVHeroDetailPanelMono__get_p_data.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$get_p_data @ 00f2fe94
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp626 @ 010b198c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+  <- CVHeroDetailPanelMono$$<OnClickZiliao>b__15_0 @ 00f30ce8
+
+--- Listing ---
+00f2fe94  stp x21,x20,[sp, #-0x20]!
+00f2fe98  stp x19,x30,[sp, #0x10]
+00f2fe9c  adrp x20,0x3573000
+00f2fea0  adrp x21,0x337d000
+00f2fea4  ldrb w8,[x20, #0x10a]
+00f2fea8  ldr x21,[x21, #0x5f8]
+00f2feac  mov x19,x0
+00f2feb0  tbnz w8,#0x0,0x00f2fec8
+00f2feb4  adrp x0,0x337d000
+00f2feb8  ldr x0,[x0, #0x5f8]
+00f2febc  bl 0x00b0789c
+00f2fec0  mov w8,#0x1
+00f2fec4  strb w8,[x20, #0x10a]
+00f2fec8  ldr x8,[x21]
+00f2fecc  ldr x8,[x8, #0xb8]
+00f2fed0  ldr x0,[x8, #0x18]
+00f2fed4  cbz x0,0x00f2feec
+00f2fed8  mov x1,x19
+00f2fedc  ldp x19,x30,[sp, #0x10]
+00f2fee0  mov x2,xzr
+00f2fee4  ldp x21,x20,[sp], #0x20
+00f2fee8  b 0x010b198c
+00f2feec  ldr x0,[x19, #0xd0]
+00f2fef0  ldp x19,x30,[sp, #0x10]
+00f2fef4  ldp x21,x20,[sp], #0x20
+00f2fef8  ret
+
+
+================================================================================
+### FILE: 00f2fefc_CVHeroDetailPanelMono__set_p_data.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$set_p_data @ 00f2fefc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$DemandOpen @ 00f2ff80
+
+--- Listing ---
+00f2fefc  str x22,[sp, #-0x30]!
+00f2ff00  stp x21,x20,[sp, #0x10]
+00f2ff04  stp x19,x30,[sp, #0x20]
+00f2ff08  adrp x21,0x3573000
+00f2ff0c  adrp x22,0x337d000
+00f2ff10  ldrb w8,[x21, #0x10b]
+00f2ff14  ldr x22,[x22, #0x5f8]
+00f2ff18  mov x19,x1
+00f2ff1c  mov x20,x0
+00f2ff20  tbnz w8,#0x0,0x00f2ff38
+00f2ff24  adrp x0,0x337d000
+00f2ff28  ldr x0,[x0, #0x5f8]
+00f2ff2c  bl 0x00b0789c
+00f2ff30  mov w8,#0x1
+00f2ff34  strb w8,[x21, #0x10b]
+00f2ff38  ldr x8,[x22]
+00f2ff3c  ldr x8,[x8, #0xb8]
+00f2ff40  ldr x0,[x8, #0x20]
+00f2ff44  cbz x0,0x00f2ff64
+00f2ff48  mov x1,x20
+00f2ff4c  mov x2,x19
+00f2ff50  ldp x19,x30,[sp, #0x20]
+00f2ff54  ldp x21,x20,[sp, #0x10]
+00f2ff58  mov x3,xzr
+00f2ff5c  ldr x22,[sp], #0x30
+00f2ff60  b 0x0106125c
+00f2ff64  str x19,[x20, #0xd0]!
+00f2ff68  mov x0,x20
+00f2ff6c  mov x1,x19
+00f2ff70  ldp x19,x30,[sp, #0x20]
+00f2ff74  ldp x21,x20,[sp, #0x10]
+00f2ff78  ldr x22,[sp], #0x30
+00f2ff7c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00f2ff80_CVHeroDetailPanelMono__DemandOpen.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$DemandOpen @ 00f2ff80
+
+--- Calls OUT ---
+  -> CVHeroDetailPanelMono$$set_p_data @ 00f2fefc
+  -> CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+  -> Ali$$GetExcelData<object> @ 01736d60
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CVHeroDetailPanelMonoWrap$$_m_DemandOpen @ 0123f254
+  <- YingyuanYYPanelMono.<>c__DisplayClass68_0$$<OnClickZiliao>b__0 @ 01059ac8
+
+--- Listing ---
+00f2ff80  str x22,[sp, #-0x30]!
+00f2ff84  stp x21,x20,[sp, #0x10]
+00f2ff88  stp x19,x30,[sp, #0x20]
+00f2ff8c  adrp x21,0x3573000
+00f2ff90  adrp x22,0x337d000
+00f2ff94  ldrb w8,[x21, #0x10c]
+00f2ff98  ldr x22,[x22, #0x5f8]
+00f2ff9c  mov w20,w1
+00f2ffa0  mov x19,x0
+00f2ffa4  tbnz w8,#0x0,0x00f2ffd4
+00f2ffa8  adrp x0,0x3344000
+00f2ffac  ldr x0,[x0, #0xb40]
+00f2ffb0  bl 0x00b0789c
+00f2ffb4  adrp x0,0x335f000
+00f2ffb8  ldr x0,[x0, #0x20]
+00f2ffbc  bl 0x00b0789c
+00f2ffc0  adrp x0,0x337d000
+00f2ffc4  ldr x0,[x0, #0x5f8]
+00f2ffc8  bl 0x00b0789c
+00f2ffcc  mov w8,#0x1
+00f2ffd0  strb w8,[x21, #0x10c]
+00f2ffd4  ldr x8,[x22]
+00f2ffd8  ldr x8,[x8, #0xb8]
+00f2ffdc  ldr x0,[x8, #0x28]
+00f2ffe0  cbz x0,0x00f30000
+00f2ffe4  mov x1,x19
+00f2ffe8  mov w2,w20
+00f2ffec  ldp x19,x30,[sp, #0x20]
+00f2fff0  ldp x21,x20,[sp, #0x10]
+00f2fff4  mov x3,xzr
+00f2fff8  ldr x22,[sp], #0x30
+00f2fffc  b 0x0106155c
+00f30000  adrp x21,0x335f000
+00f30004  ldr x21,[x21, #0x20]
+00f30008  ldr x0,[x21]
+00f3000c  ldr w8,[x0, #0xe0]
+00f30010  cbnz w8,0x00f3001c
+00f30014  bl 0x00b0798c
+00f30018  ldr x0,[x21]
+00f3001c  ldr x8,[x0, #0xb8]
+00f30020  ldr x0,[x8, #0x10]
+00f30024  cbz x0,0x00f3005c
+00f30028  adrp x8,0x3344000
+00f3002c  ldr x8,[x8, #0xb40]
+00f30030  mov w1,w20
+00f30034  ldr x2,[x8]
+00f30038  bl 0x01736d60
+00f3003c  mov x1,x0
+00f30040  mov x0,x19
+00f30044  bl 0x00f2fefc
+00f30048  mov x0,x19
+00f3004c  ldp x19,x30,[sp, #0x20]
+00f30050  ldp x21,x20,[sp, #0x10]
+00f30054  ldr x22,[sp], #0x30
+00f30058  b 0x00f30060
+00f3005c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f30060_CVHeroDetailPanelMono__ShowDetail.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> BaseData$$get_NameByWord @ 00df3614
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> CvherodetailpanelNode$$get_lbl_good @ 00fad9fc
+  -> CvherodetailpanelNode$$get_lbl_heroName @ 00fad880
+  -> System.String$$Split @ 01fe0d68
+  -> CvherodetailpanelNode$$get_lbl_life @ 00fadb78
+  -> CvherodetailpanelNode$$get_lbl_liking @ 00fada94
+  -> Ali$$isSysconfOn @ 00e0b4f0
+  -> FUN_00b079b0 @ 00b079b0
+  -> CvherodetailpanelNode$$get_lbl_race @ 00fad8cc
+  -> CvherodetailpanelNode$$get_lbl_age @ 00fad964
+  -> CVHeroDetailPanelMono$$get_m_node @ 00f2fca4
+  -> AliothExtensions$$SetSprite @ 00e14c70
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.RectTransform$$get_anchoredPosition @ 024f6424
+  -> CvherodetailpanelNode$$get_lbl_birthday @ 00fad9b0
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> UINode$$get_RectTransform @ 00dc477c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CvherodetailpanelNode$$get_btn_cv @ 00fadc5c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.String$$Format @ 01fd0378
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> CvherodetailpanelNode$$get_lbl_cv @ 00fadc10
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> CvherodetailpanelNode$$get_lbl_hate @ 00fada48
+  -> CvherodetailpanelNode$$get_lbl_character @ 00fadae0
+  -> FUN_00b2ac40 @ 00b2ac40
+  -> System.Single$$Parse @ 02163590
+  -> UnityEngine.RectTransform$$set_anchoredPosition @ 024f64b4
+  -> UnityEngine.Transform$$get_parent @ 024f42ec
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> System.Int32$$ToString @ 0214dc44
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> CvherodetailpanelNode$$get_cvObj @ 00fadbc4
+  -> UINode$$get_Image @ 00dc0d50
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> LoadEvent.LoadDelegate$$.ctor @ 00e27ad4
+  -> CvherodetailpanelNode$$get_spr_race @ 00fad918
+  -> AliothExtensions$$SetTextExt @ 00e13af0
+  -> UIEventListener$$Get @ 00e34224
+  -> UINode$$get_Text @ 00dc47dc
+  -> FUN_00b079b8 @ 00b079b8
+  -> CvherodetailpanelNode$$get_spr_girl_show @ 00fad834
+  -> CVHeroDetailPanelMono$$get_p_data @ 00f2fe94
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$DemandOpen @ 00f2ff80
+
+--- Listing ---
+00f30060  stp d9,d8,[sp, #-0x50]!
+00f30064  str x24,[sp, #0x10]
+00f30068  stp x23,x22,[sp, #0x20]
+00f3006c  stp x21,x20,[sp, #0x30]
+00f30070  stp x19,x30,[sp, #0x40]
+00f30074  adrp x21,0x3573000
+00f30078  adrp x20,0x337d000
+00f3007c  ldrb w8,[x21, #0x10e]
+00f30080  ldr x20,[x20, #0x5f8]
+00f30084  mov x19,x0
+00f30088  tbnz w8,#0x0,0x00f30124
+00f3008c  adrp x0,0x335f000
+00f30090  ldr x0,[x0, #0x20]
+00f30094  bl 0x00b0789c
+00f30098  adrp x0,0x3348000
+00f3009c  ldr x0,[x0, #0x138]
+00f300a0  bl 0x00b0789c
+00f300a4  adrp x0,0x335b000
+00f300a8  ldr x0,[x0, #0x650]
+00f300ac  bl 0x00b0789c
+00f300b0  adrp x0,0x337d000
+00f300b4  ldr x0,[x0, #0xde0]
+00f300b8  bl 0x00b0789c
+00f300bc  adrp x0,0x3341000
+00f300c0  ldr x0,[x0, #0x5d8]
+00f300c4  bl 0x00b0789c
+00f300c8  adrp x0,0x337d000
+00f300cc  ldr x0,[x0, #0x5f8]
+00f300d0  bl 0x00b0789c
+00f300d4  adrp x0,0x334c000
+00f300d8  ldr x0,[x0, #0xc30]
+00f300dc  bl 0x00b0789c
+00f300e0  adrp x0,0x3332000
+00f300e4  ldr x0,[x0, #0x38]
+00f300e8  bl 0x00b0789c
+00f300ec  adrp x0,0x3369000
+00f300f0  ldr x0,[x0, #0x448]
+00f300f4  bl 0x00b0789c
+00f300f8  adrp x0,0x332d000
+00f300fc  ldr x0,[x0, #0xd38]
+00f30100  bl 0x00b0789c
+00f30104  adrp x0,0x3360000
+00f30108  ldr x0,[x0, #0x750]
+00f3010c  bl 0x00b0789c
+00f30110  adrp x0,0x3309000
+00f30114  ldr x0,[x0, #0xa90]
+00f30118  bl 0x00b0789c
+00f3011c  mov w8,#0x1
+00f30120  strb w8,[x21, #0x10e]
+00f30124  ldr x8,[x20]
+00f30128  str wzr,[sp, #0x1c]
+00f3012c  ldr x8,[x8, #0xb8]
+00f30130  ldr x0,[x8, #0x38]
+00f30134  cbz x0,0x00f30148
+00f30138  mov x1,x19
+00f3013c  mov x2,xzr
+00f30140  bl 0x01060dac
+00f30144  b 0x00f309f8
+00f30148  mov x0,x19
+00f3014c  bl 0x00f2fca4
+00f30150  cbz x0,0x00f30a10
+00f30154  mov x1,xzr
+00f30158  bl 0x00fad834
+00f3015c  cbz x0,0x00f30a10
+00f30160  mov x1,xzr
+00f30164  bl 0x00dc477c
+00f30168  cbz x0,0x00f30a10
+00f3016c  mov x1,xzr
+00f30170  bl 0x024f6424
+00f30174  mov x0,x19
+00f30178  mov v8.16B,v0.16B
+00f3017c  mov v9.16B,v1.16B
+00f30180  bl 0x00f2fe94
+00f30184  cbz x0,0x00f30a10
+00f30188  ldr x0,[x0, #0xc0]
+00f3018c  mov x1,xzr
+00f30190  bl 0x01fdf3a0
+00f30194  tbnz w0,#0x0,0x00f301f8
+00f30198  mov x0,x19
+00f3019c  bl 0x00f2fe94
+00f301a0  cbz x0,0x00f30a10
+00f301a4  ldr x0,[x0, #0xc0]
+00f301a8  cbz x0,0x00f30a10
+00f301ac  mov w1,#0x7c
+00f301b0  mov w2,wzr
+00f301b4  mov x3,xzr
+00f301b8  bl 0x01fe0d68
+00f301bc  cbz x0,0x00f30a10
+00f301c0  ldr w8,[x0, #0x18]
+00f301c4  mov x20,x0
+00f301c8  cbz w8,0x00f30a14
+00f301cc  ldr x0,[x20, #0x20]
+00f301d0  mov x1,xzr
+00f301d4  bl 0x02163590
+00f301d8  ldr w8,[x20, #0x18]
+00f301dc  cmp w8,#0x1
+00f301e0  b.ls 0x00f30a14
+00f301e4  ldr x0,[x20, #0x28]
+00f301e8  mov x1,xzr
+00f301ec  mov v8.16B,v0.16B
+00f301f0  bl 0x02163590
+00f301f4  mov v9.16B,v0.16B
+00f301f8  mov x0,x19
+00f301fc  bl 0x00f2fca4
+00f30200  cbz x0,0x00f30a10
+00f30204  mov x1,xzr
+00f30208  bl 0x00fad834
+00f3020c  cbz x0,0x00f30a10
+00f30210  mov x1,xzr
+00f30214  bl 0x00dc477c
+00f30218  cbz x0,0x00f30a10
+00f3021c  mov v0.16B,v8.16B
+00f30220  mov v1.16B,v9.16B
+00f30224  mov x1,xzr
+00f30228  bl 0x024f64b4
+00f3022c  mov x0,x19
+00f30230  bl 0x00f2fca4
+00f30234  cbz x0,0x00f30a10
+00f30238  mov x1,xzr
+00f3023c  bl 0x00fad834
+00f30240  cbz x0,0x00f30a10
+00f30244  mov x1,xzr
+00f30248  bl 0x00dc0d50
+00f3024c  mov x20,x0
+00f30250  mov x0,x19
+00f30254  bl 0x00f2fe94
+00f30258  cbz x0,0x00f30a10
+00f3025c  adrp x8,0x3369000
+00f30260  ldr x8,[x8, #0x448]
+00f30264  ldr x21,[x0, #0xc8]
+00f30268  ldr x0,[x8]
+00f3026c  bl 0x00b079a0
+00f30270  cbz x0,0x00f30a10
+00f30274  adrp x8,0x3341000
+00f30278  ldr x8,[x8, #0x5d8]
+00f3027c  adrp x23,0x3348000
+00f30280  mov x1,x19
+00f30284  mov x3,xzr
+00f30288  ldr x2,[x8]
+00f3028c  ldr x23,[x23, #0x138]
+00f30290  mov x22,x0
+00f30294  bl 0x00e27ad4
+00f30298  ldr x0,[x23]
+00f3029c  ldr w8,[x0, #0xe0]
+00f302a0  cbnz w8,0x00f302a8
+00f302a4  bl 0x00b0798c
+00f302a8  fmov s0,wzr
+00f302ac  mov x0,x20
+00f302b0  mov x1,x21
+00f302b4  mov x2,x22
+00f302b8  mov w3,wzr
+00f302bc  mov x4,xzr
+00f302c0  bl 0x00e14c70
+00f302c4  mov x0,x19
+00f302c8  bl 0x00f2fca4
+00f302cc  cbz x0,0x00f30a10
+00f302d0  mov x1,xzr
+00f302d4  bl 0x00fad964
+00f302d8  cbz x0,0x00f30a10
+00f302dc  mov x1,xzr
+00f302e0  bl 0x00dc47dc
+00f302e4  mov x20,x0
+00f302e8  mov x0,x19
+00f302ec  bl 0x00f2fe94
+00f302f0  cbz x0,0x00f30a10
+00f302f4  ldr w8,[x0, #0x9c]
+00f302f8  add x0,sp,#0x1c
+00f302fc  mov x1,xzr
+00f30300  str w8,[sp, #0x1c]
+00f30304  bl 0x0214dc44
+00f30308  mov x1,x0
+00f3030c  mov x0,x20
+00f30310  mov x2,xzr
+00f30314  bl 0x00e13af0
+00f30318  mov x0,x19
+00f3031c  bl 0x00f2fca4
+00f30320  cbz x0,0x00f30a10
+00f30324  mov x1,xzr
+00f30328  bl 0x00fad9b0
+00f3032c  cbz x0,0x00f30a10
+00f30330  mov x1,xzr
+00f30334  bl 0x00dc47dc
+00f30338  mov x20,x0
+00f3033c  mov x0,x19
+00f30340  bl 0x00f2fe94
+00f30344  cbz x0,0x00f30a10
+00f30348  adrp x22,0x335b000
+00f3034c  ldr x22,[x22, #0x650]
+00f30350  mov x8,x0
+00f30354  ldr w21,[x8, #0xa4]
+00f30358  ldr x24,[x22]
+00f3035c  ldr x9,[x24, #0x38]
+00f30360  ldr x0,[x9]
+00f30364  ldrb w9,[x0, #0x132]
+00f30368  tbnz w9,#0x0,0x00f30370
+00f3036c  bl 0x00b2ac40
+00f30370  ldr w8,[x0, #0xe0]
+00f30374  cbnz w8,0x00f3037c
+00f30378  bl 0x00b0798c
+00f3037c  ldr x8,[x24, #0x38]
+00f30380  ldr x0,[x8]
+00f30384  ldrb w8,[x0, #0x132]
+00f30388  tbnz w8,#0x0,0x00f30390
+00f3038c  bl 0x00b2ac40
+00f30390  ldr x8,[x0, #0xb8]
+00f30394  mov x0,x20
+00f30398  mov w1,w21
+00f3039c  mov x3,xzr
+00f303a0  ldr x2,[x8]
+00f303a4  bl 0x00e14168
+00f303a8  mov x0,x19
+00f303ac  bl 0x00f2fca4
+00f303b0  cbz x0,0x00f30a10
+00f303b4  mov x1,xzr
+00f303b8  bl 0x00fadae0
+00f303bc  cbz x0,0x00f30a10
+00f303c0  mov x1,xzr
+00f303c4  bl 0x00dc47dc
+00f303c8  mov x20,x0
+00f303cc  mov x0,x19
+00f303d0  bl 0x00f2fe94
+00f303d4  cbz x0,0x00f30a10
+00f303d8  ldr x24,[x22]
+00f303dc  mov x8,x0
+00f303e0  ldr w21,[x8, #0xac]
+00f303e4  ldr x9,[x24, #0x38]
+00f303e8  ldr x0,[x9]
+00f303ec  ldrb w9,[x0, #0x132]
+00f303f0  tbnz w9,#0x0,0x00f303f8
+00f303f4  bl 0x00b2ac40
+00f303f8  ldr w8,[x0, #0xe0]
+00f303fc  cbnz w8,0x00f30404
+00f30400  bl 0x00b0798c
+00f30404  ldr x8,[x24, #0x38]
+00f30408  ldr x0,[x8]
+00f3040c  ldrb w8,[x0, #0x132]
+00f30410  tbnz w8,#0x0,0x00f30418
+00f30414  bl 0x00b2ac40
+00f30418  ldr x8,[x0, #0xb8]
+00f3041c  mov x0,x20
+00f30420  mov w1,w21
+00f30424  mov x3,xzr
+00f30428  ldr x2,[x8]
+00f3042c  bl 0x00e14168
+00f30430  mov x0,x19
+00f30434  bl 0x00f2fca4
+00f30438  cbz x0,0x00f30a10
+00f3043c  mov x1,xzr
+00f30440  bl 0x00fada48
+00f30444  cbz x0,0x00f30a10
+00f30448  mov x1,xzr
+00f3044c  bl 0x00dc47dc
+00f30450  mov x20,x0
+00f30454  mov x0,x19
+00f30458  bl 0x00f2fe94
+00f3045c  cbz x0,0x00f30a10
+00f30460  ldr x24,[x22]
+00f30464  mov x8,x0
+00f30468  ldr w21,[x8, #0xb4]
+00f3046c  ldr x9,[x24, #0x38]
+00f30470  ldr x0,[x9]
+00f30474  ldrb w9,[x0, #0x132]
+00f30478  tbnz w9,#0x0,0x00f30480
+00f3047c  bl 0x00b2ac40
+00f30480  ldr w8,[x0, #0xe0]
+00f30484  cbnz w8,0x00f3048c
+00f30488  bl 0x00b0798c
+00f3048c  ldr x8,[x24, #0x38]
+00f30490  ldr x0,[x8]
+00f30494  ldrb w8,[x0, #0x132]
+00f30498  tbnz w8,#0x0,0x00f304a0
+00f3049c  bl 0x00b2ac40
+00f304a0  ldr x8,[x0, #0xb8]
+00f304a4  mov x0,x20
+00f304a8  mov w1,w21
+00f304ac  mov x3,xzr
+00f304b0  ldr x2,[x8]
+00f304b4  bl 0x00e14168
+00f304b8  mov x0,x19
+00f304bc  bl 0x00f2fca4
+00f304c0  cbz x0,0x00f30a10
+00f304c4  mov x1,xzr
+00f304c8  bl 0x00fad880
+00f304cc  cbz x0,0x00f30a10
+00f304d0  mov x1,xzr
+00f304d4  bl 0x00dc47dc
+00f304d8  mov x20,x0
+00f304dc  mov x0,x19
+00f304e0  bl 0x00f2fe94
+00f304e4  cbz x0,0x00f30a10
+00f304e8  ldr x24,[x22]
+00f304ec  mov x8,x0
+00f304f0  ldr w21,[x8, #0x80]
+00f304f4  ldr x9,[x24, #0x38]
+00f304f8  ldr x0,[x9]
+00f304fc  ldrb w9,[x0, #0x132]
+00f30500  tbnz w9,#0x0,0x00f30508
+00f30504  bl 0x00b2ac40
+00f30508  ldr w8,[x0, #0xe0]
+00f3050c  cbnz w8,0x00f30514
+00f30510  bl 0x00b0798c
+00f30514  ldr x8,[x24, #0x38]
+00f30518  ldr x0,[x8]
+00f3051c  ldrb w8,[x0, #0x132]
+00f30520  tbnz w8,#0x0,0x00f30528
+00f30524  bl 0x00b2ac40
+00f30528  ldr x8,[x0, #0xb8]
+00f3052c  mov x0,x20
+00f30530  mov w1,w21
+00f30534  mov x3,xzr
+00f30538  ldr x2,[x8]
+00f3053c  bl 0x00e14168
+00f30540  mov x0,x19
+00f30544  bl 0x00f2fca4
+00f30548  cbz x0,0x00f30a10
+00f3054c  mov x1,xzr
+00f30550  bl 0x00fada94
+00f30554  cbz x0,0x00f30a10
+00f30558  mov x1,xzr
+00f3055c  bl 0x00dc47dc
+00f30560  mov x20,x0
+00f30564  mov x0,x19
+00f30568  bl 0x00f2fe94
+00f3056c  cbz x0,0x00f30a10
+00f30570  ldr x24,[x22]
+00f30574  mov x8,x0
+00f30578  ldr w21,[x8, #0xb0]
+00f3057c  ldr x9,[x24, #0x38]
+00f30580  ldr x0,[x9]
+00f30584  ldrb w9,[x0, #0x132]
+00f30588  tbnz w9,#0x0,0x00f30590
+00f3058c  bl 0x00b2ac40
+00f30590  ldr w8,[x0, #0xe0]
+00f30594  cbnz w8,0x00f3059c
+00f30598  bl 0x00b0798c
+00f3059c  ldr x8,[x24, #0x38]
+00f305a0  ldr x0,[x8]
+00f305a4  ldrb w8,[x0, #0x132]
+00f305a8  tbnz w8,#0x0,0x00f305b0
+00f305ac  bl 0x00b2ac40
+00f305b0  ldr x8,[x0, #0xb8]
+00f305b4  mov x0,x20
+00f305b8  mov w1,w21
+00f305bc  mov x3,xzr
+00f305c0  ldr x2,[x8]
+00f305c4  bl 0x00e14168
+00f305c8  mov x0,x19
+00f305cc  bl 0x00f2fca4
+00f305d0  cbz x0,0x00f30a10
+00f305d4  mov x1,xzr
+00f305d8  bl 0x00fad8cc
+00f305dc  cbz x0,0x00f30a10
+00f305e0  mov x1,xzr
+00f305e4  bl 0x00dc47dc
+00f305e8  mov x20,x0
+00f305ec  mov x0,x19
+00f305f0  bl 0x00f2fe94
+00f305f4  cbz x0,0x00f30a10
+00f305f8  ldr x24,[x22]
+00f305fc  mov x8,x0
+00f30600  ldr w21,[x8, #0x98]
+00f30604  ldr x9,[x24, #0x38]
+00f30608  ldr x0,[x9]
+00f3060c  ldrb w9,[x0, #0x132]
+00f30610  tbnz w9,#0x0,0x00f30618
+00f30614  bl 0x00b2ac40
+00f30618  ldr w8,[x0, #0xe0]
+00f3061c  cbnz w8,0x00f30624
+00f30620  bl 0x00b0798c
+00f30624  ldr x8,[x24, #0x38]
+00f30628  ldr x0,[x8]
+00f3062c  ldrb w8,[x0, #0x132]
+00f30630  tbnz w8,#0x0,0x00f30638
+00f30634  bl 0x00b2ac40
+00f30638  ldr x8,[x0, #0xb8]
+00f3063c  mov x0,x20
+00f30640  mov x3,xzr
+00f30644  ldr x2,[x8]
+00f30648  mov w8,#0xa784
+00f3064c  movk w8,#0x4ca, LSL #16
+00f30650  add w1,w21,w8
+00f30654  bl 0x00e14168
+00f30658  mov x0,x19
+00f3065c  bl 0x00f2fca4
+00f30660  cbz x0,0x00f30a10
+00f30664  mov x1,xzr
+00f30668  bl 0x00fad918
+00f3066c  cbz x0,0x00f30a10
+00f30670  mov x1,xzr
+00f30674  bl 0x00dc0d50
+00f30678  mov x20,x0
+00f3067c  mov x0,x19
+00f30680  bl 0x00f2fe94
+00f30684  cbz x0,0x00f30a10
+00f30688  adrp x8,0x3332000
+00f3068c  ldr x8,[x8, #0x38]
+00f30690  ldr w9,[x0, #0x98]
+00f30694  adrp x21,0x3309000
+00f30698  add x1,sp,#0x18
+00f3069c  ldr x0,[x8]
+00f306a0  ldr x21,[x21, #0xa90]
+00f306a4  str w9,[sp, #0x18]
+00f306a8  bl 0x00b07994
+00f306ac  ldr x8,[x21]
+00f306b0  mov x1,x0
+00f306b4  mov x2,xzr
+00f306b8  mov x0,x8
+00f306bc  bl 0x01fd0378
+00f306c0  mov x1,x0
+00f306c4  fmov s0,wzr
+00f306c8  mov x0,x20
+00f306cc  mov x2,xzr
+00f306d0  mov w3,wzr
+00f306d4  mov x4,xzr
+00f306d8  bl 0x00e14c70
+00f306dc  mov x0,x19
+00f306e0  bl 0x00f2fca4
+00f306e4  cbz x0,0x00f30a10
+00f306e8  mov x1,xzr
+00f306ec  bl 0x00fad9fc
+00f306f0  cbz x0,0x00f30a10
+00f306f4  mov x1,xzr
+00f306f8  bl 0x00dc47dc
+00f306fc  mov x20,x0
+00f30700  mov x0,x19
+00f30704  bl 0x00f2fe94
+00f30708  cbz x0,0x00f30a10
+00f3070c  ldr x24,[x22]
+00f30710  mov x8,x0
+00f30714  ldr w21,[x8, #0xa8]
+00f30718  ldr x9,[x24, #0x38]
+00f3071c  ldr x0,[x9]
+00f30720  ldrb w9,[x0, #0x132]
+00f30724  tbnz w9,#0x0,0x00f3072c
+00f30728  bl 0x00b2ac40
+00f3072c  ldr w8,[x0, #0xe0]
+00f30730  cbnz w8,0x00f30738
+00f30734  bl 0x00b0798c
+00f30738  ldr x8,[x24, #0x38]
+00f3073c  ldr x0,[x8]
+00f30740  ldrb w8,[x0, #0x132]
+00f30744  tbnz w8,#0x0,0x00f3074c
+00f30748  bl 0x00b2ac40
+00f3074c  ldr x8,[x0, #0xb8]
+00f30750  mov x0,x20
+00f30754  mov w1,w21
+00f30758  mov x3,xzr
+00f3075c  ldr x2,[x8]
+00f30760  bl 0x00e14168
+00f30764  mov x0,x19
+00f30768  bl 0x00f2fca4
+00f3076c  cbz x0,0x00f30a10
+00f30770  mov x1,xzr
+00f30774  bl 0x00fadb78
+00f30778  cbz x0,0x00f30a10
+00f3077c  mov x1,xzr
+00f30780  bl 0x00dc47dc
+00f30784  mov x20,x0
+00f30788  mov x0,x19
+00f3078c  bl 0x00f2fe94
+00f30790  cbz x0,0x00f30a10
+00f30794  ldr x22,[x22]
+00f30798  mov x8,x0
+00f3079c  ldr w21,[x8, #0xb8]
+00f307a0  ldr x9,[x22, #0x38]
+00f307a4  ldr x0,[x9]
+00f307a8  ldrb w9,[x0, #0x132]
+00f307ac  tbnz w9,#0x0,0x00f307b4
+00f307b0  bl 0x00b2ac40
+00f307b4  ldr w8,[x0, #0xe0]
+00f307b8  cbnz w8,0x00f307c0
+00f307bc  bl 0x00b0798c
+00f307c0  ldr x8,[x22, #0x38]
+00f307c4  ldr x0,[x8]
+00f307c8  ldrb w8,[x0, #0x132]
+00f307cc  tbnz w8,#0x0,0x00f307d4
+00f307d0  bl 0x00b2ac40
+00f307d4  ldr x8,[x0, #0xb8]
+00f307d8  mov x0,x20
+00f307dc  mov w1,w21
+00f307e0  mov x3,xzr
+00f307e4  ldr x2,[x8]
+00f307e8  bl 0x00e14168
+00f307ec  mov x0,x19
+00f307f0  bl 0x00f2fca4
+00f307f4  cbz x0,0x00f30a10
+00f307f8  mov x1,xzr
+00f307fc  bl 0x00fadb78
+00f30800  cbz x0,0x00f30a10
+00f30804  ldr x0,[x0, #0x18]
+00f30808  cbz x0,0x00f30a10
+00f3080c  adrp x20,0x334c000
+00f30810  ldr x20,[x20, #0xc30]
+00f30814  ldr x1,[x20]
+00f30818  bl 0x01794e94
+00f3081c  cbz x0,0x00f30a10
+00f30820  ldr x8,[x0]
+00f30824  ldr x9,[x8, #0x278]
+00f30828  ldr x1,[x8, #0x280]
+00f3082c  blr x9
+00f30830  mov x0,x19
+00f30834  bl 0x00f2fca4
+00f30838  cbz x0,0x00f30a10
+00f3083c  mov x1,xzr
+00f30840  bl 0x00fadb78
+00f30844  cbz x0,0x00f30a10
+00f30848  ldr x0,[x0, #0x20]
+00f3084c  cbz x0,0x00f30a10
+00f30850  mov x1,xzr
+00f30854  bl 0x024f42ec
+00f30858  cbz x0,0x00f30a10
+00f3085c  mov x1,xzr
+00f30860  bl 0x024e4ed4
+00f30864  cbz x0,0x00f30a10
+00f30868  ldr x1,[x20]
+00f3086c  bl 0x01794e94
+00f30870  cbz x0,0x00f30a10
+00f30874  ldr x8,[x0]
+00f30878  adrp x20,0x335f000
+00f3087c  ldr x9,[x8, #0x278]
+00f30880  ldr x1,[x8, #0x280]
+00f30884  ldr x20,[x20, #0x20]
+00f30888  blr x9
+00f3088c  ldr x0,[x20]
+00f30890  ldr w8,[x0, #0xe0]
+00f30894  cbnz w8,0x00f308a0
+00f30898  bl 0x00b0798c
+00f3089c  ldr x0,[x20]
+00f308a0  ldr x8,[x0, #0xb8]
+00f308a4  ldr x0,[x8, #0x10]
+00f308a8  cbz x0,0x00f30a10
+00f308ac  mov w1,#0x88c7
+00f308b0  movk w1,#0x5a6, LSL #16
+00f308b4  mov x2,xzr
+00f308b8  bl 0x00e0b4f0
+00f308bc  mov w20,w0
+00f308c0  mov x0,x19
+00f308c4  bl 0x00f2fca4
+00f308c8  cbz x0,0x00f30a10
+00f308cc  mov x1,xzr
+00f308d0  bl 0x00fadbc4
+00f308d4  cbz x0,0x00f30a10
+00f308d8  ldr x8,[x23]
+00f308dc  ldr x21,[x0, #0x18]
+00f308e0  ldr w9,[x8, #0xe0]
+00f308e4  cbz w9,0x00f309dc
+00f308e8  tbz w20,#0x0,0x00f309e8
+00f308ec  mov w1,#0x1
+00f308f0  mov x0,x21
+00f308f4  mov x2,xzr
+00f308f8  bl 0x00e13880
+00f308fc  mov x0,x19
+00f30900  bl 0x00f2fca4
+00f30904  cbz x0,0x00f30a10
+00f30908  mov x1,xzr
+00f3090c  bl 0x00fadc10
+00f30910  cbz x0,0x00f30a10
+00f30914  mov x1,xzr
+00f30918  bl 0x00dc47dc
+00f3091c  mov x20,x0
+00f30920  mov x0,x19
+00f30924  bl 0x00f2fe94
+00f30928  cbz x0,0x00f30a10
+00f3092c  mov x1,xzr
+00f30930  bl 0x00df3614
+00f30934  mov x1,x0
+00f30938  mov x0,x20
+00f3093c  mov x2,xzr
+00f30940  bl 0x00e13af0
+00f30944  mov x0,x19
+00f30948  bl 0x00f2fca4
+00f3094c  cbz x0,0x00f30a10
+00f30950  mov x1,xzr
+00f30954  bl 0x00fadc5c
+00f30958  cbz x0,0x00f30a10
+00f3095c  adrp x8,0x332d000
+00f30960  ldr x8,[x8, #0xd38]
+00f30964  adrp x21,0x3360000
+00f30968  ldr x20,[x0, #0x18]
+00f3096c  ldr x8,[x8]
+00f30970  ldr w9,[x8, #0xe0]
+00f30974  ldr x21,[x21, #0x750]
+00f30978  cbnz w9,0x00f30984
+00f3097c  mov x0,x8
+00f30980  bl 0x00b0798c
+00f30984  mov w1,#0x1
+00f30988  mov x0,x20
+00f3098c  mov x2,xzr
+00f30990  bl 0x00e34224
+00f30994  ldr x8,[x21]
+00f30998  mov x20,x0
+00f3099c  mov x0,x8
+00f309a0  bl 0x00b079a0
+00f309a4  cbz x0,0x00f30a10
+00f309a8  adrp x8,0x337d000
+00f309ac  ldr x8,[x8, #0xde0]
+00f309b0  mov x1,x19
+00f309b4  mov x3,xzr
+00f309b8  mov x21,x0
+00f309bc  ldr x2,[x8]
+00f309c0  bl 0x00e35bd0
+00f309c4  cbz x20,0x00f30a10
+00f309c8  str x21,[x20, #0x38]!
+00f309cc  mov x0,x20
+00f309d0  mov x1,x21
+00f309d4  bl 0x00b07850
+00f309d8  b 0x00f309f8
+00f309dc  mov x0,x8
+00f309e0  bl 0x00b0798c
+00f309e4  tbnz w20,#0x0,0x00f308ec
+00f309e8  mov x0,x21
+00f309ec  mov w1,wzr
+00f309f0  mov x2,xzr
+00f309f4  bl 0x00e13880
+00f309f8  ldp x19,x30,[sp, #0x40]
+00f309fc  ldp x21,x20,[sp, #0x30]
+00f30a00  ldp x23,x22,[sp, #0x20]
+00f30a04  ldr x24,[sp, #0x10]
+00f30a08  ldp d9,d8,[sp], #0x50
+00f30a0c  ret
+00f30a10  bl 0x00b079b0
+00f30a14  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00f30a18_CVHeroDetailPanelMono__Start.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$Start @ 00f30a18
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00f30a18  stp x21,x20,[sp, #-0x20]!
+00f30a1c  stp x19,x30,[sp, #0x10]
+00f30a20  adrp x20,0x3573000
+00f30a24  adrp x21,0x337d000
+00f30a28  ldrb w8,[x20, #0x10d]
+00f30a2c  ldr x21,[x21, #0x5f8]
+00f30a30  mov x19,x0
+00f30a34  tbnz w8,#0x0,0x00f30a4c
+00f30a38  adrp x0,0x337d000
+00f30a3c  ldr x0,[x0, #0x5f8]
+00f30a40  bl 0x00b0789c
+00f30a44  mov w8,#0x1
+00f30a48  strb w8,[x20, #0x10d]
+00f30a4c  ldr x8,[x21]
+00f30a50  ldr x8,[x8, #0xb8]
+00f30a54  ldr x0,[x8, #0x30]
+00f30a58  cbz x0,0x00f30a70
+00f30a5c  mov x1,x19
+00f30a60  ldp x19,x30,[sp, #0x10]
+00f30a64  mov x2,xzr
+00f30a68  ldp x21,x20,[sp], #0x20
+00f30a6c  b 0x01060dac
+00f30a70  ldp x19,x30,[sp, #0x10]
+00f30a74  ldp x21,x20,[sp], #0x20
+00f30a78  ret
+
+
+================================================================================
+### FILE: 00f30a7c_CVHeroDetailPanelMono__OnClickClose.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$OnClickClose @ 00f30a7c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GUIScreenBaseMono$$OnClickClose @ 00f206a8
+  -> AliothEngine.GUIScreenManager$$ShowScreen @ 0167a614
+
+--- Calls IN ---
+
+--- Listing ---
+00f30a7c  stp x21,x20,[sp, #-0x20]!
+00f30a80  stp x19,x30,[sp, #0x10]
+00f30a84  adrp x20,0x3573000
+00f30a88  adrp x21,0x337d000
+00f30a8c  ldrb w8,[x20, #0x10f]
+00f30a90  ldr x21,[x21, #0x5f8]
+00f30a94  mov x19,x0
+00f30a98  tbnz w8,#0x0,0x00f30ac8
+00f30a9c  adrp x0,0x337d000
+00f30aa0  ldr x0,[x0, #0x5f8]
+00f30aa4  bl 0x00b0789c
+00f30aa8  adrp x0,0x337b000
+00f30aac  ldr x0,[x0, #0xb98]
+00f30ab0  bl 0x00b0789c
+00f30ab4  adrp x0,0x3334000
+00f30ab8  ldr x0,[x0, #0xda8]
+00f30abc  bl 0x00b0789c
+00f30ac0  mov w8,#0x1
+00f30ac4  strb w8,[x20, #0x10f]
+00f30ac8  ldr x8,[x21]
+00f30acc  ldr x8,[x8, #0xb8]
+00f30ad0  ldr x0,[x8, #0x40]
+00f30ad4  cbz x0,0x00f30aec
+00f30ad8  mov x1,x19
+00f30adc  ldp x19,x30,[sp, #0x10]
+00f30ae0  mov x2,xzr
+00f30ae4  ldp x21,x20,[sp], #0x20
+00f30ae8  b 0x01060dac
+00f30aec  adrp x8,0x337b000
+00f30af0  ldr x8,[x8, #0xb98]
+00f30af4  adrp x20,0x3334000
+00f30af8  ldr x0,[x8]
+00f30afc  ldr w8,[x0, #0xe0]
+00f30b00  ldr x20,[x20, #0xda8]
+00f30b04  cbnz w8,0x00f30b0c
+00f30b08  bl 0x00b0798c
+00f30b0c  ldr x0,[x20]
+00f30b10  mov x1,xzr
+00f30b14  mov x2,x19
+00f30b18  mov w3,wzr
+00f30b1c  mov w4,wzr
+00f30b20  mov x5,xzr
+00f30b24  bl 0x0167a614
+00f30b28  mov x0,x19
+00f30b2c  ldp x19,x30,[sp, #0x10]
+00f30b30  ldp x21,x20,[sp], #0x20
+00f30b34  b 0x00f206a8
+
+
+================================================================================
+### FILE: 00f30b38_CVHeroDetailPanelMono__OnClickZiliao.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$OnClickZiliao @ 00f30b38
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.GUIScreenManager$$ShowScreen @ 0167a614
+
+--- Calls IN ---
+
+--- Listing ---
+00f30b38  str x22,[sp, #-0x30]!
+00f30b3c  stp x21,x20,[sp, #0x10]
+00f30b40  stp x19,x30,[sp, #0x20]
+00f30b44  adrp x21,0x3573000
+00f30b48  adrp x22,0x337d000
+00f30b4c  ldrb w8,[x21, #0x110]
+00f30b50  ldr x22,[x22, #0x5f8]
+00f30b54  mov x20,x1
+00f30b58  mov x19,x0
+00f30b5c  tbnz w8,#0x0,0x00f30ba4
+00f30b60  adrp x0,0x334a000
+00f30b64  ldr x0,[x0, #0xf38]
+00f30b68  bl 0x00b0789c
+00f30b6c  adrp x0,0x336d000
+00f30b70  ldr x0,[x0, #0x5d0]
+00f30b74  bl 0x00b0789c
+00f30b78  adrp x0,0x337d000
+00f30b7c  ldr x0,[x0, #0x5f8]
+00f30b80  bl 0x00b0789c
+00f30b84  adrp x0,0x337b000
+00f30b88  ldr x0,[x0, #0xb98]
+00f30b8c  bl 0x00b0789c
+00f30b90  adrp x0,0x3328000
+00f30b94  ldr x0,[x0, #0xf38]
+00f30b98  bl 0x00b0789c
+00f30b9c  mov w8,#0x1
+00f30ba0  strb w8,[x21, #0x110]
+00f30ba4  ldr x8,[x22]
+00f30ba8  ldr x8,[x8, #0xb8]
+00f30bac  ldr x0,[x8, #0x48]
+00f30bb0  cbz x0,0x00f30bd0
+00f30bb4  mov x1,x19
+00f30bb8  mov x2,x20
+00f30bbc  ldp x19,x30,[sp, #0x20]
+00f30bc0  ldp x21,x20,[sp, #0x10]
+00f30bc4  mov x3,xzr
+00f30bc8  ldr x22,[sp], #0x30
+00f30bcc  b 0x0106125c
+00f30bd0  adrp x8,0x334a000
+00f30bd4  ldr x8,[x8, #0xf38]
+00f30bd8  ldr x0,[x8]
+00f30bdc  bl 0x00b079a0
+00f30be0  cbz x0,0x00f30c48
+00f30be4  adrp x8,0x336d000
+00f30be8  ldr x8,[x8, #0x5d0]
+00f30bec  adrp x22,0x337b000
+00f30bf0  adrp x21,0x3328000
+00f30bf4  mov x1,x19
+00f30bf8  ldr x2,[x8]
+00f30bfc  ldr x22,[x22, #0xb98]
+00f30c00  ldr x21,[x21, #0xf38]
+00f30c04  mov x3,xzr
+00f30c08  mov x20,x0
+00f30c0c  bl 0x01909b80
+00f30c10  ldr x0,[x22]
+00f30c14  ldr w8,[x0, #0xe0]
+00f30c18  cbnz w8,0x00f30c20
+00f30c1c  bl 0x00b0798c
+00f30c20  ldr x0,[x21]
+00f30c24  mov x1,x20
+00f30c28  ldp x19,x30,[sp, #0x20]
+00f30c2c  ldp x21,x20,[sp, #0x10]
+00f30c30  mov x2,xzr
+00f30c34  mov w3,wzr
+00f30c38  mov w4,wzr
+00f30c3c  mov x5,xzr
+00f30c40  ldr x22,[sp], #0x30
+00f30c44  b 0x0167a614
+00f30c48  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f30c4c_CVHeroDetailPanelMono__.ctor.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$.ctor @ 00f30c4c
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CVHeroDetailPanelMonoWrap$$__CreateInstance @ 0123f09c
+
+--- Listing ---
+00f30c4c  stp x21,x20,[sp, #-0x20]!
+00f30c50  stp x19,x30,[sp, #0x10]
+00f30c54  adrp x21,0x3573000
+00f30c58  adrp x20,0x337d000
+00f30c5c  ldrb w8,[x21, #0x111]
+00f30c60  ldr x20,[x20, #0x5f8]
+00f30c64  mov x19,x0
+00f30c68  tbnz w8,#0x0,0x00f30c80
+00f30c6c  adrp x0,0x337d000
+00f30c70  ldr x0,[x0, #0x5f8]
+00f30c74  bl 0x00b0789c
+00f30c78  mov w8,#0x1
+00f30c7c  strb w8,[x21, #0x111]
+00f30c80  mov x0,x19
+00f30c84  bl 0x00f1c130
+00f30c88  ldr x8,[x20]
+00f30c8c  ldr x8,[x8, #0xb8]
+00f30c90  ldr x0,[x8, #0x50]
+00f30c94  cbz x0,0x00f30cac
+00f30c98  mov x1,x19
+00f30c9c  ldp x19,x30,[sp, #0x10]
+00f30ca0  mov x2,xzr
+00f30ca4  ldp x21,x20,[sp], #0x20
+00f30ca8  b 0x01060dac
+00f30cac  ldp x19,x30,[sp, #0x10]
+00f30cb0  ldp x21,x20,[sp], #0x20
+00f30cb4  ret
+
+
+================================================================================
+### FILE: 00f30cb8_CVHeroDetailPanelMono___ShowDetail_b__13_0.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$<ShowDetail>b__13_0 @ 00f30cb8
+
+--- Calls OUT ---
+  -> CVHeroDetailPanelMono$$get_m_node @ 00f2fca4
+  -> UINode$$get_Image @ 00dc0d50
+  -> AliothEngine.Extensions.UGUIExtensions$$UIImageSetNativeAsceptRadio @ 016bbb10
+  -> CvherodetailpanelNode$$get_spr_girl_show @ 00fad834
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00f30cb8  str x30,[sp, #-0x10]!
+00f30cbc  bl 0x00f2fca4
+00f30cc0  cbz x0,0x00f30ce4
+00f30cc4  mov x1,xzr
+00f30cc8  bl 0x00fad834
+00f30ccc  cbz x0,0x00f30ce4
+00f30cd0  mov x1,xzr
+00f30cd4  bl 0x00dc0d50
+00f30cd8  mov x1,xzr
+00f30cdc  ldr x30,[sp], #0x10
+00f30ce0  b 0x016bbb10
+00f30ce4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f30ce8_CVHeroDetailPanelMono___OnClickZiliao_b__15_0.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$<OnClickZiliao>b__15_0 @ 00f30ce8
+
+--- Calls OUT ---
+  -> YingyuanCVMono$$InitData @ 01052ddc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> BaseData$$get_id @ 00df3164
+  -> CVHeroDetailPanelMono$$get_p_data @ 00f2fe94
+
+--- Calls IN ---
+
+--- Listing ---
+00f30ce8  stp x21,x20,[sp, #-0x20]!
+00f30cec  stp x19,x30,[sp, #0x10]
+00f30cf0  adrp x21,0x3573000
+00f30cf4  ldrb w8,[x21, #0x112]
+00f30cf8  mov x19,x1
+00f30cfc  mov x20,x0
+00f30d00  tbnz w8,#0x0,0x00f30d18
+00f30d04  adrp x0,0x3352000
+00f30d08  ldr x0,[x0, #0x938]
+00f30d0c  bl 0x00b0789c
+00f30d10  mov w8,#0x1
+00f30d14  strb w8,[x21, #0x112]
+00f30d18  mov x0,x20
+00f30d1c  bl 0x00f2fe94
+00f30d20  cbz x0,0x00f30d7c
+00f30d24  mov x1,xzr
+00f30d28  bl 0x00df3164
+00f30d2c  cbz x19,0x00f30d7c
+00f30d30  adrp x8,0x3352000
+00f30d34  ldr x8,[x8, #0x938]
+00f30d38  ldr x9,[x19]
+00f30d3c  ldr x8,[x8]
+00f30d40  ldrb w11,[x9, #0x12c]
+00f30d44  ldrb w10,[x8, #0x12c]
+00f30d48  cmp w11,w10
+00f30d4c  b.cc 0x00f30d7c
+00f30d50  ldr x9,[x9, #0xc8]
+00f30d54  add x9,x9,x10, LSL #0x3
+00f30d58  ldur x9,[x9, #-0x8]
+00f30d5c  cmp x9,x8
+00f30d60  b.ne 0x00f30d7c
+00f30d64  mov w1,w0
+00f30d68  mov x0,x19
+00f30d6c  ldp x19,x30,[sp, #0x10]
+00f30d70  mov x2,xzr
+00f30d74  ldp x21,x20,[sp], #0x20
+00f30d78  b 0x01052ddc
+00f30d7c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f30d80_CVHeroDetailPanelMono____xLuaBaseProxy_get_LayerType.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$<>xLuaBaseProxy_get_LayerType @ 00f30d80
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$get_LayerType @ 016711a8
+
+--- Calls IN ---
+
+--- Listing ---
+00f30d80  mov x1,xzr
+00f30d84  b 0x016711a8
+
+
+================================================================================
+### FILE: 00f30d88_CVHeroDetailPanelMono____xLuaBaseProxy_get_TitleId.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$<>xLuaBaseProxy_get_TitleId @ 00f30d88
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$get_TitleId @ 00f20280
+
+--- Calls IN ---
+
+--- Listing ---
+00f30d88  b 0x00f20280
+
+
+================================================================================
+### FILE: 00f30d8c_CVHeroDetailPanelMono____xLuaBaseProxy_OnClickClose.txt
+================================================================================
+Function: CVHeroDetailPanelMono$$<>xLuaBaseProxy_OnClickClose @ 00f30d8c
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$OnClickClose @ 00f206a8
+
+--- Calls IN ---
+
+--- Listing ---
+00f30d8c  b 0x00f206a8
+
+
+================================================================================
+### FILE: 00f81a34_CVPanelMono__get_m_node.txt
+================================================================================
+Function: CVPanelMono$$get_m_node @ 00f81a34
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp667 @ 010b7374
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+
+--- Calls IN ---
+  <- CVPanelMono$$get_LanguageToggleGroup @ 00f81bb8
+  <- CVPanelMono$$Awake @ 00f81d44
+  <- XLua.CSObjectWrap.CVPanelMonoWrap$$_g_get_m_node @ 0123fe4c
+
+--- Listing ---
+00f81a34  str x22,[sp, #-0x30]!
+00f81a38  stp x21,x20,[sp, #0x10]
+00f81a3c  stp x19,x30,[sp, #0x20]
+00f81a40  adrp x20,0x3573000
+00f81a44  adrp x21,0x337d000
+00f81a48  ldrb w8,[x20, #0x3cc]
+00f81a4c  ldr x21,[x21, #0xf78]
+00f81a50  mov x19,x0
+00f81a54  tbnz w8,#0x0,0x00f81a90
+00f81a58  adrp x0,0x3326000
+00f81a5c  ldr x0,[x0, #0x870]
+00f81a60  bl 0x00b0789c
+00f81a64  adrp x0,0x3348000
+00f81a68  ldr x0,[x0, #0x138]
+00f81a6c  bl 0x00b0789c
+00f81a70  adrp x0,0x337d000
+00f81a74  ldr x0,[x0, #0xf78]
+00f81a78  bl 0x00b0789c
+00f81a7c  adrp x0,0x3321000
+00f81a80  ldr x0,[x0, #0xca8]
+00f81a84  bl 0x00b0789c
+00f81a88  mov w8,#0x1
+00f81a8c  strb w8,[x20, #0x3cc]
+00f81a90  ldr x8,[x21]
+00f81a94  ldr x8,[x8, #0xb8]
+00f81a98  ldr x0,[x8]
+00f81a9c  cbz x0,0x00f81ab8
+00f81aa0  mov x1,x19
+00f81aa4  ldp x19,x30,[sp, #0x20]
+00f81aa8  ldp x21,x20,[sp, #0x10]
+00f81aac  mov x2,xzr
+00f81ab0  ldr x22,[sp], #0x30
+00f81ab4  b 0x010b7374
+00f81ab8  adrp x8,0x3321000
+00f81abc  ldr x8,[x8, #0xca8]
+00f81ac0  mov x20,x19
+00f81ac4  ldr x21,[x20, #0xc8]!
+00f81ac8  ldr x0,[x8]
+00f81acc  ldr w8,[x0, #0xe0]
+00f81ad0  cbnz w8,0x00f81ad8
+00f81ad4  bl 0x00b0798c
+00f81ad8  mov x0,x21
+00f81adc  mov x1,xzr
+00f81ae0  mov x2,xzr
+00f81ae4  bl 0x024c8180
+00f81ae8  tbz w0,#0x0,0x00f81b3c
+00f81aec  adrp x22,0x3348000
+00f81af0  adrp x21,0x3326000
+00f81af4  ldr x22,[x22, #0x138]
+00f81af8  ldr x21,[x21, #0x870]
+00f81afc  mov x0,x19
+00f81b00  mov x1,xzr
+00f81b04  bl 0x024e4ed4
+00f81b08  ldr x8,[x22]
+00f81b0c  mov x19,x0
+00f81b10  ldr w9,[x8, #0xe0]
+00f81b14  cbnz w9,0x00f81b20
+00f81b18  mov x0,x8
+00f81b1c  bl 0x00b0798c
+00f81b20  ldr x1,[x21]
+00f81b24  mov x0,x19
+00f81b28  bl 0x017372ac
+00f81b2c  mov x1,x0
+00f81b30  str x0,[x20]
+00f81b34  mov x0,x20
+00f81b38  bl 0x00b07850
+00f81b3c  ldr x0,[x20]
+00f81b40  ldp x19,x30,[sp, #0x20]
+00f81b44  ldp x21,x20,[sp, #0x10]
+00f81b48  ldr x22,[sp], #0x30
+00f81b4c  ret
+
+
+================================================================================
+### FILE: 00f81b50_CVPanelMono__get_LayerType.txt
+================================================================================
+Function: CVPanelMono$$get_LayerType @ 00f81b50
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp491 @ 0109f3ac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00f81b50  stp x21,x20,[sp, #-0x20]!
+00f81b54  stp x19,x30,[sp, #0x10]
+00f81b58  adrp x20,0x3573000
+00f81b5c  adrp x21,0x337d000
+00f81b60  ldrb w8,[x20, #0x3cd]
+00f81b64  ldr x21,[x21, #0xf78]
+00f81b68  mov x19,x0
+00f81b6c  tbnz w8,#0x0,0x00f81b84
+00f81b70  adrp x0,0x337d000
+00f81b74  ldr x0,[x0, #0xf78]
+00f81b78  bl 0x00b0789c
+00f81b7c  mov w8,#0x1
+00f81b80  strb w8,[x20, #0x3cd]
+00f81b84  ldr x8,[x21]
+00f81b88  ldr x8,[x8, #0xb8]
+00f81b8c  ldr x0,[x8, #0x8]
+00f81b90  cbz x0,0x00f81ba8
+00f81b94  mov x1,x19
+00f81b98  ldp x19,x30,[sp, #0x10]
+00f81b9c  mov x2,xzr
+00f81ba0  ldp x21,x20,[sp], #0x20
+00f81ba4  b 0x0109f3ac
+00f81ba8  ldp x19,x30,[sp, #0x10]
+00f81bac  mov w0,#0x3
+00f81bb0  ldp x21,x20,[sp], #0x20
+00f81bb4  ret
+
+
+================================================================================
+### FILE: 00f81bb8_CVPanelMono__get_LanguageToggleGroup.txt
+================================================================================
+Function: CVPanelMono$$get_LanguageToggleGroup @ 00f81bb8
+
+--- Calls OUT ---
+  -> CVPanelMono$$get_m_node @ 00f81a34
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp668 @ 010b75b0
+  -> CvpanelNode$$get_CV_Content @ 00fade80
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CVPanelMono$$InitToggles @ 00f82104
+  <- CVPanelMono$$get_LanguageList @ 00f81c80
+
+--- Listing ---
+00f81bb8  stp x21,x20,[sp, #-0x20]!
+00f81bbc  stp x19,x30,[sp, #0x10]
+00f81bc0  adrp x20,0x3573000
+00f81bc4  adrp x21,0x337d000
+00f81bc8  ldrb w8,[x20, #0x3ce]
+00f81bcc  ldr x21,[x21, #0xf78]
+00f81bd0  mov x19,x0
+00f81bd4  tbnz w8,#0x0,0x00f81c04
+00f81bd8  adrp x0,0x334f000
+00f81bdc  ldr x0,[x0, #0x4e0]
+00f81be0  bl 0x00b0789c
+00f81be4  adrp x0,0x3348000
+00f81be8  ldr x0,[x0, #0x138]
+00f81bec  bl 0x00b0789c
+00f81bf0  adrp x0,0x337d000
+00f81bf4  ldr x0,[x0, #0xf78]
+00f81bf8  bl 0x00b0789c
+00f81bfc  mov w8,#0x1
+00f81c00  strb w8,[x20, #0x3ce]
+00f81c04  ldr x8,[x21]
+00f81c08  ldr x8,[x8, #0xb8]
+00f81c0c  ldr x0,[x8, #0x10]
+00f81c10  cbz x0,0x00f81c28
+00f81c14  mov x1,x19
+00f81c18  ldp x19,x30,[sp, #0x10]
+00f81c1c  mov x2,xzr
+00f81c20  ldp x21,x20,[sp], #0x20
+00f81c24  b 0x010b75b0
+00f81c28  mov x0,x19
+00f81c2c  bl 0x00f81a34
+00f81c30  cbz x0,0x00f81c7c
+00f81c34  mov x1,xzr
+00f81c38  bl 0x00fade80
+00f81c3c  cbz x0,0x00f81c7c
+00f81c40  adrp x8,0x3348000
+00f81c44  ldr x8,[x8, #0x138]
+00f81c48  adrp x20,0x334f000
+00f81c4c  ldr x19,[x0, #0x18]
+00f81c50  ldr x8,[x8]
+00f81c54  ldr w9,[x8, #0xe0]
+00f81c58  ldr x20,[x20, #0x4e0]
+00f81c5c  cbnz w9,0x00f81c68
+00f81c60  mov x0,x8
+00f81c64  bl 0x00b0798c
+00f81c68  ldr x1,[x20]
+00f81c6c  mov x0,x19
+00f81c70  ldp x19,x30,[sp, #0x10]
+00f81c74  ldp x21,x20,[sp], #0x20
+00f81c78  b 0x017372ac
+00f81c7c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f81c80_CVPanelMono__get_LanguageList.txt
+================================================================================
+Function: CVPanelMono$$get_LanguageList @ 00f81c80
+
+--- Calls OUT ---
+  -> CVPanelMono$$get_LanguageToggleGroup @ 00f81bb8
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp669 @ 010b77ec
+
+--- Calls IN ---
+  <- CVPanelMono$$InitToggles @ 00f82104
+
+--- Listing ---
+00f81c80  stp x21,x20,[sp, #-0x20]!
+00f81c84  stp x19,x30,[sp, #0x10]
+00f81c88  adrp x20,0x3573000
+00f81c8c  adrp x21,0x337d000
+00f81c90  ldrb w8,[x20, #0x3cf]
+00f81c94  ldr x21,[x21, #0xf78]
+00f81c98  mov x19,x0
+00f81c9c  tbnz w8,#0x0,0x00f81ccc
+00f81ca0  adrp x0,0x3314000
+00f81ca4  ldr x0,[x0, #0xf00]
+00f81ca8  bl 0x00b0789c
+00f81cac  adrp x0,0x3348000
+00f81cb0  ldr x0,[x0, #0x138]
+00f81cb4  bl 0x00b0789c
+00f81cb8  adrp x0,0x337d000
+00f81cbc  ldr x0,[x0, #0xf78]
+00f81cc0  bl 0x00b0789c
+00f81cc4  mov w8,#0x1
+00f81cc8  strb w8,[x20, #0x3cf]
+00f81ccc  ldr x8,[x21]
+00f81cd0  ldr x8,[x8, #0xb8]
+00f81cd4  ldr x0,[x8, #0x18]
+00f81cd8  cbz x0,0x00f81cf0
+00f81cdc  mov x1,x19
+00f81ce0  ldp x19,x30,[sp, #0x10]
+00f81ce4  mov x2,xzr
+00f81ce8  ldp x21,x20,[sp], #0x20
+00f81cec  b 0x010b77ec
+00f81cf0  mov x0,x19
+00f81cf4  bl 0x00f81bb8
+00f81cf8  cbz x0,0x00f81d40
+00f81cfc  adrp x19,0x3348000
+00f81d00  adrp x20,0x3314000
+00f81d04  ldr x19,[x19, #0x138]
+00f81d08  ldr x20,[x20, #0xf00]
+00f81d0c  mov x1,xzr
+00f81d10  bl 0x024e4ed4
+00f81d14  ldr x8,[x19]
+00f81d18  mov x19,x0
+00f81d1c  ldr w9,[x8, #0xe0]
+00f81d20  cbnz w9,0x00f81d2c
+00f81d24  mov x0,x8
+00f81d28  bl 0x00b0798c
+00f81d2c  ldr x1,[x20]
+00f81d30  mov x0,x19
+00f81d34  ldp x19,x30,[sp, #0x10]
+00f81d38  ldp x21,x20,[sp], #0x20
+00f81d3c  b 0x017372ac
+00f81d40  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f81d44_CVPanelMono__Awake.txt
+================================================================================
+Function: CVPanelMono$$Awake @ 00f81d44
+
+--- Calls OUT ---
+  -> CvpanelNode$$get_lbl_title @ 00fadde8
+  -> CvpanelNode$$get_btn_ok @ 00fadf64
+  -> CVPanelMono$$InitToggles @ 00f82104
+  -> CVPanelMono$$get_m_node @ 00f81a34
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> GUIScreenBaseMono$$Awake @ 00f21c4c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> CvpanelNode$$get_lbl_ok @ 00fadfb0
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> FUN_00b079b0 @ 00b079b0
+  -> Ali$$get_languageCV @ 00e00a6c
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> CvpanelNode$$get_btn_cancel @ 00fadecc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UIEventListener$$Get @ 00e34224
+  -> UINode$$get_Text @ 00dc47dc
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> CvpanelNode$$get_lbl_cancel @ 00fadf18
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00f81d44  str x22,[sp, #-0x30]!
+00f81d48  stp x21,x20,[sp, #0x10]
+00f81d4c  stp x19,x30,[sp, #0x20]
+00f81d50  adrp x20,0x3573000
+00f81d54  adrp x21,0x337d000
+00f81d58  ldrb w8,[x20, #0x3d0]
+00f81d5c  ldr x21,[x21, #0xf78]
+00f81d60  mov x19,x0
+00f81d64  tbnz w8,#0x0,0x00f81dd0
+00f81d68  adrp x0,0x335f000
+00f81d6c  ldr x0,[x0, #0x20]
+00f81d70  bl 0x00b0789c
+00f81d74  adrp x0,0x3348000
+00f81d78  ldr x0,[x0, #0x138]
+00f81d7c  bl 0x00b0789c
+00f81d80  adrp x0,0x335b000
+00f81d84  ldr x0,[x0, #0x650]
+00f81d88  bl 0x00b0789c
+00f81d8c  adrp x0,0x3382000
+00f81d90  ldr x0,[x0, #0x510]
+00f81d94  bl 0x00b0789c
+00f81d98  adrp x0,0x3342000
+00f81d9c  ldr x0,[x0, #0x400]
+00f81da0  bl 0x00b0789c
+00f81da4  adrp x0,0x337d000
+00f81da8  ldr x0,[x0, #0xf78]
+00f81dac  bl 0x00b0789c
+00f81db0  adrp x0,0x332d000
+00f81db4  ldr x0,[x0, #0xd38]
+00f81db8  bl 0x00b0789c
+00f81dbc  adrp x0,0x3360000
+00f81dc0  ldr x0,[x0, #0x750]
+00f81dc4  bl 0x00b0789c
+00f81dc8  mov w8,#0x1
+00f81dcc  strb w8,[x20, #0x3d0]
+00f81dd0  ldr x8,[x21]
+00f81dd4  ldr x8,[x8, #0xb8]
+00f81dd8  ldr x0,[x8, #0x20]
+00f81ddc  cbz x0,0x00f81df8
+00f81de0  mov x1,x19
+00f81de4  ldp x19,x30,[sp, #0x20]
+00f81de8  ldp x21,x20,[sp, #0x10]
+00f81dec  mov x2,xzr
+00f81df0  ldr x22,[sp], #0x30
+00f81df4  b 0x01060dac
+00f81df8  mov x0,x19
+00f81dfc  mov x1,xzr
+00f81e00  bl 0x00f21c4c
+00f81e04  mov x0,x19
+00f81e08  bl 0x00f81a34
+00f81e0c  cbz x0,0x00f82100
+00f81e10  mov x1,xzr
+00f81e14  bl 0x00fadde8
+00f81e18  cbz x0,0x00f82100
+00f81e1c  adrp x22,0x335b000
+00f81e20  ldr x22,[x22, #0x650]
+00f81e24  mov x1,xzr
+00f81e28  bl 0x00dc47dc
+00f81e2c  ldr x21,[x22]
+00f81e30  mov x20,x0
+00f81e34  ldr x8,[x21, #0x38]
+00f81e38  ldr x8,[x8]
+00f81e3c  ldrb w9,[x8, #0x132]
+00f81e40  tbnz w9,#0x0,0x00f81e50
+00f81e44  mov x0,x8
+00f81e48  bl 0x00b2ac40
+00f81e4c  mov x8,x0
+00f81e50  ldr w9,[x8, #0xe0]
+00f81e54  cbnz w9,0x00f81e60
+00f81e58  mov x0,x8
+00f81e5c  bl 0x00b0798c
+00f81e60  ldr x8,[x21, #0x38]
+00f81e64  adrp x21,0x3348000
+00f81e68  ldr x0,[x8]
+00f81e6c  ldrb w8,[x0, #0x132]
+00f81e70  ldr x21,[x21, #0x138]
+00f81e74  tbnz w8,#0x0,0x00f81e7c
+00f81e78  bl 0x00b2ac40
+00f81e7c  ldr x8,[x21]
+00f81e80  ldr x9,[x0, #0xb8]
+00f81e84  ldr w10,[x8, #0xe0]
+00f81e88  ldr x21,[x9]
+00f81e8c  cbnz w10,0x00f81e98
+00f81e90  mov x0,x8
+00f81e94  bl 0x00b0798c
+00f81e98  mov w1,#0x84d3
+00f81e9c  movk w1,#0x4c8, LSL #16
+00f81ea0  mov x0,x20
+00f81ea4  mov x2,x21
+00f81ea8  mov x3,xzr
+00f81eac  bl 0x00e14168
+00f81eb0  mov x0,x19
+00f81eb4  bl 0x00f81a34
+00f81eb8  cbz x0,0x00f82100
+00f81ebc  mov x1,xzr
+00f81ec0  bl 0x00fadfb0
+00f81ec4  cbz x0,0x00f82100
+00f81ec8  mov x1,xzr
+00f81ecc  bl 0x00dc47dc
+00f81ed0  ldr x21,[x22]
+00f81ed4  mov x20,x0
+00f81ed8  ldr x8,[x21, #0x38]
+00f81edc  ldr x8,[x8]
+00f81ee0  ldrb w9,[x8, #0x132]
+00f81ee4  tbnz w9,#0x0,0x00f81ef4
+00f81ee8  mov x0,x8
+00f81eec  bl 0x00b2ac40
+00f81ef0  mov x8,x0
+00f81ef4  ldr w9,[x8, #0xe0]
+00f81ef8  cbnz w9,0x00f81f04
+00f81efc  mov x0,x8
+00f81f00  bl 0x00b0798c
+00f81f04  ldr x8,[x21, #0x38]
+00f81f08  ldr x0,[x8]
+00f81f0c  ldrb w8,[x0, #0x132]
+00f81f10  tbnz w8,#0x0,0x00f81f18
+00f81f14  bl 0x00b2ac40
+00f81f18  ldr x8,[x0, #0xb8]
+00f81f1c  mov w1,#0x61cf
+00f81f20  movk w1,#0x4c6, LSL #16
+00f81f24  mov x0,x20
+00f81f28  ldr x2,[x8]
+00f81f2c  mov x3,xzr
+00f81f30  bl 0x00e14168
+00f81f34  mov x0,x19
+00f81f38  bl 0x00f81a34
+00f81f3c  cbz x0,0x00f82100
+00f81f40  mov x1,xzr
+00f81f44  bl 0x00fadf18
+00f81f48  cbz x0,0x00f82100
+00f81f4c  mov x1,xzr
+00f81f50  bl 0x00dc47dc
+00f81f54  ldr x21,[x22]
+00f81f58  mov x20,x0
+00f81f5c  ldr x8,[x21, #0x38]
+00f81f60  ldr x8,[x8]
+00f81f64  ldrb w9,[x8, #0x132]
+00f81f68  tbnz w9,#0x0,0x00f81f78
+00f81f6c  mov x0,x8
+00f81f70  bl 0x00b2ac40
+00f81f74  mov x8,x0
+00f81f78  ldr w9,[x8, #0xe0]
+00f81f7c  cbnz w9,0x00f81f88
+00f81f80  mov x0,x8
+00f81f84  bl 0x00b0798c
+00f81f88  ldr x8,[x21, #0x38]
+00f81f8c  ldr x0,[x8]
+00f81f90  ldrb w8,[x0, #0x132]
+00f81f94  tbnz w8,#0x0,0x00f81f9c
+00f81f98  bl 0x00b2ac40
+00f81f9c  ldr x8,[x0, #0xb8]
+00f81fa0  mov w1,#0x4c14
+00f81fa4  movk w1,#0x4c7, LSL #16
+00f81fa8  mov x0,x20
+00f81fac  ldr x2,[x8]
+00f81fb0  mov x3,xzr
+00f81fb4  bl 0x00e14168
+00f81fb8  mov x0,x19
+00f81fbc  bl 0x00f81a34
+00f81fc0  cbz x0,0x00f82100
+00f81fc4  mov x1,xzr
+00f81fc8  bl 0x00fadf64
+00f81fcc  cbz x0,0x00f82100
+00f81fd0  adrp x8,0x332d000
+00f81fd4  ldr x8,[x8, #0xd38]
+00f81fd8  adrp x22,0x3360000
+00f81fdc  ldr x20,[x0, #0x18]
+00f81fe0  ldr x8,[x8]
+00f81fe4  ldr w9,[x8, #0xe0]
+00f81fe8  ldr x22,[x22, #0x750]
+00f81fec  cbnz w9,0x00f81ff8
+00f81ff0  mov x0,x8
+00f81ff4  bl 0x00b0798c
+00f81ff8  mov w1,#0x1
+00f81ffc  mov x0,x20
+00f82000  mov x2,xzr
+00f82004  bl 0x00e34224
+00f82008  ldr x8,[x22]
+00f8200c  mov x20,x0
+00f82010  mov x0,x8
+00f82014  bl 0x00b079a0
+00f82018  cbz x0,0x00f82100
+00f8201c  adrp x8,0x3342000
+00f82020  ldr x8,[x8, #0x400]
+00f82024  mov x1,x19
+00f82028  mov x3,xzr
+00f8202c  mov x21,x0
+00f82030  ldr x2,[x8]
+00f82034  bl 0x00e35bd0
+00f82038  cbz x20,0x00f82100
+00f8203c  str x21,[x20, #0x38]!
+00f82040  mov x0,x20
+00f82044  mov x1,x21
+00f82048  bl 0x00b07850
+00f8204c  mov x0,x19
+00f82050  bl 0x00f81a34
+00f82054  cbz x0,0x00f82100
+00f82058  mov x1,xzr
+00f8205c  bl 0x00fadecc
+00f82060  cbz x0,0x00f82100
+00f82064  ldr x0,[x0, #0x18]
+00f82068  mov w1,#0x1
+00f8206c  mov x2,xzr
+00f82070  bl 0x00e34224
+00f82074  ldr x8,[x22]
+00f82078  mov x20,x0
+00f8207c  mov x0,x8
+00f82080  bl 0x00b079a0
+00f82084  cbz x0,0x00f82100
+00f82088  adrp x8,0x3382000
+00f8208c  ldr x8,[x8, #0x510]
+00f82090  mov x1,x19
+00f82094  mov x3,xzr
+00f82098  mov x21,x0
+00f8209c  ldr x2,[x8]
+00f820a0  bl 0x00e35bd0
+00f820a4  cbz x20,0x00f82100
+00f820a8  adrp x22,0x335f000
+00f820ac  ldr x22,[x22, #0x20]
+00f820b0  str x21,[x20, #0x38]!
+00f820b4  mov x0,x20
+00f820b8  mov x1,x21
+00f820bc  bl 0x00b07850
+00f820c0  ldr x0,[x22]
+00f820c4  ldr w8,[x0, #0xe0]
+00f820c8  cbnz w8,0x00f820d4
+00f820cc  bl 0x00b0798c
+00f820d0  ldr x0,[x22]
+00f820d4  ldr x8,[x0, #0xb8]
+00f820d8  ldr x0,[x8, #0x10]
+00f820dc  cbz x0,0x00f82100
+00f820e0  mov x1,xzr
+00f820e4  bl 0x00e00a6c
+00f820e8  str w0,[x19, #0xd8]
+00f820ec  mov x0,x19
+00f820f0  ldp x19,x30,[sp, #0x20]
+00f820f4  ldp x21,x20,[sp, #0x10]
+00f820f8  ldr x22,[sp], #0x30
+00f820fc  b 0x00f82104
+00f82100  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f82104_CVPanelMono__InitToggles.txt
+================================================================================
+Function: CVPanelMono$$InitToggles @ 00f82104
+
+--- Calls OUT ---
+  -> UnityEngine.UI.Toggle$$set_isOn @ 025ab6a0
+  -> System.Func<object,-bool>$$.ctor @ 01ae8650
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.Events.UnityAction<bool>$$.ctor @ 01e680a8
+  -> System.Linq.Enumerable$$Where<object> @ 0178f7b0
+  -> System.String$$Split @ 01fe0d68
+  -> AliothEngine.Extensions.ComponentExtensions$$GetOrAddComponent<object> @ 0176db7c
+  -> UnityEngine.Events.UnityEventBase$$RemoveAllListeners @ 0250bf68
+  -> FUN_00b079b0 @ 00b079b0
+  -> Ali$$GetExcelDic<object> @ 01737100
+  -> System.Int32$$Parse @ 0214df74
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> GUIElementList$$GetOrAddElementAt<object> @ 01794630
+  -> CVPanelMono$$get_LanguageToggleGroup @ 00f81bb8
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> thunk_FUN_00ace8b4 @ 00b07998
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> CVPanelMono$$get_LanguageList @ 00f81c80
+  -> FUN_00b2ac40 @ 00b2ac40
+  -> System.Collections.Generic.Dictionary<int,-object>$$get_Values @ 0192da04
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> CvitemNode$$get_lbl_tips_off @ 00fadcfc
+  -> GUIElementList$$Resize @ 00dbe3f8
+  -> CVPanelMono$$CheckToggleState @ 00f828a0
+  -> System.Collections.Generic.Dictionary<Int32Enum,-object>$$Add @ 0193fec8
+  -> System.Enum$$Parse @ 021835b8
+  -> UnityEngine.UI.Toggle$$set_group @ 025aa99c
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> CvitemNode$$get_lbl_tips_on @ 00fadd94
+  -> System.Object$$.ctor @ 02194104
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Events.UnityEvent<bool>$$AddListener @ 01e69200
+  -> System.Type$$GetTypeFromHandle @ 0215f900
+  -> UIEventListener$$Get @ 00e34224
+  -> UINode$$get_Text @ 00dc47dc
+  -> FUN_00b079b8 @ 00b079b8
+  -> System.Collections.Generic.List<object>$$get_Item @ 01c00380
+  -> System.Linq.Enumerable$$ToList<object> @ 0178daf8
+  -> System.Collections.Generic.Dictionary<Int32Enum,-object>$$Clear @ 0194005c
+
+--- Calls IN ---
+  <- CVPanelMono$$Awake @ 00f81d44
+
+--- Listing ---
+00f82104  stp x28,x27,[sp, #-0x60]!
+00f82108  stp x26,x25,[sp, #0x10]
+00f8210c  stp x24,x23,[sp, #0x20]
+00f82110  stp x22,x21,[sp, #0x30]
+00f82114  stp x20,x19,[sp, #0x40]
+00f82118  stp x29,x30,[sp, #0x50]
+00f8211c  adrp x20,0x3573000
+00f82120  adrp x21,0x337d000
+00f82124  ldrb w8,[x20, #0x3d1]
+00f82128  ldr x21,[x21, #0xf78]
+00f8212c  mov x19,x0
+00f82130  tbnz w8,#0x0,0x00f8228c
+00f82134  adrp x0,0x3353000
+00f82138  ldr x0,[x0, #0xc28]
+00f8213c  bl 0x00b0789c
+00f82140  adrp x0,0x335f000
+00f82144  ldr x0,[x0, #0x20]
+00f82148  bl 0x00b0789c
+00f8214c  adrp x0,0x3348000
+00f82150  ldr x0,[x0, #0x138]
+00f82154  bl 0x00b0789c
+00f82158  adrp x0,0x335b000
+00f8215c  ldr x0,[x0, #0x650]
+00f82160  bl 0x00b0789c
+00f82164  adrp x0,0x337d000
+00f82168  ldr x0,[x0, #0xf78]
+00f8216c  bl 0x00b0789c
+00f82170  adrp x0,0x3310000
+00f82174  ldr x0,[x0, #0x510]
+00f82178  bl 0x00b0789c
+00f8217c  adrp x0,0x3317000
+00f82180  ldr x0,[x0, #0x6a8]
+00f82184  bl 0x00b0789c
+00f82188  adrp x0,0x3346000
+00f8218c  ldr x0,[x0, #0xea0]
+00f82190  bl 0x00b0789c
+00f82194  adrp x0,0x336d000
+00f82198  ldr x0,[x0, #0x7f8]
+00f8219c  bl 0x00b0789c
+00f821a0  adrp x0,0x3358000
+00f821a4  ldr x0,[x0, #0xa10]
+00f821a8  bl 0x00b0789c
+00f821ac  adrp x0,0x3341000
+00f821b0  ldr x0,[x0, #0x5b0]
+00f821b4  bl 0x00b0789c
+00f821b8  adrp x0,0x3330000
+00f821bc  ldr x0,[x0, #0x168]
+00f821c0  bl 0x00b0789c
+00f821c4  adrp x0,0x3346000
+00f821c8  ldr x0,[x0, #0xcb0]
+00f821cc  bl 0x00b0789c
+00f821d0  adrp x0,0x3370000
+00f821d4  ldr x0,[x0, #0xa88]
+00f821d8  bl 0x00b0789c
+00f821dc  adrp x0,0x3321000
+00f821e0  ldr x0,[x0, #0x758]
+00f821e4  bl 0x00b0789c
+00f821e8  adrp x0,0x3375000
+00f821ec  ldr x0,[x0, #0x180]
+00f821f0  bl 0x00b0789c
+00f821f4  adrp x0,0x331a000
+00f821f8  ldr x0,[x0, #0xe88]
+00f821fc  bl 0x00b0789c
+00f82200  adrp x0,0x3369000
+00f82204  ldr x0,[x0, #0x220]
+00f82208  bl 0x00b0789c
+00f8220c  adrp x0,0x3347000
+00f82210  ldr x0,[x0, #0xd68]
+00f82214  bl 0x00b0789c
+00f82218  adrp x0,0x3372000
+00f8221c  ldr x0,[x0, #0x9d0]
+00f82220  bl 0x00b0789c
+00f82224  adrp x0,0x3366000
+00f82228  ldr x0,[x0, #0xd38]
+00f8222c  bl 0x00b0789c
+00f82230  adrp x0,0x3332000
+00f82234  ldr x0,[x0, #0xa8]
+00f82238  bl 0x00b0789c
+00f8223c  adrp x0,0x333b000
+00f82240  ldr x0,[x0, #0x798]
+00f82244  bl 0x00b0789c
+00f82248  adrp x0,0x3321000
+00f8224c  ldr x0,[x0, #0x598]
+00f82250  bl 0x00b0789c
+00f82254  adrp x0,0x332d000
+00f82258  ldr x0,[x0, #0xd38]
+00f8225c  bl 0x00b0789c
+00f82260  adrp x0,0x3355000
+00f82264  ldr x0,[x0, #0x140]
+00f82268  bl 0x00b0789c
+00f8226c  adrp x0,0x3321000
+00f82270  ldr x0,[x0, #0xf98]
+00f82274  bl 0x00b0789c
+00f82278  adrp x0,0x3360000
+00f8227c  ldr x0,[x0, #0x750]
+00f82280  bl 0x00b0789c
+00f82284  mov w8,#0x1
+00f82288  strb w8,[x20, #0x3d1]
+00f8228c  ldr x8,[x21]
+00f82290  ldr x8,[x8, #0xb8]
+00f82294  ldr x0,[x8, #0x28]
+00f82298  cbz x0,0x00f822c0
+00f8229c  mov x1,x19
+00f822a0  ldp x29,x30,[sp, #0x50]
+00f822a4  ldp x20,x19,[sp, #0x40]
+00f822a8  ldp x22,x21,[sp, #0x30]
+00f822ac  ldp x24,x23,[sp, #0x20]
+00f822b0  ldp x26,x25,[sp, #0x10]
+00f822b4  mov x2,xzr
+00f822b8  ldp x28,x27,[sp], #0x60
+00f822bc  b 0x01060dac
+00f822c0  adrp x20,0x335f000
+00f822c4  ldr x20,[x20, #0x20]
+00f822c8  ldr x0,[x20]
+00f822cc  ldr w8,[x0, #0xe0]
+00f822d0  cbnz w8,0x00f822dc
+00f822d4  bl 0x00b0798c
+00f822d8  ldr x0,[x20]
+00f822dc  ldr x8,[x0, #0xb8]
+00f822e0  ldr x0,[x8, #0x10]
+00f822e4  cbz x0,0x00f8288c
+00f822e8  adrp x8,0x3353000
+00f822ec  ldr x8,[x8, #0xc28]
+00f822f0  ldr x1,[x8]
+00f822f4  bl 0x01737100
+00f822f8  cbz x0,0x00f8288c
+00f822fc  adrp x8,0x336d000
+00f82300  ldr x8,[x8, #0x7f8]
+00f82304  adrp x29,0x3321000
+00f82308  ldr x1,[x8]
+00f8230c  ldr x29,[x29, #0x598]
+00f82310  bl 0x0192da04
+00f82314  ldr x8,[x29]
+00f82318  mov x20,x0
+00f8231c  ldr w9,[x8, #0xe0]
+00f82320  cbnz w9,0x00f82330
+00f82324  mov x0,x8
+00f82328  bl 0x00b0798c
+00f8232c  ldr x8,[x29]
+00f82330  ldr x9,[x8, #0xb8]
+00f82334  ldr x21,[x9, #0x8]
+00f82338  cbnz x21,0x00f8239c
+00f8233c  adrp x21,0x3346000
+00f82340  ldr w9,[x8, #0xe0]
+00f82344  ldr x21,[x21, #0xcb0]
+00f82348  cbnz w9,0x00f82358
+00f8234c  mov x0,x8
+00f82350  bl 0x00b0798c
+00f82354  ldr x8,[x29]
+00f82358  ldr x8,[x8, #0xb8]
+00f8235c  ldr x0,[x21]
+00f82360  ldr x22,[x8]
+00f82364  bl 0x00b079a0
+00f82368  cbz x0,0x00f8288c
+00f8236c  adrp x8,0x3372000
+00f82370  ldr x8,[x8, #0x9d0]
+00f82374  mov x1,x22
+00f82378  mov x3,xzr
+00f8237c  mov x21,x0
+00f82380  ldr x2,[x8]
+00f82384  bl 0x01ae8650
+00f82388  ldr x8,[x29]
+00f8238c  mov x1,x21
+00f82390  ldr x0,[x8, #0xb8]
+00f82394  str x21,[x0, #0x8]!
+00f82398  bl 0x00b07850
+00f8239c  adrp x8,0x3330000
+00f823a0  ldr x8,[x8, #0x168]
+00f823a4  adrp x22,0x3341000
+00f823a8  mov x0,x20
+00f823ac  mov x1,x21
+00f823b0  ldr x2,[x8]
+00f823b4  ldr x22,[x22, #0x5b0]
+00f823b8  bl 0x0178f7b0
+00f823bc  ldr x1,[x22]
+00f823c0  bl 0x0178daf8
+00f823c4  mov x20,x0
+00f823c8  mov x0,x19
+00f823cc  bl 0x00f81c80
+00f823d0  cbz x20,0x00f8288c
+00f823d4  cbz x0,0x00f8288c
+00f823d8  ldr w1,[x20, #0x18]
+00f823dc  mov x2,xzr
+00f823e0  bl 0x00dbe3f8
+00f823e4  ldr x0,[x19, #0xd0]
+00f823e8  cbz x0,0x00f8288c
+00f823ec  adrp x8,0x3346000
+00f823f0  ldr x8,[x8, #0xea0]
+00f823f4  ldr x1,[x8]
+00f823f8  bl 0x0194005c
+00f823fc  ldr w8,[x20, #0x18]
+00f82400  cmp w8,#0x1
+00f82404  b.lt 0x00f82870
+00f82408  mov w21,wzr
+00f8240c  adrp x8,0x333b000
+00f82410  ldr x8,[x8, #0x798]
+00f82414  ldr x0,[x8]
+00f82418  bl 0x00b079a0
+00f8241c  cbz x0,0x00f8288c
+00f82420  mov x1,xzr
+00f82424  mov x22,x0
+00f82428  bl 0x02194104
+00f8242c  mov x0,x22
+00f82430  str x19,[x0, #0x20]!
+00f82434  mov x1,x19
+00f82438  bl 0x00b07850
+00f8243c  adrp x8,0x3369000
+00f82440  ldr x8,[x8, #0x220]
+00f82444  mov x0,x20
+00f82448  mov w1,w21
+00f8244c  ldr x2,[x8]
+00f82450  bl 0x01c00380
+00f82454  mov x25,x0
+00f82458  mov x0,x19
+00f8245c  bl 0x00f81c80
+00f82460  cbz x0,0x00f8288c
+00f82464  adrp x8,0x3370000
+00f82468  ldr x8,[x8, #0xa88]
+00f8246c  mov w1,w21
+00f82470  ldr x2,[x8]
+00f82474  bl 0x01794630
+00f82478  mov x24,x22
+00f8247c  str x0,[x24, #0x10]!
+00f82480  mov x1,x0
+00f82484  mov x0,x24
+00f82488  bl 0x00b07850
+00f8248c  adrp x8,0x3310000
+00f82490  ldr x0,[x24]
+00f82494  ldr x8,[x8, #0x510]
+00f82498  ldr x1,[x8]
+00f8249c  bl 0x0176db7c
+00f824a0  mov x23,x0
+00f824a4  mov x0,x19
+00f824a8  bl 0x00f81bb8
+00f824ac  cbz x23,0x00f8288c
+00f824b0  mov x1,x0
+00f824b4  mov x0,x23
+00f824b8  mov x2,xzr
+00f824bc  bl 0x025aa99c
+00f824c0  cbz x25,0x00f8288c
+00f824c4  ldr x0,[x25, #0x80]
+00f824c8  cbz x0,0x00f8288c
+00f824cc  mov w1,#0x7c
+00f824d0  mov w2,wzr
+00f824d4  mov x3,xzr
+00f824d8  bl 0x01fe0d68
+00f824dc  ldr x8,[x24]
+00f824e0  cbz x8,0x00f8288c
+00f824e4  mov x25,x0
+00f824e8  mov x0,x8
+00f824ec  mov x1,xzr
+00f824f0  bl 0x00fadcfc
+00f824f4  cbz x0,0x00f8288c
+00f824f8  mov x1,xzr
+00f824fc  bl 0x00dc47dc
+00f82500  cbz x25,0x00f8288c
+00f82504  ldr w8,[x25, #0x18]
+00f82508  cbz w8,0x00f82890
+00f8250c  mov x26,x0
+00f82510  ldr x0,[x25, #0x20]
+00f82514  mov x1,xzr
+00f82518  bl 0x0214df74
+00f8251c  adrp x8,0x335b000
+00f82520  ldr x8,[x8, #0x650]
+00f82524  mov w27,w0
+00f82528  ldr x28,[x8]
+00f8252c  ldr x8,[x28, #0x38]
+00f82530  ldr x8,[x8]
+00f82534  ldrb w9,[x8, #0x132]
+00f82538  tbnz w9,#0x0,0x00f82548
+00f8253c  mov x0,x8
+00f82540  bl 0x00b2ac40
+00f82544  mov x8,x0
+00f82548  ldr w9,[x8, #0xe0]
+00f8254c  cbnz w9,0x00f82558
+00f82550  mov x0,x8
+00f82554  bl 0x00b0798c
+00f82558  ldr x8,[x28, #0x38]
+00f8255c  ldr x0,[x8]
+00f82560  ldrb w8,[x0, #0x132]
+00f82564  tbnz w8,#0x0,0x00f8256c
+00f82568  bl 0x00b2ac40
+00f8256c  adrp x8,0x3348000
+00f82570  ldr x8,[x8, #0x138]
+00f82574  ldr x9,[x0, #0xb8]
+00f82578  ldr x8,[x8]
+00f8257c  ldr x28,[x9]
+00f82580  ldr w10,[x8, #0xe0]
+00f82584  cbnz w10,0x00f82590
+00f82588  mov x0,x8
+00f8258c  bl 0x00b0798c
+00f82590  mov x0,x26
+00f82594  mov w1,w27
+00f82598  mov x2,x28
+00f8259c  mov x3,xzr
+00f825a0  bl 0x00e14168
+00f825a4  ldr x0,[x24]
+00f825a8  cbz x0,0x00f8288c
+00f825ac  mov x1,xzr
+00f825b0  bl 0x00fadd94
+00f825b4  cbz x0,0x00f8288c
+00f825b8  mov x1,xzr
+00f825bc  bl 0x00dc47dc
+00f825c0  ldr w8,[x25, #0x18]
+00f825c4  cbz w8,0x00f82890
+00f825c8  mov x26,x0
+00f825cc  ldr x0,[x25, #0x20]
+00f825d0  mov x1,xzr
+00f825d4  bl 0x0214df74
+00f825d8  adrp x8,0x335b000
+00f825dc  ldr x8,[x8, #0x650]
+00f825e0  mov w27,w0
+00f825e4  ldr x28,[x8]
+00f825e8  ldr x8,[x28, #0x38]
+00f825ec  ldr x8,[x8]
+00f825f0  ldrb w9,[x8, #0x132]
+00f825f4  tbnz w9,#0x0,0x00f82604
+00f825f8  mov x0,x8
+00f825fc  bl 0x00b2ac40
+00f82600  mov x8,x0
+00f82604  ldr w9,[x8, #0xe0]
+00f82608  cbnz w9,0x00f82614
+00f8260c  mov x0,x8
+00f82610  bl 0x00b0798c
+00f82614  ldr x8,[x28, #0x38]
+00f82618  ldr x0,[x8]
+00f8261c  ldrb w8,[x0, #0x132]
+00f82620  tbnz w8,#0x0,0x00f82628
+00f82624  bl 0x00b2ac40
+00f82628  ldr x8,[x0, #0xb8]
+00f8262c  mov x0,x26
+00f82630  mov w1,w27
+00f82634  mov x3,xzr
+00f82638  ldr x2,[x8]
+00f8263c  bl 0x00e14168
+00f82640  adrp x8,0x3347000
+00f82644  ldr x8,[x8, #0xd68]
+00f82648  adrp x9,0x3321000
+00f8264c  ldr x0,[x8]
+00f82650  ldr w8,[x0, #0xe0]
+00f82654  ldr x9,[x9, #0x758]
+00f82658  ldr x26,[x9]
+00f8265c  cbnz w8,0x00f82664
+00f82660  bl 0x00b0798c
+00f82664  mov x0,x26
+00f82668  mov x1,xzr
+00f8266c  bl 0x0215f900
+00f82670  ldr w8,[x25, #0x18]
+00f82674  cmp w8,#0x1
+00f82678  b.ls 0x00f82890
+00f8267c  adrp x8,0x3358000
+00f82680  ldr x8,[x8, #0xa10]
+00f82684  mov x26,x0
+00f82688  ldr x25,[x25, #0x28]
+00f8268c  ldr x0,[x8]
+00f82690  ldr w8,[x0, #0xe0]
+00f82694  cbnz w8,0x00f8269c
+00f82698  bl 0x00b0798c
+00f8269c  mov w2,#0x1
+00f826a0  mov x0,x26
+00f826a4  mov x1,x25
+00f826a8  mov x3,xzr
+00f826ac  bl 0x021835b8
+00f826b0  cbz x0,0x00f8288c
+00f826b4  adrp x9,0x3375000
+00f826b8  ldr x8,[x0]
+00f826bc  ldr x9,[x9, #0x180]
+00f826c0  ldr x8,[x8, #0x40]
+00f826c4  ldr x1,[x9]
+00f826c8  ldr x9,[x1, #0x40]
+00f826cc  cmp x8,x9
+00f826d0  b.ne 0x00f82894
+00f826d4  bl 0x00b07998
+00f826d8  ldr w1,[x0]
+00f826dc  str w1,[x22, #0x18]
+00f826e0  ldr x0,[x19, #0xd0]
+00f826e4  cbz x0,0x00f8288c
+00f826e8  adrp x8,0x3317000
+00f826ec  ldr x2,[x24]
+00f826f0  ldr x8,[x8, #0x6a8]
+00f826f4  ldr x3,[x8]
+00f826f8  bl 0x0193fec8
+00f826fc  ldr x1,[x24]
+00f82700  mov x0,x19
+00f82704  bl 0x00f828a0
+00f82708  ldr x0,[x23, #0x110]
+00f8270c  cbz x0,0x00f8288c
+00f82710  mov x1,xzr
+00f82714  bl 0x0250bf68
+00f82718  adrp x8,0x3355000
+00f8271c  ldr x24,[x23, #0x110]
+00f82720  ldr x8,[x8, #0x140]
+00f82724  ldr x0,[x8]
+00f82728  bl 0x00b079a0
+00f8272c  cbz x0,0x00f8288c
+00f82730  adrp x8,0x3332000
+00f82734  ldr x8,[x8, #0xa8]
+00f82738  mov x1,x22
+00f8273c  mov x3,xzr
+00f82740  mov x25,x0
+00f82744  ldr x2,[x8]
+00f82748  bl 0x01e680a8
+00f8274c  cbz x24,0x00f8288c
+00f82750  adrp x8,0x3321000
+00f82754  ldr x8,[x8, #0xf98]
+00f82758  mov x0,x24
+00f8275c  mov x1,x25
+00f82760  ldr x2,[x8]
+00f82764  bl 0x01e69200
+00f82768  mov x0,x23
+00f8276c  mov x1,xzr
+00f82770  bl 0x024e4ed4
+00f82774  adrp x8,0x332d000
+00f82778  ldr x8,[x8, #0xd38]
+00f8277c  mov x24,x0
+00f82780  ldr x8,[x8]
+00f82784  ldr w9,[x8, #0xe0]
+00f82788  cbnz w9,0x00f82794
+00f8278c  mov x0,x8
+00f82790  bl 0x00b0798c
+00f82794  mov w1,#0x1
+00f82798  mov x0,x24
+00f8279c  mov x2,xzr
+00f827a0  bl 0x00e34224
+00f827a4  ldr x8,[x29]
+00f827a8  mov x24,x0
+00f827ac  ldr w9,[x8, #0xe0]
+00f827b0  cbnz w9,0x00f827c0
+00f827b4  mov x0,x8
+00f827b8  bl 0x00b0798c
+00f827bc  ldr x8,[x29]
+00f827c0  ldr x9,[x8, #0xb8]
+00f827c4  ldr x25,[x9, #0x10]
+00f827c8  cbnz x25,0x00f8282c
+00f827cc  ldr w9,[x8, #0xe0]
+00f827d0  cbnz w9,0x00f827e0
+00f827d4  mov x0,x8
+00f827d8  bl 0x00b0798c
+00f827dc  ldr x8,[x29]
+00f827e0  ldr x8,[x8, #0xb8]
+00f827e4  ldr x26,[x8]
+00f827e8  adrp x8,0x3360000
+00f827ec  ldr x8,[x8, #0x750]
+00f827f0  ldr x0,[x8]
+00f827f4  bl 0x00b079a0
+00f827f8  cbz x0,0x00f8288c
+00f827fc  adrp x8,0x3366000
+00f82800  ldr x8,[x8, #0xd38]
+00f82804  mov x1,x26
+00f82808  mov x3,xzr
+00f8280c  mov x25,x0
+00f82810  ldr x2,[x8]
+00f82814  bl 0x00e35bd0
+00f82818  ldr x8,[x29]
+00f8281c  mov x1,x25
+00f82820  ldr x0,[x8, #0xb8]
+00f82824  str x25,[x0, #0x10]!
+00f82828  bl 0x00b07850
+00f8282c  cbz x24,0x00f8288c
+00f82830  str x25,[x24, #0x38]!
+00f82834  mov x0,x24
+00f82838  mov x1,x25
+00f8283c  bl 0x00b07850
+00f82840  ldr w8,[x19, #0xd8]
+00f82844  ldr w9,[x22, #0x18]
+00f82848  cmp w8,w9
+00f8284c  b.ne 0x00f82860
+00f82850  mov w1,#0x1
+00f82854  mov x0,x23
+00f82858  mov x2,xzr
+00f8285c  bl 0x025ab6a0
+00f82860  ldr w8,[x20, #0x18]
+00f82864  add w21,w21,#0x1
+00f82868  cmp w21,w8
+00f8286c  b.lt 0x00f8240c
+00f82870  ldp x29,x30,[sp, #0x50]
+00f82874  ldp x20,x19,[sp, #0x40]
+00f82878  ldp x22,x21,[sp, #0x30]
+00f8287c  ldp x24,x23,[sp, #0x20]
+00f82880  ldp x26,x25,[sp, #0x10]
+00f82884  ldp x28,x27,[sp], #0x60
+00f82888  ret
+00f8288c  bl 0x00b079b0
+00f82890  bl 0x00b079b8
+00f82894  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00f82898_CVPanelMono.__c__DisplayClass12_0__.ctor.txt
+================================================================================
+Function: CVPanelMono.<>c__DisplayClass12_0$$.ctor @ 00f82898
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00f82898  mov x1,xzr
+00f8289c  b 0x02194104
+
+
+================================================================================
+### FILE: 00f828a0_CVPanelMono__CheckToggleState.txt
+================================================================================
+Function: CVPanelMono$$CheckToggleState @ 00f828a0
+
+--- Calls OUT ---
+  -> CvitemNode$$get_BG_ON @ 00fadd48
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.Extensions.ComponentExtensions$$GetOrAddComponent<object> @ 0176db7c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> CvitemNode$$get_BG_OFF @ 00fadcb0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CVPanelMono$$InitToggles @ 00f82104
+  <- CVPanelMono.<>c__DisplayClass12_0$$<InitToggles>b__1 @ 00f82c2c
+
+--- Listing ---
+00f828a0  str x22,[sp, #-0x30]!
+00f828a4  stp x21,x20,[sp, #0x10]
+00f828a8  stp x19,x30,[sp, #0x20]
+00f828ac  adrp x21,0x3573000
+00f828b0  adrp x22,0x337d000
+00f828b4  ldrb w8,[x21, #0x3d2]
+00f828b8  ldr x22,[x22, #0xf78]
+00f828bc  mov x19,x1
+00f828c0  mov x20,x0
+00f828c4  tbnz w8,#0x0,0x00f828e8
+00f828c8  adrp x0,0x337d000
+00f828cc  ldr x0,[x0, #0xf78]
+00f828d0  bl 0x00b0789c
+00f828d4  adrp x0,0x3310000
+00f828d8  ldr x0,[x0, #0x510]
+00f828dc  bl 0x00b0789c
+00f828e0  mov w8,#0x1
+00f828e4  strb w8,[x21, #0x3d2]
+00f828e8  ldr x8,[x22]
+00f828ec  ldr x8,[x8, #0xb8]
+00f828f0  ldr x0,[x8, #0x30]
+00f828f4  cbz x0,0x00f82914
+00f828f8  mov x1,x20
+00f828fc  mov x2,x19
+00f82900  ldp x19,x30,[sp, #0x20]
+00f82904  ldp x21,x20,[sp, #0x10]
+00f82908  mov x3,xzr
+00f8290c  ldr x22,[sp], #0x30
+00f82910  b 0x0106125c
+00f82914  adrp x8,0x3310000
+00f82918  ldr x8,[x8, #0x510]
+00f8291c  mov x0,x19
+00f82920  ldr x1,[x8]
+00f82924  bl 0x0176db7c
+00f82928  cbz x0,0x00f829b8
+00f8292c  cbz x19,0x00f829b8
+00f82930  ldrb w20,[x0, #0x118]
+00f82934  mov x0,x19
+00f82938  mov x1,xzr
+00f8293c  bl 0x00fadcb0
+00f82940  cbz x0,0x00f829b8
+00f82944  ldr x0,[x0, #0x18]
+00f82948  cbz x0,0x00f829b8
+00f8294c  cbz w20,0x00f8297c
+00f82950  mov w1,wzr
+00f82954  mov x2,xzr
+00f82958  bl 0x024de86c
+00f8295c  mov x0,x19
+00f82960  mov x1,xzr
+00f82964  bl 0x00fadd48
+00f82968  cbz x0,0x00f829b8
+00f8296c  ldr x0,[x0, #0x18]
+00f82970  cbz x0,0x00f829b8
+00f82974  mov w1,#0x1
+00f82978  b 0x00f829a4
+00f8297c  mov w1,#0x1
+00f82980  mov x2,xzr
+00f82984  bl 0x024de86c
+00f82988  mov x0,x19
+00f8298c  mov x1,xzr
+00f82990  bl 0x00fadd48
+00f82994  cbz x0,0x00f829b8
+00f82998  ldr x0,[x0, #0x18]
+00f8299c  cbz x0,0x00f829b8
+00f829a0  mov w1,wzr
+00f829a4  ldp x19,x30,[sp, #0x20]
+00f829a8  ldp x21,x20,[sp, #0x10]
+00f829ac  mov x2,xzr
+00f829b0  ldr x22,[sp], #0x30
+00f829b4  b 0x024de86c
+00f829b8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f829bc_CVPanelMono__OnClickOK.txt
+================================================================================
+Function: CVPanelMono$$OnClickOK @ 00f829bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> Ali$$SetLanguageCVType @ 00e0b850
+  -> Ali$$GameRestart @ 00e0921c
+  -> FUN_00b079b0 @ 00b079b0
+  -> Ali$$get_languageCV @ 00e00a6c
+
+--- Calls IN ---
+
+--- Listing ---
+00f829bc  str x22,[sp, #-0x30]!
+00f829c0  stp x21,x20,[sp, #0x10]
+00f829c4  stp x19,x30,[sp, #0x20]
+00f829c8  adrp x21,0x3573000
+00f829cc  adrp x22,0x337d000
+00f829d0  ldrb w8,[x21, #0x3d3]
+00f829d4  ldr x22,[x22, #0xf78]
+00f829d8  mov x20,x1
+00f829dc  mov x19,x0
+00f829e0  tbnz w8,#0x0,0x00f82a04
+00f829e4  adrp x0,0x335f000
+00f829e8  ldr x0,[x0, #0x20]
+00f829ec  bl 0x00b0789c
+00f829f0  adrp x0,0x337d000
+00f829f4  ldr x0,[x0, #0xf78]
+00f829f8  bl 0x00b0789c
+00f829fc  mov w8,#0x1
+00f82a00  strb w8,[x21, #0x3d3]
+00f82a04  ldr x8,[x22]
+00f82a08  ldr x8,[x8, #0xb8]
+00f82a0c  ldr x0,[x8, #0x38]
+00f82a10  cbz x0,0x00f82a30
+00f82a14  mov x1,x19
+00f82a18  mov x2,x20
+00f82a1c  ldp x19,x30,[sp, #0x20]
+00f82a20  ldp x21,x20,[sp, #0x10]
+00f82a24  mov x3,xzr
+00f82a28  ldr x22,[sp], #0x30
+00f82a2c  b 0x0106125c
+00f82a30  adrp x20,0x335f000
+00f82a34  ldr x20,[x20, #0x20]
+00f82a38  ldr w21,[x19, #0xd8]
+00f82a3c  ldr x0,[x20]
+00f82a40  ldr w8,[x0, #0xe0]
+00f82a44  cbnz w8,0x00f82a50
+00f82a48  bl 0x00b0798c
+00f82a4c  ldr x0,[x20]
+00f82a50  ldr x8,[x0, #0xb8]
+00f82a54  ldr x0,[x8, #0x10]
+00f82a58  cbz x0,0x00f82acc
+00f82a5c  mov x1,xzr
+00f82a60  bl 0x00e00a6c
+00f82a64  cmp w21,w0
+00f82a68  b.ne 0x00f82a8c
+00f82a6c  ldr x8,[x19]
+00f82a70  mov x0,x19
+00f82a74  ldp x19,x30,[sp, #0x20]
+00f82a78  ldp x21,x20,[sp, #0x10]
+00f82a7c  ldr x2,[x8, #0x458]
+00f82a80  ldr x1,[x8, #0x460]
+00f82a84  ldr x22,[sp], #0x30
+00f82a88  br x2
+00f82a8c  ldr x0,[x20]
+00f82a90  ldr w8,[x0, #0xe0]
+00f82a94  cbnz w8,0x00f82aa0
+00f82a98  bl 0x00b0798c
+00f82a9c  ldr x0,[x20]
+00f82aa0  ldr x8,[x0, #0xb8]
+00f82aa4  ldr x0,[x8, #0x10]
+00f82aa8  cbz x0,0x00f82acc
+00f82aac  ldr w1,[x19, #0xd8]
+00f82ab0  mov x2,xzr
+00f82ab4  bl 0x00e0b850
+00f82ab8  ldp x19,x30,[sp, #0x20]
+00f82abc  ldp x21,x20,[sp, #0x10]
+00f82ac0  mov x0,xzr
+00f82ac4  ldr x22,[sp], #0x30
+00f82ac8  b 0x00e0921c
+00f82acc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f82ad0_CVPanelMono__OnClickCanel.txt
+================================================================================
+Function: CVPanelMono$$OnClickCanel @ 00f82ad0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+
+--- Listing ---
+00f82ad0  str x22,[sp, #-0x30]!
+00f82ad4  stp x21,x20,[sp, #0x10]
+00f82ad8  stp x19,x30,[sp, #0x20]
+00f82adc  adrp x21,0x3573000
+00f82ae0  adrp x22,0x337d000
+00f82ae4  ldrb w8,[x21, #0x3d4]
+00f82ae8  ldr x22,[x22, #0xf78]
+00f82aec  mov x20,x1
+00f82af0  mov x19,x0
+00f82af4  tbnz w8,#0x0,0x00f82b0c
+00f82af8  adrp x0,0x337d000
+00f82afc  ldr x0,[x0, #0xf78]
+00f82b00  bl 0x00b0789c
+00f82b04  mov w8,#0x1
+00f82b08  strb w8,[x21, #0x3d4]
+00f82b0c  ldr x8,[x22]
+00f82b10  ldr x8,[x8, #0xb8]
+00f82b14  ldr x0,[x8, #0x40]
+00f82b18  cbz x0,0x00f82b38
+00f82b1c  mov x1,x19
+00f82b20  mov x2,x20
+00f82b24  ldp x19,x30,[sp, #0x20]
+00f82b28  ldp x21,x20,[sp, #0x10]
+00f82b2c  mov x3,xzr
+00f82b30  ldr x22,[sp], #0x30
+00f82b34  b 0x0106125c
+00f82b38  ldr x8,[x19]
+00f82b3c  mov x0,x19
+00f82b40  ldp x19,x30,[sp, #0x20]
+00f82b44  ldp x21,x20,[sp, #0x10]
+00f82b48  ldr x2,[x8, #0x458]
+00f82b4c  ldr x1,[x8, #0x460]
+00f82b50  ldr x22,[sp], #0x30
+00f82b54  br x2
+
+
+================================================================================
+### FILE: 00f82b58_CVPanelMono__.ctor.txt
+================================================================================
+Function: CVPanelMono$$.ctor @ 00f82b58
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Collections.Generic.Dictionary<Int32Enum,-object>$$.ctor @ 0193f570
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CVPanelMonoWrap$$__CreateInstance @ 0123fc94
+
+--- Listing ---
+00f82b58  stp x21,x20,[sp, #-0x20]!
+00f82b5c  stp x19,x30,[sp, #0x10]
+00f82b60  adrp x20,0x3573000
+00f82b64  adrp x21,0x3359000
+00f82b68  ldrb w8,[x20, #0x3d5]
+00f82b6c  ldr x21,[x21, #0x770]
+00f82b70  mov x19,x0
+00f82b74  tbnz w8,#0x0,0x00f82ba4
+00f82b78  adrp x0,0x337d000
+00f82b7c  ldr x0,[x0, #0xf78]
+00f82b80  bl 0x00b0789c
+00f82b84  adrp x0,0x3348000
+00f82b88  ldr x0,[x0, #0x6e8]
+00f82b8c  bl 0x00b0789c
+00f82b90  adrp x0,0x3359000
+00f82b94  ldr x0,[x0, #0x770]
+00f82b98  bl 0x00b0789c
+00f82b9c  mov w8,#0x1
+00f82ba0  strb w8,[x20, #0x3d5]
+00f82ba4  ldr x0,[x21]
+00f82ba8  bl 0x00b079a0
+00f82bac  cbz x0,0x00f82c18
+00f82bb0  adrp x8,0x3348000
+00f82bb4  ldr x8,[x8, #0x6e8]
+00f82bb8  adrp x21,0x337d000
+00f82bbc  mov x20,x0
+00f82bc0  ldr x1,[x8]
+00f82bc4  ldr x21,[x21, #0xf78]
+00f82bc8  bl 0x0193f570
+00f82bcc  mov x0,x19
+00f82bd0  str x20,[x0, #0xd0]!
+00f82bd4  mov x1,x20
+00f82bd8  bl 0x00b07850
+00f82bdc  mov x0,x19
+00f82be0  mov x1,xzr
+00f82be4  bl 0x00f1c130
+00f82be8  ldr x8,[x21]
+00f82bec  ldr x8,[x8, #0xb8]
+00f82bf0  ldr x0,[x8, #0x48]
+00f82bf4  cbz x0,0x00f82c0c
+00f82bf8  mov x1,x19
+00f82bfc  ldp x19,x30,[sp, #0x10]
+00f82c00  mov x2,xzr
+00f82c04  ldp x21,x20,[sp], #0x20
+00f82c08  b 0x01060dac
+00f82c0c  ldp x19,x30,[sp, #0x10]
+00f82c10  ldp x21,x20,[sp], #0x20
+00f82c14  ret
+00f82c18  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f82c1c_CVPanelMono____xLuaBaseProxy_get_LayerType.txt
+================================================================================
+Function: CVPanelMono$$<>xLuaBaseProxy_get_LayerType @ 00f82c1c
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$get_LayerType @ 016711a8
+
+--- Calls IN ---
+
+--- Listing ---
+00f82c1c  mov x1,xzr
+00f82c20  b 0x016711a8
+
+
+================================================================================
+### FILE: 00f82c24_CVPanelMono____xLuaBaseProxy_Awake.txt
+================================================================================
+Function: CVPanelMono$$<>xLuaBaseProxy_Awake @ 00f82c24
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$Awake @ 00f21c4c
+
+--- Calls IN ---
+
+--- Listing ---
+00f82c24  mov x1,xzr
+00f82c28  b 0x00f21c4c
+
+
+================================================================================
+### FILE: 00f82c2c_CVPanelMono.__c__DisplayClass12_0___InitToggles_b__1.txt
+================================================================================
+Function: CVPanelMono.<>c__DisplayClass12_0$$<InitToggles>b__1 @ 00f82c2c
+
+--- Calls OUT ---
+  -> CVPanelMono$$CheckToggleState @ 00f828a0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00f82c2c  str x20,[sp, #-0x20]!
+00f82c30  stp x19,x30,[sp, #0x10]
+00f82c34  mov x19,x0
+00f82c38  ldr x0,[x0, #0x20]
+00f82c3c  cbz x0,0x00f82c6c
+00f82c40  mov w20,w1
+00f82c44  ldr x1,[x19, #0x10]
+00f82c48  bl 0x00f828a0
+00f82c4c  tbz w20,#0x0,0x00f82c60
+00f82c50  ldr x8,[x19, #0x20]
+00f82c54  cbz x8,0x00f82c6c
+00f82c58  ldr w9,[x19, #0x18]
+00f82c5c  str w9,[x8, #0xd8]
+00f82c60  ldp x19,x30,[sp, #0x10]
+00f82c64  ldr x20,[sp], #0x20
+00f82c68  ret
+00f82c6c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f82c70_CVPanelMono.__c__.cctor.txt
+================================================================================
+Function: CVPanelMono.<>c$$.cctor @ 00f82c70
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00f82c70  str x20,[sp, #-0x20]!
+00f82c74  stp x19,x30,[sp, #0x10]
+00f82c78  adrp x19,0x3573000
+00f82c7c  adrp x20,0x3321000
+00f82c80  ldrb w8,[x19, #0x3d6]
+00f82c84  ldr x20,[x20, #0x598]
+00f82c88  tbnz w8,#0x0,0x00f82ca0
+00f82c8c  adrp x0,0x3321000
+00f82c90  ldr x0,[x0, #0x598]
+00f82c94  bl 0x00b0789c
+00f82c98  mov w8,#0x1
+00f82c9c  strb w8,[x19, #0x3d6]
+00f82ca0  ldr x0,[x20]
+00f82ca4  bl 0x00b079a0
+00f82ca8  cbz x0,0x00f82cdc
+00f82cac  mov x1,xzr
+00f82cb0  mov x19,x0
+00f82cb4  bl 0x02194104
+00f82cb8  ldr x8,[x20]
+00f82cbc  mov x1,x19
+00f82cc0  ldr x8,[x8, #0xb8]
+00f82cc4  str x19,[x8]
+00f82cc8  ldr x8,[x20]
+00f82ccc  ldp x19,x30,[sp, #0x10]
+00f82cd0  ldr x0,[x8, #0xb8]
+00f82cd4  ldr x20,[sp], #0x20
+00f82cd8  b 0x00b07850
+00f82cdc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f82ce0_CVPanelMono.__c__.ctor.txt
+================================================================================
+Function: CVPanelMono.<>c$$.ctor @ 00f82ce0
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00f82ce0  mov x1,xzr
+00f82ce4  b 0x02194104
+
+
+================================================================================
+### FILE: 00f82ce8_CVPanelMono.__c___InitToggles_b__12_0.txt
+================================================================================
+Function: CVPanelMono.<>c$$<InitToggles>b__12_0 @ 00f82ce8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> BaseData$$get_id @ 00df3164
+  -> Ali$$VersionOpen @ 00e001d0
+
+--- Calls IN ---
+
+--- Listing ---
+00f82ce8  str x20,[sp, #-0x20]!
+00f82cec  stp x19,x30,[sp, #0x10]
+00f82cf0  adrp x20,0x3573000
+00f82cf4  ldrb w8,[x20, #0x3d7]
+00f82cf8  mov x19,x1
+00f82cfc  tbnz w8,#0x0,0x00f82d14
+00f82d00  adrp x0,0x335f000
+00f82d04  ldr x0,[x0, #0x20]
+00f82d08  bl 0x00b0789c
+00f82d0c  mov w8,#0x1
+00f82d10  strb w8,[x20, #0x3d7]
+00f82d14  cbz x19,0x00f82d98
+00f82d18  mov w20,#0x2c8b
+00f82d1c  mov x0,x19
+00f82d20  mov x1,xzr
+00f82d24  movk w20,#0x59c, LSL #16
+00f82d28  bl 0x00df3164
+00f82d2c  cmp w0,w20
+00f82d30  b.le 0x00f82d88
+00f82d34  mov x0,x19
+00f82d38  mov x1,xzr
+00f82d3c  bl 0x00df3164
+00f82d40  add w8,w20,#0x386
+00f82d44  cmp w0,w8
+00f82d48  b.ge 0x00f82d88
+00f82d4c  adrp x20,0x335f000
+00f82d50  ldr x20,[x20, #0x20]
+00f82d54  ldr x0,[x20]
+00f82d58  ldr w8,[x0, #0xe0]
+00f82d5c  cbnz w8,0x00f82d68
+00f82d60  bl 0x00b0798c
+00f82d64  ldr x0,[x20]
+00f82d68  ldr x8,[x0, #0xb8]
+00f82d6c  ldr x0,[x8, #0x10]
+00f82d70  cbz x0,0x00f82d98
+00f82d74  ldr x1,[x19, #0x90]
+00f82d78  ldp x19,x30,[sp, #0x10]
+00f82d7c  mov x2,xzr
+00f82d80  ldr x20,[sp], #0x20
+00f82d84  b 0x00e001d0
+00f82d88  ldp x19,x30,[sp, #0x10]
+00f82d8c  mov w0,wzr
+00f82d90  ldr x20,[sp], #0x20
+00f82d94  ret
+00f82d98  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f82d9c_CVPanelMono.__c___InitToggles_b__12_2.txt
+================================================================================
+Function: CVPanelMono.<>c$$<InitToggles>b__12_2 @ 00f82d9c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00f82d9c  ret
+
+
+================================================================================
+### FILE: 00fad834_CvherodetailpanelNode__get_spr_girl_show.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_spr_girl_show @ 00fad834
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+  <- CVHeroDetailPanelMono$$<ShowDetail>b__13_0 @ 00f30cb8
+
+--- Listing ---
+00fad834  stp x21,x20,[sp, #-0x20]!
+00fad838  stp x19,x30,[sp, #0x10]
+00fad83c  adrp x20,0x3573000
+00fad840  adrp x21,0x3348000
+00fad844  ldrb w8,[x20, #0x7df]
+00fad848  ldr x21,[x21, #0x6f8]
+00fad84c  mov x19,x0
+00fad850  tbnz w8,#0x0,0x00fad868
+00fad854  adrp x0,0x3348000
+00fad858  ldr x0,[x0, #0x6f8]
+00fad85c  bl 0x00b0789c
+00fad860  mov w8,#0x1
+00fad864  strb w8,[x20, #0x7df]
+00fad868  ldr x1,[x21]
+00fad86c  mov x0,x19
+00fad870  ldp x19,x30,[sp, #0x10]
+00fad874  mov x2,xzr
+00fad878  ldp x21,x20,[sp], #0x20
+00fad87c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fad880_CvherodetailpanelNode__get_lbl_heroName.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_heroName @ 00fad880
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fad880  stp x21,x20,[sp, #-0x20]!
+00fad884  stp x19,x30,[sp, #0x10]
+00fad888  adrp x20,0x3573000
+00fad88c  adrp x21,0x3313000
+00fad890  ldrb w8,[x20, #0x7e0]
+00fad894  ldr x21,[x21, #0x420]
+00fad898  mov x19,x0
+00fad89c  tbnz w8,#0x0,0x00fad8b4
+00fad8a0  adrp x0,0x3313000
+00fad8a4  ldr x0,[x0, #0x420]
+00fad8a8  bl 0x00b0789c
+00fad8ac  mov w8,#0x1
+00fad8b0  strb w8,[x20, #0x7e0]
+00fad8b4  ldr x1,[x21]
+00fad8b8  mov x0,x19
+00fad8bc  ldp x19,x30,[sp, #0x10]
+00fad8c0  mov x2,xzr
+00fad8c4  ldp x21,x20,[sp], #0x20
+00fad8c8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fad8cc_CvherodetailpanelNode__get_lbl_race.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_race @ 00fad8cc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fad8cc  stp x21,x20,[sp, #-0x20]!
+00fad8d0  stp x19,x30,[sp, #0x10]
+00fad8d4  adrp x20,0x3573000
+00fad8d8  adrp x21,0x335c000
+00fad8dc  ldrb w8,[x20, #0x7e1]
+00fad8e0  ldr x21,[x21, #0x948]
+00fad8e4  mov x19,x0
+00fad8e8  tbnz w8,#0x0,0x00fad900
+00fad8ec  adrp x0,0x335c000
+00fad8f0  ldr x0,[x0, #0x948]
+00fad8f4  bl 0x00b0789c
+00fad8f8  mov w8,#0x1
+00fad8fc  strb w8,[x20, #0x7e1]
+00fad900  ldr x1,[x21]
+00fad904  mov x0,x19
+00fad908  ldp x19,x30,[sp, #0x10]
+00fad90c  mov x2,xzr
+00fad910  ldp x21,x20,[sp], #0x20
+00fad914  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fad918_CvherodetailpanelNode__get_spr_race.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_spr_race @ 00fad918
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fad918  stp x21,x20,[sp, #-0x20]!
+00fad91c  stp x19,x30,[sp, #0x10]
+00fad920  adrp x20,0x3573000
+00fad924  adrp x21,0x3353000
+00fad928  ldrb w8,[x20, #0x7e2]
+00fad92c  ldr x21,[x21, #0x3e8]
+00fad930  mov x19,x0
+00fad934  tbnz w8,#0x0,0x00fad94c
+00fad938  adrp x0,0x3353000
+00fad93c  ldr x0,[x0, #0x3e8]
+00fad940  bl 0x00b0789c
+00fad944  mov w8,#0x1
+00fad948  strb w8,[x20, #0x7e2]
+00fad94c  ldr x1,[x21]
+00fad950  mov x0,x19
+00fad954  ldp x19,x30,[sp, #0x10]
+00fad958  mov x2,xzr
+00fad95c  ldp x21,x20,[sp], #0x20
+00fad960  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fad964_CvherodetailpanelNode__get_lbl_age.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_age @ 00fad964
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fad964  stp x21,x20,[sp, #-0x20]!
+00fad968  stp x19,x30,[sp, #0x10]
+00fad96c  adrp x20,0x3573000
+00fad970  adrp x21,0x334e000
+00fad974  ldrb w8,[x20, #0x7e3]
+00fad978  ldr x21,[x21, #0xf00]
+00fad97c  mov x19,x0
+00fad980  tbnz w8,#0x0,0x00fad998
+00fad984  adrp x0,0x334e000
+00fad988  ldr x0,[x0, #0xf00]
+00fad98c  bl 0x00b0789c
+00fad990  mov w8,#0x1
+00fad994  strb w8,[x20, #0x7e3]
+00fad998  ldr x1,[x21]
+00fad99c  mov x0,x19
+00fad9a0  ldp x19,x30,[sp, #0x10]
+00fad9a4  mov x2,xzr
+00fad9a8  ldp x21,x20,[sp], #0x20
+00fad9ac  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fad9b0_CvherodetailpanelNode__get_lbl_birthday.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_birthday @ 00fad9b0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fad9b0  stp x21,x20,[sp, #-0x20]!
+00fad9b4  stp x19,x30,[sp, #0x10]
+00fad9b8  adrp x20,0x3573000
+00fad9bc  adrp x21,0x335c000
+00fad9c0  ldrb w8,[x20, #0x7e4]
+00fad9c4  ldr x21,[x21, #0xf90]
+00fad9c8  mov x19,x0
+00fad9cc  tbnz w8,#0x0,0x00fad9e4
+00fad9d0  adrp x0,0x335c000
+00fad9d4  ldr x0,[x0, #0xf90]
+00fad9d8  bl 0x00b0789c
+00fad9dc  mov w8,#0x1
+00fad9e0  strb w8,[x20, #0x7e4]
+00fad9e4  ldr x1,[x21]
+00fad9e8  mov x0,x19
+00fad9ec  ldp x19,x30,[sp, #0x10]
+00fad9f0  mov x2,xzr
+00fad9f4  ldp x21,x20,[sp], #0x20
+00fad9f8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fad9fc_CvherodetailpanelNode__get_lbl_good.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_good @ 00fad9fc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fad9fc  stp x21,x20,[sp, #-0x20]!
+00fada00  stp x19,x30,[sp, #0x10]
+00fada04  adrp x20,0x3573000
+00fada08  adrp x21,0x331b000
+00fada0c  ldrb w8,[x20, #0x7e5]
+00fada10  ldr x21,[x21, #0xed8]
+00fada14  mov x19,x0
+00fada18  tbnz w8,#0x0,0x00fada30
+00fada1c  adrp x0,0x331b000
+00fada20  ldr x0,[x0, #0xed8]
+00fada24  bl 0x00b0789c
+00fada28  mov w8,#0x1
+00fada2c  strb w8,[x20, #0x7e5]
+00fada30  ldr x1,[x21]
+00fada34  mov x0,x19
+00fada38  ldp x19,x30,[sp, #0x10]
+00fada3c  mov x2,xzr
+00fada40  ldp x21,x20,[sp], #0x20
+00fada44  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fada48_CvherodetailpanelNode__get_lbl_hate.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_hate @ 00fada48
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fada48  stp x21,x20,[sp, #-0x20]!
+00fada4c  stp x19,x30,[sp, #0x10]
+00fada50  adrp x20,0x3573000
+00fada54  adrp x21,0x3318000
+00fada58  ldrb w8,[x20, #0x7e6]
+00fada5c  ldr x21,[x21, #0xf20]
+00fada60  mov x19,x0
+00fada64  tbnz w8,#0x0,0x00fada7c
+00fada68  adrp x0,0x3318000
+00fada6c  ldr x0,[x0, #0xf20]
+00fada70  bl 0x00b0789c
+00fada74  mov w8,#0x1
+00fada78  strb w8,[x20, #0x7e6]
+00fada7c  ldr x1,[x21]
+00fada80  mov x0,x19
+00fada84  ldp x19,x30,[sp, #0x10]
+00fada88  mov x2,xzr
+00fada8c  ldp x21,x20,[sp], #0x20
+00fada90  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fada94_CvherodetailpanelNode__get_lbl_liking.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_liking @ 00fada94
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fada94  stp x21,x20,[sp, #-0x20]!
+00fada98  stp x19,x30,[sp, #0x10]
+00fada9c  adrp x20,0x3573000
+00fadaa0  adrp x21,0x3379000
+00fadaa4  ldrb w8,[x20, #0x7e7]
+00fadaa8  ldr x21,[x21, #0x128]
+00fadaac  mov x19,x0
+00fadab0  tbnz w8,#0x0,0x00fadac8
+00fadab4  adrp x0,0x3379000
+00fadab8  ldr x0,[x0, #0x128]
+00fadabc  bl 0x00b0789c
+00fadac0  mov w8,#0x1
+00fadac4  strb w8,[x20, #0x7e7]
+00fadac8  ldr x1,[x21]
+00fadacc  mov x0,x19
+00fadad0  ldp x19,x30,[sp, #0x10]
+00fadad4  mov x2,xzr
+00fadad8  ldp x21,x20,[sp], #0x20
+00fadadc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadae0_CvherodetailpanelNode__get_lbl_character.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_character @ 00fadae0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fadae0  stp x21,x20,[sp, #-0x20]!
+00fadae4  stp x19,x30,[sp, #0x10]
+00fadae8  adrp x20,0x3573000
+00fadaec  adrp x21,0x331b000
+00fadaf0  ldrb w8,[x20, #0x7e8]
+00fadaf4  ldr x21,[x21, #0x940]
+00fadaf8  mov x19,x0
+00fadafc  tbnz w8,#0x0,0x00fadb14
+00fadb00  adrp x0,0x331b000
+00fadb04  ldr x0,[x0, #0x940]
+00fadb08  bl 0x00b0789c
+00fadb0c  mov w8,#0x1
+00fadb10  strb w8,[x20, #0x7e8]
+00fadb14  ldr x1,[x21]
+00fadb18  mov x0,x19
+00fadb1c  ldp x19,x30,[sp, #0x10]
+00fadb20  mov x2,xzr
+00fadb24  ldp x21,x20,[sp], #0x20
+00fadb28  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadb2c_CvherodetailpanelNode__get_lifeScroll.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lifeScroll @ 00fadb2c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fadb2c  stp x21,x20,[sp, #-0x20]!
+00fadb30  stp x19,x30,[sp, #0x10]
+00fadb34  adrp x20,0x3573000
+00fadb38  adrp x21,0x3318000
+00fadb3c  ldrb w8,[x20, #0x7e9]
+00fadb40  ldr x21,[x21, #0xf70]
+00fadb44  mov x19,x0
+00fadb48  tbnz w8,#0x0,0x00fadb60
+00fadb4c  adrp x0,0x3318000
+00fadb50  ldr x0,[x0, #0xf70]
+00fadb54  bl 0x00b0789c
+00fadb58  mov w8,#0x1
+00fadb5c  strb w8,[x20, #0x7e9]
+00fadb60  ldr x1,[x21]
+00fadb64  mov x0,x19
+00fadb68  ldp x19,x30,[sp, #0x10]
+00fadb6c  mov x2,xzr
+00fadb70  ldp x21,x20,[sp], #0x20
+00fadb74  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadb78_CvherodetailpanelNode__get_lbl_life.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_life @ 00fadb78
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fadb78  stp x21,x20,[sp, #-0x20]!
+00fadb7c  stp x19,x30,[sp, #0x10]
+00fadb80  adrp x20,0x3573000
+00fadb84  adrp x21,0x337f000
+00fadb88  ldrb w8,[x20, #0x7ea]
+00fadb8c  ldr x21,[x21, #0x828]
+00fadb90  mov x19,x0
+00fadb94  tbnz w8,#0x0,0x00fadbac
+00fadb98  adrp x0,0x337f000
+00fadb9c  ldr x0,[x0, #0x828]
+00fadba0  bl 0x00b0789c
+00fadba4  mov w8,#0x1
+00fadba8  strb w8,[x20, #0x7ea]
+00fadbac  ldr x1,[x21]
+00fadbb0  mov x0,x19
+00fadbb4  ldp x19,x30,[sp, #0x10]
+00fadbb8  mov x2,xzr
+00fadbbc  ldp x21,x20,[sp], #0x20
+00fadbc0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadbc4_CvherodetailpanelNode__get_cvObj.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_cvObj @ 00fadbc4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fadbc4  stp x21,x20,[sp, #-0x20]!
+00fadbc8  stp x19,x30,[sp, #0x10]
+00fadbcc  adrp x20,0x3573000
+00fadbd0  adrp x21,0x3334000
+00fadbd4  ldrb w8,[x20, #0x7eb]
+00fadbd8  ldr x21,[x21, #0x240]
+00fadbdc  mov x19,x0
+00fadbe0  tbnz w8,#0x0,0x00fadbf8
+00fadbe4  adrp x0,0x3334000
+00fadbe8  ldr x0,[x0, #0x240]
+00fadbec  bl 0x00b0789c
+00fadbf0  mov w8,#0x1
+00fadbf4  strb w8,[x20, #0x7eb]
+00fadbf8  ldr x1,[x21]
+00fadbfc  mov x0,x19
+00fadc00  ldp x19,x30,[sp, #0x10]
+00fadc04  mov x2,xzr
+00fadc08  ldp x21,x20,[sp], #0x20
+00fadc0c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadc10_CvherodetailpanelNode__get_lbl_cv.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_lbl_cv @ 00fadc10
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fadc10  stp x21,x20,[sp, #-0x20]!
+00fadc14  stp x19,x30,[sp, #0x10]
+00fadc18  adrp x20,0x3573000
+00fadc1c  adrp x21,0x334f000
+00fadc20  ldrb w8,[x20, #0x7ec]
+00fadc24  ldr x21,[x21, #0x5e8]
+00fadc28  mov x19,x0
+00fadc2c  tbnz w8,#0x0,0x00fadc44
+00fadc30  adrp x0,0x334f000
+00fadc34  ldr x0,[x0, #0x5e8]
+00fadc38  bl 0x00b0789c
+00fadc3c  mov w8,#0x1
+00fadc40  strb w8,[x20, #0x7ec]
+00fadc44  ldr x1,[x21]
+00fadc48  mov x0,x19
+00fadc4c  ldp x19,x30,[sp, #0x10]
+00fadc50  mov x2,xzr
+00fadc54  ldp x21,x20,[sp], #0x20
+00fadc58  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadc5c_CvherodetailpanelNode__get_btn_cv.txt
+================================================================================
+Function: CvherodetailpanelNode$$get_btn_cv @ 00fadc5c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVHeroDetailPanelMono$$ShowDetail @ 00f30060
+
+--- Listing ---
+00fadc5c  stp x21,x20,[sp, #-0x20]!
+00fadc60  stp x19,x30,[sp, #0x10]
+00fadc64  adrp x20,0x3573000
+00fadc68  adrp x21,0x3310000
+00fadc6c  ldrb w8,[x20, #0x7ed]
+00fadc70  ldr x21,[x21, #0x328]
+00fadc74  mov x19,x0
+00fadc78  tbnz w8,#0x0,0x00fadc90
+00fadc7c  adrp x0,0x3310000
+00fadc80  ldr x0,[x0, #0x328]
+00fadc84  bl 0x00b0789c
+00fadc88  mov w8,#0x1
+00fadc8c  strb w8,[x20, #0x7ed]
+00fadc90  ldr x1,[x21]
+00fadc94  mov x0,x19
+00fadc98  ldp x19,x30,[sp, #0x10]
+00fadc9c  mov x2,xzr
+00fadca0  ldp x21,x20,[sp], #0x20
+00fadca4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadca8_CvherodetailpanelNode__.ctor.txt
+================================================================================
+Function: CvherodetailpanelNode$$.ctor @ 00fadca8
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fadca8  mov x1,xzr
+00fadcac  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 00fadcb0_CvitemNode__get_BG_OFF.txt
+================================================================================
+Function: CvitemNode$$get_BG_OFF @ 00fadcb0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$CheckToggleState @ 00f828a0
+
+--- Listing ---
+00fadcb0  stp x21,x20,[sp, #-0x20]!
+00fadcb4  stp x19,x30,[sp, #0x10]
+00fadcb8  adrp x20,0x3573000
+00fadcbc  adrp x21,0x336c000
+00fadcc0  ldrb w8,[x20, #0x7ee]
+00fadcc4  ldr x21,[x21, #0x718]
+00fadcc8  mov x19,x0
+00fadccc  tbnz w8,#0x0,0x00fadce4
+00fadcd0  adrp x0,0x336c000
+00fadcd4  ldr x0,[x0, #0x718]
+00fadcd8  bl 0x00b0789c
+00fadcdc  mov w8,#0x1
+00fadce0  strb w8,[x20, #0x7ee]
+00fadce4  ldr x1,[x21]
+00fadce8  mov x0,x19
+00fadcec  ldp x19,x30,[sp, #0x10]
+00fadcf0  mov x2,xzr
+00fadcf4  ldp x21,x20,[sp], #0x20
+00fadcf8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadcfc_CvitemNode__get_lbl_tips_off.txt
+================================================================================
+Function: CvitemNode$$get_lbl_tips_off @ 00fadcfc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$InitToggles @ 00f82104
+
+--- Listing ---
+00fadcfc  stp x21,x20,[sp, #-0x20]!
+00fadd00  stp x19,x30,[sp, #0x10]
+00fadd04  adrp x20,0x3573000
+00fadd08  adrp x21,0x3319000
+00fadd0c  ldrb w8,[x20, #0x7ef]
+00fadd10  ldr x21,[x21, #0x780]
+00fadd14  mov x19,x0
+00fadd18  tbnz w8,#0x0,0x00fadd30
+00fadd1c  adrp x0,0x3319000
+00fadd20  ldr x0,[x0, #0x780]
+00fadd24  bl 0x00b0789c
+00fadd28  mov w8,#0x1
+00fadd2c  strb w8,[x20, #0x7ef]
+00fadd30  ldr x1,[x21]
+00fadd34  mov x0,x19
+00fadd38  ldp x19,x30,[sp, #0x10]
+00fadd3c  mov x2,xzr
+00fadd40  ldp x21,x20,[sp], #0x20
+00fadd44  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadd48_CvitemNode__get_BG_ON.txt
+================================================================================
+Function: CvitemNode$$get_BG_ON @ 00fadd48
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$CheckToggleState @ 00f828a0
+
+--- Listing ---
+00fadd48  stp x21,x20,[sp, #-0x20]!
+00fadd4c  stp x19,x30,[sp, #0x10]
+00fadd50  adrp x20,0x3573000
+00fadd54  adrp x21,0x335a000
+00fadd58  ldrb w8,[x20, #0x7f0]
+00fadd5c  ldr x21,[x21, #0x118]
+00fadd60  mov x19,x0
+00fadd64  tbnz w8,#0x0,0x00fadd7c
+00fadd68  adrp x0,0x335a000
+00fadd6c  ldr x0,[x0, #0x118]
+00fadd70  bl 0x00b0789c
+00fadd74  mov w8,#0x1
+00fadd78  strb w8,[x20, #0x7f0]
+00fadd7c  ldr x1,[x21]
+00fadd80  mov x0,x19
+00fadd84  ldp x19,x30,[sp, #0x10]
+00fadd88  mov x2,xzr
+00fadd8c  ldp x21,x20,[sp], #0x20
+00fadd90  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadd94_CvitemNode__get_lbl_tips_on.txt
+================================================================================
+Function: CvitemNode$$get_lbl_tips_on @ 00fadd94
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$InitToggles @ 00f82104
+
+--- Listing ---
+00fadd94  stp x21,x20,[sp, #-0x20]!
+00fadd98  stp x19,x30,[sp, #0x10]
+00fadd9c  adrp x20,0x3573000
+00fadda0  adrp x21,0x3382000
+00fadda4  ldrb w8,[x20, #0x7f1]
+00fadda8  ldr x21,[x21, #0xec0]
+00faddac  mov x19,x0
+00faddb0  tbnz w8,#0x0,0x00faddc8
+00faddb4  adrp x0,0x3382000
+00faddb8  ldr x0,[x0, #0xec0]
+00faddbc  bl 0x00b0789c
+00faddc0  mov w8,#0x1
+00faddc4  strb w8,[x20, #0x7f1]
+00faddc8  ldr x1,[x21]
+00faddcc  mov x0,x19
+00faddd0  ldp x19,x30,[sp, #0x10]
+00faddd4  mov x2,xzr
+00faddd8  ldp x21,x20,[sp], #0x20
+00fadddc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadde0_CvitemNode__.ctor.txt
+================================================================================
+Function: CvitemNode$$.ctor @ 00fadde0
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fadde0  mov x1,xzr
+00fadde4  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 00fadde8_CvpanelNode__get_lbl_title.txt
+================================================================================
+Function: CvpanelNode$$get_lbl_title @ 00fadde8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$Awake @ 00f81d44
+
+--- Listing ---
+00fadde8  stp x21,x20,[sp, #-0x20]!
+00faddec  stp x19,x30,[sp, #0x10]
+00faddf0  adrp x20,0x3573000
+00faddf4  adrp x21,0x3379000
+00faddf8  ldrb w8,[x20, #0x7f2]
+00faddfc  ldr x21,[x21, #0x900]
+00fade00  mov x19,x0
+00fade04  tbnz w8,#0x0,0x00fade1c
+00fade08  adrp x0,0x3379000
+00fade0c  ldr x0,[x0, #0x900]
+00fade10  bl 0x00b0789c
+00fade14  mov w8,#0x1
+00fade18  strb w8,[x20, #0x7f2]
+00fade1c  ldr x1,[x21]
+00fade20  mov x0,x19
+00fade24  ldp x19,x30,[sp, #0x10]
+00fade28  mov x2,xzr
+00fade2c  ldp x21,x20,[sp], #0x20
+00fade30  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fade34_CvpanelNode__get_ScrollView.txt
+================================================================================
+Function: CvpanelNode$$get_ScrollView @ 00fade34
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fade34  stp x21,x20,[sp, #-0x20]!
+00fade38  stp x19,x30,[sp, #0x10]
+00fade3c  adrp x20,0x3573000
+00fade40  adrp x21,0x3374000
+00fade44  ldrb w8,[x20, #0x7f3]
+00fade48  ldr x21,[x21, #0x8b0]
+00fade4c  mov x19,x0
+00fade50  tbnz w8,#0x0,0x00fade68
+00fade54  adrp x0,0x3374000
+00fade58  ldr x0,[x0, #0x8b0]
+00fade5c  bl 0x00b0789c
+00fade60  mov w8,#0x1
+00fade64  strb w8,[x20, #0x7f3]
+00fade68  ldr x1,[x21]
+00fade6c  mov x0,x19
+00fade70  ldp x19,x30,[sp, #0x10]
+00fade74  mov x2,xzr
+00fade78  ldp x21,x20,[sp], #0x20
+00fade7c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fade80_CvpanelNode__get_CV_Content.txt
+================================================================================
+Function: CvpanelNode$$get_CV_Content @ 00fade80
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$get_LanguageToggleGroup @ 00f81bb8
+
+--- Listing ---
+00fade80  stp x21,x20,[sp, #-0x20]!
+00fade84  stp x19,x30,[sp, #0x10]
+00fade88  adrp x20,0x3573000
+00fade8c  adrp x21,0x3341000
+00fade90  ldrb w8,[x20, #0x7f4]
+00fade94  ldr x21,[x21, #0xb60]
+00fade98  mov x19,x0
+00fade9c  tbnz w8,#0x0,0x00fadeb4
+00fadea0  adrp x0,0x3341000
+00fadea4  ldr x0,[x0, #0xb60]
+00fadea8  bl 0x00b0789c
+00fadeac  mov w8,#0x1
+00fadeb0  strb w8,[x20, #0x7f4]
+00fadeb4  ldr x1,[x21]
+00fadeb8  mov x0,x19
+00fadebc  ldp x19,x30,[sp, #0x10]
+00fadec0  mov x2,xzr
+00fadec4  ldp x21,x20,[sp], #0x20
+00fadec8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadecc_CvpanelNode__get_btn_cancel.txt
+================================================================================
+Function: CvpanelNode$$get_btn_cancel @ 00fadecc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$Awake @ 00f81d44
+
+--- Listing ---
+00fadecc  stp x21,x20,[sp, #-0x20]!
+00faded0  stp x19,x30,[sp, #0x10]
+00faded4  adrp x20,0x3573000
+00faded8  adrp x21,0x3312000
+00fadedc  ldrb w8,[x20, #0x7f5]
+00fadee0  ldr x21,[x21, #0x200]
+00fadee4  mov x19,x0
+00fadee8  tbnz w8,#0x0,0x00fadf00
+00fadeec  adrp x0,0x3312000
+00fadef0  ldr x0,[x0, #0x200]
+00fadef4  bl 0x00b0789c
+00fadef8  mov w8,#0x1
+00fadefc  strb w8,[x20, #0x7f5]
+00fadf00  ldr x1,[x21]
+00fadf04  mov x0,x19
+00fadf08  ldp x19,x30,[sp, #0x10]
+00fadf0c  mov x2,xzr
+00fadf10  ldp x21,x20,[sp], #0x20
+00fadf14  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadf18_CvpanelNode__get_lbl_cancel.txt
+================================================================================
+Function: CvpanelNode$$get_lbl_cancel @ 00fadf18
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$Awake @ 00f81d44
+
+--- Listing ---
+00fadf18  stp x21,x20,[sp, #-0x20]!
+00fadf1c  stp x19,x30,[sp, #0x10]
+00fadf20  adrp x20,0x3573000
+00fadf24  adrp x21,0x3354000
+00fadf28  ldrb w8,[x20, #0x7f6]
+00fadf2c  ldr x21,[x21, #0xa88]
+00fadf30  mov x19,x0
+00fadf34  tbnz w8,#0x0,0x00fadf4c
+00fadf38  adrp x0,0x3354000
+00fadf3c  ldr x0,[x0, #0xa88]
+00fadf40  bl 0x00b0789c
+00fadf44  mov w8,#0x1
+00fadf48  strb w8,[x20, #0x7f6]
+00fadf4c  ldr x1,[x21]
+00fadf50  mov x0,x19
+00fadf54  ldp x19,x30,[sp, #0x10]
+00fadf58  mov x2,xzr
+00fadf5c  ldp x21,x20,[sp], #0x20
+00fadf60  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadf64_CvpanelNode__get_btn_ok.txt
+================================================================================
+Function: CvpanelNode$$get_btn_ok @ 00fadf64
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$Awake @ 00f81d44
+
+--- Listing ---
+00fadf64  stp x21,x20,[sp, #-0x20]!
+00fadf68  stp x19,x30,[sp, #0x10]
+00fadf6c  adrp x20,0x3573000
+00fadf70  adrp x21,0x3331000
+00fadf74  ldrb w8,[x20, #0x7f7]
+00fadf78  ldr x21,[x21, #0xfd8]
+00fadf7c  mov x19,x0
+00fadf80  tbnz w8,#0x0,0x00fadf98
+00fadf84  adrp x0,0x3331000
+00fadf88  ldr x0,[x0, #0xfd8]
+00fadf8c  bl 0x00b0789c
+00fadf90  mov w8,#0x1
+00fadf94  strb w8,[x20, #0x7f7]
+00fadf98  ldr x1,[x21]
+00fadf9c  mov x0,x19
+00fadfa0  ldp x19,x30,[sp, #0x10]
+00fadfa4  mov x2,xzr
+00fadfa8  ldp x21,x20,[sp], #0x20
+00fadfac  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadfb0_CvpanelNode__get_lbl_ok.txt
+================================================================================
+Function: CvpanelNode$$get_lbl_ok @ 00fadfb0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CVPanelMono$$Awake @ 00f81d44
+
+--- Listing ---
+00fadfb0  stp x21,x20,[sp, #-0x20]!
+00fadfb4  stp x19,x30,[sp, #0x10]
+00fadfb8  adrp x20,0x3573000
+00fadfbc  adrp x21,0x3360000
+00fadfc0  ldrb w8,[x20, #0x7f8]
+00fadfc4  ldr x21,[x21, #0xc50]
+00fadfc8  mov x19,x0
+00fadfcc  tbnz w8,#0x0,0x00fadfe4
+00fadfd0  adrp x0,0x3360000
+00fadfd4  ldr x0,[x0, #0xc50]
+00fadfd8  bl 0x00b0789c
+00fadfdc  mov w8,#0x1
+00fadfe0  strb w8,[x20, #0x7f8]
+00fadfe4  ldr x1,[x21]
+00fadfe8  mov x0,x19
+00fadfec  ldp x19,x30,[sp, #0x10]
+00fadff0  mov x2,xzr
+00fadff4  ldp x21,x20,[sp], #0x20
+00fadff8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fadffc_CvpanelNode__.ctor.txt
+================================================================================
+Function: CvpanelNode$$.ctor @ 00fadffc
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fadffc  mov x1,xzr
+00fae000  b 0x00dc0e00
+
+

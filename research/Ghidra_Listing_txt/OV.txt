@@ -1,0 +1,989 @@
+================================================================================
+### FILE: 00b48474_overflow.txt
+================================================================================
+Function: overflow @ 00b48474
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::overflow(unsigned int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48474  mov w0,#0xffffffff
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::overflow(unsigned int)
+00b48478  ret
+
+
+================================================================================
+### FILE: 00b8e89c__overflow_error.txt
+================================================================================
+Function: ~overflow_error @ 00b8e89c
+FuncComment: std::overflow_error::~overflow_error()
+
+--- Calls OUT ---
+  -> operator.delete @ 008d3ed0
+  -> ~exception @ 008d3cf0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e89c  str x19,[sp, #-0x20]!
+    ; [PLATE] std::overflow_error::~overflow_error()
+00b8e8a0  stp x29,x30,[sp, #0x10]
+00b8e8a4  add x29,sp,#0x10
+00b8e8a8  adrp x9,0x3383000
+00b8e8ac  ldr x8,[x0, #0x8]
+00b8e8b0  ldr x9,[x9, #0x380]
+00b8e8b4  mov x19,x0
+00b8e8b8  add x9,x9,#0x10
+00b8e8bc  str x9,[x0]
+00b8e8c0  sub x9,x8,#0x8
+00b8e8c4  ldaxr w10,[x9]
+00b8e8c8  subs w10,w10,#0x1
+00b8e8cc  stlxr w11,w10,[x9]
+00b8e8d0  cbnz w11,0x00b8e8c4
+00b8e8d4  b.pl 0x00b8e8e0
+00b8e8d8  sub x0,x8,#0x18
+00b8e8dc  bl 0x008d3ed0
+00b8e8e0  mov x0,x19
+00b8e8e4  bl 0x008d3cf0
+00b8e8e8  ldp x29,x30,[sp, #0x10]
+00b8e8ec  mov x0,x19
+00b8e8f0  ldr x19,[sp], #0x20
+00b8e8f4  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00d54b18_OverlayTexture__.ctor.txt
+================================================================================
+Function: OverlayTexture$$.ctor @ 00d54b18
+
+--- Calls OUT ---
+  -> UnityEngine.UI.BaseMeshEffect$$.ctor @ 025af0fc
+
+--- Calls IN ---
+
+--- Listing ---
+00d54b18  mov x1,xzr
+00d54b1c  b 0x025af0fc
+
+
+================================================================================
+### FILE: 00d54b20_OverlayTexture__Start.txt
+================================================================================
+Function: OverlayTexture$$Start @ 00d54b20
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d54b20  stp x21,x20,[sp, #-0x20]!
+00d54b24  stp x19,x30,[sp, #0x10]
+00d54b28  adrp x21,0x3571000
+00d54b2c  adrp x20,0x3321000
+00d54b30  ldrb w8,[x21, #0xe56]
+00d54b34  ldr x20,[x20, #0xca8]
+00d54b38  mov x19,x0
+00d54b3c  tbnz w8,#0x0,0x00d54b54
+00d54b40  adrp x0,0x3321000
+00d54b44  ldr x0,[x0, #0xca8]
+00d54b48  bl 0x00b0789c
+00d54b4c  mov w8,#0x1
+00d54b50  strb w8,[x21, #0xe56]
+00d54b54  mov x0,x19
+00d54b58  mov x1,xzr
+00d54b5c  bl 0x025aeccc
+00d54b60  ldr x8,[x20]
+00d54b64  mov x20,x0
+00d54b68  ldr w9,[x8, #0xe0]
+00d54b6c  cbnz w9,0x00d54b78
+00d54b70  mov x0,x8
+00d54b74  bl 0x00b0798c
+00d54b78  mov x0,x20
+00d54b7c  mov x1,xzr
+00d54b80  mov x2,xzr
+00d54b84  bl 0x024de30c
+00d54b88  tbz w0,#0x0,0x00d54bb4
+00d54b8c  mov x0,x19
+00d54b90  mov x1,xzr
+00d54b94  bl 0x025aeccc
+00d54b98  cbz x0,0x00d54bc0
+00d54b9c  ldr x8,[x0]
+00d54ba0  ldp x19,x30,[sp, #0x10]
+00d54ba4  ldr x2,[x8, #0x308]
+00d54ba8  ldr x1,[x8, #0x310]
+00d54bac  ldp x21,x20,[sp], #0x20
+00d54bb0  br x2
+00d54bb4  ldp x19,x30,[sp, #0x10]
+00d54bb8  ldp x21,x20,[sp], #0x20
+00d54bbc  ret
+00d54bc0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d54bc4_OverlayTexture__get_textureMode.txt
+================================================================================
+Function: OverlayTexture$$get_textureMode @ 00d54bc4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d54bc4  ldr w0,[x0, #0x20]
+00d54bc8  ret
+
+
+================================================================================
+### FILE: 00d54bcc_OverlayTexture__set_textureMode.txt
+================================================================================
+Function: OverlayTexture$$set_textureMode @ 00d54bcc
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d54bcc  str x22,[sp, #-0x30]!
+00d54bd0  stp x21,x20,[sp, #0x10]
+00d54bd4  stp x19,x30,[sp, #0x20]
+00d54bd8  adrp x22,0x3571000
+00d54bdc  adrp x21,0x3321000
+00d54be0  ldrb w8,[x22, #0xe57]
+00d54be4  ldr x21,[x21, #0xca8]
+00d54be8  mov w20,w1
+00d54bec  mov x19,x0
+00d54bf0  tbnz w8,#0x0,0x00d54c08
+00d54bf4  adrp x0,0x3321000
+00d54bf8  ldr x0,[x0, #0xca8]
+00d54bfc  bl 0x00b0789c
+00d54c00  mov w8,#0x1
+00d54c04  strb w8,[x22, #0xe57]
+00d54c08  mov x0,x19
+00d54c0c  mov x1,xzr
+00d54c10  str w20,[x19, #0x20]
+00d54c14  bl 0x025aeccc
+00d54c18  ldr x8,[x21]
+00d54c1c  mov x20,x0
+00d54c20  ldr w9,[x8, #0xe0]
+00d54c24  cbnz w9,0x00d54c30
+00d54c28  mov x0,x8
+00d54c2c  bl 0x00b0798c
+00d54c30  mov x0,x20
+00d54c34  mov x1,xzr
+00d54c38  mov x2,xzr
+00d54c3c  bl 0x024de30c
+00d54c40  tbz w0,#0x0,0x00d54c70
+00d54c44  mov x0,x19
+00d54c48  mov x1,xzr
+00d54c4c  bl 0x025aeccc
+00d54c50  cbz x0,0x00d54c80
+00d54c54  ldr x8,[x0]
+00d54c58  ldp x19,x30,[sp, #0x20]
+00d54c5c  ldp x21,x20,[sp, #0x10]
+00d54c60  ldr x2,[x8, #0x2f8]
+00d54c64  ldr x1,[x8, #0x300]
+00d54c68  ldr x22,[sp], #0x30
+00d54c6c  br x2
+00d54c70  ldp x19,x30,[sp, #0x20]
+00d54c74  ldp x21,x20,[sp, #0x10]
+00d54c78  ldr x22,[sp], #0x30
+00d54c7c  ret
+00d54c80  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d54c84_OverlayTexture__get_colorMode.txt
+================================================================================
+Function: OverlayTexture$$get_colorMode @ 00d54c84
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d54c84  ldr w0,[x0, #0x24]
+00d54c88  ret
+
+
+================================================================================
+### FILE: 00d54c8c_OverlayTexture__set_colorMode.txt
+================================================================================
+Function: OverlayTexture$$set_colorMode @ 00d54c8c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d54c8c  str x22,[sp, #-0x30]!
+00d54c90  stp x21,x20,[sp, #0x10]
+00d54c94  stp x19,x30,[sp, #0x20]
+00d54c98  adrp x22,0x3571000
+00d54c9c  adrp x21,0x3321000
+00d54ca0  ldrb w8,[x22, #0xe58]
+00d54ca4  ldr x21,[x21, #0xca8]
+00d54ca8  mov w20,w1
+00d54cac  mov x19,x0
+00d54cb0  tbnz w8,#0x0,0x00d54cc8
+00d54cb4  adrp x0,0x3321000
+00d54cb8  ldr x0,[x0, #0xca8]
+00d54cbc  bl 0x00b0789c
+00d54cc0  mov w8,#0x1
+00d54cc4  strb w8,[x22, #0xe58]
+00d54cc8  mov x0,x19
+00d54ccc  mov x1,xzr
+00d54cd0  str w20,[x19, #0x24]
+00d54cd4  bl 0x025aeccc
+00d54cd8  ldr x8,[x21]
+00d54cdc  mov x20,x0
+00d54ce0  ldr w9,[x8, #0xe0]
+00d54ce4  cbnz w9,0x00d54cf0
+00d54ce8  mov x0,x8
+00d54cec  bl 0x00b0798c
+00d54cf0  mov x0,x20
+00d54cf4  mov x1,xzr
+00d54cf8  mov x2,xzr
+00d54cfc  bl 0x024de30c
+00d54d00  tbz w0,#0x0,0x00d54d30
+00d54d04  mov x0,x19
+00d54d08  mov x1,xzr
+00d54d0c  bl 0x025aeccc
+00d54d10  cbz x0,0x00d54d40
+00d54d14  ldr x8,[x0]
+00d54d18  ldp x19,x30,[sp, #0x20]
+00d54d1c  ldp x21,x20,[sp, #0x10]
+00d54d20  ldr x2,[x8, #0x2f8]
+00d54d24  ldr x1,[x8, #0x300]
+00d54d28  ldr x22,[sp], #0x30
+00d54d2c  br x2
+00d54d30  ldp x19,x30,[sp, #0x20]
+00d54d34  ldp x21,x20,[sp, #0x10]
+00d54d38  ldr x22,[sp], #0x30
+00d54d3c  ret
+00d54d40  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d54d44_OverlayTexture__get_overlayTexture.txt
+================================================================================
+Function: OverlayTexture$$get_overlayTexture @ 00d54d44
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d54d44  ldr x0,[x0, #0x28]
+00d54d48  ret
+
+
+================================================================================
+### FILE: 00d54d4c_OverlayTexture__set_overlayTexture.txt
+================================================================================
+Function: OverlayTexture$$set_overlayTexture @ 00d54d4c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d54d4c  str x22,[sp, #-0x30]!
+00d54d50  stp x21,x20,[sp, #0x10]
+00d54d54  stp x19,x30,[sp, #0x20]
+00d54d58  adrp x22,0x3571000
+00d54d5c  adrp x21,0x3321000
+00d54d60  ldrb w8,[x22, #0xe59]
+00d54d64  ldr x21,[x21, #0xca8]
+00d54d68  mov x20,x1
+00d54d6c  mov x19,x0
+00d54d70  tbnz w8,#0x0,0x00d54d88
+00d54d74  adrp x0,0x3321000
+00d54d78  ldr x0,[x0, #0xca8]
+00d54d7c  bl 0x00b0789c
+00d54d80  mov w8,#0x1
+00d54d84  strb w8,[x22, #0xe59]
+00d54d88  mov x0,x19
+00d54d8c  str x20,[x0, #0x28]!
+00d54d90  mov x1,x20
+00d54d94  bl 0x00b07850
+00d54d98  mov x0,x19
+00d54d9c  mov x1,xzr
+00d54da0  bl 0x025aeccc
+00d54da4  ldr x8,[x21]
+00d54da8  mov x20,x0
+00d54dac  ldr w9,[x8, #0xe0]
+00d54db0  cbnz w9,0x00d54dbc
+00d54db4  mov x0,x8
+00d54db8  bl 0x00b0798c
+00d54dbc  mov x0,x20
+00d54dc0  mov x1,xzr
+00d54dc4  mov x2,xzr
+00d54dc8  bl 0x024de30c
+00d54dcc  tbz w0,#0x0,0x00d54dfc
+00d54dd0  mov x0,x19
+00d54dd4  mov x1,xzr
+00d54dd8  bl 0x025aeccc
+00d54ddc  cbz x0,0x00d54e0c
+00d54de0  ldr x8,[x0]
+00d54de4  ldp x19,x30,[sp, #0x20]
+00d54de8  ldp x21,x20,[sp, #0x10]
+00d54dec  ldr x2,[x8, #0x2f8]
+00d54df0  ldr x1,[x8, #0x300]
+00d54df4  ldr x22,[sp], #0x30
+00d54df8  br x2
+00d54dfc  ldp x19,x30,[sp, #0x20]
+00d54e00  ldp x21,x20,[sp, #0x10]
+00d54e04  ldr x22,[sp], #0x30
+00d54e08  ret
+00d54e0c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d54e10_OverlayTexture__ModifyMesh.txt
+================================================================================
+Function: OverlayTexture$$ModifyMesh @ 00d54e10
+
+--- Calls OUT ---
+  -> UnityEngine.UI.VertexHelper$$AddUIVertexTriangleStream @ 025aeb8c
+  -> memcpy @ 008d4920
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.UI.VertexHelper$$GetUIVertexStream @ 025aebdc
+  -> UnityEngine.UI.VertexHelper$$Clear @ 0259d54c
+  -> UnityEngine.RectTransform$$get_rect @ 024f6150
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Rect$$get_yMin @ 024dafa8
+  -> System.Collections.Generic.List<UIVertex>$$set_Item @ 01c898f4
+  -> UnityEngine.Rect$$get_yMax @ 024db024
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Rect$$get_xMin @ 024dafa0
+  -> System.Collections.Generic.List<UIVertex>$$.ctor @ 01c89320
+  -> System.Collections.Generic.List<UIVertex>$$get_Item @ 01c89890
+  -> UnityEngine.Rect$$get_xMax @ 024db014
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00d54e10  sub sp,sp,#0x190
+00d54e14  stp d13,d12,[sp, #0x100]
+00d54e18  stp d11,d10,[sp, #0x110]
+00d54e1c  stp d9,d8,[sp, #0x120]
+00d54e20  stp x28,x27,[sp, #0x130]
+00d54e24  stp x26,x25,[sp, #0x140]
+00d54e28  stp x24,x23,[sp, #0x150]
+00d54e2c  stp x22,x21,[sp, #0x160]
+00d54e30  stp x20,x19,[sp, #0x170]
+00d54e34  stp x29,x30,[sp, #0x180]
+00d54e38  adrp x19,0x3571000
+00d54e3c  ldrb w8,[x19, #0xe5a]
+00d54e40  mov x22,x1
+00d54e44  mov x21,x0
+00d54e48  tbnz w8,#0x0,0x00d54e9c
+00d54e4c  adrp x0,0x332d000
+00d54e50  ldr x0,[x0, #0x198]
+00d54e54  bl 0x00b0789c
+00d54e58  adrp x0,0x331a000
+00d54e5c  ldr x0,[x0, #0x450]
+00d54e60  bl 0x00b0789c
+00d54e64  adrp x0,0x3343000
+00d54e68  ldr x0,[x0, #0x138]
+00d54e6c  bl 0x00b0789c
+00d54e70  adrp x0,0x3352000
+00d54e74  ldr x0,[x0, #0x130]
+00d54e78  bl 0x00b0789c
+00d54e7c  adrp x0,0x335b000
+00d54e80  ldr x0,[x0, #0x138]
+00d54e84  bl 0x00b0789c
+00d54e88  adrp x0,0x3311000
+00d54e8c  ldr x0,[x0, #0x9f8]
+00d54e90  bl 0x00b0789c
+00d54e94  mov w8,#0x1
+00d54e98  strb w8,[x19, #0xe5a]
+00d54e9c  movi v0.2D,#0x0
+00d54ea0  stp xzr,xzr,[sp, #0x10]
+00d54ea4  stur q0,[sp, #0x7c]
+00d54ea8  stp q0,q0,[sp, #0x60]
+00d54eac  stp q0,q0,[sp, #0x40]
+00d54eb0  stp q0,q0,[sp, #0x20]
+00d54eb4  ldr x8,[x21]
+00d54eb8  mov x0,x21
+00d54ebc  ldp x9,x1,[x8, #0x1c8]
+00d54ec0  blr x9
+00d54ec4  tbz w0,#0x0,0x00d552c0
+00d54ec8  adrp x8,0x3311000
+00d54ecc  ldr x8,[x8, #0x9f8]
+00d54ed0  ldr x0,[x8]
+00d54ed4  bl 0x00b079a0
+00d54ed8  cbz x0,0x00d552ec
+00d54edc  adrp x8,0x331a000
+00d54ee0  ldr x8,[x8, #0x450]
+00d54ee4  mov x20,x0
+00d54ee8  ldr x1,[x8]
+00d54eec  bl 0x01c89320
+00d54ef0  cbz x22,0x00d552ec
+00d54ef4  mov x0,x22
+00d54ef8  mov x1,x20
+00d54efc  mov x2,xzr
+00d54f00  bl 0x025aebdc
+00d54f04  ldr w23,[x20, #0x18]
+00d54f08  cbz w23,0x00d552c0
+00d54f0c  ldr w8,[x21, #0x20]
+00d54f10  adrp x24,0x3352000
+00d54f14  adrp x29,0x335b000
+00d54f18  ldr x24,[x24, #0x130]
+00d54f1c  ldr x29,[x29, #0x138]
+00d54f20  sub w8,w8,#0x1
+00d54f24  cmp w8,#0x2
+00d54f28  str x22,[sp, #0x8]
+00d54f2c  b.cs 0x00d54fd0
+00d54f30  adrp x19,0x3570000
+00d54f34  ldrb w8,[x19, #0xffd]
+00d54f38  cbnz w8,0x00d54f50
+00d54f3c  adrp x0,0x3365000
+00d54f40  ldr x0,[x0, #0x108]
+00d54f44  bl 0x00b0789c
+00d54f48  mov w8,#0x1
+00d54f4c  strb w8,[x19, #0xffd]
+00d54f50  ldr w8,[x21, #0x20]
+00d54f54  cmp w8,#0x2
+00d54f58  b.ne 0x00d550a4
+00d54f5c  adrp x8,0x332d000
+00d54f60  ldr x8,[x8, #0x198]
+00d54f64  mov x0,x21
+00d54f68  ldr x1,[x8]
+00d54f6c  bl 0x0176cbf8
+00d54f70  cbz x0,0x00d552ec
+00d54f74  mov x1,xzr
+00d54f78  bl 0x024f6150
+00d54f7c  add x0,sp,#0x10
+00d54f80  mov x1,xzr
+00d54f84  stp s0,s1,[sp, #0x10]
+00d54f88  stp s2,s3,[sp, #0x18]
+00d54f8c  bl 0x024dafa0
+00d54f90  add x0,sp,#0x10
+00d54f94  mov x1,xzr
+00d54f98  mov v8.16B,v0.16B
+00d54f9c  bl 0x024db024
+00d54fa0  add x0,sp,#0x10
+00d54fa4  mov x1,xzr
+00d54fa8  fmov w22,s8
+00d54fac  fmov w26,s0
+00d54fb0  bl 0x024db014
+00d54fb4  add x0,sp,#0x10
+00d54fb8  mov x1,xzr
+00d54fbc  mov v8.16B,v0.16B
+00d54fc0  bl 0x024dafa8
+00d54fc4  fmov w27,s8
+00d54fc8  fmov w28,s0
+00d54fcc  b 0x00d551f8
+00d54fd0  cmp w23,#0x1
+00d54fd4  b.lt 0x00d552a0
+00d54fd8  adrp x26,0x26db000
+00d54fdc  mov w19,#0xaaab
+00d54fe0  mov x21,xzr
+00d54fe4  add x26,x26,#0x75c
+00d54fe8  mov w27,#0xfffffffe
+00d54fec  movk w19,#0xaaaa, LSL #16
+00d54ff0  mov w25,#0x6
+00d54ff4  fmov s8,0x40000000
+00d54ff8  fmov s9,0x3f800000
+00d54ffc  orr x8,xzr,#-0x5555555555555556
+00d55000  movk x8,#0xaaab
+00d55004  umulh x8,x21,x8
+00d55008  and x9,x21,#0xffffffff
+00d5500c  ldr x2,[x24]
+00d55010  lsr x8,x8,#0x2
+00d55014  mul x9,x9,x19
+00d55018  mov x10,#-0x18
+00d5501c  mul x22,x8,x10
+00d55020  lsr x8,x9,#0x22
+00d55024  mov w28,w23
+00d55028  msub w23,w8,w25,w27
+00d5502c  add x8,sp,#0x90
+00d55030  mov x0,x20
+00d55034  mov w1,w21
+00d55038  bl 0x01c89890
+00d5503c  add x0,sp,#0x20
+00d55040  add x1,sp,#0x90
+00d55044  mov w2,#0x6c
+00d55048  bl 0x008d4920
+00d5504c  ldr s0,[x26,x22]
+00d55050  ldr x22,[x29]
+00d55054  cmp w23,#0x3
+00d55058  fcsel s1,s9,s8,cc
+00d5505c  add x0,sp,#0x90
+00d55060  add x1,sp,#0x20
+00d55064  mov w2,#0x6c
+00d55068  mov w23,w28
+00d5506c  stp s0,s1,[sp, #0x5c]
+00d55070  stp wzr,wzr,[sp, #0x64]
+00d55074  bl 0x008d4920
+00d55078  add x2,sp,#0x90
+00d5507c  mov x0,x20
+00d55080  mov w1,w21
+00d55084  mov x3,x22
+00d55088  bl 0x01c898f4
+00d5508c  add x21,x21,#0x1
+00d55090  add x26,x26,#0x4
+00d55094  cmp w28,w21
+00d55098  add w27,w27,#0x1
+00d5509c  b.ne 0x00d54ffc
+00d550a0  b 0x00d552a0
+00d550a4  ldr x2,[x24]
+00d550a8  add x8,sp,#0x90
+00d550ac  mov x0,x20
+00d550b0  mov w1,wzr
+00d550b4  bl 0x01c89890
+00d550b8  ldr w8,[x20, #0x18]
+00d550bc  ldr x2,[x24]
+00d550c0  ldp w22,w26,[sp, #0x90]
+00d550c4  mov x0,x20
+00d550c8  sub w1,w8,#0x1
+00d550cc  add x8,sp,#0x90
+00d550d0  bl 0x01c89890
+00d550d4  ldr w8,[x20, #0x18]
+00d550d8  ldp w27,w28,[sp, #0x90]
+00d550dc  cmp w8,#0x1
+00d550e0  b.lt 0x00d551f8
+00d550e4  mov w21,wzr
+00d550e8  fmov s8,w28
+00d550ec  fmov s9,w27
+00d550f0  fmov s10,w26
+00d550f4  fmov s11,w22
+00d550f8  ldr x2,[x24]
+00d550fc  add x8,sp,#0x90
+00d55100  mov x0,x20
+00d55104  mov w1,w21
+00d55108  bl 0x01c89890
+00d5510c  ldr s0,[sp, #0x90]
+00d55110  fcmp s0,s11
+00d55114  b.pl 0x00d55134
+00d55118  ldr x2,[x24]
+00d5511c  add x8,sp,#0x90
+00d55120  mov x0,x20
+00d55124  mov w1,w21
+00d55128  bl 0x01c89890
+00d5512c  ldr w22,[sp, #0x90]
+00d55130  fmov s11,w22
+00d55134  ldr x2,[x24]
+00d55138  add x8,sp,#0x90
+00d5513c  mov x0,x20
+00d55140  mov w1,w21
+00d55144  bl 0x01c89890
+00d55148  ldr s0,[sp, #0x94]
+00d5514c  fcmp s0,s10
+00d55150  b.le 0x00d55170
+00d55154  ldr x2,[x24]
+00d55158  add x8,sp,#0x90
+00d5515c  mov x0,x20
+00d55160  mov w1,w21
+00d55164  bl 0x01c89890
+00d55168  ldr w26,[sp, #0x94]
+00d5516c  fmov s10,w26
+00d55170  ldr x2,[x24]
+00d55174  add x8,sp,#0x90
+00d55178  mov x0,x20
+00d5517c  mov w1,w21
+00d55180  bl 0x01c89890
+00d55184  ldr s0,[sp, #0x90]
+00d55188  fcmp s0,s9
+00d5518c  b.le 0x00d551ac
+00d55190  ldr x2,[x24]
+00d55194  add x8,sp,#0x90
+00d55198  mov x0,x20
+00d5519c  mov w1,w21
+00d551a0  bl 0x01c89890
+00d551a4  ldr w27,[sp, #0x90]
+00d551a8  fmov s9,w27
+00d551ac  ldr x2,[x24]
+00d551b0  add x8,sp,#0x90
+00d551b4  mov x0,x20
+00d551b8  mov w1,w21
+00d551bc  bl 0x01c89890
+00d551c0  ldr s0,[sp, #0x94]
+00d551c4  fcmp s0,s8
+00d551c8  b.pl 0x00d551e8
+00d551cc  ldr x2,[x24]
+00d551d0  add x8,sp,#0x90
+00d551d4  mov x0,x20
+00d551d8  mov w1,w21
+00d551dc  bl 0x01c89890
+00d551e0  ldr w28,[sp, #0x94]
+00d551e4  fmov s8,w28
+00d551e8  ldr w8,[x20, #0x18]
+00d551ec  add w21,w21,#0x1
+00d551f0  cmp w21,w8
+00d551f4  b.lt 0x00d550f8
+00d551f8  cmp w23,#0x1
+00d551fc  b.lt 0x00d552a0
+00d55200  fmov s8,w26
+00d55204  fmov s0,w28
+00d55208  fsub s9,s8,s0
+00d5520c  fmov s0,w27
+00d55210  fmov s10,w22
+00d55214  mov w21,wzr
+00d55218  fsub s11,s0,s10
+00d5521c  fmov s12,0x3f800000
+00d55220  fmov s13,0x40000000
+00d55224  ldr x2,[x24]
+00d55228  add x8,sp,#0x90
+00d5522c  mov x0,x20
+00d55230  mov w1,w21
+00d55234  bl 0x01c89890
+00d55238  add x0,sp,#0x20
+00d5523c  add x1,sp,#0x90
+00d55240  mov w2,#0x6c
+00d55244  bl 0x008d4920
+00d55248  ldp s0,s1,[sp, #0x20]
+00d5524c  ldr x22,[x29]
+00d55250  add x0,sp,#0x90
+00d55254  add x1,sp,#0x20
+00d55258  fsub s0,s0,s10
+00d5525c  fsub s1,s8,s1
+00d55260  fdiv s0,s0,s11
+00d55264  fdiv s1,s1,s9
+00d55268  fadd s0,s0,s12
+00d5526c  fsub s1,s13,s1
+00d55270  mov w2,#0x6c
+00d55274  stp s0,s1,[sp, #0x5c]
+00d55278  stp wzr,wzr,[sp, #0x64]
+00d5527c  bl 0x008d4920
+00d55280  add x2,sp,#0x90
+00d55284  mov x0,x20
+00d55288  mov w1,w21
+00d5528c  mov x3,x22
+00d55290  bl 0x01c898f4
+00d55294  add w21,w21,#0x1
+00d55298  cmp w23,w21
+00d5529c  b.ne 0x00d55224
+00d552a0  ldr x19,[sp, #0x8]
+00d552a4  mov x1,xzr
+00d552a8  mov x0,x19
+00d552ac  bl 0x0259d54c
+00d552b0  mov x0,x19
+00d552b4  mov x1,x20
+00d552b8  mov x2,xzr
+00d552bc  bl 0x025aeb8c
+00d552c0  ldp x29,x30,[sp, #0x180]
+00d552c4  ldp x20,x19,[sp, #0x170]
+00d552c8  ldp x22,x21,[sp, #0x160]
+00d552cc  ldp x24,x23,[sp, #0x150]
+00d552d0  ldp x26,x25,[sp, #0x140]
+00d552d4  ldp x28,x27,[sp, #0x130]
+00d552d8  ldp d9,d8,[sp, #0x120]
+00d552dc  ldp d11,d10,[sp, #0x110]
+00d552e0  ldp d13,d12,[sp, #0x100]
+00d552e4  add sp,sp,#0x190
+00d552e8  ret
+00d552ec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d552f0_OverlayTexture__Update.txt
+================================================================================
+Function: OverlayTexture$$Update @ 00d552f0
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d552f0  str x20,[sp, #-0x20]!
+00d552f4  stp x19,x30,[sp, #0x10]
+00d552f8  adrp x20,0x3571000
+00d552fc  ldrb w8,[x20, #0xe5b]
+00d55300  mov x19,x0
+00d55304  tbnz w8,#0x0,0x00d5531c
+00d55308  adrp x0,0x3321000
+00d5530c  ldr x0,[x0, #0xca8]
+00d55310  bl 0x00b0789c
+00d55314  mov w8,#0x1
+00d55318  strb w8,[x20, #0xe5b]
+00d5531c  ldrb w8,[x19, #0x30]
+00d55320  cbz w8,0x00d5538c
+00d55324  adrp x20,0x3321000
+00d55328  ldr x20,[x20, #0xca8]
+00d5532c  mov x0,x19
+00d55330  mov x1,xzr
+00d55334  bl 0x025aeccc
+00d55338  ldr x8,[x20]
+00d5533c  mov x20,x0
+00d55340  ldr w9,[x8, #0xe0]
+00d55344  cbnz w9,0x00d55350
+00d55348  mov x0,x8
+00d5534c  bl 0x00b0798c
+00d55350  mov x0,x20
+00d55354  mov x1,xzr
+00d55358  mov x2,xzr
+00d5535c  bl 0x024de30c
+00d55360  tbz w0,#0x0,0x00d5538c
+00d55364  mov x0,x19
+00d55368  mov x1,xzr
+00d5536c  bl 0x025aeccc
+00d55370  cbz x0,0x00d55398
+00d55374  ldr x8,[x0]
+00d55378  ldp x19,x30,[sp, #0x10]
+00d5537c  ldr x2,[x8, #0x308]
+00d55380  ldr x1,[x8, #0x310]
+00d55384  ldr x20,[sp], #0x20
+00d55388  br x2
+00d5538c  ldp x19,x30,[sp, #0x10]
+00d55390  ldr x20,[sp], #0x20
+00d55394  ret
+00d55398  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d5539c_OverlayTexture__GetModifiedMaterial.txt
+================================================================================
+Function: OverlayTexture$$GetModifiedMaterial @ 00d5539c
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$.ctor @ 024d2c28
+  -> UnityEngine.Object$$set_hideFlags @ 024e013c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Material$$SetTexture @ 024d32ac
+  -> System.String$$Concat @ 01fdebb8
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Material$$get_shaderKeywords @ 024d3ae4
+  -> UnityEngine.Material$$SetInt @ 024d40e8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Material$$CopyPropertiesFromMaterial @ 024d3a20
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.Material$$set_shaderKeywords @ 024d3b20
+  -> UnityEngine.Object$$get_name @ 024c9a1c
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> UnityEngine.Shader$$Find @ 024d2900
+  -> UnityEngine.Material$$get_shader @ 024d2d38
+  -> UnityEngine.Material$$EnableKeyword @ 024d3834
+  -> UnityEngine.Object$$set_name @ 024df584
+
+--- Calls IN ---
+
+--- Listing ---
+00d5539c  stp x23,x22,[sp, #-0x30]!
+00d553a0  stp x21,x20,[sp, #0x10]
+00d553a4  stp x19,x30,[sp, #0x20]
+00d553a8  adrp x21,0x3571000
+00d553ac  ldrb w8,[x21, #0xe5c]
+00d553b0  mov x19,x1
+00d553b4  mov x20,x0
+00d553b8  tbnz w8,#0x0,0x00d5543c
+00d553bc  adrp x0,0x336b000
+00d553c0  ldr x0,[x0, #0x7d0]
+00d553c4  bl 0x00b0789c
+00d553c8  adrp x0,0x337f000
+00d553cc  ldr x0,[x0, #0x840]
+00d553d0  bl 0x00b0789c
+00d553d4  adrp x0,0x3321000
+00d553d8  ldr x0,[x0, #0xca8]
+00d553dc  bl 0x00b0789c
+00d553e0  adrp x0,0x335d000
+00d553e4  ldr x0,[x0, #0xf38]
+00d553e8  bl 0x00b0789c
+00d553ec  adrp x0,0x333b000
+00d553f0  ldr x0,[x0, #0xc00]
+00d553f4  bl 0x00b0789c
+00d553f8  adrp x0,0x337e000
+00d553fc  ldr x0,[x0, #0x588]
+00d55400  bl 0x00b0789c
+00d55404  adrp x0,0x3327000
+00d55408  ldr x0,[x0, #0x390]
+00d5540c  bl 0x00b0789c
+00d55410  adrp x0,0x333e000
+00d55414  ldr x0,[x0, #0x6a8]
+00d55418  bl 0x00b0789c
+00d5541c  adrp x0,0x3337000
+00d55420  ldr x0,[x0, #0x8d8]
+00d55424  bl 0x00b0789c
+00d55428  adrp x0,0x332a000
+00d5542c  ldr x0,[x0, #0xd98]
+00d55430  bl 0x00b0789c
+00d55434  mov w8,#0x1
+00d55438  strb w8,[x21, #0xe5c]
+00d5543c  ldr x8,[x20]
+00d55440  mov x0,x20
+00d55444  ldp x9,x1,[x8, #0x1c8]
+00d55448  blr x9
+00d5544c  tbz w0,#0x0,0x00d55680
+00d55450  cbz x19,0x00d55694
+00d55454  adrp x21,0x335d000
+00d55458  adrp x23,0x3321000
+00d5545c  ldr x21,[x21, #0xf38]
+00d55460  ldr x23,[x23, #0xca8]
+00d55464  mov x0,x19
+00d55468  mov x1,xzr
+00d5546c  bl 0x024d2d38
+00d55470  ldr x8,[x21]
+00d55474  mov x21,x0
+00d55478  mov x1,xzr
+00d5547c  mov x0,x8
+00d55480  bl 0x024d2900
+00d55484  ldr x8,[x23]
+00d55488  mov x22,x0
+00d5548c  ldr w9,[x8, #0xe0]
+00d55490  cbnz w9,0x00d5549c
+00d55494  mov x0,x8
+00d55498  bl 0x00b0798c
+00d5549c  mov x0,x21
+00d554a0  mov x1,x22
+00d554a4  mov x2,xzr
+00d554a8  bl 0x024de30c
+00d554ac  tbz w0,#0x0,0x00d55520
+00d554b0  mov x0,x20
+00d554b4  mov x1,xzr
+00d554b8  bl 0x024e4ed4
+00d554bc  cbz x0,0x00d55694
+00d554c0  adrp x20,0x3337000
+00d554c4  adrp x21,0x333e000
+00d554c8  adrp x22,0x336b000
+00d554cc  ldr x20,[x20, #0x8d8]
+00d554d0  ldr x21,[x21, #0x6a8]
+00d554d4  ldr x22,[x22, #0x7d0]
+00d554d8  mov x1,xzr
+00d554dc  bl 0x024c9a1c
+00d554e0  ldr x8,[x20]
+00d554e4  ldr x2,[x21]
+00d554e8  mov x1,x0
+00d554ec  mov x3,xzr
+00d554f0  mov x0,x8
+00d554f4  bl 0x01fdebb8
+00d554f8  ldr x8,[x22]
+00d554fc  mov x20,x0
+00d55500  ldr w9,[x8, #0xe0]
+00d55504  cbnz w9,0x00d55510
+00d55508  mov x0,x8
+00d5550c  bl 0x00b0798c
+00d55510  mov x0,x20
+00d55514  mov x1,xzr
+00d55518  bl 0x024c0104
+00d5551c  b 0x00d55680
+00d55520  mov x21,x20
+00d55524  ldr x22,[x21, #0x38]!
+00d55528  ldr x0,[x23]
+00d5552c  ldr w8,[x0, #0xe0]
+00d55530  cbnz w8,0x00d55538
+00d55534  bl 0x00b0798c
+00d55538  mov x0,x22
+00d5553c  mov x1,xzr
+00d55540  mov x2,xzr
+00d55544  bl 0x024c8180
+00d55548  tbz w0,#0x0,0x00d55580
+00d5554c  adrp x8,0x337f000
+00d55550  ldr x8,[x8, #0x840]
+00d55554  ldr x0,[x8]
+00d55558  bl 0x00b079a0
+00d5555c  cbz x0,0x00d55694
+00d55560  mov x1,x19
+00d55564  mov x2,xzr
+00d55568  mov x22,x0
+00d5556c  bl 0x024d2c28
+00d55570  mov x0,x21
+00d55574  mov x1,x22
+00d55578  str x22,[x21]
+00d5557c  bl 0x00b07850
+00d55580  ldr x0,[x21]
+00d55584  cbz x0,0x00d55694
+00d55588  adrp x23,0x3327000
+00d5558c  ldr x23,[x23, #0x390]
+00d55590  mov x1,x19
+00d55594  mov x2,xzr
+00d55598  bl 0x024d3a20
+00d5559c  ldr x22,[x21]
+00d555a0  mov x0,x19
+00d555a4  mov x1,xzr
+00d555a8  bl 0x024c9a1c
+00d555ac  ldr x1,[x23]
+00d555b0  mov x2,xzr
+00d555b4  bl 0x01fd2850
+00d555b8  cbz x22,0x00d55694
+00d555bc  mov x1,x0
+00d555c0  mov x0,x22
+00d555c4  mov x2,xzr
+00d555c8  bl 0x024df584
+00d555cc  ldr x0,[x21]
+00d555d0  cbz x0,0x00d55694
+00d555d4  mov w1,#0x3
+00d555d8  mov x2,xzr
+00d555dc  bl 0x024e013c
+00d555e0  ldr x22,[x21]
+00d555e4  mov x0,x19
+00d555e8  mov x1,xzr
+00d555ec  bl 0x024d3ae4
+00d555f0  cbz x22,0x00d55694
+00d555f4  mov x1,x0
+00d555f8  mov x0,x22
+00d555fc  mov x2,xzr
+00d55600  bl 0x024d3b20
+00d55604  ldr x0,[x21]
+00d55608  cbz x0,0x00d55694
+00d5560c  mov x1,x19
+00d55610  mov x2,xzr
+00d55614  bl 0x024d3a20
+00d55618  ldr x0,[x21]
+00d5561c  cbz x0,0x00d55694
+00d55620  adrp x8,0x337e000
+00d55624  ldr x8,[x8, #0x588]
+00d55628  mov x2,xzr
+00d5562c  ldr x1,[x8]
+00d55630  bl 0x024d3834
+00d55634  ldr x0,[x21]
+00d55638  cbz x0,0x00d55694
+00d5563c  adrp x8,0x332a000
+00d55640  ldr x8,[x8, #0xd98]
+00d55644  ldr x2,[x20, #0x28]
+00d55648  mov x3,xzr
+00d5564c  ldr x1,[x8]
+00d55650  bl 0x024d32ac
+00d55654  ldr x0,[x20, #0x38]
+00d55658  cbz x0,0x00d55694
+00d5565c  adrp x8,0x333b000
+00d55660  ldr x8,[x8, #0xc00]
+00d55664  ldr w2,[x20, #0x24]
+00d55668  mov x3,xzr
+00d5566c  ldr x1,[x8]
+00d55670  bl 0x024d40e8
+00d55674  ldr x19,[x20, #0x38]
+00d55678  mov w8,#0x1
+00d5567c  strb w8,[x20, #0x30]
+00d55680  mov x0,x19
+00d55684  ldp x19,x30,[sp, #0x20]
+00d55688  ldp x21,x20,[sp, #0x10]
+00d5568c  ldp x23,x22,[sp], #0x30
+00d55690  ret
+00d55694  bl 0x00b079b0
+
+

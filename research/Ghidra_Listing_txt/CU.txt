@@ -1,0 +1,3820 @@
+================================================================================
+### FILE: 008d45a0_current_exception.txt
+================================================================================
+Function: current_exception @ 008d45a0
+
+--- Calls OUT ---
+  -> current_exception @ 00b47308
+
+--- Calls IN ---
+
+--- Listing ---
+008d45a0  adrp x16,0x3307000
+008d45a4  ldr x17,[x16, #0xc90]
+008d45a8  add x16,x16,#0xc90
+008d45ac  br x17
+
+
+================================================================================
+### FILE: 00b47308_current_exception.txt
+================================================================================
+Function: current_exception @ 00b47308
+FuncComment: std::current_exception()
+
+--- Calls OUT ---
+  -> __cxa_current_primary_exception @ 008d47a0
+
+--- Calls IN ---
+  <- current_exception @ 008d45a0
+
+--- Listing ---
+00b47308  str x19,[sp, #-0x20]!
+    ; [PLATE] std::current_exception()
+00b4730c  stp x29,x30,[sp, #0x10]
+00b47310  add x29,sp,#0x10
+00b47314  mov x19,x8
+00b47318  bl 0x008d47a0
+00b4731c  ldp x29,x30,[sp, #0x10]
+00b47320  str x0,[x19]
+00b47324  ldr x19,[sp], #0x20
+00b47328  ret
+
+
+================================================================================
+### FILE: 00cf5578_CustomLeaderboardFiledsHolder__Awake.txt
+================================================================================
+Function: CustomLeaderboardFiledsHolder$$Awake @ 00cf5578
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$.ctor @ 024d2c28
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Renderer$$set_material @ 024c7348
+  -> UnityEngine.Renderer$$get_material @ 024c730c
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5578  stp x21,x20,[sp, #-0x20]!
+00cf557c  stp x19,x30,[sp, #0x10]
+00cf5580  adrp x20,0x3571000
+00cf5584  ldrb w8,[x20, #0x9df]
+00cf5588  mov x19,x0
+00cf558c  tbnz w8,#0x0,0x00cf55b0
+00cf5590  adrp x0,0x332b000
+00cf5594  ldr x0,[x0, #0xb30]
+00cf5598  bl 0x00b0789c
+00cf559c  adrp x0,0x337f000
+00cf55a0  ldr x0,[x0, #0x840]
+00cf55a4  bl 0x00b0789c
+00cf55a8  mov w8,#0x1
+00cf55ac  strb w8,[x20, #0x9df]
+00cf55b0  ldr x0,[x19, #0x38]
+00cf55b4  cbz x0,0x00cf5634
+00cf55b8  adrp x20,0x332b000
+00cf55bc  ldr x20,[x20, #0xb30]
+00cf55c0  ldr x1,[x20]
+00cf55c4  bl 0x01794e94
+00cf55c8  ldr x8,[x19, #0x38]
+00cf55cc  cbz x8,0x00cf5634
+00cf55d0  ldr x1,[x20]
+00cf55d4  mov x19,x0
+00cf55d8  mov x0,x8
+00cf55dc  bl 0x01794e94
+00cf55e0  cbz x0,0x00cf5634
+00cf55e4  adrp x20,0x337f000
+00cf55e8  ldr x20,[x20, #0x840]
+00cf55ec  mov x1,xzr
+00cf55f0  bl 0x024c730c
+00cf55f4  ldr x8,[x20]
+00cf55f8  mov x21,x0
+00cf55fc  mov x0,x8
+00cf5600  bl 0x00b079a0
+00cf5604  cbz x0,0x00cf5634
+00cf5608  mov x1,x21
+00cf560c  mov x2,xzr
+00cf5610  mov x20,x0
+00cf5614  bl 0x024d2c28
+00cf5618  cbz x19,0x00cf5634
+00cf561c  mov x0,x19
+00cf5620  ldp x19,x30,[sp, #0x10]
+00cf5624  mov x1,x20
+00cf5628  mov x2,xzr
+00cf562c  ldp x21,x20,[sp], #0x20
+00cf5630  b 0x024c7348
+00cf5634  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf5638_CustomLeaderboardFiledsHolder__Disable.txt
+================================================================================
+Function: CustomLeaderboardFiledsHolder$$Disable @ 00cf5638
+
+--- Calls OUT ---
+  -> UnityEngine.TextMesh$$set_text @ 0256cc08
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Renderer$$set_enabled @ 024c6240
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5638  str x20,[sp, #-0x20]!
+00cf563c  stp x19,x30,[sp, #0x10]
+00cf5640  adrp x20,0x3571000
+00cf5644  ldrb w8,[x20, #0x9e0]
+00cf5648  mov x19,x0
+00cf564c  tbnz w8,#0x0,0x00cf5670
+00cf5650  adrp x0,0x332b000
+00cf5654  ldr x0,[x0, #0xb30]
+00cf5658  bl 0x00b0789c
+00cf565c  adrp x0,0x332c000
+00cf5660  ldr x0,[x0, #0x2c0]
+00cf5664  bl 0x00b0789c
+00cf5668  mov w8,#0x1
+00cf566c  strb w8,[x20, #0x9e0]
+00cf5670  ldr x0,[x19, #0x18]
+00cf5674  cbz x0,0x00cf56f8
+00cf5678  adrp x20,0x332c000
+00cf567c  ldr x20,[x20, #0x2c0]
+00cf5680  mov x2,xzr
+00cf5684  ldr x1,[x20]
+00cf5688  bl 0x0256cc08
+00cf568c  ldr x0,[x19, #0x20]
+00cf5690  cbz x0,0x00cf56f8
+00cf5694  ldr x1,[x20]
+00cf5698  mov x2,xzr
+00cf569c  bl 0x0256cc08
+00cf56a0  ldr x0,[x19, #0x28]
+00cf56a4  cbz x0,0x00cf56f8
+00cf56a8  ldr x1,[x20]
+00cf56ac  mov x2,xzr
+00cf56b0  bl 0x0256cc08
+00cf56b4  ldr x0,[x19, #0x30]
+00cf56b8  cbz x0,0x00cf56f8
+00cf56bc  ldr x1,[x20]
+00cf56c0  mov x2,xzr
+00cf56c4  bl 0x0256cc08
+00cf56c8  ldr x0,[x19, #0x38]
+00cf56cc  cbz x0,0x00cf56f8
+00cf56d0  adrp x8,0x332b000
+00cf56d4  ldr x8,[x8, #0xb30]
+00cf56d8  ldr x1,[x8]
+00cf56dc  bl 0x01794e94
+00cf56e0  cbz x0,0x00cf56f8
+00cf56e4  ldp x19,x30,[sp, #0x10]
+00cf56e8  mov w1,wzr
+00cf56ec  mov x2,xzr
+00cf56f0  ldr x20,[sp], #0x20
+00cf56f4  b 0x024c6240
+00cf56f8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf56fc_CustomLeaderboardFiledsHolder__.ctor.txt
+================================================================================
+Function: CustomLeaderboardFiledsHolder$$.ctor @ 00cf56fc
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00cf56fc  mov x1,xzr
+00cf5700  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00cf5704_CustomPlayerUIRow__Awake.txt
+================================================================================
+Function: CustomPlayerUIRow$$Awake @ 00cf5704
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$.ctor @ 024d2c28
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Renderer$$set_material @ 024c7348
+  -> UnityEngine.Renderer$$get_material @ 024c730c
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5704  stp x21,x20,[sp, #-0x20]!
+00cf5708  stp x19,x30,[sp, #0x10]
+00cf570c  adrp x20,0x3571000
+00cf5710  ldrb w8,[x20, #0x9e1]
+00cf5714  mov x19,x0
+00cf5718  tbnz w8,#0x0,0x00cf573c
+00cf571c  adrp x0,0x332b000
+00cf5720  ldr x0,[x0, #0xb30]
+00cf5724  bl 0x00b0789c
+00cf5728  adrp x0,0x337f000
+00cf572c  ldr x0,[x0, #0x840]
+00cf5730  bl 0x00b0789c
+00cf5734  mov w8,#0x1
+00cf5738  strb w8,[x20, #0x9e1]
+00cf573c  ldr x0,[x19, #0x28]
+00cf5740  cbz x0,0x00cf57c0
+00cf5744  adrp x20,0x332b000
+00cf5748  ldr x20,[x20, #0xb30]
+00cf574c  ldr x1,[x20]
+00cf5750  bl 0x01794e94
+00cf5754  ldr x8,[x19, #0x28]
+00cf5758  cbz x8,0x00cf57c0
+00cf575c  ldr x1,[x20]
+00cf5760  mov x19,x0
+00cf5764  mov x0,x8
+00cf5768  bl 0x01794e94
+00cf576c  cbz x0,0x00cf57c0
+00cf5770  adrp x20,0x337f000
+00cf5774  ldr x20,[x20, #0x840]
+00cf5778  mov x1,xzr
+00cf577c  bl 0x024c730c
+00cf5780  ldr x8,[x20]
+00cf5784  mov x21,x0
+00cf5788  mov x0,x8
+00cf578c  bl 0x00b079a0
+00cf5790  cbz x0,0x00cf57c0
+00cf5794  mov x1,x21
+00cf5798  mov x2,xzr
+00cf579c  mov x20,x0
+00cf57a0  bl 0x024d2c28
+00cf57a4  cbz x19,0x00cf57c0
+00cf57a8  mov x0,x19
+00cf57ac  ldp x19,x30,[sp, #0x10]
+00cf57b0  mov x1,x20
+00cf57b4  mov x2,xzr
+00cf57b8  ldp x21,x20,[sp], #0x20
+00cf57bc  b 0x024c7348
+00cf57c0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf57c4_CustomPlayerUIRow__Disable.txt
+================================================================================
+Function: CustomPlayerUIRow$$Disable @ 00cf57c4
+
+--- Calls OUT ---
+  -> UnityEngine.TextMesh$$set_text @ 0256cc08
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> UnityEngine.Renderer$$set_enabled @ 024c6240
+
+--- Calls IN ---
+
+--- Listing ---
+00cf57c4  str x20,[sp, #-0x20]!
+00cf57c8  stp x19,x30,[sp, #0x10]
+00cf57cc  adrp x20,0x3571000
+00cf57d0  ldrb w8,[x20, #0x9e2]
+00cf57d4  mov x19,x0
+00cf57d8  tbnz w8,#0x0,0x00cf57fc
+00cf57dc  adrp x0,0x332b000
+00cf57e0  ldr x0,[x0, #0xb30]
+00cf57e4  bl 0x00b0789c
+00cf57e8  adrp x0,0x332c000
+00cf57ec  ldr x0,[x0, #0x2c0]
+00cf57f0  bl 0x00b0789c
+00cf57f4  mov w8,#0x1
+00cf57f8  strb w8,[x20, #0x9e2]
+00cf57fc  ldr x0,[x19, #0x30]
+00cf5800  cbz x0,0x00cf5884
+00cf5804  adrp x20,0x332c000
+00cf5808  ldr x20,[x20, #0x2c0]
+00cf580c  mov x2,xzr
+00cf5810  ldr x1,[x20]
+00cf5814  bl 0x0256cc08
+00cf5818  ldr x0,[x19, #0x38]
+00cf581c  cbz x0,0x00cf5884
+00cf5820  ldr x1,[x20]
+00cf5824  mov x2,xzr
+00cf5828  bl 0x0256cc08
+00cf582c  ldr x0,[x19, #0x18]
+00cf5830  cbz x0,0x00cf5884
+00cf5834  ldr x1,[x20]
+00cf5838  mov x2,xzr
+00cf583c  bl 0x0256cc08
+00cf5840  ldr x0,[x19, #0x20]
+00cf5844  cbz x0,0x00cf5884
+00cf5848  ldr x1,[x20]
+00cf584c  mov x2,xzr
+00cf5850  bl 0x0256cc08
+00cf5854  ldr x0,[x19, #0x28]
+00cf5858  cbz x0,0x00cf5884
+00cf585c  adrp x8,0x332b000
+00cf5860  ldr x8,[x8, #0xb30]
+00cf5864  ldr x1,[x8]
+00cf5868  bl 0x01794e94
+00cf586c  cbz x0,0x00cf5884
+00cf5870  ldp x19,x30,[sp, #0x10]
+00cf5874  mov w1,wzr
+00cf5878  mov x2,xzr
+00cf587c  ldr x20,[sp], #0x20
+00cf5880  b 0x024c6240
+00cf5884  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf5888_CustomPlayerUIRow__.ctor.txt
+================================================================================
+Function: CustomPlayerUIRow$$.ctor @ 00cf5888
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5888  mov x1,xzr
+00cf588c  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d513d8_CurveEffect__.ctor.txt
+================================================================================
+Function: CurveEffect$$.ctor @ 00d513d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.UI.BaseMeshEffect$$.ctor @ 025af0fc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Keyframe$$.ctor @ 024be92c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.AnimationCurve$$.ctor @ 024bf210
+
+--- Calls IN ---
+
+--- Listing ---
+00d513d8  sub sp,sp,#0xa0
+00d513dc  stp x21,x20,[sp, #0x80]
+00d513e0  stp x19,x30,[sp, #0x90]
+00d513e4  adrp x20,0x3571000
+00d513e8  adrp x21,0x3355000
+00d513ec  ldrb w8,[x20, #0xe3b]
+00d513f0  ldr x21,[x21, #0xb40]
+00d513f4  mov x19,x0
+00d513f8  tbnz w8,#0x0,0x00d5141c
+00d513fc  adrp x0,0x3360000
+00d51400  ldr x0,[x0, #0x898]
+00d51404  bl 0x00b0789c
+00d51408  adrp x0,0x3355000
+00d5140c  ldr x0,[x0, #0xb40]
+00d51410  bl 0x00b0789c
+00d51414  mov w8,#0x1
+00d51418  strb w8,[x20, #0xe3b]
+00d5141c  ldr x0,[x21]
+00d51420  mov w1,#0x2
+00d51424  bl 0x00b078f8
+00d51428  mov x20,x0
+00d5142c  fmov s3,0x40000000
+00d51430  add x0,sp,#0x60
+00d51434  fmov s0,wzr
+00d51438  fmov s1,wzr
+00d5143c  fmov s2,wzr
+00d51440  mov x1,xzr
+00d51444  stp xzr,xzr,[sp, #0x68]
+00d51448  str xzr,[sp, #0x60]
+00d5144c  str wzr,[sp, #0x78]
+00d51450  bl 0x024be92c
+00d51454  cbz x20,0x00d51530
+00d51458  ldr q0,[sp, #0x60]
+00d5145c  ldur q1,[sp, #0x6c]
+00d51460  str q0,[sp, #0x40]
+00d51464  stur q1,[sp, #0x4c]
+00d51468  ldr w8,[x20, #0x18]
+00d5146c  cbz w8,0x00d5152c
+00d51470  ldur q0,[sp, #0x4c]
+00d51474  ldr q1,[sp, #0x40]
+00d51478  fmov s2,0xc0000000
+00d5147c  add x0,sp,#0x20
+00d51480  stur q0,[x20, #0x2c]
+00d51484  str q1,[x20, #0x20]
+00d51488  fmov s0,0x3f800000
+00d5148c  fmov s1,wzr
+00d51490  fmov s3,wzr
+00d51494  mov x1,xzr
+00d51498  stp xzr,xzr,[sp, #0x28]
+00d5149c  str xzr,[sp, #0x20]
+00d514a0  str wzr,[sp, #0x38]
+00d514a4  bl 0x024be92c
+00d514a8  ldur q0,[sp, #0x2c]
+00d514ac  ldr q1,[sp, #0x20]
+00d514b0  stur q0,[sp, #0xc]
+00d514b4  str q1,[sp]
+00d514b8  ldr w8,[x20, #0x18]
+00d514bc  cmp w8,#0x1
+00d514c0  b.ls 0x00d5152c
+00d514c4  ldur q0,[sp, #0xc]
+00d514c8  ldr q1,[sp]
+00d514cc  adrp x8,0x3360000
+00d514d0  ldr x8,[x8, #0x898]
+00d514d4  stur q0,[x20, #0x48]
+00d514d8  stur q1,[x20, #0x3c]
+00d514dc  ldr x0,[x8]
+00d514e0  bl 0x00b079a0
+00d514e4  cbz x0,0x00d51530
+00d514e8  mov x1,x20
+00d514ec  mov x2,xzr
+00d514f0  mov x21,x0
+00d514f4  bl 0x024bf210
+00d514f8  mov x0,x19
+00d514fc  str x21,[x0, #0x28]!
+00d51500  mov x1,x21
+00d51504  bl 0x00b07850
+00d51508  mov w8,#0x3f800000
+00d5150c  mov x0,x19
+00d51510  mov x1,xzr
+00d51514  str w8,[x19, #0x30]
+00d51518  bl 0x025af0fc
+00d5151c  ldp x19,x30,[sp, #0x90]
+00d51520  ldp x21,x20,[sp, #0x80]
+00d51524  add sp,sp,#0xa0
+00d51528  ret
+00d5152c  bl 0x00b079b8
+00d51530  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d51534_CurveEffect__get_curve.txt
+================================================================================
+Function: CurveEffect$$get_curve @ 00d51534
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d51534  ldr x0,[x0, #0x28]
+00d51538  ret
+
+
+================================================================================
+### FILE: 00d5153c_CurveEffect__set_curve.txt
+================================================================================
+Function: CurveEffect$$set_curve @ 00d5153c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d5153c  stp x21,x20,[sp, #-0x20]!
+00d51540  stp x19,x30,[sp, #0x10]
+00d51544  adrp x21,0x3571000
+00d51548  ldrb w8,[x21, #0xe3c]
+00d5154c  mov x20,x1
+00d51550  mov x19,x0
+00d51554  tbnz w8,#0x0,0x00d5156c
+00d51558  adrp x0,0x3321000
+00d5155c  ldr x0,[x0, #0xca8]
+00d51560  bl 0x00b0789c
+00d51564  mov w8,#0x1
+00d51568  strb w8,[x21, #0xe3c]
+00d5156c  mov x0,x19
+00d51570  ldr x8,[x0, #0x28]!
+00d51574  cmp x8,x20
+00d51578  b.eq 0x00d515f0
+00d5157c  adrp x21,0x3321000
+00d51580  ldr x21,[x21, #0xca8]
+00d51584  mov x1,x20
+00d51588  str x20,[x19, #0x28]
+00d5158c  bl 0x00b07850
+00d51590  mov x0,x19
+00d51594  mov x1,xzr
+00d51598  bl 0x025aeccc
+00d5159c  ldr x8,[x21]
+00d515a0  mov x20,x0
+00d515a4  ldr w9,[x8, #0xe0]
+00d515a8  cbnz w9,0x00d515b4
+00d515ac  mov x0,x8
+00d515b0  bl 0x00b0798c
+00d515b4  mov x0,x20
+00d515b8  mov x1,xzr
+00d515bc  mov x2,xzr
+00d515c0  bl 0x024de30c
+00d515c4  tbz w0,#0x0,0x00d515f0
+00d515c8  mov x0,x19
+00d515cc  mov x1,xzr
+00d515d0  bl 0x025aeccc
+00d515d4  cbz x0,0x00d515fc
+00d515d8  ldr x8,[x0]
+00d515dc  ldp x19,x30,[sp, #0x10]
+00d515e0  ldr x2,[x8, #0x2f8]
+00d515e4  ldr x1,[x8, #0x300]
+00d515e8  ldp x21,x20,[sp], #0x20
+00d515ec  br x2
+00d515f0  ldp x19,x30,[sp, #0x10]
+00d515f4  ldp x21,x20,[sp], #0x20
+00d515f8  ret
+00d515fc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d51600_CurveEffect__get_strength.txt
+================================================================================
+Function: CurveEffect$$get_strength @ 00d51600
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d51600  ldr s0,[x0, #0x30]
+00d51604  ret
+
+
+================================================================================
+### FILE: 00d51608_CurveEffect__set_strength.txt
+================================================================================
+Function: CurveEffect$$set_strength @ 00d51608
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d51608  str d8,[sp, #-0x20]!
+00d5160c  str x20,[sp, #0x8]
+00d51610  stp x19,x30,[sp, #0x10]
+00d51614  adrp x20,0x3571000
+00d51618  ldrb w8,[x20, #0xe3d]
+00d5161c  mov v8.16B,v0.16B
+00d51620  mov x19,x0
+00d51624  tbnz w8,#0x0,0x00d5163c
+00d51628  adrp x0,0x3321000
+00d5162c  ldr x0,[x0, #0xca8]
+00d51630  bl 0x00b0789c
+00d51634  mov w8,#0x1
+00d51638  strb w8,[x20, #0xe3d]
+00d5163c  ldr s0,[x19, #0x30]
+00d51640  fcmp s0,s8
+00d51644  b.eq 0x00d516b8
+00d51648  adrp x20,0x3321000
+00d5164c  ldr x20,[x20, #0xca8]
+00d51650  mov x0,x19
+00d51654  mov x1,xzr
+00d51658  str s8,[x19, #0x30]
+00d5165c  bl 0x025aeccc
+00d51660  ldr x8,[x20]
+00d51664  mov x20,x0
+00d51668  ldr w9,[x8, #0xe0]
+00d5166c  cbnz w9,0x00d51678
+00d51670  mov x0,x8
+00d51674  bl 0x00b0798c
+00d51678  mov x0,x20
+00d5167c  mov x1,xzr
+00d51680  mov x2,xzr
+00d51684  bl 0x024de30c
+00d51688  tbz w0,#0x0,0x00d516b8
+00d5168c  mov x0,x19
+00d51690  mov x1,xzr
+00d51694  bl 0x025aeccc
+00d51698  cbz x0,0x00d516c8
+00d5169c  ldr x8,[x0]
+00d516a0  ldp x19,x30,[sp, #0x10]
+00d516a4  ldr x20,[sp, #0x8]
+00d516a8  ldr x2,[x8, #0x2f8]
+00d516ac  ldr x1,[x8, #0x300]
+00d516b0  ldr d8,[sp], #0x20
+00d516b4  br x2
+00d516b8  ldp x19,x30,[sp, #0x10]
+00d516bc  ldr x20,[sp, #0x8]
+00d516c0  ldr d8,[sp], #0x20
+00d516c4  ret
+00d516c8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d516cc_CurveEffect__ModifyMesh.txt
+================================================================================
+Function: CurveEffect$$ModifyMesh @ 00d516cc
+
+--- Calls OUT ---
+  -> UnityEngine.UI.VertexHelper$$AddUIVertexTriangleStream @ 025aeb8c
+  -> memcpy @ 008d4920
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.UI.VertexHelper$$GetUIVertexStream @ 025aebdc
+  -> UnityEngine.UI.VertexHelper$$Clear @ 0259d54c
+  -> UnityEngine.RectTransform$$get_rect @ 024f6150
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Rect$$get_yMin @ 024dafa8
+  -> System.Collections.Generic.List<UIVertex>$$set_Item @ 01c898f4
+  -> UnityEngine.Rect$$get_yMax @ 024db024
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Rect$$get_xMin @ 024dafa0
+  -> System.Collections.Generic.List<UIVertex>$$.ctor @ 01c89320
+  -> UnityEngine.AnimationCurve$$Evaluate @ 024beb58
+  -> System.Collections.Generic.List<UIVertex>$$get_Item @ 01c89890
+  -> UnityEngine.Rect$$get_xMax @ 024db014
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00d516cc  sub sp,sp,#0x170
+00d516d0  stp d11,d10,[sp, #0xf0]
+00d516d4  stp d9,d8,[sp, #0x100]
+00d516d8  str x28,[sp, #0x110]
+00d516dc  stp x27,x26,[sp, #0x120]
+00d516e0  stp x25,x24,[sp, #0x130]
+00d516e4  stp x23,x22,[sp, #0x140]
+00d516e8  stp x21,x20,[sp, #0x150]
+00d516ec  stp x19,x30,[sp, #0x160]
+00d516f0  adrp x21,0x3571000
+00d516f4  ldrb w8,[x21, #0xe3e]
+00d516f8  mov x19,x1
+00d516fc  mov x20,x0
+00d51700  tbnz w8,#0x0,0x00d51754
+00d51704  adrp x0,0x332d000
+00d51708  ldr x0,[x0, #0x198]
+00d5170c  bl 0x00b0789c
+00d51710  adrp x0,0x331a000
+00d51714  ldr x0,[x0, #0x450]
+00d51718  bl 0x00b0789c
+00d5171c  adrp x0,0x3343000
+00d51720  ldr x0,[x0, #0x138]
+00d51724  bl 0x00b0789c
+00d51728  adrp x0,0x3352000
+00d5172c  ldr x0,[x0, #0x130]
+00d51730  bl 0x00b0789c
+00d51734  adrp x0,0x335b000
+00d51738  ldr x0,[x0, #0x138]
+00d5173c  bl 0x00b0789c
+00d51740  adrp x0,0x3311000
+00d51744  ldr x0,[x0, #0x9f8]
+00d51748  bl 0x00b0789c
+00d5174c  mov w8,#0x1
+00d51750  strb w8,[x21, #0xe3e]
+00d51754  movi v0.2D,#0x0
+00d51758  stp xzr,xzr,[sp, #0x70]
+00d5175c  stp q0,q0,[sp, #0x50]
+00d51760  stp q0,q0,[sp, #0x30]
+00d51764  stp q0,q0,[sp, #0x10]
+00d51768  ldr x8,[x20]
+00d5176c  mov x0,x20
+00d51770  ldp x9,x1,[x8, #0x1c8]
+00d51774  blr x9
+00d51778  tbz w0,#0x0,0x00d51a84
+00d5177c  adrp x8,0x3311000
+00d51780  ldr x8,[x8, #0x9f8]
+00d51784  ldr x0,[x8]
+00d51788  bl 0x00b079a0
+00d5178c  cbz x0,0x00d51aac
+00d51790  adrp x8,0x331a000
+00d51794  ldr x8,[x8, #0x450]
+00d51798  mov x21,x0
+00d5179c  ldr x1,[x8]
+00d517a0  bl 0x01c89320
+00d517a4  cbz x19,0x00d51aac
+00d517a8  mov x0,x19
+00d517ac  mov x1,x21
+00d517b0  mov x2,xzr
+00d517b4  bl 0x025aebdc
+00d517b8  ldr w8,[x21, #0x18]
+00d517bc  cbz w8,0x00d51a84
+00d517c0  adrp x22,0x3570000
+00d517c4  ldrb w8,[x22, #0xffd]
+00d517c8  cbnz w8,0x00d517e0
+00d517cc  adrp x0,0x3365000
+00d517d0  ldr x0,[x0, #0x108]
+00d517d4  bl 0x00b0789c
+00d517d8  mov w8,#0x1
+00d517dc  strb w8,[x22, #0xffd]
+00d517e0  ldr w8,[x20, #0x20]
+00d517e4  adrp x25,0x3352000
+00d517e8  ldr x25,[x25, #0x130]
+00d517ec  cmp w8,#0x1
+00d517f0  b.ne 0x00d51864
+00d517f4  adrp x8,0x332d000
+00d517f8  ldr x8,[x8, #0x198]
+00d517fc  mov x0,x20
+00d51800  ldr x1,[x8]
+00d51804  bl 0x0176cbf8
+00d51808  cbz x0,0x00d51aac
+00d5180c  mov x1,xzr
+00d51810  bl 0x024f6150
+00d51814  add x0,sp,#0x70
+00d51818  mov x1,xzr
+00d5181c  stp s0,s1,[sp, #0x70]
+00d51820  stp s2,s3,[sp, #0x78]
+00d51824  bl 0x024dafa0
+00d51828  add x0,sp,#0x70
+00d5182c  mov x1,xzr
+00d51830  mov v8.16B,v0.16B
+00d51834  bl 0x024db024
+00d51838  add x0,sp,#0x70
+00d5183c  mov x1,xzr
+00d51840  fmov w23,s8
+00d51844  bl 0x024db014
+00d51848  add x0,sp,#0x70
+00d5184c  mov x1,xzr
+00d51850  mov v8.16B,v0.16B
+00d51854  bl 0x024dafa8
+00d51858  ldr w8,[x21, #0x18]
+00d5185c  fmov w24,s8
+00d51860  b 0x00d519b0
+00d51864  ldr x2,[x25]
+00d51868  add x8,sp,#0x80
+00d5186c  mov x0,x21
+00d51870  mov w1,wzr
+00d51874  bl 0x01c89890
+00d51878  ldr w8,[x21, #0x18]
+00d5187c  ldr x2,[x25]
+00d51880  ldr w23,[sp, #0x80]
+00d51884  ldr s8,[sp, #0x84]
+00d51888  sub w1,w8,#0x1
+00d5188c  add x8,sp,#0x80
+00d51890  mov x0,x21
+00d51894  bl 0x01c89890
+00d51898  ldr w8,[x21, #0x18]
+00d5189c  cmp w8,#0x1
+00d518a0  b.lt 0x00d51a68
+00d518a4  ldr w24,[sp, #0x80]
+00d518a8  ldr s9,[sp, #0x84]
+00d518ac  mov w22,wzr
+00d518b0  fmov s11,w23
+00d518b4  fmov s10,w24
+00d518b8  ldr x2,[x25]
+00d518bc  add x8,sp,#0x80
+00d518c0  mov x0,x21
+00d518c4  mov w1,w22
+00d518c8  bl 0x01c89890
+00d518cc  ldr s0,[sp, #0x80]
+00d518d0  fcmp s0,s11
+00d518d4  b.pl 0x00d518f4
+00d518d8  ldr x2,[x25]
+00d518dc  add x8,sp,#0x80
+00d518e0  mov x0,x21
+00d518e4  mov w1,w22
+00d518e8  bl 0x01c89890
+00d518ec  ldr w23,[sp, #0x80]
+00d518f0  fmov s11,w23
+00d518f4  ldr x2,[x25]
+00d518f8  add x8,sp,#0x80
+00d518fc  mov x0,x21
+00d51900  mov w1,w22
+00d51904  bl 0x01c89890
+00d51908  ldr s0,[sp, #0x84]
+00d5190c  fcmp s0,s8
+00d51910  b.le 0x00d5192c
+00d51914  ldr x2,[x25]
+00d51918  add x8,sp,#0x80
+00d5191c  mov x0,x21
+00d51920  mov w1,w22
+00d51924  bl 0x01c89890
+00d51928  ldr s8,[sp, #0x84]
+00d5192c  ldr x2,[x25]
+00d51930  add x8,sp,#0x80
+00d51934  mov x0,x21
+00d51938  mov w1,w22
+00d5193c  bl 0x01c89890
+00d51940  ldr s0,[sp, #0x80]
+00d51944  fcmp s0,s10
+00d51948  b.le 0x00d51968
+00d5194c  ldr x2,[x25]
+00d51950  add x8,sp,#0x80
+00d51954  mov x0,x21
+00d51958  mov w1,w22
+00d5195c  bl 0x01c89890
+00d51960  ldr w24,[sp, #0x80]
+00d51964  fmov s10,w24
+00d51968  ldr x2,[x25]
+00d5196c  add x8,sp,#0x80
+00d51970  mov x0,x21
+00d51974  mov w1,w22
+00d51978  bl 0x01c89890
+00d5197c  ldr s0,[sp, #0x84]
+00d51980  fcmp s0,s9
+00d51984  b.pl 0x00d519a0
+00d51988  ldr x2,[x25]
+00d5198c  add x8,sp,#0x80
+00d51990  mov x0,x21
+00d51994  mov w1,w22
+00d51998  bl 0x01c89890
+00d5199c  ldr s9,[sp, #0x84]
+00d519a0  ldr w8,[x21, #0x18]
+00d519a4  add w22,w22,#0x1
+00d519a8  cmp w22,w8
+00d519ac  b.lt 0x00d518b8
+00d519b0  cmp w8,#0x1
+00d519b4  b.lt 0x00d51a68
+00d519b8  adrp x26,0x335b000
+00d519bc  ldr x26,[x26, #0x138]
+00d519c0  fmov s0,w24
+00d519c4  fmov s8,w23
+00d519c8  add x8,sp,#0x80
+00d519cc  mov w22,wzr
+00d519d0  fsub s9,s0,s8
+00d519d4  add x23,x8,#0xc
+00d519d8  ldr x2,[x25]
+00d519dc  add x8,sp,#0x80
+00d519e0  mov x0,x21
+00d519e4  mov w1,w22
+00d519e8  bl 0x01c89890
+00d519ec  ldp s10,s11,[sp, #0x80]
+00d519f0  ldr w27,[sp, #0x88]
+00d519f4  add x0,sp,#0x10
+00d519f8  mov w2,#0x60
+00d519fc  mov x1,x23
+00d51a00  bl 0x008d4920
+00d51a04  ldr x0,[x20, #0x28]
+00d51a08  cbz x0,0x00d51aac
+00d51a0c  fsub s0,s10,s8
+00d51a10  fdiv s0,s0,s9
+00d51a14  mov x1,xzr
+00d51a18  bl 0x024beb58
+00d51a1c  ldr s1,[x20, #0x30]
+00d51a20  ldr x24,[x26]
+00d51a24  add x1,sp,#0x10
+00d51a28  mov w2,#0x60
+00d51a2c  fmul s0,s0,s1
+00d51a30  fadd s0,s11,s0
+00d51a34  mov x0,x23
+00d51a38  stp s10,s0,[sp, #0x80]
+00d51a3c  str w27,[sp, #0x88]
+00d51a40  bl 0x008d4920
+00d51a44  add x2,sp,#0x80
+00d51a48  mov x0,x21
+00d51a4c  mov w1,w22
+00d51a50  mov x3,x24
+00d51a54  bl 0x01c898f4
+00d51a58  ldr w8,[x21, #0x18]
+00d51a5c  add w22,w22,#0x1
+00d51a60  cmp w22,w8
+00d51a64  b.lt 0x00d519d8
+00d51a68  mov x0,x19
+00d51a6c  mov x1,xzr
+00d51a70  bl 0x0259d54c
+00d51a74  mov x0,x19
+00d51a78  mov x1,x21
+00d51a7c  mov x2,xzr
+00d51a80  bl 0x025aeb8c
+00d51a84  ldp x19,x30,[sp, #0x160]
+00d51a88  ldp x21,x20,[sp, #0x150]
+00d51a8c  ldp x23,x22,[sp, #0x140]
+00d51a90  ldp x25,x24,[sp, #0x130]
+00d51a94  ldp x27,x26,[sp, #0x120]
+00d51a98  ldr x28,[sp, #0x110]
+00d51a9c  ldp d9,d8,[sp, #0x100]
+00d51aa0  ldp d11,d10,[sp, #0xf0]
+00d51aa4  add sp,sp,#0x170
+00d51aa8  ret
+00d51aac  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbbca4_CutsceneOnClickSkip__Update.txt
+================================================================================
+Function: CutsceneOnClickSkip$$Update @ 00dbbca4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> Slate.Cutscene$$SkipCurrentSection @ 01602840
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Input$$GetMouseButtonDown @ 0252f7d8
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00dbbca4  str x20,[sp, #-0x20]!
+00dbbca8  stp x19,x30,[sp, #0x10]
+00dbbcac  adrp x20,0x3572000
+00dbbcb0  ldrb w8,[x20, #0x131]
+00dbbcb4  mov x19,x0
+00dbbcb8  tbnz w8,#0x0,0x00dbbcd0
+00dbbcbc  adrp x0,0x333f000
+00dbbcc0  ldr x0,[x0, #0xf48]
+00dbbcc4  bl 0x00b0789c
+00dbbcc8  mov w8,#0x1
+00dbbccc  strb w8,[x20, #0x131]
+00dbbcd0  mov w0,wzr
+00dbbcd4  mov x1,xzr
+00dbbcd8  bl 0x0252f7d8
+00dbbcdc  tbz w0,#0x0,0x00dbbd08
+00dbbce0  adrp x8,0x333f000
+00dbbce4  ldr x8,[x8, #0xf48]
+00dbbce8  mov x0,x19
+00dbbcec  ldr x1,[x8]
+00dbbcf0  bl 0x0176cbf8
+00dbbcf4  cbz x0,0x00dbbd14
+00dbbcf8  ldp x19,x30,[sp, #0x10]
+00dbbcfc  mov x1,xzr
+00dbbd00  ldr x20,[sp], #0x20
+00dbbd04  b 0x01602840
+00dbbd08  ldp x19,x30,[sp, #0x10]
+00dbbd0c  ldr x20,[sp], #0x20
+00dbbd10  ret
+00dbbd14  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbbd18_CutsceneOnClickSkip__.ctor.txt
+================================================================================
+Function: CutsceneOnClickSkip$$.ctor @ 00dbbd18
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dbbd18  mov x1,xzr
+00dbbd1c  b 0x024e45bc
+
+
+================================================================================
+### FILE: 0131a548_CurrentDownMono__get_downTip.txt
+================================================================================
+Function: CurrentDownMono$$get_downTip @ 0131a548
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a548  stp x21,x20,[sp, #-0x20]!
+0131a54c  stp x19,x30,[sp, #0x10]
+0131a550  adrp x20,0x3575000
+0131a554  adrp x21,0x3318000
+0131a558  ldrb w8,[x20, #0xd31]
+0131a55c  ldr x21,[x21, #0x650]
+0131a560  mov x19,x0
+0131a564  tbnz w8,#0x0,0x0131a57c
+0131a568  adrp x0,0x3318000
+0131a56c  ldr x0,[x0, #0x650]
+0131a570  bl 0x00b0789c
+0131a574  mov w8,#0x1
+0131a578  strb w8,[x20, #0xd31]
+0131a57c  ldr x8,[x21]
+0131a580  ldr x8,[x8, #0xb8]
+0131a584  ldr x0,[x8]
+0131a588  cbz x0,0x0131a5a0
+0131a58c  mov x1,x19
+0131a590  ldp x19,x30,[sp, #0x10]
+0131a594  mov x2,xzr
+0131a598  ldp x21,x20,[sp], #0x20
+0131a59c  b 0x0106088c
+0131a5a0  ldr x0,[x19, #0x38]
+0131a5a4  ldp x19,x30,[sp, #0x10]
+0131a5a8  ldp x21,x20,[sp], #0x20
+0131a5ac  ret
+
+
+================================================================================
+### FILE: 0131a5b0_CurrentDownMono__set_downTip.txt
+================================================================================
+Function: CurrentDownMono$$set_downTip @ 0131a5b0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a5b0  str x22,[sp, #-0x30]!
+0131a5b4  stp x21,x20,[sp, #0x10]
+0131a5b8  stp x19,x30,[sp, #0x20]
+0131a5bc  adrp x21,0x3575000
+0131a5c0  adrp x22,0x3318000
+0131a5c4  ldrb w8,[x21, #0xd32]
+0131a5c8  ldr x22,[x22, #0x650]
+0131a5cc  mov x19,x1
+0131a5d0  mov x20,x0
+0131a5d4  tbnz w8,#0x0,0x0131a5ec
+0131a5d8  adrp x0,0x3318000
+0131a5dc  ldr x0,[x0, #0x650]
+0131a5e0  bl 0x00b0789c
+0131a5e4  mov w8,#0x1
+0131a5e8  strb w8,[x21, #0xd32]
+0131a5ec  ldr x8,[x22]
+0131a5f0  ldr x8,[x8, #0xb8]
+0131a5f4  ldr x0,[x8, #0x8]
+0131a5f8  cbz x0,0x0131a618
+0131a5fc  mov x1,x20
+0131a600  mov x2,x19
+0131a604  ldp x19,x30,[sp, #0x20]
+0131a608  ldp x21,x20,[sp, #0x10]
+0131a60c  mov x3,xzr
+0131a610  ldr x22,[sp], #0x30
+0131a614  b 0x0106125c
+0131a618  str x19,[x20, #0x38]!
+0131a61c  mov x0,x20
+0131a620  mov x1,x19
+0131a624  ldp x19,x30,[sp, #0x20]
+0131a628  ldp x21,x20,[sp, #0x10]
+0131a62c  ldr x22,[sp], #0x30
+0131a630  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131a634_CurrentDownMono__get_downTip0.txt
+================================================================================
+Function: CurrentDownMono$$get_downTip0 @ 0131a634
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a634  stp x21,x20,[sp, #-0x20]!
+0131a638  stp x19,x30,[sp, #0x10]
+0131a63c  adrp x20,0x3575000
+0131a640  adrp x21,0x3318000
+0131a644  ldrb w8,[x20, #0xd33]
+0131a648  ldr x21,[x21, #0x650]
+0131a64c  mov x19,x0
+0131a650  tbnz w8,#0x0,0x0131a668
+0131a654  adrp x0,0x3318000
+0131a658  ldr x0,[x0, #0x650]
+0131a65c  bl 0x00b0789c
+0131a660  mov w8,#0x1
+0131a664  strb w8,[x20, #0xd33]
+0131a668  ldr x8,[x21]
+0131a66c  ldr x8,[x8, #0xb8]
+0131a670  ldr x0,[x8, #0x10]
+0131a674  cbz x0,0x0131a68c
+0131a678  mov x1,x19
+0131a67c  ldp x19,x30,[sp, #0x10]
+0131a680  mov x2,xzr
+0131a684  ldp x21,x20,[sp], #0x20
+0131a688  b 0x0106088c
+0131a68c  ldr x0,[x19, #0x40]
+0131a690  ldp x19,x30,[sp, #0x10]
+0131a694  ldp x21,x20,[sp], #0x20
+0131a698  ret
+
+
+================================================================================
+### FILE: 0131a69c_CurrentDownMono__set_downTip0.txt
+================================================================================
+Function: CurrentDownMono$$set_downTip0 @ 0131a69c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a69c  str x22,[sp, #-0x30]!
+0131a6a0  stp x21,x20,[sp, #0x10]
+0131a6a4  stp x19,x30,[sp, #0x20]
+0131a6a8  adrp x21,0x3575000
+0131a6ac  adrp x22,0x3318000
+0131a6b0  ldrb w8,[x21, #0xd34]
+0131a6b4  ldr x22,[x22, #0x650]
+0131a6b8  mov x19,x1
+0131a6bc  mov x20,x0
+0131a6c0  tbnz w8,#0x0,0x0131a6d8
+0131a6c4  adrp x0,0x3318000
+0131a6c8  ldr x0,[x0, #0x650]
+0131a6cc  bl 0x00b0789c
+0131a6d0  mov w8,#0x1
+0131a6d4  strb w8,[x21, #0xd34]
+0131a6d8  ldr x8,[x22]
+0131a6dc  ldr x8,[x8, #0xb8]
+0131a6e0  ldr x0,[x8, #0x18]
+0131a6e4  cbz x0,0x0131a704
+0131a6e8  mov x1,x20
+0131a6ec  mov x2,x19
+0131a6f0  ldp x19,x30,[sp, #0x20]
+0131a6f4  ldp x21,x20,[sp, #0x10]
+0131a6f8  mov x3,xzr
+0131a6fc  ldr x22,[sp], #0x30
+0131a700  b 0x0106125c
+0131a704  str x19,[x20, #0x40]!
+0131a708  mov x0,x20
+0131a70c  mov x1,x19
+0131a710  ldp x19,x30,[sp, #0x20]
+0131a714  ldp x21,x20,[sp, #0x10]
+0131a718  ldr x22,[sp], #0x30
+0131a71c  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131a720_CurrentDownMono__get_downTip1.txt
+================================================================================
+Function: CurrentDownMono$$get_downTip1 @ 0131a720
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a720  stp x21,x20,[sp, #-0x20]!
+0131a724  stp x19,x30,[sp, #0x10]
+0131a728  adrp x20,0x3575000
+0131a72c  adrp x21,0x3318000
+0131a730  ldrb w8,[x20, #0xd35]
+0131a734  ldr x21,[x21, #0x650]
+0131a738  mov x19,x0
+0131a73c  tbnz w8,#0x0,0x0131a754
+0131a740  adrp x0,0x3318000
+0131a744  ldr x0,[x0, #0x650]
+0131a748  bl 0x00b0789c
+0131a74c  mov w8,#0x1
+0131a750  strb w8,[x20, #0xd35]
+0131a754  ldr x8,[x21]
+0131a758  ldr x8,[x8, #0xb8]
+0131a75c  ldr x0,[x8, #0x20]
+0131a760  cbz x0,0x0131a778
+0131a764  mov x1,x19
+0131a768  ldp x19,x30,[sp, #0x10]
+0131a76c  mov x2,xzr
+0131a770  ldp x21,x20,[sp], #0x20
+0131a774  b 0x0106088c
+0131a778  ldr x0,[x19, #0x48]
+0131a77c  ldp x19,x30,[sp, #0x10]
+0131a780  ldp x21,x20,[sp], #0x20
+0131a784  ret
+
+
+================================================================================
+### FILE: 0131a788_CurrentDownMono__set_downTip1.txt
+================================================================================
+Function: CurrentDownMono$$set_downTip1 @ 0131a788
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a788  str x22,[sp, #-0x30]!
+0131a78c  stp x21,x20,[sp, #0x10]
+0131a790  stp x19,x30,[sp, #0x20]
+0131a794  adrp x21,0x3575000
+0131a798  adrp x22,0x3318000
+0131a79c  ldrb w8,[x21, #0xd36]
+0131a7a0  ldr x22,[x22, #0x650]
+0131a7a4  mov x19,x1
+0131a7a8  mov x20,x0
+0131a7ac  tbnz w8,#0x0,0x0131a7c4
+0131a7b0  adrp x0,0x3318000
+0131a7b4  ldr x0,[x0, #0x650]
+0131a7b8  bl 0x00b0789c
+0131a7bc  mov w8,#0x1
+0131a7c0  strb w8,[x21, #0xd36]
+0131a7c4  ldr x8,[x22]
+0131a7c8  ldr x8,[x8, #0xb8]
+0131a7cc  ldr x0,[x8, #0x28]
+0131a7d0  cbz x0,0x0131a7f0
+0131a7d4  mov x1,x20
+0131a7d8  mov x2,x19
+0131a7dc  ldp x19,x30,[sp, #0x20]
+0131a7e0  ldp x21,x20,[sp, #0x10]
+0131a7e4  mov x3,xzr
+0131a7e8  ldr x22,[sp], #0x30
+0131a7ec  b 0x0106125c
+0131a7f0  str x19,[x20, #0x48]!
+0131a7f4  mov x0,x20
+0131a7f8  mov x1,x19
+0131a7fc  ldp x19,x30,[sp, #0x20]
+0131a800  ldp x21,x20,[sp, #0x10]
+0131a804  ldr x22,[sp], #0x30
+0131a808  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131a80c_CurrentDownMono__get_downTip2.txt
+================================================================================
+Function: CurrentDownMono$$get_downTip2 @ 0131a80c
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a80c  stp x21,x20,[sp, #-0x20]!
+0131a810  stp x19,x30,[sp, #0x10]
+0131a814  adrp x20,0x3575000
+0131a818  adrp x21,0x3318000
+0131a81c  ldrb w8,[x20, #0xd37]
+0131a820  ldr x21,[x21, #0x650]
+0131a824  mov x19,x0
+0131a828  tbnz w8,#0x0,0x0131a840
+0131a82c  adrp x0,0x3318000
+0131a830  ldr x0,[x0, #0x650]
+0131a834  bl 0x00b0789c
+0131a838  mov w8,#0x1
+0131a83c  strb w8,[x20, #0xd37]
+0131a840  ldr x8,[x21]
+0131a844  ldr x8,[x8, #0xb8]
+0131a848  ldr x0,[x8, #0x30]
+0131a84c  cbz x0,0x0131a864
+0131a850  mov x1,x19
+0131a854  ldp x19,x30,[sp, #0x10]
+0131a858  mov x2,xzr
+0131a85c  ldp x21,x20,[sp], #0x20
+0131a860  b 0x0106088c
+0131a864  ldr x0,[x19, #0x50]
+0131a868  ldp x19,x30,[sp, #0x10]
+0131a86c  ldp x21,x20,[sp], #0x20
+0131a870  ret
+
+
+================================================================================
+### FILE: 0131a874_CurrentDownMono__set_downTip2.txt
+================================================================================
+Function: CurrentDownMono$$set_downTip2 @ 0131a874
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a874  str x22,[sp, #-0x30]!
+0131a878  stp x21,x20,[sp, #0x10]
+0131a87c  stp x19,x30,[sp, #0x20]
+0131a880  adrp x21,0x3575000
+0131a884  adrp x22,0x3318000
+0131a888  ldrb w8,[x21, #0xd38]
+0131a88c  ldr x22,[x22, #0x650]
+0131a890  mov x19,x1
+0131a894  mov x20,x0
+0131a898  tbnz w8,#0x0,0x0131a8b0
+0131a89c  adrp x0,0x3318000
+0131a8a0  ldr x0,[x0, #0x650]
+0131a8a4  bl 0x00b0789c
+0131a8a8  mov w8,#0x1
+0131a8ac  strb w8,[x21, #0xd38]
+0131a8b0  ldr x8,[x22]
+0131a8b4  ldr x8,[x8, #0xb8]
+0131a8b8  ldr x0,[x8, #0x38]
+0131a8bc  cbz x0,0x0131a8dc
+0131a8c0  mov x1,x20
+0131a8c4  mov x2,x19
+0131a8c8  ldp x19,x30,[sp, #0x20]
+0131a8cc  ldp x21,x20,[sp, #0x10]
+0131a8d0  mov x3,xzr
+0131a8d4  ldr x22,[sp], #0x30
+0131a8d8  b 0x0106125c
+0131a8dc  str x19,[x20, #0x50]!
+0131a8e0  mov x0,x20
+0131a8e4  mov x1,x19
+0131a8e8  ldp x19,x30,[sp, #0x20]
+0131a8ec  ldp x21,x20,[sp, #0x10]
+0131a8f0  ldr x22,[sp], #0x30
+0131a8f4  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131a8f8_CurrentDownMono__get_downTip3.txt
+================================================================================
+Function: CurrentDownMono$$get_downTip3 @ 0131a8f8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a8f8  stp x21,x20,[sp, #-0x20]!
+0131a8fc  stp x19,x30,[sp, #0x10]
+0131a900  adrp x20,0x3575000
+0131a904  adrp x21,0x3318000
+0131a908  ldrb w8,[x20, #0xd39]
+0131a90c  ldr x21,[x21, #0x650]
+0131a910  mov x19,x0
+0131a914  tbnz w8,#0x0,0x0131a92c
+0131a918  adrp x0,0x3318000
+0131a91c  ldr x0,[x0, #0x650]
+0131a920  bl 0x00b0789c
+0131a924  mov w8,#0x1
+0131a928  strb w8,[x20, #0xd39]
+0131a92c  ldr x8,[x21]
+0131a930  ldr x8,[x8, #0xb8]
+0131a934  ldr x0,[x8, #0x40]
+0131a938  cbz x0,0x0131a950
+0131a93c  mov x1,x19
+0131a940  ldp x19,x30,[sp, #0x10]
+0131a944  mov x2,xzr
+0131a948  ldp x21,x20,[sp], #0x20
+0131a94c  b 0x0106088c
+0131a950  ldr x0,[x19, #0x58]
+0131a954  ldp x19,x30,[sp, #0x10]
+0131a958  ldp x21,x20,[sp], #0x20
+0131a95c  ret
+
+
+================================================================================
+### FILE: 0131a960_CurrentDownMono__set_downTip3.txt
+================================================================================
+Function: CurrentDownMono$$set_downTip3 @ 0131a960
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131a960  str x22,[sp, #-0x30]!
+0131a964  stp x21,x20,[sp, #0x10]
+0131a968  stp x19,x30,[sp, #0x20]
+0131a96c  adrp x21,0x3575000
+0131a970  adrp x22,0x3318000
+0131a974  ldrb w8,[x21, #0xd3a]
+0131a978  ldr x22,[x22, #0x650]
+0131a97c  mov x19,x1
+0131a980  mov x20,x0
+0131a984  tbnz w8,#0x0,0x0131a99c
+0131a988  adrp x0,0x3318000
+0131a98c  ldr x0,[x0, #0x650]
+0131a990  bl 0x00b0789c
+0131a994  mov w8,#0x1
+0131a998  strb w8,[x21, #0xd3a]
+0131a99c  ldr x8,[x22]
+0131a9a0  ldr x8,[x8, #0xb8]
+0131a9a4  ldr x0,[x8, #0x48]
+0131a9a8  cbz x0,0x0131a9c8
+0131a9ac  mov x1,x20
+0131a9b0  mov x2,x19
+0131a9b4  ldp x19,x30,[sp, #0x20]
+0131a9b8  ldp x21,x20,[sp, #0x10]
+0131a9bc  mov x3,xzr
+0131a9c0  ldr x22,[sp], #0x30
+0131a9c4  b 0x0106125c
+0131a9c8  str x19,[x20, #0x58]!
+0131a9cc  mov x0,x20
+0131a9d0  mov x1,x19
+0131a9d4  ldp x19,x30,[sp, #0x20]
+0131a9d8  ldp x21,x20,[sp, #0x10]
+0131a9dc  ldr x22,[sp], #0x30
+0131a9e0  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131a9e4_CurrentDownMono__get_m_m.txt
+================================================================================
+Function: CurrentDownMono$$get_m_m @ 0131a9e4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp195 @ 0107867c
+
+--- Calls IN ---
+  <- CurrentDownMono$$<Start>b__60_1 @ 0131c348
+  <- CurrentDownMono$$<Start>b__60_0 @ 0131c32c
+
+--- Listing ---
+0131a9e4  stp x21,x20,[sp, #-0x20]!
+0131a9e8  stp x19,x30,[sp, #0x10]
+0131a9ec  adrp x20,0x3575000
+0131a9f0  adrp x21,0x3318000
+0131a9f4  ldrb w8,[x20, #0xd3b]
+0131a9f8  ldr x21,[x21, #0x650]
+0131a9fc  mov x19,x0
+0131aa00  tbnz w8,#0x0,0x0131aa18
+0131aa04  adrp x0,0x3318000
+0131aa08  ldr x0,[x0, #0x650]
+0131aa0c  bl 0x00b0789c
+0131aa10  mov w8,#0x1
+0131aa14  strb w8,[x20, #0xd3b]
+0131aa18  ldr x8,[x21]
+0131aa1c  ldr x8,[x8, #0xb8]
+0131aa20  ldr x0,[x8, #0x50]
+0131aa24  cbz x0,0x0131aa3c
+0131aa28  mov x1,x19
+0131aa2c  ldp x19,x30,[sp, #0x10]
+0131aa30  mov x2,xzr
+0131aa34  ldp x21,x20,[sp], #0x20
+0131aa38  b 0x0107867c
+0131aa3c  ldr x0,[x19, #0x60]
+0131aa40  ldp x19,x30,[sp, #0x10]
+0131aa44  ldp x21,x20,[sp], #0x20
+0131aa48  ret
+
+
+================================================================================
+### FILE: 0131aa4c_CurrentDownMono__set_m_m.txt
+================================================================================
+Function: CurrentDownMono$$set_m_m @ 0131aa4c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131aa4c  str x22,[sp, #-0x30]!
+0131aa50  stp x21,x20,[sp, #0x10]
+0131aa54  stp x19,x30,[sp, #0x20]
+0131aa58  adrp x21,0x3575000
+0131aa5c  adrp x22,0x3318000
+0131aa60  ldrb w8,[x21, #0xd3c]
+0131aa64  ldr x22,[x22, #0x650]
+0131aa68  mov x19,x1
+0131aa6c  mov x20,x0
+0131aa70  tbnz w8,#0x0,0x0131aa88
+0131aa74  adrp x0,0x3318000
+0131aa78  ldr x0,[x0, #0x650]
+0131aa7c  bl 0x00b0789c
+0131aa80  mov w8,#0x1
+0131aa84  strb w8,[x21, #0xd3c]
+0131aa88  ldr x8,[x22]
+0131aa8c  ldr x8,[x8, #0xb8]
+0131aa90  ldr x0,[x8, #0x58]
+0131aa94  cbz x0,0x0131aab4
+0131aa98  mov x1,x20
+0131aa9c  mov x2,x19
+0131aaa0  ldp x19,x30,[sp, #0x20]
+0131aaa4  ldp x21,x20,[sp, #0x10]
+0131aaa8  mov x3,xzr
+0131aaac  ldr x22,[sp], #0x30
+0131aab0  b 0x0106125c
+0131aab4  str x19,[x20, #0x60]!
+0131aab8  mov x0,x20
+0131aabc  mov x1,x19
+0131aac0  ldp x19,x30,[sp, #0x20]
+0131aac4  ldp x21,x20,[sp, #0x10]
+0131aac8  ldr x22,[sp], #0x30
+0131aacc  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131aad0_CurrentDownMono__get_m_m0.txt
+================================================================================
+Function: CurrentDownMono$$get_m_m0 @ 0131aad0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp195 @ 0107867c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CurrentDownMono$$<Start>b__60_2 @ 0131c394
+  <- CurrentDownMono$$<Start>b__60_3 @ 0131c3b0
+
+--- Listing ---
+0131aad0  stp x21,x20,[sp, #-0x20]!
+0131aad4  stp x19,x30,[sp, #0x10]
+0131aad8  adrp x20,0x3575000
+0131aadc  adrp x21,0x3318000
+0131aae0  ldrb w8,[x20, #0xd3d]
+0131aae4  ldr x21,[x21, #0x650]
+0131aae8  mov x19,x0
+0131aaec  tbnz w8,#0x0,0x0131ab04
+0131aaf0  adrp x0,0x3318000
+0131aaf4  ldr x0,[x0, #0x650]
+0131aaf8  bl 0x00b0789c
+0131aafc  mov w8,#0x1
+0131ab00  strb w8,[x20, #0xd3d]
+0131ab04  ldr x8,[x21]
+0131ab08  ldr x8,[x8, #0xb8]
+0131ab0c  ldr x0,[x8, #0x60]
+0131ab10  cbz x0,0x0131ab28
+0131ab14  mov x1,x19
+0131ab18  ldp x19,x30,[sp, #0x10]
+0131ab1c  mov x2,xzr
+0131ab20  ldp x21,x20,[sp], #0x20
+0131ab24  b 0x0107867c
+0131ab28  ldr x0,[x19, #0x68]
+0131ab2c  ldp x19,x30,[sp, #0x10]
+0131ab30  ldp x21,x20,[sp], #0x20
+0131ab34  ret
+
+
+================================================================================
+### FILE: 0131ab38_CurrentDownMono__set_m_m0.txt
+================================================================================
+Function: CurrentDownMono$$set_m_m0 @ 0131ab38
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131ab38  str x22,[sp, #-0x30]!
+0131ab3c  stp x21,x20,[sp, #0x10]
+0131ab40  stp x19,x30,[sp, #0x20]
+0131ab44  adrp x21,0x3575000
+0131ab48  adrp x22,0x3318000
+0131ab4c  ldrb w8,[x21, #0xd3e]
+0131ab50  ldr x22,[x22, #0x650]
+0131ab54  mov x19,x1
+0131ab58  mov x20,x0
+0131ab5c  tbnz w8,#0x0,0x0131ab74
+0131ab60  adrp x0,0x3318000
+0131ab64  ldr x0,[x0, #0x650]
+0131ab68  bl 0x00b0789c
+0131ab6c  mov w8,#0x1
+0131ab70  strb w8,[x21, #0xd3e]
+0131ab74  ldr x8,[x22]
+0131ab78  ldr x8,[x8, #0xb8]
+0131ab7c  ldr x0,[x8, #0x68]
+0131ab80  cbz x0,0x0131aba0
+0131ab84  mov x1,x20
+0131ab88  mov x2,x19
+0131ab8c  ldp x19,x30,[sp, #0x20]
+0131ab90  ldp x21,x20,[sp, #0x10]
+0131ab94  mov x3,xzr
+0131ab98  ldr x22,[sp], #0x30
+0131ab9c  b 0x0106125c
+0131aba0  str x19,[x20, #0x68]!
+0131aba4  mov x0,x20
+0131aba8  mov x1,x19
+0131abac  ldp x19,x30,[sp, #0x20]
+0131abb0  ldp x21,x20,[sp, #0x10]
+0131abb4  ldr x22,[sp], #0x30
+0131abb8  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131abbc_CurrentDownMono__get_m_m1.txt
+================================================================================
+Function: CurrentDownMono$$get_m_m1 @ 0131abbc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp195 @ 0107867c
+
+--- Calls IN ---
+  <- CurrentDownMono$$<Start>b__60_5 @ 0131c418
+  <- CurrentDownMono$$<Start>b__60_4 @ 0131c3fc
+
+--- Listing ---
+0131abbc  stp x21,x20,[sp, #-0x20]!
+0131abc0  stp x19,x30,[sp, #0x10]
+0131abc4  adrp x20,0x3575000
+0131abc8  adrp x21,0x3318000
+0131abcc  ldrb w8,[x20, #0xd3f]
+0131abd0  ldr x21,[x21, #0x650]
+0131abd4  mov x19,x0
+0131abd8  tbnz w8,#0x0,0x0131abf0
+0131abdc  adrp x0,0x3318000
+0131abe0  ldr x0,[x0, #0x650]
+0131abe4  bl 0x00b0789c
+0131abe8  mov w8,#0x1
+0131abec  strb w8,[x20, #0xd3f]
+0131abf0  ldr x8,[x21]
+0131abf4  ldr x8,[x8, #0xb8]
+0131abf8  ldr x0,[x8, #0x70]
+0131abfc  cbz x0,0x0131ac14
+0131ac00  mov x1,x19
+0131ac04  ldp x19,x30,[sp, #0x10]
+0131ac08  mov x2,xzr
+0131ac0c  ldp x21,x20,[sp], #0x20
+0131ac10  b 0x0107867c
+0131ac14  ldr x0,[x19, #0x70]
+0131ac18  ldp x19,x30,[sp, #0x10]
+0131ac1c  ldp x21,x20,[sp], #0x20
+0131ac20  ret
+
+
+================================================================================
+### FILE: 0131ac24_CurrentDownMono__set_m_m1.txt
+================================================================================
+Function: CurrentDownMono$$set_m_m1 @ 0131ac24
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131ac24  str x22,[sp, #-0x30]!
+0131ac28  stp x21,x20,[sp, #0x10]
+0131ac2c  stp x19,x30,[sp, #0x20]
+0131ac30  adrp x21,0x3575000
+0131ac34  adrp x22,0x3318000
+0131ac38  ldrb w8,[x21, #0xd40]
+0131ac3c  ldr x22,[x22, #0x650]
+0131ac40  mov x19,x1
+0131ac44  mov x20,x0
+0131ac48  tbnz w8,#0x0,0x0131ac60
+0131ac4c  adrp x0,0x3318000
+0131ac50  ldr x0,[x0, #0x650]
+0131ac54  bl 0x00b0789c
+0131ac58  mov w8,#0x1
+0131ac5c  strb w8,[x21, #0xd40]
+0131ac60  ldr x8,[x22]
+0131ac64  ldr x8,[x8, #0xb8]
+0131ac68  ldr x0,[x8, #0x78]
+0131ac6c  cbz x0,0x0131ac8c
+0131ac70  mov x1,x20
+0131ac74  mov x2,x19
+0131ac78  ldp x19,x30,[sp, #0x20]
+0131ac7c  ldp x21,x20,[sp, #0x10]
+0131ac80  mov x3,xzr
+0131ac84  ldr x22,[sp], #0x30
+0131ac88  b 0x0106125c
+0131ac8c  str x19,[x20, #0x70]!
+0131ac90  mov x0,x20
+0131ac94  mov x1,x19
+0131ac98  ldp x19,x30,[sp, #0x20]
+0131ac9c  ldp x21,x20,[sp, #0x10]
+0131aca0  ldr x22,[sp], #0x30
+0131aca4  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131aca8_CurrentDownMono__get_m_m2.txt
+================================================================================
+Function: CurrentDownMono$$get_m_m2 @ 0131aca8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp195 @ 0107867c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CurrentDownMono$$<Start>b__60_6 @ 0131c464
+  <- CurrentDownMono$$<Start>b__60_7 @ 0131c480
+
+--- Listing ---
+0131aca8  stp x21,x20,[sp, #-0x20]!
+0131acac  stp x19,x30,[sp, #0x10]
+0131acb0  adrp x20,0x3575000
+0131acb4  adrp x21,0x3318000
+0131acb8  ldrb w8,[x20, #0xd41]
+0131acbc  ldr x21,[x21, #0x650]
+0131acc0  mov x19,x0
+0131acc4  tbnz w8,#0x0,0x0131acdc
+0131acc8  adrp x0,0x3318000
+0131accc  ldr x0,[x0, #0x650]
+0131acd0  bl 0x00b0789c
+0131acd4  mov w8,#0x1
+0131acd8  strb w8,[x20, #0xd41]
+0131acdc  ldr x8,[x21]
+0131ace0  ldr x8,[x8, #0xb8]
+0131ace4  ldr x0,[x8, #0x80]
+0131ace8  cbz x0,0x0131ad00
+0131acec  mov x1,x19
+0131acf0  ldp x19,x30,[sp, #0x10]
+0131acf4  mov x2,xzr
+0131acf8  ldp x21,x20,[sp], #0x20
+0131acfc  b 0x0107867c
+0131ad00  ldr x0,[x19, #0x78]
+0131ad04  ldp x19,x30,[sp, #0x10]
+0131ad08  ldp x21,x20,[sp], #0x20
+0131ad0c  ret
+
+
+================================================================================
+### FILE: 0131ad10_CurrentDownMono__set_m_m2.txt
+================================================================================
+Function: CurrentDownMono$$set_m_m2 @ 0131ad10
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131ad10  str x22,[sp, #-0x30]!
+0131ad14  stp x21,x20,[sp, #0x10]
+0131ad18  stp x19,x30,[sp, #0x20]
+0131ad1c  adrp x21,0x3575000
+0131ad20  adrp x22,0x3318000
+0131ad24  ldrb w8,[x21, #0xd42]
+0131ad28  ldr x22,[x22, #0x650]
+0131ad2c  mov x19,x1
+0131ad30  mov x20,x0
+0131ad34  tbnz w8,#0x0,0x0131ad4c
+0131ad38  adrp x0,0x3318000
+0131ad3c  ldr x0,[x0, #0x650]
+0131ad40  bl 0x00b0789c
+0131ad44  mov w8,#0x1
+0131ad48  strb w8,[x21, #0xd42]
+0131ad4c  ldr x8,[x22]
+0131ad50  ldr x8,[x8, #0xb8]
+0131ad54  ldr x0,[x8, #0x88]
+0131ad58  cbz x0,0x0131ad78
+0131ad5c  mov x1,x20
+0131ad60  mov x2,x19
+0131ad64  ldp x19,x30,[sp, #0x20]
+0131ad68  ldp x21,x20,[sp, #0x10]
+0131ad6c  mov x3,xzr
+0131ad70  ldr x22,[sp], #0x30
+0131ad74  b 0x0106125c
+0131ad78  str x19,[x20, #0x78]!
+0131ad7c  mov x0,x20
+0131ad80  mov x1,x19
+0131ad84  ldp x19,x30,[sp, #0x20]
+0131ad88  ldp x21,x20,[sp, #0x10]
+0131ad8c  ldr x22,[sp], #0x30
+0131ad90  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131ad94_CurrentDownMono__get_m_m3.txt
+================================================================================
+Function: CurrentDownMono$$get_m_m3 @ 0131ad94
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp195 @ 0107867c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- CurrentDownMono$$<Start>b__60_8 @ 0131c4cc
+  <- CurrentDownMono$$<Start>b__60_9 @ 0131c4e8
+
+--- Listing ---
+0131ad94  stp x21,x20,[sp, #-0x20]!
+0131ad98  stp x19,x30,[sp, #0x10]
+0131ad9c  adrp x20,0x3575000
+0131ada0  adrp x21,0x3318000
+0131ada4  ldrb w8,[x20, #0xd43]
+0131ada8  ldr x21,[x21, #0x650]
+0131adac  mov x19,x0
+0131adb0  tbnz w8,#0x0,0x0131adc8
+0131adb4  adrp x0,0x3318000
+0131adb8  ldr x0,[x0, #0x650]
+0131adbc  bl 0x00b0789c
+0131adc0  mov w8,#0x1
+0131adc4  strb w8,[x20, #0xd43]
+0131adc8  ldr x8,[x21]
+0131adcc  ldr x8,[x8, #0xb8]
+0131add0  ldr x0,[x8, #0x90]
+0131add4  cbz x0,0x0131adec
+0131add8  mov x1,x19
+0131addc  ldp x19,x30,[sp, #0x10]
+0131ade0  mov x2,xzr
+0131ade4  ldp x21,x20,[sp], #0x20
+0131ade8  b 0x0107867c
+0131adec  ldr x0,[x19, #0x80]
+0131adf0  ldp x19,x30,[sp, #0x10]
+0131adf4  ldp x21,x20,[sp], #0x20
+0131adf8  ret
+
+
+================================================================================
+### FILE: 0131adfc_CurrentDownMono__set_m_m3.txt
+================================================================================
+Function: CurrentDownMono$$set_m_m3 @ 0131adfc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131adfc  str x22,[sp, #-0x30]!
+0131ae00  stp x21,x20,[sp, #0x10]
+0131ae04  stp x19,x30,[sp, #0x20]
+0131ae08  adrp x21,0x3575000
+0131ae0c  adrp x22,0x3318000
+0131ae10  ldrb w8,[x21, #0xd44]
+0131ae14  ldr x22,[x22, #0x650]
+0131ae18  mov x19,x1
+0131ae1c  mov x20,x0
+0131ae20  tbnz w8,#0x0,0x0131ae38
+0131ae24  adrp x0,0x3318000
+0131ae28  ldr x0,[x0, #0x650]
+0131ae2c  bl 0x00b0789c
+0131ae30  mov w8,#0x1
+0131ae34  strb w8,[x21, #0xd44]
+0131ae38  ldr x8,[x22]
+0131ae3c  ldr x8,[x8, #0xb8]
+0131ae40  ldr x0,[x8, #0x98]
+0131ae44  cbz x0,0x0131ae64
+0131ae48  mov x1,x20
+0131ae4c  mov x2,x19
+0131ae50  ldp x19,x30,[sp, #0x20]
+0131ae54  ldp x21,x20,[sp, #0x10]
+0131ae58  mov x3,xzr
+0131ae5c  ldr x22,[sp], #0x30
+0131ae60  b 0x0106125c
+0131ae64  str x19,[x20, #0x80]!
+0131ae68  mov x0,x20
+0131ae6c  mov x1,x19
+0131ae70  ldp x19,x30,[sp, #0x20]
+0131ae74  ldp x21,x20,[sp, #0x10]
+0131ae78  ldr x22,[sp], #0x30
+0131ae7c  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131ae80_CurrentDownMono__get_flashing.txt
+================================================================================
+Function: CurrentDownMono$$get_flashing @ 0131ae80
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp196 @ 010788b8
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131ae80  stp x21,x20,[sp, #-0x20]!
+0131ae84  stp x19,x30,[sp, #0x10]
+0131ae88  adrp x20,0x3575000
+0131ae8c  adrp x21,0x3318000
+0131ae90  ldrb w8,[x20, #0xd45]
+0131ae94  ldr x21,[x21, #0x650]
+0131ae98  mov x19,x0
+0131ae9c  tbnz w8,#0x0,0x0131aeb4
+0131aea0  adrp x0,0x3318000
+0131aea4  ldr x0,[x0, #0x650]
+0131aea8  bl 0x00b0789c
+0131aeac  mov w8,#0x1
+0131aeb0  strb w8,[x20, #0xd45]
+0131aeb4  ldr x8,[x21]
+0131aeb8  ldr x8,[x8, #0xb8]
+0131aebc  ldr x0,[x8, #0xa0]
+0131aec0  cbz x0,0x0131aed8
+0131aec4  mov x1,x19
+0131aec8  ldp x19,x30,[sp, #0x10]
+0131aecc  mov x2,xzr
+0131aed0  ldp x21,x20,[sp], #0x20
+0131aed4  b 0x010788b8
+0131aed8  ldr x0,[x19, #0x88]
+0131aedc  ldp x19,x30,[sp, #0x10]
+0131aee0  ldp x21,x20,[sp], #0x20
+0131aee4  ret
+
+
+================================================================================
+### FILE: 0131aee8_CurrentDownMono__set_flashing.txt
+================================================================================
+Function: CurrentDownMono$$set_flashing @ 0131aee8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131aee8  str x22,[sp, #-0x30]!
+0131aeec  stp x21,x20,[sp, #0x10]
+0131aef0  stp x19,x30,[sp, #0x20]
+0131aef4  adrp x21,0x3575000
+0131aef8  adrp x22,0x3318000
+0131aefc  ldrb w8,[x21, #0xd46]
+0131af00  ldr x22,[x22, #0x650]
+0131af04  mov x19,x1
+0131af08  mov x20,x0
+0131af0c  tbnz w8,#0x0,0x0131af24
+0131af10  adrp x0,0x3318000
+0131af14  ldr x0,[x0, #0x650]
+0131af18  bl 0x00b0789c
+0131af1c  mov w8,#0x1
+0131af20  strb w8,[x21, #0xd46]
+0131af24  ldr x8,[x22]
+0131af28  ldr x8,[x8, #0xb8]
+0131af2c  ldr x0,[x8, #0xa8]
+0131af30  cbz x0,0x0131af50
+0131af34  mov x1,x20
+0131af38  mov x2,x19
+0131af3c  ldp x19,x30,[sp, #0x20]
+0131af40  ldp x21,x20,[sp, #0x10]
+0131af44  mov x3,xzr
+0131af48  ldr x22,[sp], #0x30
+0131af4c  b 0x0106125c
+0131af50  str x19,[x20, #0x88]!
+0131af54  mov x0,x20
+0131af58  mov x1,x19
+0131af5c  ldp x19,x30,[sp, #0x20]
+0131af60  ldp x21,x20,[sp, #0x10]
+0131af64  ldr x22,[sp], #0x30
+0131af68  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131af6c_CurrentDownMono__get_flashing0.txt
+================================================================================
+Function: CurrentDownMono$$get_flashing0 @ 0131af6c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp196 @ 010788b8
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131af6c  stp x21,x20,[sp, #-0x20]!
+0131af70  stp x19,x30,[sp, #0x10]
+0131af74  adrp x20,0x3575000
+0131af78  adrp x21,0x3318000
+0131af7c  ldrb w8,[x20, #0xd47]
+0131af80  ldr x21,[x21, #0x650]
+0131af84  mov x19,x0
+0131af88  tbnz w8,#0x0,0x0131afa0
+0131af8c  adrp x0,0x3318000
+0131af90  ldr x0,[x0, #0x650]
+0131af94  bl 0x00b0789c
+0131af98  mov w8,#0x1
+0131af9c  strb w8,[x20, #0xd47]
+0131afa0  ldr x8,[x21]
+0131afa4  ldr x8,[x8, #0xb8]
+0131afa8  ldr x0,[x8, #0xb0]
+0131afac  cbz x0,0x0131afc4
+0131afb0  mov x1,x19
+0131afb4  ldp x19,x30,[sp, #0x10]
+0131afb8  mov x2,xzr
+0131afbc  ldp x21,x20,[sp], #0x20
+0131afc0  b 0x010788b8
+0131afc4  ldr x0,[x19, #0x90]
+0131afc8  ldp x19,x30,[sp, #0x10]
+0131afcc  ldp x21,x20,[sp], #0x20
+0131afd0  ret
+
+
+================================================================================
+### FILE: 0131afd4_CurrentDownMono__set_flashing0.txt
+================================================================================
+Function: CurrentDownMono$$set_flashing0 @ 0131afd4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131afd4  str x22,[sp, #-0x30]!
+0131afd8  stp x21,x20,[sp, #0x10]
+0131afdc  stp x19,x30,[sp, #0x20]
+0131afe0  adrp x21,0x3575000
+0131afe4  adrp x22,0x3318000
+0131afe8  ldrb w8,[x21, #0xd48]
+0131afec  ldr x22,[x22, #0x650]
+0131aff0  mov x19,x1
+0131aff4  mov x20,x0
+0131aff8  tbnz w8,#0x0,0x0131b010
+0131affc  adrp x0,0x3318000
+0131b000  ldr x0,[x0, #0x650]
+0131b004  bl 0x00b0789c
+0131b008  mov w8,#0x1
+0131b00c  strb w8,[x21, #0xd48]
+0131b010  ldr x8,[x22]
+0131b014  ldr x8,[x8, #0xb8]
+0131b018  ldr x0,[x8, #0xb8]
+0131b01c  cbz x0,0x0131b03c
+0131b020  mov x1,x20
+0131b024  mov x2,x19
+0131b028  ldp x19,x30,[sp, #0x20]
+0131b02c  ldp x21,x20,[sp, #0x10]
+0131b030  mov x3,xzr
+0131b034  ldr x22,[sp], #0x30
+0131b038  b 0x0106125c
+0131b03c  str x19,[x20, #0x90]!
+0131b040  mov x0,x20
+0131b044  mov x1,x19
+0131b048  ldp x19,x30,[sp, #0x20]
+0131b04c  ldp x21,x20,[sp, #0x10]
+0131b050  ldr x22,[sp], #0x30
+0131b054  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131b058_CurrentDownMono__get_flashing1.txt
+================================================================================
+Function: CurrentDownMono$$get_flashing1 @ 0131b058
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp196 @ 010788b8
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131b058  stp x21,x20,[sp, #-0x20]!
+0131b05c  stp x19,x30,[sp, #0x10]
+0131b060  adrp x20,0x3575000
+0131b064  adrp x21,0x3318000
+0131b068  ldrb w8,[x20, #0xd49]
+0131b06c  ldr x21,[x21, #0x650]
+0131b070  mov x19,x0
+0131b074  tbnz w8,#0x0,0x0131b08c
+0131b078  adrp x0,0x3318000
+0131b07c  ldr x0,[x0, #0x650]
+0131b080  bl 0x00b0789c
+0131b084  mov w8,#0x1
+0131b088  strb w8,[x20, #0xd49]
+0131b08c  ldr x8,[x21]
+0131b090  ldr x8,[x8, #0xb8]
+0131b094  ldr x0,[x8, #0xc0]
+0131b098  cbz x0,0x0131b0b0
+0131b09c  mov x1,x19
+0131b0a0  ldp x19,x30,[sp, #0x10]
+0131b0a4  mov x2,xzr
+0131b0a8  ldp x21,x20,[sp], #0x20
+0131b0ac  b 0x010788b8
+0131b0b0  ldr x0,[x19, #0x98]
+0131b0b4  ldp x19,x30,[sp, #0x10]
+0131b0b8  ldp x21,x20,[sp], #0x20
+0131b0bc  ret
+
+
+================================================================================
+### FILE: 0131b0c0_CurrentDownMono__set_flashing1.txt
+================================================================================
+Function: CurrentDownMono$$set_flashing1 @ 0131b0c0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131b0c0  str x22,[sp, #-0x30]!
+0131b0c4  stp x21,x20,[sp, #0x10]
+0131b0c8  stp x19,x30,[sp, #0x20]
+0131b0cc  adrp x21,0x3575000
+0131b0d0  adrp x22,0x3318000
+0131b0d4  ldrb w8,[x21, #0xd4a]
+0131b0d8  ldr x22,[x22, #0x650]
+0131b0dc  mov x19,x1
+0131b0e0  mov x20,x0
+0131b0e4  tbnz w8,#0x0,0x0131b0fc
+0131b0e8  adrp x0,0x3318000
+0131b0ec  ldr x0,[x0, #0x650]
+0131b0f0  bl 0x00b0789c
+0131b0f4  mov w8,#0x1
+0131b0f8  strb w8,[x21, #0xd4a]
+0131b0fc  ldr x8,[x22]
+0131b100  ldr x8,[x8, #0xb8]
+0131b104  ldr x0,[x8, #0xc8]
+0131b108  cbz x0,0x0131b128
+0131b10c  mov x1,x20
+0131b110  mov x2,x19
+0131b114  ldp x19,x30,[sp, #0x20]
+0131b118  ldp x21,x20,[sp, #0x10]
+0131b11c  mov x3,xzr
+0131b120  ldr x22,[sp], #0x30
+0131b124  b 0x0106125c
+0131b128  str x19,[x20, #0x98]!
+0131b12c  mov x0,x20
+0131b130  mov x1,x19
+0131b134  ldp x19,x30,[sp, #0x20]
+0131b138  ldp x21,x20,[sp, #0x10]
+0131b13c  ldr x22,[sp], #0x30
+0131b140  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131b144_CurrentDownMono__get_flashing2.txt
+================================================================================
+Function: CurrentDownMono$$get_flashing2 @ 0131b144
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp196 @ 010788b8
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131b144  stp x21,x20,[sp, #-0x20]!
+0131b148  stp x19,x30,[sp, #0x10]
+0131b14c  adrp x20,0x3575000
+0131b150  adrp x21,0x3318000
+0131b154  ldrb w8,[x20, #0xd4b]
+0131b158  ldr x21,[x21, #0x650]
+0131b15c  mov x19,x0
+0131b160  tbnz w8,#0x0,0x0131b178
+0131b164  adrp x0,0x3318000
+0131b168  ldr x0,[x0, #0x650]
+0131b16c  bl 0x00b0789c
+0131b170  mov w8,#0x1
+0131b174  strb w8,[x20, #0xd4b]
+0131b178  ldr x8,[x21]
+0131b17c  ldr x8,[x8, #0xb8]
+0131b180  ldr x0,[x8, #0xd0]
+0131b184  cbz x0,0x0131b19c
+0131b188  mov x1,x19
+0131b18c  ldp x19,x30,[sp, #0x10]
+0131b190  mov x2,xzr
+0131b194  ldp x21,x20,[sp], #0x20
+0131b198  b 0x010788b8
+0131b19c  ldr x0,[x19, #0xa0]
+0131b1a0  ldp x19,x30,[sp, #0x10]
+0131b1a4  ldp x21,x20,[sp], #0x20
+0131b1a8  ret
+
+
+================================================================================
+### FILE: 0131b1ac_CurrentDownMono__set_flashing2.txt
+================================================================================
+Function: CurrentDownMono$$set_flashing2 @ 0131b1ac
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131b1ac  str x22,[sp, #-0x30]!
+0131b1b0  stp x21,x20,[sp, #0x10]
+0131b1b4  stp x19,x30,[sp, #0x20]
+0131b1b8  adrp x21,0x3575000
+0131b1bc  adrp x22,0x3318000
+0131b1c0  ldrb w8,[x21, #0xd4c]
+0131b1c4  ldr x22,[x22, #0x650]
+0131b1c8  mov x19,x1
+0131b1cc  mov x20,x0
+0131b1d0  tbnz w8,#0x0,0x0131b1e8
+0131b1d4  adrp x0,0x3318000
+0131b1d8  ldr x0,[x0, #0x650]
+0131b1dc  bl 0x00b0789c
+0131b1e0  mov w8,#0x1
+0131b1e4  strb w8,[x21, #0xd4c]
+0131b1e8  ldr x8,[x22]
+0131b1ec  ldr x8,[x8, #0xb8]
+0131b1f0  ldr x0,[x8, #0xd8]
+0131b1f4  cbz x0,0x0131b214
+0131b1f8  mov x1,x20
+0131b1fc  mov x2,x19
+0131b200  ldp x19,x30,[sp, #0x20]
+0131b204  ldp x21,x20,[sp, #0x10]
+0131b208  mov x3,xzr
+0131b20c  ldr x22,[sp], #0x30
+0131b210  b 0x0106125c
+0131b214  str x19,[x20, #0xa0]!
+0131b218  mov x0,x20
+0131b21c  mov x1,x19
+0131b220  ldp x19,x30,[sp, #0x20]
+0131b224  ldp x21,x20,[sp, #0x10]
+0131b228  ldr x22,[sp], #0x30
+0131b22c  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131b230_CurrentDownMono__get_flashing3.txt
+================================================================================
+Function: CurrentDownMono$$get_flashing3 @ 0131b230
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp196 @ 010788b8
+
+--- Calls IN ---
+  <- CurrentDownMono$$ShowCurrent @ 0131bb30
+  <- CurrentDownMono$$Hide @ 0131b96c
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131b230  stp x21,x20,[sp, #-0x20]!
+0131b234  stp x19,x30,[sp, #0x10]
+0131b238  adrp x20,0x3575000
+0131b23c  adrp x21,0x3318000
+0131b240  ldrb w8,[x20, #0xd4d]
+0131b244  ldr x21,[x21, #0x650]
+0131b248  mov x19,x0
+0131b24c  tbnz w8,#0x0,0x0131b264
+0131b250  adrp x0,0x3318000
+0131b254  ldr x0,[x0, #0x650]
+0131b258  bl 0x00b0789c
+0131b25c  mov w8,#0x1
+0131b260  strb w8,[x20, #0xd4d]
+0131b264  ldr x8,[x21]
+0131b268  ldr x8,[x8, #0xb8]
+0131b26c  ldr x0,[x8, #0xe0]
+0131b270  cbz x0,0x0131b288
+0131b274  mov x1,x19
+0131b278  ldp x19,x30,[sp, #0x10]
+0131b27c  mov x2,xzr
+0131b280  ldp x21,x20,[sp], #0x20
+0131b284  b 0x010788b8
+0131b288  ldr x0,[x19, #0xa8]
+0131b28c  ldp x19,x30,[sp, #0x10]
+0131b290  ldp x21,x20,[sp], #0x20
+0131b294  ret
+
+
+================================================================================
+### FILE: 0131b298_CurrentDownMono__set_flashing3.txt
+================================================================================
+Function: CurrentDownMono$$set_flashing3 @ 0131b298
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131b298  str x22,[sp, #-0x30]!
+0131b29c  stp x21,x20,[sp, #0x10]
+0131b2a0  stp x19,x30,[sp, #0x20]
+0131b2a4  adrp x21,0x3575000
+0131b2a8  adrp x22,0x3318000
+0131b2ac  ldrb w8,[x21, #0xd4e]
+0131b2b0  ldr x22,[x22, #0x650]
+0131b2b4  mov x19,x1
+0131b2b8  mov x20,x0
+0131b2bc  tbnz w8,#0x0,0x0131b2d4
+0131b2c0  adrp x0,0x3318000
+0131b2c4  ldr x0,[x0, #0x650]
+0131b2c8  bl 0x00b0789c
+0131b2cc  mov w8,#0x1
+0131b2d0  strb w8,[x21, #0xd4e]
+0131b2d4  ldr x8,[x22]
+0131b2d8  ldr x8,[x8, #0xb8]
+0131b2dc  ldr x0,[x8, #0xe8]
+0131b2e0  cbz x0,0x0131b300
+0131b2e4  mov x1,x20
+0131b2e8  mov x2,x19
+0131b2ec  ldp x19,x30,[sp, #0x20]
+0131b2f0  ldp x21,x20,[sp, #0x10]
+0131b2f4  mov x3,xzr
+0131b2f8  ldr x22,[sp], #0x30
+0131b2fc  b 0x0106125c
+0131b300  str x19,[x20, #0xa8]!
+0131b304  mov x0,x20
+0131b308  mov x1,x19
+0131b30c  ldp x19,x30,[sp, #0x20]
+0131b310  ldp x21,x20,[sp, #0x10]
+0131b314  ldr x22,[sp], #0x30
+0131b318  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131b31c_CurrentDownMono__Start.txt
+================================================================================
+Function: CurrentDownMono$$Start @ 0131b31c
+
+--- Calls OUT ---
+  -> CurrentDownMono$$get_flashing1 @ 0131b058
+  -> CurrentDownMono$$set_downTip1 @ 0131a788
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> CurrentDownMono$$get_downTip1 @ 0131a720
+  -> CurrentDownMono$$get_downTip3 @ 0131a8f8
+  -> CurrentDownMono$$set_downTip0 @ 0131a69c
+  -> CurrentDownMono$$set_m_m3 @ 0131adfc
+  -> CurrentDownMono$$get_downTip0 @ 0131a634
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Renderer$$get_material @ 024c730c
+  -> CurrentDownMono$$get_flashing @ 0131ae80
+  -> CurrentDownMono$$Hide @ 0131b96c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CurrentDownMono$$set_downTip3 @ 0131a960
+  -> CurrentDownMono$$set_m_m @ 0131aa4c
+  -> DG.Tweening.DOTween$$ToAlpha @ 016f3694
+  -> CurrentDownMono$$get_flashing2 @ 0131b144
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> CurrentDownMono$$set_downTip2 @ 0131a874
+  -> CurrentDownMono$$get_flashing3 @ 0131b230
+  -> BaseMono$$GetSelfChild @ 00e1e044
+  -> CurrentDownMono$$set_flashing0 @ 0131afd4
+  -> CurrentDownMono$$set_flashing1 @ 0131b0c0
+  -> CurrentDownMono$$get_downTip2 @ 0131a80c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> CurrentDownMono$$set_m_m2 @ 0131ad10
+  -> CurrentDownMono$$set_m_m1 @ 0131ac24
+  -> CurrentDownMono$$set_downTip @ 0131a5b0
+  -> CurrentDownMono$$set_m_m0 @ 0131ab38
+  -> CurrentDownMono$$set_flashing2 @ 0131b1ac
+  -> CurrentDownMono$$set_flashing @ 0131aee8
+  -> DG.Tweening.Core.DOGetter<Color>$$.ctor @ 01f8a368
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> DG.Tweening.Core.DOSetter<Color>$$.ctor @ 01f8b398
+  -> CurrentDownMono$$get_flashing0 @ 0131af6c
+  -> DG.Tweening.TweenExtensions$$Pause<object> @ 017dd73c
+  -> CurrentDownMono$$get_downTip @ 0131a548
+  -> DG.Tweening.TweenSettingsExtensions$$SetLoops<object> @ 017e5030
+  -> CurrentDownMono$$set_flashing3 @ 0131b298
+
+--- Calls IN ---
+
+--- Listing ---
+0131b31c  stp d9,d8,[sp, #-0x50]!
+0131b320  stp x25,x24,[sp, #0x10]
+0131b324  stp x23,x22,[sp, #0x20]
+0131b328  stp x21,x20,[sp, #0x30]
+0131b32c  stp x19,x30,[sp, #0x40]
+0131b330  adrp x20,0x3575000
+0131b334  adrp x21,0x3318000
+0131b338  ldrb w8,[x20, #0xd4f]
+0131b33c  ldr x21,[x21, #0x650]
+0131b340  mov x19,x0
+0131b344  tbnz w8,#0x0,0x0131b458
+0131b348  adrp x0,0x3350000
+0131b34c  ldr x0,[x0, #0x1e0]
+0131b350  bl 0x00b0789c
+0131b354  adrp x0,0x3325000
+0131b358  ldr x0,[x0, #0xe48]
+0131b35c  bl 0x00b0789c
+0131b360  adrp x0,0x335e000
+0131b364  ldr x0,[x0, #0x378]
+0131b368  bl 0x00b0789c
+0131b36c  adrp x0,0x335e000
+0131b370  ldr x0,[x0, #0xb20]
+0131b374  bl 0x00b0789c
+0131b378  adrp x0,0x3354000
+0131b37c  ldr x0,[x0, #0xf48]
+0131b380  bl 0x00b0789c
+0131b384  adrp x0,0x330d000
+0131b388  ldr x0,[x0, #0xa00]
+0131b38c  bl 0x00b0789c
+0131b390  adrp x0,0x3374000
+0131b394  ldr x0,[x0, #0x5c8]
+0131b398  bl 0x00b0789c
+0131b39c  adrp x0,0x336c000
+0131b3a0  ldr x0,[x0, #0x8a8]
+0131b3a4  bl 0x00b0789c
+0131b3a8  adrp x0,0x3334000
+0131b3ac  ldr x0,[x0, #0xc90]
+0131b3b0  bl 0x00b0789c
+0131b3b4  adrp x0,0x3378000
+0131b3b8  ldr x0,[x0, #0xf08]
+0131b3bc  bl 0x00b0789c
+0131b3c0  adrp x0,0x3318000
+0131b3c4  ldr x0,[x0, #0x650]
+0131b3c8  bl 0x00b0789c
+0131b3cc  adrp x0,0x3329000
+0131b3d0  ldr x0,[x0, #0x308]
+0131b3d4  bl 0x00b0789c
+0131b3d8  adrp x0,0x3328000
+0131b3dc  ldr x0,[x0, #0x2c0]
+0131b3e0  bl 0x00b0789c
+0131b3e4  adrp x0,0x333c000
+0131b3e8  ldr x0,[x0, #0x680]
+0131b3ec  bl 0x00b0789c
+0131b3f0  adrp x0,0x335d000
+0131b3f4  ldr x0,[x0, #0xfb0]
+0131b3f8  bl 0x00b0789c
+0131b3fc  adrp x0,0x331d000
+0131b400  ldr x0,[x0, #0xb00]
+0131b404  bl 0x00b0789c
+0131b408  adrp x0,0x3351000
+0131b40c  ldr x0,[x0, #0xec8]
+0131b410  bl 0x00b0789c
+0131b414  adrp x0,0x3359000
+0131b418  ldr x0,[x0, #0x2b0]
+0131b41c  bl 0x00b0789c
+0131b420  adrp x0,0x3326000
+0131b424  ldr x0,[x0, #0xbe8]
+0131b428  bl 0x00b0789c
+0131b42c  adrp x0,0x3313000
+0131b430  ldr x0,[x0, #0x3e0]
+0131b434  bl 0x00b0789c
+0131b438  adrp x0,0x332c000
+0131b43c  ldr x0,[x0, #0x790]
+0131b440  bl 0x00b0789c
+0131b444  adrp x0,0x335f000
+0131b448  ldr x0,[x0, #0xc38]
+0131b44c  bl 0x00b0789c
+0131b450  mov w8,#0x1
+0131b454  strb w8,[x20, #0xd4f]
+0131b458  ldr x8,[x21]
+0131b45c  ldr x8,[x8, #0xb8]
+0131b460  ldr x0,[x8, #0xf0]
+0131b464  cbz x0,0x0131b488
+0131b468  mov x1,x19
+0131b46c  ldp x19,x30,[sp, #0x40]
+0131b470  ldp x21,x20,[sp, #0x30]
+0131b474  ldp x23,x22,[sp, #0x20]
+0131b478  ldp x25,x24,[sp, #0x10]
+0131b47c  mov x2,xzr
+0131b480  ldp d9,d8,[sp], #0x50
+0131b484  b 0x01060dac
+0131b488  adrp x8,0x3326000
+0131b48c  ldr x8,[x8, #0xbe8]
+0131b490  adrp x20,0x335f000
+0131b494  ldr x20,[x20, #0xc38]
+0131b498  adrp x21,0x3313000
+0131b49c  ldr x1,[x8]
+0131b4a0  adrp x22,0x3359000
+0131b4a4  adrp x23,0x332c000
+0131b4a8  ldr x21,[x21, #0x3e0]
+0131b4ac  ldr x22,[x22, #0x2b0]
+0131b4b0  ldr x23,[x23, #0x790]
+0131b4b4  mov x0,x19
+0131b4b8  mov x2,xzr
+0131b4bc  bl 0x00e1e044
+0131b4c0  mov x1,x0
+0131b4c4  mov x0,x19
+0131b4c8  bl 0x0131a5b0
+0131b4cc  ldr x1,[x20]
+0131b4d0  mov x0,x19
+0131b4d4  mov x2,xzr
+0131b4d8  bl 0x00e1e044
+0131b4dc  mov x1,x0
+0131b4e0  mov x0,x19
+0131b4e4  bl 0x0131a69c
+0131b4e8  ldr x1,[x21]
+0131b4ec  mov x0,x19
+0131b4f0  mov x2,xzr
+0131b4f4  bl 0x00e1e044
+0131b4f8  mov x1,x0
+0131b4fc  mov x0,x19
+0131b500  bl 0x0131a788
+0131b504  ldr x1,[x22]
+0131b508  mov x0,x19
+0131b50c  mov x2,xzr
+0131b510  bl 0x00e1e044
+0131b514  mov x1,x0
+0131b518  mov x0,x19
+0131b51c  bl 0x0131a874
+0131b520  ldr x1,[x23]
+0131b524  mov x0,x19
+0131b528  mov x2,xzr
+0131b52c  bl 0x00e1e044
+0131b530  mov x1,x0
+0131b534  mov x0,x19
+0131b538  bl 0x0131a960
+0131b53c  mov x0,x19
+0131b540  bl 0x0131a548
+0131b544  cbz x0,0x0131b968
+0131b548  adrp x20,0x335d000
+0131b54c  ldr x20,[x20, #0xfb0]
+0131b550  ldr x1,[x20]
+0131b554  bl 0x01794e94
+0131b558  cbz x0,0x0131b968
+0131b55c  mov x1,xzr
+0131b560  bl 0x024c730c
+0131b564  mov x1,x0
+0131b568  mov x0,x19
+0131b56c  bl 0x0131aa4c
+0131b570  mov x0,x19
+0131b574  bl 0x0131a634
+0131b578  cbz x0,0x0131b968
+0131b57c  ldr x1,[x20]
+0131b580  bl 0x01794e94
+0131b584  cbz x0,0x0131b968
+0131b588  mov x1,xzr
+0131b58c  bl 0x024c730c
+0131b590  mov x1,x0
+0131b594  mov x0,x19
+0131b598  bl 0x0131ab38
+0131b59c  mov x0,x19
+0131b5a0  bl 0x0131a720
+0131b5a4  cbz x0,0x0131b968
+0131b5a8  ldr x1,[x20]
+0131b5ac  bl 0x01794e94
+0131b5b0  cbz x0,0x0131b968
+0131b5b4  mov x1,xzr
+0131b5b8  bl 0x024c730c
+0131b5bc  mov x1,x0
+0131b5c0  mov x0,x19
+0131b5c4  bl 0x0131ac24
+0131b5c8  mov x0,x19
+0131b5cc  bl 0x0131a80c
+0131b5d0  cbz x0,0x0131b968
+0131b5d4  ldr x1,[x20]
+0131b5d8  bl 0x01794e94
+0131b5dc  cbz x0,0x0131b968
+0131b5e0  mov x1,xzr
+0131b5e4  bl 0x024c730c
+0131b5e8  mov x1,x0
+0131b5ec  mov x0,x19
+0131b5f0  bl 0x0131ad10
+0131b5f4  mov x0,x19
+0131b5f8  bl 0x0131a8f8
+0131b5fc  cbz x0,0x0131b968
+0131b600  ldr x1,[x20]
+0131b604  bl 0x01794e94
+0131b608  cbz x0,0x0131b968
+0131b60c  adrp x23,0x3329000
+0131b610  ldr x23,[x23, #0x308]
+0131b614  mov x1,xzr
+0131b618  bl 0x024c730c
+0131b61c  mov x1,x0
+0131b620  mov x0,x19
+0131b624  bl 0x0131adfc
+0131b628  ldr x0,[x23]
+0131b62c  bl 0x00b079a0
+0131b630  cbz x0,0x0131b968
+0131b634  adrp x8,0x3350000
+0131b638  ldr x8,[x8, #0x1e0]
+0131b63c  adrp x24,0x3328000
+0131b640  mov x1,x19
+0131b644  mov x3,xzr
+0131b648  ldr x2,[x8]
+0131b64c  ldr x24,[x24, #0x2c0]
+0131b650  mov x20,x0
+0131b654  bl 0x01f8a368
+0131b658  ldr x0,[x24]
+0131b65c  bl 0x00b079a0
+0131b660  cbz x0,0x0131b968
+0131b664  adrp x8,0x3325000
+0131b668  ldr x8,[x8, #0xe48]
+0131b66c  adrp x25,0x333c000
+0131b670  adrp x22,0x3351000
+0131b674  mov x1,x19
+0131b678  ldr x2,[x8]
+0131b67c  ldr x25,[x25, #0x680]
+0131b680  ldr x22,[x22, #0xec8]
+0131b684  mov x3,xzr
+0131b688  mov x21,x0
+0131b68c  bl 0x01f8b398
+0131b690  ldr x0,[x25]
+0131b694  ldr w8,[x0, #0xe0]
+0131b698  cbnz w8,0x0131b6a0
+0131b69c  bl 0x00b0798c
+0131b6a0  adrp x8,0x26db000
+0131b6a4  adrp x9,0x26db000
+0131b6a8  ldr s9,[x8, #0x528]
+0131b6ac  ldr s8,[x9, #0xe14]
+0131b6b0  mov x0,x20
+0131b6b4  mov x1,x21
+0131b6b8  mov v0.16B,v9.16B
+0131b6bc  mov v1.16B,v8.16B
+0131b6c0  mov x2,xzr
+0131b6c4  bl 0x016f3694
+0131b6c8  ldr x3,[x22]
+0131b6cc  mov w1,#0xffffffff
+0131b6d0  mov w2,#0x1
+0131b6d4  bl 0x017e5030
+0131b6d8  mov x1,x0
+0131b6dc  mov x0,x19
+0131b6e0  bl 0x0131aee8
+0131b6e4  ldr x0,[x23]
+0131b6e8  bl 0x00b079a0
+0131b6ec  cbz x0,0x0131b968
+0131b6f0  adrp x8,0x335e000
+0131b6f4  ldr x8,[x8, #0x378]
+0131b6f8  mov x1,x19
+0131b6fc  mov x3,xzr
+0131b700  mov x20,x0
+0131b704  ldr x2,[x8]
+0131b708  bl 0x01f8a368
+0131b70c  ldr x0,[x24]
+0131b710  bl 0x00b079a0
+0131b714  cbz x0,0x0131b968
+0131b718  adrp x8,0x335e000
+0131b71c  ldr x8,[x8, #0xb20]
+0131b720  mov x1,x19
+0131b724  mov x3,xzr
+0131b728  mov x21,x0
+0131b72c  ldr x2,[x8]
+0131b730  bl 0x01f8b398
+0131b734  mov x0,x20
+0131b738  mov x1,x21
+0131b73c  mov v0.16B,v9.16B
+0131b740  mov v1.16B,v8.16B
+0131b744  mov x2,xzr
+0131b748  bl 0x016f3694
+0131b74c  ldr x3,[x22]
+0131b750  mov w1,#0xffffffff
+0131b754  mov w2,#0x1
+0131b758  bl 0x017e5030
+0131b75c  mov x1,x0
+0131b760  mov x0,x19
+0131b764  bl 0x0131afd4
+0131b768  ldr x0,[x23]
+0131b76c  bl 0x00b079a0
+0131b770  cbz x0,0x0131b968
+0131b774  adrp x8,0x3354000
+0131b778  ldr x8,[x8, #0xf48]
+0131b77c  mov x1,x19
+0131b780  mov x3,xzr
+0131b784  mov x20,x0
+0131b788  ldr x2,[x8]
+0131b78c  bl 0x01f8a368
+0131b790  ldr x0,[x24]
+0131b794  bl 0x00b079a0
+0131b798  cbz x0,0x0131b968
+0131b79c  adrp x8,0x330d000
+0131b7a0  ldr x8,[x8, #0xa00]
+0131b7a4  mov x1,x19
+0131b7a8  mov x3,xzr
+0131b7ac  mov x21,x0
+0131b7b0  ldr x2,[x8]
+0131b7b4  bl 0x01f8b398
+0131b7b8  mov x0,x20
+0131b7bc  mov x1,x21
+0131b7c0  mov v0.16B,v9.16B
+0131b7c4  mov v1.16B,v8.16B
+0131b7c8  mov x2,xzr
+0131b7cc  bl 0x016f3694
+0131b7d0  ldr x3,[x22]
+0131b7d4  mov w1,#0xffffffff
+0131b7d8  mov w2,#0x1
+0131b7dc  bl 0x017e5030
+0131b7e0  mov x1,x0
+0131b7e4  mov x0,x19
+0131b7e8  bl 0x0131b0c0
+0131b7ec  ldr x0,[x23]
+0131b7f0  bl 0x00b079a0
+0131b7f4  cbz x0,0x0131b968
+0131b7f8  adrp x8,0x3374000
+0131b7fc  ldr x8,[x8, #0x5c8]
+0131b800  mov x1,x19
+0131b804  mov x3,xzr
+0131b808  mov x20,x0
+0131b80c  ldr x2,[x8]
+0131b810  bl 0x01f8a368
+0131b814  ldr x0,[x24]
+0131b818  bl 0x00b079a0
+0131b81c  cbz x0,0x0131b968
+0131b820  adrp x8,0x336c000
+0131b824  ldr x8,[x8, #0x8a8]
+0131b828  mov x1,x19
+0131b82c  mov x3,xzr
+0131b830  mov x21,x0
+0131b834  ldr x2,[x8]
+0131b838  bl 0x01f8b398
+0131b83c  mov x0,x20
+0131b840  mov x1,x21
+0131b844  mov v0.16B,v9.16B
+0131b848  mov v1.16B,v8.16B
+0131b84c  mov x2,xzr
+0131b850  bl 0x016f3694
+0131b854  ldr x3,[x22]
+0131b858  mov w1,#0xffffffff
+0131b85c  mov w2,#0x1
+0131b860  bl 0x017e5030
+0131b864  mov x1,x0
+0131b868  mov x0,x19
+0131b86c  bl 0x0131b1ac
+0131b870  ldr x0,[x23]
+0131b874  bl 0x00b079a0
+0131b878  cbz x0,0x0131b968
+0131b87c  adrp x8,0x3334000
+0131b880  ldr x8,[x8, #0xc90]
+0131b884  mov x1,x19
+0131b888  mov x3,xzr
+0131b88c  mov x20,x0
+0131b890  ldr x2,[x8]
+0131b894  bl 0x01f8a368
+0131b898  ldr x0,[x24]
+0131b89c  bl 0x00b079a0
+0131b8a0  cbz x0,0x0131b968
+0131b8a4  adrp x8,0x3378000
+0131b8a8  ldr x8,[x8, #0xf08]
+0131b8ac  adrp x23,0x331d000
+0131b8b0  mov x1,x19
+0131b8b4  mov x3,xzr
+0131b8b8  ldr x2,[x8]
+0131b8bc  ldr x23,[x23, #0xb00]
+0131b8c0  mov x21,x0
+0131b8c4  bl 0x01f8b398
+0131b8c8  mov x0,x20
+0131b8cc  mov x1,x21
+0131b8d0  mov v0.16B,v9.16B
+0131b8d4  mov v1.16B,v8.16B
+0131b8d8  mov x2,xzr
+0131b8dc  bl 0x016f3694
+0131b8e0  ldr x3,[x22]
+0131b8e4  mov w1,#0xffffffff
+0131b8e8  mov w2,#0x1
+0131b8ec  bl 0x017e5030
+0131b8f0  mov x1,x0
+0131b8f4  mov x0,x19
+0131b8f8  bl 0x0131b298
+0131b8fc  mov x0,x19
+0131b900  bl 0x0131ae80
+0131b904  ldr x1,[x23]
+0131b908  bl 0x017dd73c
+0131b90c  mov x0,x19
+0131b910  bl 0x0131af6c
+0131b914  ldr x1,[x23]
+0131b918  bl 0x017dd73c
+0131b91c  mov x0,x19
+0131b920  bl 0x0131b058
+0131b924  ldr x1,[x23]
+0131b928  bl 0x017dd73c
+0131b92c  mov x0,x19
+0131b930  bl 0x0131b144
+0131b934  ldr x1,[x23]
+0131b938  bl 0x017dd73c
+0131b93c  mov x0,x19
+0131b940  bl 0x0131b230
+0131b944  ldr x1,[x23]
+0131b948  bl 0x017dd73c
+0131b94c  mov x0,x19
+0131b950  ldp x19,x30,[sp, #0x40]
+0131b954  ldp x21,x20,[sp, #0x30]
+0131b958  ldp x23,x22,[sp, #0x20]
+0131b95c  ldp x25,x24,[sp, #0x10]
+0131b960  ldp d9,d8,[sp], #0x50
+0131b964  b 0x0131b96c
+0131b968  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131b96c_CurrentDownMono__Hide.txt
+================================================================================
+Function: CurrentDownMono$$Hide @ 0131b96c
+
+--- Calls OUT ---
+  -> CurrentDownMono$$get_flashing1 @ 0131b058
+  -> CurrentDownMono$$get_downTip1 @ 0131a720
+  -> CurrentDownMono$$get_downTip3 @ 0131a8f8
+  -> CurrentDownMono$$get_downTip2 @ 0131a80c
+  -> UnityEngine.GameObject$$get_activeSelf @ 024de8b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> CurrentDownMono$$get_downTip0 @ 0131a634
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> CurrentDownMono$$get_flashing @ 0131ae80
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CurrentDownMono$$get_flashing0 @ 0131af6c
+  -> DG.Tweening.TweenExtensions$$Pause<object> @ 017dd73c
+  -> CurrentDownMono$$get_flashing2 @ 0131b144
+  -> CurrentDownMono$$get_downTip @ 0131a548
+  -> CurrentDownMono$$get_flashing3 @ 0131b230
+
+--- Calls IN ---
+  <- BattleManager$$HideCurrentChoose @ 0117f1d0
+  <- XLua.CSObjectWrap.CurrentDownMonoWrap$$_m_Hide @ 0123c4b0
+  <- CurrentDownMono$$Start @ 0131b31c
+
+--- Listing ---
+0131b96c  stp x21,x20,[sp, #-0x20]!
+0131b970  stp x19,x30,[sp, #0x10]
+0131b974  adrp x20,0x3575000
+0131b978  adrp x21,0x3318000
+0131b97c  ldrb w8,[x20, #0xd51]
+0131b980  ldr x21,[x21, #0x650]
+0131b984  mov x19,x0
+0131b988  tbnz w8,#0x0,0x0131b9ac
+0131b98c  adrp x0,0x3318000
+0131b990  ldr x0,[x0, #0x650]
+0131b994  bl 0x00b0789c
+0131b998  adrp x0,0x331d000
+0131b99c  ldr x0,[x0, #0xb00]
+0131b9a0  bl 0x00b0789c
+0131b9a4  mov w8,#0x1
+0131b9a8  strb w8,[x20, #0xd51]
+0131b9ac  ldr x8,[x21]
+0131b9b0  ldr x8,[x8, #0xb8]
+0131b9b4  ldr x0,[x8, #0x100]
+0131b9b8  cbz x0,0x0131b9d0
+0131b9bc  mov x1,x19
+0131b9c0  ldp x19,x30,[sp, #0x10]
+0131b9c4  mov x2,xzr
+0131b9c8  ldp x21,x20,[sp], #0x20
+0131b9cc  b 0x01060dac
+0131b9d0  mov x0,x19
+0131b9d4  bl 0x0131a548
+0131b9d8  cbz x0,0x0131bb2c
+0131b9dc  adrp x20,0x331d000
+0131b9e0  ldr x20,[x20, #0xb00]
+0131b9e4  mov x1,xzr
+0131b9e8  bl 0x024de8b0
+0131b9ec  tbz w0,#0x0,0x0131ba18
+0131b9f0  mov x0,x19
+0131b9f4  bl 0x0131a548
+0131b9f8  cbz x0,0x0131bb2c
+0131b9fc  mov w1,wzr
+0131ba00  mov x2,xzr
+0131ba04  bl 0x024de86c
+0131ba08  mov x0,x19
+0131ba0c  bl 0x0131ae80
+0131ba10  ldr x1,[x20]
+0131ba14  bl 0x017dd73c
+0131ba18  mov x0,x19
+0131ba1c  bl 0x0131a634
+0131ba20  cbz x0,0x0131bb2c
+0131ba24  mov x1,xzr
+0131ba28  bl 0x024de8b0
+0131ba2c  tbz w0,#0x0,0x0131ba58
+0131ba30  mov x0,x19
+0131ba34  bl 0x0131a634
+0131ba38  cbz x0,0x0131bb2c
+0131ba3c  mov w1,wzr
+0131ba40  mov x2,xzr
+0131ba44  bl 0x024de86c
+0131ba48  mov x0,x19
+0131ba4c  bl 0x0131af6c
+0131ba50  ldr x1,[x20]
+0131ba54  bl 0x017dd73c
+0131ba58  mov x0,x19
+0131ba5c  bl 0x0131a720
+0131ba60  cbz x0,0x0131bb2c
+0131ba64  mov x1,xzr
+0131ba68  bl 0x024de8b0
+0131ba6c  tbz w0,#0x0,0x0131ba98
+0131ba70  mov x0,x19
+0131ba74  bl 0x0131a720
+0131ba78  cbz x0,0x0131bb2c
+0131ba7c  mov w1,wzr
+0131ba80  mov x2,xzr
+0131ba84  bl 0x024de86c
+0131ba88  mov x0,x19
+0131ba8c  bl 0x0131b058
+0131ba90  ldr x1,[x20]
+0131ba94  bl 0x017dd73c
+0131ba98  mov x0,x19
+0131ba9c  bl 0x0131a80c
+0131baa0  cbz x0,0x0131bb2c
+0131baa4  mov x1,xzr
+0131baa8  bl 0x024de8b0
+0131baac  tbz w0,#0x0,0x0131bad8
+0131bab0  mov x0,x19
+0131bab4  bl 0x0131a80c
+0131bab8  cbz x0,0x0131bb2c
+0131babc  mov w1,wzr
+0131bac0  mov x2,xzr
+0131bac4  bl 0x024de86c
+0131bac8  mov x0,x19
+0131bacc  bl 0x0131b144
+0131bad0  ldr x1,[x20]
+0131bad4  bl 0x017dd73c
+0131bad8  mov x0,x19
+0131badc  bl 0x0131a8f8
+0131bae0  cbz x0,0x0131bb2c
+0131bae4  mov x1,xzr
+0131bae8  bl 0x024de8b0
+0131baec  tbz w0,#0x0,0x0131bb20
+0131baf0  mov x0,x19
+0131baf4  bl 0x0131a8f8
+0131baf8  cbz x0,0x0131bb2c
+0131bafc  mov w1,wzr
+0131bb00  mov x2,xzr
+0131bb04  bl 0x024de86c
+0131bb08  mov x0,x19
+0131bb0c  bl 0x0131b230
+0131bb10  ldr x1,[x20]
+0131bb14  ldp x19,x30,[sp, #0x10]
+0131bb18  ldp x21,x20,[sp], #0x20
+0131bb1c  b 0x017dd73c
+0131bb20  ldp x19,x30,[sp, #0x10]
+0131bb24  ldp x21,x20,[sp], #0x20
+0131bb28  ret
+0131bb2c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131bb30_CurrentDownMono__ShowCurrent.txt
+================================================================================
+Function: CurrentDownMono$$ShowCurrent @ 0131bb30
+
+--- Calls OUT ---
+  -> Ali$$get_Dir @ 00e0156c
+  -> CurrentDownMono$$get_flashing1 @ 0131b058
+  -> AliothExtensions$$StrToListRangeV2 @ 00e12e8c
+  -> CurrentDownMono$$get_downTip3 @ 0131a8f8
+  -> CurrentDownMono$$get_downTip1 @ 0131a720
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.GameObject$$get_activeSelf @ 024de8b0
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> CurrentDownMono$$get_downTip0 @ 0131a634
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+  -> RoleNews$$get_actorShow @ 00fe1980
+  -> CurrentDownMono$$get_flashing @ 0131ae80
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> CurrentDownMono$$get_flashing2 @ 0131b144
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> CurrentDownMono$$get_flashing3 @ 0131b230
+  -> RoleNews$$get_currentToRight @ 00fe0ea8
+  -> CurrentDownMono$$get_downTip2 @ 0131a80c
+  -> System.Comparison<Vector2>$$.ctor @ 01f7da58
+  -> RoleNews$$get_m_place @ 00fdc548
+  -> System.Collections.Generic.List<Vector2>$$Sort @ 01c97f7c
+  -> DG.Tweening.TweenExtensions$$Restart @ 016f6fe8
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> System.Collections.Generic.List<Vector2>$$get_Item @ 01c95b9c
+  -> UnityEngine.Transform$$set_localPosition @ 024f385c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> CurrentDownMono$$get_flashing0 @ 0131af6c
+  -> DG.Tweening.TweenExtensions$$Pause<object> @ 017dd73c
+  -> CurrentDownMono$$get_downTip @ 0131a548
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CurrentDownMonoWrap$$_m_ShowCurrent @ 0123c22c
+  <- BattleManager$$ShowCurrentChoose @ 01187474
+
+--- Listing ---
+0131bb30  str d10,[sp, #-0x50]!
+0131bb34  stp d9,d8,[sp, #0x8]
+0131bb38  str x24,[sp, #0x18]
+0131bb3c  stp x23,x22,[sp, #0x20]
+0131bb40  stp x21,x20,[sp, #0x30]
+0131bb44  stp x19,x30,[sp, #0x40]
+0131bb48  adrp x21,0x3575000
+0131bb4c  adrp x22,0x3318000
+0131bb50  ldrb w8,[x21, #0xd50]
+0131bb54  ldr x22,[x22, #0x650]
+0131bb58  mov x20,x1
+0131bb5c  mov x19,x0
+0131bb60  tbnz w8,#0x0,0x0131bbcc
+0131bb64  adrp x0,0x337e000
+0131bb68  ldr x0,[x0, #0xfa8]
+0131bb6c  bl 0x00b0789c
+0131bb70  adrp x0,0x335f000
+0131bb74  ldr x0,[x0, #0x20]
+0131bb78  bl 0x00b0789c
+0131bb7c  adrp x0,0x3348000
+0131bb80  ldr x0,[x0, #0x138]
+0131bb84  bl 0x00b0789c
+0131bb88  adrp x0,0x3337000
+0131bb8c  ldr x0,[x0, #0xec8]
+0131bb90  bl 0x00b0789c
+0131bb94  adrp x0,0x3318000
+0131bb98  ldr x0,[x0, #0x650]
+0131bb9c  bl 0x00b0789c
+0131bba0  adrp x0,0x3327000
+0131bba4  ldr x0,[x0, #0x888]
+0131bba8  bl 0x00b0789c
+0131bbac  adrp x0,0x3349000
+0131bbb0  ldr x0,[x0, #0x138]
+0131bbb4  bl 0x00b0789c
+0131bbb8  adrp x0,0x331d000
+0131bbbc  ldr x0,[x0, #0xb00]
+0131bbc0  bl 0x00b0789c
+0131bbc4  mov w8,#0x1
+0131bbc8  strb w8,[x21, #0xd50]
+0131bbcc  ldr x8,[x22]
+0131bbd0  ldr x8,[x8, #0xb8]
+0131bbd4  ldr x0,[x8, #0xf8]
+0131bbd8  cbz x0,0x0131bc04
+0131bbdc  mov x1,x19
+0131bbe0  mov x2,x20
+0131bbe4  ldp x19,x30,[sp, #0x40]
+0131bbe8  ldp x21,x20,[sp, #0x30]
+0131bbec  ldp x23,x22,[sp, #0x20]
+0131bbf0  ldr x24,[sp, #0x18]
+0131bbf4  ldp d9,d8,[sp, #0x8]
+0131bbf8  mov x3,xzr
+0131bbfc  ldr d10,[sp], #0x50
+0131bc00  b 0x0106125c
+0131bc04  adrp x23,0x335f000
+0131bc08  ldr x23,[x23, #0x20]
+0131bc0c  mov x0,x19
+0131bc10  mov x1,xzr
+0131bc14  bl 0x024e4e98
+0131bc18  ldr x8,[x23]
+0131bc1c  mov x21,x0
+0131bc20  ldr w9,[x8, #0xe0]
+0131bc24  cbnz w9,0x0131bc34
+0131bc28  mov x0,x8
+0131bc2c  bl 0x00b0798c
+0131bc30  ldr x8,[x23]
+0131bc34  ldr x8,[x8, #0xb8]
+0131bc38  ldr x0,[x8, #0x10]
+0131bc3c  cbz x0,0x0131c2b8
+0131bc40  mov x1,xzr
+0131bc44  bl 0x00e0156c
+0131bc48  cbz x20,0x0131c2b8
+0131bc4c  mov x0,x20
+0131bc50  mov x1,xzr
+0131bc54  mov v8.16B,v0.16B
+0131bc58  bl 0x00fdc548
+0131bc5c  ldr x8,[x23]
+0131bc60  ldr x8,[x8, #0xb8]
+0131bc64  ldr x0,[x8, #0x10]
+0131bc68  cbz x0,0x0131c2b8
+0131bc6c  mov x1,xzr
+0131bc70  mov v9.16B,v0.16B
+0131bc74  bl 0x00e0156c
+0131bc78  mov x0,x20
+0131bc7c  mov x1,xzr
+0131bc80  mov v10.16B,v0.16B
+0131bc84  bl 0x00fdc548
+0131bc88  cbz x21,0x0131c2b8
+0131bc8c  fmul s1,s10,s1
+0131bc90  fmul s0,s8,s9
+0131bc94  fmov s2,wzr
+0131bc98  mov x0,x21
+0131bc9c  mov x1,xzr
+0131bca0  bl 0x024f385c
+0131bca4  mov x0,x20
+0131bca8  mov x1,xzr
+0131bcac  bl 0x00fe1980
+0131bcb0  cbz x0,0x0131c2b8
+0131bcb4  ldr x0,[x0, #0x100]
+0131bcb8  mov x1,xzr
+0131bcbc  bl 0x01fdf3a0
+0131bcc0  mov w21,w0
+0131bcc4  mov x0,x19
+0131bcc8  bl 0x0131a548
+0131bccc  cbz x0,0x0131c2b8
+0131bcd0  adrp x22,0x331d000
+0131bcd4  ldr x22,[x22, #0xb00]
+0131bcd8  mov x1,xzr
+0131bcdc  bl 0x024de8b0
+0131bce0  tbz w21,#0x0,0x0131be30
+0131bce4  tbnz w0,#0x0,0x0131bd18
+0131bce8  mov x0,x19
+0131bcec  bl 0x0131a548
+0131bcf0  cbz x0,0x0131c2b8
+0131bcf4  mov w1,#0x1
+0131bcf8  mov x2,xzr
+0131bcfc  bl 0x024de86c
+0131bd00  mov x0,x19
+0131bd04  bl 0x0131ae80
+0131bd08  fmov s0,0xbf800000
+0131bd0c  mov w1,#0x1
+0131bd10  mov x2,xzr
+0131bd14  bl 0x016f6fe8
+0131bd18  mov x0,x19
+0131bd1c  bl 0x0131a634
+0131bd20  cbz x0,0x0131c2b8
+0131bd24  mov x1,xzr
+0131bd28  bl 0x024de8b0
+0131bd2c  tbz w0,#0x0,0x0131bd58
+0131bd30  mov x0,x19
+0131bd34  bl 0x0131a634
+0131bd38  cbz x0,0x0131c2b8
+0131bd3c  mov w1,wzr
+0131bd40  mov x2,xzr
+0131bd44  bl 0x024de86c
+0131bd48  mov x0,x19
+0131bd4c  bl 0x0131af6c
+0131bd50  ldr x1,[x22]
+0131bd54  bl 0x017dd73c
+0131bd58  mov x0,x19
+0131bd5c  bl 0x0131a720
+0131bd60  cbz x0,0x0131c2b8
+0131bd64  mov x1,xzr
+0131bd68  bl 0x024de8b0
+0131bd6c  tbz w0,#0x0,0x0131bd98
+0131bd70  mov x0,x19
+0131bd74  bl 0x0131a720
+0131bd78  cbz x0,0x0131c2b8
+0131bd7c  mov w1,wzr
+0131bd80  mov x2,xzr
+0131bd84  bl 0x024de86c
+0131bd88  mov x0,x19
+0131bd8c  bl 0x0131b058
+0131bd90  ldr x1,[x22]
+0131bd94  bl 0x017dd73c
+0131bd98  mov x0,x19
+0131bd9c  bl 0x0131a80c
+0131bda0  cbz x0,0x0131c2b8
+0131bda4  mov x1,xzr
+0131bda8  bl 0x024de8b0
+0131bdac  tbz w0,#0x0,0x0131bdd8
+0131bdb0  mov x0,x19
+0131bdb4  bl 0x0131a80c
+0131bdb8  cbz x0,0x0131c2b8
+0131bdbc  mov w1,wzr
+0131bdc0  mov x2,xzr
+0131bdc4  bl 0x024de86c
+0131bdc8  mov x0,x19
+0131bdcc  bl 0x0131b144
+0131bdd0  ldr x1,[x22]
+0131bdd4  bl 0x017dd73c
+0131bdd8  mov x0,x19
+0131bddc  bl 0x0131a8f8
+0131bde0  cbz x0,0x0131c2b8
+0131bde4  mov x1,xzr
+0131bde8  bl 0x024de8b0
+0131bdec  tbz w0,#0x0,0x0131c29c
+0131bdf0  mov x0,x19
+0131bdf4  bl 0x0131a8f8
+0131bdf8  cbz x0,0x0131c2b8
+0131bdfc  mov w1,wzr
+0131be00  mov x2,xzr
+0131be04  bl 0x024de86c
+0131be08  mov x0,x19
+0131be0c  bl 0x0131b230
+0131be10  ldr x1,[x22]
+0131be14  ldp x19,x30,[sp, #0x40]
+0131be18  ldp x21,x20,[sp, #0x30]
+0131be1c  ldp x23,x22,[sp, #0x20]
+0131be20  ldr x24,[sp, #0x18]
+0131be24  ldp d9,d8,[sp, #0x8]
+0131be28  ldr d10,[sp], #0x50
+0131be2c  b 0x017dd73c
+0131be30  tbz w0,#0x0,0x0131be5c
+0131be34  mov x0,x19
+0131be38  bl 0x0131a548
+0131be3c  cbz x0,0x0131c2b8
+0131be40  mov w1,wzr
+0131be44  mov x2,xzr
+0131be48  bl 0x024de86c
+0131be4c  mov x0,x19
+0131be50  bl 0x0131ae80
+0131be54  ldr x1,[x22]
+0131be58  bl 0x017dd73c
+0131be5c  mov x0,x19
+0131be60  bl 0x0131a634
+0131be64  cbz x0,0x0131c2b8
+0131be68  mov x1,xzr
+0131be6c  bl 0x024de8b0
+0131be70  tbnz w0,#0x0,0x0131bea4
+0131be74  mov x0,x19
+0131be78  bl 0x0131a634
+0131be7c  cbz x0,0x0131c2b8
+0131be80  mov w1,#0x1
+0131be84  mov x2,xzr
+0131be88  bl 0x024de86c
+0131be8c  mov x0,x19
+0131be90  bl 0x0131af6c
+0131be94  fmov s0,0xbf800000
+0131be98  mov w1,#0x1
+0131be9c  mov x2,xzr
+0131bea0  bl 0x016f6fe8
+0131bea4  mov x0,x19
+0131bea8  bl 0x0131a720
+0131beac  cbz x0,0x0131c2b8
+0131beb0  mov x1,xzr
+0131beb4  bl 0x024de8b0
+0131beb8  tbnz w0,#0x0,0x0131beec
+0131bebc  mov x0,x19
+0131bec0  bl 0x0131a720
+0131bec4  cbz x0,0x0131c2b8
+0131bec8  mov w1,#0x1
+0131becc  mov x2,xzr
+0131bed0  bl 0x024de86c
+0131bed4  mov x0,x19
+0131bed8  bl 0x0131b058
+0131bedc  fmov s0,0xbf800000
+0131bee0  mov w1,#0x1
+0131bee4  mov x2,xzr
+0131bee8  bl 0x016f6fe8
+0131beec  mov x0,x19
+0131bef0  bl 0x0131a80c
+0131bef4  cbz x0,0x0131c2b8
+0131bef8  mov x1,xzr
+0131befc  bl 0x024de8b0
+0131bf00  tbnz w0,#0x0,0x0131bf34
+0131bf04  mov x0,x19
+0131bf08  bl 0x0131a80c
+0131bf0c  cbz x0,0x0131c2b8
+0131bf10  mov w1,#0x1
+0131bf14  mov x2,xzr
+0131bf18  bl 0x024de86c
+0131bf1c  mov x0,x19
+0131bf20  bl 0x0131b144
+0131bf24  fmov s0,0xbf800000
+0131bf28  mov w1,#0x1
+0131bf2c  mov x2,xzr
+0131bf30  bl 0x016f6fe8
+0131bf34  mov x0,x19
+0131bf38  bl 0x0131a8f8
+0131bf3c  cbz x0,0x0131c2b8
+0131bf40  mov x1,xzr
+0131bf44  bl 0x024de8b0
+0131bf48  tbnz w0,#0x0,0x0131bf7c
+0131bf4c  mov x0,x19
+0131bf50  bl 0x0131a8f8
+0131bf54  cbz x0,0x0131c2b8
+0131bf58  mov w1,#0x1
+0131bf5c  mov x2,xzr
+0131bf60  bl 0x024de86c
+0131bf64  mov x0,x19
+0131bf68  bl 0x0131b230
+0131bf6c  fmov s0,0xbf800000
+0131bf70  mov w1,#0x1
+0131bf74  mov x2,xzr
+0131bf78  bl 0x016f6fe8
+0131bf7c  mov x0,x20
+0131bf80  mov x1,xzr
+0131bf84  bl 0x00fe1980
+0131bf88  cbz x0,0x0131c2b8
+0131bf8c  adrp x22,0x3348000
+0131bf90  ldr x21,[x0, #0x100]
+0131bf94  ldr x22,[x22, #0x138]
+0131bf98  mov x0,x20
+0131bf9c  mov x1,xzr
+0131bfa0  bl 0x00fe0ea8
+0131bfa4  ldr x8,[x22]
+0131bfa8  mov w20,w0
+0131bfac  ldr w9,[x8, #0xe0]
+0131bfb0  cbnz w9,0x0131bfbc
+0131bfb4  mov x0,x8
+0131bfb8  bl 0x00b0798c
+0131bfbc  adrp x24,0x3337000
+0131bfc0  ldr x24,[x24, #0xec8]
+0131bfc4  and w1,w20,#0x1
+0131bfc8  mov x0,x21
+0131bfcc  mov x2,xzr
+0131bfd0  bl 0x00e12e8c
+0131bfd4  ldr x8,[x23]
+0131bfd8  mov x20,x0
+0131bfdc  ldr w9,[x8, #0xe0]
+0131bfe0  cbnz w9,0x0131bff0
+0131bfe4  mov x0,x8
+0131bfe8  bl 0x00b0798c
+0131bfec  ldr x8,[x23]
+0131bff0  ldr x8,[x8, #0xb8]
+0131bff4  ldr x0,[x24]
+0131bff8  ldr x22,[x8, #0x10]
+0131bffc  bl 0x00b079a0
+0131c000  cbz x0,0x0131c2b8
+0131c004  adrp x8,0x337e000
+0131c008  ldr x8,[x8, #0xfa8]
+0131c00c  mov x1,x22
+0131c010  mov x3,xzr
+0131c014  mov x21,x0
+0131c018  ldr x2,[x8]
+0131c01c  bl 0x01f7da58
+0131c020  cbz x20,0x0131c2b8
+0131c024  adrp x8,0x3327000
+0131c028  ldr x8,[x8, #0x888]
+0131c02c  mov x0,x20
+0131c030  mov x1,x21
+0131c034  ldr x2,[x8]
+0131c038  bl 0x01c97f7c
+0131c03c  mov x0,x19
+0131c040  bl 0x0131a8f8
+0131c044  cbz x0,0x0131c2b8
+0131c048  adrp x22,0x3349000
+0131c04c  ldr x22,[x22, #0x138]
+0131c050  mov x1,xzr
+0131c054  bl 0x024de730
+0131c058  ldr x2,[x22]
+0131c05c  mov x21,x0
+0131c060  mov x0,x20
+0131c064  mov w1,wzr
+0131c068  bl 0x01c95b9c
+0131c06c  ldr x8,[x23]
+0131c070  ldr x8,[x8, #0xb8]
+0131c074  ldr x0,[x8, #0x10]
+0131c078  cbz x0,0x0131c2b8
+0131c07c  mov x1,xzr
+0131c080  mov v8.16B,v0.16B
+0131c084  bl 0x00e0156c
+0131c088  ldr x2,[x22]
+0131c08c  mov x0,x20
+0131c090  mov w1,wzr
+0131c094  mov v9.16B,v0.16B
+0131c098  bl 0x01c95b9c
+0131c09c  ldr x8,[x23]
+0131c0a0  ldr x8,[x8, #0xb8]
+0131c0a4  ldr x0,[x8, #0x10]
+0131c0a8  cbz x0,0x0131c2b8
+0131c0ac  mov x1,xzr
+0131c0b0  mov v10.16B,v1.16B
+0131c0b4  bl 0x00e0156c
+0131c0b8  cbz x21,0x0131c2b8
+0131c0bc  fmul s1,s10,s0
+0131c0c0  fmul s0,s8,s9
+0131c0c4  fmov s2,wzr
+0131c0c8  mov x0,x21
+0131c0cc  mov x1,xzr
+0131c0d0  bl 0x024f385c
+0131c0d4  mov x0,x19
+0131c0d8  bl 0x0131a80c
+0131c0dc  cbz x0,0x0131c2b8
+0131c0e0  mov x1,xzr
+0131c0e4  bl 0x024de730
+0131c0e8  ldr x2,[x22]
+0131c0ec  mov x21,x0
+0131c0f0  mov w1,#0x1
+0131c0f4  mov x0,x20
+0131c0f8  bl 0x01c95b9c
+0131c0fc  ldr x8,[x23]
+0131c100  ldr x8,[x8, #0xb8]
+0131c104  ldr x0,[x8, #0x10]
+0131c108  cbz x0,0x0131c2b8
+0131c10c  mov x1,xzr
+0131c110  mov v8.16B,v0.16B
+0131c114  bl 0x00e0156c
+0131c118  ldr x2,[x22]
+0131c11c  mov w1,#0x1
+0131c120  mov x0,x20
+0131c124  mov v9.16B,v0.16B
+0131c128  bl 0x01c95b9c
+0131c12c  ldr x8,[x23]
+0131c130  ldr x8,[x8, #0xb8]
+0131c134  ldr x0,[x8, #0x10]
+0131c138  cbz x0,0x0131c2b8
+0131c13c  mov x1,xzr
+0131c140  mov v10.16B,v1.16B
+0131c144  bl 0x00e0156c
+0131c148  cbz x21,0x0131c2b8
+0131c14c  fmul s1,s10,s0
+0131c150  fmul s0,s8,s9
+0131c154  fmov s2,wzr
+0131c158  mov x0,x21
+0131c15c  mov x1,xzr
+0131c160  bl 0x024f385c
+0131c164  mov x0,x19
+0131c168  bl 0x0131a634
+0131c16c  cbz x0,0x0131c2b8
+0131c170  mov x1,xzr
+0131c174  bl 0x024de730
+0131c178  ldr x2,[x22]
+0131c17c  mov x21,x0
+0131c180  mov w1,#0x2
+0131c184  mov x0,x20
+0131c188  bl 0x01c95b9c
+0131c18c  ldr x8,[x23]
+0131c190  ldr x8,[x8, #0xb8]
+0131c194  ldr x0,[x8, #0x10]
+0131c198  cbz x0,0x0131c2b8
+0131c19c  mov x1,xzr
+0131c1a0  mov v8.16B,v0.16B
+0131c1a4  bl 0x00e0156c
+0131c1a8  ldr x2,[x22]
+0131c1ac  mov w1,#0x2
+0131c1b0  mov x0,x20
+0131c1b4  mov v9.16B,v0.16B
+0131c1b8  bl 0x01c95b9c
+0131c1bc  ldr x8,[x23]
+0131c1c0  ldr x8,[x8, #0xb8]
+0131c1c4  ldr x0,[x8, #0x10]
+0131c1c8  cbz x0,0x0131c2b8
+0131c1cc  mov x1,xzr
+0131c1d0  mov v10.16B,v1.16B
+0131c1d4  bl 0x00e0156c
+0131c1d8  cbz x21,0x0131c2b8
+0131c1dc  fmul s1,s10,s0
+0131c1e0  fmul s0,s8,s9
+0131c1e4  fmov s2,wzr
+0131c1e8  mov x0,x21
+0131c1ec  mov x1,xzr
+0131c1f0  bl 0x024f385c
+0131c1f4  mov x0,x19
+0131c1f8  bl 0x0131a720
+0131c1fc  cbz x0,0x0131c2b8
+0131c200  mov x1,xzr
+0131c204  bl 0x024de730
+0131c208  ldr x2,[x22]
+0131c20c  mov x19,x0
+0131c210  mov w1,#0x3
+0131c214  mov x0,x20
+0131c218  bl 0x01c95b9c
+0131c21c  ldr x8,[x23]
+0131c220  ldr x8,[x8, #0xb8]
+0131c224  ldr x0,[x8, #0x10]
+0131c228  cbz x0,0x0131c2b8
+0131c22c  mov x1,xzr
+0131c230  mov v8.16B,v0.16B
+0131c234  bl 0x00e0156c
+0131c238  ldr x2,[x22]
+0131c23c  mov w1,#0x3
+0131c240  mov x0,x20
+0131c244  mov v9.16B,v0.16B
+0131c248  bl 0x01c95b9c
+0131c24c  ldr x8,[x23]
+0131c250  ldr x8,[x8, #0xb8]
+0131c254  ldr x0,[x8, #0x10]
+0131c258  cbz x0,0x0131c2b8
+0131c25c  mov x1,xzr
+0131c260  mov v10.16B,v1.16B
+0131c264  bl 0x00e0156c
+0131c268  cbz x19,0x0131c2b8
+0131c26c  fmul s1,s10,s0
+0131c270  fmul s0,s8,s9
+0131c274  mov x0,x19
+0131c278  ldp x19,x30,[sp, #0x40]
+0131c27c  ldp x21,x20,[sp, #0x30]
+0131c280  ldp x23,x22,[sp, #0x20]
+0131c284  ldr x24,[sp, #0x18]
+0131c288  ldp d9,d8,[sp, #0x8]
+0131c28c  fmov s2,wzr
+0131c290  mov x1,xzr
+0131c294  ldr d10,[sp], #0x50
+0131c298  b 0x024f385c
+0131c29c  ldp x19,x30,[sp, #0x40]
+0131c2a0  ldp x21,x20,[sp, #0x30]
+0131c2a4  ldp x23,x22,[sp, #0x20]
+0131c2a8  ldr x24,[sp, #0x18]
+0131c2ac  ldp d9,d8,[sp, #0x8]
+0131c2b0  ldr d10,[sp], #0x50
+0131c2b4  ret
+0131c2b8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c2bc_CurrentDownMono__.ctor.txt
+================================================================================
+Function: CurrentDownMono$$.ctor @ 0131c2bc
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BaseMono$$.ctor @ 00e1c6b4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CurrentDownMonoWrap$$__CreateInstance @ 0123c074
+
+--- Listing ---
+0131c2bc  stp x21,x20,[sp, #-0x20]!
+0131c2c0  stp x19,x30,[sp, #0x10]
+0131c2c4  adrp x21,0x3575000
+0131c2c8  adrp x20,0x3318000
+0131c2cc  ldrb w8,[x21, #0xd52]
+0131c2d0  ldr x20,[x20, #0x650]
+0131c2d4  mov x19,x0
+0131c2d8  tbnz w8,#0x0,0x0131c2f0
+0131c2dc  adrp x0,0x3318000
+0131c2e0  ldr x0,[x0, #0x650]
+0131c2e4  bl 0x00b0789c
+0131c2e8  mov w8,#0x1
+0131c2ec  strb w8,[x21, #0xd52]
+0131c2f0  mov x0,x19
+0131c2f4  mov x1,xzr
+0131c2f8  bl 0x00e1c6b4
+0131c2fc  ldr x8,[x20]
+0131c300  ldr x8,[x8, #0xb8]
+0131c304  ldr x0,[x8, #0x108]
+0131c308  cbz x0,0x0131c320
+0131c30c  mov x1,x19
+0131c310  ldp x19,x30,[sp, #0x10]
+0131c314  mov x2,xzr
+0131c318  ldp x21,x20,[sp], #0x20
+0131c31c  b 0x01060dac
+0131c320  ldp x19,x30,[sp, #0x10]
+0131c324  ldp x21,x20,[sp], #0x20
+0131c328  ret
+
+
+================================================================================
+### FILE: 0131c32c_CurrentDownMono___Start_b__60_0.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_0 @ 0131c32c
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$get_color @ 024d2db8
+  -> CurrentDownMono$$get_m_m @ 0131a9e4
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0131c32c  str x30,[sp, #-0x10]!
+0131c330  bl 0x0131a9e4
+0131c334  cbz x0,0x0131c344
+0131c338  mov x1,xzr
+0131c33c  ldr x30,[sp], #0x10
+0131c340  b 0x024d2db8
+0131c344  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c348_CurrentDownMono___Start_b__60_1.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_1 @ 0131c348
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$set_color @ 024d2ed8
+  -> CurrentDownMono$$get_m_m @ 0131a9e4
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0131c348  stp d11,d10,[sp, #-0x30]!
+0131c34c  stp d9,d8,[sp, #0x10]
+0131c350  str x30,[sp, #0x20]
+0131c354  mov v8.16B,v3.16B
+0131c358  mov v9.16B,v2.16B
+0131c35c  mov v10.16B,v1.16B
+0131c360  mov v11.16B,v0.16B
+0131c364  bl 0x0131a9e4
+0131c368  cbz x0,0x0131c390
+0131c36c  mov v2.16B,v9.16B
+0131c370  mov v3.16B,v8.16B
+0131c374  ldr x30,[sp, #0x20]
+0131c378  ldp d9,d8,[sp, #0x10]
+0131c37c  mov v0.16B,v11.16B
+0131c380  mov v1.16B,v10.16B
+0131c384  mov x1,xzr
+0131c388  ldp d11,d10,[sp], #0x30
+0131c38c  b 0x024d2ed8
+0131c390  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c394_CurrentDownMono___Start_b__60_2.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_2 @ 0131c394
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$get_color @ 024d2db8
+  -> FUN_00b079b0 @ 00b079b0
+  -> CurrentDownMono$$get_m_m0 @ 0131aad0
+
+--- Calls IN ---
+
+--- Listing ---
+0131c394  str x30,[sp, #-0x10]!
+0131c398  bl 0x0131aad0
+0131c39c  cbz x0,0x0131c3ac
+0131c3a0  mov x1,xzr
+0131c3a4  ldr x30,[sp], #0x10
+0131c3a8  b 0x024d2db8
+0131c3ac  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c3b0_CurrentDownMono___Start_b__60_3.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_3 @ 0131c3b0
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$set_color @ 024d2ed8
+  -> CurrentDownMono$$get_m_m0 @ 0131aad0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0131c3b0  stp d11,d10,[sp, #-0x30]!
+0131c3b4  stp d9,d8,[sp, #0x10]
+0131c3b8  str x30,[sp, #0x20]
+0131c3bc  mov v8.16B,v3.16B
+0131c3c0  mov v9.16B,v2.16B
+0131c3c4  mov v10.16B,v1.16B
+0131c3c8  mov v11.16B,v0.16B
+0131c3cc  bl 0x0131aad0
+0131c3d0  cbz x0,0x0131c3f8
+0131c3d4  mov v2.16B,v9.16B
+0131c3d8  mov v3.16B,v8.16B
+0131c3dc  ldr x30,[sp, #0x20]
+0131c3e0  ldp d9,d8,[sp, #0x10]
+0131c3e4  mov v0.16B,v11.16B
+0131c3e8  mov v1.16B,v10.16B
+0131c3ec  mov x1,xzr
+0131c3f0  ldp d11,d10,[sp], #0x30
+0131c3f4  b 0x024d2ed8
+0131c3f8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c3fc_CurrentDownMono___Start_b__60_4.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_4 @ 0131c3fc
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$get_color @ 024d2db8
+  -> CurrentDownMono$$get_m_m1 @ 0131abbc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0131c3fc  str x30,[sp, #-0x10]!
+0131c400  bl 0x0131abbc
+0131c404  cbz x0,0x0131c414
+0131c408  mov x1,xzr
+0131c40c  ldr x30,[sp], #0x10
+0131c410  b 0x024d2db8
+0131c414  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c418_CurrentDownMono___Start_b__60_5.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_5 @ 0131c418
+
+--- Calls OUT ---
+  -> CurrentDownMono$$get_m_m1 @ 0131abbc
+  -> UnityEngine.Material$$set_color @ 024d2ed8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0131c418  stp d11,d10,[sp, #-0x30]!
+0131c41c  stp d9,d8,[sp, #0x10]
+0131c420  str x30,[sp, #0x20]
+0131c424  mov v8.16B,v3.16B
+0131c428  mov v9.16B,v2.16B
+0131c42c  mov v10.16B,v1.16B
+0131c430  mov v11.16B,v0.16B
+0131c434  bl 0x0131abbc
+0131c438  cbz x0,0x0131c460
+0131c43c  mov v2.16B,v9.16B
+0131c440  mov v3.16B,v8.16B
+0131c444  ldr x30,[sp, #0x20]
+0131c448  ldp d9,d8,[sp, #0x10]
+0131c44c  mov v0.16B,v11.16B
+0131c450  mov v1.16B,v10.16B
+0131c454  mov x1,xzr
+0131c458  ldp d11,d10,[sp], #0x30
+0131c45c  b 0x024d2ed8
+0131c460  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c464_CurrentDownMono___Start_b__60_6.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_6 @ 0131c464
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$get_color @ 024d2db8
+  -> CurrentDownMono$$get_m_m2 @ 0131aca8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0131c464  str x30,[sp, #-0x10]!
+0131c468  bl 0x0131aca8
+0131c46c  cbz x0,0x0131c47c
+0131c470  mov x1,xzr
+0131c474  ldr x30,[sp], #0x10
+0131c478  b 0x024d2db8
+0131c47c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c480_CurrentDownMono___Start_b__60_7.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_7 @ 0131c480
+
+--- Calls OUT ---
+  -> CurrentDownMono$$get_m_m2 @ 0131aca8
+  -> UnityEngine.Material$$set_color @ 024d2ed8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0131c480  stp d11,d10,[sp, #-0x30]!
+0131c484  stp d9,d8,[sp, #0x10]
+0131c488  str x30,[sp, #0x20]
+0131c48c  mov v8.16B,v3.16B
+0131c490  mov v9.16B,v2.16B
+0131c494  mov v10.16B,v1.16B
+0131c498  mov v11.16B,v0.16B
+0131c49c  bl 0x0131aca8
+0131c4a0  cbz x0,0x0131c4c8
+0131c4a4  mov v2.16B,v9.16B
+0131c4a8  mov v3.16B,v8.16B
+0131c4ac  ldr x30,[sp, #0x20]
+0131c4b0  ldp d9,d8,[sp, #0x10]
+0131c4b4  mov v0.16B,v11.16B
+0131c4b8  mov v1.16B,v10.16B
+0131c4bc  mov x1,xzr
+0131c4c0  ldp d11,d10,[sp], #0x30
+0131c4c4  b 0x024d2ed8
+0131c4c8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c4cc_CurrentDownMono___Start_b__60_8.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_8 @ 0131c4cc
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$get_color @ 024d2db8
+  -> FUN_00b079b0 @ 00b079b0
+  -> CurrentDownMono$$get_m_m3 @ 0131ad94
+
+--- Calls IN ---
+
+--- Listing ---
+0131c4cc  str x30,[sp, #-0x10]!
+0131c4d0  bl 0x0131ad94
+0131c4d4  cbz x0,0x0131c4e4
+0131c4d8  mov x1,xzr
+0131c4dc  ldr x30,[sp], #0x10
+0131c4e0  b 0x024d2db8
+0131c4e4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0131c4e8_CurrentDownMono___Start_b__60_9.txt
+================================================================================
+Function: CurrentDownMono$$<Start>b__60_9 @ 0131c4e8
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$set_color @ 024d2ed8
+  -> FUN_00b079b0 @ 00b079b0
+  -> CurrentDownMono$$get_m_m3 @ 0131ad94
+
+--- Calls IN ---
+
+--- Listing ---
+0131c4e8  stp d11,d10,[sp, #-0x30]!
+0131c4ec  stp d9,d8,[sp, #0x10]
+0131c4f0  str x30,[sp, #0x20]
+0131c4f4  mov v8.16B,v3.16B
+0131c4f8  mov v9.16B,v2.16B
+0131c4fc  mov v10.16B,v1.16B
+0131c500  mov v11.16B,v0.16B
+0131c504  bl 0x0131ad94
+0131c508  cbz x0,0x0131c530
+0131c50c  mov v2.16B,v9.16B
+0131c510  mov v3.16B,v8.16B
+0131c514  ldr x30,[sp, #0x20]
+0131c518  ldp d9,d8,[sp, #0x10]
+0131c51c  mov v0.16B,v11.16B
+0131c520  mov v1.16B,v10.16B
+0131c524  mov x1,xzr
+0131c528  ldp d11,d10,[sp], #0x30
+0131c52c  b 0x024d2ed8
+0131c530  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0220c8e4_CustomPlayableExtensions__ResetTime.txt
+================================================================================
+Function: CustomPlayableExtensions$$ResetTime @ 0220c8e4
+
+--- Calls OUT ---
+  -> UnityEngine.Playables.PlayableExtensions$$SetTime<Playable> @ 017b32f4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- SimpleAnimationPlayable$$OnGraphStop @ 02211a38
+  <- SimpleAnimationPlayable.StateInfo$$SetTime @ 02213a74
+
+--- Listing ---
+0220c8e4  str d8,[sp, #-0x30]!
+0220c8e8  str x22,[sp, #0x8]
+0220c8ec  stp x21,x20,[sp, #0x10]
+0220c8f0  stp x19,x30,[sp, #0x20]
+0220c8f4  adrp x22,0x357a000
+0220c8f8  adrp x21,0x331c000
+0220c8fc  ldrb w8,[x22, #0x9ff]
+0220c900  ldr x21,[x21, #0x958]
+0220c904  mov v8.16B,v0.16B
+0220c908  mov x19,x1
+0220c90c  mov x20,x0
+0220c910  tbnz w8,#0x0,0x0220c928
+0220c914  adrp x0,0x331c000
+0220c918  ldr x0,[x0, #0x958]
+0220c91c  bl 0x00b0789c
+0220c920  mov w8,#0x1
+0220c924  strb w8,[x22, #0x9ff]
+0220c928  ldr x2,[x21]
+0220c92c  fcvt d8,s8
+0220c930  mov x0,x20
+0220c934  mov x1,x19
+0220c938  mov v0.16B,v8.16B
+0220c93c  bl 0x017b32f4
+0220c940  ldr x2,[x21]
+0220c944  mov x0,x20
+0220c948  mov x1,x19
+0220c94c  ldp x19,x30,[sp, #0x20]
+0220c950  ldp x21,x20,[sp, #0x10]
+0220c954  ldr x22,[sp, #0x8]
+0220c958  mov v0.16B,v8.16B
+0220c95c  ldr d8,[sp], #0x30
+0220c960  b 0x017b32f4
+
+

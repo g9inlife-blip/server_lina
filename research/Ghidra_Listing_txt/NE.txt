@@ -1,0 +1,1920 @@
+================================================================================
+### FILE: 008d49c0_newlocale.txt
+================================================================================
+Function: newlocale @ 008d49c0
+
+--- Calls OUT ---
+  -> newlocale @ 03799408
+
+--- Calls IN ---
+  <- do_toupper @ 00b71e34
+  <- do_get @ 00b56900
+  <- init @ 00b7d590
+  <- ctype_byname @ 00b727c8
+  <- do_put @ 00b5daf0
+  <- do_tolower @ 00b71f0c
+  <- FUN_00b80088 @ 00b80088
+  <- FUN_00b6dfe4 @ 00b6dfe4
+  <- __widen_and_group_float @ 00b5ef2c
+  <- collate_byname @ 00b71498
+  <- FUN_00b80348 @ 00b80348
+  <- do_tolower @ 00b72480
+  <- do_get @ 00b59ca4
+  <- do_put @ 00b5f94c
+  <- ctype_byname @ 00b72b10
+  <- __time_get @ 00b78b1c
+  <- __widen_and_group_float @ 00b5cc74
+  <- FUN_00b6bcd0 @ 00b6bcd0
+  <- do_tolower @ 00b723dc
+  <- codecvt @ 00b73450
+  <- do_toupper @ 00b71d8c
+  <- do_put @ 00b5e874
+  <- do_put @ 00b5f510
+  <- __init @ 00b772d4
+  <- do_put @ 00b67e5c
+  <- do_toupper @ 00b72260
+  <- FUN_00b801e8 @ 00b801e8
+  <- do_put @ 00b5e5ec
+  <- do_put @ 00b5d674
+  <- do_put @ 00b68f60
+  <- do_tolower @ 00b71fb4
+  <- __time_put @ 00b7c704
+  <- init @ 00b7c944
+  <- do_put @ 00b5bf30
+  <- ctype_byname @ 00b72a08
+  <- do_put @ 00b5c198
+  <- __cloc @ 00b571bc
+  <- __time_get_storage @ 00b7b544
+  <- do_put @ 00b5e368
+  <- __time_get_storage @ 00b7bc38
+  <- collate_byname @ 00b715a0
+  <- __time_put @ 00b7c7f4
+  <- do_toupper @ 00b72304
+  <- collate_byname @ 00b70d68
+  <- FUN_00b7fc7c @ 00b7fc7c
+  <- do_put @ 00b5c69c
+  <- do_put @ 00b5eaf8
+  <- FUN_00b7ff20 @ 00b7ff20
+  <- __init @ 00b77764
+  <- FUN_00b80448 @ 00b80448
+  <- do_put @ 00b5c41c
+  <- ctype_byname @ 00b7268c
+  <- codecvt @ 00b734f4
+  <- do_put @ 00b5d248
+  <- collate_byname @ 00b70ec0
+  <- do_put @ 00b5b6b4
+  <- init @ 00b7d174
+  <- ~codecvt @ 00b7eae8
+  <- init @ 00b7e1ac
+  <- FUN_00b7fb40 @ 00b7fb40
+  <- ~__time_put @ 00b7c8a0
+  <- FUN_00b80548 @ 00b80548
+  <- FUN_00b7fdb8 @ 00b7fdb8
+  <- FUN_00b6a07c @ 00b6a07c
+  <- __time_get @ 00b78c0c
+
+--- Listing ---
+008d49c0  adrp x16,0x3307000
+008d49c4  ldr x17,[x16, #0xea0]
+008d49c8  add x16,x16,#0xea0
+008d49cc  br x17
+
+
+================================================================================
+### FILE: 00b472d4_nested_exception.txt
+================================================================================
+Function: nested_exception @ 00b472d4
+FuncComment: std::nested_exception::nested_exception()
+
+--- Calls OUT ---
+  -> __cxa_current_primary_exception @ 008d47a0
+
+--- Calls IN ---
+
+--- Listing ---
+00b472d4  str x19,[sp, #-0x20]!
+    ; [PLATE] std::nested_exception::nested_exception()
+00b472d8  stp x29,x30,[sp, #0x10]
+00b472dc  add x29,sp,#0x10
+00b472e0  adrp x8,0x3317000
+00b472e4  ldr x8,[x8, #0x420]
+00b472e8  mov x19,x0
+00b472ec  add x8,x8,#0x10
+00b472f0  str x8,[x0]
+00b472f4  bl 0x008d47a0
+00b472f8  str x0,[x19, #0x8]
+00b472fc  ldp x29,x30,[sp, #0x10]
+00b47300  ldr x19,[sp], #0x20
+00b47304  ret
+
+
+================================================================================
+### FILE: 00b4732c__nested_exception.txt
+================================================================================
+Function: ~nested_exception @ 00b4732c
+FuncComment: std::nested_exception::~nested_exception()
+
+--- Calls OUT ---
+  -> __cxa_decrement_exception_refcount @ 008d39b0
+
+--- Calls IN ---
+
+--- Listing ---
+00b4732c  adrp x9,0x3317000
+    ; [PLATE] std::nested_exception::~nested_exception()
+00b47330  ldr x8,[x0, #0x8]
+00b47334  ldr x9,[x9, #0x420]
+00b47338  add x9,x9,#0x10
+00b4733c  str x9,[x0]
+00b47340  mov x0,x8
+00b47344  b 0x008d39b0
+
+
+================================================================================
+### FILE: 00b47348__nested_exception.txt
+================================================================================
+Function: ~nested_exception @ 00b47348
+FuncComment: std::nested_exception::~nested_exception()
+
+--- Calls OUT ---
+  -> operator.delete @ 008d3ed0
+  -> __cxa_decrement_exception_refcount @ 008d39b0
+
+--- Calls IN ---
+
+--- Listing ---
+00b47348  str x19,[sp, #-0x20]!
+    ; [PLATE] std::nested_exception::~nested_exception()
+00b4734c  stp x29,x30,[sp, #0x10]
+00b47350  add x29,sp,#0x10
+00b47354  adrp x8,0x3317000
+00b47358  mov x19,x0
+00b4735c  ldr x0,[x0, #0x8]
+00b47360  ldr x8,[x8, #0x420]
+00b47364  add x8,x8,#0x10
+00b47368  str x8,[x19]
+00b4736c  bl 0x008d39b0
+00b47370  ldp x29,x30,[sp, #0x10]
+00b47374  mov x0,x19
+00b47378  ldr x19,[sp], #0x20
+00b4737c  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00d34464_NetworkManagerExample__send.txt
+================================================================================
+Function: NetworkManagerExample$$send @ 00d34464
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GameCenter_RTM$$SendDataToAll @ 00d0eca0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- PTPGameController$$CheckMatchState @ 00d34bc0
+  <- BasePackage$$send @ 00d33fd4
+  <- ClickManagerExample$$Update @ 00d33c60
+
+--- Listing ---
+00d34464  stp x21,x20,[sp, #-0x20]!
+00d34468  stp x19,x30,[sp, #0x10]
+00d3446c  adrp x19,0x3571000
+00d34470  adrp x21,0x336b000
+00d34474  ldrb w8,[x19, #0xd35]
+00d34478  ldr x21,[x21, #0x1c8]
+00d3447c  mov x20,x0
+00d34480  tbnz w8,#0x0,0x00d34498
+00d34484  adrp x0,0x336b000
+00d34488  ldr x0,[x0, #0x1c8]
+00d3448c  bl 0x00b0789c
+00d34490  mov w8,#0x1
+00d34494  strb w8,[x19, #0xd35]
+00d34498  ldr x0,[x21]
+00d3449c  bl 0x01e09dd4
+00d344a0  cbz x20,0x00d344e0
+00d344a4  mov x19,x0
+00d344a8  ldr x0,[x20, #0x10]
+00d344ac  cbz x0,0x00d344e0
+00d344b0  ldr x8,[x0]
+00d344b4  ldr x9,[x8, #0x3c8]
+00d344b8  ldr x1,[x8, #0x3d0]
+00d344bc  blr x9
+00d344c0  cbz x19,0x00d344e0
+00d344c4  mov x1,x0
+00d344c8  mov x0,x19
+00d344cc  ldp x19,x30,[sp, #0x10]
+00d344d0  mov w2,wzr
+00d344d4  mov x3,xzr
+00d344d8  ldp x21,x20,[sp], #0x20
+00d344dc  b 0x00d0eca0
+00d344e0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d34508_NetworkManagerExample__.ctor.txt
+================================================================================
+Function: NetworkManagerExample$$.ctor @ 00d34508
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d34508  mov x1,xzr
+00d3450c  b 0x02194104
+
+
+================================================================================
+### FILE: 00dbcb94_NetFXCoreWrappers__GetDeclaringType.txt
+================================================================================
+Function: NetFXCoreWrappers$$GetDeclaringType @ 00dbcb94
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcb94  str x30,[sp, #-0x10]!
+00dbcb98  cbz x0,0x00dbcbac
+00dbcb9c  ldr x8,[x0]
+00dbcba0  ldp x2,x1,[x8, #0x1c8]
+00dbcba4  ldr x30,[sp], #0x10
+00dbcba8  br x2
+00dbcbac  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcbb0_NetFXCoreWrappers__GetMethodInfoEx.txt
+================================================================================
+Function: NetFXCoreWrappers$$GetMethodInfoEx @ 00dbcbb0
+
+--- Calls OUT ---
+  -> System.Delegate$$get_Method @ 0219aa08
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AliothEngine.WeakEvents.WeakAction<object>$$.ctor @ 01f0cb68
+  <- AliothEngine.WeakEvents.WeakActionBase$$.ctor @ 01696f00
+  <- AliothEngine.WeakEvents.WeakEvent$$Remove @ 0169754c
+  <- AliothEngine.WeakEvents.WeakEvent<object,-object>$$Remove @ 01f0d470
+  <- AliothEngine.WeakEvents.WeakAction<object,-object>$$.ctor @ 01f0cc90
+  <- AliothEngine.WeakEvents.WeakEvent<object>$$Remove @ 01f0d02c
+
+--- Listing ---
+00dbcbb0  cbz x0,0x00dbcbbc
+00dbcbb4  mov x1,xzr
+00dbcbb8  b 0x0219aa08
+00dbcbbc  str x30,[sp, #-0x10]!
+00dbcbc0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcbc4_NetFXCoreWrappers__GetInterfacesEx.txt
+================================================================================
+Function: NetFXCoreWrappers$$GetInterfacesEx @ 00dbcbc4
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcbc4  str x30,[sp, #-0x10]!
+00dbcbc8  cbz x0,0x00dbcbe0
+00dbcbcc  ldr x8,[x0]
+00dbcbd0  ldr x2,[x8, #0x8a8]
+00dbcbd4  ldr x1,[x8, #0x8b0]
+00dbcbd8  ldr x30,[sp], #0x10
+00dbcbdc  br x2
+00dbcbe0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcbe4_NetFXCoreWrappers__IsInterfaceEx.txt
+================================================================================
+Function: NetFXCoreWrappers$$IsInterfaceEx @ 00dbcbe4
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Type$$get_IsInterface @ 0216a194
+
+--- Calls IN ---
+  <- AliothEngine.Utilities.FastInvoke<object>$$MakeSetter<object> @ 01729998
+
+--- Listing ---
+00dbcbe4  cbz x0,0x00dbcbf0
+00dbcbe8  mov x1,xzr
+00dbcbec  b 0x0216a194
+00dbcbf0  str x30,[sp, #-0x10]!
+00dbcbf4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcbf8_NetFXCoreWrappers__IsValueTypeEx.txt
+================================================================================
+Function: NetFXCoreWrappers$$IsValueTypeEx @ 00dbcbf8
+
+--- Calls OUT ---
+  -> System.Type$$get_IsValueType @ 0216af20
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AliothEngine.Utilities.FastInvoke<object>$$MakeSetter<object> @ 01729998
+
+--- Listing ---
+00dbcbf8  cbz x0,0x00dbcc04
+00dbcbfc  mov x1,xzr
+00dbcc00  b 0x0216af20
+00dbcc04  str x30,[sp, #-0x10]!
+00dbcc08  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcc0c_NetFXCoreWrappers__GetDeclaringType.txt
+================================================================================
+Function: NetFXCoreWrappers$$GetDeclaringType @ 00dbcc0c
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcc0c  str x30,[sp, #-0x10]!
+00dbcc10  cbz x0,0x00dbcc24
+00dbcc14  ldr x8,[x0]
+00dbcc18  ldp x2,x1,[x8, #0x1c8]
+00dbcc1c  ldr x30,[sp], #0x10
+00dbcc20  br x2
+00dbcc24  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcc28_NetFXCoreWrappers__GetBaseType.txt
+================================================================================
+Function: NetFXCoreWrappers$$GetBaseType @ 00dbcc28
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcc28  str x30,[sp, #-0x10]!
+00dbcc2c  cbz x0,0x00dbcc44
+00dbcc30  ldr x8,[x0]
+00dbcc34  ldr x2,[x8, #0x868]
+00dbcc38  ldr x1,[x8, #0x870]
+00dbcc3c  ldr x30,[sp], #0x10
+00dbcc40  br x2
+00dbcc44  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcc48_NetFXCoreWrappers__GetCustomAttributes.txt
+================================================================================
+Function: NetFXCoreWrappers$$GetCustomAttributes @ 00dbcc48
+
+--- Calls OUT ---
+  -> System.Attribute$$GetCustomAttributes @ 0217ba54
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcc48  and w1,w1,#0x1
+00dbcc4c  mov x2,xzr
+00dbcc50  b 0x0217ba54
+
+
+================================================================================
+### FILE: 00dbcc54_NetFXCoreWrappers__ContainsCustomAttribute.txt
+================================================================================
+Function: NetFXCoreWrappers$$ContainsCustomAttribute @ 00dbcc54
+
+--- Calls OUT ---
+  -> System.Attribute$$IsDefined @ 0217bca0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcc54  and w2,w2,#0x1
+00dbcc58  mov x3,xzr
+00dbcc5c  b 0x0217bca0
+
+
+================================================================================
+### FILE: 00dbcc60_NetFXCoreWrappers__IsGenericTypeEx.txt
+================================================================================
+Function: NetFXCoreWrappers$$IsGenericTypeEx @ 00dbcc60
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcc60  str x30,[sp, #-0x10]!
+00dbcc64  cbz x0,0x00dbcc7c
+00dbcc68  ldr x8,[x0]
+00dbcc6c  ldr x2,[x8, #0x3a8]
+00dbcc70  ldr x1,[x8, #0x3b0]
+00dbcc74  ldr x30,[sp], #0x10
+00dbcc78  br x2
+00dbcc7c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcc80_NetFXCoreWrappers__GetGenericArgumentsEx.txt
+================================================================================
+Function: NetFXCoreWrappers$$GetGenericArgumentsEx @ 00dbcc80
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcc80  str x30,[sp, #-0x10]!
+00dbcc84  cbz x0,0x00dbcc9c
+00dbcc88  ldr x8,[x0]
+00dbcc8c  ldr x2,[x8, #0x448]
+00dbcc90  ldr x1,[x8, #0x450]
+00dbcc94  ldr x30,[sp], #0x10
+00dbcc98  br x2
+00dbcc9c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcca0_NetFXCoreWrappers__FindWritablePropertiesWithCustomAttribute.txt
+================================================================================
+Function: NetFXCoreWrappers$$FindWritablePropertiesWithCustomAttribute @ 00dbcca0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.DataStructures.FasterList<object>$$Add @ 01addf30
+  -> AliothEngine.DataStructures.FasterList<object>$$ToArray @ 01ade8cc
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.DataStructures.FasterList<object>$$.ctor @ 01add9cc
+  -> System.Type$$op_Inequality @ 02169bb4
+  -> System.Attribute$$IsDefined @ 0217bca0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcca0  str x28,[sp, #-0x60]!
+00dbcca4  stp x27,x26,[sp, #0x10]
+00dbcca8  stp x25,x24,[sp, #0x20]
+00dbccac  stp x23,x22,[sp, #0x30]
+00dbccb0  stp x21,x20,[sp, #0x40]
+00dbccb4  stp x19,x30,[sp, #0x50]
+00dbccb8  adrp x21,0x3572000
+00dbccbc  adrp x22,0x3382000
+00dbccc0  ldrb w8,[x21, #0x13b]
+00dbccc4  ldr x22,[x22, #0xef0]
+00dbccc8  mov x19,x1
+00dbcccc  mov x20,x0
+00dbccd0  tbnz w8,#0x0,0x00dbcd30
+00dbccd4  adrp x0,0x3380000
+00dbccd8  ldr x0,[x0, #0x1b8]
+00dbccdc  bl 0x00b0789c
+00dbcce0  adrp x0,0x3367000
+00dbcce4  ldr x0,[x0, #0x818]
+00dbcce8  bl 0x00b0789c
+00dbccec  adrp x0,0x3321000
+00dbccf0  ldr x0,[x0, #0x560]
+00dbccf4  bl 0x00b0789c
+00dbccf8  adrp x0,0x330c000
+00dbccfc  ldr x0,[x0, #0x800]
+00dbcd00  bl 0x00b0789c
+00dbcd04  adrp x0,0x3382000
+00dbcd08  ldr x0,[x0, #0xef0]
+00dbcd0c  bl 0x00b0789c
+00dbcd10  adrp x0,0x3336000
+00dbcd14  ldr x0,[x0, #0x9c0]
+00dbcd18  bl 0x00b0789c
+00dbcd1c  adrp x0,0x3347000
+00dbcd20  ldr x0,[x0, #0xd68]
+00dbcd24  bl 0x00b0789c
+00dbcd28  mov w8,#0x1
+00dbcd2c  strb w8,[x21, #0x13b]
+00dbcd30  ldr x0,[x22]
+00dbcd34  bl 0x00b079a0
+00dbcd38  cbz x0,0x00dbcec0
+00dbcd3c  adrp x8,0x3321000
+00dbcd40  ldr x8,[x8, #0x560]
+00dbcd44  adrp x24,0x3336000
+00dbcd48  ldr x24,[x24, #0x9c0]
+00dbcd4c  adrp x26,0x3380000
+00dbcd50  ldr x2,[x8]
+00dbcd54  adrp x27,0x3347000
+00dbcd58  adrp x25,0x3367000
+00dbcd5c  ldr x26,[x26, #0x1b8]
+00dbcd60  ldr x27,[x27, #0xd68]
+00dbcd64  ldr x25,[x25, #0x818]
+00dbcd68  mov w1,#0x8
+00dbcd6c  mov x21,x0
+00dbcd70  bl 0x01add9cc
+00dbcd74  cbz x20,0x00dbcec0
+00dbcd78  ldr x8,[x20]
+00dbcd7c  mov w1,#0x36
+00dbcd80  mov x0,x20
+00dbcd84  ldr x9,[x8, #0x838]
+00dbcd88  ldr x2,[x8, #0x840]
+00dbcd8c  blr x9
+00dbcd90  cbz x0,0x00dbcec0
+00dbcd94  ldr w8,[x0, #0x18]
+00dbcd98  mov x22,x0
+00dbcd9c  cmp w8,#0x1
+00dbcda0  b.lt 0x00dbce1c
+00dbcda4  mov w28,wzr
+00dbcda8  cmp w28,w8
+00dbcdac  b.cs 0x00dbcebc
+00dbcdb0  add x8,x22,w28, SXTW  #0x3
+00dbcdb4  ldr x23,[x8, #0x20]
+00dbcdb8  cbz x23,0x00dbcec0
+00dbcdbc  ldr x8,[x23]
+00dbcdc0  mov x0,x23
+00dbcdc4  ldr x9,[x8, #0x258]
+00dbcdc8  ldr x1,[x8, #0x260]
+00dbcdcc  blr x9
+00dbcdd0  tbz w0,#0x0,0x00dbce0c
+00dbcdd4  ldr x0,[x24]
+00dbcdd8  ldr w8,[x0, #0xe0]
+00dbcddc  cbnz w8,0x00dbcde4
+00dbcde0  bl 0x00b0798c
+00dbcde4  mov x0,x23
+00dbcde8  mov x1,x19
+00dbcdec  mov w2,wzr
+00dbcdf0  mov x3,xzr
+00dbcdf4  bl 0x0217bca0
+00dbcdf8  tbz w0,#0x0,0x00dbce0c
+00dbcdfc  ldr x2,[x26]
+00dbce00  mov x0,x21
+00dbce04  mov x1,x23
+00dbce08  bl 0x01addf30
+00dbce0c  ldr w8,[x22, #0x18]
+00dbce10  add w28,w28,#0x1
+00dbce14  cmp w28,w8
+00dbce18  b.lt 0x00dbcda8
+00dbce1c  ldr x0,[x24]
+00dbce20  ldr w8,[x0, #0xe0]
+00dbce24  cbnz w8,0x00dbce2c
+00dbce28  bl 0x00b0798c
+00dbce2c  ldr x8,[x20]
+00dbce30  mov x0,x20
+00dbce34  ldr x9,[x8, #0x868]
+00dbce38  ldr x1,[x8, #0x870]
+00dbce3c  blr x9
+00dbce40  ldr x8,[x27]
+00dbce44  mov x20,x0
+00dbce48  ldr w9,[x8, #0xe0]
+00dbce4c  cbnz w9,0x00dbce58
+00dbce50  mov x0,x8
+00dbce54  bl 0x00b0798c
+00dbce58  mov x0,x20
+00dbce5c  mov x1,xzr
+00dbce60  mov x2,xzr
+00dbce64  bl 0x02169bb4
+00dbce68  tbnz w0,#0x0,0x00dbcd74
+00dbce6c  ldr w8,[x21, #0x18]
+00dbce70  cmp w8,#0x1
+00dbce74  b.lt 0x00dbce9c
+00dbce78  ldr x1,[x25]
+00dbce7c  mov x0,x21
+00dbce80  ldp x19,x30,[sp, #0x50]
+00dbce84  ldp x21,x20,[sp, #0x40]
+00dbce88  ldp x23,x22,[sp, #0x30]
+00dbce8c  ldp x25,x24,[sp, #0x20]
+00dbce90  ldp x27,x26,[sp, #0x10]
+00dbce94  ldr x28,[sp], #0x60
+00dbce98  b 0x01ade8cc
+00dbce9c  ldp x19,x30,[sp, #0x50]
+00dbcea0  ldp x21,x20,[sp, #0x40]
+00dbcea4  ldp x23,x22,[sp, #0x30]
+00dbcea8  ldp x25,x24,[sp, #0x20]
+00dbceac  ldp x27,x26,[sp, #0x10]
+00dbceb0  mov x0,xzr
+00dbceb4  ldr x28,[sp], #0x60
+00dbceb8  ret
+00dbcebc  bl 0x00b079b8
+00dbcec0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcec4_NetFXCoreWrappers__IsCompilerGenerated.txt
+================================================================================
+Function: NetFXCoreWrappers$$IsCompilerGenerated @ 00dbcec4
+
+--- Calls OUT ---
+  -> System.Attribute$$IsDefined @ 0217bc98
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Type$$GetTypeFromHandle @ 0215f900
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcec4  str x22,[sp, #-0x30]!
+00dbcec8  stp x21,x20,[sp, #0x10]
+00dbcecc  stp x19,x30,[sp, #0x20]
+00dbced0  adrp x22,0x3572000
+00dbced4  adrp x20,0x336b000
+00dbced8  adrp x21,0x3347000
+00dbcedc  ldrb w8,[x22, #0x13c]
+00dbcee0  ldr x20,[x20, #0x140]
+00dbcee4  ldr x21,[x21, #0xd68]
+00dbcee8  mov x19,x0
+00dbceec  tbnz w8,#0x0,0x00dbcf10
+00dbcef0  adrp x0,0x336b000
+00dbcef4  ldr x0,[x0, #0x140]
+00dbcef8  bl 0x00b0789c
+00dbcefc  adrp x0,0x3347000
+00dbcf00  ldr x0,[x0, #0xd68]
+00dbcf04  bl 0x00b0789c
+00dbcf08  mov w8,#0x1
+00dbcf0c  strb w8,[x22, #0x13c]
+00dbcf10  ldr x0,[x21]
+00dbcf14  ldr x20,[x20]
+00dbcf18  ldr w8,[x0, #0xe0]
+00dbcf1c  cbnz w8,0x00dbcf24
+00dbcf20  bl 0x00b0798c
+00dbcf24  mov x0,x20
+00dbcf28  mov x1,xzr
+00dbcf2c  bl 0x0215f900
+00dbcf30  mov x1,x0
+00dbcf34  mov x0,x19
+00dbcf38  ldp x19,x30,[sp, #0x20]
+00dbcf3c  ldp x21,x20,[sp, #0x10]
+00dbcf40  mov x2,xzr
+00dbcf44  ldr x22,[sp], #0x30
+00dbcf48  b 0x0217bc98
+
+
+================================================================================
+### FILE: 00dbcf4c_NetFXCoreWrappers__IsCompilerGenerated.txt
+================================================================================
+Function: NetFXCoreWrappers$$IsCompilerGenerated @ 00dbcf4c
+
+--- Calls OUT ---
+  -> System.Attribute$$IsDefined @ 0217bc98
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcf4c  stp x21,x20,[sp, #-0x20]!
+00dbcf50  stp x19,x30,[sp, #0x10]
+00dbcf54  adrp x21,0x3572000
+00dbcf58  adrp x20,0x3336000
+00dbcf5c  ldrb w8,[x21, #0x13d]
+00dbcf60  ldr x20,[x20, #0x9c0]
+00dbcf64  mov x19,x0
+00dbcf68  tbnz w8,#0x0,0x00dbcf80
+00dbcf6c  adrp x0,0x3336000
+00dbcf70  ldr x0,[x0, #0x9c0]
+00dbcf74  bl 0x00b0789c
+00dbcf78  mov w8,#0x1
+00dbcf7c  strb w8,[x21, #0x13d]
+00dbcf80  ldr x0,[x20]
+00dbcf84  ldr w8,[x0, #0xe0]
+00dbcf88  cbnz w8,0x00dbcf94
+00dbcf8c  bl 0x00b0798c
+00dbcf90  ldr x0,[x20]
+00dbcf94  ldr x8,[x0, #0xb8]
+00dbcf98  mov x0,x19
+00dbcf9c  ldp x19,x30,[sp, #0x10]
+00dbcfa0  mov x2,xzr
+00dbcfa4  ldr x1,[x8]
+00dbcfa8  ldp x21,x20,[sp], #0x20
+00dbcfac  b 0x0217bc98
+
+
+================================================================================
+### FILE: 00dbcfb0_NetFXCoreWrappers__.cctor.txt
+================================================================================
+Function: NetFXCoreWrappers$$.cctor @ 00dbcfb0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Type$$GetTypeFromHandle @ 0215f900
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcfb0  stp x21,x20,[sp, #-0x20]!
+00dbcfb4  stp x19,x30,[sp, #0x10]
+00dbcfb8  adrp x21,0x3572000
+00dbcfbc  adrp x19,0x336b000
+00dbcfc0  adrp x20,0x3347000
+00dbcfc4  ldrb w8,[x21, #0x13e]
+00dbcfc8  ldr x19,[x19, #0x140]
+00dbcfcc  ldr x20,[x20, #0xd68]
+00dbcfd0  tbnz w8,#0x0,0x00dbd000
+00dbcfd4  adrp x0,0x336b000
+00dbcfd8  ldr x0,[x0, #0x140]
+00dbcfdc  bl 0x00b0789c
+00dbcfe0  adrp x0,0x3336000
+00dbcfe4  ldr x0,[x0, #0x9c0]
+00dbcfe8  bl 0x00b0789c
+00dbcfec  adrp x0,0x3347000
+00dbcff0  ldr x0,[x0, #0xd68]
+00dbcff4  bl 0x00b0789c
+00dbcff8  mov w8,#0x1
+00dbcffc  strb w8,[x21, #0x13e]
+00dbd000  ldr x0,[x20]
+00dbd004  adrp x20,0x3336000
+00dbd008  ldr x19,[x19]
+00dbd00c  ldr w8,[x0, #0xe0]
+00dbd010  ldr x20,[x20, #0x9c0]
+00dbd014  cbnz w8,0x00dbd01c
+00dbd018  bl 0x00b0798c
+00dbd01c  mov x0,x19
+00dbd020  mov x1,xzr
+00dbd024  bl 0x0215f900
+00dbd028  ldr x8,[x20]
+00dbd02c  mov x1,x0
+00dbd030  ldr x8,[x8, #0xb8]
+00dbd034  str x0,[x8]
+00dbd038  ldr x8,[x20]
+00dbd03c  ldp x19,x30,[sp, #0x10]
+00dbd040  ldr x0,[x8, #0xb8]
+00dbd044  ldp x21,x20,[sp], #0x20
+00dbd048  b 0x00b07850
+
+
+================================================================================
+### FILE: 00e27c04_NetEvent__add_execute.txt
+================================================================================
+Function: NetEvent$$add_execute @ 00e27c04
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetEventWrap$$_e_execute @ 012f3ca4
+  <- Ali$$RegisterDataProccessCallBack @ 00e03ac8
+
+--- Listing ---
+00e27c04  str x22,[sp, #-0x30]!
+00e27c08  stp x21,x20,[sp, #0x10]
+00e27c0c  stp x19,x30,[sp, #0x20]
+00e27c10  adrp x21,0x3572000
+00e27c14  adrp x22,0x331e000
+00e27c18  ldrb w8,[x21, #0x6f7]
+00e27c1c  ldr x22,[x22, #0x7c0]
+00e27c20  mov x19,x1
+00e27c24  mov x20,x0
+00e27c28  tbnz w8,#0x0,0x00e27c4c
+00e27c2c  adrp x0,0x331e000
+00e27c30  ldr x0,[x0, #0x7c0]
+00e27c34  bl 0x00b0789c
+00e27c38  adrp x0,0x335c000
+00e27c3c  ldr x0,[x0, #0x918]
+00e27c40  bl 0x00b0789c
+00e27c44  mov w8,#0x1
+00e27c48  strb w8,[x21, #0x6f7]
+00e27c4c  ldr x8,[x22]
+00e27c50  ldr x8,[x8, #0xb8]
+00e27c54  ldr x0,[x8]
+00e27c58  cbz x0,0x00e27c78
+00e27c5c  mov x1,x20
+00e27c60  mov x2,x19
+00e27c64  ldp x19,x30,[sp, #0x20]
+00e27c68  ldp x21,x20,[sp, #0x10]
+00e27c6c  mov x3,xzr
+00e27c70  ldr x22,[sp], #0x30
+00e27c74  b 0x0106125c
+00e27c78  adrp x22,0x335c000
+00e27c7c  ldr x21,[x20, #0x10]!
+00e27c80  ldr x22,[x22, #0x918]
+00e27c84  mov x0,x21
+00e27c88  mov x1,x19
+00e27c8c  mov x2,xzr
+00e27c90  bl 0x02197810
+00e27c94  mov x8,x0
+00e27c98  cbz x0,0x00e27cac
+00e27c9c  ldr x1,[x22]
+00e27ca0  ldr x9,[x8]
+00e27ca4  cmp x9,x1
+00e27ca8  b.ne 0x00e27cd8
+00e27cac  mov x0,x20
+00e27cb0  mov x1,x8
+00e27cb4  mov x2,x21
+00e27cb8  bl 0x00ae526c
+00e27cbc  cmp x21,x0
+00e27cc0  mov x21,x0
+00e27cc4  b.ne 0x00e27c84
+00e27cc8  ldp x19,x30,[sp, #0x20]
+00e27ccc  ldp x21,x20,[sp, #0x10]
+00e27cd0  ldr x22,[sp], #0x30
+00e27cd4  ret
+00e27cd8  mov x0,x8
+00e27cdc  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00e27ce0_NetEvent__remove_execute.txt
+================================================================================
+Function: NetEvent$$remove_execute @ 00e27ce0
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetEventWrap$$_e_execute @ 012f3ca4
+  <- Ali$$UnRegisterDataProccessCallBack @ 00e03c18
+
+--- Listing ---
+00e27ce0  str x22,[sp, #-0x30]!
+00e27ce4  stp x21,x20,[sp, #0x10]
+00e27ce8  stp x19,x30,[sp, #0x20]
+00e27cec  adrp x21,0x3572000
+00e27cf0  adrp x22,0x331e000
+00e27cf4  ldrb w8,[x21, #0x6f8]
+00e27cf8  ldr x22,[x22, #0x7c0]
+00e27cfc  mov x19,x1
+00e27d00  mov x20,x0
+00e27d04  tbnz w8,#0x0,0x00e27d28
+00e27d08  adrp x0,0x331e000
+00e27d0c  ldr x0,[x0, #0x7c0]
+00e27d10  bl 0x00b0789c
+00e27d14  adrp x0,0x335c000
+00e27d18  ldr x0,[x0, #0x918]
+00e27d1c  bl 0x00b0789c
+00e27d20  mov w8,#0x1
+00e27d24  strb w8,[x21, #0x6f8]
+00e27d28  ldr x8,[x22]
+00e27d2c  ldr x8,[x8, #0xb8]
+00e27d30  ldr x0,[x8, #0x8]
+00e27d34  cbz x0,0x00e27d54
+00e27d38  mov x1,x20
+00e27d3c  mov x2,x19
+00e27d40  ldp x19,x30,[sp, #0x20]
+00e27d44  ldp x21,x20,[sp, #0x10]
+00e27d48  mov x3,xzr
+00e27d4c  ldr x22,[sp], #0x30
+00e27d50  b 0x0106125c
+00e27d54  adrp x22,0x335c000
+00e27d58  ldr x21,[x20, #0x10]!
+00e27d5c  ldr x22,[x22, #0x918]
+00e27d60  mov x0,x21
+00e27d64  mov x1,x19
+00e27d68  mov x2,xzr
+00e27d6c  bl 0x02197a1c
+00e27d70  mov x8,x0
+00e27d74  cbz x0,0x00e27d88
+00e27d78  ldr x1,[x22]
+00e27d7c  ldr x9,[x8]
+00e27d80  cmp x9,x1
+00e27d84  b.ne 0x00e27db4
+00e27d88  mov x0,x20
+00e27d8c  mov x1,x8
+00e27d90  mov x2,x21
+00e27d94  bl 0x00ae526c
+00e27d98  cmp x21,x0
+00e27d9c  mov x21,x0
+00e27da0  b.ne 0x00e27d60
+00e27da4  ldp x19,x30,[sp, #0x20]
+00e27da8  ldp x21,x20,[sp, #0x10]
+00e27dac  ldr x22,[sp], #0x30
+00e27db0  ret
+00e27db4  mov x0,x8
+00e27db8  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00e27dbc_NetEvent__callBack.txt
+================================================================================
+Function: NetEvent$$callBack @ 00e27dbc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetEventWrap$$_m_callBack @ 012f3a3c
+  <- Ali$$DataProccessCallBack @ 00e03dd4
+
+--- Listing ---
+00e27dbc  str x22,[sp, #-0x30]!
+00e27dc0  stp x21,x20,[sp, #0x10]
+00e27dc4  stp x19,x30,[sp, #0x20]
+00e27dc8  adrp x21,0x3572000
+00e27dcc  adrp x22,0x331e000
+00e27dd0  ldrb w8,[x21, #0x6f9]
+00e27dd4  ldr x22,[x22, #0x7c0]
+00e27dd8  mov x19,x1
+00e27ddc  mov x20,x0
+00e27de0  tbnz w8,#0x0,0x00e27df8
+00e27de4  adrp x0,0x331e000
+00e27de8  ldr x0,[x0, #0x7c0]
+00e27dec  bl 0x00b0789c
+00e27df0  mov w8,#0x1
+00e27df4  strb w8,[x21, #0x6f9]
+00e27df8  ldr x8,[x22]
+00e27dfc  ldr x8,[x8, #0xb8]
+00e27e00  ldr x0,[x8, #0x10]
+00e27e04  cbz x0,0x00e27e24
+00e27e08  mov x1,x20
+00e27e0c  mov x2,x19
+00e27e10  ldp x19,x30,[sp, #0x20]
+00e27e14  ldp x21,x20,[sp, #0x10]
+00e27e18  mov x3,xzr
+00e27e1c  ldr x22,[sp], #0x30
+00e27e20  b 0x0106125c
+00e27e24  ldr x8,[x20, #0x10]
+00e27e28  cbz x8,0x00e27e4c
+00e27e2c  ldr x3,[x8, #0x18]
+00e27e30  ldr x0,[x8, #0x40]
+00e27e34  ldr x2,[x8, #0x28]
+00e27e38  mov x1,x19
+00e27e3c  ldp x19,x30,[sp, #0x20]
+00e27e40  ldp x21,x20,[sp, #0x10]
+00e27e44  ldr x22,[sp], #0x30
+00e27e48  br x3
+00e27e4c  ldp x19,x30,[sp, #0x20]
+00e27e50  ldp x21,x20,[sp, #0x10]
+00e27e54  ldr x22,[sp], #0x30
+00e27e58  ret
+
+
+================================================================================
+### FILE: 00e27e5c_NetEvent__.ctor.txt
+================================================================================
+Function: NetEvent$$.ctor @ 00e27e5c
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- Ali$$RegisterDataProccessCallBack @ 00e03ac8
+  <- XLua.CSObjectWrap.NetEventWrap$$__CreateInstance @ 012f3884
+
+--- Listing ---
+00e27e5c  stp x21,x20,[sp, #-0x20]!
+00e27e60  stp x19,x30,[sp, #0x10]
+00e27e64  adrp x21,0x3572000
+00e27e68  adrp x20,0x331e000
+00e27e6c  ldrb w8,[x21, #0x6fa]
+00e27e70  ldr x20,[x20, #0x7c0]
+00e27e74  mov x19,x0
+00e27e78  tbnz w8,#0x0,0x00e27e90
+00e27e7c  adrp x0,0x331e000
+00e27e80  ldr x0,[x0, #0x7c0]
+00e27e84  bl 0x00b0789c
+00e27e88  mov w8,#0x1
+00e27e8c  strb w8,[x21, #0x6fa]
+00e27e90  mov x0,x19
+00e27e94  mov x1,xzr
+00e27e98  bl 0x02194104
+00e27e9c  ldr x8,[x20]
+00e27ea0  ldr x8,[x8, #0xb8]
+00e27ea4  ldr x0,[x8, #0x18]
+00e27ea8  cbz x0,0x00e27ec0
+00e27eac  mov x1,x19
+00e27eb0  ldp x19,x30,[sp, #0x10]
+00e27eb4  mov x2,xzr
+00e27eb8  ldp x21,x20,[sp], #0x20
+00e27ebc  b 0x01060dac
+00e27ec0  ldp x19,x30,[sp, #0x10]
+00e27ec4  ldp x21,x20,[sp], #0x20
+00e27ec8  ret
+
+
+================================================================================
+### FILE: 0131cee8_NetParam__.ctor.txt
+================================================================================
+Function: NetParam$$.ctor @ 0131cee8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- SkillEff_9001$$ExecuteSpecial @ 016c2d4c
+  <- XLua.CSObjectWrap.NetParamWrap$$__CreateInstance @ 012f6a64
+
+--- Listing ---
+0131cee8  stp x21,x20,[sp, #-0x20]!
+0131ceec  stp x19,x30,[sp, #0x10]
+0131cef0  adrp x21,0x3575000
+0131cef4  adrp x20,0x3382000
+0131cef8  ldrb w8,[x21, #0xd75]
+0131cefc  ldr x20,[x20, #0xb70]
+0131cf00  mov x19,x0
+0131cf04  tbnz w8,#0x0,0x0131cf1c
+0131cf08  adrp x0,0x3382000
+0131cf0c  ldr x0,[x0, #0xb70]
+0131cf10  bl 0x00b0789c
+0131cf14  mov w8,#0x1
+0131cf18  strb w8,[x21, #0xd75]
+0131cf1c  mov x0,x19
+0131cf20  mov x1,xzr
+0131cf24  bl 0x02194104
+0131cf28  ldr x8,[x20]
+0131cf2c  ldr x8,[x8, #0xb8]
+0131cf30  ldr x0,[x8]
+0131cf34  cbz x0,0x0131cf4c
+0131cf38  mov x1,x19
+0131cf3c  ldp x19,x30,[sp, #0x10]
+0131cf40  mov x2,xzr
+0131cf44  ldp x21,x20,[sp], #0x20
+0131cf48  b 0x01060dac
+0131cf4c  ldp x19,x30,[sp, #0x10]
+0131cf50  ldp x21,x20,[sp], #0x20
+0131cf54  ret
+
+
+================================================================================
+### FILE: 0131cf58_NetInfo__get_NetCode.txt
+================================================================================
+Function: NetInfo$$get_NetCode @ 0131cf58
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp19 @ 01061abc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetInfoWrap$$_g_get_NetCode @ 012f4388
+  <- TerrainNews$$set_m_info @ 016cb1c8
+
+--- Listing ---
+0131cf58  stp x21,x20,[sp, #-0x20]!
+0131cf5c  stp x19,x30,[sp, #0x10]
+0131cf60  adrp x20,0x3575000
+0131cf64  adrp x21,0x331b000
+0131cf68  ldrb w8,[x20, #0xd76]
+0131cf6c  ldr x21,[x21, #0x6f8]
+0131cf70  mov x19,x0
+0131cf74  tbnz w8,#0x0,0x0131cf8c
+0131cf78  adrp x0,0x331b000
+0131cf7c  ldr x0,[x0, #0x6f8]
+0131cf80  bl 0x00b0789c
+0131cf84  mov w8,#0x1
+0131cf88  strb w8,[x20, #0xd76]
+0131cf8c  ldr x8,[x21]
+0131cf90  ldr x8,[x8, #0xb8]
+0131cf94  ldr x0,[x8]
+0131cf98  cbz x0,0x0131cfb0
+0131cf9c  mov x1,x19
+0131cfa0  ldp x19,x30,[sp, #0x10]
+0131cfa4  mov x2,xzr
+0131cfa8  ldp x21,x20,[sp], #0x20
+0131cfac  b 0x01061abc
+0131cfb0  ldr x0,[x19, #0x10]
+0131cfb4  ldp x19,x30,[sp, #0x10]
+0131cfb8  ldp x21,x20,[sp], #0x20
+0131cfbc  ret
+
+
+================================================================================
+### FILE: 0131cfc0_NetInfo__set_NetCode.txt
+================================================================================
+Function: NetInfo$$set_NetCode @ 0131cfc0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- NodeManager$$Init @ 0131e350
+  <- XLua.CSObjectWrap.NetInfoWrap$$_s_set_NetCode @ 012f52dc
+
+--- Listing ---
+0131cfc0  str x22,[sp, #-0x30]!
+0131cfc4  stp x21,x20,[sp, #0x10]
+0131cfc8  stp x19,x30,[sp, #0x20]
+0131cfcc  adrp x21,0x3575000
+0131cfd0  adrp x22,0x331b000
+0131cfd4  ldrb w8,[x21, #0xd77]
+0131cfd8  ldr x22,[x22, #0x6f8]
+0131cfdc  mov x19,x1
+0131cfe0  mov x20,x0
+0131cfe4  tbnz w8,#0x0,0x0131cffc
+0131cfe8  adrp x0,0x331b000
+0131cfec  ldr x0,[x0, #0x6f8]
+0131cff0  bl 0x00b0789c
+0131cff4  mov w8,#0x1
+0131cff8  strb w8,[x21, #0xd77]
+0131cffc  ldr x8,[x22]
+0131d000  ldr x8,[x8, #0xb8]
+0131d004  ldr x0,[x8, #0x8]
+0131d008  cbz x0,0x0131d028
+0131d00c  mov x1,x20
+0131d010  mov x2,x19
+0131d014  ldp x19,x30,[sp, #0x20]
+0131d018  ldp x21,x20,[sp, #0x10]
+0131d01c  mov x3,xzr
+0131d020  ldr x22,[sp], #0x30
+0131d024  b 0x0106125c
+0131d028  str x19,[x20, #0x10]!
+0131d02c  mov x0,x20
+0131d030  mov x1,x19
+0131d034  ldp x19,x30,[sp, #0x20]
+0131d038  ldp x21,x20,[sp, #0x10]
+0131d03c  ldr x22,[sp], #0x30
+0131d040  b 0x00b07850
+
+
+================================================================================
+### FILE: 0131d044_NetInfo__get_Type.txt
+================================================================================
+Function: NetInfo$$get_Type @ 0131d044
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- NodeManager$$GetNewNetCode @ 0131e728
+  <- XLua.CSObjectWrap.NetInfoWrap$$_g_get_Type @ 012f453c
+
+--- Listing ---
+0131d044  stp x21,x20,[sp, #-0x20]!
+0131d048  stp x19,x30,[sp, #0x10]
+0131d04c  adrp x20,0x3575000
+0131d050  adrp x21,0x331b000
+0131d054  ldrb w8,[x20, #0xd78]
+0131d058  ldr x21,[x21, #0x6f8]
+0131d05c  mov x19,x0
+0131d060  tbnz w8,#0x0,0x0131d078
+0131d064  adrp x0,0x331b000
+0131d068  ldr x0,[x0, #0x6f8]
+0131d06c  bl 0x00b0789c
+0131d070  mov w8,#0x1
+0131d074  strb w8,[x20, #0xd78]
+0131d078  ldr x8,[x21]
+0131d07c  ldr x8,[x8, #0xb8]
+0131d080  ldr x0,[x8, #0x10]
+0131d084  cbz x0,0x0131d09c
+0131d088  mov x1,x19
+0131d08c  ldp x19,x30,[sp, #0x10]
+0131d090  mov x2,xzr
+0131d094  ldp x21,x20,[sp], #0x20
+0131d098  b 0x01060c2c
+0131d09c  ldr w0,[x19, #0x18]
+0131d0a0  ldp x19,x30,[sp, #0x10]
+0131d0a4  ldp x21,x20,[sp], #0x20
+0131d0a8  ret
+
+
+================================================================================
+### FILE: 0131d0ac_NetInfo__set_Type.txt
+================================================================================
+Function: NetInfo$$set_Type @ 0131d0ac
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetInfoWrap$$_s_set_Type @ 012f54a0
+  <- NodeManager$$Init @ 0131e350
+
+--- Listing ---
+0131d0ac  str x22,[sp, #-0x30]!
+0131d0b0  stp x21,x20,[sp, #0x10]
+0131d0b4  stp x19,x30,[sp, #0x20]
+0131d0b8  adrp x21,0x3575000
+0131d0bc  adrp x22,0x331b000
+0131d0c0  ldrb w8,[x21, #0xd79]
+0131d0c4  ldr x22,[x22, #0x6f8]
+0131d0c8  mov w19,w1
+0131d0cc  mov x20,x0
+0131d0d0  tbnz w8,#0x0,0x0131d0e8
+0131d0d4  adrp x0,0x331b000
+0131d0d8  ldr x0,[x0, #0x6f8]
+0131d0dc  bl 0x00b0789c
+0131d0e0  mov w8,#0x1
+0131d0e4  strb w8,[x21, #0xd79]
+0131d0e8  ldr x8,[x22]
+0131d0ec  ldr x8,[x8, #0xb8]
+0131d0f0  ldr x0,[x8, #0x18]
+0131d0f4  cbz x0,0x0131d114
+0131d0f8  mov x1,x20
+0131d0fc  mov w2,w19
+0131d100  ldp x19,x30,[sp, #0x20]
+0131d104  ldp x21,x20,[sp, #0x10]
+0131d108  mov x3,xzr
+0131d10c  ldr x22,[sp], #0x30
+0131d110  b 0x0106155c
+0131d114  str w19,[x20, #0x18]
+0131d118  ldp x19,x30,[sp, #0x20]
+0131d11c  ldp x21,x20,[sp, #0x10]
+0131d120  ldr x22,[sp], #0x30
+0131d124  ret
+
+
+================================================================================
+### FILE: 0131d128_NetInfo__get_Group.txt
+================================================================================
+Function: NetInfo$$get_Group @ 0131d128
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetInfoWrap$$_g_get_Group @ 012f46f0
+  <- TerrainNews$$get_m_group @ 016cbdc8
+
+--- Listing ---
+0131d128  stp x21,x20,[sp, #-0x20]!
+0131d12c  stp x19,x30,[sp, #0x10]
+0131d130  adrp x20,0x3575000
+0131d134  adrp x21,0x331b000
+0131d138  ldrb w8,[x20, #0xd7a]
+0131d13c  ldr x21,[x21, #0x6f8]
+0131d140  mov x19,x0
+0131d144  tbnz w8,#0x0,0x0131d15c
+0131d148  adrp x0,0x331b000
+0131d14c  ldr x0,[x0, #0x6f8]
+0131d150  bl 0x00b0789c
+0131d154  mov w8,#0x1
+0131d158  strb w8,[x20, #0xd7a]
+0131d15c  ldr x8,[x21]
+0131d160  ldr x8,[x8, #0xb8]
+0131d164  ldr x0,[x8, #0x20]
+0131d168  cbz x0,0x0131d180
+0131d16c  mov x1,x19
+0131d170  ldp x19,x30,[sp, #0x10]
+0131d174  mov x2,xzr
+0131d178  ldp x21,x20,[sp], #0x20
+0131d17c  b 0x01060c2c
+0131d180  ldr w0,[x19, #0x1c]
+0131d184  ldp x19,x30,[sp, #0x10]
+0131d188  ldp x21,x20,[sp], #0x20
+0131d18c  ret
+
+
+================================================================================
+### FILE: 0131d190_NetInfo__set_Group.txt
+================================================================================
+Function: NetInfo$$set_Group @ 0131d190
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetInfoWrap$$_s_set_Group @ 012f5664
+  <- TerrainNews$$FirstTerrain @ 016cb708
+  <- TerrainNews$$UpdateTerrain @ 016cbeb8
+
+--- Listing ---
+0131d190  str x22,[sp, #-0x30]!
+0131d194  stp x21,x20,[sp, #0x10]
+0131d198  stp x19,x30,[sp, #0x20]
+0131d19c  adrp x21,0x3575000
+0131d1a0  adrp x22,0x331b000
+0131d1a4  ldrb w8,[x21, #0xd7b]
+0131d1a8  ldr x22,[x22, #0x6f8]
+0131d1ac  mov w19,w1
+0131d1b0  mov x20,x0
+0131d1b4  tbnz w8,#0x0,0x0131d1cc
+0131d1b8  adrp x0,0x331b000
+0131d1bc  ldr x0,[x0, #0x6f8]
+0131d1c0  bl 0x00b0789c
+0131d1c4  mov w8,#0x1
+0131d1c8  strb w8,[x21, #0xd7b]
+0131d1cc  ldr x8,[x22]
+0131d1d0  ldr x8,[x8, #0xb8]
+0131d1d4  ldr x0,[x8, #0x28]
+0131d1d8  cbz x0,0x0131d1f8
+0131d1dc  mov x1,x20
+0131d1e0  mov w2,w19
+0131d1e4  ldp x19,x30,[sp, #0x20]
+0131d1e8  ldp x21,x20,[sp, #0x10]
+0131d1ec  mov x3,xzr
+0131d1f0  ldr x22,[sp], #0x30
+0131d1f4  b 0x0106155c
+0131d1f8  str w19,[x20, #0x1c]
+0131d1fc  ldp x19,x30,[sp, #0x20]
+0131d200  ldp x21,x20,[sp, #0x10]
+0131d204  ldr x22,[sp], #0x30
+0131d208  ret
+
+
+================================================================================
+### FILE: 0131d20c_NetInfo__get_X.txt
+================================================================================
+Function: NetInfo$$get_X @ 0131d20c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp32 @ 01063698
+
+--- Calls IN ---
+  <- TerrainNews$$get_m_place @ 016c7024
+  <- XLua.CSObjectWrap.NetInfoWrap$$_g_get_X @ 012f48a4
+  <- NodeManager$$GetNewNetCode @ 0131e728
+
+--- Listing ---
+0131d20c  stp x21,x20,[sp, #-0x20]!
+0131d210  stp x19,x30,[sp, #0x10]
+0131d214  adrp x20,0x3575000
+0131d218  adrp x21,0x331b000
+0131d21c  ldrb w8,[x20, #0xd7c]
+0131d220  ldr x21,[x21, #0x6f8]
+0131d224  mov x19,x0
+0131d228  tbnz w8,#0x0,0x0131d240
+0131d22c  adrp x0,0x331b000
+0131d230  ldr x0,[x0, #0x6f8]
+0131d234  bl 0x00b0789c
+0131d238  mov w8,#0x1
+0131d23c  strb w8,[x20, #0xd7c]
+0131d240  ldr x8,[x21]
+0131d244  ldr x8,[x8, #0xb8]
+0131d248  ldr x0,[x8, #0x30]
+0131d24c  cbz x0,0x0131d264
+0131d250  mov x1,x19
+0131d254  ldp x19,x30,[sp, #0x10]
+0131d258  mov x2,xzr
+0131d25c  ldp x21,x20,[sp], #0x20
+0131d260  b 0x01063698
+0131d264  ldr s0,[x19, #0x20]
+0131d268  ldp x19,x30,[sp, #0x10]
+0131d26c  ldp x21,x20,[sp], #0x20
+0131d270  ret
+
+
+================================================================================
+### FILE: 0131d274_NetInfo__set_X.txt
+================================================================================
+Function: NetInfo$$set_X @ 0131d274
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp20 @ 01061c3c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetInfoWrap$$_s_set_X @ 012f5828
+  <- NodeManager$$Init @ 0131e350
+
+--- Listing ---
+0131d274  str d8,[sp, #-0x30]!
+0131d278  stp x21,x20,[sp, #0x10]
+0131d27c  stp x19,x30,[sp, #0x20]
+0131d280  adrp x20,0x3575000
+0131d284  adrp x21,0x331b000
+0131d288  ldrb w8,[x20, #0xd7d]
+0131d28c  ldr x21,[x21, #0x6f8]
+0131d290  mov v8.16B,v0.16B
+0131d294  mov x19,x0
+0131d298  tbnz w8,#0x0,0x0131d2b0
+0131d29c  adrp x0,0x331b000
+0131d2a0  ldr x0,[x0, #0x6f8]
+0131d2a4  bl 0x00b0789c
+0131d2a8  mov w8,#0x1
+0131d2ac  strb w8,[x20, #0xd7d]
+0131d2b0  ldr x8,[x21]
+0131d2b4  ldr x8,[x8, #0xb8]
+0131d2b8  ldr x0,[x8, #0x38]
+0131d2bc  cbz x0,0x0131d2dc
+0131d2c0  mov x1,x19
+0131d2c4  ldp x19,x30,[sp, #0x20]
+0131d2c8  ldp x21,x20,[sp, #0x10]
+0131d2cc  mov v0.16B,v8.16B
+0131d2d0  mov x2,xzr
+0131d2d4  ldr d8,[sp], #0x30
+0131d2d8  b 0x01061c3c
+0131d2dc  str s8,[x19, #0x20]
+0131d2e0  ldp x19,x30,[sp, #0x20]
+0131d2e4  ldp x21,x20,[sp, #0x10]
+0131d2e8  ldr d8,[sp], #0x30
+0131d2ec  ret
+
+
+================================================================================
+### FILE: 0131d2f0_NetInfo__get_Y.txt
+================================================================================
+Function: NetInfo$$get_Y @ 0131d2f0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp32 @ 01063698
+
+--- Calls IN ---
+  <- TerrainNews$$get_m_place @ 016c7024
+  <- XLua.CSObjectWrap.NetInfoWrap$$_g_get_Y @ 012f4a58
+  <- NodeManager$$GetNewNetCode @ 0131e728
+
+--- Listing ---
+0131d2f0  stp x21,x20,[sp, #-0x20]!
+0131d2f4  stp x19,x30,[sp, #0x10]
+0131d2f8  adrp x20,0x3575000
+0131d2fc  adrp x21,0x331b000
+0131d300  ldrb w8,[x20, #0xd7e]
+0131d304  ldr x21,[x21, #0x6f8]
+0131d308  mov x19,x0
+0131d30c  tbnz w8,#0x0,0x0131d324
+0131d310  adrp x0,0x331b000
+0131d314  ldr x0,[x0, #0x6f8]
+0131d318  bl 0x00b0789c
+0131d31c  mov w8,#0x1
+0131d320  strb w8,[x20, #0xd7e]
+0131d324  ldr x8,[x21]
+0131d328  ldr x8,[x8, #0xb8]
+0131d32c  ldr x0,[x8, #0x40]
+0131d330  cbz x0,0x0131d348
+0131d334  mov x1,x19
+0131d338  ldp x19,x30,[sp, #0x10]
+0131d33c  mov x2,xzr
+0131d340  ldp x21,x20,[sp], #0x20
+0131d344  b 0x01063698
+0131d348  ldr s0,[x19, #0x24]
+0131d34c  ldp x19,x30,[sp, #0x10]
+0131d350  ldp x21,x20,[sp], #0x20
+0131d354  ret
+
+
+================================================================================
+### FILE: 0131d358_NetInfo__set_Y.txt
+================================================================================
+Function: NetInfo$$set_Y @ 0131d358
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp20 @ 01061c3c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetInfoWrap$$_s_set_Y @ 012f59e8
+  <- NodeManager$$Init @ 0131e350
+
+--- Listing ---
+0131d358  str d8,[sp, #-0x30]!
+0131d35c  stp x21,x20,[sp, #0x10]
+0131d360  stp x19,x30,[sp, #0x20]
+0131d364  adrp x20,0x3575000
+0131d368  adrp x21,0x331b000
+0131d36c  ldrb w8,[x20, #0xd7f]
+0131d370  ldr x21,[x21, #0x6f8]
+0131d374  mov v8.16B,v0.16B
+0131d378  mov x19,x0
+0131d37c  tbnz w8,#0x0,0x0131d394
+0131d380  adrp x0,0x331b000
+0131d384  ldr x0,[x0, #0x6f8]
+0131d388  bl 0x00b0789c
+0131d38c  mov w8,#0x1
+0131d390  strb w8,[x20, #0xd7f]
+0131d394  ldr x8,[x21]
+0131d398  ldr x8,[x8, #0xb8]
+0131d39c  ldr x0,[x8, #0x48]
+0131d3a0  cbz x0,0x0131d3c0
+0131d3a4  mov x1,x19
+0131d3a8  ldp x19,x30,[sp, #0x20]
+0131d3ac  ldp x21,x20,[sp, #0x10]
+0131d3b0  mov v0.16B,v8.16B
+0131d3b4  mov x2,xzr
+0131d3b8  ldr d8,[sp], #0x30
+0131d3bc  b 0x01061c3c
+0131d3c0  str s8,[x19, #0x24]
+0131d3c4  ldp x19,x30,[sp, #0x20]
+0131d3c8  ldp x21,x20,[sp, #0x10]
+0131d3cc  ldr d8,[sp], #0x30
+0131d3d0  ret
+
+
+================================================================================
+### FILE: 0131d3d4_NetInfo__get_Id.txt
+================================================================================
+Function: NetInfo$$get_Id @ 0131d3d4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- TerrainNews$$FirstTerrain @ 016cb708
+  <- TerrainNews$$RoundTurnHalf @ 016cc7a4
+  <- NodeManager$$GetNewNetCode @ 0131e728
+  <- XLua.CSObjectWrap.NetInfoWrap$$_g_get_Id @ 012f4c0c
+
+--- Listing ---
+0131d3d4  stp x21,x20,[sp, #-0x20]!
+0131d3d8  stp x19,x30,[sp, #0x10]
+0131d3dc  adrp x20,0x3575000
+0131d3e0  adrp x21,0x331b000
+0131d3e4  ldrb w8,[x20, #0xd80]
+0131d3e8  ldr x21,[x21, #0x6f8]
+0131d3ec  mov x19,x0
+0131d3f0  tbnz w8,#0x0,0x0131d408
+0131d3f4  adrp x0,0x331b000
+0131d3f8  ldr x0,[x0, #0x6f8]
+0131d3fc  bl 0x00b0789c
+0131d400  mov w8,#0x1
+0131d404  strb w8,[x20, #0xd80]
+0131d408  ldr x8,[x21]
+0131d40c  ldr x8,[x8, #0xb8]
+0131d410  ldr x0,[x8, #0x50]
+0131d414  cbz x0,0x0131d42c
+0131d418  mov x1,x19
+0131d41c  ldp x19,x30,[sp, #0x10]
+0131d420  mov x2,xzr
+0131d424  ldp x21,x20,[sp], #0x20
+0131d428  b 0x01060c2c
+0131d42c  ldr w0,[x19, #0x28]
+0131d430  ldp x19,x30,[sp, #0x10]
+0131d434  ldp x21,x20,[sp], #0x20
+0131d438  ret
+
+
+================================================================================
+### FILE: 0131d43c_NetInfo__set_Id.txt
+================================================================================
+Function: NetInfo$$set_Id @ 0131d43c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetInfoWrap$$_s_set_Id @ 012f5ba8
+  <- TerrainNews$$FirstTerrain @ 016cb708
+
+--- Listing ---
+0131d43c  str x22,[sp, #-0x30]!
+0131d440  stp x21,x20,[sp, #0x10]
+0131d444  stp x19,x30,[sp, #0x20]
+0131d448  adrp x21,0x3575000
+0131d44c  adrp x22,0x331b000
+0131d450  ldrb w8,[x21, #0xd81]
+0131d454  ldr x22,[x22, #0x6f8]
+0131d458  mov w19,w1
+0131d45c  mov x20,x0
+0131d460  tbnz w8,#0x0,0x0131d478
+0131d464  adrp x0,0x331b000
+0131d468  ldr x0,[x0, #0x6f8]
+0131d46c  bl 0x00b0789c
+0131d470  mov w8,#0x1
+0131d474  strb w8,[x21, #0xd81]
+0131d478  ldr x8,[x22]
+0131d47c  ldr x8,[x8, #0xb8]
+0131d480  ldr x0,[x8, #0x58]
+0131d484  cbz x0,0x0131d4a4
+0131d488  mov x1,x20
+0131d48c  mov w2,w19
+0131d490  ldp x19,x30,[sp, #0x20]
+0131d494  ldp x21,x20,[sp, #0x10]
+0131d498  mov x3,xzr
+0131d49c  ldr x22,[sp], #0x30
+0131d4a0  b 0x0106155c
+0131d4a4  str w19,[x20, #0x28]
+0131d4a8  ldp x19,x30,[sp, #0x20]
+0131d4ac  ldp x21,x20,[sp, #0x10]
+0131d4b0  ldr x22,[sp], #0x30
+0131d4b4  ret
+
+
+================================================================================
+### FILE: 0131d4b8_NetInfo__get_CurrentId.txt
+================================================================================
+Function: NetInfo$$get_CurrentId @ 0131d4b8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- TerrainNews$$get_m_terrainData @ 016c953c
+  <- XLua.CSObjectWrap.NetInfoWrap$$_g_get_CurrentId @ 012f4dc0
+  <- TerrainNews$$get_CurrentID @ 016cb28c
+
+--- Listing ---
+0131d4b8  stp x21,x20,[sp, #-0x20]!
+0131d4bc  stp x19,x30,[sp, #0x10]
+0131d4c0  adrp x20,0x3575000
+0131d4c4  adrp x21,0x331b000
+0131d4c8  ldrb w8,[x20, #0xd82]
+0131d4cc  ldr x21,[x21, #0x6f8]
+0131d4d0  mov x19,x0
+0131d4d4  tbnz w8,#0x0,0x0131d4ec
+0131d4d8  adrp x0,0x331b000
+0131d4dc  ldr x0,[x0, #0x6f8]
+0131d4e0  bl 0x00b0789c
+0131d4e4  mov w8,#0x1
+0131d4e8  strb w8,[x20, #0xd82]
+0131d4ec  ldr x8,[x21]
+0131d4f0  ldr x8,[x8, #0xb8]
+0131d4f4  ldr x0,[x8, #0x60]
+0131d4f8  cbz x0,0x0131d510
+0131d4fc  mov x1,x19
+0131d500  ldp x19,x30,[sp, #0x10]
+0131d504  mov x2,xzr
+0131d508  ldp x21,x20,[sp], #0x20
+0131d50c  b 0x01060c2c
+0131d510  ldr w0,[x19, #0x2c]
+0131d514  ldp x19,x30,[sp, #0x10]
+0131d518  ldp x21,x20,[sp], #0x20
+0131d51c  ret
+
+
+================================================================================
+### FILE: 0131d520_NetInfo__set_CurrentId.txt
+================================================================================
+Function: NetInfo$$set_CurrentId @ 0131d520
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- TerrainNews$$FirstTerrain @ 016cb708
+  <- TerrainNews$$UpdateTerrain @ 016cbeb8
+  <- XLua.CSObjectWrap.NetInfoWrap$$_s_set_CurrentId @ 012f5d6c
+
+--- Listing ---
+0131d520  str x22,[sp, #-0x30]!
+0131d524  stp x21,x20,[sp, #0x10]
+0131d528  stp x19,x30,[sp, #0x20]
+0131d52c  adrp x21,0x3575000
+0131d530  adrp x22,0x331b000
+0131d534  ldrb w8,[x21, #0xd83]
+0131d538  ldr x22,[x22, #0x6f8]
+0131d53c  mov w19,w1
+0131d540  mov x20,x0
+0131d544  tbnz w8,#0x0,0x0131d55c
+0131d548  adrp x0,0x331b000
+0131d54c  ldr x0,[x0, #0x6f8]
+0131d550  bl 0x00b0789c
+0131d554  mov w8,#0x1
+0131d558  strb w8,[x21, #0xd83]
+0131d55c  ldr x8,[x22]
+0131d560  ldr x8,[x8, #0xb8]
+0131d564  ldr x0,[x8, #0x68]
+0131d568  cbz x0,0x0131d588
+0131d56c  mov x1,x20
+0131d570  mov w2,w19
+0131d574  ldp x19,x30,[sp, #0x20]
+0131d578  ldp x21,x20,[sp, #0x10]
+0131d57c  mov x3,xzr
+0131d580  ldr x22,[sp], #0x30
+0131d584  b 0x0106155c
+0131d588  str w19,[x20, #0x2c]
+0131d58c  ldp x19,x30,[sp, #0x20]
+0131d590  ldp x21,x20,[sp, #0x10]
+0131d594  ldr x22,[sp], #0x30
+0131d598  ret
+
+
+================================================================================
+### FILE: 0131d59c_NetInfo__get_StartRound.txt
+================================================================================
+Function: NetInfo$$get_StartRound @ 0131d59c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp32 @ 01063698
+
+--- Calls IN ---
+  <- TerrainNews$$RoundTurnHalf @ 016cc7a4
+  <- TerrainNews$$get_RemainingTime @ 016cc91c
+  <- XLua.CSObjectWrap.NetInfoWrap$$_g_get_StartRound @ 012f4f74
+
+--- Listing ---
+0131d59c  stp x21,x20,[sp, #-0x20]!
+0131d5a0  stp x19,x30,[sp, #0x10]
+0131d5a4  adrp x20,0x3575000
+0131d5a8  adrp x21,0x331b000
+0131d5ac  ldrb w8,[x20, #0xd84]
+0131d5b0  ldr x21,[x21, #0x6f8]
+0131d5b4  mov x19,x0
+0131d5b8  tbnz w8,#0x0,0x0131d5d0
+0131d5bc  adrp x0,0x331b000
+0131d5c0  ldr x0,[x0, #0x6f8]
+0131d5c4  bl 0x00b0789c
+0131d5c8  mov w8,#0x1
+0131d5cc  strb w8,[x20, #0xd84]
+0131d5d0  ldr x8,[x21]
+0131d5d4  ldr x8,[x8, #0xb8]
+0131d5d8  ldr x0,[x8, #0x70]
+0131d5dc  cbz x0,0x0131d5f4
+0131d5e0  mov x1,x19
+0131d5e4  ldp x19,x30,[sp, #0x10]
+0131d5e8  mov x2,xzr
+0131d5ec  ldp x21,x20,[sp], #0x20
+0131d5f0  b 0x01063698
+0131d5f4  ldr s0,[x19, #0x30]
+0131d5f8  ldp x19,x30,[sp, #0x10]
+0131d5fc  ldp x21,x20,[sp], #0x20
+0131d600  ret
+
+
+================================================================================
+### FILE: 0131d604_NetInfo__set_StartRound.txt
+================================================================================
+Function: NetInfo$$set_StartRound @ 0131d604
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp20 @ 01061c3c
+
+--- Calls IN ---
+  <- TerrainNews$$FirstTerrain @ 016cb708
+  <- XLua.CSObjectWrap.NetInfoWrap$$_s_set_StartRound @ 012f5f30
+  <- TerrainNews$$UpdateTerrain @ 016cbeb8
+
+--- Listing ---
+0131d604  str d8,[sp, #-0x30]!
+0131d608  stp x21,x20,[sp, #0x10]
+0131d60c  stp x19,x30,[sp, #0x20]
+0131d610  adrp x20,0x3575000
+0131d614  adrp x21,0x331b000
+0131d618  ldrb w8,[x20, #0xd85]
+0131d61c  ldr x21,[x21, #0x6f8]
+0131d620  mov v8.16B,v0.16B
+0131d624  mov x19,x0
+0131d628  tbnz w8,#0x0,0x0131d640
+0131d62c  adrp x0,0x331b000
+0131d630  ldr x0,[x0, #0x6f8]
+0131d634  bl 0x00b0789c
+0131d638  mov w8,#0x1
+0131d63c  strb w8,[x20, #0xd85]
+0131d640  ldr x8,[x21]
+0131d644  ldr x8,[x8, #0xb8]
+0131d648  ldr x0,[x8, #0x78]
+0131d64c  cbz x0,0x0131d66c
+0131d650  mov x1,x19
+0131d654  ldp x19,x30,[sp, #0x20]
+0131d658  ldp x21,x20,[sp, #0x10]
+0131d65c  mov v0.16B,v8.16B
+0131d660  mov x2,xzr
+0131d664  ldr d8,[sp], #0x30
+0131d668  b 0x01061c3c
+0131d66c  str s8,[x19, #0x30]
+0131d670  ldp x19,x30,[sp, #0x20]
+0131d674  ldp x21,x20,[sp, #0x10]
+0131d678  ldr d8,[sp], #0x30
+0131d67c  ret
+
+
+================================================================================
+### FILE: 0131d680_NetInfo__get_Duration.txt
+================================================================================
+Function: NetInfo$$get_Duration @ 0131d680
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp32 @ 01063698
+
+--- Calls IN ---
+  <- TerrainNews$$get_duration @ 016cbe40
+  <- XLua.CSObjectWrap.NetInfoWrap$$_g_get_Duration @ 012f5128
+
+--- Listing ---
+0131d680  stp x21,x20,[sp, #-0x20]!
+0131d684  stp x19,x30,[sp, #0x10]
+0131d688  adrp x20,0x3575000
+0131d68c  adrp x21,0x331b000
+0131d690  ldrb w8,[x20, #0xd86]
+0131d694  ldr x21,[x21, #0x6f8]
+0131d698  mov x19,x0
+0131d69c  tbnz w8,#0x0,0x0131d6b4
+0131d6a0  adrp x0,0x331b000
+0131d6a4  ldr x0,[x0, #0x6f8]
+0131d6a8  bl 0x00b0789c
+0131d6ac  mov w8,#0x1
+0131d6b0  strb w8,[x20, #0xd86]
+0131d6b4  ldr x8,[x21]
+0131d6b8  ldr x8,[x8, #0xb8]
+0131d6bc  ldr x0,[x8, #0x80]
+0131d6c0  cbz x0,0x0131d6d8
+0131d6c4  mov x1,x19
+0131d6c8  ldp x19,x30,[sp, #0x10]
+0131d6cc  mov x2,xzr
+0131d6d0  ldp x21,x20,[sp], #0x20
+0131d6d4  b 0x01063698
+0131d6d8  ldr s0,[x19, #0x34]
+0131d6dc  ldp x19,x30,[sp, #0x10]
+0131d6e0  ldp x21,x20,[sp], #0x20
+0131d6e4  ret
+
+
+================================================================================
+### FILE: 0131d6e8_NetInfo__set_Duration.txt
+================================================================================
+Function: NetInfo$$set_Duration @ 0131d6e8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp20 @ 01061c3c
+
+--- Calls IN ---
+  <- TerrainNews$$FirstTerrain @ 016cb708
+  <- XLua.CSObjectWrap.NetInfoWrap$$_s_set_Duration @ 012f60f0
+  <- TerrainNews$$UpdateTerrain @ 016cbeb8
+
+--- Listing ---
+0131d6e8  str d8,[sp, #-0x30]!
+0131d6ec  stp x21,x20,[sp, #0x10]
+0131d6f0  stp x19,x30,[sp, #0x20]
+0131d6f4  adrp x20,0x3575000
+0131d6f8  adrp x21,0x331b000
+0131d6fc  ldrb w8,[x20, #0xd87]
+0131d700  ldr x21,[x21, #0x6f8]
+0131d704  mov v8.16B,v0.16B
+0131d708  mov x19,x0
+0131d70c  tbnz w8,#0x0,0x0131d724
+0131d710  adrp x0,0x331b000
+0131d714  ldr x0,[x0, #0x6f8]
+0131d718  bl 0x00b0789c
+0131d71c  mov w8,#0x1
+0131d720  strb w8,[x20, #0xd87]
+0131d724  ldr x8,[x21]
+0131d728  ldr x8,[x8, #0xb8]
+0131d72c  ldr x0,[x8, #0x88]
+0131d730  cbz x0,0x0131d750
+0131d734  mov x1,x19
+0131d738  ldp x19,x30,[sp, #0x20]
+0131d73c  ldp x21,x20,[sp, #0x10]
+0131d740  mov v0.16B,v8.16B
+0131d744  mov x2,xzr
+0131d748  ldr d8,[sp], #0x30
+0131d74c  b 0x01061c3c
+0131d750  str s8,[x19, #0x34]
+0131d754  ldp x19,x30,[sp, #0x20]
+0131d758  ldp x21,x20,[sp, #0x10]
+0131d75c  ldr d8,[sp], #0x30
+0131d760  ret
+
+
+================================================================================
+### FILE: 0131d764_NetInfo__.ctor.txt
+================================================================================
+Function: NetInfo$$.ctor @ 0131d764
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.NetInfoWrap$$__CreateInstance @ 012f41d0
+  <- NodeManager$$Init @ 0131e350
+
+--- Listing ---
+0131d764  stp x21,x20,[sp, #-0x20]!
+0131d768  stp x19,x30,[sp, #0x10]
+0131d76c  adrp x21,0x3575000
+0131d770  adrp x20,0x331b000
+0131d774  ldrb w8,[x21, #0xd88]
+0131d778  ldr x20,[x20, #0x6f8]
+0131d77c  mov x19,x0
+0131d780  tbnz w8,#0x0,0x0131d798
+0131d784  adrp x0,0x331b000
+0131d788  ldr x0,[x0, #0x6f8]
+0131d78c  bl 0x00b0789c
+0131d790  mov w8,#0x1
+0131d794  strb w8,[x21, #0xd88]
+0131d798  mov x0,x19
+0131d79c  mov x1,xzr
+0131d7a0  bl 0x02194104
+0131d7a4  ldr x8,[x20]
+0131d7a8  ldr x8,[x8, #0xb8]
+0131d7ac  ldr x0,[x8, #0x90]
+0131d7b0  cbz x0,0x0131d7c8
+0131d7b4  mov x1,x19
+0131d7b8  ldp x19,x30,[sp, #0x10]
+0131d7bc  mov x2,xzr
+0131d7c0  ldp x21,x20,[sp], #0x20
+0131d7c4  b 0x01060dac
+0131d7c8  ldp x19,x30,[sp, #0x10]
+0131d7cc  ldp x21,x20,[sp], #0x20
+0131d7d0  ret
+
+
+================================================================================
+### FILE: 03799408_newlocale.txt
+================================================================================
+Function: newlocale @ 03799408
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- newlocale @ 008d49c0
+
+--- Listing ---
+03799408  ?? ??
+
+

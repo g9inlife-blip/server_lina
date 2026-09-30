@@ -1,0 +1,151 @@
+================================================================================
+### FILE: 00b81088_what.txt
+================================================================================
+Function: what @ 00b81088
+FuncComment: std::__ndk1::bad_weak_ptr::what() const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b81088  adrp x0,0x2a0a000
+    ; [PLATE] std::__ndk1::bad_weak_ptr::what() const
+00b8108c  add x0,x0,#0x124
+00b81090  ret
+
+
+================================================================================
+### FILE: 00b8e4fc_what.txt
+================================================================================
+Function: what @ 00b8e4fc
+FuncComment: std::exception::what() const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e4fc  adrp x0,0x2a0a000
+    ; [PLATE] std::exception::what() const
+00b8e500  add x0,x0,#0xdc6
+00b8e504  ret
+
+
+================================================================================
+### FILE: 00b8e50c_what.txt
+================================================================================
+Function: what @ 00b8e50c
+FuncComment: std::bad_exception::what() const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e50c  adrp x0,0x2a0a000
+    ; [PLATE] std::bad_exception::what() const
+00b8e510  add x0,x0,#0xdd5
+00b8e514  ret
+
+
+================================================================================
+### FILE: 00b8e530_what.txt
+================================================================================
+Function: what @ 00b8e530
+FuncComment: std::bad_alloc::what() const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e530  adrp x0,0x2a0a000
+    ; [PLATE] std::bad_alloc::what() const
+00b8e534  add x0,x0,#0xde8
+00b8e538  ret
+
+
+================================================================================
+### FILE: 00b8e554_what.txt
+================================================================================
+Function: what @ 00b8e554
+FuncComment: std::bad_array_new_length::what() const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e554  adrp x0,0x2a0a000
+    ; [PLATE] std::bad_array_new_length::what() const
+00b8e558  add x0,x0,#0xdf7
+00b8e55c  ret
+
+
+================================================================================
+### FILE: 00b8e610_what.txt
+================================================================================
+Function: what @ 00b8e610
+FuncComment: std::logic_error::what() const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e610  ldr x0,[x0, #0x8]
+    ; [PLATE] std::logic_error::what() const
+00b8e614  ret
+
+
+================================================================================
+### FILE: 00b8e6c8_what.txt
+================================================================================
+Function: what @ 00b8e6c8
+FuncComment: std::runtime_error::what() const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e6c8  ldr x0,[x0, #0x8]
+    ; [PLATE] std::runtime_error::what() const
+00b8e6cc  ret
+
+
+================================================================================
+### FILE: 00b8e998_what.txt
+================================================================================
+Function: what @ 00b8e998
+FuncComment: std::bad_cast::what() const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e998  adrp x0,0x2a0a000
+    ; [PLATE] std::bad_cast::what() const
+00b8e99c  add x0,x0,#0xef2
+00b8e9a0  ret
+
+
+================================================================================
+### FILE: 00b8e9e0_what.txt
+================================================================================
+Function: what @ 00b8e9e0
+FuncComment: std::bad_typeid::what() const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e9e0  adrp x0,0x2a0a000
+    ; [PLATE] std::bad_typeid::what() const
+00b8e9e4  add x0,x0,#0xf00
+00b8e9e8  ret
+
+

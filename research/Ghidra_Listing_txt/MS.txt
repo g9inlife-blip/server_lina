@@ -1,0 +1,1816 @@
+================================================================================
+### FILE: 022f7488_MS.Internal.Xml.Cache.XPathDocumentNavigator__.ctor.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$.ctor @ 022f7488
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Xml.XPath.XPathNavigator$$.ctor @ 022b7a88
+
+--- Calls IN ---
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$Clone @ 022f7938
+
+--- Listing ---
+022f7488  stp x25,x24,[sp, #-0x40]!
+022f748c  stp x23,x22,[sp, #0x10]
+022f7490  stp x21,x20,[sp, #0x20]
+022f7494  stp x19,x30,[sp, #0x30]
+022f7498  adrp x24,0x357b000
+022f749c  adrp x25,0x3380000
+022f74a0  ldrb w8,[x24, #0x1d8]
+022f74a4  ldr x25,[x25, #0xe18]
+022f74a8  mov w19,w4
+022f74ac  mov x22,x3
+022f74b0  mov w20,w2
+022f74b4  mov x23,x1
+022f74b8  mov x21,x0
+022f74bc  tbnz w8,#0x0,0x022f74d4
+022f74c0  adrp x0,0x3380000
+022f74c4  ldr x0,[x0, #0xe18]
+022f74c8  bl 0x00b0789c
+022f74cc  mov w8,#0x1
+022f74d0  strb w8,[x24, #0x1d8]
+022f74d4  ldr x0,[x25]
+022f74d8  ldr w8,[x0, #0xe0]
+022f74dc  cbnz w8,0x022f74e4
+022f74e0  bl 0x00b0798c
+022f74e4  mov x0,x21
+022f74e8  mov x1,xzr
+022f74ec  bl 0x022b7a88
+022f74f0  mov x0,x21
+022f74f4  str x23,[x0, #0x10]!
+022f74f8  mov x1,x23
+022f74fc  bl 0x00b07850
+022f7500  str x22,[x21, #0x18]!
+022f7504  mov x0,x21
+022f7508  mov x1,x22
+022f750c  bl 0x00b07850
+022f7510  stp w20,w19,[x21, #0x8]
+022f7514  ldp x19,x30,[sp, #0x30]
+022f7518  ldp x21,x20,[sp, #0x20]
+022f751c  ldp x23,x22,[sp, #0x10]
+022f7520  ldp x25,x24,[sp], #0x40
+022f7524  ret
+
+
+================================================================================
+### FILE: 022f7528_MS.Internal.Xml.Cache.XPathDocumentNavigator__get_Value.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_Value @ 022f7528
+
+--- Calls OUT ---
+  -> MS.Internal.Xml.Cache.XPathNodeHelper$$GetNonDescendant @ 022f7724
+  -> MS.Internal.Xml.Cache.XPathNodeHelper$$GetTextFollowing @ 022f77cc
+  -> System.Text.StringBuilder$$.ctor @ 01fe7ee0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+
+--- Calls IN ---
+
+--- Listing ---
+022f7528  sub sp,sp,#0x40
+022f752c  str x22,[sp, #0x10]
+022f7530  stp x21,x20,[sp, #0x20]
+022f7534  stp x19,x30,[sp, #0x30]
+022f7538  adrp x19,0x357b000
+022f753c  ldrb w8,[x19, #0x1d9]
+022f7540  mov x20,x0
+022f7544  tbnz w8,#0x0,0x022f7568
+022f7548  adrp x0,0x3332000
+022f754c  ldr x0,[x0, #0xaf0]
+022f7550  bl 0x00b0789c
+022f7554  adrp x0,0x331b000
+022f7558  ldr x0,[x0, #0x6c8]
+022f755c  bl 0x00b0789c
+022f7560  mov w8,#0x1
+022f7564  strb w8,[x19, #0x1d9]
+022f7568  str xzr,[sp, #0x18]
+022f756c  stp xzr,xzr,[sp]
+022f7570  ldr x8,[x20, #0x10]
+022f7574  cbz x8,0x022f771c
+022f7578  ldr w9,[x20, #0x20]
+022f757c  ldr w10,[x8, #0x18]
+022f7580  cmp w9,w10
+022f7584  b.cs 0x022f7720
+022f7588  sxtw x10,w9
+022f758c  add x10,x8,x10, LSL #0x5
+022f7590  ldr x19,[x10, #0x38]
+022f7594  cbnz x19,0x022f7704
+022f7598  ldrsw x10,[x20, #0x24]
+022f759c  cbz w10,0x022f75c0
+022f75a0  ldr x8,[x20, #0x18]
+022f75a4  cbz x8,0x022f771c
+022f75a8  ldr w9,[x8, #0x18]
+022f75ac  cmp w10,w9
+022f75b0  b.cs 0x022f7720
+022f75b4  add x8,x8,x10, LSL #0x5
+022f75b8  ldr x19,[x8, #0x38]
+022f75bc  b 0x022f7704
+022f75c0  adrp x10,0x331b000
+022f75c4  ldr x10,[x10, #0x6c8]
+022f75c8  add x0,sp,#0x8
+022f75cc  mov x1,sp
+022f75d0  ldr x10,[x10]
+022f75d4  ldr x10,[x10, #0xb8]
+022f75d8  ldr x19,[x10]
+022f75dc  str x8,[sp, #0x8]
+022f75e0  str x8,[sp, #0x18]
+022f75e4  stp w9,w9,[sp]
+022f75e8  bl 0x022f7724
+022f75ec  tbz w0,#0x0,0x022f75fc
+022f75f0  ldr x2,[sp, #0x8]
+022f75f4  ldr w20,[sp]
+022f75f8  b 0x022f760c
+022f75fc  mov w20,wzr
+022f7600  mov x2,xzr
+022f7604  str xzr,[sp, #0x8]
+022f7608  str wzr,[sp]
+022f760c  add x0,sp,#0x18
+022f7610  add x1,sp,#0x4
+022f7614  mov w3,w20
+022f7618  bl 0x022f77cc
+022f761c  tbz w0,#0x0,0x022f7704
+022f7620  adrp x22,0x3332000
+022f7624  ldr x22,[x22, #0xaf0]
+022f7628  mov x21,xzr
+022f762c  cbz x19,0x022f771c
+022f7630  ldr w8,[x19, #0x10]
+022f7634  cbnz w8,0x022f7674
+022f7638  ldr x8,[sp, #0x18]
+022f763c  cbz x8,0x022f771c
+022f7640  ldrsw x9,[sp, #0x4]
+022f7644  ldr w10,[x8, #0x18]
+022f7648  cmp w9,w10
+022f764c  b.cs 0x022f7720
+022f7650  add x8,x8,x9, LSL #0x5
+022f7654  ldr x2,[sp, #0x8]
+022f7658  ldr x19,[x8, #0x38]
+022f765c  add x0,sp,#0x18
+022f7660  add x1,sp,#0x4
+022f7664  mov w3,w20
+022f7668  bl 0x022f77cc
+022f766c  tbnz w0,#0x0,0x022f762c
+022f7670  b 0x022f76ec
+022f7674  cbnz x21,0x022f76a0
+022f7678  ldr x0,[x22]
+022f767c  bl 0x00b079a0
+022f7680  cbz x0,0x022f771c
+022f7684  mov x1,xzr
+022f7688  mov x21,x0
+022f768c  bl 0x01fe7ee0
+022f7690  mov x0,x21
+022f7694  mov x1,x19
+022f7698  mov x2,xzr
+022f769c  bl 0x01fe9960
+022f76a0  ldr x8,[sp, #0x18]
+022f76a4  cbz x8,0x022f771c
+022f76a8  ldrsw x9,[sp, #0x4]
+022f76ac  ldr w10,[x8, #0x18]
+022f76b0  cmp w9,w10
+022f76b4  b.cs 0x022f7720
+022f76b8  cbz x21,0x022f771c
+022f76bc  add x8,x8,x9, LSL #0x5
+022f76c0  ldr x1,[x8, #0x38]
+022f76c4  mov x0,x21
+022f76c8  mov x2,xzr
+022f76cc  bl 0x01fe9960
+022f76d0  ldr x2,[sp, #0x8]
+022f76d4  add x0,sp,#0x18
+022f76d8  add x1,sp,#0x4
+022f76dc  mov w3,w20
+022f76e0  bl 0x022f77cc
+022f76e4  tbnz w0,#0x0,0x022f762c
+022f76e8  b 0x022f76f0
+022f76ec  cbz x21,0x022f7704
+022f76f0  ldr x8,[x21]
+022f76f4  mov x0,x21
+022f76f8  ldp x9,x1,[x8, #0x168]
+022f76fc  blr x9
+022f7700  mov x19,x0
+022f7704  mov x0,x19
+022f7708  ldp x19,x30,[sp, #0x30]
+022f770c  ldp x21,x20,[sp, #0x20]
+022f7710  ldr x22,[sp, #0x10]
+022f7714  add sp,sp,#0x40
+022f7718  ret
+022f771c  bl 0x00b079b0
+022f7720  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f7724_MS.Internal.Xml.Cache.XPathNodeHelper__GetNonDescendant.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeHelper$$GetNonDescendant @ 022f7724
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> MS.Internal.Xml.Cache.XPathNode$$GetParent @ 022f7fb0
+  -> MS.Internal.Xml.Cache.XPathNode$$GetSibling @ 022f7e44
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_Value @ 022f7528
+
+--- Listing ---
+022f7724  sub sp,sp,#0x30
+022f7728  stp x21,x20,[sp, #0x10]
+022f772c  stp x19,x30,[sp, #0x20]
+022f7730  mov x19,x1
+022f7734  ldr x1,[x0]
+022f7738  str x1,[sp, #0x8]
+022f773c  cbz x1,0x022f777c
+022f7740  mov x20,x0
+022f7744  ldr w0,[x19]
+022f7748  ldr w8,[x1, #0x18]
+022f774c  cmp w0,w8
+022f7750  b.cs 0x022f77c8
+022f7754  sxtw x21,w0
+022f7758  add x8,x1,x21, LSL #0x5
+022f775c  ldrh w9,[x8, #0x28]
+022f7760  cbnz w9,0x022f7780
+022f7764  add x0,x8,#0x20
+022f7768  add x1,sp,#0x8
+022f776c  bl 0x022f7fb0
+022f7770  cbz w0,0x022f77b8
+022f7774  ldr x1,[sp, #0x8]
+022f7778  cbnz x1,0x022f7748
+022f777c  bl 0x00b079b0
+022f7780  mov x0,x20
+022f7784  str x1,[x20]
+022f7788  bl 0x00b07850
+022f778c  ldr x8,[sp, #0x8]
+022f7790  cbz x8,0x022f777c
+022f7794  ldr w9,[x8, #0x18]
+022f7798  cmp w21,w9
+022f779c  b.cs 0x022f77c8
+022f77a0  add x8,x8,x21, LSL #0x5
+022f77a4  add x0,x8,#0x20
+022f77a8  mov x1,x20
+022f77ac  bl 0x022f7e44
+022f77b0  str w0,[x19]
+022f77b4  mov w0,#0x1
+022f77b8  ldp x19,x30,[sp, #0x20]
+022f77bc  ldp x21,x20,[sp, #0x10]
+022f77c0  add sp,sp,#0x30
+022f77c4  ret
+022f77c8  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f77cc_MS.Internal.Xml.Cache.XPathNodeHelper__GetTextFollowing.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeHelper$$GetTextFollowing @ 022f77cc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> MS.Internal.Xml.Cache.XPathNode$$get_IsText @ 022f8360
+
+--- Calls IN ---
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_Value @ 022f7528
+
+--- Listing ---
+022f77cc  str x26,[sp, #-0x50]!
+022f77d0  stp x25,x24,[sp, #0x10]
+022f77d4  stp x23,x22,[sp, #0x20]
+022f77d8  stp x21,x20,[sp, #0x30]
+022f77dc  stp x19,x30,[sp, #0x40]
+022f77e0  ldr w8,[x1]
+022f77e4  ldr x24,[x0]
+022f77e8  mov w22,w3
+022f77ec  mov x20,x2
+022f77f0  mov x19,x1
+022f77f4  mov x21,x0
+022f77f8  add w23,w8,#0x1
+022f77fc  mov w25,#0x8f
+022f7800  cmp w23,w22
+022f7804  b.gt 0x022f7810
+022f7808  cmp x24,x20
+022f780c  b.eq 0x022f78c4
+022f7810  cbz x24,0x022f7934
+022f7814  ldr w8,[x24, #0x18]
+022f7818  cbz w8,0x022f7930
+022f781c  ldr x9,[x24, #0x20]
+022f7820  cbz x9,0x022f7934
+022f7824  ldr x9,[x9, #0x48]
+022f7828  cbz x9,0x022f7934
+022f782c  ldr w10,[x9, #0x14]
+022f7830  cmp w23,w10
+022f7834  b.ge 0x022f7880
+022f7838  cmp w23,w8
+022f783c  b.cs 0x022f7930
+022f7840  sxtw x26,w23
+022f7844  add x8,x24,x26, LSL #0x5
+022f7848  add x0,x8,#0x20
+022f784c  bl 0x022f8360
+022f7850  tbnz w0,#0x0,0x022f7890
+022f7854  ldr x8,[x24, #0x18]
+022f7858  cmp w23,w8
+022f785c  b.cs 0x022f7930
+022f7860  add x9,x24,x26, LSL #0x5
+022f7864  ldr w9,[x9, #0x30]
+022f7868  and w9,w9,w25
+022f786c  cmp w9,#0x81
+022f7870  b.eq 0x022f7890
+022f7874  add w23,w23,#0x1
+022f7878  cbnz w8,0x022f781c
+022f787c  b 0x022f7930
+022f7880  ldr x24,[x9, #0x18]
+022f7884  mov w23,#0x1
+022f7888  cbnz x24,0x022f7800
+022f788c  b 0x022f78cc
+022f7890  mov x20,x24
+022f7894  mov x0,x21
+022f7898  mov x1,x20
+022f789c  str x20,[x21]
+022f78a0  bl 0x00b07850
+022f78a4  str w23,[x19]
+022f78a8  mov w0,#0x1
+022f78ac  ldp x19,x30,[sp, #0x40]
+022f78b0  ldp x21,x20,[sp, #0x30]
+022f78b4  ldp x23,x22,[sp, #0x20]
+022f78b8  ldp x25,x24,[sp, #0x10]
+022f78bc  ldr x26,[sp], #0x50
+022f78c0  ret
+022f78c4  cmp w23,w22
+022f78c8  b.ne 0x022f78d4
+022f78cc  mov w0,wzr
+022f78d0  b 0x022f78ac
+022f78d4  cbz x20,0x022f7934
+022f78d8  ldr x8,[x20, #0x18]
+022f78dc  mov w24,#0x8f
+022f78e0  cmp w23,w8
+022f78e4  b.cs 0x022f7930
+022f78e8  sxtw x25,w23
+022f78ec  add x8,x20,x25, LSL #0x5
+022f78f0  add x0,x8,#0x20
+022f78f4  bl 0x022f8360
+022f78f8  tbnz w0,#0x0,0x022f7894
+022f78fc  ldr x8,[x20, #0x18]
+022f7900  cmp w23,w8
+022f7904  b.cs 0x022f7930
+022f7908  add x9,x20,x25, LSL #0x5
+022f790c  ldr w9,[x9, #0x30]
+022f7910  and w9,w9,w24
+022f7914  cmp w9,#0x81
+022f7918  b.eq 0x022f7894
+022f791c  add w23,w23,#0x1
+022f7920  cmp w22,w23
+022f7924  mov w0,wzr
+022f7928  b.ne 0x022f78e0
+022f792c  b 0x022f78ac
+022f7930  bl 0x00b079b8
+022f7934  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f7938_MS.Internal.Xml.Cache.XPathDocumentNavigator__Clone.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$Clone @ 022f7938
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> MS.Internal.Xml.Cache.XPathDocumentNavigator$$.ctor @ 022f7488
+
+--- Calls IN ---
+
+--- Listing ---
+022f7938  stp x23,x22,[sp, #-0x30]!
+022f793c  stp x21,x20,[sp, #0x10]
+022f7940  stp x19,x30,[sp, #0x20]
+022f7944  adrp x19,0x357b000
+022f7948  adrp x23,0x3332000
+022f794c  ldrb w8,[x19, #0x1da]
+022f7950  ldr x23,[x23, #0x230]
+022f7954  mov x21,x0
+022f7958  tbnz w8,#0x0,0x022f7970
+022f795c  adrp x0,0x3332000
+022f7960  ldr x0,[x0, #0x230]
+022f7964  bl 0x00b0789c
+022f7968  mov w8,#0x1
+022f796c  strb w8,[x19, #0x1da]
+022f7970  ldr x0,[x23]
+022f7974  ldp x19,x20,[x21, #0x10]
+022f7978  ldp w22,w21,[x21, #0x20]
+022f797c  bl 0x00b079a0
+022f7980  cbz x0,0x022f79b0
+022f7984  mov x1,x19
+022f7988  mov w2,w22
+022f798c  mov x3,x20
+022f7990  mov w4,w21
+022f7994  mov x23,x0
+022f7998  bl 0x022f7488
+022f799c  ldp x19,x30,[sp, #0x20]
+022f79a0  ldp x21,x20,[sp, #0x10]
+022f79a4  mov x0,x23
+022f79a8  ldp x23,x22,[sp], #0x30
+022f79ac  ret
+022f79b0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f79b4_MS.Internal.Xml.Cache.XPathDocumentNavigator__get_NodeType.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_NodeType @ 022f79b4
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f79b4  str x30,[sp, #-0x10]!
+022f79b8  ldr x8,[x0, #0x10]
+022f79bc  cbz x8,0x022f79e4
+022f79c0  ldrsw x9,[x0, #0x20]
+022f79c4  ldr w10,[x8, #0x18]
+022f79c8  cmp w9,w10
+022f79cc  b.cs 0x022f79e8
+022f79d0  add x8,x8,x9, LSL #0x5
+022f79d4  ldr w8,[x8, #0x30]
+022f79d8  and w0,w8,#0xf
+022f79dc  ldr x30,[sp], #0x10
+022f79e0  ret
+022f79e4  bl 0x00b079b0
+022f79e8  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f79ec_MS.Internal.Xml.Cache.XPathNode__get_NodeType.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_NodeType @ 022f79ec
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f79ec  ldr w8,[x0, #0x10]
+022f79f0  and w0,w8,#0xf
+022f79f4  ret
+
+
+================================================================================
+### FILE: 022f79f8_MS.Internal.Xml.Cache.XPathDocumentNavigator__get_LocalName.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_LocalName @ 022f79f8
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f79f8  str x30,[sp, #-0x10]!
+022f79fc  ldr x8,[x0, #0x10]
+022f7a00  cbz x8,0x022f7a2c
+022f7a04  ldrsw x9,[x0, #0x20]
+022f7a08  ldr w10,[x8, #0x18]
+022f7a0c  cmp w9,w10
+022f7a10  b.cs 0x022f7a30
+022f7a14  add x8,x8,x9, LSL #0x5
+022f7a18  ldr x8,[x8, #0x20]
+022f7a1c  cbz x8,0x022f7a2c
+022f7a20  ldr x0,[x8, #0x10]
+022f7a24  ldr x30,[sp], #0x10
+022f7a28  ret
+022f7a2c  bl 0x00b079b0
+022f7a30  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f7a34_MS.Internal.Xml.Cache.XPathNode__get_LocalName.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_LocalName @ 022f7a34
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f7a34  str x30,[sp, #-0x10]!
+022f7a38  ldr x8,[x0]
+022f7a3c  cbz x8,0x022f7a4c
+022f7a40  ldr x0,[x8, #0x10]
+022f7a44  ldr x30,[sp], #0x10
+022f7a48  ret
+022f7a4c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f7a50_MS.Internal.Xml.Cache.XPathDocumentNavigator__get_NamespaceURI.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_NamespaceURI @ 022f7a50
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f7a50  str x30,[sp, #-0x10]!
+022f7a54  ldr x8,[x0, #0x10]
+022f7a58  cbz x8,0x022f7a84
+022f7a5c  ldrsw x9,[x0, #0x20]
+022f7a60  ldr w10,[x8, #0x18]
+022f7a64  cmp w9,w10
+022f7a68  b.cs 0x022f7a88
+022f7a6c  add x8,x8,x9, LSL #0x5
+022f7a70  ldr x8,[x8, #0x20]
+022f7a74  cbz x8,0x022f7a84
+022f7a78  ldr x0,[x8, #0x18]
+022f7a7c  ldr x30,[sp], #0x10
+022f7a80  ret
+022f7a84  bl 0x00b079b0
+022f7a88  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f7a8c_MS.Internal.Xml.Cache.XPathNode__get_NamespaceUri.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_NamespaceUri @ 022f7a8c
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f7a8c  str x30,[sp, #-0x10]!
+022f7a90  ldr x8,[x0]
+022f7a94  cbz x8,0x022f7aa4
+022f7a98  ldr x0,[x8, #0x18]
+022f7a9c  ldr x30,[sp], #0x10
+022f7aa0  ret
+022f7aa4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f7aa8_MS.Internal.Xml.Cache.XPathDocumentNavigator__get_Prefix.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_Prefix @ 022f7aa8
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f7aa8  str x30,[sp, #-0x10]!
+022f7aac  ldr x8,[x0, #0x10]
+022f7ab0  cbz x8,0x022f7adc
+022f7ab4  ldrsw x9,[x0, #0x20]
+022f7ab8  ldr w10,[x8, #0x18]
+022f7abc  cmp w9,w10
+022f7ac0  b.cs 0x022f7ae0
+022f7ac4  add x8,x8,x9, LSL #0x5
+022f7ac8  ldr x8,[x8, #0x20]
+022f7acc  cbz x8,0x022f7adc
+022f7ad0  ldr x0,[x8, #0x20]
+022f7ad4  ldr x30,[sp], #0x10
+022f7ad8  ret
+022f7adc  bl 0x00b079b0
+022f7ae0  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f7ae4_MS.Internal.Xml.Cache.XPathNode__get_Prefix.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_Prefix @ 022f7ae4
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f7ae4  str x30,[sp, #-0x10]!
+022f7ae8  ldr x8,[x0]
+022f7aec  cbz x8,0x022f7afc
+022f7af0  ldr x0,[x8, #0x20]
+022f7af4  ldr x30,[sp], #0x10
+022f7af8  ret
+022f7afc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f7b00_MS.Internal.Xml.Cache.XPathDocumentNavigator__get_NameTable.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_NameTable @ 022f7b00
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f7b00  str x30,[sp, #-0x10]!
+022f7b04  ldr x8,[x0, #0x10]
+022f7b08  cbz x8,0x022f7b3c
+022f7b0c  ldrsw x9,[x0, #0x20]
+022f7b10  ldr w10,[x8, #0x18]
+022f7b14  cmp w9,w10
+022f7b18  b.cs 0x022f7b40
+022f7b1c  add x8,x8,x9, LSL #0x5
+022f7b20  ldr x8,[x8, #0x20]
+022f7b24  cbz x8,0x022f7b3c
+022f7b28  ldr x8,[x8, #0x38]
+022f7b2c  cbz x8,0x022f7b3c
+022f7b30  ldr x0,[x8, #0x20]
+022f7b34  ldr x30,[sp], #0x10
+022f7b38  ret
+022f7b3c  bl 0x00b079b0
+022f7b40  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f7b44_MS.Internal.Xml.Cache.XPathNode__get_Document.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_Document @ 022f7b44
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f7b44  str x30,[sp, #-0x10]!
+022f7b48  ldr x8,[x0]
+022f7b4c  cbz x8,0x022f7b5c
+022f7b50  ldr x0,[x8, #0x38]
+022f7b54  ldr x30,[sp], #0x10
+022f7b58  ret
+022f7b5c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f7b60_MS.Internal.Xml.Cache.XPathDocumentNavigator__MoveToFirstNamespace.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToFirstNamespace @ 022f7b60
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> MS.Internal.Xml.Cache.XPathNode$$GetSibling @ 022f7e44
+  -> MS.Internal.Xml.Cache.XPathNodeHelper$$GetLocalNamespaces @ 022f7c70
+  -> FUN_00b079b8 @ 00b079b8
+  -> MS.Internal.Xml.Cache.XPathNode$$get_IsXmlNamespaceNode @ 022f7dbc
+  -> FUN_00b079b0 @ 00b079b0
+  -> MS.Internal.Xml.Cache.XPathNodeHelper$$GetInScopeNamespaces @ 022f7ce0
+
+--- Calls IN ---
+
+--- Listing ---
+022f7b60  str x24,[sp, #-0x40]!
+022f7b64  stp x23,x22,[sp, #0x10]
+022f7b68  stp x21,x20,[sp, #0x20]
+022f7b6c  stp x19,x30,[sp, #0x30]
+022f7b70  str xzr,[sp, #0x8]
+022f7b74  mov x20,x0
+022f7b78  mov x19,x0
+022f7b7c  ldr x0,[x20, #0x10]!
+022f7b80  mov w22,w1
+022f7b84  add x2,sp,#0x8
+022f7b88  cmp w1,#0x2
+022f7b8c  ldr w8,[x20, #0x10]
+022f7b90  b.ne 0x022f7ba0
+022f7b94  mov w1,w8
+022f7b98  bl 0x022f7c70
+022f7b9c  b 0x022f7ba8
+022f7ba0  mov w1,w8
+022f7ba4  bl 0x022f7ce0
+022f7ba8  mov w21,w0
+022f7bac  cbz w0,0x022f7c14
+022f7bb0  mov w23,w21
+022f7bb4  cmp w22,#0x1
+022f7bb8  b.ne 0x022f7c20
+022f7bbc  ldr x8,[sp, #0x8]
+022f7bc0  cbz x8,0x022f7c68
+022f7bc4  ldr w9,[x8, #0x18]
+022f7bc8  cmp w23,w9
+022f7bcc  b.cs 0x022f7c6c
+022f7bd0  sxtw x24,w23
+022f7bd4  add x8,x8,x24, LSL #0x5
+022f7bd8  add x0,x8,#0x20
+022f7bdc  bl 0x022f7dbc
+022f7be0  tbz w0,#0x0,0x022f7c1c
+022f7be4  ldr x8,[sp, #0x8]
+022f7be8  cbz x8,0x022f7c68
+022f7bec  ldr w9,[x8, #0x18]
+022f7bf0  cmp w23,w9
+022f7bf4  b.cs 0x022f7c6c
+022f7bf8  add x8,x8,x24, LSL #0x5
+022f7bfc  add x0,x8,#0x20
+022f7c00  add x1,sp,#0x8
+022f7c04  bl 0x022f7e44
+022f7c08  mov w23,w0
+022f7c0c  cbnz w0,0x022f7bb4
+022f7c10  b 0x022f7c54
+022f7c14  mov w0,wzr
+022f7c18  b 0x022f7c54
+022f7c1c  mov w21,w23
+022f7c20  ldr x1,[x19, #0x10]
+022f7c24  mov x22,x19
+022f7c28  str x1,[x22, #0x18]!
+022f7c2c  mov x0,x22
+022f7c30  bl 0x00b07850
+022f7c34  ldr w8,[x22, #0x8]
+022f7c38  mov x0,x20
+022f7c3c  str w8,[x22, #0xc]
+022f7c40  ldr x1,[sp, #0x8]
+022f7c44  str x1,[x19, #0x10]
+022f7c48  bl 0x00b07850
+022f7c4c  str w21,[x22, #0x8]
+022f7c50  mov w0,#0x1
+022f7c54  ldp x19,x30,[sp, #0x30]
+022f7c58  ldp x21,x20,[sp, #0x20]
+022f7c5c  ldp x23,x22,[sp, #0x10]
+022f7c60  ldr x24,[sp], #0x40
+022f7c64  ret
+022f7c68  bl 0x00b079b0
+022f7c6c  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f7c70_MS.Internal.Xml.Cache.XPathNodeHelper__GetLocalNamespaces.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeHelper$$GetLocalNamespaces @ 022f7c70
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Xml.XPath.XPathDocument$$LookupNamespaces @ 022b5d80
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToFirstNamespace @ 022f7b60
+
+--- Listing ---
+022f7c70  str x30,[sp, #-0x10]!
+022f7c74  cbz x0,0x022f7cd8
+022f7c78  ldr w8,[x0, #0x18]
+022f7c7c  mov x3,x2
+022f7c80  mov w2,w1
+022f7c84  mov x1,x0
+022f7c88  cmp w8,w2
+022f7c8c  b.ls 0x022f7cdc
+022f7c90  sxtw x8,w2
+022f7c94  add x8,x1,x8, LSL #0x5
+022f7c98  ldrb w9,[x8, #0x31]
+022f7c9c  tbnz w9,#0x1,0x022f7cbc
+022f7ca0  mov x0,x3
+022f7ca4  mov x1,xzr
+022f7ca8  str xzr,[x3]
+022f7cac  bl 0x00b07850
+022f7cb0  mov w0,wzr
+022f7cb4  ldr x30,[sp], #0x10
+022f7cb8  ret
+022f7cbc  ldr x8,[x8, #0x20]
+022f7cc0  cbz x8,0x022f7cd8
+022f7cc4  ldr x0,[x8, #0x38]
+022f7cc8  cbz x0,0x022f7cd8
+022f7ccc  mov x4,xzr
+022f7cd0  ldr x30,[sp], #0x10
+022f7cd4  b 0x022b5d80
+022f7cd8  bl 0x00b079b0
+022f7cdc  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f7ce0_MS.Internal.Xml.Cache.XPathNodeHelper__GetInScopeNamespaces.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeHelper$$GetInScopeNamespaces @ 022f7ce0
+
+--- Calls OUT ---
+  -> MS.Internal.Xml.Cache.XPathNode$$GetParent @ 022f7fb0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Xml.XPath.XPathDocument$$GetXmlNamespaceNode @ 022b5d58
+  -> System.Xml.XPath.XPathDocument$$LookupNamespaces @ 022b5d80
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToFirstNamespace @ 022f7b60
+
+--- Listing ---
+022f7ce0  str x20,[sp, #-0x20]!
+022f7ce4  stp x19,x30,[sp, #0x10]
+022f7ce8  str x0,[sp, #0x8]
+022f7cec  cbz x0,0x022f7d64
+022f7cf0  ldr w8,[x0, #0x18]
+022f7cf4  mov x19,x2
+022f7cf8  mov w2,w1
+022f7cfc  mov x1,x0
+022f7d00  cmp w8,w2
+022f7d04  b.ls 0x022f7db8
+022f7d08  sxtw x8,w2
+022f7d0c  add x8,x1,x8, LSL #0x5
+022f7d10  ldr w9,[x8, #0x30]
+022f7d14  and w9,w9,#0xf
+022f7d18  cmp w9,#0x1
+022f7d1c  b.ne 0x022f7d68
+022f7d20  ldr x8,[x8, #0x20]
+022f7d24  cbz x8,0x022f7d64
+022f7d28  ldr x20,[x8, #0x38]
+022f7d2c  ldr w8,[x1, #0x18]
+022f7d30  cmp w2,w8
+022f7d34  b.cs 0x022f7db8
+022f7d38  sxtw x8,w2
+022f7d3c  add x8,x1,x8, LSL #0x5
+022f7d40  ldrb w9,[x8, #0x31]
+022f7d44  tbnz w9,#0x1,0x022f7d80
+022f7d48  add x0,x8,#0x20
+022f7d4c  add x1,sp,#0x8
+022f7d50  bl 0x022f7fb0
+022f7d54  cbz w0,0x022f7d98
+022f7d58  ldr x1,[sp, #0x8]
+022f7d5c  mov w2,w0
+022f7d60  cbnz x1,0x022f7d2c
+022f7d64  bl 0x00b079b0
+022f7d68  mov x0,x19
+022f7d6c  mov x1,xzr
+022f7d70  str xzr,[x19]
+022f7d74  bl 0x00b07850
+022f7d78  mov w0,wzr
+022f7d7c  b 0x022f7dac
+022f7d80  cbz x20,0x022f7d64
+022f7d84  mov x0,x20
+022f7d88  mov x3,x19
+022f7d8c  mov x4,xzr
+022f7d90  bl 0x022b5d80
+022f7d94  b 0x022f7dac
+022f7d98  cbz x20,0x022f7d64
+022f7d9c  mov x0,x20
+022f7da0  mov x1,x19
+022f7da4  mov x2,xzr
+022f7da8  bl 0x022b5d58
+022f7dac  ldp x19,x30,[sp, #0x10]
+022f7db0  ldr x20,[sp], #0x20
+022f7db4  ret
+022f7db8  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f7dbc_MS.Internal.Xml.Cache.XPathNode__get_IsXmlNamespaceNode.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_IsXmlNamespaceNode @ 022f7dbc
+
+--- Calls OUT ---
+  -> System.String$$op_Equality @ 01fd05b0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- FUN_00a4d64c @ 00a4d64c
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToFirstNamespace @ 022f7b60
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToNextNamespace @ 022f7e74
+
+--- Listing ---
+022f7dbc  str x20,[sp, #-0x20]!
+022f7dc0  stp x19,x30,[sp, #0x10]
+022f7dc4  adrp x20,0x357b000
+022f7dc8  ldrb w8,[x20, #0x1dc]
+022f7dcc  mov x19,x0
+022f7dd0  tbnz w8,#0x0,0x022f7de8
+022f7dd4  adrp x0,0x336e000
+022f7dd8  ldr x0,[x0, #0x8d0]
+022f7ddc  bl 0x00b0789c
+022f7de0  mov w8,#0x1
+022f7de4  strb w8,[x20, #0x1dc]
+022f7de8  ldr x8,[x19]
+022f7dec  cbz x8,0x022f7e40
+022f7df0  ldr w9,[x19, #0x10]
+022f7df4  and w9,w9,#0xf
+022f7df8  cmp w9,#0x3
+022f7dfc  b.ne 0x022f7e30
+022f7e00  ldr x0,[x8, #0x10]
+022f7e04  cbz x0,0x022f7e40
+022f7e08  ldr w8,[x0, #0x10]
+022f7e0c  cmp w8,#0x3
+022f7e10  b.ne 0x022f7e30
+022f7e14  adrp x8,0x336e000
+022f7e18  ldr x8,[x8, #0x8d0]
+022f7e1c  ldp x19,x30,[sp, #0x10]
+022f7e20  mov x2,xzr
+022f7e24  ldr x1,[x8]
+022f7e28  ldr x20,[sp], #0x20
+022f7e2c  b 0x01fd05b0
+022f7e30  ldp x19,x30,[sp, #0x10]
+022f7e34  mov w0,wzr
+022f7e38  ldr x20,[sp], #0x20
+022f7e3c  ret
+022f7e40  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f7e44_MS.Internal.Xml.Cache.XPathNode__GetSibling.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$GetSibling @ 022f7e44
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MS.Internal.Xml.Cache.XPathNodeHelper$$GetNonDescendant @ 022f7724
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToFirstNamespace @ 022f7b60
+  <- FUN_00a4d644 @ 00a4d644
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToNextNamespace @ 022f7e74
+
+--- Listing ---
+022f7e44  stp x19,x30,[sp, #-0x10]!
+022f7e48  ldr x8,[x0]
+022f7e4c  cbz x8,0x022f7e70
+022f7e50  mov x19,x0
+022f7e54  mov x0,x1
+022f7e58  ldr x1,[x8, #0x30]
+022f7e5c  str x1,[x0]
+022f7e60  bl 0x00b07850
+022f7e64  ldrh w0,[x19, #0x8]
+022f7e68  ldp x19,x30,[sp], #0x10
+022f7e6c  ret
+022f7e70  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f7e74_MS.Internal.Xml.Cache.XPathDocumentNavigator__MoveToNextNamespace.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToNextNamespace @ 022f7e74
+
+--- Calls OUT ---
+  -> MS.Internal.Xml.Cache.XPathNode$$GetParent @ 022f7fb0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> MS.Internal.Xml.Cache.XPathNode$$GetSibling @ 022f7e44
+  -> FUN_00b079b8 @ 00b079b8
+  -> MS.Internal.Xml.Cache.XPathNode$$get_IsXmlNamespaceNode @ 022f7dbc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f7e74  sub sp,sp,#0x40
+022f7e78  stp xzr,x22,[sp, #0x8]
+022f7e7c  stp x21,x20,[sp, #0x20]
+022f7e80  stp x19,x30,[sp, #0x30]
+022f7e84  mov x20,x0
+022f7e88  ldr x8,[x20, #0x10]!
+022f7e8c  str x8,[sp, #0x18]
+022f7e90  cbz x8,0x022f7fa8
+022f7e94  ldr w21,[x20, #0x10]
+022f7e98  ldr w9,[x8, #0x18]
+022f7e9c  cmp w21,w9
+022f7ea0  b.cs 0x022f7fac
+022f7ea4  sxtw x9,w21
+022f7ea8  add x9,x8,x9, LSL #0x5
+022f7eac  ldr w9,[x9, #0x30]
+022f7eb0  and w9,w9,#0xf
+022f7eb4  cmp w9,#0x3
+022f7eb8  b.ne 0x022f7f74
+022f7ebc  mov w22,w1
+022f7ec0  mov x19,x0
+022f7ec4  ldr w9,[x8, #0x18]
+022f7ec8  cmp w21,w9
+022f7ecc  b.cs 0x022f7fac
+022f7ed0  sxtw x9,w21
+022f7ed4  add x8,x8,x9, LSL #0x5
+022f7ed8  add x0,x8,#0x20
+022f7edc  add x1,sp,#0x18
+022f7ee0  bl 0x022f7e44
+022f7ee4  cbz w0,0x022f7f94
+022f7ee8  mov w21,w0
+022f7eec  cmp w22,#0x1
+022f7ef0  b.ne 0x022f7f28
+022f7ef4  ldr x8,[sp, #0x18]
+022f7ef8  cbz x8,0x022f7fa8
+022f7efc  ldr w9,[x8, #0x18]
+022f7f00  cmp w21,w9
+022f7f04  b.cs 0x022f7fac
+022f7f08  sxtw x9,w21
+022f7f0c  add x8,x8,x9, LSL #0x5
+022f7f10  add x0,x8,#0x20
+022f7f14  bl 0x022f7dbc
+022f7f18  tbz w0,#0x0,0x022f7f7c
+022f7f1c  ldr x8,[sp, #0x18]
+022f7f20  cbnz x8,0x022f7ec4
+022f7f24  b 0x022f7fa8
+022f7f28  cmp w22,#0x2
+022f7f2c  b.ne 0x022f7f7c
+022f7f30  ldr x8,[sp, #0x18]
+022f7f34  cbz x8,0x022f7fa8
+022f7f38  ldr w9,[x8, #0x18]
+022f7f3c  cmp w21,w9
+022f7f40  b.cs 0x022f7fac
+022f7f44  sxtw x9,w21
+022f7f48  add x8,x8,x9, LSL #0x5
+022f7f4c  add x0,x8,#0x20
+022f7f50  add x1,sp,#0x8
+022f7f54  bl 0x022f7fb0
+022f7f58  ldr w8,[x19, #0x24]
+022f7f5c  cmp w0,w8
+022f7f60  b.ne 0x022f7f74
+022f7f64  ldr x8,[sp, #0x8]
+022f7f68  ldr x9,[x19, #0x18]
+022f7f6c  cmp x8,x9
+022f7f70  b.eq 0x022f7f7c
+022f7f74  mov w0,wzr
+022f7f78  b 0x022f7f94
+022f7f7c  ldr x1,[sp, #0x18]
+022f7f80  mov x0,x20
+022f7f84  str x1,[x19, #0x10]
+022f7f88  bl 0x00b07850
+022f7f8c  mov w0,#0x1
+022f7f90  str w21,[x19, #0x20]
+022f7f94  ldp x19,x30,[sp, #0x30]
+022f7f98  ldp x21,x20,[sp, #0x20]
+022f7f9c  ldr x22,[sp, #0x10]
+022f7fa0  add sp,sp,#0x40
+022f7fa4  ret
+022f7fa8  bl 0x00b079b0
+022f7fac  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f7fb0_MS.Internal.Xml.Cache.XPathNode__GetParent.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$GetParent @ 022f7fb0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MS.Internal.Xml.Cache.XPathNodeHelper$$GetNonDescendant @ 022f7724
+  <- MS.Internal.Xml.Cache.XPathNodeHelper$$GetParent @ 022f8048
+  <- FUN_00a4d63c @ 00a4d63c
+  <- MS.Internal.Xml.Cache.XPathNodeHelper$$GetInScopeNamespaces @ 022f7ce0
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToNextNamespace @ 022f7e74
+
+--- Listing ---
+022f7fb0  stp x19,x30,[sp, #-0x10]!
+022f7fb4  ldr x8,[x0]
+022f7fb8  cbz x8,0x022f7fdc
+022f7fbc  mov x19,x0
+022f7fc0  mov x0,x1
+022f7fc4  ldr x1,[x8, #0x28]
+022f7fc8  str x1,[x0]
+022f7fcc  bl 0x00b07850
+022f7fd0  ldrh w0,[x19, #0xa]
+022f7fd4  ldp x19,x30,[sp], #0x10
+022f7fd8  ret
+022f7fdc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f7fe0_MS.Internal.Xml.Cache.XPathDocumentNavigator__MoveToParent.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToParent @ 022f7fe0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> MS.Internal.Xml.Cache.XPathNodeHelper$$GetParent @ 022f8048
+
+--- Calls IN ---
+
+--- Listing ---
+022f7fe0  str x20,[sp, #-0x20]!
+022f7fe4  stp x19,x30,[sp, #0x10]
+022f7fe8  ldr w8,[x0, #0x24]
+022f7fec  mov x19,x0
+022f7ff0  cbz w8,0x022f8034
+022f7ff4  mov x20,x19
+022f7ff8  ldr x1,[x20, #0x18]!
+022f7ffc  str x1,[x19, #0x10]!
+022f8000  mov x0,x19
+022f8004  bl 0x00b07850
+022f8008  ldr w8,[x19, #0x14]
+022f800c  mov x0,x20
+022f8010  mov x1,xzr
+022f8014  str w8,[x19, #0x10]
+022f8018  str xzr,[x20]
+022f801c  bl 0x00b07850
+022f8020  str wzr,[x19, #0x14]
+022f8024  ldp x19,x30,[sp, #0x10]
+022f8028  mov w0,#0x1
+022f802c  ldr x20,[sp], #0x20
+022f8030  ret
+022f8034  add x0,x19,#0x10
+022f8038  add x1,x19,#0x20
+022f803c  ldp x19,x30,[sp, #0x10]
+022f8040  ldr x20,[sp], #0x20
+022f8044  b 0x022f8048
+
+
+================================================================================
+### FILE: 022f8048_MS.Internal.Xml.Cache.XPathNodeHelper__GetParent.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeHelper$$GetParent @ 022f8048
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> MS.Internal.Xml.Cache.XPathNode$$GetParent @ 022f7fb0
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MS.Internal.Xml.Cache.XPathDocumentNavigator$$MoveToParent @ 022f7fe0
+
+--- Listing ---
+022f8048  sub sp,sp,#0x30
+022f804c  stp x21,x20,[sp, #0x10]
+022f8050  stp x19,x30,[sp, #0x20]
+022f8054  ldr x8,[x0]
+022f8058  str x8,[sp, #0x8]
+022f805c  cbz x8,0x022f80b8
+022f8060  ldrsw x9,[x1]
+022f8064  ldr w10,[x8, #0x18]
+022f8068  mov x19,x1
+022f806c  cmp w9,w10
+022f8070  b.cs 0x022f80bc
+022f8074  add x8,x8,x9, LSL #0x5
+022f8078  mov x20,x0
+022f807c  add x0,x8,#0x20
+022f8080  add x1,sp,#0x8
+022f8084  bl 0x022f7fb0
+022f8088  cbz w0,0x022f80a8
+022f808c  ldr x1,[sp, #0x8]
+022f8090  mov w21,w0
+022f8094  mov x0,x20
+022f8098  str x1,[x20]
+022f809c  bl 0x00b07850
+022f80a0  mov w0,#0x1
+022f80a4  str w21,[x19]
+022f80a8  ldp x19,x30,[sp, #0x20]
+022f80ac  ldp x21,x20,[sp, #0x10]
+022f80b0  add sp,sp,#0x30
+022f80b4  ret
+022f80b8  bl 0x00b079b0
+022f80bc  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f80c0_MS.Internal.Xml.Cache.XPathDocumentNavigator__IsSamePosition.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$IsSamePosition @ 022f80c0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f80c0  stp x21,x20,[sp, #-0x20]!
+022f80c4  stp x19,x30,[sp, #0x10]
+022f80c8  adrp x21,0x357b000
+022f80cc  ldrb w8,[x21, #0x1db]
+022f80d0  mov x20,x1
+022f80d4  mov x19,x0
+022f80d8  tbnz w8,#0x0,0x022f80f0
+022f80dc  adrp x0,0x3332000
+022f80e0  ldr x0,[x0, #0x230]
+022f80e4  bl 0x00b0789c
+022f80e8  mov w8,#0x1
+022f80ec  strb w8,[x21, #0x1db]
+022f80f0  cbz x20,0x022f8158
+022f80f4  adrp x8,0x3332000
+022f80f8  ldr x8,[x8, #0x230]
+022f80fc  ldr x9,[x20]
+022f8100  ldr x8,[x8]
+022f8104  cmp x9,x8
+022f8108  csel x8,x20,xzr,eq
+022f810c  b.ne 0x022f8158
+022f8110  cbz x8,0x022f8168
+022f8114  ldr w9,[x19, #0x20]
+022f8118  ldr w10,[x8, #0x20]
+022f811c  cmp w9,w10
+022f8120  b.ne 0x022f8158
+022f8124  ldr x9,[x19, #0x10]
+022f8128  ldr x10,[x8, #0x10]
+022f812c  cmp x9,x10
+022f8130  b.ne 0x022f8158
+022f8134  ldr w9,[x19, #0x24]
+022f8138  ldr w10,[x8, #0x24]
+022f813c  cmp w9,w10
+022f8140  b.ne 0x022f8158
+022f8144  ldr x9,[x19, #0x18]
+022f8148  ldr x8,[x8, #0x18]
+022f814c  cmp x9,x8
+022f8150  cset w0,eq
+022f8154  b 0x022f815c
+022f8158  mov w0,wzr
+022f815c  ldp x19,x30,[sp, #0x10]
+022f8160  ldp x21,x20,[sp], #0x20
+022f8164  ret
+022f8168  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f816c_MS.Internal.Xml.Cache.XPathDocumentNavigator__get_UnderlyingObject.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_UnderlyingObject @ 022f816c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f816c  ldr x8,[x0]
+022f8170  ldr x2,[x8, #0x288]
+022f8174  ldr x1,[x8, #0x290]
+022f8178  br x2
+
+
+================================================================================
+### FILE: 022f817c_MS.Internal.Xml.Cache.XPathDocumentNavigator__get_LineNumber.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_LineNumber @ 022f817c
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f817c  stp x19,x30,[sp, #-0x10]!
+022f8180  ldr w8,[x0, #0x24]
+022f8184  mov x19,x0
+022f8188  cbz w8,0x022f81b8
+022f818c  ldr x8,[x19]
+022f8190  mov x0,x19
+022f8194  ldr x9,[x8, #0x298]
+022f8198  ldr x1,[x8, #0x2a0]
+022f819c  blr x9
+022f81a0  cmp w0,#0x4
+022f81a4  b.ne 0x022f81b8
+022f81a8  ldr x8,[x19, #0x18]
+022f81ac  cbz x8,0x022f81f8
+022f81b0  ldrsw x9,[x19, #0x24]
+022f81b4  b 0x022f81c4
+022f81b8  ldr x8,[x19, #0x10]
+022f81bc  cbz x8,0x022f81f8
+022f81c0  ldrsw x9,[x19, #0x20]
+022f81c4  ldr w10,[x8, #0x18]
+022f81c8  cmp w9,w10
+022f81cc  b.cs 0x022f81fc
+022f81d0  add x9,x8,x9, LSL #0x5
+022f81d4  ldr x8,[x9, #0x20]
+022f81d8  cbz x8,0x022f81f8
+022f81dc  add x9,x9,#0x30
+022f81e0  ldr w9,[x9]
+022f81e4  ldr w8,[x8, #0x40]
+022f81e8  ubfx w9,w9,#0xa,#0xe
+022f81ec  add w0,w9,w8
+022f81f0  ldp x19,x30,[sp], #0x10
+022f81f4  ret
+022f81f8  bl 0x00b079b0
+022f81fc  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f8200_MS.Internal.Xml.Cache.XPathNode__get_LineNumber.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_LineNumber @ 022f8200
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f8200  str x30,[sp, #-0x10]!
+022f8204  ldr x8,[x0]
+022f8208  cbz x8,0x022f8224
+022f820c  ldr w9,[x0, #0x10]
+022f8210  ldr w8,[x8, #0x40]
+022f8214  ubfx w9,w9,#0xa,#0xe
+022f8218  add w0,w9,w8
+022f821c  ldr x30,[sp], #0x10
+022f8220  ret
+022f8224  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f8228_MS.Internal.Xml.Cache.XPathDocumentNavigator__get_LinePosition.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$get_LinePosition @ 022f8228
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f8228  stp x19,x30,[sp, #-0x10]!
+022f822c  ldr w8,[x0, #0x24]
+022f8230  mov x19,x0
+022f8234  cbz w8,0x022f828c
+022f8238  ldr x8,[x19]
+022f823c  mov x0,x19
+022f8240  ldr x9,[x8, #0x298]
+022f8244  ldr x1,[x8, #0x2a0]
+022f8248  blr x9
+022f824c  cmp w0,#0x4
+022f8250  b.ne 0x022f828c
+022f8254  ldr x8,[x19, #0x18]
+022f8258  cbz x8,0x022f82c4
+022f825c  ldrsw x9,[x19, #0x24]
+022f8260  ldr w10,[x8, #0x18]
+022f8264  cmp w9,w10
+022f8268  b.cs 0x022f82c8
+022f826c  add x8,x8,x9, LSL #0x5
+022f8270  ldr x9,[x8, #0x20]
+022f8274  cbz x9,0x022f82c4
+022f8278  ldr w9,[x9, #0x44]
+022f827c  ldrh w10,[x8, #0x2e]
+022f8280  ldrb w8,[x8, #0x33]
+022f8284  add w9,w9,w10
+022f8288  b 0x022f82b8
+022f828c  ldr x8,[x19, #0x10]
+022f8290  cbz x8,0x022f82c4
+022f8294  ldrsw x9,[x19, #0x20]
+022f8298  ldr w10,[x8, #0x18]
+022f829c  cmp w9,w10
+022f82a0  b.cs 0x022f82c8
+022f82a4  add x8,x8,x9, LSL #0x5
+022f82a8  ldr x9,[x8, #0x20]
+022f82ac  cbz x9,0x022f82c4
+022f82b0  ldr w9,[x9, #0x44]
+022f82b4  ldrh w8,[x8, #0x2e]
+022f82b8  add w0,w9,w8
+022f82bc  ldp x19,x30,[sp], #0x10
+022f82c0  ret
+022f82c4  bl 0x00b079b0
+022f82c8  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f82cc_MS.Internal.Xml.Cache.XPathNode__get_CollapsedLinePosition.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_CollapsedLinePosition @ 022f82cc
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f82cc  str x30,[sp, #-0x10]!
+022f82d0  ldr x8,[x0]
+022f82d4  cbz x8,0x022f82f4
+022f82d8  ldr w8,[x8, #0x44]
+022f82dc  ldrh w9,[x0, #0xe]
+022f82e0  ldrb w10,[x0, #0x13]
+022f82e4  add w8,w8,w9
+022f82e8  add w0,w8,w10
+022f82ec  ldr x30,[sp], #0x10
+022f82f0  ret
+022f82f4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f82f8_MS.Internal.Xml.Cache.XPathNode__get_LinePosition.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_LinePosition @ 022f82f8
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f82f8  str x30,[sp, #-0x10]!
+022f82fc  ldr x8,[x0]
+022f8300  cbz x8,0x022f8318
+022f8304  ldr w8,[x8, #0x44]
+022f8308  ldrh w9,[x0, #0xe]
+022f830c  add w0,w8,w9
+022f8310  ldr x30,[sp], #0x10
+022f8314  ret
+022f8318  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f831c_MS.Internal.Xml.Cache.XPathDocumentNavigator__GetPositionHashCode.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathDocumentNavigator$$GetPositionHashCode @ 022f831c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- System.Xml.XPath.XPathNavigatorKeyComparer$$System.Collections.IEqualityComparer.GetHashCode @ 022b7cfc
+
+--- Listing ---
+022f831c  ldp w8,w9,[x0, #0x20]
+022f8320  eor w0,w9,w8
+022f8324  ret
+
+
+================================================================================
+### FILE: 022f8328_MS.Internal.Xml.Cache.XPathNode__get_PageInfo.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_PageInfo @ 022f8328
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+022f8328  str x30,[sp, #-0x10]!
+022f832c  ldr x8,[x0]
+022f8330  cbz x8,0x022f8340
+022f8334  ldr x0,[x8, #0x48]
+022f8338  ldr x30,[sp], #0x10
+022f833c  ret
+022f8340  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022f8344_MS.Internal.Xml.Cache.XPathNode__get_HasSibling.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_HasSibling @ 022f8344
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f8344  ldrh w8,[x0, #0x8]
+022f8348  cmp w8,#0x0
+022f834c  cset w0,ne
+022f8350  ret
+
+
+================================================================================
+### FILE: 022f8354_MS.Internal.Xml.Cache.XPathNode__get_HasCollapsedText.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_HasCollapsedText @ 022f8354
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f8354  ldrb w8,[x0, #0x10]
+022f8358  lsr w0,w8,#0x7
+022f835c  ret
+
+
+================================================================================
+### FILE: 022f8360_MS.Internal.Xml.Cache.XPathNode__get_IsText.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_IsText @ 022f8360
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Xml.XPath.XPathNavigator$$IsText @ 022b7a78
+
+--- Calls IN ---
+  <- FUN_00a4d670 @ 00a4d670
+  <- MS.Internal.Xml.Cache.XPathNodeHelper$$GetTextFollowing @ 022f77cc
+
+--- Listing ---
+022f8360  stp x21,x20,[sp, #-0x20]!
+022f8364  stp x19,x30,[sp, #0x10]
+022f8368  adrp x21,0x357b000
+022f836c  adrp x20,0x3380000
+022f8370  ldrb w8,[x21, #0x1dd]
+022f8374  ldr x20,[x20, #0xe18]
+022f8378  mov x19,x0
+022f837c  tbnz w8,#0x0,0x022f8394
+022f8380  adrp x0,0x3380000
+022f8384  ldr x0,[x0, #0xe18]
+022f8388  bl 0x00b0789c
+022f838c  mov w8,#0x1
+022f8390  strb w8,[x21, #0x1dd]
+022f8394  ldr x0,[x20]
+022f8398  ldr w8,[x19, #0x10]
+022f839c  ldr w9,[x0, #0xe0]
+022f83a0  and w19,w8,#0xf
+022f83a4  cbnz w9,0x022f83ac
+022f83a8  bl 0x00b0798c
+022f83ac  mov w0,w19
+022f83b0  ldp x19,x30,[sp, #0x10]
+022f83b4  mov x1,xzr
+022f83b8  ldp x21,x20,[sp], #0x20
+022f83bc  b 0x022b7a78
+
+
+================================================================================
+### FILE: 022f83c0_MS.Internal.Xml.Cache.XPathNode__get_HasNamespaceDecls.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_HasNamespaceDecls @ 022f83c0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f83c0  ldrb w8,[x0, #0x11]
+022f83c4  ubfx w0,w8,#0x1,#0x1
+022f83c8  ret
+
+
+================================================================================
+### FILE: 022f83cc_MS.Internal.Xml.Cache.XPathNode__get_Value.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNode$$get_Value @ 022f83cc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f83cc  ldr x0,[x0, #0x18]
+022f83d0  ret
+
+
+================================================================================
+### FILE: 022f83d4_MS.Internal.Xml.Cache.XPathNodeRef__.ctor.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeRef$$.ctor @ 022f83d4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+  <- System.Xml.XPath.XPathDocument$$LookupNamespaces @ 022b5d80
+
+--- Listing ---
+022f83d4  str x20,[sp, #-0x20]!
+022f83d8  stp x19,x30,[sp, #0x10]
+022f83dc  mov w19,w2
+022f83e0  mov x20,x0
+022f83e4  str x1,[x0]
+022f83e8  bl 0x00b07850
+022f83ec  str w19,[x20, #0x8]
+022f83f0  ldp x19,x30,[sp, #0x10]
+022f83f4  ldr x20,[sp], #0x20
+022f83f8  ret
+
+
+================================================================================
+### FILE: 022f83fc_MS.Internal.Xml.Cache.XPathNodeRef__get_Page.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeRef$$get_Page @ 022f83fc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f83fc  ldr x0,[x0]
+022f8400  ret
+
+
+================================================================================
+### FILE: 022f8404_MS.Internal.Xml.Cache.XPathNodeRef__get_Index.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeRef$$get_Index @ 022f8404
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f8404  ldr w0,[x0, #0x8]
+022f8408  ret
+
+
+================================================================================
+### FILE: 022f840c_MS.Internal.Xml.Cache.XPathNodeRef__GetHashCode.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeRef$$GetHashCode @ 022f840c
+
+--- Calls OUT ---
+  -> MS.Internal.Xml.Cache.XPathNodeHelper$$GetLocation @ 022f841c
+
+--- Calls IN ---
+  <- System.Collections.Generic.Dictionary<XPathNodeRef,-XPathNodeRef>$$FindEntry @ 019a84e4
+  <- System.Collections.Generic.Dictionary<XPathNodeRef,-XPathNodeRef>$$Remove @ 019a93d4
+  <- System.Collections.Generic.Dictionary<XPathNodeRef,-XPathNodeRef>$$Resize @ 019a91d8
+  <- System.Collections.Generic.ObjectEqualityComparer<XPathNodeRef>$$GetHashCode @ 01d48548
+  <- System.Collections.Generic.Dictionary<XPathNodeRef,-XPathNodeRef>$$TryInsert @ 019a88b8
+
+--- Listing ---
+022f840c  ldr x8,[x0]
+022f8410  ldr w1,[x0, #0x8]
+022f8414  mov x0,x8
+022f8418  b 0x022f841c
+
+
+================================================================================
+### FILE: 022f841c_MS.Internal.Xml.Cache.XPathNodeHelper__GetLocation.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeHelper$$GetLocation @ 022f841c
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- FUN_00a4d6fc @ 00a4d6fc
+  <- MS.Internal.Xml.Cache.XPathNodeRef$$GetHashCode @ 022f840c
+
+--- Listing ---
+022f841c  str x30,[sp, #-0x10]!
+022f8420  cbz x0,0x022f844c
+022f8424  ldr w8,[x0, #0x18]
+022f8428  cbz w8,0x022f8450
+022f842c  ldr x8,[x0, #0x20]
+022f8430  cbz x8,0x022f844c
+022f8434  ldr x8,[x8, #0x48]
+022f8438  cbz x8,0x022f844c
+022f843c  ldr w8,[x8, #0x10]
+022f8440  orr w0,w1,w8, LSL #0x10
+022f8444  ldr x30,[sp], #0x10
+022f8448  ret
+022f844c  bl 0x00b079b0
+022f8450  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 022f8454_MS.Internal.Xml.Cache.XPathNodePageInfo__get_PageNumber.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodePageInfo$$get_PageNumber @ 022f8454
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f8454  ldr w0,[x0, #0x10]
+022f8458  ret
+
+
+================================================================================
+### FILE: 022f845c_MS.Internal.Xml.Cache.XPathNodePageInfo__get_NodeCount.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodePageInfo$$get_NodeCount @ 022f845c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f845c  ldr w0,[x0, #0x14]
+022f8460  ret
+
+
+================================================================================
+### FILE: 022f8464_MS.Internal.Xml.Cache.XPathNodePageInfo__get_NextPage.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodePageInfo$$get_NextPage @ 022f8464
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f8464  ldr x0,[x0, #0x18]
+022f8468  ret
+
+
+================================================================================
+### FILE: 022f846c_MS.Internal.Xml.Cache.XPathNodeInfoAtom__get_PageInfo.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeInfoAtom$$get_PageInfo @ 022f846c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f846c  ldr x0,[x0, #0x48]
+022f8470  ret
+
+
+================================================================================
+### FILE: 022f8474_MS.Internal.Xml.Cache.XPathNodeInfoAtom__get_LocalName.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeInfoAtom$$get_LocalName @ 022f8474
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f8474  ldr x0,[x0, #0x10]
+022f8478  ret
+
+
+================================================================================
+### FILE: 022f847c_MS.Internal.Xml.Cache.XPathNodeInfoAtom__get_NamespaceUri.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeInfoAtom$$get_NamespaceUri @ 022f847c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f847c  ldr x0,[x0, #0x18]
+022f8480  ret
+
+
+================================================================================
+### FILE: 022f8484_MS.Internal.Xml.Cache.XPathNodeInfoAtom__get_Prefix.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeInfoAtom$$get_Prefix @ 022f8484
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f8484  ldr x0,[x0, #0x20]
+022f8488  ret
+
+
+================================================================================
+### FILE: 022f848c_MS.Internal.Xml.Cache.XPathNodeInfoAtom__get_SiblingPage.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeInfoAtom$$get_SiblingPage @ 022f848c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f848c  ldr x0,[x0, #0x30]
+022f8490  ret
+
+
+================================================================================
+### FILE: 022f8494_MS.Internal.Xml.Cache.XPathNodeInfoAtom__get_ParentPage.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeInfoAtom$$get_ParentPage @ 022f8494
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f8494  ldr x0,[x0, #0x28]
+022f8498  ret
+
+
+================================================================================
+### FILE: 022f849c_MS.Internal.Xml.Cache.XPathNodeInfoAtom__get_Document.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeInfoAtom$$get_Document @ 022f849c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f849c  ldr x0,[x0, #0x38]
+022f84a0  ret
+
+
+================================================================================
+### FILE: 022f84a4_MS.Internal.Xml.Cache.XPathNodeInfoAtom__get_LineNumberBase.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeInfoAtom$$get_LineNumberBase @ 022f84a4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f84a4  ldr w0,[x0, #0x40]
+022f84a8  ret
+
+
+================================================================================
+### FILE: 022f84ac_MS.Internal.Xml.Cache.XPathNodeInfoAtom__get_LinePositionBase.txt
+================================================================================
+Function: MS.Internal.Xml.Cache.XPathNodeInfoAtom$$get_LinePositionBase @ 022f84ac
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+022f84ac  ldr w0,[x0, #0x44]
+022f84b0  ret
+
+

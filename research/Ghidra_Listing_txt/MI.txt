@@ -1,0 +1,4070 @@
+================================================================================
+### FILE: 00af40d4_mini_get_interp_callbacks.txt
+================================================================================
+Function: mini_get_interp_callbacks @ 00af40d4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af40d4  mov x0,xzr
+00af40d8  ret
+
+
+================================================================================
+### FILE: 00af4160_mini_jit_info_table_find.txt
+================================================================================
+Function: mini_jit_info_table_find @ 00af4160
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af4160  mov x0,xzr
+00af4164  ret
+
+
+================================================================================
+### FILE: 00df0cfc_MissionData__get_battlefieldTIM.txt
+================================================================================
+Function: MissionData$$get_battlefieldTIM @ 00df0cfc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0cfc  ldr w0,[x0, #0x74]
+00df0d00  ret
+
+
+================================================================================
+### FILE: 00df0d04_MissionData__get_chapter.txt
+================================================================================
+Function: MissionData$$get_chapter @ 00df0d04
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d04  ldr w0,[x0, #0x78]
+00df0d08  ret
+
+
+================================================================================
+### FILE: 00df0d0c_MissionData__get_lastCombat.txt
+================================================================================
+Function: MissionData$$get_lastCombat @ 00df0d0c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d0c  ldr w0,[x0, #0x7c]
+00df0d10  ret
+
+
+================================================================================
+### FILE: 00df0d14_MissionData__get_unlockCondition.txt
+================================================================================
+Function: MissionData$$get_unlockCondition @ 00df0d14
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d14  ldr x0,[x0, #0x80]
+00df0d18  ret
+
+
+================================================================================
+### FILE: 00df0d1c_MissionData__get_monsterLevel.txt
+================================================================================
+Function: MissionData$$get_monsterLevel @ 00df0d1c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d1c  ldr w0,[x0, #0x88]
+00df0d20  ret
+
+
+================================================================================
+### FILE: 00df0d24_MissionData__get_attributes.txt
+================================================================================
+Function: MissionData$$get_attributes @ 00df0d24
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d24  ldr x0,[x0, #0x90]
+00df0d28  ret
+
+
+================================================================================
+### FILE: 00df0d2c_MissionData__get_tollgateId.txt
+================================================================================
+Function: MissionData$$get_tollgateId @ 00df0d2c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d2c  ldr x0,[x0, #0x98]
+00df0d30  ret
+
+
+================================================================================
+### FILE: 00df0d34_MissionData__get_consume.txt
+================================================================================
+Function: MissionData$$get_consume @ 00df0d34
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d34  ldr w0,[x0, #0xa0]
+00df0d38  ret
+
+
+================================================================================
+### FILE: 00df0d3c_MissionData__get_itemPackageId.txt
+================================================================================
+Function: MissionData$$get_itemPackageId @ 00df0d3c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d3c  ldr x0,[x0, #0xa8]
+00df0d40  ret
+
+
+================================================================================
+### FILE: 00df0d44_MissionData__get_sweepItemPackageId.txt
+================================================================================
+Function: MissionData$$get_sweepItemPackageId @ 00df0d44
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d44  ldr x0,[x0, #0xb0]
+00df0d48  ret
+
+
+================================================================================
+### FILE: 00df0d4c_MissionData__get_captainPackageId.txt
+================================================================================
+Function: MissionData$$get_captainPackageId @ 00df0d4c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d4c  ldr x0,[x0, #0xb8]
+00df0d50  ret
+
+
+================================================================================
+### FILE: 00df0d54_MissionData__get_userExp.txt
+================================================================================
+Function: MissionData$$get_userExp @ 00df0d54
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d54  ldr w0,[x0, #0xc0]
+00df0d58  ret
+
+
+================================================================================
+### FILE: 00df0d5c_MissionData__get_heroExp.txt
+================================================================================
+Function: MissionData$$get_heroExp @ 00df0d5c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d5c  ldr w0,[x0, #0xc4]
+00df0d60  ret
+
+
+================================================================================
+### FILE: 00df0d64_MissionData__get_weaponExp.txt
+================================================================================
+Function: MissionData$$get_weaponExp @ 00df0d64
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d64  ldr w0,[x0, #0xc8]
+00df0d68  ret
+
+
+================================================================================
+### FILE: 00df0d6c_MissionData__get_gold.txt
+================================================================================
+Function: MissionData$$get_gold @ 00df0d6c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d6c  ldr w0,[x0, #0xcc]
+00df0d70  ret
+
+
+================================================================================
+### FILE: 00df0d74_MissionData__get_partPreview.txt
+================================================================================
+Function: MissionData$$get_partPreview @ 00df0d74
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d74  ldr x0,[x0, #0xd0]
+00df0d78  ret
+
+
+================================================================================
+### FILE: 00df0d7c_MissionData__get_preview.txt
+================================================================================
+Function: MissionData$$get_preview @ 00df0d7c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d7c  ldr x0,[x0, #0xd8]
+00df0d80  ret
+
+
+================================================================================
+### FILE: 00df0d84_MissionData__get_weaponShow.txt
+================================================================================
+Function: MissionData$$get_weaponShow @ 00df0d84
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d84  ldr w0,[x0, #0xe0]
+00df0d88  ret
+
+
+================================================================================
+### FILE: 00df0d8c_MissionData__get_first.txt
+================================================================================
+Function: MissionData$$get_first @ 00df0d8c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d8c  ldr x0,[x0, #0xe8]
+00df0d90  ret
+
+
+================================================================================
+### FILE: 00df0d94_MissionData__get_challengeIds.txt
+================================================================================
+Function: MissionData$$get_challengeIds @ 00df0d94
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d94  ldr x0,[x0, #0xf0]
+00df0d98  ret
+
+
+================================================================================
+### FILE: 00df0d9c_MissionData__get_whetherItRaids.txt
+================================================================================
+Function: MissionData$$get_whetherItRaids @ 00df0d9c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0d9c  ldr w0,[x0, #0xf8]
+00df0da0  ret
+
+
+================================================================================
+### FILE: 00df0da4_MissionData__get_eventPoint.txt
+================================================================================
+Function: MissionData$$get_eventPoint @ 00df0da4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0da4  ldr w0,[x0, #0xfc]
+00df0da8  ret
+
+
+================================================================================
+### FILE: 00df0dac_MissionData__get_chaos.txt
+================================================================================
+Function: MissionData$$get_chaos @ 00df0dac
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0dac  ldr s0,[x0, #0x100]
+00df0db0  ret
+
+
+================================================================================
+### FILE: 00df0db4_MissionData__get_subtitleId.txt
+================================================================================
+Function: MissionData$$get_subtitleId @ 00df0db4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0db4  ldr x0,[x0, #0x108]
+00df0db8  ret
+
+
+================================================================================
+### FILE: 00df0dbc_MissionData__get_backGround.txt
+================================================================================
+Function: MissionData$$get_backGround @ 00df0dbc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0dbc  ldr x0,[x0, #0x110]
+00df0dc0  ret
+
+
+================================================================================
+### FILE: 00df0dc4_MissionData__get_weatherId.txt
+================================================================================
+Function: MissionData$$get_weatherId @ 00df0dc4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0dc4  ldr x0,[x0, #0x118]
+00df0dc8  ret
+
+
+================================================================================
+### FILE: 00df0dcc_MissionData__get_allowTeam.txt
+================================================================================
+Function: MissionData$$get_allowTeam @ 00df0dcc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0dcc  ldr w0,[x0, #0x120]
+00df0dd0  ret
+
+
+================================================================================
+### FILE: 00df0dd4_MissionData__get_openDialogId.txt
+================================================================================
+Function: MissionData$$get_openDialogId @ 00df0dd4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0dd4  ldr w0,[x0, #0x124]
+00df0dd8  ret
+
+
+================================================================================
+### FILE: 00df0ddc_MissionData__get_openShow.txt
+================================================================================
+Function: MissionData$$get_openShow @ 00df0ddc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0ddc  ldr x0,[x0, #0x128]
+00df0de0  ret
+
+
+================================================================================
+### FILE: 00df0de4_MissionData__get_endDialogId.txt
+================================================================================
+Function: MissionData$$get_endDialogId @ 00df0de4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0de4  ldr w0,[x0, #0x130]
+00df0de8  ret
+
+
+================================================================================
+### FILE: 00df0dec_MissionData__get_endshow.txt
+================================================================================
+Function: MissionData$$get_endshow @ 00df0dec
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0dec  ldr x0,[x0, #0x138]
+00df0df0  ret
+
+
+================================================================================
+### FILE: 00df0df4_MissionData__get_settlementType.txt
+================================================================================
+Function: MissionData$$get_settlementType @ 00df0df4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0df4  ldr w0,[x0, #0x140]
+00df0df8  ret
+
+
+================================================================================
+### FILE: 00df0dfc_MissionData__get_search.txt
+================================================================================
+Function: MissionData$$get_search @ 00df0dfc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0dfc  ldr w0,[x0, #0x144]
+00df0e00  ret
+
+
+================================================================================
+### FILE: 00df0e04_MissionData__get_playerAttrPro.txt
+================================================================================
+Function: MissionData$$get_playerAttrPro @ 00df0e04
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0e04  ldr x0,[x0, #0x148]
+00df0e08  ret
+
+
+================================================================================
+### FILE: 00df0e0c_MissionData__get_monsterAttrPro.txt
+================================================================================
+Function: MissionData$$get_monsterAttrPro @ 00df0e0c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0e0c  ldr x0,[x0, #0x150]
+00df0e10  ret
+
+
+================================================================================
+### FILE: 00df0e14_MissionData__get_SkillRandId.txt
+================================================================================
+Function: MissionData$$get_SkillRandId @ 00df0e14
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0e14  ldr x0,[x0, #0x158]
+00df0e18  ret
+
+
+================================================================================
+### FILE: 00df0e1c_MissionData__get_ShowAvatar.txt
+================================================================================
+Function: MissionData$$get_ShowAvatar @ 00df0e1c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0e1c  ldr x0,[x0, #0x160]
+00df0e20  ret
+
+
+================================================================================
+### FILE: 00df0e24_MissionData__get_sdkEventId.txt
+================================================================================
+Function: MissionData$$get_sdkEventId @ 00df0e24
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0e24  ldr w0,[x0, #0x168]
+00df0e28  ret
+
+
+================================================================================
+### FILE: 00df0e2c_MissionData__.ctor.txt
+================================================================================
+Function: MissionData$$.ctor @ 00df0e2c
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.MissionDataWrap$$__CreateInstance @ 012ee780
+
+--- Listing ---
+00df0e2c  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00df0e30_MissionRecord__.ctor.txt
+================================================================================
+Function: MissionRecord$$.ctor @ 00df0e30
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00df0e30  stp x21,x20,[sp, #-0x20]!
+00df0e34  stp x19,x30,[sp, #0x10]
+00df0e38  adrp x20,0x3572000
+00df0e3c  adrp x21,0x334a000
+00df0e40  ldrb w8,[x20, #0x456]
+00df0e44  ldr x21,[x21, #0xe0]
+00df0e48  mov x19,x0
+00df0e4c  tbnz w8,#0x0,0x00df0e70
+00df0e50  adrp x0,0x3371000
+00df0e54  ldr x0,[x0, #0x298]
+00df0e58  bl 0x00b0789c
+00df0e5c  adrp x0,0x334a000
+00df0e60  ldr x0,[x0, #0xe0]
+00df0e64  bl 0x00b0789c
+00df0e68  mov w8,#0x1
+00df0e6c  strb w8,[x20, #0x456]
+00df0e70  ldr x0,[x21]
+00df0e74  bl 0x00b079a0
+00df0e78  cbz x0,0x00df0eb4
+00df0e7c  adrp x8,0x3371000
+00df0e80  ldr x8,[x8, #0x298]
+00df0e84  mov x20,x0
+00df0e88  ldr x1,[x8]
+00df0e8c  bl 0x01bffe10
+00df0e90  mov x0,x19
+00df0e94  str x20,[x0, #0x18]!
+00df0e98  mov x1,x20
+00df0e9c  bl 0x00b07850
+00df0ea0  mov x0,x19
+00df0ea4  ldp x19,x30,[sp, #0x10]
+00df0ea8  mov x1,xzr
+00df0eac  ldp x21,x20,[sp], #0x20
+00df0eb0  b 0x024e277c
+00df0eb4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162d260_MiniJSON.Json__Deserialize.txt
+================================================================================
+Function: MiniJSON.Json$$Deserialize @ 0162d260
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Parser$$Parse @ 0162d26c
+
+--- Calls IN ---
+
+--- Listing ---
+0162d260  cbz x0,0x0162d268
+0162d264  b 0x0162d26c
+0162d268  ret
+
+
+================================================================================
+### FILE: 0162d26c_MiniJSON.Json.Parser__Parse.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$Parse @ 0162d26c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00aaac8c @ 00aaac8c
+  -> MiniJSON.Json.Parser$$ParseByToken @ 0162dc5c
+  -> FUN_00b079b0 @ 00b079b0
+  -> MiniJSON.Json.Parser$$get_NextToken @ 0162d710
+  -> MiniJSON.Json.Parser$$.ctor @ 0162d51c
+
+--- Calls IN ---
+  <- President.JSONSerializer$$Deserialize @ 0163030c
+  <- MiniJSON.Json$$Deserialize @ 0162d260
+
+--- Listing ---
+0162d26c  str x22,[sp, #-0x30]!
+0162d270  stp x21,x20,[sp, #0x10]
+0162d274  stp x19,x30,[sp, #0x20]
+0162d278  adrp x19,0x3577000
+0162d27c  adrp x21,0x334c000
+0162d280  ldrb w8,[x19, #0x648]
+0162d284  ldr x21,[x21, #0xb18]
+0162d288  mov x20,x0
+0162d28c  tbnz w8,#0x0,0x0162d2b0
+0162d290  adrp x0,0x337d000
+0162d294  ldr x0,[x0, #0x848]
+0162d298  bl 0x00b0789c
+0162d29c  adrp x0,0x334c000
+0162d2a0  ldr x0,[x0, #0xb18]
+0162d2a4  bl 0x00b0789c
+0162d2a8  mov w8,#0x1
+0162d2ac  strb w8,[x19, #0x648]
+0162d2b0  ldr x0,[x21]
+0162d2b4  bl 0x00b079a0
+0162d2b8  cbz x0,0x0162d35c
+0162d2bc  adrp x22,0x337d000
+0162d2c0  ldr x22,[x22, #0x848]
+0162d2c4  mov x1,x20
+0162d2c8  mov x19,x0
+0162d2cc  bl 0x0162d51c
+0162d2d0  mov x0,x19
+    ; [PRE] try { // try from 0162d2d0 to 0162d2e3 has its CatchHandler @ 0162d368
+0162d2d4  bl 0x0162d710
+0162d2d8  mov w1,w0
+0162d2dc  mov x0,x19
+0162d2e0  bl 0x0162dc5c
+    ; [POST] } // end try from 0162d2d0 to 0162d2e3
+0162d2e4  mov x21,x0
+0162d2e8  mov x20,xzr
+0162d2ec  ldr x8,[x19]
+0162d2f0  ldr x1,[x22]
+0162d2f4  ldrh w9,[x8, #0x12a]
+0162d2f8  cbz x9,0x0162d31c
+0162d2fc  ldr x10,[x8, #0xb0]
+0162d300  add x10,x10,#0x8
+0162d304  ldur x11,[x10, #-0x8]
+0162d308  cmp x11,x1
+0162d30c  b.eq 0x0162d32c
+0162d310  subs x9,x9,#0x1
+0162d314  add x10,x10,#0x10
+0162d318  b.ne 0x0162d304
+0162d31c  mov x0,x19
+0162d320  mov w2,wzr
+0162d324  bl 0x00b2ae24
+0162d328  b 0x0162d338
+0162d32c  ldrsw x9,[x10]
+0162d330  add x8,x8,x9, LSL #0x4
+0162d334  add x0,x8,#0x138
+0162d338  ldp x8,x1,[x0]
+0162d33c  mov x0,x19
+0162d340  blr x8
+0162d344  cbnz x20,0x0162d360
+0162d348  mov x0,x21
+0162d34c  ldp x19,x30,[sp, #0x20]
+0162d350  ldp x21,x20,[sp, #0x10]
+0162d354  ldr x22,[sp], #0x30
+0162d358  ret
+0162d35c  bl 0x00b079b0
+0162d360  mov x0,x20
+0162d364  bl 0x00aaac8c
+
+
+================================================================================
+### FILE: 0162d408_MiniJSON.Json__Serialize.txt
+================================================================================
+Function: MiniJSON.Json$$Serialize @ 0162d408
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Serializer$$Serialize @ 0162d40c
+
+--- Calls IN ---
+
+--- Listing ---
+0162d408  b 0x0162d40c
+
+
+================================================================================
+### FILE: 0162d40c_MiniJSON.Json.Serializer__Serialize.txt
+================================================================================
+Function: MiniJSON.Json.Serializer$$Serialize @ 0162d40c
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Serializer$$SerializeValue @ 0162e0c8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> MiniJSON.Json.Serializer$$.ctor @ 0162e054
+
+--- Calls IN ---
+  <- MiniJSON.Json$$Serialize @ 0162d408
+  <- President.JSONSerializer$$Serialize @ 0162f998
+
+--- Listing ---
+0162d40c  stp x21,x20,[sp, #-0x20]!
+0162d410  stp x19,x30,[sp, #0x10]
+0162d414  adrp x20,0x3577000
+0162d418  adrp x21,0x3362000
+0162d41c  ldrb w8,[x20, #0x654]
+0162d420  ldr x21,[x21, #0x570]
+0162d424  mov x19,x0
+0162d428  tbnz w8,#0x0,0x0162d440
+0162d42c  adrp x0,0x3362000
+0162d430  ldr x0,[x0, #0x570]
+0162d434  bl 0x00b0789c
+0162d438  mov w8,#0x1
+0162d43c  strb w8,[x20, #0x654]
+0162d440  ldr x0,[x21]
+0162d444  bl 0x00b079a0
+0162d448  cbz x0,0x0162d47c
+0162d44c  mov x20,x0
+0162d450  bl 0x0162e054
+0162d454  mov x0,x20
+0162d458  mov x1,x19
+0162d45c  bl 0x0162e0c8
+0162d460  ldr x0,[x20, #0x10]
+0162d464  cbz x0,0x0162d47c
+0162d468  ldr x8,[x0]
+0162d46c  ldp x19,x30,[sp, #0x10]
+0162d470  ldp x2,x1,[x8, #0x168]
+0162d474  ldp x21,x20,[sp], #0x20
+0162d478  br x2
+0162d47c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162d480_MiniJSON.Json.Parser__IsWordBreak.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$IsWordBreak @ 0162d480
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Char$$IsWhiteSpace @ 020d9818
+  -> System.String$$IndexOf @ 01fe3254
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$get_NextWord @ 0162de8c
+
+--- Listing ---
+0162d480  stp x21,x20,[sp, #-0x20]!
+0162d484  stp x19,x30,[sp, #0x10]
+0162d488  adrp x21,0x3577000
+0162d48c  adrp x20,0x3329000
+0162d490  ldrb w8,[x21, #0x646]
+0162d494  ldr x20,[x20, #0xc30]
+0162d498  mov w19,w0
+0162d49c  tbnz w8,#0x0,0x0162d4c0
+0162d4a0  adrp x0,0x3329000
+0162d4a4  ldr x0,[x0, #0xc30]
+0162d4a8  bl 0x00b0789c
+0162d4ac  adrp x0,0x335d000
+0162d4b0  ldr x0,[x0, #0xed0]
+0162d4b4  bl 0x00b0789c
+0162d4b8  mov w8,#0x1
+0162d4bc  strb w8,[x21, #0x646]
+0162d4c0  ldr x0,[x20]
+0162d4c4  ldr w8,[x0, #0xe0]
+0162d4c8  cbnz w8,0x0162d4d0
+0162d4cc  bl 0x00b0798c
+0162d4d0  mov w0,w19
+0162d4d4  mov x1,xzr
+0162d4d8  bl 0x020d9818
+0162d4dc  tbz w0,#0x0,0x0162d4e8
+0162d4e0  mov w0,#0x1
+0162d4e4  b 0x0162d50c
+0162d4e8  adrp x8,0x335d000
+0162d4ec  ldr x8,[x8, #0xed0]
+0162d4f0  ldr x0,[x8]
+0162d4f4  cbz x0,0x0162d518
+0162d4f8  mov w1,w19
+0162d4fc  mov x2,xzr
+0162d500  bl 0x01fe3254
+0162d504  cmn w0,#0x1
+0162d508  cset w0,ne
+0162d50c  ldp x19,x30,[sp, #0x10]
+0162d510  ldp x21,x20,[sp], #0x20
+0162d514  ret
+0162d518  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162d51c_MiniJSON.Json.Parser__.ctor.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$.ctor @ 0162d51c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.IO.StringReader$$.ctor @ 020bbe14
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$Parse @ 0162d26c
+
+--- Listing ---
+0162d51c  str x22,[sp, #-0x30]!
+0162d520  stp x21,x20,[sp, #0x10]
+0162d524  stp x19,x30,[sp, #0x20]
+0162d528  adrp x22,0x3577000
+0162d52c  adrp x21,0x333f000
+0162d530  ldrb w8,[x22, #0x647]
+0162d534  ldr x21,[x21, #0xc28]
+0162d538  mov x20,x1
+0162d53c  mov x19,x0
+0162d540  tbnz w8,#0x0,0x0162d558
+0162d544  adrp x0,0x333f000
+0162d548  ldr x0,[x0, #0xc28]
+0162d54c  bl 0x00b0789c
+0162d550  mov w8,#0x1
+0162d554  strb w8,[x22, #0x647]
+0162d558  mov x0,x19
+0162d55c  mov x1,xzr
+0162d560  bl 0x02194104
+0162d564  ldr x0,[x21]
+0162d568  bl 0x00b079a0
+0162d56c  cbz x0,0x0162d59c
+0162d570  mov x1,x20
+0162d574  mov x2,xzr
+0162d578  mov x21,x0
+0162d57c  bl 0x020bbe14
+0162d580  str x21,[x19, #0x10]!
+0162d584  mov x0,x19
+0162d588  mov x1,x21
+0162d58c  ldp x19,x30,[sp, #0x20]
+0162d590  ldp x21,x20,[sp, #0x10]
+0162d594  ldr x22,[sp], #0x30
+0162d598  b 0x00b07850
+0162d59c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162d5a0_MiniJSON.Json.Parser__ParseValue.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$ParseValue @ 0162d5a0
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Parser$$ParseByToken @ 0162dc5c
+  -> MiniJSON.Json.Parser$$get_NextToken @ 0162d710
+
+--- Calls IN ---
+
+--- Listing ---
+0162d5a0  stp x19,x30,[sp, #-0x10]!
+0162d5a4  mov x19,x0
+0162d5a8  bl 0x0162d710
+0162d5ac  mov w1,w0
+0162d5b0  mov x0,x19
+0162d5b4  ldp x19,x30,[sp], #0x10
+0162d5b8  b 0x0162dc5c
+
+
+================================================================================
+### FILE: 0162d5bc_MiniJSON.Json.Parser__Dispose.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$Dispose @ 0162d5bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.IO.TextReader$$Dispose @ 020ab218
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0162d5bc  stp x19,x30,[sp, #-0x10]!
+0162d5c0  mov x19,x0
+0162d5c4  ldr x0,[x19, #0x10]!
+0162d5c8  cbz x0,0x0162d5e8
+0162d5cc  mov x1,xzr
+0162d5d0  bl 0x020ab218
+0162d5d4  str xzr,[x19]
+0162d5d8  mov x0,x19
+0162d5dc  mov x1,xzr
+0162d5e0  ldp x19,x30,[sp], #0x10
+0162d5e4  b 0x00b07850
+0162d5e8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162d5ec_MiniJSON.Json.Parser__ParseObject.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$ParseObject @ 0162d5ec
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<object,-object>$$.ctor @ 0196dbb0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.Dictionary<object,-object>$$set_Item @ 0196e4c0
+  -> MiniJSON.Json.Parser$$ParseByToken @ 0162dc5c
+  -> FUN_00b079b0 @ 00b079b0
+  -> MiniJSON.Json.Parser$$ParseString @ 0162d8d4
+  -> MiniJSON.Json.Parser$$get_NextToken @ 0162d710
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$ParseByToken @ 0162dc5c
+
+--- Listing ---
+0162d5ec  str x22,[sp, #-0x30]!
+0162d5f0  stp x21,x20,[sp, #0x10]
+0162d5f4  stp x19,x30,[sp, #0x20]
+0162d5f8  adrp x20,0x3577000
+0162d5fc  adrp x21,0x336b000
+0162d600  ldrb w8,[x20, #0x649]
+0162d604  ldr x21,[x21, #0x730]
+0162d608  mov x19,x0
+0162d60c  tbnz w8,#0x0,0x0162d63c
+0162d610  adrp x0,0x3310000
+0162d614  ldr x0,[x0, #0xc18]
+0162d618  bl 0x00b0789c
+0162d61c  adrp x0,0x332f000
+0162d620  ldr x0,[x0, #0xdc8]
+0162d624  bl 0x00b0789c
+0162d628  adrp x0,0x336b000
+0162d62c  ldr x0,[x0, #0x730]
+0162d630  bl 0x00b0789c
+0162d634  mov w8,#0x1
+0162d638  strb w8,[x20, #0x649]
+0162d63c  ldr x0,[x21]
+0162d640  bl 0x00b079a0
+0162d644  cbz x0,0x0162d70c
+0162d648  adrp x8,0x3310000
+0162d64c  ldr x8,[x8, #0xc18]
+0162d650  mov x20,x0
+0162d654  ldr x1,[x8]
+0162d658  bl 0x0196dbb0
+0162d65c  ldr x0,[x19, #0x10]
+0162d660  cbz x0,0x0162d70c
+0162d664  ldr x8,[x0]
+0162d668  adrp x22,0x332f000
+0162d66c  ldp x9,x1,[x8, #0x1d8]
+0162d670  ldr x22,[x22, #0xdc8]
+0162d674  blr x9
+0162d678  mov x0,x19
+0162d67c  bl 0x0162d710
+0162d680  cmp w0,#0x6
+0162d684  b.eq 0x0162d678
+0162d688  cbz w0,0x0162d6f4
+0162d68c  cmp w0,#0x2
+0162d690  b.eq 0x0162d6f8
+0162d694  mov x0,x19
+0162d698  bl 0x0162d8d4
+0162d69c  cbz x0,0x0162d6f4
+0162d6a0  mov x21,x0
+0162d6a4  mov x0,x19
+0162d6a8  bl 0x0162d710
+0162d6ac  cmp w0,#0x5
+0162d6b0  b.ne 0x0162d6f4
+0162d6b4  ldr x0,[x19, #0x10]
+0162d6b8  cbz x0,0x0162d70c
+0162d6bc  ldr x8,[x0]
+0162d6c0  ldp x9,x1,[x8, #0x1d8]
+0162d6c4  blr x9
+0162d6c8  mov x0,x19
+0162d6cc  bl 0x0162d710
+0162d6d0  mov w1,w0
+0162d6d4  mov x0,x19
+0162d6d8  bl 0x0162dc5c
+0162d6dc  ldr x3,[x22]
+0162d6e0  mov x2,x0
+0162d6e4  mov x0,x20
+0162d6e8  mov x1,x21
+0162d6ec  bl 0x0196e4c0
+0162d6f0  b 0x0162d678
+0162d6f4  mov x20,xzr
+0162d6f8  mov x0,x20
+0162d6fc  ldp x19,x30,[sp, #0x20]
+0162d700  ldp x21,x20,[sp, #0x10]
+0162d704  ldr x22,[sp], #0x30
+0162d708  ret
+0162d70c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162d710_MiniJSON.Json.Parser__get_NextToken.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$get_NextToken @ 0162d710
+
+--- Calls OUT ---
+  -> System.String$$op_Equality @ 01fd05b0
+  -> MiniJSON.Json.Parser$$get_NextWord @ 0162de8c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> MiniJSON.Json.Parser$$get_PeekChar @ 0162dfdc
+  -> MiniJSON.Json.Parser$$EatWhitespace @ 0162df38
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$Parse @ 0162d26c
+  <- MiniJSON.Json.Parser$$ParseArray @ 0162db34
+  <- MiniJSON.Json.Parser$$ParseObject @ 0162d5ec
+  <- MiniJSON.Json.Parser$$ParseValue @ 0162d5a0
+
+--- Listing ---
+0162d710  str x20,[sp, #-0x20]!
+0162d714  stp x19,x30,[sp, #0x10]
+0162d718  adrp x20,0x3577000
+0162d71c  ldrb w8,[x20, #0x652]
+0162d720  mov x19,x0
+0162d724  tbnz w8,#0x0,0x0162d754
+0162d728  adrp x0,0x3339000
+0162d72c  ldr x0,[x0, #0xd90]
+0162d730  bl 0x00b0789c
+0162d734  adrp x0,0x332a000
+0162d738  ldr x0,[x0, #0x148]
+0162d73c  bl 0x00b0789c
+0162d740  adrp x0,0x3316000
+0162d744  ldr x0,[x0, #0xc28]
+0162d748  bl 0x00b0789c
+0162d74c  mov w8,#0x1
+0162d750  strb w8,[x20, #0x652]
+0162d754  mov x0,x19
+0162d758  bl 0x0162df38
+0162d75c  ldr x0,[x19, #0x10]
+0162d760  cbz x0,0x0162d8d0
+0162d764  ldr x8,[x0]
+0162d768  ldp x9,x1,[x8, #0x1c8]
+0162d76c  blr x9
+0162d770  cmn w0,#0x1
+0162d774  b.eq 0x0162d7bc
+0162d778  mov x0,x19
+0162d77c  bl 0x0162dfdc
+0162d780  and w8,w0,#0xffff
+0162d784  cmp w8,#0x5b
+0162d788  b.hi 0x0162d7cc
+0162d78c  sub w9,w8,#0x22
+0162d790  cmp w9,#0x18
+0162d794  b.hi 0x0162d824
+0162d798  adrp x8,0x26dc000
+0162d79c  add x8,x8,#0xf20
+0162d7a0  adr x10,0x162d7b4
+0162d7a4  ldrb w11,[x8, x9, LSL ]
+0162d7a8  add x10,x10,x11, LSL #0x2
+0162d7ac  mov w0,#0x5
+0162d7b0  br x10
+0162d7b4  mov w0,#0x8
+0162d7b8  b 0x0162d7c0
+0162d7bc  mov w0,wzr
+0162d7c0  ldp x19,x30,[sp, #0x10]
+0162d7c4  ldr x20,[sp], #0x20
+0162d7c8  ret
+0162d7cc  cmp w8,#0x5d
+0162d7d0  b.eq 0x0162d800
+0162d7d4  cmp w8,#0x7b
+0162d7d8  b.eq 0x0162d81c
+0162d7dc  cmp w8,#0x7d
+0162d7e0  b.ne 0x0162d834
+0162d7e4  ldr x0,[x19, #0x10]
+0162d7e8  cbz x0,0x0162d8d0
+0162d7ec  ldr x8,[x0]
+0162d7f0  ldp x9,x1,[x8, #0x1d8]
+0162d7f4  blr x9
+0162d7f8  mov w0,#0x2
+0162d7fc  b 0x0162d7c0
+0162d800  ldr x0,[x19, #0x10]
+0162d804  cbz x0,0x0162d8d0
+0162d808  ldr x8,[x0]
+0162d80c  ldp x9,x1,[x8, #0x1d8]
+0162d810  blr x9
+0162d814  mov w0,#0x4
+0162d818  b 0x0162d7c0
+0162d81c  mov w0,#0x1
+0162d820  b 0x0162d7c0
+0162d824  cmp w8,#0x5b
+0162d828  b.ne 0x0162d834
+0162d82c  mov w0,#0x3
+0162d830  b 0x0162d7c0
+0162d834  adrp x20,0x332a000
+0162d838  ldr x20,[x20, #0x148]
+0162d83c  mov x0,x19
+0162d840  bl 0x0162de8c
+0162d844  ldr x1,[x20]
+0162d848  mov x2,xzr
+0162d84c  mov x19,x0
+0162d850  bl 0x01fd05b0
+0162d854  tbz w0,#0x0,0x0162d860
+0162d858  mov w0,#0xa
+0162d85c  b 0x0162d7c0
+0162d860  adrp x8,0x3316000
+0162d864  ldr x8,[x8, #0xc28]
+0162d868  mov x0,x19
+0162d86c  mov x2,xzr
+0162d870  ldr x1,[x8]
+0162d874  bl 0x01fd05b0
+0162d878  tbz w0,#0x0,0x0162d884
+0162d87c  mov w0,#0x9
+0162d880  b 0x0162d7c0
+0162d884  adrp x8,0x3339000
+0162d888  ldr x8,[x8, #0xd90]
+0162d88c  mov x0,x19
+0162d890  mov x2,xzr
+0162d894  ldr x1,[x8]
+0162d898  bl 0x01fd05b0
+0162d89c  tst w0,#0x1
+0162d8a0  mov w8,#0xb
+0162d8a4  csel w0,w8,wzr,ne
+0162d8a8  b 0x0162d7c0
+0162d8ac  mov w0,#0x7
+0162d8b0  b 0x0162d7c0
+0162d8b4  ldr x0,[x19, #0x10]
+0162d8b8  cbz x0,0x0162d8d0
+0162d8bc  ldr x8,[x0]
+0162d8c0  ldp x9,x1,[x8, #0x1d8]
+0162d8c4  blr x9
+0162d8c8  mov w0,#0x6
+0162d8cc  b 0x0162d7c0
+0162d8d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162d8d4_MiniJSON.Json.Parser__ParseString.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$ParseString @ 0162d8d4
+
+--- Calls OUT ---
+  -> System.Text.StringBuilder$$.ctor @ 01fe7ee0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Convert$$ToInt32 @ 020e3b1c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$CreateString @ 01fdcf88
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b0 @ 00b079b0
+  -> MiniJSON.Json.Parser$$get_NextChar @ 0162de14
+  -> System.Text.StringBuilder$$Append @ 01fea30c
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$ParseObject @ 0162d5ec
+  <- MiniJSON.Json.Parser$$ParseByToken @ 0162dc5c
+
+--- Listing ---
+0162d8d4  str x28,[sp, #-0x60]!
+0162d8d8  stp x27,x26,[sp, #0x10]
+0162d8dc  stp x25,x24,[sp, #0x20]
+0162d8e0  stp x23,x22,[sp, #0x30]
+0162d8e4  stp x21,x20,[sp, #0x40]
+0162d8e8  stp x19,x30,[sp, #0x50]
+0162d8ec  adrp x20,0x3577000
+0162d8f0  adrp x21,0x3332000
+0162d8f4  ldrb w8,[x20, #0x64c]
+0162d8f8  ldr x21,[x21, #0xaf0]
+0162d8fc  mov x19,x0
+0162d900  tbnz w8,#0x0,0x0162d930
+0162d904  adrp x0,0x335a000
+0162d908  ldr x0,[x0, #0x340]
+0162d90c  bl 0x00b0789c
+0162d910  adrp x0,0x3362000
+0162d914  ldr x0,[x0, #0xe28]
+0162d918  bl 0x00b0789c
+0162d91c  adrp x0,0x3332000
+0162d920  ldr x0,[x0, #0xaf0]
+0162d924  bl 0x00b0789c
+0162d928  mov w8,#0x1
+0162d92c  strb w8,[x20, #0x64c]
+0162d930  ldr x0,[x21]
+0162d934  bl 0x00b079a0
+0162d938  cbz x0,0x0162db2c
+0162d93c  mov x1,xzr
+0162d940  mov x20,x0
+0162d944  bl 0x01fe7ee0
+0162d948  ldr x0,[x19, #0x10]
+0162d94c  cbz x0,0x0162db2c
+0162d950  ldr x8,[x0]
+0162d954  ldp x9,x1,[x8, #0x1d8]
+0162d958  blr x9
+0162d95c  ldr x0,[x19, #0x10]
+0162d960  cbz x0,0x0162db2c
+0162d964  adrp x25,0x335a000
+0162d968  adrp x26,0x3362000
+0162d96c  ldr x25,[x25, #0x340]
+0162d970  ldr x26,[x26, #0xe28]
+0162d974  mov x23,#0x2001
+0162d978  adrp x24,0x26dc000
+0162d97c  mov w22,#0x1
+0162d980  movk x23,#0x400, LSL #48
+0162d984  add x24,x24,#0xf39
+0162d988  ldr x8,[x0]
+0162d98c  ldp x9,x1,[x8, #0x1c8]
+0162d990  blr x9
+0162d994  cmn w0,#0x1
+0162d998  b.eq 0x0162db04
+0162d99c  mov x0,x19
+0162d9a0  bl 0x0162de14
+0162d9a4  and w8,w0,#0xffff
+0162d9a8  cmp w8,#0x5c
+0162d9ac  b.eq 0x0162d9c0
+0162d9b0  cmp w8,#0x22
+0162d9b4  b.eq 0x0162db04
+0162d9b8  mov w1,w0
+0162d9bc  b 0x0162da0c
+0162d9c0  ldr x0,[x19, #0x10]
+0162d9c4  cbz x0,0x0162db2c
+0162d9c8  ldr x8,[x0]
+0162d9cc  ldp x9,x1,[x8, #0x1c8]
+0162d9d0  blr x9
+0162d9d4  cmn w0,#0x1
+0162d9d8  b.eq 0x0162db04
+0162d9dc  mov x0,x19
+0162d9e0  bl 0x0162de14
+0162d9e4  and w8,w0,#0xffff
+0162d9e8  mov w1,w0
+0162d9ec  cmp w8,#0x5c
+0162d9f0  b.hi 0x0162da24
+0162d9f4  sub w8,w8,#0x22
+0162d9f8  cmp w8,#0x3a
+0162d9fc  b.hi 0x0162da18
+0162da00  lsl x8,x22,x8
+0162da04  tst x8,x23
+0162da08  b.eq 0x0162da18
+0162da0c  mov x0,x20
+0162da10  mov x2,xzr
+0162da14  bl 0x01fea30c
+0162da18  ldr x0,[x19, #0x10]
+0162da1c  cbnz x0,0x0162d988
+0162da20  b 0x0162db2c
+0162da24  cmp w8,#0x66
+0162da28  b.hi 0x0162da48
+0162da2c  and w8,w1,#0xffff
+0162da30  cmp w8,#0x62
+0162da34  b.eq 0x0162da70
+0162da38  cmp w8,#0x66
+0162da3c  b.ne 0x0162da18
+0162da40  mov w1,#0xc
+0162da44  b 0x0162da0c
+0162da48  and w8,w1,#0xffff
+0162da4c  sub w8,w8,#0x6e
+0162da50  cmp w8,#0x7
+0162da54  b.hi 0x0162da18
+0162da58  adr x9,0x162da18
+0162da5c  ldrb w10,[x24, x8, LSL ]
+0162da60  add x9,x9,x10, LSL #0x2
+0162da64  br x9
+0162da68  mov w1,#0xa
+0162da6c  b 0x0162da0c
+0162da70  mov w1,#0x8
+0162da74  b 0x0162da0c
+0162da78  mov w1,#0x9
+0162da7c  b 0x0162da0c
+0162da80  mov w1,#0xd
+0162da84  b 0x0162da0c
+0162da88  ldr x0,[x25]
+0162da8c  mov w1,#0x4
+0162da90  bl 0x00b078f8
+0162da94  mov x21,x0
+0162da98  mov x27,xzr
+0162da9c  add x28,x0,#0x20
+0162daa0  mov x0,x19
+0162daa4  bl 0x0162de14
+0162daa8  cbz x21,0x0162db2c
+0162daac  ldr w8,[x21, #0x18]
+0162dab0  cmp x27,x8
+0162dab4  b.cs 0x0162db30
+0162dab8  strh w0,[x28, x27, LSL #0x1]
+0162dabc  add x27,x27,#0x1
+0162dac0  cmp x27,#0x4
+0162dac4  b.ne 0x0162daa0
+0162dac8  mov x0,xzr
+0162dacc  mov x1,x21
+0162dad0  mov x2,xzr
+0162dad4  bl 0x01fdcf88
+0162dad8  ldr x8,[x26]
+0162dadc  mov x21,x0
+0162dae0  ldr w9,[x8, #0xe0]
+0162dae4  cbnz w9,0x0162daf0
+0162dae8  mov x0,x8
+0162daec  bl 0x00b0798c
+0162daf0  mov w1,#0x10
+0162daf4  mov x0,x21
+0162daf8  mov x2,xzr
+0162dafc  bl 0x020e3b1c
+0162db00  b 0x0162d9b8
+0162db04  ldr x8,[x20]
+0162db08  mov x0,x20
+0162db0c  ldp x19,x30,[sp, #0x50]
+0162db10  ldp x21,x20,[sp, #0x40]
+0162db14  ldp x2,x1,[x8, #0x168]
+0162db18  ldp x23,x22,[sp, #0x30]
+0162db1c  ldp x25,x24,[sp, #0x20]
+0162db20  ldp x27,x26,[sp, #0x10]
+0162db24  ldr x28,[sp], #0x60
+0162db28  br x2
+0162db2c  bl 0x00b079b0
+0162db30  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 0162db34_MiniJSON.Json.Parser__ParseArray.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$ParseArray @ 0162db34
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> MiniJSON.Json.Parser$$ParseByToken @ 0162dc5c
+  -> FUN_00b079b0 @ 00b079b0
+  -> MiniJSON.Json.Parser$$get_NextToken @ 0162d710
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$ParseByToken @ 0162dc5c
+
+--- Listing ---
+0162db34  stp x21,x20,[sp, #-0x20]!
+0162db38  stp x19,x30,[sp, #0x10]
+0162db3c  adrp x20,0x3577000
+0162db40  adrp x21,0x3319000
+0162db44  ldrb w8,[x20, #0x64a]
+0162db48  ldr x21,[x21, #0xc58]
+0162db4c  mov x19,x0
+0162db50  tbnz w8,#0x0,0x0162db80
+0162db54  adrp x0,0x333d000
+0162db58  ldr x0,[x0, #0x3b0]
+0162db5c  bl 0x00b0789c
+0162db60  adrp x0,0x334e000
+0162db64  ldr x0,[x0, #0x470]
+0162db68  bl 0x00b0789c
+0162db6c  adrp x0,0x3319000
+0162db70  ldr x0,[x0, #0xc58]
+0162db74  bl 0x00b0789c
+0162db78  mov w8,#0x1
+0162db7c  strb w8,[x20, #0x64a]
+0162db80  ldr x0,[x21]
+0162db84  bl 0x00b079a0
+0162db88  cbz x0,0x0162dc58
+0162db8c  adrp x8,0x334e000
+0162db90  ldr x8,[x8, #0x470]
+0162db94  mov x20,x0
+0162db98  ldr x1,[x8]
+0162db9c  bl 0x01bffe10
+0162dba0  ldr x0,[x19, #0x10]
+0162dba4  cbz x0,0x0162dc58
+0162dba8  ldr x8,[x0]
+0162dbac  adrp x21,0x333d000
+0162dbb0  ldp x9,x1,[x8, #0x1d8]
+0162dbb4  ldr x21,[x21, #0x3b0]
+0162dbb8  blr x9
+0162dbbc  mov x0,x19
+0162dbc0  bl 0x0162d710
+0162dbc4  cmp w0,#0x6
+0162dbc8  b.eq 0x0162dbbc
+0162dbcc  mov w1,w0
+0162dbd0  cbz w0,0x0162dc44
+0162dbd4  cmp w1,#0x4
+0162dbd8  b.eq 0x0162dc48
+0162dbdc  mov x0,x19
+0162dbe0  bl 0x0162dc5c
+0162dbe4  ldr w10,[x20, #0x1c]
+0162dbe8  ldr x8,[x20, #0x10]
+0162dbec  ldr x9,[x21]
+0162dbf0  add w10,w10,#0x1
+0162dbf4  str w10,[x20, #0x1c]
+0162dbf8  cbz x8,0x0162dc58
+0162dbfc  ldrsw x10,[x20, #0x18]
+0162dc00  ldr w11,[x8, #0x18]
+0162dc04  mov x1,x0
+0162dc08  cmp w10,w11
+0162dc0c  b.cs 0x0162dc28
+0162dc10  add w9,w10,#0x1
+0162dc14  add x0,x8,x10, LSL #0x3
+0162dc18  str w9,[x20, #0x18]
+0162dc1c  str x1,[x0, #0x20]!
+0162dc20  bl 0x00b07850
+0162dc24  b 0x0162dbbc
+0162dc28  ldr x8,[x9, #0x20]
+0162dc2c  mov x0,x20
+0162dc30  ldr x8,[x8, #0xc0]
+0162dc34  ldr x2,[x8, #0x58]
+0162dc38  ldr x8,[x2, #0x8]
+0162dc3c  blr x8
+0162dc40  b 0x0162dbbc
+0162dc44  mov x20,xzr
+0162dc48  ldp x19,x30,[sp, #0x10]
+0162dc4c  mov x0,x20
+0162dc50  ldp x21,x20,[sp], #0x20
+0162dc54  ret
+0162dc58  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162dc5c_MiniJSON.Json.Parser__ParseByToken.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$ParseByToken @ 0162dc5c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> MiniJSON.Json.Parser$$ParseArray @ 0162db34
+  -> MiniJSON.Json.Parser$$ParseObject @ 0162d5ec
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> MiniJSON.Json.Parser$$ParseNumber @ 0162dd44
+  -> MiniJSON.Json.Parser$$ParseString @ 0162d8d4
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$Parse @ 0162d26c
+  <- MiniJSON.Json.Parser$$ParseArray @ 0162db34
+  <- MiniJSON.Json.Parser$$ParseObject @ 0162d5ec
+  <- MiniJSON.Json.Parser$$ParseValue @ 0162d5a0
+
+--- Listing ---
+0162dc5c  sub sp,sp,#0x30
+0162dc60  stp x21,x20,[sp, #0x10]
+0162dc64  stp x19,x30,[sp, #0x20]
+0162dc68  adrp x21,0x3577000
+0162dc6c  ldrb w8,[x21, #0x64b]
+0162dc70  mov w20,w1
+0162dc74  mov x19,x0
+0162dc78  tbnz w8,#0x0,0x0162dc90
+0162dc7c  adrp x0,0x337c000
+0162dc80  ldr x0,[x0, #0xf70]
+0162dc84  bl 0x00b0789c
+0162dc88  mov w8,#0x1
+0162dc8c  strb w8,[x21, #0x64b]
+0162dc90  sub w8,w20,#0x1
+0162dc94  cmp w8,#0x9
+0162dc98  mov x0,xzr
+0162dc9c  b.hi 0x0162dd34
+0162dca0  adrp x9,0x26dc000
+0162dca4  add x9,x9,#0xf41
+0162dca8  adr x10,0x162dcc0
+0162dcac  ldrb w11,[x9, x8, LSL ]
+0162dcb0  add x10,x10,x11, LSL #0x2
+0162dcb4  adrp x8,0x337c000
+0162dcb8  ldr x8,[x8, #0xf70]
+0162dcbc  br x10
+0162dcc0  mov x0,x19
+0162dcc4  ldp x19,x30,[sp, #0x20]
+0162dcc8  ldp x21,x20,[sp, #0x10]
+0162dccc  add sp,sp,#0x30
+0162dcd0  b 0x0162d5ec
+0162dcd4  mov x0,x19
+0162dcd8  ldp x19,x30,[sp, #0x20]
+0162dcdc  ldp x21,x20,[sp, #0x10]
+0162dce0  add sp,sp,#0x30
+0162dce4  b 0x0162db34
+0162dce8  mov x0,x19
+0162dcec  ldp x19,x30,[sp, #0x20]
+0162dcf0  ldp x21,x20,[sp, #0x10]
+0162dcf4  add sp,sp,#0x30
+0162dcf8  b 0x0162d8d4
+0162dcfc  mov x0,x19
+0162dd00  ldp x19,x30,[sp, #0x20]
+0162dd04  ldp x21,x20,[sp, #0x10]
+0162dd08  add sp,sp,#0x30
+0162dd0c  b 0x0162dd44
+0162dd10  ldr x0,[x8]
+0162dd14  mov w8,#0x1
+0162dd18  strb w8,[sp, #0xc]
+0162dd1c  add x1,sp,#0xc
+0162dd20  b 0x0162dd30
+0162dd24  ldr x0,[x8]
+0162dd28  add x1,sp,#0x8
+0162dd2c  strb wzr,[sp, #0x8]
+0162dd30  bl 0x00b07994
+0162dd34  ldp x19,x30,[sp, #0x20]
+0162dd38  ldp x21,x20,[sp, #0x10]
+0162dd3c  add sp,sp,#0x30
+0162dd40  ret
+
+
+================================================================================
+### FILE: 0162dd44_MiniJSON.Json.Parser__ParseNumber.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$ParseNumber @ 0162dd44
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Parser$$get_NextWord @ 0162de8c
+  -> System.Int64$$TryParse @ 0214fad0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.Double$$TryParse @ 021393a4
+  -> System.String$$IndexOf @ 01fe3254
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$ParseByToken @ 0162dc5c
+
+--- Listing ---
+0162dd44  sub sp,sp,#0x30
+0162dd48  str x20,[sp, #0x10]
+0162dd4c  stp x19,x30,[sp, #0x20]
+0162dd50  adrp x20,0x3577000
+0162dd54  ldrb w8,[x20, #0x64d]
+0162dd58  mov x19,x0
+0162dd5c  tbnz w8,#0x0,0x0162dd80
+0162dd60  adrp x0,0x3310000
+0162dd64  ldr x0,[x0, #0x6f0]
+0162dd68  bl 0x00b0789c
+0162dd6c  adrp x0,0x332b000
+0162dd70  ldr x0,[x0, #0xb0]
+0162dd74  bl 0x00b0789c
+0162dd78  mov w8,#0x1
+0162dd7c  strb w8,[x20, #0x64d]
+0162dd80  mov x0,x19
+0162dd84  str xzr,[sp, #0x18]
+0162dd88  str xzr,[sp, #0x8]
+0162dd8c  bl 0x0162de8c
+0162dd90  cbz x0,0x0162de10
+0162dd94  mov w1,#0x2e
+0162dd98  mov x2,xzr
+0162dd9c  mov x19,x0
+0162dda0  bl 0x01fe3254
+0162dda4  cmn w0,#0x1
+0162dda8  b.eq 0x0162ddd4
+0162ddac  add x1,sp,#0x18
+0162ddb0  mov x0,x19
+0162ddb4  mov x2,xzr
+0162ddb8  bl 0x021393a4
+0162ddbc  ldr x8,[sp, #0x18]
+0162ddc0  mov x1,sp
+0162ddc4  str x8,[sp]
+0162ddc8  adrp x8,0x3310000
+0162ddcc  ldr x8,[x8, #0x6f0]
+0162ddd0  b 0x0162ddf8
+0162ddd4  add x1,sp,#0x8
+0162ddd8  mov x0,x19
+0162dddc  mov x2,xzr
+0162dde0  bl 0x0214fad0
+0162dde4  ldr x8,[sp, #0x8]
+0162dde8  mov x1,sp
+0162ddec  str x8,[sp]
+0162ddf0  adrp x8,0x332b000
+0162ddf4  ldr x8,[x8, #0xb0]
+0162ddf8  ldr x0,[x8]
+0162ddfc  bl 0x00b07994
+0162de00  ldp x19,x30,[sp, #0x20]
+0162de04  ldr x20,[sp, #0x10]
+0162de08  add sp,sp,#0x30
+0162de0c  ret
+0162de10  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162de14_MiniJSON.Json.Parser__get_NextChar.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$get_NextChar @ 0162de14
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Convert$$ToChar @ 020dfde8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$get_NextWord @ 0162de8c
+  <- MiniJSON.Json.Parser$$ParseString @ 0162d8d4
+
+--- Listing ---
+0162de14  str x20,[sp, #-0x20]!
+0162de18  stp x19,x30,[sp, #0x10]
+0162de1c  adrp x20,0x3577000
+0162de20  ldrb w8,[x20, #0x650]
+0162de24  mov x19,x0
+0162de28  tbnz w8,#0x0,0x0162de40
+0162de2c  adrp x0,0x3362000
+0162de30  ldr x0,[x0, #0xe28]
+0162de34  bl 0x00b0789c
+0162de38  mov w8,#0x1
+0162de3c  strb w8,[x20, #0x650]
+0162de40  ldr x0,[x19, #0x10]
+0162de44  cbz x0,0x0162de88
+0162de48  ldr x8,[x0]
+0162de4c  adrp x19,0x3362000
+0162de50  ldp x9,x1,[x8, #0x1d8]
+0162de54  ldr x19,[x19, #0xe28]
+0162de58  blr x9
+0162de5c  ldr x8,[x19]
+0162de60  mov w19,w0
+0162de64  ldr w9,[x8, #0xe0]
+0162de68  cbnz w9,0x0162de74
+0162de6c  mov x0,x8
+0162de70  bl 0x00b0798c
+0162de74  mov w0,w19
+0162de78  ldp x19,x30,[sp, #0x10]
+0162de7c  mov x1,xzr
+0162de80  ldr x20,[sp], #0x20
+0162de84  b 0x020dfde8
+0162de88  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162de8c_MiniJSON.Json.Parser__get_NextWord.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$get_NextWord @ 0162de8c
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Parser$$IsWordBreak @ 0162d480
+  -> System.Text.StringBuilder$$.ctor @ 01fe7ee0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> MiniJSON.Json.Parser$$get_PeekChar @ 0162dfdc
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Text.StringBuilder$$Append @ 01fea30c
+  -> MiniJSON.Json.Parser$$get_NextChar @ 0162de14
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$ParseNumber @ 0162dd44
+  <- MiniJSON.Json.Parser$$get_NextToken @ 0162d710
+
+--- Listing ---
+0162de8c  stp x21,x20,[sp, #-0x20]!
+0162de90  stp x19,x30,[sp, #0x10]
+0162de94  adrp x20,0x3577000
+0162de98  adrp x21,0x3332000
+0162de9c  ldrb w8,[x20, #0x651]
+0162dea0  ldr x21,[x21, #0xaf0]
+0162dea4  mov x19,x0
+0162dea8  tbnz w8,#0x0,0x0162dec0
+0162deac  adrp x0,0x3332000
+0162deb0  ldr x0,[x0, #0xaf0]
+0162deb4  bl 0x00b0789c
+0162deb8  mov w8,#0x1
+0162debc  strb w8,[x20, #0x651]
+0162dec0  ldr x0,[x21]
+0162dec4  bl 0x00b079a0
+0162dec8  cbz x0,0x0162df34
+0162decc  mov x1,xzr
+0162ded0  mov x20,x0
+0162ded4  bl 0x01fe7ee0
+0162ded8  mov x0,x19
+0162dedc  bl 0x0162dfdc
+0162dee0  bl 0x0162d480
+0162dee4  tbnz w0,#0x0,0x0162df1c
+0162dee8  mov x0,x19
+0162deec  bl 0x0162de14
+0162def0  mov w1,w0
+0162def4  mov x0,x20
+0162def8  mov x2,xzr
+0162defc  bl 0x01fea30c
+0162df00  ldr x0,[x19, #0x10]
+0162df04  cbz x0,0x0162df34
+0162df08  ldr x8,[x0]
+0162df0c  ldp x9,x1,[x8, #0x1c8]
+0162df10  blr x9
+0162df14  cmn w0,#0x1
+0162df18  b.ne 0x0162ded8
+0162df1c  ldr x8,[x20]
+0162df20  ldp x19,x30,[sp, #0x10]
+0162df24  mov x0,x20
+0162df28  ldp x2,x1,[x8, #0x168]
+0162df2c  ldp x21,x20,[sp], #0x20
+0162df30  br x2
+0162df34  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162df38_MiniJSON.Json.Parser__EatWhitespace.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$EatWhitespace @ 0162df38
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Char$$IsWhiteSpace @ 020d9818
+  -> MiniJSON.Json.Parser$$get_PeekChar @ 0162dfdc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$get_NextToken @ 0162d710
+
+--- Listing ---
+0162df38  stp x21,x20,[sp, #-0x20]!
+0162df3c  stp x19,x30,[sp, #0x10]
+0162df40  adrp x20,0x3577000
+0162df44  adrp x21,0x3329000
+0162df48  ldrb w8,[x20, #0x64e]
+0162df4c  ldr x21,[x21, #0xc30]
+0162df50  mov x19,x0
+0162df54  tbnz w8,#0x0,0x0162df6c
+0162df58  adrp x0,0x3329000
+0162df5c  ldr x0,[x0, #0xc30]
+0162df60  bl 0x00b0789c
+0162df64  mov w8,#0x1
+0162df68  strb w8,[x20, #0x64e]
+0162df6c  mov x0,x19
+0162df70  bl 0x0162dfdc
+0162df74  ldr x8,[x21]
+0162df78  mov w20,w0
+0162df7c  ldr w9,[x8, #0xe0]
+0162df80  cbnz w9,0x0162df8c
+0162df84  mov x0,x8
+0162df88  bl 0x00b0798c
+0162df8c  mov w0,w20
+0162df90  mov x1,xzr
+0162df94  bl 0x020d9818
+0162df98  tbz w0,#0x0,0x0162dfcc
+0162df9c  ldr x0,[x19, #0x10]
+0162dfa0  cbz x0,0x0162dfd8
+0162dfa4  ldr x8,[x0]
+0162dfa8  ldp x9,x1,[x8, #0x1d8]
+0162dfac  blr x9
+0162dfb0  ldr x0,[x19, #0x10]
+0162dfb4  cbz x0,0x0162dfd8
+0162dfb8  ldr x8,[x0]
+0162dfbc  ldp x9,x1,[x8, #0x1c8]
+0162dfc0  blr x9
+0162dfc4  cmn w0,#0x1
+0162dfc8  b.ne 0x0162df6c
+0162dfcc  ldp x19,x30,[sp, #0x10]
+0162dfd0  ldp x21,x20,[sp], #0x20
+0162dfd4  ret
+0162dfd8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162dfdc_MiniJSON.Json.Parser__get_PeekChar.txt
+================================================================================
+Function: MiniJSON.Json.Parser$$get_PeekChar @ 0162dfdc
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Convert$$ToChar @ 020dfde8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- MiniJSON.Json.Parser$$get_NextWord @ 0162de8c
+  <- MiniJSON.Json.Parser$$EatWhitespace @ 0162df38
+  <- MiniJSON.Json.Parser$$get_NextToken @ 0162d710
+
+--- Listing ---
+0162dfdc  str x20,[sp, #-0x20]!
+0162dfe0  stp x19,x30,[sp, #0x10]
+0162dfe4  adrp x20,0x3577000
+0162dfe8  ldrb w8,[x20, #0x64f]
+0162dfec  mov x19,x0
+0162dff0  tbnz w8,#0x0,0x0162e008
+0162dff4  adrp x0,0x3362000
+0162dff8  ldr x0,[x0, #0xe28]
+0162dffc  bl 0x00b0789c
+0162e000  mov w8,#0x1
+0162e004  strb w8,[x20, #0x64f]
+0162e008  ldr x0,[x19, #0x10]
+0162e00c  cbz x0,0x0162e050
+0162e010  ldr x8,[x0]
+0162e014  adrp x19,0x3362000
+0162e018  ldp x9,x1,[x8, #0x1c8]
+0162e01c  ldr x19,[x19, #0xe28]
+0162e020  blr x9
+0162e024  ldr x8,[x19]
+0162e028  mov w19,w0
+0162e02c  ldr w9,[x8, #0xe0]
+0162e030  cbnz w9,0x0162e03c
+0162e034  mov x0,x8
+0162e038  bl 0x00b0798c
+0162e03c  mov w0,w19
+0162e040  ldp x19,x30,[sp, #0x10]
+0162e044  mov x1,xzr
+0162e048  ldr x20,[sp], #0x20
+0162e04c  b 0x020dfde8
+0162e050  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162e054_MiniJSON.Json.Serializer__.ctor.txt
+================================================================================
+Function: MiniJSON.Json.Serializer$$.ctor @ 0162e054
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Text.StringBuilder$$.ctor @ 01fe7ee0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- MiniJSON.Json.Serializer$$Serialize @ 0162d40c
+
+--- Listing ---
+0162e054  stp x21,x20,[sp, #-0x20]!
+0162e058  stp x19,x30,[sp, #0x10]
+0162e05c  adrp x21,0x3577000
+0162e060  adrp x20,0x3332000
+0162e064  ldrb w8,[x21, #0x653]
+0162e068  ldr x20,[x20, #0xaf0]
+0162e06c  mov x19,x0
+0162e070  tbnz w8,#0x0,0x0162e088
+0162e074  adrp x0,0x3332000
+0162e078  ldr x0,[x0, #0xaf0]
+0162e07c  bl 0x00b0789c
+0162e080  mov w8,#0x1
+0162e084  strb w8,[x21, #0x653]
+0162e088  mov x0,x19
+0162e08c  mov x1,xzr
+0162e090  bl 0x02194104
+0162e094  ldr x0,[x20]
+0162e098  bl 0x00b079a0
+0162e09c  cbz x0,0x0162e0c4
+0162e0a0  mov x1,xzr
+0162e0a4  mov x20,x0
+0162e0a8  bl 0x01fe7ee0
+0162e0ac  str x20,[x19, #0x10]!
+0162e0b0  mov x0,x19
+0162e0b4  ldp x19,x30,[sp, #0x10]
+0162e0b8  mov x1,x20
+0162e0bc  ldp x21,x20,[sp], #0x20
+0162e0c0  b 0x00b07850
+0162e0c4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162e0c8_MiniJSON.Json.Serializer__SerializeValue.txt
+================================================================================
+Function: MiniJSON.Json.Serializer$$SerializeValue @ 0162e0c8
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Serializer$$SerializeObject @ 0162e8b4
+  -> System.String$$CreateString @ 01fe6044
+  -> MiniJSON.Json.Serializer$$SerializeString @ 0162e298
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace8b4 @ 00b07998
+  -> MiniJSON.Json.Serializer$$SerializeArray @ 0162e554
+  -> FUN_00b079b0 @ 00b079b0
+  -> MiniJSON.Json.Serializer$$SerializeOther @ 0162ed40
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+
+--- Calls IN ---
+  <- MiniJSON.Json.Serializer$$SerializeObject @ 0162e8b4
+  <- MiniJSON.Json.Serializer$$Serialize @ 0162d40c
+  <- MiniJSON.Json.Serializer$$SerializeArray @ 0162e554
+
+--- Listing ---
+0162e0c8  stp x21,x20,[sp, #-0x20]!
+0162e0cc  stp x19,x30,[sp, #0x10]
+0162e0d0  adrp x21,0x3577000
+0162e0d4  ldrb w8,[x21, #0x655]
+0162e0d8  mov x20,x1
+0162e0dc  mov x19,x0
+0162e0e0  tbnz w8,#0x0,0x0162e14c
+0162e0e4  adrp x0,0x337c000
+0162e0e8  ldr x0,[x0, #0xf70]
+0162e0ec  bl 0x00b0789c
+0162e0f0  adrp x0,0x3329000
+0162e0f4  ldr x0,[x0, #0xc30]
+0162e0f8  bl 0x00b0789c
+0162e0fc  adrp x0,0x331f000
+0162e100  ldr x0,[x0, #0x6e8]
+0162e104  bl 0x00b0789c
+0162e108  adrp x0,0x331f000
+0162e10c  ldr x0,[x0, #0x4c8]
+0162e110  bl 0x00b0789c
+0162e114  adrp x0,0x331b000
+0162e118  ldr x0,[x0, #0x6c8]
+0162e11c  bl 0x00b0789c
+0162e120  adrp x0,0x3339000
+0162e124  ldr x0,[x0, #0xd90]
+0162e128  bl 0x00b0789c
+0162e12c  adrp x0,0x332a000
+0162e130  ldr x0,[x0, #0x148]
+0162e134  bl 0x00b0789c
+0162e138  adrp x0,0x3316000
+0162e13c  ldr x0,[x0, #0xc28]
+0162e140  bl 0x00b0789c
+0162e144  mov w8,#0x1
+0162e148  strb w8,[x21, #0x655]
+0162e14c  cbz x20,0x0162e1a8
+0162e150  adrp x8,0x331b000
+0162e154  ldr x8,[x8, #0x6c8]
+0162e158  ldr x9,[x8]
+0162e15c  ldr x8,[x20]
+0162e160  cmp x8,x9
+0162e164  b.eq 0x0162e1bc
+0162e168  adrp x9,0x337c000
+0162e16c  ldr x9,[x9, #0xf70]
+0162e170  ldr x9,[x9]
+0162e174  cmp x8,x9
+0162e178  b.eq 0x0162e1d0
+0162e17c  adrp x8,0x331f000
+0162e180  ldr x8,[x8, #0x4c8]
+0162e184  mov x0,x20
+0162e188  ldr x1,[x8]
+0162e18c  bl 0x00b07990
+0162e190  cbz x0,0x0162e214
+0162e194  mov x1,x0
+0162e198  mov x0,x19
+0162e19c  ldp x19,x30,[sp, #0x10]
+0162e1a0  ldp x21,x20,[sp], #0x20
+0162e1a4  b 0x0162e554
+0162e1a8  ldr x0,[x19, #0x10]
+0162e1ac  cbz x0,0x0162e294
+0162e1b0  adrp x8,0x3339000
+0162e1b4  ldr x8,[x8, #0xd90]
+0162e1b8  b 0x0162e200
+0162e1bc  mov x0,x19
+0162e1c0  mov x1,x20
+0162e1c4  ldp x19,x30,[sp, #0x10]
+0162e1c8  ldp x21,x20,[sp], #0x20
+0162e1cc  b 0x0162e298
+0162e1d0  ldr x19,[x19, #0x10]
+0162e1d4  mov x0,x20
+0162e1d8  bl 0x00b07998
+0162e1dc  cbz x19,0x0162e294
+0162e1e0  ldrb w8,[x0]
+0162e1e4  adrp x9,0x332a000
+0162e1e8  adrp x10,0x3316000
+0162e1ec  ldr x9,[x9, #0x148]
+0162e1f0  ldr x10,[x10, #0xc28]
+0162e1f4  cmp w8,#0x0
+0162e1f8  mov x0,x19
+0162e1fc  csel x8,x9,x10,eq
+0162e200  ldr x1,[x8]
+0162e204  ldp x19,x30,[sp, #0x10]
+0162e208  mov x2,xzr
+0162e20c  ldp x21,x20,[sp], #0x20
+0162e210  b 0x01fe9960
+0162e214  adrp x8,0x331f000
+0162e218  ldr x8,[x8, #0x6e8]
+0162e21c  mov x0,x20
+0162e220  ldr x1,[x8]
+0162e224  bl 0x00b07990
+0162e228  cbz x0,0x0162e240
+0162e22c  mov x1,x0
+0162e230  mov x0,x19
+0162e234  ldp x19,x30,[sp, #0x10]
+0162e238  ldp x21,x20,[sp], #0x20
+0162e23c  b 0x0162e8b4
+0162e240  adrp x8,0x3329000
+0162e244  ldr x8,[x8, #0xc30]
+0162e248  ldr x9,[x20]
+0162e24c  ldr x8,[x8]
+0162e250  cmp x9,x8
+0162e254  b.eq 0x0162e26c
+0162e258  mov x0,x19
+0162e25c  ldp x19,x30,[sp, #0x10]
+0162e260  mov x1,x20
+0162e264  ldp x21,x20,[sp], #0x20
+0162e268  b 0x0162ed40
+0162e26c  mov x0,x20
+0162e270  bl 0x00b07998
+0162e274  ldrh w1,[x0]
+0162e278  mov w2,#0x1
+0162e27c  mov x0,xzr
+0162e280  mov x3,xzr
+0162e284  bl 0x01fe6044
+0162e288  mov x1,x0
+0162e28c  mov x0,x19
+0162e290  b 0x0162e1c4
+0162e294  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0162e298_MiniJSON.Json.Serializer__SerializeString.txt
+================================================================================
+Function: MiniJSON.Json.Serializer$$SerializeString @ 0162e298
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.String$$ToCharArray @ 01fe4eec
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dcd8
+  -> System.Convert$$ToInt32 @ 020dca6c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+  -> System.Text.StringBuilder$$Append @ 01fea30c
+
+--- Calls IN ---
+  <- MiniJSON.Json.Serializer$$SerializeObject @ 0162e8b4
+  <- MiniJSON.Json.Serializer$$SerializeValue @ 0162e0c8
+  <- MiniJSON.Json.Serializer$$SerializeOther @ 0162ed40
+
+--- Listing ---
+0162e298  sub sp,sp,#0x70
+0162e29c  stp x28,x27,[sp, #0x10]
+0162e2a0  stp x26,x25,[sp, #0x20]
+0162e2a4  stp x24,x23,[sp, #0x30]
+0162e2a8  stp x22,x21,[sp, #0x40]
+0162e2ac  stp x20,x19,[sp, #0x50]
+0162e2b0  stp x29,x30,[sp, #0x60]
+0162e2b4  adrp x21,0x3577000
+0162e2b8  ldrb w8,[x21, #0x658]
+0162e2bc  mov x20,x1
+0162e2c0  mov x19,x0
+0162e2c4  tbnz w8,#0x0,0x0162e348
+0162e2c8  adrp x0,0x3362000
+0162e2cc  ldr x0,[x0, #0xe28]
+0162e2d0  bl 0x00b0789c
+0162e2d4  adrp x0,0x335f000
+0162e2d8  ldr x0,[x0, #0x118]
+0162e2dc  bl 0x00b0789c
+0162e2e0  adrp x0,0x3309000
+0162e2e4  ldr x0,[x0, #0x9e8]
+0162e2e8  bl 0x00b0789c
+0162e2ec  adrp x0,0x337b000
+0162e2f0  ldr x0,[x0, #0xb78]
+0162e2f4  bl 0x00b0789c
+0162e2f8  adrp x0,0x337a000
+0162e2fc  ldr x0,[x0, #0x108]
+0162e300  bl 0x00b0789c
+0162e304  adrp x0,0x3358000
+0162e308  ldr x0,[x0, #0x188]
+0162e30c  bl 0x00b0789c
+0162e310  adrp x0,0x3330000
+0162e314  ldr x0,[x0, #0xec0]
+0162e318  bl 0x00b0789c
+0162e31c  adrp x0,0x3341000
+0162e320  ldr x0,[x0, #0x9f8]
+0162e324  bl 0x00b0789c
+0162e328  adrp x0,0x3374000
+0162e32c  ldr x0,[x0, #0x3b0]
+0162e330  bl 0x00b0789c
+0162e334  adrp x0,0x337b000
+0162e338  ldr x0,[x0, #0xae0]
+0162e33c  bl 0x00b0789c
+0162e340  mov w8,#0x1
+0162e344  strb w8,[x21, #0x658]
+0162e348  str wzr,[sp, #0xc]
+0162e34c  ldr x0,[x19, #0x10]
+0162e350  cbz x0,0x0162e54c
+0162e354  mov w1,#0x22
+0162e358  mov x2,xzr
+0162e35c  bl 0x01fea30c
+0162e360  cbz x20,0x0162e54c
+0162e364  mov x0,x20
+0162e368  mov x1,xzr
+0162e36c  bl 0x01fe4eec
+0162e370  cbz x0,0x0162e54c
+0162e374  ldr x8,[x0, #0x18]
+0162e378  mov x20,x0
+0162e37c  cmp w8,#0x1
+0162e380  b.lt 0x0162e518
+0162e384  adrp x25,0x3362000
+0162e388  adrp x29,0x337b000
+0162e38c  adrp x26,0x3309000
+0162e390  adrp x27,0x3358000
+0162e394  adrp x23,0x3330000
+0162e398  ldr x25,[x25, #0xe28]
+0162e39c  ldr x29,[x29, #0xb78]
+0162e3a0  ldr x26,[x26, #0x9e8]
+0162e3a4  ldr x27,[x27, #0x188]
+0162e3a8  ldr x23,[x23, #0xec0]
+0162e3ac  adrp x28,0x26dc000
+0162e3b0  mov x22,xzr
+0162e3b4  and x8,x8,#0xffffffff
+0162e3b8  add x24,x20,#0x20
+0162e3bc  add x28,x28,#0xf4b
+0162e3c0  cmp x22,w8, UXTW 
+0162e3c4  b.cs 0x0162e550
+0162e3c8  ldrh w21,[x24, x22, LSL #0x1]
+0162e3cc  sub w8,w21,#0x8
+0162e3d0  cmp w8,#0x5
+0162e3d4  b.hi 0x0162e3fc
+0162e3d8  adr x9,0x162e3e8
+0162e3dc  ldrb w10,[x28, x8, LSL ]
+0162e3e0  add x9,x9,x10, LSL #0x2
+0162e3e4  br x9
+0162e3e8  ldr x0,[x19, #0x10]
+0162e3ec  cbz x0,0x0162e54c
+0162e3f0  adrp x8,0x335f000
+0162e3f4  ldr x8,[x8, #0x118]
+0162e3f8  b 0x0162e4e8
+0162e3fc  cmp w21,#0x5c
+0162e400  b.eq 0x0162e4d8
+0162e404  cmp w21,#0x22
+0162e408  b.ne 0x0162e420
+0162e40c  ldr x0,[x19, #0x10]
+0162e410  cbz x0,0x0162e54c
+0162e414  adrp x8,0x337a000
+0162e418  ldr x8,[x8, #0x108]
+0162e41c  b 0x0162e4e8
+0162e420  ldr x0,[x25]
+0162e424  ldr w8,[x0, #0xe0]
+0162e428  cbnz w8,0x0162e430
+0162e42c  bl 0x00b0798c
+0162e430  mov w0,w21
+0162e434  mov x1,xzr
+0162e438  bl 0x020dca6c
+0162e43c  str w0,[sp, #0xc]
+0162e440  mov w8,w0
+0162e444  ldr x0,[x19, #0x10]
+0162e448  cbz x0,0x0162e54c
+0162e44c  sub w8,w8,#0x20
+0162e450  cmp w8,#0x5e
+0162e454  b.ls 0x0162e508
+0162e458  adrp x8,0x3341000
+0162e45c  ldr x8,[x8, #0x9f8]
+0162e460  mov x2,xzr
+0162e464  ldr x1,[x8]
+0162e468  bl 0x01fe9960
+0162e46c  adrp x8,0x3374000
+0162e470  ldr x21,[x19, #0x10]
+0162e474  ldr x8,[x8, #0x3b0]
+0162e478  add x0,sp,#0xc
+0162e47c  mov x2,xzr
+0162e480  ldr x1,[x8]
+0162e484  bl 0x0214dcd8
+0162e488  cbz x21,0x0162e54c
+0162e48c  mov x1,x0
+0162e490  mov x0,x21
+0162e494  b 0x0162e4ec
+0162e498  ldr x0,[x19, #0x10]
+0162e49c  cbz x0,0x0162e54c
+0162e4a0  ldr x1,[x29]
+0162e4a4  b 0x0162e4ec
+0162e4a8  ldr x0,[x19, #0x10]
+0162e4ac  cbz x0,0x0162e54c
+0162e4b0  ldr x1,[x26]
+0162e4b4  b 0x0162e4ec
+0162e4b8  ldr x0,[x19, #0x10]
+0162e4bc  cbz x0,0x0162e54c
+0162e4c0  ldr x1,[x27]
+0162e4c4  b 0x0162e4ec
+0162e4c8  ldr x0,[x19, #0x10]
+0162e4cc  cbz x0,0x0162e54c
+0162e4d0  ldr x1,[x23]
+0162e4d4  b 0x0162e4ec
+0162e4d8  ldr x0,[x19, #0x10]
+0162e4dc  cbz x0,0x0162e54c
+0162e4e0  adrp x8,0x337b000
+0162e4e4  ldr x8,[x8, #0xae0]
+0162e4e8  ldr x1,[x8]
+0162e4ec  mov x2,xzr
+0162e4f0  bl 0x01fe9960
+0162e4f4  ldr w8,[x20, #0x18]
+0162e4f8  add x22,x22,#0x1
+0162e4fc  cmp x22,w8, SXTW 
+0162e500  b.lt 0x0162e3c0
+0162e504  b 0x0162e518
+0162e508  mov w1,w21
+0162e50c  mov x2,xzr
+0162e510  bl 0x01fea30c
+0162e514  b 0x0162e4f4
+0162e518  ldr x0,[x19, #0x10]
+0162e51c  cbz x0,0x0162e54c
+0162e520  mov w1,#0x22
+0162e524  mov x2,xzr
+0162e528  bl 0x01fea30c
+0162e52c  ldp x29,x30,[sp, #0x60]
+0162e530  ldp x20,x19,[sp, #0x50]
+0162e534  ldp x22,x21,[sp, #0x40]
+0162e538  ldp x24,x23,[sp, #0x30]
+0162e53c  ldp x26,x25,[sp, #0x20]
+0162e540  ldp x28,x27,[sp, #0x10]
+0162e544  add sp,sp,#0x70
+0162e548  ret
+0162e54c  bl 0x00b079b0
+0162e550  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 0162e554_MiniJSON.Json.Serializer__SerializeArray.txt
+================================================================================
+Function: MiniJSON.Json.Serializer$$SerializeArray @ 0162e554
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Serializer$$SerializeValue @ 0162e0c8
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00aaac8c @ 00aaac8c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Text.StringBuilder$$Append @ 01fea30c
+
+--- Calls IN ---
+  <- MiniJSON.Json.Serializer$$SerializeValue @ 0162e0c8
+
+--- Listing ---
+0162e554  str x24,[sp, #-0x40]!
+0162e558  stp x23,x22,[sp, #0x10]
+0162e55c  stp x21,x20,[sp, #0x20]
+0162e560  stp x19,x30,[sp, #0x30]
+0162e564  adrp x21,0x3577000
+0162e568  ldrb w8,[x21, #0x657]
+0162e56c  mov x20,x1
+0162e570  mov x19,x0
+0162e574  tbnz w8,#0x0,0x0162e5a4
+0162e578  adrp x0,0x337d000
+0162e57c  ldr x0,[x0, #0x848]
+0162e580  bl 0x00b0789c
+0162e584  adrp x0,0x332f000
+0162e588  ldr x0,[x0, #0x9e8]
+0162e58c  bl 0x00b0789c
+0162e590  adrp x0,0x3364000
+0162e594  ldr x0,[x0, #0xeb0]
+0162e598  bl 0x00b0789c
+0162e59c  mov w8,#0x1
+0162e5a0  strb w8,[x21, #0x657]
+0162e5a4  ldr x0,[x19, #0x10]
+0162e5a8  cbz x0,0x0162e7e0
+0162e5ac  mov w1,#0x5b
+0162e5b0  mov x2,xzr
+0162e5b4  bl 0x01fea30c
+0162e5b8  cbz x20,0x0162e7e0
+0162e5bc  adrp x10,0x332f000
+0162e5c0  ldr x8,[x20]
+0162e5c4  ldr x10,[x10, #0x9e8]
+0162e5c8  ldrh w9,[x8, #0x12a]
+0162e5cc  ldr x1,[x10]
+0162e5d0  cbz x9,0x0162e5f4
+0162e5d4  ldr x10,[x8, #0xb0]
+0162e5d8  add x10,x10,#0x8
+0162e5dc  ldur x11,[x10, #-0x8]
+0162e5e0  cmp x11,x1
+0162e5e4  b.eq 0x0162e604
+0162e5e8  subs x9,x9,#0x1
+0162e5ec  add x10,x10,#0x10
+0162e5f0  b.ne 0x0162e5dc
+0162e5f4  mov x0,x20
+0162e5f8  mov w2,wzr
+0162e5fc  bl 0x00b2ae24
+0162e600  b 0x0162e610
+0162e604  ldrsw x9,[x10]
+0162e608  add x8,x8,x9, LSL #0x4
+0162e60c  add x0,x8,#0x138
+0162e610  ldp x8,x1,[x0]
+0162e614  adrp x22,0x337d000
+0162e618  ldr x22,[x22, #0x848]
+0162e61c  mov x0,x20
+0162e620  blr x8
+0162e624  mov x20,x0
+0162e628  cbz x0,0x0162e7e4
+0162e62c  adrp x23,0x3364000
+0162e630  ldr x23,[x23, #0xeb0]
+0162e634  mov w24,#0x1
+0162e638  ldr x8,[x20]
+0162e63c  ldr x1,[x23]
+0162e640  ldrh w9,[x8, #0x12a]
+0162e644  cbz x9,0x0162e668
+0162e648  ldr x10,[x8, #0xb0]
+0162e64c  add x10,x10,#0x8
+0162e650  ldur x11,[x10, #-0x8]
+0162e654  cmp x11,x1
+0162e658  b.eq 0x0162e678
+0162e65c  subs x9,x9,#0x1
+0162e660  add x10,x10,#0x10
+0162e664  b.ne 0x0162e650
+0162e668  mov x0,x20
+    ; [PRE] try { // try from 0162e668 to 0162e68f has its CatchHandler @ 0162e804
+0162e66c  mov w2,wzr
+0162e670  bl 0x00b2ae24
+0162e674  b 0x0162e684
+0162e678  ldrsw x9,[x10]
+0162e67c  add x8,x8,x9, LSL #0x4
+0162e680  add x0,x8,#0x138
+0162e684  ldp x8,x1,[x0]
+0162e688  mov x0,x20
+0162e68c  blr x8
+    ; [POST] } // end try from 0162e668 to 0162e68f
+0162e690  tbz w0,#0x0,0x0162e720
+0162e694  ldr x8,[x20]
+0162e698  ldr x1,[x23]
+0162e69c  ldrh w9,[x8, #0x12a]
+0162e6a0  cbz x9,0x0162e6c4
+0162e6a4  ldr x10,[x8, #0xb0]
+0162e6a8  add x10,x10,#0x8
+0162e6ac  ldur x11,[x10, #-0x8]
+0162e6b0  cmp x11,x1
+0162e6b4  b.eq 0x0162e6d4
+0162e6b8  subs x9,x9,#0x1
+0162e6bc  add x10,x10,#0x10
+0162e6c0  b.ne 0x0162e6ac
+0162e6c4  mov w2,#0x1
+    ; [PRE] try { // try from 0162e6c4 to 0162e6ef has its CatchHandler @ 0162e800
+0162e6c8  mov x0,x20
+0162e6cc  bl 0x00b2ae24
+0162e6d0  b 0x0162e6e4
+0162e6d4  ldr w9,[x10]
+0162e6d8  add w9,w9,#0x1
+0162e6dc  add x8,x8,w9, SXTW  #0x4
+0162e6e0  add x0,x8,#0x138
+0162e6e4  ldp x8,x1,[x0]
+0162e6e8  mov x0,x20
+0162e6ec  blr x8
+    ; [POST] } // end try from 0162e6c4 to 0162e6ef
+0162e6f0  mov x21,x0
+0162e6f4  tbnz w24,#0x0,0x0162e70c
+0162e6f8  ldr x0,[x19, #0x10]
+0162e6fc  cbz x0,0x0162e7dc
+0162e700  mov w1,#0x2c
+    ; [PRE] try { // try from 0162e700 to 0162e70b has its CatchHandler @ 0162e7f8
+0162e704  mov x2,xzr
+0162e708  bl 0x01fea30c
+    ; [POST] } // end try from 0162e700 to 0162e70b
+0162e70c  mov x0,x19
+    ; [PRE] try { // try from 0162e70c to 0162e717 has its CatchHandler @ 0162e7fc
+0162e710  mov x1,x21
+0162e714  bl 0x0162e0c8
+    ; [POST] } // end try from 0162e70c to 0162e717
+0162e718  mov w24,wzr
+0162e71c  b 0x0162e638
+0162e720  mov x21,xzr
+0162e724  mov w23,#0x5
+0162e728  ldr x1,[x22]
+0162e72c  mov x0,x20
+0162e730  bl 0x00b07990
+0162e734  cbz x0,0x0162e794
+0162e738  ldr x8,[x0]
+0162e73c  ldr x1,[x22]
+0162e740  mov x20,x0
+0162e744  ldrh w9,[x8, #0x12a]
+0162e748  cbz x9,0x0162e76c
+0162e74c  ldr x10,[x8, #0xb0]
+0162e750  add x10,x10,#0x8
+0162e754  ldur x11,[x10, #-0x8]
+0162e758  cmp x11,x1
+0162e75c  b.eq 0x0162e77c
+0162e760  subs x9,x9,#0x1
+0162e764  add x10,x10,#0x10
+0162e768  b.ne 0x0162e754
+0162e76c  mov x0,x20
+0162e770  mov w2,wzr
+0162e774  bl 0x00b2ae24
+0162e778  b 0x0162e788
+0162e77c  ldrsw x9,[x10]
+0162e780  add x8,x8,x9, LSL #0x4
+0162e784  add x0,x8,#0x138
+0162e788  ldp x8,x1,[x0]
+0162e78c  mov x0,x20
+0162e790  blr x8
+0162e794  cbnz x21,0x0162e7e8
+0162e798  cmp w23,#0x5
+0162e79c  b.eq 0x0162e7a4
+0162e7a0  cbnz w23,0x0162e7c8
+0162e7a4  ldr x0,[x19, #0x10]
+0162e7a8  cbz x0,0x0162e7e0
+0162e7ac  ldp x19,x30,[sp, #0x30]
+0162e7b0  ldp x21,x20,[sp, #0x20]
+0162e7b4  ldp x23,x22,[sp, #0x10]
+0162e7b8  mov w1,#0x5d
+0162e7bc  mov x2,xzr
+0162e7c0  ldr x24,[sp], #0x40
+0162e7c4  b 0x01fea30c
+0162e7c8  ldp x19,x30,[sp, #0x30]
+0162e7cc  ldp x21,x20,[sp, #0x20]
+0162e7d0  ldp x23,x22,[sp, #0x10]
+0162e7d4  ldr x24,[sp], #0x40
+0162e7d8  ret
+0162e7dc  bl 0x00b079b0
+    ; [PRE] try { // try from 0162e7dc to 0162e7df has its CatchHandler @ 0162e7f4
+    ; [POST] } // end try from 0162e7dc to 0162e7df
+0162e7e0  bl 0x00b079b0
+0162e7e4  bl 0x00b079b0
+    ; [PRE] try { // try from 0162e7e4 to 0162e7e7 has its CatchHandler @ 0162e7f0
+    ; [POST] } // end try from 0162e7e4 to 0162e7e7
+0162e7e8  mov x0,x21
+0162e7ec  bl 0x00aaac8c
+
+
+================================================================================
+### FILE: 0162e8b4_MiniJSON.Json.Serializer__SerializeObject.txt
+================================================================================
+Function: MiniJSON.Json.Serializer$$SerializeObject @ 0162e8b4
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Serializer$$SerializeValue @ 0162e0c8
+  -> MiniJSON.Json.Serializer$$SerializeString @ 0162e298
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00aaac8c @ 00aaac8c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Text.StringBuilder$$Append @ 01fea30c
+
+--- Calls IN ---
+  <- MiniJSON.Json.Serializer$$SerializeValue @ 0162e0c8
+
+--- Listing ---
+0162e8b4  str x26,[sp, #-0x50]!
+0162e8b8  stp x25,x24,[sp, #0x10]
+0162e8bc  stp x23,x22,[sp, #0x20]
+0162e8c0  stp x21,x20,[sp, #0x30]
+0162e8c4  stp x19,x30,[sp, #0x40]
+0162e8c8  adrp x20,0x3577000
+0162e8cc  ldrb w8,[x20, #0x656]
+0162e8d0  mov x21,x1
+0162e8d4  mov x19,x0
+0162e8d8  tbnz w8,#0x0,0x0162e914
+0162e8dc  adrp x0,0x331f000
+0162e8e0  ldr x0,[x0, #0x6e8]
+0162e8e4  bl 0x00b0789c
+0162e8e8  adrp x0,0x337d000
+0162e8ec  ldr x0,[x0, #0x848]
+0162e8f0  bl 0x00b0789c
+0162e8f4  adrp x0,0x332f000
+0162e8f8  ldr x0,[x0, #0x9e8]
+0162e8fc  bl 0x00b0789c
+0162e900  adrp x0,0x3364000
+0162e904  ldr x0,[x0, #0xeb0]
+0162e908  bl 0x00b0789c
+0162e90c  mov w8,#0x1
+0162e910  strb w8,[x20, #0x656]
+0162e914  ldr x0,[x19, #0x10]
+0162e918  cbz x0,0x0162ec5c
+0162e91c  mov w1,#0x7b
+0162e920  mov x2,xzr
+0162e924  bl 0x01fea30c
+0162e928  cbz x21,0x0162ec5c
+0162e92c  adrp x24,0x331f000
+0162e930  ldr x8,[x21]
+0162e934  ldr x24,[x24, #0x6e8]
+0162e938  ldrh w9,[x8, #0x12a]
+0162e93c  ldr x1,[x24]
+0162e940  cbz x9,0x0162e964
+0162e944  ldr x10,[x8, #0xb0]
+0162e948  add x10,x10,#0x8
+0162e94c  ldur x11,[x10, #-0x8]
+0162e950  cmp x11,x1
+0162e954  b.eq 0x0162e974
+0162e958  subs x9,x9,#0x1
+0162e95c  add x10,x10,#0x10
+0162e960  b.ne 0x0162e94c
+0162e964  mov w2,#0x2
+0162e968  mov x0,x21
+0162e96c  bl 0x00b2ae24
+0162e970  b 0x0162e984
+0162e974  ldr w9,[x10]
+0162e978  add w9,w9,#0x2
+0162e97c  add x8,x8,w9, SXTW  #0x4
+0162e980  add x0,x8,#0x138
+0162e984  ldp x8,x1,[x0]
+0162e988  mov x0,x21
+0162e98c  blr x8
+0162e990  cbz x0,0x0162ec5c
+0162e994  adrp x10,0x332f000
+0162e998  ldr x8,[x0]
+0162e99c  ldr x10,[x10, #0x9e8]
+0162e9a0  mov x20,x0
+0162e9a4  ldrh w9,[x8, #0x12a]
+0162e9a8  ldr x1,[x10]
+0162e9ac  cbz x9,0x0162e9d0
+0162e9b0  ldr x10,[x8, #0xb0]
+0162e9b4  add x10,x10,#0x8
+0162e9b8  ldur x11,[x10, #-0x8]
+0162e9bc  cmp x11,x1
+0162e9c0  b.eq 0x0162e9e0
+0162e9c4  subs x9,x9,#0x1
+0162e9c8  add x10,x10,#0x10
+0162e9cc  b.ne 0x0162e9b8
+0162e9d0  mov x0,x20
+0162e9d4  mov w2,wzr
+0162e9d8  bl 0x00b2ae24
+0162e9dc  b 0x0162e9ec
+0162e9e0  ldrsw x9,[x10]
+0162e9e4  add x8,x8,x9, LSL #0x4
+0162e9e8  add x0,x8,#0x138
+0162e9ec  ldp x8,x1,[x0]
+0162e9f0  adrp x23,0x337d000
+0162e9f4  ldr x23,[x23, #0x848]
+0162e9f8  mov x0,x20
+0162e9fc  blr x8
+0162ea00  mov x20,x0
+0162ea04  cbz x0,0x0162ec60
+0162ea08  adrp x25,0x3364000
+0162ea0c  ldr x25,[x25, #0xeb0]
+0162ea10  mov w26,#0x1
+0162ea14  ldr x8,[x20]
+0162ea18  ldr x1,[x25]
+0162ea1c  ldrh w9,[x8, #0x12a]
+0162ea20  cbz x9,0x0162ea44
+0162ea24  ldr x10,[x8, #0xb0]
+0162ea28  add x10,x10,#0x8
+0162ea2c  ldur x11,[x10, #-0x8]
+0162ea30  cmp x11,x1
+0162ea34  b.eq 0x0162ea54
+0162ea38  subs x9,x9,#0x1
+0162ea3c  add x10,x10,#0x10
+0162ea40  b.ne 0x0162ea2c
+0162ea44  mov x0,x20
+    ; [PRE] try { // try from 0162ea44 to 0162ea6b has its CatchHandler @ 0162ec88
+0162ea48  mov w2,wzr
+0162ea4c  bl 0x00b2ae24
+0162ea50  b 0x0162ea60
+0162ea54  ldrsw x9,[x10]
+0162ea58  add x8,x8,x9, LSL #0x4
+0162ea5c  add x0,x8,#0x138
+0162ea60  ldp x8,x1,[x0]
+0162ea64  mov x0,x20
+0162ea68  blr x8
+    ; [POST] } // end try from 0162ea44 to 0162ea6b
+0162ea6c  tbz w0,#0x0,0x0162eb8c
+0162ea70  ldr x8,[x20]
+0162ea74  ldr x1,[x25]
+0162ea78  ldrh w9,[x8, #0x12a]
+0162ea7c  cbz x9,0x0162eaa0
+0162ea80  ldr x10,[x8, #0xb0]
+0162ea84  add x10,x10,#0x8
+0162ea88  ldur x11,[x10, #-0x8]
+0162ea8c  cmp x11,x1
+0162ea90  b.eq 0x0162eab0
+0162ea94  subs x9,x9,#0x1
+0162ea98  add x10,x10,#0x10
+0162ea9c  b.ne 0x0162ea88
+0162eaa0  mov w2,#0x1
+    ; [PRE] try { // try from 0162eaa0 to 0162eacb has its CatchHandler @ 0162ec84
+0162eaa4  mov x0,x20
+0162eaa8  bl 0x00b2ae24
+0162eaac  b 0x0162eac0
+0162eab0  ldr w9,[x10]
+0162eab4  add w9,w9,#0x1
+0162eab8  add x8,x8,w9, SXTW  #0x4
+0162eabc  add x0,x8,#0x138
+0162eac0  ldp x8,x1,[x0]
+0162eac4  mov x0,x20
+0162eac8  blr x8
+    ; [POST] } // end try from 0162eaa0 to 0162eacb
+0162eacc  mov x22,x0
+0162ead0  tbnz w26,#0x0,0x0162eae8
+0162ead4  ldr x0,[x19, #0x10]
+0162ead8  cbz x0,0x0162ec58
+0162eadc  mov w1,#0x2c
+    ; [PRE] try { // try from 0162eadc to 0162eae7 has its CatchHandler @ 0162ec7c
+0162eae0  mov x2,xzr
+0162eae4  bl 0x01fea30c
+    ; [POST] } // end try from 0162eadc to 0162eae7
+0162eae8  cbz x22,0x0162ec50
+0162eaec  ldr x8,[x22]
+0162eaf0  ldp x9,x1,[x8, #0x168]
+0162eaf4  mov x0,x22
+    ; [PRE] try { // try from 0162eaf4 to 0162eb07 has its CatchHandler @ 0162ec8c
+0162eaf8  blr x9
+0162eafc  mov x1,x0
+0162eb00  mov x0,x19
+0162eb04  bl 0x0162e298
+    ; [POST] } // end try from 0162eaf4 to 0162eb07
+0162eb08  ldr x0,[x19, #0x10]
+0162eb0c  cbz x0,0x0162ec54
+0162eb10  mov w1,#0x3a
+    ; [PRE] try { // try from 0162eb10 to 0162eb1b has its CatchHandler @ 0162ec80
+0162eb14  mov x2,xzr
+0162eb18  bl 0x01fea30c
+    ; [POST] } // end try from 0162eb10 to 0162eb1b
+0162eb1c  ldr x8,[x21]
+0162eb20  ldr x1,[x24]
+0162eb24  ldrh w9,[x8, #0x12a]
+0162eb28  cbz x9,0x0162eb4c
+0162eb2c  ldr x10,[x8, #0xb0]
+0162eb30  add x10,x10,#0x8
+0162eb34  ldur x11,[x10, #-0x8]
+0162eb38  cmp x11,x1
+0162eb3c  b.eq 0x0162eb5c
+0162eb40  subs x9,x9,#0x1
+0162eb44  add x10,x10,#0x10
+0162eb48  b.ne 0x0162eb34
+0162eb4c  mov x0,x21
+    ; [PRE] try { // try from 0162eb4c to 0162eb83 has its CatchHandler @ 0162ec90
+0162eb50  mov w2,wzr
+0162eb54  bl 0x00b2ae24
+0162eb58  b 0x0162eb68
+0162eb5c  ldrsw x9,[x10]
+0162eb60  add x8,x8,x9, LSL #0x4
+0162eb64  add x0,x8,#0x138
+0162eb68  ldp x8,x2,[x0]
+0162eb6c  mov x0,x21
+0162eb70  mov x1,x22
+0162eb74  blr x8
+0162eb78  mov x1,x0
+0162eb7c  mov x0,x19
+0162eb80  bl 0x0162e0c8
+    ; [POST] } // end try from 0162eb4c to 0162eb83
+0162eb84  mov w26,wzr
+0162eb88  b 0x0162ea14
+0162eb8c  mov x21,xzr
+0162eb90  mov w22,#0x5
+0162eb94  ldr x1,[x23]
+0162eb98  mov x0,x20
+0162eb9c  bl 0x00b07990
+0162eba0  cbz x0,0x0162ec00
+0162eba4  ldr x8,[x0]
+0162eba8  ldr x1,[x23]
+0162ebac  mov x20,x0
+0162ebb0  ldrh w9,[x8, #0x12a]
+0162ebb4  cbz x9,0x0162ebd8
+0162ebb8  ldr x10,[x8, #0xb0]
+0162ebbc  add x10,x10,#0x8
+0162ebc0  ldur x11,[x10, #-0x8]
+0162ebc4  cmp x11,x1
+0162ebc8  b.eq 0x0162ebe8
+0162ebcc  subs x9,x9,#0x1
+0162ebd0  add x10,x10,#0x10
+0162ebd4  b.ne 0x0162ebc0
+0162ebd8  mov x0,x20
+0162ebdc  mov w2,wzr
+0162ebe0  bl 0x00b2ae24
+0162ebe4  b 0x0162ebf4
+0162ebe8  ldrsw x9,[x10]
+0162ebec  add x8,x8,x9, LSL #0x4
+0162ebf0  add x0,x8,#0x138
+0162ebf4  ldp x8,x1,[x0]
+0162ebf8  mov x0,x20
+0162ebfc  blr x8
+0162ec00  cbnz x21,0x0162ec64
+0162ec04  cmp w22,#0x5
+0162ec08  b.eq 0x0162ec10
+0162ec0c  cbnz w22,0x0162ec38
+0162ec10  ldr x0,[x19, #0x10]
+0162ec14  cbz x0,0x0162ec5c
+0162ec18  ldp x19,x30,[sp, #0x40]
+0162ec1c  ldp x21,x20,[sp, #0x30]
+0162ec20  ldp x23,x22,[sp, #0x20]
+0162ec24  ldp x25,x24,[sp, #0x10]
+0162ec28  mov w1,#0x7d
+0162ec2c  mov x2,xzr
+0162ec30  ldr x26,[sp], #0x50
+0162ec34  b 0x01fea30c
+0162ec38  ldp x19,x30,[sp, #0x40]
+0162ec3c  ldp x21,x20,[sp, #0x30]
+0162ec40  ldp x23,x22,[sp, #0x20]
+0162ec44  ldp x25,x24,[sp, #0x10]
+0162ec48  ldr x26,[sp], #0x50
+0162ec4c  ret
+0162ec50  bl 0x00b079b0
+    ; [PRE] try { // try from 0162ec50 to 0162ec53 has its CatchHandler @ 0162ec78
+    ; [POST] } // end try from 0162ec50 to 0162ec53
+0162ec54  bl 0x00b079b0
+    ; [PRE] try { // try from 0162ec54 to 0162ec57 has its CatchHandler @ 0162ec74
+    ; [POST] } // end try from 0162ec54 to 0162ec57
+0162ec58  bl 0x00b079b0
+    ; [PRE] try { // try from 0162ec58 to 0162ec5b has its CatchHandler @ 0162ec70
+    ; [POST] } // end try from 0162ec58 to 0162ec5b
+0162ec5c  bl 0x00b079b0
+0162ec60  bl 0x00b079b0
+    ; [PRE] try { // try from 0162ec60 to 0162ec63 has its CatchHandler @ 0162ec6c
+    ; [POST] } // end try from 0162ec60 to 0162ec63
+0162ec64  mov x0,x21
+0162ec68  bl 0x00aaac8c
+
+
+================================================================================
+### FILE: 0162ed40_MiniJSON.Json.Serializer__SerializeOther.txt
+================================================================================
+Function: MiniJSON.Json.Serializer$$SerializeOther @ 0162ed40
+
+--- Calls OUT ---
+  -> MiniJSON.Json.Serializer$$SerializeString @ 0162e298
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Double$$ToString @ 02138ec4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Text.StringBuilder$$Append @ 01fea56c
+  -> System.Convert$$ToDouble @ 020e29d0
+  -> thunk_FUN_00ace8b4 @ 00b07998
+  -> System.Single$$ToString @ 021633b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+
+--- Calls IN ---
+  <- MiniJSON.Json.Serializer$$SerializeValue @ 0162e0c8
+
+--- Listing ---
+0162ed40  sub sp,sp,#0x30
+0162ed44  stp x21,x20,[sp, #0x10]
+0162ed48  stp x19,x30,[sp, #0x20]
+0162ed4c  adrp x21,0x3577000
+0162ed50  ldrb w8,[x21, #0x659]
+0162ed54  mov x19,x1
+0162ed58  mov x20,x0
+0162ed5c  tbnz w8,#0x0,0x0162ee04
+0162ed60  adrp x0,0x331d000
+0162ed64  ldr x0,[x0, #0x5c8]
+0162ed68  bl 0x00b0789c
+0162ed6c  adrp x0,0x3362000
+0162ed70  ldr x0,[x0, #0xe28]
+0162ed74  bl 0x00b0789c
+0162ed78  adrp x0,0x331a000
+0162ed7c  ldr x0,[x0, #0xd8]
+0162ed80  bl 0x00b0789c
+0162ed84  adrp x0,0x3310000
+0162ed88  ldr x0,[x0, #0x6f0]
+0162ed8c  bl 0x00b0789c
+0162ed90  adrp x0,0x335d000
+0162ed94  ldr x0,[x0, #0x5c8]
+0162ed98  bl 0x00b0789c
+0162ed9c  adrp x0,0x3332000
+0162eda0  ldr x0,[x0, #0x38]
+0162eda4  bl 0x00b0789c
+0162eda8  adrp x0,0x332b000
+0162edac  ldr x0,[x0, #0xb0]
+0162edb0  bl 0x00b0789c
+0162edb4  adrp x0,0x3378000
+0162edb8  ldr x0,[x0, #0x2c8]
+0162edbc  bl 0x00b0789c
+0162edc0  adrp x0,0x3321000
+0162edc4  ldr x0,[x0, #0xa60]
+0162edc8  bl 0x00b0789c
+0162edcc  adrp x0,0x3348000
+0162edd0  ldr x0,[x0, #0x238]
+0162edd4  bl 0x00b0789c
+0162edd8  adrp x0,0x335a000
+0162eddc  ldr x0,[x0, #0x968]
+0162ede0  bl 0x00b0789c
+0162ede4  adrp x0,0x3364000
+0162ede8  ldr x0,[x0, #0x4c0]
+0162edec  bl 0x00b0789c
+0162edf0  adrp x0,0x3343000
+0162edf4  ldr x0,[x0, #0x788]
+0162edf8  bl 0x00b0789c
+0162edfc  mov w8,#0x1
+0162ee00  strb w8,[x21, #0x659]
+0162ee04  str wzr,[sp, #0xc]
+0162ee08  str xzr,[sp]
+0162ee0c  cbz x19,0x0162efb8
+0162ee10  adrp x8,0x3321000
+0162ee14  ldr x8,[x8, #0xa60]
+0162ee18  adrp x21,0x3343000
+0162ee1c  ldr x9,[x8]
+0162ee20  ldr x8,[x19]
+0162ee24  ldr x21,[x21, #0x788]
+0162ee28  cmp x8,x9
+0162ee2c  b.eq 0x0162ef14
+0162ee30  adrp x9,0x3332000
+0162ee34  ldr x9,[x9, #0x38]
+0162ee38  ldr x9,[x9]
+0162ee3c  cmp x8,x9
+0162ee40  b.eq 0x0162ef40
+0162ee44  adrp x9,0x335a000
+0162ee48  ldr x9,[x9, #0x968]
+0162ee4c  ldr x9,[x9]
+0162ee50  cmp x8,x9
+0162ee54  b.eq 0x0162ef40
+0162ee58  adrp x9,0x332b000
+0162ee5c  ldr x9,[x9, #0xb0]
+0162ee60  ldr x9,[x9]
+0162ee64  cmp x8,x9
+0162ee68  b.eq 0x0162ef40
+0162ee6c  adrp x9,0x3378000
+0162ee70  ldr x9,[x9, #0x2c8]
+0162ee74  ldr x9,[x9]
+0162ee78  cmp x8,x9
+0162ee7c  b.eq 0x0162ef40
+0162ee80  adrp x9,0x331d000
+0162ee84  ldr x9,[x9, #0x5c8]
+0162ee88  ldr x9,[x9]
+0162ee8c  cmp x8,x9
+0162ee90  b.eq 0x0162ef40
+0162ee94  adrp x9,0x335d000
+0162ee98  ldr x9,[x9, #0x5c8]
+0162ee9c  ldr x9,[x9]
+0162eea0  cmp x8,x9
+0162eea4  b.eq 0x0162ef40
+0162eea8  adrp x9,0x3348000
+0162eeac  ldr x9,[x9, #0x238]
+0162eeb0  ldr x9,[x9]
+0162eeb4  cmp x8,x9
+0162eeb8  b.eq 0x0162ef40
+0162eebc  adrp x9,0x3364000
+0162eec0  ldr x9,[x9, #0x4c0]
+0162eec4  ldr x9,[x9]
+0162eec8  cmp x8,x9
+0162eecc  b.eq 0x0162ef40
+0162eed0  adrp x9,0x3310000
+0162eed4  ldr x9,[x9, #0x6f0]
+0162eed8  ldr x9,[x9]
+0162eedc  cmp x8,x9
+0162eee0  b.eq 0x0162ef58
+0162eee4  adrp x9,0x331a000
+0162eee8  ldr x9,[x9, #0xd8]
+0162eeec  ldr x9,[x9]
+0162eef0  cmp x8,x9
+0162eef4  b.eq 0x0162ef58
+0162eef8  ldp x9,x1,[x8, #0x168]
+0162eefc  mov x0,x19
+0162ef00  blr x9
+0162ef04  mov x1,x0
+0162ef08  mov x0,x20
+0162ef0c  bl 0x0162e298
+0162ef10  b 0x0162efa8
+0162ef14  ldr x20,[x20, #0x10]
+0162ef18  mov x0,x19
+0162ef1c  bl 0x00b07998
+0162ef20  ldr w8,[x0]
+0162ef24  ldr x1,[x21]
+0162ef28  add x0,sp,#0xc
+0162ef2c  mov x2,xzr
+0162ef30  str w8,[sp, #0xc]
+0162ef34  bl 0x021633b8
+0162ef38  cbnz x20,0x0162ef98
+0162ef3c  b 0x0162efb8
+0162ef40  ldr x0,[x20, #0x10]
+0162ef44  cbz x0,0x0162efb8
+0162ef48  mov x1,x19
+0162ef4c  mov x2,xzr
+0162ef50  bl 0x01fea56c
+0162ef54  b 0x0162efa8
+0162ef58  adrp x8,0x3362000
+0162ef5c  ldr x8,[x8, #0xe28]
+0162ef60  ldr x20,[x20, #0x10]
+0162ef64  ldr x0,[x8]
+0162ef68  ldr w8,[x0, #0xe0]
+0162ef6c  cbnz w8,0x0162ef74
+0162ef70  bl 0x00b0798c
+0162ef74  mov x0,x19
+0162ef78  mov x1,xzr
+0162ef7c  bl 0x020e29d0
+0162ef80  ldr x1,[x21]
+0162ef84  mov x0,sp
+0162ef88  mov x2,xzr
+0162ef8c  str d0,[sp]
+0162ef90  bl 0x02138ec4
+0162ef94  cbz x20,0x0162efb8
+0162ef98  mov x1,x0
+0162ef9c  mov x0,x20
+0162efa0  mov x2,xzr
+0162efa4  bl 0x01fe9960
+0162efa8  ldp x19,x30,[sp, #0x20]
+0162efac  ldp x21,x20,[sp, #0x10]
+0162efb0  add sp,sp,#0x30
+0162efb4  ret
+0162efb8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01e03224_Microsoft.Win32.SafeHandles.SafeHandleCache_object___IsCachedInvalidHandle.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeHandleCache<object>$$IsCachedInvalidHandle @ 01e03224
+
+--- Calls OUT ---
+  -> thunk_FUN_00aff470 @ 00b078ac
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- Microsoft.Win32.SafeHandles.SafePasswordHandle$$Dispose @ 01fdc5d8
+
+--- Listing ---
+01e03224  str x20,[sp, #-0x20]!
+01e03228  stp x19,x30,[sp, #0x10]
+01e0322c  ldr x8,[x1, #0x20]
+01e03230  mov x19,x0
+01e03234  ldrb w9,[x8, #0x132]
+01e03238  tbnz w9,#0x0,0x01e03248
+01e0323c  mov x0,x8
+01e03240  bl 0x00b2ac40
+01e03244  mov x8,x0
+01e03248  ldr x8,[x8, #0xc0]
+01e0324c  ldr x0,[x8]
+01e03250  ldrb w8,[x0, #0x132]
+01e03254  tbnz w8,#0x0,0x01e0325c
+01e03258  bl 0x00b2ac40
+01e0325c  ldr x8,[x0, #0xb8]
+01e03260  ldr x20,[x8]
+01e03264  bl 0x00b078ac
+01e03268  cmp x19,x20
+01e0326c  ldp x19,x30,[sp, #0x10]
+01e03270  cset w0,eq
+01e03274  ldr x20,[sp], #0x20
+01e03278  ret
+
+
+================================================================================
+### FILE: 01fdc3c8_Microsoft.Win32.Win32Native__GetMessage.txt
+================================================================================
+Function: Microsoft.Win32.Win32Native$$GetMessage @ 01fdc3c8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+
+--- Calls IN ---
+  <- System.IO.__Error$$WinIOError @ 020b8fb8
+
+--- Listing ---
+01fdc3c8  str x20,[sp, #-0x20]!
+01fdc3cc  stp x19,x30,[sp, #0x10]
+01fdc3d0  adrp x20,0x3579000
+01fdc3d4  str w0,[sp, #0xc]
+01fdc3d8  adrp x19,0x330e000
+01fdc3dc  ldrb w8,[x20, #0x6c9]
+01fdc3e0  ldr x19,[x19, #0xeb0]
+01fdc3e4  tbnz w8,#0x0,0x01fdc3fc
+01fdc3e8  adrp x0,0x330e000
+01fdc3ec  ldr x0,[x0, #0xeb0]
+01fdc3f0  bl 0x00b0789c
+01fdc3f4  mov w8,#0x1
+01fdc3f8  strb w8,[x20, #0x6c9]
+01fdc3fc  add x0,sp,#0xc
+01fdc400  mov x1,xzr
+01fdc404  bl 0x0214dc44
+01fdc408  ldr x8,[x19]
+01fdc40c  mov x1,x0
+01fdc410  mov x0,x8
+01fdc414  bl 0x01fd2850
+01fdc418  ldp x19,x30,[sp, #0x10]
+01fdc41c  ldr x20,[sp], #0x20
+01fdc420  ret
+
+
+================================================================================
+### FILE: 01fdc424_Microsoft.Win32.Win32Native__MakeHRFromErrorCode.txt
+================================================================================
+Function: Microsoft.Win32.Win32Native$$MakeHRFromErrorCode @ 01fdc424
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- System.IO.__Error$$WinIOError @ 020b8fb8
+
+--- Listing ---
+01fdc424  mov w8,#0x80070000
+01fdc428  orr w0,w0,w8
+01fdc42c  ret
+
+
+================================================================================
+### FILE: 01fdc430_Microsoft.Win32.SafeHandles.SafePasswordHandle__CreateHandle.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafePasswordHandle$$CreateHandle @ 01fdc430
+
+--- Calls OUT ---
+  -> System.Runtime.InteropServices.Marshal$$StringToHGlobalAnsi @ 0208023c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- Microsoft.Win32.SafeHandles.SafePasswordHandle$$.ctor @ 01fdc4e4
+
+--- Listing ---
+01fdc430  stp x21,x20,[sp, #-0x20]!
+01fdc434  stp x19,x30,[sp, #0x10]
+01fdc438  adrp x20,0x3579000
+01fdc43c  adrp x21,0x3374000
+01fdc440  ldrb w8,[x20, #0x6ca]
+01fdc444  ldr x21,[x21, #0x8a8]
+01fdc448  mov x19,x1
+01fdc44c  tbnz w8,#0x0,0x01fdc464
+01fdc450  adrp x0,0x3374000
+01fdc454  ldr x0,[x0, #0x8a8]
+01fdc458  bl 0x00b0789c
+01fdc45c  mov w8,#0x1
+01fdc460  strb w8,[x20, #0x6ca]
+01fdc464  ldr x0,[x21]
+01fdc468  ldr w8,[x0, #0xe0]
+01fdc46c  cbnz w8,0x01fdc474
+01fdc470  bl 0x00b0798c
+01fdc474  mov x0,x19
+01fdc478  ldp x19,x30,[sp, #0x10]
+01fdc47c  mov x1,xzr
+01fdc480  ldp x21,x20,[sp], #0x20
+01fdc484  b 0x0208023c
+
+
+================================================================================
+### FILE: 01fdc488_Microsoft.Win32.SafeHandles.SafePasswordHandle__FreeHandle.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafePasswordHandle$$FreeHandle @ 01fdc488
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Runtime.InteropServices.Marshal$$ZeroFreeGlobalAllocAnsi @ 02080158
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- Microsoft.Win32.SafeHandles.SafePasswordHandle$$ReleaseHandle @ 01fdc55c
+
+--- Listing ---
+01fdc488  stp x21,x20,[sp, #-0x20]!
+01fdc48c  stp x19,x30,[sp, #0x10]
+01fdc490  adrp x21,0x3579000
+01fdc494  adrp x20,0x3374000
+01fdc498  ldrb w8,[x21, #0x6cb]
+01fdc49c  ldr x20,[x20, #0x8a8]
+01fdc4a0  mov x19,x0
+01fdc4a4  tbnz w8,#0x0,0x01fdc4bc
+01fdc4a8  adrp x0,0x3374000
+01fdc4ac  ldr x0,[x0, #0x8a8]
+01fdc4b0  bl 0x00b0789c
+01fdc4b4  mov w8,#0x1
+01fdc4b8  strb w8,[x21, #0x6cb]
+01fdc4bc  ldr x0,[x20]
+01fdc4c0  ldr x19,[x19, #0x10]
+01fdc4c4  ldr w8,[x0, #0xe0]
+01fdc4c8  cbnz w8,0x01fdc4d0
+01fdc4cc  bl 0x00b0798c
+01fdc4d0  mov x0,x19
+01fdc4d4  ldp x19,x30,[sp, #0x10]
+01fdc4d8  mov x1,xzr
+01fdc4dc  ldp x21,x20,[sp], #0x20
+01fdc4e0  b 0x02080158
+
+
+================================================================================
+### FILE: 01fdc4e4_Microsoft.Win32.SafeHandles.SafePasswordHandle__.ctor.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafePasswordHandle$$.ctor @ 01fdc4e4
+
+--- Calls OUT ---
+  -> Microsoft.Win32.SafeHandles.SafePasswordHandle$$CreateHandle @ 01fdc430
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Runtime.InteropServices.SafeHandle$$.ctor @ 0207eee0
+
+--- Calls IN ---
+  <- Mono.X509PalImpl$$ImportFallback @ 0223ec24
+  <- System.Security.Cryptography.X509Certificates.X509Certificate2$$.ctor @ 0234f594
+
+--- Listing ---
+01fdc4e4  str x22,[sp, #-0x30]!
+01fdc4e8  stp x21,x20,[sp, #0x10]
+01fdc4ec  stp x19,x30,[sp, #0x20]
+01fdc4f0  adrp x21,0x3579000
+01fdc4f4  adrp x22,0x3340000
+01fdc4f8  ldrb w8,[x21, #0x6cc]
+01fdc4fc  ldr x22,[x22, #0x790]
+01fdc500  mov x20,x1
+01fdc504  mov x19,x0
+01fdc508  tbnz w8,#0x0,0x01fdc520
+01fdc50c  adrp x0,0x3340000
+01fdc510  ldr x0,[x0, #0x790]
+01fdc514  bl 0x00b0789c
+01fdc518  mov w8,#0x1
+01fdc51c  strb w8,[x21, #0x6cc]
+01fdc520  ldr x8,[x22]
+01fdc524  mov w2,#0x1
+01fdc528  mov x0,x19
+01fdc52c  mov x3,xzr
+01fdc530  ldr x8,[x8, #0xb8]
+01fdc534  ldr x1,[x8]
+01fdc538  bl 0x0207eee0
+01fdc53c  cbz x20,0x01fdc54c
+01fdc540  mov x1,x20
+01fdc544  bl 0x01fdc430
+01fdc548  str x0,[x19, #0x10]
+01fdc54c  ldp x19,x30,[sp, #0x20]
+01fdc550  ldp x21,x20,[sp, #0x10]
+01fdc554  ldr x22,[sp], #0x30
+01fdc558  ret
+
+
+================================================================================
+### FILE: 01fdc55c_Microsoft.Win32.SafeHandles.SafePasswordHandle__ReleaseHandle.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafePasswordHandle$$ReleaseHandle @ 01fdc55c
+
+--- Calls OUT ---
+  -> Microsoft.Win32.SafeHandles.SafePasswordHandle$$FreeHandle @ 01fdc488
+  -> System.IntPtr$$op_Explicit @ 0219d1d8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.IntPtr$$op_Inequality @ 0219c54c
+
+--- Calls IN ---
+
+--- Listing ---
+01fdc55c  stp x21,x20,[sp, #-0x20]!
+01fdc560  stp x19,x30,[sp, #0x10]
+01fdc564  adrp x21,0x3579000
+01fdc568  adrp x20,0x3340000
+01fdc56c  ldrb w8,[x21, #0x6cd]
+01fdc570  ldr x20,[x20, #0x790]
+01fdc574  mov x19,x0
+01fdc578  tbnz w8,#0x0,0x01fdc590
+01fdc57c  adrp x0,0x3340000
+01fdc580  ldr x0,[x0, #0x790]
+01fdc584  bl 0x00b0789c
+01fdc588  mov w8,#0x1
+01fdc58c  strb w8,[x21, #0x6cd]
+01fdc590  ldr x8,[x20]
+01fdc594  ldr x0,[x19, #0x10]
+01fdc598  mov x2,xzr
+01fdc59c  ldr x8,[x8, #0xb8]
+01fdc5a0  ldr x1,[x8]
+01fdc5a4  bl 0x0219c54c
+01fdc5a8  tbz w0,#0x0,0x01fdc5b4
+01fdc5ac  mov x0,x19
+01fdc5b0  bl 0x01fdc488
+01fdc5b4  mov w0,#0xffffffff
+01fdc5b8  mov x1,xzr
+01fdc5bc  bl 0x0219d1d8
+01fdc5c0  mov x8,x0
+01fdc5c4  str x8,[x19, #0x10]
+01fdc5c8  ldp x19,x30,[sp, #0x10]
+01fdc5cc  mov w0,#0x1
+01fdc5d0  ldp x21,x20,[sp], #0x20
+01fdc5d4  ret
+
+
+================================================================================
+### FILE: 01fdc5d8_Microsoft.Win32.SafeHandles.SafePasswordHandle__Dispose.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafePasswordHandle$$Dispose @ 01fdc5d8
+
+--- Calls OUT ---
+  -> System.Runtime.InteropServices.SafeHandle$$Dispose @ 0207f05c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> Microsoft.Win32.SafeHandles.SafeHandleCache<object>$$IsCachedInvalidHandle @ 01e03224
+
+--- Calls IN ---
+
+--- Listing ---
+01fdc5d8  stp x21,x20,[sp, #-0x20]!
+01fdc5dc  stp x19,x30,[sp, #0x10]
+01fdc5e0  adrp x21,0x3579000
+01fdc5e4  ldrb w8,[x21, #0x6ce]
+01fdc5e8  mov w19,w1
+01fdc5ec  mov x20,x0
+01fdc5f0  tbnz w8,#0x0,0x01fdc608
+01fdc5f4  adrp x0,0x3314000
+01fdc5f8  ldr x0,[x0, #0x8f8]
+01fdc5fc  bl 0x00b0789c
+01fdc600  mov w8,#0x1
+01fdc604  strb w8,[x21, #0x6ce]
+01fdc608  tbz w19,#0x0,0x01fdc630
+01fdc60c  adrp x8,0x3314000
+01fdc610  ldr x8,[x8, #0x8f8]
+01fdc614  mov x0,x20
+01fdc618  ldr x1,[x8]
+01fdc61c  bl 0x01e03224
+01fdc620  tbz w0,#0x0,0x01fdc630
+01fdc624  ldp x19,x30,[sp, #0x10]
+01fdc628  ldp x21,x20,[sp], #0x20
+01fdc62c  ret
+01fdc630  and w1,w19,#0x1
+01fdc634  ldp x19,x30,[sp, #0x10]
+01fdc638  mov x0,x20
+01fdc63c  mov x2,xzr
+01fdc640  ldp x21,x20,[sp], #0x20
+01fdc644  b 0x0207f05c
+
+
+================================================================================
+### FILE: 01fdc648_Microsoft.Win32.SafeHandles.SafePasswordHandle__get_IsInvalid.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafePasswordHandle$$get_IsInvalid @ 01fdc648
+
+--- Calls OUT ---
+  -> System.IntPtr$$op_Explicit @ 0219d1d8
+  -> System.IntPtr$$op_Equality @ 021949b0
+
+--- Calls IN ---
+
+--- Listing ---
+01fdc648  stp x19,x30,[sp, #-0x10]!
+01fdc64c  ldr x19,[x0, #0x10]
+01fdc650  mov w0,#0xffffffff
+01fdc654  mov x1,xzr
+01fdc658  bl 0x0219d1d8
+01fdc65c  mov x1,x0
+01fdc660  mov x0,x19
+01fdc664  mov x2,xzr
+01fdc668  ldp x19,x30,[sp], #0x10
+01fdc66c  b 0x021949b0
+
+
+================================================================================
+### FILE: 01fdc670_Microsoft.Win32.SafeHandles.SafePasswordHandle__Mono_DangerousGetString.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafePasswordHandle$$Mono_DangerousGetString @ 01fdc670
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Runtime.InteropServices.Marshal$$PtrToStringAnsi @ 02080228
+
+--- Calls IN ---
+  <- System.Security.Cryptography.X509Certificates.X509Certificate2ImplMono$$ImportPkcs12 @ 0235332c
+
+--- Listing ---
+01fdc670  stp x21,x20,[sp, #-0x20]!
+01fdc674  stp x19,x30,[sp, #0x10]
+01fdc678  adrp x21,0x3579000
+01fdc67c  adrp x20,0x3374000
+01fdc680  ldrb w8,[x21, #0x6cf]
+01fdc684  ldr x20,[x20, #0x8a8]
+01fdc688  mov x19,x0
+01fdc68c  tbnz w8,#0x0,0x01fdc6a4
+01fdc690  adrp x0,0x3374000
+01fdc694  ldr x0,[x0, #0x8a8]
+01fdc698  bl 0x00b0789c
+01fdc69c  mov w8,#0x1
+01fdc6a0  strb w8,[x21, #0x6cf]
+01fdc6a4  ldr x0,[x20]
+01fdc6a8  ldr x19,[x19, #0x10]
+01fdc6ac  ldr w8,[x0, #0xe0]
+01fdc6b0  cbnz w8,0x01fdc6b8
+01fdc6b4  bl 0x00b0798c
+01fdc6b8  mov x0,x19
+01fdc6bc  ldp x19,x30,[sp, #0x10]
+01fdc6c0  mov x1,xzr
+01fdc6c4  ldp x21,x20,[sp], #0x20
+01fdc6c8  b 0x02080228
+
+
+================================================================================
+### FILE: 01fdc6cc_Microsoft.Win32.SafeHandles.SafeFileHandle__.ctor.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeFileHandle$$.ctor @ 01fdc6cc
+
+--- Calls OUT ---
+  -> Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid$$.ctor @ 01fdc6f4
+
+--- Calls IN ---
+  <- System.IO.FileStream$$.ctor @ 020bc7a8
+  <- System.IO.FileStream$$.ctor @ 020bcc84
+
+--- Listing ---
+01fdc6cc  str x20,[sp, #-0x20]!
+01fdc6d0  stp x19,x30,[sp, #0x10]
+01fdc6d4  mov x19,x1
+01fdc6d8  and w1,w2,#0x1
+01fdc6dc  mov x20,x0
+01fdc6e0  bl 0x01fdc6f4
+01fdc6e4  str x19,[x20, #0x10]
+01fdc6e8  ldp x19,x30,[sp, #0x10]
+01fdc6ec  ldr x20,[sp], #0x20
+01fdc6f0  ret
+
+
+================================================================================
+### FILE: 01fdc6f4_Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid__.ctor.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid$$.ctor @ 01fdc6f4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Runtime.InteropServices.SafeHandle$$.ctor @ 0207eee0
+
+--- Calls IN ---
+  <- Microsoft.Win32.SafeHandles.SafeWaitHandle$$.ctor @ 01fdc7d4
+  <- Microsoft.Win32.SafeHandles.SafeProcessHandle$$.ctor @ 022537a8
+  <- Microsoft.Win32.SafeHandles.SafeProcessHandle$$.cctor @ 02253a0c
+  <- Microsoft.Win32.SafeHandles.SafeFileHandle$$.ctor @ 01fdc6cc
+  <- System.Net.Sockets.SafeSocketHandle$$.ctor @ 023c3080
+  <- Microsoft.Win32.NativeMethods$$DuplicateHandle @ 0225364c
+  <- Microsoft.Win32.SafeHandles.SafeProcessHandle$$.ctor @ 022539d8
+
+--- Listing ---
+01fdc6f4  str x22,[sp, #-0x30]!
+01fdc6f8  stp x21,x20,[sp, #0x10]
+01fdc6fc  stp x19,x30,[sp, #0x20]
+01fdc700  adrp x21,0x3579000
+01fdc704  adrp x22,0x3340000
+01fdc708  ldrb w8,[x21, #0x6d1]
+01fdc70c  ldr x22,[x22, #0x790]
+01fdc710  mov w20,w1
+01fdc714  mov x19,x0
+01fdc718  tbnz w8,#0x0,0x01fdc730
+01fdc71c  adrp x0,0x3340000
+01fdc720  ldr x0,[x0, #0x790]
+01fdc724  bl 0x00b0789c
+01fdc728  mov w8,#0x1
+01fdc72c  strb w8,[x21, #0x6d1]
+01fdc730  ldr x8,[x22]
+01fdc734  and w2,w20,#0x1
+01fdc738  mov x0,x19
+01fdc73c  ldp x19,x30,[sp, #0x20]
+01fdc740  ldr x8,[x8, #0xb8]
+01fdc744  ldp x21,x20,[sp, #0x10]
+01fdc748  mov x3,xzr
+01fdc74c  ldr x1,[x8]
+01fdc750  ldr x22,[sp], #0x30
+01fdc754  b 0x0207eee0
+
+
+================================================================================
+### FILE: 01fdc758_Microsoft.Win32.SafeHandles.SafeFileHandle__ReleaseHandle.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeFileHandle$$ReleaseHandle @ 01fdc758
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.IO.MonoIO$$Close @ 020c13c0
+
+--- Calls IN ---
+
+--- Listing ---
+01fdc758  sub sp,sp,#0x30
+01fdc75c  stp x21,x20,[sp, #0x10]
+01fdc760  stp x19,x30,[sp, #0x20]
+01fdc764  adrp x21,0x3579000
+01fdc768  adrp x20,0x3310000
+01fdc76c  ldrb w8,[x21, #0x6d0]
+01fdc770  ldr x20,[x20, #0x568]
+01fdc774  mov x19,x0
+01fdc778  tbnz w8,#0x0,0x01fdc790
+01fdc77c  adrp x0,0x3310000
+01fdc780  ldr x0,[x0, #0x568]
+01fdc784  bl 0x00b0789c
+01fdc788  mov w8,#0x1
+01fdc78c  strb w8,[x21, #0x6d0]
+01fdc790  ldr x0,[x20]
+01fdc794  str wzr,[sp, #0xc]
+01fdc798  ldr x19,[x19, #0x10]
+01fdc79c  ldr w8,[x0, #0xe0]
+01fdc7a0  cbnz w8,0x01fdc7a8
+01fdc7a4  bl 0x00b0798c
+01fdc7a8  add x1,sp,#0xc
+01fdc7ac  mov x0,x19
+01fdc7b0  mov x2,xzr
+01fdc7b4  bl 0x020c13c0
+01fdc7b8  ldr w8,[sp, #0xc]
+01fdc7bc  ldp x19,x30,[sp, #0x20]
+01fdc7c0  ldp x21,x20,[sp, #0x10]
+01fdc7c4  cmp w8,#0x0
+01fdc7c8  cset w0,eq
+01fdc7cc  add sp,sp,#0x30
+01fdc7d0  ret
+
+
+================================================================================
+### FILE: 01fdc7d4_Microsoft.Win32.SafeHandles.SafeWaitHandle__.ctor.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeWaitHandle$$.ctor @ 01fdc7d4
+
+--- Calls OUT ---
+  -> Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid$$.ctor @ 01fdc6f4
+
+--- Calls IN ---
+  <- System.Threading.WaitHandle$$get_SafeWaitHandle @ 021c2c18
+  <- System.Threading.EventWaitHandle$$.ctor @ 021bb184
+  <- System.Threading.WaitHandle$$set_Handle @ 021c2b14
+  <- Microsoft.Win32.NativeMethods$$DuplicateHandle @ 0225343c
+
+--- Listing ---
+01fdc7d4  str x20,[sp, #-0x20]!
+01fdc7d8  stp x19,x30,[sp, #0x10]
+01fdc7dc  mov x19,x1
+01fdc7e0  and w1,w2,#0x1
+01fdc7e4  mov x20,x0
+01fdc7e8  bl 0x01fdc6f4
+01fdc7ec  str x19,[x20, #0x10]
+01fdc7f0  ldp x19,x30,[sp, #0x10]
+01fdc7f4  ldr x20,[sp], #0x20
+01fdc7f8  ret
+
+
+================================================================================
+### FILE: 01fdc7fc_Microsoft.Win32.SafeHandles.SafeWaitHandle__ReleaseHandle.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeWaitHandle$$ReleaseHandle @ 01fdc7fc
+
+--- Calls OUT ---
+  -> System.Threading.NativeEventCalls$$CloseEvent_internal @ 021c3e70
+
+--- Calls IN ---
+
+--- Listing ---
+01fdc7fc  str x30,[sp, #-0x10]!
+01fdc800  ldr x0,[x0, #0x10]
+01fdc804  mov x1,xzr
+01fdc808  bl 0x021c3e70
+01fdc80c  mov w0,#0x1
+01fdc810  ldr x30,[sp], #0x10
+01fdc814  ret
+
+
+================================================================================
+### FILE: 01fdc818_Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid__get_IsInvalid.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid$$get_IsInvalid @ 01fdc818
+
+--- Calls OUT ---
+  -> System.IntPtr$$IsNull @ 0219d208
+  -> System.IntPtr$$.ctor @ 0219cfd4
+  -> System.IntPtr$$op_Equality @ 021949b0
+
+--- Calls IN ---
+
+--- Listing ---
+01fdc818  sub sp,sp,#0x20
+01fdc81c  stp x19,x30,[sp, #0x10]
+01fdc820  add x19,x0,#0x10
+01fdc824  mov x0,x19
+01fdc828  mov x1,xzr
+01fdc82c  bl 0x0219d208
+01fdc830  tbz w0,#0x0,0x01fdc83c
+01fdc834  mov w0,#0x1
+01fdc838  b 0x01fdc864
+01fdc83c  ldr x19,[x19]
+01fdc840  add x0,sp,#0x8
+01fdc844  mov w1,#0xffffffff
+01fdc848  mov x2,xzr
+01fdc84c  str xzr,[sp, #0x8]
+01fdc850  bl 0x0219cfd4
+01fdc854  ldr x1,[sp, #0x8]
+01fdc858  mov x0,x19
+01fdc85c  mov x2,xzr
+01fdc860  bl 0x021949b0
+01fdc864  ldp x19,x30,[sp, #0x10]
+01fdc868  and w0,w0,#0x1
+01fdc86c  add sp,sp,#0x20
+01fdc870  ret
+
+
+================================================================================
+### FILE: 0225343c_Microsoft.Win32.NativeMethods__DuplicateHandle.txt
+================================================================================
+Function: Microsoft.Win32.NativeMethods$$DuplicateHandle @ 0225343c
+
+--- Calls OUT ---
+  -> Microsoft.Win32.SafeHandles.SafeWaitHandle$$.ctor @ 01fdc7d4
+  -> System.IO.MonoIO$$GetException @ 020c166c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> System.Runtime.InteropServices.SafeHandle$$DangerousAddRef @ 0207e634
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00aaac8c @ 00aaac8c
+  -> System.IO.MonoIO$$DuplicateHandle @ 020c197c
+  -> System.Runtime.InteropServices.SafeHandle$$DangerousRelease @ 0207e7e0
+
+--- Calls IN ---
+  <- System.Diagnostics.ProcessWaitHandle$$.ctor @ 02344fb8
+
+--- Listing ---
+0225343c  sub sp,sp,#0x60
+02253440  stp x25,x24,[sp, #0x20]
+02253444  stp x23,x22,[sp, #0x30]
+02253448  stp x21,x20,[sp, #0x40]
+0225344c  stp x19,x30,[sp, #0x50]
+02253450  adrp x25,0x357a000
+02253454  ldrb w8,[x25, #0xcac]
+02253458  mov w24,w7
+0225345c  mov w21,w6
+02253460  mov x20,x5
+02253464  mov x22,x4
+02253468  mov x19,x2
+0225346c  mov x23,x1
+02253470  tbnz w8,#0x0,0x02253494
+02253474  adrp x0,0x3310000
+02253478  ldr x0,[x0, #0x568]
+0225347c  bl 0x00b0789c
+02253480  adrp x0,0x3323000
+02253484  ldr x0,[x0, #0xc90]
+02253488  bl 0x00b0789c
+0225348c  mov w8,#0x1
+02253490  strb w8,[x25, #0xcac]
+02253494  str wzr,[sp, #0x18]
+02253498  str xzr,[sp, #0x10]
+0225349c  strb wzr,[sp, #0x1c]
+022534a0  cbz x19,0x02253580
+022534a4  add x1,sp,#0x1c
+    ; [PRE] try { // try from 022534a4 to 022534b3 has its CatchHandler @ 022535e4
+022534a8  mov x0,x19
+022534ac  mov x2,xzr
+022534b0  bl 0x0207e634
+    ; [POST] } // end try from 022534a4 to 022534b3
+022534b4  adrp x8,0x3310000
+022534b8  ldr x8,[x8, #0x568]
+022534bc  ldr x25,[x19, #0x10]
+022534c0  ldr x0,[x8]
+022534c4  ldr w8,[x0, #0xe0]
+022534c8  cbnz w8,0x022534d0
+022534cc  bl 0x00b0798c
+    ; [PRE] try { // try from 022534cc to 022534cf has its CatchHandler @ 022535dc
+    ; [POST] } // end try from 022534cc to 022534cf
+022534d0  ldr w6,[sp, #0x60]
+022534d4  and w5,w24,#0x1
+022534d8  add x3,sp,#0x10
+    ; [PRE] try { // try from 022534d8 to 022534f7 has its CatchHandler @ 022535e0
+022534dc  add x7,sp,#0x18
+022534e0  mov x0,x23
+022534e4  mov x1,x25
+022534e8  mov x2,x22
+022534ec  mov w4,w21
+022534f0  str xzr,[sp]
+022534f4  bl 0x020c197c
+    ; [POST] } // end try from 022534d8 to 022534f7
+022534f8  ldr w22,[sp, #0x18]
+022534fc  cbnz w22,0x0225358c
+02253500  adrp x8,0x3323000
+02253504  ldr x8,[x8, #0xc90]
+02253508  mov w21,w0
+0225350c  ldr x23,[sp, #0x10]
+02253510  ldr x0,[x8]
+02253514  bl 0x00b079a0
+    ; [PRE] try { // try from 02253514 to 02253543 has its CatchHandler @ 022535e8
+02253518  mov x22,x0
+0225351c  cbz x0,0x022535cc
+02253520  mov w2,#0x1
+02253524  mov x0,x22
+02253528  mov x1,x23
+0225352c  mov x3,xzr
+02253530  bl 0x01fdc7d4
+02253534  str x22,[x20]
+02253538  mov x0,x20
+0225353c  mov x1,x22
+02253540  bl 0x00b07850
+    ; [POST] } // end try from 02253514 to 02253543
+02253544  mov x22,xzr
+02253548  ldrb w8,[sp, #0x1c]
+0225354c  cbz w8,0x02253560
+02253550  cbz x19,0x022535d0
+02253554  mov x0,x19
+02253558  mov x1,xzr
+0225355c  bl 0x0207e7e0
+02253560  cbnz x22,0x02253584
+02253564  and w0,w21,#0x1
+02253568  ldp x19,x30,[sp, #0x50]
+0225356c  ldp x21,x20,[sp, #0x40]
+02253570  ldp x23,x22,[sp, #0x30]
+02253574  ldp x25,x24,[sp, #0x20]
+02253578  add sp,sp,#0x60
+0225357c  ret
+02253580  bl 0x00b079b0
+    ; [PRE] try { // try from 02253580 to 02253583 has its CatchHandler @ 022535e4
+    ; [POST] } // end try from 02253580 to 02253583
+02253584  mov x0,x22
+02253588  bl 0x00aaac8c
+0225358c  adrp x0,0x3310000
+    ; [PRE] try { // try from 0225358c to 022535a3 has its CatchHandler @ 022535d4
+02253590  ldr x0,[x0, #0x568]
+02253594  bl 0x00b078a0
+02253598  ldr w8,[x0, #0xe0]
+0225359c  cbnz w8,0x022535a4
+022535a0  bl 0x00b0798c
+    ; [POST] } // end try from 0225358c to 022535a3
+022535a4  mov w0,w22
+    ; [PRE] try { // try from 022535a4 to 022535cb has its CatchHandler @ 022535d8
+022535a8  mov x1,xzr
+022535ac  bl 0x020c166c
+022535b0  mov x20,x0
+022535b4  adrp x0,0x3351000
+022535b8  ldr x0,[x0, #0x58]
+022535bc  bl 0x00b078a0
+022535c0  mov x1,x0
+022535c4  mov x0,x20
+022535c8  bl 0x00b07978
+    ; [POST] } // end try from 022535a4 to 022535cb
+022535cc  bl 0x00b079b0
+    ; [PRE] try { // try from 022535cc to 022535cf has its CatchHandler @ 022535e8
+    ; [POST] } // end try from 022535cc to 022535cf
+022535d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0225364c_Microsoft.Win32.NativeMethods__DuplicateHandle.txt
+================================================================================
+Function: Microsoft.Win32.NativeMethods$$DuplicateHandle @ 0225364c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> System.IO.MonoIO$$GetException @ 020c166c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid$$.ctor @ 01fdc6f4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_008da56c @ 008da56c
+  -> System.IO.MonoIO$$DuplicateHandle @ 020c197c
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- System.Diagnostics.Process$$GetProcessHandle @ 02344af0
+
+--- Listing ---
+0225364c  sub sp,sp,#0x70
+02253650  stp x27,x26,[sp, #0x20]
+02253654  stp x25,x24,[sp, #0x30]
+02253658  stp x23,x22,[sp, #0x40]
+0225365c  stp x21,x20,[sp, #0x50]
+02253660  stp x19,x30,[sp, #0x60]
+02253664  adrp x27,0x357a000
+02253668  adrp x26,0x3310000
+0225366c  ldr w23,[sp, #0x78]
+02253670  ldrb w8,[x27, #0xcad]
+02253674  ldrb w25,[sp, #0x70]
+02253678  ldr x26,[x26, #0x568]
+0225367c  mov w20,w7
+02253680  mov x19,x6
+02253684  mov x21,x5
+02253688  mov x22,x3
+0225368c  mov x24,x1
+02253690  tbnz w8,#0x0,0x022536b4
+02253694  adrp x0,0x3310000
+02253698  ldr x0,[x0, #0x568]
+0225369c  bl 0x00b0789c
+022536a0  adrp x0,0x3381000
+022536a4  ldr x0,[x0, #0xd30]
+022536a8  bl 0x00b0789c
+022536ac  mov w8,#0x1
+022536b0  strb w8,[x27, #0xcad]
+022536b4  ldr x0,[x26]
+022536b8  str wzr,[sp, #0x1c]
+022536bc  str xzr,[sp, #0x10]
+022536c0  and w25,w25,#0x1
+022536c4  ldr w8,[x0, #0xe0]
+022536c8  cbnz w8,0x022536d0
+022536cc  bl 0x00b0798c
+022536d0  add x3,sp,#0x10
+022536d4  add x7,sp,#0x1c
+022536d8  mov x0,x24
+022536dc  mov x1,x22
+022536e0  mov x2,x21
+022536e4  mov w4,w20
+022536e8  mov w5,w25
+022536ec  mov w6,w23
+022536f0  str xzr,[sp]
+022536f4  bl 0x020c197c
+022536f8  ldr w20,[sp, #0x1c]
+022536fc  cmp w20,#0x0
+02253700  cset w23,eq
+02253704  cbnz w20,0x0225376c
+02253708  adrp x8,0x3381000
+0225370c  ldr x8,[x8, #0xd30]
+02253710  mov w21,w0
+02253714  ldr x22,[sp, #0x10]
+02253718  ldr x0,[x8]
+0225371c  bl 0x00b079a0
+02253720  cbz x0,0x022537a4
+02253724  mov w1,#0x1
+02253728  mov x2,xzr
+0225372c  mov x20,x0
+02253730  and w21,w21,w23
+02253734  bl 0x01fdc6f4
+02253738  mov x0,x19
+0225373c  mov x1,x20
+02253740  str x22,[x20, #0x10]
+02253744  str x20,[x19]
+02253748  bl 0x00b07850
+0225374c  mov w0,w21
+02253750  ldp x19,x30,[sp, #0x60]
+02253754  ldp x21,x20,[sp, #0x50]
+02253758  ldp x23,x22,[sp, #0x40]
+0225375c  ldp x25,x24,[sp, #0x30]
+02253760  ldp x27,x26,[sp, #0x20]
+02253764  add sp,sp,#0x70
+02253768  ret
+0225376c  adrp x0,0x3310000
+02253770  ldr x0,[x0, #0x568]
+02253774  bl 0x00b078a0
+02253778  bl 0x008da56c
+0225377c  mov w0,w20
+02253780  mov x1,xzr
+02253784  bl 0x020c166c
+02253788  mov x19,x0
+0225378c  adrp x0,0x3322000
+02253790  ldr x0,[x0, #0xab8]
+02253794  bl 0x00b078a0
+02253798  mov x1,x0
+0225379c  mov x0,x19
+022537a0  bl 0x00b07978
+022537a4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022537a8_Microsoft.Win32.SafeHandles.SafeProcessHandle__.ctor.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeProcessHandle$$.ctor @ 022537a8
+
+--- Calls OUT ---
+  -> Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid$$.ctor @ 01fdc6f4
+
+--- Calls IN ---
+  <- System.Diagnostics.Process$$StartWithCreateProcess @ 023468d0
+  <- System.Diagnostics.Process$$StartWithShellExecuteEx @ 02346514
+
+--- Listing ---
+022537a8  str x20,[sp, #-0x20]!
+022537ac  stp x19,x30,[sp, #0x10]
+022537b0  mov x19,x1
+022537b4  and w1,w2,#0x1
+022537b8  mov x2,xzr
+022537bc  mov x20,x0
+022537c0  bl 0x01fdc6f4
+022537c4  str x19,[x20, #0x10]
+022537c8  ldp x19,x30,[sp, #0x10]
+022537cc  ldr x20,[sp], #0x20
+022537d0  ret
+
+
+================================================================================
+### FILE: 022537d4_Microsoft.Win32.NativeMethods__GetCurrentProcess.txt
+================================================================================
+Function: Microsoft.Win32.NativeMethods$$GetCurrentProcess @ 022537d4
+
+--- Calls OUT ---
+  -> FUN_00aafc1c @ 00aafc1c
+
+--- Calls IN ---
+  <- System.Diagnostics.Process$$GetProcessHandle @ 02344af0
+  <- System.Diagnostics.ProcessWaitHandle$$.ctor @ 02344fb8
+
+--- Listing ---
+022537d4  b 0x00aafc1c
+
+
+================================================================================
+### FILE: 022537d8_Microsoft.Win32.NativeMethods__GetExitCodeProcess.txt
+================================================================================
+Function: Microsoft.Win32.NativeMethods$$GetExitCodeProcess @ 022537d8
+
+--- Calls OUT ---
+  -> FUN_00aafb70 @ 00aafb70
+
+--- Calls IN ---
+
+--- Listing ---
+022537d8  b 0x00aafb70
+
+
+================================================================================
+### FILE: 022537dc_Microsoft.Win32.NativeMethods__GetExitCodeProcess.txt
+================================================================================
+Function: Microsoft.Win32.NativeMethods$$GetExitCodeProcess @ 022537dc
+
+--- Calls OUT ---
+  -> System.Runtime.InteropServices.SafeHandle$$DangerousAddRef @ 0207e634
+  -> FUN_00aaac8c @ 00aaac8c
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00aafb70 @ 00aafb70
+  -> System.Runtime.InteropServices.SafeHandle$$DangerousRelease @ 0207e7e0
+
+--- Calls IN ---
+  <- System.Diagnostics.Process$$get_HasExited @ 02344650
+  <- System.Diagnostics.Process$$GetProcessHandle @ 02344af0
+
+--- Listing ---
+022537dc  sub sp,sp,#0x30
+022537e0  stp x21,x20,[sp, #0x10]
+022537e4  stp x19,x30,[sp, #0x20]
+022537e8  mov x19,x0
+022537ec  strb wzr,[sp, #0xc]
+022537f0  cbz x0,0x0225384c
+022537f4  mov x20,x1
+022537f8  add x1,sp,#0xc
+    ; [PRE] try { // try from 022537f8 to 02253807 has its CatchHandler @ 02253860
+022537fc  mov x0,x19
+02253800  mov x2,xzr
+02253804  bl 0x0207e634
+    ; [POST] } // end try from 022537f8 to 02253807
+02253808  ldr x0,[x19, #0x10]
+0225380c  mov x1,x20
+    ; [PRE] try { // try from 0225380c to 02253813 has its CatchHandler @ 0225385c
+02253810  bl 0x00aafb70
+    ; [POST] } // end try from 0225380c to 02253813
+02253814  mov w21,w0
+02253818  mov x20,xzr
+0225381c  ldrb w8,[sp, #0xc]
+02253820  cbz w8,0x02253834
+02253824  cbz x19,0x02253858
+02253828  mov x0,x19
+0225382c  mov x1,xzr
+02253830  bl 0x0207e7e0
+02253834  cbnz x20,0x02253850
+02253838  and w0,w21,#0x1
+0225383c  ldp x19,x30,[sp, #0x20]
+02253840  ldp x21,x20,[sp, #0x10]
+02253844  add sp,sp,#0x30
+02253848  ret
+0225384c  bl 0x00b079b0
+    ; [PRE] try { // try from 0225384c to 0225384f has its CatchHandler @ 02253860
+    ; [POST] } // end try from 0225384c to 0225384f
+02253850  mov x0,x20
+02253854  bl 0x00aaac8c
+02253858  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022538c4_Microsoft.Win32.NativeMethods__GetProcessTimes.txt
+================================================================================
+Function: Microsoft.Win32.NativeMethods$$GetProcessTimes @ 022538c4
+
+--- Calls OUT ---
+  -> getpid @ 00aafc18
+
+--- Calls IN ---
+
+--- Listing ---
+022538c4  b 0x00aafc18
+
+
+================================================================================
+### FILE: 022538c8_Microsoft.Win32.NativeMethods__GetProcessTimes.txt
+================================================================================
+Function: Microsoft.Win32.NativeMethods$$GetProcessTimes @ 022538c8
+
+--- Calls OUT ---
+  -> System.Runtime.InteropServices.SafeHandle$$DangerousAddRef @ 0207e634
+  -> getpid @ 00aafc18
+  -> FUN_00aaac8c @ 00aaac8c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Runtime.InteropServices.SafeHandle$$DangerousRelease @ 0207e7e0
+
+--- Calls IN ---
+  <- System.Diagnostics.Process$$GetProcessTimes @ 023451ec
+
+--- Listing ---
+022538c8  sub sp,sp,#0x40
+022538cc  stp x23,x22,[sp, #0x10]
+022538d0  stp x21,x20,[sp, #0x20]
+022538d4  stp x19,x30,[sp, #0x30]
+022538d8  mov x19,x0
+022538dc  strb wzr,[sp, #0xc]
+022538e0  cbz x0,0x02253958
+022538e4  mov x20,x4
+022538e8  mov x21,x3
+022538ec  mov x22,x2
+022538f0  mov x23,x1
+022538f4  add x1,sp,#0xc
+    ; [PRE] try { // try from 022538f4 to 02253903 has its CatchHandler @ 0225396c
+022538f8  mov x0,x19
+022538fc  mov x2,xzr
+02253900  bl 0x0207e634
+    ; [POST] } // end try from 022538f4 to 02253903
+02253904  ldr x0,[x19, #0x10]
+02253908  mov x1,x23
+    ; [PRE] try { // try from 02253908 to 0225391b has its CatchHandler @ 02253968
+0225390c  mov x2,x22
+02253910  mov x3,x21
+02253914  mov x4,x20
+02253918  bl 0x00aafc18
+    ; [POST] } // end try from 02253908 to 0225391b
+0225391c  mov w21,w0
+02253920  mov x20,xzr
+02253924  ldrb w8,[sp, #0xc]
+02253928  cbz w8,0x0225393c
+0225392c  cbz x19,0x02253964
+02253930  mov x0,x19
+02253934  mov x1,xzr
+02253938  bl 0x0207e7e0
+0225393c  cbnz x20,0x0225395c
+02253940  and w0,w21,#0x1
+02253944  ldp x19,x30,[sp, #0x30]
+02253948  ldp x21,x20,[sp, #0x20]
+0225394c  ldp x23,x22,[sp, #0x10]
+02253950  add sp,sp,#0x40
+02253954  ret
+02253958  bl 0x00b079b0
+    ; [PRE] try { // try from 02253958 to 0225395b has its CatchHandler @ 0225396c
+    ; [POST] } // end try from 02253958 to 0225395b
+0225395c  mov x0,x20
+02253960  bl 0x00aaac8c
+02253964  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 022539d0_Microsoft.Win32.NativeMethods__GetCurrentProcessId.txt
+================================================================================
+Function: Microsoft.Win32.NativeMethods$$GetCurrentProcessId @ 022539d0
+
+--- Calls OUT ---
+  -> getpid @ 00aafc18
+
+--- Calls IN ---
+  <- System.Diagnostics.Process$$GetCurrentProcess @ 02346084
+
+--- Listing ---
+022539d0  b 0x00aafc18
+
+
+================================================================================
+### FILE: 022539d4_Microsoft.Win32.NativeMethods__CloseProcess.txt
+================================================================================
+Function: Microsoft.Win32.NativeMethods$$CloseProcess @ 022539d4
+
+--- Calls OUT ---
+  -> getpid @ 00aafb6c
+
+--- Calls IN ---
+
+--- Listing ---
+022539d4  b 0x00aafb6c
+
+
+================================================================================
+### FILE: 022539d8_Microsoft.Win32.SafeHandles.SafeProcessHandle__.ctor.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeProcessHandle$$.ctor @ 022539d8
+
+--- Calls OUT ---
+  -> Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid$$.ctor @ 01fdc6f4
+
+--- Calls IN ---
+
+--- Listing ---
+022539d8  str x20,[sp, #-0x20]!
+022539dc  stp x19,x30,[sp, #0x10]
+022539e0  mov x19,x1
+022539e4  mov w1,#0x1
+022539e8  mov x2,xzr
+022539ec  mov x20,x0
+022539f0  bl 0x01fdc6f4
+022539f4  str x19,[x20, #0x10]
+022539f8  ldp x19,x30,[sp, #0x10]
+022539fc  ldr x20,[sp], #0x20
+02253a00  ret
+
+
+================================================================================
+### FILE: 02253a04_Microsoft.Win32.SafeHandles.SafeProcessHandle__ReleaseHandle.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeProcessHandle$$ReleaseHandle @ 02253a04
+
+--- Calls OUT ---
+  -> getpid @ 00aafb6c
+
+--- Calls IN ---
+
+--- Listing ---
+02253a04  ldr x0,[x0, #0x10]
+02253a08  b 0x00aafb6c
+
+
+================================================================================
+### FILE: 02253a0c_Microsoft.Win32.SafeHandles.SafeProcessHandle__.cctor.txt
+================================================================================
+Function: Microsoft.Win32.SafeHandles.SafeProcessHandle$$.cctor @ 02253a0c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid$$.ctor @ 01fdc6f4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+02253a0c  stp x21,x20,[sp, #-0x20]!
+02253a10  stp x19,x30,[sp, #0x10]
+02253a14  adrp x19,0x357a000
+02253a18  adrp x21,0x3340000
+02253a1c  adrp x20,0x3381000
+02253a20  ldrb w8,[x19, #0xcae]
+02253a24  ldr x21,[x21, #0x790]
+02253a28  ldr x20,[x20, #0xd30]
+02253a2c  tbnz w8,#0x0,0x02253a50
+02253a30  adrp x0,0x3340000
+02253a34  ldr x0,[x0, #0x790]
+02253a38  bl 0x00b0789c
+02253a3c  adrp x0,0x3381000
+02253a40  ldr x0,[x0, #0xd30]
+02253a44  bl 0x00b0789c
+02253a48  mov w8,#0x1
+02253a4c  strb w8,[x19, #0xcae]
+02253a50  ldr x8,[x21]
+02253a54  ldr x0,[x20]
+02253a58  ldr x8,[x8, #0xb8]
+02253a5c  ldr x21,[x8]
+02253a60  bl 0x00b079a0
+02253a64  cbz x0,0x02253aa0
+02253a68  mov w1,#0x1
+02253a6c  mov x2,xzr
+02253a70  mov x19,x0
+02253a74  bl 0x01fdc6f4
+02253a78  str x21,[x19, #0x10]
+02253a7c  ldr x8,[x20]
+02253a80  mov x1,x19
+02253a84  ldr x8,[x8, #0xb8]
+02253a88  str x19,[x8]
+02253a8c  ldr x8,[x20]
+02253a90  ldp x19,x30,[sp, #0x10]
+02253a94  ldr x0,[x8, #0xb8]
+02253a98  ldp x21,x20,[sp], #0x20
+02253a9c  b 0x00b07850
+02253aa0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 024bdc38_Microsoft.CodeAnalysis.EmbeddedAttribute__.ctor.txt
+================================================================================
+Function: Microsoft.CodeAnalysis.EmbeddedAttribute$$.ctor @ 024bdc38
+
+--- Calls OUT ---
+  -> System.Attribute$$.ctor @ 0217926c
+
+--- Calls IN ---
+
+--- Listing ---
+024bdc38  mov x1,xzr
+024bdc3c  b 0x0217926c
+
+
+================================================================================
+### FILE: 0250f6b0_Microsoft.CodeAnalysis.EmbeddedAttribute__.ctor.txt
+================================================================================
+Function: Microsoft.CodeAnalysis.EmbeddedAttribute$$.ctor @ 0250f6b0
+
+--- Calls OUT ---
+  -> System.Attribute$$.ctor @ 0217926c
+
+--- Calls IN ---
+
+--- Listing ---
+0250f6b0  mov x1,xzr
+0250f6b4  b 0x0217926c
+
+
+================================================================================
+### FILE: 025c1948_Microsoft.CodeAnalysis.EmbeddedAttribute__.ctor.txt
+================================================================================
+Function: Microsoft.CodeAnalysis.EmbeddedAttribute$$.ctor @ 025c1948
+
+--- Calls OUT ---
+  -> System.Attribute$$.ctor @ 0217926c
+
+--- Calls IN ---
+
+--- Listing ---
+025c1948  mov x1,xzr
+025c194c  b 0x0217926c
+
+
+================================================================================
+### FILE: 026d9d8c_Microsoft.CodeAnalysis.EmbeddedAttribute__.ctor.txt
+================================================================================
+Function: Microsoft.CodeAnalysis.EmbeddedAttribute$$.ctor @ 026d9d8c
+
+--- Calls OUT ---
+  -> System.Attribute$$.ctor @ 0217926c
+
+--- Calls IN ---
+
+--- Listing ---
+026d9d8c  mov x1,xzr
+026d9d90  b 0x0217926c
+
+

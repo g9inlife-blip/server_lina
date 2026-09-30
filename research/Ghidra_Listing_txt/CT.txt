@@ -1,0 +1,691 @@
+================================================================================
+### FILE: 008d39f0__ctype.txt
+================================================================================
+Function: ~ctype @ 008d39f0
+
+--- Calls OUT ---
+  -> ~ctype @ 00b721d0
+
+--- Calls IN ---
+
+--- Listing ---
+008d39f0  adrp x16,0x3307000
+008d39f4  ldr x17,[x16, #0x6b8]
+008d39f8  add x16,x16,#0x6b8
+008d39fc  br x17
+
+
+================================================================================
+### FILE: 008d3d50_ctype_byname.txt
+================================================================================
+Function: ctype_byname @ 008d3d50
+
+--- Calls OUT ---
+  -> ctype_byname @ 00b72b10
+
+--- Calls IN ---
+  <- FUN_00b6dfe4 @ 00b6dfe4
+  <- FUN_00b6bcd0 @ 00b6bcd0
+  <- __time_get_storage @ 00b7bc38
+
+--- Listing ---
+008d3d50  adrp x16,0x3307000
+008d3d54  ldr x17,[x16, #0x868]
+008d3d58  add x16,x16,#0x868
+008d3d5c  br x17
+
+
+================================================================================
+### FILE: 008d47c0_ctype_byname.txt
+================================================================================
+Function: ctype_byname @ 008d47c0
+
+--- Calls OUT ---
+  -> ctype_byname @ 00b72a08
+
+--- Calls IN ---
+  <- __time_get_storage @ 00b7b8e8
+
+--- Listing ---
+008d47c0  adrp x16,0x3307000
+008d47c4  ldr x17,[x16, #0xda0]
+008d47c8  add x16,x16,#0xda0
+008d47cc  br x17
+
+
+================================================================================
+### FILE: 008d5350_ctype_byname.txt
+================================================================================
+Function: ctype_byname @ 008d5350
+
+--- Calls OUT ---
+  -> ctype_byname @ 00b7268c
+
+--- Calls IN ---
+  <- __time_get_storage @ 00b7b188
+
+--- Listing ---
+008d5350  adrp x16,0x3308000
+008d5354  ldr x17,[x16, #0x368]
+008d5358  add x16,x16,#0x368
+008d535c  br x17
+
+
+================================================================================
+### FILE: 008d53c0_ctype_byname.txt
+================================================================================
+Function: ctype_byname @ 008d53c0
+
+--- Calls OUT ---
+  -> ctype_byname @ 00b727c8
+
+--- Calls IN ---
+  <- FUN_00b6dfe4 @ 00b6dfe4
+  <- FUN_00b6bcd0 @ 00b6bcd0
+  <- __time_get_storage @ 00b7b544
+
+--- Listing ---
+008d53c0  adrp x16,0x3308000
+008d53c4  ldr x17,[x16, #0x3a0]
+008d53c8  add x16,x16,#0x3a0
+008d53cc  br x17
+
+
+================================================================================
+### FILE: 008d5b50___ctype_get_mb_cur_max.txt
+================================================================================
+Function: __ctype_get_mb_cur_max @ 008d5b50
+
+--- Calls OUT ---
+  -> __ctype_get_mb_cur_max @ 037998b8
+
+--- Calls IN ---
+  <- do_encoding @ 00b73db8
+  <- do_max_length @ 00b73f88
+
+--- Listing ---
+008d5b50  adrp x16,0x3308000
+008d5b54  ldr x17,[x16, #0x768]
+008d5b58  add x16,x16,#0x768
+008d5b5c  br x17
+
+
+================================================================================
+### FILE: 00b71c64__ctype.txt
+================================================================================
+Function: ~ctype @ 00b71c64
+FuncComment: std::__ndk1::ctype<wchar_t>::~ctype()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b71c64  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ctype<wchar_t>::~ctype()
+00b71c68  stp x29,x30,[sp, #0x10]
+00b71c6c  add x29,sp,#0x10
+00b71c70  mov x19,x0
+00b71c74  bl 0x008d4ca0
+00b71c78  ldp x29,x30,[sp, #0x10]
+00b71c7c  mov x0,x19
+00b71c80  ldr x19,[sp], #0x20
+00b71c84  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b72198_ctype.txt
+================================================================================
+Function: ctype @ 00b72198
+FuncComment: std::__ndk1::ctype<char>::ctype(unsigned long const*, bool, unsigned long)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b72198  adrp x10,0x335a000
+    ; [PLATE] std::__ndk1::ctype<char>::ctype(unsigned long const*, bool, unsigned long)
+00b7219c  ldr x10,[x10, #0xc40]
+00b721a0  and w8,w2,#0x1
+00b721a4  sub x9,x3,#0x1
+00b721a8  stp x9,x1,[x0, #0x8]
+00b721ac  add x10,x10,#0x10
+00b721b0  str x10,[x0]
+00b721b4  strb w8,[x0, #0x18]
+00b721b8  cbz x1,0x00b721c0
+00b721bc  ret
+00b721c0  adrp x8,0x2a08000
+00b721c4  add x8,x8,#0x718
+00b721c8  str x8,[x0, #0x10]
+00b721cc  ret
+
+
+================================================================================
+### FILE: 00b721d0__ctype.txt
+================================================================================
+Function: ~ctype @ 00b721d0
+FuncComment: std::__ndk1::ctype<char>::~ctype()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete[] @ 008d4240
+
+--- Calls IN ---
+  <- ~ctype @ 008d39f0
+
+--- Listing ---
+00b721d0  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ctype<char>::~ctype()
+00b721d4  stp x29,x30,[sp, #0x10]
+00b721d8  add x29,sp,#0x10
+00b721dc  adrp x8,0x335a000
+00b721e0  mov x19,x0
+00b721e4  ldr x0,[x0, #0x10]
+00b721e8  ldr x8,[x8, #0xc40]
+00b721ec  add x8,x8,#0x10
+00b721f0  str x8,[x19]
+00b721f4  cbz x0,0x00b72204
+00b721f8  ldrb w8,[x19, #0x18]
+00b721fc  cbz w8,0x00b72204
+00b72200  bl 0x008d4240
+00b72204  ldp x29,x30,[sp, #0x10]
+00b72208  mov x0,x19
+00b7220c  ldr x19,[sp], #0x20
+00b72210  b 0x008d4ca0
+
+
+================================================================================
+### FILE: 00b72214__ctype.txt
+================================================================================
+Function: ~ctype @ 00b72214
+FuncComment: std::__ndk1::ctype<char>::~ctype()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+  -> operator.delete[] @ 008d4240
+
+--- Calls IN ---
+
+--- Listing ---
+00b72214  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ctype<char>::~ctype()
+00b72218  stp x29,x30,[sp, #0x10]
+00b7221c  add x29,sp,#0x10
+00b72220  adrp x8,0x335a000
+00b72224  mov x19,x0
+00b72228  ldr x0,[x0, #0x10]
+00b7222c  ldr x8,[x8, #0xc40]
+00b72230  add x8,x8,#0x10
+00b72234  str x8,[x19]
+00b72238  cbz x0,0x00b72248
+00b7223c  ldrb w8,[x19, #0x18]
+00b72240  cbz w8,0x00b72248
+00b72244  bl 0x008d4240
+00b72248  mov x0,x19
+00b7224c  bl 0x008d4ca0
+00b72250  ldp x29,x30,[sp, #0x10]
+00b72254  mov x0,x19
+00b72258  ldr x19,[sp], #0x20
+00b7225c  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b7268c_ctype_byname.txt
+================================================================================
+Function: ctype_byname @ 00b7268c
+FuncComment: std::__ndk1::ctype_byname<char>::ctype_byname(char const*, unsigned long)
+
+--- Calls OUT ---
+  -> newlocale @ 008d49c0
+  -> insert @ 008d3a20
+  -> FUN_00b70e70 @ 00b70e70
+  -> FUN_00a8d368 @ 00a8d368
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- ctype_byname @ 008d5350
+
+--- Listing ---
+00b7268c  sub sp,sp,#0x70
+    ; [PLATE] std::__ndk1::ctype_byname<char>::ctype_byname(char const*, unsigned long)
+00b72690  str x21,[sp, #0x40]
+00b72694  stp x20,x19,[sp, #0x50]
+00b72698  stp x29,x30,[sp, #0x60]
+00b7269c  add x29,sp,#0x60
+00b726a0  mrs x21,tpidr_el0
+00b726a4  adrp x11,0x3382000
+00b726a8  ldr x9,[x21, #0x28]
+00b726ac  ldr x11,[x11, #0x188]
+00b726b0  adrp x10,0x2a08000
+00b726b4  mov x20,x1
+00b726b8  mov x19,x0
+00b726bc  sub x8,x2,#0x1
+00b726c0  add x10,x10,#0x718
+00b726c4  add x11,x11,#0x10
+00b726c8  stur x9,[x29, #-0x28]
+00b726cc  stp x11,x8,[x0]
+00b726d0  strb wzr,[x0, #0x18]
+00b726d4  str x10,[x0, #0x10]
+00b726d8  mov w0,#0x1fbf
+    ; [PRE] try { // try from 00b726d8 to 00b726e3 has its CatchHandler @ 00b72790
+00b726dc  mov x2,xzr
+00b726e0  bl 0x008d49c0
+    ; [POST] } // end try from 00b726d8 to 00b726e3
+00b726e4  str x0,[x19, #0x20]
+00b726e8  cbz x0,0x00b72710
+00b726ec  ldr x8,[x21, #0x28]
+00b726f0  ldur x9,[x29, #-0x28]
+00b726f4  cmp x8,x9
+00b726f8  b.ne 0x00b72750
+00b726fc  ldp x29,x30,[sp, #0x60]
+00b72700  ldp x20,x19,[sp, #0x50]
+00b72704  ldr x21,[sp, #0x40]
+00b72708  add sp,sp,#0x70
+00b7270c  ret
+00b72710  add x0,sp,#0x8
+    ; [PRE] try { // try from 00b72710 to 00b7271b has its CatchHandler @ 00b7278c
+00b72714  mov x1,x20
+00b72718  bl 0x00a8d368
+    ; [POST] } // end try from 00b72710 to 00b7271b
+00b7271c  adrp x2,0x2a08000
+    ; [PRE] try { // try from 00b7271c to 00b7272f has its CatchHandler @ 00b72774
+00b72720  add x2,x2,#0x2e5
+00b72724  add x0,sp,#0x8
+00b72728  mov x1,xzr
+00b7272c  bl 0x008d3a20
+    ; [POST] } // end try from 00b7271c to 00b7272f
+00b72730  ldr x8,[x0, #0x10]
+00b72734  ldr q0,[x0]
+00b72738  str x8,[sp, #0x30]
+00b7273c  str q0,[sp, #0x20]
+00b72740  stp xzr,xzr,[x0, #0x8]
+00b72744  str xzr,[x0]
+00b72748  add x0,sp,#0x20
+    ; [PRE] try { // try from 00b72748 to 00b7274f has its CatchHandler @ 00b72754
+00b7274c  bl 0x00b70e70
+    ; [POST] } // end try from 00b72748 to 00b7274f
+00b72750  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b727c8_ctype_byname.txt
+================================================================================
+Function: ctype_byname @ 00b727c8
+FuncComment: std::__ndk1::ctype_byname<char>::ctype_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long)
+
+--- Calls OUT ---
+  -> newlocale @ 008d49c0
+  -> FUN_00b70e70 @ 00b70e70
+  -> FUN_00ab0244 @ 00ab0244
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- ctype_byname @ 008d53c0
+
+--- Listing ---
+00b727c8  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::ctype_byname<char>::ctype_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long)
+00b727cc  str x21,[sp, #0x20]
+00b727d0  stp x20,x19,[sp, #0x30]
+00b727d4  stp x29,x30,[sp, #0x40]
+00b727d8  add x29,sp,#0x40
+00b727dc  mrs x21,tpidr_el0
+00b727e0  ldr x8,[x21, #0x28]
+00b727e4  adrp x10,0x2a08000
+00b727e8  sub x9,x2,#0x1
+00b727ec  add x10,x10,#0x718
+00b727f0  str x8,[sp, #0x18]
+00b727f4  adrp x8,0x3382000
+00b727f8  ldr x8,[x8, #0x188]
+00b727fc  strb wzr,[x0, #0x18]
+00b72800  str x10,[x0, #0x10]
+00b72804  mov x20,x1
+00b72808  add x8,x8,#0x10
+00b7280c  stp x8,x9,[x0]
+00b72810  ldrb w8,[x1]
+00b72814  ldr x9,[x1, #0x10]
+00b72818  mov x19,x0
+00b7281c  tst w8,#0x1
+00b72820  csinc x1,x9,x1,ne
+00b72824  mov w0,#0x1fbf
+    ; [PRE] try { // try from 00b72824 to 00b7282f has its CatchHandler @ 00b72898
+00b72828  mov x2,xzr
+00b7282c  bl 0x008d49c0
+    ; [POST] } // end try from 00b72824 to 00b7282f
+00b72830  str x0,[x19, #0x20]
+00b72834  cbz x0,0x00b7285c
+00b72838  ldr x8,[x21, #0x28]
+00b7283c  ldr x9,[sp, #0x18]
+00b72840  cmp x8,x9
+00b72844  b.ne 0x00b72878
+00b72848  ldp x29,x30,[sp, #0x40]
+00b7284c  ldp x20,x19,[sp, #0x30]
+00b72850  ldr x21,[sp, #0x20]
+00b72854  add sp,sp,#0x50
+00b72858  ret
+00b7285c  adrp x0,0x2a08000
+    ; [PRE] try { // try from 00b7285c to 00b7286f has its CatchHandler @ 00b72894
+00b72860  add x0,x0,#0x2e5
+00b72864  mov x8,sp
+00b72868  mov x1,x20
+00b7286c  bl 0x00ab0244
+    ; [POST] } // end try from 00b7285c to 00b7286f
+00b72870  mov x0,sp
+    ; [PRE] try { // try from 00b72870 to 00b72877 has its CatchHandler @ 00b7287c
+00b72874  bl 0x00b70e70
+    ; [POST] } // end try from 00b72870 to 00b72877
+00b72878  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b728d0__ctype_byname.txt
+================================================================================
+Function: ~ctype_byname @ 00b728d0
+FuncComment: std::__ndk1::ctype_byname<char>::~ctype_byname()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> freelocale @ 008d4980
+  -> operator.delete @ 008d3ed0
+  -> operator.delete[] @ 008d4240
+
+--- Calls IN ---
+
+--- Listing ---
+00b728d0  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ctype_byname<char>::~ctype_byname()
+00b728d4  stp x29,x30,[sp, #0x10]
+00b728d8  add x29,sp,#0x10
+00b728dc  adrp x8,0x3382000
+00b728e0  mov x19,x0
+00b728e4  ldr x0,[x0, #0x20]
+00b728e8  ldr x8,[x8, #0x188]
+00b728ec  add x8,x8,#0x10
+00b728f0  str x8,[x19]
+00b728f4  bl 0x008d4980
+    ; [PRE] try { // try from 00b728f4 to 00b728f7 has its CatchHandler @ 00b72934
+    ; [POST] } // end try from 00b728f4 to 00b728f7
+00b728f8  adrp x8,0x335a000
+00b728fc  ldr x0,[x19, #0x10]
+00b72900  ldr x8,[x8, #0xc40]
+00b72904  add x8,x8,#0x10
+00b72908  str x8,[x19]
+00b7290c  cbz x0,0x00b7291c
+00b72910  ldrb w8,[x19, #0x18]
+00b72914  cbz w8,0x00b7291c
+00b72918  bl 0x008d4240
+00b7291c  mov x0,x19
+00b72920  bl 0x008d4ca0
+00b72924  ldp x29,x30,[sp, #0x10]
+00b72928  mov x0,x19
+00b7292c  ldp x20,x19,[sp], #0x20
+00b72930  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b72a08_ctype_byname.txt
+================================================================================
+Function: ctype_byname @ 00b72a08
+FuncComment: std::__ndk1::ctype_byname<wchar_t>::ctype_byname(char const*, unsigned long)
+
+--- Calls OUT ---
+  -> newlocale @ 008d49c0
+  -> insert @ 008d3a20
+  -> FUN_00b70e70 @ 00b70e70
+  -> FUN_00a8d368 @ 00a8d368
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- ctype_byname @ 008d47c0
+
+--- Listing ---
+00b72a08  sub sp,sp,#0x70
+    ; [PLATE] std::__ndk1::ctype_byname<wchar_t>::ctype_byname(char const*, unsigned long)
+00b72a0c  str x21,[sp, #0x40]
+00b72a10  stp x20,x19,[sp, #0x50]
+00b72a14  stp x29,x30,[sp, #0x60]
+00b72a18  add x29,sp,#0x60
+00b72a1c  mrs x21,tpidr_el0
+00b72a20  adrp x10,0x3313000
+00b72a24  ldr x8,[x21, #0x28]
+00b72a28  ldr x10,[x10, #0xc18]
+00b72a2c  mov x20,x1
+00b72a30  mov x19,x0
+00b72a34  sub x9,x2,#0x1
+00b72a38  add x10,x10,#0x10
+00b72a3c  stur x8,[x29, #-0x28]
+00b72a40  stp x10,x9,[x0]
+00b72a44  mov w0,#0x1fbf
+    ; [PRE] try { // try from 00b72a44 to 00b72a4f has its CatchHandler @ 00b72afc
+00b72a48  mov x2,xzr
+00b72a4c  bl 0x008d49c0
+    ; [POST] } // end try from 00b72a44 to 00b72a4f
+00b72a50  str x0,[x19, #0x10]
+00b72a54  cbz x0,0x00b72a7c
+00b72a58  ldr x8,[x21, #0x28]
+00b72a5c  ldur x9,[x29, #-0x28]
+00b72a60  cmp x8,x9
+00b72a64  b.ne 0x00b72abc
+00b72a68  ldp x29,x30,[sp, #0x60]
+00b72a6c  ldp x20,x19,[sp, #0x50]
+00b72a70  ldr x21,[sp, #0x40]
+00b72a74  add sp,sp,#0x70
+00b72a78  ret
+00b72a7c  add x0,sp,#0x8
+    ; [PRE] try { // try from 00b72a7c to 00b72a87 has its CatchHandler @ 00b72af8
+00b72a80  mov x1,x20
+00b72a84  bl 0x00a8d368
+    ; [POST] } // end try from 00b72a7c to 00b72a87
+00b72a88  adrp x2,0x2a08000
+    ; [PRE] try { // try from 00b72a88 to 00b72a9b has its CatchHandler @ 00b72ae0
+00b72a8c  add x2,x2,#0x31f
+00b72a90  add x0,sp,#0x8
+00b72a94  mov x1,xzr
+00b72a98  bl 0x008d3a20
+    ; [POST] } // end try from 00b72a88 to 00b72a9b
+00b72a9c  ldr x8,[x0, #0x10]
+00b72aa0  ldr q0,[x0]
+00b72aa4  str x8,[sp, #0x30]
+00b72aa8  str q0,[sp, #0x20]
+00b72aac  stp xzr,xzr,[x0, #0x8]
+00b72ab0  str xzr,[x0]
+00b72ab4  add x0,sp,#0x20
+    ; [PRE] try { // try from 00b72ab4 to 00b72abb has its CatchHandler @ 00b72ac0
+00b72ab8  bl 0x00b70e70
+    ; [POST] } // end try from 00b72ab4 to 00b72abb
+00b72abc  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b72b10_ctype_byname.txt
+================================================================================
+Function: ctype_byname @ 00b72b10
+FuncComment: std::__ndk1::ctype_byname<wchar_t>::ctype_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long)
+
+--- Calls OUT ---
+  -> newlocale @ 008d49c0
+  -> FUN_00b70e70 @ 00b70e70
+  -> FUN_00ab0244 @ 00ab0244
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- ctype_byname @ 008d3d50
+
+--- Listing ---
+00b72b10  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::ctype_byname<wchar_t>::ctype_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long)
+00b72b14  str x21,[sp, #0x20]
+00b72b18  stp x20,x19,[sp, #0x30]
+00b72b1c  stp x29,x30,[sp, #0x40]
+00b72b20  add x29,sp,#0x40
+00b72b24  mrs x21,tpidr_el0
+00b72b28  ldr x8,[x21, #0x28]
+00b72b2c  sub x9,x2,#0x1
+00b72b30  mov x20,x1
+00b72b34  mov x19,x0
+00b72b38  str x8,[sp, #0x18]
+00b72b3c  adrp x8,0x3313000
+00b72b40  ldr x8,[x8, #0xc18]
+00b72b44  add x8,x8,#0x10
+00b72b48  stp x8,x9,[x0]
+00b72b4c  ldrb w8,[x1]
+00b72b50  ldr x9,[x1, #0x10]
+00b72b54  tst w8,#0x1
+00b72b58  csinc x1,x9,x1,ne
+00b72b5c  mov w0,#0x1fbf
+    ; [PRE] try { // try from 00b72b5c to 00b72b67 has its CatchHandler @ 00b72bd0
+00b72b60  mov x2,xzr
+00b72b64  bl 0x008d49c0
+    ; [POST] } // end try from 00b72b5c to 00b72b67
+00b72b68  str x0,[x19, #0x10]
+00b72b6c  cbz x0,0x00b72b94
+00b72b70  ldr x8,[x21, #0x28]
+00b72b74  ldr x9,[sp, #0x18]
+00b72b78  cmp x8,x9
+00b72b7c  b.ne 0x00b72bb0
+00b72b80  ldp x29,x30,[sp, #0x40]
+00b72b84  ldp x20,x19,[sp, #0x30]
+00b72b88  ldr x21,[sp, #0x20]
+00b72b8c  add sp,sp,#0x50
+00b72b90  ret
+00b72b94  adrp x0,0x2a08000
+    ; [PRE] try { // try from 00b72b94 to 00b72ba7 has its CatchHandler @ 00b72bcc
+00b72b98  add x0,x0,#0x31f
+00b72b9c  mov x8,sp
+00b72ba0  mov x1,x20
+00b72ba4  bl 0x00ab0244
+    ; [POST] } // end try from 00b72b94 to 00b72ba7
+00b72ba8  mov x0,sp
+    ; [PRE] try { // try from 00b72ba8 to 00b72baf has its CatchHandler @ 00b72bb4
+00b72bac  bl 0x00b70e70
+    ; [POST] } // end try from 00b72ba8 to 00b72baf
+00b72bb0  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b72be4__ctype_byname.txt
+================================================================================
+Function: ~ctype_byname @ 00b72be4
+FuncComment: std::__ndk1::ctype_byname<wchar_t>::~ctype_byname()
+
+--- Calls OUT ---
+  -> freelocale @ 008d4980
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b72be4  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ctype_byname<wchar_t>::~ctype_byname()
+00b72be8  stp x29,x30,[sp, #0x10]
+00b72bec  add x29,sp,#0x10
+00b72bf0  adrp x8,0x3313000
+00b72bf4  mov x19,x0
+00b72bf8  ldr x0,[x0, #0x10]
+00b72bfc  ldr x8,[x8, #0xc18]
+00b72c00  add x8,x8,#0x10
+00b72c04  str x8,[x19]
+00b72c08  bl 0x008d4980
+    ; [PRE] try { // try from 00b72c08 to 00b72c0b has its CatchHandler @ 00b72c24
+    ; [POST] } // end try from 00b72c08 to 00b72c0b
+00b72c0c  mov x0,x19
+00b72c10  bl 0x008d4ca0
+00b72c14  ldp x29,x30,[sp, #0x10]
+00b72c18  mov x0,x19
+00b72c1c  ldp x20,x19,[sp], #0x20
+00b72c20  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b7b4d4__ctype_byname.txt
+================================================================================
+Function: ~ctype_byname @ 00b7b4d4
+FuncComment: std::__ndk1::ctype_byname<char>::~ctype_byname()
+
+--- Calls OUT ---
+  -> freelocale @ 008d4980
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete[] @ 008d4240
+
+--- Calls IN ---
+
+--- Listing ---
+00b7b4d4  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ctype_byname<char>::~ctype_byname()
+00b7b4d8  stp x29,x30,[sp, #0x10]
+00b7b4dc  add x29,sp,#0x10
+00b7b4e0  adrp x8,0x3382000
+00b7b4e4  mov x19,x0
+00b7b4e8  ldr x0,[x0, #0x20]
+00b7b4ec  ldr x8,[x8, #0x188]
+00b7b4f0  add x8,x8,#0x10
+00b7b4f4  str x8,[x19]
+00b7b4f8  bl 0x008d4980
+    ; [PRE] try { // try from 00b7b4f8 to 00b7b4fb has its CatchHandler @ 00b7b530
+    ; [POST] } // end try from 00b7b4f8 to 00b7b4fb
+00b7b4fc  adrp x8,0x335a000
+00b7b500  ldr x0,[x19, #0x10]
+00b7b504  ldr x8,[x8, #0xc40]
+00b7b508  add x8,x8,#0x10
+00b7b50c  str x8,[x19]
+00b7b510  cbz x0,0x00b7b520
+00b7b514  ldrb w8,[x19, #0x18]
+00b7b518  cbz w8,0x00b7b520
+00b7b51c  bl 0x008d4240
+00b7b520  ldp x29,x30,[sp, #0x10]
+00b7b524  mov x0,x19
+00b7b528  ldp x20,x19,[sp], #0x20
+00b7b52c  b 0x008d4ca0
+
+
+================================================================================
+### FILE: 00b7bbec__ctype_byname.txt
+================================================================================
+Function: ~ctype_byname @ 00b7bbec
+FuncComment: std::__ndk1::ctype_byname<wchar_t>::~ctype_byname()
+
+--- Calls OUT ---
+  -> freelocale @ 008d4980
+  -> ~__shared_count @ 008d4ca0
+
+--- Calls IN ---
+
+--- Listing ---
+00b7bbec  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ctype_byname<wchar_t>::~ctype_byname()
+00b7bbf0  stp x29,x30,[sp, #0x10]
+00b7bbf4  add x29,sp,#0x10
+00b7bbf8  adrp x8,0x3313000
+00b7bbfc  mov x19,x0
+00b7bc00  ldr x0,[x0, #0x10]
+00b7bc04  ldr x8,[x8, #0xc18]
+00b7bc08  add x8,x8,#0x10
+00b7bc0c  str x8,[x19]
+00b7bc10  bl 0x008d4980
+    ; [PRE] try { // try from 00b7bc10 to 00b7bc13 has its CatchHandler @ 00b7bc24
+    ; [POST] } // end try from 00b7bc10 to 00b7bc13
+00b7bc14  ldp x29,x30,[sp, #0x10]
+00b7bc18  mov x0,x19
+00b7bc1c  ldp x20,x19,[sp], #0x20
+00b7bc20  b 0x008d4ca0
+
+
+================================================================================
+### FILE: 037998b8___ctype_get_mb_cur_max.txt
+================================================================================
+Function: __ctype_get_mb_cur_max @ 037998b8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __ctype_get_mb_cur_max @ 008d5b50
+
+--- Listing ---
+037998b8  ?? ??
+
+

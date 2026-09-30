@@ -1,0 +1,185 @@
+================================================================================
+### FILE: 00e39c38_LuaFixData__.ctor.txt
+================================================================================
+Function: LuaFixData$$.ctor @ 00e39c38
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00e39c38  stp x21,x20,[sp, #-0x20]!
+00e39c3c  stp x19,x30,[sp, #0x10]
+00e39c40  adrp x20,0x3572000
+00e39c44  adrp x21,0x3331000
+00e39c48  ldrb w8,[x20, #0x7f9]
+00e39c4c  ldr x21,[x21, #0x9c0]
+00e39c50  mov x19,x0
+00e39c54  tbnz w8,#0x0,0x00e39c78
+00e39c58  adrp x0,0x331a000
+00e39c5c  ldr x0,[x0, #0xe40]
+00e39c60  bl 0x00b0789c
+00e39c64  adrp x0,0x3331000
+00e39c68  ldr x0,[x0, #0x9c0]
+00e39c6c  bl 0x00b0789c
+00e39c70  mov w8,#0x1
+00e39c74  strb w8,[x20, #0x7f9]
+00e39c78  ldr x0,[x21]
+00e39c7c  bl 0x00b079a0
+00e39c80  cbz x0,0x00e39cbc
+00e39c84  adrp x8,0x331a000
+00e39c88  ldr x8,[x8, #0xe40]
+00e39c8c  mov x20,x0
+00e39c90  ldr x1,[x8]
+00e39c94  bl 0x01bffe10
+00e39c98  mov x0,x19
+00e39c9c  str x20,[x0, #0x18]!
+00e39ca0  mov x1,x20
+00e39ca4  bl 0x00b07850
+00e39ca8  mov x0,x19
+00e39cac  ldp x19,x30,[sp, #0x10]
+00e39cb0  mov x1,xzr
+00e39cb4  ldp x21,x20,[sp], #0x20
+00e39cb8  b 0x024e277c
+00e39cbc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105d2b4_LuaCallCs__Start.txt
+================================================================================
+Function: LuaCallCs$$Start @ 0105d2b4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.LuaEnv$$DoString @ 010eecf8
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.LuaEnv$$.ctor @ 010eda30
+
+--- Calls IN ---
+
+--- Listing ---
+0105d2b4  stp x21,x20,[sp, #-0x20]!
+0105d2b8  stp x19,x30,[sp, #0x10]
+0105d2bc  adrp x20,0x3574000
+0105d2c0  adrp x21,0x3312000
+0105d2c4  ldrb w8,[x20, #0x706]
+0105d2c8  ldr x21,[x21, #0xf28]
+0105d2cc  mov x19,x0
+0105d2d0  tbnz w8,#0x0,0x0105d2f4
+0105d2d4  adrp x0,0x3312000
+0105d2d8  ldr x0,[x0, #0xf28]
+0105d2dc  bl 0x00b0789c
+0105d2e0  adrp x0,0x336b000
+0105d2e4  ldr x0,[x0, #0x5f8]
+0105d2e8  bl 0x00b0789c
+0105d2ec  mov w8,#0x1
+0105d2f0  strb w8,[x20, #0x706]
+0105d2f4  ldr x0,[x21]
+0105d2f8  bl 0x00b079a0
+0105d2fc  cbz x0,0x0105d34c
+0105d300  mov x1,xzr
+0105d304  mov x20,x0
+0105d308  bl 0x010eda30
+0105d30c  mov x21,x19
+0105d310  str x20,[x21, #0x18]!
+0105d314  mov x0,x21
+0105d318  mov x1,x20
+0105d31c  bl 0x00b07850
+0105d320  ldr x0,[x21]
+0105d324  cbz x0,0x0105d34c
+0105d328  adrp x8,0x336b000
+0105d32c  ldr x8,[x8, #0x5f8]
+0105d330  ldr x1,[x19, #0x20]
+0105d334  ldp x19,x30,[sp, #0x10]
+0105d338  mov x3,xzr
+0105d33c  ldr x2,[x8]
+0105d340  mov x4,xzr
+0105d344  ldp x21,x20,[sp], #0x20
+0105d348  b 0x010eecf8
+0105d34c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105d350_LuaCallCs__Update.txt
+================================================================================
+Function: LuaCallCs$$Update @ 0105d350
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Tick @ 010ef4d4
+
+--- Calls IN ---
+
+--- Listing ---
+0105d350  ldr x0,[x0, #0x18]
+0105d354  cbz x0,0x0105d360
+0105d358  mov x1,xzr
+0105d35c  b 0x010ef4d4
+0105d360  ret
+
+
+================================================================================
+### FILE: 0105d364_LuaCallCs__OnDestroy.txt
+================================================================================
+Function: LuaCallCs$$OnDestroy @ 0105d364
+
+--- Calls OUT ---
+  -> XLua.LuaEnv$$Dispose @ 010efa7c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0105d364  str x30,[sp, #-0x10]!
+0105d368  ldr x0,[x0, #0x18]
+0105d36c  cbz x0,0x0105d37c
+0105d370  mov x1,xzr
+0105d374  ldr x30,[sp], #0x10
+0105d378  b 0x010efa7c
+0105d37c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0105d380_LuaCallCs__.ctor.txt
+================================================================================
+Function: LuaCallCs$$.ctor @ 0105d380
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+0105d380  stp x21,x20,[sp, #-0x20]!
+0105d384  stp x19,x30,[sp, #0x10]
+0105d388  adrp x20,0x3574000
+0105d38c  adrp x21,0x337a000
+0105d390  ldrb w8,[x20, #0x707]
+0105d394  ldr x21,[x21, #0xa78]
+0105d398  mov x19,x0
+0105d39c  tbnz w8,#0x0,0x0105d3b4
+0105d3a0  adrp x0,0x337a000
+0105d3a4  ldr x0,[x0, #0xa78]
+0105d3a8  bl 0x00b0789c
+0105d3ac  mov w8,#0x1
+0105d3b0  strb w8,[x20, #0x707]
+0105d3b4  ldr x1,[x21]
+0105d3b8  mov x0,x19
+0105d3bc  str x1,[x0, #0x20]!
+0105d3c0  bl 0x00b07850
+0105d3c4  mov x0,x19
+0105d3c8  ldp x19,x30,[sp, #0x10]
+0105d3cc  mov x1,xzr
+0105d3d0  ldp x21,x20,[sp], #0x20
+0105d3d4  b 0x024e45bc
+
+

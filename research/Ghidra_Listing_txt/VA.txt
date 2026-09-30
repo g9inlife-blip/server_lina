@@ -1,0 +1,353 @@
+================================================================================
+### FILE: 008d5750_vasprintf.txt
+================================================================================
+Function: vasprintf @ 008d5750
+
+--- Calls OUT ---
+  -> vasprintf @ 03799768
+
+--- Calls IN ---
+  <- FUN_00b8e9ec @ 00b8e9ec
+  <- __libcpp_asprintf_l @ 00b5cb80
+
+--- Listing ---
+008d5750  adrp x16,0x3308000
+008d5754  ldr x17,[x16, #0x568]
+008d5758  add x16,x16,#0x568
+008d575c  br x17
+
+
+================================================================================
+### FILE: 00dd3404_ValueProtoInfo__get_PropertyName.txt
+================================================================================
+Function: ValueProtoInfo$$get_PropertyName @ 00dd3404
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp19 @ 01061abc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ValueProtoInfoWrap$$_g_get_PropertyName @ 01502630
+
+--- Listing ---
+00dd3404  stp x21,x20,[sp, #-0x20]!
+00dd3408  stp x19,x30,[sp, #0x10]
+00dd340c  adrp x20,0x3572000
+00dd3410  adrp x21,0x3372000
+00dd3414  ldrb w8,[x20, #0x258]
+00dd3418  ldr x21,[x21, #0x6c8]
+00dd341c  mov x19,x0
+00dd3420  tbnz w8,#0x0,0x00dd3438
+00dd3424  adrp x0,0x3372000
+00dd3428  ldr x0,[x0, #0x6c8]
+00dd342c  bl 0x00b0789c
+00dd3430  mov w8,#0x1
+00dd3434  strb w8,[x20, #0x258]
+00dd3438  ldr x8,[x21]
+00dd343c  ldr x8,[x8, #0xb8]
+00dd3440  ldr x0,[x8]
+00dd3444  cbz x0,0x00dd345c
+00dd3448  mov x1,x19
+00dd344c  ldp x19,x30,[sp, #0x10]
+00dd3450  mov x2,xzr
+00dd3454  ldp x21,x20,[sp], #0x20
+00dd3458  b 0x01061abc
+00dd345c  ldr x0,[x19, #0x10]
+00dd3460  ldp x19,x30,[sp, #0x10]
+00dd3464  ldp x21,x20,[sp], #0x20
+00dd3468  ret
+
+
+================================================================================
+### FILE: 00dd346c_ValueProtoInfo__set_PropertyName.txt
+================================================================================
+Function: ValueProtoInfo$$set_PropertyName @ 00dd346c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ValueProtoInfoWrap$$_s_set_PropertyName @ 01502b64
+  <- DataTool$$GetUnionProperty<object,-object> @ 017720a0
+
+--- Listing ---
+00dd346c  str x22,[sp, #-0x30]!
+00dd3470  stp x21,x20,[sp, #0x10]
+00dd3474  stp x19,x30,[sp, #0x20]
+00dd3478  adrp x21,0x3572000
+00dd347c  adrp x22,0x3372000
+00dd3480  ldrb w8,[x21, #0x259]
+00dd3484  ldr x22,[x22, #0x6c8]
+00dd3488  mov x19,x1
+00dd348c  mov x20,x0
+00dd3490  tbnz w8,#0x0,0x00dd34a8
+00dd3494  adrp x0,0x3372000
+00dd3498  ldr x0,[x0, #0x6c8]
+00dd349c  bl 0x00b0789c
+00dd34a0  mov w8,#0x1
+00dd34a4  strb w8,[x21, #0x259]
+00dd34a8  ldr x8,[x22]
+00dd34ac  ldr x8,[x8, #0xb8]
+00dd34b0  ldr x0,[x8, #0x8]
+00dd34b4  cbz x0,0x00dd34d4
+00dd34b8  mov x1,x20
+00dd34bc  mov x2,x19
+00dd34c0  ldp x19,x30,[sp, #0x20]
+00dd34c4  ldp x21,x20,[sp, #0x10]
+00dd34c8  mov x3,xzr
+00dd34cc  ldr x22,[sp], #0x30
+00dd34d0  b 0x0106125c
+00dd34d4  str x19,[x20, #0x10]!
+00dd34d8  mov x0,x20
+00dd34dc  mov x1,x19
+00dd34e0  ldp x19,x30,[sp, #0x20]
+00dd34e4  ldp x21,x20,[sp, #0x10]
+00dd34e8  ldr x22,[sp], #0x30
+00dd34ec  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dd34f0_ValueProtoInfo__get_ValueObjectProperty.txt
+================================================================================
+Function: ValueProtoInfo$$get_ValueObjectProperty @ 00dd34f0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp325 @ 0108909c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ValueProtoInfoWrap$$_g_get_ValueObjectProperty @ 015027e4
+  <- DataTool$$CopyTo<object,-object> @ 01771ddc
+
+--- Listing ---
+00dd34f0  stp x21,x20,[sp, #-0x20]!
+00dd34f4  stp x19,x30,[sp, #0x10]
+00dd34f8  adrp x20,0x3572000
+00dd34fc  adrp x21,0x3372000
+00dd3500  ldrb w8,[x20, #0x25a]
+00dd3504  ldr x21,[x21, #0x6c8]
+00dd3508  mov x19,x0
+00dd350c  tbnz w8,#0x0,0x00dd3524
+00dd3510  adrp x0,0x3372000
+00dd3514  ldr x0,[x0, #0x6c8]
+00dd3518  bl 0x00b0789c
+00dd351c  mov w8,#0x1
+00dd3520  strb w8,[x20, #0x25a]
+00dd3524  ldr x8,[x21]
+00dd3528  ldr x8,[x8, #0xb8]
+00dd352c  ldr x0,[x8, #0x10]
+00dd3530  cbz x0,0x00dd3548
+00dd3534  mov x1,x19
+00dd3538  ldp x19,x30,[sp, #0x10]
+00dd353c  mov x2,xzr
+00dd3540  ldp x21,x20,[sp], #0x20
+00dd3544  b 0x0108909c
+00dd3548  ldr x0,[x19, #0x18]
+00dd354c  ldp x19,x30,[sp, #0x10]
+00dd3550  ldp x21,x20,[sp], #0x20
+00dd3554  ret
+
+
+================================================================================
+### FILE: 00dd3558_ValueProtoInfo__set_ValueObjectProperty.txt
+================================================================================
+Function: ValueProtoInfo$$set_ValueObjectProperty @ 00dd3558
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- DataTool$$GetUnionProperty<object,-object> @ 017720a0
+  <- XLua.CSObjectWrap.ValueProtoInfoWrap$$_s_set_ValueObjectProperty @ 01502d28
+
+--- Listing ---
+00dd3558  str x22,[sp, #-0x30]!
+00dd355c  stp x21,x20,[sp, #0x10]
+00dd3560  stp x19,x30,[sp, #0x20]
+00dd3564  adrp x21,0x3572000
+00dd3568  adrp x22,0x3372000
+00dd356c  ldrb w8,[x21, #0x25b]
+00dd3570  ldr x22,[x22, #0x6c8]
+00dd3574  mov x19,x1
+00dd3578  mov x20,x0
+00dd357c  tbnz w8,#0x0,0x00dd3594
+00dd3580  adrp x0,0x3372000
+00dd3584  ldr x0,[x0, #0x6c8]
+00dd3588  bl 0x00b0789c
+00dd358c  mov w8,#0x1
+00dd3590  strb w8,[x21, #0x25b]
+00dd3594  ldr x8,[x22]
+00dd3598  ldr x8,[x8, #0xb8]
+00dd359c  ldr x0,[x8, #0x18]
+00dd35a0  cbz x0,0x00dd35c0
+00dd35a4  mov x1,x20
+00dd35a8  mov x2,x19
+00dd35ac  ldp x19,x30,[sp, #0x20]
+00dd35b0  ldp x21,x20,[sp, #0x10]
+00dd35b4  mov x3,xzr
+00dd35b8  ldr x22,[sp], #0x30
+00dd35bc  b 0x0106125c
+00dd35c0  str x19,[x20, #0x18]!
+00dd35c4  mov x0,x20
+00dd35c8  mov x1,x19
+00dd35cc  ldp x19,x30,[sp, #0x20]
+00dd35d0  ldp x21,x20,[sp, #0x10]
+00dd35d4  ldr x22,[sp], #0x30
+00dd35d8  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dd35dc_ValueProtoInfo__get_ProtoObjectProperty.txt
+================================================================================
+Function: ValueProtoInfo$$get_ProtoObjectProperty @ 00dd35dc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp325 @ 0108909c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ValueProtoInfoWrap$$_g_get_ProtoObjectProperty @ 015029a4
+  <- DataTool$$CopyTo<object,-object> @ 01771ddc
+
+--- Listing ---
+00dd35dc  stp x21,x20,[sp, #-0x20]!
+00dd35e0  stp x19,x30,[sp, #0x10]
+00dd35e4  adrp x20,0x3572000
+00dd35e8  adrp x21,0x3372000
+00dd35ec  ldrb w8,[x20, #0x25c]
+00dd35f0  ldr x21,[x21, #0x6c8]
+00dd35f4  mov x19,x0
+00dd35f8  tbnz w8,#0x0,0x00dd3610
+00dd35fc  adrp x0,0x3372000
+00dd3600  ldr x0,[x0, #0x6c8]
+00dd3604  bl 0x00b0789c
+00dd3608  mov w8,#0x1
+00dd360c  strb w8,[x20, #0x25c]
+00dd3610  ldr x8,[x21]
+00dd3614  ldr x8,[x8, #0xb8]
+00dd3618  ldr x0,[x8, #0x20]
+00dd361c  cbz x0,0x00dd3634
+00dd3620  mov x1,x19
+00dd3624  ldp x19,x30,[sp, #0x10]
+00dd3628  mov x2,xzr
+00dd362c  ldp x21,x20,[sp], #0x20
+00dd3630  b 0x0108909c
+00dd3634  ldr x0,[x19, #0x20]
+00dd3638  ldp x19,x30,[sp, #0x10]
+00dd363c  ldp x21,x20,[sp], #0x20
+00dd3640  ret
+
+
+================================================================================
+### FILE: 00dd3644_ValueProtoInfo__set_ProtoObjectProperty.txt
+================================================================================
+Function: ValueProtoInfo$$set_ProtoObjectProperty @ 00dd3644
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ValueProtoInfoWrap$$_s_set_ProtoObjectProperty @ 01502fa4
+  <- DataTool$$GetUnionProperty<object,-object> @ 017720a0
+
+--- Listing ---
+00dd3644  str x22,[sp, #-0x30]!
+00dd3648  stp x21,x20,[sp, #0x10]
+00dd364c  stp x19,x30,[sp, #0x20]
+00dd3650  adrp x21,0x3572000
+00dd3654  adrp x22,0x3372000
+00dd3658  ldrb w8,[x21, #0x25d]
+00dd365c  ldr x22,[x22, #0x6c8]
+00dd3660  mov x19,x1
+00dd3664  mov x20,x0
+00dd3668  tbnz w8,#0x0,0x00dd3680
+00dd366c  adrp x0,0x3372000
+00dd3670  ldr x0,[x0, #0x6c8]
+00dd3674  bl 0x00b0789c
+00dd3678  mov w8,#0x1
+00dd367c  strb w8,[x21, #0x25d]
+00dd3680  ldr x8,[x22]
+00dd3684  ldr x8,[x8, #0xb8]
+00dd3688  ldr x0,[x8, #0x28]
+00dd368c  cbz x0,0x00dd36ac
+00dd3690  mov x1,x20
+00dd3694  mov x2,x19
+00dd3698  ldp x19,x30,[sp, #0x20]
+00dd369c  ldp x21,x20,[sp, #0x10]
+00dd36a0  mov x3,xzr
+00dd36a4  ldr x22,[sp], #0x30
+00dd36a8  b 0x0106125c
+00dd36ac  str x19,[x20, #0x20]!
+00dd36b0  mov x0,x20
+00dd36b4  mov x1,x19
+00dd36b8  ldp x19,x30,[sp, #0x20]
+00dd36bc  ldp x21,x20,[sp, #0x10]
+00dd36c0  ldr x22,[sp], #0x30
+00dd36c4  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dd36c8_ValueProtoInfo__.ctor.txt
+================================================================================
+Function: ValueProtoInfo$$.ctor @ 00dd36c8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ValueProtoInfoWrap$$__CreateInstance @ 01502478
+  <- DataTool$$GetUnionProperty<object,-object> @ 017720a0
+
+--- Listing ---
+00dd36c8  stp x21,x20,[sp, #-0x20]!
+00dd36cc  stp x19,x30,[sp, #0x10]
+00dd36d0  adrp x21,0x3572000
+00dd36d4  adrp x20,0x3372000
+00dd36d8  ldrb w8,[x21, #0x25e]
+00dd36dc  ldr x20,[x20, #0x6c8]
+00dd36e0  mov x19,x0
+00dd36e4  tbnz w8,#0x0,0x00dd36fc
+00dd36e8  adrp x0,0x3372000
+00dd36ec  ldr x0,[x0, #0x6c8]
+00dd36f0  bl 0x00b0789c
+00dd36f4  mov w8,#0x1
+00dd36f8  strb w8,[x21, #0x25e]
+00dd36fc  mov x0,x19
+00dd3700  mov x1,xzr
+00dd3704  bl 0x02194104
+00dd3708  ldr x8,[x20]
+00dd370c  ldr x8,[x8, #0xb8]
+00dd3710  ldr x0,[x8, #0x30]
+00dd3714  cbz x0,0x00dd372c
+00dd3718  mov x1,x19
+00dd371c  ldp x19,x30,[sp, #0x10]
+00dd3720  mov x2,xzr
+00dd3724  ldp x21,x20,[sp], #0x20
+00dd3728  b 0x01060dac
+00dd372c  ldp x19,x30,[sp, #0x10]
+00dd3730  ldp x21,x20,[sp], #0x20
+00dd3734  ret
+
+
+================================================================================
+### FILE: 03799768_vasprintf.txt
+================================================================================
+Function: vasprintf @ 03799768
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- vasprintf @ 008d5750
+
+--- Listing ---
+03799768  ?? ??
+
+

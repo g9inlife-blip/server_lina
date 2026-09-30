@@ -1,0 +1,1037 @@
+================================================================================
+### FILE: 008d4440___format.txt
+================================================================================
+Function: __format @ 008d4440
+
+--- Calls OUT ---
+  -> __format @ 00b696fc
+
+--- Calls IN ---
+  <- do_put @ 00b68f60
+  <- do_put @ 00b69bf0
+
+--- Listing ---
+008d4440  adrp x16,0x3307000
+008d4444  ldr x17,[x16, #0xbe0]
+008d4448  add x16,x16,#0xbe0
+008d444c  br x17
+
+
+================================================================================
+### FILE: 008d5460_fopen.txt
+================================================================================
+Function: fopen @ 008d5460
+
+--- Calls OUT ---
+  -> fopen @ 03799690
+
+--- Calls IN ---
+  <- FUN_00af51ec @ 00af51ec
+
+--- Listing ---
+008d5460  adrp x16,0x3308000
+008d5464  ldr x17,[x16, #0x3f0]
+008d5468  add x16,x16,#0x3f0
+008d546c  br x17
+
+
+================================================================================
+### FILE: 008d5b80___format.txt
+================================================================================
+Function: __format @ 008d5b80
+
+--- Calls OUT ---
+  -> __format @ 00b68694
+
+--- Calls IN ---
+  <- do_put @ 00b68bac
+  <- do_put @ 00b67e5c
+
+--- Listing ---
+008d5b80  adrp x16,0x3308000
+008d5b84  ldr x17,[x16, #0x780]
+008d5b88  add x16,x16,#0x780
+008d5b8c  br x17
+
+
+================================================================================
+### FILE: 00b5b920___format_int.txt
+================================================================================
+Function: __format_int @ 00b5b920
+FuncComment: std::__ndk1::__num_put_base::__format_int(char*, char const*, bool, unsigned int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b5b920  tbnz w3,#0xb,0x00b5b934
+    ; [PLATE] std::__ndk1::__num_put_base::__format_int(char*, char const*, bool, unsigned int)
+00b5b924  tbnz w3,#0x9,0x00b5b940
+00b5b928  ldrb w8,[x1]
+00b5b92c  cbnz w8,0x00b5b950
+00b5b930  b 0x00b5b960
+00b5b934  mov w8,#0x2b
+00b5b938  strb w8,[x0], #0x1
+00b5b93c  tbz w3,#0x9,0x00b5b928
+00b5b940  mov w8,#0x23
+00b5b944  strb w8,[x0], #0x1
+00b5b948  ldrb w8,[x1]
+00b5b94c  cbz w8,0x00b5b960
+00b5b950  add x9,x1,#0x1
+00b5b954  strb w8,[x0], #0x1
+00b5b958  ldrb w8,[x9], #0x1
+00b5b95c  cbnz w8,0x00b5b954
+00b5b960  mov w8,#0x4a
+00b5b964  and w8,w3,w8
+00b5b968  cmp w8,#0x40
+00b5b96c  b.eq 0x00b5b990
+00b5b970  cmp w8,#0x8
+00b5b974  b.ne 0x00b5b99c
+00b5b978  tst w3,#0x4000
+00b5b97c  mov w8,#0x58
+00b5b980  mov w9,#0x78
+00b5b984  csel w8,w9,w8,eq
+00b5b988  strb w8,[x0]
+00b5b98c  ret
+00b5b990  mov w8,#0x6f
+00b5b994  strb w8,[x0]
+00b5b998  ret
+00b5b99c  tst w2,#0x1
+00b5b9a0  mov w8,#0x75
+00b5b9a4  mov w9,#0x64
+00b5b9a8  csel w8,w9,w8,ne
+00b5b9ac  strb w8,[x0]
+00b5b9b0  ret
+
+
+================================================================================
+### FILE: 00b5cac0___format_float.txt
+================================================================================
+Function: __format_float @ 00b5cac0
+FuncComment: std::__ndk1::__num_put_base::__format_float(char*, char const*, unsigned int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b5cac0  tbz w2,#0xb,0x00b5cacc
+    ; [PLATE] std::__ndk1::__num_put_base::__format_float(char*, char const*, unsigned int)
+00b5cac4  mov w8,#0x2b
+00b5cac8  strb w8,[x0], #0x1
+00b5cacc  tbz w2,#0xa,0x00b5cad8
+00b5cad0  mov w8,#0x23
+00b5cad4  strb w8,[x0], #0x1
+00b5cad8  mov w8,#0x104
+00b5cadc  and w9,w2,w8
+00b5cae0  cmp w9,#0x104
+00b5cae4  b.ne 0x00b5caf8
+00b5cae8  mov w8,wzr
+00b5caec  ldrb w10,[x1]
+00b5caf0  cbnz w10,0x00b5cb0c
+00b5caf4  b 0x00b5cb1c
+00b5caf8  mov w8,#0x2a2e
+00b5cafc  strh w8,[x0], #0x2
+00b5cb00  mov w8,#0x1
+00b5cb04  ldrb w10,[x1]
+00b5cb08  cbz w10,0x00b5cb1c
+00b5cb0c  add x11,x1,#0x1
+00b5cb10  strb w10,[x0], #0x1
+00b5cb14  ldrb w10,[x11], #0x1
+00b5cb18  cbnz w10,0x00b5cb10
+00b5cb1c  cmp w9,#0x100
+00b5cb20  b.eq 0x00b5cb3c
+00b5cb24  cmp w9,#0x4
+00b5cb28  b.ne 0x00b5cb4c
+00b5cb2c  tst w2,#0x4000
+00b5cb30  mov w9,#0x66
+00b5cb34  mov w10,#0x46
+00b5cb38  b 0x00b5cb70
+00b5cb3c  tst w2,#0x4000
+00b5cb40  mov w9,#0x65
+00b5cb44  mov w10,#0x45
+00b5cb48  b 0x00b5cb70
+00b5cb4c  cmp w9,#0x104
+00b5cb50  b.ne 0x00b5cb64
+00b5cb54  tst w2,#0x4000
+00b5cb58  mov w9,#0x61
+00b5cb5c  mov w10,#0x41
+00b5cb60  b 0x00b5cb70
+00b5cb64  tst w2,#0x4000
+00b5cb68  mov w9,#0x67
+00b5cb6c  mov w10,#0x47
+00b5cb70  csel w9,w10,w9,ne
+00b5cb74  strb w9,[x0]
+00b5cb78  mov w0,w8
+00b5cb7c  ret
+
+
+================================================================================
+### FILE: 00b68694___format.txt
+================================================================================
+Function: __format @ 00b68694
+FuncComment: std::__ndk1::__money_put<char>::__format(char*, char*&, char*&, unsigned int, char const*, char const*, std::__ndk1::ctype<char> const&, bool, std::__ndk1::money_base::pattern const&, char, char, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, int)
+
+--- Calls OUT ---
+  -> memmove @ 008d3fa0
+
+--- Calls IN ---
+  <- __format @ 008d5b80
+
+--- Listing ---
+00b68694  sub sp,sp,#0xc0
+    ; [PLATE] std::__ndk1::__money_put<char>::__format(char*, char*&, char*&, unsigned int, char const*, char const*, std::__ndk1::ctype<char> const&, bool, std::__ndk1::money_base::pattern const&, char, char, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, int)
+00b68698  stp x28,x27,[sp, #0x60]
+00b6869c  stp x26,x25,[sp, #0x70]
+00b686a0  stp x24,x23,[sp, #0x80]
+00b686a4  stp x22,x21,[sp, #0x90]
+00b686a8  stp x20,x19,[sp, #0xa0]
+00b686ac  stp x29,x30,[sp, #0xb0]
+00b686b0  add x29,sp,#0xb0
+00b686b4  ldr w8,[x29, #0x40]
+00b686b8  ldp x9,x28,[x29, #0x30]
+00b686bc  ldr x19,[x29, #0x28]
+00b686c0  ldrb w22,[x29, #0x20]
+00b686c4  ldrb w10,[x29, #0x18]
+00b686c8  ldr x21,[x29, #0x10]
+00b686cc  str w8,[sp, #0x3c]
+00b686d0  sub w8,w8,#0x1
+00b686d4  stp w7,w3,[sp, #0x34]
+00b686d8  str x0,[x2]
+00b686dc  stp x9,x28,[sp, #0x40]
+00b686e0  add x9,x9,#0x1
+00b686e4  cmp w8,#0x0
+00b686e8  adrp x14,0x2a08000
+00b686ec  mov x24,x6
+00b686f0  mov x25,x5
+00b686f4  mov x26,x4
+00b686f8  mov x20,x2
+00b686fc  mov x23,xzr
+00b68700  add x27,x19,#0x1
+00b68704  str x9,[sp, #0x10]
+00b68708  add x9,x28,#0x1
+00b6870c  str w8,[sp, #0xc]
+00b68710  cset w8,gt
+00b68714  add x14,x14,#0xe2
+00b68718  str x1,[sp, #0x58]
+00b6871c  str w10,[sp, #0x1c]
+00b68720  str x0,[sp]
+00b68724  stp x9,x21,[sp, #0x20]
+00b68728  str w8,[sp, #0x8]
+00b6872c  str x27,[sp, #0x50]
+00b68730  b 0x00b68778
+00b68734  ldr x8,[x20]
+00b68738  ldr x9,[sp, #0x58]
+00b6873c  mov w1,#0x20
+00b68740  mov x0,x24
+00b68744  str x8,[x9]
+00b68748  ldr x8,[x24]
+00b6874c  ldr x8,[x8, #0x38]
+00b68750  blr x8
+00b68754  ldr x8,[x20]
+00b68758  adrp x14,0x2a08000
+00b6875c  add x14,x14,#0xe2
+00b68760  add x9,x8,#0x1
+00b68764  str x9,[x20]
+00b68768  strb w0,[x8]
+00b6876c  add x23,x23,#0x1
+00b68770  cmp x23,#0x4
+00b68774  b.eq 0x00b68afc
+00b68778  ldrb w8,[x21, x23, LSL ]
+00b6877c  cmp w8,#0x4
+00b68780  b.hi 0x00b6876c
+00b68784  adr x9,0xb68734
+00b68788  ldrb w10,[x14, x8, LSL ]
+00b6878c  add x9,x9,x10, LSL #0x2
+00b68790  br x9
+00b68794  ldr x8,[x20]
+00b68798  ldr x9,[sp, #0x58]
+00b6879c  str x8,[x9]
+00b687a0  b 0x00b6876c
+00b687a4  ldr x9,[sp, #0x40]
+00b687a8  ldrb w8,[x9]
+00b687ac  ldr x9,[x9, #0x8]
+00b687b0  lsr x10,x8,#0x1
+00b687b4  tst w8,#0x1
+00b687b8  csel x27,x10,x9,eq
+00b687bc  ldr w9,[sp, #0x38]
+00b687c0  tbz w9,#0x9,0x00b68920
+00b687c4  cbz x27,0x00b68920
+00b687c8  ldr x9,[sp, #0x40]
+00b687cc  ldr x28,[x20]
+00b687d0  tst w8,#0x1
+00b687d4  ldr x8,[sp, #0x10]
+00b687d8  ldr x9,[x9, #0x10]
+00b687dc  mov x0,x28
+00b687e0  mov x2,x27
+00b687e4  csel x1,x8,x9,eq
+00b687e8  bl 0x008d3fa0
+00b687ec  add x8,x28,x27
+00b687f0  ldp x28,x27,[sp, #0x48]
+00b687f4  adrp x14,0x2a08000
+00b687f8  add x14,x14,#0xe2
+00b687fc  str x8,[x20]
+00b68800  b 0x00b6876c
+00b68804  ldrb w8,[x28]
+00b68808  ldr x9,[x28, #0x8]
+00b6880c  lsr x10,x8,#0x1
+00b68810  tst w8,#0x1
+00b68814  csel x8,x10,x9,eq
+00b68818  cbz x8,0x00b6876c
+00b6881c  ldr x8,[x28, #0x10]
+00b68820  ldr x10,[sp, #0x20]
+00b68824  ldr x9,[x20]
+00b68828  csel x8,x10,x8,eq
+00b6882c  ldrb w8,[x8]
+00b68830  add x10,x9,#0x1
+00b68834  str x10,[x20]
+00b68838  strb w8,[x9]
+00b6883c  b 0x00b6876c
+00b68840  ldr w8,[sp, #0x34]
+00b68844  ldr x15,[x20]
+00b68848  tst w8,#0x1
+00b6884c  cinc x26,x26,ne
+00b68850  cmp x26,x25
+00b68854  mov x8,x26
+00b68858  b.cs 0x00b68888
+00b6885c  mov x8,x26
+00b68860  ldrsb w9,[x8]
+00b68864  tbnz w9,#0x1f,0x00b68888
+00b68868  ldr x10,[x24, #0x10]
+00b6886c  and x9,x9,#0xff
+00b68870  ldr x9,[x10, x9, LSL #0x3]
+00b68874  tbz w9,#0x6,0x00b68888
+00b68878  add x8,x8,#0x1
+00b6887c  cmp x25,x8
+00b68880  b.ne 0x00b68860
+00b68884  mov x8,x25
+00b68888  ldr w9,[sp, #0x3c]
+00b6888c  cmp w9,#0x1
+00b68890  b.lt 0x00b68928
+00b68894  cmp x8,x26
+00b68898  b.ls 0x00b68970
+00b6889c  mov x28,x8
+00b688a0  ldrb w9,[x28, #-0x1]!
+00b688a4  ldr w27,[sp, #0xc]
+00b688a8  add x10,x15,#0x1
+00b688ac  str x10,[x20]
+00b688b0  strb w9,[x15]
+00b688b4  cmp w27,#0x1
+00b688b8  b.lt 0x00b68aec
+00b688bc  ldr w9,[sp, #0x8]
+00b688c0  cmp x28,x26
+00b688c4  b.ls 0x00b6890c
+00b688c8  ldr w27,[sp, #0xc]
+00b688cc  sub x8,x8,#0x2
+00b688d0  mov x10,x8
+00b688d4  ldr x11,[x20]
+00b688d8  ldrb w12,[x10], #-0x1
+00b688dc  sub w27,w27,#0x1
+00b688e0  cmp w27,#0x0
+00b688e4  cset w9,gt
+00b688e8  cmp w27,#0x1
+00b688ec  add x13,x11,#0x1
+00b688f0  str x13,[x20]
+00b688f4  strb w12,[x11]
+00b688f8  b.lt 0x00b68908
+00b688fc  cmp x8,x26
+00b68900  mov x8,x10
+00b68904  b.hi 0x00b688d4
+00b68908  add x28,x10,#0x1
+00b6890c  mov x21,x15
+00b68910  cbnz w9,0x00b6897c
+00b68914  mov w27,wzr
+00b68918  mov w0,wzr
+00b6891c  b 0x00b68990
+00b68920  ldr x27,[sp, #0x50]
+00b68924  b 0x00b6876c
+00b68928  mov x28,x8
+00b6892c  cmp x28,x26
+00b68930  b.ne 0x00b689e4
+00b68934  ldr x8,[x24]
+00b68938  mov w1,#0x30
+00b6893c  mov x0,x24
+00b68940  mov x21,x15
+00b68944  ldr x8,[x8, #0x38]
+00b68948  blr x8
+00b6894c  ldr x8,[x20]
+00b68950  mov x15,x21
+00b68954  ldr x21,[sp, #0x28]
+00b68958  adrp x14,0x2a08000
+00b6895c  add x9,x8,#0x1
+00b68960  add x14,x14,#0xe2
+00b68964  str x9,[x20]
+00b68968  strb w0,[x8]
+00b6896c  b 0x00b68aa4
+00b68970  ldr w27,[sp, #0x3c]
+00b68974  mov x21,x15
+00b68978  mov x28,x8
+00b6897c  ldr x8,[x24]
+00b68980  mov w1,#0x30
+00b68984  mov x0,x24
+00b68988  ldr x8,[x8, #0x38]
+00b6898c  blr x8
+00b68990  ldr x8,[x20]
+00b68994  adrp x14,0x2a08000
+00b68998  cmp w27,#0x1
+00b6899c  add x14,x14,#0xe2
+00b689a0  add x9,x8,#0x1
+00b689a4  mov x15,x21
+00b689a8  str x9,[x20]
+00b689ac  b.lt 0x00b689cc
+00b689b0  strb w0,[x8]
+00b689b4  ldr x8,[x20]
+00b689b8  sub w27,w27,#0x1
+00b689bc  cmp w27,#0x0
+00b689c0  add x9,x8,#0x1
+00b689c4  str x9,[x20]
+00b689c8  b.gt 0x00b689b0
+00b689cc  ldr w9,[sp, #0x1c]
+00b689d0  ldr x27,[sp, #0x50]
+00b689d4  ldr x21,[sp, #0x28]
+00b689d8  strb w9,[x8]
+00b689dc  cmp x28,x26
+00b689e0  b.eq 0x00b68934
+00b689e4  ldrb w8,[x19]
+00b689e8  ldr x9,[x19, #0x8]
+00b689ec  lsr x10,x8,#0x1
+00b689f0  tst w8,#0x1
+00b689f4  csel x9,x10,x9,eq
+00b689f8  cbz x9,0x00b68a10
+00b689fc  ldr x9,[x19, #0x10]
+00b68a00  tst w8,#0x1
+00b68a04  csel x8,x27,x9,eq
+00b68a08  ldrb w8,[x8]
+00b68a0c  b 0x00b68a14
+00b68a10  mov w8,#0xffffffff
+00b68a14  mov w9,wzr
+00b68a18  mov w10,wzr
+00b68a1c  cmp w10,w8
+00b68a20  b.ne 0x00b68a44
+00b68a24  b 0x00b68a6c
+00b68a28  ldr x8,[x19, #0x10]
+00b68a2c  tst w11,#0x1
+00b68a30  mov w10,wzr
+00b68a34  csel x8,x27,x8,eq
+00b68a38  ldrb w8,[x8, x9, LSL ]
+00b68a3c  cmp w8,#0xff
+00b68a40  csinv w8,w8,wzr,ne
+00b68a44  ldrb w11,[x28, #-0x1]!
+00b68a48  ldr x12,[x20]
+00b68a4c  add w10,w10,#0x1
+00b68a50  cmp x26,x28
+00b68a54  add x13,x12,#0x1
+00b68a58  str x13,[x20]
+00b68a5c  strb w11,[x12]
+00b68a60  b.eq 0x00b68aa4
+00b68a64  cmp w10,w8
+00b68a68  b.ne 0x00b68a44
+00b68a6c  ldr x10,[x20]
+00b68a70  add w9,w9,#0x1
+00b68a74  add x11,x10,#0x1
+00b68a78  str x11,[x20]
+00b68a7c  strb w22,[x10]
+00b68a80  ldrb w11,[x19]
+00b68a84  ldr x10,[x19, #0x8]
+00b68a88  lsr x12,x11,#0x1
+00b68a8c  tst w11,#0x1
+00b68a90  csel x10,x12,x10,eq
+00b68a94  cmp x10,x9
+00b68a98  b.hi 0x00b68a28
+00b68a9c  mov w10,wzr
+00b68aa0  b 0x00b68a44
+00b68aa4  ldr x8,[x20]
+00b68aa8  cmp x15,x8
+00b68aac  b.eq 0x00b68ae4
+00b68ab0  ldr x28,[sp, #0x48]
+00b68ab4  sub x8,x8,#0x1
+00b68ab8  cmp x8,x15
+00b68abc  b.ls 0x00b6876c
+00b68ac0  add x9,x15,#0x1
+00b68ac4  ldrb w10,[x8]
+00b68ac8  ldurb w11,[x9, #-0x1]
+00b68acc  sturb w10,[x9, #-0x1]
+00b68ad0  strb w11,[x8], #-0x1
+00b68ad4  cmp x9,x8
+00b68ad8  add x9,x9,#0x1
+00b68adc  b.cc 0x00b68ac4
+00b68ae0  b 0x00b6876c
+00b68ae4  ldr x28,[sp, #0x48]
+00b68ae8  b 0x00b6876c
+00b68aec  ldr w9,[sp, #0x8]
+00b68af0  mov x21,x15
+00b68af4  cbz w9,0x00b68914
+00b68af8  b 0x00b6897c
+00b68afc  ldrb w8,[x28]
+00b68b00  ldr x9,[x28, #0x8]
+00b68b04  lsr x10,x8,#0x1
+00b68b08  tst w8,#0x1
+00b68b0c  csel x9,x10,x9,eq
+00b68b10  cmp x9,#0x1
+00b68b14  b.ls 0x00b68b54
+00b68b18  ldr x10,[x28, #0x10]
+00b68b1c  tst w8,#0x1
+00b68b20  ldr x8,[sp, #0x20]
+00b68b24  ldr x23,[x20]
+00b68b28  add x11,x28,#0x2
+00b68b2c  csinc x1,x11,x10,eq
+00b68b30  csel x8,x8,x10,eq
+00b68b34  add x8,x8,x9
+00b68b38  subs x24,x8,x1
+00b68b3c  b.eq 0x00b68b4c
+00b68b40  mov x0,x23
+00b68b44  mov x2,x24
+00b68b48  bl 0x008d3fa0
+00b68b4c  add x8,x23,x24
+00b68b50  str x8,[x20]
+00b68b54  ldr w9,[sp, #0x38]
+00b68b58  mov w8,#0xb0
+00b68b5c  and w8,w9,w8
+00b68b60  cmp w8,#0x10
+00b68b64  b.eq 0x00b68b8c
+00b68b68  cmp w8,#0x20
+00b68b6c  b.ne 0x00b68b80
+00b68b70  ldr x8,[x20]
+00b68b74  ldr x9,[sp, #0x58]
+00b68b78  str x8,[x9]
+00b68b7c  b 0x00b68b8c
+00b68b80  ldr x8,[sp, #0x58]
+00b68b84  ldr x9,[sp]
+00b68b88  str x9,[x8]
+00b68b8c  ldp x29,x30,[sp, #0xb0]
+00b68b90  ldp x20,x19,[sp, #0xa0]
+00b68b94  ldp x22,x21,[sp, #0x90]
+00b68b98  ldp x24,x23,[sp, #0x80]
+00b68b9c  ldp x26,x25,[sp, #0x70]
+00b68ba0  ldp x28,x27,[sp, #0x60]
+00b68ba4  add sp,sp,#0xc0
+00b68ba8  ret
+
+
+================================================================================
+### FILE: 00b696fc___format.txt
+================================================================================
+Function: __format @ 00b696fc
+FuncComment: std::__ndk1::__money_put<wchar_t>::__format(wchar_t*, wchar_t*&, wchar_t*&, unsigned int, wchar_t const*, wchar_t const*, std::__ndk1::ctype<wchar_t> const&, bool, std::__ndk1::money_base::pattern const&, wchar_t, wchar_t, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> > const&, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> > const&, int)
+
+--- Calls OUT ---
+  -> memmove @ 008d3fa0
+
+--- Calls IN ---
+  <- __format @ 008d4440
+
+--- Listing ---
+00b696fc  sub sp,sp,#0xd0
+    ; [PLATE] std::__ndk1::__money_put<wchar_t>::__format(wchar_t*, wchar_t*&, wchar_t*&, unsigned int, wchar_t const*, wchar_t const*, std::__ndk1::ctype<wchar_t> const&, bool, std::__ndk1::money_base::pattern const&, wchar_t, wchar_t, std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> > const&, std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> > const&, int)
+00b69700  stp x28,x27,[sp, #0x70]
+00b69704  stp x26,x25,[sp, #0x80]
+00b69708  stp x24,x23,[sp, #0x90]
+00b6970c  stp x22,x21,[sp, #0xa0]
+00b69710  stp x20,x19,[sp, #0xb0]
+00b69714  stp x29,x30,[sp, #0xc0]
+00b69718  add x29,sp,#0xc0
+00b6971c  ldr w8,[x29, #0x40]
+00b69720  ldr x23,[x29, #0x28]
+00b69724  ldr w9,[x29, #0x18]
+00b69728  ldr w19,[x29, #0x20]
+00b6972c  str w8,[sp, #0x5c]
+00b69730  ldp x8,x26,[x29, #0x30]
+00b69734  ldr x22,[x29, #0x10]
+00b69738  str x0,[x2]
+00b6973c  adrp x11,0x2a08000
+00b69740  stp x8,x26,[sp, #0x48]
+00b69744  add x8,x8,#0x4
+00b69748  str x8,[sp, #0x18]
+00b6974c  add x8,x26,#0x8
+00b69750  mov x24,x6
+00b69754  mov x25,x5
+00b69758  mov x28,x4
+00b6975c  mov x20,x2
+00b69760  mov x27,x1
+00b69764  mov x21,xzr
+00b69768  str w9,[sp, #0x24]
+00b6976c  add x9,x23,#0x1
+00b69770  str x8,[sp, #0x10]
+00b69774  add x8,x26,#0x4
+00b69778  add x11,x11,#0xe7
+00b6977c  str w7,[sp, #0x34]
+00b69780  str w3,[sp, #0x44]
+00b69784  str x0,[sp, #0x8]
+00b69788  stur x9,[x29, #-0x58]
+00b6978c  str x8,[sp, #0x28]
+00b69790  str x1,[sp, #0x38]
+00b69794  b 0x00b697ac
+00b69798  adrp x11,0x2a08000
+00b6979c  add x11,x11,#0xe7
+00b697a0  add x21,x21,#0x1
+00b697a4  cmp x21,#0x4
+00b697a8  b.eq 0x00b69b48
+00b697ac  ldrb w8,[x22, x21, LSL ]
+00b697b0  cmp w8,#0x4
+00b697b4  b.hi 0x00b697a0
+00b697b8  adr x9,0xb697c8
+00b697bc  ldrb w10,[x11, x8, LSL ]
+00b697c0  add x9,x9,x10, LSL #0x2
+00b697c4  br x9
+00b697c8  ldr x8,[x20]
+00b697cc  str x8,[x27]
+00b697d0  b 0x00b697a0
+00b697d4  ldr x8,[x20]
+00b697d8  mov w1,#0x20
+00b697dc  mov x0,x24
+00b697e0  str x8,[x27]
+00b697e4  ldr x8,[x24]
+00b697e8  ldr x8,[x8, #0x58]
+00b697ec  blr x8
+00b697f0  ldr x8,[x20]
+00b697f4  adrp x11,0x2a08000
+00b697f8  add x11,x11,#0xe7
+00b697fc  add x9,x8,#0x4
+00b69800  str x9,[x20]
+00b69804  str w0,[x8]
+00b69808  b 0x00b697a0
+00b6980c  ldr x9,[sp, #0x48]
+00b69810  ldrb w8,[x9]
+00b69814  ldr x9,[x9, #0x8]
+00b69818  lsr x10,x8,#0x1
+00b6981c  tst w8,#0x1
+00b69820  csel x9,x10,x9,eq
+00b69824  ldr w10,[sp, #0x44]
+00b69828  tbz w10,#0x9,0x00b697a0
+00b6982c  cbz x9,0x00b697a0
+00b69830  ldr x10,[sp, #0x48]
+00b69834  tst w8,#0x1
+00b69838  ldr x8,[sp, #0x18]
+00b6983c  ldr x27,[x20]
+00b69840  ldr x10,[x10, #0x10]
+00b69844  lsl x2,x9,#0x2
+00b69848  sbfx x26,x9,#0x0,#0x3e
+00b6984c  csel x1,x8,x10,eq
+00b69850  cbz x2,0x00b69864
+00b69854  mov x0,x27
+00b69858  bl 0x008d3fa0
+00b6985c  adrp x11,0x2a08000
+00b69860  add x11,x11,#0xe7
+00b69864  add x8,x27,x26, LSL #0x2
+00b69868  ldr x27,[sp, #0x38]
+00b6986c  ldr x26,[sp, #0x50]
+00b69870  str x8,[x20]
+00b69874  b 0x00b697a0
+00b69878  ldrb w8,[x26]
+00b6987c  ldr x9,[x26, #0x8]
+00b69880  lsr x10,x8,#0x1
+00b69884  tst w8,#0x1
+00b69888  csel x8,x10,x9,eq
+00b6988c  cbz x8,0x00b697a0
+00b69890  ldr x8,[x26, #0x10]
+00b69894  ldr x10,[sp, #0x28]
+00b69898  ldr x9,[x20]
+00b6989c  csel x8,x10,x8,eq
+00b698a0  ldr w8,[x8]
+00b698a4  add x10,x9,#0x4
+00b698a8  str x10,[x20]
+00b698ac  str w8,[x9]
+00b698b0  b 0x00b697a0
+00b698b4  ldr x8,[x20]
+00b698b8  ldr w9,[sp, #0x34]
+00b698bc  str x8,[sp, #0x60]
+00b698c0  add x8,x28,#0x4
+00b698c4  tst w9,#0x1
+00b698c8  csel x28,x8,x28,ne
+00b698cc  cmp x28,x25
+00b698d0  mov x26,x28
+00b698d4  b.cs 0x00b69904
+00b698d8  mov x26,x28
+00b698dc  ldr x8,[x24]
+00b698e0  ldr w2,[x26]
+00b698e4  mov w1,#0x40
+00b698e8  mov x0,x24
+00b698ec  ldr x8,[x8, #0x18]
+00b698f0  blr x8
+00b698f4  tbz w0,#0x0,0x00b69904
+00b698f8  add x26,x26,#0x4
+00b698fc  cmp x26,x25
+00b69900  b.cc 0x00b698dc
+00b69904  ldr w8,[sp, #0x5c]
+00b69908  cmp w8,#0x1
+00b6990c  b.lt 0x00b69a14
+00b69910  cmp x26,x28
+00b69914  b.ls 0x00b69964
+00b69918  ldr x8,[x20]
+00b6991c  ldr w27,[sp, #0x5c]
+00b69920  sub x10,x26,#0x4
+00b69924  mov x9,x10
+00b69928  ldr w11,[x9], #-0x4
+00b6992c  sub w27,w27,#0x1
+00b69930  cmp w27,#0x1
+00b69934  str w11,[x8], #0x4
+00b69938  b.lt 0x00b69948
+00b6993c  cmp x10,x28
+00b69940  mov x10,x9
+00b69944  b.hi 0x00b69928
+00b69948  cmp w27,#0x0
+00b6994c  add x26,x9,#0x4
+00b69950  str x8,[x20]
+00b69954  b.gt 0x00b69968
+00b69958  ldr x9,[x20]
+00b6995c  add x8,x9,#0x4
+00b69960  b 0x00b69a04
+00b69964  ldr w27,[sp, #0x5c]
+00b69968  ldr x8,[x24]
+00b6996c  mov w1,#0x30
+00b69970  mov x0,x24
+00b69974  ldr x8,[x8, #0x58]
+00b69978  blr x8
+00b6997c  ldr x9,[x20]
+00b69980  sub w8,w27,#0x1
+00b69984  and w10,w8,w8, ASR #0x1f
+00b69988  sub w8,w8,w10
+00b6998c  add x11,x8,#0x1
+00b69990  add x8,x9,#0x4
+00b69994  cmp x11,#0x8
+00b69998  str x8,[x20]
+00b6999c  b.cs 0x00b699a8
+00b699a0  mov x10,x9
+00b699a4  b 0x00b699e8
+00b699a8  and x12,x11,#0x1fffffff8
+00b699ac  lsl x10,x12,#0x2
+00b699b0  dup v0.4S,w0
+00b699b4  sub w27,w27,w12
+00b699b8  add x8,x8,x10
+00b699bc  add x10,x9,x10
+00b699c0  add x13,x9,#0x10
+00b699c4  mov x14,x12
+00b699c8  stp q0,q0,[x13, #-0x10]
+00b699cc  subs x14,x14,#0x8
+00b699d0  add x13,x13,#0x20
+00b699d4  b.ne 0x00b699c8
+00b699d8  cmp x11,x12
+00b699dc  b.ne 0x00b699e8
+00b699e0  add x9,x9,x12, LSL #0x2
+00b699e4  b 0x00b69a04
+00b699e8  sub w27,w27,#0x1
+00b699ec  str w0,[x10]
+00b699f0  cmp w27,#0x0
+00b699f4  mov x10,x8
+00b699f8  add x8,x8,#0x4
+00b699fc  b.gt 0x00b699e8
+00b69a00  sub x9,x8,#0x4
+00b69a04  str x8,[x20]
+00b69a08  ldr w8,[sp, #0x24]
+00b69a0c  ldr x27,[sp, #0x38]
+00b69a10  str w8,[x9]
+00b69a14  cmp x26,x28
+00b69a18  b.eq 0x00b69a4c
+00b69a1c  ldrb w8,[x23]
+00b69a20  ldr x9,[x23, #0x8]
+00b69a24  lsr x10,x8,#0x1
+00b69a28  tst w8,#0x1
+00b69a2c  csel x9,x10,x9,eq
+00b69a30  cbz x9,0x00b69a74
+00b69a34  ldr x9,[x23, #0x10]
+00b69a38  tst w8,#0x1
+00b69a3c  ldur x8,[x29, #-0x58]
+00b69a40  csel x8,x8,x9,eq
+00b69a44  ldrb w8,[x8]
+00b69a48  b 0x00b69a78
+00b69a4c  ldr x8,[x24]
+00b69a50  mov w1,#0x30
+00b69a54  mov x0,x24
+00b69a58  ldr x8,[x8, #0x58]
+00b69a5c  blr x8
+00b69a60  ldr x8,[x20]
+00b69a64  add x12,x8,#0x4
+00b69a68  str x12,[x20]
+00b69a6c  str w0,[x8]
+00b69a70  b 0x00b69b08
+00b69a74  mov w8,#0xffffffff
+00b69a78  mov w9,wzr
+00b69a7c  mov w10,wzr
+00b69a80  b 0x00b69aa4
+00b69a84  mov x11,x12
+00b69a88  ldr w13,[x26, #-0x4]!
+00b69a8c  add x12,x11,#0x4
+00b69a90  add w10,w10,#0x1
+00b69a94  str x12,[x20]
+00b69a98  cmp x28,x26
+00b69a9c  str w13,[x11]
+00b69aa0  b.eq 0x00b69b08
+00b69aa4  ldr x12,[x20]
+00b69aa8  cmp w10,w8
+00b69aac  b.ne 0x00b69a84
+00b69ab0  add x11,x12,#0x4
+00b69ab4  str x11,[x20]
+00b69ab8  str w19,[x12]
+00b69abc  ldrb w12,[x23]
+00b69ac0  ldr x10,[x23, #0x8]
+00b69ac4  add w9,w9,#0x1
+00b69ac8  lsr x13,x12,#0x1
+00b69acc  tst w12,#0x1
+00b69ad0  csel x10,x13,x10,eq
+00b69ad4  cmp x10,x9
+00b69ad8  b.ls 0x00b69b00
+00b69adc  ldr x8,[x23, #0x10]
+00b69ae0  tst w12,#0x1
+00b69ae4  ldur x12,[x29, #-0x58]
+00b69ae8  mov w10,wzr
+00b69aec  csel x8,x12,x8,eq
+00b69af0  ldrb w8,[x8, x9, LSL ]
+00b69af4  cmp w8,#0xff
+00b69af8  csinv w8,w8,wzr,ne
+00b69afc  b 0x00b69a88
+00b69b00  mov w10,wzr
+00b69b04  b 0x00b69a88
+00b69b08  ldr x9,[sp, #0x60]
+00b69b0c  ldr x26,[sp, #0x50]
+00b69b10  cmp x9,x12
+00b69b14  b.eq 0x00b69798
+00b69b18  sub x8,x12,#0x4
+00b69b1c  cmp x8,x9
+00b69b20  b.ls 0x00b69798
+00b69b24  add x9,x9,#0x4
+00b69b28  ldr w10,[x8]
+00b69b2c  ldur w11,[x9, #-0x4]
+00b69b30  stur w10,[x9, #-0x4]
+00b69b34  str w11,[x8], #-0x4
+00b69b38  cmp x9,x8
+00b69b3c  add x9,x9,#0x4
+00b69b40  b.cc 0x00b69b28
+00b69b44  b 0x00b69798
+00b69b48  ldrb w8,[x26]
+00b69b4c  ldr x9,[x26, #0x8]
+00b69b50  lsr x10,x8,#0x1
+00b69b54  tst w8,#0x1
+00b69b58  csel x9,x10,x9,eq
+00b69b5c  cmp x9,#0x1
+00b69b60  b.ls 0x00b69ba4
+00b69b64  ldr x10,[x26, #0x10]
+00b69b68  ldr x11,[sp, #0x28]
+00b69b6c  tst w8,#0x1
+00b69b70  ldr x23,[x20]
+00b69b74  add x8,x10,#0x4
+00b69b78  csel x10,x11,x10,eq
+00b69b7c  ldr x11,[sp, #0x10]
+00b69b80  csel x1,x11,x8,eq
+00b69b84  add x8,x10,x9, LSL #0x2
+00b69b88  subs x2,x8,x1
+00b69b8c  asr x19,x2,#0x2
+00b69b90  b.eq 0x00b69b9c
+00b69b94  mov x0,x23
+00b69b98  bl 0x008d3fa0
+00b69b9c  add x8,x23,x19, LSL #0x2
+00b69ba0  str x8,[x20]
+00b69ba4  ldr w9,[sp, #0x44]
+00b69ba8  mov w8,#0xb0
+00b69bac  and w8,w9,w8
+00b69bb0  cmp w8,#0x10
+00b69bb4  b.eq 0x00b69bd0
+00b69bb8  cmp w8,#0x20
+00b69bbc  b.ne 0x00b69bc8
+00b69bc0  ldr x8,[x20]
+00b69bc4  b 0x00b69bcc
+00b69bc8  ldr x8,[sp, #0x8]
+00b69bcc  str x8,[x27]
+00b69bd0  ldp x29,x30,[sp, #0xc0]
+00b69bd4  ldp x20,x19,[sp, #0xb0]
+00b69bd8  ldp x22,x21,[sp, #0xa0]
+00b69bdc  ldp x24,x23,[sp, #0x90]
+00b69be0  ldp x26,x25,[sp, #0x80]
+00b69be4  ldp x28,x27,[sp, #0x70]
+00b69be8  add sp,sp,#0xd0
+00b69bec  ret
+
+
+================================================================================
+### FILE: 00df0378_ForginglistData__get_order.txt
+================================================================================
+Function: ForginglistData$$get_order @ 00df0378
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0378  ldr w0,[x0, #0x74]
+00df037c  ret
+
+
+================================================================================
+### FILE: 00df0380_ForginglistData__get_groupNameId.txt
+================================================================================
+Function: ForginglistData$$get_groupNameId @ 00df0380
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0380  ldr w0,[x0, #0x78]
+00df0384  ret
+
+
+================================================================================
+### FILE: 00df0388_ForginglistData__get_subNameId.txt
+================================================================================
+Function: ForginglistData$$get_subNameId @ 00df0388
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0388  ldr w0,[x0, #0x7c]
+00df038c  ret
+
+
+================================================================================
+### FILE: 00df0390_ForginglistData__get_equipmentId.txt
+================================================================================
+Function: ForginglistData$$get_equipmentId @ 00df0390
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0390  ldr w0,[x0, #0x80]
+00df0394  ret
+
+
+================================================================================
+### FILE: 00df0398_ForginglistData__get_forgingResult.txt
+================================================================================
+Function: ForginglistData$$get_forgingResult @ 00df0398
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0398  ldr x0,[x0, #0x88]
+00df039c  ret
+
+
+================================================================================
+### FILE: 00df03a0_ForginglistData__get_activityForgingResult.txt
+================================================================================
+Function: ForginglistData$$get_activityForgingResult @ 00df03a0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df03a0  ldr x0,[x0, #0x90]
+00df03a4  ret
+
+
+================================================================================
+### FILE: 00df03a8_ForginglistData__get_cost.txt
+================================================================================
+Function: ForginglistData$$get_cost @ 00df03a8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df03a8  ldr x0,[x0, #0x98]
+00df03ac  ret
+
+
+================================================================================
+### FILE: 00df03b0_ForginglistData__get_versionOpen.txt
+================================================================================
+Function: ForginglistData$$get_versionOpen @ 00df03b0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df03b0  ldr x0,[x0, #0xa0]
+00df03b4  ret
+
+
+================================================================================
+### FILE: 00df03b8_ForginglistData__.ctor.txt
+================================================================================
+Function: ForginglistData$$.ctor @ 00df03b8
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ForginglistDataWrap$$__CreateInstance @ 01297270
+
+--- Listing ---
+00df03b8  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00df03bc_ForginglistRecord__.ctor.txt
+================================================================================
+Function: ForginglistRecord$$.ctor @ 00df03bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00df03bc  stp x21,x20,[sp, #-0x20]!
+00df03c0  stp x19,x30,[sp, #0x10]
+00df03c4  adrp x20,0x3572000
+00df03c8  adrp x21,0x336a000
+00df03cc  ldrb w8,[x20, #0x449]
+00df03d0  ldr x21,[x21, #0x4d8]
+00df03d4  mov x19,x0
+00df03d8  tbnz w8,#0x0,0x00df03fc
+00df03dc  adrp x0,0x3379000
+00df03e0  ldr x0,[x0, #0x360]
+00df03e4  bl 0x00b0789c
+00df03e8  adrp x0,0x336a000
+00df03ec  ldr x0,[x0, #0x4d8]
+00df03f0  bl 0x00b0789c
+00df03f4  mov w8,#0x1
+00df03f8  strb w8,[x20, #0x449]
+00df03fc  ldr x0,[x21]
+00df0400  bl 0x00b079a0
+00df0404  cbz x0,0x00df0440
+00df0408  adrp x8,0x3379000
+00df040c  ldr x8,[x8, #0x360]
+00df0410  mov x20,x0
+00df0414  ldr x1,[x8]
+00df0418  bl 0x01bffe10
+00df041c  mov x0,x19
+00df0420  str x20,[x0, #0x18]!
+00df0424  mov x1,x20
+00df0428  bl 0x00b07850
+00df042c  mov x0,x19
+00df0430  ldp x19,x30,[sp, #0x10]
+00df0434  mov x1,xzr
+00df0438  ldp x21,x20,[sp], #0x20
+00df043c  b 0x024e277c
+00df0440  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 03799690_fopen.txt
+================================================================================
+Function: fopen @ 03799690
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- fopen @ 008d5460
+
+--- Listing ---
+03799690  ?? ??
+
+

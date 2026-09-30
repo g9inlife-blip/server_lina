@@ -1,0 +1,2388 @@
+================================================================================
+### FILE: 018f7fc4___f__AnonymousType0_char_-int___get_ch.txt
+================================================================================
+Function: <>f__AnonymousType0<char,-int>$$get_ch @ 018f7fc4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f7fc4  ldrh w0,[x0, #0x10]
+018f7fc8  ret
+
+
+================================================================================
+### FILE: 018f7fcc___f__AnonymousType0_char_-int___get_quotes.txt
+================================================================================
+Function: <>f__AnonymousType0<char,-int>$$get_quotes @ 018f7fcc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f7fcc  ldr w0,[x0, #0x14]
+018f7fd0  ret
+
+
+================================================================================
+### FILE: 018f7fd4___f__AnonymousType0_char_-int___.ctor.txt
+================================================================================
+Function: <>f__AnonymousType0<char,-int>$$.ctor @ 018f7fd4
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- AliothEngine.Utils.StringUtils.<>c__DisplayClass11_0$$<FormatJson>b__0 @ 0169c240
+
+--- Listing ---
+018f7fd4  stp x21,x20,[sp, #-0x20]!
+018f7fd8  stp x19,x30,[sp, #0x10]
+018f7fdc  mov w20,w1
+018f7fe0  mov x1,xzr
+018f7fe4  mov w19,w2
+018f7fe8  mov x21,x0
+018f7fec  bl 0x02194104
+018f7ff0  strh w20,[x21, #0x10]
+018f7ff4  str w19,[x21, #0x14]
+018f7ff8  ldp x19,x30,[sp, #0x10]
+018f7ffc  ldp x21,x20,[sp], #0x20
+018f8000  ret
+
+
+================================================================================
+### FILE: 018f8004___f__AnonymousType0_char_-int___Equals.txt
+================================================================================
+Function: <>f__AnonymousType0<char,-int>$$Equals @ 018f8004
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+018f8004  stp x21,x20,[sp, #-0x20]!
+018f8008  stp x19,x30,[sp, #0x10]
+018f800c  ldr x8,[x2, #0x20]
+018f8010  mov x20,x2
+018f8014  mov x21,x1
+018f8018  mov x19,x0
+018f801c  ldr x8,[x8, #0xc0]
+018f8020  ldr x8,[x8]
+018f8024  ldrb w9,[x8, #0x132]
+018f8028  tbnz w9,#0x0,0x018f8038
+018f802c  mov x0,x8
+018f8030  bl 0x00b2ac40
+018f8034  mov x8,x0
+018f8038  cbz x21,0x018f80b4
+018f803c  ldr x9,[x21]
+018f8040  cmp x9,x8
+018f8044  csel x21,x21,xzr,eq
+018f8048  b.ne 0x018f80b4
+018f804c  ldr x8,[x20, #0x20]
+018f8050  ldr x8,[x8, #0xc0]
+018f8054  ldr x0,[x8, #0x8]
+018f8058  ldr x8,[x0, #0x8]
+018f805c  blr x8
+018f8060  cbz x21,0x018f80c4
+018f8064  cbz x0,0x018f80c4
+018f8068  ldr x8,[x0]
+018f806c  ldrh w1,[x19, #0x10]
+018f8070  ldrh w2,[x21, #0x10]
+018f8074  ldp x9,x3,[x8, #0x1b8]
+018f8078  blr x9
+018f807c  tbz w0,#0x0,0x018f80b4
+018f8080  ldr x8,[x20, #0x20]
+018f8084  ldr x8,[x8, #0xc0]
+018f8088  ldr x0,[x8, #0x28]
+018f808c  ldr x8,[x0, #0x8]
+018f8090  blr x8
+018f8094  cbz x0,0x018f80c4
+018f8098  ldr x8,[x0]
+018f809c  ldr w2,[x21, #0x14]
+018f80a0  ldr w1,[x19, #0x14]
+018f80a4  ldp x19,x30,[sp, #0x10]
+018f80a8  ldp x4,x3,[x8, #0x1b8]
+018f80ac  ldp x21,x20,[sp], #0x20
+018f80b0  br x4
+018f80b4  ldp x19,x30,[sp, #0x10]
+018f80b8  mov w0,wzr
+018f80bc  ldp x21,x20,[sp], #0x20
+018f80c0  ret
+018f80c4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f80c8___f__AnonymousType0_char_-int___GetHashCode.txt
+================================================================================
+Function: <>f__AnonymousType0<char,-int>$$GetHashCode @ 018f80c8
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+018f80c8  str x20,[sp, #-0x20]!
+018f80cc  stp x19,x30,[sp, #0x10]
+018f80d0  ldr x8,[x1, #0x20]
+018f80d4  mov x19,x0
+018f80d8  mov x20,x1
+018f80dc  ldr x8,[x8, #0xc0]
+018f80e0  ldr x8,[x8, #0x8]
+018f80e4  ldr x9,[x8, #0x8]
+018f80e8  mov x0,x8
+018f80ec  blr x9
+018f80f0  cbz x0,0x018f8158
+018f80f4  ldr x8,[x0]
+018f80f8  ldrh w1,[x19, #0x10]
+018f80fc  ldp x9,x2,[x8, #0x1c8]
+018f8100  blr x9
+018f8104  ldr x8,[x20, #0x20]
+018f8108  mov w20,w0
+018f810c  ldr x8,[x8, #0xc0]
+018f8110  ldr x8,[x8, #0x28]
+018f8114  ldr x9,[x8, #0x8]
+018f8118  mov x0,x8
+018f811c  blr x9
+018f8120  cbz x0,0x018f8158
+018f8124  ldr x8,[x0]
+018f8128  ldr w1,[x19, #0x14]
+018f812c  ldp x9,x2,[x8, #0x1c8]
+018f8130  blr x9
+018f8134  mov w8,#0x5529
+018f8138  ldp x19,x30,[sp, #0x10]
+018f813c  movk w8,#0xa555, LSL #16
+018f8140  mov w9,#0xf410
+018f8144  madd w8,w20,w8,w0
+018f8148  movk w9,#0x2798, LSL #16
+018f814c  add w0,w8,w9
+018f8150  ldr x20,[sp], #0x20
+018f8154  ret
+018f8158  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f815c___f__AnonymousType0_char_-int___ToString.txt
+================================================================================
+Function: <>f__AnonymousType0<char,-int>$$ToString @ 018f815c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> System.Char$$ToString @ 020cbf14
+
+--- Calls IN ---
+
+--- Listing ---
+018f815c  sub sp,sp,#0x40
+018f8160  stp x23,x22,[sp, #0x10]
+018f8164  stp x21,x20,[sp, #0x20]
+018f8168  stp x19,x30,[sp, #0x30]
+018f816c  adrp x23,0x3578000
+018f8170  adrp x20,0x3370000
+018f8174  adrp x19,0x3363000
+018f8178  ldrb w8,[x23, #0x5d0]
+018f817c  ldr x20,[x20, #0x778]
+018f8180  ldr x19,[x19, #0xee8]
+018f8184  mov x21,x1
+018f8188  mov x22,x0
+018f818c  tbnz w8,#0x0,0x018f81b0
+018f8190  adrp x0,0x3370000
+018f8194  ldr x0,[x0, #0x778]
+018f8198  bl 0x00b0789c
+018f819c  adrp x0,0x3363000
+018f81a0  ldr x0,[x0, #0xee8]
+018f81a4  bl 0x00b0789c
+018f81a8  mov w8,#0x1
+018f81ac  strb w8,[x23, #0x5d0]
+018f81b0  ldr x0,[x20]
+018f81b4  mov w1,#0x2
+018f81b8  str wzr,[sp, #0x8]
+018f81bc  bl 0x00b078f8
+018f81c0  ldrh w8,[x22, #0x10]
+018f81c4  ldr x20,[x19]
+018f81c8  mov x19,x0
+018f81cc  add x0,sp,#0xc
+018f81d0  strh w8,[sp, #0xc]
+018f81d4  ldr x8,[x21, #0x20]
+018f81d8  ldr x8,[x8, #0xc0]
+018f81dc  ldr x1,[x8, #0x60]
+018f81e0  bl 0x020cbf14
+018f81e4  cbz x19,0x018f82a8
+018f81e8  mov x23,x0
+018f81ec  cbz x0,0x018f8204
+018f81f0  ldr x8,[x19]
+018f81f4  mov x0,x23
+018f81f8  ldr x1,[x8, #0x40]
+018f81fc  bl 0x00b07990
+018f8200  cbz x0,0x018f829c
+018f8204  ldr w8,[x19, #0x18]
+018f8208  cbz w8,0x018f8298
+018f820c  mov x0,x19
+018f8210  str x23,[x0, #0x20]!
+018f8214  mov x1,x23
+018f8218  bl 0x00b07850
+018f821c  ldr w8,[x22, #0x14]
+018f8220  add x0,sp,#0x8
+018f8224  str w8,[sp, #0x8]
+018f8228  ldr x8,[x21, #0x20]
+018f822c  ldr x8,[x8, #0xc0]
+018f8230  ldr x1,[x8, #0x70]
+018f8234  bl 0x0214dc44
+018f8238  mov x21,x0
+018f823c  cbz x0,0x018f8254
+018f8240  ldr x8,[x19]
+018f8244  mov x0,x21
+018f8248  ldr x1,[x8, #0x40]
+018f824c  bl 0x00b07990
+018f8250  cbz x0,0x018f829c
+018f8254  ldr w8,[x19, #0x18]
+018f8258  cmp w8,#0x1
+018f825c  b.ls 0x018f8298
+018f8260  mov x0,x19
+018f8264  str x21,[x0, #0x28]!
+018f8268  mov x1,x21
+018f826c  bl 0x00b07850
+018f8270  mov x0,xzr
+018f8274  mov x1,x20
+018f8278  mov x2,x19
+018f827c  mov x3,xzr
+018f8280  bl 0x01fdf988
+018f8284  ldp x19,x30,[sp, #0x30]
+018f8288  ldp x21,x20,[sp, #0x20]
+018f828c  ldp x23,x22,[sp, #0x10]
+018f8290  add sp,sp,#0x40
+018f8294  ret
+018f8298  bl 0x00b079b8
+018f829c  bl 0x00b079d4
+018f82a0  mov x1,xzr
+018f82a4  bl 0x00b07978
+018f82a8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f82ac___f__AnonymousType0_object_-object___get_ch.txt
+================================================================================
+Function: <>f__AnonymousType0<object,-object>$$get_ch @ 018f82ac
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f82ac  ldr x0,[x0, #0x10]
+018f82b0  ret
+
+
+================================================================================
+### FILE: 018f82b4___f__AnonymousType0_object_-object___get_quotes.txt
+================================================================================
+Function: <>f__AnonymousType0<object,-object>$$get_quotes @ 018f82b4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f82b4  ldr x0,[x0, #0x18]
+018f82b8  ret
+
+
+================================================================================
+### FILE: 018f82bc___f__AnonymousType0_object_-object___.ctor.txt
+================================================================================
+Function: <>f__AnonymousType0<object,-object>$$.ctor @ 018f82bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+018f82bc  stp x21,x20,[sp, #-0x20]!
+018f82c0  stp x19,x30,[sp, #0x10]
+018f82c4  mov x20,x1
+018f82c8  mov x1,xzr
+018f82cc  mov x19,x2
+018f82d0  mov x21,x0
+018f82d4  bl 0x02194104
+018f82d8  mov x0,x21
+018f82dc  str x20,[x0, #0x10]!
+018f82e0  mov x1,x20
+018f82e4  bl 0x00b07850
+018f82e8  str x19,[x21, #0x18]!
+018f82ec  mov x1,x19
+018f82f0  ldp x19,x30,[sp, #0x10]
+018f82f4  mov x0,x21
+018f82f8  ldp x21,x20,[sp], #0x20
+018f82fc  b 0x00b07850
+
+
+================================================================================
+### FILE: 018f8300___f__AnonymousType0_object_-object___Equals.txt
+================================================================================
+Function: <>f__AnonymousType0<object,-object>$$Equals @ 018f8300
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+018f8300  stp x21,x20,[sp, #-0x20]!
+018f8304  stp x19,x30,[sp, #0x10]
+018f8308  ldr x8,[x2, #0x20]
+018f830c  mov x20,x2
+018f8310  mov x21,x1
+018f8314  mov x19,x0
+018f8318  ldr x8,[x8, #0xc0]
+018f831c  ldr x8,[x8]
+018f8320  ldrb w9,[x8, #0x132]
+018f8324  tbnz w9,#0x0,0x018f8334
+018f8328  mov x0,x8
+018f832c  bl 0x00b2ac40
+018f8330  mov x8,x0
+018f8334  cbz x21,0x018f83b0
+018f8338  ldr x9,[x21]
+018f833c  cmp x9,x8
+018f8340  csel x21,x21,xzr,eq
+018f8344  b.ne 0x018f83b0
+018f8348  ldr x8,[x20, #0x20]
+018f834c  ldr x8,[x8, #0xc0]
+018f8350  ldr x0,[x8, #0x8]
+018f8354  ldr x8,[x0, #0x8]
+018f8358  blr x8
+018f835c  cbz x21,0x018f83c0
+018f8360  cbz x0,0x018f83c0
+018f8364  ldr x8,[x0]
+018f8368  ldr x1,[x19, #0x10]
+018f836c  ldr x2,[x21, #0x10]
+018f8370  ldp x9,x3,[x8, #0x1b8]
+018f8374  blr x9
+018f8378  tbz w0,#0x0,0x018f83b0
+018f837c  ldr x8,[x20, #0x20]
+018f8380  ldr x8,[x8, #0xc0]
+018f8384  ldr x0,[x8, #0x28]
+018f8388  ldr x8,[x0, #0x8]
+018f838c  blr x8
+018f8390  cbz x0,0x018f83c0
+018f8394  ldr x8,[x0]
+018f8398  ldr x2,[x21, #0x18]
+018f839c  ldr x1,[x19, #0x18]
+018f83a0  ldp x19,x30,[sp, #0x10]
+018f83a4  ldp x4,x3,[x8, #0x1b8]
+018f83a8  ldp x21,x20,[sp], #0x20
+018f83ac  br x4
+018f83b0  ldp x19,x30,[sp, #0x10]
+018f83b4  mov w0,wzr
+018f83b8  ldp x21,x20,[sp], #0x20
+018f83bc  ret
+018f83c0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f83c4___f__AnonymousType0_object_-object___GetHashCode.txt
+================================================================================
+Function: <>f__AnonymousType0<object,-object>$$GetHashCode @ 018f83c4
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+018f83c4  str x20,[sp, #-0x20]!
+018f83c8  stp x19,x30,[sp, #0x10]
+018f83cc  ldr x8,[x1, #0x20]
+018f83d0  mov x19,x0
+018f83d4  mov x20,x1
+018f83d8  ldr x8,[x8, #0xc0]
+018f83dc  ldr x8,[x8, #0x8]
+018f83e0  ldr x9,[x8, #0x8]
+018f83e4  mov x0,x8
+018f83e8  blr x9
+018f83ec  cbz x0,0x018f8454
+018f83f0  ldr x8,[x0]
+018f83f4  ldr x1,[x19, #0x10]
+018f83f8  ldp x9,x2,[x8, #0x1c8]
+018f83fc  blr x9
+018f8400  ldr x8,[x20, #0x20]
+018f8404  mov w20,w0
+018f8408  ldr x8,[x8, #0xc0]
+018f840c  ldr x8,[x8, #0x28]
+018f8410  ldr x9,[x8, #0x8]
+018f8414  mov x0,x8
+018f8418  blr x9
+018f841c  cbz x0,0x018f8454
+018f8420  ldr x8,[x0]
+018f8424  ldr x1,[x19, #0x18]
+018f8428  ldp x9,x2,[x8, #0x1c8]
+018f842c  blr x9
+018f8430  mov w8,#0x5529
+018f8434  ldp x19,x30,[sp, #0x10]
+018f8438  movk w8,#0xa555, LSL #16
+018f843c  mov w9,#0xf410
+018f8440  madd w8,w20,w8,w0
+018f8444  movk w9,#0x2798, LSL #16
+018f8448  add w0,w8,w9
+018f844c  ldr x20,[sp], #0x20
+018f8450  ret
+018f8454  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f8458___f__AnonymousType0_object_-object___ToString.txt
+================================================================================
+Function: <>f__AnonymousType0<object,-object>$$ToString @ 018f8458
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+018f8458  sub sp,sp,#0x40
+018f845c  str x22,[sp, #0x10]
+018f8460  stp x21,x20,[sp, #0x20]
+018f8464  stp x19,x30,[sp, #0x30]
+018f8468  adrp x22,0x3578000
+018f846c  adrp x19,0x3370000
+018f8470  adrp x20,0x3363000
+018f8474  ldrb w8,[x22, #0x5d1]
+018f8478  ldr x19,[x19, #0x778]
+018f847c  ldr x20,[x20, #0xee8]
+018f8480  mov x21,x0
+018f8484  tbnz w8,#0x0,0x018f84a8
+018f8488  adrp x0,0x3370000
+018f848c  ldr x0,[x0, #0x778]
+018f8490  bl 0x00b0789c
+018f8494  adrp x0,0x3363000
+018f8498  ldr x0,[x0, #0xee8]
+018f849c  bl 0x00b0789c
+018f84a0  mov w8,#0x1
+018f84a4  strb w8,[x22, #0x5d1]
+018f84a8  ldr x0,[x19]
+018f84ac  mov w1,#0x2
+018f84b0  str xzr,[sp, #0x8]
+018f84b4  bl 0x00b078f8
+018f84b8  ldr x8,[x21, #0x10]
+018f84bc  ldr x20,[x20]
+018f84c0  mov x19,x0
+018f84c4  str x8,[sp, #0x18]
+018f84c8  cbz x8,0x018f8560
+018f84cc  ldr x0,[sp, #0x18]
+018f84d0  cbz x0,0x018f8568
+018f84d4  ldr x8,[x0]
+018f84d8  ldp x9,x1,[x8, #0x168]
+018f84dc  blr x9
+018f84e0  mov x22,x0
+018f84e4  cbz x19,0x018f8568
+018f84e8  cbz x22,0x018f8500
+018f84ec  ldr x8,[x19]
+018f84f0  mov x0,x22
+018f84f4  ldr x1,[x8, #0x40]
+018f84f8  bl 0x00b07990
+018f84fc  cbz x0,0x018f8554
+018f8500  ldr w8,[x19, #0x18]
+018f8504  cbz w8,0x018f85b0
+018f8508  mov x0,x19
+018f850c  str x22,[x0, #0x20]!
+018f8510  mov x1,x22
+018f8514  bl 0x00b07850
+018f8518  ldr x8,[x21, #0x18]
+018f851c  str x8,[sp, #0x8]
+018f8520  cbz x8,0x018f856c
+018f8524  ldr x0,[sp, #0x8]
+018f8528  cbz x0,0x018f8568
+018f852c  ldr x8,[x0]
+018f8530  ldp x9,x1,[x8, #0x168]
+018f8534  blr x9
+018f8538  mov x21,x0
+018f853c  cbz x0,0x018f8570
+018f8540  ldr x8,[x19]
+018f8544  mov x0,x21
+018f8548  ldr x1,[x8, #0x40]
+018f854c  bl 0x00b07990
+018f8550  cbnz x0,0x018f8570
+018f8554  bl 0x00b079d4
+018f8558  mov x1,xzr
+018f855c  bl 0x00b07978
+018f8560  mov x22,xzr
+018f8564  cbnz x19,0x018f84e8
+018f8568  bl 0x00b079b0
+018f856c  mov x21,xzr
+018f8570  ldr w8,[x19, #0x18]
+018f8574  cmp w8,#0x1
+018f8578  b.ls 0x018f85b0
+018f857c  mov x0,x19
+018f8580  str x21,[x0, #0x28]!
+018f8584  mov x1,x21
+018f8588  bl 0x00b07850
+018f858c  mov x1,x20
+018f8590  mov x2,x19
+018f8594  ldp x19,x30,[sp, #0x30]
+018f8598  ldp x21,x20,[sp, #0x20]
+018f859c  ldr x22,[sp, #0x10]
+018f85a0  mov x0,xzr
+018f85a4  mov x3,xzr
+018f85a8  add sp,sp,#0x40
+018f85ac  b 0x01fdf988
+018f85b0  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 018f85b4___f__AnonymousType1_object_-object___get___h__TransparentIdentifier0.txt
+================================================================================
+Function: <>f__AnonymousType1<object,-object>$$get_<>h__TransparentIdentifier0 @ 018f85b4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f85b4  ldr x0,[x0, #0x10]
+018f85b8  ret
+
+
+================================================================================
+### FILE: 018f85bc___f__AnonymousType1_object_-object___get_lineBreak.txt
+================================================================================
+Function: <>f__AnonymousType1<object,-object>$$get_lineBreak @ 018f85bc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f85bc  ldr x0,[x0, #0x18]
+018f85c0  ret
+
+
+================================================================================
+### FILE: 018f85c4___f__AnonymousType1_object_-object___.ctor.txt
+================================================================================
+Function: <>f__AnonymousType1<object,-object>$$.ctor @ 018f85c4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- AliothEngine.Utils.StringUtils.<>c__DisplayClass11_0$$<FormatJson>b__1 @ 0169c2d8
+
+--- Listing ---
+018f85c4  stp x21,x20,[sp, #-0x20]!
+018f85c8  stp x19,x30,[sp, #0x10]
+018f85cc  mov x20,x1
+018f85d0  mov x1,xzr
+018f85d4  mov x19,x2
+018f85d8  mov x21,x0
+018f85dc  bl 0x02194104
+018f85e0  mov x0,x21
+018f85e4  str x20,[x0, #0x10]!
+018f85e8  mov x1,x20
+018f85ec  bl 0x00b07850
+018f85f0  str x19,[x21, #0x18]!
+018f85f4  mov x1,x19
+018f85f8  ldp x19,x30,[sp, #0x10]
+018f85fc  mov x0,x21
+018f8600  ldp x21,x20,[sp], #0x20
+018f8604  b 0x00b07850
+
+
+================================================================================
+### FILE: 018f8608___f__AnonymousType1_object_-object___Equals.txt
+================================================================================
+Function: <>f__AnonymousType1<object,-object>$$Equals @ 018f8608
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+018f8608  stp x21,x20,[sp, #-0x20]!
+018f860c  stp x19,x30,[sp, #0x10]
+018f8610  ldr x8,[x2, #0x20]
+018f8614  mov x20,x2
+018f8618  mov x21,x1
+018f861c  mov x19,x0
+018f8620  ldr x8,[x8, #0xc0]
+018f8624  ldr x8,[x8]
+018f8628  ldrb w9,[x8, #0x132]
+018f862c  tbnz w9,#0x0,0x018f863c
+018f8630  mov x0,x8
+018f8634  bl 0x00b2ac40
+018f8638  mov x8,x0
+018f863c  cbz x21,0x018f86b8
+018f8640  ldr x9,[x21]
+018f8644  cmp x9,x8
+018f8648  csel x21,x21,xzr,eq
+018f864c  b.ne 0x018f86b8
+018f8650  ldr x8,[x20, #0x20]
+018f8654  ldr x8,[x8, #0xc0]
+018f8658  ldr x0,[x8, #0x8]
+018f865c  ldr x8,[x0, #0x8]
+018f8660  blr x8
+018f8664  cbz x21,0x018f86c8
+018f8668  cbz x0,0x018f86c8
+018f866c  ldr x8,[x0]
+018f8670  ldr x1,[x19, #0x10]
+018f8674  ldr x2,[x21, #0x10]
+018f8678  ldp x9,x3,[x8, #0x1b8]
+018f867c  blr x9
+018f8680  tbz w0,#0x0,0x018f86b8
+018f8684  ldr x8,[x20, #0x20]
+018f8688  ldr x8,[x8, #0xc0]
+018f868c  ldr x0,[x8, #0x28]
+018f8690  ldr x8,[x0, #0x8]
+018f8694  blr x8
+018f8698  cbz x0,0x018f86c8
+018f869c  ldr x8,[x0]
+018f86a0  ldr x2,[x21, #0x18]
+018f86a4  ldr x1,[x19, #0x18]
+018f86a8  ldp x19,x30,[sp, #0x10]
+018f86ac  ldp x4,x3,[x8, #0x1b8]
+018f86b0  ldp x21,x20,[sp], #0x20
+018f86b4  br x4
+018f86b8  ldp x19,x30,[sp, #0x10]
+018f86bc  mov w0,wzr
+018f86c0  ldp x21,x20,[sp], #0x20
+018f86c4  ret
+018f86c8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f86cc___f__AnonymousType1_object_-object___GetHashCode.txt
+================================================================================
+Function: <>f__AnonymousType1<object,-object>$$GetHashCode @ 018f86cc
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+018f86cc  str x20,[sp, #-0x20]!
+018f86d0  stp x19,x30,[sp, #0x10]
+018f86d4  ldr x8,[x1, #0x20]
+018f86d8  mov x19,x0
+018f86dc  mov x20,x1
+018f86e0  ldr x8,[x8, #0xc0]
+018f86e4  ldr x8,[x8, #0x8]
+018f86e8  ldr x9,[x8, #0x8]
+018f86ec  mov x0,x8
+018f86f0  blr x9
+018f86f4  cbz x0,0x018f875c
+018f86f8  ldr x8,[x0]
+018f86fc  ldr x1,[x19, #0x10]
+018f8700  ldp x9,x2,[x8, #0x1c8]
+018f8704  blr x9
+018f8708  ldr x8,[x20, #0x20]
+018f870c  mov w20,w0
+018f8710  ldr x8,[x8, #0xc0]
+018f8714  ldr x8,[x8, #0x28]
+018f8718  ldr x9,[x8, #0x8]
+018f871c  mov x0,x8
+018f8720  blr x9
+018f8724  cbz x0,0x018f875c
+018f8728  ldr x8,[x0]
+018f872c  ldr x1,[x19, #0x18]
+018f8730  ldp x9,x2,[x8, #0x1c8]
+018f8734  blr x9
+018f8738  mov w8,#0x5529
+018f873c  ldp x19,x30,[sp, #0x10]
+018f8740  movk w8,#0xa555, LSL #16
+018f8744  mov w9,#0xeb54
+018f8748  madd w8,w20,w8,w0
+018f874c  movk w9,#0x6bef, LSL #16
+018f8750  add w0,w8,w9
+018f8754  ldr x20,[sp], #0x20
+018f8758  ret
+018f875c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f8760___f__AnonymousType1_object_-object___ToString.txt
+================================================================================
+Function: <>f__AnonymousType1<object,-object>$$ToString @ 018f8760
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+018f8760  sub sp,sp,#0x40
+018f8764  str x22,[sp, #0x10]
+018f8768  stp x21,x20,[sp, #0x20]
+018f876c  stp x19,x30,[sp, #0x30]
+018f8770  adrp x22,0x3578000
+018f8774  adrp x19,0x3370000
+018f8778  adrp x20,0x334a000
+018f877c  ldrb w8,[x22, #0x5d2]
+018f8780  ldr x19,[x19, #0x778]
+018f8784  ldr x20,[x20, #0x2f0]
+018f8788  mov x21,x0
+018f878c  tbnz w8,#0x0,0x018f87b0
+018f8790  adrp x0,0x3370000
+018f8794  ldr x0,[x0, #0x778]
+018f8798  bl 0x00b0789c
+018f879c  adrp x0,0x334a000
+018f87a0  ldr x0,[x0, #0x2f0]
+018f87a4  bl 0x00b0789c
+018f87a8  mov w8,#0x1
+018f87ac  strb w8,[x22, #0x5d2]
+018f87b0  ldr x0,[x19]
+018f87b4  mov w1,#0x2
+018f87b8  str xzr,[sp, #0x8]
+018f87bc  bl 0x00b078f8
+018f87c0  ldr x8,[x21, #0x10]
+018f87c4  ldr x20,[x20]
+018f87c8  mov x19,x0
+018f87cc  str x8,[sp, #0x18]
+018f87d0  cbz x8,0x018f8868
+018f87d4  ldr x0,[sp, #0x18]
+018f87d8  cbz x0,0x018f8870
+018f87dc  ldr x8,[x0]
+018f87e0  ldp x9,x1,[x8, #0x168]
+018f87e4  blr x9
+018f87e8  mov x22,x0
+018f87ec  cbz x19,0x018f8870
+018f87f0  cbz x22,0x018f8808
+018f87f4  ldr x8,[x19]
+018f87f8  mov x0,x22
+018f87fc  ldr x1,[x8, #0x40]
+018f8800  bl 0x00b07990
+018f8804  cbz x0,0x018f885c
+018f8808  ldr w8,[x19, #0x18]
+018f880c  cbz w8,0x018f88b8
+018f8810  mov x0,x19
+018f8814  str x22,[x0, #0x20]!
+018f8818  mov x1,x22
+018f881c  bl 0x00b07850
+018f8820  ldr x8,[x21, #0x18]
+018f8824  str x8,[sp, #0x8]
+018f8828  cbz x8,0x018f8874
+018f882c  ldr x0,[sp, #0x8]
+018f8830  cbz x0,0x018f8870
+018f8834  ldr x8,[x0]
+018f8838  ldp x9,x1,[x8, #0x168]
+018f883c  blr x9
+018f8840  mov x21,x0
+018f8844  cbz x0,0x018f8878
+018f8848  ldr x8,[x19]
+018f884c  mov x0,x21
+018f8850  ldr x1,[x8, #0x40]
+018f8854  bl 0x00b07990
+018f8858  cbnz x0,0x018f8878
+018f885c  bl 0x00b079d4
+018f8860  mov x1,xzr
+018f8864  bl 0x00b07978
+018f8868  mov x22,xzr
+018f886c  cbnz x19,0x018f87f0
+018f8870  bl 0x00b079b0
+018f8874  mov x21,xzr
+018f8878  ldr w8,[x19, #0x18]
+018f887c  cmp w8,#0x1
+018f8880  b.ls 0x018f88b8
+018f8884  mov x0,x19
+018f8888  str x21,[x0, #0x28]!
+018f888c  mov x1,x21
+018f8890  bl 0x00b07850
+018f8894  mov x1,x20
+018f8898  mov x2,x19
+018f889c  ldp x19,x30,[sp, #0x30]
+018f88a0  ldp x21,x20,[sp, #0x20]
+018f88a4  ldr x22,[sp, #0x10]
+018f88a8  mov x0,xzr
+018f88ac  mov x3,xzr
+018f88b0  add sp,sp,#0x40
+018f88b4  b 0x01fdf988
+018f88b8  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 018f88bc___f__AnonymousType2_object_-object___get___h__TransparentIdentifier1.txt
+================================================================================
+Function: <>f__AnonymousType2<object,-object>$$get_<>h__TransparentIdentifier1 @ 018f88bc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f88bc  ldr x0,[x0, #0x10]
+018f88c0  ret
+
+
+================================================================================
+### FILE: 018f88c4___f__AnonymousType2_object_-object___get_openChar.txt
+================================================================================
+Function: <>f__AnonymousType2<object,-object>$$get_openChar @ 018f88c4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f88c4  ldr x0,[x0, #0x18]
+018f88c8  ret
+
+
+================================================================================
+### FILE: 018f88cc___f__AnonymousType2_object_-object___.ctor.txt
+================================================================================
+Function: <>f__AnonymousType2<object,-object>$$.ctor @ 018f88cc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- AliothEngine.Utils.StringUtils.<>c__DisplayClass11_0$$<FormatJson>b__2 @ 0169c424
+
+--- Listing ---
+018f88cc  stp x21,x20,[sp, #-0x20]!
+018f88d0  stp x19,x30,[sp, #0x10]
+018f88d4  mov x20,x1
+018f88d8  mov x1,xzr
+018f88dc  mov x19,x2
+018f88e0  mov x21,x0
+018f88e4  bl 0x02194104
+018f88e8  mov x0,x21
+018f88ec  str x20,[x0, #0x10]!
+018f88f0  mov x1,x20
+018f88f4  bl 0x00b07850
+018f88f8  str x19,[x21, #0x18]!
+018f88fc  mov x1,x19
+018f8900  ldp x19,x30,[sp, #0x10]
+018f8904  mov x0,x21
+018f8908  ldp x21,x20,[sp], #0x20
+018f890c  b 0x00b07850
+
+
+================================================================================
+### FILE: 018f8910___f__AnonymousType2_object_-object___Equals.txt
+================================================================================
+Function: <>f__AnonymousType2<object,-object>$$Equals @ 018f8910
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+018f8910  stp x21,x20,[sp, #-0x20]!
+018f8914  stp x19,x30,[sp, #0x10]
+018f8918  ldr x8,[x2, #0x20]
+018f891c  mov x20,x2
+018f8920  mov x21,x1
+018f8924  mov x19,x0
+018f8928  ldr x8,[x8, #0xc0]
+018f892c  ldr x8,[x8]
+018f8930  ldrb w9,[x8, #0x132]
+018f8934  tbnz w9,#0x0,0x018f8944
+018f8938  mov x0,x8
+018f893c  bl 0x00b2ac40
+018f8940  mov x8,x0
+018f8944  cbz x21,0x018f89c0
+018f8948  ldr x9,[x21]
+018f894c  cmp x9,x8
+018f8950  csel x21,x21,xzr,eq
+018f8954  b.ne 0x018f89c0
+018f8958  ldr x8,[x20, #0x20]
+018f895c  ldr x8,[x8, #0xc0]
+018f8960  ldr x0,[x8, #0x8]
+018f8964  ldr x8,[x0, #0x8]
+018f8968  blr x8
+018f896c  cbz x21,0x018f89d0
+018f8970  cbz x0,0x018f89d0
+018f8974  ldr x8,[x0]
+018f8978  ldr x1,[x19, #0x10]
+018f897c  ldr x2,[x21, #0x10]
+018f8980  ldp x9,x3,[x8, #0x1b8]
+018f8984  blr x9
+018f8988  tbz w0,#0x0,0x018f89c0
+018f898c  ldr x8,[x20, #0x20]
+018f8990  ldr x8,[x8, #0xc0]
+018f8994  ldr x0,[x8, #0x28]
+018f8998  ldr x8,[x0, #0x8]
+018f899c  blr x8
+018f89a0  cbz x0,0x018f89d0
+018f89a4  ldr x8,[x0]
+018f89a8  ldr x2,[x21, #0x18]
+018f89ac  ldr x1,[x19, #0x18]
+018f89b0  ldp x19,x30,[sp, #0x10]
+018f89b4  ldp x4,x3,[x8, #0x1b8]
+018f89b8  ldp x21,x20,[sp], #0x20
+018f89bc  br x4
+018f89c0  ldp x19,x30,[sp, #0x10]
+018f89c4  mov w0,wzr
+018f89c8  ldp x21,x20,[sp], #0x20
+018f89cc  ret
+018f89d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f89d4___f__AnonymousType2_object_-object___GetHashCode.txt
+================================================================================
+Function: <>f__AnonymousType2<object,-object>$$GetHashCode @ 018f89d4
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+018f89d4  str x20,[sp, #-0x20]!
+018f89d8  stp x19,x30,[sp, #0x10]
+018f89dc  ldr x8,[x1, #0x20]
+018f89e0  mov x19,x0
+018f89e4  mov x20,x1
+018f89e8  ldr x8,[x8, #0xc0]
+018f89ec  ldr x8,[x8, #0x8]
+018f89f0  ldr x9,[x8, #0x8]
+018f89f4  mov x0,x8
+018f89f8  blr x9
+018f89fc  cbz x0,0x018f8a64
+018f8a00  ldr x8,[x0]
+018f8a04  ldr x1,[x19, #0x10]
+018f8a08  ldp x9,x2,[x8, #0x1c8]
+018f8a0c  blr x9
+018f8a10  ldr x8,[x20, #0x20]
+018f8a14  mov w20,w0
+018f8a18  ldr x8,[x8, #0xc0]
+018f8a1c  ldr x8,[x8, #0x28]
+018f8a20  ldr x9,[x8, #0x8]
+018f8a24  mov x0,x8
+018f8a28  blr x9
+018f8a2c  cbz x0,0x018f8a64
+018f8a30  ldr x8,[x0]
+018f8a34  ldr x1,[x19, #0x18]
+018f8a38  ldp x9,x2,[x8, #0x1c8]
+018f8a3c  blr x9
+018f8a40  mov w8,#0x5529
+018f8a44  ldp x19,x30,[sp, #0x10]
+018f8a48  movk w8,#0xa555, LSL #16
+018f8a4c  mov w9,#0x667a
+018f8a50  madd w8,w20,w8,w0
+018f8a54  movk w9,#0xfd, LSL #16
+018f8a58  add w0,w8,w9
+018f8a5c  ldr x20,[sp], #0x20
+018f8a60  ret
+018f8a64  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f8a68___f__AnonymousType2_object_-object___ToString.txt
+================================================================================
+Function: <>f__AnonymousType2<object,-object>$$ToString @ 018f8a68
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+018f8a68  sub sp,sp,#0x40
+018f8a6c  str x22,[sp, #0x10]
+018f8a70  stp x21,x20,[sp, #0x20]
+018f8a74  stp x19,x30,[sp, #0x30]
+018f8a78  adrp x22,0x3578000
+018f8a7c  adrp x19,0x3370000
+018f8a80  adrp x20,0x3332000
+018f8a84  ldrb w8,[x22, #0x5d3]
+018f8a88  ldr x19,[x19, #0x778]
+018f8a8c  ldr x20,[x20, #0x268]
+018f8a90  mov x21,x0
+018f8a94  tbnz w8,#0x0,0x018f8ab8
+018f8a98  adrp x0,0x3370000
+018f8a9c  ldr x0,[x0, #0x778]
+018f8aa0  bl 0x00b0789c
+018f8aa4  adrp x0,0x3332000
+018f8aa8  ldr x0,[x0, #0x268]
+018f8aac  bl 0x00b0789c
+018f8ab0  mov w8,#0x1
+018f8ab4  strb w8,[x22, #0x5d3]
+018f8ab8  ldr x0,[x19]
+018f8abc  mov w1,#0x2
+018f8ac0  str xzr,[sp, #0x8]
+018f8ac4  bl 0x00b078f8
+018f8ac8  ldr x8,[x21, #0x10]
+018f8acc  ldr x20,[x20]
+018f8ad0  mov x19,x0
+018f8ad4  str x8,[sp, #0x18]
+018f8ad8  cbz x8,0x018f8b70
+018f8adc  ldr x0,[sp, #0x18]
+018f8ae0  cbz x0,0x018f8b78
+018f8ae4  ldr x8,[x0]
+018f8ae8  ldp x9,x1,[x8, #0x168]
+018f8aec  blr x9
+018f8af0  mov x22,x0
+018f8af4  cbz x19,0x018f8b78
+018f8af8  cbz x22,0x018f8b10
+018f8afc  ldr x8,[x19]
+018f8b00  mov x0,x22
+018f8b04  ldr x1,[x8, #0x40]
+018f8b08  bl 0x00b07990
+018f8b0c  cbz x0,0x018f8b64
+018f8b10  ldr w8,[x19, #0x18]
+018f8b14  cbz w8,0x018f8bc0
+018f8b18  mov x0,x19
+018f8b1c  str x22,[x0, #0x20]!
+018f8b20  mov x1,x22
+018f8b24  bl 0x00b07850
+018f8b28  ldr x8,[x21, #0x18]
+018f8b2c  str x8,[sp, #0x8]
+018f8b30  cbz x8,0x018f8b7c
+018f8b34  ldr x0,[sp, #0x8]
+018f8b38  cbz x0,0x018f8b78
+018f8b3c  ldr x8,[x0]
+018f8b40  ldp x9,x1,[x8, #0x168]
+018f8b44  blr x9
+018f8b48  mov x21,x0
+018f8b4c  cbz x0,0x018f8b80
+018f8b50  ldr x8,[x19]
+018f8b54  mov x0,x21
+018f8b58  ldr x1,[x8, #0x40]
+018f8b5c  bl 0x00b07990
+018f8b60  cbnz x0,0x018f8b80
+018f8b64  bl 0x00b079d4
+018f8b68  mov x1,xzr
+018f8b6c  bl 0x00b07978
+018f8b70  mov x22,xzr
+018f8b74  cbnz x19,0x018f8af8
+018f8b78  bl 0x00b079b0
+018f8b7c  mov x21,xzr
+018f8b80  ldr w8,[x19, #0x18]
+018f8b84  cmp w8,#0x1
+018f8b88  b.ls 0x018f8bc0
+018f8b8c  mov x0,x19
+018f8b90  str x21,[x0, #0x28]!
+018f8b94  mov x1,x21
+018f8b98  bl 0x00b07850
+018f8b9c  mov x1,x20
+018f8ba0  mov x2,x19
+018f8ba4  ldp x19,x30,[sp, #0x30]
+018f8ba8  ldp x21,x20,[sp, #0x20]
+018f8bac  ldr x22,[sp, #0x10]
+018f8bb0  mov x0,xzr
+018f8bb4  mov x3,xzr
+018f8bb8  add sp,sp,#0x40
+018f8bbc  b 0x01fdf988
+018f8bc0  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 018f8bc4___f__AnonymousType3_object_-object___get___h__TransparentIdentifier2.txt
+================================================================================
+Function: <>f__AnonymousType3<object,-object>$$get_<>h__TransparentIdentifier2 @ 018f8bc4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f8bc4  ldr x0,[x0, #0x10]
+018f8bc8  ret
+
+
+================================================================================
+### FILE: 018f8bcc___f__AnonymousType3_object_-object___get_closeChar.txt
+================================================================================
+Function: <>f__AnonymousType3<object,-object>$$get_closeChar @ 018f8bcc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f8bcc  ldr x0,[x0, #0x18]
+018f8bd0  ret
+
+
+================================================================================
+### FILE: 018f8bd4___f__AnonymousType3_object_-object___.ctor.txt
+================================================================================
+Function: <>f__AnonymousType3<object,-object>$$.ctor @ 018f8bd4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- AliothEngine.Utils.StringUtils.<>c__DisplayClass11_0$$<FormatJson>b__3 @ 0169c584
+
+--- Listing ---
+018f8bd4  stp x21,x20,[sp, #-0x20]!
+018f8bd8  stp x19,x30,[sp, #0x10]
+018f8bdc  mov x20,x1
+018f8be0  mov x1,xzr
+018f8be4  mov x19,x2
+018f8be8  mov x21,x0
+018f8bec  bl 0x02194104
+018f8bf0  mov x0,x21
+018f8bf4  str x20,[x0, #0x10]!
+018f8bf8  mov x1,x20
+018f8bfc  bl 0x00b07850
+018f8c00  str x19,[x21, #0x18]!
+018f8c04  mov x1,x19
+018f8c08  ldp x19,x30,[sp, #0x10]
+018f8c0c  mov x0,x21
+018f8c10  ldp x21,x20,[sp], #0x20
+018f8c14  b 0x00b07850
+
+
+================================================================================
+### FILE: 018f8c18___f__AnonymousType3_object_-object___Equals.txt
+================================================================================
+Function: <>f__AnonymousType3<object,-object>$$Equals @ 018f8c18
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+018f8c18  stp x21,x20,[sp, #-0x20]!
+018f8c1c  stp x19,x30,[sp, #0x10]
+018f8c20  ldr x8,[x2, #0x20]
+018f8c24  mov x20,x2
+018f8c28  mov x21,x1
+018f8c2c  mov x19,x0
+018f8c30  ldr x8,[x8, #0xc0]
+018f8c34  ldr x8,[x8]
+018f8c38  ldrb w9,[x8, #0x132]
+018f8c3c  tbnz w9,#0x0,0x018f8c4c
+018f8c40  mov x0,x8
+018f8c44  bl 0x00b2ac40
+018f8c48  mov x8,x0
+018f8c4c  cbz x21,0x018f8cc8
+018f8c50  ldr x9,[x21]
+018f8c54  cmp x9,x8
+018f8c58  csel x21,x21,xzr,eq
+018f8c5c  b.ne 0x018f8cc8
+018f8c60  ldr x8,[x20, #0x20]
+018f8c64  ldr x8,[x8, #0xc0]
+018f8c68  ldr x0,[x8, #0x8]
+018f8c6c  ldr x8,[x0, #0x8]
+018f8c70  blr x8
+018f8c74  cbz x21,0x018f8cd8
+018f8c78  cbz x0,0x018f8cd8
+018f8c7c  ldr x8,[x0]
+018f8c80  ldr x1,[x19, #0x10]
+018f8c84  ldr x2,[x21, #0x10]
+018f8c88  ldp x9,x3,[x8, #0x1b8]
+018f8c8c  blr x9
+018f8c90  tbz w0,#0x0,0x018f8cc8
+018f8c94  ldr x8,[x20, #0x20]
+018f8c98  ldr x8,[x8, #0xc0]
+018f8c9c  ldr x0,[x8, #0x28]
+018f8ca0  ldr x8,[x0, #0x8]
+018f8ca4  blr x8
+018f8ca8  cbz x0,0x018f8cd8
+018f8cac  ldr x8,[x0]
+018f8cb0  ldr x2,[x21, #0x18]
+018f8cb4  ldr x1,[x19, #0x18]
+018f8cb8  ldp x19,x30,[sp, #0x10]
+018f8cbc  ldp x4,x3,[x8, #0x1b8]
+018f8cc0  ldp x21,x20,[sp], #0x20
+018f8cc4  br x4
+018f8cc8  ldp x19,x30,[sp, #0x10]
+018f8ccc  mov w0,wzr
+018f8cd0  ldp x21,x20,[sp], #0x20
+018f8cd4  ret
+018f8cd8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f8cdc___f__AnonymousType3_object_-object___GetHashCode.txt
+================================================================================
+Function: <>f__AnonymousType3<object,-object>$$GetHashCode @ 018f8cdc
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+018f8cdc  str x20,[sp, #-0x20]!
+018f8ce0  stp x19,x30,[sp, #0x10]
+018f8ce4  ldr x8,[x1, #0x20]
+018f8ce8  mov x19,x0
+018f8cec  mov x20,x1
+018f8cf0  ldr x8,[x8, #0xc0]
+018f8cf4  ldr x8,[x8, #0x8]
+018f8cf8  ldr x9,[x8, #0x8]
+018f8cfc  mov x0,x8
+018f8d00  blr x9
+018f8d04  cbz x0,0x018f8d6c
+018f8d08  ldr x8,[x0]
+018f8d0c  ldr x1,[x19, #0x10]
+018f8d10  ldp x9,x2,[x8, #0x1c8]
+018f8d14  blr x9
+018f8d18  ldr x8,[x20, #0x20]
+018f8d1c  mov w20,w0
+018f8d20  ldr x8,[x8, #0xc0]
+018f8d24  ldr x8,[x8, #0x28]
+018f8d28  ldr x9,[x8, #0x8]
+018f8d2c  mov x0,x8
+018f8d30  blr x9
+018f8d34  cbz x0,0x018f8d6c
+018f8d38  ldr x8,[x0]
+018f8d3c  ldr x1,[x19, #0x18]
+018f8d40  ldp x9,x2,[x8, #0x1c8]
+018f8d44  blr x9
+018f8d48  mov w8,#0x5529
+018f8d4c  ldp x19,x30,[sp, #0x10]
+018f8d50  movk w8,#0xa555, LSL #16
+018f8d54  mov w9,#0xf4e3
+018f8d58  madd w8,w20,w8,w0
+018f8d5c  movk w9,#0x764d, LSL #16
+018f8d60  add w0,w8,w9
+018f8d64  ldr x20,[sp], #0x20
+018f8d68  ret
+018f8d6c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f8d70___f__AnonymousType3_object_-object___ToString.txt
+================================================================================
+Function: <>f__AnonymousType3<object,-object>$$ToString @ 018f8d70
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+018f8d70  sub sp,sp,#0x40
+018f8d74  str x22,[sp, #0x10]
+018f8d78  stp x21,x20,[sp, #0x20]
+018f8d7c  stp x19,x30,[sp, #0x30]
+018f8d80  adrp x22,0x3578000
+018f8d84  adrp x19,0x3370000
+018f8d88  adrp x20,0x334f000
+018f8d8c  ldrb w8,[x22, #0x5d4]
+018f8d90  ldr x19,[x19, #0x778]
+018f8d94  ldr x20,[x20, #0x750]
+018f8d98  mov x21,x0
+018f8d9c  tbnz w8,#0x0,0x018f8dc0
+018f8da0  adrp x0,0x3370000
+018f8da4  ldr x0,[x0, #0x778]
+018f8da8  bl 0x00b0789c
+018f8dac  adrp x0,0x334f000
+018f8db0  ldr x0,[x0, #0x750]
+018f8db4  bl 0x00b0789c
+018f8db8  mov w8,#0x1
+018f8dbc  strb w8,[x22, #0x5d4]
+018f8dc0  ldr x0,[x19]
+018f8dc4  mov w1,#0x2
+018f8dc8  str xzr,[sp, #0x8]
+018f8dcc  bl 0x00b078f8
+018f8dd0  ldr x8,[x21, #0x10]
+018f8dd4  ldr x20,[x20]
+018f8dd8  mov x19,x0
+018f8ddc  str x8,[sp, #0x18]
+018f8de0  cbz x8,0x018f8e78
+018f8de4  ldr x0,[sp, #0x18]
+018f8de8  cbz x0,0x018f8e80
+018f8dec  ldr x8,[x0]
+018f8df0  ldp x9,x1,[x8, #0x168]
+018f8df4  blr x9
+018f8df8  mov x22,x0
+018f8dfc  cbz x19,0x018f8e80
+018f8e00  cbz x22,0x018f8e18
+018f8e04  ldr x8,[x19]
+018f8e08  mov x0,x22
+018f8e0c  ldr x1,[x8, #0x40]
+018f8e10  bl 0x00b07990
+018f8e14  cbz x0,0x018f8e6c
+018f8e18  ldr w8,[x19, #0x18]
+018f8e1c  cbz w8,0x018f8ec8
+018f8e20  mov x0,x19
+018f8e24  str x22,[x0, #0x20]!
+018f8e28  mov x1,x22
+018f8e2c  bl 0x00b07850
+018f8e30  ldr x8,[x21, #0x18]
+018f8e34  str x8,[sp, #0x8]
+018f8e38  cbz x8,0x018f8e84
+018f8e3c  ldr x0,[sp, #0x8]
+018f8e40  cbz x0,0x018f8e80
+018f8e44  ldr x8,[x0]
+018f8e48  ldp x9,x1,[x8, #0x168]
+018f8e4c  blr x9
+018f8e50  mov x21,x0
+018f8e54  cbz x0,0x018f8e88
+018f8e58  ldr x8,[x19]
+018f8e5c  mov x0,x21
+018f8e60  ldr x1,[x8, #0x40]
+018f8e64  bl 0x00b07990
+018f8e68  cbnz x0,0x018f8e88
+018f8e6c  bl 0x00b079d4
+018f8e70  mov x1,xzr
+018f8e74  bl 0x00b07978
+018f8e78  mov x22,xzr
+018f8e7c  cbnz x19,0x018f8e00
+018f8e80  bl 0x00b079b0
+018f8e84  mov x21,xzr
+018f8e88  ldr w8,[x19, #0x18]
+018f8e8c  cmp w8,#0x1
+018f8e90  b.ls 0x018f8ec8
+018f8e94  mov x0,x19
+018f8e98  str x21,[x0, #0x28]!
+018f8e9c  mov x1,x21
+018f8ea0  bl 0x00b07850
+018f8ea4  mov x1,x20
+018f8ea8  mov x2,x19
+018f8eac  ldp x19,x30,[sp, #0x30]
+018f8eb0  ldp x21,x20,[sp, #0x20]
+018f8eb4  ldr x22,[sp, #0x10]
+018f8eb8  mov x0,xzr
+018f8ebc  mov x3,xzr
+018f8ec0  add sp,sp,#0x40
+018f8ec4  b 0x01fdf988
+018f8ec8  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 018f8ecc___f__AnonymousType4_Int32Enum_-object_-int___get_Type.txt
+================================================================================
+Function: <>f__AnonymousType4<Int32Enum,-object,-int>$$get_Type @ 018f8ecc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f8ecc  ldr w0,[x0, #0x10]
+018f8ed0  ret
+
+
+================================================================================
+### FILE: 018f8ed4___f__AnonymousType4_Int32Enum_-object_-int___get_Value.txt
+================================================================================
+Function: <>f__AnonymousType4<Int32Enum,-object,-int>$$get_Value @ 018f8ed4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f8ed4  ldr x0,[x0, #0x18]
+018f8ed8  ret
+
+
+================================================================================
+### FILE: 018f8edc___f__AnonymousType4_Int32Enum_-object_-int___get_Index.txt
+================================================================================
+Function: <>f__AnonymousType4<Int32Enum,-object,-int>$$get_Index @ 018f8edc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f8edc  ldr w0,[x0, #0x20]
+018f8ee0  ret
+
+
+================================================================================
+### FILE: 018f8ee4___f__AnonymousType4_Int32Enum_-object_-int___.ctor.txt
+================================================================================
+Function: <>f__AnonymousType4<Int32Enum,-object,-int>$$.ctor @ 018f8ee4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.TemplateEngine.Parser.<>c$$<Parse>b__7_2 @ 01105a60
+  <- XLua.TemplateEngine.Parser.<>c$$<Parse>b__7_1 @ 01105990
+  <- XLua.TemplateEngine.Parser.<>c$$<Parse>b__7_0 @ 011058f4
+
+--- Listing ---
+018f8ee4  str x22,[sp, #-0x30]!
+018f8ee8  stp x21,x20,[sp, #0x10]
+018f8eec  stp x19,x30,[sp, #0x20]
+018f8ef0  mov w21,w1
+018f8ef4  mov x1,xzr
+018f8ef8  mov w19,w3
+018f8efc  mov x20,x2
+018f8f00  mov x22,x0
+018f8f04  bl 0x02194104
+018f8f08  str x20,[x22, #0x18]!
+018f8f0c  mov x0,x22
+018f8f10  mov x1,x20
+018f8f14  stur w21,[x22, #-0x8]
+018f8f18  bl 0x00b07850
+018f8f1c  str w19,[x22, #0x8]
+018f8f20  ldp x19,x30,[sp, #0x20]
+018f8f24  ldp x21,x20,[sp, #0x10]
+018f8f28  ldr x22,[sp], #0x30
+018f8f2c  ret
+
+
+================================================================================
+### FILE: 018f8f30___f__AnonymousType4_Int32Enum_-object_-int___Equals.txt
+================================================================================
+Function: <>f__AnonymousType4<Int32Enum,-object,-int>$$Equals @ 018f8f30
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+018f8f30  stp x21,x20,[sp, #-0x20]!
+018f8f34  stp x19,x30,[sp, #0x10]
+018f8f38  ldr x8,[x2, #0x20]
+018f8f3c  mov x20,x2
+018f8f40  mov x21,x1
+018f8f44  mov x19,x0
+018f8f48  ldr x8,[x8, #0xc0]
+018f8f4c  ldr x8,[x8]
+018f8f50  ldrb w9,[x8, #0x132]
+018f8f54  tbnz w9,#0x0,0x018f8f64
+018f8f58  mov x0,x8
+018f8f5c  bl 0x00b2ac40
+018f8f60  mov x8,x0
+018f8f64  cbz x21,0x018f9010
+018f8f68  ldr x9,[x21]
+018f8f6c  cmp x9,x8
+018f8f70  csel x21,x21,xzr,eq
+018f8f74  b.ne 0x018f9010
+018f8f78  ldr x8,[x20, #0x20]
+018f8f7c  ldr x8,[x8, #0xc0]
+018f8f80  ldr x0,[x8, #0x8]
+018f8f84  ldr x8,[x0, #0x8]
+018f8f88  blr x8
+018f8f8c  cbz x21,0x018f9020
+018f8f90  cbz x0,0x018f9020
+018f8f94  ldr x8,[x0]
+018f8f98  ldr w1,[x19, #0x10]
+018f8f9c  ldr w2,[x21, #0x10]
+018f8fa0  ldp x9,x3,[x8, #0x1b8]
+018f8fa4  blr x9
+018f8fa8  tbz w0,#0x0,0x018f9010
+018f8fac  ldr x8,[x20, #0x20]
+018f8fb0  ldr x8,[x8, #0xc0]
+018f8fb4  ldr x0,[x8, #0x28]
+018f8fb8  ldr x8,[x0, #0x8]
+018f8fbc  blr x8
+018f8fc0  cbz x0,0x018f9020
+018f8fc4  ldr x8,[x0]
+018f8fc8  ldr x2,[x21, #0x18]
+018f8fcc  ldr x1,[x19, #0x18]
+018f8fd0  ldp x9,x3,[x8, #0x1b8]
+018f8fd4  blr x9
+018f8fd8  tbz w0,#0x0,0x018f9010
+018f8fdc  ldr x8,[x20, #0x20]
+018f8fe0  ldr x8,[x8, #0xc0]
+018f8fe4  ldr x0,[x8, #0x48]
+018f8fe8  ldr x8,[x0, #0x8]
+018f8fec  blr x8
+018f8ff0  cbz x0,0x018f9020
+018f8ff4  ldr x8,[x0]
+018f8ff8  ldr w2,[x21, #0x20]
+018f8ffc  ldr w1,[x19, #0x20]
+018f9000  ldp x19,x30,[sp, #0x10]
+018f9004  ldp x4,x3,[x8, #0x1b8]
+018f9008  ldp x21,x20,[sp], #0x20
+018f900c  br x4
+018f9010  ldp x19,x30,[sp, #0x10]
+018f9014  mov w0,wzr
+018f9018  ldp x21,x20,[sp], #0x20
+018f901c  ret
+018f9020  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f9024___f__AnonymousType4_Int32Enum_-object_-int___GetHashCode.txt
+================================================================================
+Function: <>f__AnonymousType4<Int32Enum,-object,-int>$$GetHashCode @ 018f9024
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+018f9024  stp x21,x20,[sp, #-0x20]!
+018f9028  stp x19,x30,[sp, #0x10]
+018f902c  ldr x8,[x1, #0x20]
+018f9030  mov x19,x0
+018f9034  mov x20,x1
+018f9038  ldr x8,[x8, #0xc0]
+018f903c  ldr x8,[x8, #0x8]
+018f9040  ldr x9,[x8, #0x8]
+018f9044  mov x0,x8
+018f9048  blr x9
+018f904c  cbz x0,0x018f90ec
+018f9050  ldr x8,[x0]
+018f9054  ldr w1,[x19, #0x10]
+018f9058  ldp x9,x2,[x8, #0x1c8]
+018f905c  blr x9
+018f9060  ldr x8,[x20, #0x20]
+018f9064  mov w21,w0
+018f9068  ldr x8,[x8, #0xc0]
+018f906c  ldr x8,[x8, #0x28]
+018f9070  ldr x9,[x8, #0x8]
+018f9074  mov x0,x8
+018f9078  blr x9
+018f907c  cbz x0,0x018f90ec
+018f9080  ldr x8,[x0]
+018f9084  ldr x1,[x19, #0x18]
+018f9088  ldp x9,x2,[x8, #0x1c8]
+018f908c  blr x9
+018f9090  ldr x8,[x20, #0x20]
+018f9094  mov w20,w0
+018f9098  ldr x8,[x8, #0xc0]
+018f909c  ldr x8,[x8, #0x48]
+018f90a0  ldr x9,[x8, #0x8]
+018f90a4  mov x0,x8
+018f90a8  blr x9
+018f90ac  cbz x0,0x018f90ec
+018f90b0  ldr x8,[x0]
+018f90b4  ldr w1,[x19, #0x20]
+018f90b8  ldp x9,x2,[x8, #0x1c8]
+018f90bc  blr x9
+018f90c0  mov w8,#0x5529
+018f90c4  mov w9,#0x6c2b
+018f90c8  movk w8,#0xa555, LSL #16
+018f90cc  movk w9,#0x33ad, LSL #16
+018f90d0  ldp x19,x30,[sp, #0x10]
+018f90d4  madd w10,w21,w8,w20
+018f90d8  mul w9,w9,w8
+018f90dc  madd w8,w10,w8,w9
+018f90e0  add w0,w0,w8
+018f90e4  ldp x21,x20,[sp], #0x20
+018f90e8  ret
+018f90ec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f90f0___f__AnonymousType4_Int32Enum_-object_-int___ToString.txt
+================================================================================
+Function: <>f__AnonymousType4<Int32Enum,-object,-int>$$ToString @ 018f90f0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Enum$$ToString @ 02186100
+  -> System.Int32$$ToString @ 0214dc44
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+018f90f0  sub sp,sp,#0x60
+018f90f4  stp x23,x22,[sp, #0x30]
+018f90f8  stp x21,x20,[sp, #0x40]
+018f90fc  stp x19,x30,[sp, #0x50]
+018f9100  adrp x23,0x3578000
+018f9104  adrp x21,0x3370000
+018f9108  adrp x19,0x3325000
+018f910c  ldrb w8,[x23, #0x5d5]
+018f9110  ldr x21,[x21, #0x778]
+018f9114  ldr x19,[x19, #0xd40]
+018f9118  mov x20,x1
+018f911c  mov x22,x0
+018f9120  tbnz w8,#0x0,0x018f9144
+018f9124  adrp x0,0x3370000
+018f9128  ldr x0,[x0, #0x778]
+018f912c  bl 0x00b0789c
+018f9130  adrp x0,0x3325000
+018f9134  ldr x0,[x0, #0xd40]
+018f9138  bl 0x00b0789c
+018f913c  mov w8,#0x1
+018f9140  strb w8,[x23, #0x5d5]
+018f9144  ldr x0,[x21]
+018f9148  mov w1,#0x3
+018f914c  str xzr,[sp, #0x28]
+018f9150  str wzr,[sp, #0x24]
+018f9154  bl 0x00b078f8
+018f9158  ldr x8,[x20, #0x20]
+018f915c  ldr w23,[x22, #0x10]
+018f9160  ldr x21,[x19]
+018f9164  mov x19,x0
+018f9168  ldr x8,[x8, #0xc0]
+018f916c  ldr x8,[x8, #0x80]
+018f9170  ldrb w9,[x8, #0x132]
+018f9174  tbnz w9,#0x0,0x018f9184
+018f9178  mov x0,x8
+018f917c  bl 0x00b2ac40
+018f9180  mov x8,x0
+018f9184  mov x9,#-0x1
+018f9188  add x0,sp,#0x8
+018f918c  mov x1,xzr
+018f9190  stp x8,x9,[sp, #0x8]
+018f9194  str w23,[sp, #0x18]
+018f9198  bl 0x02186100
+018f919c  cbz x19,0x018f92b4
+018f91a0  mov x23,x0
+018f91a4  cbz x0,0x018f91bc
+018f91a8  ldr x8,[x19]
+018f91ac  mov x0,x23
+018f91b0  ldr x1,[x8, #0x40]
+018f91b4  bl 0x00b07990
+018f91b8  cbz x0,0x018f92b8
+018f91bc  ldr w8,[x19, #0x18]
+018f91c0  cbz w8,0x018f92b0
+018f91c4  mov x0,x19
+018f91c8  str x23,[x0, #0x20]!
+018f91cc  mov x1,x23
+018f91d0  bl 0x00b07850
+018f91d4  ldr x8,[x22, #0x18]
+018f91d8  str x8,[sp, #0x28]
+018f91dc  cbz x8,0x018f9214
+018f91e0  ldr x0,[sp, #0x28]
+018f91e4  cbz x0,0x018f92b4
+018f91e8  ldr x8,[x0]
+018f91ec  ldp x9,x1,[x8, #0x168]
+018f91f0  blr x9
+018f91f4  mov x23,x0
+018f91f8  cbz x0,0x018f9218
+018f91fc  ldr x8,[x19]
+018f9200  mov x0,x23
+018f9204  ldr x1,[x8, #0x40]
+018f9208  bl 0x00b07990
+018f920c  cbnz x0,0x018f9218
+018f9210  b 0x018f92b8
+018f9214  mov x23,xzr
+018f9218  ldr w8,[x19, #0x18]
+018f921c  cmp w8,#0x1
+018f9220  b.ls 0x018f92b0
+018f9224  mov x0,x19
+018f9228  str x23,[x0, #0x28]!
+018f922c  mov x1,x23
+018f9230  bl 0x00b07850
+018f9234  ldr w8,[x22, #0x20]
+018f9238  add x0,sp,#0x24
+018f923c  str w8,[sp, #0x24]
+018f9240  ldr x8,[x20, #0x20]
+018f9244  ldr x8,[x8, #0xc0]
+018f9248  ldr x1,[x8, #0xa8]
+018f924c  bl 0x0214dc44
+018f9250  mov x20,x0
+018f9254  cbz x0,0x018f926c
+018f9258  ldr x8,[x19]
+018f925c  mov x0,x20
+018f9260  ldr x1,[x8, #0x40]
+018f9264  bl 0x00b07990
+018f9268  cbz x0,0x018f92b8
+018f926c  ldr w8,[x19, #0x18]
+018f9270  cmp w8,#0x2
+018f9274  b.ls 0x018f92b0
+018f9278  mov x0,x19
+018f927c  str x20,[x0, #0x30]!
+018f9280  mov x1,x20
+018f9284  bl 0x00b07850
+018f9288  mov x0,xzr
+018f928c  mov x1,x21
+018f9290  mov x2,x19
+018f9294  mov x3,xzr
+018f9298  bl 0x01fdf988
+018f929c  ldp x19,x30,[sp, #0x50]
+018f92a0  ldp x21,x20,[sp, #0x40]
+018f92a4  ldp x23,x22,[sp, #0x30]
+018f92a8  add sp,sp,#0x60
+018f92ac  ret
+018f92b0  bl 0x00b079b8
+018f92b4  bl 0x00b079b0
+018f92b8  bl 0x00b079d4
+018f92bc  mov x1,xzr
+018f92c0  bl 0x00b07978
+
+
+================================================================================
+### FILE: 018f92c4___f__AnonymousType4_object_-object_-object___get_Type.txt
+================================================================================
+Function: <>f__AnonymousType4<object,-object,-object>$$get_Type @ 018f92c4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f92c4  ldr x0,[x0, #0x10]
+018f92c8  ret
+
+
+================================================================================
+### FILE: 018f92cc___f__AnonymousType4_object_-object_-object___get_Value.txt
+================================================================================
+Function: <>f__AnonymousType4<object,-object,-object>$$get_Value @ 018f92cc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f92cc  ldr x0,[x0, #0x18]
+018f92d0  ret
+
+
+================================================================================
+### FILE: 018f92d4___f__AnonymousType4_object_-object_-object___get_Index.txt
+================================================================================
+Function: <>f__AnonymousType4<object,-object,-object>$$get_Index @ 018f92d4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f92d4  ldr x0,[x0, #0x20]
+018f92d8  ret
+
+
+================================================================================
+### FILE: 018f92dc___f__AnonymousType4_object_-object_-object___.ctor.txt
+================================================================================
+Function: <>f__AnonymousType4<object,-object,-object>$$.ctor @ 018f92dc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+018f92dc  str x22,[sp, #-0x30]!
+018f92e0  stp x21,x20,[sp, #0x10]
+018f92e4  stp x19,x30,[sp, #0x20]
+018f92e8  mov x21,x1
+018f92ec  mov x1,xzr
+018f92f0  mov x19,x3
+018f92f4  mov x20,x2
+018f92f8  mov x22,x0
+018f92fc  bl 0x02194104
+018f9300  mov x0,x22
+018f9304  str x21,[x0, #0x10]!
+018f9308  mov x1,x21
+018f930c  bl 0x00b07850
+018f9310  mov x0,x22
+018f9314  str x20,[x0, #0x18]!
+018f9318  mov x1,x20
+018f931c  bl 0x00b07850
+018f9320  str x19,[x22, #0x20]!
+018f9324  mov x1,x19
+018f9328  ldp x19,x30,[sp, #0x20]
+018f932c  ldp x21,x20,[sp, #0x10]
+018f9330  mov x0,x22
+018f9334  ldr x22,[sp], #0x30
+018f9338  b 0x00b07850
+
+
+================================================================================
+### FILE: 018f933c___f__AnonymousType4_object_-object_-object___Equals.txt
+================================================================================
+Function: <>f__AnonymousType4<object,-object,-object>$$Equals @ 018f933c
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+018f933c  stp x21,x20,[sp, #-0x20]!
+018f9340  stp x19,x30,[sp, #0x10]
+018f9344  ldr x8,[x2, #0x20]
+018f9348  mov x20,x2
+018f934c  mov x21,x1
+018f9350  mov x19,x0
+018f9354  ldr x8,[x8, #0xc0]
+018f9358  ldr x8,[x8]
+018f935c  ldrb w9,[x8, #0x132]
+018f9360  tbnz w9,#0x0,0x018f9370
+018f9364  mov x0,x8
+018f9368  bl 0x00b2ac40
+018f936c  mov x8,x0
+018f9370  cbz x21,0x018f941c
+018f9374  ldr x9,[x21]
+018f9378  cmp x9,x8
+018f937c  csel x21,x21,xzr,eq
+018f9380  b.ne 0x018f941c
+018f9384  ldr x8,[x20, #0x20]
+018f9388  ldr x8,[x8, #0xc0]
+018f938c  ldr x0,[x8, #0x8]
+018f9390  ldr x8,[x0, #0x8]
+018f9394  blr x8
+018f9398  cbz x21,0x018f942c
+018f939c  cbz x0,0x018f942c
+018f93a0  ldr x8,[x0]
+018f93a4  ldr x1,[x19, #0x10]
+018f93a8  ldr x2,[x21, #0x10]
+018f93ac  ldp x9,x3,[x8, #0x1b8]
+018f93b0  blr x9
+018f93b4  tbz w0,#0x0,0x018f941c
+018f93b8  ldr x8,[x20, #0x20]
+018f93bc  ldr x8,[x8, #0xc0]
+018f93c0  ldr x0,[x8, #0x28]
+018f93c4  ldr x8,[x0, #0x8]
+018f93c8  blr x8
+018f93cc  cbz x0,0x018f942c
+018f93d0  ldr x8,[x0]
+018f93d4  ldr x2,[x21, #0x18]
+018f93d8  ldr x1,[x19, #0x18]
+018f93dc  ldp x9,x3,[x8, #0x1b8]
+018f93e0  blr x9
+018f93e4  tbz w0,#0x0,0x018f941c
+018f93e8  ldr x8,[x20, #0x20]
+018f93ec  ldr x8,[x8, #0xc0]
+018f93f0  ldr x0,[x8, #0x48]
+018f93f4  ldr x8,[x0, #0x8]
+018f93f8  blr x8
+018f93fc  cbz x0,0x018f942c
+018f9400  ldr x8,[x0]
+018f9404  ldr x2,[x21, #0x20]
+018f9408  ldr x1,[x19, #0x20]
+018f940c  ldp x19,x30,[sp, #0x10]
+018f9410  ldp x4,x3,[x8, #0x1b8]
+018f9414  ldp x21,x20,[sp], #0x20
+018f9418  br x4
+018f941c  ldp x19,x30,[sp, #0x10]
+018f9420  mov w0,wzr
+018f9424  ldp x21,x20,[sp], #0x20
+018f9428  ret
+018f942c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f9430___f__AnonymousType4_object_-object_-object___GetHashCode.txt
+================================================================================
+Function: <>f__AnonymousType4<object,-object,-object>$$GetHashCode @ 018f9430
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+018f9430  stp x21,x20,[sp, #-0x20]!
+018f9434  stp x19,x30,[sp, #0x10]
+018f9438  ldr x8,[x1, #0x20]
+018f943c  mov x19,x0
+018f9440  mov x20,x1
+018f9444  ldr x8,[x8, #0xc0]
+018f9448  ldr x8,[x8, #0x8]
+018f944c  ldr x9,[x8, #0x8]
+018f9450  mov x0,x8
+018f9454  blr x9
+018f9458  cbz x0,0x018f94f8
+018f945c  ldr x8,[x0]
+018f9460  ldr x1,[x19, #0x10]
+018f9464  ldp x9,x2,[x8, #0x1c8]
+018f9468  blr x9
+018f946c  ldr x8,[x20, #0x20]
+018f9470  mov w21,w0
+018f9474  ldr x8,[x8, #0xc0]
+018f9478  ldr x8,[x8, #0x28]
+018f947c  ldr x9,[x8, #0x8]
+018f9480  mov x0,x8
+018f9484  blr x9
+018f9488  cbz x0,0x018f94f8
+018f948c  ldr x8,[x0]
+018f9490  ldr x1,[x19, #0x18]
+018f9494  ldp x9,x2,[x8, #0x1c8]
+018f9498  blr x9
+018f949c  ldr x8,[x20, #0x20]
+018f94a0  mov w20,w0
+018f94a4  ldr x8,[x8, #0xc0]
+018f94a8  ldr x8,[x8, #0x48]
+018f94ac  ldr x9,[x8, #0x8]
+018f94b0  mov x0,x8
+018f94b4  blr x9
+018f94b8  cbz x0,0x018f94f8
+018f94bc  ldr x8,[x0]
+018f94c0  ldr x1,[x19, #0x20]
+018f94c4  ldp x9,x2,[x8, #0x1c8]
+018f94c8  blr x9
+018f94cc  mov w8,#0x5529
+018f94d0  mov w9,#0x6c2b
+018f94d4  movk w8,#0xa555, LSL #16
+018f94d8  movk w9,#0x33ad, LSL #16
+018f94dc  ldp x19,x30,[sp, #0x10]
+018f94e0  madd w10,w21,w8,w20
+018f94e4  mul w9,w9,w8
+018f94e8  madd w8,w10,w8,w9
+018f94ec  add w0,w0,w8
+018f94f0  ldp x21,x20,[sp], #0x20
+018f94f4  ret
+018f94f8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f94fc___f__AnonymousType4_object_-object_-object___ToString.txt
+================================================================================
+Function: <>f__AnonymousType4<object,-object,-object>$$ToString @ 018f94fc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+018f94fc  sub sp,sp,#0x40
+018f9500  str x22,[sp, #0x10]
+018f9504  stp x21,x20,[sp, #0x20]
+018f9508  stp x19,x30,[sp, #0x30]
+018f950c  adrp x22,0x3578000
+018f9510  adrp x19,0x3370000
+018f9514  adrp x20,0x3325000
+018f9518  ldrb w8,[x22, #0x5d6]
+018f951c  ldr x19,[x19, #0x778]
+018f9520  ldr x20,[x20, #0xd40]
+018f9524  mov x21,x0
+018f9528  tbnz w8,#0x0,0x018f954c
+018f952c  adrp x0,0x3370000
+018f9530  ldr x0,[x0, #0x778]
+018f9534  bl 0x00b0789c
+018f9538  adrp x0,0x3325000
+018f953c  ldr x0,[x0, #0xd40]
+018f9540  bl 0x00b0789c
+018f9544  mov w8,#0x1
+018f9548  strb w8,[x22, #0x5d6]
+018f954c  ldr x0,[x19]
+018f9550  mov w1,#0x3
+018f9554  stp xzr,xzr,[sp]
+018f9558  bl 0x00b078f8
+018f955c  ldr x8,[x21, #0x10]
+018f9560  ldr x20,[x20]
+018f9564  mov x19,x0
+018f9568  str x8,[sp, #0x18]
+018f956c  cbz x8,0x018f95fc
+018f9570  ldr x0,[sp, #0x18]
+018f9574  cbz x0,0x018f96b8
+018f9578  ldr x8,[x0]
+018f957c  ldp x9,x1,[x8, #0x168]
+018f9580  blr x9
+018f9584  mov x22,x0
+018f9588  cbz x19,0x018f96b8
+018f958c  cbz x22,0x018f95a4
+018f9590  ldr x8,[x19]
+018f9594  mov x0,x22
+018f9598  ldr x1,[x8, #0x40]
+018f959c  bl 0x00b07990
+018f95a0  cbz x0,0x018f9664
+018f95a4  ldr w8,[x19, #0x18]
+018f95a8  cbz w8,0x018f96b4
+018f95ac  mov x0,x19
+018f95b0  str x22,[x0, #0x20]!
+018f95b4  mov x1,x22
+018f95b8  bl 0x00b07850
+018f95bc  ldr x8,[x21, #0x18]
+018f95c0  str x8,[sp, #0x8]
+018f95c4  cbz x8,0x018f9608
+018f95c8  ldr x0,[sp, #0x8]
+018f95cc  cbz x0,0x018f96b8
+018f95d0  ldr x8,[x0]
+018f95d4  ldp x9,x1,[x8, #0x168]
+018f95d8  blr x9
+018f95dc  mov x22,x0
+018f95e0  cbz x0,0x018f960c
+018f95e4  ldr x8,[x19]
+018f95e8  mov x0,x22
+018f95ec  ldr x1,[x8, #0x40]
+018f95f0  bl 0x00b07990
+018f95f4  cbnz x0,0x018f960c
+018f95f8  b 0x018f9664
+018f95fc  mov x22,xzr
+018f9600  cbnz x19,0x018f958c
+018f9604  b 0x018f96b8
+018f9608  mov x22,xzr
+018f960c  ldr w8,[x19, #0x18]
+018f9610  cmp w8,#0x1
+018f9614  b.ls 0x018f96b4
+018f9618  mov x0,x19
+018f961c  str x22,[x0, #0x28]!
+018f9620  mov x1,x22
+018f9624  bl 0x00b07850
+018f9628  ldr x8,[x21, #0x20]
+018f962c  str x8,[sp]
+018f9630  cbz x8,0x018f9670
+018f9634  ldr x0,[sp]
+018f9638  cbz x0,0x018f96b8
+018f963c  ldr x8,[x0]
+018f9640  ldp x9,x1,[x8, #0x168]
+018f9644  blr x9
+018f9648  mov x21,x0
+018f964c  cbz x0,0x018f9674
+018f9650  ldr x8,[x19]
+018f9654  mov x0,x21
+018f9658  ldr x1,[x8, #0x40]
+018f965c  bl 0x00b07990
+018f9660  cbnz x0,0x018f9674
+018f9664  bl 0x00b079d4
+018f9668  mov x1,xzr
+018f966c  bl 0x00b07978
+018f9670  mov x21,xzr
+018f9674  ldr w8,[x19, #0x18]
+018f9678  cmp w8,#0x2
+018f967c  b.ls 0x018f96b4
+018f9680  mov x0,x19
+018f9684  str x21,[x0, #0x30]!
+018f9688  mov x1,x21
+018f968c  bl 0x00b07850
+018f9690  mov x1,x20
+018f9694  mov x2,x19
+018f9698  ldp x19,x30,[sp, #0x30]
+018f969c  ldp x21,x20,[sp, #0x20]
+018f96a0  ldr x22,[sp, #0x10]
+018f96a4  mov x0,xzr
+018f96a8  mov x3,xzr
+018f96ac  add sp,sp,#0x40
+018f96b0  b 0x01fdf988
+018f96b4  bl 0x00b079b8
+018f96b8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f96bc___f__AnonymousType5_object_-object___get_type.txt
+================================================================================
+Function: <>f__AnonymousType5<object,-object>$$get_type @ 018f96bc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f96bc  ldr x0,[x0, #0x10]
+018f96c0  ret
+
+
+================================================================================
+### FILE: 018f96c4___f__AnonymousType5_object_-object___get_method.txt
+================================================================================
+Function: <>f__AnonymousType5<object,-object>$$get_method @ 018f96c4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+018f96c4  ldr x0,[x0, #0x18]
+018f96c8  ret
+
+
+================================================================================
+### FILE: 018f96cc___f__AnonymousType5_object_-object___.ctor.txt
+================================================================================
+Function: <>f__AnonymousType5<object,-object>$$.ctor @ 018f96cc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.Utils.<>c$$<GetExtensionMethodsOf>b__8_1 @ 011037f4
+
+--- Listing ---
+018f96cc  stp x21,x20,[sp, #-0x20]!
+018f96d0  stp x19,x30,[sp, #0x10]
+018f96d4  mov x20,x1
+018f96d8  mov x1,xzr
+018f96dc  mov x19,x2
+018f96e0  mov x21,x0
+018f96e4  bl 0x02194104
+018f96e8  mov x0,x21
+018f96ec  str x20,[x0, #0x10]!
+018f96f0  mov x1,x20
+018f96f4  bl 0x00b07850
+018f96f8  str x19,[x21, #0x18]!
+018f96fc  mov x1,x19
+018f9700  ldp x19,x30,[sp, #0x10]
+018f9704  mov x0,x21
+018f9708  ldp x21,x20,[sp], #0x20
+018f970c  b 0x00b07850
+
+
+================================================================================
+### FILE: 018f9710___f__AnonymousType5_object_-object___Equals.txt
+================================================================================
+Function: <>f__AnonymousType5<object,-object>$$Equals @ 018f9710
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+018f9710  stp x21,x20,[sp, #-0x20]!
+018f9714  stp x19,x30,[sp, #0x10]
+018f9718  ldr x8,[x2, #0x20]
+018f971c  mov x20,x2
+018f9720  mov x21,x1
+018f9724  mov x19,x0
+018f9728  ldr x8,[x8, #0xc0]
+018f972c  ldr x8,[x8]
+018f9730  ldrb w9,[x8, #0x132]
+018f9734  tbnz w9,#0x0,0x018f9744
+018f9738  mov x0,x8
+018f973c  bl 0x00b2ac40
+018f9740  mov x8,x0
+018f9744  cbz x21,0x018f97c0
+018f9748  ldr x9,[x21]
+018f974c  cmp x9,x8
+018f9750  csel x21,x21,xzr,eq
+018f9754  b.ne 0x018f97c0
+018f9758  ldr x8,[x20, #0x20]
+018f975c  ldr x8,[x8, #0xc0]
+018f9760  ldr x0,[x8, #0x8]
+018f9764  ldr x8,[x0, #0x8]
+018f9768  blr x8
+018f976c  cbz x21,0x018f97d0
+018f9770  cbz x0,0x018f97d0
+018f9774  ldr x8,[x0]
+018f9778  ldr x1,[x19, #0x10]
+018f977c  ldr x2,[x21, #0x10]
+018f9780  ldp x9,x3,[x8, #0x1b8]
+018f9784  blr x9
+018f9788  tbz w0,#0x0,0x018f97c0
+018f978c  ldr x8,[x20, #0x20]
+018f9790  ldr x8,[x8, #0xc0]
+018f9794  ldr x0,[x8, #0x28]
+018f9798  ldr x8,[x0, #0x8]
+018f979c  blr x8
+018f97a0  cbz x0,0x018f97d0
+018f97a4  ldr x8,[x0]
+018f97a8  ldr x2,[x21, #0x18]
+018f97ac  ldr x1,[x19, #0x18]
+018f97b0  ldp x19,x30,[sp, #0x10]
+018f97b4  ldp x4,x3,[x8, #0x1b8]
+018f97b8  ldp x21,x20,[sp], #0x20
+018f97bc  br x4
+018f97c0  ldp x19,x30,[sp, #0x10]
+018f97c4  mov w0,wzr
+018f97c8  ldp x21,x20,[sp], #0x20
+018f97cc  ret
+018f97d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f97d4___f__AnonymousType5_object_-object___GetHashCode.txt
+================================================================================
+Function: <>f__AnonymousType5<object,-object>$$GetHashCode @ 018f97d4
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+018f97d4  str x20,[sp, #-0x20]!
+018f97d8  stp x19,x30,[sp, #0x10]
+018f97dc  ldr x8,[x1, #0x20]
+018f97e0  mov x19,x0
+018f97e4  mov x20,x1
+018f97e8  ldr x8,[x8, #0xc0]
+018f97ec  ldr x8,[x8, #0x8]
+018f97f0  ldr x9,[x8, #0x8]
+018f97f4  mov x0,x8
+018f97f8  blr x9
+018f97fc  cbz x0,0x018f9864
+018f9800  ldr x8,[x0]
+018f9804  ldr x1,[x19, #0x10]
+018f9808  ldp x9,x2,[x8, #0x1c8]
+018f980c  blr x9
+018f9810  ldr x8,[x20, #0x20]
+018f9814  mov w20,w0
+018f9818  ldr x8,[x8, #0xc0]
+018f981c  ldr x8,[x8, #0x28]
+018f9820  ldr x9,[x8, #0x8]
+018f9824  mov x0,x8
+018f9828  blr x9
+018f982c  cbz x0,0x018f9864
+018f9830  ldr x8,[x0]
+018f9834  ldr x1,[x19, #0x18]
+018f9838  ldp x9,x2,[x8, #0x1c8]
+018f983c  blr x9
+018f9840  mov w8,#0x5529
+018f9844  ldp x19,x30,[sp, #0x10]
+018f9848  movk w8,#0xa555, LSL #16
+018f984c  mov w9,#0x94cb
+018f9850  madd w8,w20,w8,w0
+018f9854  movk w9,#0x5b18, LSL #16
+018f9858  add w0,w8,w9
+018f985c  ldr x20,[sp], #0x20
+018f9860  ret
+018f9864  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 018f9868___f__AnonymousType5_object_-object___ToString.txt
+================================================================================
+Function: <>f__AnonymousType5<object,-object>$$ToString @ 018f9868
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Format @ 01fdf988
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+018f9868  sub sp,sp,#0x40
+018f986c  str x22,[sp, #0x10]
+018f9870  stp x21,x20,[sp, #0x20]
+018f9874  stp x19,x30,[sp, #0x30]
+018f9878  adrp x22,0x3578000
+018f987c  adrp x19,0x3370000
+018f9880  adrp x20,0x3331000
+018f9884  ldrb w8,[x22, #0x5d7]
+018f9888  ldr x19,[x19, #0x778]
+018f988c  ldr x20,[x20, #0xfb8]
+018f9890  mov x21,x0
+018f9894  tbnz w8,#0x0,0x018f98b8
+018f9898  adrp x0,0x3370000
+018f989c  ldr x0,[x0, #0x778]
+018f98a0  bl 0x00b0789c
+018f98a4  adrp x0,0x3331000
+018f98a8  ldr x0,[x0, #0xfb8]
+018f98ac  bl 0x00b0789c
+018f98b0  mov w8,#0x1
+018f98b4  strb w8,[x22, #0x5d7]
+018f98b8  ldr x0,[x19]
+018f98bc  mov w1,#0x2
+018f98c0  str xzr,[sp, #0x8]
+018f98c4  bl 0x00b078f8
+018f98c8  ldr x8,[x21, #0x10]
+018f98cc  ldr x20,[x20]
+018f98d0  mov x19,x0
+018f98d4  str x8,[sp, #0x18]
+018f98d8  cbz x8,0x018f9970
+018f98dc  ldr x0,[sp, #0x18]
+018f98e0  cbz x0,0x018f9978
+018f98e4  ldr x8,[x0]
+018f98e8  ldp x9,x1,[x8, #0x168]
+018f98ec  blr x9
+018f98f0  mov x22,x0
+018f98f4  cbz x19,0x018f9978
+018f98f8  cbz x22,0x018f9910
+018f98fc  ldr x8,[x19]
+018f9900  mov x0,x22
+018f9904  ldr x1,[x8, #0x40]
+018f9908  bl 0x00b07990
+018f990c  cbz x0,0x018f9964
+018f9910  ldr w8,[x19, #0x18]
+018f9914  cbz w8,0x018f99c0
+018f9918  mov x0,x19
+018f991c  str x22,[x0, #0x20]!
+018f9920  mov x1,x22
+018f9924  bl 0x00b07850
+018f9928  ldr x8,[x21, #0x18]
+018f992c  str x8,[sp, #0x8]
+018f9930  cbz x8,0x018f997c
+018f9934  ldr x0,[sp, #0x8]
+018f9938  cbz x0,0x018f9978
+018f993c  ldr x8,[x0]
+018f9940  ldp x9,x1,[x8, #0x168]
+018f9944  blr x9
+018f9948  mov x21,x0
+018f994c  cbz x0,0x018f9980
+018f9950  ldr x8,[x19]
+018f9954  mov x0,x21
+018f9958  ldr x1,[x8, #0x40]
+018f995c  bl 0x00b07990
+018f9960  cbnz x0,0x018f9980
+018f9964  bl 0x00b079d4
+018f9968  mov x1,xzr
+018f996c  bl 0x00b07978
+018f9970  mov x22,xzr
+018f9974  cbnz x19,0x018f98f8
+018f9978  bl 0x00b079b0
+018f997c  mov x21,xzr
+018f9980  ldr w8,[x19, #0x18]
+018f9984  cmp w8,#0x1
+018f9988  b.ls 0x018f99c0
+018f998c  mov x0,x19
+018f9990  str x21,[x0, #0x28]!
+018f9994  mov x1,x21
+018f9998  bl 0x00b07850
+018f999c  mov x1,x20
+018f99a0  mov x2,x19
+018f99a4  ldp x19,x30,[sp, #0x30]
+018f99a8  ldp x21,x20,[sp, #0x20]
+018f99ac  ldr x22,[sp, #0x10]
+018f99b0  mov x0,xzr
+018f99b4  mov x3,xzr
+018f99b8  add sp,sp,#0x40
+018f99bc  b 0x01fdf988
+018f99c0  bl 0x00b079b8
+
+

@@ -1,0 +1,287 @@
+================================================================================
+### FILE: 00fcc020_QiandaoitemNode__get_spr_Qiandaon_04.txt
+================================================================================
+Function: QiandaoitemNode$$get_spr_Qiandaon_04 @ 00fcc020
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ActiveShowPanelMono$$SignShowType1 @ 0101d870
+
+--- Listing ---
+00fcc020  stp x21,x20,[sp, #-0x20]!
+00fcc024  stp x19,x30,[sp, #0x10]
+00fcc028  adrp x20,0x3573000
+00fcc02c  adrp x21,0x3383000
+00fcc030  ldrb w8,[x20, #0xe0c]
+00fcc034  ldr x21,[x21, #0x530]
+00fcc038  mov x19,x0
+00fcc03c  tbnz w8,#0x0,0x00fcc054
+00fcc040  adrp x0,0x3383000
+00fcc044  ldr x0,[x0, #0x530]
+00fcc048  bl 0x00b0789c
+00fcc04c  mov w8,#0x1
+00fcc050  strb w8,[x20, #0xe0c]
+00fcc054  ldr x1,[x21]
+00fcc058  mov x0,x19
+00fcc05c  ldp x19,x30,[sp, #0x10]
+00fcc060  mov x2,xzr
+00fcc064  ldp x21,x20,[sp], #0x20
+00fcc068  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcc06c_QiandaoitemNode__get_spr_Qiandaon_2.txt
+================================================================================
+Function: QiandaoitemNode$$get_spr_Qiandaon_2 @ 00fcc06c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ActiveShowPanelMono$$SignShowType1 @ 0101d870
+
+--- Listing ---
+00fcc06c  stp x21,x20,[sp, #-0x20]!
+00fcc070  stp x19,x30,[sp, #0x10]
+00fcc074  adrp x20,0x3573000
+00fcc078  adrp x21,0x3335000
+00fcc07c  ldrb w8,[x20, #0xe0d]
+00fcc080  ldr x21,[x21, #0x50]
+00fcc084  mov x19,x0
+00fcc088  tbnz w8,#0x0,0x00fcc0a0
+00fcc08c  adrp x0,0x3335000
+00fcc090  ldr x0,[x0, #0x50]
+00fcc094  bl 0x00b0789c
+00fcc098  mov w8,#0x1
+00fcc09c  strb w8,[x20, #0xe0d]
+00fcc0a0  ldr x1,[x21]
+00fcc0a4  mov x0,x19
+00fcc0a8  ldp x19,x30,[sp, #0x10]
+00fcc0ac  mov x2,xzr
+00fcc0b0  ldp x21,x20,[sp], #0x20
+00fcc0b4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcc0b8_QiandaoitemNode__get_spr_Qiandaon_1.txt
+================================================================================
+Function: QiandaoitemNode$$get_spr_Qiandaon_1 @ 00fcc0b8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ActiveShowPanelMono$$SignShowType1 @ 0101d870
+
+--- Listing ---
+00fcc0b8  stp x21,x20,[sp, #-0x20]!
+00fcc0bc  stp x19,x30,[sp, #0x10]
+00fcc0c0  adrp x20,0x3573000
+00fcc0c4  adrp x21,0x330b000
+00fcc0c8  ldrb w8,[x20, #0xe0e]
+00fcc0cc  ldr x21,[x21, #0x3a8]
+00fcc0d0  mov x19,x0
+00fcc0d4  tbnz w8,#0x0,0x00fcc0ec
+00fcc0d8  adrp x0,0x330b000
+00fcc0dc  ldr x0,[x0, #0x3a8]
+00fcc0e0  bl 0x00b0789c
+00fcc0e4  mov w8,#0x1
+00fcc0e8  strb w8,[x20, #0xe0e]
+00fcc0ec  ldr x1,[x21]
+00fcc0f0  mov x0,x19
+00fcc0f4  ldp x19,x30,[sp, #0x10]
+00fcc0f8  mov x2,xzr
+00fcc0fc  ldp x21,x20,[sp], #0x20
+00fcc100  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcc104_QiandaoitemNode__get_lbl_Tianshu.txt
+================================================================================
+Function: QiandaoitemNode$$get_lbl_Tianshu @ 00fcc104
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ActiveShowPanelMono$$SignShowType1 @ 0101d870
+
+--- Listing ---
+00fcc104  stp x21,x20,[sp, #-0x20]!
+00fcc108  stp x19,x30,[sp, #0x10]
+00fcc10c  adrp x20,0x3573000
+00fcc110  adrp x21,0x336a000
+00fcc114  ldrb w8,[x20, #0xe0f]
+00fcc118  ldr x21,[x21, #0x6d8]
+00fcc11c  mov x19,x0
+00fcc120  tbnz w8,#0x0,0x00fcc138
+00fcc124  adrp x0,0x336a000
+00fcc128  ldr x0,[x0, #0x6d8]
+00fcc12c  bl 0x00b0789c
+00fcc130  mov w8,#0x1
+00fcc134  strb w8,[x20, #0xe0f]
+00fcc138  ldr x1,[x21]
+00fcc13c  mov x0,x19
+00fcc140  ldp x19,x30,[sp, #0x10]
+00fcc144  mov x2,xzr
+00fcc148  ldp x21,x20,[sp], #0x20
+00fcc14c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcc150_QiandaoitemNode__get_EquipItemParent.txt
+================================================================================
+Function: QiandaoitemNode$$get_EquipItemParent @ 00fcc150
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ActiveShowPanelMono$$SignShowType1 @ 0101d870
+
+--- Listing ---
+00fcc150  stp x21,x20,[sp, #-0x20]!
+00fcc154  stp x19,x30,[sp, #0x10]
+00fcc158  adrp x20,0x3573000
+00fcc15c  adrp x21,0x3366000
+00fcc160  ldrb w8,[x20, #0xe10]
+00fcc164  ldr x21,[x21, #0xa48]
+00fcc168  mov x19,x0
+00fcc16c  tbnz w8,#0x0,0x00fcc184
+00fcc170  adrp x0,0x3366000
+00fcc174  ldr x0,[x0, #0xa48]
+00fcc178  bl 0x00b0789c
+00fcc17c  mov w8,#0x1
+00fcc180  strb w8,[x20, #0xe10]
+00fcc184  ldr x1,[x21]
+00fcc188  mov x0,x19
+00fcc18c  ldp x19,x30,[sp, #0x10]
+00fcc190  mov x2,xzr
+00fcc194  ldp x21,x20,[sp], #0x20
+00fcc198  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcc19c_QiandaoitemNode__get_spr_Yilingqu.txt
+================================================================================
+Function: QiandaoitemNode$$get_spr_Yilingqu @ 00fcc19c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ActiveShowPanelMono$$SignShowType1 @ 0101d870
+
+--- Listing ---
+00fcc19c  stp x21,x20,[sp, #-0x20]!
+00fcc1a0  stp x19,x30,[sp, #0x10]
+00fcc1a4  adrp x20,0x3573000
+00fcc1a8  adrp x21,0x3342000
+00fcc1ac  ldrb w8,[x20, #0xe11]
+00fcc1b0  ldr x21,[x21, #0x410]
+00fcc1b4  mov x19,x0
+00fcc1b8  tbnz w8,#0x0,0x00fcc1d0
+00fcc1bc  adrp x0,0x3342000
+00fcc1c0  ldr x0,[x0, #0x410]
+00fcc1c4  bl 0x00b0789c
+00fcc1c8  mov w8,#0x1
+00fcc1cc  strb w8,[x20, #0xe11]
+00fcc1d0  ldr x1,[x21]
+00fcc1d4  mov x0,x19
+00fcc1d8  ldp x19,x30,[sp, #0x10]
+00fcc1dc  mov x2,xzr
+00fcc1e0  ldp x21,x20,[sp], #0x20
+00fcc1e4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcc1e8_QiandaoitemNode__get_spr_Guoqi_2.txt
+================================================================================
+Function: QiandaoitemNode$$get_spr_Guoqi_2 @ 00fcc1e8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ActiveShowPanelMono$$SignShowType1 @ 0101d870
+
+--- Listing ---
+00fcc1e8  stp x21,x20,[sp, #-0x20]!
+00fcc1ec  stp x19,x30,[sp, #0x10]
+00fcc1f0  adrp x20,0x3573000
+00fcc1f4  adrp x21,0x3347000
+00fcc1f8  ldrb w8,[x20, #0xe12]
+00fcc1fc  ldr x21,[x21, #0x3a0]
+00fcc200  mov x19,x0
+00fcc204  tbnz w8,#0x0,0x00fcc21c
+00fcc208  adrp x0,0x3347000
+00fcc20c  ldr x0,[x0, #0x3a0]
+00fcc210  bl 0x00b0789c
+00fcc214  mov w8,#0x1
+00fcc218  strb w8,[x20, #0xe12]
+00fcc21c  ldr x1,[x21]
+00fcc220  mov x0,x19
+00fcc224  ldp x19,x30,[sp, #0x10]
+00fcc228  mov x2,xzr
+00fcc22c  ldp x21,x20,[sp], #0x20
+00fcc230  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcc234_QiandaoitemNode__get_spr_today.txt
+================================================================================
+Function: QiandaoitemNode$$get_spr_today @ 00fcc234
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ActiveShowPanelMono$$SignShowType1 @ 0101d870
+
+--- Listing ---
+00fcc234  stp x21,x20,[sp, #-0x20]!
+00fcc238  stp x19,x30,[sp, #0x10]
+00fcc23c  adrp x20,0x3573000
+00fcc240  adrp x21,0x3351000
+00fcc244  ldrb w8,[x20, #0xe13]
+00fcc248  ldr x21,[x21, #0x110]
+00fcc24c  mov x19,x0
+00fcc250  tbnz w8,#0x0,0x00fcc268
+00fcc254  adrp x0,0x3351000
+00fcc258  ldr x0,[x0, #0x110]
+00fcc25c  bl 0x00b0789c
+00fcc260  mov w8,#0x1
+00fcc264  strb w8,[x20, #0xe13]
+00fcc268  ldr x1,[x21]
+00fcc26c  mov x0,x19
+00fcc270  ldp x19,x30,[sp, #0x10]
+00fcc274  mov x2,xzr
+00fcc278  ldp x21,x20,[sp], #0x20
+00fcc27c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcc280_QiandaoitemNode__.ctor.txt
+================================================================================
+Function: QiandaoitemNode$$.ctor @ 00fcc280
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fcc280  mov x1,xzr
+00fcc284  b 0x00dc0e00
+
+

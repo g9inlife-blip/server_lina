@@ -1,0 +1,478 @@
+================================================================================
+### FILE: 00b4824c_imbue.txt
+================================================================================
+Function: imbue @ 00b4824c
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::imbue(std::__ndk1::locale const&)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b4824c  ret
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::imbue(std::__ndk1::locale const&)
+
+
+================================================================================
+### FILE: 00b53690_imbue.txt
+================================================================================
+Function: imbue @ 00b53690
+FuncComment: std::__ndk1::ios_base::imbue(std::__ndk1::locale const&)
+
+--- Calls OUT ---
+  -> locale @ 008d52c0
+  -> operator= @ 008d49a0
+
+--- Calls IN ---
+
+--- Listing ---
+00b53690  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::ios_base::imbue(std::__ndk1::locale const&)
+00b53694  stp x20,x19,[sp, #0x10]
+00b53698  stp x29,x30,[sp, #0x20]
+00b5369c  add x29,sp,#0x20
+00b536a0  add x22,x0,#0x30
+00b536a4  mov x21,x1
+00b536a8  mov x20,x0
+00b536ac  mov x0,x8
+00b536b0  mov x1,x22
+00b536b4  mov x19,x8
+00b536b8  bl 0x008d52c0
+00b536bc  mov x0,x22
+00b536c0  mov x1,x21
+00b536c4  bl 0x008d49a0
+00b536c8  ldr x8,[x20, #0x48]
+00b536cc  cbz x8,0x00b536f8
+00b536d0  sub x21,x8,#0x1
+00b536d4  ldp x8,x9,[x20, #0x38]
+00b536d8  ldr x8,[x8, x21, LSL #0x3]
+00b536dc  ldr w2,[x9, x21, LSL #0x2]
+00b536e0  mov w0,#0x1
+    ; [PRE] try { // try from 00b536e0 to 00b536eb has its CatchHandler @ 00b53708
+00b536e4  mov x1,x20
+00b536e8  blr x8
+    ; [POST] } // end try from 00b536e0 to 00b536eb
+00b536ec  sub x21,x21,#0x1
+00b536f0  cmn x21,#0x1
+00b536f4  b.ne 0x00b536d4
+00b536f8  ldp x29,x30,[sp, #0x20]
+00b536fc  ldp x20,x19,[sp, #0x10]
+00b53700  ldp x22,x21,[sp], #0x30
+00b53704  ret
+
+
+================================================================================
+### FILE: 00ceab98_ImmersiveMode__Awake.txt
+================================================================================
+Function: ImmersiveMode$$Awake @ 00ceab98
+
+--- Calls OUT ---
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$DontDestroyOnLoad @ 024e00c4
+
+--- Calls IN ---
+
+--- Listing ---
+00ceab98  stp x21,x20,[sp, #-0x20]!
+00ceab9c  stp x19,x30,[sp, #0x10]
+00ceaba0  adrp x21,0x3571000
+00ceaba4  adrp x20,0x3321000
+00ceaba8  ldrb w8,[x21, #0x950]
+00ceabac  ldr x20,[x20, #0xca8]
+00ceabb0  mov x19,x0
+00ceabb4  tbnz w8,#0x0,0x00ceabcc
+00ceabb8  adrp x0,0x3321000
+00ceabbc  ldr x0,[x0, #0xca8]
+00ceabc0  bl 0x00b0789c
+00ceabc4  mov w8,#0x1
+00ceabc8  strb w8,[x21, #0x950]
+00ceabcc  mov x0,x19
+00ceabd0  mov x1,xzr
+00ceabd4  bl 0x024e4ed4
+00ceabd8  ldr x8,[x20]
+00ceabdc  mov x19,x0
+00ceabe0  ldr w9,[x8, #0xe0]
+00ceabe4  cbnz w9,0x00ceabf0
+00ceabe8  mov x0,x8
+00ceabec  bl 0x00b0798c
+00ceabf0  mov x0,x19
+00ceabf4  ldp x19,x30,[sp, #0x10]
+00ceabf8  mov x1,xzr
+00ceabfc  ldp x21,x20,[sp], #0x20
+00ceac00  b 0x024e00c4
+
+
+================================================================================
+### FILE: 00ceac04_ImmersiveMode__EnableImmersiveMode.txt
+================================================================================
+Function: ImmersiveMode$$EnableImmersiveMode @ 00ceac04
+
+--- Calls OUT ---
+  -> AN_ImmersiveModeProxy$$enableImmersiveMode @ 00cde8b4
+
+--- Calls IN ---
+  <- SA.AN.NATIVE_API.NativeApiTab$$EnableImmersiveMode @ 00cb5ab4
+  <- AnOtherFeaturesPreview$$EnableImmersiveMode @ 00cf9e48
+
+--- Listing ---
+00ceac04  b 0x00cde8b4
+
+
+================================================================================
+### FILE: 00ceac08_ImmersiveMode__.ctor.txt
+================================================================================
+Function: ImmersiveMode$$.ctor @ 00ceac08
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$.ctor @ 01e0a43c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00ceac08  stp x21,x20,[sp, #-0x20]!
+00ceac0c  stp x19,x30,[sp, #0x10]
+00ceac10  adrp x20,0x3571000
+00ceac14  adrp x21,0x3309000
+00ceac18  ldrb w8,[x20, #0x951]
+00ceac1c  ldr x21,[x21, #0x820]
+00ceac20  mov x19,x0
+00ceac24  tbnz w8,#0x0,0x00ceac3c
+00ceac28  adrp x0,0x3309000
+00ceac2c  ldr x0,[x0, #0x820]
+00ceac30  bl 0x00b0789c
+00ceac34  mov w8,#0x1
+00ceac38  strb w8,[x20, #0x951]
+00ceac3c  ldr x1,[x21]
+00ceac40  mov x0,x19
+00ceac44  ldp x19,x30,[sp, #0x10]
+00ceac48  ldp x21,x20,[sp], #0x20
+00ceac4c  b 0x01e0a43c
+
+
+================================================================================
+### FILE: 00da8098_ImporterFunc__.ctor.txt
+================================================================================
+Function: ImporterFunc$$.ctor @ 00da8098
+
+--- Calls OUT ---
+  -> FUN_00b07cc4 @ 00b07cc4
+  -> FUN_00b07910 @ 00b07910
+  -> FUN_008dbcb8 @ 008dbcb8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_008dbc78 @ 008dbc78
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_008dbc08 @ 008dbc08
+  -> thunk_FUN_00aed804 @ 00b079c0
+  -> FUN_008dbde8 @ 008dbde8
+  -> FUN_008dbd18 @ 008dbd18
+  -> FUN_008dbc88 @ 008dbc88
+  -> FUN_008dbd9c @ 008dbd9c
+  -> FUN_008dbc58 @ 008dbc58
+  -> thunk_FUN_00afc848 @ 00b07908
+  -> FUN_008dbcf0 @ 008dbcf0
+  -> thunk_FUN_00afcc14 @ 00b07984
+
+--- Calls IN ---
+  <- JsonMapper$$RegisterBaseImporters @ 00da93ec
+  <- JsonMapper$$RegisterImporter<object,-object> @ 0179cb34
+
+--- Listing ---
+00da8098  str x22,[sp, #-0x30]!
+00da809c  stp x21,x20,[sp, #0x10]
+00da80a0  stp x19,x30,[sp, #0x20]
+00da80a4  mov x19,x0
+00da80a8  mov x0,x2
+00da80ac  mov x20,x2
+00da80b0  mov x21,x1
+00da80b4  bl 0x00b07984
+00da80b8  str x0,[x19, #0x10]
+00da80bc  mov x0,x19
+00da80c0  str x20,[x19, #0x28]
+00da80c4  str x21,[x0, #0x20]!
+00da80c8  mov x1,x21
+00da80cc  bl 0x00b07850
+00da80d0  ldrb w22,[x20, #0x52]
+00da80d4  mov x0,x20
+00da80d8  str x19,[x19, #0x40]
+00da80dc  bl 0x00b07910
+00da80e0  tbz w0,#0x0,0x00da8100
+00da80e4  ldrb w8,[x20, #0x53]
+00da80e8  tbnz w8,#0x4,0x00da811c
+00da80ec  cmp w22,#0x1
+00da80f0  b.ne 0x00da8108
+00da80f4  adrp x8,0x8db000
+00da80f8  add x8,x8,#0xc78
+00da80fc  b 0x00da819c
+00da8100  cbz w22,0x00da8130
+00da8104  cbz x21,0x00da81bc
+00da8108  ldr x8,[x19, #0x10]
+00da810c  ldr x9,[x19, #0x20]
+00da8110  str x8,[x19, #0x18]
+00da8114  str x9,[x19, #0x40]
+00da8118  b 0x00da81a0
+00da811c  cmp w22,#0x1
+00da8120  b.ne 0x00da8160
+00da8124  adrp x8,0x8db000
+00da8128  add x8,x8,#0xc88
+00da812c  b 0x00da819c
+00da8130  ldrb w8,[x19, #0x70]
+00da8134  cbz w8,0x00da816c
+00da8138  mov x0,x20
+00da813c  bl 0x00b07908
+00da8140  mov w21,w0
+00da8144  mov x0,x20
+00da8148  bl 0x00b07cc4
+00da814c  tbz w21,#0x0,0x00da8178
+00da8150  tbz w0,#0x0,0x00da8188
+00da8154  adrp x8,0x8db000
+00da8158  add x8,x8,#0xde8
+00da815c  b 0x00da819c
+00da8160  adrp x8,0x8db000
+00da8164  add x8,x8,#0xcb8
+00da8168  b 0x00da819c
+00da816c  adrp x8,0x8db000
+00da8170  add x8,x8,#0xc58
+00da8174  b 0x00da819c
+00da8178  tbz w0,#0x0,0x00da8194
+00da817c  adrp x8,0x8db000
+00da8180  add x8,x8,#0xd18
+00da8184  b 0x00da819c
+00da8188  adrp x8,0x8db000
+00da818c  add x8,x8,#0xd9c
+00da8190  b 0x00da819c
+00da8194  adrp x8,0x8db000
+00da8198  add x8,x8,#0xcf0
+00da819c  str x8,[x19, #0x18]
+00da81a0  adrp x8,0x8db000
+00da81a4  add x8,x8,#0xc08
+00da81a8  str x8,[x19, #0x38]
+00da81ac  ldp x19,x30,[sp, #0x20]
+00da81b0  ldp x21,x20,[sp, #0x10]
+00da81b4  ldr x22,[sp], #0x30
+00da81b8  ret
+00da81bc  adrp x1,0x26db000
+00da81c0  add x1,x1,#0xd9
+00da81c4  mov x0,xzr
+00da81c8  bl 0x00b079c0
+00da81cc  mov x1,xzr
+00da81d0  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00da81d4_ImporterFunc__Invoke.txt
+================================================================================
+Function: ImporterFunc$$Invoke @ 00da81d4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da81d4  ldr x8,[x0, #0x40]
+00da81d8  ldr x3,[x0, #0x18]
+00da81dc  ldr x2,[x0, #0x28]
+00da81e0  mov x0,x8
+00da81e4  br x3
+
+
+================================================================================
+### FILE: 00da81e8_ImporterFunc__BeginInvoke.txt
+================================================================================
+Function: ImporterFunc$$BeginInvoke @ 00da81e8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf4b4 @ 00b07858
+
+--- Calls IN ---
+
+--- Listing ---
+00da81e8  sub sp,sp,#0x20
+00da81ec  stp xzr,x30,[sp, #0x8]
+00da81f0  str x1,[sp]
+00da81f4  mov x1,sp
+00da81f8  bl 0x00b07858
+00da81fc  ldr x30,[sp, #0x10]
+00da8200  add sp,sp,#0x20
+00da8204  ret
+
+
+================================================================================
+### FILE: 00da8208_ImporterFunc__EndInvoke.txt
+================================================================================
+Function: ImporterFunc$$EndInvoke @ 00da8208
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf574 @ 00b0785c
+
+--- Calls IN ---
+
+--- Listing ---
+00da8208  mov x0,x1
+00da820c  mov x1,xzr
+00da8210  b 0x00b0785c
+
+
+================================================================================
+### FILE: 01b08bd8_ImporterFunc_object_-object___.ctor.txt
+================================================================================
+Function: ImporterFunc<object,-object>$$.ctor @ 01b08bd8
+
+--- Calls OUT ---
+  -> FUN_0098a638 @ 0098a638
+  -> FUN_0098a5f8 @ 0098a5f8
+  -> FUN_0098a588 @ 0098a588
+  -> FUN_00b07cc4 @ 00b07cc4
+  -> FUN_00b07910 @ 00b07910
+  -> FUN_0098a768 @ 0098a768
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_0098a5d8 @ 0098a5d8
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aed804 @ 00b079c0
+  -> FUN_0098a698 @ 0098a698
+  -> thunk_FUN_00afc848 @ 00b07908
+  -> FUN_0098a71c @ 0098a71c
+  -> thunk_FUN_00afcc14 @ 00b07984
+  -> FUN_0098a608 @ 0098a608
+  -> FUN_0098a670 @ 0098a670
+
+--- Calls IN ---
+
+--- Listing ---
+01b08bd8  str x22,[sp, #-0x30]!
+01b08bdc  stp x21,x20,[sp, #0x10]
+01b08be0  stp x19,x30,[sp, #0x20]
+01b08be4  mov x19,x0
+01b08be8  mov x0,x2
+01b08bec  mov x20,x2
+01b08bf0  mov x21,x1
+01b08bf4  bl 0x00b07984
+01b08bf8  str x0,[x19, #0x10]
+01b08bfc  mov x0,x19
+01b08c00  str x20,[x19, #0x28]
+01b08c04  str x21,[x0, #0x20]!
+01b08c08  mov x1,x21
+01b08c0c  bl 0x00b07850
+01b08c10  ldrb w22,[x20, #0x52]
+01b08c14  mov x0,x20
+01b08c18  str x19,[x19, #0x40]
+01b08c1c  bl 0x00b07910
+01b08c20  tbz w0,#0x0,0x01b08c40
+01b08c24  ldrb w8,[x20, #0x53]
+01b08c28  tbnz w8,#0x4,0x01b08c5c
+01b08c2c  cmp w22,#0x1
+01b08c30  b.ne 0x01b08c48
+01b08c34  adrp x8,0x98a000
+01b08c38  add x8,x8,#0x5f8
+01b08c3c  b 0x01b08cdc
+01b08c40  cbz w22,0x01b08c70
+01b08c44  cbz x21,0x01b08cfc
+01b08c48  ldr x8,[x19, #0x10]
+01b08c4c  ldr x9,[x19, #0x20]
+01b08c50  str x8,[x19, #0x18]
+01b08c54  str x9,[x19, #0x40]
+01b08c58  b 0x01b08ce0
+01b08c5c  cmp w22,#0x1
+01b08c60  b.ne 0x01b08ca0
+01b08c64  adrp x8,0x98a000
+01b08c68  add x8,x8,#0x608
+01b08c6c  b 0x01b08cdc
+01b08c70  ldrb w8,[x19, #0x70]
+01b08c74  cbz w8,0x01b08cac
+01b08c78  mov x0,x20
+01b08c7c  bl 0x00b07908
+01b08c80  mov w21,w0
+01b08c84  mov x0,x20
+01b08c88  bl 0x00b07cc4
+01b08c8c  tbz w21,#0x0,0x01b08cb8
+01b08c90  tbz w0,#0x0,0x01b08cc8
+01b08c94  adrp x8,0x98a000
+01b08c98  add x8,x8,#0x768
+01b08c9c  b 0x01b08cdc
+01b08ca0  adrp x8,0x98a000
+01b08ca4  add x8,x8,#0x638
+01b08ca8  b 0x01b08cdc
+01b08cac  adrp x8,0x98a000
+01b08cb0  add x8,x8,#0x5d8
+01b08cb4  b 0x01b08cdc
+01b08cb8  tbz w0,#0x0,0x01b08cd4
+01b08cbc  adrp x8,0x98a000
+01b08cc0  add x8,x8,#0x698
+01b08cc4  b 0x01b08cdc
+01b08cc8  adrp x8,0x98a000
+01b08ccc  add x8,x8,#0x71c
+01b08cd0  b 0x01b08cdc
+01b08cd4  adrp x8,0x98a000
+01b08cd8  add x8,x8,#0x670
+01b08cdc  str x8,[x19, #0x18]
+01b08ce0  adrp x8,0x98a000
+01b08ce4  add x8,x8,#0x588
+01b08ce8  str x8,[x19, #0x38]
+01b08cec  ldp x19,x30,[sp, #0x20]
+01b08cf0  ldp x21,x20,[sp, #0x10]
+01b08cf4  ldr x22,[sp], #0x30
+01b08cf8  ret
+01b08cfc  adrp x1,0x26db000
+01b08d00  add x1,x1,#0xd9
+01b08d04  mov x0,xzr
+01b08d08  bl 0x00b079c0
+01b08d0c  mov x1,xzr
+01b08d10  bl 0x00b07978
+
+
+================================================================================
+### FILE: 01b08d14_ImporterFunc_object_-object___Invoke.txt
+================================================================================
+Function: ImporterFunc<object,-object>$$Invoke @ 01b08d14
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+01b08d14  ldr x8,[x0, #0x40]
+01b08d18  ldr x3,[x0, #0x18]
+01b08d1c  ldr x2,[x0, #0x28]
+01b08d20  mov x0,x8
+01b08d24  br x3
+
+
+================================================================================
+### FILE: 01b08d28_ImporterFunc_object_-object___BeginInvoke.txt
+================================================================================
+Function: ImporterFunc<object,-object>$$BeginInvoke @ 01b08d28
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf4b4 @ 00b07858
+
+--- Calls IN ---
+
+--- Listing ---
+01b08d28  sub sp,sp,#0x20
+01b08d2c  stp xzr,x30,[sp, #0x8]
+01b08d30  str x1,[sp]
+01b08d34  mov x1,sp
+01b08d38  bl 0x00b07858
+01b08d3c  ldr x30,[sp, #0x10]
+01b08d40  add sp,sp,#0x20
+01b08d44  ret
+
+
+================================================================================
+### FILE: 01b08d48_ImporterFunc_object_-object___EndInvoke.txt
+================================================================================
+Function: ImporterFunc<object,-object>$$EndInvoke @ 01b08d48
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf574 @ 00b0785c
+
+--- Calls IN ---
+
+--- Listing ---
+01b08d48  mov x0,x1
+01b08d4c  mov x1,xzr
+01b08d50  b 0x00b0785c
+
+

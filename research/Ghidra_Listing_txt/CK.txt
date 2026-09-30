@@ -1,0 +1,2595 @@
+================================================================================
+### FILE: 00d1cd54_CK_Database__.ctor.txt
+================================================================================
+Function: CK_Database$$.ctor @ 00d1cd54
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Collections.Generic.Dictionary<int,-object>$$Add @ 0192dbc0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- ISN_CloudKit$$Awake @ 00d1cc80
+
+--- Listing ---
+00d1cd54  str x24,[sp, #-0x40]!
+00d1cd58  stp x23,x22,[sp, #0x10]
+00d1cd5c  stp x21,x20,[sp, #0x20]
+00d1cd60  stp x19,x30,[sp, #0x30]
+00d1cd64  adrp x21,0x3571000
+00d1cd68  adrp x23,0x337d000
+00d1cd6c  ldrb w8,[x21, #0xbfb]
+00d1cd70  ldr x23,[x23, #0xd58]
+00d1cd74  mov w20,w1
+00d1cd78  mov x19,x0
+00d1cd7c  tbnz w8,#0x0,0x00d1ce00
+00d1cd80  adrp x0,0x3366000
+00d1cd84  ldr x0,[x0, #0x750]
+00d1cd88  bl 0x00b0789c
+00d1cd8c  adrp x0,0x330b000
+00d1cd90  ldr x0,[x0, #0x410]
+00d1cd94  bl 0x00b0789c
+00d1cd98  adrp x0,0x337d000
+00d1cd9c  ldr x0,[x0, #0x748]
+00d1cda0  bl 0x00b0789c
+00d1cda4  adrp x0,0x3350000
+00d1cda8  ldr x0,[x0, #0x238]
+00d1cdac  bl 0x00b0789c
+00d1cdb0  adrp x0,0x3364000
+00d1cdb4  ldr x0,[x0, #0x208]
+00d1cdb8  bl 0x00b0789c
+00d1cdbc  adrp x0,0x337d000
+00d1cdc0  ldr x0,[x0, #0xb40]
+00d1cdc4  bl 0x00b0789c
+00d1cdc8  adrp x0,0x3333000
+00d1cdcc  ldr x0,[x0, #0xd80]
+00d1cdd0  bl 0x00b0789c
+00d1cdd4  adrp x0,0x3334000
+00d1cdd8  ldr x0,[x0, #0x3d0]
+00d1cddc  bl 0x00b0789c
+00d1cde0  adrp x0,0x334c000
+00d1cde4  ldr x0,[x0, #0x5a8]
+00d1cde8  bl 0x00b0789c
+00d1cdec  adrp x0,0x337d000
+00d1cdf0  ldr x0,[x0, #0xd58]
+00d1cdf4  bl 0x00b0789c
+00d1cdf8  mov w8,#0x1
+00d1cdfc  strb w8,[x21, #0xbfb]
+00d1ce00  ldr x0,[x23]
+00d1ce04  ldr w8,[x0, #0xe0]
+00d1ce08  cbnz w8,0x00d1ce14
+00d1ce0c  bl 0x00b0798c
+00d1ce10  ldr x0,[x23]
+00d1ce14  ldr x8,[x0, #0xb8]
+00d1ce18  adrp x24,0x3366000
+00d1ce1c  ldr x21,[x8, #0x8]
+00d1ce20  ldr x24,[x24, #0x750]
+00d1ce24  cbnz x21,0x00d1ce7c
+00d1ce28  ldr w8,[x0, #0xe0]
+00d1ce2c  cbnz w8,0x00d1ce38
+00d1ce30  bl 0x00b0798c
+00d1ce34  ldr x0,[x23]
+00d1ce38  ldr x8,[x0, #0xb8]
+00d1ce3c  ldr x0,[x24]
+00d1ce40  ldr x22,[x8]
+00d1ce44  bl 0x00b079a0
+00d1ce48  cbz x0,0x00d1d08c
+00d1ce4c  adrp x8,0x337d000
+00d1ce50  ldr x8,[x8, #0xb40]
+00d1ce54  mov x1,x22
+00d1ce58  mov x3,xzr
+00d1ce5c  mov x21,x0
+00d1ce60  ldr x2,[x8]
+00d1ce64  bl 0x01909b80
+00d1ce68  ldr x8,[x23]
+00d1ce6c  mov x1,x21
+00d1ce70  ldr x0,[x8, #0xb8]
+00d1ce74  str x21,[x0, #0x8]!
+00d1ce78  bl 0x00b07850
+00d1ce7c  cbz x19,0x00d1d08c
+00d1ce80  mov x0,x19
+00d1ce84  str x21,[x0, #0x10]!
+00d1ce88  mov x1,x21
+00d1ce8c  bl 0x00b07850
+00d1ce90  ldr x0,[x23]
+00d1ce94  ldr w8,[x0, #0xe0]
+00d1ce98  cbnz w8,0x00d1cea4
+00d1ce9c  bl 0x00b0798c
+00d1cea0  ldr x0,[x23]
+00d1cea4  ldr x8,[x0, #0xb8]
+00d1cea8  ldr x21,[x8, #0x10]
+00d1ceac  cbnz x21,0x00d1cf04
+00d1ceb0  ldr w8,[x0, #0xe0]
+00d1ceb4  cbnz w8,0x00d1cec0
+00d1ceb8  bl 0x00b0798c
+00d1cebc  ldr x0,[x23]
+00d1cec0  ldr x8,[x0, #0xb8]
+00d1cec4  ldr x0,[x24]
+00d1cec8  ldr x22,[x8]
+00d1cecc  bl 0x00b079a0
+00d1ced0  cbz x0,0x00d1d08c
+00d1ced4  adrp x8,0x3333000
+00d1ced8  ldr x8,[x8, #0xd80]
+00d1cedc  mov x1,x22
+00d1cee0  mov x3,xzr
+00d1cee4  mov x21,x0
+00d1cee8  ldr x2,[x8]
+00d1ceec  bl 0x01909b80
+00d1cef0  ldr x8,[x23]
+00d1cef4  mov x1,x21
+00d1cef8  ldr x0,[x8, #0xb8]
+00d1cefc  str x21,[x0, #0x10]!
+00d1cf00  bl 0x00b07850
+00d1cf04  mov x0,x19
+00d1cf08  str x21,[x0, #0x18]!
+00d1cf0c  mov x1,x21
+00d1cf10  bl 0x00b07850
+00d1cf14  ldr x0,[x23]
+00d1cf18  ldr w8,[x0, #0xe0]
+00d1cf1c  cbnz w8,0x00d1cf28
+00d1cf20  bl 0x00b0798c
+00d1cf24  ldr x0,[x23]
+00d1cf28  ldr x8,[x0, #0xb8]
+00d1cf2c  ldr x21,[x8, #0x18]
+00d1cf30  cbnz x21,0x00d1cf90
+00d1cf34  adrp x21,0x330b000
+00d1cf38  ldr w8,[x0, #0xe0]
+00d1cf3c  ldr x21,[x21, #0x410]
+00d1cf40  cbnz w8,0x00d1cf4c
+00d1cf44  bl 0x00b0798c
+00d1cf48  ldr x0,[x23]
+00d1cf4c  ldr x8,[x0, #0xb8]
+00d1cf50  ldr x0,[x21]
+00d1cf54  ldr x22,[x8]
+00d1cf58  bl 0x00b079a0
+00d1cf5c  cbz x0,0x00d1d08c
+00d1cf60  adrp x8,0x3334000
+00d1cf64  ldr x8,[x8, #0x3d0]
+00d1cf68  mov x1,x22
+00d1cf6c  mov x3,xzr
+00d1cf70  mov x21,x0
+00d1cf74  ldr x2,[x8]
+00d1cf78  bl 0x01909b80
+00d1cf7c  ldr x8,[x23]
+00d1cf80  mov x1,x21
+00d1cf84  ldr x0,[x8, #0xb8]
+00d1cf88  str x21,[x0, #0x18]!
+00d1cf8c  bl 0x00b07850
+00d1cf90  mov x0,x19
+00d1cf94  str x21,[x0, #0x20]!
+00d1cf98  mov x1,x21
+00d1cf9c  bl 0x00b07850
+00d1cfa0  ldr x0,[x23]
+00d1cfa4  ldr w8,[x0, #0xe0]
+00d1cfa8  cbnz w8,0x00d1cfb4
+00d1cfac  bl 0x00b0798c
+00d1cfb0  ldr x0,[x23]
+00d1cfb4  ldr x8,[x0, #0xb8]
+00d1cfb8  ldr x21,[x8, #0x20]
+00d1cfbc  cbnz x21,0x00d1d01c
+00d1cfc0  adrp x21,0x337d000
+00d1cfc4  ldr w8,[x0, #0xe0]
+00d1cfc8  ldr x21,[x21, #0x748]
+00d1cfcc  cbnz w8,0x00d1cfd8
+00d1cfd0  bl 0x00b0798c
+00d1cfd4  ldr x0,[x23]
+00d1cfd8  ldr x8,[x0, #0xb8]
+00d1cfdc  ldr x0,[x21]
+00d1cfe0  ldr x22,[x8]
+00d1cfe4  bl 0x00b079a0
+00d1cfe8  cbz x0,0x00d1d08c
+00d1cfec  adrp x8,0x334c000
+00d1cff0  ldr x8,[x8, #0x5a8]
+00d1cff4  mov x1,x22
+00d1cff8  mov x3,xzr
+00d1cffc  mov x21,x0
+00d1d000  ldr x2,[x8]
+00d1d004  bl 0x01909b80
+00d1d008  ldr x8,[x23]
+00d1d00c  mov x1,x21
+00d1d010  ldr x0,[x8, #0xb8]
+00d1d014  str x21,[x0, #0x20]!
+00d1d018  bl 0x00b07850
+00d1d01c  adrp x22,0x3350000
+00d1d020  ldr x22,[x22, #0x238]
+00d1d024  mov x0,x19
+00d1d028  str x21,[x0, #0x28]!
+00d1d02c  mov x1,x21
+00d1d030  bl 0x00b07850
+00d1d034  mov x0,x19
+00d1d038  mov x1,xzr
+00d1d03c  bl 0x02194104
+00d1d040  str w20,[x19, #0x30]
+00d1d044  ldr x0,[x22]
+00d1d048  ldr w8,[x0, #0xe0]
+00d1d04c  cbnz w8,0x00d1d058
+00d1d050  bl 0x00b0798c
+00d1d054  ldr x0,[x22]
+00d1d058  ldr x8,[x0, #0xb8]
+00d1d05c  ldr x0,[x8]
+00d1d060  cbz x0,0x00d1d08c
+00d1d064  adrp x8,0x3364000
+00d1d068  ldr x8,[x8, #0x208]
+00d1d06c  ldr w1,[x19, #0x30]
+00d1d070  mov x2,x19
+00d1d074  ldp x19,x30,[sp, #0x30]
+00d1d078  ldr x3,[x8]
+00d1d07c  ldp x21,x20,[sp, #0x20]
+00d1d080  ldp x23,x22,[sp, #0x10]
+00d1d084  ldr x24,[sp], #0x40
+00d1d088  b 0x0192dbc0
+00d1d08c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1d1cc_CK_Database__GetDatabaseByInternalId.txt
+================================================================================
+Function: CK_Database$$GetDatabaseByInternalId @ 00d1d1cc
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<int,-object>$$get_Item @ 0192db0c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnDeleteRecordSuccess @ 00d1d528
+  <- ISN_CloudKit$$OnSaveRecordFailed @ 00d1d314
+  <- ISN_CloudKit$$OnSaveRecordSuccess @ 00d1d0a0
+  <- ISN_CloudKit$$OnFetchRecordFailed @ 00d1e390
+  <- ISN_CloudKit$$OnDeleteRecordFailed @ 00d1d71c
+  <- ISN_CloudKit$$OnPerformQueryFailed @ 00d1df00
+  <- ISN_CloudKit$$OnFetchRecordSuccess @ 00d1e164
+  <- ISN_CloudKit$$OnPerformQuerySuccess @ 00d1d930
+
+--- Listing ---
+00d1d1cc  stp x21,x20,[sp, #-0x20]!
+00d1d1d0  stp x19,x30,[sp, #0x10]
+00d1d1d4  adrp x21,0x3571000
+00d1d1d8  adrp x20,0x3350000
+00d1d1dc  ldrb w8,[x21, #0xbfc]
+00d1d1e0  ldr x20,[x20, #0x238]
+00d1d1e4  mov w19,w0
+00d1d1e8  tbnz w8,#0x0,0x00d1d20c
+00d1d1ec  adrp x0,0x3350000
+00d1d1f0  ldr x0,[x0, #0x238]
+00d1d1f4  bl 0x00b0789c
+00d1d1f8  adrp x0,0x3380000
+00d1d1fc  ldr x0,[x0, #0x2d0]
+00d1d200  bl 0x00b0789c
+00d1d204  mov w8,#0x1
+00d1d208  strb w8,[x21, #0xbfc]
+00d1d20c  ldr x0,[x20]
+00d1d210  ldr w8,[x0, #0xe0]
+00d1d214  cbnz w8,0x00d1d220
+00d1d218  bl 0x00b0798c
+00d1d21c  ldr x0,[x20]
+00d1d220  ldr x8,[x0, #0xb8]
+00d1d224  ldr x0,[x8]
+00d1d228  cbz x0,0x00d1d248
+00d1d22c  adrp x8,0x3380000
+00d1d230  ldr x8,[x8, #0x2d0]
+00d1d234  mov w1,w19
+00d1d238  ldp x19,x30,[sp, #0x10]
+00d1d23c  ldr x2,[x8]
+00d1d240  ldp x21,x20,[sp], #0x20
+00d1d244  b 0x0192db0c
+00d1d248  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1d24c_CK_RecordResult__.ctor.txt
+================================================================================
+Function: CK_RecordResult$$.ctor @ 00d1d24c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> CK_Record$$GetRecordByInternalId @ 00d1f3b8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA.Common.Models.Result$$.ctor @ 00c889e0
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnSaveRecordSuccess @ 00d1d0a0
+  <- ISN_CloudKit$$OnFetchRecordSuccess @ 00d1e164
+
+--- Listing ---
+00d1d24c  str x22,[sp, #-0x30]!
+00d1d250  stp x21,x20,[sp, #0x10]
+00d1d254  stp x19,x30,[sp, #0x20]
+00d1d258  adrp x22,0x3571000
+00d1d25c  adrp x21,0x3330000
+00d1d260  ldrb w8,[x22, #0xc0e]
+00d1d264  ldr x21,[x21, #0xf20]
+00d1d268  mov w20,w1
+00d1d26c  mov x19,x0
+00d1d270  tbnz w8,#0x0,0x00d1d288
+00d1d274  adrp x0,0x3330000
+00d1d278  ldr x0,[x0, #0xf20]
+00d1d27c  bl 0x00b0789c
+00d1d280  mov w8,#0x1
+00d1d284  strb w8,[x22, #0xc0e]
+00d1d288  mov x0,x19
+00d1d28c  mov x1,xzr
+00d1d290  bl 0x00c889e0
+00d1d294  ldr x0,[x21]
+00d1d298  ldr w8,[x0, #0xe0]
+00d1d29c  cbnz w8,0x00d1d2a4
+00d1d2a0  bl 0x00b0798c
+00d1d2a4  mov w0,w20
+00d1d2a8  bl 0x00d1f3b8
+00d1d2ac  str x0,[x19, #0x18]!
+00d1d2b0  mov x1,x0
+00d1d2b4  mov x0,x19
+00d1d2b8  ldp x19,x30,[sp, #0x20]
+00d1d2bc  ldp x21,x20,[sp, #0x10]
+00d1d2c0  ldr x22,[sp], #0x30
+00d1d2c4  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d1d2c8_CK_Database__FireSaveRecordResult.txt
+================================================================================
+Function: CK_Database$$FireSaveRecordResult @ 00d1d2c8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnSaveRecordFailed @ 00d1d314
+  <- ISN_CloudKit$$OnSaveRecordSuccess @ 00d1d0a0
+
+--- Listing ---
+00d1d2c8  str x20,[sp, #-0x20]!
+00d1d2cc  stp x19,x30,[sp, #0x10]
+00d1d2d0  cbz x1,0x00d1d310
+00d1d2d4  mov x20,x0
+00d1d2d8  mov x0,x1
+00d1d2dc  mov x19,x1
+00d1d2e0  str x20,[x0, #0x20]!
+00d1d2e4  mov x1,x20
+00d1d2e8  bl 0x00b07850
+00d1d2ec  ldr x8,[x20, #0x10]
+00d1d2f0  cbz x8,0x00d1d310
+00d1d2f4  ldr x3,[x8, #0x18]
+00d1d2f8  ldr x0,[x8, #0x40]
+00d1d2fc  ldr x2,[x8, #0x28]
+00d1d300  mov x1,x19
+00d1d304  ldp x19,x30,[sp, #0x10]
+00d1d308  ldr x20,[sp], #0x20
+00d1d30c  br x3
+00d1d310  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1d4b0_CK_RecordResult__.ctor.txt
+================================================================================
+Function: CK_RecordResult$$.ctor @ 00d1d4b0
+
+--- Calls OUT ---
+  -> SA.Common.Models.Result$$.ctor @ 00c889e8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Error$$.ctor @ 00c88240
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnSaveRecordFailed @ 00d1d314
+  <- ISN_CloudKit$$OnFetchRecordFailed @ 00d1e390
+
+--- Listing ---
+00d1d4b0  str x22,[sp, #-0x30]!
+00d1d4b4  stp x21,x20,[sp, #0x10]
+00d1d4b8  stp x19,x30,[sp, #0x20]
+00d1d4bc  adrp x21,0x3571000
+00d1d4c0  adrp x22,0x336f000
+00d1d4c4  ldrb w8,[x21, #0xc0f]
+00d1d4c8  ldr x22,[x22, #0x200]
+00d1d4cc  mov x20,x1
+00d1d4d0  mov x19,x0
+00d1d4d4  tbnz w8,#0x0,0x00d1d4ec
+00d1d4d8  adrp x0,0x336f000
+00d1d4dc  ldr x0,[x0, #0x200]
+00d1d4e0  bl 0x00b0789c
+00d1d4e4  mov w8,#0x1
+00d1d4e8  strb w8,[x21, #0xc0f]
+00d1d4ec  ldr x0,[x22]
+00d1d4f0  bl 0x00b079a0
+00d1d4f4  cbz x0,0x00d1d524
+00d1d4f8  mov x1,x20
+00d1d4fc  mov x2,xzr
+00d1d500  mov x21,x0
+00d1d504  bl 0x00c88240
+00d1d508  mov x0,x19
+00d1d50c  mov x1,x21
+00d1d510  ldp x19,x30,[sp, #0x20]
+00d1d514  ldp x21,x20,[sp, #0x10]
+00d1d518  mov x2,xzr
+00d1d51c  ldr x22,[sp], #0x30
+00d1d520  b 0x00c889e8
+00d1d524  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1d654_CK_RecordDeleteResult__.ctor.txt
+================================================================================
+Function: CK_RecordDeleteResult$$.ctor @ 00d1d654
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA.Common.Models.Result$$.ctor @ 00c889e0
+  -> CK_RecordID$$GetRecordIdByInternalId @ 00d1f4e0
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnDeleteRecordSuccess @ 00d1d528
+
+--- Listing ---
+00d1d654  str x22,[sp, #-0x30]!
+00d1d658  stp x21,x20,[sp, #0x10]
+00d1d65c  stp x19,x30,[sp, #0x20]
+00d1d660  adrp x22,0x3571000
+00d1d664  adrp x21,0x336a000
+00d1d668  ldrb w8,[x22, #0xc0c]
+00d1d66c  ldr x21,[x21, #0xd20]
+00d1d670  mov w20,w1
+00d1d674  mov x19,x0
+00d1d678  tbnz w8,#0x0,0x00d1d690
+00d1d67c  adrp x0,0x336a000
+00d1d680  ldr x0,[x0, #0xd20]
+00d1d684  bl 0x00b0789c
+00d1d688  mov w8,#0x1
+00d1d68c  strb w8,[x22, #0xc0c]
+00d1d690  mov x0,x19
+00d1d694  mov x1,xzr
+00d1d698  bl 0x00c889e0
+00d1d69c  ldr x0,[x21]
+00d1d6a0  ldr w8,[x0, #0xe0]
+00d1d6a4  cbnz w8,0x00d1d6ac
+00d1d6a8  bl 0x00b0798c
+00d1d6ac  mov w0,w20
+00d1d6b0  bl 0x00d1f4e0
+00d1d6b4  str x0,[x19, #0x18]!
+00d1d6b8  mov x1,x0
+00d1d6bc  mov x0,x19
+00d1d6c0  ldp x19,x30,[sp, #0x20]
+00d1d6c4  ldp x21,x20,[sp, #0x10]
+00d1d6c8  ldr x22,[sp], #0x30
+00d1d6cc  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d1d6d0_CK_Database__FireDeleteRecordResult.txt
+================================================================================
+Function: CK_Database$$FireDeleteRecordResult @ 00d1d6d0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnDeleteRecordSuccess @ 00d1d528
+  <- ISN_CloudKit$$OnDeleteRecordFailed @ 00d1d71c
+
+--- Listing ---
+00d1d6d0  str x20,[sp, #-0x20]!
+00d1d6d4  stp x19,x30,[sp, #0x10]
+00d1d6d8  cbz x1,0x00d1d718
+00d1d6dc  mov x20,x0
+00d1d6e0  mov x0,x1
+00d1d6e4  mov x19,x1
+00d1d6e8  str x20,[x0, #0x20]!
+00d1d6ec  mov x1,x20
+00d1d6f0  bl 0x00b07850
+00d1d6f4  ldr x8,[x20, #0x20]
+00d1d6f8  cbz x8,0x00d1d718
+00d1d6fc  ldr x3,[x8, #0x18]
+00d1d700  ldr x0,[x8, #0x40]
+00d1d704  ldr x2,[x8, #0x28]
+00d1d708  mov x1,x19
+00d1d70c  ldp x19,x30,[sp, #0x10]
+00d1d710  ldr x20,[sp], #0x20
+00d1d714  br x3
+00d1d718  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1d8b8_CK_RecordDeleteResult__.ctor.txt
+================================================================================
+Function: CK_RecordDeleteResult$$.ctor @ 00d1d8b8
+
+--- Calls OUT ---
+  -> SA.Common.Models.Result$$.ctor @ 00c889e8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Error$$.ctor @ 00c88240
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnDeleteRecordFailed @ 00d1d71c
+
+--- Listing ---
+00d1d8b8  str x22,[sp, #-0x30]!
+00d1d8bc  stp x21,x20,[sp, #0x10]
+00d1d8c0  stp x19,x30,[sp, #0x20]
+00d1d8c4  adrp x21,0x3571000
+00d1d8c8  adrp x22,0x336f000
+00d1d8cc  ldrb w8,[x21, #0xc0d]
+00d1d8d0  ldr x22,[x22, #0x200]
+00d1d8d4  mov x20,x1
+00d1d8d8  mov x19,x0
+00d1d8dc  tbnz w8,#0x0,0x00d1d8f4
+00d1d8e0  adrp x0,0x336f000
+00d1d8e4  ldr x0,[x0, #0x200]
+00d1d8e8  bl 0x00b0789c
+00d1d8ec  mov w8,#0x1
+00d1d8f0  strb w8,[x21, #0xc0d]
+00d1d8f4  ldr x0,[x22]
+00d1d8f8  bl 0x00b079a0
+00d1d8fc  cbz x0,0x00d1d92c
+00d1d900  mov x1,x20
+00d1d904  mov x2,xzr
+00d1d908  mov x21,x0
+00d1d90c  bl 0x00c88240
+00d1d910  mov x0,x19
+00d1d914  mov x1,x21
+00d1d918  ldp x19,x30,[sp, #0x20]
+00d1d91c  ldp x21,x20,[sp, #0x10]
+00d1d920  mov x2,xzr
+00d1d924  ldr x22,[sp], #0x30
+00d1d928  b 0x00c889e8
+00d1d92c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1dc3c_CK_Record__.ctor.txt
+================================================================================
+Function: CK_Record$$.ctor @ 00d1dc3c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Collections.Generic.Dictionary<object,-object>$$.ctor @ 0196dbb0
+  -> System.String$$op_Equality @ 01fd05b0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> CK_Record$$IndexRecord @ 00d1f0d8
+  -> CK_Record$$SetObject @ 00d1f224
+  -> System.String$$Split @ 01fe0d68
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CK_RecordID$$.ctor @ 00d1f168
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnFetchRecordSuccess @ 00d1e164
+  <- ISN_CloudKit$$OnPerformQuerySuccess @ 00d1d930
+
+--- Listing ---
+00d1dc3c  str x24,[sp, #-0x40]!
+00d1dc40  stp x23,x22,[sp, #0x10]
+00d1dc44  stp x21,x20,[sp, #0x20]
+00d1dc48  stp x19,x30,[sp, #0x30]
+00d1dc4c  adrp x22,0x3571000
+00d1dc50  adrp x24,0x331b000
+00d1dc54  adrp x23,0x337d000
+00d1dc58  ldrb w8,[x22, #0xc00]
+00d1dc5c  ldr x24,[x24, #0x6c8]
+00d1dc60  ldr x23,[x23, #0x240]
+00d1dc64  mov x20,x2
+00d1dc68  mov x21,x1
+00d1dc6c  mov x19,x0
+00d1dc70  tbnz w8,#0x0,0x00d1dcb8
+00d1dc74  adrp x0,0x336a000
+00d1dc78  ldr x0,[x0, #0xd20]
+00d1dc7c  bl 0x00b0789c
+00d1dc80  adrp x0,0x3314000
+00d1dc84  ldr x0,[x0, #0xee0]
+00d1dc88  bl 0x00b0789c
+00d1dc8c  adrp x0,0x337d000
+00d1dc90  ldr x0,[x0, #0x240]
+00d1dc94  bl 0x00b0789c
+00d1dc98  adrp x0,0x331b000
+00d1dc9c  ldr x0,[x0, #0x6c8]
+00d1dca0  bl 0x00b0789c
+00d1dca4  adrp x0,0x335e000
+00d1dca8  ldr x0,[x0, #0xe58]
+00d1dcac  bl 0x00b0789c
+00d1dcb0  mov w8,#0x1
+00d1dcb4  strb w8,[x22, #0xc00]
+00d1dcb8  ldr x8,[x24]
+00d1dcbc  mov x22,x19
+00d1dcc0  ldr x8,[x8, #0xb8]
+00d1dcc4  ldr x1,[x8]
+00d1dcc8  str x1,[x22, #0x18]!
+00d1dccc  mov x0,x22
+00d1dcd0  bl 0x00b07850
+00d1dcd4  ldr x0,[x23]
+00d1dcd8  bl 0x00b079a0
+00d1dcdc  cbz x0,0x00d1de08
+00d1dce0  adrp x8,0x3314000
+00d1dce4  ldr x8,[x8, #0xee0]
+00d1dce8  adrp x24,0x336a000
+00d1dcec  mov x23,x0
+00d1dcf0  ldr x1,[x8]
+00d1dcf4  ldr x24,[x24, #0xd20]
+00d1dcf8  bl 0x0196dbb0
+00d1dcfc  mov x0,x19
+00d1dd00  str x23,[x0, #0x20]!
+00d1dd04  mov x1,x23
+00d1dd08  bl 0x00b07850
+00d1dd0c  mov x0,x19
+00d1dd10  mov x1,xzr
+00d1dd14  bl 0x02194104
+00d1dd18  ldr x0,[x24]
+00d1dd1c  bl 0x00b079a0
+00d1dd20  cbz x0,0x00d1de08
+00d1dd24  mov x1,x21
+00d1dd28  mov x23,x0
+00d1dd2c  bl 0x00d1f168
+00d1dd30  mov x0,x19
+00d1dd34  str x23,[x0, #0x10]!
+00d1dd38  mov x1,x23
+00d1dd3c  bl 0x00b07850
+00d1dd40  cbz x20,0x00d1de08
+00d1dd44  mov w1,#0x7c
+00d1dd48  mov x0,x20
+00d1dd4c  mov w2,wzr
+00d1dd50  mov x3,xzr
+00d1dd54  bl 0x01fe0d68
+00d1dd58  cbz x0,0x00d1de08
+00d1dd5c  ldr w8,[x0, #0x18]
+00d1dd60  mov x20,x0
+00d1dd64  cbz w8,0x00d1de04
+00d1dd68  ldr x1,[x20, #0x20]
+00d1dd6c  mov x0,x22
+00d1dd70  str x1,[x22]
+00d1dd74  bl 0x00b07850
+00d1dd78  ldr w8,[x20, #0x18]
+00d1dd7c  cmp w8,#0x2
+00d1dd80  b.lt 0x00d1ddec
+00d1dd84  adrp x21,0x335e000
+00d1dd88  ldr x21,[x21, #0xe58]
+00d1dd8c  mov w22,#0x1
+00d1dd90  cmp w22,w8
+00d1dd94  b.cs 0x00d1de04
+00d1dd98  add x23,x20,w22, SXTW  #0x3
+00d1dd9c  ldr x0,[x23, #0x20]!
+00d1dda0  ldr x1,[x21]
+00d1dda4  mov x2,xzr
+00d1dda8  bl 0x01fd05b0
+00d1ddac  tbnz w0,#0x0,0x00d1ddec
+00d1ddb0  ldr w8,[x20, #0x18]
+00d1ddb4  cmp w22,w8
+00d1ddb8  b.cs 0x00d1de04
+00d1ddbc  add w22,w22,#0x1
+00d1ddc0  cmp w22,w8
+00d1ddc4  b.cs 0x00d1de04
+00d1ddc8  add x8,x20,w22, SXTW  #0x3
+00d1ddcc  ldr x1,[x23]
+00d1ddd0  ldr x2,[x8, #0x20]
+00d1ddd4  mov x0,x19
+00d1ddd8  bl 0x00d1f224
+00d1dddc  ldr w8,[x20, #0x18]
+00d1dde0  add w22,w22,#0x1
+00d1dde4  cmp w22,w8
+00d1dde8  b.lt 0x00d1dd90
+00d1ddec  mov x0,x19
+00d1ddf0  ldp x19,x30,[sp, #0x30]
+00d1ddf4  ldp x21,x20,[sp, #0x20]
+00d1ddf8  ldp x23,x22,[sp, #0x10]
+00d1ddfc  ldr x24,[sp], #0x40
+00d1de00  b 0x00d1f0d8
+00d1de04  bl 0x00b079b8
+00d1de08  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1de0c_CK_QueryResult__.ctor.txt
+================================================================================
+Function: CK_QueryResult$$.ctor @ 00d1de0c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> SA.Common.Models.Result$$.ctor @ 00c889e0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnPerformQuerySuccess @ 00d1d930
+
+--- Listing ---
+00d1de0c  str x22,[sp, #-0x30]!
+00d1de10  stp x21,x20,[sp, #0x10]
+00d1de14  stp x19,x30,[sp, #0x20]
+00d1de18  adrp x21,0x3571000
+00d1de1c  adrp x22,0x3343000
+00d1de20  ldrb w8,[x21, #0xc0a]
+00d1de24  ldr x22,[x22, #0x2e0]
+00d1de28  mov x19,x1
+00d1de2c  mov x20,x0
+00d1de30  tbnz w8,#0x0,0x00d1de54
+00d1de34  adrp x0,0x336b000
+00d1de38  ldr x0,[x0, #0xf30]
+00d1de3c  bl 0x00b0789c
+00d1de40  adrp x0,0x3343000
+00d1de44  ldr x0,[x0, #0x2e0]
+00d1de48  bl 0x00b0789c
+00d1de4c  mov w8,#0x1
+00d1de50  strb w8,[x21, #0xc0a]
+00d1de54  ldr x0,[x22]
+00d1de58  bl 0x00b079a0
+00d1de5c  cbz x0,0x00d1deb0
+00d1de60  adrp x8,0x336b000
+00d1de64  ldr x8,[x8, #0xf30]
+00d1de68  mov x21,x0
+00d1de6c  ldr x1,[x8]
+00d1de70  bl 0x01bffe10
+00d1de74  mov x22,x20
+00d1de78  str x21,[x22, #0x20]!
+00d1de7c  mov x0,x22
+00d1de80  mov x1,x21
+00d1de84  bl 0x00b07850
+00d1de88  mov x0,x20
+00d1de8c  mov x1,xzr
+00d1de90  bl 0x00c889e0
+00d1de94  str x19,[x22]
+00d1de98  mov x1,x19
+00d1de9c  ldp x19,x30,[sp, #0x20]
+00d1dea0  ldp x21,x20,[sp, #0x10]
+00d1dea4  mov x0,x22
+00d1dea8  ldr x22,[sp], #0x30
+00d1deac  b 0x00b07850
+00d1deb0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1deb4_CK_Database__FireQueryCompleteResult.txt
+================================================================================
+Function: CK_Database$$FireQueryCompleteResult @ 00d1deb4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnPerformQueryFailed @ 00d1df00
+  <- ISN_CloudKit$$OnPerformQuerySuccess @ 00d1d930
+
+--- Listing ---
+00d1deb4  str x20,[sp, #-0x20]!
+00d1deb8  stp x19,x30,[sp, #0x10]
+00d1debc  cbz x1,0x00d1defc
+00d1dec0  mov x20,x0
+00d1dec4  mov x0,x1
+00d1dec8  mov x19,x1
+00d1decc  str x20,[x0, #0x18]!
+00d1ded0  mov x1,x20
+00d1ded4  bl 0x00b07850
+00d1ded8  ldr x8,[x20, #0x28]
+00d1dedc  cbz x8,0x00d1defc
+00d1dee0  ldr x3,[x8, #0x18]
+00d1dee4  ldr x0,[x8, #0x40]
+00d1dee8  ldr x2,[x8, #0x28]
+00d1deec  mov x1,x19
+00d1def0  ldp x19,x30,[sp, #0x10]
+00d1def4  ldr x20,[sp], #0x20
+00d1def8  br x3
+00d1defc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1e09c_CK_QueryResult__.ctor.txt
+================================================================================
+Function: CK_QueryResult$$.ctor @ 00d1e09c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SA.Common.Models.Result$$.ctor @ 00c889e8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Error$$.ctor @ 00c88240
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnPerformQueryFailed @ 00d1df00
+
+--- Listing ---
+00d1e09c  str x22,[sp, #-0x30]!
+00d1e0a0  stp x21,x20,[sp, #0x10]
+00d1e0a4  stp x19,x30,[sp, #0x20]
+00d1e0a8  adrp x21,0x3571000
+00d1e0ac  adrp x22,0x3343000
+00d1e0b0  ldrb w8,[x21, #0xc0b]
+00d1e0b4  ldr x22,[x22, #0x2e0]
+00d1e0b8  mov x20,x1
+00d1e0bc  mov x19,x0
+00d1e0c0  tbnz w8,#0x0,0x00d1e0f0
+00d1e0c4  adrp x0,0x336f000
+00d1e0c8  ldr x0,[x0, #0x200]
+00d1e0cc  bl 0x00b0789c
+00d1e0d0  adrp x0,0x336b000
+00d1e0d4  ldr x0,[x0, #0xf30]
+00d1e0d8  bl 0x00b0789c
+00d1e0dc  adrp x0,0x3343000
+00d1e0e0  ldr x0,[x0, #0x2e0]
+00d1e0e4  bl 0x00b0789c
+00d1e0e8  mov w8,#0x1
+00d1e0ec  strb w8,[x21, #0xc0b]
+00d1e0f0  ldr x0,[x22]
+00d1e0f4  bl 0x00b079a0
+00d1e0f8  cbz x0,0x00d1e160
+00d1e0fc  adrp x8,0x336b000
+00d1e100  ldr x8,[x8, #0xf30]
+00d1e104  adrp x22,0x336f000
+00d1e108  mov x21,x0
+00d1e10c  ldr x1,[x8]
+00d1e110  ldr x22,[x22, #0x200]
+00d1e114  bl 0x01bffe10
+00d1e118  mov x0,x19
+00d1e11c  str x21,[x0, #0x20]!
+00d1e120  mov x1,x21
+00d1e124  bl 0x00b07850
+00d1e128  ldr x0,[x22]
+00d1e12c  bl 0x00b079a0
+00d1e130  cbz x0,0x00d1e160
+00d1e134  mov x1,x20
+00d1e138  mov x2,xzr
+00d1e13c  mov x21,x0
+00d1e140  bl 0x00c88240
+00d1e144  mov x0,x19
+00d1e148  mov x1,x21
+00d1e14c  ldp x19,x30,[sp, #0x20]
+00d1e150  ldp x21,x20,[sp, #0x10]
+00d1e154  mov x2,xzr
+00d1e158  ldr x22,[sp], #0x30
+00d1e15c  b 0x00c889e8
+00d1e160  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1e344_CK_Database__FireFetchRecordResult.txt
+================================================================================
+Function: CK_Database$$FireFetchRecordResult @ 00d1e344
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ISN_CloudKit$$OnFetchRecordFailed @ 00d1e390
+  <- ISN_CloudKit$$OnFetchRecordSuccess @ 00d1e164
+
+--- Listing ---
+00d1e344  str x20,[sp, #-0x20]!
+00d1e348  stp x19,x30,[sp, #0x10]
+00d1e34c  cbz x1,0x00d1e38c
+00d1e350  mov x20,x0
+00d1e354  mov x0,x1
+00d1e358  mov x19,x1
+00d1e35c  str x20,[x0, #0x20]!
+00d1e360  mov x1,x20
+00d1e364  bl 0x00b07850
+00d1e368  ldr x8,[x20, #0x18]
+00d1e36c  cbz x8,0x00d1e38c
+00d1e370  ldr x3,[x8, #0x18]
+00d1e374  ldr x0,[x8, #0x40]
+00d1e378  ldr x2,[x8, #0x28]
+00d1e37c  mov x1,x19
+00d1e380  ldp x19,x30,[sp, #0x10]
+00d1e384  ldr x20,[sp], #0x20
+00d1e388  br x3
+00d1e38c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1e58c_CK_Database__add_ActionRecordSaved.txt
+================================================================================
+Function: CK_Database$$add_ActionRecordSaved @ 00d1e58c
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- CloudKitUseExample$$Database_ActionRecordFetchForUpdateComplete @ 00d37f1c
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1e58c  str x24,[sp, #-0x40]!
+00d1e590  stp x23,x22,[sp, #0x10]
+00d1e594  stp x21,x20,[sp, #0x20]
+00d1e598  stp x19,x30,[sp, #0x30]
+00d1e59c  adrp x21,0x3571000
+00d1e5a0  ldrb w8,[x21, #0xbf3]
+00d1e5a4  mov x19,x1
+00d1e5a8  mov x20,x0
+00d1e5ac  tbnz w8,#0x0,0x00d1e5c4
+00d1e5b0  adrp x0,0x3366000
+00d1e5b4  ldr x0,[x0, #0x750]
+00d1e5b8  bl 0x00b0789c
+00d1e5bc  mov w8,#0x1
+00d1e5c0  strb w8,[x21, #0xbf3]
+00d1e5c4  adrp x24,0x3366000
+00d1e5c8  ldr x21,[x20, #0x10]!
+00d1e5cc  ldr x24,[x24, #0x750]
+00d1e5d0  mov x0,x21
+00d1e5d4  mov x1,x19
+00d1e5d8  mov x2,xzr
+00d1e5dc  bl 0x02197810
+00d1e5e0  cbz x0,0x00d1e600
+00d1e5e4  ldr x23,[x24]
+00d1e5e8  mov x22,x0
+00d1e5ec  mov x1,x23
+00d1e5f0  bl 0x00b07990
+00d1e5f4  mov x1,x0
+00d1e5f8  cbnz x0,0x00d1e604
+00d1e5fc  b 0x00d1e630
+00d1e600  mov x1,xzr
+00d1e604  mov x0,x20
+00d1e608  mov x2,x21
+00d1e60c  bl 0x00ae526c
+00d1e610  cmp x21,x0
+00d1e614  mov x21,x0
+00d1e618  b.ne 0x00d1e5d0
+00d1e61c  ldp x19,x30,[sp, #0x30]
+00d1e620  ldp x21,x20,[sp, #0x20]
+00d1e624  ldp x23,x22,[sp, #0x10]
+00d1e628  ldr x24,[sp], #0x40
+00d1e62c  ret
+00d1e630  mov x0,x22
+00d1e634  mov x1,x23
+00d1e638  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1e63c_CK_Database__remove_ActionRecordSaved.txt
+================================================================================
+Function: CK_Database$$remove_ActionRecordSaved @ 00d1e63c
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- CloudKitUseExample$$Database_ActionRecordSaved @ 00d382ec
+
+--- Listing ---
+00d1e63c  str x24,[sp, #-0x40]!
+00d1e640  stp x23,x22,[sp, #0x10]
+00d1e644  stp x21,x20,[sp, #0x20]
+00d1e648  stp x19,x30,[sp, #0x30]
+00d1e64c  adrp x21,0x3571000
+00d1e650  ldrb w8,[x21, #0xbf4]
+00d1e654  mov x19,x1
+00d1e658  mov x20,x0
+00d1e65c  tbnz w8,#0x0,0x00d1e674
+00d1e660  adrp x0,0x3366000
+00d1e664  ldr x0,[x0, #0x750]
+00d1e668  bl 0x00b0789c
+00d1e66c  mov w8,#0x1
+00d1e670  strb w8,[x21, #0xbf4]
+00d1e674  adrp x24,0x3366000
+00d1e678  ldr x21,[x20, #0x10]!
+00d1e67c  ldr x24,[x24, #0x750]
+00d1e680  mov x0,x21
+00d1e684  mov x1,x19
+00d1e688  mov x2,xzr
+00d1e68c  bl 0x02197a1c
+00d1e690  cbz x0,0x00d1e6b0
+00d1e694  ldr x23,[x24]
+00d1e698  mov x22,x0
+00d1e69c  mov x1,x23
+00d1e6a0  bl 0x00b07990
+00d1e6a4  mov x1,x0
+00d1e6a8  cbnz x0,0x00d1e6b4
+00d1e6ac  b 0x00d1e6e0
+00d1e6b0  mov x1,xzr
+00d1e6b4  mov x0,x20
+00d1e6b8  mov x2,x21
+00d1e6bc  bl 0x00ae526c
+00d1e6c0  cmp x21,x0
+00d1e6c4  mov x21,x0
+00d1e6c8  b.ne 0x00d1e680
+00d1e6cc  ldp x19,x30,[sp, #0x30]
+00d1e6d0  ldp x21,x20,[sp, #0x20]
+00d1e6d4  ldp x23,x22,[sp, #0x10]
+00d1e6d8  ldr x24,[sp], #0x40
+00d1e6dc  ret
+00d1e6e0  mov x0,x22
+00d1e6e4  mov x1,x23
+00d1e6e8  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1e6ec_CK_Database__add_ActionRecordFetchComplete.txt
+================================================================================
+Function: CK_Database$$add_ActionRecordFetchComplete @ 00d1e6ec
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1e6ec  str x24,[sp, #-0x40]!
+00d1e6f0  stp x23,x22,[sp, #0x10]
+00d1e6f4  stp x21,x20,[sp, #0x20]
+00d1e6f8  stp x19,x30,[sp, #0x30]
+00d1e6fc  adrp x21,0x3571000
+00d1e700  ldrb w8,[x21, #0xbf5]
+00d1e704  mov x19,x1
+00d1e708  mov x20,x0
+00d1e70c  tbnz w8,#0x0,0x00d1e724
+00d1e710  adrp x0,0x3366000
+00d1e714  ldr x0,[x0, #0x750]
+00d1e718  bl 0x00b0789c
+00d1e71c  mov w8,#0x1
+00d1e720  strb w8,[x21, #0xbf5]
+00d1e724  adrp x24,0x3366000
+00d1e728  ldr x21,[x20, #0x18]!
+00d1e72c  ldr x24,[x24, #0x750]
+00d1e730  mov x0,x21
+00d1e734  mov x1,x19
+00d1e738  mov x2,xzr
+00d1e73c  bl 0x02197810
+00d1e740  cbz x0,0x00d1e760
+00d1e744  ldr x23,[x24]
+00d1e748  mov x22,x0
+00d1e74c  mov x1,x23
+00d1e750  bl 0x00b07990
+00d1e754  mov x1,x0
+00d1e758  cbnz x0,0x00d1e764
+00d1e75c  b 0x00d1e790
+00d1e760  mov x1,xzr
+00d1e764  mov x0,x20
+00d1e768  mov x2,x21
+00d1e76c  bl 0x00ae526c
+00d1e770  cmp x21,x0
+00d1e774  mov x21,x0
+00d1e778  b.ne 0x00d1e730
+00d1e77c  ldp x19,x30,[sp, #0x30]
+00d1e780  ldp x21,x20,[sp, #0x20]
+00d1e784  ldp x23,x22,[sp, #0x10]
+00d1e788  ldr x24,[sp], #0x40
+00d1e78c  ret
+00d1e790  mov x0,x22
+00d1e794  mov x1,x23
+00d1e798  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1e79c_CK_Database__remove_ActionRecordFetchComplete.txt
+================================================================================
+Function: CK_Database$$remove_ActionRecordFetchComplete @ 00d1e79c
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- CloudKitUseExample$$Database_ActionRecordFetchForUpdateComplete @ 00d37f1c
+  <- CloudKitUseExample$$Database_ActionRecordFetchComplete @ 00d37d80
+
+--- Listing ---
+00d1e79c  str x24,[sp, #-0x40]!
+00d1e7a0  stp x23,x22,[sp, #0x10]
+00d1e7a4  stp x21,x20,[sp, #0x20]
+00d1e7a8  stp x19,x30,[sp, #0x30]
+00d1e7ac  adrp x21,0x3571000
+00d1e7b0  ldrb w8,[x21, #0xbf6]
+00d1e7b4  mov x19,x1
+00d1e7b8  mov x20,x0
+00d1e7bc  tbnz w8,#0x0,0x00d1e7d4
+00d1e7c0  adrp x0,0x3366000
+00d1e7c4  ldr x0,[x0, #0x750]
+00d1e7c8  bl 0x00b0789c
+00d1e7cc  mov w8,#0x1
+00d1e7d0  strb w8,[x21, #0xbf6]
+00d1e7d4  adrp x24,0x3366000
+00d1e7d8  ldr x21,[x20, #0x18]!
+00d1e7dc  ldr x24,[x24, #0x750]
+00d1e7e0  mov x0,x21
+00d1e7e4  mov x1,x19
+00d1e7e8  mov x2,xzr
+00d1e7ec  bl 0x02197a1c
+00d1e7f0  cbz x0,0x00d1e810
+00d1e7f4  ldr x23,[x24]
+00d1e7f8  mov x22,x0
+00d1e7fc  mov x1,x23
+00d1e800  bl 0x00b07990
+00d1e804  mov x1,x0
+00d1e808  cbnz x0,0x00d1e814
+00d1e80c  b 0x00d1e840
+00d1e810  mov x1,xzr
+00d1e814  mov x0,x20
+00d1e818  mov x2,x21
+00d1e81c  bl 0x00ae526c
+00d1e820  cmp x21,x0
+00d1e824  mov x21,x0
+00d1e828  b.ne 0x00d1e7e0
+00d1e82c  ldp x19,x30,[sp, #0x30]
+00d1e830  ldp x21,x20,[sp, #0x20]
+00d1e834  ldp x23,x22,[sp, #0x10]
+00d1e838  ldr x24,[sp], #0x40
+00d1e83c  ret
+00d1e840  mov x0,x22
+00d1e844  mov x1,x23
+00d1e848  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1e84c_CK_Database__add_ActionRecordDeleted.txt
+================================================================================
+Function: CK_Database$$add_ActionRecordDeleted @ 00d1e84c
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1e84c  str x24,[sp, #-0x40]!
+00d1e850  stp x23,x22,[sp, #0x10]
+00d1e854  stp x21,x20,[sp, #0x20]
+00d1e858  stp x19,x30,[sp, #0x30]
+00d1e85c  adrp x21,0x3571000
+00d1e860  ldrb w8,[x21, #0xbf7]
+00d1e864  mov x19,x1
+00d1e868  mov x20,x0
+00d1e86c  tbnz w8,#0x0,0x00d1e884
+00d1e870  adrp x0,0x330b000
+00d1e874  ldr x0,[x0, #0x410]
+00d1e878  bl 0x00b0789c
+00d1e87c  mov w8,#0x1
+00d1e880  strb w8,[x21, #0xbf7]
+00d1e884  adrp x24,0x330b000
+00d1e888  ldr x21,[x20, #0x20]!
+00d1e88c  ldr x24,[x24, #0x410]
+00d1e890  mov x0,x21
+00d1e894  mov x1,x19
+00d1e898  mov x2,xzr
+00d1e89c  bl 0x02197810
+00d1e8a0  cbz x0,0x00d1e8c0
+00d1e8a4  ldr x23,[x24]
+00d1e8a8  mov x22,x0
+00d1e8ac  mov x1,x23
+00d1e8b0  bl 0x00b07990
+00d1e8b4  mov x1,x0
+00d1e8b8  cbnz x0,0x00d1e8c4
+00d1e8bc  b 0x00d1e8f0
+00d1e8c0  mov x1,xzr
+00d1e8c4  mov x0,x20
+00d1e8c8  mov x2,x21
+00d1e8cc  bl 0x00ae526c
+00d1e8d0  cmp x21,x0
+00d1e8d4  mov x21,x0
+00d1e8d8  b.ne 0x00d1e890
+00d1e8dc  ldp x19,x30,[sp, #0x30]
+00d1e8e0  ldp x21,x20,[sp, #0x20]
+00d1e8e4  ldp x23,x22,[sp, #0x10]
+00d1e8e8  ldr x24,[sp], #0x40
+00d1e8ec  ret
+00d1e8f0  mov x0,x22
+00d1e8f4  mov x1,x23
+00d1e8f8  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1e8fc_CK_Database__remove_ActionRecordDeleted.txt
+================================================================================
+Function: CK_Database$$remove_ActionRecordDeleted @ 00d1e8fc
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- CloudKitUseExample$$Database_ActionRecordDeleted @ 00d381ac
+
+--- Listing ---
+00d1e8fc  str x24,[sp, #-0x40]!
+00d1e900  stp x23,x22,[sp, #0x10]
+00d1e904  stp x21,x20,[sp, #0x20]
+00d1e908  stp x19,x30,[sp, #0x30]
+00d1e90c  adrp x21,0x3571000
+00d1e910  ldrb w8,[x21, #0xbf8]
+00d1e914  mov x19,x1
+00d1e918  mov x20,x0
+00d1e91c  tbnz w8,#0x0,0x00d1e934
+00d1e920  adrp x0,0x330b000
+00d1e924  ldr x0,[x0, #0x410]
+00d1e928  bl 0x00b0789c
+00d1e92c  mov w8,#0x1
+00d1e930  strb w8,[x21, #0xbf8]
+00d1e934  adrp x24,0x330b000
+00d1e938  ldr x21,[x20, #0x20]!
+00d1e93c  ldr x24,[x24, #0x410]
+00d1e940  mov x0,x21
+00d1e944  mov x1,x19
+00d1e948  mov x2,xzr
+00d1e94c  bl 0x02197a1c
+00d1e950  cbz x0,0x00d1e970
+00d1e954  ldr x23,[x24]
+00d1e958  mov x22,x0
+00d1e95c  mov x1,x23
+00d1e960  bl 0x00b07990
+00d1e964  mov x1,x0
+00d1e968  cbnz x0,0x00d1e974
+00d1e96c  b 0x00d1e9a0
+00d1e970  mov x1,xzr
+00d1e974  mov x0,x20
+00d1e978  mov x2,x21
+00d1e97c  bl 0x00ae526c
+00d1e980  cmp x21,x0
+00d1e984  mov x21,x0
+00d1e988  b.ne 0x00d1e940
+00d1e98c  ldp x19,x30,[sp, #0x30]
+00d1e990  ldp x21,x20,[sp, #0x20]
+00d1e994  ldp x23,x22,[sp, #0x10]
+00d1e998  ldr x24,[sp], #0x40
+00d1e99c  ret
+00d1e9a0  mov x0,x22
+00d1e9a4  mov x1,x23
+00d1e9a8  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1e9ac_CK_Database__add_ActionQueryComplete.txt
+================================================================================
+Function: CK_Database$$add_ActionQueryComplete @ 00d1e9ac
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1e9ac  str x24,[sp, #-0x40]!
+00d1e9b0  stp x23,x22,[sp, #0x10]
+00d1e9b4  stp x21,x20,[sp, #0x20]
+00d1e9b8  stp x19,x30,[sp, #0x30]
+00d1e9bc  adrp x21,0x3571000
+00d1e9c0  ldrb w8,[x21, #0xbf9]
+00d1e9c4  mov x19,x1
+00d1e9c8  mov x20,x0
+00d1e9cc  tbnz w8,#0x0,0x00d1e9e4
+00d1e9d0  adrp x0,0x337d000
+00d1e9d4  ldr x0,[x0, #0x748]
+00d1e9d8  bl 0x00b0789c
+00d1e9dc  mov w8,#0x1
+00d1e9e0  strb w8,[x21, #0xbf9]
+00d1e9e4  adrp x24,0x337d000
+00d1e9e8  ldr x21,[x20, #0x28]!
+00d1e9ec  ldr x24,[x24, #0x748]
+00d1e9f0  mov x0,x21
+00d1e9f4  mov x1,x19
+00d1e9f8  mov x2,xzr
+00d1e9fc  bl 0x02197810
+00d1ea00  cbz x0,0x00d1ea20
+00d1ea04  ldr x23,[x24]
+00d1ea08  mov x22,x0
+00d1ea0c  mov x1,x23
+00d1ea10  bl 0x00b07990
+00d1ea14  mov x1,x0
+00d1ea18  cbnz x0,0x00d1ea24
+00d1ea1c  b 0x00d1ea50
+00d1ea20  mov x1,xzr
+00d1ea24  mov x0,x20
+00d1ea28  mov x2,x21
+00d1ea2c  bl 0x00ae526c
+00d1ea30  cmp x21,x0
+00d1ea34  mov x21,x0
+00d1ea38  b.ne 0x00d1e9f0
+00d1ea3c  ldp x19,x30,[sp, #0x30]
+00d1ea40  ldp x21,x20,[sp, #0x20]
+00d1ea44  ldp x23,x22,[sp, #0x10]
+00d1ea48  ldr x24,[sp], #0x40
+00d1ea4c  ret
+00d1ea50  mov x0,x22
+00d1ea54  mov x1,x23
+00d1ea58  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1ea5c_CK_Database__remove_ActionQueryComplete.txt
+================================================================================
+Function: CK_Database$$remove_ActionQueryComplete @ 00d1ea5c
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ea5c  str x24,[sp, #-0x40]!
+00d1ea60  stp x23,x22,[sp, #0x10]
+00d1ea64  stp x21,x20,[sp, #0x20]
+00d1ea68  stp x19,x30,[sp, #0x30]
+00d1ea6c  adrp x21,0x3571000
+00d1ea70  ldrb w8,[x21, #0xbfa]
+00d1ea74  mov x19,x1
+00d1ea78  mov x20,x0
+00d1ea7c  tbnz w8,#0x0,0x00d1ea94
+00d1ea80  adrp x0,0x337d000
+00d1ea84  ldr x0,[x0, #0x748]
+00d1ea88  bl 0x00b0789c
+00d1ea8c  mov w8,#0x1
+00d1ea90  strb w8,[x21, #0xbfa]
+00d1ea94  adrp x24,0x337d000
+00d1ea98  ldr x21,[x20, #0x28]!
+00d1ea9c  ldr x24,[x24, #0x748]
+00d1eaa0  mov x0,x21
+00d1eaa4  mov x1,x19
+00d1eaa8  mov x2,xzr
+00d1eaac  bl 0x02197a1c
+00d1eab0  cbz x0,0x00d1ead0
+00d1eab4  ldr x23,[x24]
+00d1eab8  mov x22,x0
+00d1eabc  mov x1,x23
+00d1eac0  bl 0x00b07990
+00d1eac4  mov x1,x0
+00d1eac8  cbnz x0,0x00d1ead4
+00d1eacc  b 0x00d1eb00
+00d1ead0  mov x1,xzr
+00d1ead4  mov x0,x20
+00d1ead8  mov x2,x21
+00d1eadc  bl 0x00ae526c
+00d1eae0  cmp x21,x0
+00d1eae4  mov x21,x0
+00d1eae8  b.ne 0x00d1eaa0
+00d1eaec  ldp x19,x30,[sp, #0x30]
+00d1eaf0  ldp x21,x20,[sp, #0x20]
+00d1eaf4  ldp x23,x22,[sp, #0x10]
+00d1eaf8  ldr x24,[sp], #0x40
+00d1eafc  ret
+00d1eb00  mov x0,x22
+00d1eb04  mov x1,x23
+00d1eb08  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1eb0c_CK_Database__SaveRecrod.txt
+================================================================================
+Function: CK_Database$$SaveRecrod @ 00d1eb0c
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> CK_Record$$UpdateRecord @ 00d1eb20
+
+--- Calls IN ---
+  <- CloudKitUseExample$$Database_ActionRecordFetchForUpdateComplete @ 00d37f1c
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1eb0c  cbz x1,0x00d1eb18
+00d1eb10  mov x0,x1
+00d1eb14  b 0x00d1eb20
+00d1eb18  str x30,[sp, #-0x10]!
+00d1eb1c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1eb20_CK_Record__UpdateRecord.txt
+================================================================================
+Function: CK_Record$$UpdateRecord @ 00d1eb20
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Collections.Generic.Dictionary.Enumerator<object,-object>$$MoveNext @ 01a4cb84
+  -> SA.Common.Data.Converter$$SerializeArray @ 00c8bfbc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary<object,-object>$$GetEnumerator @ 0196e924
+  -> System.Collections.Generic.Dictionary.Enumerator<object,-object>$$Dispose @ 01a4cc9c
+  -> System.Collections.Generic.List<object>$$ToArray @ 01c02720
+
+--- Calls IN ---
+  <- CK_Database$$SaveRecrod @ 00d1eb0c
+
+--- Listing ---
+00d1eb20  sub sp,sp,#0xb0
+00d1eb24  stp x27,x26,[sp, #0x60]
+00d1eb28  stp x25,x24,[sp, #0x70]
+00d1eb2c  stp x23,x22,[sp, #0x80]
+00d1eb30  stp x21,x20,[sp, #0x90]
+00d1eb34  stp x19,x30,[sp, #0xa0]
+00d1eb38  adrp x20,0x3571000
+00d1eb3c  adrp x21,0x3331000
+00d1eb40  ldrb w8,[x20, #0xc04]
+00d1eb44  ldr x21,[x21, #0x9c0]
+00d1eb48  mov x19,x0
+00d1eb4c  tbnz w8,#0x0,0x00d1ebdc
+00d1eb50  adrp x0,0x332b000
+00d1eb54  ldr x0,[x0, #0xb48]
+00d1eb58  bl 0x00b0789c
+00d1eb5c  adrp x0,0x331b000
+00d1eb60  ldr x0,[x0, #0xfd0]
+00d1eb64  bl 0x00b0789c
+00d1eb68  adrp x0,0x3377000
+00d1eb6c  ldr x0,[x0, #0x6d0]
+00d1eb70  bl 0x00b0789c
+00d1eb74  adrp x0,0x3345000
+00d1eb78  ldr x0,[x0, #0x260]
+00d1eb7c  bl 0x00b0789c
+00d1eb80  adrp x0,0x3340000
+00d1eb84  ldr x0,[x0, #0x800]
+00d1eb88  bl 0x00b0789c
+00d1eb8c  adrp x0,0x3378000
+00d1eb90  ldr x0,[x0, #0xd58]
+00d1eb94  bl 0x00b0789c
+00d1eb98  adrp x0,0x3362000
+00d1eb9c  ldr x0,[x0, #0xde0]
+00d1eba0  bl 0x00b0789c
+00d1eba4  adrp x0,0x3348000
+00d1eba8  ldr x0,[x0, #0xca0]
+00d1ebac  bl 0x00b0789c
+00d1ebb0  adrp x0,0x331a000
+00d1ebb4  ldr x0,[x0, #0xe40]
+00d1ebb8  bl 0x00b0789c
+00d1ebbc  adrp x0,0x3331000
+00d1ebc0  ldr x0,[x0, #0x9c0]
+00d1ebc4  bl 0x00b0789c
+00d1ebc8  adrp x0,0x3345000
+00d1ebcc  ldr x0,[x0, #0x150]
+00d1ebd0  bl 0x00b0789c
+00d1ebd4  mov w8,#0x1
+00d1ebd8  strb w8,[x20, #0xc04]
+00d1ebdc  ldr x0,[x21]
+00d1ebe0  movi v0.2D,#0x0
+00d1ebe4  str xzr,[sp, #0x50]
+00d1ebe8  stp q0,q0,[sp, #0x30]
+00d1ebec  bl 0x00b079a0
+00d1ebf0  cbz x0,0x00d1edb8
+00d1ebf4  adrp x22,0x331a000
+00d1ebf8  ldr x22,[x22, #0xe40]
+00d1ebfc  mov x20,x0
+00d1ec00  ldr x1,[x22]
+00d1ec04  bl 0x01bffe10
+00d1ec08  ldr x0,[x21]
+00d1ec0c  bl 0x00b079a0
+00d1ec10  cbz x0,0x00d1edb8
+00d1ec14  ldr x1,[x22]
+00d1ec18  mov x21,x0
+00d1ec1c  bl 0x01bffe10
+00d1ec20  ldr x0,[x19, #0x20]
+00d1ec24  cbz x0,0x00d1edb8
+00d1ec28  adrp x8,0x332b000
+00d1ec2c  ldr x8,[x8, #0xb48]
+00d1ec30  adrp x26,0x3377000
+00d1ec34  adrp x27,0x3362000
+00d1ec38  ldr x26,[x26, #0x6d0]
+00d1ec3c  ldr x27,[x27, #0xde0]
+00d1ec40  ldr x1,[x8]
+00d1ec44  adrp x25,0x3348000
+00d1ec48  adrp x24,0x3345000
+00d1ec4c  adrp x23,0x331b000
+00d1ec50  ldr x25,[x25, #0xca0]
+00d1ec54  ldr x24,[x24, #0x150]
+00d1ec58  ldr x23,[x23, #0xfd0]
+00d1ec5c  add x8,sp,#0x8
+00d1ec60  bl 0x0196e924
+00d1ec64  ldur q0,[sp, #0x8]
+00d1ec68  ldur q1,[sp, #0x18]
+00d1ec6c  ldr x8,[sp, #0x28]
+00d1ec70  stp q0,q1,[sp, #0x30]
+00d1ec74  str x8,[sp, #0x50]
+00d1ec78  ldr x1,[x26]
+00d1ec7c  add x0,sp,#0x30
+    ; [PRE] try { // try from 00d1ec7c to 00d1ec83 has its CatchHandler @ 00d1edcc
+00d1ec80  bl 0x01a4cb84
+    ; [POST] } // end try from 00d1ec7c to 00d1ec83
+00d1ec84  tbz w0,#0x0,0x00d1ed48
+00d1ec88  ldr w10,[x20, #0x1c]
+00d1ec8c  ldp x1,x22,[sp, #0x40]
+00d1ec90  ldr x8,[x20, #0x10]
+00d1ec94  ldr x9,[x27]
+00d1ec98  add w10,w10,#0x1
+00d1ec9c  str w10,[x20, #0x1c]
+00d1eca0  cbz x8,0x00d1eda8
+00d1eca4  ldrsw x10,[x20, #0x18]
+00d1eca8  ldr w11,[x8, #0x18]
+00d1ecac  cmp w10,w11
+00d1ecb0  b.cs 0x00d1eccc
+00d1ecb4  add w9,w10,#0x1
+00d1ecb8  add x0,x8,x10, LSL #0x3
+00d1ecbc  str w9,[x20, #0x18]
+00d1ecc0  str x1,[x0, #0x20]!
+00d1ecc4  bl 0x00b07850
+    ; [PRE] try { // try from 00d1ecc4 to 00d1ece3 has its CatchHandler @ 00d1edc4
+00d1ecc8  b 0x00d1ece4
+00d1eccc  ldr x8,[x9, #0x20]
+00d1ecd0  ldr x8,[x8, #0xc0]
+00d1ecd4  ldr x2,[x8, #0x58]
+00d1ecd8  ldr x8,[x2, #0x8]
+00d1ecdc  mov x0,x20
+00d1ece0  blr x8
+    ; [POST] } // end try from 00d1ecc4 to 00d1ece3
+00d1ece4  ldr w10,[x21, #0x1c]
+00d1ece8  ldr x8,[x21, #0x10]
+00d1ecec  ldr x9,[x27]
+00d1ecf0  add w10,w10,#0x1
+00d1ecf4  str w10,[x21, #0x1c]
+00d1ecf8  cbz x8,0x00d1edb0
+00d1ecfc  ldrsw x10,[x21, #0x18]
+00d1ed00  ldr w11,[x8, #0x18]
+00d1ed04  cmp w10,w11
+00d1ed08  b.cs 0x00d1ed28
+00d1ed0c  add w9,w10,#0x1
+00d1ed10  add x0,x8,x10, LSL #0x3
+00d1ed14  str w9,[x21, #0x18]
+00d1ed18  str x22,[x0, #0x20]!
+00d1ed1c  mov x1,x22
+    ; [PRE] try { // try from 00d1ed1c to 00d1ed43 has its CatchHandler @ 00d1edc8
+00d1ed20  bl 0x00b07850
+00d1ed24  b 0x00d1ec78
+00d1ed28  ldr x8,[x9, #0x20]
+00d1ed2c  ldr x8,[x8, #0xc0]
+00d1ed30  ldr x2,[x8, #0x58]
+00d1ed34  ldr x8,[x2, #0x8]
+00d1ed38  mov x0,x21
+00d1ed3c  mov x1,x22
+00d1ed40  blr x8
+    ; [POST] } // end try from 00d1ed1c to 00d1ed43
+00d1ed44  b 0x00d1ec78
+00d1ed48  ldr x1,[x23]
+00d1ed4c  add x0,sp,#0x30
+00d1ed50  bl 0x01a4cc9c
+00d1ed54  ldr x1,[x25]
+00d1ed58  mov x0,x20
+00d1ed5c  bl 0x01c02720
+00d1ed60  ldr x1,[x24]
+00d1ed64  mov x2,xzr
+00d1ed68  bl 0x00c8bfbc
+00d1ed6c  ldr x1,[x25]
+00d1ed70  mov x0,x21
+00d1ed74  bl 0x01c02720
+00d1ed78  ldr x1,[x24]
+00d1ed7c  mov x2,xzr
+00d1ed80  bl 0x00c8bfbc
+00d1ed84  ldr x8,[x19, #0x10]
+00d1ed88  cbz x8,0x00d1edb8
+00d1ed8c  ldp x19,x30,[sp, #0xa0]
+00d1ed90  ldp x21,x20,[sp, #0x90]
+00d1ed94  ldp x23,x22,[sp, #0x80]
+00d1ed98  ldp x25,x24,[sp, #0x70]
+00d1ed9c  ldp x27,x26,[sp, #0x60]
+00d1eda0  add sp,sp,#0xb0
+00d1eda4  ret
+00d1eda8  mov x26,x23
+    ; [PRE] try { // try from 00d1eda8 to 00d1edaf has its CatchHandler @ 00d1edc0
+00d1edac  bl 0x00b079b0
+    ; [POST] } // end try from 00d1eda8 to 00d1edaf
+00d1edb0  mov x26,x23
+    ; [PRE] try { // try from 00d1edb0 to 00d1edb7 has its CatchHandler @ 00d1edbc
+00d1edb4  bl 0x00b079b0
+    ; [POST] } // end try from 00d1edb0 to 00d1edb7
+00d1edb8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1ee34_CK_Database__FetchRecordWithID.txt
+================================================================================
+Function: CK_Database$$FetchRecordWithID @ 00d1ee34
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1ee34  cbz x1,0x00d1ee3c
+00d1ee38  ret
+00d1ee3c  str x30,[sp, #-0x10]!
+00d1ee40  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1ee44_CK_Database__DeleteRecordWithID.txt
+================================================================================
+Function: CK_Database$$DeleteRecordWithID @ 00d1ee44
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1ee44  cbz x1,0x00d1ee4c
+00d1ee48  ret
+00d1ee4c  str x30,[sp, #-0x10]!
+00d1ee50  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1ee54_CK_Database__PerformQuery.txt
+================================================================================
+Function: CK_Database$$PerformQuery @ 00d1ee54
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1ee54  cbz x1,0x00d1ee5c
+00d1ee58  ret
+00d1ee5c  str x30,[sp, #-0x10]!
+00d1ee60  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1ee64_CK_Database__get_InternalId.txt
+================================================================================
+Function: CK_Database$$get_InternalId @ 00d1ee64
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ee64  ldr w0,[x0, #0x30]
+00d1ee68  ret
+
+
+================================================================================
+### FILE: 00d1ee6c_CK_Database__.cctor.txt
+================================================================================
+Function: CK_Database$$.cctor @ 00d1ee6c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary<int,-object>$$.ctor @ 0192d268
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ee6c  str x20,[sp, #-0x20]!
+00d1ee70  stp x19,x30,[sp, #0x10]
+00d1ee74  adrp x19,0x3571000
+00d1ee78  adrp x20,0x334b000
+00d1ee7c  ldrb w8,[x19, #0xbfd]
+00d1ee80  ldr x20,[x20, #0x7a0]
+00d1ee84  tbnz w8,#0x0,0x00d1eeb4
+00d1ee88  adrp x0,0x3350000
+00d1ee8c  ldr x0,[x0, #0x238]
+00d1ee90  bl 0x00b0789c
+00d1ee94  adrp x0,0x3379000
+00d1ee98  ldr x0,[x0, #0x8f0]
+00d1ee9c  bl 0x00b0789c
+00d1eea0  adrp x0,0x334b000
+00d1eea4  ldr x0,[x0, #0x7a0]
+00d1eea8  bl 0x00b0789c
+00d1eeac  mov w8,#0x1
+00d1eeb0  strb w8,[x19, #0xbfd]
+00d1eeb4  ldr x0,[x20]
+00d1eeb8  bl 0x00b079a0
+00d1eebc  cbz x0,0x00d1ef00
+00d1eec0  adrp x8,0x3379000
+00d1eec4  ldr x8,[x8, #0x8f0]
+00d1eec8  adrp x20,0x3350000
+00d1eecc  mov x19,x0
+00d1eed0  ldr x1,[x8]
+00d1eed4  ldr x20,[x20, #0x238]
+00d1eed8  bl 0x0192d268
+00d1eedc  ldr x8,[x20]
+00d1eee0  mov x1,x19
+00d1eee4  ldr x8,[x8, #0xb8]
+00d1eee8  str x19,[x8]
+00d1eeec  ldr x8,[x20]
+00d1eef0  ldp x19,x30,[sp, #0x10]
+00d1eef4  ldr x0,[x8, #0xb8]
+00d1eef8  ldr x20,[sp], #0x20
+00d1eefc  b 0x00b07850
+00d1ef00  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1ef04_CK_Database.__c__.cctor.txt
+================================================================================
+Function: CK_Database.<>c$$.cctor @ 00d1ef04
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ef04  str x20,[sp, #-0x20]!
+00d1ef08  stp x19,x30,[sp, #0x10]
+00d1ef0c  adrp x19,0x3571000
+00d1ef10  adrp x20,0x337d000
+00d1ef14  ldrb w8,[x19, #0xbfe]
+00d1ef18  ldr x20,[x20, #0xd58]
+00d1ef1c  tbnz w8,#0x0,0x00d1ef34
+00d1ef20  adrp x0,0x337d000
+00d1ef24  ldr x0,[x0, #0xd58]
+00d1ef28  bl 0x00b0789c
+00d1ef2c  mov w8,#0x1
+00d1ef30  strb w8,[x19, #0xbfe]
+00d1ef34  ldr x0,[x20]
+00d1ef38  bl 0x00b079a0
+00d1ef3c  cbz x0,0x00d1ef70
+00d1ef40  mov x1,xzr
+00d1ef44  mov x19,x0
+00d1ef48  bl 0x02194104
+00d1ef4c  ldr x8,[x20]
+00d1ef50  mov x1,x19
+00d1ef54  ldr x8,[x8, #0xb8]
+00d1ef58  str x19,[x8]
+00d1ef5c  ldr x8,[x20]
+00d1ef60  ldp x19,x30,[sp, #0x10]
+00d1ef64  ldr x0,[x8, #0xb8]
+00d1ef68  ldr x20,[sp], #0x20
+00d1ef6c  b 0x00b07850
+00d1ef70  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1ef74_CK_Database.__c__.ctor.txt
+================================================================================
+Function: CK_Database.<>c$$.ctor @ 00d1ef74
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ef74  mov x1,xzr
+00d1ef78  b 0x02194104
+
+
+================================================================================
+### FILE: 00d1ef7c_CK_Database.__c___.ctor_b__14_0.txt
+================================================================================
+Function: CK_Database.<>c$$<.ctor>b__14_0 @ 00d1ef7c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ef7c  ret
+
+
+================================================================================
+### FILE: 00d1ef80_CK_Database.__c___.ctor_b__14_1.txt
+================================================================================
+Function: CK_Database.<>c$$<.ctor>b__14_1 @ 00d1ef80
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ef80  ret
+
+
+================================================================================
+### FILE: 00d1ef84_CK_Database.__c___.ctor_b__14_2.txt
+================================================================================
+Function: CK_Database.<>c$$<.ctor>b__14_2 @ 00d1ef84
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ef84  ret
+
+
+================================================================================
+### FILE: 00d1ef88_CK_Database.__c___.ctor_b__14_3.txt
+================================================================================
+Function: CK_Database.<>c$$<.ctor>b__14_3 @ 00d1ef88
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ef88  ret
+
+
+================================================================================
+### FILE: 00d1ef8c_CK_Query__.ctor.txt
+================================================================================
+Function: CK_Query$$.ctor @ 00d1ef8c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1ef8c  stp x21,x20,[sp, #-0x20]!
+00d1ef90  stp x19,x30,[sp, #0x10]
+00d1ef94  mov x20,x1
+00d1ef98  mov x1,xzr
+00d1ef9c  mov x19,x2
+00d1efa0  mov x21,x0
+00d1efa4  bl 0x02194104
+00d1efa8  mov x0,x21
+00d1efac  str x20,[x0, #0x10]!
+00d1efb0  mov x1,x20
+00d1efb4  bl 0x00b07850
+00d1efb8  str x19,[x21, #0x18]!
+00d1efbc  mov x1,x19
+00d1efc0  ldp x19,x30,[sp, #0x10]
+00d1efc4  mov x0,x21
+00d1efc8  ldp x21,x20,[sp], #0x20
+00d1efcc  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d1efd0_CK_Query__get_Predicate.txt
+================================================================================
+Function: CK_Query$$get_Predicate @ 00d1efd0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1efd0  ldr x0,[x0, #0x10]
+00d1efd4  ret
+
+
+================================================================================
+### FILE: 00d1efd8_CK_Query__get_RecordType.txt
+================================================================================
+Function: CK_Query$$get_RecordType @ 00d1efd8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1efd8  ldr x0,[x0, #0x18]
+00d1efdc  ret
+
+
+================================================================================
+### FILE: 00d1efe0_CK_Record__.ctor.txt
+================================================================================
+Function: CK_Record$$.ctor @ 00d1efe0
+
+--- Calls OUT ---
+  -> FUN_00d32880 @ 00d32880
+
+--- Calls IN ---
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1efe0  str x24,[sp, #-0x40]!
+00d1efe4  stp x23,x22,[sp, #0x10]
+00d1efe8  stp x21,x20,[sp, #0x20]
+00d1efec  stp x19,x30,[sp, #0x30]
+00d1eff0  adrp x22,0x3571000
+00d1eff4  adrp x24,0x331b000
+00d1eff8  adrp x23,0x337d000
+00d1effc  ldrb w8,[x22, #0xbff]
+00d1f000  ldr x24,[x24, #0x6c8]
+00d1f004  b 0x00d32880
+
+
+================================================================================
+### FILE: 00d1f0d8_CK_Record__IndexRecord.txt
+================================================================================
+Function: CK_Record$$IndexRecord @ 00d1f0d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Collections.Generic.Dictionary<int,-object>$$Add @ 0192dbc0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA.Common.Util.IdFactory$$get_NextId @ 00c878b0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CK_Record$$.ctor @ 00d1dc3c
+  <- FUN_00d1f008 @ 00d1f008
+
+--- Listing ---
+00d1f0d8  stp x21,x20,[sp, #-0x20]!
+00d1f0dc  stp x19,x30,[sp, #0x10]
+00d1f0e0  adrp x21,0x3571000
+00d1f0e4  adrp x20,0x3330000
+00d1f0e8  ldrb w8,[x21, #0xc03]
+00d1f0ec  ldr x20,[x20, #0xf20]
+00d1f0f0  mov x19,x0
+00d1f0f4  tbnz w8,#0x0,0x00d1f118
+00d1f0f8  adrp x0,0x3330000
+00d1f0fc  ldr x0,[x0, #0xf20]
+00d1f100  bl 0x00b0789c
+00d1f104  adrp x0,0x3370000
+00d1f108  ldr x0,[x0, #0x1e8]
+00d1f10c  bl 0x00b0789c
+00d1f110  mov w8,#0x1
+00d1f114  strb w8,[x21, #0xc03]
+00d1f118  mov x0,xzr
+00d1f11c  bl 0x00c878b0
+00d1f120  str w0,[x19, #0x28]
+00d1f124  ldr x0,[x20]
+00d1f128  ldr w8,[x0, #0xe0]
+00d1f12c  cbnz w8,0x00d1f138
+00d1f130  bl 0x00b0798c
+00d1f134  ldr x0,[x20]
+00d1f138  ldr x8,[x0, #0xb8]
+00d1f13c  ldr x0,[x8]
+00d1f140  cbz x0,0x00d1f164
+00d1f144  adrp x8,0x3370000
+00d1f148  ldr x8,[x8, #0x1e8]
+00d1f14c  ldr w1,[x19, #0x28]
+00d1f150  mov x2,x19
+00d1f154  ldp x19,x30,[sp, #0x10]
+00d1f158  ldr x3,[x8]
+00d1f15c  ldp x21,x20,[sp], #0x20
+00d1f160  b 0x0192dbc0
+00d1f164  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1f168_CK_RecordID__.ctor.txt
+================================================================================
+Function: CK_RecordID$$.ctor @ 00d1f168
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Collections.Generic.Dictionary<int,-object>$$Add @ 0192dbc0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA.Common.Util.IdFactory$$get_NextId @ 00c878b0
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- CK_Record$$.ctor @ 00d1dc3c
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1f168  str x22,[sp, #-0x30]!
+00d1f16c  stp x21,x20,[sp, #0x10]
+00d1f170  stp x19,x30,[sp, #0x20]
+00d1f174  adrp x22,0x3571000
+00d1f178  adrp x21,0x336a000
+00d1f17c  ldrb w8,[x22, #0xc07]
+00d1f180  ldr x21,[x21, #0xd20]
+00d1f184  mov x20,x1
+00d1f188  mov x19,x0
+00d1f18c  tbnz w8,#0x0,0x00d1f1b0
+00d1f190  adrp x0,0x336a000
+00d1f194  ldr x0,[x0, #0xd20]
+00d1f198  bl 0x00b0789c
+00d1f19c  adrp x0,0x332f000
+00d1f1a0  ldr x0,[x0, #0x9b8]
+00d1f1a4  bl 0x00b0789c
+00d1f1a8  mov w8,#0x1
+00d1f1ac  strb w8,[x22, #0xc07]
+00d1f1b0  mov x0,x19
+00d1f1b4  mov x1,xzr
+00d1f1b8  bl 0x02194104
+00d1f1bc  mov x0,xzr
+00d1f1c0  bl 0x00c878b0
+00d1f1c4  mov x8,x19
+00d1f1c8  str x20,[x8, #0x18]!
+00d1f1cc  stur w0,[x8, #-0x8]
+00d1f1d0  mov x0,x8
+00d1f1d4  mov x1,x20
+00d1f1d8  bl 0x00b07850
+00d1f1dc  ldr x0,[x21]
+00d1f1e0  ldr w8,[x0, #0xe0]
+00d1f1e4  cbnz w8,0x00d1f1f0
+00d1f1e8  bl 0x00b0798c
+00d1f1ec  ldr x0,[x21]
+00d1f1f0  ldr x8,[x0, #0xb8]
+00d1f1f4  ldr x0,[x8]
+00d1f1f8  cbz x0,0x00d1f220
+00d1f1fc  adrp x8,0x332f000
+00d1f200  ldr x8,[x8, #0x9b8]
+00d1f204  ldr w1,[x19, #0x10]
+00d1f208  mov x2,x19
+00d1f20c  ldp x19,x30,[sp, #0x20]
+00d1f210  ldr x3,[x8]
+00d1f214  ldp x21,x20,[sp, #0x10]
+00d1f218  ldr x22,[sp], #0x30
+00d1f21c  b 0x0192dbc0
+00d1f220  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1f224_CK_Record__SetObject.txt
+================================================================================
+Function: CK_Record$$SetObject @ 00d1f224
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<object,-object>$$ContainsKey @ 0196e6d8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.Dictionary<object,-object>$$set_Item @ 0196e4c0
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary<object,-object>$$Add @ 0196e4d8
+
+--- Calls IN ---
+  <- CK_Record$$.ctor @ 00d1dc3c
+  <- CloudKitUseExample$$Database_ActionRecordFetchForUpdateComplete @ 00d37f1c
+  <- CloudKitUseExample$$OnGUI @ 00d37394
+
+--- Listing ---
+00d1f224  str x22,[sp, #-0x30]!
+00d1f228  stp x21,x20,[sp, #0x10]
+00d1f22c  stp x19,x30,[sp, #0x20]
+00d1f230  adrp x22,0x3571000
+00d1f234  ldrb w8,[x22, #0xc01]
+00d1f238  mov x19,x2
+00d1f23c  mov x20,x1
+00d1f240  mov x21,x0
+00d1f244  tbnz w8,#0x0,0x00d1f274
+00d1f248  adrp x0,0x331b000
+00d1f24c  ldr x0,[x0, #0x880]
+00d1f250  bl 0x00b0789c
+00d1f254  adrp x0,0x3336000
+00d1f258  ldr x0,[x0, #0x90]
+00d1f25c  bl 0x00b0789c
+00d1f260  adrp x0,0x335c000
+00d1f264  ldr x0,[x0, #0x408]
+00d1f268  bl 0x00b0789c
+00d1f26c  mov w8,#0x1
+00d1f270  strb w8,[x22, #0xc01]
+00d1f274  ldr x0,[x21, #0x20]
+00d1f278  cbz x0,0x00d1f2ec
+00d1f27c  adrp x8,0x3336000
+00d1f280  ldr x8,[x8, #0x90]
+00d1f284  mov x1,x20
+00d1f288  ldr x2,[x8]
+00d1f28c  bl 0x0196e6d8
+00d1f290  ldr x8,[x21, #0x20]
+00d1f294  cbz x8,0x00d1f2ec
+00d1f298  tbz w0,#0x0,0x00d1f2c4
+00d1f29c  adrp x9,0x335c000
+00d1f2a0  ldr x9,[x9, #0x408]
+00d1f2a4  mov x1,x20
+00d1f2a8  mov x2,x19
+00d1f2ac  ldp x19,x30,[sp, #0x20]
+00d1f2b0  ldr x3,[x9]
+00d1f2b4  ldp x21,x20,[sp, #0x10]
+00d1f2b8  mov x0,x8
+00d1f2bc  ldr x22,[sp], #0x30
+00d1f2c0  b 0x0196e4c0
+00d1f2c4  adrp x9,0x331b000
+00d1f2c8  ldr x9,[x9, #0x880]
+00d1f2cc  mov x1,x20
+00d1f2d0  mov x2,x19
+00d1f2d4  ldp x19,x30,[sp, #0x20]
+00d1f2d8  ldr x3,[x9]
+00d1f2dc  ldp x21,x20,[sp, #0x10]
+00d1f2e0  mov x0,x8
+00d1f2e4  ldr x22,[sp], #0x30
+00d1f2e8  b 0x0196e4d8
+00d1f2ec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1f2f0_CK_Record__GetObject.txt
+================================================================================
+Function: CK_Record$$GetObject @ 00d1f2f0
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<object,-object>$$ContainsKey @ 0196e6d8
+  -> System.Collections.Generic.Dictionary<object,-object>$$get_Item @ 0196e450
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CloudKitUseExample$$Database_ActionQueryComplete @ 00d37a9c
+  <- CloudKitUseExample$$Database_ActionRecordFetchForUpdateComplete @ 00d37f1c
+  <- CloudKitUseExample$$Database_ActionRecordFetchComplete @ 00d37d80
+  <- CloudKitUseExample$$Database_ActionRecordSaved @ 00d382ec
+
+--- Listing ---
+00d1f2f0  stp x21,x20,[sp, #-0x20]!
+00d1f2f4  stp x19,x30,[sp, #0x10]
+00d1f2f8  adrp x21,0x3571000
+00d1f2fc  ldrb w8,[x21, #0xc02]
+00d1f300  mov x19,x1
+00d1f304  mov x20,x0
+00d1f308  tbnz w8,#0x0,0x00d1f338
+00d1f30c  adrp x0,0x3336000
+00d1f310  ldr x0,[x0, #0x90]
+00d1f314  bl 0x00b0789c
+00d1f318  adrp x0,0x3367000
+00d1f31c  ldr x0,[x0, #0xef0]
+00d1f320  bl 0x00b0789c
+00d1f324  adrp x0,0x331b000
+00d1f328  ldr x0,[x0, #0x6c8]
+00d1f32c  bl 0x00b0789c
+00d1f330  mov w8,#0x1
+00d1f334  strb w8,[x21, #0xc02]
+00d1f338  ldr x0,[x20, #0x20]
+00d1f33c  cbz x0,0x00d1f39c
+00d1f340  adrp x8,0x3336000
+00d1f344  ldr x8,[x8, #0x90]
+00d1f348  mov x1,x19
+00d1f34c  ldr x2,[x8]
+00d1f350  bl 0x0196e6d8
+00d1f354  tbz w0,#0x0,0x00d1f37c
+00d1f358  ldr x0,[x20, #0x20]
+00d1f35c  cbz x0,0x00d1f39c
+00d1f360  adrp x8,0x3367000
+00d1f364  ldr x8,[x8, #0xef0]
+00d1f368  mov x1,x19
+00d1f36c  ldp x19,x30,[sp, #0x10]
+00d1f370  ldr x2,[x8]
+00d1f374  ldp x21,x20,[sp], #0x20
+00d1f378  b 0x0196e450
+00d1f37c  adrp x8,0x331b000
+00d1f380  ldr x8,[x8, #0x6c8]
+00d1f384  ldp x19,x30,[sp, #0x10]
+00d1f388  ldr x8,[x8]
+00d1f38c  ldr x8,[x8, #0xb8]
+00d1f390  ldr x0,[x8]
+00d1f394  ldp x21,x20,[sp], #0x20
+00d1f398  ret
+00d1f39c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1f3a0_CK_Record__get_Id.txt
+================================================================================
+Function: CK_Record$$get_Id @ 00d1f3a0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f3a0  ldr x0,[x0, #0x10]
+00d1f3a4  ret
+
+
+================================================================================
+### FILE: 00d1f3a8_CK_Record__get_Type.txt
+================================================================================
+Function: CK_Record$$get_Type @ 00d1f3a8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f3a8  ldr x0,[x0, #0x18]
+00d1f3ac  ret
+
+
+================================================================================
+### FILE: 00d1f3b0_CK_Record__get_Internal_Id.txt
+================================================================================
+Function: CK_Record$$get_Internal_Id @ 00d1f3b0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f3b0  ldr w0,[x0, #0x28]
+00d1f3b4  ret
+
+
+================================================================================
+### FILE: 00d1f3b8_CK_Record__GetRecordByInternalId.txt
+================================================================================
+Function: CK_Record$$GetRecordByInternalId @ 00d1f3b8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Collections.Generic.Dictionary<int,-object>$$get_Item @ 0192db0c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CK_RecordResult$$.ctor @ 00d1d24c
+
+--- Listing ---
+00d1f3b8  stp x21,x20,[sp, #-0x20]!
+00d1f3bc  stp x19,x30,[sp, #0x10]
+00d1f3c0  adrp x21,0x3571000
+00d1f3c4  adrp x20,0x3330000
+00d1f3c8  ldrb w8,[x21, #0xc05]
+00d1f3cc  ldr x20,[x20, #0xf20]
+00d1f3d0  mov w19,w0
+00d1f3d4  tbnz w8,#0x0,0x00d1f3f8
+00d1f3d8  adrp x0,0x3330000
+00d1f3dc  ldr x0,[x0, #0xf20]
+00d1f3e0  bl 0x00b0789c
+00d1f3e4  adrp x0,0x335d000
+00d1f3e8  ldr x0,[x0, #0xc88]
+00d1f3ec  bl 0x00b0789c
+00d1f3f0  mov w8,#0x1
+00d1f3f4  strb w8,[x21, #0xc05]
+00d1f3f8  ldr x0,[x20]
+00d1f3fc  ldr w8,[x0, #0xe0]
+00d1f400  cbnz w8,0x00d1f40c
+00d1f404  bl 0x00b0798c
+00d1f408  ldr x0,[x20]
+00d1f40c  ldr x8,[x0, #0xb8]
+00d1f410  ldr x0,[x8]
+00d1f414  cbz x0,0x00d1f434
+00d1f418  adrp x8,0x335d000
+00d1f41c  ldr x8,[x8, #0xc88]
+00d1f420  mov w1,w19
+00d1f424  ldp x19,x30,[sp, #0x10]
+00d1f428  ldr x2,[x8]
+00d1f42c  ldp x21,x20,[sp], #0x20
+00d1f430  b 0x0192db0c
+00d1f434  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1f438_CK_Record__.cctor.txt
+================================================================================
+Function: CK_Record$$.cctor @ 00d1f438
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary<int,-object>$$.ctor @ 0192d268
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f438  str x20,[sp, #-0x20]!
+00d1f43c  stp x19,x30,[sp, #0x10]
+00d1f440  adrp x19,0x3571000
+00d1f444  adrp x20,0x3345000
+00d1f448  ldrb w8,[x19, #0xc06]
+00d1f44c  ldr x20,[x20, #0x530]
+00d1f450  tbnz w8,#0x0,0x00d1f480
+00d1f454  adrp x0,0x3330000
+00d1f458  ldr x0,[x0, #0xf20]
+00d1f45c  bl 0x00b0789c
+00d1f460  adrp x0,0x3384000
+00d1f464  ldr x0,[x0, #0xde8]
+00d1f468  bl 0x00b0789c
+00d1f46c  adrp x0,0x3345000
+00d1f470  ldr x0,[x0, #0x530]
+00d1f474  bl 0x00b0789c
+00d1f478  mov w8,#0x1
+00d1f47c  strb w8,[x19, #0xc06]
+00d1f480  ldr x0,[x20]
+00d1f484  bl 0x00b079a0
+00d1f488  cbz x0,0x00d1f4cc
+00d1f48c  adrp x8,0x3384000
+00d1f490  ldr x8,[x8, #0xde8]
+00d1f494  adrp x20,0x3330000
+00d1f498  mov x19,x0
+00d1f49c  ldr x1,[x8]
+00d1f4a0  ldr x20,[x20, #0xf20]
+00d1f4a4  bl 0x0192d268
+00d1f4a8  ldr x8,[x20]
+00d1f4ac  mov x1,x19
+00d1f4b0  ldr x8,[x8, #0xb8]
+00d1f4b4  str x19,[x8]
+00d1f4b8  ldr x8,[x20]
+00d1f4bc  ldp x19,x30,[sp, #0x10]
+00d1f4c0  ldr x0,[x8, #0xb8]
+00d1f4c4  ldr x20,[sp], #0x20
+00d1f4c8  b 0x00b07850
+00d1f4cc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1f4d0_CK_RecordID__get_Name.txt
+================================================================================
+Function: CK_RecordID$$get_Name @ 00d1f4d0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f4d0  ldr x0,[x0, #0x18]
+00d1f4d4  ret
+
+
+================================================================================
+### FILE: 00d1f4d8_CK_RecordID__get_Internal_Id.txt
+================================================================================
+Function: CK_RecordID$$get_Internal_Id @ 00d1f4d8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f4d8  ldr w0,[x0, #0x10]
+00d1f4dc  ret
+
+
+================================================================================
+### FILE: 00d1f4e0_CK_RecordID__GetRecordIdByInternalId.txt
+================================================================================
+Function: CK_RecordID$$GetRecordIdByInternalId @ 00d1f4e0
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<int,-object>$$get_Item @ 0192db0c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CK_RecordDeleteResult$$.ctor @ 00d1d654
+
+--- Listing ---
+00d1f4e0  stp x21,x20,[sp, #-0x20]!
+00d1f4e4  stp x19,x30,[sp, #0x10]
+00d1f4e8  adrp x21,0x3571000
+00d1f4ec  adrp x20,0x336a000
+00d1f4f0  ldrb w8,[x21, #0xc08]
+00d1f4f4  ldr x20,[x20, #0xd20]
+00d1f4f8  mov w19,w0
+00d1f4fc  tbnz w8,#0x0,0x00d1f520
+00d1f500  adrp x0,0x336a000
+00d1f504  ldr x0,[x0, #0xd20]
+00d1f508  bl 0x00b0789c
+00d1f50c  adrp x0,0x3341000
+00d1f510  ldr x0,[x0, #0xd80]
+00d1f514  bl 0x00b0789c
+00d1f518  mov w8,#0x1
+00d1f51c  strb w8,[x21, #0xc08]
+00d1f520  ldr x0,[x20]
+00d1f524  ldr w8,[x0, #0xe0]
+00d1f528  cbnz w8,0x00d1f534
+00d1f52c  bl 0x00b0798c
+00d1f530  ldr x0,[x20]
+00d1f534  ldr x8,[x0, #0xb8]
+00d1f538  ldr x0,[x8]
+00d1f53c  cbz x0,0x00d1f55c
+00d1f540  adrp x8,0x3341000
+00d1f544  ldr x8,[x8, #0xd80]
+00d1f548  mov w1,w19
+00d1f54c  ldp x19,x30,[sp, #0x10]
+00d1f550  ldr x2,[x8]
+00d1f554  ldp x21,x20,[sp], #0x20
+00d1f558  b 0x0192db0c
+00d1f55c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1f560_CK_RecordID__.cctor.txt
+================================================================================
+Function: CK_RecordID$$.cctor @ 00d1f560
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.Dictionary<int,-object>$$.ctor @ 0192d268
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f560  str x20,[sp, #-0x20]!
+00d1f564  stp x19,x30,[sp, #0x10]
+00d1f568  adrp x19,0x3571000
+00d1f56c  adrp x20,0x336c000
+00d1f570  ldrb w8,[x19, #0xc09]
+00d1f574  ldr x20,[x20, #0xcd8]
+00d1f578  tbnz w8,#0x0,0x00d1f5a8
+00d1f57c  adrp x0,0x336a000
+00d1f580  ldr x0,[x0, #0xd20]
+00d1f584  bl 0x00b0789c
+00d1f588  adrp x0,0x334f000
+00d1f58c  ldr x0,[x0, #0xf10]
+00d1f590  bl 0x00b0789c
+00d1f594  adrp x0,0x336c000
+00d1f598  ldr x0,[x0, #0xcd8]
+00d1f59c  bl 0x00b0789c
+00d1f5a0  mov w8,#0x1
+00d1f5a4  strb w8,[x19, #0xc09]
+00d1f5a8  ldr x0,[x20]
+00d1f5ac  bl 0x00b079a0
+00d1f5b0  cbz x0,0x00d1f5f4
+00d1f5b4  adrp x8,0x334f000
+00d1f5b8  ldr x8,[x8, #0xf10]
+00d1f5bc  adrp x20,0x336a000
+00d1f5c0  mov x19,x0
+00d1f5c4  ldr x1,[x8]
+00d1f5c8  ldr x20,[x20, #0xd20]
+00d1f5cc  bl 0x0192d268
+00d1f5d0  ldr x8,[x20]
+00d1f5d4  mov x1,x19
+00d1f5d8  ldr x8,[x8, #0xb8]
+00d1f5dc  str x19,[x8]
+00d1f5e0  ldr x8,[x20]
+00d1f5e4  ldp x19,x30,[sp, #0x10]
+00d1f5e8  ldr x0,[x8, #0xb8]
+00d1f5ec  ldr x20,[sp], #0x20
+00d1f5f0  b 0x00b07850
+00d1f5f4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1f5f8_CK_QueryResult__SetDatabase.txt
+================================================================================
+Function: CK_QueryResult$$SetDatabase @ 00d1f5f8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f5f8  str x1,[x0, #0x18]!
+00d1f5fc  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d1f600_CK_QueryResult__get_Database.txt
+================================================================================
+Function: CK_QueryResult$$get_Database @ 00d1f600
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f600  ldr x0,[x0, #0x18]
+00d1f604  ret
+
+
+================================================================================
+### FILE: 00d1f608_CK_QueryResult__get_Records.txt
+================================================================================
+Function: CK_QueryResult$$get_Records @ 00d1f608
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f608  ldr x0,[x0, #0x20]
+00d1f60c  ret
+
+
+================================================================================
+### FILE: 00d1f610_CK_RecordDeleteResult__SetDatabase.txt
+================================================================================
+Function: CK_RecordDeleteResult$$SetDatabase @ 00d1f610
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f610  str x1,[x0, #0x20]!
+00d1f614  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d1f618_CK_RecordDeleteResult__get_Database.txt
+================================================================================
+Function: CK_RecordDeleteResult$$get_Database @ 00d1f618
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f618  ldr x0,[x0, #0x20]
+00d1f61c  ret
+
+
+================================================================================
+### FILE: 00d1f620_CK_RecordDeleteResult__get_RecordID.txt
+================================================================================
+Function: CK_RecordDeleteResult$$get_RecordID @ 00d1f620
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f620  ldr x0,[x0, #0x18]
+00d1f624  ret
+
+
+================================================================================
+### FILE: 00d1f628_CK_RecordResult__SetDatabase.txt
+================================================================================
+Function: CK_RecordResult$$SetDatabase @ 00d1f628
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f628  str x1,[x0, #0x20]!
+00d1f62c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d1f630_CK_RecordResult__get_Record.txt
+================================================================================
+Function: CK_RecordResult$$get_Record @ 00d1f630
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f630  ldr x0,[x0, #0x18]
+00d1f634  ret
+
+
+================================================================================
+### FILE: 00d1f638_CK_RecordResult__get_Database.txt
+================================================================================
+Function: CK_RecordResult$$get_Database @ 00d1f638
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f638  ldr x0,[x0, #0x20]
+00d1f63c  ret
+
+

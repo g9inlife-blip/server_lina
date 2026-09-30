@@ -1,0 +1,706 @@
+================================================================================
+### FILE: 00dc0e88_CenterOnChild__add_onCenter.txt
+================================================================================
+Function: CenterOnChild$$add_onCenter @ 00dc0e88
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> FUN_00b07c6c @ 00b07c6c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+
+--- Listing ---
+00dc0e88  str x22,[sp, #-0x30]!
+00dc0e8c  stp x21,x20,[sp, #0x10]
+00dc0e90  stp x19,x30,[sp, #0x20]
+00dc0e94  adrp x21,0x3572000
+00dc0e98  ldrb w8,[x21, #0x171]
+00dc0e9c  mov x19,x1
+00dc0ea0  mov x20,x0
+00dc0ea4  tbnz w8,#0x0,0x00dc0ebc
+00dc0ea8  adrp x0,0x3311000
+00dc0eac  ldr x0,[x0, #0xf60]
+00dc0eb0  bl 0x00b0789c
+00dc0eb4  mov w8,#0x1
+00dc0eb8  strb w8,[x21, #0x171]
+00dc0ebc  adrp x22,0x3311000
+00dc0ec0  ldr x21,[x20, #0x20]!
+00dc0ec4  ldr x22,[x22, #0xf60]
+00dc0ec8  mov x0,x21
+00dc0ecc  mov x1,x19
+00dc0ed0  mov x2,xzr
+00dc0ed4  bl 0x02197810
+00dc0ed8  mov x8,x0
+00dc0edc  cbz x0,0x00dc0ef0
+00dc0ee0  ldr x1,[x22]
+00dc0ee4  ldr x9,[x8]
+00dc0ee8  cmp x9,x1
+00dc0eec  b.ne 0x00dc0f1c
+00dc0ef0  mov x0,x20
+00dc0ef4  mov x1,x8
+00dc0ef8  mov x2,x21
+00dc0efc  bl 0x00ae526c
+00dc0f00  cmp x21,x0
+00dc0f04  mov x21,x0
+00dc0f08  b.ne 0x00dc0ec8
+00dc0f0c  ldp x19,x30,[sp, #0x20]
+00dc0f10  ldp x21,x20,[sp, #0x10]
+00dc0f14  ldr x22,[sp], #0x30
+00dc0f18  ret
+00dc0f1c  mov x0,x8
+00dc0f20  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00dc0f24_CenterOnChild__remove_onCenter.txt
+================================================================================
+Function: CenterOnChild$$remove_onCenter @ 00dc0f24
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+
+--- Listing ---
+00dc0f24  str x22,[sp, #-0x30]!
+00dc0f28  stp x21,x20,[sp, #0x10]
+00dc0f2c  stp x19,x30,[sp, #0x20]
+00dc0f30  adrp x21,0x3572000
+00dc0f34  ldrb w8,[x21, #0x172]
+00dc0f38  mov x19,x1
+00dc0f3c  mov x20,x0
+00dc0f40  tbnz w8,#0x0,0x00dc0f58
+00dc0f44  adrp x0,0x3311000
+00dc0f48  ldr x0,[x0, #0xf60]
+00dc0f4c  bl 0x00b0789c
+00dc0f50  mov w8,#0x1
+00dc0f54  strb w8,[x21, #0x172]
+00dc0f58  adrp x22,0x3311000
+00dc0f5c  ldr x21,[x20, #0x20]!
+00dc0f60  ldr x22,[x22, #0xf60]
+00dc0f64  mov x0,x21
+00dc0f68  mov x1,x19
+00dc0f6c  mov x2,xzr
+00dc0f70  bl 0x02197a1c
+00dc0f74  mov x8,x0
+00dc0f78  cbz x0,0x00dc0f8c
+00dc0f7c  ldr x1,[x22]
+00dc0f80  ldr x9,[x8]
+00dc0f84  cmp x9,x1
+00dc0f88  b.ne 0x00dc0fb8
+00dc0f8c  mov x0,x20
+00dc0f90  mov x1,x8
+00dc0f94  mov x2,x21
+00dc0f98  bl 0x00ae526c
+00dc0f9c  cmp x21,x0
+00dc0fa0  mov x21,x0
+00dc0fa4  b.ne 0x00dc0f64
+00dc0fa8  ldp x19,x30,[sp, #0x20]
+00dc0fac  ldp x21,x20,[sp, #0x10]
+00dc0fb0  ldr x22,[sp], #0x30
+00dc0fb4  ret
+00dc0fb8  mov x0,x8
+00dc0fbc  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00dc0fc0_CenterOnChild__Awake.txt
+================================================================================
+Function: CenterOnChild$$Awake @ 00dc0fc0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Transform$$get_childCount @ 024f5578
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.RectTransform$$get_rect @ 024f6150
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$LogError @ 024c0830
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Rect$$get_width @ 024db068
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00dc0fc0  sub sp,sp,#0x50
+00dc0fc4  str d8,[sp, #0x10]
+00dc0fc8  stp x23,x22,[sp, #0x20]
+00dc0fcc  stp x21,x20,[sp, #0x30]
+00dc0fd0  stp x19,x30,[sp, #0x40]
+00dc0fd4  adrp x22,0x3572000
+00dc0fd8  adrp x20,0x3362000
+00dc0fdc  adrp x21,0x3321000
+00dc0fe0  ldrb w8,[x22, #0x173]
+00dc0fe4  ldr x20,[x20, #0x598]
+00dc0fe8  ldr x21,[x21, #0xca8]
+00dc0fec  mov x19,x0
+00dc0ff0  tbnz w8,#0x0,0x00dc105c
+00dc0ff4  adrp x0,0x3365000
+00dc0ff8  ldr x0,[x0, #0x498]
+00dc0ffc  bl 0x00b0789c
+00dc1000  adrp x0,0x332d000
+00dc1004  ldr x0,[x0, #0x198]
+00dc1008  bl 0x00b0789c
+00dc100c  adrp x0,0x3362000
+00dc1010  ldr x0,[x0, #0x598]
+00dc1014  bl 0x00b0789c
+00dc1018  adrp x0,0x336b000
+00dc101c  ldr x0,[x0, #0x7d0]
+00dc1020  bl 0x00b0789c
+00dc1024  adrp x0,0x3349000
+00dc1028  ldr x0,[x0, #0x7f0]
+00dc102c  bl 0x00b0789c
+00dc1030  adrp x0,0x3321000
+00dc1034  ldr x0,[x0, #0xca8]
+00dc1038  bl 0x00b0789c
+00dc103c  adrp x0,0x3362000
+00dc1040  ldr x0,[x0, #0x8c0]
+00dc1044  bl 0x00b0789c
+00dc1048  adrp x0,0x333a000
+00dc104c  ldr x0,[x0, #0xa20]
+00dc1050  bl 0x00b0789c
+00dc1054  mov w8,#0x1
+00dc1058  strb w8,[x22, #0x173]
+00dc105c  ldr x1,[x20]
+00dc1060  mov x0,x19
+00dc1064  stp xzr,xzr,[sp]
+00dc1068  bl 0x0176cbf8
+00dc106c  mov x22,x19
+00dc1070  str x0,[x22, #0x28]!
+00dc1074  mov x1,x0
+00dc1078  mov x0,x22
+00dc107c  bl 0x00b07850
+00dc1080  ldr x0,[x21]
+00dc1084  ldr x20,[x22]
+00dc1088  ldr w8,[x0, #0xe0]
+00dc108c  cbnz w8,0x00dc1094
+00dc1090  bl 0x00b0798c
+00dc1094  adrp x23,0x336b000
+00dc1098  ldr x23,[x23, #0x7d0]
+00dc109c  mov x0,x20
+00dc10a0  mov x1,xzr
+00dc10a4  mov x2,xzr
+00dc10a8  bl 0x024c8180
+00dc10ac  tbz w0,#0x0,0x00dc10cc
+00dc10b0  ldr x0,[x23]
+00dc10b4  ldr w8,[x0, #0xe0]
+00dc10b8  cbnz w8,0x00dc10c0
+00dc10bc  bl 0x00b0798c
+00dc10c0  adrp x8,0x333a000
+00dc10c4  ldr x8,[x8, #0xa20]
+00dc10c8  b 0x00dc1144
+00dc10cc  ldr x8,[x22]
+00dc10d0  cbz x8,0x00dc12a4
+00dc10d4  ldr x1,[x8, #0x18]
+00dc10d8  mov x20,x19
+00dc10dc  str x1,[x20, #0x30]!
+00dc10e0  mov x0,x20
+00dc10e4  bl 0x00b07850
+00dc10e8  ldr x0,[x20]
+00dc10ec  cbz x0,0x00dc12a4
+00dc10f0  adrp x8,0x3365000
+00dc10f4  ldr x8,[x8, #0x498]
+00dc10f8  ldr x1,[x8]
+00dc10fc  bl 0x0176cbf8
+00dc1100  ldr x8,[x21]
+00dc1104  mov x21,x0
+00dc1108  ldr w9,[x8, #0xe0]
+00dc110c  cbnz w9,0x00dc1118
+00dc1110  mov x0,x8
+00dc1114  bl 0x00b0798c
+00dc1118  mov x0,x21
+00dc111c  mov x1,xzr
+00dc1120  mov x2,xzr
+00dc1124  bl 0x024c8180
+00dc1128  tbz w0,#0x0,0x00dc1154
+00dc112c  ldr x0,[x23]
+00dc1130  ldr w8,[x0, #0xe0]
+00dc1134  cbnz w8,0x00dc113c
+00dc1138  bl 0x00b0798c
+00dc113c  adrp x8,0x3362000
+00dc1140  ldr x8,[x8, #0x8c0]
+00dc1144  ldr x0,[x8]
+00dc1148  mov x1,xzr
+00dc114c  bl 0x024c0830
+00dc1150  b 0x00dc12a8
+00dc1154  ldr x0,[x22]
+00dc1158  cbz x0,0x00dc12a4
+00dc115c  adrp x8,0x332d000
+00dc1160  ldr x8,[x8, #0x198]
+00dc1164  str wzr,[x0, #0x24]
+00dc1168  ldr x1,[x8]
+00dc116c  bl 0x0176cbf8
+00dc1170  cbz x0,0x00dc12a4
+00dc1174  mov x1,xzr
+00dc1178  bl 0x024f6150
+00dc117c  mov x0,sp
+00dc1180  mov x1,xzr
+00dc1184  stp s0,s1,[sp]
+00dc1188  stp s2,s3,[sp, #0x8]
+00dc118c  bl 0x024db068
+00dc1190  cbz x21,0x00dc12a4
+00dc1194  ldr x0,[x19, #0x38]
+00dc1198  cbz x0,0x00dc12a4
+00dc119c  adrp x22,0x3349000
+00dc11a0  ldr x22,[x22, #0x7f0]
+00dc11a4  ldr w10,[x0, #0x1c]
+00dc11a8  ldr s1,[x21, #0x60]
+00dc11ac  ldr x8,[x0, #0x10]
+00dc11b0  ldr x9,[x22]
+00dc11b4  add w10,w10,#0x1
+00dc11b8  str w10,[x0, #0x1c]
+00dc11bc  cbz x8,0x00dc12a4
+00dc11c0  ldrsw x10,[x0, #0x18]
+00dc11c4  ldr w11,[x8, #0x18]
+00dc11c8  fmov s2,0x3f000000
+00dc11cc  fmul s0,s0,s2
+00dc11d0  fmul s1,s1,s2
+00dc11d4  cmp w10,w11
+00dc11d8  fsub s8,s0,s1
+00dc11dc  b.cs 0x00dc11f4
+00dc11e0  add w9,w10,#0x1
+00dc11e4  add x8,x8,x10, LSL #0x2
+00dc11e8  str w9,[x0, #0x18]
+00dc11ec  str s8,[x8, #0x20]
+00dc11f0  b 0x00dc120c
+00dc11f4  ldr x8,[x9, #0x20]
+00dc11f8  mov v0.16B,v8.16B
+00dc11fc  ldr x8,[x8, #0xc0]
+00dc1200  ldr x1,[x8, #0x58]
+00dc1204  ldr x8,[x1, #0x8]
+00dc1208  blr x8
+00dc120c  ldr x0,[x20]
+00dc1210  cbz x0,0x00dc12a4
+00dc1214  mov w23,#0xffffffff
+00dc1218  mov x1,xzr
+00dc121c  bl 0x024f5578
+00dc1220  sub w8,w0,#0x1
+00dc1224  add w23,w23,#0x1
+00dc1228  cmp w23,w8
+00dc122c  b.ge 0x00dc12a8
+00dc1230  ldr x0,[x19, #0x38]
+00dc1234  cbz x0,0x00dc12a4
+00dc1238  ldr w10,[x0, #0x1c]
+00dc123c  ldr s0,[x21, #0x60]
+00dc1240  ldr s1,[x21, #0x68]
+00dc1244  ldr x8,[x0, #0x10]
+00dc1248  ldr x9,[x22]
+00dc124c  add w10,w10,#0x1
+00dc1250  str w10,[x0, #0x1c]
+00dc1254  cbz x8,0x00dc12a4
+00dc1258  ldrsw x10,[x0, #0x18]
+00dc125c  ldr w11,[x8, #0x18]
+00dc1260  fadd s0,s0,s1
+00dc1264  fsub s8,s8,s0
+00dc1268  cmp w10,w11
+00dc126c  b.cs 0x00dc1284
+00dc1270  add w9,w10,#0x1
+00dc1274  add x8,x8,x10, LSL #0x2
+00dc1278  str w9,[x0, #0x18]
+00dc127c  str s8,[x8, #0x20]
+00dc1280  b 0x00dc129c
+00dc1284  ldr x8,[x9, #0x20]
+00dc1288  mov v0.16B,v8.16B
+00dc128c  ldr x8,[x8, #0xc0]
+00dc1290  ldr x1,[x8, #0x58]
+00dc1294  ldr x8,[x1, #0x8]
+00dc1298  blr x8
+00dc129c  ldr x0,[x20]
+00dc12a0  cbnz x0,0x00dc1218
+00dc12a4  bl 0x00b079b0
+00dc12a8  ldp x19,x30,[sp, #0x40]
+00dc12ac  ldp x21,x20,[sp, #0x30]
+00dc12b0  ldp x23,x22,[sp, #0x20]
+00dc12b4  ldr d8,[sp, #0x10]
+00dc12b8  add sp,sp,#0x50
+00dc12bc  ret
+
+
+================================================================================
+### FILE: 00dc12c0_CenterOnChild__Update.txt
+================================================================================
+Function: CenterOnChild$$Update @ 00dc12c0
+
+--- Calls OUT ---
+  -> UnityEngine.Transform$$get_localPosition @ 024f37bc
+  -> UnityEngine.Transform$$set_localPosition @ 024f385c
+  -> UnityEngine.Time$$get_deltaTime @ 024dc048
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dc12c0  str d12,[sp, #-0x40]!
+00dc12c4  stp d11,d10,[sp, #0x10]
+00dc12c8  stp d9,d8,[sp, #0x20]
+00dc12cc  stp x19,x30,[sp, #0x30]
+00dc12d0  ldrb w8,[x0, #0x44]
+00dc12d4  cbz w8,0x00dc1380
+00dc12d8  mov x19,x0
+00dc12dc  ldr x0,[x0, #0x30]
+00dc12e0  cbz x0,0x00dc1394
+00dc12e4  mov x1,xzr
+00dc12e8  bl 0x024f37bc
+00dc12ec  ldr x0,[x19, #0x30]
+00dc12f0  cbz x0,0x00dc1394
+00dc12f4  mov x1,xzr
+00dc12f8  mov v8.16B,v1.16B
+00dc12fc  mov v9.16B,v2.16B
+00dc1300  bl 0x024f37bc
+00dc1304  ldr s11,[x19, #0x40]
+00dc1308  ldr s12,[x19, #0x18]
+00dc130c  mov x0,xzr
+00dc1310  mov v10.16B,v0.16B
+00dc1314  bl 0x024dc048
+00dc1318  ldr x0,[x19, #0x30]
+00dc131c  cbz x0,0x00dc1394
+00dc1320  fmul s0,s12,s0
+00dc1324  fmov s2,0x3f800000
+00dc1328  fmin s2,s0,s2
+00dc132c  fcmp s0,#0.0
+00dc1330  fmov s0,wzr
+00dc1334  fsub s1,s11,s10
+00dc1338  fcsel s0,s2,s0,pl
+00dc133c  fmul s0,s1,s0
+00dc1340  fadd s0,s10,s0
+00dc1344  mov v1.16B,v8.16B
+00dc1348  mov v2.16B,v9.16B
+00dc134c  mov x1,xzr
+00dc1350  bl 0x024f385c
+00dc1354  ldr x0,[x19, #0x30]
+00dc1358  cbz x0,0x00dc1394
+00dc135c  mov x1,xzr
+00dc1360  bl 0x024f37bc
+00dc1364  ldr s1,[x19, #0x40]
+00dc1368  adrp x8,0x26db000
+00dc136c  ldr s2,[x8, #0x290]
+00dc1370  fabd s0,s0,s1
+00dc1374  fcmp s0,s2
+00dc1378  b.pl 0x00dc1380
+00dc137c  strb wzr,[x19, #0x44]
+00dc1380  ldp x19,x30,[sp, #0x30]
+00dc1384  ldp d9,d8,[sp, #0x20]
+00dc1388  ldp d11,d10,[sp, #0x10]
+00dc138c  ldr d12,[sp], #0x40
+00dc1390  ret
+00dc1394  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc1398_CenterOnChild__OnEndDrag.txt
+================================================================================
+Function: CenterOnChild$$OnEndDrag @ 00dc1398
+
+--- Calls OUT ---
+  -> UnityEngine.Transform$$get_localPosition @ 024f37bc
+  -> CenterOnChild$$FindClosestPos @ 00dc13d0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dc1398  stp x19,x30,[sp, #-0x10]!
+00dc139c  mov x19,x0
+00dc13a0  ldr x0,[x0, #0x30]
+00dc13a4  mov w8,#0x1
+00dc13a8  strb w8,[x19, #0x44]
+00dc13ac  cbz x0,0x00dc13cc
+00dc13b0  mov x1,xzr
+00dc13b4  bl 0x024f37bc
+00dc13b8  mov x0,x19
+00dc13bc  bl 0x00dc13d0
+00dc13c0  str s0,[x19, #0x40]
+00dc13c4  ldp x19,x30,[sp], #0x10
+00dc13c8  ret
+00dc13cc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc13d0_CenterOnChild__FindClosestPos.txt
+================================================================================
+Function: CenterOnChild$$FindClosestPos @ 00dc13d0
+
+--- Calls OUT ---
+  -> System.Collections.Generic.List<float>$$get_Item @ 01c2fbd0
+  -> UnityEngine.Transform$$GetChild @ 024f5bec
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CenterOnChild$$OnEndDrag @ 00dc1398
+
+--- Listing ---
+00dc13d0  str d10,[sp, #-0x40]!
+00dc13d4  stp d9,d8,[sp, #0x8]
+00dc13d8  str x22,[sp, #0x18]
+00dc13dc  stp x21,x20,[sp, #0x20]
+00dc13e0  stp x19,x30,[sp, #0x30]
+00dc13e4  adrp x20,0x3572000
+00dc13e8  ldrb w8,[x20, #0x174]
+00dc13ec  mov v9.16B,v0.16B
+00dc13f0  mov x19,x0
+00dc13f4  tbnz w8,#0x0,0x00dc1418
+00dc13f8  adrp x0,0x3339000
+00dc13fc  ldr x0,[x0, #0x7f0]
+00dc1400  bl 0x00b0789c
+00dc1404  adrp x0,0x3323000
+00dc1408  ldr x0,[x0, #0x2d0]
+00dc140c  bl 0x00b0789c
+00dc1410  mov w8,#0x1
+00dc1414  strb w8,[x20, #0x174]
+00dc1418  ldr x0,[x19, #0x38]
+00dc141c  cbz x0,0x00dc1474
+00dc1420  adrp x22,0x3323000
+00dc1424  ldr x22,[x22, #0x2d0]
+00dc1428  mov w8,#0x7f800000
+00dc142c  mov w20,wzr
+00dc1430  mov w21,wzr
+00dc1434  fmov s8,wzr
+00dc1438  fmov s10,w8
+00dc143c  ldr w8,[x0, #0x18]
+00dc1440  cmp w21,w8
+00dc1444  b.ge 0x00dc1478
+00dc1448  ldr x2,[x22]
+00dc144c  mov w1,w21
+00dc1450  bl 0x01c2fbd0
+00dc1454  ldr x0,[x19, #0x38]
+00dc1458  fabd s1,s0,s9
+00dc145c  fcmp s1,s10
+00dc1460  fcsel s10,s1,s10,mi
+00dc1464  fcsel s8,s0,s8,mi
+00dc1468  csel w20,w21,w20,mi
+00dc146c  add w21,w21,#0x1
+00dc1470  cbnz x0,0x00dc143c
+00dc1474  bl 0x00b079b0
+00dc1478  ldr x0,[x19, #0x30]
+00dc147c  cbz x0,0x00dc1474
+00dc1480  mov w1,w20
+00dc1484  mov x2,xzr
+00dc1488  bl 0x024f5bec
+00dc148c  cbz x0,0x00dc1474
+00dc1490  mov x1,xzr
+00dc1494  bl 0x024e4ed4
+00dc1498  ldr x8,[x19, #0x20]
+00dc149c  cbz x8,0x00dc14b4
+00dc14a0  mov x1,x0
+00dc14a4  ldr x9,[x8, #0x18]
+00dc14a8  ldr x0,[x8, #0x40]
+00dc14ac  ldr x2,[x8, #0x28]
+00dc14b0  blr x9
+00dc14b4  mov v0.16B,v8.16B
+00dc14b8  ldp x19,x30,[sp, #0x30]
+00dc14bc  ldp x21,x20,[sp, #0x20]
+00dc14c0  ldr x22,[sp, #0x18]
+00dc14c4  ldp d9,d8,[sp, #0x8]
+00dc14c8  ldr d10,[sp], #0x40
+00dc14cc  ret
+
+
+================================================================================
+### FILE: 00dc14d0_CenterOnChild__OnDrag.txt
+================================================================================
+Function: CenterOnChild$$OnDrag @ 00dc14d0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc14d0  strb wzr,[x0, #0x44]
+00dc14d4  ret
+
+
+================================================================================
+### FILE: 00dc14d8_CenterOnChild__.ctor.txt
+================================================================================
+Function: CenterOnChild$$.ctor @ 00dc14d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.List<float>$$.ctor @ 01c2f660
+
+--- Calls IN ---
+
+--- Listing ---
+00dc14d8  stp x21,x20,[sp, #-0x20]!
+00dc14dc  stp x19,x30,[sp, #0x10]
+00dc14e0  adrp x21,0x3572000
+00dc14e4  adrp x20,0x3374000
+00dc14e8  ldrb w8,[x21, #0x175]
+00dc14ec  ldr x20,[x20, #0xef0]
+00dc14f0  mov x19,x0
+00dc14f4  tbnz w8,#0x0,0x00dc1518
+00dc14f8  adrp x0,0x3346000
+00dc14fc  ldr x0,[x0, #0xe50]
+00dc1500  bl 0x00b0789c
+00dc1504  adrp x0,0x3374000
+00dc1508  ldr x0,[x0, #0xef0]
+00dc150c  bl 0x00b0789c
+00dc1510  mov w8,#0x1
+00dc1514  strb w8,[x21, #0x175]
+00dc1518  mov w8,#0x41100000
+00dc151c  str w8,[x19, #0x18]
+00dc1520  ldr x0,[x20]
+00dc1524  bl 0x00b079a0
+00dc1528  cbz x0,0x00dc1564
+00dc152c  adrp x8,0x3346000
+00dc1530  ldr x8,[x8, #0xe50]
+00dc1534  mov x20,x0
+00dc1538  ldr x1,[x8]
+00dc153c  bl 0x01c2f660
+00dc1540  mov x0,x19
+00dc1544  str x20,[x0, #0x38]!
+00dc1548  mov x1,x20
+00dc154c  bl 0x00b07850
+00dc1550  mov x0,x19
+00dc1554  ldp x19,x30,[sp, #0x10]
+00dc1558  mov x1,xzr
+00dc155c  ldp x21,x20,[sp], #0x20
+00dc1560  b 0x024e45bc
+00dc1564  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc1568_CenterOnChild.OnCenterHandler__.ctor.txt
+================================================================================
+Function: CenterOnChild.OnCenterHandler$$.ctor @ 00dc1568
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aed804 @ 00b079c0
+  -> FUN_008dc200 @ 008dc200
+  -> FUN_00b07910 @ 00b07910
+  -> FUN_008dc220 @ 008dc220
+  -> FUN_00b07978 @ 00b07978
+  -> thunk_FUN_00afcc14 @ 00b07984
+  -> FUN_008dc230 @ 008dc230
+  -> FUN_008dc1b8 @ 008dc1b8
+  -> FUN_008dc25c @ 008dc25c
+
+--- Calls IN ---
+
+--- Listing ---
+00dc1568  str x22,[sp, #-0x30]!
+00dc156c  stp x21,x20,[sp, #0x10]
+00dc1570  stp x19,x30,[sp, #0x20]
+00dc1574  mov x19,x0
+00dc1578  mov x0,x2
+00dc157c  mov x21,x2
+00dc1580  mov x20,x1
+00dc1584  bl 0x00b07984
+00dc1588  str x0,[x19, #0x10]
+00dc158c  mov x0,x19
+00dc1590  str x21,[x19, #0x28]
+00dc1594  str x20,[x0, #0x20]!
+00dc1598  mov x1,x20
+00dc159c  bl 0x00b07850
+00dc15a0  ldrb w22,[x21, #0x52]
+00dc15a4  mov x0,x21
+00dc15a8  str x19,[x19, #0x40]
+00dc15ac  bl 0x00b07910
+00dc15b0  tbz w0,#0x0,0x00dc15d0
+00dc15b4  ldrb w8,[x21, #0x53]
+00dc15b8  tbnz w8,#0x4,0x00dc15ec
+00dc15bc  cmp w22,#0x1
+00dc15c0  b.ne 0x00dc15d8
+00dc15c4  adrp x8,0x8dc000
+00dc15c8  add x8,x8,#0x220
+00dc15cc  b 0x00dc1614
+00dc15d0  cbz w22,0x00dc1600
+00dc15d4  cbz x20,0x00dc1634
+00dc15d8  ldr x8,[x19, #0x10]
+00dc15dc  ldr x9,[x19, #0x20]
+00dc15e0  str x8,[x19, #0x18]
+00dc15e4  str x9,[x19, #0x40]
+00dc15e8  b 0x00dc1618
+00dc15ec  cmp w22,#0x1
+00dc15f0  b.ne 0x00dc160c
+00dc15f4  adrp x8,0x8dc000
+00dc15f8  add x8,x8,#0x230
+00dc15fc  b 0x00dc1614
+00dc1600  adrp x8,0x8dc000
+00dc1604  add x8,x8,#0x200
+00dc1608  b 0x00dc1614
+00dc160c  adrp x8,0x8dc000
+00dc1610  add x8,x8,#0x25c
+00dc1614  str x8,[x19, #0x18]
+00dc1618  adrp x8,0x8dc000
+00dc161c  add x8,x8,#0x1b8
+00dc1620  str x8,[x19, #0x38]
+00dc1624  ldp x19,x30,[sp, #0x20]
+00dc1628  ldp x21,x20,[sp, #0x10]
+00dc162c  ldr x22,[sp], #0x30
+00dc1630  ret
+00dc1634  adrp x1,0x26db000
+00dc1638  add x1,x1,#0xd9
+00dc163c  mov x0,xzr
+00dc1640  bl 0x00b079c0
+00dc1644  mov x1,xzr
+00dc1648  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00dc164c_CenterOnChild.OnCenterHandler__Invoke.txt
+================================================================================
+Function: CenterOnChild.OnCenterHandler$$Invoke @ 00dc164c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc164c  ldr x8,[x0, #0x40]
+00dc1650  ldr x3,[x0, #0x18]
+00dc1654  ldr x2,[x0, #0x28]
+00dc1658  mov x0,x8
+00dc165c  br x3
+
+
+================================================================================
+### FILE: 00dc1660_CenterOnChild.OnCenterHandler__BeginInvoke.txt
+================================================================================
+Function: CenterOnChild.OnCenterHandler$$BeginInvoke @ 00dc1660
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf4b4 @ 00b07858
+
+--- Calls IN ---
+
+--- Listing ---
+00dc1660  sub sp,sp,#0x20
+00dc1664  stp xzr,x30,[sp, #0x8]
+00dc1668  str x1,[sp]
+00dc166c  mov x1,sp
+00dc1670  bl 0x00b07858
+00dc1674  ldr x30,[sp, #0x10]
+00dc1678  add sp,sp,#0x20
+00dc167c  ret
+
+
+================================================================================
+### FILE: 00dc1680_CenterOnChild.OnCenterHandler__EndInvoke.txt
+================================================================================
+Function: CenterOnChild.OnCenterHandler$$EndInvoke @ 00dc1680
+
+--- Calls OUT ---
+  -> thunk_FUN_00aaf574 @ 00b0785c
+
+--- Calls IN ---
+
+--- Listing ---
+00dc1680  mov x0,x1
+00dc1684  mov x1,xzr
+00dc1688  b 0x00b0785c
+
+

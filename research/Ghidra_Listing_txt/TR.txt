@@ -1,0 +1,2882 @@
+================================================================================
+### FILE: 00b81374_try_lock.txt
+================================================================================
+Function: try_lock @ 00b81374
+FuncComment: std::__ndk1::mutex::try_lock()
+
+--- Calls OUT ---
+  -> pthread_mutex_trylock @ 008d5950
+
+--- Calls IN ---
+
+--- Listing ---
+00b81374  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::mutex::try_lock()
+00b81378  mov x29,sp
+00b8137c  bl 0x008d5950
+    ; [PRE] try { // try from 00b8137c to 00b8137f has its CatchHandler @ 00b81390
+    ; [POST] } // end try from 00b8137c to 00b8137f
+00b81380  cmp w0,#0x0
+00b81384  cset w0,eq
+00b81388  ldp x29,x30,[sp], #0x10
+00b8138c  ret
+
+
+================================================================================
+### FILE: 00b814c4_try_lock.txt
+================================================================================
+Function: try_lock @ 00b814c4
+FuncComment: std::__ndk1::recursive_mutex::try_lock()
+
+--- Calls OUT ---
+  -> pthread_mutex_trylock @ 008d5950
+
+--- Calls IN ---
+
+--- Listing ---
+00b814c4  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::recursive_mutex::try_lock()
+00b814c8  mov x29,sp
+00b814cc  bl 0x008d5950
+    ; [PRE] try { // try from 00b814cc to 00b814cf has its CatchHandler @ 00b814e0
+    ; [POST] } // end try from 00b814cc to 00b814cf
+00b814d0  cmp w0,#0x0
+00b814d4  cset w0,eq
+00b814d8  ldp x29,x30,[sp], #0x10
+00b814dc  ret
+
+
+================================================================================
+### FILE: 00b81614_try_lock.txt
+================================================================================
+Function: try_lock @ 00b81614
+FuncComment: std::__ndk1::timed_mutex::try_lock()
+
+--- Calls OUT ---
+  -> pthread_mutex_unlock @ 008d4a20
+  -> pthread_mutex_trylock @ 008d5950
+
+--- Calls IN ---
+
+--- Listing ---
+00b81614  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::timed_mutex::try_lock()
+00b81618  stp x29,x30,[sp, #0x10]
+00b8161c  add x29,sp,#0x10
+00b81620  mov x19,x0
+00b81624  bl 0x008d5950
+    ; [PRE] try { // try from 00b81624 to 00b81627 has its CatchHandler @ 00b81668
+    ; [POST] } // end try from 00b81624 to 00b81627
+00b81628  cbz w0,0x00b81634
+00b8162c  mov w20,wzr
+00b81630  b 0x00b81654
+00b81634  ldrb w8,[x19, #0x58]
+00b81638  cbz w8,0x00b81644
+00b8163c  mov w20,wzr
+00b81640  b 0x00b8164c
+00b81644  mov w20,#0x1
+00b81648  strb w20,[x19, #0x58]
+00b8164c  mov x0,x19
+    ; [PRE] try { // try from 00b8164c to 00b81653 has its CatchHandler @ 00b81664
+00b81650  bl 0x008d4a20
+    ; [POST] } // end try from 00b8164c to 00b81653
+00b81654  ldp x29,x30,[sp, #0x10]
+00b81658  mov w0,w20
+00b8165c  ldp x20,x19,[sp], #0x20
+00b81660  ret
+
+
+================================================================================
+### FILE: 00b8185c_try_lock.txt
+================================================================================
+Function: try_lock @ 00b8185c
+FuncComment: std::__ndk1::recursive_timed_mutex::try_lock()
+
+--- Calls OUT ---
+  -> pthread_mutex_unlock @ 008d4a20
+  -> pthread_self @ 008d43d0
+  -> pthread_mutex_trylock @ 008d5950
+  -> pthread_equal @ 008d4020
+
+--- Calls IN ---
+
+--- Listing ---
+00b8185c  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::recursive_timed_mutex::try_lock()
+00b81860  stp x29,x30,[sp, #0x10]
+00b81864  add x29,sp,#0x10
+00b81868  mov x19,x0
+00b8186c  bl 0x008d43d0
+00b81870  mov x20,x0
+00b81874  mov x0,x19
+    ; [PRE] try { // try from 00b81874 to 00b8187b has its CatchHandler @ 00b818fc
+00b81878  bl 0x008d5950
+    ; [POST] } // end try from 00b81874 to 00b8187b
+00b8187c  cbz w0,0x00b81888
+00b81880  mov w20,wzr
+00b81884  b 0x00b818e4
+00b81888  ldr x8,[x19, #0x58]
+00b8188c  cbz x8,0x00b818c8
+00b81890  ldr x1,[x19, #0x60]
+00b81894  cbz x20,0x00b818b8
+00b81898  cbz x1,0x00b818b8
+00b8189c  mov x0,x20
+    ; [PRE] try { // try from 00b8189c to 00b818a3 has its CatchHandler @ 00b818f4
+00b818a0  bl 0x008d4020
+    ; [POST] } // end try from 00b8189c to 00b818a3
+00b818a4  cbz w0,0x00b818d8
+00b818a8  ldr x8,[x19, #0x58]
+00b818ac  cmn x8,#0x1
+00b818b0  b.ne 0x00b818c8
+00b818b4  b 0x00b818d8
+00b818b8  orr x9,x1,x20
+00b818bc  cbnz x9,0x00b818d8
+00b818c0  cmn x8,#0x1
+00b818c4  b.eq 0x00b818d8
+00b818c8  add x8,x8,#0x1
+00b818cc  stp x8,x20,[x19, #0x58]
+00b818d0  mov w20,#0x1
+00b818d4  b 0x00b818dc
+00b818d8  mov w20,wzr
+00b818dc  mov x0,x19
+    ; [PRE] try { // try from 00b818dc to 00b818e3 has its CatchHandler @ 00b818f8
+00b818e0  bl 0x008d4a20
+    ; [POST] } // end try from 00b818dc to 00b818e3
+00b818e4  ldp x29,x30,[sp, #0x10]
+00b818e8  mov w0,w20
+00b818ec  ldp x20,x19,[sp], #0x20
+00b818f0  ret
+
+
+================================================================================
+### FILE: 00d9e4f0_TransitionSoundMapping__.ctor.txt
+================================================================================
+Function: TransitionSoundMapping$$.ctor @ 00d9e4f0
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d9e4f0  mov x1,xzr
+00d9e4f4  b 0x02194104
+
+
+================================================================================
+### FILE: 00df2d3c_TrainingcampData__get_stage.txt
+================================================================================
+Function: TrainingcampData$$get_stage @ 00df2d3c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2d3c  ldr w0,[x0, #0x74]
+00df2d40  ret
+
+
+================================================================================
+### FILE: 00df2d44_TrainingcampData__get_taskID1.txt
+================================================================================
+Function: TrainingcampData$$get_taskID1 @ 00df2d44
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2d44  ldr x0,[x0, #0x78]
+00df2d48  ret
+
+
+================================================================================
+### FILE: 00df2d4c_TrainingcampData__get_correspondIcon.txt
+================================================================================
+Function: TrainingcampData$$get_correspondIcon @ 00df2d4c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2d4c  ldr x0,[x0, #0x80]
+00df2d50  ret
+
+
+================================================================================
+### FILE: 00df2d54_TrainingcampData__get_taskID2.txt
+================================================================================
+Function: TrainingcampData$$get_taskID2 @ 00df2d54
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2d54  ldr w0,[x0, #0x88]
+00df2d58  ret
+
+
+================================================================================
+### FILE: 00df2d5c_TrainingcampData__get_propaganda.txt
+================================================================================
+Function: TrainingcampData$$get_propaganda @ 00df2d5c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2d5c  ldr x0,[x0, #0x90]
+00df2d60  ret
+
+
+================================================================================
+### FILE: 00df2d64_TrainingcampData__.ctor.txt
+================================================================================
+Function: TrainingcampData$$.ctor @ 00df2d64
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TrainingcampDataWrap$$__CreateInstance @ 0144993c
+
+--- Listing ---
+00df2d64  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00df2d68_TrainingcampRecord__.ctor.txt
+================================================================================
+Function: TrainingcampRecord$$.ctor @ 00df2d68
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00df2d68  stp x21,x20,[sp, #-0x20]!
+00df2d6c  stp x19,x30,[sp, #0x10]
+00df2d70  adrp x20,0x3572000
+00df2d74  adrp x21,0x3380000
+00df2d78  ldrb w8,[x20, #0x47d]
+00df2d7c  ldr x21,[x21, #0x9b0]
+00df2d80  mov x19,x0
+00df2d84  tbnz w8,#0x0,0x00df2da8
+00df2d88  adrp x0,0x333b000
+00df2d8c  ldr x0,[x0, #0xde8]
+00df2d90  bl 0x00b0789c
+00df2d94  adrp x0,0x3380000
+00df2d98  ldr x0,[x0, #0x9b0]
+00df2d9c  bl 0x00b0789c
+00df2da0  mov w8,#0x1
+00df2da4  strb w8,[x20, #0x47d]
+00df2da8  ldr x0,[x21]
+00df2dac  bl 0x00b079a0
+00df2db0  cbz x0,0x00df2dec
+00df2db4  adrp x8,0x333b000
+00df2db8  ldr x8,[x8, #0xde8]
+00df2dbc  mov x20,x0
+00df2dc0  ldr x1,[x8]
+00df2dc4  bl 0x01bffe10
+00df2dc8  mov x0,x19
+00df2dcc  str x20,[x0, #0x18]!
+00df2dd0  mov x1,x20
+00df2dd4  bl 0x00b07850
+00df2dd8  mov x0,x19
+00df2ddc  ldp x19,x30,[sp, #0x10]
+00df2de0  mov x1,xzr
+00df2de4  ldp x21,x20,[sp], #0x20
+00df2de8  b 0x024e277c
+00df2dec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ff49bc_TrainingcamppanelNode__get_mask.txt
+================================================================================
+Function: TrainingcamppanelNode$$get_mask @ 00ff49bc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00ff49bc  stp x21,x20,[sp, #-0x20]!
+00ff49c0  stp x19,x30,[sp, #0x10]
+00ff49c4  adrp x20,0x3574000
+00ff49c8  adrp x21,0x337b000
+00ff49cc  ldrb w8,[x20, #0x23a]
+00ff49d0  ldr x21,[x21, #0x2b8]
+00ff49d4  mov x19,x0
+00ff49d8  tbnz w8,#0x0,0x00ff49f0
+00ff49dc  adrp x0,0x337b000
+00ff49e0  ldr x0,[x0, #0x2b8]
+00ff49e4  bl 0x00b0789c
+00ff49e8  mov w8,#0x1
+00ff49ec  strb w8,[x20, #0x23a]
+00ff49f0  ldr x1,[x21]
+00ff49f4  mov x0,x19
+00ff49f8  ldp x19,x30,[sp, #0x10]
+00ff49fc  mov x2,xzr
+00ff4a00  ldp x21,x20,[sp], #0x20
+00ff4a04  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4a08_TrainingcamppanelNode__get_spr_propaganda.txt
+================================================================================
+Function: TrainingcamppanelNode$$get_spr_propaganda @ 00ff4a08
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$RefreshUI @ 0103be34
+
+--- Listing ---
+00ff4a08  stp x21,x20,[sp, #-0x20]!
+00ff4a0c  stp x19,x30,[sp, #0x10]
+00ff4a10  adrp x20,0x3574000
+00ff4a14  adrp x21,0x336c000
+00ff4a18  ldrb w8,[x20, #0x23b]
+00ff4a1c  ldr x21,[x21, #0x8b0]
+00ff4a20  mov x19,x0
+00ff4a24  tbnz w8,#0x0,0x00ff4a3c
+00ff4a28  adrp x0,0x336c000
+00ff4a2c  ldr x0,[x0, #0x8b0]
+00ff4a30  bl 0x00b0789c
+00ff4a34  mov w8,#0x1
+00ff4a38  strb w8,[x20, #0x23b]
+00ff4a3c  ldr x1,[x21]
+00ff4a40  mov x0,x19
+00ff4a44  ldp x19,x30,[sp, #0x10]
+00ff4a48  mov x2,xzr
+00ff4a4c  ldp x21,x20,[sp], #0x20
+00ff4a50  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4a54_TrainingcamppanelNode__get_btn_receive.txt
+================================================================================
+Function: TrainingcamppanelNode$$get_btn_receive @ 00ff4a54
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$RefreshUI @ 0103be34
+
+--- Listing ---
+00ff4a54  stp x21,x20,[sp, #-0x20]!
+00ff4a58  stp x19,x30,[sp, #0x10]
+00ff4a5c  adrp x20,0x3574000
+00ff4a60  adrp x21,0x335e000
+00ff4a64  ldrb w8,[x20, #0x23c]
+00ff4a68  ldr x21,[x21, #0xa20]
+00ff4a6c  mov x19,x0
+00ff4a70  tbnz w8,#0x0,0x00ff4a88
+00ff4a74  adrp x0,0x335e000
+00ff4a78  ldr x0,[x0, #0xa20]
+00ff4a7c  bl 0x00b0789c
+00ff4a80  mov w8,#0x1
+00ff4a84  strb w8,[x20, #0x23c]
+00ff4a88  ldr x1,[x21]
+00ff4a8c  mov x0,x19
+00ff4a90  ldp x19,x30,[sp, #0x10]
+00ff4a94  mov x2,xzr
+00ff4a98  ldp x21,x20,[sp], #0x20
+00ff4a9c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4aa0_TrainingcamppanelNode__get_btn_preShow.txt
+================================================================================
+Function: TrainingcamppanelNode$$get_btn_preShow @ 00ff4aa0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$RefreshUI @ 0103be34
+
+--- Listing ---
+00ff4aa0  stp x21,x20,[sp, #-0x20]!
+00ff4aa4  stp x19,x30,[sp, #0x10]
+00ff4aa8  adrp x20,0x3574000
+00ff4aac  adrp x21,0x3361000
+00ff4ab0  ldrb w8,[x20, #0x23d]
+00ff4ab4  ldr x21,[x21, #0xfc8]
+00ff4ab8  mov x19,x0
+00ff4abc  tbnz w8,#0x0,0x00ff4ad4
+00ff4ac0  adrp x0,0x3361000
+00ff4ac4  ldr x0,[x0, #0xfc8]
+00ff4ac8  bl 0x00b0789c
+00ff4acc  mov w8,#0x1
+00ff4ad0  strb w8,[x20, #0x23d]
+00ff4ad4  ldr x1,[x21]
+00ff4ad8  mov x0,x19
+00ff4adc  ldp x19,x30,[sp, #0x10]
+00ff4ae0  mov x2,xzr
+00ff4ae4  ldp x21,x20,[sp], #0x20
+00ff4ae8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4aec_TrainingcamppanelNode__get_lbl_title.txt
+================================================================================
+Function: TrainingcamppanelNode$$get_lbl_title @ 00ff4aec
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$RefreshUI @ 0103be34
+
+--- Listing ---
+00ff4aec  stp x21,x20,[sp, #-0x20]!
+00ff4af0  stp x19,x30,[sp, #0x10]
+00ff4af4  adrp x20,0x3574000
+00ff4af8  adrp x21,0x3379000
+00ff4afc  ldrb w8,[x20, #0x23e]
+00ff4b00  ldr x21,[x21, #0x900]
+00ff4b04  mov x19,x0
+00ff4b08  tbnz w8,#0x0,0x00ff4b20
+00ff4b0c  adrp x0,0x3379000
+00ff4b10  ldr x0,[x0, #0x900]
+00ff4b14  bl 0x00b0789c
+00ff4b18  mov w8,#0x1
+00ff4b1c  strb w8,[x20, #0x23e]
+00ff4b20  ldr x1,[x21]
+00ff4b24  mov x0,x19
+00ff4b28  ldp x19,x30,[sp, #0x10]
+00ff4b2c  mov x2,xzr
+00ff4b30  ldp x21,x20,[sp], #0x20
+00ff4b34  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4b38_TrainingcamppanelNode__get_campTaskGrid.txt
+================================================================================
+Function: TrainingcamppanelNode$$get_campTaskGrid @ 00ff4b38
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$RefreshUI @ 0103be34
+
+--- Listing ---
+00ff4b38  stp x21,x20,[sp, #-0x20]!
+00ff4b3c  stp x19,x30,[sp, #0x10]
+00ff4b40  adrp x20,0x3574000
+00ff4b44  adrp x21,0x3349000
+00ff4b48  ldrb w8,[x20, #0x23f]
+00ff4b4c  ldr x21,[x21, #0xa0]
+00ff4b50  mov x19,x0
+00ff4b54  tbnz w8,#0x0,0x00ff4b6c
+00ff4b58  adrp x0,0x3349000
+00ff4b5c  ldr x0,[x0, #0xa0]
+00ff4b60  bl 0x00b0789c
+00ff4b64  mov w8,#0x1
+00ff4b68  strb w8,[x20, #0x23f]
+00ff4b6c  ldr x1,[x21]
+00ff4b70  mov x0,x19
+00ff4b74  ldp x19,x30,[sp, #0x10]
+00ff4b78  mov x2,xzr
+00ff4b7c  ldp x21,x20,[sp], #0x20
+00ff4b80  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4b84_TrainingcamppanelNode__get_btn_close.txt
+================================================================================
+Function: TrainingcamppanelNode$$get_btn_close @ 00ff4b84
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$RegisterCallBack @ 0103bbfc
+
+--- Listing ---
+00ff4b84  stp x21,x20,[sp, #-0x20]!
+00ff4b88  stp x19,x30,[sp, #0x10]
+00ff4b8c  adrp x20,0x3574000
+00ff4b90  adrp x21,0x3310000
+00ff4b94  ldrb w8,[x20, #0x240]
+00ff4b98  ldr x21,[x21, #0x1b8]
+00ff4b9c  mov x19,x0
+00ff4ba0  tbnz w8,#0x0,0x00ff4bb8
+00ff4ba4  adrp x0,0x3310000
+00ff4ba8  ldr x0,[x0, #0x1b8]
+00ff4bac  bl 0x00b0789c
+00ff4bb0  mov w8,#0x1
+00ff4bb4  strb w8,[x20, #0x240]
+00ff4bb8  ldr x1,[x21]
+00ff4bbc  mov x0,x19
+00ff4bc0  ldp x19,x30,[sp, #0x10]
+00ff4bc4  mov x2,xzr
+00ff4bc8  ldp x21,x20,[sp], #0x20
+00ff4bcc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00ff4bd0_TrainingcamppanelNode__.ctor.txt
+================================================================================
+Function: TrainingcamppanelNode$$.ctor @ 00ff4bd0
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00ff4bd0  mov x1,xzr
+00ff4bd4  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 0103bae4_TrainingCampPanelMono__get_m_node.txt
+================================================================================
+Function: TrainingCampPanelMono$$get_m_node @ 0103bae4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$RefreshUI @ 0103be34
+  <- TrainingCampPanelMono$$RegisterCallBack @ 0103bbfc
+
+--- Listing ---
+0103bae4  str x22,[sp, #-0x30]!
+0103bae8  stp x21,x20,[sp, #0x10]
+0103baec  stp x19,x30,[sp, #0x20]
+0103baf0  adrp x19,0x3574000
+0103baf4  adrp x22,0x3321000
+0103baf8  ldrb w8,[x19, #0x59a]
+0103bafc  ldr x22,[x22, #0xca8]
+0103bb00  mov x20,x0
+0103bb04  tbnz w8,#0x0,0x0103bb34
+0103bb08  adrp x0,0x3353000
+0103bb0c  ldr x0,[x0, #0x6b8]
+0103bb10  bl 0x00b0789c
+0103bb14  adrp x0,0x3348000
+0103bb18  ldr x0,[x0, #0x138]
+0103bb1c  bl 0x00b0789c
+0103bb20  adrp x0,0x3321000
+0103bb24  ldr x0,[x0, #0xca8]
+0103bb28  bl 0x00b0789c
+0103bb2c  mov w8,#0x1
+0103bb30  strb w8,[x19, #0x59a]
+0103bb34  mov x19,x20
+0103bb38  ldr x21,[x19, #0xc8]!
+0103bb3c  ldr x0,[x22]
+0103bb40  ldr w8,[x0, #0xe0]
+0103bb44  cbnz w8,0x0103bb4c
+0103bb48  bl 0x00b0798c
+0103bb4c  mov x0,x21
+0103bb50  mov x1,xzr
+0103bb54  mov x2,xzr
+0103bb58  bl 0x024c8180
+0103bb5c  tbz w0,#0x0,0x0103bbb0
+0103bb60  adrp x22,0x3348000
+0103bb64  adrp x21,0x3353000
+0103bb68  ldr x22,[x22, #0x138]
+0103bb6c  ldr x21,[x21, #0x6b8]
+0103bb70  mov x0,x20
+0103bb74  mov x1,xzr
+0103bb78  bl 0x024e4ed4
+0103bb7c  ldr x8,[x22]
+0103bb80  mov x20,x0
+0103bb84  ldr w9,[x8, #0xe0]
+0103bb88  cbnz w9,0x0103bb94
+0103bb8c  mov x0,x8
+0103bb90  bl 0x00b0798c
+0103bb94  ldr x1,[x21]
+0103bb98  mov x0,x20
+0103bb9c  bl 0x017372ac
+0103bba0  mov x1,x0
+0103bba4  str x0,[x19]
+0103bba8  mov x0,x19
+0103bbac  bl 0x00b07850
+0103bbb0  ldr x0,[x19]
+0103bbb4  ldp x19,x30,[sp, #0x20]
+0103bbb8  ldp x21,x20,[sp, #0x10]
+0103bbbc  ldr x22,[sp], #0x30
+0103bbc0  ret
+
+
+================================================================================
+### FILE: 0103bbc4_TrainingCampPanelMono__get_LayerType.txt
+================================================================================
+Function: TrainingCampPanelMono$$get_LayerType @ 0103bbc4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0103bbc4  mov w0,#0x3
+0103bbc8  ret
+
+
+================================================================================
+### FILE: 0103bbcc_TrainingCampPanelMono__get_m_campData.txt
+================================================================================
+Function: TrainingCampPanelMono$$get_m_campData @ 0103bbcc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0103bbcc  ldr x0,[x0, #0xd0]
+0103bbd0  ret
+
+
+================================================================================
+### FILE: 0103bbd4_TrainingCampPanelMono__set_m_campData.txt
+================================================================================
+Function: TrainingCampPanelMono$$set_m_campData @ 0103bbd4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+0103bbd4  str x1,[x0, #0xd0]!
+0103bbd8  b 0x00b07850
+
+
+================================================================================
+### FILE: 0103bbdc_TrainingCampPanelMono__get_m_taskList.txt
+================================================================================
+Function: TrainingCampPanelMono$$get_m_taskList @ 0103bbdc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0103bbdc  ldr x0,[x0, #0xd8]
+0103bbe0  ret
+
+
+================================================================================
+### FILE: 0103bbe4_TrainingCampPanelMono__set_m_taskList.txt
+================================================================================
+Function: TrainingCampPanelMono$$set_m_taskList @ 0103bbe4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+0103bbe4  str x1,[x0, #0xd8]!
+0103bbe8  b 0x00b07850
+
+
+================================================================================
+### FILE: 0103bbec_TrainingCampPanelMono__get_m_finalTask.txt
+================================================================================
+Function: TrainingCampPanelMono$$get_m_finalTask @ 0103bbec
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+0103bbec  ldr x0,[x0, #0xe0]
+0103bbf0  ret
+
+
+================================================================================
+### FILE: 0103bbf4_TrainingCampPanelMono__set_m_finalTask.txt
+================================================================================
+Function: TrainingCampPanelMono$$set_m_finalTask @ 0103bbf4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+0103bbf4  str x1,[x0, #0xe0]!
+0103bbf8  b 0x00b07850
+
+
+================================================================================
+### FILE: 0103bbfc_TrainingCampPanelMono__RegisterCallBack.txt
+================================================================================
+Function: TrainingCampPanelMono$$RegisterCallBack @ 0103bbfc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BaseMono$$RegisterDataProccessCallBack @ 00e1a5c0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> TrainingcamppanelNode$$get_btn_close @ 00ff4b84
+  -> Ali.OnProccessRequestFinish$$.ctor @ 00e110fc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GUIScreenBaseMono$$RegisterCallBack @ 00f21d5c
+  -> UIEventListener$$Get @ 00e34224
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> FUN_00b079b0 @ 00b079b0
+  -> TrainingCampPanelMono$$get_m_node @ 0103bae4
+
+--- Calls IN ---
+
+--- Listing ---
+0103bbfc  stp x21,x20,[sp, #-0x20]!
+0103bc00  stp x19,x30,[sp, #0x10]
+0103bc04  adrp x21,0x3574000
+0103bc08  adrp x20,0x335c000
+0103bc0c  ldrb w8,[x21, #0x59b]
+0103bc10  ldr x20,[x20, #0x918]
+0103bc14  mov x19,x0
+0103bc18  tbnz w8,#0x0,0x0103bc54
+0103bc1c  adrp x0,0x335c000
+0103bc20  ldr x0,[x0, #0x918]
+0103bc24  bl 0x00b0789c
+0103bc28  adrp x0,0x3370000
+0103bc2c  ldr x0,[x0, #0x530]
+0103bc30  bl 0x00b0789c
+0103bc34  adrp x0,0x332d000
+0103bc38  ldr x0,[x0, #0xd38]
+0103bc3c  bl 0x00b0789c
+0103bc40  adrp x0,0x3360000
+0103bc44  ldr x0,[x0, #0x750]
+0103bc48  bl 0x00b0789c
+0103bc4c  mov w8,#0x1
+0103bc50  strb w8,[x21, #0x59b]
+0103bc54  mov x0,x19
+0103bc58  mov x1,xzr
+0103bc5c  bl 0x00f21d5c
+0103bc60  ldr x0,[x20]
+0103bc64  bl 0x00b079a0
+0103bc68  cbz x0,0x0103bd38
+0103bc6c  adrp x8,0x3370000
+0103bc70  ldr x8,[x8, #0x530]
+0103bc74  mov x1,x19
+0103bc78  mov x3,xzr
+0103bc7c  mov x20,x0
+0103bc80  ldr x2,[x8]
+0103bc84  bl 0x00e110fc
+0103bc88  mov w1,#0x30
+0103bc8c  mov x0,x19
+0103bc90  mov x2,x20
+0103bc94  mov x3,xzr
+0103bc98  bl 0x00e1a5c0
+0103bc9c  mov x0,x19
+0103bca0  bl 0x0103bae4
+0103bca4  cbz x0,0x0103bd38
+0103bca8  mov x1,xzr
+0103bcac  bl 0x00ff4b84
+0103bcb0  cbz x0,0x0103bd38
+0103bcb4  adrp x8,0x332d000
+0103bcb8  ldr x8,[x8, #0xd38]
+0103bcbc  adrp x21,0x3360000
+0103bcc0  ldr x20,[x0, #0x18]
+0103bcc4  ldr x8,[x8]
+0103bcc8  ldr w9,[x8, #0xe0]
+0103bccc  ldr x21,[x21, #0x750]
+0103bcd0  cbnz w9,0x0103bcdc
+0103bcd4  mov x0,x8
+0103bcd8  bl 0x00b0798c
+0103bcdc  mov w1,#0x1
+0103bce0  mov x0,x20
+0103bce4  mov x2,xzr
+0103bce8  bl 0x00e34224
+0103bcec  ldr x8,[x21]
+0103bcf0  mov x20,x0
+0103bcf4  mov x0,x8
+0103bcf8  bl 0x00b079a0
+0103bcfc  cbz x0,0x0103bd38
+0103bd00  cbz x19,0x0103bd38
+0103bd04  ldr x8,[x19]
+0103bd08  mov x1,x19
+0103bd0c  mov x3,xzr
+0103bd10  mov x21,x0
+0103bd14  ldr x2,[x8, #0x450]
+0103bd18  bl 0x00e35bd0
+0103bd1c  cbz x20,0x0103bd38
+0103bd20  str x21,[x20, #0x38]!
+0103bd24  ldp x19,x30,[sp, #0x10]
+0103bd28  mov x0,x20
+0103bd2c  mov x1,x21
+0103bd30  ldp x21,x20,[sp], #0x20
+0103bd34  b 0x00b07850
+0103bd38  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0103bd3c_TrainingCampPanelMono__QuestGetRewardBack.txt
+================================================================================
+Function: TrainingCampPanelMono$$QuestGetRewardBack @ 0103bd3c
+
+--- Calls OUT ---
+  -> BaseMono$$Notify @ 00e1d098
+  -> Ali$$ShowReward @ 00e068f8
+  -> TrainingCampPanelMono$$RefreshUI @ 0103be34
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+0103bd3c  str x22,[sp, #-0x30]!
+0103bd40  stp x21,x20,[sp, #0x10]
+0103bd44  stp x19,x30,[sp, #0x20]
+0103bd48  adrp x22,0x3574000
+0103bd4c  adrp x21,0x335f000
+0103bd50  ldrb w8,[x22, #0x59c]
+0103bd54  ldr x21,[x21, #0x20]
+0103bd58  mov x20,x1
+0103bd5c  mov x19,x0
+0103bd60  tbnz w8,#0x0,0x0103bd90
+0103bd64  adrp x0,0x335f000
+0103bd68  ldr x0,[x0, #0x20]
+0103bd6c  bl 0x00b0789c
+0103bd70  adrp x0,0x335b000
+0103bd74  ldr x0,[x0, #0x650]
+0103bd78  bl 0x00b0789c
+0103bd7c  adrp x0,0x3351000
+0103bd80  ldr x0,[x0, #0x800]
+0103bd84  bl 0x00b0789c
+0103bd88  mov w8,#0x1
+0103bd8c  strb w8,[x22, #0x59c]
+0103bd90  ldr x0,[x21]
+0103bd94  ldr w8,[x0, #0xe0]
+0103bd98  cbnz w8,0x0103bda4
+0103bd9c  bl 0x00b0798c
+0103bda0  ldr x0,[x21]
+0103bda4  ldr x8,[x0, #0xb8]
+0103bda8  ldr x0,[x8, #0x10]
+0103bdac  cbz x0,0x0103be30
+0103bdb0  adrp x21,0x335b000
+0103bdb4  ldr x21,[x21, #0x650]
+0103bdb8  mov x1,x20
+0103bdbc  mov w2,wzr
+0103bdc0  mov x3,xzr
+0103bdc4  bl 0x00e068f8
+0103bdc8  ldr x20,[x21]
+0103bdcc  ldr x8,[x20, #0x38]
+0103bdd0  ldr x0,[x8]
+0103bdd4  ldrb w8,[x0, #0x132]
+0103bdd8  tbnz w8,#0x0,0x0103bde0
+0103bddc  bl 0x00b2ac40
+0103bde0  ldr w8,[x0, #0xe0]
+0103bde4  cbnz w8,0x0103bdec
+0103bde8  bl 0x00b0798c
+0103bdec  ldr x8,[x20, #0x38]
+0103bdf0  adrp x20,0x3351000
+0103bdf4  ldr x0,[x8]
+0103bdf8  ldrb w8,[x0, #0x132]
+0103bdfc  ldr x20,[x20, #0x800]
+0103be00  tbnz w8,#0x0,0x0103be08
+0103be04  bl 0x00b2ac40
+0103be08  ldr x8,[x0, #0xb8]
+0103be0c  ldr x0,[x20]
+0103be10  mov x2,xzr
+0103be14  ldr x1,[x8]
+0103be18  bl 0x00e1d098
+0103be1c  mov x0,x19
+0103be20  ldp x19,x30,[sp, #0x20]
+0103be24  ldp x21,x20,[sp, #0x10]
+0103be28  ldr x22,[sp], #0x30
+0103be2c  b 0x0103be34
+0103be30  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0103be34_TrainingCampPanelMono__RefreshUI.txt
+================================================================================
+Function: TrainingCampPanelMono$$RefreshUI @ 0103be34
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> TrainingcamppanelNode$$get_spr_propaganda @ 00ff4a08
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.Transform$$GetChild @ 024f5bec
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> FUN_00b079b0 @ 00b079b0
+  -> TrainingCampPanelMono$$get_m_node @ 0103bae4
+  -> BaseData$$get_id @ 00df3164
+  -> AliothExtensions$$SetSprite @ 00e14c70
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Transform$$get_childCount @ 024f5578
+  -> BaseData$$get_nameId @ 00df38a8
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> UIData$$set_m_int_1 @ 00eb5f2c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> FUN_00b2ac40 @ 00b2ac40
+  -> TrainingcamppanelNode$$get_btn_preShow @ 00ff4aa0
+  -> System.Collections.Generic.Dictionary<int,-object>$$get_Item @ 0192db0c
+  -> TrainingcamppanelNode$$get_campTaskGrid @ 00ff4b38
+  -> BaseMono$$GetUIData @ 00e1efec
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> UINode$$get_Image @ 00dc0d50
+  -> TrainingCampPanelMono$$RefrshData @ 0103c48c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> TrainingcamppanelNode$$get_lbl_title @ 00ff4aec
+  -> TrainingcamppanelNode$$get_btn_receive @ 00ff4a54
+  -> UIEventListener$$Get @ 00e34224
+  -> System.Collections.Generic.Dictionary<int,-object>$$ContainsKey @ 0192ddc0
+  -> UINode$$get_Text @ 00dc47dc
+  -> System.Collections.Generic.List<object>$$get_Item @ 01c00380
+  -> BaseMono$$AddChildSync @ 00e1e300
+  -> TrainingCampPanelMono$$RefreshTaskItem @ 0103cb68
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$PreloadAssetComplete @ 0103cb4c
+  <- TrainingCampPanelMono$$QuestGetRewardBack @ 0103bd3c
+
+--- Listing ---
+0103be34  stp x25,x24,[sp, #-0x40]!
+0103be38  stp x23,x22,[sp, #0x10]
+0103be3c  stp x21,x20,[sp, #0x20]
+0103be40  stp x19,x30,[sp, #0x30]
+0103be44  adrp x20,0x3574000
+0103be48  ldrb w8,[x20, #0x59f]
+0103be4c  mov x19,x0
+0103be50  tbnz w8,#0x0,0x0103bef8
+0103be54  adrp x0,0x3348000
+0103be58  ldr x0,[x0, #0x138]
+0103be5c  bl 0x00b0789c
+0103be60  adrp x0,0x335b000
+0103be64  ldr x0,[x0, #0x650]
+0103be68  bl 0x00b0789c
+0103be6c  adrp x0,0x331f000
+0103be70  ldr x0,[x0, #0x128]
+0103be74  bl 0x00b0789c
+0103be78  adrp x0,0x333d000
+0103be7c  ldr x0,[x0, #0x828]
+0103be80  bl 0x00b0789c
+0103be84  adrp x0,0x3314000
+0103be88  ldr x0,[x0, #0x728]
+0103be8c  bl 0x00b0789c
+0103be90  adrp x0,0x3317000
+0103be94  ldr x0,[x0, #0xbd0]
+0103be98  bl 0x00b0789c
+0103be9c  adrp x0,0x3321000
+0103bea0  ldr x0,[x0, #0xca8]
+0103bea4  bl 0x00b0789c
+0103bea8  adrp x0,0x3347000
+0103beac  ldr x0,[x0, #0x410]
+0103beb0  bl 0x00b0789c
+0103beb4  adrp x0,0x337b000
+0103beb8  ldr x0,[x0, #0x288]
+0103bebc  bl 0x00b0789c
+0103bec0  adrp x0,0x3331000
+0103bec4  ldr x0,[x0, #0x388]
+0103bec8  bl 0x00b0789c
+0103becc  adrp x0,0x332d000
+0103bed0  ldr x0,[x0, #0xd38]
+0103bed4  bl 0x00b0789c
+0103bed8  adrp x0,0x3360000
+0103bedc  ldr x0,[x0, #0x750]
+0103bee0  bl 0x00b0789c
+0103bee4  adrp x0,0x3346000
+0103bee8  ldr x0,[x0, #0xe98]
+0103beec  bl 0x00b0789c
+0103bef0  mov w8,#0x1
+0103bef4  strb w8,[x20, #0x59f]
+0103bef8  mov x0,x19
+0103befc  bl 0x0103c48c
+0103bf00  ldr x8,[x19, #0xd0]
+0103bf04  cbz x8,0x0103c1fc
+0103bf08  mov x0,x19
+0103bf0c  bl 0x0103bae4
+0103bf10  cbz x0,0x0103c474
+0103bf14  mov x1,xzr
+0103bf18  bl 0x00ff4a08
+0103bf1c  cbz x0,0x0103c474
+0103bf20  mov x1,xzr
+0103bf24  bl 0x00dc0d50
+0103bf28  ldr x8,[x19, #0xd0]
+0103bf2c  cbz x8,0x0103c474
+0103bf30  adrp x24,0x3348000
+0103bf34  ldr x24,[x24, #0x138]
+0103bf38  mov x20,x0
+0103bf3c  ldr x21,[x8, #0x90]
+0103bf40  ldr x0,[x24]
+0103bf44  ldr w9,[x0, #0xe0]
+0103bf48  cbnz w9,0x0103bf50
+0103bf4c  bl 0x00b0798c
+0103bf50  fmov s0,wzr
+0103bf54  mov x0,x20
+0103bf58  mov x1,x21
+0103bf5c  mov x2,xzr
+0103bf60  mov w3,wzr
+0103bf64  mov x4,xzr
+0103bf68  bl 0x00e14c70
+0103bf6c  mov x0,x19
+0103bf70  bl 0x0103bae4
+0103bf74  cbz x0,0x0103c474
+0103bf78  mov x1,xzr
+0103bf7c  bl 0x00ff4aec
+0103bf80  cbz x0,0x0103c474
+0103bf84  mov x1,xzr
+0103bf88  bl 0x00dc47dc
+0103bf8c  ldr x8,[x19, #0xd0]
+0103bf90  cbz x8,0x0103c474
+0103bf94  adrp x21,0x335b000
+0103bf98  ldr x21,[x21, #0x650]
+0103bf9c  mov x20,x0
+0103bfa0  mov x0,x8
+0103bfa4  mov x1,xzr
+0103bfa8  bl 0x00df38a8
+0103bfac  ldr x22,[x21]
+0103bfb0  mov w21,w0
+0103bfb4  ldr x8,[x22, #0x38]
+0103bfb8  ldr x8,[x8]
+0103bfbc  ldrb w9,[x8, #0x132]
+0103bfc0  tbnz w9,#0x0,0x0103bfd0
+0103bfc4  mov x0,x8
+0103bfc8  bl 0x00b2ac40
+0103bfcc  mov x8,x0
+0103bfd0  ldr w9,[x8, #0xe0]
+0103bfd4  cbnz w9,0x0103bfe0
+0103bfd8  mov x0,x8
+0103bfdc  bl 0x00b0798c
+0103bfe0  ldr x8,[x22, #0x38]
+0103bfe4  adrp x25,0x3347000
+0103bfe8  ldr x0,[x8]
+0103bfec  ldrb w8,[x0, #0x132]
+0103bff0  ldr x25,[x25, #0x410]
+0103bff4  tbnz w8,#0x0,0x0103bffc
+0103bff8  bl 0x00b2ac40
+0103bffc  ldr x8,[x0, #0xb8]
+0103c000  mov x0,x20
+0103c004  mov w1,w21
+0103c008  mov x3,xzr
+0103c00c  ldr x2,[x8]
+0103c010  bl 0x00e14168
+0103c014  ldr x0,[x25]
+0103c018  bl 0x01e0894c
+0103c01c  cbz x0,0x0103c474
+0103c020  ldr x8,[x19, #0xe0]
+0103c024  cbz x8,0x0103c474
+0103c028  ldr x20,[x0, #0x80]
+0103c02c  mov x0,x8
+0103c030  mov x1,xzr
+0103c034  bl 0x00df3164
+0103c038  cbz x20,0x0103c474
+0103c03c  adrp x8,0x331f000
+0103c040  ldr x8,[x8, #0x128]
+0103c044  adrp x23,0x332d000
+0103c048  adrp x22,0x3360000
+0103c04c  mov w1,w0
+0103c050  ldr x2,[x8]
+0103c054  ldr x23,[x23, #0xd38]
+0103c058  ldr x22,[x22, #0x750]
+0103c05c  mov x0,x20
+0103c060  bl 0x0192ddc0
+0103c064  tbz w0,#0x0,0x0103c228
+0103c068  ldr x0,[x25]
+0103c06c  bl 0x01e0894c
+0103c070  cbz x0,0x0103c474
+0103c074  ldr x8,[x19, #0xe0]
+0103c078  cbz x8,0x0103c474
+0103c07c  ldr x20,[x0, #0x80]
+0103c080  mov x0,x8
+0103c084  mov x1,xzr
+0103c088  bl 0x00df3164
+0103c08c  cbz x20,0x0103c474
+0103c090  adrp x8,0x333d000
+0103c094  ldr x8,[x8, #0x828]
+0103c098  mov w1,w0
+0103c09c  mov x0,x20
+0103c0a0  ldr x2,[x8]
+0103c0a4  bl 0x0192db0c
+0103c0a8  cbz x0,0x0103c474
+0103c0ac  ldr w8,[x0, #0x1c]
+0103c0b0  cmp w8,#0x1
+0103c0b4  b.ne 0x0103c220
+0103c0b8  mov x0,x19
+0103c0bc  bl 0x0103bae4
+0103c0c0  cbz x0,0x0103c474
+0103c0c4  mov x1,xzr
+0103c0c8  bl 0x00ff4a54
+0103c0cc  cbz x0,0x0103c474
+0103c0d0  ldr x8,[x24]
+0103c0d4  ldr x20,[x0, #0x18]
+0103c0d8  ldr w9,[x8, #0xe0]
+0103c0dc  cbnz w9,0x0103c0e8
+0103c0e0  mov x0,x8
+0103c0e4  bl 0x00b0798c
+0103c0e8  mov w1,#0x1
+0103c0ec  mov x0,x20
+0103c0f0  mov x2,xzr
+0103c0f4  bl 0x00e13880
+0103c0f8  mov x0,x19
+0103c0fc  bl 0x0103bae4
+0103c100  cbz x0,0x0103c474
+0103c104  mov x1,xzr
+0103c108  bl 0x00ff4aa0
+0103c10c  cbz x0,0x0103c474
+0103c110  ldr x0,[x0, #0x18]
+0103c114  mov w1,wzr
+0103c118  mov x2,xzr
+0103c11c  bl 0x00e13880
+0103c120  mov x0,x19
+0103c124  bl 0x0103bae4
+0103c128  cbz x0,0x0103c474
+0103c12c  mov x1,xzr
+0103c130  bl 0x00ff4a54
+0103c134  cbz x0,0x0103c474
+0103c138  ldr x1,[x0, #0x18]
+0103c13c  mov x0,x19
+0103c140  mov x2,xzr
+0103c144  bl 0x00e1efec
+0103c148  ldr x8,[x19, #0xe0]
+0103c14c  cbz x8,0x0103c474
+0103c150  mov x20,x0
+0103c154  mov x0,x8
+0103c158  mov x1,xzr
+0103c15c  bl 0x00df3164
+0103c160  cbz x20,0x0103c474
+0103c164  mov w1,w0
+0103c168  mov x0,x20
+0103c16c  mov x2,xzr
+0103c170  bl 0x00eb5f2c
+0103c174  mov x0,x19
+0103c178  bl 0x0103bae4
+0103c17c  cbz x0,0x0103c474
+0103c180  mov x1,xzr
+0103c184  bl 0x00ff4a54
+0103c188  cbz x0,0x0103c474
+0103c18c  ldr x8,[x23]
+0103c190  ldr x20,[x0, #0x18]
+0103c194  ldr w9,[x8, #0xe0]
+0103c198  cbnz w9,0x0103c1a4
+0103c19c  mov x0,x8
+0103c1a0  bl 0x00b0798c
+0103c1a4  mov w1,#0x1
+0103c1a8  mov x0,x20
+0103c1ac  mov x2,xzr
+0103c1b0  bl 0x00e34224
+0103c1b4  ldr x8,[x22]
+0103c1b8  mov x20,x0
+0103c1bc  mov x0,x8
+0103c1c0  bl 0x00b079a0
+0103c1c4  cbz x0,0x0103c474
+0103c1c8  adrp x8,0x3331000
+0103c1cc  ldr x8,[x8, #0x388]
+0103c1d0  mov x1,x19
+0103c1d4  mov x3,xzr
+0103c1d8  mov x21,x0
+0103c1dc  ldr x2,[x8]
+0103c1e0  bl 0x00e35bd0
+0103c1e4  cbz x20,0x0103c474
+0103c1e8  str x21,[x20, #0x38]!
+0103c1ec  mov x0,x20
+0103c1f0  mov x1,x21
+0103c1f4  bl 0x00b07850
+0103c1f8  b 0x0103c290
+0103c1fc  ldr x8,[x19]
+0103c200  mov x0,x19
+0103c204  ldp x19,x30,[sp, #0x30]
+0103c208  ldp x21,x20,[sp, #0x20]
+0103c20c  ldr x2,[x8, #0x458]
+0103c210  ldr x1,[x8, #0x460]
+0103c214  ldp x23,x22,[sp, #0x10]
+0103c218  ldp x25,x24,[sp], #0x40
+0103c21c  br x2
+0103c220  ldr x8,[x19, #0xe0]
+0103c224  cbz x8,0x0103c474
+0103c228  mov x0,x19
+0103c22c  bl 0x0103bae4
+0103c230  cbz x0,0x0103c474
+0103c234  mov x1,xzr
+0103c238  bl 0x00ff4a54
+0103c23c  cbz x0,0x0103c474
+0103c240  ldr x8,[x24]
+0103c244  ldr x20,[x0, #0x18]
+0103c248  ldr w9,[x8, #0xe0]
+0103c24c  cbnz w9,0x0103c258
+0103c250  mov x0,x8
+0103c254  bl 0x00b0798c
+0103c258  mov x0,x20
+0103c25c  mov w1,wzr
+0103c260  mov x2,xzr
+0103c264  bl 0x00e13880
+0103c268  mov x0,x19
+0103c26c  bl 0x0103bae4
+0103c270  cbz x0,0x0103c474
+0103c274  mov x1,xzr
+0103c278  bl 0x00ff4aa0
+0103c27c  cbz x0,0x0103c474
+0103c280  ldr x0,[x0, #0x18]
+0103c284  mov w1,#0x1
+0103c288  mov x2,xzr
+0103c28c  bl 0x00e13880
+0103c290  mov x0,x19
+0103c294  bl 0x0103bae4
+0103c298  cbz x0,0x0103c474
+0103c29c  mov x1,xzr
+0103c2a0  bl 0x00ff4aa0
+0103c2a4  cbz x0,0x0103c474
+0103c2a8  ldr x1,[x0, #0x18]
+0103c2ac  mov x0,x19
+0103c2b0  mov x2,xzr
+0103c2b4  bl 0x00e1efec
+0103c2b8  ldr x8,[x19, #0xe0]
+0103c2bc  cbz x8,0x0103c474
+0103c2c0  mov x20,x0
+0103c2c4  mov x0,x8
+0103c2c8  mov x1,xzr
+0103c2cc  bl 0x00df3164
+0103c2d0  cbz x20,0x0103c474
+0103c2d4  mov w1,w0
+0103c2d8  mov x0,x20
+0103c2dc  mov x2,xzr
+0103c2e0  bl 0x00eb5f2c
+0103c2e4  mov x0,x19
+0103c2e8  bl 0x0103bae4
+0103c2ec  cbz x0,0x0103c474
+0103c2f0  mov x1,xzr
+0103c2f4  bl 0x00ff4aa0
+0103c2f8  cbz x0,0x0103c474
+0103c2fc  ldr x8,[x23]
+0103c300  ldr x20,[x0, #0x18]
+0103c304  ldr w9,[x8, #0xe0]
+0103c308  cbnz w9,0x0103c314
+0103c30c  mov x0,x8
+0103c310  bl 0x00b0798c
+0103c314  mov w1,#0x1
+0103c318  mov x0,x20
+0103c31c  mov x2,xzr
+0103c320  bl 0x00e34224
+0103c324  ldr x8,[x22]
+0103c328  mov x20,x0
+0103c32c  mov x0,x8
+0103c330  bl 0x00b079a0
+0103c334  cbz x0,0x0103c474
+0103c338  adrp x8,0x337b000
+0103c33c  ldr x8,[x8, #0x288]
+0103c340  mov x1,x19
+0103c344  mov x3,xzr
+0103c348  mov x21,x0
+0103c34c  ldr x2,[x8]
+0103c350  bl 0x00e35bd0
+0103c354  cbz x20,0x0103c474
+0103c358  str x21,[x20, #0x38]!
+0103c35c  mov x0,x20
+0103c360  mov x1,x21
+0103c364  bl 0x00b07850
+0103c368  ldr x8,[x19, #0xd8]
+0103c36c  cbz x8,0x0103c474
+0103c370  adrp x22,0x3321000
+0103c374  adrp x23,0x3317000
+0103c378  adrp x24,0x3346000
+0103c37c  ldr x22,[x22, #0xca8]
+0103c380  ldr x23,[x23, #0xbd0]
+0103c384  ldr x24,[x24, #0xe98]
+0103c388  mov w20,wzr
+0103c38c  ldr w8,[x8, #0x18]
+0103c390  cmp w20,w8
+0103c394  b.ge 0x0103c478
+0103c398  mov x0,x19
+0103c39c  bl 0x0103bae4
+0103c3a0  cbz x0,0x0103c474
+0103c3a4  mov x1,xzr
+0103c3a8  bl 0x00ff4b38
+0103c3ac  cbz x0,0x0103c474
+0103c3b0  ldr x0,[x0, #0x20]
+0103c3b4  cbz x0,0x0103c474
+0103c3b8  mov x1,xzr
+0103c3bc  bl 0x024f5578
+0103c3c0  mov w21,w0
+0103c3c4  mov x0,x19
+0103c3c8  bl 0x0103bae4
+0103c3cc  cbz x0,0x0103c474
+0103c3d0  mov x1,xzr
+0103c3d4  bl 0x00ff4b38
+0103c3d8  cbz x0,0x0103c474
+0103c3dc  cmp w20,w21
+0103c3e0  b.ge 0x0103c408
+0103c3e4  ldr x0,[x0, #0x20]
+0103c3e8  cbz x0,0x0103c474
+0103c3ec  mov w1,w20
+0103c3f0  mov x2,xzr
+0103c3f4  bl 0x024f5bec
+0103c3f8  cbz x0,0x0103c474
+0103c3fc  mov x1,xzr
+0103c400  bl 0x024e4ed4
+0103c404  b 0x0103c41c
+0103c408  ldr x2,[x0, #0x18]
+0103c40c  ldr x1,[x24]
+0103c410  mov x0,x19
+0103c414  mov x3,xzr
+0103c418  bl 0x00e1e300
+0103c41c  mov x21,x0
+0103c420  ldr x0,[x22]
+0103c424  ldr w8,[x0, #0xe0]
+0103c428  cbnz w8,0x0103c430
+0103c42c  bl 0x00b0798c
+0103c430  mov x0,x21
+0103c434  mov x1,xzr
+0103c438  mov x2,xzr
+0103c43c  bl 0x024de30c
+0103c440  tbz w0,#0x0,0x0103c468
+0103c444  ldr x0,[x19, #0xd8]
+0103c448  cbz x0,0x0103c474
+0103c44c  ldr x2,[x23]
+0103c450  mov w1,w20
+0103c454  bl 0x01c00380
+0103c458  mov x2,x0
+0103c45c  mov x0,x19
+0103c460  mov x1,x21
+0103c464  bl 0x0103cb68
+0103c468  ldr x8,[x19, #0xd8]
+0103c46c  add w20,w20,#0x1
+0103c470  cbnz x8,0x0103c38c
+0103c474  bl 0x00b079b0
+0103c478  ldp x19,x30,[sp, #0x30]
+0103c47c  ldp x21,x20,[sp, #0x20]
+0103c480  ldp x23,x22,[sp, #0x10]
+0103c484  ldp x25,x24,[sp], #0x40
+0103c488  ret
+
+
+================================================================================
+### FILE: 0103c48c_TrainingCampPanelMono__RefrshData.txt
+================================================================================
+Function: TrainingCampPanelMono$$RefrshData @ 0103c48c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.String$$Split @ 01fe0d68
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> System.Converter<object,-int>$$.ctor @ 01f89310
+  -> FUN_00b079b0 @ 00b079b0
+  -> Ali$$GetExcelDic<object> @ 01737100
+  -> System.Array$$Clear @ 02173bc0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Collections.Generic.Dictionary<int,-object>$$GetEnumerator @ 0192e014
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List.Enumerator<int>$$MoveNext @ 01a049b8
+  -> System.Collections.Generic.Dictionary.Enumerator<int,-object>$$Dispose @ 01a40af0
+  -> Ali$$GetExcelData<object> @ 01736d60
+  -> System.Collections.Generic.List.Enumerator<int>$$Dispose @ 01a049b4
+  -> System.Collections.Generic.List<object>$$ConvertAll<int> @ 0172a26c
+  -> System.Collections.Generic.Dictionary.Enumerator<int,-object>$$MoveNext @ 01a409d4
+  -> DataCenter$$CheckTaskStateByID @ 016e74d0
+  -> System.Collections.Generic.List<int>$$GetEnumerator @ 01beeba8
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bfff38
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$RefreshUI @ 0103be34
+
+--- Listing ---
+0103c48c  sub sp,sp,#0xe0
+0103c490  stp x28,x27,[sp, #0x80]
+0103c494  stp x26,x25,[sp, #0x90]
+0103c498  stp x24,x23,[sp, #0xa0]
+0103c49c  stp x22,x21,[sp, #0xb0]
+0103c4a0  stp x20,x19,[sp, #0xc0]
+0103c4a4  stp x29,x30,[sp, #0xd0]
+0103c4a8  adrp x20,0x3574000
+0103c4ac  adrp x23,0x335f000
+0103c4b0  ldrb w8,[x20, #0x59d]
+0103c4b4  ldr x23,[x23, #0x20]
+0103c4b8  mov x19,x0
+0103c4bc  tbnz w8,#0x0,0x0103c5c4
+0103c4c0  adrp x0,0x3356000
+0103c4c4  ldr x0,[x0, #0xe50]
+0103c4c8  bl 0x00b0789c
+0103c4cc  adrp x0,0x333c000
+0103c4d0  ldr x0,[x0, #0xfc8]
+0103c4d4  bl 0x00b0789c
+0103c4d8  adrp x0,0x335f000
+0103c4dc  ldr x0,[x0, #0x20]
+0103c4e0  bl 0x00b0789c
+0103c4e4  adrp x0,0x335a000
+0103c4e8  ldr x0,[x0, #0x2c8]
+0103c4ec  bl 0x00b0789c
+0103c4f0  adrp x0,0x3348000
+0103c4f4  ldr x0,[x0, #0xf08]
+0103c4f8  bl 0x00b0789c
+0103c4fc  adrp x0,0x336f000
+0103c500  ldr x0,[x0, #0x310]
+0103c504  bl 0x00b0789c
+0103c508  adrp x0,0x3384000
+0103c50c  ldr x0,[x0, #0x460]
+0103c510  bl 0x00b0789c
+0103c514  adrp x0,0x3358000
+0103c518  ldr x0,[x0, #0xea8]
+0103c51c  bl 0x00b0789c
+0103c520  adrp x0,0x3362000
+0103c524  ldr x0,[x0, #0x908]
+0103c528  bl 0x00b0789c
+0103c52c  adrp x0,0x337b000
+0103c530  ldr x0,[x0, #0xb0]
+0103c534  bl 0x00b0789c
+0103c538  adrp x0,0x335b000
+0103c53c  ldr x0,[x0, #0x300]
+0103c540  bl 0x00b0789c
+0103c544  adrp x0,0x333d000
+0103c548  ldr x0,[x0, #0x2f0]
+0103c54c  bl 0x00b0789c
+0103c550  adrp x0,0x331e000
+0103c554  ldr x0,[x0, #0xeb0]
+0103c558  bl 0x00b0789c
+0103c55c  adrp x0,0x336a000
+0103c560  ldr x0,[x0, #0x38]
+0103c564  bl 0x00b0789c
+0103c568  adrp x0,0x3335000
+0103c56c  ldr x0,[x0, #0xe68]
+0103c570  bl 0x00b0789c
+0103c574  adrp x0,0x331d000
+0103c578  ldr x0,[x0, #0xeb0]
+0103c57c  bl 0x00b0789c
+0103c580  adrp x0,0x3347000
+0103c584  ldr x0,[x0, #0xb88]
+0103c588  bl 0x00b0789c
+0103c58c  adrp x0,0x3331000
+0103c590  ldr x0,[x0, #0x9c0]
+0103c594  bl 0x00b0789c
+0103c598  adrp x0,0x3347000
+0103c59c  ldr x0,[x0, #0x410]
+0103c5a0  bl 0x00b0789c
+0103c5a4  adrp x0,0x3339000
+0103c5a8  ldr x0,[x0, #0x9a8]
+0103c5ac  bl 0x00b0789c
+0103c5b0  adrp x0,0x335b000
+0103c5b4  ldr x0,[x0, #0xe78]
+0103c5b8  bl 0x00b0789c
+0103c5bc  mov w8,#0x1
+0103c5c0  strb w8,[x20, #0x59d]
+0103c5c4  ldr x0,[x23]
+0103c5c8  movi v0.2D,#0x0
+0103c5cc  str xzr,[sp, #0x70]
+0103c5d0  stp q0,q0,[sp, #0x50]
+0103c5d4  stp xzr,xzr,[sp, #0x38]
+0103c5d8  str xzr,[sp, #0x30]
+0103c5dc  ldr w8,[x0, #0xe0]
+0103c5e0  cbnz w8,0x0103c5ec
+0103c5e4  bl 0x00b0798c
+0103c5e8  ldr x0,[x23]
+0103c5ec  ldr x8,[x0, #0xb8]
+0103c5f0  ldr x0,[x8, #0x10]
+0103c5f4  cbz x0,0x0103c984
+0103c5f8  adrp x8,0x333c000
+0103c5fc  ldr x8,[x8, #0xfc8]
+0103c600  ldr x1,[x8]
+0103c604  bl 0x01737100
+0103c608  mov x20,x19
+0103c60c  str xzr,[x20, #0xd0]!
+0103c610  mov x21,x0
+0103c614  mov x0,x20
+0103c618  mov x1,xzr
+0103c61c  bl 0x00b07850
+0103c620  cbz x21,0x0103c984
+0103c624  adrp x8,0x3348000
+0103c628  ldr x8,[x8, #0xf08]
+0103c62c  adrp x22,0x3362000
+0103c630  adrp x28,0x3347000
+0103c634  adrp x25,0x3356000
+0103c638  adrp x26,0x3358000
+0103c63c  adrp x27,0x331e000
+0103c640  ldr x22,[x22, #0x908]
+0103c644  ldr x28,[x28, #0x410]
+0103c648  ldr x25,[x25, #0xe50]
+0103c64c  ldr x26,[x26, #0xea8]
+0103c650  ldr x27,[x27, #0xeb0]
+0103c654  ldr x1,[x8]
+0103c658  add x8,sp,#0x8
+0103c65c  mov x0,x21
+0103c660  bl 0x0192e014
+0103c664  ldur q0,[sp, #0x8]
+0103c668  ldur q1,[sp, #0x18]
+0103c66c  ldr x8,[sp, #0x28]
+0103c670  mov w29,wzr
+0103c674  stp q0,q1,[sp, #0x50]
+0103c678  str x8,[sp, #0x70]
+0103c67c  ldr x1,[x22]
+0103c680  add x0,sp,#0x50
+    ; [PRE] try { // try from 0103c680 to 0103c687 has its CatchHandler @ 0103ca18
+0103c684  bl 0x01a409d4
+    ; [POST] } // end try from 0103c680 to 0103c687
+0103c688  tbz w0,#0x0,0x0103c6e0
+0103c68c  ldr x21,[sp, #0x68]
+0103c690  ldr x0,[x28]
+0103c694  bl 0x01e0894c
+    ; [PRE] try { // try from 0103c694 to 0103c697 has its CatchHandler @ 0103ca10
+    ; [POST] } // end try from 0103c694 to 0103c697
+0103c698  cbz x21,0x0103c970
+0103c69c  cbz x0,0x0103c974
+0103c6a0  ldr w1,[x21, #0x88]
+0103c6a4  mov w2,#0xffffffff
+    ; [PRE] try { // try from 0103c6a4 to 0103c6b3 has its CatchHandler @ 0103ca14
+0103c6a8  mov w3,#0x1
+0103c6ac  mov x4,xzr
+0103c6b0  bl 0x016e74d0
+    ; [POST] } // end try from 0103c6a4 to 0103c6b3
+0103c6b4  tbnz w0,#0x0,0x0103c67c
+0103c6b8  ldr w24,[x21, #0x74]
+0103c6bc  cbz w29,0x0103c6c8
+0103c6c0  cmp w24,w29
+0103c6c4  b.ge 0x0103c67c
+0103c6c8  str x21,[x20]
+0103c6cc  mov x0,x20
+    ; [PRE] try { // try from 0103c6cc to 0103c6d7 has its CatchHandler @ 0103c998
+0103c6d0  mov x1,x21
+0103c6d4  bl 0x00b07850
+    ; [POST] } // end try from 0103c6cc to 0103c6d7
+0103c6d8  mov w29,w24
+0103c6dc  b 0x0103c67c
+0103c6e0  adrp x8,0x3384000
+0103c6e4  ldr x8,[x8, #0x460]
+0103c6e8  add x0,sp,#0x50
+0103c6ec  ldr x1,[x8]
+0103c6f0  bl 0x01a40af0
+0103c6f4  adrp x24,0x335b000
+0103c6f8  ldr x8,[x20]
+0103c6fc  ldr x24,[x24, #0xe78]
+0103c700  cbz x8,0x0103c950
+0103c704  ldr x0,[x23]
+0103c708  ldr w9,[x0, #0xe0]
+0103c70c  cbnz w9,0x0103c720
+0103c710  bl 0x00b0798c
+0103c714  ldr x8,[x20]
+0103c718  cbz x8,0x0103c984
+0103c71c  ldr x0,[x23]
+0103c720  ldr x9,[x0, #0xb8]
+0103c724  ldr x0,[x9, #0x10]
+0103c728  cbz x0,0x0103c984
+0103c72c  ldr w1,[x8, #0x88]
+0103c730  ldr x2,[x25]
+0103c734  bl 0x01736d60
+0103c738  mov x20,x19
+0103c73c  str x0,[x20, #0xe0]!
+0103c740  mov x1,x0
+0103c744  mov x0,x20
+0103c748  bl 0x00b07850
+0103c74c  ldur x8,[x20, #-0x10]
+0103c750  cbz x8,0x0103c984
+0103c754  ldr x0,[x8, #0x78]
+0103c758  cbz x0,0x0103c984
+0103c75c  mov w1,#0x7c
+0103c760  mov w2,wzr
+0103c764  mov x3,xzr
+0103c768  bl 0x01fe0d68
+0103c76c  adrp x8,0x3331000
+0103c770  ldr x8,[x8, #0x9c0]
+0103c774  mov x21,x0
+0103c778  ldr x8,[x8]
+0103c77c  mov x0,x8
+0103c780  bl 0x00b079a0
+0103c784  cbz x0,0x0103c984
+0103c788  adrp x8,0x3347000
+0103c78c  ldr x8,[x8, #0xb88]
+0103c790  mov x1,x21
+0103c794  mov x20,x0
+0103c798  ldr x2,[x8]
+0103c79c  bl 0x01bfff38
+0103c7a0  ldr x0,[x24]
+0103c7a4  ldr w8,[x0, #0xe0]
+0103c7a8  cbnz w8,0x0103c7b4
+0103c7ac  bl 0x00b0798c
+0103c7b0  ldr x0,[x24]
+0103c7b4  ldr x8,[x0, #0xb8]
+0103c7b8  ldr x21,[x8, #0x8]
+0103c7bc  cbnz x21,0x0103c81c
+0103c7c0  ldr w8,[x0, #0xe0]
+0103c7c4  cbnz w8,0x0103c7d0
+0103c7c8  bl 0x00b0798c
+0103c7cc  ldr x0,[x24]
+0103c7d0  ldr x8,[x0, #0xb8]
+0103c7d4  ldr x22,[x8]
+0103c7d8  adrp x8,0x335a000
+0103c7dc  ldr x8,[x8, #0x2c8]
+0103c7e0  ldr x0,[x8]
+0103c7e4  bl 0x00b079a0
+0103c7e8  cbz x0,0x0103c984
+0103c7ec  adrp x8,0x3339000
+0103c7f0  ldr x8,[x8, #0x9a8]
+0103c7f4  mov x1,x22
+0103c7f8  mov x3,xzr
+0103c7fc  mov x21,x0
+0103c800  ldr x2,[x8]
+0103c804  bl 0x01f89310
+0103c808  ldr x8,[x24]
+0103c80c  mov x1,x21
+0103c810  ldr x0,[x8, #0xb8]
+0103c814  str x21,[x0, #0x8]!
+0103c818  bl 0x00b07850
+0103c81c  adrp x8,0x3335000
+0103c820  ldr x8,[x8, #0xe68]
+0103c824  mov x0,x20
+0103c828  mov x1,x21
+0103c82c  ldr x2,[x8]
+0103c830  bl 0x0172a26c
+0103c834  ldr x8,[x19, #0xd8]
+0103c838  cbz x8,0x0103c984
+0103c83c  ldp w2,w9,[x8, #0x18]
+0103c840  mov x20,x0
+0103c844  add w9,w9,#0x1
+0103c848  cmp w2,#0x1
+0103c84c  stp wzr,w9,[x8, #0x18]
+0103c850  b.lt 0x0103c864
+0103c854  ldr x0,[x8, #0x10]
+0103c858  mov w1,wzr
+0103c85c  mov x3,xzr
+0103c860  bl 0x02173bc0
+0103c864  cbz x20,0x0103c984
+0103c868  adrp x8,0x331d000
+0103c86c  ldr x8,[x8, #0xeb0]
+0103c870  mov x0,x20
+0103c874  ldr x1,[x8]
+0103c878  add x8,sp,#0x8
+0103c87c  bl 0x01beeba8
+0103c880  ldur q0,[sp, #0x8]
+0103c884  ldr x8,[sp, #0x18]
+0103c888  str q0,[sp, #0x30]
+0103c88c  str x8,[sp, #0x40]
+0103c890  ldr x1,[x26]
+0103c894  add x0,sp,#0x30
+    ; [PRE] try { // try from 0103c894 to 0103c89b has its CatchHandler @ 0103c9a8
+0103c898  bl 0x01a049b8
+    ; [POST] } // end try from 0103c894 to 0103c89b
+0103c89c  tbz w0,#0x0,0x0103c93c
+0103c8a0  ldr x0,[x23]
+0103c8a4  ldr w20,[sp, #0x40]
+0103c8a8  ldr w8,[x0, #0xe0]
+0103c8ac  cbnz w8,0x0103c8b8
+0103c8b0  bl 0x00b0798c
+    ; [PRE] try { // try from 0103c8b0 to 0103c8b3 has its CatchHandler @ 0103c99c
+    ; [POST] } // end try from 0103c8b0 to 0103c8b3
+0103c8b4  ldr x0,[x23]
+0103c8b8  ldr x8,[x0, #0xb8]
+0103c8bc  ldr x0,[x8, #0x10]
+0103c8c0  cbz x0,0x0103c978
+0103c8c4  ldr x2,[x25]
+0103c8c8  mov w1,w20
+    ; [PRE] try { // try from 0103c8c8 to 0103c8d3 has its CatchHandler @ 0103c9a4
+0103c8cc  bl 0x01736d60
+0103c8d0  mov x1,x0
+    ; [POST] } // end try from 0103c8c8 to 0103c8d3
+0103c8d4  cbz x1,0x0103c890
+0103c8d8  ldr x0,[x19, #0xd8]
+0103c8dc  cbz x0,0x0103c97c
+0103c8e0  ldr w10,[x0, #0x1c]
+0103c8e4  ldr x8,[x0, #0x10]
+0103c8e8  ldr x9,[x27]
+0103c8ec  add w10,w10,#0x1
+0103c8f0  str w10,[x0, #0x1c]
+0103c8f4  cbz x8,0x0103c980
+0103c8f8  ldrsw x10,[x0, #0x18]
+0103c8fc  ldr w11,[x8, #0x18]
+0103c900  cmp w10,w11
+0103c904  b.cs 0x0103c924
+0103c908  add w9,w10,#0x1
+0103c90c  add x8,x8,x10, LSL #0x3
+0103c910  str w9,[x0, #0x18]
+0103c914  str x1,[x8, #0x20]!
+0103c918  mov x0,x8
+    ; [PRE] try { // try from 0103c918 to 0103c937 has its CatchHandler @ 0103c9a0
+0103c91c  bl 0x00b07850
+0103c920  b 0x0103c890
+0103c924  ldr x8,[x9, #0x20]
+0103c928  ldr x8,[x8, #0xc0]
+0103c92c  ldr x2,[x8, #0x58]
+0103c930  ldr x8,[x2, #0x8]
+0103c934  blr x8
+    ; [POST] } // end try from 0103c918 to 0103c937
+0103c938  b 0x0103c890
+0103c93c  adrp x8,0x336f000
+0103c940  ldr x8,[x8, #0x310]
+0103c944  add x0,sp,#0x30
+0103c948  ldr x1,[x8]
+0103c94c  bl 0x01a049b4
+0103c950  ldp x29,x30,[sp, #0xd0]
+0103c954  ldp x20,x19,[sp, #0xc0]
+0103c958  ldp x22,x21,[sp, #0xb0]
+0103c95c  ldp x24,x23,[sp, #0xa0]
+0103c960  ldp x26,x25,[sp, #0x90]
+0103c964  ldp x28,x27,[sp, #0x80]
+0103c968  add sp,sp,#0xe0
+0103c96c  ret
+0103c970  bl 0x00b079b0
+    ; [PRE] try { // try from 0103c970 to 0103c973 has its CatchHandler @ 0103c994
+    ; [POST] } // end try from 0103c970 to 0103c973
+0103c974  bl 0x00b079b0
+    ; [PRE] try { // try from 0103c974 to 0103c977 has its CatchHandler @ 0103c990
+    ; [POST] } // end try from 0103c974 to 0103c977
+0103c978  bl 0x00b079b0
+    ; [PRE] try { // try from 0103c978 to 0103c97b has its CatchHandler @ 0103c988
+    ; [POST] } // end try from 0103c978 to 0103c97b
+0103c97c  bl 0x00b079b0
+    ; [PRE] try { // try from 0103c97c to 0103c983 has its CatchHandler @ 0103c98c
+0103c980  bl 0x00b079b0
+    ; [POST] } // end try from 0103c97c to 0103c983
+0103c984  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0103ca8c_TrainingCampPanelMono__get_PreloadAssets.txt
+================================================================================
+Function: TrainingCampPanelMono$$get_PreloadAssets @ 0103ca8c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+0103ca8c  str x20,[sp, #-0x20]!
+0103ca90  stp x19,x30,[sp, #0x10]
+0103ca94  adrp x19,0x3574000
+0103ca98  adrp x20,0x3308000
+0103ca9c  ldrb w8,[x19, #0x59e]
+0103caa0  ldr x20,[x20, #0x9a8]
+0103caa4  tbnz w8,#0x0,0x0103cac8
+0103caa8  adrp x0,0x3308000
+0103caac  ldr x0,[x0, #0x9a8]
+0103cab0  bl 0x00b0789c
+0103cab4  adrp x0,0x3346000
+0103cab8  ldr x0,[x0, #0xe98]
+0103cabc  bl 0x00b0789c
+0103cac0  mov w8,#0x1
+0103cac4  strb w8,[x19, #0x59e]
+0103cac8  ldr x0,[x20]
+0103cacc  mov w1,#0x1
+0103cad0  bl 0x00b078f8
+0103cad4  cbz x0,0x0103cb38
+0103cad8  adrp x20,0x3346000
+0103cadc  ldr x20,[x20, #0xe98]
+0103cae0  mov x19,x0
+0103cae4  ldr x1,[x20]
+0103cae8  cbz x1,0x0103cb10
+0103caec  ldr x8,[x19]
+0103caf0  mov x0,x1
+0103caf4  ldr x8,[x8, #0x40]
+0103caf8  mov x1,x8
+0103cafc  bl 0x00b07990
+0103cb00  cbz x0,0x0103cb40
+0103cb04  ldr x8,[x20]
+0103cb08  mov x1,x8
+0103cb0c  b 0x0103cb14
+0103cb10  mov x8,xzr
+0103cb14  ldr w9,[x19, #0x18]
+0103cb18  cbz w9,0x0103cb3c
+0103cb1c  mov x0,x19
+0103cb20  str x8,[x0, #0x20]!
+0103cb24  bl 0x00b07850
+0103cb28  mov x0,x19
+0103cb2c  ldp x19,x30,[sp, #0x10]
+0103cb30  ldr x20,[sp], #0x20
+0103cb34  ret
+0103cb38  bl 0x00b079b0
+0103cb3c  bl 0x00b079b8
+0103cb40  bl 0x00b079d4
+0103cb44  mov x1,xzr
+0103cb48  bl 0x00b07978
+
+
+================================================================================
+### FILE: 0103cb4c_TrainingCampPanelMono__PreloadAssetComplete.txt
+================================================================================
+Function: TrainingCampPanelMono$$PreloadAssetComplete @ 0103cb4c
+
+--- Calls OUT ---
+  -> TrainingCampPanelMono$$RefreshUI @ 0103be34
+  -> GUIScreenBaseMono$$PreloadAssetComplete @ 00f1b338
+
+--- Calls IN ---
+
+--- Listing ---
+0103cb4c  stp x19,x30,[sp, #-0x10]!
+0103cb50  mov x1,xzr
+0103cb54  mov x19,x0
+0103cb58  bl 0x00f1b338
+0103cb5c  mov x0,x19
+0103cb60  ldp x19,x30,[sp], #0x10
+0103cb64  b 0x0103be34
+
+
+================================================================================
+### FILE: 0103cb68_TrainingCampPanelMono__RefreshTaskItem.txt
+================================================================================
+Function: TrainingCampPanelMono$$RefreshTaskItem @ 0103cb68
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> BaseData$$get_NameByWord @ 00df3614
+  -> CamptaskitemNode$$get_lbl_taskTitle @ 00fab638
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> BaseData$$SplitToInt32Dict @ 00df3f10
+  -> CamptaskitemNode$$get_EquipItemParent @ 00fab84c
+  -> UnityEngine.UI.Image$$set_fillAmount @ 0257de30
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> BaseData$$get_id @ 00df3164
+  -> CamptaskitemNode$$get_spr_state_received @ 00fab898
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Collections.Generic.Dictionary<int,-int>$$GetEnumerator @ 019250e4
+  -> CamptaskitemNode$$get_spr_taskProgress @ 00fab684
+  -> System.Collections.Generic.Dictionary.Enumerator<int,-int>$$MoveNext @ 01a3efbc
+  -> BaseData$$get_nameId @ 00df38a8
+  -> UIData$$set_m_int_1 @ 00eb5f2c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CamptaskitemNode$$get_lbl_rewardName_1 @ 00fab800
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b2ac40 @ 00b2ac40
+  -> System.Collections.Generic.Dictionary<int,-object>$$get_Item @ 0192db0c
+  -> BaseMono$$GetUIData @ 00e1efec
+  -> BaseMono$$EquipItemShow @ 00e21920
+  -> CamptaskitemNode$$get_spr_state_finish @ 00fab768
+  -> FUN_00b07978 @ 00b07978
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> CamptaskitemNode$$get_lbl_rewardName @ 00fab71c
+  -> Ali$$GetBaseData @ 00e035d4
+  -> System.Collections.Generic.Dictionary.Enumerator<int,-int>$$Dispose @ 01a3f0b4
+  -> UINode$$get_Image @ 00dc0d50
+  -> CamptaskitemNode$$get_spr_taskBg @ 00fab5ec
+  -> CamptaskitemNode$$get_lbl_taskTitle_finish @ 00fab7b4
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> AliothExtensions$$SetTextExt @ 00e13af0
+  -> System.Collections.Generic.Dictionary<int,-object>$$ContainsKey @ 0192ddc0
+  -> UIEventListener$$Get @ 00e34224
+  -> UINode$$get_Text @ 00dc47dc
+  -> FUN_00b079b8 @ 00b079b8
+  -> CamptaskitemNode$$get_lbl_taskProgress @ 00fab6d0
+  -> System.Collections.Generic.Dictionary<int,-int>$$get_Count @ 01924a20
+
+--- Calls IN ---
+  <- TrainingCampPanelMono$$RefreshUI @ 0103be34
+
+--- Listing ---
+0103cb68  sub sp,sp,#0xd0
+0103cb6c  stp d9,d8,[sp, #0x60]
+0103cb70  stp x28,x27,[sp, #0x70]
+0103cb74  stp x26,x25,[sp, #0x80]
+0103cb78  stp x24,x23,[sp, #0x90]
+0103cb7c  stp x22,x21,[sp, #0xa0]
+0103cb80  stp x20,x19,[sp, #0xb0]
+0103cb84  stp x29,x30,[sp, #0xc0]
+0103cb88  adrp x22,0x3574000
+0103cb8c  adrp x26,0x3348000
+0103cb90  ldrb w8,[x22, #0x5a1]
+0103cb94  ldr x26,[x26, #0x138]
+0103cb98  mov x19,x2
+0103cb9c  mov x21,x1
+0103cba0  mov x20,x0
+0103cba4  tbnz w8,#0x0,0x0103cca0
+0103cba8  adrp x0,0x335f000
+0103cbac  ldr x0,[x0, #0x20]
+0103cbb0  bl 0x00b0789c
+0103cbb4  adrp x0,0x3377000
+0103cbb8  ldr x0,[x0, #0x6f0]
+0103cbbc  bl 0x00b0789c
+0103cbc0  adrp x0,0x3348000
+0103cbc4  ldr x0,[x0, #0x138]
+0103cbc8  bl 0x00b0789c
+0103cbcc  adrp x0,0x335b000
+0103cbd0  ldr x0,[x0, #0x650]
+0103cbd4  bl 0x00b0789c
+0103cbd8  adrp x0,0x331f000
+0103cbdc  ldr x0,[x0, #0x128]
+0103cbe0  bl 0x00b0789c
+0103cbe4  adrp x0,0x3309000
+0103cbe8  ldr x0,[x0, #0x8]
+0103cbec  bl 0x00b0789c
+0103cbf0  adrp x0,0x3336000
+0103cbf4  ldr x0,[x0, #0xfa8]
+0103cbf8  bl 0x00b0789c
+0103cbfc  adrp x0,0x333d000
+0103cc00  ldr x0,[x0, #0x828]
+0103cc04  bl 0x00b0789c
+0103cc08  adrp x0,0x3336000
+0103cc0c  ldr x0,[x0, #0x7e0]
+0103cc10  bl 0x00b0789c
+0103cc14  adrp x0,0x334d000
+0103cc18  ldr x0,[x0, #0xc18]
+0103cc1c  bl 0x00b0789c
+0103cc20  adrp x0,0x3343000
+0103cc24  ldr x0,[x0, #0x7f0]
+0103cc28  bl 0x00b0789c
+0103cc2c  adrp x0,0x3332000
+0103cc30  ldr x0,[x0, #0x38]
+0103cc34  bl 0x00b0789c
+0103cc38  adrp x0,0x3316000
+0103cc3c  ldr x0,[x0, #0xac0]
+0103cc40  bl 0x00b0789c
+0103cc44  adrp x0,0x3347000
+0103cc48  ldr x0,[x0, #0x5e8]
+0103cc4c  bl 0x00b0789c
+0103cc50  adrp x0,0x3370000
+0103cc54  ldr x0,[x0, #0x778]
+0103cc58  bl 0x00b0789c
+0103cc5c  adrp x0,0x3347000
+0103cc60  ldr x0,[x0, #0x410]
+0103cc64  bl 0x00b0789c
+0103cc68  adrp x0,0x337b000
+0103cc6c  ldr x0,[x0, #0x288]
+0103cc70  bl 0x00b0789c
+0103cc74  adrp x0,0x3331000
+0103cc78  ldr x0,[x0, #0x388]
+0103cc7c  bl 0x00b0789c
+0103cc80  adrp x0,0x332d000
+0103cc84  ldr x0,[x0, #0xd38]
+0103cc88  bl 0x00b0789c
+0103cc8c  adrp x0,0x3360000
+0103cc90  ldr x0,[x0, #0x750]
+0103cc94  bl 0x00b0789c
+0103cc98  mov w8,#0x1
+0103cc9c  strb w8,[x22, #0x5a1]
+0103cca0  ldr x0,[x26]
+0103cca4  movi v0.2D,#0x0
+0103cca8  stp q0,q0,[sp, #0x40]
+0103ccac  adrp x22,0x3377000
+0103ccb0  ldr w8,[x0, #0xe0]
+0103ccb4  ldr x22,[x22, #0x6f0]
+0103ccb8  cbnz w8,0x0103ccc0
+0103ccbc  bl 0x00b0798c
+0103ccc0  ldr x1,[x22]
+0103ccc4  mov x0,x21
+0103ccc8  bl 0x017372ac
+0103cccc  cbz x0,0x0103d43c
+0103ccd0  mov x1,xzr
+0103ccd4  mov x21,x0
+0103ccd8  bl 0x00fab5ec
+0103ccdc  cbz x0,0x0103d43c
+0103cce0  ldr x1,[x0, #0x18]
+0103cce4  mov x0,x20
+0103cce8  mov x2,xzr
+0103ccec  bl 0x00e1efec
+0103ccf0  cbz x19,0x0103d43c
+0103ccf4  mov x22,x0
+0103ccf8  mov x0,x19
+0103ccfc  mov x1,xzr
+0103cd00  bl 0x00df3164
+0103cd04  cbz x22,0x0103d43c
+0103cd08  mov w1,w0
+0103cd0c  mov x0,x22
+0103cd10  mov x2,xzr
+0103cd14  bl 0x00eb5f2c
+0103cd18  ldr x0,[x19, #0xc8]
+0103cd1c  mov w1,#0x7c
+0103cd20  mov w2,#0x2a
+0103cd24  mov x3,xzr
+0103cd28  bl 0x00df3f10
+0103cd2c  cbz x0,0x0103cf40
+0103cd30  adrp x8,0x3336000
+0103cd34  ldr x8,[x8, #0xfa8]
+0103cd38  mov x22,x0
+0103cd3c  ldr x1,[x8]
+0103cd40  bl 0x01924a20
+0103cd44  cmp w0,#0x1
+0103cd48  b.lt 0x0103cf40
+0103cd4c  adrp x8,0x3309000
+0103cd50  ldr x8,[x8, #0x8]
+0103cd54  adrp x23,0x334d000
+0103cd58  adrp x27,0x3336000
+0103cd5c  mov x0,x22
+0103cd60  ldr x1,[x8]
+0103cd64  ldr x23,[x23, #0xc18]
+0103cd68  ldr x27,[x27, #0x7e0]
+0103cd6c  add x8,sp,#0x20
+0103cd70  bl 0x019250e4
+0103cd74  ldp q0,q1,[sp, #0x20]
+0103cd78  ldr x1,[x23]
+0103cd7c  stp q0,q1,[sp, #0x40]
+0103cd80  add x0,sp,#0x40
+    ; [PRE] try { // try from 0103cd80 to 0103cd87 has its CatchHandler @ 0103d49c
+0103cd84  bl 0x01a3efbc
+    ; [POST] } // end try from 0103cd80 to 0103cd87
+0103cd88  tbz w0,#0x0,0x0103cf34
+0103cd8c  ldp w22,w23,[sp, #0x50]
+0103cd90  mov x0,x21
+    ; [PRE] try { // try from 0103cd90 to 0103cd9b has its CatchHandler @ 0103d494
+0103cd94  mov x1,xzr
+0103cd98  bl 0x00fab84c
+    ; [POST] } // end try from 0103cd90 to 0103cd9b
+0103cd9c  cbz x0,0x0103d450
+0103cda0  ldr x1,[x0, #0x18]
+0103cda4  mov w4,#0x1
+    ; [PRE] try { // try from 0103cda4 to 0103cdcb has its CatchHandler @ 0103d490
+0103cda8  mov x0,x20
+0103cdac  mov w2,w22
+0103cdb0  mov w3,w23
+0103cdb4  mov w5,wzr
+0103cdb8  mov x6,xzr
+0103cdbc  mov w7,wzr
+0103cdc0  str xzr,[sp, #0x8]
+0103cdc4  str wzr,[sp]
+0103cdc8  bl 0x00e21920
+    ; [POST] } // end try from 0103cda4 to 0103cdcb
+0103cdcc  mov x0,x21
+    ; [PRE] try { // try from 0103cdcc to 0103cdd7 has its CatchHandler @ 0103d48c
+0103cdd0  mov x1,xzr
+0103cdd4  bl 0x00fab71c
+    ; [POST] } // end try from 0103cdcc to 0103cdd7
+0103cdd8  cbz x0,0x0103d454
+0103cddc  mov x1,xzr
+    ; [PRE] try { // try from 0103cddc to 0103cdff has its CatchHandler @ 0103d498
+0103cde0  bl 0x00dc47dc
+0103cde4  adrp x28,0x335f000
+0103cde8  ldr x28,[x28, #0x20]
+0103cdec  mov x23,x0
+0103cdf0  ldr x0,[x28]
+0103cdf4  ldr w8,[x0, #0xe0]
+0103cdf8  cbnz w8,0x0103ce04
+0103cdfc  bl 0x00b0798c
+    ; [POST] } // end try from 0103cddc to 0103cdff
+0103ce00  ldr x0,[x28]
+0103ce04  ldr x8,[x0, #0xb8]
+0103ce08  ldr x0,[x8, #0x10]
+0103ce0c  cbz x0,0x0103d458
+0103ce10  mov w1,w22
+    ; [PRE] try { // try from 0103ce10 to 0103ce1b has its CatchHandler @ 0103d488
+0103ce14  mov x2,xzr
+0103ce18  bl 0x00e035d4
+    ; [POST] } // end try from 0103ce10 to 0103ce1b
+0103ce1c  cbz x0,0x0103d45c
+0103ce20  mov x1,xzr
+    ; [PRE] try { // try from 0103ce20 to 0103ce27 has its CatchHandler @ 0103d484
+0103ce24  bl 0x00df38a8
+    ; [POST] } // end try from 0103ce20 to 0103ce27
+0103ce28  adrp x29,0x335b000
+0103ce2c  ldr x29,[x29, #0x650]
+0103ce30  mov w24,w0
+0103ce34  ldr x25,[x29]
+0103ce38  ldr x8,[x25, #0x38]
+0103ce3c  ldr x0,[x8]
+0103ce40  ldrb w8,[x0, #0x132]
+0103ce44  tbnz w8,#0x0,0x0103ce4c
+0103ce48  bl 0x00b2ac40
+    ; [PRE] try { // try from 0103ce48 to 0103ce9b has its CatchHandler @ 0103d4a4
+0103ce4c  ldr w8,[x0, #0xe0]
+0103ce50  cbnz w8,0x0103ce58
+0103ce54  bl 0x00b0798c
+0103ce58  ldr x8,[x25, #0x38]
+0103ce5c  ldr x0,[x8]
+0103ce60  ldrb w8,[x0, #0x132]
+0103ce64  tbnz w8,#0x0,0x0103ce6c
+0103ce68  bl 0x00b2ac40
+0103ce6c  ldr x8,[x26]
+0103ce70  ldr x9,[x0, #0xb8]
+0103ce74  ldr w10,[x8, #0xe0]
+0103ce78  ldr x25,[x9]
+0103ce7c  cbnz w10,0x0103ce88
+0103ce80  mov x0,x8
+0103ce84  bl 0x00b0798c
+0103ce88  mov x0,x23
+0103ce8c  mov w1,w24
+0103ce90  mov x2,x25
+0103ce94  mov x3,xzr
+0103ce98  bl 0x00e14168
+    ; [POST] } // end try from 0103ce48 to 0103ce9b
+0103ce9c  mov x0,x21
+    ; [PRE] try { // try from 0103ce9c to 0103cea7 has its CatchHandler @ 0103d480
+0103cea0  mov x1,xzr
+0103cea4  bl 0x00fab800
+    ; [POST] } // end try from 0103ce9c to 0103cea7
+0103cea8  cbz x0,0x0103d460
+0103ceac  mov x1,xzr
+    ; [PRE] try { // try from 0103ceac to 0103ceb3 has its CatchHandler @ 0103d47c
+0103ceb0  bl 0x00dc47dc
+    ; [POST] } // end try from 0103ceac to 0103ceb3
+0103ceb4  ldr x8,[x28]
+0103ceb8  mov x23,x0
+0103cebc  ldr x8,[x8, #0xb8]
+0103cec0  ldr x0,[x8, #0x10]
+0103cec4  cbz x0,0x0103d464
+0103cec8  mov w1,w22
+    ; [PRE] try { // try from 0103cec8 to 0103ced3 has its CatchHandler @ 0103d478
+0103cecc  mov x2,xzr
+0103ced0  bl 0x00e035d4
+    ; [POST] } // end try from 0103cec8 to 0103ced3
+0103ced4  cbz x0,0x0103d468
+0103ced8  mov x1,xzr
+    ; [PRE] try { // try from 0103ced8 to 0103cedf has its CatchHandler @ 0103d474
+0103cedc  bl 0x00df38a8
+    ; [POST] } // end try from 0103ced8 to 0103cedf
+0103cee0  ldr x24,[x29]
+0103cee4  mov w22,w0
+0103cee8  ldr x8,[x24, #0x38]
+0103ceec  ldr x0,[x8]
+0103cef0  ldrb w8,[x0, #0x132]
+0103cef4  tbnz w8,#0x0,0x0103cefc
+0103cef8  bl 0x00b2ac40
+    ; [PRE] try { // try from 0103cef8 to 0103cf33 has its CatchHandler @ 0103d4a0
+0103cefc  ldr w8,[x0, #0xe0]
+0103cf00  cbnz w8,0x0103cf08
+0103cf04  bl 0x00b0798c
+0103cf08  ldr x8,[x24, #0x38]
+0103cf0c  ldr x0,[x8]
+0103cf10  ldrb w8,[x0, #0x132]
+0103cf14  tbnz w8,#0x0,0x0103cf1c
+0103cf18  bl 0x00b2ac40
+0103cf1c  ldr x8,[x0, #0xb8]
+0103cf20  ldr x2,[x8]
+0103cf24  mov x0,x23
+0103cf28  mov w1,w22
+0103cf2c  mov x3,xzr
+0103cf30  bl 0x00e14168
+    ; [POST] } // end try from 0103cef8 to 0103cf33
+0103cf34  ldr x1,[x27]
+0103cf38  add x0,sp,#0x40
+0103cf3c  bl 0x01a3f0b4
+0103cf40  adrp x23,0x3347000
+0103cf44  ldr x23,[x23, #0x410]
+0103cf48  ldr x0,[x23]
+0103cf4c  bl 0x01e0894c
+0103cf50  cbz x0,0x0103d43c
+0103cf54  ldr x22,[x0, #0x80]
+0103cf58  mov x0,x19
+0103cf5c  mov x1,xzr
+0103cf60  bl 0x00df3164
+0103cf64  cbz x22,0x0103d43c
+0103cf68  adrp x8,0x331f000
+0103cf6c  ldr x8,[x8, #0x128]
+0103cf70  mov w1,w0
+0103cf74  mov x0,x22
+0103cf78  ldr x2,[x8]
+0103cf7c  bl 0x0192ddc0
+0103cf80  tbz w0,#0x0,0x0103cfc4
+0103cf84  ldr x0,[x23]
+0103cf88  bl 0x01e0894c
+0103cf8c  cbz x0,0x0103d43c
+0103cf90  ldr x22,[x0, #0x80]
+0103cf94  mov x0,x19
+0103cf98  mov x1,xzr
+0103cf9c  bl 0x00df3164
+0103cfa0  cbz x22,0x0103d43c
+0103cfa4  adrp x8,0x333d000
+0103cfa8  ldr x8,[x8, #0x828]
+0103cfac  mov w1,w0
+0103cfb0  mov x0,x22
+0103cfb4  ldr x2,[x8]
+0103cfb8  bl 0x0192db0c
+0103cfbc  mov x22,x0
+0103cfc0  b 0x0103cfc8
+0103cfc4  mov x22,xzr
+0103cfc8  mov x0,x21
+0103cfcc  mov x1,xzr
+0103cfd0  bl 0x00fab638
+0103cfd4  cbz x0,0x0103d43c
+0103cfd8  mov x1,xzr
+0103cfdc  bl 0x00dc47dc
+0103cfe0  mov x23,x0
+0103cfe4  mov x0,x19
+0103cfe8  mov x1,xzr
+0103cfec  bl 0x00df3614
+0103cff0  ldr x8,[x26]
+0103cff4  mov x24,x0
+0103cff8  ldr w9,[x8, #0xe0]
+0103cffc  cbnz w9,0x0103d008
+0103d000  mov x0,x8
+0103d004  bl 0x00b0798c
+0103d008  mov x0,x23
+0103d00c  mov x1,x24
+0103d010  mov x2,xzr
+0103d014  bl 0x00e13af0
+0103d018  mov x0,x21
+0103d01c  mov x1,xzr
+0103d020  bl 0x00fab7b4
+0103d024  cbz x0,0x0103d43c
+0103d028  mov x1,xzr
+0103d02c  bl 0x00dc47dc
+0103d030  mov x23,x0
+0103d034  mov x0,x19
+0103d038  mov x1,xzr
+0103d03c  bl 0x00df3614
+0103d040  mov x1,x0
+0103d044  mov x0,x23
+0103d048  mov x2,xzr
+0103d04c  bl 0x00e13af0
+0103d050  mov x0,x21
+0103d054  mov x1,xzr
+0103d058  bl 0x00fab768
+0103d05c  cbz x0,0x0103d43c
+0103d060  adrp x27,0x332d000
+0103d064  adrp x24,0x3360000
+0103d068  adrp x25,0x337b000
+0103d06c  ldr x23,[x0, #0x18]
+0103d070  ldr x27,[x27, #0xd38]
+0103d074  ldr x24,[x24, #0x750]
+0103d078  ldr x25,[x25, #0x288]
+0103d07c  cbz x22,0x0103d118
+0103d080  ldr x0,[x26]
+0103d084  ldr w28,[x22, #0x1c]
+0103d088  ldr w8,[x0, #0xe0]
+0103d08c  cbnz w8,0x0103d094
+0103d090  bl 0x00b0798c
+0103d094  cmp w28,#0x1
+0103d098  cset w1,eq
+0103d09c  mov x0,x23
+0103d0a0  mov x2,xzr
+0103d0a4  bl 0x00e13880
+0103d0a8  mov x0,x21
+0103d0ac  mov x1,xzr
+0103d0b0  bl 0x00fab898
+0103d0b4  cbz x0,0x0103d43c
+0103d0b8  ldr w8,[x22, #0x1c]
+0103d0bc  ldr x0,[x0, #0x18]
+0103d0c0  mov x2,xzr
+0103d0c4  cmn w8,#0x1
+0103d0c8  cset w1,eq
+0103d0cc  bl 0x00e13880
+0103d0d0  ldr w8,[x22, #0x1c]
+0103d0d4  cmp w8,#0x1
+0103d0d8  b.eq 0x0103d1f4
+0103d0dc  cmn w8,#0x1
+0103d0e0  b.eq 0x0103d180
+0103d0e4  ldr s8,[x22, #0x18]
+0103d0e8  ldr s9,[x19, #0xc0]
+0103d0ec  mov x0,x21
+0103d0f0  mov x1,xzr
+0103d0f4  bl 0x00fab684
+0103d0f8  cbz x0,0x0103d43c
+0103d0fc  mov x1,xzr
+0103d100  bl 0x00dc0d50
+0103d104  cbz x0,0x0103d43c
+0103d108  scvtf s0,s8
+0103d10c  scvtf s1,s9
+0103d110  fdiv s0,s0,s1
+0103d114  b 0x0103d178
+0103d118  ldr x0,[x26]
+0103d11c  ldr w8,[x0, #0xe0]
+0103d120  cbnz w8,0x0103d128
+0103d124  bl 0x00b0798c
+0103d128  mov x0,x23
+0103d12c  mov w1,wzr
+0103d130  mov x2,xzr
+0103d134  bl 0x00e13880
+0103d138  mov x0,x21
+0103d13c  mov x1,xzr
+0103d140  bl 0x00fab898
+0103d144  cbz x0,0x0103d43c
+0103d148  ldr x0,[x0, #0x18]
+0103d14c  mov w1,wzr
+0103d150  mov x2,xzr
+0103d154  bl 0x00e13880
+0103d158  mov x0,x21
+0103d15c  mov x1,xzr
+0103d160  bl 0x00fab684
+0103d164  cbz x0,0x0103d43c
+0103d168  mov x1,xzr
+0103d16c  bl 0x00dc0d50
+0103d170  cbz x0,0x0103d43c
+0103d174  fmov s0,wzr
+0103d178  mov x1,xzr
+0103d17c  bl 0x0257de30
+0103d180  mov x0,x21
+0103d184  mov x1,xzr
+0103d188  bl 0x00fab5ec
+0103d18c  cbz x0,0x0103d43c
+0103d190  ldr x8,[x27]
+0103d194  ldr x23,[x0, #0x18]
+0103d198  ldr w9,[x8, #0xe0]
+0103d19c  cbnz w9,0x0103d1a8
+0103d1a0  mov x0,x8
+0103d1a4  bl 0x00b0798c
+0103d1a8  mov w1,#0x1
+0103d1ac  mov x0,x23
+0103d1b0  mov x2,xzr
+0103d1b4  bl 0x00e34224
+0103d1b8  ldr x8,[x24]
+0103d1bc  mov x23,x0
+0103d1c0  mov x0,x8
+0103d1c4  bl 0x00b079a0
+0103d1c8  cbz x0,0x0103d43c
+0103d1cc  ldr x2,[x25]
+0103d1d0  mov x1,x20
+0103d1d4  mov x3,xzr
+0103d1d8  mov x24,x0
+0103d1dc  bl 0x00e35bd0
+0103d1e0  cbz x23,0x0103d43c
+0103d1e4  str x24,[x23, #0x38]!
+0103d1e8  mov x0,x23
+0103d1ec  mov x1,x24
+0103d1f0  b 0x0103d308
+0103d1f4  mov x0,x21
+0103d1f8  mov x1,xzr
+0103d1fc  bl 0x00fab684
+0103d200  cbz x0,0x0103d43c
+0103d204  mov x1,xzr
+0103d208  bl 0x00dc0d50
+0103d20c  cbz x0,0x0103d43c
+0103d210  fmov s0,0x3f800000
+0103d214  mov x1,xzr
+0103d218  bl 0x0257de30
+0103d21c  mov x0,x21
+0103d220  mov x1,xzr
+0103d224  bl 0x00fab768
+0103d228  cbz x0,0x0103d43c
+0103d22c  ldr x1,[x0, #0x18]
+0103d230  mov x0,x20
+0103d234  mov x2,xzr
+0103d238  bl 0x00e1efec
+0103d23c  mov x23,x0
+0103d240  mov x0,x19
+0103d244  mov x1,xzr
+0103d248  bl 0x00df3164
+0103d24c  cbz x23,0x0103d43c
+0103d250  mov w1,w0
+0103d254  mov x0,x23
+0103d258  mov x2,xzr
+0103d25c  bl 0x00eb5f2c
+0103d260  mov x0,x21
+0103d264  mov x1,xzr
+0103d268  bl 0x00fab768
+0103d26c  cbz x0,0x0103d43c
+0103d270  ldr x8,[x27]
+0103d274  ldr x23,[x0, #0x18]
+0103d278  ldr w9,[x8, #0xe0]
+0103d27c  cbnz w9,0x0103d288
+0103d280  mov x0,x8
+0103d284  bl 0x00b0798c
+0103d288  mov w1,#0x1
+0103d28c  mov x0,x23
+0103d290  mov x2,xzr
+0103d294  bl 0x00e34224
+0103d298  ldr x8,[x24]
+0103d29c  mov x23,x0
+0103d2a0  mov x0,x8
+0103d2a4  bl 0x00b079a0
+0103d2a8  cbz x0,0x0103d43c
+0103d2ac  adrp x8,0x3331000
+0103d2b0  ldr x8,[x8, #0x388]
+0103d2b4  mov x1,x20
+0103d2b8  mov x3,xzr
+0103d2bc  mov x24,x0
+0103d2c0  ldr x2,[x8]
+0103d2c4  bl 0x00e35bd0
+0103d2c8  cbz x23,0x0103d43c
+0103d2cc  str x24,[x23, #0x38]!
+0103d2d0  mov x0,x23
+0103d2d4  mov x1,x24
+0103d2d8  bl 0x00b07850
+0103d2dc  mov x0,x21
+0103d2e0  mov x1,xzr
+0103d2e4  bl 0x00fab5ec
+0103d2e8  cbz x0,0x0103d43c
+0103d2ec  ldr x0,[x0, #0x18]
+0103d2f0  mov w1,#0x1
+0103d2f4  mov x2,xzr
+0103d2f8  bl 0x00e34224
+0103d2fc  cbz x0,0x0103d43c
+0103d300  str xzr,[x0, #0x38]!
+0103d304  mov x1,xzr
+0103d308  bl 0x00b07850
+0103d30c  mov x0,x21
+0103d310  mov x1,xzr
+0103d314  bl 0x00fab6d0
+0103d318  cbz x0,0x0103d43c
+0103d31c  adrp x20,0x3370000
+0103d320  adrp x23,0x3332000
+0103d324  ldr x20,[x20, #0x778]
+0103d328  ldr x23,[x23, #0x38]
+0103d32c  mov x1,xzr
+0103d330  bl 0x00dc47dc
+0103d334  ldr x8,[x20]
+0103d338  mov x20,x0
+0103d33c  mov w1,#0x2
+0103d340  mov x0,x8
+0103d344  bl 0x00b078f8
+0103d348  mov x21,x0
+0103d34c  cbz x22,0x0103d358
+0103d350  ldr w8,[x22, #0x18]
+0103d354  b 0x0103d35c
+0103d358  mov w8,wzr
+0103d35c  ldr x0,[x23]
+0103d360  add x1,sp,#0x20
+0103d364  str w8,[sp, #0x20]
+0103d368  bl 0x00b07994
+0103d36c  cbz x21,0x0103d43c
+0103d370  mov x22,x0
+0103d374  cbz x0,0x0103d38c
+0103d378  ldr x8,[x21]
+0103d37c  mov x0,x22
+0103d380  ldr x1,[x8, #0x40]
+0103d384  bl 0x00b07990
+0103d388  cbz x0,0x0103d444
+0103d38c  ldr w8,[x21, #0x18]
+0103d390  cbz w8,0x0103d440
+0103d394  mov x0,x21
+0103d398  str x22,[x0, #0x20]!
+0103d39c  mov x1,x22
+0103d3a0  bl 0x00b07850
+0103d3a4  ldr w8,[x19, #0xc0]
+0103d3a8  ldr x0,[x23]
+0103d3ac  add x1,sp,#0x1c
+0103d3b0  str w8,[sp, #0x1c]
+0103d3b4  bl 0x00b07994
+0103d3b8  mov x19,x0
+0103d3bc  cbz x0,0x0103d3d4
+0103d3c0  ldr x8,[x21]
+0103d3c4  mov x0,x19
+0103d3c8  ldr x1,[x8, #0x40]
+0103d3cc  bl 0x00b07990
+0103d3d0  cbz x0,0x0103d444
+0103d3d4  ldr w8,[x21, #0x18]
+0103d3d8  cmp w8,#0x1
+0103d3dc  b.ls 0x0103d440
+0103d3e0  mov x0,x21
+0103d3e4  str x19,[x0, #0x28]!
+0103d3e8  mov x1,x19
+0103d3ec  bl 0x00b07850
+0103d3f0  ldr x0,[x26]
+0103d3f4  ldr w8,[x0, #0xe0]
+0103d3f8  cbnz w8,0x0103d400
+0103d3fc  bl 0x00b0798c
+0103d400  mov w1,#0x556a
+0103d404  movk w1,#0x4ca, LSL #16
+0103d408  mov x0,x20
+0103d40c  mov x2,x21
+0103d410  mov x3,xzr
+0103d414  bl 0x00e14168
+0103d418  ldp x29,x30,[sp, #0xc0]
+0103d41c  ldp x20,x19,[sp, #0xb0]
+0103d420  ldp x22,x21,[sp, #0xa0]
+0103d424  ldp x24,x23,[sp, #0x90]
+0103d428  ldp x26,x25,[sp, #0x80]
+0103d42c  ldp x28,x27,[sp, #0x70]
+0103d430  ldp d9,d8,[sp, #0x60]
+0103d434  add sp,sp,#0xd0
+0103d438  ret
+0103d43c  bl 0x00b079b0
+0103d440  bl 0x00b079b8
+0103d444  bl 0x00b079d4
+0103d448  mov x1,xzr
+0103d44c  bl 0x00b07978
+0103d450  bl 0x00b079b0
+    ; [PRE] try { // try from 0103d450 to 0103d453 has its CatchHandler @ 0103d494
+    ; [POST] } // end try from 0103d450 to 0103d453
+0103d454  bl 0x00b079b0
+    ; [PRE] try { // try from 0103d454 to 0103d457 has its CatchHandler @ 0103d48c
+    ; [POST] } // end try from 0103d454 to 0103d457
+0103d458  bl 0x00b079b0
+    ; [PRE] try { // try from 0103d458 to 0103d45b has its CatchHandler @ 0103d470
+    ; [POST] } // end try from 0103d458 to 0103d45b
+0103d45c  bl 0x00b079b0
+    ; [PRE] try { // try from 0103d45c to 0103d45f has its CatchHandler @ 0103d488
+    ; [POST] } // end try from 0103d45c to 0103d45f
+0103d460  bl 0x00b079b0
+    ; [PRE] try { // try from 0103d460 to 0103d463 has its CatchHandler @ 0103d480
+    ; [POST] } // end try from 0103d460 to 0103d463
+0103d464  bl 0x00b079b0
+    ; [PRE] try { // try from 0103d464 to 0103d467 has its CatchHandler @ 0103d46c
+    ; [POST] } // end try from 0103d464 to 0103d467
+0103d468  bl 0x00b079b0
+    ; [PRE] try { // try from 0103d468 to 0103d46b has its CatchHandler @ 0103d478
+    ; [POST] } // end try from 0103d468 to 0103d46b
+
+
+================================================================================
+### FILE: 0103d508_TrainingCampPanelMono__OnClickReceive.txt
+================================================================================
+Function: TrainingCampPanelMono$$OnClickReceive @ 0103d508
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<int,-object>$$get_Item @ 0192db0c
+  -> UIData$$get_m_int_1 @ 00eb5ec4
+  -> BaseMono$$GetUIData @ 00e1efec
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> System.Collections.Generic.Dictionary<int,-object>$$ContainsKey @ 0192ddc0
+  -> ProtocolGame_SendRequest$$QuestGetReward @ 00ddfc10
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0103d508  stp x21,x20,[sp, #-0x20]!
+0103d50c  stp x19,x30,[sp, #0x10]
+0103d510  adrp x21,0x3574000
+0103d514  ldrb w8,[x21, #0x5a0]
+0103d518  mov x19,x1
+0103d51c  mov x20,x0
+0103d520  tbnz w8,#0x0,0x0103d550
+0103d524  adrp x0,0x331f000
+0103d528  ldr x0,[x0, #0x128]
+0103d52c  bl 0x00b0789c
+0103d530  adrp x0,0x333d000
+0103d534  ldr x0,[x0, #0x828]
+0103d538  bl 0x00b0789c
+0103d53c  adrp x0,0x3347000
+0103d540  ldr x0,[x0, #0x410]
+0103d544  bl 0x00b0789c
+0103d548  mov w8,#0x1
+0103d54c  strb w8,[x21, #0x5a0]
+0103d550  mov x0,x20
+0103d554  mov x1,x19
+0103d558  mov x2,xzr
+0103d55c  bl 0x00e1efec
+0103d560  cbz x0,0x0103d600
+0103d564  adrp x20,0x3347000
+0103d568  ldr x20,[x20, #0x410]
+0103d56c  mov x1,xzr
+0103d570  bl 0x00eb5ec4
+0103d574  ldr x8,[x20]
+0103d578  mov w19,w0
+0103d57c  mov x0,x8
+0103d580  bl 0x01e0894c
+0103d584  cbz x0,0x0103d600
+0103d588  ldr x0,[x0, #0x80]
+0103d58c  cbz x0,0x0103d600
+0103d590  adrp x8,0x331f000
+0103d594  ldr x8,[x8, #0x128]
+0103d598  mov w1,w19
+0103d59c  ldr x2,[x8]
+0103d5a0  bl 0x0192ddc0
+0103d5a4  tbz w0,#0x0,0x0103d5f4
+0103d5a8  ldr x0,[x20]
+0103d5ac  bl 0x01e0894c
+0103d5b0  cbz x0,0x0103d600
+0103d5b4  ldr x0,[x0, #0x80]
+0103d5b8  cbz x0,0x0103d600
+0103d5bc  adrp x8,0x333d000
+0103d5c0  ldr x8,[x8, #0x828]
+0103d5c4  mov w1,w19
+0103d5c8  ldr x2,[x8]
+0103d5cc  bl 0x0192db0c
+0103d5d0  cbz x0,0x0103d600
+0103d5d4  ldr w8,[x0, #0x1c]
+0103d5d8  cmp w8,#0x1
+0103d5dc  b.ne 0x0103d5f4
+0103d5e0  mov w0,w19
+0103d5e4  ldp x19,x30,[sp, #0x10]
+0103d5e8  mov x1,xzr
+0103d5ec  ldp x21,x20,[sp], #0x20
+0103d5f0  b 0x00ddfc10
+0103d5f4  ldp x19,x30,[sp, #0x10]
+0103d5f8  ldp x21,x20,[sp], #0x20
+0103d5fc  ret
+0103d600  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0103d604_TrainingCampPanelMono__OnClickDetail.txt
+================================================================================
+Function: TrainingCampPanelMono$$OnClickDetail @ 0103d604
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UIData$$get_m_int_1 @ 00eb5ec4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BaseMono$$GetUIData @ 00e1efec
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.GUIScreenManager$$ShowScreen @ 0167a614
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+0103d604  str x22,[sp, #-0x30]!
+0103d608  stp x21,x20,[sp, #0x10]
+0103d60c  stp x19,x30,[sp, #0x20]
+0103d610  adrp x21,0x3574000
+0103d614  adrp x22,0x3369000
+0103d618  ldrb w8,[x21, #0x5a2]
+0103d61c  ldr x22,[x22, #0xf00]
+0103d620  mov x19,x1
+0103d624  mov x20,x0
+0103d628  tbnz w8,#0x0,0x0103d670
+0103d62c  adrp x0,0x334a000
+0103d630  ldr x0,[x0, #0xf38]
+0103d634  bl 0x00b0789c
+0103d638  adrp x0,0x337b000
+0103d63c  ldr x0,[x0, #0xb98]
+0103d640  bl 0x00b0789c
+0103d644  adrp x0,0x3356000
+0103d648  ldr x0,[x0, #0xff0]
+0103d64c  bl 0x00b0789c
+0103d650  adrp x0,0x3369000
+0103d654  ldr x0,[x0, #0xf00]
+0103d658  bl 0x00b0789c
+0103d65c  adrp x0,0x332d000
+0103d660  ldr x0,[x0, #0x740]
+0103d664  bl 0x00b0789c
+0103d668  mov w8,#0x1
+0103d66c  strb w8,[x21, #0x5a2]
+0103d670  ldr x0,[x22]
+0103d674  bl 0x00b079a0
+0103d678  cbz x0,0x0103d720
+0103d67c  mov x1,xzr
+0103d680  mov x21,x0
+0103d684  bl 0x02194104
+0103d688  mov x0,x20
+0103d68c  mov x1,x19
+0103d690  mov x2,xzr
+0103d694  bl 0x00e1efec
+0103d698  cbz x0,0x0103d720
+0103d69c  adrp x19,0x334a000
+0103d6a0  ldr x19,[x19, #0xf38]
+0103d6a4  mov x1,xzr
+0103d6a8  bl 0x00eb5ec4
+0103d6ac  str w0,[x21, #0x10]
+0103d6b0  ldr x0,[x19]
+0103d6b4  bl 0x00b079a0
+0103d6b8  cbz x0,0x0103d720
+0103d6bc  adrp x8,0x3356000
+0103d6c0  ldr x8,[x8, #0xff0]
+0103d6c4  adrp x22,0x337b000
+0103d6c8  adrp x20,0x332d000
+0103d6cc  mov x1,x21
+0103d6d0  ldr x2,[x8]
+0103d6d4  ldr x22,[x22, #0xb98]
+0103d6d8  ldr x20,[x20, #0x740]
+0103d6dc  mov x3,xzr
+0103d6e0  mov x19,x0
+0103d6e4  bl 0x01909b80
+0103d6e8  ldr x0,[x22]
+0103d6ec  ldr w8,[x0, #0xe0]
+0103d6f0  cbnz w8,0x0103d6f8
+0103d6f4  bl 0x00b0798c
+0103d6f8  ldr x0,[x20]
+0103d6fc  mov x1,x19
+0103d700  ldp x19,x30,[sp, #0x20]
+0103d704  ldp x21,x20,[sp, #0x10]
+0103d708  mov x2,xzr
+0103d70c  mov w3,wzr
+0103d710  mov w4,wzr
+0103d714  mov x5,xzr
+0103d718  ldr x22,[sp], #0x30
+0103d71c  b 0x0167a614
+0103d720  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0103d724_TrainingCampPanelMono.__c__DisplayClass26_0__.ctor.txt
+================================================================================
+Function: TrainingCampPanelMono.<>c__DisplayClass26_0$$.ctor @ 0103d724
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+0103d724  mov x1,xzr
+0103d728  b 0x02194104
+
+
+================================================================================
+### FILE: 0103d72c_TrainingCampPanelMono__.ctor.txt
+================================================================================
+Function: TrainingCampPanelMono$$.ctor @ 0103d72c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0103d72c  stp x21,x20,[sp, #-0x20]!
+0103d730  stp x19,x30,[sp, #0x10]
+0103d734  adrp x20,0x3574000
+0103d738  adrp x21,0x3317000
+0103d73c  ldrb w8,[x20, #0x5a3]
+0103d740  ldr x21,[x21, #0x9f8]
+0103d744  mov x19,x0
+0103d748  tbnz w8,#0x0,0x0103d76c
+0103d74c  adrp x0,0x336b000
+0103d750  ldr x0,[x0, #0xb58]
+0103d754  bl 0x00b0789c
+0103d758  adrp x0,0x3317000
+0103d75c  ldr x0,[x0, #0x9f8]
+0103d760  bl 0x00b0789c
+0103d764  mov w8,#0x1
+0103d768  strb w8,[x20, #0x5a3]
+0103d76c  ldr x0,[x21]
+0103d770  bl 0x00b079a0
+0103d774  cbz x0,0x0103d7b0
+0103d778  adrp x8,0x336b000
+0103d77c  ldr x8,[x8, #0xb58]
+0103d780  mov x20,x0
+0103d784  ldr x1,[x8]
+0103d788  bl 0x01bffe10
+0103d78c  mov x0,x19
+0103d790  str x20,[x0, #0xd8]!
+0103d794  mov x1,x20
+0103d798  bl 0x00b07850
+0103d79c  mov x0,x19
+0103d7a0  ldp x19,x30,[sp, #0x10]
+0103d7a4  mov x1,xzr
+0103d7a8  ldp x21,x20,[sp], #0x20
+0103d7ac  b 0x00f1c130
+0103d7b0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0103d7b4_TrainingCampPanelMono.__c__.cctor.txt
+================================================================================
+Function: TrainingCampPanelMono.<>c$$.cctor @ 0103d7b4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+0103d7b4  str x20,[sp, #-0x20]!
+0103d7b8  stp x19,x30,[sp, #0x10]
+0103d7bc  adrp x19,0x3574000
+0103d7c0  adrp x20,0x335b000
+0103d7c4  ldrb w8,[x19, #0x5a4]
+0103d7c8  ldr x20,[x20, #0xe78]
+0103d7cc  tbnz w8,#0x0,0x0103d7e4
+0103d7d0  adrp x0,0x335b000
+0103d7d4  ldr x0,[x0, #0xe78]
+0103d7d8  bl 0x00b0789c
+0103d7dc  mov w8,#0x1
+0103d7e0  strb w8,[x19, #0x5a4]
+0103d7e4  ldr x0,[x20]
+0103d7e8  bl 0x00b079a0
+0103d7ec  cbz x0,0x0103d820
+0103d7f0  mov x1,xzr
+0103d7f4  mov x19,x0
+0103d7f8  bl 0x02194104
+0103d7fc  ldr x8,[x20]
+0103d800  mov x1,x19
+0103d804  ldr x8,[x8, #0xb8]
+0103d808  str x19,[x8]
+0103d80c  ldr x8,[x20]
+0103d810  ldp x19,x30,[sp, #0x10]
+0103d814  ldr x0,[x8, #0xb8]
+0103d818  ldr x20,[sp], #0x20
+0103d81c  b 0x00b07850
+0103d820  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 0103d824_TrainingCampPanelMono.__c__.ctor.txt
+================================================================================
+Function: TrainingCampPanelMono.<>c$$.ctor @ 0103d824
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+0103d824  mov x1,xzr
+0103d828  b 0x02194104
+
+
+================================================================================
+### FILE: 0103d82c_TrainingCampPanelMono.__c___RefrshData_b__19_0.txt
+================================================================================
+Function: TrainingCampPanelMono.<>c$$<RefrshData>b__19_0 @ 0103d82c
+
+--- Calls OUT ---
+  -> System.Int32$$Parse @ 0214df74
+
+--- Calls IN ---
+
+--- Listing ---
+0103d82c  mov x0,x1
+0103d830  mov x1,xzr
+0103d834  b 0x0214df74
+
+
+================================================================================
+### FILE: 0103d838_TrainingCampPanelMono.__c__DisplayClass26_0___OnClickDetail_b__0.txt
+================================================================================
+Function: TrainingCampPanelMono.<>c__DisplayClass26_0$$<OnClickDetail>b__0 @ 0103d838
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+0103d838  stp x21,x20,[sp, #-0x20]!
+0103d83c  stp x19,x30,[sp, #0x10]
+0103d840  adrp x21,0x3574000
+0103d844  ldrb w8,[x21, #0x5a5]
+0103d848  mov x19,x1
+0103d84c  mov x20,x0
+0103d850  tbnz w8,#0x0,0x0103d868
+0103d854  adrp x0,0x336c000
+0103d858  ldr x0,[x0, #0x448]
+0103d85c  bl 0x00b0789c
+0103d860  mov w8,#0x1
+0103d864  strb w8,[x21, #0x5a5]
+0103d868  add x0,x20,#0x10
+0103d86c  mov x1,xzr
+0103d870  bl 0x0214dc44
+0103d874  cbz x19,0x0103d8c8
+0103d878  adrp x9,0x336c000
+0103d87c  ldr x9,[x9, #0x448]
+0103d880  ldr x8,[x19]
+0103d884  ldr x9,[x9]
+0103d888  ldrb w11,[x8, #0x12c]
+0103d88c  ldrb w10,[x9, #0x12c]
+0103d890  cmp w11,w10
+0103d894  b.cc 0x0103d8c8
+0103d898  ldr x11,[x8, #0xc8]
+0103d89c  add x10,x11,x10, LSL #0x3
+0103d8a0  ldur x10,[x10, #-0x8]
+0103d8a4  cmp x10,x9
+0103d8a8  b.ne 0x0103d8c8
+0103d8ac  mov x1,x0
+0103d8b0  ldr x3,[x8, #0x268]
+0103d8b4  ldr x2,[x8, #0x270]
+0103d8b8  mov x0,x19
+0103d8bc  ldp x19,x30,[sp, #0x10]
+0103d8c0  ldp x21,x20,[sp], #0x20
+0103d8c4  br x3
+0103d8c8  bl 0x00b079b0
+
+

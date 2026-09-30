@@ -1,0 +1,348 @@
+================================================================================
+### FILE: 00fc9c30_MynamestyleNode__get_lbl_myName.txt
+================================================================================
+Function: MynamestyleNode$$get_lbl_myName @ 00fc9c30
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ReadyMono$$RefreshMyNameStyle @ 00e615a4
+
+--- Listing ---
+00fc9c30  stp x21,x20,[sp, #-0x20]!
+00fc9c34  stp x19,x30,[sp, #0x10]
+00fc9c38  adrp x20,0x3573000
+00fc9c3c  adrp x21,0x335d000
+00fc9c40  ldrb w8,[x20, #0xd94]
+00fc9c44  ldr x21,[x21, #0x7b0]
+00fc9c48  mov x19,x0
+00fc9c4c  tbnz w8,#0x0,0x00fc9c64
+00fc9c50  adrp x0,0x335d000
+00fc9c54  ldr x0,[x0, #0x7b0]
+00fc9c58  bl 0x00b0789c
+00fc9c5c  mov w8,#0x1
+00fc9c60  strb w8,[x20, #0xd94]
+00fc9c64  ldr x1,[x21]
+00fc9c68  mov x0,x19
+00fc9c6c  ldp x19,x30,[sp, #0x10]
+00fc9c70  mov x2,xzr
+00fc9c74  ldp x21,x20,[sp], #0x20
+00fc9c78  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9c7c_MynamestyleNode__get_spr_my_destroypart.txt
+================================================================================
+Function: MynamestyleNode$$get_spr_my_destroypart @ 00fc9c7c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ReadyMono$$RefreshMyNameStyle @ 00e615a4
+
+--- Listing ---
+00fc9c7c  stp x21,x20,[sp, #-0x20]!
+00fc9c80  stp x19,x30,[sp, #0x10]
+00fc9c84  adrp x20,0x3573000
+00fc9c88  adrp x21,0x3323000
+00fc9c8c  ldrb w8,[x20, #0xd95]
+00fc9c90  ldr x21,[x21, #0xe08]
+00fc9c94  mov x19,x0
+00fc9c98  tbnz w8,#0x0,0x00fc9cb0
+00fc9c9c  adrp x0,0x3323000
+00fc9ca0  ldr x0,[x0, #0xe08]
+00fc9ca4  bl 0x00b0789c
+00fc9ca8  mov w8,#0x1
+00fc9cac  strb w8,[x20, #0xd95]
+00fc9cb0  ldr x1,[x21]
+00fc9cb4  mov x0,x19
+00fc9cb8  ldp x19,x30,[sp, #0x10]
+00fc9cbc  mov x2,xzr
+00fc9cc0  ldp x21,x20,[sp], #0x20
+00fc9cc4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9cc8_MynamestyleNode__get_lbl_myLv.txt
+================================================================================
+Function: MynamestyleNode$$get_lbl_myLv @ 00fc9cc8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ReadyMono$$RefreshMyNameStyle @ 00e615a4
+
+--- Listing ---
+00fc9cc8  stp x21,x20,[sp, #-0x20]!
+00fc9ccc  stp x19,x30,[sp, #0x10]
+00fc9cd0  adrp x20,0x3573000
+00fc9cd4  adrp x21,0x3351000
+00fc9cd8  ldrb w8,[x20, #0xd96]
+00fc9cdc  ldr x21,[x21, #0xcb0]
+00fc9ce0  mov x19,x0
+00fc9ce4  tbnz w8,#0x0,0x00fc9cfc
+00fc9ce8  adrp x0,0x3351000
+00fc9cec  ldr x0,[x0, #0xcb0]
+00fc9cf0  bl 0x00b0789c
+00fc9cf4  mov w8,#0x1
+00fc9cf8  strb w8,[x20, #0xd96]
+00fc9cfc  ldr x1,[x21]
+00fc9d00  mov x0,x19
+00fc9d04  ldp x19,x30,[sp, #0x10]
+00fc9d08  mov x2,xzr
+00fc9d0c  ldp x21,x20,[sp], #0x20
+00fc9d10  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9d14_MynamestyleNode__get_starGrid.txt
+================================================================================
+Function: MynamestyleNode$$get_starGrid @ 00fc9d14
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc9d14  stp x21,x20,[sp, #-0x20]!
+00fc9d18  stp x19,x30,[sp, #0x10]
+00fc9d1c  adrp x20,0x3573000
+00fc9d20  adrp x21,0x333b000
+00fc9d24  ldrb w8,[x20, #0xd97]
+00fc9d28  ldr x21,[x21, #0xc98]
+00fc9d2c  mov x19,x0
+00fc9d30  tbnz w8,#0x0,0x00fc9d48
+00fc9d34  adrp x0,0x333b000
+00fc9d38  ldr x0,[x0, #0xc98]
+00fc9d3c  bl 0x00b0789c
+00fc9d40  mov w8,#0x1
+00fc9d44  strb w8,[x20, #0xd97]
+00fc9d48  ldr x1,[x21]
+00fc9d4c  mov x0,x19
+00fc9d50  ldp x19,x30,[sp, #0x10]
+00fc9d54  mov x2,xzr
+00fc9d58  ldp x21,x20,[sp], #0x20
+00fc9d5c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9d60_MynamestyleNode__get_spr_star_6.txt
+================================================================================
+Function: MynamestyleNode$$get_spr_star_6 @ 00fc9d60
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc9d60  stp x21,x20,[sp, #-0x20]!
+00fc9d64  stp x19,x30,[sp, #0x10]
+00fc9d68  adrp x20,0x3573000
+00fc9d6c  adrp x21,0x334c000
+00fc9d70  ldrb w8,[x20, #0xd98]
+00fc9d74  ldr x21,[x21, #0xb88]
+00fc9d78  mov x19,x0
+00fc9d7c  tbnz w8,#0x0,0x00fc9d94
+00fc9d80  adrp x0,0x334c000
+00fc9d84  ldr x0,[x0, #0xb88]
+00fc9d88  bl 0x00b0789c
+00fc9d8c  mov w8,#0x1
+00fc9d90  strb w8,[x20, #0xd98]
+00fc9d94  ldr x1,[x21]
+00fc9d98  mov x0,x19
+00fc9d9c  ldp x19,x30,[sp, #0x10]
+00fc9da0  mov x2,xzr
+00fc9da4  ldp x21,x20,[sp], #0x20
+00fc9da8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9dac_MynamestyleNode__get_spr_star_5.txt
+================================================================================
+Function: MynamestyleNode$$get_spr_star_5 @ 00fc9dac
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc9dac  stp x21,x20,[sp, #-0x20]!
+00fc9db0  stp x19,x30,[sp, #0x10]
+00fc9db4  adrp x20,0x3573000
+00fc9db8  adrp x21,0x3324000
+00fc9dbc  ldrb w8,[x20, #0xd99]
+00fc9dc0  ldr x21,[x21, #0x7c8]
+00fc9dc4  mov x19,x0
+00fc9dc8  tbnz w8,#0x0,0x00fc9de0
+00fc9dcc  adrp x0,0x3324000
+00fc9dd0  ldr x0,[x0, #0x7c8]
+00fc9dd4  bl 0x00b0789c
+00fc9dd8  mov w8,#0x1
+00fc9ddc  strb w8,[x20, #0xd99]
+00fc9de0  ldr x1,[x21]
+00fc9de4  mov x0,x19
+00fc9de8  ldp x19,x30,[sp, #0x10]
+00fc9dec  mov x2,xzr
+00fc9df0  ldp x21,x20,[sp], #0x20
+00fc9df4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9df8_MynamestyleNode__get_spr_star_4.txt
+================================================================================
+Function: MynamestyleNode$$get_spr_star_4 @ 00fc9df8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc9df8  stp x21,x20,[sp, #-0x20]!
+00fc9dfc  stp x19,x30,[sp, #0x10]
+00fc9e00  adrp x20,0x3573000
+00fc9e04  adrp x21,0x3353000
+00fc9e08  ldrb w8,[x20, #0xd9a]
+00fc9e0c  ldr x21,[x21, #0x350]
+00fc9e10  mov x19,x0
+00fc9e14  tbnz w8,#0x0,0x00fc9e2c
+00fc9e18  adrp x0,0x3353000
+00fc9e1c  ldr x0,[x0, #0x350]
+00fc9e20  bl 0x00b0789c
+00fc9e24  mov w8,#0x1
+00fc9e28  strb w8,[x20, #0xd9a]
+00fc9e2c  ldr x1,[x21]
+00fc9e30  mov x0,x19
+00fc9e34  ldp x19,x30,[sp, #0x10]
+00fc9e38  mov x2,xzr
+00fc9e3c  ldp x21,x20,[sp], #0x20
+00fc9e40  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9e44_MynamestyleNode__get_spr_star_3.txt
+================================================================================
+Function: MynamestyleNode$$get_spr_star_3 @ 00fc9e44
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc9e44  stp x21,x20,[sp, #-0x20]!
+00fc9e48  stp x19,x30,[sp, #0x10]
+00fc9e4c  adrp x20,0x3573000
+00fc9e50  adrp x21,0x3369000
+00fc9e54  ldrb w8,[x20, #0xd9b]
+00fc9e58  ldr x21,[x21, #0xda8]
+00fc9e5c  mov x19,x0
+00fc9e60  tbnz w8,#0x0,0x00fc9e78
+00fc9e64  adrp x0,0x3369000
+00fc9e68  ldr x0,[x0, #0xda8]
+00fc9e6c  bl 0x00b0789c
+00fc9e70  mov w8,#0x1
+00fc9e74  strb w8,[x20, #0xd9b]
+00fc9e78  ldr x1,[x21]
+00fc9e7c  mov x0,x19
+00fc9e80  ldp x19,x30,[sp, #0x10]
+00fc9e84  mov x2,xzr
+00fc9e88  ldp x21,x20,[sp], #0x20
+00fc9e8c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9e90_MynamestyleNode__get_spr_star_2.txt
+================================================================================
+Function: MynamestyleNode$$get_spr_star_2 @ 00fc9e90
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc9e90  stp x21,x20,[sp, #-0x20]!
+00fc9e94  stp x19,x30,[sp, #0x10]
+00fc9e98  adrp x20,0x3573000
+00fc9e9c  adrp x21,0x331c000
+00fc9ea0  ldrb w8,[x20, #0xd9c]
+00fc9ea4  ldr x21,[x21, #0xd8]
+00fc9ea8  mov x19,x0
+00fc9eac  tbnz w8,#0x0,0x00fc9ec4
+00fc9eb0  adrp x0,0x331c000
+00fc9eb4  ldr x0,[x0, #0xd8]
+00fc9eb8  bl 0x00b0789c
+00fc9ebc  mov w8,#0x1
+00fc9ec0  strb w8,[x20, #0xd9c]
+00fc9ec4  ldr x1,[x21]
+00fc9ec8  mov x0,x19
+00fc9ecc  ldp x19,x30,[sp, #0x10]
+00fc9ed0  mov x2,xzr
+00fc9ed4  ldp x21,x20,[sp], #0x20
+00fc9ed8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9edc_MynamestyleNode__get_spr_star_1.txt
+================================================================================
+Function: MynamestyleNode$$get_spr_star_1 @ 00fc9edc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fc9edc  stp x21,x20,[sp, #-0x20]!
+00fc9ee0  stp x19,x30,[sp, #0x10]
+00fc9ee4  adrp x20,0x3573000
+00fc9ee8  adrp x21,0x337f000
+00fc9eec  ldrb w8,[x20, #0xd9d]
+00fc9ef0  ldr x21,[x21, #0xe8]
+00fc9ef4  mov x19,x0
+00fc9ef8  tbnz w8,#0x0,0x00fc9f10
+00fc9efc  adrp x0,0x337f000
+00fc9f00  ldr x0,[x0, #0xe8]
+00fc9f04  bl 0x00b0789c
+00fc9f08  mov w8,#0x1
+00fc9f0c  strb w8,[x20, #0xd9d]
+00fc9f10  ldr x1,[x21]
+00fc9f14  mov x0,x19
+00fc9f18  ldp x19,x30,[sp, #0x10]
+00fc9f1c  mov x2,xzr
+00fc9f20  ldp x21,x20,[sp], #0x20
+00fc9f24  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fc9f28_MynamestyleNode__.ctor.txt
+================================================================================
+Function: MynamestyleNode$$.ctor @ 00fc9f28
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fc9f28  mov x1,xzr
+00fc9f2c  b 0x00dc0e00
+
+

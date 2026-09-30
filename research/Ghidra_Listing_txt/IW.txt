@@ -1,0 +1,82 @@
+================================================================================
+### FILE: 00b53738_iword.txt
+================================================================================
+Function: iword @ 00b53738
+FuncComment: std::__ndk1::ios_base::iword(int)
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> memset @ 008d4dd0
+  -> realloc @ 008d4c90
+
+--- Calls IN ---
+
+--- Listing ---
+00b53738  stp x24,x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::ios_base::iword(int)
+00b5373c  stp x22,x21,[sp, #0x10]
+00b53740  stp x20,x19,[sp, #0x20]
+00b53744  stp x29,x30,[sp, #0x30]
+00b53748  add x29,sp,#0x30
+00b5374c  ldr x8,[x0, #0x68]
+00b53750  sxtw x21,w1
+00b53754  add x22,x21,#0x1
+00b53758  mov x19,x0
+00b5375c  cmp x22,x8
+00b53760  b.ls 0x00b53780
+00b53764  orr x9,xzr,#0xffffffffffffffe
+00b53768  cmp x22,x9
+00b5376c  b.hi 0x00b53788
+00b53770  lsl x8,x8,#0x1
+00b53774  cmp x8,x22
+00b53778  csel x23,x22,x8,cc
+00b5377c  b 0x00b5378c
+00b53780  ldp x20,x24,[x19, #0x58]
+00b53784  b 0x00b537e8
+00b53788  mov x23,#0x1fffffffffffffff
+00b5378c  ldr x0,[x19, #0x58]
+00b53790  lsl x1,x23,#0x3
+00b53794  bl 0x008d4c90
+00b53798  cbz x0,0x00b5380c
+00b5379c  ldr x24,[x19, #0x60]
+00b537a0  mov x20,x0
+00b537a4  str x0,[x19, #0x58]
+00b537a8  cmp x24,x23
+00b537ac  b.ge 0x00b537e4
+00b537b0  lsl x9,x24,#0x3
+00b537b4  add x0,x20,x9
+00b537b8  add x8,x20,x23, LSL #0x3
+00b537bc  add x10,x0,#0x8
+00b537c0  cmp x10,x8
+00b537c4  csel x8,x10,x8,hi
+00b537c8  sub x8,x8,x9
+00b537cc  mvn x9,x20
+00b537d0  add x8,x8,x9
+00b537d4  add x8,x8,#0x8
+00b537d8  and x2,x8,#-0x8
+00b537dc  mov w1,wzr
+00b537e0  bl 0x008d4dd0
+00b537e4  str x23,[x19, #0x68]
+00b537e8  cmp x24,x22
+00b537ec  csel x8,x22,x24,cc
+00b537f0  add x0,x20,x21, LSL #0x3
+00b537f4  str x8,[x19, #0x60]
+00b537f8  ldp x29,x30,[sp, #0x30]
+00b537fc  ldp x20,x19,[sp, #0x20]
+00b53800  ldp x22,x21,[sp, #0x10]
+00b53804  ldp x24,x23,[sp], #0x40
+00b53808  ret
+00b5380c  ldp w8,w9,[x19, #0x20]
+00b53810  orr w8,w8,#0x1
+00b53814  tst w9,w8
+00b53818  str w8,[x19, #0x20]
+00b5381c  b.ne 0x00b53830
+00b53820  adrp x0,0x3584000
+00b53824  add x0,x0,#0xb58
+00b53828  str xzr,[x0]
+00b5382c  b 0x00b537f8
+00b53830  adrp x0,0x2a07000
+00b53834  add x0,x0,#0xcf4
+00b53838  bl 0x00b53a58
+
+

@@ -1,0 +1,3182 @@
+================================================================================
+### FILE: 00b535f8_failure.txt
+================================================================================
+Function: failure @ 00b535f8
+FuncComment: std::__ndk1::ios_base::failure::failure(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, std::__ndk1::error_code const&)
+
+--- Calls OUT ---
+  -> system_error @ 008d41c0
+
+--- Calls IN ---
+
+--- Listing ---
+00b535f8  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ios_base::failure::failure(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, std::__ndk1::error_code const&)
+00b535fc  stp x29,x30,[sp, #0x10]
+00b53600  add x29,sp,#0x10
+00b53604  mov x3,x1
+00b53608  ldp x1,x2,[x2]
+00b5360c  mov x19,x0
+00b53610  bl 0x008d41c0
+00b53614  adrp x8,0x337c000
+00b53618  ldr x8,[x8, #0x378]
+00b5361c  add x8,x8,#0x10
+00b53620  str x8,[x19]
+00b53624  ldp x29,x30,[sp, #0x10]
+00b53628  ldr x19,[sp], #0x20
+00b5362c  ret
+
+
+================================================================================
+### FILE: 00b53630_failure.txt
+================================================================================
+Function: failure @ 00b53630
+FuncComment: std::__ndk1::ios_base::failure::failure(char const*, std::__ndk1::error_code const&)
+
+--- Calls OUT ---
+  -> system_error @ 008d3ac0
+
+--- Calls IN ---
+
+--- Listing ---
+00b53630  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ios_base::failure::failure(char const*, std::__ndk1::error_code const&)
+00b53634  stp x29,x30,[sp, #0x10]
+00b53638  add x29,sp,#0x10
+00b5363c  mov x3,x1
+00b53640  ldp x1,x2,[x2]
+00b53644  mov x19,x0
+00b53648  bl 0x008d3ac0
+00b5364c  adrp x8,0x337c000
+00b53650  ldr x8,[x8, #0x378]
+00b53654  add x8,x8,#0x10
+00b53658  str x8,[x19]
+00b5365c  ldp x29,x30,[sp, #0x10]
+00b53660  ldr x19,[sp], #0x20
+00b53664  ret
+
+
+================================================================================
+### FILE: 00b53668__failure.txt
+================================================================================
+Function: ~failure @ 00b53668
+FuncComment: std::__ndk1::ios_base::failure::~failure()
+
+--- Calls OUT ---
+  -> ~system_error @ 008d49b0
+
+--- Calls IN ---
+  <- FUN_00b53a58 @ 00b53a58
+
+--- Listing ---
+00b53668  b 0x008d49b0
+    ; [PLATE] std::__ndk1::ios_base::failure::~failure()
+
+
+================================================================================
+### FILE: 00b5366c__failure.txt
+================================================================================
+Function: ~failure @ 00b5366c
+FuncComment: std::__ndk1::ios_base::failure::~failure()
+
+--- Calls OUT ---
+  -> operator.delete @ 008d3ed0
+  -> ~system_error @ 008d49b0
+
+--- Calls IN ---
+
+--- Listing ---
+00b5366c  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::ios_base::failure::~failure()
+00b53670  stp x29,x30,[sp, #0x10]
+00b53674  add x29,sp,#0x10
+00b53678  mov x19,x0
+00b5367c  bl 0x008d49b0
+00b53680  ldp x29,x30,[sp, #0x10]
+00b53684  mov x0,x19
+00b53688  ldr x19,[sp], #0x20
+00b5368c  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b70d10__facet.txt
+================================================================================
+Function: ~facet @ 00b70d10
+FuncComment: std::__ndk1::locale::facet::~facet()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b70d10  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::locale::facet::~facet()
+00b70d14  stp x29,x30,[sp, #0x10]
+00b70d18  add x29,sp,#0x10
+00b70d1c  mov x19,x0
+00b70d20  bl 0x008d4ca0
+00b70d24  ldp x29,x30,[sp, #0x10]
+00b70d28  mov x0,x19
+00b70d2c  ldr x19,[sp], #0x20
+00b70d30  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00bd080c_FacebookEvents__.ctor.txt
+================================================================================
+Function: FacebookEvents$$.ctor @ 00bd080c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00bd080c  mov x1,xzr
+00bd0810  b 0x02194104
+
+
+================================================================================
+### FILE: 00d0381c_FacebookAnalyticsExample__ActivateApp.txt
+================================================================================
+Function: FacebookAnalyticsExample$$ActivateApp @ 00d0381c
+
+--- Calls OUT ---
+  -> SPFacebookAnalytics$$ActivateApp @ 00bdbe48
+
+--- Calls IN ---
+
+--- Listing ---
+00d0381c  mov x0,xzr
+00d03820  b 0x00bdbe48
+
+
+================================================================================
+### FILE: 00d03824_FacebookAnalyticsExample__AchievedLevel.txt
+================================================================================
+Function: FacebookAnalyticsExample$$AchievedLevel @ 00d03824
+
+--- Calls OUT ---
+  -> SPFacebookAnalytics$$AchievedLevel @ 00bdbe4c
+
+--- Calls IN ---
+
+--- Listing ---
+00d03824  mov w0,#0x1
+00d03828  mov x1,xzr
+00d0382c  b 0x00bdbe4c
+
+
+================================================================================
+### FILE: 00d03830_FacebookAnalyticsExample__AddedPaymentInfo.txt
+================================================================================
+Function: FacebookAnalyticsExample$$AddedPaymentInfo @ 00d03830
+
+--- Calls OUT ---
+  -> SPFacebookAnalytics$$AddedPaymentInfo @ 00bdbe50
+
+--- Calls IN ---
+
+--- Listing ---
+00d03830  mov w0,#0x1
+00d03834  mov x1,xzr
+00d03838  b 0x00bdbe50
+
+
+================================================================================
+### FILE: 00d0383c_FacebookAnalyticsExample__AddedToCart.txt
+================================================================================
+Function: FacebookAnalyticsExample$$AddedToCart @ 00d0383c
+
+--- Calls OUT ---
+  -> SPFacebookAnalytics$$AddedToCart @ 00bdbe54
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d0383c  str x22,[sp, #-0x30]!
+00d03840  stp x21,x20,[sp, #0x10]
+00d03844  stp x19,x30,[sp, #0x20]
+00d03848  adrp x19,0x3571000
+00d0384c  adrp x20,0x3360000
+00d03850  adrp x21,0x3349000
+00d03854  adrp x22,0x3378000
+00d03858  ldrb w8,[x19, #0xa6b]
+00d0385c  ldr x20,[x20, #0xa38]
+00d03860  ldr x21,[x21, #0xaa8]
+00d03864  ldr x22,[x22, #0xa20]
+00d03868  tbnz w8,#0x0,0x00d03898
+00d0386c  adrp x0,0x3349000
+00d03870  ldr x0,[x0, #0xaa8]
+00d03874  bl 0x00b0789c
+00d03878  adrp x0,0x3360000
+00d0387c  ldr x0,[x0, #0xa38]
+00d03880  bl 0x00b0789c
+00d03884  adrp x0,0x3378000
+00d03888  ldr x0,[x0, #0xa20]
+00d0388c  bl 0x00b0789c
+00d03890  mov w8,#0x1
+00d03894  strb w8,[x19, #0xa6b]
+00d03898  adrp x8,0x26db000
+00d0389c  ldr x0,[x20]
+00d038a0  ldr x1,[x21]
+00d038a4  ldr x2,[x22]
+00d038a8  ldr s0,[x8, #0x668]
+00d038ac  ldp x19,x30,[sp, #0x20]
+00d038b0  ldp x21,x20,[sp, #0x10]
+00d038b4  mov x3,xzr
+00d038b8  ldr x22,[sp], #0x30
+00d038bc  b 0x00bdbe54
+
+
+================================================================================
+### FILE: 00d038c0_FacebookAnalyticsExample__AddedToWishlist.txt
+================================================================================
+Function: FacebookAnalyticsExample$$AddedToWishlist @ 00d038c0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebookAnalytics$$AddedToWishlist @ 00bdbe58
+
+--- Calls IN ---
+
+--- Listing ---
+00d038c0  str x22,[sp, #-0x30]!
+00d038c4  stp x21,x20,[sp, #0x10]
+00d038c8  stp x19,x30,[sp, #0x20]
+00d038cc  adrp x19,0x3571000
+00d038d0  adrp x20,0x3360000
+00d038d4  adrp x21,0x3349000
+00d038d8  adrp x22,0x3378000
+00d038dc  ldrb w8,[x19, #0xa6c]
+00d038e0  ldr x20,[x20, #0xa38]
+00d038e4  ldr x21,[x21, #0xaa8]
+00d038e8  ldr x22,[x22, #0xa20]
+00d038ec  tbnz w8,#0x0,0x00d0391c
+00d038f0  adrp x0,0x3349000
+00d038f4  ldr x0,[x0, #0xaa8]
+00d038f8  bl 0x00b0789c
+00d038fc  adrp x0,0x3360000
+00d03900  ldr x0,[x0, #0xa38]
+00d03904  bl 0x00b0789c
+00d03908  adrp x0,0x3378000
+00d0390c  ldr x0,[x0, #0xa20]
+00d03910  bl 0x00b0789c
+00d03914  mov w8,#0x1
+00d03918  strb w8,[x19, #0xa6c]
+00d0391c  adrp x8,0x26db000
+00d03920  ldr x0,[x20]
+00d03924  ldr x1,[x21]
+00d03928  ldr x2,[x22]
+00d0392c  ldr s0,[x8, #0x668]
+00d03930  ldp x19,x30,[sp, #0x20]
+00d03934  ldp x21,x20,[sp, #0x10]
+00d03938  mov x3,xzr
+00d0393c  ldr x22,[sp], #0x30
+00d03940  b 0x00bdbe58
+
+
+================================================================================
+### FILE: 00d03944_FacebookAnalyticsExample__CompletedRegistration.txt
+================================================================================
+Function: FacebookAnalyticsExample$$CompletedRegistration @ 00d03944
+
+--- Calls OUT ---
+  -> SPFacebookAnalytics$$CompletedRegistration @ 00bdbe5c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d03944  str x20,[sp, #-0x20]!
+00d03948  stp x19,x30,[sp, #0x10]
+00d0394c  adrp x19,0x3571000
+00d03950  adrp x20,0x3335000
+00d03954  ldrb w8,[x19, #0xa6d]
+00d03958  ldr x20,[x20, #0xc80]
+00d0395c  tbnz w8,#0x0,0x00d03974
+00d03960  adrp x0,0x3335000
+00d03964  ldr x0,[x0, #0xc80]
+00d03968  bl 0x00b0789c
+00d0396c  mov w8,#0x1
+00d03970  strb w8,[x19, #0xa6d]
+00d03974  ldr x0,[x20]
+00d03978  ldp x19,x30,[sp, #0x10]
+00d0397c  mov x1,xzr
+00d03980  ldr x20,[sp], #0x20
+00d03984  b 0x00bdbe5c
+
+
+================================================================================
+### FILE: 00d03988_FacebookAnalyticsExample__InitiatedCheckout.txt
+================================================================================
+Function: FacebookAnalyticsExample$$InitiatedCheckout @ 00d03988
+
+--- Calls OUT ---
+  -> SPFacebookAnalytics$$InitiatedCheckout @ 00bdbe64
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d03988  str x22,[sp, #-0x30]!
+00d0398c  stp x21,x20,[sp, #0x10]
+00d03990  stp x19,x30,[sp, #0x20]
+00d03994  adrp x19,0x3571000
+00d03998  adrp x20,0x3360000
+00d0399c  adrp x21,0x3349000
+00d039a0  adrp x22,0x3378000
+00d039a4  ldrb w8,[x19, #0xa6e]
+00d039a8  ldr x20,[x20, #0xa38]
+00d039ac  ldr x21,[x21, #0xaa8]
+00d039b0  ldr x22,[x22, #0xa20]
+00d039b4  tbnz w8,#0x0,0x00d039e4
+00d039b8  adrp x0,0x3349000
+00d039bc  ldr x0,[x0, #0xaa8]
+00d039c0  bl 0x00b0789c
+00d039c4  adrp x0,0x3360000
+00d039c8  ldr x0,[x0, #0xa38]
+00d039cc  bl 0x00b0789c
+00d039d0  adrp x0,0x3378000
+00d039d4  ldr x0,[x0, #0xa20]
+00d039d8  bl 0x00b0789c
+00d039dc  mov w8,#0x1
+00d039e0  strb w8,[x19, #0xa6e]
+00d039e4  adrp x8,0x26db000
+00d039e8  ldr x1,[x20]
+00d039ec  ldr x2,[x21]
+00d039f0  ldr x4,[x22]
+00d039f4  ldr s0,[x8, #0x668]
+00d039f8  ldp x19,x30,[sp, #0x20]
+00d039fc  ldp x21,x20,[sp, #0x10]
+00d03a00  mov w0,#0x3
+00d03a04  mov w3,#0x1
+00d03a08  mov x5,xzr
+00d03a0c  ldr x22,[sp], #0x30
+00d03a10  b 0x00bdbe64
+
+
+================================================================================
+### FILE: 00d03a14_FacebookAnalyticsExample__Purchased.txt
+================================================================================
+Function: FacebookAnalyticsExample$$Purchased @ 00d03a14
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebookAnalytics$$Purchased @ 00bdbe68
+
+--- Calls IN ---
+
+--- Listing ---
+00d03a14  str x22,[sp, #-0x30]!
+00d03a18  stp x21,x20,[sp, #0x10]
+00d03a1c  stp x19,x30,[sp, #0x20]
+00d03a20  adrp x19,0x3571000
+00d03a24  adrp x20,0x3349000
+00d03a28  adrp x21,0x3360000
+00d03a2c  adrp x22,0x3378000
+00d03a30  ldrb w8,[x19, #0xa6f]
+00d03a34  ldr x20,[x20, #0xaa8]
+00d03a38  ldr x21,[x21, #0xa38]
+00d03a3c  ldr x22,[x22, #0xa20]
+00d03a40  tbnz w8,#0x0,0x00d03a70
+00d03a44  adrp x0,0x3349000
+00d03a48  ldr x0,[x0, #0xaa8]
+00d03a4c  bl 0x00b0789c
+00d03a50  adrp x0,0x3360000
+00d03a54  ldr x0,[x0, #0xa38]
+00d03a58  bl 0x00b0789c
+00d03a5c  adrp x0,0x3378000
+00d03a60  ldr x0,[x0, #0xa20]
+00d03a64  bl 0x00b0789c
+00d03a68  mov w8,#0x1
+00d03a6c  strb w8,[x19, #0xa6f]
+00d03a70  adrp x8,0x26db000
+00d03a74  ldr x1,[x20]
+00d03a78  ldr x2,[x21]
+00d03a7c  ldr x3,[x22]
+00d03a80  ldr s0,[x8, #0x668]
+00d03a84  ldp x19,x30,[sp, #0x20]
+00d03a88  ldp x21,x20,[sp, #0x10]
+00d03a8c  mov w0,#0x3
+00d03a90  mov x4,xzr
+00d03a94  ldr x22,[sp], #0x30
+00d03a98  b 0x00bdbe68
+
+
+================================================================================
+### FILE: 00d03a9c_FacebookAnalyticsExample__Rated.txt
+================================================================================
+Function: FacebookAnalyticsExample$$Rated @ 00d03a9c
+
+--- Calls OUT ---
+  -> SPFacebookAnalytics$$Rated @ 00bdbe6c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d03a9c  stp x21,x20,[sp, #-0x20]!
+00d03aa0  stp x19,x30,[sp, #0x10]
+00d03aa4  adrp x19,0x3571000
+00d03aa8  adrp x20,0x3360000
+00d03aac  adrp x21,0x3349000
+00d03ab0  ldrb w8,[x19, #0xa70]
+00d03ab4  ldr x20,[x20, #0xa38]
+00d03ab8  ldr x21,[x21, #0xaa8]
+00d03abc  tbnz w8,#0x0,0x00d03ae0
+00d03ac0  adrp x0,0x3349000
+00d03ac4  ldr x0,[x0, #0xaa8]
+00d03ac8  bl 0x00b0789c
+00d03acc  adrp x0,0x3360000
+00d03ad0  ldr x0,[x0, #0xa38]
+00d03ad4  bl 0x00b0789c
+00d03ad8  mov w8,#0x1
+00d03adc  strb w8,[x19, #0xa70]
+00d03ae0  ldr x1,[x20]
+00d03ae4  ldr x2,[x21]
+00d03ae8  ldp x19,x30,[sp, #0x10]
+00d03aec  mov w0,#0x4
+00d03af0  mov w3,#0x5
+00d03af4  mov x4,xzr
+00d03af8  ldp x21,x20,[sp], #0x20
+00d03afc  b 0x00bdbe6c
+
+
+================================================================================
+### FILE: 00d03b00_FacebookAnalyticsExample__Searched.txt
+================================================================================
+Function: FacebookAnalyticsExample$$Searched @ 00d03b00
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebookAnalytics$$Searched @ 00bdbe70
+
+--- Calls IN ---
+
+--- Listing ---
+00d03b00  stp x21,x20,[sp, #-0x20]!
+00d03b04  stp x19,x30,[sp, #0x10]
+00d03b08  adrp x19,0x3571000
+00d03b0c  adrp x20,0x3349000
+00d03b10  adrp x21,0x3351000
+00d03b14  ldrb w8,[x19, #0xa71]
+00d03b18  ldr x20,[x20, #0xaa8]
+00d03b1c  ldr x21,[x21, #0xf68]
+00d03b20  tbnz w8,#0x0,0x00d03b44
+00d03b24  adrp x0,0x3351000
+00d03b28  ldr x0,[x0, #0xf68]
+00d03b2c  bl 0x00b0789c
+00d03b30  adrp x0,0x3349000
+00d03b34  ldr x0,[x0, #0xaa8]
+00d03b38  bl 0x00b0789c
+00d03b3c  mov w8,#0x1
+00d03b40  strb w8,[x19, #0xa71]
+00d03b44  ldr x0,[x20]
+00d03b48  ldr x1,[x21]
+00d03b4c  ldp x19,x30,[sp, #0x10]
+00d03b50  mov w2,#0x1
+00d03b54  mov x3,xzr
+00d03b58  ldp x21,x20,[sp], #0x20
+00d03b5c  b 0x00bdbe70
+
+
+================================================================================
+### FILE: 00d03b60_FacebookAnalyticsExample__SpentCredits.txt
+================================================================================
+Function: FacebookAnalyticsExample$$SpentCredits @ 00d03b60
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebookAnalytics$$SpentCredits @ 00bdbe74
+
+--- Calls IN ---
+
+--- Listing ---
+00d03b60  stp x21,x20,[sp, #-0x20]!
+00d03b64  stp x19,x30,[sp, #0x10]
+00d03b68  adrp x19,0x3571000
+00d03b6c  adrp x20,0x3349000
+00d03b70  adrp x21,0x3360000
+00d03b74  ldrb w8,[x19, #0xa72]
+00d03b78  ldr x20,[x20, #0xaa8]
+00d03b7c  ldr x21,[x21, #0xa38]
+00d03b80  tbnz w8,#0x0,0x00d03ba4
+00d03b84  adrp x0,0x3349000
+00d03b88  ldr x0,[x0, #0xaa8]
+00d03b8c  bl 0x00b0789c
+00d03b90  adrp x0,0x3360000
+00d03b94  ldr x0,[x0, #0xa38]
+00d03b98  bl 0x00b0789c
+00d03b9c  mov w8,#0x1
+00d03ba0  strb w8,[x19, #0xa72]
+00d03ba4  ldr x0,[x20]
+00d03ba8  ldr x1,[x21]
+00d03bac  ldp x19,x30,[sp, #0x10]
+00d03bb0  mov w8,#0x42f00000
+00d03bb4  fmov s0,w8
+00d03bb8  mov x2,xzr
+00d03bbc  ldp x21,x20,[sp], #0x20
+00d03bc0  b 0x00bdbe74
+
+
+================================================================================
+### FILE: 00d03bc4_FacebookAnalyticsExample__UnlockedAchievement.txt
+================================================================================
+Function: FacebookAnalyticsExample$$UnlockedAchievement @ 00d03bc4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebookAnalytics$$UnlockedAchievement @ 00bdbe78
+
+--- Calls IN ---
+
+--- Listing ---
+00d03bc4  str x20,[sp, #-0x20]!
+00d03bc8  stp x19,x30,[sp, #0x10]
+00d03bcc  adrp x19,0x3571000
+00d03bd0  adrp x20,0x331c000
+00d03bd4  ldrb w8,[x19, #0xa73]
+00d03bd8  ldr x20,[x20, #0x840]
+00d03bdc  tbnz w8,#0x0,0x00d03bf4
+00d03be0  adrp x0,0x331c000
+00d03be4  ldr x0,[x0, #0x840]
+00d03be8  bl 0x00b0789c
+00d03bec  mov w8,#0x1
+00d03bf0  strb w8,[x19, #0xa73]
+00d03bf4  ldr x0,[x20]
+00d03bf8  ldp x19,x30,[sp, #0x10]
+00d03bfc  mov x1,xzr
+00d03c00  ldr x20,[sp], #0x20
+00d03c04  b 0x00bdbe78
+
+
+================================================================================
+### FILE: 00d03c08_FacebookAnalyticsExample__ViewedContent.txt
+================================================================================
+Function: FacebookAnalyticsExample$$ViewedContent @ 00d03c08
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebookAnalytics$$ViewedContent @ 00bdbe80
+
+--- Calls IN ---
+
+--- Listing ---
+00d03c08  str x22,[sp, #-0x30]!
+00d03c0c  stp x21,x20,[sp, #0x10]
+00d03c10  stp x19,x30,[sp, #0x20]
+00d03c14  adrp x19,0x3571000
+00d03c18  adrp x20,0x3349000
+00d03c1c  adrp x21,0x3360000
+00d03c20  adrp x22,0x3378000
+00d03c24  ldrb w8,[x19, #0xa74]
+00d03c28  ldr x20,[x20, #0xaa8]
+00d03c2c  ldr x21,[x21, #0xa38]
+00d03c30  ldr x22,[x22, #0xa20]
+00d03c34  tbnz w8,#0x0,0x00d03c64
+00d03c38  adrp x0,0x3349000
+00d03c3c  ldr x0,[x0, #0xaa8]
+00d03c40  bl 0x00b0789c
+00d03c44  adrp x0,0x3360000
+00d03c48  ldr x0,[x0, #0xa38]
+00d03c4c  bl 0x00b0789c
+00d03c50  adrp x0,0x3378000
+00d03c54  ldr x0,[x0, #0xa20]
+00d03c58  bl 0x00b0789c
+00d03c5c  mov w8,#0x1
+00d03c60  strb w8,[x19, #0xa74]
+00d03c64  adrp x8,0x26db000
+00d03c68  ldr x0,[x20]
+00d03c6c  ldr x1,[x21]
+00d03c70  ldr x2,[x22]
+00d03c74  ldr s0,[x8, #0x668]
+00d03c78  ldp x19,x30,[sp, #0x20]
+00d03c7c  ldp x21,x20,[sp, #0x10]
+00d03c80  mov x3,xzr
+00d03c84  ldr x22,[sp], #0x30
+00d03c88  b 0x00bdbe80
+
+
+================================================================================
+### FILE: 00d03c8c_FacebookAnalyticsExample__.ctor.txt
+================================================================================
+Function: FacebookAnalyticsExample$$.ctor @ 00d03c8c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d03c8c  mov x1,xzr
+00d03c90  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d03c94_FacebookAndroidTurnBasedAndGiftsExample__Awake.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$Awake @ 00d03c94
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> System.Action<bool>$$.ctor @ 019084dc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> SPFacebook$$add_OnInitCompleteAction @ 00bd10d4
+  -> SPFacebook$$add_OnFocusChangedAction @ 00bd1474
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Action$$.ctor @ 020d5760
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA_StatusBar$$set_text @ 00cf001c
+  -> SPFacebook$$Init @ 00bd2bc0
+  -> SPFacebook$$add_OnAuthCompleteAction @ 00bd165c
+
+--- Calls IN ---
+
+--- Listing ---
+00d03c94  str x22,[sp, #-0x30]!
+00d03c98  stp x21,x20,[sp, #0x10]
+00d03c9c  stp x19,x30,[sp, #0x20]
+00d03ca0  adrp x20,0x3571000
+00d03ca4  adrp x21,0x3348000
+00d03ca8  ldrb w8,[x20, #0xa75]
+00d03cac  ldr x21,[x21, #0xcf8]
+00d03cb0  mov x19,x0
+00d03cb4  tbnz w8,#0x0,0x00d03d2c
+00d03cb8  adrp x0,0x3380000
+00d03cbc  ldr x0,[x0, #0x300]
+00d03cc0  bl 0x00b0789c
+00d03cc4  adrp x0,0x3338000
+00d03cc8  ldr x0,[x0, #0x610]
+00d03ccc  bl 0x00b0789c
+00d03cd0  adrp x0,0x3348000
+00d03cd4  ldr x0,[x0, #0xcf8]
+00d03cd8  bl 0x00b0789c
+00d03cdc  adrp x0,0x3343000
+00d03ce0  ldr x0,[x0, #0x4a0]
+00d03ce4  bl 0x00b0789c
+00d03ce8  adrp x0,0x3361000
+00d03cec  ldr x0,[x0, #0x708]
+00d03cf0  bl 0x00b0789c
+00d03cf4  adrp x0,0x334c000
+00d03cf8  ldr x0,[x0, #0x3f0]
+00d03cfc  bl 0x00b0789c
+00d03d00  adrp x0,0x334f000
+00d03d04  ldr x0,[x0, #0xbc0]
+00d03d08  bl 0x00b0789c
+00d03d0c  adrp x0,0x3319000
+00d03d10  ldr x0,[x0, #0xed0]
+00d03d14  bl 0x00b0789c
+00d03d18  adrp x0,0x3326000
+00d03d1c  ldr x0,[x0, #0x8e8]
+00d03d20  bl 0x00b0789c
+00d03d24  mov w8,#0x1
+00d03d28  strb w8,[x20, #0xa75]
+00d03d2c  ldr x0,[x21]
+00d03d30  bl 0x00b079a0
+00d03d34  cbz x0,0x00d03e2c
+00d03d38  adrp x8,0x334c000
+00d03d3c  ldr x8,[x8, #0x3f0]
+00d03d40  adrp x22,0x334f000
+00d03d44  adrp x21,0x3380000
+00d03d48  mov x1,x19
+00d03d4c  ldr x2,[x8]
+00d03d50  ldr x22,[x22, #0xbc0]
+00d03d54  ldr x21,[x21, #0x300]
+00d03d58  mov x3,xzr
+00d03d5c  mov x20,x0
+00d03d60  bl 0x020d5760
+00d03d64  ldr x0,[x22]
+00d03d68  ldr w8,[x0, #0xe0]
+00d03d6c  cbnz w8,0x00d03d74
+00d03d70  bl 0x00b0798c
+00d03d74  mov x0,x20
+00d03d78  mov x1,xzr
+00d03d7c  bl 0x00bd10d4
+00d03d80  ldr x0,[x21]
+00d03d84  bl 0x00b079a0
+00d03d88  cbz x0,0x00d03e2c
+00d03d8c  adrp x8,0x3361000
+00d03d90  ldr x8,[x8, #0x708]
+00d03d94  adrp x21,0x3338000
+00d03d98  mov x1,x19
+00d03d9c  mov x3,xzr
+00d03da0  ldr x2,[x8]
+00d03da4  ldr x21,[x21, #0x610]
+00d03da8  mov x20,x0
+00d03dac  bl 0x019084dc
+00d03db0  mov x0,x20
+00d03db4  mov x1,xzr
+00d03db8  bl 0x00bd1474
+00d03dbc  ldr x0,[x21]
+00d03dc0  bl 0x00b079a0
+00d03dc4  cbz x0,0x00d03e2c
+00d03dc8  adrp x8,0x3343000
+00d03dcc  ldr x8,[x8, #0x4a0]
+00d03dd0  adrp x21,0x3319000
+00d03dd4  mov x1,x19
+00d03dd8  mov x3,xzr
+00d03ddc  ldr x2,[x8]
+00d03de0  ldr x21,[x21, #0xed0]
+00d03de4  mov x20,x0
+00d03de8  bl 0x01909b80
+00d03dec  mov x0,x20
+00d03df0  mov x1,xzr
+00d03df4  bl 0x00bd165c
+00d03df8  ldr x0,[x21]
+00d03dfc  bl 0x01e09dd4
+00d03e00  cbz x0,0x00d03e2c
+00d03e04  adrp x19,0x3326000
+00d03e08  ldr x19,[x19, #0x8e8]
+00d03e0c  mov x1,xzr
+00d03e10  bl 0x00bd2bc0
+00d03e14  ldr x0,[x19]
+00d03e18  ldp x19,x30,[sp, #0x20]
+00d03e1c  ldp x21,x20,[sp, #0x10]
+00d03e20  mov x1,xzr
+00d03e24  ldr x22,[sp], #0x30
+00d03e28  b 0x00cf001c
+00d03e2c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d03e30_FacebookAndroidTurnBasedAndGiftsExample__FixedUpdate.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$FixedUpdate @ 00d03e30
+
+--- Calls OUT ---
+  -> DefaultPreviewButton$$set_text @ 00ceea40
+  -> FB_UserInfo$$GetProfileImage @ 00bde2cc
+  -> SA_Texture$$set_texture @ 00cf01d8
+  -> DefaultPreviewButton$$DisabledButton @ 00cee880
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$Concat @ 01fdebb8
+  -> DefaultPreviewButton$$EnabledButton @ 00cee930
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> FUN_00b079b8 @ 00b079b8
+  -> SA_Label$$set_text @ 00cef7e8
+
+--- Calls IN ---
+
+--- Listing ---
+00d03e30  str x22,[sp, #-0x30]!
+00d03e34  stp x21,x20,[sp, #0x10]
+00d03e38  stp x19,x30,[sp, #0x20]
+00d03e3c  adrp x21,0x3571000
+00d03e40  adrp x20,0x334d000
+00d03e44  ldrb w8,[x21, #0xa76]
+00d03e48  ldr x20,[x20, #0x5a8]
+00d03e4c  mov x19,x0
+00d03e50  tbnz w8,#0x0,0x00d03ebc
+00d03e54  adrp x0,0x334d000
+00d03e58  ldr x0,[x0, #0x5a8]
+00d03e5c  bl 0x00b0789c
+00d03e60  adrp x0,0x3321000
+00d03e64  ldr x0,[x0, #0xca8]
+00d03e68  bl 0x00b0789c
+00d03e6c  adrp x0,0x3319000
+00d03e70  ldr x0,[x0, #0xed0]
+00d03e74  bl 0x00b0789c
+00d03e78  adrp x0,0x3381000
+00d03e7c  ldr x0,[x0, #0x478]
+00d03e80  bl 0x00b0789c
+00d03e84  adrp x0,0x3323000
+00d03e88  ldr x0,[x0, #0xfb8]
+00d03e8c  bl 0x00b0789c
+00d03e90  adrp x0,0x3378000
+00d03e94  ldr x0,[x0, #0xa60]
+00d03e98  bl 0x00b0789c
+00d03e9c  adrp x0,0x3366000
+00d03ea0  ldr x0,[x0, #0xa50]
+00d03ea4  bl 0x00b0789c
+00d03ea8  adrp x0,0x3342000
+00d03eac  ldr x0,[x0, #0x670]
+00d03eb0  bl 0x00b0789c
+00d03eb4  mov w8,#0x1
+00d03eb8  strb w8,[x21, #0xa76]
+00d03ebc  ldr x8,[x20]
+00d03ec0  ldr x8,[x8, #0xb8]
+00d03ec4  ldrb w8,[x8, #0x1]
+00d03ec8  cbz w8,0x00d040b0
+00d03ecc  ldr x0,[x19, #0x20]
+00d03ed0  cbz x0,0x00d04138
+00d03ed4  adrp x8,0x3378000
+00d03ed8  ldr x8,[x8, #0xa60]
+00d03edc  mov x2,xzr
+00d03ee0  ldr x1,[x8]
+00d03ee4  bl 0x00ceea40
+00d03ee8  ldr x0,[x19, #0x48]
+00d03eec  cbz x0,0x00d04138
+00d03ef0  adrp x8,0x3366000
+00d03ef4  ldr x8,[x8, #0xa50]
+00d03ef8  mov x2,xzr
+00d03efc  ldr x1,[x8]
+00d03f00  bl 0x00cef7e8
+00d03f04  ldr x21,[x19, #0x18]
+00d03f08  cbz x21,0x00d04138
+00d03f0c  ldr w8,[x21, #0x18]
+00d03f10  cmp w8,#0x1
+00d03f14  b.lt 0x00d03f48
+00d03f18  mov w22,wzr
+00d03f1c  cmp w22,w8
+00d03f20  b.cs 0x00d0413c
+00d03f24  add x8,x21,w22, SXTW  #0x3
+00d03f28  ldr x0,[x8, #0x20]
+00d03f2c  cbz x0,0x00d04138
+00d03f30  mov x1,xzr
+00d03f34  bl 0x00cee930
+00d03f38  ldr w8,[x21, #0x18]
+00d03f3c  add w22,w22,#0x1
+00d03f40  cmp w22,w8
+00d03f44  b.lt 0x00d03f1c
+00d03f48  ldr x8,[x20]
+00d03f4c  ldr x8,[x8, #0xb8]
+00d03f50  ldrb w8,[x8]
+00d03f54  cbz w8,0x00d040a0
+00d03f58  adrp x22,0x3319000
+00d03f5c  ldr x22,[x22, #0xed0]
+00d03f60  ldr x0,[x22]
+00d03f64  bl 0x01e09dd4
+00d03f68  cbz x0,0x00d04138
+00d03f6c  ldr x0,[x0, #0x18]
+00d03f70  cbz x0,0x00d04138
+00d03f74  adrp x20,0x3321000
+00d03f78  ldr x20,[x20, #0xca8]
+00d03f7c  mov w1,#0x3
+00d03f80  mov x2,xzr
+00d03f84  bl 0x00bde2cc
+00d03f88  ldr x8,[x20]
+00d03f8c  mov x20,x0
+00d03f90  ldr w9,[x8, #0xe0]
+00d03f94  cbnz w9,0x00d03fa0
+00d03f98  mov x0,x8
+00d03f9c  bl 0x00b0798c
+00d03fa0  mov x0,x20
+00d03fa4  mov x1,xzr
+00d03fa8  mov x2,xzr
+00d03fac  bl 0x024de30c
+00d03fb0  tbz w0,#0x0,0x00d040a0
+00d03fb4  ldr x0,[x22]
+00d03fb8  ldr x20,[x19, #0x28]
+00d03fbc  bl 0x01e09dd4
+00d03fc0  cbz x0,0x00d04138
+00d03fc4  ldr x0,[x0, #0x18]
+00d03fc8  cbz x0,0x00d04138
+00d03fcc  mov w1,#0x3
+00d03fd0  mov x2,xzr
+00d03fd4  bl 0x00bde2cc
+00d03fd8  cbz x20,0x00d04138
+00d03fdc  mov x1,x0
+00d03fe0  mov x0,x20
+00d03fe4  mov x2,xzr
+00d03fe8  bl 0x00cf01d8
+00d03fec  ldr x0,[x22]
+00d03ff0  ldr x20,[x19, #0x48]
+00d03ff4  bl 0x01e09dd4
+00d03ff8  cbz x0,0x00d04138
+00d03ffc  ldr x8,[x0, #0x18]
+00d04000  cbz x8,0x00d04138
+00d04004  ldr x0,[x22]
+00d04008  ldr x21,[x8, #0x18]
+00d0400c  bl 0x01e09dd4
+00d04010  cbz x0,0x00d04138
+00d04014  ldr x8,[x0, #0x18]
+00d04018  cbz x8,0x00d04138
+00d0401c  adrp x9,0x3342000
+00d04020  ldr x9,[x9, #0x670]
+00d04024  ldr x2,[x8, #0x30]
+00d04028  mov x0,x21
+00d0402c  mov x3,xzr
+00d04030  ldr x1,[x9]
+00d04034  bl 0x01fdebb8
+00d04038  cbz x20,0x00d04138
+00d0403c  mov x1,x0
+00d04040  mov x0,x20
+00d04044  mov x2,xzr
+00d04048  bl 0x00cef7e8
+00d0404c  ldr x0,[x22]
+00d04050  ldr x20,[x19, #0x30]
+00d04054  bl 0x01e09dd4
+00d04058  cbz x0,0x00d04138
+00d0405c  ldr x8,[x0, #0x18]
+00d04060  cbz x8,0x00d04138
+00d04064  cbz x20,0x00d04138
+00d04068  ldr x1,[x8, #0x48]
+00d0406c  mov x0,x20
+00d04070  mov x2,xzr
+00d04074  bl 0x00cef7e8
+00d04078  ldr x0,[x22]
+00d0407c  ldr x19,[x19, #0x38]
+00d04080  bl 0x01e09dd4
+00d04084  cbz x0,0x00d04138
+00d04088  ldr x8,[x0, #0x18]
+00d0408c  cbz x8,0x00d04138
+00d04090  cbz x19,0x00d04138
+00d04094  ldr x1,[x8, #0x50]
+00d04098  mov x0,x19
+00d0409c  b 0x00d04124
+00d040a0  ldp x19,x30,[sp, #0x20]
+00d040a4  ldp x21,x20,[sp, #0x10]
+00d040a8  ldr x22,[sp], #0x30
+00d040ac  ret
+00d040b0  ldr x20,[x19, #0x18]
+00d040b4  cbz x20,0x00d04138
+00d040b8  ldr w8,[x20, #0x18]
+00d040bc  cmp w8,#0x1
+00d040c0  b.lt 0x00d040f4
+00d040c4  mov w21,wzr
+00d040c8  cmp w21,w8
+00d040cc  b.cs 0x00d0413c
+00d040d0  add x8,x20,w21, SXTW  #0x3
+00d040d4  ldr x0,[x8, #0x20]
+00d040d8  cbz x0,0x00d04138
+00d040dc  mov x1,xzr
+00d040e0  bl 0x00cee880
+00d040e4  ldr w8,[x20, #0x18]
+00d040e8  add w21,w21,#0x1
+00d040ec  cmp w21,w8
+00d040f0  b.lt 0x00d040c8
+00d040f4  ldr x0,[x19, #0x20]
+00d040f8  cbz x0,0x00d04138
+00d040fc  adrp x8,0x3381000
+00d04100  ldr x8,[x8, #0x478]
+00d04104  mov x2,xzr
+00d04108  ldr x1,[x8]
+00d0410c  bl 0x00ceea40
+00d04110  ldr x0,[x19, #0x48]
+00d04114  cbz x0,0x00d04138
+00d04118  adrp x8,0x3323000
+00d0411c  ldr x8,[x8, #0xfb8]
+00d04120  ldr x1,[x8]
+00d04124  ldp x19,x30,[sp, #0x20]
+00d04128  ldp x21,x20,[sp, #0x10]
+00d0412c  mov x2,xzr
+00d04130  ldr x22,[sp], #0x30
+00d04134  b 0x00cef7e8
+00d04138  bl 0x00b079b0
+00d0413c  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00d04140_FacebookAndroidTurnBasedAndGiftsExample__RetriveAppRequests.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$RetriveAppRequests @ 00d04140
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebook$$LoadPendingRequests @ 00bd53ec
+  -> SPFacebook$$add_OnAppRequestsLoaded @ 00bd1fe4
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d04140  stp x21,x20,[sp, #-0x20]!
+00d04144  stp x19,x30,[sp, #0x10]
+00d04148  adrp x20,0x3571000
+00d0414c  adrp x21,0x3319000
+00d04150  ldrb w8,[x20, #0xa77]
+00d04154  ldr x21,[x21, #0xed0]
+00d04158  mov x19,x0
+00d0415c  tbnz w8,#0x0,0x00d04198
+00d04160  adrp x0,0x3319000
+00d04164  ldr x0,[x0, #0x660]
+00d04168  bl 0x00b0789c
+00d0416c  adrp x0,0x331c000
+00d04170  ldr x0,[x0, #0x650]
+00d04174  bl 0x00b0789c
+00d04178  adrp x0,0x334f000
+00d0417c  ldr x0,[x0, #0xbc0]
+00d04180  bl 0x00b0789c
+00d04184  adrp x0,0x3319000
+00d04188  ldr x0,[x0, #0xed0]
+00d0418c  bl 0x00b0789c
+00d04190  mov w8,#0x1
+00d04194  strb w8,[x20, #0xa77]
+00d04198  ldr x0,[x21]
+00d0419c  bl 0x01e09dd4
+00d041a0  cbz x0,0x00d04208
+00d041a4  adrp x20,0x3319000
+00d041a8  ldr x20,[x20, #0x660]
+00d041ac  mov x1,xzr
+00d041b0  bl 0x00bd53ec
+00d041b4  ldr x0,[x20]
+00d041b8  bl 0x00b079a0
+00d041bc  cbz x0,0x00d04208
+00d041c0  adrp x8,0x331c000
+00d041c4  ldr x8,[x8, #0x650]
+00d041c8  adrp x21,0x334f000
+00d041cc  mov x1,x19
+00d041d0  mov x3,xzr
+00d041d4  ldr x2,[x8]
+00d041d8  ldr x21,[x21, #0xbc0]
+00d041dc  mov x20,x0
+00d041e0  bl 0x01909b80
+00d041e4  ldr x0,[x21]
+00d041e8  ldr w8,[x0, #0xe0]
+00d041ec  cbnz w8,0x00d041f4
+00d041f0  bl 0x00b0798c
+00d041f4  ldp x19,x30,[sp, #0x10]
+00d041f8  mov x0,x20
+00d041fc  mov x1,xzr
+00d04200  ldp x21,x20,[sp], #0x20
+00d04204  b 0x00bd1fe4
+00d04208  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d0420c_FacebookAndroidTurnBasedAndGiftsExample__OnAppRequestsLoaded.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$OnAppRequestsLoaded @ 00d0420c
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Collections.Generic.List.Enumerator<object>$$Dispose @ 01a070e8
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Collections.Generic.List<object>$$GetEnumerator @ 01c01338
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebook$$remove_OnAppRequestsLoaded @ 00bd20d8
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.Collections.Generic.List.Enumerator<object>$$MoveNext @ 01a070ec
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00d0420c  sub sp,sp,#0x90
+00d04210  str x26,[sp, #0x40]
+00d04214  stp x25,x24,[sp, #0x50]
+00d04218  stp x23,x22,[sp, #0x60]
+00d0421c  stp x21,x20,[sp, #0x70]
+00d04220  stp x19,x30,[sp, #0x80]
+00d04224  adrp x21,0x3571000
+00d04228  ldrb w8,[x21, #0xa78]
+00d0422c  mov x20,x1
+00d04230  mov x19,x0
+00d04234  tbnz w8,#0x0,0x00d042d0
+00d04238  adrp x0,0x3319000
+00d0423c  ldr x0,[x0, #0x660]
+00d04240  bl 0x00b0789c
+00d04244  adrp x0,0x336b000
+00d04248  ldr x0,[x0, #0x7d0]
+00d0424c  bl 0x00b0789c
+00d04250  adrp x0,0x3373000
+00d04254  ldr x0,[x0, #0x288]
+00d04258  bl 0x00b0789c
+00d0425c  adrp x0,0x3315000
+00d04260  ldr x0,[x0, #0xd48]
+00d04264  bl 0x00b0789c
+00d04268  adrp x0,0x3320000
+00d0426c  ldr x0,[x0, #0x6f8]
+00d04270  bl 0x00b0789c
+00d04274  adrp x0,0x3338000
+00d04278  ldr x0,[x0, #0x928]
+00d0427c  bl 0x00b0789c
+00d04280  adrp x0,0x3383000
+00d04284  ldr x0,[x0, #0x2d0]
+00d04288  bl 0x00b0789c
+00d0428c  adrp x0,0x331c000
+00d04290  ldr x0,[x0, #0x650]
+00d04294  bl 0x00b0789c
+00d04298  adrp x0,0x3309000
+00d0429c  ldr x0,[x0, #0x9d0]
+00d042a0  bl 0x00b0789c
+00d042a4  adrp x0,0x334f000
+00d042a8  ldr x0,[x0, #0xbc0]
+00d042ac  bl 0x00b0789c
+00d042b0  adrp x0,0x3319000
+00d042b4  ldr x0,[x0, #0xed0]
+00d042b8  bl 0x00b0789c
+00d042bc  adrp x0,0x3383000
+00d042c0  ldr x0,[x0, #0x670]
+00d042c4  bl 0x00b0789c
+00d042c8  mov w8,#0x1
+00d042cc  strb w8,[x21, #0xa78]
+00d042d0  stp xzr,xzr,[sp, #0x28]
+00d042d4  str xzr,[sp, #0x20]
+00d042d8  cbz x20,0x00d04474
+00d042dc  ldrb w8,[x20, #0x20]
+00d042e0  cbz w8,0x00d04400
+00d042e4  adrp x8,0x3319000
+00d042e8  ldr x8,[x8, #0xed0]
+00d042ec  ldr x0,[x8]
+00d042f0  bl 0x01e09dd4
+00d042f4  cbz x0,0x00d04474
+00d042f8  ldr x0,[x0, #0x58]
+00d042fc  cbz x0,0x00d04474
+00d04300  adrp x8,0x3309000
+00d04304  ldr x8,[x8, #0x9d0]
+00d04308  adrp x20,0x3315000
+00d0430c  adrp x22,0x336b000
+00d04310  adrp x23,0x3383000
+00d04314  ldr x20,[x20, #0xd48]
+00d04318  ldr x22,[x22, #0x7d0]
+00d0431c  ldr x23,[x23, #0x670]
+00d04320  ldr x1,[x8]
+00d04324  adrp x24,0x3383000
+00d04328  adrp x25,0x3338000
+00d0432c  adrp x21,0x3373000
+00d04330  ldr x24,[x24, #0x2d0]
+00d04334  ldr x25,[x25, #0x928]
+00d04338  ldr x21,[x21, #0x288]
+00d0433c  add x8,sp,#0x8
+00d04340  bl 0x01c01338
+00d04344  ldur q0,[sp, #0x8]
+00d04348  ldr x8,[sp, #0x18]
+00d0434c  str q0,[sp, #0x20]
+00d04350  str x8,[sp, #0x30]
+00d04354  ldr x1,[x20]
+00d04358  add x0,sp,#0x20
+    ; [PRE] try { // try from 00d04358 to 00d0435f has its CatchHandler @ 00d04484
+00d0435c  bl 0x01a070ec
+    ; [POST] } // end try from 00d04358 to 00d0435f
+00d04360  tbz w0,#0x0,0x00d043f4
+00d04364  ldr x0,[x22]
+00d04368  ldr x26,[sp, #0x30]
+00d0436c  ldr w8,[x0, #0xe0]
+00d04370  cbnz w8,0x00d04378
+00d04374  bl 0x00b0798c
+    ; [PRE] try { // try from 00d04374 to 00d04383 has its CatchHandler @ 00d04488
+00d04378  ldr x0,[x23]
+00d0437c  mov x1,xzr
+00d04380  bl 0x024c0104
+    ; [POST] } // end try from 00d04374 to 00d04383
+00d04384  cbz x26,0x00d04470
+00d04388  ldr x0,[x26, #0x10]
+00d0438c  mov x1,xzr
+    ; [PRE] try { // try from 00d0438c to 00d04393 has its CatchHandler @ 00d0447c
+00d04390  bl 0x024c0104
+    ; [POST] } // end try from 00d0438c to 00d04393
+00d04394  ldr x0,[x26, #0x20]
+00d04398  mov x1,xzr
+    ; [PRE] try { // try from 00d04398 to 00d0439f has its CatchHandler @ 00d04480
+00d0439c  bl 0x024c0104
+    ; [POST] } // end try from 00d04398 to 00d0439f
+00d043a0  ldr w8,[x26, #0x28]
+00d043a4  ldr x0,[x24]
+00d043a8  str w8,[sp, #0x8]
+00d043ac  add x1,sp,#0x8
+    ; [PRE] try { // try from 00d043ac to 00d043bb has its CatchHandler @ 00d04494
+00d043b0  bl 0x00b07994
+00d043b4  mov x1,xzr
+00d043b8  bl 0x024c0104
+    ; [POST] } // end try from 00d043ac to 00d043bb
+00d043bc  ldr w8,[x26, #0x2c]
+00d043c0  ldr x0,[x25]
+00d043c4  str w8,[sp, #0x4c]
+00d043c8  add x1,sp,#0x4c
+    ; [PRE] try { // try from 00d043c8 to 00d043d7 has its CatchHandler @ 00d04490
+00d043cc  bl 0x00b07994
+00d043d0  mov x1,xzr
+00d043d4  bl 0x024c0104
+    ; [POST] } // end try from 00d043c8 to 00d043d7
+00d043d8  ldr x0,[x26, #0x50]
+00d043dc  mov x1,xzr
+    ; [PRE] try { // try from 00d043dc to 00d043ef has its CatchHandler @ 00d0448c
+00d043e0  bl 0x024c0104
+00d043e4  ldr x0,[x23]
+00d043e8  mov x1,xzr
+00d043ec  bl 0x024c0104
+    ; [POST] } // end try from 00d043dc to 00d043ef
+00d043f0  b 0x00d04354
+00d043f4  ldr x1,[x21]
+00d043f8  add x0,sp,#0x20
+00d043fc  bl 0x01a070e8
+00d04400  adrp x8,0x3319000
+00d04404  ldr x8,[x8, #0x660]
+00d04408  ldr x0,[x8]
+00d0440c  bl 0x00b079a0
+00d04410  cbz x0,0x00d04474
+00d04414  adrp x8,0x331c000
+00d04418  ldr x8,[x8, #0x650]
+00d0441c  adrp x21,0x334f000
+00d04420  mov x1,x19
+00d04424  mov x3,xzr
+00d04428  ldr x2,[x8]
+00d0442c  ldr x21,[x21, #0xbc0]
+00d04430  mov x20,x0
+00d04434  bl 0x01909b80
+00d04438  ldr x0,[x21]
+00d0443c  ldr w8,[x0, #0xe0]
+00d04440  cbnz w8,0x00d04448
+00d04444  bl 0x00b0798c
+00d04448  mov x0,x20
+00d0444c  mov x1,xzr
+00d04450  bl 0x00bd20d8
+00d04454  ldp x19,x30,[sp, #0x80]
+00d04458  ldp x21,x20,[sp, #0x70]
+00d0445c  ldp x23,x22,[sp, #0x60]
+00d04460  ldp x25,x24,[sp, #0x50]
+00d04464  ldr x26,[sp, #0x40]
+00d04468  add sp,sp,#0x90
+00d0446c  ret
+00d04470  bl 0x00b079b0
+    ; [PRE] try { // try from 00d04470 to 00d04473 has its CatchHandler @ 00d04478
+    ; [POST] } // end try from 00d04470 to 00d04473
+00d04474  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d04500_FacebookAndroidTurnBasedAndGiftsExample__SendTrunhRequest.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$SendTrunhRequest @ 00d04500
+
+--- Calls OUT ---
+  -> SPFacebook$$SendTrunRequest @ 00bd4368
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d04500  str x20,[sp, #-0x20]!
+00d04504  stp x19,x30,[sp, #0x10]
+00d04508  adrp x19,0x3571000
+00d0450c  adrp x20,0x3319000
+00d04510  ldrb w8,[x19, #0xa79]
+00d04514  ldr x20,[x20, #0xed0]
+00d04518  tbnz w8,#0x0,0x00d04554
+00d0451c  adrp x0,0x3319000
+00d04520  ldr x0,[x0, #0xed0]
+00d04524  bl 0x00b0789c
+00d04528  adrp x0,0x3320000
+00d0452c  ldr x0,[x0, #0xfc8]
+00d04530  bl 0x00b0789c
+00d04534  adrp x0,0x3372000
+00d04538  ldr x0,[x0, #0x190]
+00d0453c  bl 0x00b0789c
+00d04540  adrp x0,0x332c000
+00d04544  ldr x0,[x0, #0x2c0]
+00d04548  bl 0x00b0789c
+00d0454c  mov w8,#0x1
+00d04550  strb w8,[x19, #0xa79]
+00d04554  ldr x0,[x20]
+00d04558  bl 0x01e09dd4
+00d0455c  cbz x0,0x00d04598
+00d04560  adrp x8,0x3372000
+00d04564  adrp x9,0x3320000
+00d04568  adrp x10,0x332c000
+00d0456c  ldr x8,[x8, #0x190]
+00d04570  ldr x9,[x9, #0xfc8]
+00d04574  ldr x10,[x10, #0x2c0]
+00d04578  ldp x19,x30,[sp, #0x10]
+00d0457c  ldr x1,[x8]
+00d04580  ldr x2,[x9]
+00d04584  ldr x3,[x10]
+00d04588  mov x4,xzr
+00d0458c  mov x5,xzr
+00d04590  ldr x20,[sp], #0x20
+00d04594  b 0x00bd4368
+00d04598  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d0459c_FacebookAndroidTurnBasedAndGiftsExample__SendTrunhRequestToSpecifiedFriend.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$SendTrunhRequestToSpecifiedFriend @ 00d0459c
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SPFacebook$$SendTrunRequest @ 00bd4368
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebook$$AppRequest @ 00bd4668
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> SPFacebook$$add_OnAppRequestCompleteAction @ 00bd1dfc
+
+--- Calls IN ---
+
+--- Listing ---
+00d0459c  sub sp,sp,#0x60
+00d045a0  str x26,[sp, #0x10]
+00d045a4  stp x25,x24,[sp, #0x20]
+00d045a8  stp x23,x22,[sp, #0x30]
+00d045ac  stp x21,x20,[sp, #0x40]
+00d045b0  stp x19,x30,[sp, #0x50]
+00d045b4  adrp x20,0x3571000
+00d045b8  adrp x21,0x3323000
+00d045bc  adrp x24,0x3319000
+00d045c0  adrp x23,0x3308000
+00d045c4  ldrb w8,[x20, #0xa7a]
+00d045c8  ldr x21,[x21, #0x268]
+00d045cc  ldr x24,[x24, #0xed0]
+00d045d0  ldr x23,[x23, #0x9a8]
+00d045d4  mov x19,x0
+00d045d8  tbnz w8,#0x0,0x00d04674
+00d045dc  adrp x0,0x337f000
+00d045e0  ldr x0,[x0, #0x4c0]
+00d045e4  bl 0x00b0789c
+00d045e8  adrp x0,0x330b000
+00d045ec  ldr x0,[x0, #0x390]
+00d045f0  bl 0x00b0789c
+00d045f4  adrp x0,0x334f000
+00d045f8  ldr x0,[x0, #0xbc0]
+00d045fc  bl 0x00b0789c
+00d04600  adrp x0,0x3319000
+00d04604  ldr x0,[x0, #0xed0]
+00d04608  bl 0x00b0789c
+00d0460c  adrp x0,0x3308000
+00d04610  ldr x0,[x0, #0x9a8]
+00d04614  bl 0x00b0789c
+00d04618  adrp x0,0x3352000
+00d0461c  ldr x0,[x0, #0x150]
+00d04620  bl 0x00b0789c
+00d04624  adrp x0,0x3323000
+00d04628  ldr x0,[x0, #0x268]
+00d0462c  bl 0x00b0789c
+00d04630  adrp x0,0x330d000
+00d04634  ldr x0,[x0, #0x4c8]
+00d04638  bl 0x00b0789c
+00d0463c  adrp x0,0x3361000
+00d04640  ldr x0,[x0, #0x768]
+00d04644  bl 0x00b0789c
+00d04648  adrp x0,0x3353000
+00d0464c  ldr x0,[x0, #0xba8]
+00d04650  bl 0x00b0789c
+00d04654  adrp x0,0x337e000
+00d04658  ldr x0,[x0, #0xb70]
+00d0465c  bl 0x00b0789c
+00d04660  adrp x0,0x332c000
+00d04664  ldr x0,[x0, #0x2c0]
+00d04668  bl 0x00b0789c
+00d0466c  mov w8,#0x1
+00d04670  strb w8,[x20, #0xa7a]
+00d04674  ldr x0,[x24]
+00d04678  ldr x20,[x21]
+00d0467c  bl 0x01e09dd4
+00d04680  ldr x8,[x23]
+00d04684  mov x21,x0
+00d04688  mov w1,#0x2
+00d0468c  mov x0,x8
+00d04690  bl 0x00b078f8
+00d04694  cbz x0,0x00d0489c
+00d04698  mov x22,x0
+00d0469c  cbz x20,0x00d046b4
+00d046a0  ldr x8,[x22]
+00d046a4  mov x0,x20
+00d046a8  ldr x1,[x8, #0x40]
+00d046ac  bl 0x00b07990
+00d046b0  cbz x0,0x00d048a4
+00d046b4  ldr w8,[x22, #0x18]
+00d046b8  cbz w8,0x00d048a0
+00d046bc  adrp x25,0x330d000
+00d046c0  ldr x25,[x25, #0x4c8]
+00d046c4  mov x0,x22
+00d046c8  str x20,[x0, #0x20]!
+00d046cc  mov x1,x20
+00d046d0  bl 0x00b07850
+00d046d4  ldr x1,[x25]
+00d046d8  cbz x1,0x00d04700
+00d046dc  ldr x8,[x22]
+00d046e0  mov x0,x1
+00d046e4  ldr x8,[x8, #0x40]
+00d046e8  mov x1,x8
+00d046ec  bl 0x00b07990
+00d046f0  cbz x0,0x00d048a4
+00d046f4  ldr x8,[x25]
+00d046f8  mov x1,x8
+00d046fc  b 0x00d04704
+00d04700  mov x8,xzr
+00d04704  ldr w9,[x22, #0x18]
+00d04708  cmp w9,#0x1
+00d0470c  b.ls 0x00d048a0
+00d04710  mov x0,x22
+00d04714  str x8,[x0, #0x28]!
+00d04718  bl 0x00b07850
+00d0471c  cbz x21,0x00d0489c
+00d04720  adrp x8,0x3352000
+00d04724  adrp x9,0x3361000
+00d04728  adrp x10,0x337e000
+00d0472c  ldr x8,[x8, #0x150]
+00d04730  ldr x9,[x9, #0x768]
+00d04734  ldr x10,[x10, #0xb70]
+00d04738  adrp x26,0x337f000
+00d0473c  ldr x1,[x8]
+00d04740  ldr x2,[x9]
+00d04744  ldr x3,[x10]
+00d04748  ldr x26,[x26, #0x4c0]
+00d0474c  mov x0,x21
+00d04750  mov x4,x22
+00d04754  mov x5,xzr
+00d04758  bl 0x00bd4368
+00d0475c  ldr x0,[x26]
+00d04760  bl 0x00b079a0
+00d04764  cbz x0,0x00d0489c
+00d04768  adrp x8,0x330b000
+00d0476c  ldr x8,[x8, #0x390]
+00d04770  adrp x22,0x334f000
+00d04774  mov x1,x19
+00d04778  mov x3,xzr
+00d0477c  ldr x2,[x8]
+00d04780  ldr x22,[x22, #0xbc0]
+00d04784  mov x21,x0
+00d04788  bl 0x01909b80
+00d0478c  ldr x0,[x22]
+00d04790  ldr w8,[x0, #0xe0]
+00d04794  cbnz w8,0x00d0479c
+00d04798  bl 0x00b0798c
+00d0479c  mov x0,x21
+00d047a0  mov x1,xzr
+00d047a4  bl 0x00bd1dfc
+00d047a8  ldr x0,[x24]
+00d047ac  bl 0x01e09dd4
+00d047b0  ldr x8,[x23]
+00d047b4  mov x19,x0
+00d047b8  mov w1,#0x2
+00d047bc  mov x0,x8
+00d047c0  bl 0x00b078f8
+00d047c4  cbz x0,0x00d0489c
+00d047c8  mov x21,x0
+00d047cc  cbz x20,0x00d047e4
+00d047d0  ldr x8,[x21]
+00d047d4  mov x0,x20
+00d047d8  ldr x1,[x8, #0x40]
+00d047dc  bl 0x00b07990
+00d047e0  cbz x0,0x00d048a4
+00d047e4  ldr w8,[x21, #0x18]
+00d047e8  cbz w8,0x00d048a0
+00d047ec  mov x0,x21
+00d047f0  str x20,[x0, #0x20]!
+00d047f4  mov x1,x20
+00d047f8  bl 0x00b07850
+00d047fc  ldr x1,[x25]
+00d04800  cbz x1,0x00d04828
+00d04804  ldr x8,[x21]
+00d04808  mov x0,x1
+00d0480c  ldr x8,[x8, #0x40]
+00d04810  mov x1,x8
+00d04814  bl 0x00b07990
+00d04818  cbz x0,0x00d048a4
+00d0481c  ldr x8,[x25]
+00d04820  mov x1,x8
+00d04824  b 0x00d0482c
+00d04828  mov x8,xzr
+00d0482c  ldr w9,[x21, #0x18]
+00d04830  cmp w9,#0x1
+00d04834  b.ls 0x00d048a0
+00d04838  mov x0,x21
+00d0483c  str x8,[x0, #0x28]!
+00d04840  bl 0x00b07850
+00d04844  cbz x19,0x00d0489c
+00d04848  adrp x8,0x3353000
+00d0484c  adrp x9,0x332c000
+00d04850  ldr x8,[x8, #0xba8]
+00d04854  ldr x9,[x9, #0x2c0]
+00d04858  mov x0,x19
+00d0485c  mov x2,x21
+00d04860  ldr x1,[x8]
+00d04864  ldr x6,[x9]
+00d04868  mov x3,xzr
+00d0486c  mov x4,xzr
+00d04870  mov x5,xzr
+00d04874  mov x7,x6
+00d04878  str xzr,[sp]
+00d0487c  bl 0x00bd4668
+00d04880  ldp x19,x30,[sp, #0x50]
+00d04884  ldp x21,x20,[sp, #0x40]
+00d04888  ldp x23,x22,[sp, #0x30]
+00d0488c  ldp x25,x24,[sp, #0x20]
+00d04890  ldr x26,[sp, #0x10]
+00d04894  add sp,sp,#0x60
+00d04898  ret
+00d0489c  bl 0x00b079b0
+00d048a0  bl 0x00b079b8
+00d048a4  bl 0x00b079d4
+00d048a8  mov x1,xzr
+00d048ac  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00d048b0_FacebookAndroidTurnBasedAndGiftsExample__AskItem.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$AskItem @ 00d048b0
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> SPFacebook$$AskGift @ 00bd4614
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d048b0  stp x21,x20,[sp, #-0x20]!
+00d048b4  stp x19,x30,[sp, #0x10]
+00d048b8  adrp x20,0x3571000
+00d048bc  adrp x21,0x3319000
+00d048c0  ldrb w8,[x20, #0xa7b]
+00d048c4  ldr x21,[x21, #0xed0]
+00d048c8  mov x19,x0
+00d048cc  tbnz w8,#0x0,0x00d04908
+00d048d0  adrp x0,0x3319000
+00d048d4  ldr x0,[x0, #0xed0]
+00d048d8  bl 0x00b0789c
+00d048dc  adrp x0,0x3352000
+00d048e0  ldr x0,[x0, #0x150]
+00d048e4  bl 0x00b0789c
+00d048e8  adrp x0,0x3361000
+00d048ec  ldr x0,[x0, #0x768]
+00d048f0  bl 0x00b0789c
+00d048f4  adrp x0,0x332c000
+00d048f8  ldr x0,[x0, #0x2c0]
+00d048fc  bl 0x00b0789c
+00d04900  mov w8,#0x1
+00d04904  strb w8,[x20, #0xa7b]
+00d04908  ldr x0,[x21]
+00d0490c  bl 0x01e09dd4
+00d04910  cbz x0,0x00d04950
+00d04914  adrp x8,0x3352000
+00d04918  adrp x9,0x3361000
+00d0491c  adrp x10,0x332c000
+00d04920  ldr x8,[x8, #0x150]
+00d04924  ldr x9,[x9, #0x768]
+00d04928  ldr x10,[x10, #0x2c0]
+00d0492c  ldr x3,[x19, #0x50]
+00d04930  ldr x1,[x8]
+00d04934  ldr x2,[x9]
+00d04938  ldr x4,[x10]
+00d0493c  ldp x19,x30,[sp, #0x10]
+00d04940  mov x5,xzr
+00d04944  mov x6,xzr
+00d04948  ldp x21,x20,[sp], #0x20
+00d0494c  b 0x00bd4614
+00d04950  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d04954_FacebookAndroidTurnBasedAndGiftsExample__SendItem.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$SendItem @ 00d04954
+
+--- Calls OUT ---
+  -> SPFacebook$$SendGift @ 00bd4400
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d04954  stp x21,x20,[sp, #-0x20]!
+00d04958  stp x19,x30,[sp, #0x10]
+00d0495c  adrp x20,0x3571000
+00d04960  adrp x21,0x3319000
+00d04964  ldrb w8,[x20, #0xa7c]
+00d04968  ldr x21,[x21, #0xed0]
+00d0496c  mov x19,x0
+00d04970  tbnz w8,#0x0,0x00d049ac
+00d04974  adrp x0,0x3319000
+00d04978  ldr x0,[x0, #0xed0]
+00d0497c  bl 0x00b0789c
+00d04980  adrp x0,0x3352000
+00d04984  ldr x0,[x0, #0x150]
+00d04988  bl 0x00b0789c
+00d0498c  adrp x0,0x3361000
+00d04990  ldr x0,[x0, #0x768]
+00d04994  bl 0x00b0789c
+00d04998  adrp x0,0x332c000
+00d0499c  ldr x0,[x0, #0x2c0]
+00d049a0  bl 0x00b0789c
+00d049a4  mov w8,#0x1
+00d049a8  strb w8,[x20, #0xa7c]
+00d049ac  ldr x0,[x21]
+00d049b0  bl 0x01e09dd4
+00d049b4  cbz x0,0x00d049f4
+00d049b8  adrp x8,0x3352000
+00d049bc  adrp x9,0x3361000
+00d049c0  adrp x10,0x332c000
+00d049c4  ldr x8,[x8, #0x150]
+00d049c8  ldr x9,[x9, #0x768]
+00d049cc  ldr x10,[x10, #0x2c0]
+00d049d0  ldr x3,[x19, #0x50]
+00d049d4  ldr x1,[x8]
+00d049d8  ldr x2,[x9]
+00d049dc  ldr x4,[x10]
+00d049e0  ldp x19,x30,[sp, #0x10]
+00d049e4  mov x5,xzr
+00d049e8  mov x6,xzr
+00d049ec  ldp x21,x20,[sp], #0x20
+00d049f0  b 0x00bd4400
+00d049f4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d049f8_FacebookAndroidTurnBasedAndGiftsExample__SendInv.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$SendInv @ 00d049f8
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SPFacebook$$add_OnAppRequestCompleteAction @ 00bd1dfc
+  -> SPFacebook$$SendInvite @ 00bd4634
+
+--- Calls IN ---
+
+--- Listing ---
+00d049f8  stp x23,x22,[sp, #-0x30]!
+00d049fc  stp x21,x20,[sp, #0x10]
+00d04a00  stp x19,x30,[sp, #0x20]
+00d04a04  adrp x20,0x3571000
+00d04a08  adrp x21,0x334b000
+00d04a0c  adrp x22,0x3353000
+00d04a10  adrp x23,0x3319000
+00d04a14  ldrb w8,[x20, #0xa7d]
+00d04a18  ldr x21,[x21, #0xe80]
+00d04a1c  ldr x22,[x22, #0xba8]
+00d04a20  ldr x23,[x23, #0xed0]
+00d04a24  mov x19,x0
+00d04a28  tbnz w8,#0x0,0x00d04a88
+00d04a2c  adrp x0,0x337f000
+00d04a30  ldr x0,[x0, #0x4c0]
+00d04a34  bl 0x00b0789c
+00d04a38  adrp x0,0x330b000
+00d04a3c  ldr x0,[x0, #0x390]
+00d04a40  bl 0x00b0789c
+00d04a44  adrp x0,0x334f000
+00d04a48  ldr x0,[x0, #0xbc0]
+00d04a4c  bl 0x00b0789c
+00d04a50  adrp x0,0x3319000
+00d04a54  ldr x0,[x0, #0xed0]
+00d04a58  bl 0x00b0789c
+00d04a5c  adrp x0,0x3353000
+00d04a60  ldr x0,[x0, #0xba8]
+00d04a64  bl 0x00b0789c
+00d04a68  adrp x0,0x334b000
+00d04a6c  ldr x0,[x0, #0xe80]
+00d04a70  bl 0x00b0789c
+00d04a74  adrp x0,0x332c000
+00d04a78  ldr x0,[x0, #0x2c0]
+00d04a7c  bl 0x00b0789c
+00d04a80  mov w8,#0x1
+00d04a84  strb w8,[x20, #0xa7d]
+00d04a88  ldr x0,[x23]
+00d04a8c  ldr x20,[x21]
+00d04a90  ldr x21,[x22]
+00d04a94  bl 0x01e09dd4
+00d04a98  cbz x0,0x00d04b1c
+00d04a9c  adrp x8,0x332c000
+00d04aa0  ldr x8,[x8, #0x2c0]
+00d04aa4  adrp x22,0x337f000
+00d04aa8  mov x1,x20
+00d04aac  mov x2,x21
+00d04ab0  ldr x3,[x8]
+00d04ab4  ldr x22,[x22, #0x4c0]
+00d04ab8  mov x4,xzr
+00d04abc  mov x5,xzr
+00d04ac0  bl 0x00bd4634
+00d04ac4  ldr x0,[x22]
+00d04ac8  bl 0x00b079a0
+00d04acc  cbz x0,0x00d04b1c
+00d04ad0  adrp x8,0x330b000
+00d04ad4  ldr x8,[x8, #0x390]
+00d04ad8  adrp x21,0x334f000
+00d04adc  mov x1,x19
+00d04ae0  mov x3,xzr
+00d04ae4  ldr x2,[x8]
+00d04ae8  ldr x21,[x21, #0xbc0]
+00d04aec  mov x20,x0
+00d04af0  bl 0x01909b80
+00d04af4  ldr x0,[x21]
+00d04af8  ldr w8,[x0, #0xe0]
+00d04afc  cbnz w8,0x00d04b04
+00d04b00  bl 0x00b0798c
+00d04b04  mov x0,x20
+00d04b08  ldp x19,x30,[sp, #0x20]
+00d04b0c  ldp x21,x20,[sp, #0x10]
+00d04b10  mov x1,xzr
+00d04b14  ldp x23,x22,[sp], #0x30
+00d04b18  b 0x00bd1dfc
+00d04b1c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d04b20_FacebookAndroidTurnBasedAndGiftsExample__SendInvToSpecifayedFirend.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$SendInvToSpecifayedFirend @ 00d04b20
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> SPFacebook$$add_OnAppRequestCompleteAction @ 00bd1dfc
+  -> SPFacebook$$SendInvite @ 00bd4634
+
+--- Calls IN ---
+
+--- Listing ---
+00d04b20  stp x27,x26,[sp, #-0x50]!
+00d04b24  stp x25,x24,[sp, #0x10]
+00d04b28  stp x23,x22,[sp, #0x20]
+00d04b2c  stp x21,x20,[sp, #0x30]
+00d04b30  stp x19,x30,[sp, #0x40]
+00d04b34  adrp x20,0x3571000
+00d04b38  adrp x21,0x3323000
+00d04b3c  adrp x22,0x334b000
+00d04b40  adrp x25,0x3353000
+00d04b44  adrp x26,0x337e000
+00d04b48  adrp x27,0x3319000
+00d04b4c  adrp x23,0x3308000
+00d04b50  ldr x21,[x21, #0x268]
+00d04b54  ldrb w8,[x20, #0xa7e]
+00d04b58  ldr x22,[x22, #0xe80]
+00d04b5c  ldr x25,[x25, #0xba8]
+00d04b60  ldr x26,[x26, #0xb70]
+00d04b64  ldr x27,[x27, #0xed0]
+00d04b68  ldr x23,[x23, #0x9a8]
+00d04b6c  mov x19,x0
+00d04b70  tbnz w8,#0x0,0x00d04be8
+00d04b74  adrp x0,0x337f000
+00d04b78  ldr x0,[x0, #0x4c0]
+00d04b7c  bl 0x00b0789c
+00d04b80  adrp x0,0x330b000
+00d04b84  ldr x0,[x0, #0x390]
+00d04b88  bl 0x00b0789c
+00d04b8c  adrp x0,0x334f000
+00d04b90  ldr x0,[x0, #0xbc0]
+00d04b94  bl 0x00b0789c
+00d04b98  adrp x0,0x3319000
+00d04b9c  ldr x0,[x0, #0xed0]
+00d04ba0  bl 0x00b0789c
+00d04ba4  adrp x0,0x3308000
+00d04ba8  ldr x0,[x0, #0x9a8]
+00d04bac  bl 0x00b0789c
+00d04bb0  adrp x0,0x3323000
+00d04bb4  ldr x0,[x0, #0x268]
+00d04bb8  bl 0x00b0789c
+00d04bbc  adrp x0,0x3353000
+00d04bc0  ldr x0,[x0, #0xba8]
+00d04bc4  bl 0x00b0789c
+00d04bc8  adrp x0,0x337e000
+00d04bcc  ldr x0,[x0, #0xb70]
+00d04bd0  bl 0x00b0789c
+00d04bd4  adrp x0,0x334b000
+00d04bd8  ldr x0,[x0, #0xe80]
+00d04bdc  bl 0x00b0789c
+00d04be0  mov w8,#0x1
+00d04be4  strb w8,[x20, #0xa7e]
+00d04be8  ldr x0,[x27]
+00d04bec  ldr x24,[x21]
+00d04bf0  ldr x20,[x22]
+00d04bf4  ldr x21,[x25]
+00d04bf8  ldr x22,[x26]
+00d04bfc  bl 0x01e09dd4
+00d04c00  ldr x8,[x23]
+00d04c04  mov x23,x0
+00d04c08  mov w1,#0x1
+00d04c0c  mov x0,x8
+00d04c10  bl 0x00b078f8
+00d04c14  cbz x0,0x00d04cd4
+00d04c18  mov x25,x0
+00d04c1c  cbz x24,0x00d04c34
+00d04c20  ldr x8,[x25]
+00d04c24  mov x0,x24
+00d04c28  ldr x1,[x8, #0x40]
+00d04c2c  bl 0x00b07990
+00d04c30  cbz x0,0x00d04cdc
+00d04c34  ldr w8,[x25, #0x18]
+00d04c38  cbz w8,0x00d04cd8
+00d04c3c  mov x0,x25
+00d04c40  str x24,[x0, #0x20]!
+00d04c44  mov x1,x24
+00d04c48  bl 0x00b07850
+00d04c4c  cbz x23,0x00d04cd4
+00d04c50  adrp x24,0x337f000
+00d04c54  ldr x24,[x24, #0x4c0]
+00d04c58  mov x0,x23
+00d04c5c  mov x1,x20
+00d04c60  mov x2,x21
+00d04c64  mov x3,x22
+00d04c68  mov x4,x25
+00d04c6c  mov x5,xzr
+00d04c70  bl 0x00bd4634
+00d04c74  ldr x0,[x24]
+00d04c78  bl 0x00b079a0
+00d04c7c  cbz x0,0x00d04cd4
+00d04c80  adrp x8,0x330b000
+00d04c84  ldr x8,[x8, #0x390]
+00d04c88  adrp x21,0x334f000
+00d04c8c  mov x1,x19
+00d04c90  mov x3,xzr
+00d04c94  ldr x2,[x8]
+00d04c98  ldr x21,[x21, #0xbc0]
+00d04c9c  mov x20,x0
+00d04ca0  bl 0x01909b80
+00d04ca4  ldr x0,[x21]
+00d04ca8  ldr w8,[x0, #0xe0]
+00d04cac  cbnz w8,0x00d04cb4
+00d04cb0  bl 0x00b0798c
+00d04cb4  mov x0,x20
+00d04cb8  ldp x19,x30,[sp, #0x40]
+00d04cbc  ldp x21,x20,[sp, #0x30]
+00d04cc0  ldp x23,x22,[sp, #0x20]
+00d04cc4  ldp x25,x24,[sp, #0x10]
+00d04cc8  mov x1,xzr
+00d04ccc  ldp x27,x26,[sp], #0x50
+00d04cd0  b 0x00bd1dfc
+00d04cd4  bl 0x00b079b0
+00d04cd8  bl 0x00b079b8
+00d04cdc  bl 0x00b079d4
+00d04ce0  mov x1,xzr
+00d04ce4  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00d04ce8_FacebookAndroidTurnBasedAndGiftsExample__SendToSpecifiedFriend.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$SendToSpecifiedFriend @ 00d04ce8
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SPFacebook$$SendGift @ 00bd4400
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> SPFacebook$$add_OnAppRequestCompleteAction @ 00bd1dfc
+
+--- Calls IN ---
+
+--- Listing ---
+00d04ce8  str x24,[sp, #-0x40]!
+00d04cec  stp x23,x22,[sp, #0x10]
+00d04cf0  stp x21,x20,[sp, #0x20]
+00d04cf4  stp x19,x30,[sp, #0x30]
+00d04cf8  adrp x20,0x3571000
+00d04cfc  adrp x22,0x3323000
+00d04d00  adrp x24,0x3319000
+00d04d04  adrp x21,0x3308000
+00d04d08  ldrb w8,[x20, #0xa7f]
+00d04d0c  ldr x22,[x22, #0x268]
+00d04d10  ldr x24,[x24, #0xed0]
+00d04d14  ldr x21,[x21, #0x9a8]
+00d04d18  mov x19,x0
+00d04d1c  tbnz w8,#0x0,0x00d04d94
+00d04d20  adrp x0,0x337f000
+00d04d24  ldr x0,[x0, #0x4c0]
+00d04d28  bl 0x00b0789c
+00d04d2c  adrp x0,0x330b000
+00d04d30  ldr x0,[x0, #0x390]
+00d04d34  bl 0x00b0789c
+00d04d38  adrp x0,0x334f000
+00d04d3c  ldr x0,[x0, #0xbc0]
+00d04d40  bl 0x00b0789c
+00d04d44  adrp x0,0x3319000
+00d04d48  ldr x0,[x0, #0xed0]
+00d04d4c  bl 0x00b0789c
+00d04d50  adrp x0,0x3308000
+00d04d54  ldr x0,[x0, #0x9a8]
+00d04d58  bl 0x00b0789c
+00d04d5c  adrp x0,0x334c000
+00d04d60  ldr x0,[x0, #0x588]
+00d04d64  bl 0x00b0789c
+00d04d68  adrp x0,0x3352000
+00d04d6c  ldr x0,[x0, #0x150]
+00d04d70  bl 0x00b0789c
+00d04d74  adrp x0,0x3323000
+00d04d78  ldr x0,[x0, #0x268]
+00d04d7c  bl 0x00b0789c
+00d04d80  adrp x0,0x3361000
+00d04d84  ldr x0,[x0, #0x768]
+00d04d88  bl 0x00b0789c
+00d04d8c  mov w8,#0x1
+00d04d90  strb w8,[x20, #0xa7f]
+00d04d94  ldr x0,[x24]
+00d04d98  ldr x23,[x22]
+00d04d9c  bl 0x01e09dd4
+00d04da0  ldr x8,[x21]
+00d04da4  ldr x20,[x19, #0x50]
+00d04da8  mov x21,x0
+00d04dac  mov w1,#0x1
+00d04db0  mov x0,x8
+00d04db4  bl 0x00b078f8
+00d04db8  cbz x0,0x00d04e90
+00d04dbc  mov x22,x0
+00d04dc0  cbz x23,0x00d04dd8
+00d04dc4  ldr x8,[x22]
+00d04dc8  mov x0,x23
+00d04dcc  ldr x1,[x8, #0x40]
+00d04dd0  bl 0x00b07990
+00d04dd4  cbz x0,0x00d04e98
+00d04dd8  ldr w8,[x22, #0x18]
+00d04ddc  cbz w8,0x00d04e94
+00d04de0  mov x0,x22
+00d04de4  str x23,[x0, #0x20]!
+00d04de8  mov x1,x23
+00d04dec  bl 0x00b07850
+00d04df0  cbz x21,0x00d04e90
+00d04df4  adrp x8,0x3352000
+00d04df8  adrp x9,0x3361000
+00d04dfc  adrp x10,0x334c000
+00d04e00  ldr x8,[x8, #0x150]
+00d04e04  ldr x9,[x9, #0x768]
+00d04e08  ldr x10,[x10, #0x588]
+00d04e0c  adrp x23,0x337f000
+00d04e10  ldr x1,[x8]
+00d04e14  ldr x2,[x9]
+00d04e18  ldr x4,[x10]
+00d04e1c  ldr x23,[x23, #0x4c0]
+00d04e20  mov x0,x21
+00d04e24  mov x3,x20
+00d04e28  mov x5,x22
+00d04e2c  mov x6,xzr
+00d04e30  bl 0x00bd4400
+00d04e34  ldr x0,[x23]
+00d04e38  bl 0x00b079a0
+00d04e3c  cbz x0,0x00d04e90
+00d04e40  adrp x8,0x330b000
+00d04e44  ldr x8,[x8, #0x390]
+00d04e48  adrp x21,0x334f000
+00d04e4c  mov x1,x19
+00d04e50  mov x3,xzr
+00d04e54  ldr x2,[x8]
+00d04e58  ldr x21,[x21, #0xbc0]
+00d04e5c  mov x20,x0
+00d04e60  bl 0x01909b80
+00d04e64  ldr x0,[x21]
+00d04e68  ldr w8,[x0, #0xe0]
+00d04e6c  cbnz w8,0x00d04e74
+00d04e70  bl 0x00b0798c
+00d04e74  mov x0,x20
+00d04e78  ldp x19,x30,[sp, #0x30]
+00d04e7c  ldp x21,x20,[sp, #0x20]
+00d04e80  ldp x23,x22,[sp, #0x10]
+00d04e84  mov x1,xzr
+00d04e88  ldr x24,[sp], #0x40
+00d04e8c  b 0x00bd1dfc
+00d04e90  bl 0x00b079b0
+00d04e94  bl 0x00b079b8
+00d04e98  bl 0x00b079d4
+00d04e9c  mov x1,xzr
+00d04ea0  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00d04ea4_FacebookAndroidTurnBasedAndGiftsExample__OnAppRequestCompleteAction.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$OnAppRequestCompleteAction @ 00d04ea4
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Collections.Generic.List<object>$$GetEnumerator @ 01c01338
+  -> System.Collections.Generic.List.Enumerator<object>$$Dispose @ 01a070e8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List.Enumerator<object>$$MoveNext @ 01a070ec
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> SPFacebook$$remove_OnAppRequestCompleteAction @ 00bd1ef0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00d04ea4  sub sp,sp,#0x60
+00d04ea8  stp x25,x24,[sp, #0x20]
+00d04eac  stp x23,x22,[sp, #0x30]
+00d04eb0  stp x21,x20,[sp, #0x40]
+00d04eb4  stp x19,x30,[sp, #0x50]
+00d04eb8  adrp x21,0x3571000
+00d04ebc  ldrb w8,[x21, #0xa80]
+00d04ec0  mov x20,x1
+00d04ec4  mov x19,x0
+00d04ec8  tbnz w8,#0x0,0x00d04f64
+00d04ecc  adrp x0,0x337f000
+00d04ed0  ldr x0,[x0, #0x4c0]
+00d04ed4  bl 0x00b0789c
+00d04ed8  adrp x0,0x336b000
+00d04edc  ldr x0,[x0, #0x7d0]
+00d04ee0  bl 0x00b0789c
+00d04ee4  adrp x0,0x3329000
+00d04ee8  ldr x0,[x0, #0xd70]
+00d04eec  bl 0x00b0789c
+00d04ef0  adrp x0,0x335f000
+00d04ef4  ldr x0,[x0, #0xff0]
+00d04ef8  bl 0x00b0789c
+00d04efc  adrp x0,0x3329000
+00d04f00  ldr x0,[x0, #0x738]
+00d04f04  bl 0x00b0789c
+00d04f08  adrp x0,0x330b000
+00d04f0c  ldr x0,[x0, #0x390]
+00d04f10  bl 0x00b0789c
+00d04f14  adrp x0,0x3322000
+00d04f18  ldr x0,[x0, #0xa78]
+00d04f1c  bl 0x00b0789c
+00d04f20  adrp x0,0x334f000
+00d04f24  ldr x0,[x0, #0xbc0]
+00d04f28  bl 0x00b0789c
+00d04f2c  adrp x0,0x3326000
+00d04f30  ldr x0,[x0, #0x268]
+00d04f34  bl 0x00b0789c
+00d04f38  adrp x0,0x3365000
+00d04f3c  ldr x0,[x0, #0xee0]
+00d04f40  bl 0x00b0789c
+00d04f44  adrp x0,0x3326000
+00d04f48  ldr x0,[x0, #0xc20]
+00d04f4c  bl 0x00b0789c
+00d04f50  adrp x0,0x3327000
+00d04f54  ldr x0,[x0, #0x940]
+00d04f58  bl 0x00b0789c
+00d04f5c  mov w8,#0x1
+00d04f60  strb w8,[x21, #0xa80]
+00d04f64  stp xzr,xzr,[sp, #0x10]
+00d04f68  str xzr,[sp, #0x8]
+00d04f6c  cbz x20,0x00d050ec
+00d04f70  adrp x23,0x336b000
+00d04f74  ldr x23,[x23, #0x7d0]
+00d04f78  ldrb w21,[x20, #0x20]
+00d04f7c  ldr x0,[x23]
+00d04f80  ldr w8,[x0, #0xe0]
+00d04f84  cbz w8,0x00d05064
+00d04f88  cbz w21,0x00d0506c
+00d04f8c  adrp x8,0x3326000
+00d04f90  ldr x8,[x8, #0xc20]
+00d04f94  adrp x21,0x3327000
+00d04f98  mov x1,xzr
+00d04f9c  ldr x0,[x8]
+00d04fa0  ldr x21,[x21, #0x940]
+00d04fa4  bl 0x024c0104
+00d04fa8  ldr x1,[x20, #0x28]
+00d04fac  ldr x0,[x21]
+00d04fb0  mov x2,xzr
+00d04fb4  bl 0x01fd2850
+00d04fb8  mov x1,xzr
+00d04fbc  bl 0x024c0104
+00d04fc0  ldr x0,[x20, #0x30]
+00d04fc4  cbz x0,0x00d050ec
+00d04fc8  adrp x8,0x3322000
+00d04fcc  ldr x8,[x8, #0xa78]
+00d04fd0  adrp x22,0x335f000
+00d04fd4  adrp x24,0x3365000
+00d04fd8  adrp x25,0x3329000
+00d04fdc  ldr x1,[x8]
+00d04fe0  ldr x22,[x22, #0xff0]
+00d04fe4  ldr x24,[x24, #0xee0]
+00d04fe8  ldr x25,[x25, #0xd70]
+00d04fec  add x8,sp,#0x8
+00d04ff0  bl 0x01c01338
+00d04ff4  ldr x1,[x22]
+00d04ff8  add x0,sp,#0x8
+    ; [PRE] try { // try from 00d04ff8 to 00d04fff has its CatchHandler @ 00d050f0
+00d04ffc  bl 0x01a070ec
+    ; [POST] } // end try from 00d04ff8 to 00d04fff
+00d05000  tbz w0,#0x0,0x00d05028
+00d05004  ldr x0,[x23]
+00d05008  ldr x21,[sp, #0x18]
+00d0500c  ldr w8,[x0, #0xe0]
+00d05010  cbnz w8,0x00d05018
+00d05014  bl 0x00b0798c
+    ; [PRE] try { // try from 00d05014 to 00d05023 has its CatchHandler @ 00d050f4
+00d05018  mov x0,x21
+00d0501c  mov x1,xzr
+00d05020  bl 0x024c0104
+    ; [POST] } // end try from 00d05014 to 00d05023
+00d05024  b 0x00d04ff4
+00d05028  ldr x1,[x25]
+00d0502c  add x0,sp,#0x8
+00d05030  bl 0x01a070e8
+00d05034  ldr x1,[x20, #0x10]
+00d05038  ldr x0,[x24]
+00d0503c  mov x2,xzr
+00d05040  bl 0x01fd2850
+00d05044  ldr x8,[x23]
+00d05048  mov x20,x0
+00d0504c  ldr w9,[x8, #0xe0]
+00d05050  cbnz w9,0x00d0505c
+00d05054  mov x0,x8
+00d05058  bl 0x00b0798c
+00d0505c  mov x0,x20
+00d05060  b 0x00d05078
+00d05064  bl 0x00b0798c
+00d05068  cbnz w21,0x00d04f8c
+00d0506c  adrp x8,0x3326000
+00d05070  ldr x8,[x8, #0x268]
+00d05074  ldr x0,[x8]
+00d05078  mov x1,xzr
+00d0507c  bl 0x024c0104
+00d05080  adrp x8,0x337f000
+00d05084  ldr x8,[x8, #0x4c0]
+00d05088  ldr x0,[x8]
+00d0508c  bl 0x00b079a0
+00d05090  cbz x0,0x00d050ec
+00d05094  adrp x8,0x330b000
+00d05098  ldr x8,[x8, #0x390]
+00d0509c  adrp x21,0x334f000
+00d050a0  mov x1,x19
+00d050a4  mov x3,xzr
+00d050a8  ldr x2,[x8]
+00d050ac  ldr x21,[x21, #0xbc0]
+00d050b0  mov x20,x0
+00d050b4  bl 0x01909b80
+00d050b8  ldr x0,[x21]
+00d050bc  ldr w8,[x0, #0xe0]
+00d050c0  cbnz w8,0x00d050c8
+00d050c4  bl 0x00b0798c
+00d050c8  mov x0,x20
+00d050cc  mov x1,xzr
+00d050d0  bl 0x00bd1ef0
+00d050d4  ldp x19,x30,[sp, #0x50]
+00d050d8  ldp x21,x20,[sp, #0x40]
+00d050dc  ldp x23,x22,[sp, #0x30]
+00d050e0  ldp x25,x24,[sp, #0x20]
+00d050e4  add sp,sp,#0x60
+00d050e8  ret
+00d050ec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d05158_FacebookAndroidTurnBasedAndGiftsExample__Connect.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$Connect @ 00d05158
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> SPFacebook$$Login @ 00bd2ee0
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA_StatusBar$$set_text @ 00cf001c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> FacebookAndroidTurnBasedAndGiftsExample$$LogOut @ 00d052a8
+
+--- Calls IN ---
+
+--- Listing ---
+00d05158  stp x21,x20,[sp, #-0x20]!
+00d0515c  stp x19,x30,[sp, #0x10]
+00d05160  adrp x19,0x3571000
+00d05164  adrp x20,0x334d000
+00d05168  ldrb w8,[x19, #0xa81]
+00d0516c  ldr x20,[x20, #0x5a8]
+00d05170  tbnz w8,#0x0,0x00d051c4
+00d05174  adrp x0,0x334d000
+00d05178  ldr x0,[x0, #0x5a8]
+00d0517c  bl 0x00b0789c
+00d05180  adrp x0,0x3319000
+00d05184  ldr x0,[x0, #0xed0]
+00d05188  bl 0x00b0789c
+00d0518c  adrp x0,0x3308000
+00d05190  ldr x0,[x0, #0x9a8]
+00d05194  bl 0x00b0789c
+00d05198  adrp x0,0x330f000
+00d0519c  ldr x0,[x0, #0x9e0]
+00d051a0  bl 0x00b0789c
+00d051a4  adrp x0,0x336f000
+00d051a8  ldr x0,[x0, #0x1d8]
+00d051ac  bl 0x00b0789c
+00d051b0  adrp x0,0x336b000
+00d051b4  ldr x0,[x0, #0xaf8]
+00d051b8  bl 0x00b0789c
+00d051bc  mov w8,#0x1
+00d051c0  strb w8,[x19, #0xa81]
+00d051c4  ldr x8,[x20]
+00d051c8  ldr x8,[x8, #0xb8]
+00d051cc  ldrb w8,[x8, #0x1]
+00d051d0  cbz w8,0x00d051e4
+00d051d4  bl 0x00d052a8
+00d051d8  adrp x8,0x330f000
+00d051dc  ldr x8,[x8, #0x9e0]
+00d051e0  b 0x00d05280
+00d051e4  adrp x8,0x3319000
+00d051e8  ldr x8,[x8, #0xed0]
+00d051ec  adrp x19,0x3308000
+00d051f0  ldr x0,[x8]
+00d051f4  ldr x19,[x19, #0x9a8]
+00d051f8  bl 0x01e09dd4
+00d051fc  ldr x8,[x19]
+00d05200  mov x19,x0
+00d05204  mov w1,#0x1
+00d05208  mov x0,x8
+00d0520c  bl 0x00b078f8
+00d05210  cbz x0,0x00d05294
+00d05214  adrp x21,0x336f000
+00d05218  ldr x21,[x21, #0x1d8]
+00d0521c  mov x20,x0
+00d05220  ldr x1,[x21]
+00d05224  cbz x1,0x00d0524c
+00d05228  ldr x8,[x20]
+00d0522c  mov x0,x1
+00d05230  ldr x8,[x8, #0x40]
+00d05234  mov x1,x8
+00d05238  bl 0x00b07990
+00d0523c  cbz x0,0x00d0529c
+00d05240  ldr x8,[x21]
+00d05244  mov x1,x8
+00d05248  b 0x00d05250
+00d0524c  mov x8,xzr
+00d05250  ldr w9,[x20, #0x18]
+00d05254  cbz w9,0x00d05298
+00d05258  mov x0,x20
+00d0525c  str x8,[x0, #0x20]!
+00d05260  bl 0x00b07850
+00d05264  cbz x19,0x00d05294
+00d05268  mov x0,x19
+00d0526c  mov x1,x20
+00d05270  mov x2,xzr
+00d05274  bl 0x00bd2ee0
+00d05278  adrp x8,0x336b000
+00d0527c  ldr x8,[x8, #0xaf8]
+00d05280  ldr x0,[x8]
+00d05284  ldp x19,x30,[sp, #0x10]
+00d05288  mov x1,xzr
+00d0528c  ldp x21,x20,[sp], #0x20
+00d05290  b 0x00cf001c
+00d05294  bl 0x00b079b0
+00d05298  bl 0x00b079b8
+00d0529c  bl 0x00b079d4
+00d052a0  mov x1,xzr
+00d052a4  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00d052a8_FacebookAndroidTurnBasedAndGiftsExample__LogOut.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$LogOut @ 00d052a8
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SPFacebook$$Logout @ 00bd30a4
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- FacebookAndroidTurnBasedAndGiftsExample$$Connect @ 00d05158
+
+--- Listing ---
+00d052a8  stp x21,x20,[sp, #-0x20]!
+00d052ac  stp x19,x30,[sp, #0x10]
+00d052b0  adrp x20,0x3571000
+00d052b4  adrp x21,0x334d000
+00d052b8  adrp x19,0x3319000
+00d052bc  ldrb w8,[x20, #0xa86]
+00d052c0  ldr x21,[x21, #0x5a8]
+00d052c4  ldr x19,[x19, #0xed0]
+00d052c8  tbnz w8,#0x0,0x00d052ec
+00d052cc  adrp x0,0x334d000
+00d052d0  ldr x0,[x0, #0x5a8]
+00d052d4  bl 0x00b0789c
+00d052d8  adrp x0,0x3319000
+00d052dc  ldr x0,[x0, #0xed0]
+00d052e0  bl 0x00b0789c
+00d052e4  mov w8,#0x1
+00d052e8  strb w8,[x20, #0xa86]
+00d052ec  ldr x8,[x21]
+00d052f0  ldr x8,[x8, #0xb8]
+00d052f4  strh wzr,[x8]
+00d052f8  ldr x0,[x19]
+00d052fc  bl 0x01e09dd4
+00d05300  cbz x0,0x00d05314
+00d05304  ldp x19,x30,[sp, #0x10]
+00d05308  mov x1,xzr
+00d0530c  ldp x21,x20,[sp], #0x20
+00d05310  b 0x00bd30a4
+00d05314  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d05318_FacebookAndroidTurnBasedAndGiftsExample__LoadUserData.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$LoadUserData @ 00d05318
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA_StatusBar$$set_text @ 00cf001c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SPFacebook$$LoadUserData @ 00bd3194
+  -> SPFacebook$$add_OnUserDataRequestCompleteAction @ 00bd1844
+
+--- Calls IN ---
+  <- FacebookAndroidTurnBasedAndGiftsExample$$OnAuth @ 00d05658
+
+--- Listing ---
+00d05318  str x22,[sp, #-0x30]!
+00d0531c  stp x21,x20,[sp, #0x10]
+00d05320  stp x19,x30,[sp, #0x20]
+00d05324  adrp x20,0x3571000
+00d05328  adrp x21,0x3319000
+00d0532c  ldrb w8,[x20, #0xa82]
+00d05330  ldr x21,[x21, #0x660]
+00d05334  mov x19,x0
+00d05338  tbnz w8,#0x0,0x00d05380
+00d0533c  adrp x0,0x3319000
+00d05340  ldr x0,[x0, #0x660]
+00d05344  bl 0x00b0789c
+00d05348  adrp x0,0x333a000
+00d0534c  ldr x0,[x0, #0x190]
+00d05350  bl 0x00b0789c
+00d05354  adrp x0,0x334f000
+00d05358  ldr x0,[x0, #0xbc0]
+00d0535c  bl 0x00b0789c
+00d05360  adrp x0,0x3319000
+00d05364  ldr x0,[x0, #0xed0]
+00d05368  bl 0x00b0789c
+00d0536c  adrp x0,0x335e000
+00d05370  ldr x0,[x0, #0xbc0]
+00d05374  bl 0x00b0789c
+00d05378  mov w8,#0x1
+00d0537c  strb w8,[x20, #0xa82]
+00d05380  ldr x0,[x21]
+00d05384  bl 0x00b079a0
+00d05388  cbz x0,0x00d05408
+00d0538c  adrp x8,0x333a000
+00d05390  ldr x8,[x8, #0x190]
+00d05394  adrp x22,0x334f000
+00d05398  adrp x21,0x3319000
+00d0539c  mov x1,x19
+00d053a0  ldr x2,[x8]
+00d053a4  ldr x22,[x22, #0xbc0]
+00d053a8  ldr x21,[x21, #0xed0]
+00d053ac  mov x3,xzr
+00d053b0  mov x20,x0
+00d053b4  bl 0x01909b80
+00d053b8  ldr x0,[x22]
+00d053bc  ldr w8,[x0, #0xe0]
+00d053c0  cbnz w8,0x00d053c8
+00d053c4  bl 0x00b0798c
+00d053c8  mov x0,x20
+00d053cc  mov x1,xzr
+00d053d0  bl 0x00bd1844
+00d053d4  ldr x0,[x21]
+00d053d8  bl 0x01e09dd4
+00d053dc  cbz x0,0x00d05408
+00d053e0  adrp x19,0x335e000
+00d053e4  ldr x19,[x19, #0xbc0]
+00d053e8  mov x1,xzr
+00d053ec  bl 0x00bd3194
+00d053f0  ldr x0,[x19]
+00d053f4  ldp x19,x30,[sp, #0x20]
+00d053f8  ldp x21,x20,[sp, #0x10]
+00d053fc  mov x1,xzr
+00d05400  ldr x22,[sp], #0x30
+00d05404  b 0x00cf001c
+00d05408  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d0540c_FacebookAndroidTurnBasedAndGiftsExample__OnFocusChanged.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$OnFocusChanged @ 00d0540c
+
+--- Calls OUT ---
+  -> UnityEngine.Time$$set_timeScale @ 024dc320
+
+--- Calls IN ---
+
+--- Listing ---
+00d0540c  tst w1,#0x1
+00d05410  fmov s0,wzr
+00d05414  fmov s1,0x3f800000
+00d05418  fcsel s0,s1,s0,ne
+00d0541c  mov x0,xzr
+00d05420  b 0x024dc320
+
+
+================================================================================
+### FILE: 00d05424_FacebookAndroidTurnBasedAndGiftsExample__OnUserDataLoaded.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$OnUserDataLoaded @ 00d05424
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA_StatusBar$$set_text @ 00cf001c
+  -> FB_UserInfo$$LoadProfileImage @ 00bde360
+  -> SPFacebook$$remove_OnUserDataRequestCompleteAction @ 00bd1938
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00d05424  str x22,[sp, #-0x30]!
+00d05428  stp x21,x20,[sp, #0x10]
+00d0542c  stp x19,x30,[sp, #0x20]
+00d05430  adrp x21,0x3571000
+00d05434  adrp x22,0x3319000
+00d05438  ldrb w8,[x21, #0xa83]
+00d0543c  ldr x22,[x22, #0x660]
+00d05440  mov x19,x1
+00d05444  mov x20,x0
+00d05448  tbnz w8,#0x0,0x00d054b4
+00d0544c  adrp x0,0x3319000
+00d05450  ldr x0,[x0, #0x660]
+00d05454  bl 0x00b0789c
+00d05458  adrp x0,0x336b000
+00d0545c  ldr x0,[x0, #0x7d0]
+00d05460  bl 0x00b0789c
+00d05464  adrp x0,0x333a000
+00d05468  ldr x0,[x0, #0x190]
+00d0546c  bl 0x00b0789c
+00d05470  adrp x0,0x334d000
+00d05474  ldr x0,[x0, #0x5a8]
+00d05478  bl 0x00b0789c
+00d0547c  adrp x0,0x334f000
+00d05480  ldr x0,[x0, #0xbc0]
+00d05484  bl 0x00b0789c
+00d05488  adrp x0,0x3319000
+00d0548c  ldr x0,[x0, #0xed0]
+00d05490  bl 0x00b0789c
+00d05494  adrp x0,0x3332000
+00d05498  ldr x0,[x0, #0x108]
+00d0549c  bl 0x00b0789c
+00d054a0  adrp x0,0x331a000
+00d054a4  ldr x0,[x0, #0xaa0]
+00d054a8  bl 0x00b0789c
+00d054ac  mov w8,#0x1
+00d054b0  strb w8,[x21, #0xa83]
+00d054b4  ldr x0,[x22]
+00d054b8  bl 0x00b079a0
+00d054bc  cbz x0,0x00d055b0
+00d054c0  adrp x8,0x333a000
+00d054c4  ldr x8,[x8, #0x190]
+00d054c8  adrp x22,0x334f000
+00d054cc  mov x1,x20
+00d054d0  mov x3,xzr
+00d054d4  ldr x2,[x8]
+00d054d8  ldr x22,[x22, #0xbc0]
+00d054dc  mov x21,x0
+00d054e0  bl 0x01909b80
+00d054e4  ldr x0,[x22]
+00d054e8  ldr w8,[x0, #0xe0]
+00d054ec  cbnz w8,0x00d054f4
+00d054f0  bl 0x00b0798c
+00d054f4  mov x0,x21
+00d054f8  mov x1,xzr
+00d054fc  bl 0x00bd1938
+00d05500  cbz x19,0x00d055b0
+00d05504  ldrb w8,[x19, #0x20]
+00d05508  cbz w8,0x00d0556c
+00d0550c  adrp x8,0x331a000
+00d05510  ldr x8,[x8, #0xaa0]
+00d05514  adrp x19,0x334d000
+00d05518  adrp x20,0x3319000
+00d0551c  mov x1,xzr
+00d05520  ldr x0,[x8]
+00d05524  ldr x19,[x19, #0x5a8]
+00d05528  ldr x20,[x20, #0xed0]
+00d0552c  bl 0x00cf001c
+00d05530  ldr x8,[x19]
+00d05534  mov w9,#0x1
+00d05538  ldr x8,[x8, #0xb8]
+00d0553c  strb w9,[x8]
+00d05540  ldr x0,[x20]
+00d05544  bl 0x01e09dd4
+00d05548  cbz x0,0x00d055b0
+00d0554c  ldr x0,[x0, #0x18]
+00d05550  cbz x0,0x00d055b0
+00d05554  ldp x19,x30,[sp, #0x20]
+00d05558  ldp x21,x20,[sp, #0x10]
+00d0555c  mov w1,#0x3
+00d05560  mov x2,xzr
+00d05564  ldr x22,[sp], #0x30
+00d05568  b 0x00bde360
+00d0556c  adrp x19,0x3332000
+00d05570  ldr x19,[x19, #0x108]
+00d05574  adrp x20,0x336b000
+00d05578  mov x1,xzr
+00d0557c  ldr x0,[x19]
+00d05580  ldr x20,[x20, #0x7d0]
+00d05584  bl 0x00cf001c
+00d05588  ldr x0,[x20]
+00d0558c  ldr w8,[x0, #0xe0]
+00d05590  cbnz w8,0x00d05598
+00d05594  bl 0x00b0798c
+00d05598  ldr x0,[x19]
+00d0559c  ldp x19,x30,[sp, #0x20]
+00d055a0  ldp x21,x20,[sp, #0x10]
+00d055a4  mov x1,xzr
+00d055a8  ldr x22,[sp], #0x30
+00d055ac  b 0x024c0104
+00d055b0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d055b4_FacebookAndroidTurnBasedAndGiftsExample__OnInit.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$OnInit @ 00d055b4
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> SPFacebook$$get_IsLoggedIn @ 00bd33a4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA_StatusBar$$set_text @ 00cf001c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d055b4  str x20,[sp, #-0x20]!
+00d055b8  stp x19,x30,[sp, #0x10]
+00d055bc  adrp x19,0x3571000
+00d055c0  adrp x20,0x3319000
+00d055c4  ldrb w8,[x19, #0xa84]
+00d055c8  ldr x20,[x20, #0xed0]
+00d055cc  tbnz w8,#0x0,0x00d055fc
+00d055d0  adrp x0,0x334d000
+00d055d4  ldr x0,[x0, #0x5a8]
+00d055d8  bl 0x00b0789c
+00d055dc  adrp x0,0x3319000
+00d055e0  ldr x0,[x0, #0xed0]
+00d055e4  bl 0x00b0789c
+00d055e8  adrp x0,0x330d000
+00d055ec  ldr x0,[x0, #0x918]
+00d055f0  bl 0x00b0789c
+00d055f4  mov w8,#0x1
+00d055f8  strb w8,[x19, #0xa84]
+00d055fc  ldr x0,[x20]
+00d05600  bl 0x01e09dd4
+00d05604  cbz x0,0x00d05654
+00d05608  mov x1,xzr
+00d0560c  bl 0x00bd33a4
+00d05610  tbz w0,#0x0,0x00d05638
+00d05614  adrp x8,0x334d000
+00d05618  ldr x8,[x8, #0x5a8]
+00d0561c  mov w9,#0x1
+00d05620  ldr x8,[x8]
+00d05624  ldr x8,[x8, #0xb8]
+00d05628  strb w9,[x8, #0x1]
+00d0562c  ldp x19,x30,[sp, #0x10]
+00d05630  ldr x20,[sp], #0x20
+00d05634  ret
+00d05638  adrp x8,0x330d000
+00d0563c  ldr x8,[x8, #0x918]
+00d05640  ldp x19,x30,[sp, #0x10]
+00d05644  mov x1,xzr
+00d05648  ldr x0,[x8]
+00d0564c  ldr x20,[sp], #0x20
+00d05650  b 0x00cf001c
+00d05654  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d05658_FacebookAndroidTurnBasedAndGiftsExample__OnAuth.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$OnAuth @ 00d05658
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> FacebookAndroidTurnBasedAndGiftsExample$$LoadUserData @ 00d05318
+  -> SPFacebook$$get_IsLoggedIn @ 00bd33a4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA_StatusBar$$set_text @ 00cf001c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00d05658  stp x21,x20,[sp, #-0x20]!
+00d0565c  stp x19,x30,[sp, #0x10]
+00d05660  adrp x20,0x3571000
+00d05664  adrp x21,0x3319000
+00d05668  ldrb w8,[x20, #0xa85]
+00d0566c  ldr x21,[x21, #0xed0]
+00d05670  mov x19,x0
+00d05674  tbnz w8,#0x0,0x00d056bc
+00d05678  adrp x0,0x336b000
+00d0567c  ldr x0,[x0, #0x7d0]
+00d05680  bl 0x00b0789c
+00d05684  adrp x0,0x334d000
+00d05688  ldr x0,[x0, #0x5a8]
+00d0568c  bl 0x00b0789c
+00d05690  adrp x0,0x3319000
+00d05694  ldr x0,[x0, #0xed0]
+00d05698  bl 0x00b0789c
+00d0569c  adrp x0,0x333a000
+00d056a0  ldr x0,[x0, #0x370]
+00d056a4  bl 0x00b0789c
+00d056a8  adrp x0,0x3313000
+00d056ac  ldr x0,[x0, #0xf8]
+00d056b0  bl 0x00b0789c
+00d056b4  mov w8,#0x1
+00d056b8  strb w8,[x20, #0xa85]
+00d056bc  ldr x0,[x21]
+00d056c0  bl 0x01e09dd4
+00d056c4  cbz x0,0x00d05744
+00d056c8  mov x1,xzr
+00d056cc  bl 0x00bd33a4
+00d056d0  tbz w0,#0x0,0x00d05710
+00d056d4  adrp x8,0x334d000
+00d056d8  ldr x8,[x8, #0x5a8]
+00d056dc  adrp x20,0x333a000
+00d056e0  mov w9,#0x1
+00d056e4  mov x0,x19
+00d056e8  ldr x8,[x8]
+00d056ec  ldr x8,[x8, #0xb8]
+00d056f0  ldr x20,[x20, #0x370]
+00d056f4  strb w9,[x8, #0x1]
+00d056f8  bl 0x00d05318
+00d056fc  ldr x0,[x20]
+00d05700  ldp x19,x30,[sp, #0x10]
+00d05704  mov x1,xzr
+00d05708  ldp x21,x20,[sp], #0x20
+00d0570c  b 0x00cf001c
+00d05710  adrp x8,0x336b000
+00d05714  ldr x8,[x8, #0x7d0]
+00d05718  adrp x19,0x3313000
+00d0571c  ldr x0,[x8]
+00d05720  ldr w8,[x0, #0xe0]
+00d05724  ldr x19,[x19, #0xf8]
+00d05728  cbnz w8,0x00d05730
+00d0572c  bl 0x00b0798c
+00d05730  ldr x0,[x19]
+00d05734  ldp x19,x30,[sp, #0x10]
+00d05738  mov x1,xzr
+00d0573c  ldp x21,x20,[sp], #0x20
+00d05740  b 0x024c0104
+00d05744  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d05748_FacebookAndroidTurnBasedAndGiftsExample__.ctor.txt
+================================================================================
+Function: FacebookAndroidTurnBasedAndGiftsExample$$.ctor @ 00d05748
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d05748  stp x21,x20,[sp, #-0x20]!
+00d0574c  stp x19,x30,[sp, #0x10]
+00d05750  adrp x20,0x3571000
+00d05754  adrp x21,0x3340000
+00d05758  ldrb w8,[x20, #0xa87]
+00d0575c  ldr x21,[x21, #0x58]
+00d05760  mov x19,x0
+00d05764  tbnz w8,#0x0,0x00d0577c
+00d05768  adrp x0,0x3340000
+00d0576c  ldr x0,[x0, #0x58]
+00d05770  bl 0x00b0789c
+00d05774  mov w8,#0x1
+00d05778  strb w8,[x20, #0xa87]
+00d0577c  ldr x1,[x21]
+00d05780  mov x0,x19
+00d05784  str x1,[x0, #0x50]!
+00d05788  bl 0x00b07850
+00d0578c  mov x0,x19
+00d05790  ldp x19,x30,[sp, #0x10]
+00d05794  mov x1,xzr
+00d05798  ldp x21,x20,[sp], #0x20
+00d0579c  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00df020c_FashionData__get_hero.txt
+================================================================================
+Function: FashionData$$get_hero @ 00df020c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df020c  ldr w0,[x0, #0x74]
+00df0210  ret
+
+
+================================================================================
+### FILE: 00df0214_FashionData__get_open.txt
+================================================================================
+Function: FashionData$$get_open @ 00df0214
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0214  ldr w0,[x0, #0x78]
+00df0218  ret
+
+
+================================================================================
+### FILE: 00df021c_FashionData__get_exchange.txt
+================================================================================
+Function: FashionData$$get_exchange @ 00df021c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df021c  ldr x0,[x0, #0x80]
+00df0220  ret
+
+
+================================================================================
+### FILE: 00df0224_FashionData__get_description.txt
+================================================================================
+Function: FashionData$$get_description @ 00df0224
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0224  ldr w0,[x0, #0x88]
+00df0228  ret
+
+
+================================================================================
+### FILE: 00df022c_FashionData__get_resources.txt
+================================================================================
+Function: FashionData$$get_resources @ 00df022c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df022c  ldr w0,[x0, #0x8c]
+00df0230  ret
+
+
+================================================================================
+### FILE: 00df0234_FashionData__get_attribute.txt
+================================================================================
+Function: FashionData$$get_attribute @ 00df0234
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0234  ldr x0,[x0, #0x90]
+00df0238  ret
+
+
+================================================================================
+### FILE: 00df023c_FashionData__get_seqencing.txt
+================================================================================
+Function: FashionData$$get_seqencing @ 00df023c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df023c  ldr w0,[x0, #0x98]
+00df0240  ret
+
+
+================================================================================
+### FILE: 00df0244_FashionData__get_fashion.txt
+================================================================================
+Function: FashionData$$get_fashion @ 00df0244
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0244  ldr x0,[x0, #0xa0]
+00df0248  ret
+
+
+================================================================================
+### FILE: 00df024c_FashionData__get_background.txt
+================================================================================
+Function: FashionData$$get_background @ 00df024c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df024c  ldr w0,[x0, #0xa8]
+00df0250  ret
+
+
+================================================================================
+### FILE: 00df0254_FashionData__get_bust.txt
+================================================================================
+Function: FashionData$$get_bust @ 00df0254
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0254  ldr x0,[x0, #0xb0]
+00df0258  ret
+
+
+================================================================================
+### FILE: 00df025c_FashionData__get_å__.txt
+================================================================================
+Function: FashionData$$get_å @ 00df025c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df025c  ldr x0,[x0, #0xb8]
+00df0260  ret
+
+
+================================================================================
+### FILE: 00df0264_FashionData__get_sound.txt
+================================================================================
+Function: FashionData$$get_sound @ 00df0264
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0264  ldr w0,[x0, #0xc0]
+00df0268  ret
+
+
+================================================================================
+### FILE: 00df026c_FashionData__get_hitAudio.txt
+================================================================================
+Function: FashionData$$get_hitAudio @ 00df026c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df026c  ldr w0,[x0, #0xc4]
+00df0270  ret
+
+
+================================================================================
+### FILE: 00df0274_FashionData__get_deathAudio.txt
+================================================================================
+Function: FashionData$$get_deathAudio @ 00df0274
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0274  ldr w0,[x0, #0xc8]
+00df0278  ret
+
+
+================================================================================
+### FILE: 00df027c_FashionData__get_spineID.txt
+================================================================================
+Function: FashionData$$get_spineID @ 00df027c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df027c  ldr w0,[x0, #0xcc]
+00df0280  ret
+
+
+================================================================================
+### FILE: 00df0284_FashionData__get_skillSpineID.txt
+================================================================================
+Function: FashionData$$get_skillSpineID @ 00df0284
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0284  ldr w0,[x0, #0xd0]
+00df0288  ret
+
+
+================================================================================
+### FILE: 00df028c_FashionData__get_callID.txt
+================================================================================
+Function: FashionData$$get_callID @ 00df028c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df028c  ldr w0,[x0, #0xd4]
+00df0290  ret
+
+
+================================================================================
+### FILE: 00df0294_FashionData__get_HeroFigure.txt
+================================================================================
+Function: FashionData$$get_HeroFigure @ 00df0294
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0294  ldr x0,[x0, #0xd8]
+00df0298  ret
+
+
+================================================================================
+### FILE: 00df029c_FashionData__get_position.txt
+================================================================================
+Function: FashionData$$get_position @ 00df029c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df029c  ldr x0,[x0, #0xe0]
+00df02a0  ret
+
+
+================================================================================
+### FILE: 00df02a4_FashionData__get_skillShow.txt
+================================================================================
+Function: FashionData$$get_skillShow @ 00df02a4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df02a4  ldr x0,[x0, #0xe8]
+00df02a8  ret
+
+
+================================================================================
+### FILE: 00df02ac_FashionData__get_HeroPosFlip.txt
+================================================================================
+Function: FashionData$$get_HeroPosFlip @ 00df02ac
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df02ac  ldr w0,[x0, #0xf0]
+00df02b0  ret
+
+
+================================================================================
+### FILE: 00df02b4_FashionData__get_HeroPos.txt
+================================================================================
+Function: FashionData$$get_HeroPos @ 00df02b4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df02b4  ldr x0,[x0, #0xf8]
+00df02b8  ret
+
+
+================================================================================
+### FILE: 00df02bc_FashionData__get_HeroBackground.txt
+================================================================================
+Function: FashionData$$get_HeroBackground @ 00df02bc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df02bc  ldr x0,[x0, #0x100]
+00df02c0  ret
+
+
+================================================================================
+### FILE: 00df02c4_FashionData__get_card.txt
+================================================================================
+Function: FashionData$$get_card @ 00df02c4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df02c4  ldr x0,[x0, #0x108]
+00df02c8  ret
+
+
+================================================================================
+### FILE: 00df02cc_FashionData__get_figure.txt
+================================================================================
+Function: FashionData$$get_figure @ 00df02cc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df02cc  ldr x0,[x0, #0x110]
+00df02d0  ret
+
+
+================================================================================
+### FILE: 00df02d4_FashionData__get_friendShow.txt
+================================================================================
+Function: FashionData$$get_friendShow @ 00df02d4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df02d4  ldr x0,[x0, #0x118]
+00df02d8  ret
+
+
+================================================================================
+### FILE: 00df02dc_FashionData__get_theAuthor.txt
+================================================================================
+Function: FashionData$$get_theAuthor @ 00df02dc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df02dc  ldr w0,[x0, #0x120]
+00df02e0  ret
+
+
+================================================================================
+### FILE: 00df02e4_FashionData__get_versionOpen.txt
+================================================================================
+Function: FashionData$$get_versionOpen @ 00df02e4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df02e4  ldr x0,[x0, #0x128]
+00df02e8  ret
+
+
+================================================================================
+### FILE: 00df02ec_FashionData__.ctor.txt
+================================================================================
+Function: FashionData$$.ctor @ 00df02ec
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.FashionDataWrap$$__CreateInstance @ 01292e30
+
+--- Listing ---
+00df02ec  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00df02f0_FashionRecord__.ctor.txt
+================================================================================
+Function: FashionRecord$$.ctor @ 00df02f0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00df02f0  stp x21,x20,[sp, #-0x20]!
+00df02f4  stp x19,x30,[sp, #0x10]
+00df02f8  adrp x20,0x3572000
+00df02fc  adrp x21,0x332f000
+00df0300  ldrb w8,[x20, #0x448]
+00df0304  ldr x21,[x21, #0x738]
+00df0308  mov x19,x0
+00df030c  tbnz w8,#0x0,0x00df0330
+00df0310  adrp x0,0x3371000
+00df0314  ldr x0,[x0, #0x138]
+00df0318  bl 0x00b0789c
+00df031c  adrp x0,0x332f000
+00df0320  ldr x0,[x0, #0x738]
+00df0324  bl 0x00b0789c
+00df0328  mov w8,#0x1
+00df032c  strb w8,[x20, #0x448]
+00df0330  ldr x0,[x21]
+00df0334  bl 0x00b079a0
+00df0338  cbz x0,0x00df0374
+00df033c  adrp x8,0x3371000
+00df0340  ldr x8,[x8, #0x138]
+00df0344  mov x20,x0
+00df0348  ldr x1,[x8]
+00df034c  bl 0x01bffe10
+00df0350  mov x0,x19
+00df0354  str x20,[x0, #0x18]!
+00df0358  mov x1,x20
+00df035c  bl 0x00b07850
+00df0360  mov x0,x19
+00df0364  ldp x19,x30,[sp, #0x10]
+00df0368  mov x1,xzr
+00df036c  ldp x21,x20,[sp], #0x20
+00df0370  b 0x024e277c
+00df0374  bl 0x00b079b0
+
+

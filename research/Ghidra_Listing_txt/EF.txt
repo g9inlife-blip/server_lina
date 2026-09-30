@@ -1,0 +1,6221 @@
+================================================================================
+### FILE: 00def9b8_EffData__get_name.txt
+================================================================================
+Function: EffData$$get_name @ 00def9b8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def9b8  ldr x0,[x0, #0x78]
+00def9bc  ret
+
+
+================================================================================
+### FILE: 00def9c0_EffData__get_resourcesId.txt
+================================================================================
+Function: EffData$$get_resourcesId @ 00def9c0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def9c0  ldr w0,[x0, #0x80]
+00def9c4  ret
+
+
+================================================================================
+### FILE: 00def9c8_EffData__get_effModel.txt
+================================================================================
+Function: EffData$$get_effModel @ 00def9c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def9c8  ldr x0,[x0, #0x88]
+00def9cc  ret
+
+
+================================================================================
+### FILE: 00def9d0_EffData__get_effAni.txt
+================================================================================
+Function: EffData$$get_effAni @ 00def9d0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def9d0  ldr x0,[x0, #0x90]
+00def9d4  ret
+
+
+================================================================================
+### FILE: 00def9d8_EffData__get_leftEffAni.txt
+================================================================================
+Function: EffData$$get_leftEffAni @ 00def9d8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def9d8  ldr x0,[x0, #0x98]
+00def9dc  ret
+
+
+================================================================================
+### FILE: 00def9e0_EffData__get_loopAni.txt
+================================================================================
+Function: EffData$$get_loopAni @ 00def9e0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def9e0  ldr x0,[x0, #0xa0]
+00def9e4  ret
+
+
+================================================================================
+### FILE: 00def9e8_EffData__get_loop.txt
+================================================================================
+Function: EffData$$get_loop @ 00def9e8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def9e8  ldr w0,[x0, #0xa8]
+00def9ec  ret
+
+
+================================================================================
+### FILE: 00def9f0_EffData__get_rotate.txt
+================================================================================
+Function: EffData$$get_rotate @ 00def9f0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def9f0  ldr w0,[x0, #0xac]
+00def9f4  ret
+
+
+================================================================================
+### FILE: 00def9f8_EffData__get_positionUp.txt
+================================================================================
+Function: EffData$$get_positionUp @ 00def9f8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def9f8  ldr s0,[x0, #0xb0]
+00def9fc  ret
+
+
+================================================================================
+### FILE: 00defa00_EffData__get_positionDown.txt
+================================================================================
+Function: EffData$$get_positionDown @ 00defa00
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa00  ldr s0,[x0, #0xb4]
+00defa04  ret
+
+
+================================================================================
+### FILE: 00defa08_EffData__get_positionLeft.txt
+================================================================================
+Function: EffData$$get_positionLeft @ 00defa08
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa08  ldr s0,[x0, #0xb8]
+00defa0c  ret
+
+
+================================================================================
+### FILE: 00defa10_EffData__get_positionRight.txt
+================================================================================
+Function: EffData$$get_positionRight @ 00defa10
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa10  ldr s0,[x0, #0xbc]
+00defa14  ret
+
+
+================================================================================
+### FILE: 00defa18_EffData__get_position.txt
+================================================================================
+Function: EffData$$get_position @ 00defa18
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa18  ldr x0,[x0, #0xc0]
+00defa1c  ret
+
+
+================================================================================
+### FILE: 00defa20_EffData__get_leftPosition.txt
+================================================================================
+Function: EffData$$get_leftPosition @ 00defa20
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa20  ldr x0,[x0, #0xc8]
+00defa24  ret
+
+
+================================================================================
+### FILE: 00defa28_EffData__get_order.txt
+================================================================================
+Function: EffData$$get_order @ 00defa28
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa28  ldr w0,[x0, #0xd0]
+00defa2c  ret
+
+
+================================================================================
+### FILE: 00defa30_EffData__get_time.txt
+================================================================================
+Function: EffData$$get_time @ 00defa30
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa30  ldr s0,[x0, #0xd4]
+00defa34  ret
+
+
+================================================================================
+### FILE: 00defa38_EffData__get_display.txt
+================================================================================
+Function: EffData$$get_display @ 00defa38
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa38  ldr w0,[x0, #0xd8]
+00defa3c  ret
+
+
+================================================================================
+### FILE: 00defa40_EffData__get_directionType.txt
+================================================================================
+Function: EffData$$get_directionType @ 00defa40
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa40  ldr w0,[x0, #0xdc]
+00defa44  ret
+
+
+================================================================================
+### FILE: 00defa48_EffData__get_angle.txt
+================================================================================
+Function: EffData$$get_angle @ 00defa48
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa48  ldr w0,[x0, #0xe0]
+00defa4c  ret
+
+
+================================================================================
+### FILE: 00defa50_EffData__get_boneName.txt
+================================================================================
+Function: EffData$$get_boneName @ 00defa50
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa50  ldr x0,[x0, #0xe8]
+00defa54  ret
+
+
+================================================================================
+### FILE: 00defa58_EffData__get_scale.txt
+================================================================================
+Function: EffData$$get_scale @ 00defa58
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa58  ldr s0,[x0, #0xf0]
+00defa5c  ret
+
+
+================================================================================
+### FILE: 00defa60_EffData__get_orderType.txt
+================================================================================
+Function: EffData$$get_orderType @ 00defa60
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defa60  ldr w0,[x0, #0xf4]
+00defa64  ret
+
+
+================================================================================
+### FILE: 00defa68_EffData__.ctor.txt
+================================================================================
+Function: EffData$$.ctor @ 00defa68
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffDataWrap$$__CreateInstance @ 0126fa88
+
+--- Listing ---
+00defa68  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00defa6c_EffRecord__.ctor.txt
+================================================================================
+Function: EffRecord$$.ctor @ 00defa6c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00defa6c  stp x21,x20,[sp, #-0x20]!
+00defa70  stp x19,x30,[sp, #0x10]
+00defa74  adrp x20,0x3572000
+00defa78  adrp x21,0x337a000
+00defa7c  ldrb w8,[x20, #0x43b]
+00defa80  ldr x21,[x21, #0x738]
+00defa84  mov x19,x0
+00defa88  tbnz w8,#0x0,0x00defaac
+00defa8c  adrp x0,0x336e000
+00defa90  ldr x0,[x0, #0x658]
+00defa94  bl 0x00b0789c
+00defa98  adrp x0,0x337a000
+00defa9c  ldr x0,[x0, #0x738]
+00defaa0  bl 0x00b0789c
+00defaa4  mov w8,#0x1
+00defaa8  strb w8,[x20, #0x43b]
+00defaac  ldr x0,[x21]
+00defab0  bl 0x00b079a0
+00defab4  cbz x0,0x00defaf0
+00defab8  adrp x8,0x336e000
+00defabc  ldr x8,[x8, #0x658]
+00defac0  mov x20,x0
+00defac4  ldr x1,[x8]
+00defac8  bl 0x01bffe10
+00defacc  mov x0,x19
+00defad0  str x20,[x0, #0x18]!
+00defad4  mov x1,x20
+00defad8  bl 0x00b07850
+00defadc  mov x0,x19
+00defae0  ldp x19,x30,[sp, #0x10]
+00defae4  mov x1,xzr
+00defae8  ldp x21,x20,[sp], #0x20
+00defaec  b 0x024e277c
+00defaf0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfa90c_EffInfo__.ctor.txt
+================================================================================
+Function: EffInfo$$.ctor @ 00dfa90c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> EffInfo$$set_playEndAct @ 00dfb1dc
+  -> System.String$$Split @ 01fe0d68
+  -> EffInfo$$set_m_boneName @ 00dfae28
+  -> EffInfo$$set_LocalPositon_Excel @ 00dfaf30
+  -> System.Collections.Generic.Dictionary<object,-int>$$.ctor @ 01967ca0
+  -> RoleNews$$get_modelName @ 00fe7c4c
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp368 @ 0108efd4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> EffInfo$$set_m_target @ 00dfb050
+  -> System.Converter<object,-float>$$.ctor @ 01f895b0
+  -> AliothExtensions$$IsHaveMono @ 00e124cc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> Ali$$GetExcelData<object> @ 01736d60
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> EffInfo$$set_instBackAct @ 00dfb158
+  -> EffInfo$$set_m_modelName @ 00dfaeac
+  -> EffInfo$$set_parent @ 00dfafcc
+  -> System.Object$$.ctor @ 02194104
+  -> EffInfo$$set_m_raider @ 00dfb0d4
+  -> EffInfo$$set_m_effData @ 00dfad3c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> EffInfo$$CheckRoleFollower @ 00dfb260
+  -> FUN_00b079b8 @ 00b079b8
+  -> System.Array$$ConvertAll<object,-float> @ 01755f6c
+
+--- Calls IN ---
+  <- BaseSkillEff$$RaiderHpUp @ 015e5ca4
+  <- BattleManager$$WeatherManage @ 01189ca0
+  <- BattleManager$$PlaySkillShow @ 0118a3f8
+  <- RoleMono$$GhostAndPlay @ 014acc64
+  <- RoleMono$$OnSpineEvent @ 014a6304
+  <- BattleManager$$HitFly @ 01188a70
+  <- XLua.CSObjectWrap.EffInfoWrap$$__CreateInstance @ 01272ae0
+  <- BaseSkillEff$$PassiveShowEff @ 015e7c84
+  <- RoleMono$$PlayShildEff @ 014a108c
+  <- BattleManager$$PlayRoleEff @ 01182ecc
+  <- BaseSkillEff$$UpdataEvent @ 015d8f24
+  <- SkillEff_9004$$ExecuteSpecial @ 016c3930
+  <- TerrainMono$$RefreshShow @ 016c9224
+  <- BaseBuff$$ShowLongEff @ 015de310
+  <- PropNews$$CreateProp @ 0149d940
+  <- BaseSkillEff$$PlayEffToTarget @ 015e5544
+  <- RoleMono$$PowerOpen @ 014a98bc
+  <- BattleManager.<SpeedLinePlayEnd>d__257$$MoveNext @ 01315d48
+  <- RoleMono$$RefreshCD @ 014a047c
+  <- BaseBuff$$Execute @ 015df498
+
+--- Listing ---
+00dfa90c  sub sp,sp,#0x70
+00dfa910  stp x28,x27,[sp, #0x10]
+00dfa914  stp x26,x25,[sp, #0x20]
+00dfa918  stp x24,x23,[sp, #0x30]
+00dfa91c  stp x22,x21,[sp, #0x40]
+00dfa920  stp x20,x19,[sp, #0x50]
+00dfa924  stp x29,x30,[sp, #0x60]
+00dfa928  adrp x26,0x3572000
+00dfa92c  ldrb w8,[x26, #0x4c5]
+00dfa930  mov x19,x6
+00dfa934  mov x20,x5
+00dfa938  mov x21,x4
+00dfa93c  mov x22,x3
+00dfa940  mov x23,x2
+00dfa944  mov w24,w1
+00dfa948  mov x25,x0
+00dfa94c  tbnz w8,#0x0,0x00dfa9dc
+00dfa950  adrp x0,0x3374000
+00dfa954  ldr x0,[x0, #0xe18]
+00dfa958  bl 0x00b0789c
+00dfa95c  adrp x0,0x335f000
+00dfa960  ldr x0,[x0, #0x20]
+00dfa964  bl 0x00b0789c
+00dfa968  adrp x0,0x3348000
+00dfa96c  ldr x0,[x0, #0x138]
+00dfa970  bl 0x00b0789c
+00dfa974  adrp x0,0x3355000
+00dfa978  ldr x0,[x0, #0x450]
+00dfa97c  bl 0x00b0789c
+00dfa980  adrp x0,0x334b000
+00dfa984  ldr x0,[x0, #0x8a8]
+00dfa988  bl 0x00b0789c
+00dfa98c  adrp x0,0x3368000
+00dfa990  ldr x0,[x0, #0x728]
+00dfa994  bl 0x00b0789c
+00dfa998  adrp x0,0x3318000
+00dfa99c  ldr x0,[x0, #0xde0]
+00dfa9a0  bl 0x00b0789c
+00dfa9a4  adrp x0,0x3344000
+00dfa9a8  ldr x0,[x0, #0x6b0]
+00dfa9ac  bl 0x00b0789c
+00dfa9b0  adrp x0,0x3376000
+00dfa9b4  ldr x0,[x0, #0x698]
+00dfa9b8  bl 0x00b0789c
+00dfa9bc  adrp x0,0x3326000
+00dfa9c0  ldr x0,[x0, #0x758]
+00dfa9c4  bl 0x00b0789c
+00dfa9c8  adrp x0,0x330a000
+00dfa9cc  ldr x0,[x0, #0xc10]
+00dfa9d0  bl 0x00b0789c
+00dfa9d4  mov w8,#0x1
+00dfa9d8  strb w8,[x26, #0x4c5]
+00dfa9dc  adrp x27,0x3570000
+00dfa9e0  adrp x26,0x3318000
+00dfa9e4  ldrb w8,[x27, #0xf0c]
+00dfa9e8  ldr x26,[x26, #0xde0]
+00dfa9ec  cbnz w8,0x00dfaa04
+00dfa9f0  adrp x0,0x3368000
+00dfa9f4  ldr x0,[x0, #0x9b8]
+00dfa9f8  bl 0x00b0789c
+00dfa9fc  mov w8,#0x1
+00dfaa00  strb w8,[x27, #0xf0c]
+00dfaa04  adrp x8,0x3368000
+00dfaa08  ldr x8,[x8, #0x9b8]
+00dfaa0c  ldr x8,[x8]
+00dfaa10  ldr x8,[x8, #0xb8]
+00dfaa14  ldr x9,[x8]
+00dfaa18  ldr w8,[x8, #0x8]
+00dfaa1c  str x9,[x25, #0x58]
+00dfaa20  str w8,[x25, #0x60]
+00dfaa24  ldr x0,[x26]
+00dfaa28  bl 0x00b079a0
+00dfaa2c  cbz x0,0x00dfad34
+00dfaa30  adrp x8,0x3368000
+00dfaa34  ldr x8,[x8, #0x728]
+00dfaa38  mov x26,x0
+00dfaa3c  ldr x1,[x8]
+00dfaa40  bl 0x01967ca0
+00dfaa44  mov x0,x25
+00dfaa48  str x26,[x0, #0x78]!
+00dfaa4c  mov x1,x26
+00dfaa50  bl 0x00b07850
+00dfaa54  mov x0,x25
+00dfaa58  mov x1,xzr
+00dfaa5c  bl 0x02194104
+00dfaa60  cmp w24,#0x1
+00dfaa64  b.lt 0x00dfaab0
+00dfaa68  adrp x26,0x335f000
+00dfaa6c  ldr x26,[x26, #0x20]
+00dfaa70  ldr x0,[x26]
+00dfaa74  ldr w8,[x0, #0xe0]
+00dfaa78  cbnz w8,0x00dfaa84
+00dfaa7c  bl 0x00b0798c
+00dfaa80  ldr x0,[x26]
+00dfaa84  ldr x8,[x0, #0xb8]
+00dfaa88  ldr x0,[x8, #0x10]
+00dfaa8c  cbz x0,0x00dfad34
+00dfaa90  adrp x8,0x3374000
+00dfaa94  ldr x8,[x8, #0xe18]
+00dfaa98  mov w1,w24
+00dfaa9c  ldr x2,[x8]
+00dfaaa0  bl 0x01736d60
+00dfaaa4  mov x1,x0
+00dfaaa8  mov x0,x25
+00dfaaac  bl 0x00dfad3c
+00dfaab0  mov x0,x25
+00dfaab4  bl 0x00dfadc0
+00dfaab8  cbz x0,0x00dfac94
+00dfaabc  mov x0,x25
+00dfaac0  bl 0x00dfadc0
+00dfaac4  cbz x0,0x00dfad34
+00dfaac8  ldr x1,[x0, #0xe8]
+00dfaacc  mov x0,x25
+00dfaad0  bl 0x00dfae28
+00dfaad4  mov x0,x25
+00dfaad8  bl 0x00dfadc0
+00dfaadc  cbz x0,0x00dfad34
+00dfaae0  ldr x0,[x0, #0x88]
+00dfaae4  mov x1,xzr
+00dfaae8  bl 0x01fdf3a0
+00dfaaec  tbz w0,#0x0,0x00dfab24
+00dfaaf0  adrp x8,0x3348000
+00dfaaf4  ldr x8,[x8, #0x138]
+00dfaaf8  cbz x21,0x00dfab1c
+00dfaafc  adrp x9,0x3376000
+00dfab00  ldr x9,[x9, #0x698]
+00dfab04  ldr x10,[x21]
+00dfab08  ldr x9,[x9]
+00dfab0c  ldrb w12,[x10, #0x12c]
+00dfab10  ldrb w11,[x9, #0x12c]
+00dfab14  cmp w12,w11
+00dfab18  b.cs 0x00dfab38
+00dfab1c  mov x26,xzr
+00dfab20  b 0x00dfab4c
+00dfab24  mov x0,x25
+00dfab28  bl 0x00dfadc0
+00dfab2c  cbz x0,0x00dfad34
+00dfab30  ldr x1,[x0, #0x88]
+00dfab34  b 0x00dfab80
+00dfab38  ldr x10,[x10, #0xc8]
+00dfab3c  add x10,x10,x11, LSL #0x3
+00dfab40  ldur x10,[x10, #-0x8]
+00dfab44  cmp x10,x9
+00dfab48  csel x26,x21,xzr,eq
+00dfab4c  ldr x0,[x8]
+00dfab50  ldr w8,[x0, #0xe0]
+00dfab54  cbnz w8,0x00dfab5c
+00dfab58  bl 0x00b0798c
+00dfab5c  mov x0,x26
+00dfab60  mov x1,xzr
+00dfab64  bl 0x00e124cc
+00dfab68  tbz w0,#0x0,0x00dfab88
+00dfab6c  cbz x26,0x00dfad34
+00dfab70  mov x0,x26
+00dfab74  mov x1,xzr
+00dfab78  bl 0x00fe7c4c
+00dfab7c  mov x1,x0
+00dfab80  mov x0,x25
+00dfab84  bl 0x00dfaeac
+00dfab88  mov x0,x25
+00dfab8c  bl 0x00dfadc0
+00dfab90  cbz x0,0x00dfad34
+00dfab94  ldr x0,[x0, #0xc0]
+00dfab98  mov x1,xzr
+00dfab9c  bl 0x01fdf3a0
+00dfaba0  tbnz w0,#0x0,0x00dfac94
+00dfaba4  mov x0,x25
+00dfaba8  bl 0x00dfadc0
+00dfabac  cbz x0,0x00dfad34
+00dfabb0  ldr x0,[x0, #0xc0]
+00dfabb4  cbz x0,0x00dfad34
+00dfabb8  adrp x29,0x330a000
+00dfabbc  ldr x29,[x29, #0xc10]
+00dfabc0  mov w1,#0x2a
+00dfabc4  mov w2,wzr
+00dfabc8  mov x3,xzr
+00dfabcc  bl 0x01fe0d68
+00dfabd0  ldr x8,[x29]
+00dfabd4  mov x26,x0
+00dfabd8  ldr w9,[x8, #0xe0]
+00dfabdc  cbnz w9,0x00dfabec
+00dfabe0  mov x0,x8
+00dfabe4  bl 0x00b0798c
+00dfabe8  ldr x8,[x29]
+00dfabec  ldr x9,[x8, #0xb8]
+00dfabf0  ldr x27,[x9, #0x8]
+00dfabf4  cbnz x27,0x00dfac58
+00dfabf8  adrp x27,0x334b000
+00dfabfc  ldr w9,[x8, #0xe0]
+00dfac00  ldr x27,[x27, #0x8a8]
+00dfac04  cbnz w9,0x00dfac14
+00dfac08  mov x0,x8
+00dfac0c  bl 0x00b0798c
+00dfac10  ldr x8,[x29]
+00dfac14  ldr x8,[x8, #0xb8]
+00dfac18  ldr x0,[x27]
+00dfac1c  ldr x28,[x8]
+00dfac20  bl 0x00b079a0
+00dfac24  cbz x0,0x00dfad34
+00dfac28  adrp x8,0x3326000
+00dfac2c  ldr x8,[x8, #0x758]
+00dfac30  mov x1,x28
+00dfac34  mov x3,xzr
+00dfac38  mov x27,x0
+00dfac3c  ldr x2,[x8]
+00dfac40  bl 0x01f895b0
+00dfac44  ldr x8,[x29]
+00dfac48  mov x1,x27
+00dfac4c  ldr x0,[x8, #0xb8]
+00dfac50  str x27,[x0, #0x8]!
+00dfac54  bl 0x00b07850
+00dfac58  adrp x8,0x3355000
+00dfac5c  ldr x8,[x8, #0x450]
+00dfac60  mov x0,x26
+00dfac64  mov x1,x27
+00dfac68  ldr x2,[x8]
+00dfac6c  bl 0x01755f6c
+00dfac70  cbz x0,0x00dfad34
+00dfac74  ldr w8,[x0, #0x18]
+00dfac78  cmp w8,#0x1
+00dfac7c  b.eq 0x00dfad38
+00dfac80  cbz w8,0x00dfad38
+00dfac84  ldp s0,s1,[x0, #0x20]
+00dfac88  fmov s2,wzr
+00dfac8c  mov x0,x25
+00dfac90  bl 0x00dfaf30
+00dfac94  adrp x26,0x3344000
+00dfac98  ldr x26,[x26, #0x6b0]
+00dfac9c  mov x0,x25
+00dfaca0  mov x1,x23
+00dfaca4  bl 0x00dfafcc
+00dfaca8  mov x0,x25
+00dfacac  mov x1,x22
+00dfacb0  bl 0x00dfb050
+00dfacb4  mov x0,x25
+00dfacb8  mov x1,x21
+00dfacbc  bl 0x00dfb0d4
+00dfacc0  mov x0,x25
+00dfacc4  mov x1,x20
+00dfacc8  bl 0x00dfb158
+00dfaccc  mov x0,x25
+00dfacd0  mov x1,x19
+00dfacd4  bl 0x00dfb1dc
+00dfacd8  mov x0,x25
+00dfacdc  bl 0x00dfb260
+00dface0  ldr x8,[x26]
+00dface4  ldr x8,[x8, #0xb8]
+00dface8  ldr x0,[x8]
+00dfacec  cbz x0,0x00dfad14
+00dfacf0  mov x1,x25
+00dfacf4  mov w2,w24
+00dfacf8  mov x3,x23
+00dfacfc  mov x4,x22
+00dfad00  mov x5,x21
+00dfad04  mov x6,x20
+00dfad08  mov x7,x19
+00dfad0c  str xzr,[sp]
+00dfad10  bl 0x0108efd4
+00dfad14  ldp x29,x30,[sp, #0x60]
+00dfad18  ldp x20,x19,[sp, #0x50]
+00dfad1c  ldp x22,x21,[sp, #0x40]
+00dfad20  ldp x24,x23,[sp, #0x30]
+00dfad24  ldp x26,x25,[sp, #0x20]
+00dfad28  ldp x28,x27,[sp, #0x10]
+00dfad2c  add sp,sp,#0x70
+00dfad30  ret
+00dfad34  bl 0x00b079b0
+00dfad38  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dfad3c_EffInfo__set_m_effData.txt
+================================================================================
+Function: EffInfo$$set_m_effData @ 00dfad3c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_s_set_m_effData @ 012750c8
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfad3c  str x22,[sp, #-0x30]!
+00dfad40  stp x21,x20,[sp, #0x10]
+00dfad44  stp x19,x30,[sp, #0x20]
+00dfad48  adrp x21,0x3572000
+00dfad4c  adrp x22,0x3344000
+00dfad50  ldrb w8,[x21, #0x4ca]
+00dfad54  ldr x22,[x22, #0x6b0]
+00dfad58  mov x19,x1
+00dfad5c  mov x20,x0
+00dfad60  tbnz w8,#0x0,0x00dfad78
+00dfad64  adrp x0,0x3344000
+00dfad68  ldr x0,[x0, #0x6b0]
+00dfad6c  bl 0x00b0789c
+00dfad70  mov w8,#0x1
+00dfad74  strb w8,[x21, #0x4ca]
+00dfad78  ldr x8,[x22]
+00dfad7c  ldr x8,[x8, #0xb8]
+00dfad80  ldr x0,[x8, #0x28]
+00dfad84  cbz x0,0x00dfada4
+00dfad88  mov x1,x20
+00dfad8c  mov x2,x19
+00dfad90  ldp x19,x30,[sp, #0x20]
+00dfad94  ldp x21,x20,[sp, #0x10]
+00dfad98  mov x3,xzr
+00dfad9c  ldr x22,[sp], #0x30
+00dfada0  b 0x0106125c
+00dfada4  str x19,[x20, #0x18]!
+00dfada8  mov x0,x20
+00dfadac  mov x1,x19
+00dfadb0  ldp x19,x30,[sp, #0x20]
+00dfadb4  ldp x21,x20,[sp, #0x10]
+00dfadb8  ldr x22,[sp], #0x30
+00dfadbc  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfadc0_EffInfo__get_m_effData.txt
+================================================================================
+Function: EffInfo$$get_m_effData @ 00dfadc0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp222 @ 0107c1b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_m_effData @ 01273f84
+  <- EffInfo$$get_IsCurrentLeftAni @ 00dfc688
+  <- RoleMono$$<OnSpineEvent>b__155_0 @ 014ad758
+  <- EffInfo$$FixPos @ 00dfc73c
+  <- RoleMono$$OnSpineEvent @ 014a6304
+  <- EffInfo$$NowOrder @ 00dfcc54
+  <- EffManager$$EffComplete @ 00dfe8b4
+  <- RoleMono$$PlayShildEff @ 014a108c
+  <- EffLiveMono$$Start @ 00dfdcc4
+  <- BattleManager$$PlayRoleEff @ 01182ecc
+  <- EffLiveMono$$TurnAround @ 00dfe460
+  <- RoleMono$$OrderEff @ 014a9084
+  <- TerrainMono$$RefreshShow @ 016c9224
+  <- EffLiveMono$$SetEffInfo @ 00dfd6a8
+  <- EffLiveMono$$PlaySpineAni @ 00dfe01c
+  <- EffManager$$PlayEff @ 00dfe6c4
+  <- EffInfo$$Play @ 00dfbca0
+  <- EffInfo$$.ctor @ 00dfa90c
+  <- EffInfo$$Order @ 00dfc3d0
+
+--- Listing ---
+00dfadc0  stp x21,x20,[sp, #-0x20]!
+00dfadc4  stp x19,x30,[sp, #0x10]
+00dfadc8  adrp x20,0x3572000
+00dfadcc  adrp x21,0x3344000
+00dfadd0  ldrb w8,[x20, #0x4c9]
+00dfadd4  ldr x21,[x21, #0x6b0]
+00dfadd8  mov x19,x0
+00dfaddc  tbnz w8,#0x0,0x00dfadf4
+00dfade0  adrp x0,0x3344000
+00dfade4  ldr x0,[x0, #0x6b0]
+00dfade8  bl 0x00b0789c
+00dfadec  mov w8,#0x1
+00dfadf0  strb w8,[x20, #0x4c9]
+00dfadf4  ldr x8,[x21]
+00dfadf8  ldr x8,[x8, #0xb8]
+00dfadfc  ldr x0,[x8, #0x20]
+00dfae00  cbz x0,0x00dfae18
+00dfae04  mov x1,x19
+00dfae08  ldp x19,x30,[sp, #0x10]
+00dfae0c  mov x2,xzr
+00dfae10  ldp x21,x20,[sp], #0x20
+00dfae14  b 0x0107c1b0
+00dfae18  ldr x0,[x19, #0x18]
+00dfae1c  ldp x19,x30,[sp, #0x10]
+00dfae20  ldp x21,x20,[sp], #0x20
+00dfae24  ret
+
+
+================================================================================
+### FILE: 00dfae28_EffInfo__set_m_boneName.txt
+================================================================================
+Function: EffInfo$$set_m_boneName @ 00dfae28
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_s_set_m_boneName @ 01275804
+  <- RoleMono$$OnSpineEvent @ 014a6304
+  <- BaseSkillEff$$PlayEffToTarget @ 015e5544
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfae28  str x22,[sp, #-0x30]!
+00dfae2c  stp x21,x20,[sp, #0x10]
+00dfae30  stp x19,x30,[sp, #0x20]
+00dfae34  adrp x21,0x3572000
+00dfae38  adrp x22,0x3344000
+00dfae3c  ldrb w8,[x21, #0x4d0]
+00dfae40  ldr x22,[x22, #0x6b0]
+00dfae44  mov x19,x1
+00dfae48  mov x20,x0
+00dfae4c  tbnz w8,#0x0,0x00dfae64
+00dfae50  adrp x0,0x3344000
+00dfae54  ldr x0,[x0, #0x6b0]
+00dfae58  bl 0x00b0789c
+00dfae5c  mov w8,#0x1
+00dfae60  strb w8,[x21, #0x4d0]
+00dfae64  ldr x8,[x22]
+00dfae68  ldr x8,[x8, #0xb8]
+00dfae6c  ldr x0,[x8, #0x58]
+00dfae70  cbz x0,0x00dfae90
+00dfae74  mov x1,x20
+00dfae78  mov x2,x19
+00dfae7c  ldp x19,x30,[sp, #0x20]
+00dfae80  ldp x21,x20,[sp, #0x10]
+00dfae84  mov x3,xzr
+00dfae88  ldr x22,[sp], #0x30
+00dfae8c  b 0x0106125c
+00dfae90  str x19,[x20, #0x30]!
+00dfae94  mov x0,x20
+00dfae98  mov x1,x19
+00dfae9c  ldp x19,x30,[sp, #0x20]
+00dfaea0  ldp x21,x20,[sp, #0x10]
+00dfaea4  ldr x22,[sp], #0x30
+00dfaea8  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfaeac_EffInfo__set_m_modelName.txt
+================================================================================
+Function: EffInfo$$set_m_modelName @ 00dfaeac
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfaeac  str x22,[sp, #-0x30]!
+00dfaeb0  stp x21,x20,[sp, #0x10]
+00dfaeb4  stp x19,x30,[sp, #0x20]
+00dfaeb8  adrp x21,0x3572000
+00dfaebc  adrp x22,0x3344000
+00dfaec0  ldrb w8,[x21, #0x4e0]
+00dfaec4  ldr x22,[x22, #0x6b0]
+00dfaec8  mov x19,x1
+00dfaecc  mov x20,x0
+00dfaed0  tbnz w8,#0x0,0x00dfaee8
+00dfaed4  adrp x0,0x3344000
+00dfaed8  ldr x0,[x0, #0x6b0]
+00dfaedc  bl 0x00b0789c
+00dfaee0  mov w8,#0x1
+00dfaee4  strb w8,[x21, #0x4e0]
+00dfaee8  ldr x8,[x22]
+00dfaeec  ldr x8,[x8, #0xb8]
+00dfaef0  ldr x0,[x8, #0xd8]
+00dfaef4  cbz x0,0x00dfaf14
+00dfaef8  mov x1,x20
+00dfaefc  mov x2,x19
+00dfaf00  ldp x19,x30,[sp, #0x20]
+00dfaf04  ldp x21,x20,[sp, #0x10]
+00dfaf08  mov x3,xzr
+00dfaf0c  ldr x22,[sp], #0x30
+00dfaf10  b 0x0106125c
+00dfaf14  str x19,[x20, #0x70]!
+00dfaf18  mov x0,x20
+00dfaf1c  mov x1,x19
+00dfaf20  ldp x19,x30,[sp, #0x20]
+00dfaf24  ldp x21,x20,[sp, #0x10]
+00dfaf28  ldr x22,[sp], #0x30
+00dfaf2c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfaf30_EffInfo__set_LocalPositon_Excel.txt
+================================================================================
+Function: EffInfo$$set_LocalPositon_Excel @ 00dfaf30
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp68 @ 01067c4c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_s_set_LocalPositon_Excel @ 01275bf8
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfaf30  str d10,[sp, #-0x40]!
+00dfaf34  stp d9,d8,[sp, #0x10]
+00dfaf38  stp x21,x20,[sp, #0x20]
+00dfaf3c  stp x19,x30,[sp, #0x30]
+00dfaf40  adrp x20,0x3572000
+00dfaf44  adrp x21,0x3344000
+00dfaf48  ldrb w8,[x20, #0x4da]
+00dfaf4c  ldr x21,[x21, #0x6b0]
+00dfaf50  mov v8.16B,v2.16B
+00dfaf54  mov v9.16B,v1.16B
+00dfaf58  mov v10.16B,v0.16B
+00dfaf5c  mov x19,x0
+00dfaf60  tbnz w8,#0x0,0x00dfaf78
+00dfaf64  adrp x0,0x3344000
+00dfaf68  ldr x0,[x0, #0x6b0]
+00dfaf6c  bl 0x00b0789c
+00dfaf70  mov w8,#0x1
+00dfaf74  strb w8,[x20, #0x4da]
+00dfaf78  ldr x8,[x21]
+00dfaf7c  ldr x8,[x8, #0xb8]
+00dfaf80  ldr x0,[x8, #0xa8]
+00dfaf84  cbz x0,0x00dfafb0
+00dfaf88  mov x1,x19
+00dfaf8c  mov v1.16B,v9.16B
+00dfaf90  mov v2.16B,v8.16B
+00dfaf94  ldp x19,x30,[sp, #0x30]
+00dfaf98  ldp x21,x20,[sp, #0x20]
+00dfaf9c  ldp d9,d8,[sp, #0x10]
+00dfafa0  mov v0.16B,v10.16B
+00dfafa4  mov x2,xzr
+00dfafa8  ldr d10,[sp], #0x40
+00dfafac  b 0x01067c4c
+00dfafb0  stp s10,s9,[x19, #0x58]
+00dfafb4  str s8,[x19, #0x60]
+00dfafb8  ldp x19,x30,[sp, #0x30]
+00dfafbc  ldp x21,x20,[sp, #0x20]
+00dfafc0  ldp d9,d8,[sp, #0x10]
+00dfafc4  ldr d10,[sp], #0x40
+00dfafc8  ret
+
+
+================================================================================
+### FILE: 00dfafcc_EffInfo__set_parent.txt
+================================================================================
+Function: EffInfo$$set_parent @ 00dfafcc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_s_set_parent @ 01275344
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfafcc  str x22,[sp, #-0x30]!
+00dfafd0  stp x21,x20,[sp, #0x10]
+00dfafd4  stp x19,x30,[sp, #0x20]
+00dfafd8  adrp x21,0x3572000
+00dfafdc  adrp x22,0x3344000
+00dfafe0  ldrb w8,[x21, #0x4cc]
+00dfafe4  ldr x22,[x22, #0x6b0]
+00dfafe8  mov x19,x1
+00dfafec  mov x20,x0
+00dfaff0  tbnz w8,#0x0,0x00dfb008
+00dfaff4  adrp x0,0x3344000
+00dfaff8  ldr x0,[x0, #0x6b0]
+00dfaffc  bl 0x00b0789c
+00dfb000  mov w8,#0x1
+00dfb004  strb w8,[x21, #0x4cc]
+00dfb008  ldr x8,[x22]
+00dfb00c  ldr x8,[x8, #0xb8]
+00dfb010  ldr x0,[x8, #0x38]
+00dfb014  cbz x0,0x00dfb034
+00dfb018  mov x1,x20
+00dfb01c  mov x2,x19
+00dfb020  ldp x19,x30,[sp, #0x20]
+00dfb024  ldp x21,x20,[sp, #0x10]
+00dfb028  mov x3,xzr
+00dfb02c  ldr x22,[sp], #0x30
+00dfb030  b 0x0106125c
+00dfb034  str x19,[x20, #0x20]!
+00dfb038  mov x0,x20
+00dfb03c  mov x1,x19
+00dfb040  ldp x19,x30,[sp, #0x20]
+00dfb044  ldp x21,x20,[sp, #0x10]
+00dfb048  ldr x22,[sp], #0x30
+00dfb04c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfb050_EffInfo__set_m_target.txt
+================================================================================
+Function: EffInfo$$set_m_target @ 00dfb050
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_s_set_m_target @ 012759c8
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfb050  str x22,[sp, #-0x30]!
+00dfb054  stp x21,x20,[sp, #0x10]
+00dfb058  stp x19,x30,[sp, #0x20]
+00dfb05c  adrp x21,0x3572000
+00dfb060  adrp x22,0x3344000
+00dfb064  ldrb w8,[x21, #0x4d2]
+00dfb068  ldr x22,[x22, #0x6b0]
+00dfb06c  mov x19,x1
+00dfb070  mov x20,x0
+00dfb074  tbnz w8,#0x0,0x00dfb08c
+00dfb078  adrp x0,0x3344000
+00dfb07c  ldr x0,[x0, #0x6b0]
+00dfb080  bl 0x00b0789c
+00dfb084  mov w8,#0x1
+00dfb088  strb w8,[x21, #0x4d2]
+00dfb08c  ldr x8,[x22]
+00dfb090  ldr x8,[x8, #0xb8]
+00dfb094  ldr x0,[x8, #0x68]
+00dfb098  cbz x0,0x00dfb0b8
+00dfb09c  mov x1,x20
+00dfb0a0  mov x2,x19
+00dfb0a4  ldp x19,x30,[sp, #0x20]
+00dfb0a8  ldp x21,x20,[sp, #0x10]
+00dfb0ac  mov x3,xzr
+00dfb0b0  ldr x22,[sp], #0x30
+00dfb0b4  b 0x0106125c
+00dfb0b8  str x19,[x20, #0x38]!
+00dfb0bc  mov x0,x20
+00dfb0c0  mov x1,x19
+00dfb0c4  ldp x19,x30,[sp, #0x20]
+00dfb0c8  ldp x21,x20,[sp, #0x10]
+00dfb0cc  ldr x22,[sp], #0x30
+00dfb0d0  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfb0d4_EffInfo__set_m_raider.txt
+================================================================================
+Function: EffInfo$$set_m_raider @ 00dfb0d4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfb0d4  str x22,[sp, #-0x30]!
+00dfb0d8  stp x21,x20,[sp, #0x10]
+00dfb0dc  stp x19,x30,[sp, #0x20]
+00dfb0e0  adrp x21,0x3572000
+00dfb0e4  adrp x22,0x3344000
+00dfb0e8  ldrb w8,[x21, #0x4d4]
+00dfb0ec  ldr x22,[x22, #0x6b0]
+00dfb0f0  mov x19,x1
+00dfb0f4  mov x20,x0
+00dfb0f8  tbnz w8,#0x0,0x00dfb110
+00dfb0fc  adrp x0,0x3344000
+00dfb100  ldr x0,[x0, #0x6b0]
+00dfb104  bl 0x00b0789c
+00dfb108  mov w8,#0x1
+00dfb10c  strb w8,[x21, #0x4d4]
+00dfb110  ldr x8,[x22]
+00dfb114  ldr x8,[x8, #0xb8]
+00dfb118  ldr x0,[x8, #0x78]
+00dfb11c  cbz x0,0x00dfb13c
+00dfb120  mov x1,x20
+00dfb124  mov x2,x19
+00dfb128  ldp x19,x30,[sp, #0x20]
+00dfb12c  ldp x21,x20,[sp, #0x10]
+00dfb130  mov x3,xzr
+00dfb134  ldr x22,[sp], #0x30
+00dfb138  b 0x0106125c
+00dfb13c  str x19,[x20, #0x40]!
+00dfb140  mov x0,x20
+00dfb144  mov x1,x19
+00dfb148  ldp x19,x30,[sp, #0x20]
+00dfb14c  ldp x21,x20,[sp, #0x10]
+00dfb150  ldr x22,[sp], #0x30
+00dfb154  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfb158_EffInfo__set_instBackAct.txt
+================================================================================
+Function: EffInfo$$set_instBackAct @ 00dfb158
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfb158  str x22,[sp, #-0x30]!
+00dfb15c  stp x21,x20,[sp, #0x10]
+00dfb160  stp x19,x30,[sp, #0x20]
+00dfb164  adrp x21,0x3572000
+00dfb168  adrp x22,0x3344000
+00dfb16c  ldrb w8,[x21, #0x4d8]
+00dfb170  ldr x22,[x22, #0x6b0]
+00dfb174  mov x19,x1
+00dfb178  mov x20,x0
+00dfb17c  tbnz w8,#0x0,0x00dfb194
+00dfb180  adrp x0,0x3344000
+00dfb184  ldr x0,[x0, #0x6b0]
+00dfb188  bl 0x00b0789c
+00dfb18c  mov w8,#0x1
+00dfb190  strb w8,[x21, #0x4d8]
+00dfb194  ldr x8,[x22]
+00dfb198  ldr x8,[x8, #0xb8]
+00dfb19c  ldr x0,[x8, #0x98]
+00dfb1a0  cbz x0,0x00dfb1c0
+00dfb1a4  mov x1,x20
+00dfb1a8  mov x2,x19
+00dfb1ac  ldp x19,x30,[sp, #0x20]
+00dfb1b0  ldp x21,x20,[sp, #0x10]
+00dfb1b4  mov x3,xzr
+00dfb1b8  ldr x22,[sp], #0x30
+00dfb1bc  b 0x0106125c
+00dfb1c0  str x19,[x20, #0x50]!
+00dfb1c4  mov x0,x20
+00dfb1c8  mov x1,x19
+00dfb1cc  ldp x19,x30,[sp, #0x20]
+00dfb1d0  ldp x21,x20,[sp, #0x10]
+00dfb1d4  ldr x22,[sp], #0x30
+00dfb1d8  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfb1dc_EffInfo__set_playEndAct.txt
+================================================================================
+Function: EffInfo$$set_playEndAct @ 00dfb1dc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfb1dc  str x22,[sp, #-0x30]!
+00dfb1e0  stp x21,x20,[sp, #0x10]
+00dfb1e4  stp x19,x30,[sp, #0x20]
+00dfb1e8  adrp x21,0x3572000
+00dfb1ec  adrp x22,0x3344000
+00dfb1f0  ldrb w8,[x21, #0x4d6]
+00dfb1f4  ldr x22,[x22, #0x6b0]
+00dfb1f8  mov x19,x1
+00dfb1fc  mov x20,x0
+00dfb200  tbnz w8,#0x0,0x00dfb218
+00dfb204  adrp x0,0x3344000
+00dfb208  ldr x0,[x0, #0x6b0]
+00dfb20c  bl 0x00b0789c
+00dfb210  mov w8,#0x1
+00dfb214  strb w8,[x21, #0x4d6]
+00dfb218  ldr x8,[x22]
+00dfb21c  ldr x8,[x8, #0xb8]
+00dfb220  ldr x0,[x8, #0x88]
+00dfb224  cbz x0,0x00dfb244
+00dfb228  mov x1,x20
+00dfb22c  mov x2,x19
+00dfb230  ldp x19,x30,[sp, #0x20]
+00dfb234  ldp x21,x20,[sp, #0x10]
+00dfb238  mov x3,xzr
+00dfb23c  ldr x22,[sp], #0x30
+00dfb240  b 0x0106125c
+00dfb244  str x19,[x20, #0x48]!
+00dfb248  mov x0,x20
+00dfb24c  mov x1,x19
+00dfb250  ldp x19,x30,[sp, #0x20]
+00dfb254  ldp x21,x20,[sp, #0x10]
+00dfb258  ldr x22,[sp], #0x30
+00dfb25c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfb260_EffInfo__CheckRoleFollower.txt
+================================================================================
+Function: EffInfo$$CheckRoleFollower @ 00dfb260
+
+--- Calls OUT ---
+  -> UnityEngine.Transform$$get_parent @ 024f42ec
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> EffInfo$$get_m_target @ 00dfb628
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> RoleNews$$get_m_roleMono @ 00fdf520
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> AliothExtensions$$IsHaveMono @ 00e124cc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> EffInfo$$set_m_roleFollower @ 00dfb690
+  -> EffInfo$$get_parent @ 00dfb5c0
+  -> EffInfo$$get_m_raider @ 00dfb714
+
+--- Calls IN ---
+  <- EffInfo$$.ctor @ 00dfa90c
+
+--- Listing ---
+00dfb260  str x26,[sp, #-0x50]!
+00dfb264  stp x25,x24,[sp, #0x10]
+00dfb268  stp x23,x22,[sp, #0x20]
+00dfb26c  stp x21,x20,[sp, #0x30]
+00dfb270  stp x19,x30,[sp, #0x40]
+00dfb274  adrp x20,0x3572000
+00dfb278  adrp x21,0x3344000
+00dfb27c  ldrb w8,[x20, #0x4c6]
+00dfb280  ldr x21,[x21, #0x6b0]
+00dfb284  mov x19,x0
+00dfb288  tbnz w8,#0x0,0x00dfb2c4
+00dfb28c  adrp x0,0x3348000
+00dfb290  ldr x0,[x0, #0x138]
+00dfb294  bl 0x00b0789c
+00dfb298  adrp x0,0x3344000
+00dfb29c  ldr x0,[x0, #0x6b0]
+00dfb2a0  bl 0x00b0789c
+00dfb2a4  adrp x0,0x3321000
+00dfb2a8  ldr x0,[x0, #0xca8]
+00dfb2ac  bl 0x00b0789c
+00dfb2b0  adrp x0,0x3376000
+00dfb2b4  ldr x0,[x0, #0x698]
+00dfb2b8  bl 0x00b0789c
+00dfb2bc  mov w8,#0x1
+00dfb2c0  strb w8,[x20, #0x4c6]
+00dfb2c4  ldr x8,[x21]
+00dfb2c8  ldr x8,[x8, #0xb8]
+00dfb2cc  ldr x0,[x8, #0x8]
+00dfb2d0  cbz x0,0x00dfb2f4
+00dfb2d4  mov x1,x19
+00dfb2d8  ldp x19,x30,[sp, #0x40]
+00dfb2dc  ldp x21,x20,[sp, #0x30]
+00dfb2e0  ldp x23,x22,[sp, #0x20]
+00dfb2e4  ldp x25,x24,[sp, #0x10]
+00dfb2e8  mov x2,xzr
+00dfb2ec  ldr x26,[sp], #0x50
+00dfb2f0  b 0x01060dac
+00dfb2f4  adrp x24,0x3321000
+00dfb2f8  ldr x24,[x24, #0xca8]
+00dfb2fc  mov x0,x19
+00dfb300  bl 0x00dfb5c0
+00dfb304  ldr x8,[x24]
+00dfb308  mov x20,x0
+00dfb30c  ldr w9,[x8, #0xe0]
+00dfb310  cbnz w9,0x00dfb31c
+00dfb314  mov x0,x8
+00dfb318  bl 0x00b0798c
+00dfb31c  mov x0,x20
+00dfb320  mov x1,xzr
+00dfb324  mov x2,xzr
+00dfb328  bl 0x024c8180
+00dfb32c  tbnz w0,#0x0,0x00dfb588
+00dfb330  adrp x26,0x3376000
+00dfb334  adrp x25,0x3348000
+00dfb338  ldr x26,[x26, #0x698]
+00dfb33c  ldr x25,[x25, #0x138]
+00dfb340  mov x0,x19
+00dfb344  bl 0x00dfb628
+00dfb348  cbz x0,0x00dfb364
+00dfb34c  ldr x9,[x0]
+00dfb350  ldr x8,[x26]
+00dfb354  ldrb w11,[x9, #0x12c]
+00dfb358  ldrb w10,[x8, #0x12c]
+00dfb35c  cmp w11,w10
+00dfb360  b.cs 0x00dfb36c
+00dfb364  mov x20,xzr
+00dfb368  b 0x00dfb380
+00dfb36c  ldr x9,[x9, #0xc8]
+00dfb370  add x9,x9,x10, LSL #0x3
+00dfb374  ldur x9,[x9, #-0x8]
+00dfb378  cmp x9,x8
+00dfb37c  csel x20,x0,xzr,eq
+00dfb380  ldr x0,[x25]
+00dfb384  ldr w8,[x0, #0xe0]
+00dfb388  cbnz w8,0x00dfb390
+00dfb38c  bl 0x00b0798c
+00dfb390  mov x0,x20
+00dfb394  mov x1,xzr
+00dfb398  bl 0x00e124cc
+00dfb39c  tbz w0,#0x0,0x00dfb464
+00dfb3a0  mov x0,x19
+00dfb3a4  bl 0x00dfb5c0
+00dfb3a8  cbz x0,0x00dfb584
+00dfb3ac  mov x1,xzr
+00dfb3b0  bl 0x024de730
+00dfb3b4  cbz x0,0x00dfb584
+00dfb3b8  mov x21,x0
+00dfb3bc  mov x0,x21
+00dfb3c0  mov x1,xzr
+00dfb3c4  bl 0x024f42ec
+00dfb3c8  ldr x8,[x24]
+00dfb3cc  mov x22,x0
+00dfb3d0  ldr w9,[x8, #0xe0]
+00dfb3d4  cbnz w9,0x00dfb3e0
+00dfb3d8  mov x0,x8
+00dfb3dc  bl 0x00b0798c
+00dfb3e0  mov x0,x22
+00dfb3e4  mov x1,xzr
+00dfb3e8  mov x2,xzr
+00dfb3ec  bl 0x024de30c
+00dfb3f0  tbz w0,#0x0,0x00dfb464
+00dfb3f4  mov x0,x21
+00dfb3f8  mov x1,xzr
+00dfb3fc  bl 0x024f42ec
+00dfb400  cbz x20,0x00dfb584
+00dfb404  mov x22,x0
+00dfb408  mov x0,x20
+00dfb40c  mov x1,xzr
+00dfb410  bl 0x00fdf520
+00dfb414  cbz x0,0x00dfb584
+00dfb418  mov x1,xzr
+00dfb41c  bl 0x024e4e98
+00dfb420  ldr x8,[x24]
+00dfb424  mov x23,x0
+00dfb428  ldr w9,[x8, #0xe0]
+00dfb42c  cbnz w9,0x00dfb438
+00dfb430  mov x0,x8
+00dfb434  bl 0x00b0798c
+00dfb438  mov x0,x22
+00dfb43c  mov x1,x23
+00dfb440  mov x2,xzr
+00dfb444  bl 0x024c8180
+00dfb448  tbnz w0,#0x0,0x00dfb5a0
+00dfb44c  mov x0,x21
+00dfb450  mov x1,xzr
+00dfb454  bl 0x024f42ec
+00dfb458  mov x21,x0
+00dfb45c  cbnz x0,0x00dfb3bc
+00dfb460  b 0x00dfb584
+00dfb464  mov x0,x19
+00dfb468  bl 0x00dfb714
+00dfb46c  cbz x0,0x00dfb488
+00dfb470  ldr x9,[x0]
+00dfb474  ldr x8,[x26]
+00dfb478  ldrb w11,[x9, #0x12c]
+00dfb47c  ldrb w10,[x8, #0x12c]
+00dfb480  cmp w11,w10
+00dfb484  b.cs 0x00dfb490
+00dfb488  mov x20,xzr
+00dfb48c  b 0x00dfb4a4
+00dfb490  ldr x9,[x9, #0xc8]
+00dfb494  add x9,x9,x10, LSL #0x3
+00dfb498  ldur x9,[x9, #-0x8]
+00dfb49c  cmp x9,x8
+00dfb4a0  csel x20,x0,xzr,eq
+00dfb4a4  ldr x0,[x25]
+00dfb4a8  ldr w8,[x0, #0xe0]
+00dfb4ac  cbnz w8,0x00dfb4b4
+00dfb4b0  bl 0x00b0798c
+00dfb4b4  mov x0,x20
+00dfb4b8  mov x1,xzr
+00dfb4bc  bl 0x00e124cc
+00dfb4c0  tbz w0,#0x0,0x00dfb588
+00dfb4c4  mov x0,x19
+00dfb4c8  bl 0x00dfb5c0
+00dfb4cc  cbz x0,0x00dfb584
+00dfb4d0  mov x1,xzr
+00dfb4d4  bl 0x024de730
+00dfb4d8  cbz x0,0x00dfb584
+00dfb4dc  mov x21,x0
+00dfb4e0  mov x0,x21
+00dfb4e4  mov x1,xzr
+00dfb4e8  bl 0x024f42ec
+00dfb4ec  ldr x8,[x24]
+00dfb4f0  mov x22,x0
+00dfb4f4  ldr w9,[x8, #0xe0]
+00dfb4f8  cbnz w9,0x00dfb504
+00dfb4fc  mov x0,x8
+00dfb500  bl 0x00b0798c
+00dfb504  mov x0,x22
+00dfb508  mov x1,xzr
+00dfb50c  mov x2,xzr
+00dfb510  bl 0x024de30c
+00dfb514  tbz w0,#0x0,0x00dfb588
+00dfb518  mov x0,x21
+00dfb51c  mov x1,xzr
+00dfb520  bl 0x024f42ec
+00dfb524  cbz x20,0x00dfb584
+00dfb528  mov x22,x0
+00dfb52c  mov x0,x20
+00dfb530  mov x1,xzr
+00dfb534  bl 0x00fdf520
+00dfb538  cbz x0,0x00dfb584
+00dfb53c  mov x1,xzr
+00dfb540  bl 0x024e4e98
+00dfb544  ldr x8,[x24]
+00dfb548  mov x23,x0
+00dfb54c  ldr w9,[x8, #0xe0]
+00dfb550  cbnz w9,0x00dfb55c
+00dfb554  mov x0,x8
+00dfb558  bl 0x00b0798c
+00dfb55c  mov x0,x22
+00dfb560  mov x1,x23
+00dfb564  mov x2,xzr
+00dfb568  bl 0x024c8180
+00dfb56c  tbnz w0,#0x0,0x00dfb5a0
+00dfb570  mov x0,x21
+00dfb574  mov x1,xzr
+00dfb578  bl 0x024f42ec
+00dfb57c  mov x21,x0
+00dfb580  cbnz x0,0x00dfb4e0
+00dfb584  bl 0x00b079b0
+00dfb588  ldp x19,x30,[sp, #0x40]
+00dfb58c  ldp x21,x20,[sp, #0x30]
+00dfb590  ldp x23,x22,[sp, #0x20]
+00dfb594  ldp x25,x24,[sp, #0x10]
+00dfb598  ldr x26,[sp], #0x50
+00dfb59c  ret
+00dfb5a0  mov x0,x19
+00dfb5a4  mov x1,x20
+00dfb5a8  ldp x19,x30,[sp, #0x40]
+00dfb5ac  ldp x21,x20,[sp, #0x30]
+00dfb5b0  ldp x23,x22,[sp, #0x20]
+00dfb5b4  ldp x25,x24,[sp, #0x10]
+00dfb5b8  ldr x26,[sp], #0x50
+00dfb5bc  b 0x00dfb690
+
+
+================================================================================
+### FILE: 00dfb5c0_EffInfo__get_parent.txt
+================================================================================
+Function: EffInfo$$get_parent @ 00dfb5c0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_parent @ 01274144
+  <- EffInfo$$CheckRoleFollower @ 00dfb260
+  <- EffManager$$PlayEff @ 00dfe6c4
+
+--- Listing ---
+00dfb5c0  stp x21,x20,[sp, #-0x20]!
+00dfb5c4  stp x19,x30,[sp, #0x10]
+00dfb5c8  adrp x20,0x3572000
+00dfb5cc  adrp x21,0x3344000
+00dfb5d0  ldrb w8,[x20, #0x4cb]
+00dfb5d4  ldr x21,[x21, #0x6b0]
+00dfb5d8  mov x19,x0
+00dfb5dc  tbnz w8,#0x0,0x00dfb5f4
+00dfb5e0  adrp x0,0x3344000
+00dfb5e4  ldr x0,[x0, #0x6b0]
+00dfb5e8  bl 0x00b0789c
+00dfb5ec  mov w8,#0x1
+00dfb5f0  strb w8,[x20, #0x4cb]
+00dfb5f4  ldr x8,[x21]
+00dfb5f8  ldr x8,[x8, #0xb8]
+00dfb5fc  ldr x0,[x8, #0x30]
+00dfb600  cbz x0,0x00dfb618
+00dfb604  mov x1,x19
+00dfb608  ldp x19,x30,[sp, #0x10]
+00dfb60c  mov x2,xzr
+00dfb610  ldp x21,x20,[sp], #0x20
+00dfb614  b 0x0106088c
+00dfb618  ldr x0,[x19, #0x20]
+00dfb61c  ldp x19,x30,[sp, #0x10]
+00dfb620  ldp x21,x20,[sp], #0x20
+00dfb624  ret
+
+
+================================================================================
+### FILE: 00dfb628_EffInfo__get_m_target.txt
+================================================================================
+Function: EffInfo$$get_m_target @ 00dfb628
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp197 @ 01078af4
+
+--- Calls IN ---
+  <- EffInfo$$FixPos @ 00dfc73c
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_m_target @ 01274678
+  <- EffInfo$$CheckRoleFollower @ 00dfb260
+  <- EffInfo$$Order @ 00dfc3d0
+
+--- Listing ---
+00dfb628  stp x21,x20,[sp, #-0x20]!
+00dfb62c  stp x19,x30,[sp, #0x10]
+00dfb630  adrp x20,0x3572000
+00dfb634  adrp x21,0x3344000
+00dfb638  ldrb w8,[x20, #0x4d1]
+00dfb63c  ldr x21,[x21, #0x6b0]
+00dfb640  mov x19,x0
+00dfb644  tbnz w8,#0x0,0x00dfb65c
+00dfb648  adrp x0,0x3344000
+00dfb64c  ldr x0,[x0, #0x6b0]
+00dfb650  bl 0x00b0789c
+00dfb654  mov w8,#0x1
+00dfb658  strb w8,[x20, #0x4d1]
+00dfb65c  ldr x8,[x21]
+00dfb660  ldr x8,[x8, #0xb8]
+00dfb664  ldr x0,[x8, #0x60]
+00dfb668  cbz x0,0x00dfb680
+00dfb66c  mov x1,x19
+00dfb670  ldp x19,x30,[sp, #0x10]
+00dfb674  mov x2,xzr
+00dfb678  ldp x21,x20,[sp], #0x20
+00dfb67c  b 0x01078af4
+00dfb680  ldr x0,[x19, #0x38]
+00dfb684  ldp x19,x30,[sp, #0x10]
+00dfb688  ldp x21,x20,[sp], #0x20
+00dfb68c  ret
+
+
+================================================================================
+### FILE: 00dfb690_EffInfo__set_m_roleFollower.txt
+================================================================================
+Function: EffInfo$$set_m_roleFollower @ 00dfb690
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EffInfo$$CheckRoleFollower @ 00dfb260
+
+--- Listing ---
+00dfb690  str x22,[sp, #-0x30]!
+00dfb694  stp x21,x20,[sp, #0x10]
+00dfb698  stp x19,x30,[sp, #0x20]
+00dfb69c  adrp x21,0x3572000
+00dfb6a0  adrp x22,0x3344000
+00dfb6a4  ldrb w8,[x21, #0x4c8]
+00dfb6a8  ldr x22,[x22, #0x6b0]
+00dfb6ac  mov x19,x1
+00dfb6b0  mov x20,x0
+00dfb6b4  tbnz w8,#0x0,0x00dfb6cc
+00dfb6b8  adrp x0,0x3344000
+00dfb6bc  ldr x0,[x0, #0x6b0]
+00dfb6c0  bl 0x00b0789c
+00dfb6c4  mov w8,#0x1
+00dfb6c8  strb w8,[x21, #0x4c8]
+00dfb6cc  ldr x8,[x22]
+00dfb6d0  ldr x8,[x8, #0xb8]
+00dfb6d4  ldr x0,[x8, #0x18]
+00dfb6d8  cbz x0,0x00dfb6f8
+00dfb6dc  mov x1,x20
+00dfb6e0  mov x2,x19
+00dfb6e4  ldp x19,x30,[sp, #0x20]
+00dfb6e8  ldp x21,x20,[sp, #0x10]
+00dfb6ec  mov x3,xzr
+00dfb6f0  ldr x22,[sp], #0x30
+00dfb6f4  b 0x0106125c
+00dfb6f8  str x19,[x20, #0x10]!
+00dfb6fc  mov x0,x20
+00dfb700  mov x1,x19
+00dfb704  ldp x19,x30,[sp, #0x20]
+00dfb708  ldp x21,x20,[sp, #0x10]
+00dfb70c  ldr x22,[sp], #0x30
+00dfb710  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfb714_EffInfo__get_m_raider.txt
+================================================================================
+Function: EffInfo$$get_m_raider @ 00dfb714
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp197 @ 01078af4
+
+--- Calls IN ---
+  <- EffInfo$$FixPos @ 00dfc73c
+  <- EffInfo$$CheckRoleFollower @ 00dfb260
+  <- EffInfo$$Order @ 00dfc3d0
+
+--- Listing ---
+00dfb714  stp x21,x20,[sp, #-0x20]!
+00dfb718  stp x19,x30,[sp, #0x10]
+00dfb71c  adrp x20,0x3572000
+00dfb720  adrp x21,0x3344000
+00dfb724  ldrb w8,[x20, #0x4d3]
+00dfb728  ldr x21,[x21, #0x6b0]
+00dfb72c  mov x19,x0
+00dfb730  tbnz w8,#0x0,0x00dfb748
+00dfb734  adrp x0,0x3344000
+00dfb738  ldr x0,[x0, #0x6b0]
+00dfb73c  bl 0x00b0789c
+00dfb740  mov w8,#0x1
+00dfb744  strb w8,[x20, #0x4d3]
+00dfb748  ldr x8,[x21]
+00dfb74c  ldr x8,[x8, #0xb8]
+00dfb750  ldr x0,[x8, #0x70]
+00dfb754  cbz x0,0x00dfb76c
+00dfb758  mov x1,x19
+00dfb75c  ldp x19,x30,[sp, #0x10]
+00dfb760  mov x2,xzr
+00dfb764  ldp x21,x20,[sp], #0x20
+00dfb768  b 0x01078af4
+00dfb76c  ldr x0,[x19, #0x40]
+00dfb770  ldp x19,x30,[sp, #0x10]
+00dfb774  ldp x21,x20,[sp], #0x20
+00dfb778  ret
+
+
+================================================================================
+### FILE: 00dfb77c_EffInfo__get_m_roleFollower.txt
+================================================================================
+Function: EffInfo$$get_m_roleFollower @ 00dfb77c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp45 @ 01064e3c
+
+--- Calls IN ---
+  <- EffInfo$$get_IsCurrentLeftAni @ 00dfc688
+  <- EffInfo$$BoneFollower @ 00dfcb48
+
+--- Listing ---
+00dfb77c  stp x21,x20,[sp, #-0x20]!
+00dfb780  stp x19,x30,[sp, #0x10]
+00dfb784  adrp x20,0x3572000
+00dfb788  adrp x21,0x3344000
+00dfb78c  ldrb w8,[x20, #0x4c7]
+00dfb790  ldr x21,[x21, #0x6b0]
+00dfb794  mov x19,x0
+00dfb798  tbnz w8,#0x0,0x00dfb7b0
+00dfb79c  adrp x0,0x3344000
+00dfb7a0  ldr x0,[x0, #0x6b0]
+00dfb7a4  bl 0x00b0789c
+00dfb7a8  mov w8,#0x1
+00dfb7ac  strb w8,[x20, #0x4c7]
+00dfb7b0  ldr x8,[x21]
+00dfb7b4  ldr x8,[x8, #0xb8]
+00dfb7b8  ldr x0,[x8, #0x10]
+00dfb7bc  cbz x0,0x00dfb7d4
+00dfb7c0  mov x1,x19
+00dfb7c4  ldp x19,x30,[sp, #0x10]
+00dfb7c8  mov x2,xzr
+00dfb7cc  ldp x21,x20,[sp], #0x20
+00dfb7d0  b 0x01064e3c
+00dfb7d4  ldr x0,[x19, #0x10]
+00dfb7d8  ldp x19,x30,[sp, #0x10]
+00dfb7dc  ldp x21,x20,[sp], #0x20
+00dfb7e0  ret
+
+
+================================================================================
+### FILE: 00dfb7e4_EffInfo__get_m_inst.txt
+================================================================================
+Function: EffInfo$$get_m_inst @ 00dfb7e4
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- EffInfo$$FixPos @ 00dfc73c
+  <- RoleMono$$OnSpineEvent @ 014a6304
+  <- RoleMono$$BreakLongEff @ 014a3000
+  <- BattleManager.<PlaySkillShowEnd2>d__260$$MoveNext @ 01316440
+  <- EffInfo$$BoneFollower @ 00dfcb48
+  <- TerrainMono$$<RefreshShow>b__51_0 @ 016cb0a8
+  <- EffLiveMono$$TurnAround @ 00dfe460
+  <- RoleMono$$OrderEff @ 014a9084
+  <- TerrainMono$$RefreshShow @ 016c9224
+  <- BattleManager$$WeatherEnd @ 0117caf8
+  <- BaseBuff$$DestoryEffInfo @ 015df2e4
+  <- EffInfo$$Order @ 00dfc3d0
+  <- RoleMono$$PowerClose @ 014a9a38
+  <- RoleMono$$<OnSpineEvent>b__155_0 @ 014ad758
+  <- BaseSkillEff$$DestoryPassiveEff @ 015e76d0
+  <- BattleManager$$PlaySkillShow @ 0118a3f8
+  <- BaseSkillEff$$PassiveEffActive @ 015e7a88
+  <- EffManager$$EffComplete @ 00dfe8b4
+  <- RoleMono$$PlayShildEff @ 014a108c
+  <- EffInfo$$Init @ 00dfd23c
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_m_inst @ 01274304
+  <- EffManager$$PlayEff @ 00dfe6c4
+  <- EffInfo$$Play @ 00dfbca0
+  <- PropNews$$<CreateProp>b__35_0 @ 0149dca4
+  <- RoleMono$$RefreshCD @ 014a047c
+  <- RoleMono$$DestroyLoopEff @ 014a5904
+
+--- Listing ---
+00dfb7e4  stp x21,x20,[sp, #-0x20]!
+00dfb7e8  stp x19,x30,[sp, #0x10]
+00dfb7ec  adrp x20,0x3572000
+00dfb7f0  adrp x21,0x3344000
+00dfb7f4  ldrb w8,[x20, #0x4cd]
+00dfb7f8  ldr x21,[x21, #0x6b0]
+00dfb7fc  mov x19,x0
+00dfb800  tbnz w8,#0x0,0x00dfb818
+00dfb804  adrp x0,0x3344000
+00dfb808  ldr x0,[x0, #0x6b0]
+00dfb80c  bl 0x00b0789c
+00dfb810  mov w8,#0x1
+00dfb814  strb w8,[x20, #0x4cd]
+00dfb818  ldr x8,[x21]
+00dfb81c  ldr x8,[x8, #0xb8]
+00dfb820  ldr x0,[x8, #0x40]
+00dfb824  cbz x0,0x00dfb83c
+00dfb828  mov x1,x19
+00dfb82c  ldp x19,x30,[sp, #0x10]
+00dfb830  mov x2,xzr
+00dfb834  ldp x21,x20,[sp], #0x20
+00dfb838  b 0x0106088c
+00dfb83c  ldr x0,[x19, #0x28]
+00dfb840  ldp x19,x30,[sp, #0x10]
+00dfb844  ldp x21,x20,[sp], #0x20
+00dfb848  ret
+
+
+================================================================================
+### FILE: 00dfb84c_EffInfo__set_m_inst.txt
+================================================================================
+Function: EffInfo$$set_m_inst @ 00dfb84c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- RoleMono$$GhostAndPlay @ 014acc64
+  <- XLua.CSObjectWrap.EffInfoWrap$$_s_set_m_inst @ 012755a4
+  <- EffManager$$AddEffEnd @ 00dfedf0
+
+--- Listing ---
+00dfb84c  str x22,[sp, #-0x30]!
+00dfb850  stp x21,x20,[sp, #0x10]
+00dfb854  stp x19,x30,[sp, #0x20]
+00dfb858  adrp x21,0x3572000
+00dfb85c  adrp x22,0x3344000
+00dfb860  ldrb w8,[x21, #0x4ce]
+00dfb864  ldr x22,[x22, #0x6b0]
+00dfb868  mov x19,x1
+00dfb86c  mov x20,x0
+00dfb870  tbnz w8,#0x0,0x00dfb888
+00dfb874  adrp x0,0x3344000
+00dfb878  ldr x0,[x0, #0x6b0]
+00dfb87c  bl 0x00b0789c
+00dfb880  mov w8,#0x1
+00dfb884  strb w8,[x21, #0x4ce]
+00dfb888  ldr x8,[x22]
+00dfb88c  ldr x8,[x8, #0xb8]
+00dfb890  ldr x0,[x8, #0x48]
+00dfb894  cbz x0,0x00dfb8b4
+00dfb898  mov x1,x20
+00dfb89c  mov x2,x19
+00dfb8a0  ldp x19,x30,[sp, #0x20]
+00dfb8a4  ldp x21,x20,[sp, #0x10]
+00dfb8a8  mov x3,xzr
+00dfb8ac  ldr x22,[sp], #0x30
+00dfb8b0  b 0x0106125c
+00dfb8b4  str x19,[x20, #0x28]!
+00dfb8b8  mov x0,x20
+00dfb8bc  mov x1,x19
+00dfb8c0  ldp x19,x30,[sp, #0x20]
+00dfb8c4  ldp x21,x20,[sp, #0x10]
+00dfb8c8  ldr x22,[sp], #0x30
+00dfb8cc  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfb8d0_EffInfo__get_m_boneName.txt
+================================================================================
+Function: EffInfo$$get_m_boneName @ 00dfb8d0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp19 @ 01061abc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- RoleMono$$<OnSpineEvent>b__155_0 @ 014ad758
+  <- EffInfo$$BoneFollower @ 00dfcb48
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_m_boneName @ 012744c4
+
+--- Listing ---
+00dfb8d0  stp x21,x20,[sp, #-0x20]!
+00dfb8d4  stp x19,x30,[sp, #0x10]
+00dfb8d8  adrp x20,0x3572000
+00dfb8dc  adrp x21,0x3344000
+00dfb8e0  ldrb w8,[x20, #0x4cf]
+00dfb8e4  ldr x21,[x21, #0x6b0]
+00dfb8e8  mov x19,x0
+00dfb8ec  tbnz w8,#0x0,0x00dfb904
+00dfb8f0  adrp x0,0x3344000
+00dfb8f4  ldr x0,[x0, #0x6b0]
+00dfb8f8  bl 0x00b0789c
+00dfb8fc  mov w8,#0x1
+00dfb900  strb w8,[x20, #0x4cf]
+00dfb904  ldr x8,[x21]
+00dfb908  ldr x8,[x8, #0xb8]
+00dfb90c  ldr x0,[x8, #0x50]
+00dfb910  cbz x0,0x00dfb928
+00dfb914  mov x1,x19
+00dfb918  ldp x19,x30,[sp, #0x10]
+00dfb91c  mov x2,xzr
+00dfb920  ldp x21,x20,[sp], #0x20
+00dfb924  b 0x01061abc
+00dfb928  ldr x0,[x19, #0x30]
+00dfb92c  ldp x19,x30,[sp, #0x10]
+00dfb930  ldp x21,x20,[sp], #0x20
+00dfb934  ret
+
+
+================================================================================
+### FILE: 00dfb938_EffInfo__get_playEndAct.txt
+================================================================================
+Function: EffInfo$$get_playEndAct @ 00dfb938
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp133 @ 010701c8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- EffInfo$$PlayComplete @ 00dfd3fc
+
+--- Listing ---
+00dfb938  stp x21,x20,[sp, #-0x20]!
+00dfb93c  stp x19,x30,[sp, #0x10]
+00dfb940  adrp x20,0x3572000
+00dfb944  adrp x21,0x3344000
+00dfb948  ldrb w8,[x20, #0x4d5]
+00dfb94c  ldr x21,[x21, #0x6b0]
+00dfb950  mov x19,x0
+00dfb954  tbnz w8,#0x0,0x00dfb96c
+00dfb958  adrp x0,0x3344000
+00dfb95c  ldr x0,[x0, #0x6b0]
+00dfb960  bl 0x00b0789c
+00dfb964  mov w8,#0x1
+00dfb968  strb w8,[x20, #0x4d5]
+00dfb96c  ldr x8,[x21]
+00dfb970  ldr x8,[x8, #0xb8]
+00dfb974  ldr x0,[x8, #0x80]
+00dfb978  cbz x0,0x00dfb990
+00dfb97c  mov x1,x19
+00dfb980  ldp x19,x30,[sp, #0x10]
+00dfb984  mov x2,xzr
+00dfb988  ldp x21,x20,[sp], #0x20
+00dfb98c  b 0x010701c8
+00dfb990  ldr x0,[x19, #0x48]
+00dfb994  ldp x19,x30,[sp, #0x10]
+00dfb998  ldp x21,x20,[sp], #0x20
+00dfb99c  ret
+
+
+================================================================================
+### FILE: 00dfb9a0_EffInfo__get_instBackAct.txt
+================================================================================
+Function: EffInfo$$get_instBackAct @ 00dfb9a0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp367 @ 0108ee24
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- EffInfo$$InstComplete @ 00dfd498
+
+--- Listing ---
+00dfb9a0  stp x21,x20,[sp, #-0x20]!
+00dfb9a4  stp x19,x30,[sp, #0x10]
+00dfb9a8  adrp x20,0x3572000
+00dfb9ac  adrp x21,0x3344000
+00dfb9b0  ldrb w8,[x20, #0x4d7]
+00dfb9b4  ldr x21,[x21, #0x6b0]
+00dfb9b8  mov x19,x0
+00dfb9bc  tbnz w8,#0x0,0x00dfb9d4
+00dfb9c0  adrp x0,0x3344000
+00dfb9c4  ldr x0,[x0, #0x6b0]
+00dfb9c8  bl 0x00b0789c
+00dfb9cc  mov w8,#0x1
+00dfb9d0  strb w8,[x20, #0x4d7]
+00dfb9d4  ldr x8,[x21]
+00dfb9d8  ldr x8,[x8, #0xb8]
+00dfb9dc  ldr x0,[x8, #0x90]
+00dfb9e0  cbz x0,0x00dfb9f8
+00dfb9e4  mov x1,x19
+00dfb9e8  ldp x19,x30,[sp, #0x10]
+00dfb9ec  mov x2,xzr
+00dfb9f0  ldp x21,x20,[sp], #0x20
+00dfb9f4  b 0x0108ee24
+00dfb9f8  ldr x0,[x19, #0x50]
+00dfb9fc  ldp x19,x30,[sp, #0x10]
+00dfba00  ldp x21,x20,[sp], #0x20
+00dfba04  ret
+
+
+================================================================================
+### FILE: 00dfba08_EffInfo__get_LocalPositon_Excel.txt
+================================================================================
+Function: EffInfo$$get_LocalPositon_Excel @ 00dfba08
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp67 @ 01067a8c
+
+--- Calls IN ---
+  <- EffInfo$$FixPos @ 00dfc73c
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_LocalPositon_Excel @ 01274838
+
+--- Listing ---
+00dfba08  stp x21,x20,[sp, #-0x20]!
+00dfba0c  stp x19,x30,[sp, #0x10]
+00dfba10  adrp x20,0x3572000
+00dfba14  adrp x21,0x3344000
+00dfba18  ldrb w8,[x20, #0x4d9]
+00dfba1c  ldr x21,[x21, #0x6b0]
+00dfba20  mov x19,x0
+00dfba24  tbnz w8,#0x0,0x00dfba3c
+00dfba28  adrp x0,0x3344000
+00dfba2c  ldr x0,[x0, #0x6b0]
+00dfba30  bl 0x00b0789c
+00dfba34  mov w8,#0x1
+00dfba38  strb w8,[x20, #0x4d9]
+00dfba3c  ldr x8,[x21]
+00dfba40  ldr x8,[x8, #0xb8]
+00dfba44  ldr x0,[x8, #0xa0]
+00dfba48  cbz x0,0x00dfba5c
+00dfba4c  mov x1,x19
+00dfba50  mov x2,xzr
+00dfba54  bl 0x01067a8c
+00dfba58  b 0x00dfba64
+00dfba5c  ldp s0,s1,[x19, #0x58]
+00dfba60  ldr s2,[x19, #0x60]
+00dfba64  ldp x19,x30,[sp, #0x10]
+00dfba68  ldp x21,x20,[sp], #0x20
+00dfba6c  ret
+
+
+================================================================================
+### FILE: 00dfba70_EffInfo__get_m_effType.txt
+================================================================================
+Function: EffInfo$$get_m_effType @ 00dfba70
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- RoleMono$$BreakLongEff @ 014a3000
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_m_effType @ 012749f8
+
+--- Listing ---
+00dfba70  stp x21,x20,[sp, #-0x20]!
+00dfba74  stp x19,x30,[sp, #0x10]
+00dfba78  adrp x20,0x3572000
+00dfba7c  adrp x21,0x3344000
+00dfba80  ldrb w8,[x20, #0x4db]
+00dfba84  ldr x21,[x21, #0x6b0]
+00dfba88  mov x19,x0
+00dfba8c  tbnz w8,#0x0,0x00dfbaa4
+00dfba90  adrp x0,0x3344000
+00dfba94  ldr x0,[x0, #0x6b0]
+00dfba98  bl 0x00b0789c
+00dfba9c  mov w8,#0x1
+00dfbaa0  strb w8,[x20, #0x4db]
+00dfbaa4  ldr x8,[x21]
+00dfbaa8  ldr x8,[x8, #0xb8]
+00dfbaac  ldr x0,[x8, #0xb0]
+00dfbab0  cbz x0,0x00dfbac8
+00dfbab4  mov x1,x19
+00dfbab8  ldp x19,x30,[sp, #0x10]
+00dfbabc  mov x2,xzr
+00dfbac0  ldp x21,x20,[sp], #0x20
+00dfbac4  b 0x01060c2c
+00dfbac8  ldr w0,[x19, #0x64]
+00dfbacc  ldp x19,x30,[sp, #0x10]
+00dfbad0  ldp x21,x20,[sp], #0x20
+00dfbad4  ret
+
+
+================================================================================
+### FILE: 00dfbad8_EffInfo__set_m_effType.txt
+================================================================================
+Function: EffInfo$$set_m_effType @ 00dfbad8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- RoleMono$$OnSpineEvent @ 014a6304
+  <- XLua.CSObjectWrap.EffInfoWrap$$_s_set_m_effType @ 01275de0
+
+--- Listing ---
+00dfbad8  str x22,[sp, #-0x30]!
+00dfbadc  stp x21,x20,[sp, #0x10]
+00dfbae0  stp x19,x30,[sp, #0x20]
+00dfbae4  adrp x21,0x3572000
+00dfbae8  adrp x22,0x3344000
+00dfbaec  ldrb w8,[x21, #0x4dc]
+00dfbaf0  ldr x22,[x22, #0x6b0]
+00dfbaf4  mov w19,w1
+00dfbaf8  mov x20,x0
+00dfbafc  tbnz w8,#0x0,0x00dfbb14
+00dfbb00  adrp x0,0x3344000
+00dfbb04  ldr x0,[x0, #0x6b0]
+00dfbb08  bl 0x00b0789c
+00dfbb0c  mov w8,#0x1
+00dfbb10  strb w8,[x21, #0x4dc]
+00dfbb14  ldr x8,[x22]
+00dfbb18  ldr x8,[x8, #0xb8]
+00dfbb1c  ldr x0,[x8, #0xb8]
+00dfbb20  cbz x0,0x00dfbb40
+00dfbb24  mov x1,x20
+00dfbb28  mov w2,w19
+00dfbb2c  ldp x19,x30,[sp, #0x20]
+00dfbb30  ldp x21,x20,[sp, #0x10]
+00dfbb34  mov x3,xzr
+00dfbb38  ldr x22,[sp], #0x30
+00dfbb3c  b 0x0106155c
+00dfbb40  str w19,[x20, #0x64]
+00dfbb44  ldp x19,x30,[sp, #0x20]
+00dfbb48  ldp x21,x20,[sp, #0x10]
+00dfbb4c  ldr x22,[sp], #0x30
+00dfbb50  ret
+
+
+================================================================================
+### FILE: 00dfbb54_EffInfo__get_durationRound.txt
+================================================================================
+Function: EffInfo$$get_durationRound @ 00dfbb54
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp32 @ 01063698
+
+--- Calls IN ---
+  <- EffLiveMono$$RoundStart @ 00dfe1e8
+  <- EffLiveMono$$SetEffInfo @ 00dfd6a8
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_durationRound @ 01274bac
+
+--- Listing ---
+00dfbb54  stp x21,x20,[sp, #-0x20]!
+00dfbb58  stp x19,x30,[sp, #0x10]
+00dfbb5c  adrp x20,0x3572000
+00dfbb60  adrp x21,0x3344000
+00dfbb64  ldrb w8,[x20, #0x4dd]
+00dfbb68  ldr x21,[x21, #0x6b0]
+00dfbb6c  mov x19,x0
+00dfbb70  tbnz w8,#0x0,0x00dfbb88
+00dfbb74  adrp x0,0x3344000
+00dfbb78  ldr x0,[x0, #0x6b0]
+00dfbb7c  bl 0x00b0789c
+00dfbb80  mov w8,#0x1
+00dfbb84  strb w8,[x20, #0x4dd]
+00dfbb88  ldr x8,[x21]
+00dfbb8c  ldr x8,[x8, #0xb8]
+00dfbb90  ldr x0,[x8, #0xc0]
+00dfbb94  cbz x0,0x00dfbbac
+00dfbb98  mov x1,x19
+00dfbb9c  ldp x19,x30,[sp, #0x10]
+00dfbba0  mov x2,xzr
+00dfbba4  ldp x21,x20,[sp], #0x20
+00dfbba8  b 0x01063698
+00dfbbac  ldr s0,[x19, #0x68]
+00dfbbb0  ldp x19,x30,[sp, #0x10]
+00dfbbb4  ldp x21,x20,[sp], #0x20
+00dfbbb8  ret
+
+
+================================================================================
+### FILE: 00dfbbbc_EffInfo__set_durationRound.txt
+================================================================================
+Function: EffInfo$$set_durationRound @ 00dfbbbc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp20 @ 01061c3c
+
+--- Calls IN ---
+  <- SkillEff_9004$$ExecuteSpecial @ 016c3930
+  <- XLua.CSObjectWrap.EffInfoWrap$$_s_set_durationRound @ 01275fa4
+
+--- Listing ---
+00dfbbbc  str d8,[sp, #-0x30]!
+00dfbbc0  stp x21,x20,[sp, #0x10]
+00dfbbc4  stp x19,x30,[sp, #0x20]
+00dfbbc8  adrp x20,0x3572000
+00dfbbcc  adrp x21,0x3344000
+00dfbbd0  ldrb w8,[x20, #0x4de]
+00dfbbd4  ldr x21,[x21, #0x6b0]
+00dfbbd8  mov v8.16B,v0.16B
+00dfbbdc  mov x19,x0
+00dfbbe0  tbnz w8,#0x0,0x00dfbbf8
+00dfbbe4  adrp x0,0x3344000
+00dfbbe8  ldr x0,[x0, #0x6b0]
+00dfbbec  bl 0x00b0789c
+00dfbbf0  mov w8,#0x1
+00dfbbf4  strb w8,[x20, #0x4de]
+00dfbbf8  ldr x8,[x21]
+00dfbbfc  ldr x8,[x8, #0xb8]
+00dfbc00  ldr x0,[x8, #0xc8]
+00dfbc04  cbz x0,0x00dfbc24
+00dfbc08  mov x1,x19
+00dfbc0c  ldp x19,x30,[sp, #0x20]
+00dfbc10  ldp x21,x20,[sp, #0x10]
+00dfbc14  mov v0.16B,v8.16B
+00dfbc18  mov x2,xzr
+00dfbc1c  ldr d8,[sp], #0x30
+00dfbc20  b 0x01061c3c
+00dfbc24  str s8,[x19, #0x68]
+00dfbc28  ldp x19,x30,[sp, #0x20]
+00dfbc2c  ldp x21,x20,[sp, #0x10]
+00dfbc30  ldr d8,[sp], #0x30
+00dfbc34  ret
+
+
+================================================================================
+### FILE: 00dfbc38_EffInfo__get_m_modelName.txt
+================================================================================
+Function: EffInfo$$get_m_modelName @ 00dfbc38
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp19 @ 01061abc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- EffInfo$$Init @ 00dfd23c
+  <- BattleManager$$PlaySkillShow @ 0118a3f8
+  <- EffManager$$PlayEff @ 00dfe6c4
+  <- EffInfo$$Play @ 00dfbca0
+  <- EffManager$$EffComplete @ 00dfe8b4
+  <- EffInfo$$Order @ 00dfc3d0
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_m_modelName @ 01274d60
+
+--- Listing ---
+00dfbc38  stp x21,x20,[sp, #-0x20]!
+00dfbc3c  stp x19,x30,[sp, #0x10]
+00dfbc40  adrp x20,0x3572000
+00dfbc44  adrp x21,0x3344000
+00dfbc48  ldrb w8,[x20, #0x4df]
+00dfbc4c  ldr x21,[x21, #0x6b0]
+00dfbc50  mov x19,x0
+00dfbc54  tbnz w8,#0x0,0x00dfbc6c
+00dfbc58  adrp x0,0x3344000
+00dfbc5c  ldr x0,[x0, #0x6b0]
+00dfbc60  bl 0x00b0789c
+00dfbc64  mov w8,#0x1
+00dfbc68  strb w8,[x20, #0x4df]
+00dfbc6c  ldr x8,[x21]
+00dfbc70  ldr x8,[x8, #0xb8]
+00dfbc74  ldr x0,[x8, #0xd0]
+00dfbc78  cbz x0,0x00dfbc90
+00dfbc7c  mov x1,x19
+00dfbc80  ldp x19,x30,[sp, #0x10]
+00dfbc84  mov x2,xzr
+00dfbc88  ldp x21,x20,[sp], #0x20
+00dfbc8c  b 0x01061abc
+00dfbc90  ldr x0,[x19, #0x70]
+00dfbc94  ldp x19,x30,[sp, #0x10]
+00dfbc98  ldp x21,x20,[sp], #0x20
+00dfbc9c  ret
+
+
+================================================================================
+### FILE: 00dfbca0_EffInfo__Play.txt
+================================================================================
+Function: EffInfo$$Play @ 00dfbca0
+
+--- Calls OUT ---
+  -> EffInfo$$get_m_inst @ 00dfb7e4
+  -> EffInfo$$get_IsCurrentLeftAni @ 00dfc688
+  -> EffInfo$$FixPos @ 00dfc73c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> EffInfo$$get_m_modelName @ 00dfbc38
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+  -> Spine.AnimationState$$GetCurrent @ 00d6663c
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> AliothExtensions$$SetAnimationEx @ 00e1676c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Contains @ 01fe31fc
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> System.String$$Equals @ 01fde08c
+  -> EffInfo$$Order @ 00dfc3d0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_m_Play @ 012735dc
+  <- EffLiveMono$$PlaySpineAni @ 00dfe01c
+  <- EffManager$$EffComplete @ 00dfe8b4
+  <- EffLiveMono$$TurnAround @ 00dfe460
+
+--- Listing ---
+00dfbca0  sub sp,sp,#0x40
+00dfbca4  stp x23,x22,[sp, #0x10]
+00dfbca8  stp x21,x20,[sp, #0x20]
+00dfbcac  stp x19,x30,[sp, #0x30]
+00dfbcb0  adrp x21,0x3572000
+00dfbcb4  adrp x20,0x3344000
+00dfbcb8  ldrb w8,[x21, #0x4e1]
+00dfbcbc  ldr x20,[x20, #0x6b0]
+00dfbcc0  mov x19,x0
+00dfbcc4  tbnz w8,#0x0,0x00dfbd18
+00dfbcc8  adrp x0,0x3348000
+00dfbccc  ldr x0,[x0, #0x138]
+00dfbcd0  bl 0x00b0789c
+00dfbcd4  adrp x0,0x3344000
+00dfbcd8  ldr x0,[x0, #0x6b0]
+00dfbcdc  bl 0x00b0789c
+00dfbce0  adrp x0,0x337f000
+00dfbce4  ldr x0,[x0, #0xc50]
+00dfbce8  bl 0x00b0789c
+00dfbcec  adrp x0,0x3332000
+00dfbcf0  ldr x0,[x0, #0xf20]
+00dfbcf4  bl 0x00b0789c
+00dfbcf8  adrp x0,0x3321000
+00dfbcfc  ldr x0,[x0, #0xca8]
+00dfbd00  bl 0x00b0789c
+00dfbd04  adrp x0,0x330e000
+00dfbd08  ldr x0,[x0, #0xee0]
+00dfbd0c  bl 0x00b0789c
+00dfbd10  mov w8,#0x1
+00dfbd14  strb w8,[x21, #0x4e1]
+00dfbd18  ldr x8,[x20]
+00dfbd1c  str wzr,[sp, #0xc]
+00dfbd20  ldr x8,[x8, #0xb8]
+00dfbd24  ldr x0,[x8, #0xe0]
+00dfbd28  cbz x0,0x00dfbd3c
+00dfbd2c  mov x1,x19
+00dfbd30  mov x2,xzr
+00dfbd34  bl 0x01060dac
+00dfbd38  b 0x00dfbdc4
+00dfbd3c  adrp x21,0x3321000
+00dfbd40  ldr x21,[x21, #0xca8]
+00dfbd44  mov x0,x19
+00dfbd48  bl 0x00dfb7e4
+00dfbd4c  ldr x8,[x21]
+00dfbd50  mov x20,x0
+00dfbd54  ldr w9,[x8, #0xe0]
+00dfbd58  cbnz w9,0x00dfbd64
+00dfbd5c  mov x0,x8
+00dfbd60  bl 0x00b0798c
+00dfbd64  mov x0,x20
+00dfbd68  mov x1,xzr
+00dfbd6c  mov x2,xzr
+00dfbd70  bl 0x024c8180
+00dfbd74  tbnz w0,#0x0,0x00dfbdc4
+00dfbd78  mov x0,x19
+00dfbd7c  bl 0x00dfbc38
+00dfbd80  cbz x0,0x00dfc394
+00dfbd84  adrp x8,0x330e000
+00dfbd88  ldr x8,[x8, #0xee0]
+00dfbd8c  mov x2,xzr
+00dfbd90  ldr x1,[x8]
+00dfbd94  bl 0x01fe31fc
+00dfbd98  tbz w0,#0x0,0x00dfbdd8
+00dfbd9c  mov x0,x19
+00dfbda0  bl 0x00dfb7e4
+00dfbda4  cbz x0,0x00dfc394
+00dfbda8  mov w1,#0x1
+00dfbdac  mov x2,xzr
+00dfbdb0  bl 0x024de86c
+00dfbdb4  mov x0,x19
+00dfbdb8  bl 0x00dfc3d0
+00dfbdbc  mov x0,x19
+00dfbdc0  bl 0x00dfc73c
+00dfbdc4  ldp x19,x30,[sp, #0x30]
+00dfbdc8  ldp x21,x20,[sp, #0x20]
+00dfbdcc  ldp x23,x22,[sp, #0x10]
+00dfbdd0  add sp,sp,#0x40
+00dfbdd4  ret
+00dfbdd8  mov x0,x19
+    ; [PRE] try { // try from 00dfbdd8 to 00dfbdef has its CatchHandler @ 00dfc0f4
+00dfbddc  bl 0x00dfb7e4
+00dfbde0  cbz x0,0x00dfc020
+00dfbde4  mov w1,#0x1
+00dfbde8  mov x2,xzr
+00dfbdec  bl 0x024de86c
+    ; [POST] } // end try from 00dfbdd8 to 00dfbdef
+00dfbdf0  mov x0,x19
+    ; [PRE] try { // try from 00dfbdf0 to 00dfbdf7 has its CatchHandler @ 00dfc0f0
+00dfbdf4  bl 0x00dfb7e4
+    ; [POST] } // end try from 00dfbdf0 to 00dfbdf7
+00dfbdf8  cbz x0,0x00dfc024
+00dfbdfc  adrp x8,0x337f000
+00dfbe00  ldr x8,[x8, #0xc50]
+00dfbe04  ldr x1,[x8]
+00dfbe08  bl 0x01794e94
+    ; [PRE] try { // try from 00dfbe08 to 00dfbe0b has its CatchHandler @ 00dfc0ec
+    ; [POST] } // end try from 00dfbe08 to 00dfbe0b
+00dfbe0c  mov x20,x0
+00dfbe10  ldr x0,[x21]
+00dfbe14  ldr w8,[x0, #0xe0]
+00dfbe18  cbnz w8,0x00dfbe20
+00dfbe1c  bl 0x00b0798c
+    ; [PRE] try { // try from 00dfbe1c to 00dfbe1f has its CatchHandler @ 00dfc0d4
+    ; [POST] } // end try from 00dfbe1c to 00dfbe1f
+00dfbe20  mov x0,x20
+    ; [PRE] try { // try from 00dfbe20 to 00dfbe2f has its CatchHandler @ 00dfc0e8
+00dfbe24  mov x1,xzr
+00dfbe28  mov x2,xzr
+00dfbe2c  bl 0x024de30c
+    ; [POST] } // end try from 00dfbe20 to 00dfbe2f
+00dfbe30  adrp x22,0x3348000
+00dfbe34  ldr x22,[x22, #0x138]
+00dfbe38  tbz w0,#0x0,0x00dfbf60
+00dfbe3c  ldr x0,[x21]
+00dfbe40  ldr w8,[x0, #0xe0]
+00dfbe44  cbnz w8,0x00dfbe4c
+00dfbe48  bl 0x00b0798c
+    ; [PRE] try { // try from 00dfbe48 to 00dfbe4b has its CatchHandler @ 00dfc0d0
+    ; [POST] } // end try from 00dfbe48 to 00dfbe4b
+00dfbe4c  mov x0,x20
+    ; [PRE] try { // try from 00dfbe4c to 00dfbe5b has its CatchHandler @ 00dfc0e0
+00dfbe50  mov x1,xzr
+00dfbe54  mov x2,xzr
+00dfbe58  bl 0x024c8180
+    ; [POST] } // end try from 00dfbe4c to 00dfbe5b
+00dfbe5c  tbnz w0,#0x0,0x00dfbdc4
+00dfbe60  cbz x20,0x00dfc02c
+00dfbe64  ldr x8,[x20, #0xb0]
+00dfbe68  cbz x8,0x00dfbdc4
+00dfbe6c  mov x0,x19
+    ; [PRE] try { // try from 00dfbe6c to 00dfbe73 has its CatchHandler @ 00dfc0c8
+00dfbe70  bl 0x00dfadc0
+    ; [POST] } // end try from 00dfbe6c to 00dfbe73
+00dfbe74  cbz x0,0x00dfc034
+00dfbe78  ldr x21,[x0, #0x90]
+00dfbe7c  mov x0,x19
+    ; [PRE] try { // try from 00dfbe7c to 00dfbe83 has its CatchHandler @ 00dfc0c4
+00dfbe80  bl 0x00dfc688
+    ; [POST] } // end try from 00dfbe7c to 00dfbe83
+00dfbe84  tbz w0,#0x0,0x00dfbe98
+00dfbe88  mov x0,x19
+    ; [PRE] try { // try from 00dfbe88 to 00dfbe8f has its CatchHandler @ 00dfc0a0
+00dfbe8c  bl 0x00dfadc0
+    ; [POST] } // end try from 00dfbe88 to 00dfbe8f
+00dfbe90  cbz x0,0x00dfc054
+00dfbe94  ldr x21,[x0, #0x98]
+00dfbe98  ldr x0,[x20, #0xb0]
+00dfbe9c  cbz x0,0x00dfc038
+00dfbea0  mov w1,wzr
+    ; [PRE] try { // try from 00dfbea0 to 00dfbeab has its CatchHandler @ 00dfc0bc
+00dfbea4  mov x2,xzr
+00dfbea8  bl 0x00d6663c
+    ; [POST] } // end try from 00dfbea0 to 00dfbeab
+00dfbeac  cbz x0,0x00dfbf08
+00dfbeb0  ldr x0,[x20, #0xb0]
+00dfbeb4  cbz x0,0x00dfc04c
+00dfbeb8  mov w1,wzr
+    ; [PRE] try { // try from 00dfbeb8 to 00dfbec3 has its CatchHandler @ 00dfc0a4
+00dfbebc  mov x2,xzr
+00dfbec0  bl 0x00d6663c
+    ; [POST] } // end try from 00dfbeb8 to 00dfbec3
+00dfbec4  cbz x0,0x00dfc050
+00dfbec8  ldr x8,[x0, #0x10]
+00dfbecc  cbz x8,0x00dfbf08
+00dfbed0  ldr x0,[x20, #0xb0]
+00dfbed4  cbz x0,0x00dfc05c
+00dfbed8  mov w1,wzr
+    ; [PRE] try { // try from 00dfbed8 to 00dfbee3 has its CatchHandler @ 00dfc094
+00dfbedc  mov x2,xzr
+00dfbee0  bl 0x00d6663c
+    ; [POST] } // end try from 00dfbed8 to 00dfbee3
+00dfbee4  cbz x0,0x00dfc060
+00dfbee8  ldr x8,[x0, #0x10]
+00dfbeec  cbz x8,0x00dfc064
+00dfbef0  ldr x0,[x8, #0x20]
+00dfbef4  cbz x0,0x00dfc068
+00dfbef8  mov x1,x21
+    ; [PRE] try { // try from 00dfbef8 to 00dfbf03 has its CatchHandler @ 00dfc090
+00dfbefc  mov x2,xzr
+00dfbf00  bl 0x01fde08c
+    ; [POST] } // end try from 00dfbef8 to 00dfbf03
+00dfbf04  tbnz w0,#0x0,0x00dfbdc4
+00dfbf08  mov x0,x21
+    ; [PRE] try { // try from 00dfbf08 to 00dfbf13 has its CatchHandler @ 00dfc0a8
+00dfbf0c  mov x1,xzr
+00dfbf10  bl 0x01fdf3a0
+    ; [POST] } // end try from 00dfbf08 to 00dfbf13
+00dfbf14  tbnz w0,#0x0,0x00dfbdc4
+00dfbf18  ldr x20,[x20, #0xb0]
+00dfbf1c  mov x0,x19
+    ; [PRE] try { // try from 00dfbf1c to 00dfbf23 has its CatchHandler @ 00dfc09c
+00dfbf20  bl 0x00dfadc0
+    ; [POST] } // end try from 00dfbf1c to 00dfbf23
+00dfbf24  cbz x0,0x00dfc058
+00dfbf28  ldr x8,[x22]
+00dfbf2c  ldr w22,[x0, #0xa8]
+00dfbf30  ldr w9,[x8, #0xe0]
+00dfbf34  cbnz w9,0x00dfbf40
+00dfbf38  mov x0,x8
+    ; [PRE] try { // try from 00dfbf38 to 00dfbf3f has its CatchHandler @ 00dfc088
+00dfbf3c  bl 0x00b0798c
+    ; [POST] } // end try from 00dfbf38 to 00dfbf3f
+00dfbf40  cmp w22,#0x1
+00dfbf44  cset w3,eq
+00dfbf48  mov x0,x20
+    ; [PRE] try { // try from 00dfbf48 to 00dfbf5b has its CatchHandler @ 00dfc098
+00dfbf4c  mov w1,wzr
+00dfbf50  mov x2,x21
+00dfbf54  mov x4,xzr
+00dfbf58  bl 0x00e1676c
+    ; [POST] } // end try from 00dfbf48 to 00dfbf5b
+00dfbf5c  b 0x00dfbdbc
+00dfbf60  mov x0,x19
+    ; [PRE] try { // try from 00dfbf60 to 00dfbf67 has its CatchHandler @ 00dfc0e4
+00dfbf64  bl 0x00dfb7e4
+    ; [POST] } // end try from 00dfbf60 to 00dfbf67
+00dfbf68  cbz x0,0x00dfc028
+00dfbf6c  adrp x23,0x3332000
+00dfbf70  ldr x23,[x23, #0xf20]
+00dfbf74  ldr x1,[x23]
+00dfbf78  bl 0x01794e94
+    ; [PRE] try { // try from 00dfbf78 to 00dfbf7b has its CatchHandler @ 00dfc0dc
+    ; [POST] } // end try from 00dfbf78 to 00dfbf7b
+00dfbf7c  mov x20,x0
+00dfbf80  ldr x0,[x21]
+00dfbf84  ldr w8,[x0, #0xe0]
+00dfbf88  cbnz w8,0x00dfbf90
+00dfbf8c  bl 0x00b0798c
+    ; [PRE] try { // try from 00dfbf8c to 00dfbf8f has its CatchHandler @ 00dfc0cc
+    ; [POST] } // end try from 00dfbf8c to 00dfbf8f
+00dfbf90  mov x0,x20
+    ; [PRE] try { // try from 00dfbf90 to 00dfbf9f has its CatchHandler @ 00dfc0d8
+00dfbf94  mov x1,xzr
+00dfbf98  mov x2,xzr
+00dfbf9c  bl 0x024c8180
+    ; [POST] } // end try from 00dfbf90 to 00dfbf9f
+00dfbfa0  tbnz w0,#0x0,0x00dfbdc4
+00dfbfa4  cbz x20,0x00dfc030
+00dfbfa8  ldr x8,[x20, #0x110]
+00dfbfac  cbz x8,0x00dfbdc4
+00dfbfb0  mov x0,x19
+    ; [PRE] try { // try from 00dfbfb0 to 00dfbfb7 has its CatchHandler @ 00dfc0c0
+00dfbfb4  bl 0x00dfb7e4
+    ; [POST] } // end try from 00dfbfb0 to 00dfbfb7
+00dfbfb8  cbz x0,0x00dfc03c
+00dfbfbc  ldr x1,[x23]
+00dfbfc0  bl 0x01794e94
+    ; [PRE] try { // try from 00dfbfc0 to 00dfbfc3 has its CatchHandler @ 00dfc0b8
+    ; [POST] } // end try from 00dfbfc0 to 00dfbfc3
+00dfbfc4  cbz x0,0x00dfc040
+00dfbfc8  ldr x20,[x0, #0x110]
+00dfbfcc  mov x0,x19
+    ; [PRE] try { // try from 00dfbfcc to 00dfbfd3 has its CatchHandler @ 00dfc0b4
+00dfbfd0  bl 0x00dfadc0
+    ; [POST] } // end try from 00dfbfcc to 00dfbfd3
+00dfbfd4  cbz x0,0x00dfc044
+00dfbfd8  ldr x21,[x0, #0x90]
+00dfbfdc  mov x0,x19
+    ; [PRE] try { // try from 00dfbfdc to 00dfbfe3 has its CatchHandler @ 00dfc0b0
+00dfbfe0  bl 0x00dfadc0
+    ; [POST] } // end try from 00dfbfdc to 00dfbfe3
+00dfbfe4  cbz x0,0x00dfc048
+00dfbfe8  ldr x8,[x22]
+00dfbfec  ldr w22,[x0, #0xa8]
+00dfbff0  ldr w9,[x8, #0xe0]
+00dfbff4  cbnz w9,0x00dfc000
+00dfbff8  mov x0,x8
+    ; [PRE] try { // try from 00dfbff8 to 00dfbfff has its CatchHandler @ 00dfc08c
+00dfbffc  bl 0x00b0798c
+    ; [POST] } // end try from 00dfbff8 to 00dfbfff
+00dfc000  cmp w22,#0x1
+00dfc004  cset w3,eq
+00dfc008  mov x0,x20
+    ; [PRE] try { // try from 00dfc008 to 00dfc01b has its CatchHandler @ 00dfc0ac
+00dfc00c  mov w1,wzr
+00dfc010  mov x2,x21
+00dfc014  mov x4,xzr
+00dfc018  bl 0x00e1676c
+    ; [POST] } // end try from 00dfc008 to 00dfc01b
+00dfc01c  b 0x00dfbdbc
+00dfc020  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc020 to 00dfc023 has its CatchHandler @ 00dfc0f4
+    ; [POST] } // end try from 00dfc020 to 00dfc023
+00dfc024  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc024 to 00dfc027 has its CatchHandler @ 00dfc0f0
+    ; [POST] } // end try from 00dfc024 to 00dfc027
+00dfc028  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc028 to 00dfc02b has its CatchHandler @ 00dfc0e4
+    ; [POST] } // end try from 00dfc028 to 00dfc02b
+00dfc02c  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc02c to 00dfc02f has its CatchHandler @ 00dfc084
+    ; [POST] } // end try from 00dfc02c to 00dfc02f
+00dfc030  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc030 to 00dfc033 has its CatchHandler @ 00dfc080
+    ; [POST] } // end try from 00dfc030 to 00dfc033
+00dfc034  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc034 to 00dfc037 has its CatchHandler @ 00dfc0c8
+    ; [POST] } // end try from 00dfc034 to 00dfc037
+00dfc038  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc038 to 00dfc03b has its CatchHandler @ 00dfc07c
+    ; [POST] } // end try from 00dfc038 to 00dfc03b
+00dfc03c  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc03c to 00dfc03f has its CatchHandler @ 00dfc0c0
+    ; [POST] } // end try from 00dfc03c to 00dfc03f
+00dfc040  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc040 to 00dfc043 has its CatchHandler @ 00dfc0b8
+    ; [POST] } // end try from 00dfc040 to 00dfc043
+00dfc044  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc044 to 00dfc047 has its CatchHandler @ 00dfc0b4
+    ; [POST] } // end try from 00dfc044 to 00dfc047
+00dfc048  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc048 to 00dfc04b has its CatchHandler @ 00dfc0b0
+    ; [POST] } // end try from 00dfc048 to 00dfc04b
+00dfc04c  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc04c to 00dfc04f has its CatchHandler @ 00dfc078
+    ; [POST] } // end try from 00dfc04c to 00dfc04f
+00dfc050  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc050 to 00dfc053 has its CatchHandler @ 00dfc0a4
+    ; [POST] } // end try from 00dfc050 to 00dfc053
+00dfc054  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc054 to 00dfc057 has its CatchHandler @ 00dfc0a0
+    ; [POST] } // end try from 00dfc054 to 00dfc057
+00dfc058  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc058 to 00dfc05b has its CatchHandler @ 00dfc09c
+    ; [POST] } // end try from 00dfc058 to 00dfc05b
+00dfc05c  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc05c to 00dfc05f has its CatchHandler @ 00dfc074
+    ; [POST] } // end try from 00dfc05c to 00dfc05f
+00dfc060  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc060 to 00dfc063 has its CatchHandler @ 00dfc094
+    ; [POST] } // end try from 00dfc060 to 00dfc063
+00dfc064  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc064 to 00dfc067 has its CatchHandler @ 00dfc070
+    ; [POST] } // end try from 00dfc064 to 00dfc067
+00dfc068  bl 0x00b079b0
+    ; [PRE] try { // try from 00dfc068 to 00dfc06b has its CatchHandler @ 00dfc06c
+    ; [POST] } // end try from 00dfc068 to 00dfc06b
+00dfc394  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfc3d0_EffInfo__Order.txt
+================================================================================
+Function: EffInfo$$Order @ 00dfc3d0
+
+--- Calls OUT ---
+  -> EffInfo$$get_m_inst @ 00dfb7e4
+  -> EffInfo$$get_m_target @ 00dfb628
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> System.Collections.Generic.Dictionary<object,-int>$$ContainsKey @ 019687cc
+  -> EffInfo$$NowPlaceOrder @ 00dfce58
+  -> EffInfo$$get_m_modelName @ 00dfbc38
+  -> EffInfo$$NowOrder @ 00dfcc54
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary<object,-int>$$get_Item @ 01968544
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> EffInfo$$Init @ 00dfd23c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Contains @ 01fe31fc
+  -> UnityEngine.Renderer$$set_sortingOrder @ 024c697c
+  -> FUN_00b079b8 @ 00b079b8
+  -> EffInfo$$get_m_raider @ 00dfb714
+
+--- Calls IN ---
+  <- RoleMono$$GhostAndPlay @ 014acc64
+  <- XLua.CSObjectWrap.EffInfoWrap$$_m_Order @ 01273ab0
+  <- EffInfo$$Play @ 00dfbca0
+  <- EffManager$$EffComplete @ 00dfe8b4
+  <- RoleMono$$OrderEff @ 014a9084
+
+--- Listing ---
+00dfc3d0  stp x27,x26,[sp, #-0x50]!
+00dfc3d4  stp x25,x24,[sp, #0x10]
+00dfc3d8  stp x23,x22,[sp, #0x20]
+00dfc3dc  stp x21,x20,[sp, #0x30]
+00dfc3e0  stp x19,x30,[sp, #0x40]
+00dfc3e4  adrp x20,0x3572000
+00dfc3e8  adrp x21,0x3344000
+00dfc3ec  ldrb w8,[x20, #0x4e8]
+00dfc3f0  ldr x21,[x21, #0x6b0]
+00dfc3f4  mov x19,x0
+00dfc3f8  tbnz w8,#0x0,0x00dfc440
+00dfc3fc  adrp x0,0x3330000
+00dfc400  ldr x0,[x0, #0x7b8]
+00dfc404  bl 0x00b0789c
+00dfc408  adrp x0,0x3367000
+00dfc40c  ldr x0,[x0, #0x290]
+00dfc410  bl 0x00b0789c
+00dfc414  adrp x0,0x3344000
+00dfc418  ldr x0,[x0, #0x6b0]
+00dfc41c  bl 0x00b0789c
+00dfc420  adrp x0,0x3321000
+00dfc424  ldr x0,[x0, #0xca8]
+00dfc428  bl 0x00b0789c
+00dfc42c  adrp x0,0x330f000
+00dfc430  ldr x0,[x0, #0x460]
+00dfc434  bl 0x00b0789c
+00dfc438  mov w8,#0x1
+00dfc43c  strb w8,[x20, #0x4e8]
+00dfc440  ldr x8,[x21]
+00dfc444  ldr x8,[x8, #0xb8]
+00dfc448  ldr x0,[x8, #0x118]
+00dfc44c  cbz x0,0x00dfc470
+00dfc450  mov x1,x19
+00dfc454  ldp x19,x30,[sp, #0x40]
+00dfc458  ldp x21,x20,[sp, #0x30]
+00dfc45c  ldp x23,x22,[sp, #0x20]
+00dfc460  ldp x25,x24,[sp, #0x10]
+00dfc464  mov x2,xzr
+00dfc468  ldp x27,x26,[sp], #0x50
+00dfc46c  b 0x01060dac
+00dfc470  adrp x20,0x3321000
+00dfc474  ldr x20,[x20, #0xca8]
+00dfc478  mov x0,x19
+00dfc47c  bl 0x00dfb7e4
+00dfc480  ldr x8,[x20]
+00dfc484  mov x20,x0
+00dfc488  ldr w9,[x8, #0xe0]
+00dfc48c  cbnz w9,0x00dfc498
+00dfc490  mov x0,x8
+00dfc494  bl 0x00b0798c
+00dfc498  mov x0,x20
+00dfc49c  mov x1,xzr
+00dfc4a0  mov x2,xzr
+00dfc4a4  bl 0x024c8180
+00dfc4a8  tbnz w0,#0x0,0x00dfc668
+00dfc4ac  mov x0,x19
+00dfc4b0  bl 0x00dfbc38
+00dfc4b4  cbz x0,0x00dfc680
+00dfc4b8  adrp x8,0x330f000
+00dfc4bc  ldr x8,[x8, #0x460]
+00dfc4c0  mov x2,xzr
+00dfc4c4  ldr x1,[x8]
+00dfc4c8  bl 0x01fe31fc
+00dfc4cc  tbnz w0,#0x0,0x00dfc668
+00dfc4d0  ldr x22,[x19, #0x80]
+00dfc4d4  cbnz x22,0x00dfc4e8
+00dfc4d8  mov x0,x19
+00dfc4dc  bl 0x00dfd23c
+00dfc4e0  ldr x22,[x19, #0x80]
+00dfc4e4  cbz x22,0x00dfc680
+00dfc4e8  ldr x8,[x22, #0x18]
+00dfc4ec  cmp w8,#0x1
+00dfc4f0  b.lt 0x00dfc668
+00dfc4f4  adrp x24,0x3330000
+00dfc4f8  adrp x25,0x3367000
+00dfc4fc  ldr x24,[x24, #0x7b8]
+00dfc500  ldr x25,[x25, #0x290]
+00dfc504  mov x23,xzr
+00dfc508  and x8,x8,#0xffffffff
+00dfc50c  add x26,x22,#0x20
+00dfc510  cmp x23,w8, UXTW 
+00dfc514  b.cs 0x00dfc684
+00dfc518  ldr x20,[x26, x23, LSL #0x3]
+00dfc51c  mov x0,x19
+00dfc520  bl 0x00dfadc0
+00dfc524  cbz x0,0x00dfc680
+00dfc528  ldr w8,[x0, #0xf4]
+00dfc52c  mov x0,x19
+00dfc530  cmp w8,#0x3
+00dfc534  b.eq 0x00dfc564
+00dfc538  cmp w8,#0x2
+00dfc53c  b.eq 0x00dfc55c
+00dfc540  cmp w8,#0x1
+00dfc544  b.ne 0x00dfc5fc
+00dfc548  bl 0x00dfb628
+00dfc54c  cbz x0,0x00dfc578
+00dfc550  mov x0,x19
+00dfc554  bl 0x00dfb628
+00dfc558  b 0x00dfc58c
+00dfc55c  bl 0x00dfb628
+00dfc560  b 0x00dfc568
+00dfc564  bl 0x00dfb714
+00dfc568  mov x1,x0
+00dfc56c  mov x0,x19
+00dfc570  bl 0x00dfcc54
+00dfc574  b 0x00dfc598
+00dfc578  mov x0,x19
+00dfc57c  bl 0x00dfb714
+00dfc580  cbz x0,0x00dfc5f8
+00dfc584  mov x0,x19
+00dfc588  bl 0x00dfb714
+00dfc58c  mov x1,x0
+00dfc590  mov x0,x19
+00dfc594  bl 0x00dfce58
+00dfc598  mov w21,w0
+00dfc59c  mov x0,x19
+00dfc5a0  bl 0x00dfadc0
+00dfc5a4  cbz x0,0x00dfc680
+00dfc5a8  ldr x8,[x19, #0x78]
+00dfc5ac  cbz x8,0x00dfc680
+00dfc5b0  ldr x2,[x24]
+00dfc5b4  ldr w27,[x0, #0xd0]
+00dfc5b8  mov x0,x8
+00dfc5bc  mov x1,x20
+00dfc5c0  bl 0x019687cc
+00dfc5c4  tbz w0,#0x0,0x00dfc5e4
+00dfc5c8  ldr x0,[x19, #0x78]
+00dfc5cc  cbz x0,0x00dfc680
+00dfc5d0  ldr x2,[x25]
+00dfc5d4  mov x1,x20
+00dfc5d8  bl 0x01968544
+00dfc5dc  cbnz x20,0x00dfc5ec
+00dfc5e0  b 0x00dfc680
+00dfc5e4  mov w0,wzr
+00dfc5e8  cbz x20,0x00dfc680
+00dfc5ec  add w8,w27,w21
+00dfc5f0  add w1,w0,w8
+00dfc5f4  b 0x00dfc64c
+00dfc5f8  mov x0,x19
+00dfc5fc  bl 0x00dfadc0
+00dfc600  cbz x0,0x00dfc680
+00dfc604  ldr x8,[x19, #0x78]
+00dfc608  cbz x8,0x00dfc680
+00dfc60c  ldr x2,[x24]
+00dfc610  ldr w21,[x0, #0xd0]
+00dfc614  mov x0,x8
+00dfc618  mov x1,x20
+00dfc61c  bl 0x019687cc
+00dfc620  tbz w0,#0x0,0x00dfc640
+00dfc624  ldr x0,[x19, #0x78]
+00dfc628  cbz x0,0x00dfc680
+00dfc62c  ldr x2,[x25]
+00dfc630  mov x1,x20
+00dfc634  bl 0x01968544
+00dfc638  cbnz x20,0x00dfc648
+00dfc63c  b 0x00dfc680
+00dfc640  mov w0,wzr
+00dfc644  cbz x20,0x00dfc680
+00dfc648  add w1,w0,w21
+00dfc64c  mov x0,x20
+00dfc650  mov x2,xzr
+00dfc654  bl 0x024c697c
+00dfc658  ldr w8,[x22, #0x18]
+00dfc65c  add x23,x23,#0x1
+00dfc660  cmp x23,w8, SXTW 
+00dfc664  b.lt 0x00dfc510
+00dfc668  ldp x19,x30,[sp, #0x40]
+00dfc66c  ldp x21,x20,[sp, #0x30]
+00dfc670  ldp x23,x22,[sp, #0x20]
+00dfc674  ldp x25,x24,[sp, #0x10]
+00dfc678  ldp x27,x26,[sp], #0x50
+00dfc67c  ret
+00dfc680  bl 0x00b079b0
+00dfc684  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dfc688_EffInfo__get_IsCurrentLeftAni.txt
+================================================================================
+Function: EffInfo$$get_IsCurrentLeftAni @ 00dfc688
+
+--- Calls OUT ---
+  -> EffInfo$$get_m_roleFollower @ 00dfb77c
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+  -> RoleNews$$get_currentToRight @ 00fe0ea8
+
+--- Calls IN ---
+  <- EffInfo$$FixPos @ 00dfc73c
+  <- EffInfo$$Play @ 00dfbca0
+  <- XLua.CSObjectWrap.EffInfoWrap$$_g_get_IsCurrentLeftAni @ 01274f14
+
+--- Listing ---
+00dfc688  stp x21,x20,[sp, #-0x20]!
+00dfc68c  stp x19,x30,[sp, #0x10]
+00dfc690  adrp x20,0x3572000
+00dfc694  adrp x21,0x3344000
+00dfc698  ldrb w8,[x20, #0x4e3]
+00dfc69c  ldr x21,[x21, #0x6b0]
+00dfc6a0  mov x19,x0
+00dfc6a4  tbnz w8,#0x0,0x00dfc6bc
+00dfc6a8  adrp x0,0x3344000
+00dfc6ac  ldr x0,[x0, #0x6b0]
+00dfc6b0  bl 0x00b0789c
+00dfc6b4  mov w8,#0x1
+00dfc6b8  strb w8,[x20, #0x4e3]
+00dfc6bc  ldr x8,[x21]
+00dfc6c0  ldr x8,[x8, #0xb8]
+00dfc6c4  ldr x0,[x8, #0xf0]
+00dfc6c8  cbz x0,0x00dfc6e0
+00dfc6cc  mov x1,x19
+00dfc6d0  ldp x19,x30,[sp, #0x10]
+00dfc6d4  mov x2,xzr
+00dfc6d8  ldp x21,x20,[sp], #0x20
+00dfc6dc  b 0x01060aac
+00dfc6e0  mov x0,x19
+00dfc6e4  bl 0x00dfb77c
+00dfc6e8  cbz x0,0x00dfc704
+00dfc6ec  mov x0,x19
+00dfc6f0  bl 0x00dfb77c
+00dfc6f4  cbz x0,0x00dfc738
+00dfc6f8  mov x1,xzr
+00dfc6fc  bl 0x00fe0ea8
+00dfc700  tbz w0,#0x0,0x00dfc70c
+00dfc704  mov w8,wzr
+00dfc708  b 0x00dfc728
+00dfc70c  mov x0,x19
+00dfc710  bl 0x00dfadc0
+00dfc714  cbz x0,0x00dfc738
+00dfc718  ldr x0,[x0, #0x98]
+00dfc71c  mov x1,xzr
+00dfc720  bl 0x01fdf3a0
+00dfc724  eor w8,w0,#0x1
+00dfc728  ldp x19,x30,[sp, #0x10]
+00dfc72c  and w0,w8,#0x1
+00dfc730  ldp x21,x20,[sp], #0x20
+00dfc734  ret
+00dfc738  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfc73c_EffInfo__FixPos.txt
+================================================================================
+Function: EffInfo$$FixPos @ 00dfc73c
+
+--- Calls OUT ---
+  -> EffInfo$$get_m_inst @ 00dfb7e4
+  -> UnityEngine.Random$$Range @ 024d6370
+  -> EffInfo$$get_IsCurrentLeftAni @ 00dfc688
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> EffInfo$$get_m_target @ 00dfb628
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> System.String$$Split @ 01fe0d68
+  -> EffInfo$$get_LocalPositon_Excel @ 00dfba08
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> UnityEngine.Transform$$set_localEulerAngles @ 024f3c88
+  -> UnityEngine.Transform$$set_localPosition @ 024f385c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> EffInfo$$get_m_raider @ 00dfb714
+  -> RoleNews$$get_currentToRight @ 00fe0ea8
+  -> System.Single$$Parse @ 02163590
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_m_FixPos @ 01273914
+  <- EffInfo$$Play @ 00dfbca0
+
+--- Listing ---
+00dfc73c  str d10,[sp, #-0x40]!
+00dfc740  stp d9,d8,[sp, #0x10]
+00dfc744  stp x21,x20,[sp, #0x20]
+00dfc748  stp x19,x30,[sp, #0x30]
+00dfc74c  adrp x20,0x3572000
+00dfc750  adrp x21,0x3344000
+00dfc754  ldrb w8,[x20, #0x4e6]
+00dfc758  ldr x21,[x21, #0x6b0]
+00dfc75c  mov x19,x0
+00dfc760  tbnz w8,#0x0,0x00dfc790
+00dfc764  adrp x0,0x3344000
+00dfc768  ldr x0,[x0, #0x6b0]
+00dfc76c  bl 0x00b0789c
+00dfc770  adrp x0,0x3321000
+00dfc774  ldr x0,[x0, #0xca8]
+00dfc778  bl 0x00b0789c
+00dfc77c  adrp x0,0x3376000
+00dfc780  ldr x0,[x0, #0x698]
+00dfc784  bl 0x00b0789c
+00dfc788  mov w8,#0x1
+00dfc78c  strb w8,[x20, #0x4e6]
+00dfc790  ldr x8,[x21]
+00dfc794  ldr x8,[x8, #0xb8]
+00dfc798  ldr x0,[x8, #0x108]
+00dfc79c  cbz x0,0x00dfc7bc
+00dfc7a0  mov x1,x19
+00dfc7a4  ldp x19,x30,[sp, #0x30]
+00dfc7a8  ldp x21,x20,[sp, #0x20]
+00dfc7ac  ldp d9,d8,[sp, #0x10]
+00dfc7b0  mov x2,xzr
+00dfc7b4  ldr d10,[sp], #0x40
+00dfc7b8  b 0x01060dac
+00dfc7bc  adrp x20,0x3321000
+00dfc7c0  ldr x20,[x20, #0xca8]
+00dfc7c4  mov x0,x19
+00dfc7c8  bl 0x00dfb7e4
+00dfc7cc  ldr x8,[x20]
+00dfc7d0  mov x20,x0
+00dfc7d4  ldr w9,[x8, #0xe0]
+00dfc7d8  cbnz w9,0x00dfc7e4
+00dfc7dc  mov x0,x8
+00dfc7e0  bl 0x00b0798c
+00dfc7e4  mov x0,x20
+00dfc7e8  mov x1,xzr
+00dfc7ec  mov x2,xzr
+00dfc7f0  bl 0x024c8180
+00dfc7f4  tbz w0,#0x0,0x00dfc80c
+00dfc7f8  ldp x19,x30,[sp, #0x30]
+00dfc7fc  ldp x21,x20,[sp, #0x20]
+00dfc800  ldp d9,d8,[sp, #0x10]
+00dfc804  ldr d10,[sp], #0x40
+00dfc808  ret
+00dfc80c  mov x0,x19
+00dfc810  bl 0x00dfadc0
+00dfc814  cbz x0,0x00dfcb40
+00dfc818  ldr w8,[x0, #0xac]
+00dfc81c  cmp w8,#0x1
+00dfc820  b.ne 0x00dfc86c
+00dfc824  mov x0,x19
+00dfc828  bl 0x00dfb7e4
+00dfc82c  cbz x0,0x00dfcb40
+00dfc830  mov x1,xzr
+00dfc834  bl 0x024de730
+00dfc838  mov w8,#0x43b40000
+00dfc83c  mov x20,x0
+00dfc840  fmov s0,wzr
+00dfc844  fmov s1,w8
+00dfc848  mov x0,xzr
+00dfc84c  bl 0x024d6370
+00dfc850  cbz x20,0x00dfcb40
+00dfc854  mov v2.16B,v0.16B
+00dfc858  fmov s0,wzr
+00dfc85c  fmov s1,wzr
+00dfc860  mov x0,x20
+00dfc864  mov x1,xzr
+00dfc868  bl 0x024f3c88
+00dfc86c  adrp x20,0x3570000
+00dfc870  ldrb w8,[x20, #0xf0c]
+00dfc874  cbnz w8,0x00dfc88c
+00dfc878  adrp x0,0x3368000
+00dfc87c  ldr x0,[x0, #0x9b8]
+00dfc880  bl 0x00b0789c
+00dfc884  mov w8,#0x1
+00dfc888  strb w8,[x20, #0xf0c]
+00dfc88c  adrp x8,0x3368000
+00dfc890  ldr x8,[x8, #0x9b8]
+00dfc894  mov x0,x19
+00dfc898  ldr x8,[x8]
+00dfc89c  ldr x8,[x8, #0xb8]
+00dfc8a0  ldp s8,s9,[x8]
+00dfc8a4  ldr s10,[x8, #0x8]
+00dfc8a8  bl 0x00dfadc0
+00dfc8ac  cbz x0,0x00dfcb40
+00dfc8b0  ldr s0,[x0, #0xb4]
+00dfc8b4  fcmp s0,#0.0
+00dfc8b8  b.ne 0x00dfc9bc
+00dfc8bc  mov x0,x19
+00dfc8c0  bl 0x00dfadc0
+00dfc8c4  cbz x0,0x00dfcb40
+00dfc8c8  ldr s0,[x0, #0xb0]
+00dfc8cc  fcmp s0,#0.0
+00dfc8d0  b.ne 0x00dfc9bc
+00dfc8d4  mov x0,x19
+00dfc8d8  bl 0x00dfadc0
+00dfc8dc  cbz x0,0x00dfcb40
+00dfc8e0  ldr s0,[x0, #0xb8]
+00dfc8e4  fcmp s0,#0.0
+00dfc8e8  b.ne 0x00dfc9bc
+00dfc8ec  mov x0,x19
+00dfc8f0  bl 0x00dfadc0
+00dfc8f4  cbz x0,0x00dfcb40
+00dfc8f8  ldr s0,[x0, #0xbc]
+00dfc8fc  fcmp s0,#0.0
+00dfc900  b.ne 0x00dfc9bc
+00dfc904  mov x0,x19
+00dfc908  bl 0x00dfc688
+00dfc90c  tbz w0,#0x0,0x00dfcb0c
+00dfc910  mov x0,x19
+00dfc914  bl 0x00dfadc0
+00dfc918  cbz x0,0x00dfcb40
+00dfc91c  ldr x0,[x0, #0xc8]
+00dfc920  mov x1,xzr
+00dfc924  bl 0x01fdf3a0
+00dfc928  tbnz w0,#0x0,0x00dfca20
+00dfc92c  mov x0,x19
+00dfc930  bl 0x00dfadc0
+00dfc934  cbz x0,0x00dfcb40
+00dfc938  ldr x0,[x0, #0xc8]
+00dfc93c  cbz x0,0x00dfcb40
+00dfc940  mov w1,#0x2a
+00dfc944  mov w2,wzr
+00dfc948  mov x3,xzr
+00dfc94c  bl 0x01fe0d68
+00dfc950  cbz x0,0x00dfcb40
+00dfc954  ldr w8,[x0, #0x18]
+00dfc958  mov x20,x0
+00dfc95c  cbz w8,0x00dfcb44
+00dfc960  ldr x0,[x20, #0x20]
+00dfc964  mov x1,xzr
+00dfc968  bl 0x02163590
+00dfc96c  mov x0,x19
+00dfc970  mov v8.16B,v0.16B
+00dfc974  bl 0x00dfadc0
+00dfc978  cbz x0,0x00dfcb40
+00dfc97c  ldr w8,[x20, #0x18]
+00dfc980  cmp w8,#0x1
+00dfc984  b.ls 0x00dfcb44
+00dfc988  ldr s10,[x0, #0xf0]
+00dfc98c  ldr x0,[x20, #0x28]
+00dfc990  mov x1,xzr
+00dfc994  bl 0x02163590
+00dfc998  mov x0,x19
+00dfc99c  mov v9.16B,v0.16B
+00dfc9a0  bl 0x00dfadc0
+00dfc9a4  cbz x0,0x00dfcb40
+00dfc9a8  ldr s0,[x0, #0xf0]
+00dfc9ac  fmul s8,s8,s10
+00dfc9b0  fmov s10,wzr
+00dfc9b4  fmul s9,s9,s0
+00dfc9b8  b 0x00dfca20
+00dfc9bc  mov x0,x19
+00dfc9c0  bl 0x00dfadc0
+00dfc9c4  cbz x0,0x00dfcb40
+00dfc9c8  ldr s8,[x0, #0xb8]
+00dfc9cc  mov x0,x19
+00dfc9d0  bl 0x00dfadc0
+00dfc9d4  cbz x0,0x00dfcb40
+00dfc9d8  ldr s1,[x0, #0xbc]
+00dfc9dc  mov v0.16B,v8.16B
+00dfc9e0  mov x0,xzr
+00dfc9e4  bl 0x024d6370
+00dfc9e8  mov x0,x19
+00dfc9ec  mov v8.16B,v0.16B
+00dfc9f0  bl 0x00dfadc0
+00dfc9f4  cbz x0,0x00dfcb40
+00dfc9f8  ldr s9,[x0, #0xb4]
+00dfc9fc  mov x0,x19
+00dfca00  bl 0x00dfadc0
+00dfca04  cbz x0,0x00dfcb40
+00dfca08  ldr s1,[x0, #0xb0]
+00dfca0c  mov v0.16B,v9.16B
+00dfca10  mov x0,xzr
+00dfca14  bl 0x024d6370
+00dfca18  mov v9.16B,v0.16B
+00dfca1c  fmov s10,wzr
+00dfca20  mov x0,x19
+00dfca24  bl 0x00dfadc0
+00dfca28  cbz x0,0x00dfcb40
+00dfca2c  ldr w8,[x0, #0xdc]
+00dfca30  adrp x20,0x3376000
+00dfca34  ldr x20,[x20, #0x698]
+00dfca38  cmp w8,#0x2
+00dfca3c  b.eq 0x00dfca58
+00dfca40  cmp w8,#0x1
+00dfca44  b.ne 0x00dfcad0
+00dfca48  mov x0,x19
+00dfca4c  bl 0x00dfb628
+00dfca50  cbnz x0,0x00dfca64
+00dfca54  b 0x00dfcad0
+00dfca58  mov x0,x19
+00dfca5c  bl 0x00dfb714
+00dfca60  cbz x0,0x00dfcad0
+00dfca64  ldr x9,[x0]
+00dfca68  ldr x8,[x20]
+00dfca6c  ldrb w11,[x9, #0x12c]
+00dfca70  ldrb w10,[x8, #0x12c]
+00dfca74  cmp w11,w10
+00dfca78  b.cc 0x00dfcad0
+00dfca7c  ldr x9,[x9, #0xc8]
+00dfca80  add x9,x9,x10, LSL #0x3
+00dfca84  ldur x9,[x9, #-0x8]
+00dfca88  cmp x9,x8
+00dfca8c  b.ne 0x00dfcad0
+00dfca90  mov x1,xzr
+00dfca94  bl 0x00fe0ea8
+00dfca98  tbnz w0,#0x0,0x00dfcad0
+00dfca9c  mov x0,x19
+00dfcaa0  bl 0x00dfb7e4
+00dfcaa4  cbz x0,0x00dfcb40
+00dfcaa8  mov x1,xzr
+00dfcaac  bl 0x024de730
+00dfcab0  cbz x0,0x00dfcb40
+00dfcab4  mov w8,#0x43340000
+00dfcab8  fmov s0,wzr
+00dfcabc  fmov s2,wzr
+00dfcac0  fmov s1,w8
+00dfcac4  mov x1,xzr
+00dfcac8  bl 0x024f3c88
+00dfcacc  fneg s8,s8
+00dfcad0  mov x0,x19
+00dfcad4  bl 0x00dfb7e4
+00dfcad8  cbz x0,0x00dfcb40
+00dfcadc  mov x1,xzr
+00dfcae0  bl 0x024de730
+00dfcae4  cbz x0,0x00dfcb40
+00dfcae8  mov v0.16B,v8.16B
+00dfcaec  mov v1.16B,v9.16B
+00dfcaf0  ldp x19,x30,[sp, #0x30]
+00dfcaf4  ldp x21,x20,[sp, #0x20]
+00dfcaf8  ldp d9,d8,[sp, #0x10]
+00dfcafc  mov v2.16B,v10.16B
+00dfcb00  mov x1,xzr
+00dfcb04  ldr d10,[sp], #0x40
+00dfcb08  b 0x024f385c
+00dfcb0c  mov x0,x19
+00dfcb10  bl 0x00dfba08
+00dfcb14  mov x0,x19
+00dfcb18  mov v8.16B,v0.16B
+00dfcb1c  mov v9.16B,v1.16B
+00dfcb20  mov v10.16B,v2.16B
+00dfcb24  bl 0x00dfadc0
+00dfcb28  cbz x0,0x00dfcb40
+00dfcb2c  ldr s0,[x0, #0xf0]
+00dfcb30  fmul s8,s8,s0
+00dfcb34  fmul s9,s9,s0
+00dfcb38  fmul s10,s10,s0
+00dfcb3c  b 0x00dfca20
+00dfcb40  bl 0x00b079b0
+00dfcb44  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dfcb48_EffInfo__BoneFollower.txt
+================================================================================
+Function: EffInfo$$BoneFollower @ 00dfcb48
+
+--- Calls OUT ---
+  -> RoleNews$$get_m_roleMono @ 00fdf520
+  -> EffInfo$$get_m_inst @ 00dfb7e4
+  -> EffInfo$$get_m_roleFollower @ 00dfb77c
+  -> EffInfo$$get_m_boneName @ 00dfb8d0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> AliothExtensions$$IsHaveMono @ 00e124cc
+  -> RoleMono$$AddBoneFollower @ 014a8604
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+
+--- Calls IN ---
+  <- EffManager$$EffComplete @ 00dfe8b4
+  <- XLua.CSObjectWrap.EffInfoWrap$$_m_BoneFollower @ 01273778
+
+--- Listing ---
+00dfcb48  stp x21,x20,[sp, #-0x20]!
+00dfcb4c  stp x19,x30,[sp, #0x10]
+00dfcb50  adrp x20,0x3572000
+00dfcb54  adrp x21,0x3344000
+00dfcb58  ldrb w8,[x20, #0x4e2]
+00dfcb5c  ldr x21,[x21, #0x6b0]
+00dfcb60  mov x19,x0
+00dfcb64  tbnz w8,#0x0,0x00dfcb88
+00dfcb68  adrp x0,0x3348000
+00dfcb6c  ldr x0,[x0, #0x138]
+00dfcb70  bl 0x00b0789c
+00dfcb74  adrp x0,0x3344000
+00dfcb78  ldr x0,[x0, #0x6b0]
+00dfcb7c  bl 0x00b0789c
+00dfcb80  mov w8,#0x1
+00dfcb84  strb w8,[x20, #0x4e2]
+00dfcb88  ldr x8,[x21]
+00dfcb8c  ldr x8,[x8, #0xb8]
+00dfcb90  ldr x0,[x8, #0xe8]
+00dfcb94  cbz x0,0x00dfcbac
+00dfcb98  mov x1,x19
+00dfcb9c  ldp x19,x30,[sp, #0x10]
+00dfcba0  mov x2,xzr
+00dfcba4  ldp x21,x20,[sp], #0x20
+00dfcba8  b 0x01060dac
+00dfcbac  mov x0,x19
+00dfcbb0  bl 0x00dfb8d0
+00dfcbb4  mov x1,xzr
+00dfcbb8  bl 0x01fdf3a0
+00dfcbbc  tbnz w0,#0x0,0x00dfcc44
+00dfcbc0  adrp x20,0x3348000
+00dfcbc4  ldr x20,[x20, #0x138]
+00dfcbc8  mov x0,x19
+00dfcbcc  bl 0x00dfb77c
+00dfcbd0  ldr x8,[x20]
+00dfcbd4  mov x20,x0
+00dfcbd8  ldr w9,[x8, #0xe0]
+00dfcbdc  cbnz w9,0x00dfcbe8
+00dfcbe0  mov x0,x8
+00dfcbe4  bl 0x00b0798c
+00dfcbe8  mov x0,x20
+00dfcbec  mov x1,xzr
+00dfcbf0  bl 0x00e124cc
+00dfcbf4  tbz w0,#0x0,0x00dfcc44
+00dfcbf8  mov x0,x19
+00dfcbfc  bl 0x00dfb77c
+00dfcc00  cbz x0,0x00dfcc50
+00dfcc04  mov x1,xzr
+00dfcc08  bl 0x00fdf520
+00dfcc0c  mov x20,x0
+00dfcc10  mov x0,x19
+00dfcc14  bl 0x00dfb7e4
+00dfcc18  mov x21,x0
+00dfcc1c  mov x0,x19
+00dfcc20  bl 0x00dfb8d0
+00dfcc24  cbz x20,0x00dfcc50
+00dfcc28  ldp x19,x30,[sp, #0x10]
+00dfcc2c  mov x2,x0
+00dfcc30  mov x0,x20
+00dfcc34  mov x1,x21
+00dfcc38  mov x3,xzr
+00dfcc3c  ldp x21,x20,[sp], #0x20
+00dfcc40  b 0x014a8604
+00dfcc44  ldp x19,x30,[sp, #0x10]
+00dfcc48  ldp x21,x20,[sp], #0x20
+00dfcc4c  ret
+00dfcc50  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfcc54_EffInfo__NowOrder.txt
+================================================================================
+Function: EffInfo$$NowOrder @ 00dfcc54
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp17 @ 010616d4
+  -> RoleNews$$get_m_roleMono @ 00fdf520
+  -> RoleMono$$get_NowOrder @ 014a9794
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> Ali$$PlaceOrder @ 00e05248
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> AliothExtensions$$IsHaveMono @ 00e124cc
+  -> EffInfo$$NowPlaceOrder @ 00dfce58
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> PropNews$$get_m_place @ 0149cb9c
+  -> FUN_00b079b0 @ 00b079b0
+  -> PropNews$$get_m_eff @ 0149ccec
+
+--- Calls IN ---
+  <- EffInfo$$Order @ 00dfc3d0
+
+--- Listing ---
+00dfcc54  str x22,[sp, #-0x30]!
+00dfcc58  stp x21,x20,[sp, #0x10]
+00dfcc5c  stp x19,x30,[sp, #0x20]
+00dfcc60  adrp x21,0x3572000
+00dfcc64  adrp x22,0x3344000
+00dfcc68  ldrb w8,[x21, #0x4e4]
+00dfcc6c  ldr x22,[x22, #0x6b0]
+00dfcc70  mov x19,x1
+00dfcc74  mov x20,x0
+00dfcc78  tbnz w8,#0x0,0x00dfccc0
+00dfcc7c  adrp x0,0x335f000
+00dfcc80  ldr x0,[x0, #0x20]
+00dfcc84  bl 0x00b0789c
+00dfcc88  adrp x0,0x3348000
+00dfcc8c  ldr x0,[x0, #0x138]
+00dfcc90  bl 0x00b0789c
+00dfcc94  adrp x0,0x3344000
+00dfcc98  ldr x0,[x0, #0x6b0]
+00dfcc9c  bl 0x00b0789c
+00dfcca0  adrp x0,0x3361000
+00dfcca4  ldr x0,[x0, #0x450]
+00dfcca8  bl 0x00b0789c
+00dfccac  adrp x0,0x3376000
+00dfccb0  ldr x0,[x0, #0x698]
+00dfccb4  bl 0x00b0789c
+00dfccb8  mov w8,#0x1
+00dfccbc  strb w8,[x21, #0x4e4]
+00dfccc0  ldr x8,[x22]
+00dfccc4  ldr x8,[x8, #0xb8]
+00dfccc8  ldr x0,[x8, #0xf8]
+00dfcccc  cbz x0,0x00dfccec
+00dfccd0  mov x1,x20
+00dfccd4  mov x2,x19
+00dfccd8  ldp x19,x30,[sp, #0x20]
+00dfccdc  ldp x21,x20,[sp, #0x10]
+00dfcce0  mov x3,xzr
+00dfcce4  ldr x22,[sp], #0x30
+00dfcce8  b 0x010616d4
+00dfccec  cbz x19,0x00dfcd20
+00dfccf0  adrp x8,0x3376000
+00dfccf4  ldr x8,[x8, #0x698]
+00dfccf8  ldr x10,[x19]
+00dfccfc  ldr x9,[x8]
+00dfcd00  ldrb w8,[x10, #0x12c]
+00dfcd04  ldrb w11,[x9, #0x12c]
+00dfcd08  cmp w8,w11
+00dfcd0c  adrp x8,0x3348000
+00dfcd10  ldr x8,[x8, #0x138]
+00dfcd14  b.cs 0x00dfcd34
+00dfcd18  mov x21,xzr
+00dfcd1c  b 0x00dfcd48
+00dfcd20  mov w0,wzr
+00dfcd24  ldp x19,x30,[sp, #0x20]
+00dfcd28  ldp x21,x20,[sp, #0x10]
+00dfcd2c  ldr x22,[sp], #0x30
+00dfcd30  ret
+00dfcd34  ldr x10,[x10, #0xc8]
+00dfcd38  add x10,x10,x11, LSL #0x3
+00dfcd3c  ldur x10,[x10, #-0x8]
+00dfcd40  cmp x10,x9
+00dfcd44  csel x21,x19,xzr,eq
+00dfcd48  ldr x0,[x8]
+00dfcd4c  ldr w8,[x0, #0xe0]
+00dfcd50  cbnz w8,0x00dfcd58
+00dfcd54  bl 0x00b0798c
+00dfcd58  mov x0,x21
+00dfcd5c  mov x1,xzr
+00dfcd60  bl 0x00e124cc
+00dfcd64  tbz w0,#0x0,0x00dfcd90
+00dfcd68  cbz x21,0x00dfce54
+00dfcd6c  mov x0,x21
+00dfcd70  mov x1,xzr
+00dfcd74  bl 0x00fdf520
+00dfcd78  cbz x0,0x00dfce54
+00dfcd7c  ldp x19,x30,[sp, #0x20]
+00dfcd80  ldp x21,x20,[sp, #0x10]
+00dfcd84  mov x1,xzr
+00dfcd88  ldr x22,[sp], #0x30
+00dfcd8c  b 0x014a9794
+00dfcd90  adrp x8,0x3361000
+00dfcd94  ldr x8,[x8, #0x450]
+00dfcd98  ldr x9,[x19]
+00dfcd9c  ldr x8,[x8]
+00dfcda0  ldrb w11,[x9, #0x12c]
+00dfcda4  ldrb w10,[x8, #0x12c]
+00dfcda8  cmp w11,w10
+00dfcdac  b.cc 0x00dfcdc4
+00dfcdb0  ldr x9,[x9, #0xc8]
+00dfcdb4  add x9,x9,x10, LSL #0x3
+00dfcdb8  ldur x9,[x9, #-0x8]
+00dfcdbc  cmp x9,x8
+00dfcdc0  b.eq 0x00dfcddc
+00dfcdc4  mov x0,x20
+00dfcdc8  mov x1,x19
+00dfcdcc  ldp x19,x30,[sp, #0x20]
+00dfcdd0  ldp x21,x20,[sp, #0x10]
+00dfcdd4  ldr x22,[sp], #0x30
+00dfcdd8  b 0x00dfce58
+00dfcddc  mov x0,x19
+00dfcde0  mov x1,xzr
+00dfcde4  bl 0x0149ccec
+00dfcde8  cbz x0,0x00dfcdc4
+00dfcdec  adrp x20,0x335f000
+00dfcdf0  ldr x20,[x20, #0x20]
+00dfcdf4  ldr x0,[x20]
+00dfcdf8  ldr w8,[x0, #0xe0]
+00dfcdfc  cbnz w8,0x00dfce08
+00dfce00  bl 0x00b0798c
+00dfce04  ldr x0,[x20]
+00dfce08  ldr x8,[x0, #0xb8]
+00dfce0c  mov x0,x19
+00dfce10  mov x1,xzr
+00dfce14  ldr x20,[x8, #0x10]
+00dfce18  bl 0x0149cb9c
+00dfce1c  cbz x20,0x00dfce54
+00dfce20  mov x0,x20
+00dfce24  mov x1,xzr
+00dfce28  bl 0x00e05248
+00dfce2c  mov w20,w0
+00dfce30  mov x0,x19
+00dfce34  mov x1,xzr
+00dfce38  bl 0x0149ccec
+00dfce3c  cbz x0,0x00dfce54
+00dfce40  bl 0x00dfadc0
+00dfce44  cbz x0,0x00dfce54
+00dfce48  ldr w8,[x0, #0xd0]
+00dfce4c  add w0,w8,w20
+00dfce50  b 0x00dfcd24
+00dfce54  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfce58_EffInfo__NowPlaceOrder.txt
+================================================================================
+Function: EffInfo$$NowPlaceOrder @ 00dfce58
+
+--- Calls OUT ---
+  -> PropNews$$get_m_place @ 0149cb9c
+  -> RoleNews$$get_m_place @ 00fdc548
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$GetType @ 021948fc
+  -> TerrainNews$$get_m_place @ 016c7024
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp17 @ 010616d4
+  -> Ali$$PlaceOrder @ 00e05248
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> System.Type$$GetTypeFromHandle @ 0215f900
+  -> System.Type$$op_Equality @ 02168d68
+  -> thunk_FUN_00ace8b4 @ 00b07998
+
+--- Calls IN ---
+  <- EffInfo$$NowOrder @ 00dfcc54
+  <- EffInfo$$Order @ 00dfc3d0
+
+--- Listing ---
+00dfce58  stp x23,x22,[sp, #-0x30]!
+00dfce5c  stp x21,x20,[sp, #0x10]
+00dfce60  stp x19,x30,[sp, #0x20]
+00dfce64  adrp x21,0x3572000
+00dfce68  adrp x22,0x3344000
+00dfce6c  ldrb w8,[x21, #0x4e5]
+00dfce70  ldr x22,[x22, #0x6b0]
+00dfce74  mov x19,x1
+00dfce78  mov x20,x0
+00dfce7c  tbnz w8,#0x0,0x00dfcf0c
+00dfce80  adrp x0,0x335f000
+00dfce84  ldr x0,[x0, #0x20]
+00dfce88  bl 0x00b0789c
+00dfce8c  adrp x0,0x3344000
+00dfce90  ldr x0,[x0, #0x6b0]
+00dfce94  bl 0x00b0789c
+00dfce98  adrp x0,0x3360000
+00dfce9c  ldr x0,[x0, #0x7e0]
+00dfcea0  bl 0x00b0789c
+00dfcea4  adrp x0,0x3361000
+00dfcea8  ldr x0,[x0, #0x450]
+00dfceac  bl 0x00b0789c
+00dfceb0  adrp x0,0x335c000
+00dfceb4  ldr x0,[x0, #0x220]
+00dfceb8  bl 0x00b0789c
+00dfcebc  adrp x0,0x3376000
+00dfcec0  ldr x0,[x0, #0x698]
+00dfcec4  bl 0x00b0789c
+00dfcec8  adrp x0,0x335c000
+00dfcecc  ldr x0,[x0, #0x1a0]
+00dfced0  bl 0x00b0789c
+00dfced4  adrp x0,0x3333000
+00dfced8  ldr x0,[x0, #0xc98]
+00dfcedc  bl 0x00b0789c
+00dfcee0  adrp x0,0x3347000
+00dfcee4  ldr x0,[x0, #0xd68]
+00dfcee8  bl 0x00b0789c
+00dfceec  adrp x0,0x3334000
+00dfcef0  ldr x0,[x0, #0x278]
+00dfcef4  bl 0x00b0789c
+00dfcef8  adrp x0,0x3365000
+00dfcefc  ldr x0,[x0, #0x108]
+00dfcf00  bl 0x00b0789c
+00dfcf04  mov w8,#0x1
+00dfcf08  strb w8,[x21, #0x4e5]
+00dfcf0c  ldr x8,[x22]
+00dfcf10  ldr x8,[x8, #0xb8]
+00dfcf14  ldr x0,[x8, #0x100]
+00dfcf18  cbz x0,0x00dfcf38
+00dfcf1c  mov x1,x20
+00dfcf20  mov x2,x19
+00dfcf24  ldp x19,x30,[sp, #0x20]
+00dfcf28  ldp x21,x20,[sp, #0x10]
+00dfcf2c  mov x3,xzr
+00dfcf30  ldp x23,x22,[sp], #0x30
+00dfcf34  b 0x010616d4
+00dfcf38  cbz x19,0x00dfd230
+00dfcf3c  adrp x20,0x335c000
+00dfcf40  adrp x23,0x3347000
+00dfcf44  ldr x20,[x20, #0x220]
+00dfcf48  ldr x23,[x23, #0xd68]
+00dfcf4c  mov x0,x19
+00dfcf50  mov x1,xzr
+00dfcf54  bl 0x021948fc
+00dfcf58  ldr x8,[x23]
+00dfcf5c  ldr x21,[x20]
+00dfcf60  mov x20,x0
+00dfcf64  ldr w9,[x8, #0xe0]
+00dfcf68  cbnz w9,0x00dfcf74
+00dfcf6c  mov x0,x8
+00dfcf70  bl 0x00b0798c
+00dfcf74  adrp x22,0x335f000
+00dfcf78  ldr x22,[x22, #0x20]
+00dfcf7c  mov x0,x21
+00dfcf80  mov x1,xzr
+00dfcf84  bl 0x0215f900
+00dfcf88  mov x1,x0
+00dfcf8c  mov x0,x20
+00dfcf90  mov x2,xzr
+00dfcf94  bl 0x02168d68
+00dfcf98  tbz w0,#0x0,0x00dfd000
+00dfcf9c  ldr x0,[x22]
+00dfcfa0  adrp x20,0x3376000
+00dfcfa4  ldr w8,[x0, #0xe0]
+00dfcfa8  ldr x20,[x20, #0x698]
+00dfcfac  cbnz w8,0x00dfcfb8
+00dfcfb0  bl 0x00b0798c
+00dfcfb4  ldr x0,[x22]
+00dfcfb8  ldr x8,[x19]
+00dfcfbc  ldr x1,[x20]
+00dfcfc0  ldrb w10,[x8, #0x12c]
+00dfcfc4  ldrb w9,[x1, #0x12c]
+00dfcfc8  cmp w10,w9
+00dfcfcc  b.cc 0x00dfd234
+00dfcfd0  ldr x8,[x8, #0xc8]
+00dfcfd4  add x8,x8,x9, LSL #0x3
+00dfcfd8  ldur x8,[x8, #-0x8]
+00dfcfdc  cmp x8,x1
+00dfcfe0  b.ne 0x00dfd234
+00dfcfe4  ldr x8,[x0, #0xb8]
+00dfcfe8  mov x0,x19
+00dfcfec  mov x1,xzr
+00dfcff0  ldr x20,[x8, #0x10]
+00dfcff4  bl 0x00fdc548
+00dfcff8  cbnz x20,0x00dfd204
+00dfcffc  b 0x00dfd230
+00dfd000  adrp x20,0x335c000
+00dfd004  ldr x20,[x20, #0x1a0]
+00dfd008  mov x0,x19
+00dfd00c  mov x1,xzr
+00dfd010  bl 0x021948fc
+00dfd014  ldr x8,[x23]
+00dfd018  ldr x21,[x20]
+00dfd01c  mov x20,x0
+00dfd020  ldr w9,[x8, #0xe0]
+00dfd024  cbnz w9,0x00dfd030
+00dfd028  mov x0,x8
+00dfd02c  bl 0x00b0798c
+00dfd030  mov x0,x21
+00dfd034  mov x1,xzr
+00dfd038  bl 0x0215f900
+00dfd03c  mov x1,x0
+00dfd040  mov x0,x20
+00dfd044  mov x2,xzr
+00dfd048  bl 0x02168d68
+00dfd04c  tbz w0,#0x0,0x00dfd0b4
+00dfd050  ldr x0,[x22]
+00dfd054  adrp x20,0x3333000
+00dfd058  ldr w8,[x0, #0xe0]
+00dfd05c  ldr x20,[x20, #0xc98]
+00dfd060  cbnz w8,0x00dfd06c
+00dfd064  bl 0x00b0798c
+00dfd068  ldr x0,[x22]
+00dfd06c  ldr x8,[x19]
+00dfd070  ldr x1,[x20]
+00dfd074  ldrb w10,[x8, #0x12c]
+00dfd078  ldrb w9,[x1, #0x12c]
+00dfd07c  cmp w10,w9
+00dfd080  b.cc 0x00dfd234
+00dfd084  ldr x8,[x8, #0xc8]
+00dfd088  add x8,x8,x9, LSL #0x3
+00dfd08c  ldur x8,[x8, #-0x8]
+00dfd090  cmp x8,x1
+00dfd094  b.ne 0x00dfd234
+00dfd098  ldr x8,[x0, #0xb8]
+00dfd09c  mov x0,x19
+00dfd0a0  mov x1,xzr
+00dfd0a4  ldr x20,[x8, #0x10]
+00dfd0a8  bl 0x016c7024
+00dfd0ac  cbnz x20,0x00dfd204
+00dfd0b0  b 0x00dfd230
+00dfd0b4  adrp x20,0x3360000
+00dfd0b8  ldr x20,[x20, #0x7e0]
+00dfd0bc  mov x0,x19
+00dfd0c0  mov x1,xzr
+00dfd0c4  bl 0x021948fc
+00dfd0c8  ldr x8,[x23]
+00dfd0cc  ldr x21,[x20]
+00dfd0d0  mov x20,x0
+00dfd0d4  ldr w9,[x8, #0xe0]
+00dfd0d8  cbnz w9,0x00dfd0e4
+00dfd0dc  mov x0,x8
+00dfd0e0  bl 0x00b0798c
+00dfd0e4  mov x0,x21
+00dfd0e8  mov x1,xzr
+00dfd0ec  bl 0x0215f900
+00dfd0f0  mov x1,x0
+00dfd0f4  mov x0,x20
+00dfd0f8  mov x2,xzr
+00dfd0fc  bl 0x02168d68
+00dfd100  tbz w0,#0x0,0x00dfd168
+00dfd104  ldr x0,[x22]
+00dfd108  adrp x20,0x3361000
+00dfd10c  ldr w8,[x0, #0xe0]
+00dfd110  ldr x20,[x20, #0x450]
+00dfd114  cbnz w8,0x00dfd120
+00dfd118  bl 0x00b0798c
+00dfd11c  ldr x0,[x22]
+00dfd120  ldr x8,[x19]
+00dfd124  ldr x1,[x20]
+00dfd128  ldrb w10,[x8, #0x12c]
+00dfd12c  ldrb w9,[x1, #0x12c]
+00dfd130  cmp w10,w9
+00dfd134  b.cc 0x00dfd234
+00dfd138  ldr x8,[x8, #0xc8]
+00dfd13c  add x8,x8,x9, LSL #0x3
+00dfd140  ldur x8,[x8, #-0x8]
+00dfd144  cmp x8,x1
+00dfd148  b.ne 0x00dfd234
+00dfd14c  ldr x8,[x0, #0xb8]
+00dfd150  mov x0,x19
+00dfd154  mov x1,xzr
+00dfd158  ldr x20,[x8, #0x10]
+00dfd15c  bl 0x0149cb9c
+00dfd160  cbnz x20,0x00dfd204
+00dfd164  b 0x00dfd230
+00dfd168  adrp x20,0x3334000
+00dfd16c  ldr x20,[x20, #0x278]
+00dfd170  mov x0,x19
+00dfd174  mov x1,xzr
+00dfd178  bl 0x021948fc
+00dfd17c  ldr x8,[x23]
+00dfd180  ldr x21,[x20]
+00dfd184  mov x20,x0
+00dfd188  ldr w9,[x8, #0xe0]
+00dfd18c  cbnz w9,0x00dfd198
+00dfd190  mov x0,x8
+00dfd194  bl 0x00b0798c
+00dfd198  mov x0,x21
+00dfd19c  mov x1,xzr
+00dfd1a0  bl 0x0215f900
+00dfd1a4  mov x1,x0
+00dfd1a8  mov x0,x20
+00dfd1ac  mov x2,xzr
+00dfd1b0  bl 0x02168d68
+00dfd1b4  tbz w0,#0x0,0x00dfd21c
+00dfd1b8  ldr x0,[x22]
+00dfd1bc  ldr w8,[x0, #0xe0]
+00dfd1c0  cbnz w8,0x00dfd1cc
+00dfd1c4  bl 0x00b0798c
+00dfd1c8  ldr x0,[x22]
+00dfd1cc  ldr x8,[x0, #0xb8]
+00dfd1d0  ldr x20,[x8, #0x10]
+00dfd1d4  cbz x20,0x00dfd230
+00dfd1d8  adrp x8,0x3365000
+00dfd1dc  ldr x8,[x8, #0x108]
+00dfd1e0  ldr x9,[x19]
+00dfd1e4  ldr x1,[x8]
+00dfd1e8  ldr x8,[x9, #0x40]
+00dfd1ec  ldr x9,[x1, #0x40]
+00dfd1f0  cmp x8,x9
+00dfd1f4  b.ne 0x00dfd234
+00dfd1f8  mov x0,x19
+00dfd1fc  bl 0x00b07998
+00dfd200  ldp s0,s1,[x0]
+00dfd204  mov x0,x20
+00dfd208  ldp x19,x30,[sp, #0x20]
+00dfd20c  ldp x21,x20,[sp, #0x10]
+00dfd210  mov x1,xzr
+00dfd214  ldp x23,x22,[sp], #0x30
+00dfd218  b 0x00e05248
+00dfd21c  ldp x19,x30,[sp, #0x20]
+00dfd220  ldp x21,x20,[sp, #0x10]
+00dfd224  mov w0,wzr
+00dfd228  ldp x23,x22,[sp], #0x30
+00dfd22c  ret
+00dfd230  bl 0x00b079b0
+00dfd234  mov x0,x19
+00dfd238  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00dfd23c_EffInfo__Init.txt
+================================================================================
+Function: EffInfo$$Init @ 00dfd23c
+
+--- Calls OUT ---
+  -> EffInfo$$get_m_inst @ 00dfb7e4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> EffInfo$$get_m_modelName @ 00dfbc38
+  -> UnityEngine.Component$$GetComponentsInChildren<object> @ 0176d07c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> UnityEngine.Renderer$$get_sortingOrder @ 024c6940
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary<object,-int>$$set_Item @ 019685b4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Contains @ 01fe31fc
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+  <- EffInfo$$Order @ 00dfc3d0
+
+--- Listing ---
+00dfd23c  str x24,[sp, #-0x40]!
+00dfd240  stp x23,x22,[sp, #0x10]
+00dfd244  stp x21,x20,[sp, #0x20]
+00dfd248  stp x19,x30,[sp, #0x30]
+00dfd24c  adrp x20,0x3572000
+00dfd250  adrp x21,0x3344000
+00dfd254  ldrb w8,[x20, #0x4e7]
+00dfd258  ldr x21,[x21, #0x6b0]
+00dfd25c  mov x19,x0
+00dfd260  tbnz w8,#0x0,0x00dfd2a8
+00dfd264  adrp x0,0x336a000
+00dfd268  ldr x0,[x0, #0xdd0]
+00dfd26c  bl 0x00b0789c
+00dfd270  adrp x0,0x3372000
+00dfd274  ldr x0,[x0, #0x80]
+00dfd278  bl 0x00b0789c
+00dfd27c  adrp x0,0x3344000
+00dfd280  ldr x0,[x0, #0x6b0]
+00dfd284  bl 0x00b0789c
+00dfd288  adrp x0,0x3321000
+00dfd28c  ldr x0,[x0, #0xca8]
+00dfd290  bl 0x00b0789c
+00dfd294  adrp x0,0x330e000
+00dfd298  ldr x0,[x0, #0xee0]
+00dfd29c  bl 0x00b0789c
+00dfd2a0  mov w8,#0x1
+00dfd2a4  strb w8,[x20, #0x4e7]
+00dfd2a8  ldr x8,[x21]
+00dfd2ac  ldr x8,[x8, #0xb8]
+00dfd2b0  ldr x0,[x8, #0x110]
+00dfd2b4  cbz x0,0x00dfd2d4
+00dfd2b8  mov x1,x19
+00dfd2bc  ldp x19,x30,[sp, #0x30]
+00dfd2c0  ldp x21,x20,[sp, #0x20]
+00dfd2c4  ldp x23,x22,[sp, #0x10]
+00dfd2c8  mov x2,xzr
+00dfd2cc  ldr x24,[sp], #0x40
+00dfd2d0  b 0x01060dac
+00dfd2d4  adrp x20,0x3321000
+00dfd2d8  ldr x20,[x20, #0xca8]
+00dfd2dc  mov x0,x19
+00dfd2e0  bl 0x00dfb7e4
+00dfd2e4  ldr x8,[x20]
+00dfd2e8  mov x20,x0
+00dfd2ec  ldr w9,[x8, #0xe0]
+00dfd2f0  cbnz w9,0x00dfd2fc
+00dfd2f4  mov x0,x8
+00dfd2f8  bl 0x00b0798c
+00dfd2fc  mov x0,x20
+00dfd300  mov x1,xzr
+00dfd304  mov x2,xzr
+00dfd308  bl 0x024c8180
+00dfd30c  tbnz w0,#0x0,0x00dfd3e0
+00dfd310  mov x0,x19
+00dfd314  bl 0x00dfb7e4
+00dfd318  cbz x0,0x00dfd3f4
+00dfd31c  mov x1,xzr
+00dfd320  bl 0x024de730
+00dfd324  cbz x0,0x00dfd3f4
+00dfd328  adrp x8,0x336a000
+00dfd32c  ldr x8,[x8, #0xdd0]
+00dfd330  mov w1,#0x1
+00dfd334  ldr x2,[x8]
+00dfd338  bl 0x0176d07c
+00dfd33c  mov x20,x19
+00dfd340  str x0,[x20, #0x80]!
+00dfd344  mov x1,x0
+00dfd348  mov x0,x20
+00dfd34c  bl 0x00b07850
+00dfd350  mov x0,x19
+00dfd354  bl 0x00dfbc38
+00dfd358  cbz x0,0x00dfd3f4
+00dfd35c  adrp x8,0x330e000
+00dfd360  ldr x8,[x8, #0xee0]
+00dfd364  mov x2,xzr
+00dfd368  ldr x1,[x8]
+00dfd36c  bl 0x01fe31fc
+00dfd370  tbz w0,#0x0,0x00dfd3e0
+00dfd374  ldr x22,[x20]
+00dfd378  cbz x22,0x00dfd3f4
+00dfd37c  ldr w8,[x22, #0x18]
+00dfd380  cmp w8,#0x1
+00dfd384  b.lt 0x00dfd3e0
+00dfd388  adrp x24,0x3372000
+00dfd38c  ldr x24,[x24, #0x80]
+00dfd390  mov w23,wzr
+00dfd394  cmp w23,w8
+00dfd398  b.cs 0x00dfd3f8
+00dfd39c  add x8,x22,w23, SXTW  #0x3
+00dfd3a0  ldr x20,[x8, #0x20]
+00dfd3a4  cbz x20,0x00dfd3f4
+00dfd3a8  ldr x21,[x19, #0x78]
+00dfd3ac  mov x0,x20
+00dfd3b0  mov x1,xzr
+00dfd3b4  bl 0x024c6940
+00dfd3b8  cbz x21,0x00dfd3f4
+00dfd3bc  ldr x3,[x24]
+00dfd3c0  mov w2,w0
+00dfd3c4  mov x0,x21
+00dfd3c8  mov x1,x20
+00dfd3cc  bl 0x019685b4
+00dfd3d0  ldr w8,[x22, #0x18]
+00dfd3d4  add w23,w23,#0x1
+00dfd3d8  cmp w23,w8
+00dfd3dc  b.lt 0x00dfd394
+00dfd3e0  ldp x19,x30,[sp, #0x30]
+00dfd3e4  ldp x21,x20,[sp, #0x20]
+00dfd3e8  ldp x23,x22,[sp, #0x10]
+00dfd3ec  ldr x24,[sp], #0x40
+00dfd3f0  ret
+00dfd3f4  bl 0x00b079b0
+00dfd3f8  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dfd3fc_EffInfo__PlayComplete.txt
+================================================================================
+Function: EffInfo$$PlayComplete @ 00dfd3fc
+
+--- Calls OUT ---
+  -> EffInfo$$get_playEndAct @ 00dfb938
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- EffLiveMono$$OnDestroy @ 00dfe3bc
+  <- XLua.CSObjectWrap.EffInfoWrap$$_m_PlayComplete @ 01273c4c
+
+--- Listing ---
+00dfd3fc  stp x21,x20,[sp, #-0x20]!
+00dfd400  stp x19,x30,[sp, #0x10]
+00dfd404  adrp x20,0x3572000
+00dfd408  adrp x21,0x3344000
+00dfd40c  ldrb w8,[x20, #0x4e9]
+00dfd410  ldr x21,[x21, #0x6b0]
+00dfd414  mov x19,x0
+00dfd418  tbnz w8,#0x0,0x00dfd430
+00dfd41c  adrp x0,0x3344000
+00dfd420  ldr x0,[x0, #0x6b0]
+00dfd424  bl 0x00b0789c
+00dfd428  mov w8,#0x1
+00dfd42c  strb w8,[x20, #0x4e9]
+00dfd430  ldr x8,[x21]
+00dfd434  ldr x8,[x8, #0xb8]
+00dfd438  ldr x0,[x8, #0x120]
+00dfd43c  cbz x0,0x00dfd454
+00dfd440  mov x1,x19
+00dfd444  ldp x19,x30,[sp, #0x10]
+00dfd448  mov x2,xzr
+00dfd44c  ldp x21,x20,[sp], #0x20
+00dfd450  b 0x01060dac
+00dfd454  mov x0,x19
+00dfd458  bl 0x00dfb938
+00dfd45c  cbz x0,0x00dfd488
+00dfd460  mov x0,x19
+00dfd464  bl 0x00dfb938
+00dfd468  cbz x0,0x00dfd494
+00dfd46c  ldr x8,[x0, #0x40]
+00dfd470  ldr x2,[x0, #0x18]
+00dfd474  ldr x1,[x0, #0x28]
+00dfd478  ldp x19,x30,[sp, #0x10]
+00dfd47c  mov x0,x8
+00dfd480  ldp x21,x20,[sp], #0x20
+00dfd484  br x2
+00dfd488  ldp x19,x30,[sp, #0x10]
+00dfd48c  ldp x21,x20,[sp], #0x20
+00dfd490  ret
+00dfd494  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfd498_EffInfo__InstComplete.txt
+================================================================================
+Function: EffInfo$$InstComplete @ 00dfd498
+
+--- Calls OUT ---
+  -> EffInfo$$get_instBackAct @ 00dfb9a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffInfoWrap$$_m_InstComplete @ 01273de8
+  <- EffManager$$EffComplete @ 00dfe8b4
+
+--- Listing ---
+00dfd498  stp x21,x20,[sp, #-0x20]!
+00dfd49c  stp x19,x30,[sp, #0x10]
+00dfd4a0  adrp x20,0x3572000
+00dfd4a4  adrp x21,0x3344000
+00dfd4a8  ldrb w8,[x20, #0x4ea]
+00dfd4ac  ldr x21,[x21, #0x6b0]
+00dfd4b0  mov x19,x0
+00dfd4b4  tbnz w8,#0x0,0x00dfd4cc
+00dfd4b8  adrp x0,0x3344000
+00dfd4bc  ldr x0,[x0, #0x6b0]
+00dfd4c0  bl 0x00b0789c
+00dfd4c4  mov w8,#0x1
+00dfd4c8  strb w8,[x20, #0x4ea]
+00dfd4cc  ldr x8,[x21]
+00dfd4d0  ldr x8,[x8, #0xb8]
+00dfd4d4  ldr x0,[x8, #0x128]
+00dfd4d8  cbz x0,0x00dfd4f0
+00dfd4dc  mov x1,x19
+00dfd4e0  ldp x19,x30,[sp, #0x10]
+00dfd4e4  mov x2,xzr
+00dfd4e8  ldp x21,x20,[sp], #0x20
+00dfd4ec  b 0x01060dac
+00dfd4f0  mov x0,x19
+00dfd4f4  bl 0x00dfb9a0
+00dfd4f8  cbz x0,0x00dfd528
+00dfd4fc  mov x0,x19
+00dfd500  bl 0x00dfb9a0
+00dfd504  cbz x0,0x00dfd534
+00dfd508  ldr x8,[x0, #0x40]
+00dfd50c  ldr x3,[x0, #0x18]
+00dfd510  ldr x2,[x0, #0x28]
+00dfd514  mov x1,x19
+00dfd518  ldp x19,x30,[sp, #0x10]
+00dfd51c  mov x0,x8
+00dfd520  ldp x21,x20,[sp], #0x20
+00dfd524  br x3
+00dfd528  ldp x19,x30,[sp, #0x10]
+00dfd52c  ldp x21,x20,[sp], #0x20
+00dfd530  ret
+00dfd534  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfd538_EffInfo.__c__.cctor.txt
+================================================================================
+Function: EffInfo.<>c$$.cctor @ 00dfd538
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dfd538  str x20,[sp, #-0x20]!
+00dfd53c  stp x19,x30,[sp, #0x10]
+00dfd540  adrp x19,0x3572000
+00dfd544  adrp x20,0x330a000
+00dfd548  ldrb w8,[x19, #0x4eb]
+00dfd54c  ldr x20,[x20, #0xc10]
+00dfd550  tbnz w8,#0x0,0x00dfd568
+00dfd554  adrp x0,0x330a000
+00dfd558  ldr x0,[x0, #0xc10]
+00dfd55c  bl 0x00b0789c
+00dfd560  mov w8,#0x1
+00dfd564  strb w8,[x19, #0x4eb]
+00dfd568  ldr x0,[x20]
+00dfd56c  bl 0x00b079a0
+00dfd570  cbz x0,0x00dfd5a4
+00dfd574  mov x1,xzr
+00dfd578  mov x19,x0
+00dfd57c  bl 0x02194104
+00dfd580  ldr x8,[x20]
+00dfd584  mov x1,x19
+00dfd588  ldr x8,[x8, #0xb8]
+00dfd58c  str x19,[x8]
+00dfd590  ldr x8,[x20]
+00dfd594  ldp x19,x30,[sp, #0x10]
+00dfd598  ldr x0,[x8, #0xb8]
+00dfd59c  ldr x20,[sp], #0x20
+00dfd5a0  b 0x00b07850
+00dfd5a4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfd5a8_EffInfo.__c__.ctor.txt
+================================================================================
+Function: EffInfo.<>c$$.ctor @ 00dfd5a8
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dfd5a8  mov x1,xzr
+00dfd5ac  b 0x02194104
+
+
+================================================================================
+### FILE: 00dfd5b0_EffInfo.__c___.ctor_b__0_0.txt
+================================================================================
+Function: EffInfo.<>c$$<.ctor>b__0_0 @ 00dfd5b0
+
+--- Calls OUT ---
+  -> System.Single$$Parse @ 02163590
+
+--- Calls IN ---
+
+--- Listing ---
+00dfd5b0  mov x0,x1
+00dfd5b4  mov x1,xzr
+00dfd5b8  b 0x02163590
+
+
+================================================================================
+### FILE: 00dfd5bc_EffLiveMono__get_m_effInfo.txt
+================================================================================
+Function: EffLiveMono$$get_m_effInfo @ 00dfd5bc
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp157 @ 01073704
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- EffLiveMono$$RoundStart @ 00dfe1e8
+  <- EffLiveMono$$PlaySpineAni @ 00dfe01c
+  <- EffLiveMono$$OnDestroy @ 00dfe3bc
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_g_get_m_effInfo @ 01277a64
+  <- EffLiveMono$$Start @ 00dfdcc4
+  <- EffLiveMono$$TurnAround @ 00dfe460
+  <- RoleMono$$OrderEff @ 014a9084
+
+--- Listing ---
+00dfd5bc  stp x21,x20,[sp, #-0x20]!
+00dfd5c0  stp x19,x30,[sp, #0x10]
+00dfd5c4  adrp x20,0x3572000
+00dfd5c8  adrp x21,0x3383000
+00dfd5cc  ldrb w8,[x20, #0x4ec]
+00dfd5d0  ldr x21,[x21, #0x3a8]
+00dfd5d4  mov x19,x0
+00dfd5d8  tbnz w8,#0x0,0x00dfd5f0
+00dfd5dc  adrp x0,0x3383000
+00dfd5e0  ldr x0,[x0, #0x3a8]
+00dfd5e4  bl 0x00b0789c
+00dfd5e8  mov w8,#0x1
+00dfd5ec  strb w8,[x20, #0x4ec]
+00dfd5f0  ldr x8,[x21]
+00dfd5f4  ldr x8,[x8, #0xb8]
+00dfd5f8  ldr x0,[x8]
+00dfd5fc  cbz x0,0x00dfd614
+00dfd600  mov x1,x19
+00dfd604  ldp x19,x30,[sp, #0x10]
+00dfd608  mov x2,xzr
+00dfd60c  ldp x21,x20,[sp], #0x20
+00dfd610  b 0x01073704
+00dfd614  ldr x0,[x19, #0x38]
+00dfd618  ldp x19,x30,[sp, #0x10]
+00dfd61c  ldp x21,x20,[sp], #0x20
+00dfd620  ret
+
+
+================================================================================
+### FILE: 00dfd624_EffLiveMono__set_m_effInfo.txt
+================================================================================
+Function: EffLiveMono$$set_m_effInfo @ 00dfd624
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EffLiveMono$$SetEffInfo @ 00dfd6a8
+
+--- Listing ---
+00dfd624  str x22,[sp, #-0x30]!
+00dfd628  stp x21,x20,[sp, #0x10]
+00dfd62c  stp x19,x30,[sp, #0x20]
+00dfd630  adrp x21,0x3572000
+00dfd634  adrp x22,0x3383000
+00dfd638  ldrb w8,[x21, #0x4ed]
+00dfd63c  ldr x22,[x22, #0x3a8]
+00dfd640  mov x19,x1
+00dfd644  mov x20,x0
+00dfd648  tbnz w8,#0x0,0x00dfd660
+00dfd64c  adrp x0,0x3383000
+00dfd650  ldr x0,[x0, #0x3a8]
+00dfd654  bl 0x00b0789c
+00dfd658  mov w8,#0x1
+00dfd65c  strb w8,[x21, #0x4ed]
+00dfd660  ldr x8,[x22]
+00dfd664  ldr x8,[x8, #0xb8]
+00dfd668  ldr x0,[x8, #0x8]
+00dfd66c  cbz x0,0x00dfd68c
+00dfd670  mov x1,x20
+00dfd674  mov x2,x19
+00dfd678  ldp x19,x30,[sp, #0x20]
+00dfd67c  ldp x21,x20,[sp, #0x10]
+00dfd680  mov x3,xzr
+00dfd684  ldr x22,[sp], #0x30
+00dfd688  b 0x0106125c
+00dfd68c  str x19,[x20, #0x38]!
+00dfd690  mov x0,x20
+00dfd694  mov x1,x19
+00dfd698  ldp x19,x30,[sp, #0x20]
+00dfd69c  ldp x21,x20,[sp, #0x10]
+00dfd6a0  ldr x22,[sp], #0x30
+00dfd6a4  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfd6a8_EffLiveMono__SetEffInfo.txt
+================================================================================
+Function: EffLiveMono$$SetEffInfo @ 00dfd6a8
+
+--- Calls OUT ---
+  -> EffInfo$$get_durationRound @ 00dfbb54
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> EffLiveMono$$set_m_durationRound @ 00dfd758
+  -> EffLiveMono$$set_m_playTime @ 00dfd7d4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b079b0 @ 00b079b0
+  -> EffLiveMono$$set_m_effInfo @ 00dfd624
+
+--- Calls IN ---
+  <- RoleMono$$GhostAndPlay @ 014acc64
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_m_SetEffInfo @ 01276d24
+  <- EffManager$$EffComplete @ 00dfe8b4
+
+--- Listing ---
+00dfd6a8  str x22,[sp, #-0x30]!
+00dfd6ac  stp x21,x20,[sp, #0x10]
+00dfd6b0  stp x19,x30,[sp, #0x20]
+00dfd6b4  adrp x21,0x3572000
+00dfd6b8  adrp x22,0x3383000
+00dfd6bc  ldrb w8,[x21, #0x4ee]
+00dfd6c0  ldr x22,[x22, #0x3a8]
+00dfd6c4  mov x20,x1
+00dfd6c8  mov x19,x0
+00dfd6cc  tbnz w8,#0x0,0x00dfd6e4
+00dfd6d0  adrp x0,0x3383000
+00dfd6d4  ldr x0,[x0, #0x3a8]
+00dfd6d8  bl 0x00b0789c
+00dfd6dc  mov w8,#0x1
+00dfd6e0  strb w8,[x21, #0x4ee]
+00dfd6e4  ldr x8,[x22]
+00dfd6e8  ldr x8,[x8, #0xb8]
+00dfd6ec  ldr x0,[x8, #0x10]
+00dfd6f0  cbz x0,0x00dfd710
+00dfd6f4  mov x1,x19
+00dfd6f8  mov x2,x20
+00dfd6fc  ldp x19,x30,[sp, #0x20]
+00dfd700  ldp x21,x20,[sp, #0x10]
+00dfd704  mov x3,xzr
+00dfd708  ldr x22,[sp], #0x30
+00dfd70c  b 0x0106125c
+00dfd710  mov x0,x19
+00dfd714  mov x1,x20
+00dfd718  bl 0x00dfd624
+00dfd71c  cbz x20,0x00dfd754
+00dfd720  mov x0,x20
+00dfd724  bl 0x00dfbb54
+00dfd728  mov x0,x19
+00dfd72c  bl 0x00dfd758
+00dfd730  mov x0,x20
+00dfd734  bl 0x00dfadc0
+00dfd738  cbz x0,0x00dfd754
+00dfd73c  ldr s0,[x0, #0xd4]
+00dfd740  mov x0,x19
+00dfd744  ldp x19,x30,[sp, #0x20]
+00dfd748  ldp x21,x20,[sp, #0x10]
+00dfd74c  ldr x22,[sp], #0x30
+00dfd750  b 0x00dfd7d4
+00dfd754  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfd758_EffLiveMono__set_m_durationRound.txt
+================================================================================
+Function: EffLiveMono$$set_m_durationRound @ 00dfd758
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp20 @ 01061c3c
+
+--- Calls IN ---
+  <- EffLiveMono$$SetEffInfo @ 00dfd6a8
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_s_set_m_durationRound @ 012782f4
+
+--- Listing ---
+00dfd758  str d8,[sp, #-0x30]!
+00dfd75c  stp x21,x20,[sp, #0x10]
+00dfd760  stp x19,x30,[sp, #0x20]
+00dfd764  adrp x20,0x3572000
+00dfd768  adrp x21,0x3383000
+00dfd76c  ldrb w8,[x20, #0x4f4]
+00dfd770  ldr x21,[x21, #0x3a8]
+00dfd774  mov v8.16B,v0.16B
+00dfd778  mov x19,x0
+00dfd77c  tbnz w8,#0x0,0x00dfd794
+00dfd780  adrp x0,0x3383000
+00dfd784  ldr x0,[x0, #0x3a8]
+00dfd788  bl 0x00b0789c
+00dfd78c  mov w8,#0x1
+00dfd790  strb w8,[x20, #0x4f4]
+00dfd794  ldr x8,[x21]
+00dfd798  ldr x8,[x8, #0xb8]
+00dfd79c  ldr x0,[x8, #0x40]
+00dfd7a0  cbz x0,0x00dfd7c0
+00dfd7a4  mov x1,x19
+00dfd7a8  ldp x19,x30,[sp, #0x20]
+00dfd7ac  ldp x21,x20,[sp, #0x10]
+00dfd7b0  mov v0.16B,v8.16B
+00dfd7b4  mov x2,xzr
+00dfd7b8  ldr d8,[sp], #0x30
+00dfd7bc  b 0x01061c3c
+00dfd7c0  str s8,[x19, #0x4c]
+00dfd7c4  ldp x19,x30,[sp, #0x20]
+00dfd7c8  ldp x21,x20,[sp, #0x10]
+00dfd7cc  ldr d8,[sp], #0x30
+00dfd7d0  ret
+
+
+================================================================================
+### FILE: 00dfd7d4_EffLiveMono__set_m_playTime.txt
+================================================================================
+Function: EffLiveMono$$set_m_playTime @ 00dfd7d4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp20 @ 01061c3c
+
+--- Calls IN ---
+  <- EffLiveMono$$SetEffInfo @ 00dfd6a8
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_s_set_m_playTime @ 012784b4
+
+--- Listing ---
+00dfd7d4  str d8,[sp, #-0x30]!
+00dfd7d8  stp x21,x20,[sp, #0x10]
+00dfd7dc  stp x19,x30,[sp, #0x20]
+00dfd7e0  adrp x20,0x3572000
+00dfd7e4  adrp x21,0x3383000
+00dfd7e8  ldrb w8,[x20, #0x4f6]
+00dfd7ec  ldr x21,[x21, #0x3a8]
+00dfd7f0  mov v8.16B,v0.16B
+00dfd7f4  mov x19,x0
+00dfd7f8  tbnz w8,#0x0,0x00dfd810
+00dfd7fc  adrp x0,0x3383000
+00dfd800  ldr x0,[x0, #0x3a8]
+00dfd804  bl 0x00b0789c
+00dfd808  mov w8,#0x1
+00dfd80c  strb w8,[x20, #0x4f6]
+00dfd810  ldr x8,[x21]
+00dfd814  ldr x8,[x8, #0xb8]
+00dfd818  ldr x0,[x8, #0x50]
+00dfd81c  cbz x0,0x00dfd83c
+00dfd820  mov x1,x19
+00dfd824  ldp x19,x30,[sp, #0x20]
+00dfd828  ldp x21,x20,[sp, #0x10]
+00dfd82c  mov v0.16B,v8.16B
+00dfd830  mov x2,xzr
+00dfd834  ldr d8,[sp], #0x30
+00dfd838  b 0x01061c3c
+00dfd83c  str s8,[x19, #0x50]
+00dfd840  ldp x19,x30,[sp, #0x20]
+00dfd844  ldp x21,x20,[sp, #0x10]
+00dfd848  ldr d8,[sp], #0x30
+00dfd84c  ret
+
+
+================================================================================
+### FILE: 00dfd850_EffLiveMono__get_m_SkeletonAnimation.txt
+================================================================================
+Function: EffLiveMono$$get_m_SkeletonAnimation @ 00dfd850
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp217 @ 0107b684
+
+--- Calls IN ---
+  <- EffLiveMono$$PlaySpineAni @ 00dfe01c
+  <- EffLiveMono$$Start @ 00dfdcc4
+
+--- Listing ---
+00dfd850  stp x21,x20,[sp, #-0x20]!
+00dfd854  stp x19,x30,[sp, #0x10]
+00dfd858  adrp x20,0x3572000
+00dfd85c  adrp x21,0x3383000
+00dfd860  ldrb w8,[x20, #0x4ef]
+00dfd864  ldr x21,[x21, #0x3a8]
+00dfd868  mov x19,x0
+00dfd86c  tbnz w8,#0x0,0x00dfd884
+00dfd870  adrp x0,0x3383000
+00dfd874  ldr x0,[x0, #0x3a8]
+00dfd878  bl 0x00b0789c
+00dfd87c  mov w8,#0x1
+00dfd880  strb w8,[x20, #0x4ef]
+00dfd884  ldr x8,[x21]
+00dfd888  ldr x8,[x8, #0xb8]
+00dfd88c  ldr x0,[x8, #0x18]
+00dfd890  cbz x0,0x00dfd8a8
+00dfd894  mov x1,x19
+00dfd898  ldp x19,x30,[sp, #0x10]
+00dfd89c  mov x2,xzr
+00dfd8a0  ldp x21,x20,[sp], #0x20
+00dfd8a4  b 0x0107b684
+00dfd8a8  ldr x0,[x19, #0x40]
+00dfd8ac  ldp x19,x30,[sp, #0x10]
+00dfd8b0  ldp x21,x20,[sp], #0x20
+00dfd8b4  ret
+
+
+================================================================================
+### FILE: 00dfd8b8_EffLiveMono__set_m_SkeletonAnimation.txt
+================================================================================
+Function: EffLiveMono$$set_m_SkeletonAnimation @ 00dfd8b8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EffLiveMono$$Start @ 00dfdcc4
+
+--- Listing ---
+00dfd8b8  str x22,[sp, #-0x30]!
+00dfd8bc  stp x21,x20,[sp, #0x10]
+00dfd8c0  stp x19,x30,[sp, #0x20]
+00dfd8c4  adrp x21,0x3572000
+00dfd8c8  adrp x22,0x3383000
+00dfd8cc  ldrb w8,[x21, #0x4f0]
+00dfd8d0  ldr x22,[x22, #0x3a8]
+00dfd8d4  mov x19,x1
+00dfd8d8  mov x20,x0
+00dfd8dc  tbnz w8,#0x0,0x00dfd8f4
+00dfd8e0  adrp x0,0x3383000
+00dfd8e4  ldr x0,[x0, #0x3a8]
+00dfd8e8  bl 0x00b0789c
+00dfd8ec  mov w8,#0x1
+00dfd8f0  strb w8,[x21, #0x4f0]
+00dfd8f4  ldr x8,[x22]
+00dfd8f8  ldr x8,[x8, #0xb8]
+00dfd8fc  ldr x0,[x8, #0x20]
+00dfd900  cbz x0,0x00dfd920
+00dfd904  mov x1,x20
+00dfd908  mov x2,x19
+00dfd90c  ldp x19,x30,[sp, #0x20]
+00dfd910  ldp x21,x20,[sp, #0x10]
+00dfd914  mov x3,xzr
+00dfd918  ldr x22,[sp], #0x30
+00dfd91c  b 0x0106125c
+00dfd920  str x19,[x20, #0x40]!
+00dfd924  mov x0,x20
+00dfd928  mov x1,x19
+00dfd92c  ldp x19,x30,[sp, #0x20]
+00dfd930  ldp x21,x20,[sp, #0x10]
+00dfd934  ldr x22,[sp], #0x30
+00dfd938  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfd93c_EffLiveMono__get_m_startRound.txt
+================================================================================
+Function: EffLiveMono$$get_m_startRound @ 00dfd93c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp32 @ 01063698
+
+--- Calls IN ---
+  <- EffLiveMono$$RoundStart @ 00dfe1e8
+
+--- Listing ---
+00dfd93c  stp x21,x20,[sp, #-0x20]!
+00dfd940  stp x19,x30,[sp, #0x10]
+00dfd944  adrp x20,0x3572000
+00dfd948  adrp x21,0x3383000
+00dfd94c  ldrb w8,[x20, #0x4f1]
+00dfd950  ldr x21,[x21, #0x3a8]
+00dfd954  mov x19,x0
+00dfd958  tbnz w8,#0x0,0x00dfd970
+00dfd95c  adrp x0,0x3383000
+00dfd960  ldr x0,[x0, #0x3a8]
+00dfd964  bl 0x00b0789c
+00dfd968  mov w8,#0x1
+00dfd96c  strb w8,[x20, #0x4f1]
+00dfd970  ldr x8,[x21]
+00dfd974  ldr x8,[x8, #0xb8]
+00dfd978  ldr x0,[x8, #0x28]
+00dfd97c  cbz x0,0x00dfd994
+00dfd980  mov x1,x19
+00dfd984  ldp x19,x30,[sp, #0x10]
+00dfd988  mov x2,xzr
+00dfd98c  ldp x21,x20,[sp], #0x20
+00dfd990  b 0x01063698
+00dfd994  ldr s0,[x19, #0x48]
+00dfd998  ldp x19,x30,[sp, #0x10]
+00dfd99c  ldp x21,x20,[sp], #0x20
+00dfd9a0  ret
+
+
+================================================================================
+### FILE: 00dfd9a4_EffLiveMono__set_m_startRound.txt
+================================================================================
+Function: EffLiveMono$$set_m_startRound @ 00dfd9a4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp20 @ 01061c3c
+
+--- Calls IN ---
+  <- EffLiveMono$$Start @ 00dfdcc4
+
+--- Listing ---
+00dfd9a4  str d8,[sp, #-0x30]!
+00dfd9a8  stp x21,x20,[sp, #0x10]
+00dfd9ac  stp x19,x30,[sp, #0x20]
+00dfd9b0  adrp x20,0x3572000
+00dfd9b4  adrp x21,0x3383000
+00dfd9b8  ldrb w8,[x20, #0x4f2]
+00dfd9bc  ldr x21,[x21, #0x3a8]
+00dfd9c0  mov v8.16B,v0.16B
+00dfd9c4  mov x19,x0
+00dfd9c8  tbnz w8,#0x0,0x00dfd9e0
+00dfd9cc  adrp x0,0x3383000
+00dfd9d0  ldr x0,[x0, #0x3a8]
+00dfd9d4  bl 0x00b0789c
+00dfd9d8  mov w8,#0x1
+00dfd9dc  strb w8,[x20, #0x4f2]
+00dfd9e0  ldr x8,[x21]
+00dfd9e4  ldr x8,[x8, #0xb8]
+00dfd9e8  ldr x0,[x8, #0x30]
+00dfd9ec  cbz x0,0x00dfda0c
+00dfd9f0  mov x1,x19
+00dfd9f4  ldp x19,x30,[sp, #0x20]
+00dfd9f8  ldp x21,x20,[sp, #0x10]
+00dfd9fc  mov v0.16B,v8.16B
+00dfda00  mov x2,xzr
+00dfda04  ldr d8,[sp], #0x30
+00dfda08  b 0x01061c3c
+00dfda0c  str s8,[x19, #0x48]
+00dfda10  ldp x19,x30,[sp, #0x20]
+00dfda14  ldp x21,x20,[sp, #0x10]
+00dfda18  ldr d8,[sp], #0x30
+00dfda1c  ret
+
+
+================================================================================
+### FILE: 00dfda20_EffLiveMono__get_m_durationRound.txt
+================================================================================
+Function: EffLiveMono$$get_m_durationRound @ 00dfda20
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp32 @ 01063698
+
+--- Calls IN ---
+  <- EffLiveMono$$WeatherCheck @ 00dfe55c
+  <- EffLiveMono$$Start @ 00dfdcc4
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_g_get_m_durationRound @ 01277c24
+
+--- Listing ---
+00dfda20  stp x21,x20,[sp, #-0x20]!
+00dfda24  stp x19,x30,[sp, #0x10]
+00dfda28  adrp x20,0x3572000
+00dfda2c  adrp x21,0x3383000
+00dfda30  ldrb w8,[x20, #0x4f3]
+00dfda34  ldr x21,[x21, #0x3a8]
+00dfda38  mov x19,x0
+00dfda3c  tbnz w8,#0x0,0x00dfda54
+00dfda40  adrp x0,0x3383000
+00dfda44  ldr x0,[x0, #0x3a8]
+00dfda48  bl 0x00b0789c
+00dfda4c  mov w8,#0x1
+00dfda50  strb w8,[x20, #0x4f3]
+00dfda54  ldr x8,[x21]
+00dfda58  ldr x8,[x8, #0xb8]
+00dfda5c  ldr x0,[x8, #0x38]
+00dfda60  cbz x0,0x00dfda78
+00dfda64  mov x1,x19
+00dfda68  ldp x19,x30,[sp, #0x10]
+00dfda6c  mov x2,xzr
+00dfda70  ldp x21,x20,[sp], #0x20
+00dfda74  b 0x01063698
+00dfda78  ldr s0,[x19, #0x4c]
+00dfda7c  ldp x19,x30,[sp, #0x10]
+00dfda80  ldp x21,x20,[sp], #0x20
+00dfda84  ret
+
+
+================================================================================
+### FILE: 00dfda88_EffLiveMono__get_m_playTime.txt
+================================================================================
+Function: EffLiveMono$$get_m_playTime @ 00dfda88
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp32 @ 01063698
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_g_get_m_playTime @ 01277dd8
+
+--- Listing ---
+00dfda88  stp x21,x20,[sp, #-0x20]!
+00dfda8c  stp x19,x30,[sp, #0x10]
+00dfda90  adrp x20,0x3572000
+00dfda94  adrp x21,0x3383000
+00dfda98  ldrb w8,[x20, #0x4f5]
+00dfda9c  ldr x21,[x21, #0x3a8]
+00dfdaa0  mov x19,x0
+00dfdaa4  tbnz w8,#0x0,0x00dfdabc
+00dfdaa8  adrp x0,0x3383000
+00dfdaac  ldr x0,[x0, #0x3a8]
+00dfdab0  bl 0x00b0789c
+00dfdab4  mov w8,#0x1
+00dfdab8  strb w8,[x20, #0x4f5]
+00dfdabc  ldr x8,[x21]
+00dfdac0  ldr x8,[x8, #0xb8]
+00dfdac4  ldr x0,[x8, #0x48]
+00dfdac8  cbz x0,0x00dfdae0
+00dfdacc  mov x1,x19
+00dfdad0  ldp x19,x30,[sp, #0x10]
+00dfdad4  mov x2,xzr
+00dfdad8  ldp x21,x20,[sp], #0x20
+00dfdadc  b 0x01063698
+00dfdae0  ldr s0,[x19, #0x50]
+00dfdae4  ldp x19,x30,[sp, #0x10]
+00dfdae8  ldp x21,x20,[sp], #0x20
+00dfdaec  ret
+
+
+================================================================================
+### FILE: 00dfdaf0_EffLiveMono__get_m_aniName.txt
+================================================================================
+Function: EffLiveMono$$get_m_aniName @ 00dfdaf0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp19 @ 01061abc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_g_get_m_aniName @ 01277f8c
+  <- EffLiveMono$$PlaySpineAni @ 00dfe01c
+
+--- Listing ---
+00dfdaf0  stp x21,x20,[sp, #-0x20]!
+00dfdaf4  stp x19,x30,[sp, #0x10]
+00dfdaf8  adrp x20,0x3572000
+00dfdafc  adrp x21,0x3383000
+00dfdb00  ldrb w8,[x20, #0x4f7]
+00dfdb04  ldr x21,[x21, #0x3a8]
+00dfdb08  mov x19,x0
+00dfdb0c  tbnz w8,#0x0,0x00dfdb24
+00dfdb10  adrp x0,0x3383000
+00dfdb14  ldr x0,[x0, #0x3a8]
+00dfdb18  bl 0x00b0789c
+00dfdb1c  mov w8,#0x1
+00dfdb20  strb w8,[x20, #0x4f7]
+00dfdb24  ldr x8,[x21]
+00dfdb28  ldr x8,[x8, #0xb8]
+00dfdb2c  ldr x0,[x8, #0x58]
+00dfdb30  cbz x0,0x00dfdb48
+00dfdb34  mov x1,x19
+00dfdb38  ldp x19,x30,[sp, #0x10]
+00dfdb3c  mov x2,xzr
+00dfdb40  ldp x21,x20,[sp], #0x20
+00dfdb44  b 0x01061abc
+00dfdb48  ldr x0,[x19, #0x58]
+00dfdb4c  ldp x19,x30,[sp, #0x10]
+00dfdb50  ldp x21,x20,[sp], #0x20
+00dfdb54  ret
+
+
+================================================================================
+### FILE: 00dfdb58_EffLiveMono__set_m_aniName.txt
+================================================================================
+Function: EffLiveMono$$set_m_aniName @ 00dfdb58
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- RoleMono$$GhostAndPlay @ 014acc64
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_s_set_m_aniName @ 01278674
+
+--- Listing ---
+00dfdb58  str x22,[sp, #-0x30]!
+00dfdb5c  stp x21,x20,[sp, #0x10]
+00dfdb60  stp x19,x30,[sp, #0x20]
+00dfdb64  adrp x21,0x3572000
+00dfdb68  adrp x22,0x3383000
+00dfdb6c  ldrb w8,[x21, #0x4f8]
+00dfdb70  ldr x22,[x22, #0x3a8]
+00dfdb74  mov x19,x1
+00dfdb78  mov x20,x0
+00dfdb7c  tbnz w8,#0x0,0x00dfdb94
+00dfdb80  adrp x0,0x3383000
+00dfdb84  ldr x0,[x0, #0x3a8]
+00dfdb88  bl 0x00b0789c
+00dfdb8c  mov w8,#0x1
+00dfdb90  strb w8,[x21, #0x4f8]
+00dfdb94  ldr x8,[x22]
+00dfdb98  ldr x8,[x8, #0xb8]
+00dfdb9c  ldr x0,[x8, #0x60]
+00dfdba0  cbz x0,0x00dfdbc0
+00dfdba4  mov x1,x20
+00dfdba8  mov x2,x19
+00dfdbac  ldp x19,x30,[sp, #0x20]
+00dfdbb0  ldp x21,x20,[sp, #0x10]
+00dfdbb4  mov x3,xzr
+00dfdbb8  ldr x22,[sp], #0x30
+00dfdbbc  b 0x0106125c
+00dfdbc0  str x19,[x20, #0x58]!
+00dfdbc4  mov x0,x20
+00dfdbc8  mov x1,x19
+00dfdbcc  ldp x19,x30,[sp, #0x20]
+00dfdbd0  ldp x21,x20,[sp, #0x10]
+00dfdbd4  ldr x22,[sp], #0x30
+00dfdbd8  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dfdbdc_EffLiveMono__get_m_nextStop.txt
+================================================================================
+Function: EffLiveMono$$get_m_nextStop @ 00dfdbdc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+  <- EffLiveMono$$OnDestroy @ 00dfe3bc
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_g_get_m_nextStop @ 01278140
+
+--- Listing ---
+00dfdbdc  stp x21,x20,[sp, #-0x20]!
+00dfdbe0  stp x19,x30,[sp, #0x10]
+00dfdbe4  adrp x20,0x3572000
+00dfdbe8  adrp x21,0x3383000
+00dfdbec  ldrb w8,[x20, #0x4f9]
+00dfdbf0  ldr x21,[x21, #0x3a8]
+00dfdbf4  mov x19,x0
+00dfdbf8  tbnz w8,#0x0,0x00dfdc10
+00dfdbfc  adrp x0,0x3383000
+00dfdc00  ldr x0,[x0, #0x3a8]
+00dfdc04  bl 0x00b0789c
+00dfdc08  mov w8,#0x1
+00dfdc0c  strb w8,[x20, #0x4f9]
+00dfdc10  ldr x8,[x21]
+00dfdc14  ldr x8,[x8, #0xb8]
+00dfdc18  ldr x0,[x8, #0x68]
+00dfdc1c  cbz x0,0x00dfdc34
+00dfdc20  mov x1,x19
+00dfdc24  ldp x19,x30,[sp, #0x10]
+00dfdc28  mov x2,xzr
+00dfdc2c  ldp x21,x20,[sp], #0x20
+00dfdc30  b 0x01060aac
+00dfdc34  ldrb w0,[x19, #0x60]
+00dfdc38  ldp x19,x30,[sp, #0x10]
+00dfdc3c  ldp x21,x20,[sp], #0x20
+00dfdc40  ret
+
+
+================================================================================
+### FILE: 00dfdc44_EffLiveMono__set_m_nextStop.txt
+================================================================================
+Function: EffLiveMono$$set_m_nextStop @ 00dfdc44
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp15 @ 010613e4
+
+--- Calls IN ---
+  <- EffLiveMono$$WeatherStop @ 00dfe5e0
+
+--- Listing ---
+00dfdc44  str x22,[sp, #-0x30]!
+00dfdc48  stp x21,x20,[sp, #0x10]
+00dfdc4c  stp x19,x30,[sp, #0x20]
+00dfdc50  adrp x21,0x3572000
+00dfdc54  adrp x22,0x3383000
+00dfdc58  ldrb w8,[x21, #0x4fa]
+00dfdc5c  ldr x22,[x22, #0x3a8]
+00dfdc60  mov w20,w1
+00dfdc64  mov x19,x0
+00dfdc68  tbnz w8,#0x0,0x00dfdc80
+00dfdc6c  adrp x0,0x3383000
+00dfdc70  ldr x0,[x0, #0x3a8]
+00dfdc74  bl 0x00b0789c
+00dfdc78  mov w8,#0x1
+00dfdc7c  strb w8,[x21, #0x4fa]
+00dfdc80  ldr x8,[x22]
+00dfdc84  ldr x8,[x8, #0xb8]
+00dfdc88  ldr x0,[x8, #0x70]
+00dfdc8c  cbz x0,0x00dfdcac
+00dfdc90  and w2,w20,#0x1
+00dfdc94  mov x1,x19
+00dfdc98  ldp x19,x30,[sp, #0x20]
+00dfdc9c  ldp x21,x20,[sp, #0x10]
+00dfdca0  mov x3,xzr
+00dfdca4  ldr x22,[sp], #0x30
+00dfdca8  b 0x010613e4
+00dfdcac  and w8,w20,#0x1
+00dfdcb0  strb w8,[x19, #0x60]
+00dfdcb4  ldp x19,x30,[sp, #0x20]
+00dfdcb8  ldp x21,x20,[sp, #0x10]
+00dfdcbc  ldr x22,[sp], #0x30
+00dfdcc0  ret
+
+
+================================================================================
+### FILE: 00dfdcc4_EffLiveMono__Start.txt
+================================================================================
+Function: EffLiveMono$$Start @ 00dfdcc4
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> BaseMono$$Invoke @ 00e1dacc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> EffLiveMono$$set_m_startRound @ 00dfd9a4
+  -> EffLiveMono$$get_m_effInfo @ 00dfd5bc
+  -> BattleCache$$get_m_halfRound @ 00eccdf0
+  -> BaseMono$$AddNotifyListener @ 00e1cfa8
+  -> FUN_00b079b0 @ 00b079b0
+  -> EffLiveMono$$get_m_durationRound @ 00dfda20
+  -> System.Action$$.ctor @ 020d5760
+  -> Spine.AnimationState$$add_Complete @ 00d630e8
+  -> Ali.NotifyDelegate$$.ctor @ 00e10f80
+  -> CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat$$op_Implicit @ 00c165f0
+  -> EffLiveMono$$set_m_SkeletonAnimation @ 00dfd8b8
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> EffLiveMono$$get_m_SkeletonAnimation @ 00dfd850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> Spine.AnimationState.TrackEntryDelegate$$.ctor @ 00d6697c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EffLiveMono$$PlaySpineAni @ 00dfe01c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+
+--- Calls IN ---
+
+--- Listing ---
+00dfdcc4  sub sp,sp,#0x70
+00dfdcc8  stp x21,x20,[sp, #0x50]
+00dfdccc  stp x19,x30,[sp, #0x60]
+00dfdcd0  adrp x20,0x3572000
+00dfdcd4  adrp x21,0x3383000
+00dfdcd8  ldrb w8,[x20, #0x4fb]
+00dfdcdc  ldr x21,[x21, #0x3a8]
+00dfdce0  mov x19,x0
+00dfdce4  tbnz w8,#0x0,0x00dfdd8c
+00dfdce8  adrp x0,0x3348000
+00dfdcec  ldr x0,[x0, #0xcf8]
+00dfdcf0  bl 0x00b0789c
+00dfdcf4  adrp x0,0x3348000
+00dfdcf8  ldr x0,[x0, #0x138]
+00dfdcfc  bl 0x00b0789c
+00dfdd00  adrp x0,0x334e000
+00dfdd04  ldr x0,[x0, #0xf08]
+00dfdd08  bl 0x00b0789c
+00dfdd0c  adrp x0,0x3329000
+00dfdd10  ldr x0,[x0, #0x270]
+00dfdd14  bl 0x00b0789c
+00dfdd18  adrp x0,0x336e000
+00dfdd1c  ldr x0,[x0, #0x660]
+00dfdd20  bl 0x00b0789c
+00dfdd24  adrp x0,0x3342000
+00dfdd28  ldr x0,[x0, #0xc0]
+00dfdd2c  bl 0x00b0789c
+00dfdd30  adrp x0,0x3383000
+00dfdd34  ldr x0,[x0, #0x3a8]
+00dfdd38  bl 0x00b0789c
+00dfdd3c  adrp x0,0x337f000
+00dfdd40  ldr x0,[x0, #0xc50]
+00dfdd44  bl 0x00b0789c
+00dfdd48  adrp x0,0x333a000
+00dfdd4c  ldr x0,[x0, #0x628]
+00dfdd50  bl 0x00b0789c
+00dfdd54  adrp x0,0x3321000
+00dfdd58  ldr x0,[x0, #0xca8]
+00dfdd5c  bl 0x00b0789c
+00dfdd60  adrp x0,0x3359000
+00dfdd64  ldr x0,[x0, #0xb20]
+00dfdd68  bl 0x00b0789c
+00dfdd6c  adrp x0,0x3329000
+00dfdd70  ldr x0,[x0, #0xe90]
+00dfdd74  bl 0x00b0789c
+00dfdd78  adrp x0,0x3317000
+00dfdd7c  ldr x0,[x0, #0xef8]
+00dfdd80  bl 0x00b0789c
+00dfdd84  mov w8,#0x1
+00dfdd88  strb w8,[x20, #0x4fb]
+00dfdd8c  ldr x8,[x21]
+00dfdd90  ldr x8,[x8, #0xb8]
+00dfdd94  ldr x0,[x8, #0x78]
+00dfdd98  cbz x0,0x00dfddb4
+00dfdd9c  mov x1,x19
+00dfdda0  ldp x19,x30,[sp, #0x60]
+00dfdda4  ldp x21,x20,[sp, #0x50]
+00dfdda8  mov x2,xzr
+00dfddac  add sp,sp,#0x70
+00dfddb0  b 0x01060dac
+00dfddb4  adrp x20,0x334e000
+00dfddb8  ldr x20,[x20, #0xf08]
+00dfddbc  ldr x0,[x20]
+00dfddc0  ldr w8,[x0, #0xe0]
+00dfddc4  cbnz w8,0x00dfddd0
+00dfddc8  bl 0x00b0798c
+00dfddcc  ldr x0,[x20]
+00dfddd0  ldr x8,[x0, #0xb8]
+00dfddd4  ldr x0,[x8]
+00dfddd8  cbz x0,0x00dfe018
+00dfdddc  adrp x21,0x3359000
+00dfdde0  adrp x20,0x3348000
+00dfdde4  ldr x21,[x21, #0xb20]
+00dfdde8  ldr x20,[x20, #0x138]
+00dfddec  add x8,sp,#0x18
+00dfddf0  mov x1,xzr
+00dfddf4  bl 0x00eccdf0
+00dfddf8  ldur q0,[sp, #0x18]
+00dfddfc  ldr x8,[sp, #0x28]
+00dfde00  ldr x0,[x21]
+00dfde04  str q0,[sp, #0x30]
+00dfde08  str x8,[sp, #0x40]
+00dfde0c  ldr w8,[x0, #0xe0]
+00dfde10  cbnz w8,0x00dfde18
+00dfde14  bl 0x00b0798c
+00dfde18  ldr q0,[sp, #0x30]
+00dfde1c  ldr x8,[sp, #0x40]
+00dfde20  mov x0,sp
+00dfde24  mov x1,xzr
+00dfde28  str q0,[sp]
+00dfde2c  str x8,[sp, #0x10]
+00dfde30  bl 0x00c165f0
+00dfde34  mov x0,x19
+00dfde38  bl 0x00dfd9a4
+00dfde3c  mov x0,x19
+00dfde40  mov x1,xzr
+00dfde44  bl 0x024e4ed4
+00dfde48  ldr x8,[x20]
+00dfde4c  mov x20,x0
+00dfde50  ldr w9,[x8, #0xe0]
+00dfde54  cbnz w9,0x00dfde60
+00dfde58  mov x0,x8
+00dfde5c  bl 0x00b0798c
+00dfde60  mov w1,#0x1
+00dfde64  mov x0,x20
+00dfde68  mov x2,xzr
+00dfde6c  bl 0x00e13880
+00dfde70  mov x0,x19
+00dfde74  bl 0x00dfda20
+00dfde78  fcmp s0,#0.0
+00dfde7c  b.le 0x00dfdecc
+00dfde80  adrp x8,0x333a000
+00dfde84  ldr x8,[x8, #0x628]
+00dfde88  ldr x0,[x8]
+00dfde8c  bl 0x00b079a0
+00dfde90  cbz x0,0x00dfe018
+00dfde94  adrp x8,0x3342000
+00dfde98  ldr x8,[x8, #0xc0]
+00dfde9c  adrp x21,0x3317000
+00dfdea0  mov x1,x19
+00dfdea4  mov x3,xzr
+00dfdea8  ldr x2,[x8]
+00dfdeac  ldr x21,[x21, #0xef8]
+00dfdeb0  mov x20,x0
+00dfdeb4  bl 0x00e10f80
+00dfdeb8  ldr x1,[x21]
+00dfdebc  mov x0,x19
+00dfdec0  mov x2,x20
+00dfdec4  mov x3,xzr
+00dfdec8  bl 0x00e1cfa8
+00dfdecc  mov x0,x19
+00dfded0  bl 0x00dfd5bc
+00dfded4  cbz x0,0x00dfe018
+00dfded8  bl 0x00dfadc0
+00dfdedc  cbz x0,0x00dfe018
+00dfdee0  ldr w8,[x0, #0xa8]
+00dfdee4  cbnz w8,0x00dfe000
+00dfdee8  mov x0,x19
+00dfdeec  mov x1,xzr
+00dfdef0  bl 0x024e4ed4
+00dfdef4  cbz x0,0x00dfe018
+00dfdef8  adrp x8,0x337f000
+00dfdefc  ldr x8,[x8, #0xc50]
+00dfdf00  adrp x20,0x3321000
+00dfdf04  ldr x1,[x8]
+00dfdf08  ldr x20,[x20, #0xca8]
+00dfdf0c  bl 0x01794e94
+00dfdf10  mov x1,x0
+00dfdf14  mov x0,x19
+00dfdf18  bl 0x00dfd8b8
+00dfdf1c  mov x0,x19
+00dfdf20  bl 0x00dfd850
+00dfdf24  ldr x8,[x20]
+00dfdf28  mov x20,x0
+00dfdf2c  ldr w9,[x8, #0xe0]
+00dfdf30  cbnz w9,0x00dfdf3c
+00dfdf34  mov x0,x8
+00dfdf38  bl 0x00b0798c
+00dfdf3c  mov x0,x20
+00dfdf40  mov x1,xzr
+00dfdf44  mov x2,xzr
+00dfdf48  bl 0x024de30c
+00dfdf4c  tbz w0,#0x0,0x00dfdfa8
+00dfdf50  mov x0,x19
+00dfdf54  bl 0x00dfd850
+00dfdf58  cbz x0,0x00dfe018
+00dfdf5c  adrp x8,0x3329000
+00dfdf60  ldr x8,[x8, #0xe90]
+00dfdf64  ldr x20,[x0, #0xb0]
+00dfdf68  ldr x0,[x8]
+00dfdf6c  bl 0x00b079a0
+00dfdf70  cbz x0,0x00dfe018
+00dfdf74  adrp x8,0x336e000
+00dfdf78  ldr x8,[x8, #0x660]
+00dfdf7c  mov x1,x19
+00dfdf80  mov x3,xzr
+00dfdf84  mov x21,x0
+00dfdf88  ldr x2,[x8]
+00dfdf8c  bl 0x00d6697c
+00dfdf90  cbz x20,0x00dfe018
+00dfdf94  mov x0,x20
+00dfdf98  mov x1,x21
+00dfdf9c  mov x2,xzr
+00dfdfa0  bl 0x00d630e8
+00dfdfa4  b 0x00dfe000
+00dfdfa8  adrp x8,0x3348000
+00dfdfac  ldr x8,[x8, #0xcf8]
+00dfdfb0  ldr x0,[x8]
+00dfdfb4  bl 0x00b079a0
+00dfdfb8  cbz x0,0x00dfe018
+00dfdfbc  adrp x8,0x3329000
+00dfdfc0  ldr x8,[x8, #0x270]
+00dfdfc4  mov x1,x19
+00dfdfc8  mov x3,xzr
+00dfdfcc  mov x20,x0
+00dfdfd0  ldr x2,[x8]
+00dfdfd4  bl 0x020d5760
+00dfdfd8  mov x0,x19
+00dfdfdc  bl 0x00dfd5bc
+00dfdfe0  cbz x0,0x00dfe018
+00dfdfe4  bl 0x00dfadc0
+00dfdfe8  cbz x0,0x00dfe018
+00dfdfec  ldr s0,[x0, #0xd4]
+00dfdff0  mov x0,x19
+00dfdff4  mov x1,x20
+00dfdff8  mov x2,xzr
+00dfdffc  bl 0x00e1dacc
+00dfe000  mov x0,x19
+00dfe004  bl 0x00dfe01c
+00dfe008  ldp x19,x30,[sp, #0x60]
+00dfe00c  ldp x21,x20,[sp, #0x50]
+00dfe010  add sp,sp,#0x70
+00dfe014  ret
+00dfe018  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfe01c_EffLiveMono__PlaySpineAni.txt
+================================================================================
+Function: EffLiveMono$$PlaySpineAni @ 00dfe01c
+
+--- Calls OUT ---
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> EffLiveMono$$get_m_SkeletonAnimation @ 00dfd850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> AliothExtensions$$SetAnimationEx @ 00e1676c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> EffLiveMono$$get_m_aniName @ 00dfdaf0
+  -> EffLiveMono$$get_m_effInfo @ 00dfd5bc
+  -> EffInfo$$Play @ 00dfbca0
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_m_PlaySpineAni @ 01276fa8
+  <- EffLiveMono$$Start @ 00dfdcc4
+
+--- Listing ---
+00dfe01c  stp x21,x20,[sp, #-0x20]!
+00dfe020  stp x19,x30,[sp, #0x10]
+00dfe024  adrp x20,0x3572000
+00dfe028  adrp x21,0x3383000
+00dfe02c  ldrb w8,[x20, #0x4fc]
+00dfe030  ldr x21,[x21, #0x3a8]
+00dfe034  mov x19,x0
+00dfe038  tbnz w8,#0x0,0x00dfe068
+00dfe03c  adrp x0,0x3348000
+00dfe040  ldr x0,[x0, #0x138]
+00dfe044  bl 0x00b0789c
+00dfe048  adrp x0,0x3383000
+00dfe04c  ldr x0,[x0, #0x3a8]
+00dfe050  bl 0x00b0789c
+00dfe054  adrp x0,0x3321000
+00dfe058  ldr x0,[x0, #0xca8]
+00dfe05c  bl 0x00b0789c
+00dfe060  mov w8,#0x1
+00dfe064  strb w8,[x20, #0x4fc]
+00dfe068  ldr x8,[x21]
+00dfe06c  ldr x8,[x8, #0xb8]
+00dfe070  ldr x0,[x8, #0x80]
+00dfe074  cbz x0,0x00dfe08c
+00dfe078  mov x1,x19
+00dfe07c  ldp x19,x30,[sp, #0x10]
+00dfe080  mov x2,xzr
+00dfe084  ldp x21,x20,[sp], #0x20
+00dfe088  b 0x01060dac
+00dfe08c  adrp x20,0x3321000
+00dfe090  ldr x20,[x20, #0xca8]
+00dfe094  mov x0,x19
+00dfe098  bl 0x00dfd850
+00dfe09c  ldr x8,[x20]
+00dfe0a0  mov x20,x0
+00dfe0a4  ldr w9,[x8, #0xe0]
+00dfe0a8  cbnz w9,0x00dfe0b4
+00dfe0ac  mov x0,x8
+00dfe0b0  bl 0x00b0798c
+00dfe0b4  mov x0,x20
+00dfe0b8  mov x1,xzr
+00dfe0bc  mov x2,xzr
+00dfe0c0  bl 0x024de30c
+00dfe0c4  tbz w0,#0x0,0x00dfe0dc
+00dfe0c8  mov x0,x19
+00dfe0cc  bl 0x00dfdaf0
+00dfe0d0  mov x1,xzr
+00dfe0d4  bl 0x01fdf3a0
+00dfe0d8  tbz w0,#0x0,0x00dfe0f4
+00dfe0dc  mov x0,x19
+00dfe0e0  bl 0x00dfd5bc
+00dfe0e4  cbz x0,0x00dfe168
+00dfe0e8  ldp x19,x30,[sp, #0x10]
+00dfe0ec  ldp x21,x20,[sp], #0x20
+00dfe0f0  b 0x00dfbca0
+00dfe0f4  mov x0,x19
+00dfe0f8  bl 0x00dfd850
+00dfe0fc  cbz x0,0x00dfe168
+00dfe100  ldr x20,[x0, #0xb0]
+00dfe104  mov x0,x19
+00dfe108  bl 0x00dfdaf0
+00dfe10c  mov x21,x0
+00dfe110  mov x0,x19
+00dfe114  bl 0x00dfd5bc
+00dfe118  cbz x0,0x00dfe168
+00dfe11c  bl 0x00dfadc0
+00dfe120  cbz x0,0x00dfe168
+00dfe124  adrp x8,0x3348000
+00dfe128  ldr x8,[x8, #0x138]
+00dfe12c  ldr w19,[x0, #0xa8]
+00dfe130  ldr x8,[x8]
+00dfe134  ldr w9,[x8, #0xe0]
+00dfe138  cbnz w9,0x00dfe144
+00dfe13c  mov x0,x8
+00dfe140  bl 0x00b0798c
+00dfe144  cmp w19,#0x0
+00dfe148  ldp x19,x30,[sp, #0x10]
+00dfe14c  cset w3,eq
+00dfe150  mov x0,x20
+00dfe154  mov w1,wzr
+00dfe158  mov x2,x21
+00dfe15c  mov x4,xzr
+00dfe160  ldp x21,x20,[sp], #0x20
+00dfe164  b 0x00e1676c
+00dfe168  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfe16c_EffLiveMono__DestoryEff.txt
+================================================================================
+Function: EffLiveMono$$DestoryEff @ 00dfe16c
+
+--- Calls OUT ---
+  -> BaseMono$$DestroyEnhance @ 00e1e854
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- EffLiveMono$$RoundStart @ 00dfe1e8
+  <- EffLiveMono$$PlayEnd @ 00dfe340
+  <- EffLiveMono$$WeatherCheck @ 00dfe55c
+
+--- Listing ---
+00dfe16c  stp x21,x20,[sp, #-0x20]!
+00dfe170  stp x19,x30,[sp, #0x10]
+00dfe174  adrp x20,0x3572000
+00dfe178  adrp x21,0x3383000
+00dfe17c  ldrb w8,[x20, #0x4fd]
+00dfe180  ldr x21,[x21, #0x3a8]
+00dfe184  mov x19,x0
+00dfe188  tbnz w8,#0x0,0x00dfe1a0
+00dfe18c  adrp x0,0x3383000
+00dfe190  ldr x0,[x0, #0x3a8]
+00dfe194  bl 0x00b0789c
+00dfe198  mov w8,#0x1
+00dfe19c  strb w8,[x20, #0x4fd]
+00dfe1a0  ldr x8,[x21]
+00dfe1a4  ldr x8,[x8, #0xb8]
+00dfe1a8  ldr x0,[x8, #0x88]
+00dfe1ac  cbz x0,0x00dfe1c4
+00dfe1b0  mov x1,x19
+00dfe1b4  ldp x19,x30,[sp, #0x10]
+00dfe1b8  mov x2,xzr
+00dfe1bc  ldp x21,x20,[sp], #0x20
+00dfe1c0  b 0x01060dac
+00dfe1c4  mov x0,x19
+00dfe1c8  mov x1,xzr
+00dfe1cc  bl 0x024e4ed4
+00dfe1d0  mov x1,x0
+00dfe1d4  mov x0,x19
+00dfe1d8  ldp x19,x30,[sp, #0x10]
+00dfe1dc  mov x2,xzr
+00dfe1e0  ldp x21,x20,[sp], #0x20
+00dfe1e4  b 0x00e1e854
+
+
+================================================================================
+### FILE: 00dfe1e8_EffLiveMono__RoundStart.txt
+================================================================================
+Function: EffLiveMono$$RoundStart @ 00dfe1e8
+
+--- Calls OUT ---
+  -> EffInfo$$get_durationRound @ 00dfbb54
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> EffLiveMono$$get_m_startRound @ 00dfd93c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> EffLiveMono$$get_m_effInfo @ 00dfd5bc
+  -> EffLiveMono$$DestoryEff @ 00dfe16c
+  -> BattleCache$$get_m_halfRound @ 00eccdf0
+  -> FUN_00b079b0 @ 00b079b0
+  -> CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat$$op_Implicit @ 00c165f0
+
+--- Calls IN ---
+
+--- Listing ---
+00dfe1e8  sub sp,sp,#0x90
+00dfe1ec  stp d9,d8,[sp, #0x50]
+00dfe1f0  str x22,[sp, #0x60]
+00dfe1f4  stp x21,x20,[sp, #0x70]
+00dfe1f8  stp x19,x30,[sp, #0x80]
+00dfe1fc  adrp x21,0x3572000
+00dfe200  adrp x22,0x3383000
+00dfe204  ldrb w8,[x21, #0x4fe]
+00dfe208  ldr x22,[x22, #0x3a8]
+00dfe20c  mov x20,x1
+00dfe210  mov x19,x0
+00dfe214  tbnz w8,#0x0,0x00dfe244
+00dfe218  adrp x0,0x334e000
+00dfe21c  ldr x0,[x0, #0xf08]
+00dfe220  bl 0x00b0789c
+00dfe224  adrp x0,0x3383000
+00dfe228  ldr x0,[x0, #0x3a8]
+00dfe22c  bl 0x00b0789c
+00dfe230  adrp x0,0x3359000
+00dfe234  ldr x0,[x0, #0xb20]
+00dfe238  bl 0x00b0789c
+00dfe23c  mov w8,#0x1
+00dfe240  strb w8,[x21, #0x4fe]
+00dfe244  ldr x8,[x22]
+00dfe248  ldr x8,[x8, #0xb8]
+00dfe24c  ldr x0,[x8, #0x90]
+00dfe250  cbz x0,0x00dfe278
+00dfe254  mov x1,x19
+00dfe258  mov x2,x20
+00dfe25c  ldp x19,x30,[sp, #0x80]
+00dfe260  ldp x21,x20,[sp, #0x70]
+00dfe264  ldr x22,[sp, #0x60]
+00dfe268  ldp d9,d8,[sp, #0x50]
+00dfe26c  mov x3,xzr
+00dfe270  add sp,sp,#0x90
+00dfe274  b 0x0106125c
+00dfe278  adrp x20,0x334e000
+00dfe27c  ldr x20,[x20, #0xf08]
+00dfe280  ldr x0,[x20]
+00dfe284  ldr w8,[x0, #0xe0]
+00dfe288  cbnz w8,0x00dfe294
+00dfe28c  bl 0x00b0798c
+00dfe290  ldr x0,[x20]
+00dfe294  ldr x8,[x0, #0xb8]
+00dfe298  ldr x0,[x8]
+00dfe29c  cbz x0,0x00dfe33c
+00dfe2a0  adrp x20,0x3359000
+00dfe2a4  ldr x20,[x20, #0xb20]
+00dfe2a8  add x8,sp,#0x18
+00dfe2ac  mov x1,xzr
+00dfe2b0  bl 0x00eccdf0
+00dfe2b4  ldur q0,[sp, #0x18]
+00dfe2b8  ldr x8,[sp, #0x28]
+00dfe2bc  ldr x0,[x20]
+00dfe2c0  str q0,[sp, #0x30]
+00dfe2c4  str x8,[sp, #0x40]
+00dfe2c8  ldr w8,[x0, #0xe0]
+00dfe2cc  cbnz w8,0x00dfe2d4
+00dfe2d0  bl 0x00b0798c
+00dfe2d4  ldr q0,[sp, #0x30]
+00dfe2d8  ldr x8,[sp, #0x40]
+00dfe2dc  mov x0,sp
+00dfe2e0  mov x1,xzr
+00dfe2e4  str q0,[sp]
+00dfe2e8  str x8,[sp, #0x10]
+00dfe2ec  bl 0x00c165f0
+00dfe2f0  mov x0,x19
+00dfe2f4  mov v8.16B,v0.16B
+00dfe2f8  bl 0x00dfd5bc
+00dfe2fc  cbz x0,0x00dfe33c
+00dfe300  bl 0x00dfbb54
+00dfe304  mov x0,x19
+00dfe308  mov v9.16B,v0.16B
+00dfe30c  bl 0x00dfd93c
+00dfe310  fadd s0,s9,s0
+00dfe314  fcmp s8,s0
+00dfe318  b.lt 0x00dfe324
+00dfe31c  mov x0,x19
+00dfe320  bl 0x00dfe16c
+00dfe324  ldp x19,x30,[sp, #0x80]
+00dfe328  ldp x21,x20,[sp, #0x70]
+00dfe32c  ldr x22,[sp, #0x60]
+00dfe330  ldp d9,d8,[sp, #0x50]
+00dfe334  add sp,sp,#0x90
+00dfe338  ret
+00dfe33c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfe340_EffLiveMono__PlayEnd.txt
+================================================================================
+Function: EffLiveMono$$PlayEnd @ 00dfe340
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> EffLiveMono$$DestoryEff @ 00dfe16c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_m_PlayEnd @ 01277144
+
+--- Listing ---
+00dfe340  str x22,[sp, #-0x30]!
+00dfe344  stp x21,x20,[sp, #0x10]
+00dfe348  stp x19,x30,[sp, #0x20]
+00dfe34c  adrp x21,0x3572000
+00dfe350  adrp x22,0x3383000
+00dfe354  ldrb w8,[x21, #0x4ff]
+00dfe358  ldr x22,[x22, #0x3a8]
+00dfe35c  mov x19,x1
+00dfe360  mov x20,x0
+00dfe364  tbnz w8,#0x0,0x00dfe37c
+00dfe368  adrp x0,0x3383000
+00dfe36c  ldr x0,[x0, #0x3a8]
+00dfe370  bl 0x00b0789c
+00dfe374  mov w8,#0x1
+00dfe378  strb w8,[x21, #0x4ff]
+00dfe37c  ldr x8,[x22]
+00dfe380  ldr x8,[x8, #0xb8]
+00dfe384  ldr x0,[x8, #0x98]
+00dfe388  cbz x0,0x00dfe3a8
+00dfe38c  mov x1,x20
+00dfe390  mov x2,x19
+00dfe394  ldp x19,x30,[sp, #0x20]
+00dfe398  ldp x21,x20,[sp, #0x10]
+00dfe39c  mov x3,xzr
+00dfe3a0  ldr x22,[sp], #0x30
+00dfe3a4  b 0x0106125c
+00dfe3a8  mov x0,x20
+00dfe3ac  ldp x19,x30,[sp, #0x20]
+00dfe3b0  ldp x21,x20,[sp, #0x10]
+00dfe3b4  ldr x22,[sp], #0x30
+00dfe3b8  b 0x00dfe16c
+
+
+================================================================================
+### FILE: 00dfe3bc_EffLiveMono__OnDestroy.txt
+================================================================================
+Function: EffLiveMono$$OnDestroy @ 00dfe3bc
+
+--- Calls OUT ---
+  -> EffInfo$$PlayComplete @ 00dfd3fc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EffLiveMono$$get_m_effInfo @ 00dfd5bc
+  -> BaseMono$$OnDestroy @ 00e1d958
+  -> FUN_00b079b0 @ 00b079b0
+  -> EffLiveMono$$get_m_nextStop @ 00dfdbdc
+
+--- Calls IN ---
+
+--- Listing ---
+00dfe3bc  stp x21,x20,[sp, #-0x20]!
+00dfe3c0  stp x19,x30,[sp, #0x10]
+00dfe3c4  adrp x20,0x3572000
+00dfe3c8  adrp x21,0x3383000
+00dfe3cc  ldrb w8,[x20, #0x500]
+00dfe3d0  ldr x21,[x21, #0x3a8]
+00dfe3d4  mov x19,x0
+00dfe3d8  tbnz w8,#0x0,0x00dfe3f0
+00dfe3dc  adrp x0,0x3383000
+00dfe3e0  ldr x0,[x0, #0x3a8]
+00dfe3e4  bl 0x00b0789c
+00dfe3e8  mov w8,#0x1
+00dfe3ec  strb w8,[x20, #0x500]
+00dfe3f0  ldr x8,[x21]
+00dfe3f4  ldr x8,[x8, #0xb8]
+00dfe3f8  ldr x0,[x8, #0xa0]
+00dfe3fc  cbz x0,0x00dfe414
+00dfe400  mov x1,x19
+00dfe404  ldp x19,x30,[sp, #0x10]
+00dfe408  mov x2,xzr
+00dfe40c  ldp x21,x20,[sp], #0x20
+00dfe410  b 0x01060dac
+00dfe414  mov x0,x19
+00dfe418  mov x1,xzr
+00dfe41c  bl 0x00e1d958
+00dfe420  mov x0,x19
+00dfe424  bl 0x00dfd5bc
+00dfe428  cbz x0,0x00dfe438
+00dfe42c  mov x0,x19
+00dfe430  bl 0x00dfdbdc
+00dfe434  tbz w0,#0x0,0x00dfe444
+00dfe438  ldp x19,x30,[sp, #0x10]
+00dfe43c  ldp x21,x20,[sp], #0x20
+00dfe440  ret
+00dfe444  mov x0,x19
+00dfe448  bl 0x00dfd5bc
+00dfe44c  cbz x0,0x00dfe45c
+00dfe450  ldp x19,x30,[sp, #0x10]
+00dfe454  ldp x21,x20,[sp], #0x20
+00dfe458  b 0x00dfd3fc
+00dfe45c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfe460_EffLiveMono__TurnAround.txt
+================================================================================
+Function: EffLiveMono$$TurnAround @ 00dfe460
+
+--- Calls OUT ---
+  -> EffInfo$$get_m_inst @ 00dfb7e4
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> EffLiveMono$$get_m_effInfo @ 00dfd5bc
+  -> EffInfo$$Play @ 00dfbca0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_m_TurnAround @ 01277590
+  <- RoleMono$$TurnAround @ 014a4528
+
+--- Listing ---
+00dfe460  stp x21,x20,[sp, #-0x20]!
+00dfe464  stp x19,x30,[sp, #0x10]
+00dfe468  adrp x20,0x3572000
+00dfe46c  adrp x21,0x3383000
+00dfe470  ldrb w8,[x20, #0x501]
+00dfe474  ldr x21,[x21, #0x3a8]
+00dfe478  mov x19,x0
+00dfe47c  tbnz w8,#0x0,0x00dfe4a0
+00dfe480  adrp x0,0x3383000
+00dfe484  ldr x0,[x0, #0x3a8]
+00dfe488  bl 0x00b0789c
+00dfe48c  adrp x0,0x3321000
+00dfe490  ldr x0,[x0, #0xca8]
+00dfe494  bl 0x00b0789c
+00dfe498  mov w8,#0x1
+00dfe49c  strb w8,[x20, #0x501]
+00dfe4a0  ldr x8,[x21]
+00dfe4a4  ldr x8,[x8, #0xb8]
+00dfe4a8  ldr x0,[x8, #0xa8]
+00dfe4ac  cbz x0,0x00dfe4c4
+00dfe4b0  mov x1,x19
+00dfe4b4  ldp x19,x30,[sp, #0x10]
+00dfe4b8  mov x2,xzr
+00dfe4bc  ldp x21,x20,[sp], #0x20
+00dfe4c0  b 0x01060dac
+00dfe4c4  mov x0,x19
+00dfe4c8  bl 0x00dfd5bc
+00dfe4cc  cbz x0,0x00dfe54c
+00dfe4d0  mov x0,x19
+00dfe4d4  bl 0x00dfd5bc
+00dfe4d8  cbz x0,0x00dfe558
+00dfe4dc  adrp x20,0x3321000
+00dfe4e0  ldr x20,[x20, #0xca8]
+00dfe4e4  bl 0x00dfb7e4
+00dfe4e8  ldr x8,[x20]
+00dfe4ec  mov x20,x0
+00dfe4f0  ldr w9,[x8, #0xe0]
+00dfe4f4  cbnz w9,0x00dfe500
+00dfe4f8  mov x0,x8
+00dfe4fc  bl 0x00b0798c
+00dfe500  mov x0,x20
+00dfe504  mov x1,xzr
+00dfe508  mov x2,xzr
+00dfe50c  bl 0x024de30c
+00dfe510  tbz w0,#0x0,0x00dfe54c
+00dfe514  mov x0,x19
+00dfe518  bl 0x00dfd5bc
+00dfe51c  cbz x0,0x00dfe558
+00dfe520  bl 0x00dfadc0
+00dfe524  cbz x0,0x00dfe558
+00dfe528  ldr w8,[x0, #0xa8]
+00dfe52c  cmp w8,#0x1
+00dfe530  b.ne 0x00dfe54c
+00dfe534  mov x0,x19
+00dfe538  bl 0x00dfd5bc
+00dfe53c  cbz x0,0x00dfe558
+00dfe540  ldp x19,x30,[sp, #0x10]
+00dfe544  ldp x21,x20,[sp], #0x20
+00dfe548  b 0x00dfbca0
+00dfe54c  ldp x19,x30,[sp, #0x10]
+00dfe550  ldp x21,x20,[sp], #0x20
+00dfe554  ret
+00dfe558  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dfe55c_EffLiveMono__WeatherCheck.txt
+================================================================================
+Function: EffLiveMono$$WeatherCheck @ 00dfe55c
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EffLiveMono$$DestoryEff @ 00dfe16c
+  -> EffLiveMono$$get_m_durationRound @ 00dfda20
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_m_WeatherCheck @ 0127772c
+  <- BattleManager$$InitTollgate @ 01179bec
+
+--- Listing ---
+00dfe55c  stp x21,x20,[sp, #-0x20]!
+00dfe560  stp x19,x30,[sp, #0x10]
+00dfe564  adrp x20,0x3572000
+00dfe568  adrp x21,0x3383000
+00dfe56c  ldrb w8,[x20, #0x502]
+00dfe570  ldr x21,[x21, #0x3a8]
+00dfe574  mov x19,x0
+00dfe578  tbnz w8,#0x0,0x00dfe590
+00dfe57c  adrp x0,0x3383000
+00dfe580  ldr x0,[x0, #0x3a8]
+00dfe584  bl 0x00b0789c
+00dfe588  mov w8,#0x1
+00dfe58c  strb w8,[x20, #0x502]
+00dfe590  ldr x8,[x21]
+00dfe594  ldr x8,[x8, #0xb8]
+00dfe598  ldr x0,[x8, #0xb0]
+00dfe59c  cbz x0,0x00dfe5b4
+00dfe5a0  mov x1,x19
+00dfe5a4  ldp x19,x30,[sp, #0x10]
+00dfe5a8  mov x2,xzr
+00dfe5ac  ldp x21,x20,[sp], #0x20
+00dfe5b0  b 0x01060dac
+00dfe5b4  mov x0,x19
+00dfe5b8  bl 0x00dfda20
+00dfe5bc  fcmp s0,#0.0
+00dfe5c0  b.eq 0x00dfe5d4
+00dfe5c4  mov x0,x19
+00dfe5c8  ldp x19,x30,[sp, #0x10]
+00dfe5cc  ldp x21,x20,[sp], #0x20
+00dfe5d0  b 0x00dfe16c
+00dfe5d4  ldp x19,x30,[sp, #0x10]
+00dfe5d8  ldp x21,x20,[sp], #0x20
+00dfe5dc  ret
+
+
+================================================================================
+### FILE: 00dfe5e0_EffLiveMono__WeatherStop.txt
+================================================================================
+Function: EffLiveMono$$WeatherStop @ 00dfe5e0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EffLiveMono$$set_m_nextStop @ 00dfdc44
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$_m_WeatherStop @ 012778c8
+  <- BattleManager$$StopWeather @ 01189adc
+
+--- Listing ---
+00dfe5e0  stp x21,x20,[sp, #-0x20]!
+00dfe5e4  stp x19,x30,[sp, #0x10]
+00dfe5e8  adrp x20,0x3572000
+00dfe5ec  adrp x21,0x3383000
+00dfe5f0  ldrb w8,[x20, #0x503]
+00dfe5f4  ldr x21,[x21, #0x3a8]
+00dfe5f8  mov x19,x0
+00dfe5fc  tbnz w8,#0x0,0x00dfe614
+00dfe600  adrp x0,0x3383000
+00dfe604  ldr x0,[x0, #0x3a8]
+00dfe608  bl 0x00b0789c
+00dfe60c  mov w8,#0x1
+00dfe610  strb w8,[x20, #0x503]
+00dfe614  ldr x8,[x21]
+00dfe618  ldr x8,[x8, #0xb8]
+00dfe61c  ldr x0,[x8, #0xb8]
+00dfe620  cbz x0,0x00dfe638
+00dfe624  mov x1,x19
+00dfe628  ldp x19,x30,[sp, #0x10]
+00dfe62c  mov x2,xzr
+00dfe630  ldp x21,x20,[sp], #0x20
+00dfe634  b 0x01060dac
+00dfe638  mov x0,x19
+00dfe63c  ldp x19,x30,[sp, #0x10]
+00dfe640  mov w1,#0x1
+00dfe644  ldp x21,x20,[sp], #0x20
+00dfe648  b 0x00dfdc44
+
+
+================================================================================
+### FILE: 00dfe64c_EffLiveMono__.ctor.txt
+================================================================================
+Function: EffLiveMono$$.ctor @ 00dfe64c
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> BaseMono$$.ctor @ 00e1c6b4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffLiveMonoWrap$$__CreateInstance @ 01276b6c
+
+--- Listing ---
+00dfe64c  stp x21,x20,[sp, #-0x20]!
+00dfe650  stp x19,x30,[sp, #0x10]
+00dfe654  adrp x21,0x3572000
+00dfe658  adrp x20,0x3383000
+00dfe65c  ldrb w8,[x21, #0x504]
+00dfe660  ldr x20,[x20, #0x3a8]
+00dfe664  mov x19,x0
+00dfe668  tbnz w8,#0x0,0x00dfe680
+00dfe66c  adrp x0,0x3383000
+00dfe670  ldr x0,[x0, #0x3a8]
+00dfe674  bl 0x00b0789c
+00dfe678  mov w8,#0x1
+00dfe67c  strb w8,[x21, #0x504]
+00dfe680  mov x0,x19
+00dfe684  mov x1,xzr
+00dfe688  bl 0x00e1c6b4
+00dfe68c  ldr x8,[x20]
+00dfe690  ldr x8,[x8, #0xb8]
+00dfe694  ldr x0,[x8, #0xc0]
+00dfe698  cbz x0,0x00dfe6b0
+00dfe69c  mov x1,x19
+00dfe6a0  ldp x19,x30,[sp, #0x10]
+00dfe6a4  mov x2,xzr
+00dfe6a8  ldp x21,x20,[sp], #0x20
+00dfe6ac  b 0x01060dac
+00dfe6b0  ldp x19,x30,[sp, #0x10]
+00dfe6b4  ldp x21,x20,[sp], #0x20
+00dfe6b8  ret
+
+
+================================================================================
+### FILE: 00dfe6bc_EffLiveMono____xLuaBaseProxy_OnDestroy.txt
+================================================================================
+Function: EffLiveMono$$<>xLuaBaseProxy_OnDestroy @ 00dfe6bc
+
+--- Calls OUT ---
+  -> BaseMono$$OnDestroy @ 00e1d958
+
+--- Calls IN ---
+
+--- Listing ---
+00dfe6bc  mov x1,xzr
+00dfe6c0  b 0x00e1d958
+
+
+================================================================================
+### FILE: 00dfe6c4_EffManager__PlayEff.txt
+================================================================================
+Function: EffManager$$PlayEff @ 00dfe6c4
+
+--- Calls OUT ---
+  -> EffInfo$$get_m_inst @ 00dfb7e4
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> EffInfo$$get_m_modelName @ 00dfbc38
+  -> EffManager$$EffComplete @ 00dfe8b4
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> BaseMono$$AddChild @ 00e1e3c4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> LoadEvent.LoadDelegate$$.ctor @ 00e27ad4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> EffInfo$$get_parent @ 00dfb5c0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffManagerWrap$$_m_PlayEff @ 012790dc
+  <- BaseSkillEff$$RaiderHpUp @ 015e5ca4
+  <- BattleManager$$WeatherManage @ 01189ca0
+  <- BattleManager$$PlaySkillShow @ 0118a3f8
+  <- RoleMono$$OnSpineEvent @ 014a6304
+  <- BattleManager$$HitFly @ 01188a70
+  <- BaseSkillEff$$PassiveShowEff @ 015e7c84
+  <- RoleMono$$PlayShildEff @ 014a108c
+  <- BattleManager$$PlayRoleEff @ 01182ecc
+  <- BaseSkillEff$$UpdataEvent @ 015d8f24
+  <- SkillEff_9004$$ExecuteSpecial @ 016c3930
+  <- TerrainMono$$RefreshShow @ 016c9224
+  <- BaseBuff$$ShowLongEff @ 015de310
+  <- PropNews$$CreateProp @ 0149d940
+  <- BaseSkillEff$$PlayEffToTarget @ 015e5544
+  <- RoleMono$$PowerOpen @ 014a98bc
+  <- BattleManager.<SpeedLinePlayEnd>d__257$$MoveNext @ 01315d48
+  <- RoleMono$$RefreshCD @ 014a047c
+  <- BaseBuff$$Execute @ 015df498
+
+--- Listing ---
+00dfe6c4  str x24,[sp, #-0x40]!
+00dfe6c8  stp x23,x22,[sp, #0x10]
+00dfe6cc  stp x21,x20,[sp, #0x20]
+00dfe6d0  stp x19,x30,[sp, #0x30]
+00dfe6d4  adrp x21,0x3572000
+00dfe6d8  adrp x22,0x3343000
+00dfe6dc  ldrb w8,[x21, #0x505]
+00dfe6e0  ldr x22,[x22, #0xf30]
+00dfe6e4  mov x20,x1
+00dfe6e8  mov x19,x0
+00dfe6ec  tbnz w8,#0x0,0x00dfe734
+00dfe6f0  adrp x0,0x3383000
+00dfe6f4  ldr x0,[x0, #0x330]
+00dfe6f8  bl 0x00b0789c
+00dfe6fc  adrp x0,0x3343000
+00dfe700  ldr x0,[x0, #0xf30]
+00dfe704  bl 0x00b0789c
+00dfe708  adrp x0,0x3369000
+00dfe70c  ldr x0,[x0, #0x448]
+00dfe710  bl 0x00b0789c
+00dfe714  adrp x0,0x3370000
+00dfe718  ldr x0,[x0, #0x778]
+00dfe71c  bl 0x00b0789c
+00dfe720  adrp x0,0x3321000
+00dfe724  ldr x0,[x0, #0xca8]
+00dfe728  bl 0x00b0789c
+00dfe72c  mov w8,#0x1
+00dfe730  strb w8,[x21, #0x505]
+00dfe734  ldr x8,[x22]
+00dfe738  ldr x8,[x8, #0xb8]
+00dfe73c  ldr x0,[x8]
+00dfe740  cbz x0,0x00dfe764
+00dfe744  mov x1,x19
+00dfe748  mov x2,x20
+00dfe74c  ldp x19,x30,[sp, #0x30]
+00dfe750  ldp x21,x20,[sp, #0x20]
+00dfe754  ldp x23,x22,[sp, #0x10]
+00dfe758  mov x3,xzr
+00dfe75c  ldr x24,[sp], #0x40
+00dfe760  b 0x0106125c
+00dfe764  cbz x20,0x00dfe8a0
+00dfe768  mov x0,x20
+00dfe76c  bl 0x00dfadc0
+00dfe770  cbz x0,0x00dfe7cc
+00dfe774  adrp x21,0x3321000
+00dfe778  ldr x21,[x21, #0xca8]
+00dfe77c  mov x0,x20
+00dfe780  bl 0x00dfb7e4
+00dfe784  ldr x8,[x21]
+00dfe788  mov x21,x0
+00dfe78c  ldr w9,[x8, #0xe0]
+00dfe790  cbnz w9,0x00dfe79c
+00dfe794  mov x0,x8
+00dfe798  bl 0x00b0798c
+00dfe79c  mov x0,x21
+00dfe7a0  mov x1,xzr
+00dfe7a4  mov x2,xzr
+00dfe7a8  bl 0x024de30c
+00dfe7ac  tbz w0,#0x0,0x00dfe7e0
+00dfe7b0  mov x0,x19
+00dfe7b4  mov x1,x20
+00dfe7b8  ldp x19,x30,[sp, #0x30]
+00dfe7bc  ldp x21,x20,[sp, #0x20]
+00dfe7c0  ldp x23,x22,[sp, #0x10]
+00dfe7c4  ldr x24,[sp], #0x40
+00dfe7c8  b 0x00dfe8b4
+00dfe7cc  ldp x19,x30,[sp, #0x30]
+00dfe7d0  ldp x21,x20,[sp, #0x20]
+00dfe7d4  ldp x23,x22,[sp, #0x10]
+00dfe7d8  ldr x24,[sp], #0x40
+00dfe7dc  ret
+00dfe7e0  adrp x22,0x3369000
+00dfe7e4  ldr x22,[x22, #0x448]
+00dfe7e8  mov x0,x20
+00dfe7ec  bl 0x00dfbc38
+00dfe7f0  mov x21,x0
+00dfe7f4  mov x0,x20
+00dfe7f8  bl 0x00dfb5c0
+00dfe7fc  ldr x8,[x22]
+00dfe800  mov x22,x0
+00dfe804  mov x0,x8
+00dfe808  bl 0x00b079a0
+00dfe80c  cbz x0,0x00dfe8a0
+00dfe810  adrp x8,0x3383000
+00dfe814  ldr x8,[x8, #0x330]
+00dfe818  adrp x24,0x3370000
+00dfe81c  mov x1,x19
+00dfe820  mov x3,xzr
+00dfe824  ldr x2,[x8]
+00dfe828  ldr x24,[x24, #0x778]
+00dfe82c  mov x23,x0
+00dfe830  bl 0x00e27ad4
+00dfe834  ldr x0,[x24]
+00dfe838  mov w1,#0x1
+00dfe83c  bl 0x00b078f8
+00dfe840  cbz x0,0x00dfe8a0
+00dfe844  ldr x8,[x0]
+00dfe848  mov x24,x0
+00dfe84c  mov x0,x20
+00dfe850  ldr x1,[x8, #0x40]
+00dfe854  bl 0x00b07990
+00dfe858  cbz x0,0x00dfe8a4
+00dfe85c  ldr w8,[x24, #0x18]
+00dfe860  cbz w8,0x00dfe8b0
+00dfe864  mov x0,x24
+00dfe868  str x20,[x0, #0x20]!
+00dfe86c  mov x1,x20
+00dfe870  bl 0x00b07850
+00dfe874  mov x0,x19
+00dfe878  mov x1,x21
+00dfe87c  mov x2,x22
+00dfe880  mov x3,x23
+00dfe884  ldp x19,x30,[sp, #0x30]
+00dfe888  ldp x21,x20,[sp, #0x20]
+00dfe88c  ldp x23,x22,[sp, #0x10]
+00dfe890  mov x4,x24
+00dfe894  mov x5,xzr
+00dfe898  ldr x24,[sp], #0x40
+00dfe89c  b 0x00e1e3c4
+00dfe8a0  bl 0x00b079b0
+00dfe8a4  bl 0x00b079d4
+00dfe8a8  mov x1,xzr
+00dfe8ac  bl 0x00b07978
+00dfe8b0  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dfe8b4_EffManager__EffComplete.txt
+================================================================================
+Function: EffManager$$EffComplete @ 00dfe8b4
+
+--- Calls OUT ---
+  -> EffInfo$$get_m_inst @ 00dfb7e4
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> EffInfo$$get_m_modelName @ 00dfbc38
+  -> EffInfo$$BoneFollower @ 00dfcb48
+  -> FUN_00b079b0 @ 00b079b0
+  -> EffInfo$$get_m_effData @ 00dfadc0
+  -> UnityEngine.Transform$$set_localEulerAngles @ 024f3c88
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EffLiveMono$$SetEffInfo @ 00dfd6a8
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> System.String$$Contains @ 01fe31fc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> EffInfo$$InstComplete @ 00dfd498
+  -> EffInfo$$Order @ 00dfc3d0
+  -> UnityEngine.Transform$$get_parent @ 024f42ec
+  -> BaseMono$$Setlayer @ 00e205b8
+  -> UnityEngine.Transform$$set_localScale @ 024f4254
+  -> UnityEngine.GameObject$$GetComponentsInChildren<object> @ 0179526c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Transform$$get_localEulerAngles @ 024f3c00
+  -> EffInfo$$Play @ 00dfbca0
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+  <- EffManager$$PlayEff @ 00dfe6c4
+  <- EffManager$$AddEffEnd @ 00dfedf0
+
+--- Listing ---
+00dfe8b4  str d10,[sp, #-0x50]!
+00dfe8b8  stp d9,d8,[sp, #0x8]
+00dfe8bc  str x24,[sp, #0x18]
+00dfe8c0  stp x23,x22,[sp, #0x20]
+00dfe8c4  stp x21,x20,[sp, #0x30]
+00dfe8c8  stp x19,x30,[sp, #0x40]
+00dfe8cc  adrp x21,0x3572000
+00dfe8d0  adrp x22,0x3343000
+00dfe8d4  ldrb w8,[x21, #0x507]
+00dfe8d8  ldr x22,[x22, #0xf30]
+00dfe8dc  mov x19,x1
+00dfe8e0  mov x20,x0
+00dfe8e4  tbnz w8,#0x0,0x00dfe95c
+00dfe8e8  adrp x0,0x3321000
+00dfe8ec  ldr x0,[x0, #0x3c8]
+00dfe8f0  bl 0x00b0789c
+00dfe8f4  adrp x0,0x3348000
+00dfe8f8  ldr x0,[x0, #0x138]
+00dfe8fc  bl 0x00b0789c
+00dfe900  adrp x0,0x3343000
+00dfe904  ldr x0,[x0, #0xf30]
+00dfe908  bl 0x00b0789c
+00dfe90c  adrp x0,0x3347000
+00dfe910  ldr x0,[x0, #0x70]
+00dfe914  bl 0x00b0789c
+00dfe918  adrp x0,0x3321000
+00dfe91c  ldr x0,[x0, #0xca8]
+00dfe920  bl 0x00b0789c
+00dfe924  adrp x0,0x337b000
+00dfe928  ldr x0,[x0, #0x80]
+00dfe92c  bl 0x00b0789c
+00dfe930  adrp x0,0x3362000
+00dfe934  ldr x0,[x0, #0x368]
+00dfe938  bl 0x00b0789c
+00dfe93c  adrp x0,0x333b000
+00dfe940  ldr x0,[x0, #0x3e0]
+00dfe944  bl 0x00b0789c
+00dfe948  adrp x0,0x3363000
+00dfe94c  ldr x0,[x0, #0xc8]
+00dfe950  bl 0x00b0789c
+00dfe954  mov w8,#0x1
+00dfe958  strb w8,[x21, #0x507]
+00dfe95c  ldr x8,[x22]
+00dfe960  ldr x8,[x8, #0xb8]
+00dfe964  ldr x0,[x8, #0x10]
+00dfe968  cbz x0,0x00dfe994
+00dfe96c  mov x1,x20
+00dfe970  mov x2,x19
+00dfe974  ldp x19,x30,[sp, #0x40]
+00dfe978  ldp x21,x20,[sp, #0x30]
+00dfe97c  ldp x23,x22,[sp, #0x20]
+00dfe980  ldr x24,[sp, #0x18]
+00dfe984  ldp d9,d8,[sp, #0x8]
+00dfe988  mov x3,xzr
+00dfe98c  ldr d10,[sp], #0x50
+00dfe990  b 0x0106125c
+00dfe994  cbz x19,0x00dfe9d4
+00dfe998  adrp x23,0x3321000
+00dfe99c  ldr x23,[x23, #0xca8]
+00dfe9a0  mov x0,x19
+00dfe9a4  bl 0x00dfb7e4
+00dfe9a8  ldr x8,[x23]
+00dfe9ac  mov x21,x0
+00dfe9b0  ldr w9,[x8, #0xe0]
+00dfe9b4  cbnz w9,0x00dfe9c0
+00dfe9b8  mov x0,x8
+00dfe9bc  bl 0x00b0798c
+00dfe9c0  mov x0,x21
+00dfe9c4  mov x1,xzr
+00dfe9c8  mov x2,xzr
+00dfe9cc  bl 0x024c8180
+00dfe9d0  tbz w0,#0x0,0x00dfe9f0
+00dfe9d4  ldp x19,x30,[sp, #0x40]
+00dfe9d8  ldp x21,x20,[sp, #0x30]
+00dfe9dc  ldp x23,x22,[sp, #0x20]
+00dfe9e0  ldr x24,[sp, #0x18]
+00dfe9e4  ldp d9,d8,[sp, #0x8]
+00dfe9e8  ldr d10,[sp], #0x50
+00dfe9ec  ret
+00dfe9f0  mov x0,x19
+00dfe9f4  bl 0x00dfadc0
+00dfe9f8  cbz x0,0x00dfede8
+00dfe9fc  ldr w24,[x0, #0xe0]
+00dfea00  mov x0,x19
+00dfea04  bl 0x00dfb7e4
+00dfea08  cbz x0,0x00dfede8
+00dfea0c  mov x1,xzr
+00dfea10  bl 0x024de730
+00dfea14  adrp x22,0x3368000
+00dfea18  ldr x22,[x22, #0x9b8]
+00dfea1c  mov x21,x0
+00dfea20  cbz w24,0x00dfeabc
+00dfea24  cbz x21,0x00dfede8
+00dfea28  mov x0,x21
+00dfea2c  mov x1,xzr
+00dfea30  bl 0x024f42ec
+00dfea34  ldr x8,[x23]
+00dfea38  mov x21,x0
+00dfea3c  ldr w9,[x8, #0xe0]
+00dfea40  cbnz w9,0x00dfea4c
+00dfea44  mov x0,x8
+00dfea48  bl 0x00b0798c
+00dfea4c  mov x0,x21
+00dfea50  mov x1,xzr
+00dfea54  mov x2,xzr
+00dfea58  bl 0x024de30c
+00dfea5c  tbz w0,#0x0,0x00dfeb04
+00dfea60  mov x0,x19
+00dfea64  bl 0x00dfb7e4
+00dfea68  cbz x0,0x00dfede8
+00dfea6c  mov x1,xzr
+00dfea70  bl 0x024de730
+00dfea74  cbz x0,0x00dfede8
+00dfea78  mov x1,xzr
+00dfea7c  bl 0x024f42ec
+00dfea80  cbz x0,0x00dfede8
+00dfea84  mov x1,xzr
+00dfea88  bl 0x024f3c00
+00dfea8c  mov x0,x19
+00dfea90  mov v10.16B,v0.16B
+00dfea94  mov v8.16B,v1.16B
+00dfea98  mov v9.16B,v2.16B
+00dfea9c  bl 0x00dfb7e4
+00dfeaa0  cbz x0,0x00dfede8
+00dfeaa4  mov x1,xzr
+00dfeaa8  bl 0x024de730
+00dfeaac  cbz x0,0x00dfede8
+00dfeab0  mov x21,x0
+00dfeab4  fneg s0,s10
+00dfeab8  b 0x00dfeaf0
+00dfeabc  adrp x23,0x3570000
+00dfeac0  ldrb w8,[x23, #0xf0c]
+00dfeac4  cbnz w8,0x00dfeadc
+00dfeac8  adrp x0,0x3368000
+00dfeacc  ldr x0,[x0, #0x9b8]
+00dfead0  bl 0x00b0789c
+00dfead4  mov w8,#0x1
+00dfead8  strb w8,[x23, #0xf0c]
+00dfeadc  cbz x21,0x00dfede8
+00dfeae0  ldr x8,[x22]
+00dfeae4  ldr x8,[x8, #0xb8]
+00dfeae8  ldp s0,s8,[x8]
+00dfeaec  ldr s9,[x8, #0x8]
+00dfeaf0  mov x0,x21
+00dfeaf4  mov v1.16B,v8.16B
+00dfeaf8  mov v2.16B,v9.16B
+00dfeafc  mov x1,xzr
+00dfeb00  bl 0x024f3c88
+00dfeb04  mov x0,x19
+00dfeb08  bl 0x00dfadc0
+00dfeb0c  cbz x0,0x00dfede8
+00dfeb10  ldr s8,[x0, #0xf0]
+00dfeb14  mov x0,x19
+00dfeb18  bl 0x00dfb7e4
+00dfeb1c  cbz x0,0x00dfede8
+00dfeb20  mov x1,xzr
+00dfeb24  bl 0x024de730
+00dfeb28  fmov s0,0x3f800000
+00dfeb2c  fcmp s8,s0
+00dfeb30  mov x21,x0
+00dfeb34  b.ne 0x00dfeb70
+00dfeb38  adrp x23,0x3570000
+00dfeb3c  ldrb w8,[x23, #0xf0e]
+00dfeb40  cbnz w8,0x00dfeb58
+00dfeb44  adrp x0,0x3368000
+00dfeb48  ldr x0,[x0, #0x9b8]
+00dfeb4c  bl 0x00b0789c
+00dfeb50  mov w8,#0x1
+00dfeb54  strb w8,[x23, #0xf0e]
+00dfeb58  cbz x21,0x00dfede8
+00dfeb5c  ldr x8,[x22]
+00dfeb60  ldr x8,[x8, #0xb8]
+00dfeb64  ldp s8,s9,[x8, #0xc]
+00dfeb68  add x8,x8,#0x14
+00dfeb6c  b 0x00dfeba4
+00dfeb70  mov x0,x19
+00dfeb74  bl 0x00dfadc0
+00dfeb78  cbz x0,0x00dfede8
+00dfeb7c  ldr s8,[x0, #0xf0]
+00dfeb80  mov x0,x19
+00dfeb84  bl 0x00dfadc0
+00dfeb88  cbz x0,0x00dfede8
+00dfeb8c  ldr s9,[x0, #0xf0]
+00dfeb90  mov x0,x19
+00dfeb94  bl 0x00dfadc0
+00dfeb98  cbz x0,0x00dfede8
+00dfeb9c  cbz x21,0x00dfede8
+00dfeba0  add x8,x0,#0xf0
+00dfeba4  ldr s2,[x8]
+00dfeba8  adrp x23,0x3348000
+00dfebac  adrp x22,0x3321000
+00dfebb0  ldr x23,[x23, #0x138]
+00dfebb4  ldr x22,[x22, #0x3c8]
+00dfebb8  mov x0,x21
+00dfebbc  mov v0.16B,v8.16B
+00dfebc0  mov v1.16B,v9.16B
+00dfebc4  mov x1,xzr
+00dfebc8  bl 0x024f4254
+00dfebcc  mov x0,x19
+00dfebd0  bl 0x00dfb7e4
+00dfebd4  ldr x8,[x23]
+00dfebd8  mov x21,x0
+00dfebdc  ldr w9,[x8, #0xe0]
+00dfebe0  cbnz w9,0x00dfebec
+00dfebe4  mov x0,x8
+00dfebe8  bl 0x00b0798c
+00dfebec  ldr x1,[x22]
+00dfebf0  mov x0,x21
+00dfebf4  bl 0x017372ac
+00dfebf8  cbz x0,0x00dfede8
+00dfebfc  mov x1,x19
+00dfec00  bl 0x00dfd6a8
+00dfec04  mov x0,x19
+00dfec08  bl 0x00dfbca0
+00dfec0c  mov x0,x19
+00dfec10  bl 0x00dfc3d0
+00dfec14  mov x0,x19
+00dfec18  bl 0x00dfcb48
+00dfec1c  mov x0,x19
+00dfec20  bl 0x00dfbc38
+00dfec24  cbz x0,0x00dfede8
+00dfec28  adrp x8,0x333b000
+00dfec2c  ldr x8,[x8, #0x3e0]
+00dfec30  mov x2,xzr
+00dfec34  ldr x1,[x8]
+00dfec38  bl 0x01fe31fc
+00dfec3c  tbz w0,#0x0,0x00dfec68
+00dfec40  adrp x21,0x3362000
+00dfec44  ldr x21,[x21, #0x368]
+00dfec48  mov x0,x19
+00dfec4c  bl 0x00dfb7e4
+00dfec50  ldr x2,[x21]
+00dfec54  mov x1,x0
+00dfec58  mov x0,x20
+00dfec5c  mov x3,xzr
+00dfec60  bl 0x00e205b8
+00dfec64  b 0x00dfedc8
+00dfec68  mov x0,x19
+00dfec6c  bl 0x00dfadc0
+00dfec70  cbz x0,0x00dfede8
+00dfec74  adrp x21,0x3347000
+00dfec78  ldr w8,[x0, #0xd8]
+00dfec7c  ldr x21,[x21, #0x70]
+00dfec80  cbz w8,0x00dfed34
+00dfec84  mov x0,x19
+00dfec88  bl 0x00dfadc0
+00dfec8c  cbz x0,0x00dfede8
+00dfec90  ldr w8,[x0, #0xd8]
+00dfec94  cmp w8,#0x1
+00dfec98  b.ne 0x00dfedc8
+00dfec9c  adrp x22,0x337b000
+00dfeca0  ldr x22,[x22, #0x80]
+00dfeca4  mov x0,x19
+00dfeca8  bl 0x00dfb7e4
+00dfecac  ldr x2,[x22]
+00dfecb0  mov x1,x0
+00dfecb4  mov x0,x20
+00dfecb8  mov x3,xzr
+00dfecbc  bl 0x00e205b8
+00dfecc0  mov x0,x19
+00dfecc4  bl 0x00dfb7e4
+00dfecc8  cbz x0,0x00dfede8
+00dfeccc  ldr x2,[x21]
+00dfecd0  mov w1,#0x1
+00dfecd4  bl 0x0179526c
+00dfecd8  cbz x0,0x00dfede8
+00dfecdc  ldr w8,[x0, #0x18]
+00dfece0  mov x21,x0
+00dfece4  cmp w8,#0x1
+00dfece8  b.lt 0x00dfedc8
+00dfecec  mov w23,wzr
+00dfecf0  cmp w23,w8
+00dfecf4  b.cs 0x00dfedec
+00dfecf8  add x8,x21,w23, SXTW  #0x3
+00dfecfc  ldr x0,[x8, #0x20]
+00dfed00  cbz x0,0x00dfede8
+00dfed04  mov x1,xzr
+00dfed08  bl 0x024e4ed4
+00dfed0c  ldr x2,[x22]
+00dfed10  mov x1,x0
+00dfed14  mov x0,x20
+00dfed18  mov x3,xzr
+00dfed1c  bl 0x00e205b8
+00dfed20  ldr w8,[x21, #0x18]
+00dfed24  add w23,w23,#0x1
+00dfed28  cmp w23,w8
+00dfed2c  b.lt 0x00dfecf0
+00dfed30  b 0x00dfedc8
+00dfed34  adrp x22,0x3363000
+00dfed38  ldr x22,[x22, #0xc8]
+00dfed3c  mov x0,x19
+00dfed40  bl 0x00dfb7e4
+00dfed44  ldr x2,[x22]
+00dfed48  mov x1,x0
+00dfed4c  mov x0,x20
+00dfed50  mov x3,xzr
+00dfed54  bl 0x00e205b8
+00dfed58  mov x0,x19
+00dfed5c  bl 0x00dfb7e4
+00dfed60  cbz x0,0x00dfede8
+00dfed64  ldr x2,[x21]
+00dfed68  mov w1,#0x1
+00dfed6c  bl 0x0179526c
+00dfed70  cbz x0,0x00dfede8
+00dfed74  ldr w8,[x0, #0x18]
+00dfed78  mov x21,x0
+00dfed7c  cmp w8,#0x1
+00dfed80  b.lt 0x00dfedc8
+00dfed84  mov w23,wzr
+00dfed88  cmp w23,w8
+00dfed8c  b.cs 0x00dfedec
+00dfed90  add x8,x21,w23, SXTW  #0x3
+00dfed94  ldr x0,[x8, #0x20]
+00dfed98  cbz x0,0x00dfede8
+00dfed9c  mov x1,xzr
+00dfeda0  bl 0x024e4ed4
+00dfeda4  ldr x2,[x22]
+00dfeda8  mov x1,x0
+00dfedac  mov x0,x20
+00dfedb0  mov x3,xzr
+00dfedb4  bl 0x00e205b8
+00dfedb8  ldr w8,[x21, #0x18]
+00dfedbc  add w23,w23,#0x1
+00dfedc0  cmp w23,w8
+00dfedc4  b.lt 0x00dfed88
+00dfedc8  mov x0,x19
+00dfedcc  ldp x19,x30,[sp, #0x40]
+00dfedd0  ldp x21,x20,[sp, #0x30]
+00dfedd4  ldp x23,x22,[sp, #0x20]
+00dfedd8  ldr x24,[sp, #0x18]
+00dfeddc  ldp d9,d8,[sp, #0x8]
+00dfede0  ldr d10,[sp], #0x50
+00dfede4  b 0x00dfd498
+00dfede8  bl 0x00b079b0
+00dfedec  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dfedf0_EffManager__AddEffEnd.txt
+================================================================================
+Function: EffManager$$AddEffEnd @ 00dfedf0
+
+--- Calls OUT ---
+  -> EffInfo$$set_m_inst @ 00dfb84c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> EffManager$$EffComplete @ 00dfe8b4
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp62 @ 010670b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dfedf0  stp x23,x22,[sp, #-0x30]!
+00dfedf4  stp x21,x20,[sp, #0x10]
+00dfedf8  stp x19,x30,[sp, #0x20]
+00dfedfc  adrp x22,0x3572000
+00dfee00  adrp x23,0x3343000
+00dfee04  ldrb w8,[x22, #0x506]
+00dfee08  ldr x23,[x23, #0xf30]
+00dfee0c  mov x21,x2
+00dfee10  mov x20,x1
+00dfee14  mov x19,x0
+00dfee18  tbnz w8,#0x0,0x00dfee3c
+00dfee1c  adrp x0,0x3344000
+00dfee20  ldr x0,[x0, #0x6b0]
+00dfee24  bl 0x00b0789c
+00dfee28  adrp x0,0x3343000
+00dfee2c  ldr x0,[x0, #0xf30]
+00dfee30  bl 0x00b0789c
+00dfee34  mov w8,#0x1
+00dfee38  strb w8,[x22, #0x506]
+00dfee3c  ldr x8,[x23]
+00dfee40  ldr x8,[x8, #0xb8]
+00dfee44  ldr x0,[x8, #0x8]
+00dfee48  cbz x0,0x00dfee6c
+00dfee4c  mov x1,x19
+00dfee50  mov x2,x20
+00dfee54  mov x3,x21
+00dfee58  ldp x19,x30,[sp, #0x20]
+00dfee5c  ldp x21,x20,[sp, #0x10]
+00dfee60  mov x4,xzr
+00dfee64  ldp x23,x22,[sp], #0x30
+00dfee68  b 0x010670b0
+00dfee6c  cbz x21,0x00dfeed8
+00dfee70  ldr w8,[x21, #0x18]
+00dfee74  cbz w8,0x00dfeee4
+00dfee78  ldr x21,[x21, #0x20]
+00dfee7c  cbz x21,0x00dfeed8
+00dfee80  adrp x9,0x3344000
+00dfee84  ldr x9,[x9, #0x6b0]
+00dfee88  ldr x8,[x21]
+00dfee8c  ldr x1,[x9]
+00dfee90  ldrb w10,[x8, #0x12c]
+00dfee94  ldrb w9,[x1, #0x12c]
+00dfee98  cmp w10,w9
+00dfee9c  b.cc 0x00dfeedc
+00dfeea0  ldr x8,[x8, #0xc8]
+00dfeea4  add x8,x8,x9, LSL #0x3
+00dfeea8  ldur x8,[x8, #-0x8]
+00dfeeac  cmp x8,x1
+00dfeeb0  b.ne 0x00dfeedc
+00dfeeb4  mov x0,x21
+00dfeeb8  mov x1,x20
+00dfeebc  bl 0x00dfb84c
+00dfeec0  mov x0,x19
+00dfeec4  mov x1,x21
+00dfeec8  ldp x19,x30,[sp, #0x20]
+00dfeecc  ldp x21,x20,[sp, #0x10]
+00dfeed0  ldp x23,x22,[sp], #0x30
+00dfeed4  b 0x00dfe8b4
+00dfeed8  bl 0x00b079b0
+00dfeedc  mov x0,x21
+00dfeee0  bl 0x00b07c6c
+00dfeee4  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dfeee8_EffManager__.ctor.txt
+================================================================================
+Function: EffManager$$.ctor @ 00dfeee8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> BaseMono$$.ctor @ 00e1c6b4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EffManagerWrap$$__CreateInstance @ 01278f24
+
+--- Listing ---
+00dfeee8  stp x21,x20,[sp, #-0x20]!
+00dfeeec  stp x19,x30,[sp, #0x10]
+00dfeef0  adrp x21,0x3572000
+00dfeef4  adrp x20,0x3343000
+00dfeef8  ldrb w8,[x21, #0x508]
+00dfeefc  ldr x20,[x20, #0xf30]
+00dfef00  mov x19,x0
+00dfef04  tbnz w8,#0x0,0x00dfef1c
+00dfef08  adrp x0,0x3343000
+00dfef0c  ldr x0,[x0, #0xf30]
+00dfef10  bl 0x00b0789c
+00dfef14  mov w8,#0x1
+00dfef18  strb w8,[x21, #0x508]
+00dfef1c  mov x0,x19
+00dfef20  mov x1,xzr
+00dfef24  bl 0x00e1c6b4
+00dfef28  ldr x8,[x20]
+00dfef2c  ldr x8,[x8, #0xb8]
+00dfef30  ldr x0,[x8, #0x18]
+00dfef34  cbz x0,0x00dfef4c
+00dfef38  mov x1,x19
+00dfef3c  ldp x19,x30,[sp, #0x10]
+00dfef40  mov x2,xzr
+00dfef44  ldp x21,x20,[sp], #0x20
+00dfef48  b 0x01060dac
+00dfef4c  ldp x19,x30,[sp, #0x10]
+00dfef50  ldp x21,x20,[sp], #0x20
+00dfef54  ret
+
+

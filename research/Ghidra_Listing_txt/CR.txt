@@ -1,0 +1,1222 @@
+================================================================================
+### FILE: 008d3df0_CreateZStream.txt
+================================================================================
+Function: CreateZStream @ 008d3df0
+
+--- Calls OUT ---
+  -> CreateZStream @ 00b00ed4
+
+--- Calls IN ---
+  <- System.IO.Compression.DeflateStreamNative$$CreateZStream @ 0231735c
+
+--- Listing ---
+008d3df0  adrp x16,0x3307000
+008d3df4  ldr x17,[x16, #0x8b8]
+008d3df8  add x16,x16,#0x8b8
+008d3dfc  br x17
+
+
+================================================================================
+### FILE: 00b00ed4_CreateZStream.txt
+================================================================================
+Function: CreateZStream @ 00b00ed4
+
+--- Calls OUT ---
+  -> FUN_00b00fcc @ 00b00fcc
+  -> malloc @ 008d56a0
+  -> free @ 008d3ca0
+  -> FUN_00b00fc0 @ 00b00fc0
+  -> FUN_00b4073c @ 00b4073c
+  -> FUN_00b43c38 @ 00b43c38
+  -> calloc @ 008d3a10
+
+--- Calls IN ---
+  <- CreateZStream @ 008d3df0
+
+--- Listing ---
+00b00ed4  stp x23,x22,[sp, #-0x30]!
+00b00ed8  stp x21,x20,[sp, #0x10]
+00b00edc  stp x19,x30,[sp, #0x20]
+00b00ee0  cbz x2,0x00b00f4c
+00b00ee4  mov w23,w1
+00b00ee8  mov w20,w0
+00b00eec  mov w0,#0x1
+00b00ef0  mov w1,#0x70
+00b00ef4  mov x19,x3
+00b00ef8  mov x21,x2
+00b00efc  bl 0x008d3a10
+00b00f00  tst w23,#0xff
+00b00f04  mov w8,#0x1f
+00b00f08  mov w9,#0xfffffff1
+00b00f0c  mov x22,x0
+00b00f10  csel w8,w9,w8,eq
+00b00f14  cbz w20,0x00b00f54
+00b00f18  adrp x6,0x298a000
+00b00f1c  add x6,x6,#0x5cb
+00b00f20  mov w1,#0xffffffff
+00b00f24  mov w2,#0x8
+00b00f28  mov w4,#0x8
+00b00f2c  mov w7,#0x70
+00b00f30  mov x0,x22
+00b00f34  mov w3,w8
+00b00f38  mov w5,wzr
+00b00f3c  bl 0x00b43c38
+00b00f40  cbz w0,0x00b00f70
+00b00f44  mov x0,x22
+00b00f48  bl 0x008d3ca0
+00b00f4c  mov x23,xzr
+00b00f50  b 0x00b00fac
+00b00f54  adrp x2,0x298a000
+00b00f58  add x2,x2,#0x5cb
+00b00f5c  mov w3,#0x70
+00b00f60  mov x0,x22
+00b00f64  mov w1,w8
+00b00f68  bl 0x00b4073c
+00b00f6c  cbnz w0,0x00b00f44
+00b00f70  adrp x8,0xb00000
+00b00f74  adrp x9,0xb00000
+00b00f78  add x8,x8,#0xfc0
+00b00f7c  add x9,x9,#0xfcc
+00b00f80  mov w0,#0x1
+00b00f84  mov w1,#0x28
+00b00f88  stp x8,x9,[x22, #0x40]
+00b00f8c  bl 0x008d3a10
+00b00f90  mov x23,x0
+00b00f94  str x22,[x0]
+00b00f98  stp x21,x19,[x0, #0x10]
+00b00f9c  strb w20,[x0, #0x20]
+00b00fa0  mov w0,#0x1000
+00b00fa4  bl 0x008d56a0
+00b00fa8  str x0,[x23, #0x8]
+00b00fac  ldp x19,x30,[sp, #0x20]
+00b00fb0  ldp x21,x20,[sp, #0x10]
+00b00fb4  mov x0,x23
+00b00fb8  ldp x23,x22,[sp], #0x30
+00b00fbc  ret
+
+
+================================================================================
+### FILE: 00dc5e68_CryptoPrefs__SetInt.txt
+================================================================================
+Function: CryptoPrefs$$SetInt @ 00dc5e68
+
+--- Calls OUT ---
+  -> UnityEngine.PlayerPrefs$$SetString @ 024be710
+  -> CryptoPrefs$$Encrypt @ 00dc6030
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CryptoPrefs$$GetHash @ 00dc5ef0
+  -> System.Int32$$ToString @ 0214dc44
+
+--- Calls IN ---
+
+--- Listing ---
+00dc5e68  sub sp,sp,#0x30
+00dc5e6c  stp x21,x20,[sp, #0x10]
+00dc5e70  stp x19,x30,[sp, #0x20]
+00dc5e74  adrp x20,0x3572000
+00dc5e78  str w1,[sp, #0xc]
+00dc5e7c  adrp x21,0x3341000
+00dc5e80  ldrb w8,[x20, #0x1af]
+00dc5e84  ldr x21,[x21, #0x490]
+00dc5e88  mov x19,x0
+00dc5e8c  tbnz w8,#0x0,0x00dc5ea4
+00dc5e90  adrp x0,0x3341000
+00dc5e94  ldr x0,[x0, #0x490]
+00dc5e98  bl 0x00b0789c
+00dc5e9c  mov w8,#0x1
+00dc5ea0  strb w8,[x20, #0x1af]
+00dc5ea4  ldr x0,[x21]
+00dc5ea8  ldr w8,[x0, #0xe0]
+00dc5eac  cbnz w8,0x00dc5eb4
+00dc5eb0  bl 0x00b0798c
+00dc5eb4  mov x0,x19
+00dc5eb8  bl 0x00dc5ef0
+00dc5ebc  mov x19,x0
+00dc5ec0  add x0,sp,#0xc
+00dc5ec4  mov x1,xzr
+00dc5ec8  bl 0x0214dc44
+00dc5ecc  bl 0x00dc6030
+00dc5ed0  mov x1,x0
+00dc5ed4  mov x0,x19
+00dc5ed8  mov x2,xzr
+00dc5edc  bl 0x024be710
+00dc5ee0  ldp x19,x30,[sp, #0x20]
+00dc5ee4  ldp x21,x20,[sp, #0x10]
+00dc5ee8  add sp,sp,#0x30
+00dc5eec  ret
+
+
+================================================================================
+### FILE: 00dc5ef0_CryptoPrefs__GetHash.txt
+================================================================================
+Function: CryptoPrefs$$GetHash @ 00dc5ef0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Text.StringBuilder$$.ctor @ 01fe7ee0
+  -> System.Security.Cryptography.HashAlgorithm$$ComputeHash @ 0200a324
+  -> System.Text.Encoding$$get_UTF8 @ 01ff8ca0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Byte$$ToString @ 020db3dc
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Security.Cryptography.MD5CryptoServiceProvider$$.ctor @ 0201e478
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+
+--- Calls IN ---
+  <- CryptoPrefs$$DeleteKey @ 00dc6854
+  <- CryptoPrefs$$GetString @ 00dc631c
+  <- CryptoPrefs$$HasKey @ 00dc67f8
+  <- CryptoPrefs$$SetInt @ 00dc5e68
+  <- CryptoPrefs$$SetString @ 00dc650c
+  <- CryptoPrefs$$SetFloat @ 00dc63ec
+
+--- Listing ---
+00dc5ef0  stp x23,x22,[sp, #-0x30]!
+00dc5ef4  stp x21,x20,[sp, #0x10]
+00dc5ef8  stp x19,x30,[sp, #0x20]
+00dc5efc  adrp x20,0x3572000
+00dc5f00  adrp x21,0x3374000
+00dc5f04  ldrb w8,[x20, #0x1b9]
+00dc5f08  ldr x21,[x21, #0xad8]
+00dc5f0c  mov x19,x0
+00dc5f10  tbnz w8,#0x0,0x00dc5f40
+00dc5f14  adrp x0,0x3374000
+00dc5f18  ldr x0,[x0, #0xad8]
+00dc5f1c  bl 0x00b0789c
+00dc5f20  adrp x0,0x3332000
+00dc5f24  ldr x0,[x0, #0xaf0]
+00dc5f28  bl 0x00b0789c
+00dc5f2c  adrp x0,0x3367000
+00dc5f30  ldr x0,[x0, #0x4b8]
+00dc5f34  bl 0x00b0789c
+00dc5f38  mov w8,#0x1
+00dc5f3c  strb w8,[x20, #0x1b9]
+00dc5f40  ldr x0,[x21]
+00dc5f44  bl 0x00b079a0
+00dc5f48  cbz x0,0x00dc602c
+00dc5f4c  mov x1,xzr
+00dc5f50  mov x20,x0
+00dc5f54  bl 0x0201e478
+00dc5f58  mov x0,xzr
+00dc5f5c  bl 0x01ff8ca0
+00dc5f60  cbz x0,0x00dc602c
+00dc5f64  ldr x8,[x0]
+00dc5f68  adrp x21,0x3332000
+00dc5f6c  mov x1,x19
+00dc5f70  ldr x9,[x8, #0x268]
+00dc5f74  ldr x2,[x8, #0x270]
+00dc5f78  ldr x21,[x21, #0xaf0]
+00dc5f7c  blr x9
+00dc5f80  mov x1,x0
+00dc5f84  mov x0,x20
+00dc5f88  mov x2,xzr
+00dc5f8c  bl 0x0200a324
+00dc5f90  ldr x8,[x21]
+00dc5f94  mov x19,x0
+00dc5f98  mov x0,x8
+00dc5f9c  bl 0x00b079a0
+00dc5fa0  cbz x0,0x00dc602c
+00dc5fa4  mov x1,xzr
+00dc5fa8  mov x20,x0
+00dc5fac  bl 0x01fe7ee0
+00dc5fb0  cbz x19,0x00dc602c
+00dc5fb4  ldr x8,[x19, #0x18]
+00dc5fb8  cmp w8,#0x1
+00dc5fbc  b.lt 0x00dc600c
+00dc5fc0  adrp x22,0x3367000
+00dc5fc4  ldr x22,[x22, #0x4b8]
+00dc5fc8  mov x21,xzr
+00dc5fcc  and x8,x8,#0xffffffff
+00dc5fd0  add x23,x19,#0x20
+00dc5fd4  cmp x21,w8, UXTW 
+00dc5fd8  b.cs 0x00dc6028
+00dc5fdc  ldr x1,[x22]
+00dc5fe0  add x0,x23,x21
+00dc5fe4  mov x2,xzr
+00dc5fe8  bl 0x020db3dc
+00dc5fec  mov x1,x0
+00dc5ff0  mov x0,x20
+00dc5ff4  mov x2,xzr
+00dc5ff8  bl 0x01fe9960
+00dc5ffc  ldr w8,[x19, #0x18]
+00dc6000  add x21,x21,#0x1
+00dc6004  cmp x21,w8, SXTW 
+00dc6008  b.lt 0x00dc5fd4
+00dc600c  ldr x8,[x20]
+00dc6010  mov x0,x20
+00dc6014  ldp x19,x30,[sp, #0x20]
+00dc6018  ldp x21,x20,[sp, #0x10]
+00dc601c  ldp x2,x1,[x8, #0x168]
+00dc6020  ldp x23,x22,[sp], #0x30
+00dc6024  br x2
+00dc6028  bl 0x00b079b8
+00dc602c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc6030_CryptoPrefs__Encrypt.txt
+================================================================================
+Function: CryptoPrefs$$Encrypt @ 00dc6030
+
+--- Calls OUT ---
+  -> System.Security.Cryptography.CryptoStream$$.ctor @ 02005eb4
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Convert$$FromBase64String @ 020e4acc
+  -> System.Security.Cryptography.RijndaelManaged$$.ctor @ 0200fef4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.IO.MemoryStream$$.ctor @ 020a3bd8
+  -> System.Convert$$ToBase64String @ 020e3f88
+  -> System.Text.Encoding$$get_UTF8 @ 01ff8ca0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Security.Cryptography.CryptoStream$$FlushFinalBlock @ 02006338
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CryptoPrefs$$SetInt @ 00dc5e68
+  <- CryptoPrefs$$SetString @ 00dc650c
+  <- CryptoPrefs$$SetFloat @ 00dc63ec
+
+--- Listing ---
+00dc6030  str x24,[sp, #-0x40]!
+00dc6034  stp x23,x22,[sp, #0x10]
+00dc6038  stp x21,x20,[sp, #0x20]
+00dc603c  stp x19,x30,[sp, #0x30]
+00dc6040  adrp x20,0x3572000
+00dc6044  adrp x21,0x336a000
+00dc6048  ldrb w8,[x20, #0x1b8]
+00dc604c  ldr x21,[x21, #0xfc0]
+00dc6050  mov x19,x0
+00dc6054  tbnz w8,#0x0,0x00dc609c
+00dc6058  adrp x0,0x3362000
+00dc605c  ldr x0,[x0, #0xe28]
+00dc6060  bl 0x00b0789c
+00dc6064  adrp x0,0x3341000
+00dc6068  ldr x0,[x0, #0x490]
+00dc606c  bl 0x00b0789c
+00dc6070  adrp x0,0x3322000
+00dc6074  ldr x0,[x0, #0x688]
+00dc6078  bl 0x00b0789c
+00dc607c  adrp x0,0x3368000
+00dc6080  ldr x0,[x0, #0xf58]
+00dc6084  bl 0x00b0789c
+00dc6088  adrp x0,0x336a000
+00dc608c  ldr x0,[x0, #0xfc0]
+00dc6090  bl 0x00b0789c
+00dc6094  mov w8,#0x1
+00dc6098  strb w8,[x20, #0x1b8]
+00dc609c  ldr x0,[x21]
+00dc60a0  bl 0x00b079a0
+00dc60a4  cbz x0,0x00dc6280
+00dc60a8  adrp x22,0x3341000
+00dc60ac  ldr x22,[x22, #0x490]
+00dc60b0  mov x1,xzr
+00dc60b4  mov x20,x0
+00dc60b8  bl 0x0200fef4
+00dc60bc  ldr x8,[x20]
+00dc60c0  mov w1,#0x3
+00dc60c4  mov x0,x20
+00dc60c8  ldr x9,[x8, #0x268]
+00dc60cc  ldr x2,[x8, #0x270]
+00dc60d0  blr x9
+00dc60d4  ldr x8,[x20]
+00dc60d8  mov w1,#0x1
+00dc60dc  mov x0,x20
+00dc60e0  ldr x9,[x8, #0x248]
+00dc60e4  ldr x2,[x8, #0x250]
+00dc60e8  blr x9
+00dc60ec  ldr x8,[x20]
+00dc60f0  mov w1,#0x80
+00dc60f4  mov x0,x20
+00dc60f8  ldr x9,[x8, #0x228]
+00dc60fc  ldr x2,[x8, #0x230]
+00dc6100  blr x9
+00dc6104  ldr x8,[x20]
+00dc6108  mov w1,#0x80
+00dc610c  mov x0,x20
+00dc6110  ldp x9,x2,[x8, #0x1a8]
+00dc6114  blr x9
+00dc6118  mov x0,xzr
+00dc611c  bl 0x01ff8ca0
+00dc6120  ldr x8,[x22]
+00dc6124  mov x21,x0
+00dc6128  ldr w9,[x8, #0xe0]
+00dc612c  cbnz w9,0x00dc6138
+00dc6130  mov x0,x8
+00dc6134  bl 0x00b0798c
+00dc6138  cbz x21,0x00dc6280
+00dc613c  ldr x8,[x22]
+00dc6140  ldr x9,[x21]
+00dc6144  adrp x24,0x3362000
+00dc6148  adrp x23,0x3368000
+00dc614c  ldr x8,[x8, #0xb8]
+00dc6150  ldr x10,[x9, #0x268]
+00dc6154  ldr x2,[x9, #0x270]
+00dc6158  mov x0,x21
+00dc615c  ldr x1,[x8]
+00dc6160  ldr x24,[x24, #0xe28]
+00dc6164  ldr x23,[x23, #0xf58]
+00dc6168  blr x10
+00dc616c  ldr x9,[x22]
+00dc6170  ldr x8,[x24]
+00dc6174  mov x21,x0
+00dc6178  ldr x9,[x9, #0xb8]
+00dc617c  ldr w10,[x8, #0xe0]
+00dc6180  ldr x22,[x9, #0x8]
+00dc6184  cbnz w10,0x00dc6190
+00dc6188  mov x0,x8
+00dc618c  bl 0x00b0798c
+00dc6190  mov x0,x22
+00dc6194  mov x1,xzr
+00dc6198  bl 0x020e4acc
+00dc619c  ldr x8,[x20]
+00dc61a0  mov x2,x0
+00dc61a4  mov x0,x20
+00dc61a8  mov x1,x21
+00dc61ac  ldr x9,[x8, #0x288]
+00dc61b0  ldr x3,[x8, #0x290]
+00dc61b4  blr x9
+00dc61b8  ldr x8,[x23]
+00dc61bc  mov x22,x0
+00dc61c0  mov x0,x8
+00dc61c4  bl 0x00b079a0
+00dc61c8  cbz x0,0x00dc6280
+00dc61cc  adrp x21,0x3322000
+00dc61d0  ldr x21,[x21, #0x688]
+00dc61d4  mov x1,xzr
+00dc61d8  mov x20,x0
+00dc61dc  bl 0x020a3bd8
+00dc61e0  ldr x0,[x21]
+00dc61e4  bl 0x00b079a0
+00dc61e8  cbz x0,0x00dc6280
+00dc61ec  mov w3,#0x1
+00dc61f0  mov x1,x20
+00dc61f4  mov x2,x22
+00dc61f8  mov x4,xzr
+00dc61fc  mov x21,x0
+00dc6200  bl 0x02005eb4
+00dc6204  mov x0,xzr
+00dc6208  bl 0x01ff8ca0
+00dc620c  cbz x0,0x00dc6280
+00dc6210  ldr x8,[x0]
+00dc6214  mov x1,x19
+00dc6218  ldr x9,[x8, #0x268]
+00dc621c  ldr x2,[x8, #0x270]
+00dc6220  blr x9
+00dc6224  cbz x0,0x00dc6280
+00dc6228  ldr x8,[x21]
+00dc622c  ldr w3,[x0, #0x18]
+00dc6230  mov x1,x0
+00dc6234  mov x0,x21
+00dc6238  ldr x9,[x8, #0x368]
+00dc623c  ldr x4,[x8, #0x370]
+00dc6240  mov w2,wzr
+00dc6244  blr x9
+00dc6248  mov x0,x21
+00dc624c  mov x1,xzr
+00dc6250  bl 0x02006338
+00dc6254  ldr x8,[x20]
+00dc6258  mov x0,x20
+00dc625c  ldr x9,[x8, #0x3c8]
+00dc6260  ldr x1,[x8, #0x3d0]
+00dc6264  blr x9
+00dc6268  ldp x19,x30,[sp, #0x30]
+00dc626c  ldp x21,x20,[sp, #0x20]
+00dc6270  ldp x23,x22,[sp, #0x10]
+00dc6274  mov x1,xzr
+00dc6278  ldr x24,[sp], #0x40
+00dc627c  b 0x020e3f88
+00dc6280  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc6284_CryptoPrefs__GetInt.txt
+================================================================================
+Function: CryptoPrefs$$GetInt @ 00dc6284
+
+--- Calls OUT ---
+  -> CryptoPrefs$$GetString @ 00dc631c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$TryParse @ 0214e358
+  -> System.Int32$$ToString @ 0214dc44
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6284  sub sp,sp,#0x30
+00dc6288  stp x21,x20,[sp, #0x10]
+00dc628c  stp x19,x30,[sp, #0x20]
+00dc6290  adrp x21,0x3572000
+00dc6294  str w1,[sp, #0xc]
+00dc6298  adrp x20,0x3341000
+00dc629c  ldrb w8,[x21, #0x1b0]
+00dc62a0  ldr x20,[x20, #0x490]
+00dc62a4  mov x19,x0
+00dc62a8  tbnz w8,#0x0,0x00dc62c0
+00dc62ac  adrp x0,0x3341000
+00dc62b0  ldr x0,[x0, #0x490]
+00dc62b4  bl 0x00b0789c
+00dc62b8  mov w8,#0x1
+00dc62bc  strb w8,[x21, #0x1b0]
+00dc62c0  add x0,sp,#0xc
+00dc62c4  mov x1,xzr
+00dc62c8  str wzr,[sp, #0x8]
+00dc62cc  bl 0x0214dc44
+00dc62d0  ldr x8,[x20]
+00dc62d4  mov x20,x0
+00dc62d8  ldr w9,[x8, #0xe0]
+00dc62dc  cbnz w9,0x00dc62e8
+00dc62e0  mov x0,x8
+00dc62e4  bl 0x00b0798c
+00dc62e8  mov x0,x19
+00dc62ec  mov x1,x20
+00dc62f0  bl 0x00dc631c
+00dc62f4  ldr w8,[sp, #0xc]
+00dc62f8  add x1,sp,#0x8
+00dc62fc  mov x2,xzr
+00dc6300  str w8,[sp, #0x8]
+00dc6304  bl 0x0214e358
+00dc6308  ldr w0,[sp, #0x8]
+00dc630c  ldp x19,x30,[sp, #0x20]
+00dc6310  ldp x21,x20,[sp, #0x10]
+00dc6314  add sp,sp,#0x30
+00dc6318  ret
+
+
+================================================================================
+### FILE: 00dc631c_CryptoPrefs__GetString.txt
+================================================================================
+Function: CryptoPrefs$$GetString @ 00dc631c
+
+--- Calls OUT ---
+  -> CryptoPrefs$$Decrypt @ 00dc6588
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CryptoPrefs$$GetHash @ 00dc5ef0
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.PlayerPrefs$$GetString @ 024be7a4
+  -> System.String$$Equals @ 01fde08c
+
+--- Calls IN ---
+  <- CryptoPrefs$$GetFloat @ 00dc6474
+  <- CryptoPrefs$$GetInt @ 00dc6284
+
+--- Listing ---
+00dc631c  str x22,[sp, #-0x30]!
+00dc6320  stp x21,x20,[sp, #0x10]
+00dc6324  stp x19,x30,[sp, #0x20]
+00dc6328  adrp x22,0x3572000
+00dc632c  adrp x21,0x3341000
+00dc6330  ldrb w8,[x22, #0x1b4]
+00dc6334  ldr x21,[x21, #0x490]
+00dc6338  mov x19,x1
+00dc633c  mov x20,x0
+00dc6340  tbnz w8,#0x0,0x00dc6358
+00dc6344  adrp x0,0x3341000
+00dc6348  ldr x0,[x0, #0x490]
+00dc634c  bl 0x00b0789c
+00dc6350  mov w8,#0x1
+00dc6354  strb w8,[x22, #0x1b4]
+00dc6358  ldr x0,[x21]
+00dc635c  ldr w8,[x0, #0xe0]
+00dc6360  cbnz w8,0x00dc6368
+00dc6364  bl 0x00b0798c
+00dc6368  mov x0,x20
+00dc636c  bl 0x00dc5ef0
+00dc6370  cbz x19,0x00dc63e8
+00dc6374  ldr x8,[x19]
+00dc6378  mov x20,x0
+00dc637c  mov x0,x19
+00dc6380  ldp x9,x1,[x8, #0x168]
+00dc6384  blr x9
+00dc6388  mov x1,x0
+00dc638c  mov x0,x20
+00dc6390  mov x2,xzr
+00dc6394  bl 0x024be7a4
+00dc6398  mov x20,x0
+00dc639c  mov x0,x19
+00dc63a0  mov x1,x20
+00dc63a4  mov x2,xzr
+00dc63a8  bl 0x01fde08c
+00dc63ac  tbz w0,#0x0,0x00dc63c4
+00dc63b0  mov x0,x19
+00dc63b4  ldp x19,x30,[sp, #0x20]
+00dc63b8  ldp x21,x20,[sp, #0x10]
+00dc63bc  ldr x22,[sp], #0x30
+00dc63c0  ret
+00dc63c4  ldr x0,[x21]
+00dc63c8  ldr w8,[x0, #0xe0]
+00dc63cc  cbnz w8,0x00dc63d4
+00dc63d0  bl 0x00b0798c
+00dc63d4  mov x0,x20
+00dc63d8  ldp x19,x30,[sp, #0x20]
+00dc63dc  ldp x21,x20,[sp, #0x10]
+00dc63e0  ldr x22,[sp], #0x30
+00dc63e4  b 0x00dc6588
+00dc63e8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc63ec_CryptoPrefs__SetFloat.txt
+================================================================================
+Function: CryptoPrefs$$SetFloat @ 00dc63ec
+
+--- Calls OUT ---
+  -> UnityEngine.PlayerPrefs$$SetString @ 024be710
+  -> CryptoPrefs$$Encrypt @ 00dc6030
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CryptoPrefs$$GetHash @ 00dc5ef0
+  -> System.Single$$ToString @ 021632b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dc63ec  sub sp,sp,#0x30
+00dc63f0  stp x21,x20,[sp, #0x10]
+00dc63f4  stp x19,x30,[sp, #0x20]
+00dc63f8  adrp x20,0x3572000
+00dc63fc  str s0,[sp, #0xc]
+00dc6400  adrp x21,0x3341000
+00dc6404  ldrb w8,[x20, #0x1b1]
+00dc6408  ldr x21,[x21, #0x490]
+00dc640c  mov x19,x0
+00dc6410  tbnz w8,#0x0,0x00dc6428
+00dc6414  adrp x0,0x3341000
+00dc6418  ldr x0,[x0, #0x490]
+00dc641c  bl 0x00b0789c
+00dc6420  mov w8,#0x1
+00dc6424  strb w8,[x20, #0x1b1]
+00dc6428  ldr x0,[x21]
+00dc642c  ldr w8,[x0, #0xe0]
+00dc6430  cbnz w8,0x00dc6438
+00dc6434  bl 0x00b0798c
+00dc6438  mov x0,x19
+00dc643c  bl 0x00dc5ef0
+00dc6440  mov x19,x0
+00dc6444  add x0,sp,#0xc
+00dc6448  mov x1,xzr
+00dc644c  bl 0x021632b0
+00dc6450  bl 0x00dc6030
+00dc6454  mov x1,x0
+00dc6458  mov x0,x19
+00dc645c  mov x2,xzr
+00dc6460  bl 0x024be710
+00dc6464  ldp x19,x30,[sp, #0x20]
+00dc6468  ldp x21,x20,[sp, #0x10]
+00dc646c  add sp,sp,#0x30
+00dc6470  ret
+
+
+================================================================================
+### FILE: 00dc6474_CryptoPrefs__GetFloat.txt
+================================================================================
+Function: CryptoPrefs$$GetFloat @ 00dc6474
+
+--- Calls OUT ---
+  -> System.Single$$TryParse @ 021637dc
+  -> CryptoPrefs$$GetString @ 00dc631c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Single$$ToString @ 021632b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6474  sub sp,sp,#0x30
+00dc6478  stp x21,x20,[sp, #0x10]
+00dc647c  stp x19,x30,[sp, #0x20]
+00dc6480  adrp x21,0x3572000
+00dc6484  str s0,[sp, #0xc]
+00dc6488  adrp x20,0x3341000
+00dc648c  ldrb w8,[x21, #0x1b2]
+00dc6490  ldr x20,[x20, #0x490]
+00dc6494  mov x19,x0
+00dc6498  tbnz w8,#0x0,0x00dc64b0
+00dc649c  adrp x0,0x3341000
+00dc64a0  ldr x0,[x0, #0x490]
+00dc64a4  bl 0x00b0789c
+00dc64a8  mov w8,#0x1
+00dc64ac  strb w8,[x21, #0x1b2]
+00dc64b0  add x0,sp,#0xc
+00dc64b4  mov x1,xzr
+00dc64b8  str wzr,[sp, #0x8]
+00dc64bc  bl 0x021632b0
+00dc64c0  ldr x8,[x20]
+00dc64c4  mov x20,x0
+00dc64c8  ldr w9,[x8, #0xe0]
+00dc64cc  cbnz w9,0x00dc64d8
+00dc64d0  mov x0,x8
+00dc64d4  bl 0x00b0798c
+00dc64d8  mov x0,x19
+00dc64dc  mov x1,x20
+00dc64e0  bl 0x00dc631c
+00dc64e4  ldr w8,[sp, #0xc]
+00dc64e8  add x1,sp,#0x8
+00dc64ec  mov x2,xzr
+00dc64f0  str w8,[sp, #0x8]
+00dc64f4  bl 0x021637dc
+00dc64f8  ldr s0,[sp, #0x8]
+00dc64fc  ldp x19,x30,[sp, #0x20]
+00dc6500  ldp x21,x20,[sp, #0x10]
+00dc6504  add sp,sp,#0x30
+00dc6508  ret
+
+
+================================================================================
+### FILE: 00dc650c_CryptoPrefs__SetString.txt
+================================================================================
+Function: CryptoPrefs$$SetString @ 00dc650c
+
+--- Calls OUT ---
+  -> UnityEngine.PlayerPrefs$$SetString @ 024be710
+  -> CryptoPrefs$$Encrypt @ 00dc6030
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CryptoPrefs$$GetHash @ 00dc5ef0
+
+--- Calls IN ---
+
+--- Listing ---
+00dc650c  str x22,[sp, #-0x30]!
+00dc6510  stp x21,x20,[sp, #0x10]
+00dc6514  stp x19,x30,[sp, #0x20]
+00dc6518  adrp x21,0x3572000
+00dc651c  adrp x22,0x3341000
+00dc6520  ldrb w8,[x21, #0x1b3]
+00dc6524  ldr x22,[x22, #0x490]
+00dc6528  mov x19,x1
+00dc652c  mov x20,x0
+00dc6530  tbnz w8,#0x0,0x00dc6548
+00dc6534  adrp x0,0x3341000
+00dc6538  ldr x0,[x0, #0x490]
+00dc653c  bl 0x00b0789c
+00dc6540  mov w8,#0x1
+00dc6544  strb w8,[x21, #0x1b3]
+00dc6548  ldr x0,[x22]
+00dc654c  ldr w8,[x0, #0xe0]
+00dc6550  cbnz w8,0x00dc6558
+00dc6554  bl 0x00b0798c
+00dc6558  mov x0,x20
+00dc655c  bl 0x00dc5ef0
+00dc6560  mov x20,x0
+00dc6564  mov x0,x19
+00dc6568  bl 0x00dc6030
+00dc656c  mov x1,x0
+00dc6570  mov x0,x20
+00dc6574  ldp x19,x30,[sp, #0x20]
+00dc6578  ldp x21,x20,[sp, #0x10]
+00dc657c  mov x2,xzr
+00dc6580  ldr x22,[sp], #0x30
+00dc6584  b 0x024be710
+
+
+================================================================================
+### FILE: 00dc6588_CryptoPrefs__Decrypt.txt
+================================================================================
+Function: CryptoPrefs$$Decrypt @ 00dc6588
+
+--- Calls OUT ---
+  -> System.Security.Cryptography.CryptoStream$$.ctor @ 02005eb4
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Convert$$FromBase64String @ 020e4acc
+  -> System.Security.Cryptography.RijndaelManaged$$.ctor @ 0200fef4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Text.Encoding$$get_UTF8 @ 01ff8ca0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> System.IO.MemoryStream$$.ctor @ 020a3d4c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$TrimEnd @ 01fe3118
+
+--- Calls IN ---
+  <- CryptoPrefs$$GetString @ 00dc631c
+
+--- Listing ---
+00dc6588  stp x23,x22,[sp, #-0x30]!
+00dc658c  stp x21,x20,[sp, #0x10]
+00dc6590  stp x19,x30,[sp, #0x20]
+00dc6594  adrp x20,0x3572000
+00dc6598  adrp x21,0x336a000
+00dc659c  ldrb w8,[x20, #0x1b7]
+00dc65a0  ldr x21,[x21, #0xfc0]
+00dc65a4  mov x19,x0
+00dc65a8  tbnz w8,#0x0,0x00dc65fc
+00dc65ac  adrp x0,0x334f000
+00dc65b0  ldr x0,[x0, #0x28]
+00dc65b4  bl 0x00b0789c
+00dc65b8  adrp x0,0x3362000
+00dc65bc  ldr x0,[x0, #0xe28]
+00dc65c0  bl 0x00b0789c
+00dc65c4  adrp x0,0x3341000
+00dc65c8  ldr x0,[x0, #0x490]
+00dc65cc  bl 0x00b0789c
+00dc65d0  adrp x0,0x3322000
+00dc65d4  ldr x0,[x0, #0x688]
+00dc65d8  bl 0x00b0789c
+00dc65dc  adrp x0,0x3368000
+00dc65e0  ldr x0,[x0, #0xf58]
+00dc65e4  bl 0x00b0789c
+00dc65e8  adrp x0,0x336a000
+00dc65ec  ldr x0,[x0, #0xfc0]
+00dc65f0  bl 0x00b0789c
+00dc65f4  mov w8,#0x1
+00dc65f8  strb w8,[x20, #0x1b7]
+00dc65fc  ldr x0,[x21]
+00dc6600  bl 0x00b079a0
+00dc6604  cbz x0,0x00dc67f4
+00dc6608  adrp x22,0x3341000
+00dc660c  ldr x22,[x22, #0x490]
+00dc6610  mov x1,xzr
+00dc6614  mov x20,x0
+00dc6618  bl 0x0200fef4
+00dc661c  ldr x8,[x20]
+00dc6620  mov w1,#0x3
+00dc6624  mov x0,x20
+00dc6628  ldr x9,[x8, #0x268]
+00dc662c  ldr x2,[x8, #0x270]
+00dc6630  blr x9
+00dc6634  ldr x8,[x20]
+00dc6638  mov w1,#0x1
+00dc663c  mov x0,x20
+00dc6640  ldr x9,[x8, #0x248]
+00dc6644  ldr x2,[x8, #0x250]
+00dc6648  blr x9
+00dc664c  ldr x8,[x20]
+00dc6650  mov w1,#0x80
+00dc6654  mov x0,x20
+00dc6658  ldr x9,[x8, #0x228]
+00dc665c  ldr x2,[x8, #0x230]
+00dc6660  blr x9
+00dc6664  ldr x8,[x20]
+00dc6668  mov w1,#0x80
+00dc666c  mov x0,x20
+00dc6670  ldp x9,x2,[x8, #0x1a8]
+00dc6674  blr x9
+00dc6678  mov x0,xzr
+00dc667c  bl 0x01ff8ca0
+00dc6680  ldr x8,[x22]
+00dc6684  mov x21,x0
+00dc6688  ldr w9,[x8, #0xe0]
+00dc668c  cbnz w9,0x00dc6698
+00dc6690  mov x0,x8
+00dc6694  bl 0x00b0798c
+00dc6698  cbz x21,0x00dc67f4
+00dc669c  ldr x8,[x22]
+00dc66a0  ldr x9,[x21]
+00dc66a4  adrp x23,0x3362000
+00dc66a8  mov x0,x21
+00dc66ac  ldr x8,[x8, #0xb8]
+00dc66b0  ldr x10,[x9, #0x268]
+00dc66b4  ldr x2,[x9, #0x270]
+00dc66b8  ldr x1,[x8]
+00dc66bc  ldr x23,[x23, #0xe28]
+00dc66c0  blr x10
+00dc66c4  ldr x9,[x22]
+00dc66c8  ldr x8,[x23]
+00dc66cc  mov x21,x0
+00dc66d0  ldr x9,[x9, #0xb8]
+00dc66d4  ldr w10,[x8, #0xe0]
+00dc66d8  ldr x22,[x9, #0x8]
+00dc66dc  cbnz w10,0x00dc66e8
+00dc66e0  mov x0,x8
+00dc66e4  bl 0x00b0798c
+00dc66e8  mov x0,x22
+00dc66ec  mov x1,xzr
+00dc66f0  bl 0x020e4acc
+00dc66f4  ldr x8,[x20]
+00dc66f8  mov x2,x0
+00dc66fc  mov x0,x20
+00dc6700  mov x1,x21
+00dc6704  ldr x9,[x8, #0x2a8]
+00dc6708  ldr x3,[x8, #0x2b0]
+00dc670c  blr x9
+00dc6710  mov x20,x0
+00dc6714  mov x0,x19
+00dc6718  mov x1,xzr
+00dc671c  bl 0x020e4acc
+00dc6720  cbz x0,0x00dc67f4
+00dc6724  adrp x8,0x334f000
+00dc6728  ldr x8,[x8, #0x28]
+00dc672c  mov x21,x0
+00dc6730  ldr w1,[x21, #0x18]
+00dc6734  adrp x19,0x3368000
+00dc6738  ldr x0,[x8]
+00dc673c  ldr x19,[x19, #0xf58]
+00dc6740  bl 0x00b078f8
+00dc6744  ldr x8,[x19]
+00dc6748  mov x19,x0
+00dc674c  mov x0,x8
+00dc6750  bl 0x00b079a0
+00dc6754  cbz x0,0x00dc67f4
+00dc6758  adrp x23,0x3322000
+00dc675c  ldr x23,[x23, #0x688]
+00dc6760  mov x1,x21
+00dc6764  mov x2,xzr
+00dc6768  mov x22,x0
+00dc676c  bl 0x020a3d4c
+00dc6770  ldr x0,[x23]
+00dc6774  bl 0x00b079a0
+00dc6778  cbz x0,0x00dc67f4
+00dc677c  mov x1,x22
+00dc6780  mov x2,x20
+00dc6784  mov w3,wzr
+00dc6788  mov x4,xzr
+00dc678c  mov x21,x0
+00dc6790  bl 0x02005eb4
+00dc6794  cbz x19,0x00dc67f4
+00dc6798  ldr x8,[x21]
+00dc679c  ldr w3,[x19, #0x18]
+00dc67a0  mov x0,x21
+00dc67a4  mov x1,x19
+00dc67a8  ldr x9,[x8, #0x338]
+00dc67ac  ldr x4,[x8, #0x340]
+00dc67b0  mov w2,wzr
+00dc67b4  blr x9
+00dc67b8  mov x0,xzr
+00dc67bc  bl 0x01ff8ca0
+00dc67c0  cbz x0,0x00dc67f4
+00dc67c4  ldr x8,[x0]
+00dc67c8  mov x1,x19
+00dc67cc  ldr x9,[x8, #0x378]
+00dc67d0  ldr x2,[x8, #0x380]
+00dc67d4  blr x9
+00dc67d8  cbz x0,0x00dc67f4
+00dc67dc  ldp x19,x30,[sp, #0x20]
+00dc67e0  ldp x21,x20,[sp, #0x10]
+00dc67e4  mov w1,wzr
+00dc67e8  mov x2,xzr
+00dc67ec  ldp x23,x22,[sp], #0x30
+00dc67f0  b 0x01fe3118
+00dc67f4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc67f8_CryptoPrefs__HasKey.txt
+================================================================================
+Function: CryptoPrefs$$HasKey @ 00dc67f8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CryptoPrefs$$GetHash @ 00dc5ef0
+  -> UnityEngine.PlayerPrefs$$HasKey @ 024be854
+
+--- Calls IN ---
+
+--- Listing ---
+00dc67f8  stp x21,x20,[sp, #-0x20]!
+00dc67fc  stp x19,x30,[sp, #0x10]
+00dc6800  adrp x20,0x3572000
+00dc6804  adrp x21,0x3341000
+00dc6808  ldrb w8,[x20, #0x1b5]
+00dc680c  ldr x21,[x21, #0x490]
+00dc6810  mov x19,x0
+00dc6814  tbnz w8,#0x0,0x00dc682c
+00dc6818  adrp x0,0x3341000
+00dc681c  ldr x0,[x0, #0x490]
+00dc6820  bl 0x00b0789c
+00dc6824  mov w8,#0x1
+00dc6828  strb w8,[x20, #0x1b5]
+00dc682c  ldr x0,[x21]
+00dc6830  ldr w8,[x0, #0xe0]
+00dc6834  cbnz w8,0x00dc683c
+00dc6838  bl 0x00b0798c
+00dc683c  mov x0,x19
+00dc6840  bl 0x00dc5ef0
+00dc6844  ldp x19,x30,[sp, #0x10]
+00dc6848  mov x1,xzr
+00dc684c  ldp x21,x20,[sp], #0x20
+00dc6850  b 0x024be854
+
+
+================================================================================
+### FILE: 00dc6854_CryptoPrefs__DeleteKey.txt
+================================================================================
+Function: CryptoPrefs$$DeleteKey @ 00dc6854
+
+--- Calls OUT ---
+  -> UnityEngine.PlayerPrefs$$DeleteKey @ 024be890
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> CryptoPrefs$$GetHash @ 00dc5ef0
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6854  stp x21,x20,[sp, #-0x20]!
+00dc6858  stp x19,x30,[sp, #0x10]
+00dc685c  adrp x20,0x3572000
+00dc6860  adrp x21,0x3341000
+00dc6864  ldrb w8,[x20, #0x1b6]
+00dc6868  ldr x21,[x21, #0x490]
+00dc686c  mov x19,x0
+00dc6870  tbnz w8,#0x0,0x00dc6888
+00dc6874  adrp x0,0x3341000
+00dc6878  ldr x0,[x0, #0x490]
+00dc687c  bl 0x00b0789c
+00dc6880  mov w8,#0x1
+00dc6884  strb w8,[x20, #0x1b6]
+00dc6888  ldr x0,[x21]
+00dc688c  ldr w8,[x0, #0xe0]
+00dc6890  cbnz w8,0x00dc6898
+00dc6894  bl 0x00b0798c
+00dc6898  mov x0,x19
+00dc689c  bl 0x00dc5ef0
+00dc68a0  ldp x19,x30,[sp, #0x10]
+00dc68a4  mov x1,xzr
+00dc68a8  ldp x21,x20,[sp], #0x20
+00dc68ac  b 0x024be890
+
+
+================================================================================
+### FILE: 00dc68b0_CryptoPrefs__DeleteAll.txt
+================================================================================
+Function: CryptoPrefs$$DeleteAll @ 00dc68b0
+
+--- Calls OUT ---
+  -> UnityEngine.PlayerPrefs$$DeleteAll @ 024be8cc
+
+--- Calls IN ---
+
+--- Listing ---
+00dc68b0  mov x0,xzr
+00dc68b4  b 0x024be8cc
+
+
+================================================================================
+### FILE: 00dc68b8_CryptoPrefs__Save.txt
+================================================================================
+Function: CryptoPrefs$$Save @ 00dc68b8
+
+--- Calls OUT ---
+  -> UnityEngine.PlayerPrefs$$Save @ 024be8f4
+
+--- Calls IN ---
+
+--- Listing ---
+00dc68b8  mov x0,xzr
+00dc68bc  b 0x024be8f4
+
+
+================================================================================
+### FILE: 00dc68c0_CryptoPrefs__.ctor.txt
+================================================================================
+Function: CryptoPrefs$$.ctor @ 00dc68c0
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dc68c0  mov x1,xzr
+00dc68c4  b 0x02194104
+
+
+================================================================================
+### FILE: 00dc68c8_CryptoPrefs__.cctor.txt
+================================================================================
+Function: CryptoPrefs$$.cctor @ 00dc68c8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00dc68c8  str x22,[sp, #-0x30]!
+00dc68cc  stp x21,x20,[sp, #0x10]
+00dc68d0  stp x19,x30,[sp, #0x20]
+00dc68d4  adrp x22,0x3572000
+00dc68d8  adrp x21,0x337f000
+00dc68dc  adrp x19,0x3341000
+00dc68e0  adrp x20,0x3340000
+00dc68e4  ldrb w8,[x22, #0x1ba]
+00dc68e8  ldr x21,[x21, #0xd30]
+00dc68ec  ldr x19,[x19, #0x490]
+00dc68f0  ldr x20,[x20, #0x108]
+00dc68f4  tbnz w8,#0x0,0x00dc6924
+00dc68f8  adrp x0,0x3341000
+00dc68fc  ldr x0,[x0, #0x490]
+00dc6900  bl 0x00b0789c
+00dc6904  adrp x0,0x3340000
+00dc6908  ldr x0,[x0, #0x108]
+00dc690c  bl 0x00b0789c
+00dc6910  adrp x0,0x337f000
+00dc6914  ldr x0,[x0, #0xd30]
+00dc6918  bl 0x00b0789c
+00dc691c  mov w8,#0x1
+00dc6920  strb w8,[x22, #0x1ba]
+00dc6924  ldr x8,[x19]
+00dc6928  ldr x9,[x21]
+00dc692c  ldr x8,[x8, #0xb8]
+00dc6930  str x9,[x8]
+00dc6934  ldr x8,[x19]
+00dc6938  ldr x1,[x21]
+00dc693c  ldr x0,[x8, #0xb8]
+00dc6940  bl 0x00b07850
+00dc6944  ldr x8,[x19]
+00dc6948  ldr x1,[x20]
+00dc694c  ldr x0,[x8, #0xb8]
+00dc6950  str x1,[x0, #0x8]!
+00dc6954  ldp x19,x30,[sp, #0x20]
+00dc6958  ldp x21,x20,[sp, #0x10]
+00dc695c  ldr x22,[sp], #0x30
+00dc6960  b 0x00b07850
+
+
+================================================================================
+### FILE: 00def3a4_CrusadeData__get_Level.txt
+================================================================================
+Function: CrusadeData$$get_Level @ 00def3a4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def3a4  ldr w0,[x0, #0x74]
+00def3a8  ret
+
+
+================================================================================
+### FILE: 00def3ac_CrusadeData__get_RequiredExp.txt
+================================================================================
+Function: CrusadeData$$get_RequiredExp @ 00def3ac
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def3ac  ldr w0,[x0, #0x78]
+00def3b0  ret
+
+
+================================================================================
+### FILE: 00def3b4_CrusadeData__get_RequiredGeneralExp.txt
+================================================================================
+Function: CrusadeData$$get_RequiredGeneralExp @ 00def3b4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def3b4  ldr w0,[x0, #0x7c]
+00def3b8  ret
+
+
+================================================================================
+### FILE: 00def3bc_CrusadeData__get_cost.txt
+================================================================================
+Function: CrusadeData$$get_cost @ 00def3bc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def3bc  ldr x0,[x0, #0x80]
+00def3c0  ret
+
+
+================================================================================
+### FILE: 00def3c4_CrusadeData__get_Award1.txt
+================================================================================
+Function: CrusadeData$$get_Award1 @ 00def3c4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def3c4  ldr x0,[x0, #0x88]
+00def3c8  ret
+
+
+================================================================================
+### FILE: 00def3cc_CrusadeData__get_Award2.txt
+================================================================================
+Function: CrusadeData$$get_Award2 @ 00def3cc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00def3cc  ldr x0,[x0, #0x90]
+00def3d0  ret
+
+
+================================================================================
+### FILE: 00def3d4_CrusadeData__.ctor.txt
+================================================================================
+Function: CrusadeData$$.ctor @ 00def3d4
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CrusadeDataWrap$$__CreateInstance @ 012383d0
+
+--- Listing ---
+00def3d4  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00def3d8_CrusadeRecord__.ctor.txt
+================================================================================
+Function: CrusadeRecord$$.ctor @ 00def3d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00def3d8  stp x21,x20,[sp, #-0x20]!
+00def3dc  stp x19,x30,[sp, #0x10]
+00def3e0  adrp x20,0x3572000
+00def3e4  adrp x21,0x337c000
+00def3e8  ldrb w8,[x20, #0x434]
+00def3ec  ldr x21,[x21, #0x1f0]
+00def3f0  mov x19,x0
+00def3f4  tbnz w8,#0x0,0x00def418
+00def3f8  adrp x0,0x330e000
+00def3fc  ldr x0,[x0, #0x710]
+00def400  bl 0x00b0789c
+00def404  adrp x0,0x337c000
+00def408  ldr x0,[x0, #0x1f0]
+00def40c  bl 0x00b0789c
+00def410  mov w8,#0x1
+00def414  strb w8,[x20, #0x434]
+00def418  ldr x0,[x21]
+00def41c  bl 0x00b079a0
+00def420  cbz x0,0x00def45c
+00def424  adrp x8,0x330e000
+00def428  ldr x8,[x8, #0x710]
+00def42c  mov x20,x0
+00def430  ldr x1,[x8]
+00def434  bl 0x01bffe10
+00def438  mov x0,x19
+00def43c  str x20,[x0, #0x18]!
+00def440  mov x1,x20
+00def444  bl 0x00b07850
+00def448  mov x0,x19
+00def44c  ldp x19,x30,[sp, #0x10]
+00def450  mov x1,xzr
+00def454  ldp x21,x20,[sp], #0x20
+00def458  b 0x024e277c
+00def45c  bl 0x00b079b0
+
+

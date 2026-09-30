@@ -1,0 +1,2518 @@
+================================================================================
+### FILE: 008d39d0_pthread_cond_timedwait.txt
+================================================================================
+Function: pthread_cond_timedwait @ 008d39d0
+
+--- Calls OUT ---
+  -> pthread_cond_timedwait @ 03799018
+
+--- Calls IN ---
+  <- FUN_00ab1254 @ 00ab1254
+  <- __do_timed_wait @ 00b8a1f8
+
+--- Listing ---
+008d39d0  adrp x16,0x3307000
+008d39d4  ldr x17,[x16, #0x6a8]
+008d39d8  add x16,x16,#0x6a8
+008d39dc  br x17
+
+
+================================================================================
+### FILE: 008d3ab0_pthread_sigmask.txt
+================================================================================
+Function: pthread_sigmask @ 008d3ab0
+
+--- Calls OUT ---
+  -> pthread_sigmask @ 03799050
+
+--- Calls IN ---
+  <- FUN_00b3eb14 @ 00b3eb14
+
+--- Listing ---
+008d3ab0  adrp x16,0x3307000
+008d3ab4  ldr x17,[x16, #0x718]
+008d3ab8  add x16,x16,#0x718
+008d3abc  br x17
+
+
+================================================================================
+### FILE: 008d3d40_pthread_mutex_lock.txt
+================================================================================
+Function: pthread_mutex_lock @ 008d3d40
+
+--- Calls OUT ---
+  -> pthread_mutex_lock @ 037990f0
+
+--- Calls IN ---
+  <- __register_frame_info_table_bases @ 00ba2eb4
+  <- FUN_00ab11d0 @ 00ab11d0
+  <- lock @ 00b81560
+  <- __cxa_guard_acquire @ 00b8ba34
+  <- lock @ 00b81228
+  <- unlock @ 00b8166c
+  <- FUN_00b8cc98 @ 00b8cc98
+  <- __register_frame_info_bases @ 00ba2dcc
+  <- FUN_00ae5704 @ 00ae5704
+  <- unlock @ 00b81900
+  <- _Unwind_Find_FDE @ 00ba30a8
+  <- FUN_00ae57a8 @ 00ae57a8
+  <- __call_once @ 00b81970
+  <- ~recursive_timed_mutex @ 00b816d0
+  <- FUN_00aa9098 @ 00aa9098
+  <- ~timed_mutex @ 00b814fc
+  <- __cxa_guard_abort @ 00b8bc3c
+  <- FUN_00aa90fc @ 00aa90fc
+  <- lock @ 00b81350
+  <- FUN_00b0147c @ 00b0147c
+  <- __deregister_frame_info_bases @ 00ba2f80
+  <- FUN_00ae95bc @ 00ae95bc
+  <- FUN_00ae95c4 @ 00ae95c4
+  <- FUN_00ae809c @ 00ae809c
+  <- FUN_00b8cb20 @ 00b8cb20
+  <- FUN_00ab1254 @ 00ab1254
+  <- FUN_00ae81f4 @ 00ae81f4
+  <- lock @ 00b81488
+  <- __cxa_guard_release @ 00b8bb94
+  <- FUN_00ab1230 @ 00ab1230
+  <- lock @ 00b81734
+
+--- Listing ---
+008d3d40  adrp x16,0x3307000
+008d3d44  ldr x17,[x16, #0x860]
+008d3d48  add x16,x16,#0x860
+008d3d4c  br x17
+
+
+================================================================================
+### FILE: 008d3ee0_pthread_atfork.txt
+================================================================================
+Function: pthread_atfork @ 008d3ee0
+
+--- Calls OUT ---
+  -> pthread_atfork @ 03799158
+
+--- Calls IN ---
+  <- FUN_00b3d320 @ 00b3d320
+
+--- Listing ---
+008d3ee0  adrp x16,0x3307000
+008d3ee4  ldr x17,[x16, #0x930]
+008d3ee8  add x16,x16,#0x930
+008d3eec  br x17
+
+
+================================================================================
+### FILE: 008d4020_pthread_equal.txt
+================================================================================
+Function: pthread_equal @ 008d4020
+
+--- Calls OUT ---
+  -> pthread_equal @ 03799198
+
+--- Calls IN ---
+  <- lock @ 00b81734
+  <- try_lock @ 00b8185c
+
+--- Listing ---
+008d4020  adrp x16,0x3307000
+008d4024  ldr x17,[x16, #0x9d0]
+008d4028  add x16,x16,#0x9d0
+008d402c  br x17
+
+
+================================================================================
+### FILE: 008d40f0_pthread_attr_init.txt
+================================================================================
+Function: pthread_attr_init @ 008d40f0
+
+--- Calls OUT ---
+  -> pthread_attr_init @ 037991c8
+
+--- Calls IN ---
+  <- FUN_00ae7f3c @ 00ae7f3c
+
+--- Listing ---
+008d40f0  adrp x16,0x3307000
+008d40f4  ldr x17,[x16, #0xa38]
+008d40f8  add x16,x16,#0xa38
+008d40fc  br x17
+
+
+================================================================================
+### FILE: 008d4360_pthread_cond_wait.txt
+================================================================================
+Function: pthread_cond_wait @ 008d4360
+
+--- Calls OUT ---
+  -> pthread_cond_wait @ 03799278
+
+--- Calls IN ---
+  <- wait @ 00b8a1b0
+  <- FUN_00ab1254 @ 00ab1254
+  <- pthread_cond_wait @ 00a8d2ac
+  <- __call_once @ 00b81970
+  <- __cxa_guard_acquire @ 00b8ba34
+
+--- Listing ---
+008d4360  adrp x16,0x3307000
+008d4364  ldr x17,[x16, #0xb70]
+008d4368  add x16,x16,#0xb70
+008d436c  br x17
+
+
+================================================================================
+### FILE: 008d43c0_pthread_condattr_init.txt
+================================================================================
+Function: pthread_condattr_init @ 008d43c0
+
+--- Calls OUT ---
+  -> pthread_condattr_init @ 037992a0
+
+--- Calls IN ---
+  <- FUN_00ab117c @ 00ab117c
+
+--- Listing ---
+008d43c0  adrp x16,0x3307000
+008d43c4  ldr x17,[x16, #0xba0]
+008d43c8  add x16,x16,#0xba0
+008d43cc  br x17
+
+
+================================================================================
+### FILE: 008d43d0_pthread_self.txt
+================================================================================
+Function: pthread_self @ 008d43d0
+
+--- Calls OUT ---
+  -> pthread_self @ 037992a8
+
+--- Calls IN ---
+  <- FUN_00b3f724 @ 00b3f724
+  <- FUN_00b3d274 @ 00b3d274
+  <- FUN_00b39f68 @ 00b39f68
+  <- pthread_self @ 00ae82a4
+  <- FUN_00b3e054 @ 00b3e054
+  <- FUN_00b3f60c @ 00b3f60c
+  <- FUN_00ae7fc4 @ 00ae7fc4
+  <- FUN_00b3ed20 @ 00b3ed20
+  <- FUN_00b3dedc @ 00b3dedc
+  <- FUN_00b3a0fc @ 00b3a0fc
+  <- FUN_00b3d320 @ 00b3d320
+  <- FUN_00ae82bc @ 00ae82bc
+  <- FUN_00b3ebc8 @ 00b3ebc8
+  <- FUN_00b3f3f4 @ 00b3f3f4
+  <- lock @ 00b81734
+  <- pthread_self @ 00b46d00
+  <- FUN_00b3ef68 @ 00b3ef68
+  <- FUN_00ae7ff8 @ 00ae7ff8
+  <- FUN_00b3f5e4 @ 00b3f5e4
+  <- try_lock @ 00b8185c
+
+--- Listing ---
+008d43d0  adrp x16,0x3307000
+008d43d4  ldr x17,[x16, #0xba8]
+008d43d8  add x16,x16,#0xba8
+008d43dc  br x17
+
+
+================================================================================
+### FILE: 008d44b0_pthread_mutexattr_init.txt
+================================================================================
+Function: pthread_mutexattr_init @ 008d44b0
+
+--- Calls OUT ---
+  -> pthread_mutexattr_init @ 037992c8
+
+--- Calls IN ---
+  <- recursive_mutex @ 00b813ac
+  <- FUN_00b01410 @ 00b01410
+
+--- Listing ---
+008d44b0  adrp x16,0x3307000
+008d44b4  ldr x17,[x16, #0xc18]
+008d44b8  add x16,x16,#0xc18
+008d44bc  br x17
+
+
+================================================================================
+### FILE: 008d4670_pthread_detach.txt
+================================================================================
+Function: pthread_detach @ 008d4670
+
+--- Calls OUT ---
+  -> pthread_detach @ 03799348
+
+--- Calls IN ---
+  <- FUN_00ae7fc4 @ 00ae7fc4
+  <- detach @ 00b89724
+
+--- Listing ---
+008d4670  adrp x16,0x3307000
+008d4674  ldr x17,[x16, #0xcf8]
+008d4678  add x16,x16,#0xcf8
+008d467c  br x17
+
+
+================================================================================
+### FILE: 008d46e0_pthread_getattr_np.txt
+================================================================================
+Function: pthread_getattr_np @ 008d46e0
+
+--- Calls OUT ---
+  -> pthread_getattr_np @ 03799368
+
+--- Calls IN ---
+  <- FUN_00b3d274 @ 00b3d274
+  <- FUN_00b3dedc @ 00b3dedc
+
+--- Listing ---
+008d46e0  adrp x16,0x3307000
+008d46e4  ldr x17,[x16, #0xd30]
+008d46e8  add x16,x16,#0xd30
+008d46ec  br x17
+
+
+================================================================================
+### FILE: 008d48d0_pthread_getspecific.txt
+================================================================================
+Function: pthread_getspecific @ 008d48d0
+
+--- Calls OUT ---
+  -> pthread_getspecific @ 037993c8
+
+--- Calls IN ---
+  <- FUN_00aff34c @ 00aff34c
+  <- FUN_00afdad4 @ 00afdad4
+  <- FUN_00afd5fc @ 00afd5fc
+  <- FUN_00afbbe0 @ 00afbbe0
+  <- FUN_00af96f8 @ 00af96f8
+  <- FUN_00afedb8 @ 00afedb8
+  <- FUN_00aea62c @ 00aea62c
+  <- FUN_00aea85c @ 00aea85c
+  <- FUN_00af96e8 @ 00af96e8
+  <- FUN_00af96b8 @ 00af96b8
+  <- FUN_00afbc10 @ 00afbc10
+  <- FUN_00aff318 @ 00aff318
+  <- FUN_00afd860 @ 00afd860
+  <- FUN_00aaef3c @ 00aaef3c
+  <- FUN_00afea38 @ 00afea38
+  <- notify_all_at_thread_exit @ 00b8a2bc
+  <- FUN_00afd264 @ 00afd264
+  <- FUN_00ae9468 @ 00ae9468
+  <- FUN_00aaf024 @ 00aaf024
+  <- FUN_00afd018 @ 00afd018
+  <- FUN_00aea4bc @ 00aea4bc
+  <- FUN_00afd630 @ 00afd630
+  <- FUN_00aea6a4 @ 00aea6a4
+  <- FUN_00aaeeb4 @ 00aaeeb4
+  <- FUN_00afccb8 @ 00afccb8
+  <- set_exception_at_thread_exit @ 00b8a7e0
+  <- __cxa_get_globals @ 00b8b900
+  <- FUN_00aaefd0 @ 00aaefd0
+  <- FUN_00afe088 @ 00afe088
+  <- set_value_at_thread_exit @ 00b8a664
+  <- FUN_00afbb9c @ 00afbb9c
+  <- FUN_00ae8388 @ 00ae8388
+  <- __cxa_get_globals_fast @ 00b8b990
+
+--- Listing ---
+008d48d0  adrp x16,0x3307000
+008d48d4  ldr x17,[x16, #0xe28]
+008d48d8  add x16,x16,#0xe28
+008d48dc  br x17
+
+
+================================================================================
+### FILE: 008d48e0_pthread_cond_broadcast.txt
+================================================================================
+Function: pthread_cond_broadcast @ 008d48e0
+
+--- Calls OUT ---
+  -> pthread_cond_broadcast @ 037993d0
+
+--- Calls IN ---
+  <- notify_all @ 00b8a198
+  <- FUN_00ab1518 @ 00ab1518
+  <- pthread_cond_broadcast @ 00a8d2b0
+  <- __cxa_guard_release @ 00b8bb94
+  <- __call_once @ 00b81970
+  <- FUN_00aa9098 @ 00aa9098
+  <- __cxa_guard_abort @ 00b8bc3c
+
+--- Listing ---
+008d48e0  adrp x16,0x3307000
+008d48e4  ldr x17,[x16, #0xe30]
+008d48e8  add x16,x16,#0xe30
+008d48ec  br x17
+
+
+================================================================================
+### FILE: 008d4940_pthread_attr_getstack.txt
+================================================================================
+Function: pthread_attr_getstack @ 008d4940
+
+--- Calls OUT ---
+  -> pthread_attr_getstack @ 037993f0
+
+--- Calls IN ---
+  <- FUN_00b3d274 @ 00b3d274
+  <- FUN_00b3dedc @ 00b3dedc
+
+--- Listing ---
+008d4940  adrp x16,0x3307000
+008d4944  ldr x17,[x16, #0xe60]
+008d4948  add x16,x16,#0xe60
+008d494c  br x17
+
+
+================================================================================
+### FILE: 008d4a20_pthread_mutex_unlock.txt
+================================================================================
+Function: pthread_mutex_unlock @ 008d4a20
+
+--- Calls OUT ---
+  -> pthread_mutex_unlock @ 03799420
+
+--- Calls IN ---
+  <- FUN_00b01484 @ 00b01484
+  <- __register_frame_info_table_bases @ 00ba2eb4
+  <- unlock @ 00b81278
+  <- FUN_00ab11d0 @ 00ab11d0
+  <- unlock @ 00b81394
+  <- lock @ 00b81560
+  <- __cxa_guard_acquire @ 00b8ba34
+  <- unlock @ 00b814ac
+  <- unlock @ 00b8166c
+  <- FUN_00b8cc98 @ 00b8cc98
+  <- FUN_00ab123c @ 00ab123c
+  <- __register_frame_info_bases @ 00ba2dcc
+  <- FUN_00ae5704 @ 00ae5704
+  <- unlock @ 00b81900
+  <- _Unwind_Find_FDE @ 00ba30a8
+  <- FUN_00ae57a8 @ 00ae57a8
+  <- __call_once @ 00b81970
+  <- ~recursive_timed_mutex @ 00b816d0
+  <- FUN_00aa9098 @ 00aa9098
+  <- ~timed_mutex @ 00b814fc
+  <- try_lock @ 00b81614
+  <- try_lock @ 00b8185c
+  <- __cxa_guard_abort @ 00b8bc3c
+  <- FUN_00aa90fc @ 00aa90fc
+  <- FUN_00ae95d4 @ 00ae95d4
+  <- __deregister_frame_info_bases @ 00ba2f80
+  <- FUN_00ae809c @ 00ae809c
+  <- FUN_00b8cb20 @ 00b8cb20
+  <- FUN_00ab1254 @ 00ab1254
+  <- FUN_00ae81f4 @ 00ae81f4
+  <- __cxa_guard_release @ 00b8bb94
+  <- FUN_00ae95cc @ 00ae95cc
+  <- lock @ 00b81734
+
+--- Listing ---
+008d4a20  adrp x16,0x3307000
+008d4a24  ldr x17,[x16, #0xed0]
+008d4a28  add x16,x16,#0xed0
+008d4a2c  br x17
+
+
+================================================================================
+### FILE: 008d4a90_pthread_condattr_destroy.txt
+================================================================================
+Function: pthread_condattr_destroy @ 008d4a90
+
+--- Calls OUT ---
+  -> pthread_condattr_destroy @ 03799438
+
+--- Calls IN ---
+  <- FUN_00ab117c @ 00ab117c
+
+--- Listing ---
+008d4a90  adrp x16,0x3307000
+008d4a94  ldr x17,[x16, #0xf08]
+008d4a98  add x16,x16,#0xf08
+008d4a9c  br x17
+
+
+================================================================================
+### FILE: 008d4bb0_pthread_cond_destroy.txt
+================================================================================
+Function: pthread_cond_destroy @ 008d4bb0
+
+--- Calls OUT ---
+  -> pthread_cond_destroy @ 03799480
+
+--- Calls IN ---
+  <- ~condition_variable @ 00b8a344
+  <- FUN_00ab11d0 @ 00ab11d0
+
+--- Listing ---
+008d4bb0  adrp x16,0x3307000
+008d4bb4  ldr x17,[x16, #0xf98]
+008d4bb8  add x16,x16,#0xf98
+008d4bbc  br x17
+
+
+================================================================================
+### FILE: 008d4cb0_pthread_key_create.txt
+================================================================================
+Function: pthread_key_create @ 008d4cb0
+
+--- Calls OUT ---
+  -> pthread_key_create @ 037994b8
+
+--- Calls IN ---
+  <- __thread_local_data @ 00b89824
+  <- _INIT_12 @ 008d6538
+  <- FUN_00ae8318 @ 00ae8318
+  <- _INIT_15 @ 008d67bc
+  <- FUN_00aaf7a0 @ 00aaf7a0
+  <- FUN_00b8b9cc @ 00b8b9cc
+
+--- Listing ---
+008d4cb0  adrp x16,0x3308000
+008d4cb4  ldr x17,[x16, #0x18]
+008d4cb8  add x16,x16,#0x18
+008d4cbc  br x17
+
+
+================================================================================
+### FILE: 008d4dc0_pthread_once.txt
+================================================================================
+Function: pthread_once @ 008d4dc0
+
+--- Calls OUT ---
+  -> pthread_once @ 03799508
+
+--- Calls IN ---
+  <- FUN_00ac72ac @ 00ac72ac
+  <- FUN_00ba10ec @ 00ba10ec
+  <- __cxa_get_globals @ 00b8b900
+  <- __cxa_get_globals_fast @ 00b8b990
+
+--- Listing ---
+008d4dc0  adrp x16,0x3308000
+008d4dc4  ldr x17,[x16, #0xa0]
+008d4dc8  add x16,x16,#0xa0
+008d4dcc  br x17
+
+
+================================================================================
+### FILE: 008d4f10_pthread_mutex_destroy.txt
+================================================================================
+Function: pthread_mutex_destroy @ 008d4f10
+
+--- Calls OUT ---
+  -> pthread_mutex_destroy @ 03799570
+
+--- Calls IN ---
+  <- FUN_00b01450 @ 00b01450
+  <- FUN_00ae9590 @ 00ae9590
+  <- recursive_mutex @ 00b813ac
+  <- ~recursive_mutex @ 00b81470
+  <- FUN_00ab11d0 @ 00ab11d0
+  <- ~mutex @ 00b81a94
+  <- FUN_00ae7edc @ 00ae7edc
+
+--- Listing ---
+008d4f10  adrp x16,0x3308000
+008d4f14  ldr x17,[x16, #0x148]
+008d4f18  add x16,x16,#0x148
+008d4f1c  br x17
+
+
+================================================================================
+### FILE: 008d50e0_pthread_setname_np.txt
+================================================================================
+Function: pthread_setname_np @ 008d50e0
+
+--- Calls OUT ---
+  -> pthread_setname_np @ 037995e0
+
+--- Calls IN ---
+  <- FUN_00ae7ff8 @ 00ae7ff8
+
+--- Listing ---
+008d50e0  adrp x16,0x3308000
+008d50e4  ldr x17,[x16, #0x230]
+008d50e8  add x16,x16,#0x230
+008d50ec  br x17
+
+
+================================================================================
+### FILE: 008d51c0_pthread_join.txt
+================================================================================
+Function: pthread_join @ 008d51c0
+
+--- Calls OUT ---
+  -> pthread_join @ 03799600
+
+--- Calls IN ---
+  <- join @ 00b896e0
+
+--- Listing ---
+008d51c0  adrp x16,0x3308000
+008d51c4  ldr x17,[x16, #0x2a0]
+008d51c8  add x16,x16,#0x2a0
+008d51cc  br x17
+
+
+================================================================================
+### FILE: 008d52f0_pthread_setspecific.txt
+================================================================================
+Function: pthread_setspecific @ 008d52f0
+
+--- Calls OUT ---
+  -> pthread_setspecific @ 03799638
+
+--- Calls IN ---
+  <- FUN_00aea6a4 @ 00aea6a4
+  <- FUN_00aea62c @ 00aea62c
+  <- FUN_00aaeeb4 @ 00aaeeb4
+  <- FUN_00b8ba00 @ 00b8ba00
+  <- FUN_00afdd48 @ 00afdd48
+  <- FUN_00afd768 @ 00afd768
+  <- FUN_00ae9484 @ 00ae9484
+  <- FUN_00aea888 @ 00aea888
+  <- __cxa_get_globals @ 00b8b900
+  <- FUN_00aea9c8 @ 00aea9c8
+  <- FUN_00afd860 @ 00afd860
+  <- FUN_00ae8374 @ 00ae8374
+  <- FUN_00aaef3c @ 00aaef3c
+  <- FUN_00ae8388 @ 00ae8388
+  <- notify_all_at_thread_exit @ 00b8a2bc
+
+--- Listing ---
+008d52f0  adrp x16,0x3308000
+008d52f4  ldr x17,[x16, #0x338]
+008d52f8  add x16,x16,#0x338
+008d52fc  br x17
+
+
+================================================================================
+### FILE: 008d5500_pthread_cond_init.txt
+================================================================================
+Function: pthread_cond_init @ 008d5500
+
+--- Calls OUT ---
+  -> pthread_cond_init @ 037996c8
+
+--- Calls IN ---
+  <- FUN_00a8d2a4 @ 00a8d2a4
+  <- FUN_00ab117c @ 00ab117c
+
+--- Listing ---
+008d5500  adrp x16,0x3308000
+008d5504  ldr x17,[x16, #0x440]
+008d5508  add x16,x16,#0x440
+008d550c  br x17
+
+
+================================================================================
+### FILE: 008d5650_pthread_create.txt
+================================================================================
+Function: pthread_create @ 008d5650
+
+--- Calls OUT ---
+  -> pthread_create @ 03799720
+
+--- Calls IN ---
+  <- FUN_00ae7f3c @ 00ae7f3c
+
+--- Listing ---
+008d5650  adrp x16,0x3308000
+008d5654  ldr x17,[x16, #0x4e8]
+008d5658  add x16,x16,#0x4e8
+008d565c  br x17
+
+
+================================================================================
+### FILE: 008d57c0_pthread_key_delete.txt
+================================================================================
+Function: pthread_key_delete @ 008d57c0
+
+--- Calls OUT ---
+  -> pthread_key_delete @ 03799798
+
+--- Calls IN ---
+  <- FUN_00ae943c @ 00ae943c
+  <- FUN_00ae8318 @ 00ae8318
+  <- FUN_00aaee5c @ 00aaee5c
+
+--- Listing ---
+008d57c0  adrp x16,0x3308000
+008d57c4  ldr x17,[x16, #0x5a0]
+008d57c8  add x16,x16,#0x5a0
+008d57cc  br x17
+
+
+================================================================================
+### FILE: 008d5840_pthread_attr_destroy.txt
+================================================================================
+Function: pthread_attr_destroy @ 008d5840
+
+--- Calls OUT ---
+  -> pthread_attr_destroy @ 037997c8
+
+--- Calls IN ---
+  <- FUN_00b3d274 @ 00b3d274
+  <- FUN_00ae7f3c @ 00ae7f3c
+  <- FUN_00b3dedc @ 00b3dedc
+
+--- Listing ---
+008d5840  adrp x16,0x3308000
+008d5844  ldr x17,[x16, #0x5e0]
+008d5848  add x16,x16,#0x5e0
+008d584c  br x17
+
+
+================================================================================
+### FILE: 008d5870_pthread_mutexattr_settype.txt
+================================================================================
+Function: pthread_mutexattr_settype @ 008d5870
+
+--- Calls OUT ---
+  -> pthread_mutexattr_settype @ 037997d8
+
+--- Calls IN ---
+  <- recursive_mutex @ 00b813ac
+  <- FUN_00b01410 @ 00b01410
+
+--- Listing ---
+008d5870  adrp x16,0x3308000
+008d5874  ldr x17,[x16, #0x5f8]
+008d5878  add x16,x16,#0x5f8
+008d587c  br x17
+
+
+================================================================================
+### FILE: 008d5950_pthread_mutex_trylock.txt
+================================================================================
+Function: pthread_mutex_trylock @ 008d5950
+
+--- Calls OUT ---
+  -> pthread_mutex_trylock @ 03799818
+
+--- Calls IN ---
+  <- lock @ 00b81228
+  <- try_lock @ 00b81374
+  <- try_lock @ 00b814c4
+  <- try_lock @ 00b81614
+  <- try_lock @ 00b8185c
+
+--- Listing ---
+008d5950  adrp x16,0x3308000
+008d5954  ldr x17,[x16, #0x668]
+008d5958  add x16,x16,#0x668
+008d595c  br x17
+
+
+================================================================================
+### FILE: 008d5a70_pthread_kill.txt
+================================================================================
+Function: pthread_kill @ 008d5a70
+
+--- Calls OUT ---
+  -> pthread_kill @ 03799868
+
+--- Calls IN ---
+  <- FUN_00b3ed20 @ 00b3ed20
+  <- FUN_00b3ef68 @ 00b3ef68
+
+--- Listing ---
+008d5a70  adrp x16,0x3308000
+008d5a74  ldr x17,[x16, #0x6f8]
+008d5a78  add x16,x16,#0x6f8
+008d5a7c  br x17
+
+
+================================================================================
+### FILE: 008d5ab0_pthread_cond_signal.txt
+================================================================================
+Function: pthread_cond_signal @ 008d5ab0
+
+--- Calls OUT ---
+  -> pthread_cond_signal @ 03799888
+
+--- Calls IN ---
+  <- FUN_00ab1254 @ 00ab1254
+  <- notify_one @ 00b8a180
+  <- FUN_00ae5704 @ 00ae5704
+  <- FUN_00ae57a8 @ 00ae57a8
+
+--- Listing ---
+008d5ab0  adrp x16,0x3308000
+008d5ab4  ldr x17,[x16, #0x718]
+008d5ab8  add x16,x16,#0x718
+008d5abc  br x17
+
+
+================================================================================
+### FILE: 008d5b20_pthread_condattr_setclock.txt
+================================================================================
+Function: pthread_condattr_setclock @ 008d5b20
+
+--- Calls OUT ---
+  -> pthread_condattr_setclock @ 037998a8
+
+--- Calls IN ---
+  <- FUN_00ab117c @ 00ab117c
+
+--- Listing ---
+008d5b20  adrp x16,0x3308000
+008d5b24  ldr x17,[x16, #0x750]
+008d5b28  add x16,x16,#0x750
+008d5b2c  br x17
+
+
+================================================================================
+### FILE: 008d5c10_pthread_mutex_init.txt
+================================================================================
+Function: pthread_mutex_init @ 008d5c10
+
+--- Calls OUT ---
+  -> pthread_mutex_init @ 037998e0
+
+--- Calls IN ---
+  <- FUN_00ae7e3c @ 00ae7e3c
+  <- FUN_00ae954c @ 00ae954c
+  <- recursive_mutex @ 00b813ac
+  <- FUN_00b01410 @ 00b01410
+  <- FUN_00ab117c @ 00ab117c
+
+--- Listing ---
+008d5c10  adrp x16,0x3308000
+008d5c14  ldr x17,[x16, #0x7c8]
+008d5c18  add x16,x16,#0x7c8
+008d5c1c  br x17
+
+
+================================================================================
+### FILE: 008d5ca0_pthread_mutexattr_destroy.txt
+================================================================================
+Function: pthread_mutexattr_destroy @ 008d5ca0
+
+--- Calls OUT ---
+  -> pthread_mutexattr_destroy @ 03799910
+
+--- Calls IN ---
+  <- recursive_mutex @ 00b813ac
+  <- FUN_00b01410 @ 00b01410
+
+--- Listing ---
+008d5ca0  adrp x16,0x3308000
+008d5ca4  ldr x17,[x16, #0x810]
+008d5ca8  add x16,x16,#0x810
+008d5cac  br x17
+
+
+================================================================================
+### FILE: 00a8d2ac_pthread_cond_wait.txt
+================================================================================
+Function: pthread_cond_wait @ 00a8d2ac
+
+--- Calls OUT ---
+  -> pthread_cond_wait @ 008d4360
+
+--- Calls IN ---
+  <- FUN_00b012b0 @ 00b012b0
+
+--- Listing ---
+00a8d2ac  b 0x008d4360
+
+
+================================================================================
+### FILE: 00a8d2b0_pthread_cond_broadcast.txt
+================================================================================
+Function: pthread_cond_broadcast @ 00a8d2b0
+
+--- Calls OUT ---
+  -> pthread_cond_broadcast @ 008d48e0
+
+--- Calls IN ---
+  <- FUN_00b012bc @ 00b012bc
+
+--- Listing ---
+00a8d2b0  b 0x008d48e0
+
+
+================================================================================
+### FILE: 00ae82a4_pthread_self.txt
+================================================================================
+Function: pthread_self @ 00ae82a4
+
+--- Calls OUT ---
+  -> pthread_self @ 008d43d0
+
+--- Calls IN ---
+  <- pthread_self @ 00aea9c4
+
+--- Listing ---
+00ae82a4  b 0x008d43d0
+
+
+================================================================================
+### FILE: 00aea9c4_pthread_self.txt
+================================================================================
+Function: pthread_self @ 00aea9c4
+
+--- Calls OUT ---
+  -> pthread_self @ 00ae82a4
+
+--- Calls IN ---
+  <- FUN_00afccb8 @ 00afccb8
+  <- FUN_00aac4e0 @ 00aac4e0
+  <- FUN_00afd178 @ 00afd178
+
+--- Listing ---
+00aea9c4  b 0x00ae82a4
+
+
+================================================================================
+### FILE: 00b46d00_pthread_self.txt
+================================================================================
+Function: pthread_self @ 00b46d00
+
+--- Calls OUT ---
+  -> pthread_self @ 008d43d0
+
+--- Calls IN ---
+  <- FUN_00b107b4 @ 00b107b4
+  <- FUN_00aff34c @ 00aff34c
+  <- FUN_00afdad4 @ 00afdad4
+  <- FUN_00ab2994 @ 00ab2994
+  <- FUN_00afeb2c @ 00afeb2c
+  <- FUN_00afdd90 @ 00afdd90
+  <- FUN_00ab1ec0 @ 00ab1ec0
+  <- FUN_00ab47b0 @ 00ab47b0
+  <- FUN_00ae977c @ 00ae977c
+  <- FUN_00b01708 @ 00b01708
+  <- FUN_00ab2228 @ 00ab2228
+  <- FUN_00aa998c @ 00aa998c
+  <- FUN_00aac4e0 @ 00aac4e0
+  <- FUN_00aea230 @ 00aea230
+  <- FUN_00aadeb8 @ 00aadeb8
+  <- FUN_00ae8d84 @ 00ae8d84
+  <- FUN_00aef8e8 @ 00aef8e8
+  <- FUN_00b09310 @ 00b09310
+  <- DllGetActivationFactory @ 00aec4cc
+  <- FUN_00afeee4 @ 00afeee4
+  <- FUN_00afd988 @ 00afd988
+  <- FUN_00ab20cc @ 00ab20cc
+  <- FUN_00ae0c3c @ 00ae0c3c
+  <- FUN_00a8ca2c @ 00a8ca2c
+  <- FUN_00ae2190 @ 00ae2190
+  <- FUN_00ab1b70 @ 00ab1b70
+  <- FUN_00aea6a4 @ 00aea6a4
+  <- FUN_00ab24c8 @ 00ab24c8
+  <- FUN_00aa96b8 @ 00aa96b8
+  <- FUN_00ab4d94 @ 00ab4d94
+  <- FUN_00ae114c @ 00ae114c
+  <- FUN_00afe88c @ 00afe88c
+  <- FUN_00aace0c @ 00aace0c
+  <- FUN_00b04690 @ 00b04690
+  <- FUN_00b10618 @ 00b10618
+  <- FUN_00b02218 @ 00b02218
+  <- FUN_00ae8a6c @ 00ae8a6c
+  <- FUN_00b043f0 @ 00b043f0
+  <- FUN_00aa9134 @ 00aa9134
+  <- FUN_00b10124 @ 00b10124
+  <- FUN_00afe088 @ 00afe088
+  <- FUN_00ae8978 @ 00ae8978
+  <- FUN_00ab2650 @ 00ab2650
+  <- FUN_00b1989c @ 00b1989c
+  <- FUN_00b10238 @ 00b10238
+  <- FUN_00acafc0 @ 00acafc0
+  <- FUN_00b0383c @ 00b0383c
+  <- FUN_00afded8 @ 00afded8
+  <- FUN_00ae1c9c @ 00ae1c9c
+  <- FUN_00afedb8 @ 00afedb8
+  <- FUN_00acb1a8 @ 00acb1a8
+  <- FUN_00a9aec8 @ 00a9aec8
+  <- FUN_00af9798 @ 00af9798
+  <- FUN_00b188f8 @ 00b188f8
+  <- FUN_00afe6d4 @ 00afe6d4
+  <- FUN_00b015c8 @ 00b015c8
+  <- FUN_00b19e28 @ 00b19e28
+  <- FUN_00afec38 @ 00afec38
+  <- FUN_00b0f320 @ 00b0f320
+  <- FUN_00afaa94 @ 00afaa94
+  <- FUN_00ae1704 @ 00ae1704
+  <- FUN_00ab6950 @ 00ab6950
+  <- FUN_00b10360 @ 00b10360
+  <- FUN_00b01da0 @ 00b01da0
+  <- FUN_00b03d88 @ 00b03d88
+  <- FUN_00ae1e94 @ 00ae1e94
+  <- FUN_00ae1af8 @ 00ae1af8
+  <- FUN_00afea58 @ 00afea58
+  <- FUN_00b08c2c @ 00b08c2c
+  <- FUN_00aefcc8 @ 00aefcc8
+  <- FUN_00ae8ed4 @ 00ae8ed4
+  <- FUN_00afe5f0 @ 00afe5f0
+  <- FUN_00b03bcc @ 00b03bcc
+  <- FUN_00aa955c @ 00aa955c
+  <- FUN_00afe7b0 @ 00afe7b0
+  <- FUN_00ab75bc @ 00ab75bc
+  <- FUN_00aea4bc @ 00aea4bc
+  <- FUN_00afdc48 @ 00afdc48
+  <- FUN_00ab1d60 @ 00ab1d60
+  <- FUN_00ab76e4 @ 00ab76e4
+  <- FUN_00b02f48 @ 00b02f48
+  <- FUN_00ae14b4 @ 00ae14b4
+  <- FUN_00ab18c4 @ 00ab18c4
+  <- FUN_00b196b8 @ 00b196b8
+  <- FUN_00afe958 @ 00afe958
+  <- FUN_00ae1300 @ 00ae1300
+  <- FUN_00b01494 @ 00b01494
+  <- FUN_00afbc80 @ 00afbc80
+  <- FUN_00aea384 @ 00aea384
+  <- FUN_00b0f960 @ 00b0f960
+  <- FUN_00b02450 @ 00b02450
+
+--- Listing ---
+00b46d00  b 0x008d43d0
+
+
+================================================================================
+### FILE: 00d33d40_PTPGameController__createGreenSphere.txt
+================================================================================
+Function: PTPGameController$$createGreenSphere @ 00d33d40
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$.ctor @ 024d2c28
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.Object$$Instantiate<object> @ 017a970c
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> UnityEngine.Material$$set_color @ 024d2ed8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Renderer$$set_material @ 024c7348
+  -> UnityEngine.Renderer$$get_material @ 024c730c
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> UnityEngine.Transform$$set_position @ 024f3724
+  -> UnityEngine.Renderer$$set_enabled @ 024c6240
+
+--- Calls IN ---
+  <- ClickManagerExample$$Update @ 00d33c60
+
+--- Listing ---
+00d33d40  str d10,[sp, #-0x50]!
+00d33d44  stp d9,d8,[sp, #0x8]
+00d33d48  str x24,[sp, #0x18]
+00d33d4c  stp x23,x22,[sp, #0x20]
+00d33d50  stp x21,x20,[sp, #0x30]
+00d33d54  stp x19,x30,[sp, #0x40]
+00d33d58  adrp x21,0x3571000
+00d33d5c  adrp x20,0x3321000
+00d33d60  ldrb w8,[x21, #0xd38]
+00d33d64  ldr x20,[x20, #0xca8]
+00d33d68  mov v8.16B,v2.16B
+00d33d6c  mov v9.16B,v1.16B
+00d33d70  mov v10.16B,v0.16B
+00d33d74  mov x19,x0
+00d33d78  tbnz w8,#0x0,0x00d33dc0
+00d33d7c  adrp x0,0x332b000
+00d33d80  ldr x0,[x0, #0xb30]
+00d33d84  bl 0x00b0789c
+00d33d88  adrp x0,0x336d000
+00d33d8c  ldr x0,[x0, #0x948]
+00d33d90  bl 0x00b0789c
+00d33d94  adrp x0,0x337f000
+00d33d98  ldr x0,[x0, #0x840]
+00d33d9c  bl 0x00b0789c
+00d33da0  adrp x0,0x333f000
+00d33da4  ldr x0,[x0, #0x1b8]
+00d33da8  bl 0x00b0789c
+00d33dac  adrp x0,0x3321000
+00d33db0  ldr x0,[x0, #0xca8]
+00d33db4  bl 0x00b0789c
+00d33db8  mov w8,#0x1
+00d33dbc  strb w8,[x21, #0xd38]
+00d33dc0  ldr x0,[x20]
+00d33dc4  adrp x21,0x333f000
+00d33dc8  ldr x20,[x19, #0x18]
+00d33dcc  ldr w8,[x0, #0xe0]
+00d33dd0  ldr x21,[x21, #0x1b8]
+00d33dd4  cbnz w8,0x00d33ddc
+00d33dd8  bl 0x00b0798c
+00d33ddc  ldr x1,[x21]
+00d33de0  mov x0,x20
+00d33de4  bl 0x017a970c
+00d33de8  cbz x0,0x00d33f6c
+00d33dec  mov x1,xzr
+00d33df0  mov x20,x0
+00d33df4  bl 0x024de730
+00d33df8  cbz x0,0x00d33f6c
+00d33dfc  adrp x24,0x332b000
+00d33e00  ldr x24,[x24, #0xb30]
+00d33e04  mov v0.16B,v10.16B
+00d33e08  mov v1.16B,v9.16B
+00d33e0c  mov v2.16B,v8.16B
+00d33e10  mov x1,xzr
+00d33e14  bl 0x024f3724
+00d33e18  ldr x1,[x24]
+00d33e1c  mov x0,x20
+00d33e20  bl 0x01794e94
+00d33e24  cbz x0,0x00d33f6c
+00d33e28  mov w1,#0x1
+00d33e2c  mov x2,xzr
+00d33e30  bl 0x024c6240
+00d33e34  ldr x1,[x24]
+00d33e38  mov x0,x20
+00d33e3c  bl 0x01794e94
+00d33e40  ldr x1,[x24]
+00d33e44  mov x21,x0
+00d33e48  mov x0,x20
+00d33e4c  bl 0x01794e94
+00d33e50  cbz x0,0x00d33f6c
+00d33e54  adrp x22,0x337f000
+00d33e58  ldr x22,[x22, #0x840]
+00d33e5c  mov x1,xzr
+00d33e60  bl 0x024c730c
+00d33e64  ldr x8,[x22]
+00d33e68  mov x23,x0
+00d33e6c  mov x0,x8
+00d33e70  bl 0x00b079a0
+00d33e74  cbz x0,0x00d33f6c
+00d33e78  mov x1,x23
+00d33e7c  mov x2,xzr
+00d33e80  mov x22,x0
+00d33e84  bl 0x024d2c28
+00d33e88  cbz x21,0x00d33f6c
+00d33e8c  mov x0,x21
+00d33e90  mov x1,x22
+00d33e94  mov x2,xzr
+00d33e98  bl 0x024c7348
+00d33e9c  ldr x1,[x24]
+00d33ea0  mov x0,x20
+00d33ea4  bl 0x01794e94
+00d33ea8  cbz x0,0x00d33f6c
+00d33eac  mov x1,xzr
+00d33eb0  bl 0x024c730c
+00d33eb4  cbz x0,0x00d33f6c
+00d33eb8  fmov s1,0x3f800000
+00d33ebc  fmov s0,wzr
+00d33ec0  fmov s2,wzr
+00d33ec4  mov v3.16B,v1.16B
+00d33ec8  mov x1,xzr
+00d33ecc  bl 0x024d2ed8
+00d33ed0  ldr x0,[x19, #0x38]
+00d33ed4  cbz x0,0x00d33f6c
+00d33ed8  adrp x9,0x336d000
+00d33edc  ldr x9,[x9, #0x948]
+00d33ee0  ldr w10,[x0, #0x1c]
+00d33ee4  ldr x8,[x0, #0x10]
+00d33ee8  ldr x9,[x9]
+00d33eec  add w10,w10,#0x1
+00d33ef0  str w10,[x0, #0x1c]
+00d33ef4  cbz x8,0x00d33f6c
+00d33ef8  ldrsw x10,[x0, #0x18]
+00d33efc  ldr w11,[x8, #0x18]
+00d33f00  cmp w10,w11
+00d33f04  b.cs 0x00d33f3c
+00d33f08  add w9,w10,#0x1
+00d33f0c  add x8,x8,x10, LSL #0x3
+00d33f10  str w9,[x0, #0x18]
+00d33f14  str x20,[x8, #0x20]!
+00d33f18  mov x1,x20
+00d33f1c  ldp x19,x30,[sp, #0x40]
+00d33f20  ldp x21,x20,[sp, #0x30]
+00d33f24  ldp x23,x22,[sp, #0x20]
+00d33f28  ldr x24,[sp, #0x18]
+00d33f2c  ldp d9,d8,[sp, #0x8]
+00d33f30  mov x0,x8
+00d33f34  ldr d10,[sp], #0x50
+00d33f38  b 0x00b07850
+00d33f3c  ldr x8,[x9, #0x20]
+00d33f40  mov x1,x20
+00d33f44  ldp x19,x30,[sp, #0x40]
+00d33f48  ldp x21,x20,[sp, #0x30]
+00d33f4c  ldr x8,[x8, #0xc0]
+00d33f50  ldp x23,x22,[sp, #0x20]
+00d33f54  ldr x24,[sp, #0x18]
+00d33f58  ldp d9,d8,[sp, #0x8]
+00d33f5c  ldr x2,[x8, #0x58]
+00d33f60  ldr x3,[x2, #0x8]
+00d33f64  ldr d10,[sp], #0x50
+00d33f68  br x3
+00d33f6c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d3422c_PTPGameController__createRedSphere.txt
+================================================================================
+Function: PTPGameController$$createRedSphere @ 00d3422c
+
+--- Calls OUT ---
+  -> UnityEngine.Material$$.ctor @ 024d2c28
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.Object$$Instantiate<object> @ 017a970c
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> UnityEngine.Material$$set_color @ 024d2ed8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Renderer$$set_material @ 024c7348
+  -> UnityEngine.Renderer$$get_material @ 024c730c
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> UnityEngine.Transform$$set_position @ 024f3724
+  -> UnityEngine.Renderer$$set_enabled @ 024c6240
+
+--- Calls IN ---
+  <- ClickManagerExample$$HandleActionDataReceived @ 00d33fd8
+
+--- Listing ---
+00d3422c  str d10,[sp, #-0x50]!
+00d34230  stp d9,d8,[sp, #0x8]
+00d34234  str x24,[sp, #0x18]
+00d34238  stp x23,x22,[sp, #0x20]
+00d3423c  stp x21,x20,[sp, #0x30]
+00d34240  stp x19,x30,[sp, #0x40]
+00d34244  adrp x21,0x3571000
+00d34248  adrp x20,0x3321000
+00d3424c  ldrb w8,[x21, #0xd37]
+00d34250  ldr x20,[x20, #0xca8]
+00d34254  mov v8.16B,v2.16B
+00d34258  mov v9.16B,v1.16B
+00d3425c  mov v10.16B,v0.16B
+00d34260  mov x19,x0
+00d34264  tbnz w8,#0x0,0x00d342ac
+00d34268  adrp x0,0x332b000
+00d3426c  ldr x0,[x0, #0xb30]
+00d34270  bl 0x00b0789c
+00d34274  adrp x0,0x336d000
+00d34278  ldr x0,[x0, #0x948]
+00d3427c  bl 0x00b0789c
+00d34280  adrp x0,0x337f000
+00d34284  ldr x0,[x0, #0x840]
+00d34288  bl 0x00b0789c
+00d3428c  adrp x0,0x333f000
+00d34290  ldr x0,[x0, #0x1b8]
+00d34294  bl 0x00b0789c
+00d34298  adrp x0,0x3321000
+00d3429c  ldr x0,[x0, #0xca8]
+00d342a0  bl 0x00b0789c
+00d342a4  mov w8,#0x1
+00d342a8  strb w8,[x21, #0xd37]
+00d342ac  ldr x0,[x20]
+00d342b0  adrp x21,0x333f000
+00d342b4  ldr x20,[x19, #0x18]
+00d342b8  ldr w8,[x0, #0xe0]
+00d342bc  ldr x21,[x21, #0x1b8]
+00d342c0  cbnz w8,0x00d342c8
+00d342c4  bl 0x00b0798c
+00d342c8  ldr x1,[x21]
+00d342cc  mov x0,x20
+00d342d0  bl 0x017a970c
+00d342d4  cbz x0,0x00d34458
+00d342d8  mov x1,xzr
+00d342dc  mov x20,x0
+00d342e0  bl 0x024de730
+00d342e4  cbz x0,0x00d34458
+00d342e8  adrp x24,0x332b000
+00d342ec  ldr x24,[x24, #0xb30]
+00d342f0  mov v0.16B,v10.16B
+00d342f4  mov v1.16B,v9.16B
+00d342f8  mov v2.16B,v8.16B
+00d342fc  mov x1,xzr
+00d34300  bl 0x024f3724
+00d34304  ldr x1,[x24]
+00d34308  mov x0,x20
+00d3430c  bl 0x01794e94
+00d34310  cbz x0,0x00d34458
+00d34314  mov w1,#0x1
+00d34318  mov x2,xzr
+00d3431c  bl 0x024c6240
+00d34320  ldr x1,[x24]
+00d34324  mov x0,x20
+00d34328  bl 0x01794e94
+00d3432c  ldr x1,[x24]
+00d34330  mov x21,x0
+00d34334  mov x0,x20
+00d34338  bl 0x01794e94
+00d3433c  cbz x0,0x00d34458
+00d34340  adrp x22,0x337f000
+00d34344  ldr x22,[x22, #0x840]
+00d34348  mov x1,xzr
+00d3434c  bl 0x024c730c
+00d34350  ldr x8,[x22]
+00d34354  mov x23,x0
+00d34358  mov x0,x8
+00d3435c  bl 0x00b079a0
+00d34360  cbz x0,0x00d34458
+00d34364  mov x1,x23
+00d34368  mov x2,xzr
+00d3436c  mov x22,x0
+00d34370  bl 0x024d2c28
+00d34374  cbz x21,0x00d34458
+00d34378  mov x0,x21
+00d3437c  mov x1,x22
+00d34380  mov x2,xzr
+00d34384  bl 0x024c7348
+00d34388  ldr x1,[x24]
+00d3438c  mov x0,x20
+00d34390  bl 0x01794e94
+00d34394  cbz x0,0x00d34458
+00d34398  mov x1,xzr
+00d3439c  bl 0x024c730c
+00d343a0  cbz x0,0x00d34458
+00d343a4  fmov s0,0x3f800000
+00d343a8  fmov s1,wzr
+00d343ac  fmov s2,wzr
+00d343b0  mov v3.16B,v0.16B
+00d343b4  mov x1,xzr
+00d343b8  bl 0x024d2ed8
+00d343bc  ldr x0,[x19, #0x38]
+00d343c0  cbz x0,0x00d34458
+00d343c4  adrp x9,0x336d000
+00d343c8  ldr x9,[x9, #0x948]
+00d343cc  ldr w10,[x0, #0x1c]
+00d343d0  ldr x8,[x0, #0x10]
+00d343d4  ldr x9,[x9]
+00d343d8  add w10,w10,#0x1
+00d343dc  str w10,[x0, #0x1c]
+00d343e0  cbz x8,0x00d34458
+00d343e4  ldrsw x10,[x0, #0x18]
+00d343e8  ldr w11,[x8, #0x18]
+00d343ec  cmp w10,w11
+00d343f0  b.cs 0x00d34428
+00d343f4  add w9,w10,#0x1
+00d343f8  add x8,x8,x10, LSL #0x3
+00d343fc  str w9,[x0, #0x18]
+00d34400  str x20,[x8, #0x20]!
+00d34404  mov x1,x20
+00d34408  ldp x19,x30,[sp, #0x40]
+00d3440c  ldp x21,x20,[sp, #0x30]
+00d34410  ldp x23,x22,[sp, #0x20]
+00d34414  ldr x24,[sp, #0x18]
+00d34418  ldp d9,d8,[sp, #0x8]
+00d3441c  mov x0,x8
+00d34420  ldr d10,[sp], #0x50
+00d34424  b 0x00b07850
+00d34428  ldr x8,[x9, #0x20]
+00d3442c  mov x1,x20
+00d34430  ldp x19,x30,[sp, #0x40]
+00d34434  ldp x21,x20,[sp, #0x30]
+00d34438  ldr x8,[x8, #0xc0]
+00d3443c  ldp x23,x22,[sp, #0x20]
+00d34440  ldr x24,[sp, #0x18]
+00d34444  ldp d9,d8,[sp, #0x8]
+00d34448  ldr x2,[x8, #0x58]
+00d3444c  ldr x3,[x2, #0x8]
+00d34450  ldr d10,[sp], #0x50
+00d34454  br x3
+00d34458  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d34510_PTPGameController__Awake.txt
+================================================================================
+Function: PTPGameController$$Awake @ 00d34510
+
+--- Calls OUT ---
+  -> UnityEngine.Behaviour$$set_enabled @ 024dd2a4
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> GameCenterManager$$add_OnAuthFinished @ 00d07cd0
+  -> UnityEngine.GameObject$$AddComponent<object> @ 01794da8
+  -> GameCenterManager$$Init @ 00d093c4
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> GameCenter_RTM$$add_ActionPlayerStateChanged @ 00d0e824
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> GameCenter_RTM$$add_ActionMatchStarted @ 00d0dcbc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> System.Action<object,-Int32Enum,-object>$$.ctor @ 01911f6c
+
+--- Calls IN ---
+
+--- Listing ---
+00d34510  str x22,[sp, #-0x30]!
+00d34514  stp x21,x20,[sp, #0x10]
+00d34518  stp x19,x30,[sp, #0x20]
+00d3451c  adrp x22,0x3571000
+00d34520  adrp x21,0x337f000
+00d34524  adrp x20,0x3369000
+00d34528  ldrb w8,[x22, #0xd36]
+00d3452c  ldr x21,[x21, #0x418]
+00d34530  ldr x20,[x20, #0x800]
+00d34534  mov x19,x0
+00d34538  tbnz w8,#0x0,0x00d345d4
+00d3453c  adrp x0,0x3369000
+00d34540  ldr x0,[x0, #0x800]
+00d34544  bl 0x00b0789c
+00d34548  adrp x0,0x3347000
+00d3454c  ldr x0,[x0, #0xc98]
+00d34550  bl 0x00b0789c
+00d34554  adrp x0,0x330a000
+00d34558  ldr x0,[x0, #0x420]
+00d3455c  bl 0x00b0789c
+00d34560  adrp x0,0x3338000
+00d34564  ldr x0,[x0, #0xea0]
+00d34568  bl 0x00b0789c
+00d3456c  adrp x0,0x331e000
+00d34570  ldr x0,[x0, #0xe78]
+00d34574  bl 0x00b0789c
+00d34578  adrp x0,0x333d000
+00d3457c  ldr x0,[x0, #0xb18]
+00d34580  bl 0x00b0789c
+00d34584  adrp x0,0x3376000
+00d34588  ldr x0,[x0, #0xa8]
+00d3458c  bl 0x00b0789c
+00d34590  adrp x0,0x3354000
+00d34594  ldr x0,[x0, #0x9f8]
+00d34598  bl 0x00b0789c
+00d3459c  adrp x0,0x332a000
+00d345a0  ldr x0,[x0, #0xa28]
+00d345a4  bl 0x00b0789c
+00d345a8  adrp x0,0x331c000
+00d345ac  ldr x0,[x0, #0x8c0]
+00d345b0  bl 0x00b0789c
+00d345b4  adrp x0,0x3379000
+00d345b8  ldr x0,[x0, #0xaa0]
+00d345bc  bl 0x00b0789c
+00d345c0  adrp x0,0x337f000
+00d345c4  ldr x0,[x0, #0x418]
+00d345c8  bl 0x00b0789c
+00d345cc  mov w8,#0x1
+00d345d0  strb w8,[x22, #0xd36]
+00d345d4  ldr x8,[x21]
+00d345d8  mov x1,x19
+00d345dc  ldr x8,[x8, #0xb8]
+00d345e0  str x19,[x8]
+00d345e4  ldr x8,[x21]
+00d345e8  ldr x0,[x8, #0xb8]
+00d345ec  bl 0x00b07850
+00d345f0  ldr x0,[x20]
+00d345f4  bl 0x00b079a0
+00d345f8  cbz x0,0x00d347b8
+00d345fc  adrp x8,0x3379000
+00d34600  ldr x8,[x8, #0xaa0]
+00d34604  adrp x21,0x3338000
+00d34608  mov x1,x19
+00d3460c  mov x3,xzr
+00d34610  ldr x2,[x8]
+00d34614  ldr x21,[x21, #0xea0]
+00d34618  mov x20,x0
+00d3461c  bl 0x01909b80
+00d34620  ldr x0,[x21]
+00d34624  ldr w8,[x0, #0xe0]
+00d34628  cbnz w8,0x00d34630
+00d3462c  bl 0x00b0798c
+00d34630  mov x0,x20
+00d34634  mov x1,xzr
+00d34638  bl 0x00d07cd0
+00d3463c  mov x0,xzr
+00d34640  bl 0x00d093c4
+00d34644  mov x0,x19
+00d34648  mov x1,xzr
+00d3464c  bl 0x024e4ed4
+00d34650  cbz x0,0x00d347b8
+00d34654  adrp x8,0x333d000
+00d34658  ldr x8,[x8, #0xb18]
+00d3465c  ldr x1,[x8]
+00d34660  bl 0x01794da8
+00d34664  mov x20,x19
+00d34668  str x0,[x20, #0x28]!
+00d3466c  mov x1,x0
+00d34670  mov x0,x20
+00d34674  bl 0x00b07850
+00d34678  ldr x0,[x20]
+00d3467c  cbz x0,0x00d347b8
+00d34680  mov w1,wzr
+00d34684  mov x2,xzr
+00d34688  bl 0x024dd2a4
+00d3468c  mov x0,x19
+00d34690  mov x1,xzr
+00d34694  bl 0x024e4ed4
+00d34698  cbz x0,0x00d347b8
+00d3469c  adrp x8,0x3376000
+00d346a0  ldr x8,[x8, #0xa8]
+00d346a4  ldr x1,[x8]
+00d346a8  bl 0x01794da8
+00d346ac  mov x20,x19
+00d346b0  str x0,[x20, #0x20]!
+00d346b4  mov x1,x0
+00d346b8  mov x0,x20
+00d346bc  bl 0x00b07850
+00d346c0  ldr x0,[x20]
+00d346c4  cbz x0,0x00d347b8
+00d346c8  mov w1,wzr
+00d346cc  mov x2,xzr
+00d346d0  bl 0x024dd2a4
+00d346d4  mov x0,x19
+00d346d8  mov x1,xzr
+00d346dc  bl 0x024e4ed4
+00d346e0  cbz x0,0x00d347b8
+00d346e4  adrp x8,0x3354000
+00d346e8  ldr x8,[x8, #0x9f8]
+00d346ec  ldr x1,[x8]
+00d346f0  bl 0x01794e94
+00d346f4  mov x20,x19
+00d346f8  str x0,[x20, #0x30]!
+00d346fc  mov x1,x0
+00d34700  mov x0,x20
+00d34704  bl 0x00b07850
+00d34708  ldr x0,[x20]
+00d3470c  cbz x0,0x00d347b8
+00d34710  adrp x20,0x330a000
+00d34714  ldr x20,[x20, #0x420]
+00d34718  mov w1,wzr
+00d3471c  mov x2,xzr
+00d34720  bl 0x024dd2a4
+00d34724  ldr x0,[x20]
+00d34728  bl 0x00b079a0
+00d3472c  cbz x0,0x00d347b8
+00d34730  adrp x8,0x331c000
+00d34734  ldr x8,[x8, #0x8c0]
+00d34738  adrp x22,0x331e000
+00d3473c  adrp x21,0x3347000
+00d34740  mov x1,x19
+00d34744  ldr x2,[x8]
+00d34748  ldr x22,[x22, #0xe78]
+00d3474c  ldr x21,[x21, #0xc98]
+00d34750  mov x3,xzr
+00d34754  mov x20,x0
+00d34758  bl 0x01911f6c
+00d3475c  ldr x0,[x22]
+00d34760  ldr w8,[x0, #0xe0]
+00d34764  cbnz w8,0x00d3476c
+00d34768  bl 0x00b0798c
+00d3476c  mov x0,x20
+00d34770  mov x1,xzr
+00d34774  bl 0x00d0e824
+00d34778  ldr x0,[x21]
+00d3477c  bl 0x00b079a0
+00d34780  cbz x0,0x00d347b8
+00d34784  adrp x8,0x332a000
+00d34788  ldr x8,[x8, #0xa28]
+00d3478c  mov x1,x19
+00d34790  mov x3,xzr
+00d34794  mov x20,x0
+00d34798  ldr x2,[x8]
+00d3479c  bl 0x01909b80
+00d347a0  mov x0,x20
+00d347a4  ldp x19,x30,[sp, #0x20]
+00d347a8  ldp x21,x20,[sp, #0x10]
+00d347ac  mov x1,xzr
+00d347b0  ldr x22,[sp], #0x30
+00d347b4  b 0x00d0dcbc
+00d347b8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d347bc_PTPGameController__OnAuthFinished.txt
+================================================================================
+Function: PTPGameController$$OnAuthFinished @ 00d347bc
+
+--- Calls OUT ---
+  -> System.String$$Concat @ 01fdf3bc
+  -> IOSNativePopUpManager$$showMessage @ 00d25960
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Result$$get_IsSucceeded @ 00c88a30
+  -> PTPGameController$$cleanUpScene @ 00d34928
+
+--- Calls IN ---
+
+--- Listing ---
+00d347bc  str x22,[sp, #-0x30]!
+00d347c0  stp x21,x20,[sp, #0x10]
+00d347c4  stp x19,x30,[sp, #0x20]
+00d347c8  adrp x21,0x3571000
+00d347cc  ldrb w8,[x21, #0xd39]
+00d347d0  mov x20,x1
+00d347d4  mov x19,x0
+00d347d8  tbnz w8,#0x0,0x00d34814
+00d347dc  adrp x0,0x3338000
+00d347e0  ldr x0,[x0, #0xea0]
+00d347e4  bl 0x00b0789c
+00d347e8  adrp x0,0x3332000
+00d347ec  ldr x0,[x0, #0x9d8]
+00d347f0  bl 0x00b0789c
+00d347f4  adrp x0,0x3347000
+00d347f8  ldr x0,[x0, #0x628]
+00d347fc  bl 0x00b0789c
+00d34800  adrp x0,0x334e000
+00d34804  ldr x0,[x0, #0x358]
+00d34808  bl 0x00b0789c
+00d3480c  mov w8,#0x1
+00d34810  strb w8,[x21, #0xd39]
+00d34814  cbz x20,0x00d34924
+00d34818  mov x0,x20
+00d3481c  mov x1,xzr
+00d34820  bl 0x00c88a30
+00d34824  tbz w0,#0x0,0x00d34914
+00d34828  adrp x20,0x3338000
+00d3482c  ldr x20,[x20, #0xea0]
+00d34830  ldr x0,[x20]
+00d34834  ldr w8,[x0, #0xe0]
+00d34838  cbnz w8,0x00d34840
+00d3483c  bl 0x00b0798c
+00d34840  adrp x22,0x3571000
+00d34844  ldrb w8,[x22, #0xb63]
+00d34848  cbnz w8,0x00d34860
+00d3484c  adrp x0,0x3338000
+00d34850  ldr x0,[x0, #0xea0]
+00d34854  bl 0x00b0789c
+00d34858  mov w8,#0x1
+00d3485c  strb w8,[x22, #0xb63]
+00d34860  ldr x0,[x20]
+00d34864  ldr w8,[x0, #0xe0]
+00d34868  cbnz w8,0x00d34874
+00d3486c  bl 0x00b0798c
+00d34870  ldr x0,[x20]
+00d34874  ldr x8,[x0, #0xb8]
+00d34878  ldr x8,[x8, #0x88]
+00d3487c  cbz x8,0x00d34924
+00d34880  ldrb w9,[x22, #0xb63]
+00d34884  ldr x21,[x8, #0x10]
+00d34888  cbnz w9,0x00d348a0
+00d3488c  mov x0,x20
+00d34890  bl 0x00b0789c
+00d34894  ldr x0,[x20]
+00d34898  mov w8,#0x1
+00d3489c  strb w8,[x22, #0xb63]
+00d348a0  ldr w8,[x0, #0xe0]
+00d348a4  cbnz w8,0x00d348b0
+00d348a8  bl 0x00b0798c
+00d348ac  ldr x0,[x20]
+00d348b0  ldr x8,[x0, #0xb8]
+00d348b4  ldr x8,[x8, #0x88]
+00d348b8  cbz x8,0x00d34924
+00d348bc  adrp x9,0x3347000
+00d348c0  adrp x10,0x334e000
+00d348c4  ldr x9,[x9, #0x628]
+00d348c8  ldr x10,[x10, #0x358]
+00d348cc  ldr x3,[x8, #0x18]
+00d348d0  adrp x20,0x3332000
+00d348d4  ldr x0,[x9]
+00d348d8  ldr x2,[x10]
+00d348dc  ldr x20,[x20, #0x9d8]
+00d348e0  mov x1,x21
+00d348e4  mov x4,xzr
+00d348e8  bl 0x01fdf3bc
+00d348ec  ldr x8,[x20]
+00d348f0  mov x1,x0
+00d348f4  mov x2,xzr
+00d348f8  mov x0,x8
+00d348fc  bl 0x00d25960
+00d34900  mov x0,x19
+00d34904  ldp x19,x30,[sp, #0x20]
+00d34908  ldp x21,x20,[sp, #0x10]
+00d3490c  ldr x22,[sp], #0x30
+00d34910  b 0x00d34928
+00d34914  ldp x19,x30,[sp, #0x20]
+00d34918  ldp x21,x20,[sp, #0x10]
+00d3491c  ldr x22,[sp], #0x30
+00d34920  ret
+00d34924  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d34928_PTPGameController__cleanUpScene.txt
+================================================================================
+Function: PTPGameController$$cleanUpScene @ 00d34928
+
+--- Calls OUT ---
+  -> UnityEngine.Behaviour$$set_enabled @ 024dd2a4
+  -> System.Collections.Generic.List.Enumerator<object>$$Dispose @ 01a070e8
+  -> System.Collections.Generic.List<object>$$GetEnumerator @ 01c01338
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List.Enumerator<object>$$MoveNext @ 01a070ec
+  -> UnityEngine.Object$$Destroy @ 024dfed4
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Array$$Clear @ 02173bc0
+
+--- Calls IN ---
+  <- PTPGameController$$OnAuthFinished @ 00d347bc
+  <- PTPGameController$$HandleActionPlayerStateChanged @ 00d34afc
+
+--- Listing ---
+00d34928  sub sp,sp,#0x50
+00d3492c  stp x23,x22,[sp, #0x20]
+00d34930  stp x21,x20,[sp, #0x30]
+00d34934  stp x19,x30,[sp, #0x40]
+00d34938  adrp x20,0x3571000
+00d3493c  ldrb w8,[x20, #0xd3d]
+00d34940  mov x19,x0
+00d34944  tbnz w8,#0x0,0x00d34998
+00d34948  adrp x0,0x336a000
+00d3494c  ldr x0,[x0, #0xad8]
+00d34950  bl 0x00b0789c
+00d34954  adrp x0,0x3331000
+00d34958  ldr x0,[x0, #0x618]
+00d3495c  bl 0x00b0789c
+00d34960  adrp x0,0x330f000
+00d34964  ldr x0,[x0, #0x470]
+00d34968  bl 0x00b0789c
+00d3496c  adrp x0,0x3374000
+00d34970  ldr x0,[x0, #0x1f0]
+00d34974  bl 0x00b0789c
+00d34978  adrp x0,0x336c000
+00d3497c  ldr x0,[x0, #0x178]
+00d34980  bl 0x00b0789c
+00d34984  adrp x0,0x3321000
+00d34988  ldr x0,[x0, #0xca8]
+00d3498c  bl 0x00b0789c
+00d34990  mov w8,#0x1
+00d34994  strb w8,[x20, #0xd3d]
+00d34998  stp xzr,xzr,[sp, #0x10]
+00d3499c  str xzr,[sp, #0x8]
+00d349a0  ldr x0,[x19, #0x28]
+00d349a4  cbz x0,0x00d34a90
+00d349a8  mov w1,#0x1
+00d349ac  mov x2,xzr
+00d349b0  bl 0x024dd2a4
+00d349b4  ldr x0,[x19, #0x30]
+00d349b8  cbz x0,0x00d34a90
+00d349bc  mov w1,wzr
+00d349c0  mov x2,xzr
+00d349c4  bl 0x024dd2a4
+00d349c8  ldr x0,[x19, #0x20]
+00d349cc  cbz x0,0x00d34a90
+00d349d0  mov w1,wzr
+00d349d4  mov x2,xzr
+00d349d8  bl 0x024dd2a4
+00d349dc  ldr x0,[x19, #0x38]
+00d349e0  cbz x0,0x00d34a90
+00d349e4  adrp x8,0x336c000
+00d349e8  ldr x8,[x8, #0x178]
+00d349ec  adrp x21,0x3331000
+00d349f0  adrp x23,0x3321000
+00d349f4  adrp x22,0x336a000
+00d349f8  ldr x1,[x8]
+00d349fc  ldr x21,[x21, #0x618]
+00d34a00  ldr x23,[x23, #0xca8]
+00d34a04  ldr x22,[x22, #0xad8]
+00d34a08  add x8,sp,#0x8
+00d34a0c  bl 0x01c01338
+00d34a10  ldr x1,[x21]
+00d34a14  add x0,sp,#0x8
+    ; [PRE] try { // try from 00d34a14 to 00d34a1b has its CatchHandler @ 00d34a94
+00d34a18  bl 0x01a070ec
+    ; [POST] } // end try from 00d34a14 to 00d34a1b
+00d34a1c  tbz w0,#0x0,0x00d34a44
+00d34a20  ldr x0,[x23]
+00d34a24  ldr x20,[sp, #0x18]
+00d34a28  ldr w8,[x0, #0xe0]
+00d34a2c  cbnz w8,0x00d34a34
+00d34a30  bl 0x00b0798c
+    ; [PRE] try { // try from 00d34a30 to 00d34a3f has its CatchHandler @ 00d34a98
+00d34a34  mov x0,x20
+00d34a38  mov x1,xzr
+00d34a3c  bl 0x024dfed4
+    ; [POST] } // end try from 00d34a30 to 00d34a3f
+00d34a40  b 0x00d34a10
+00d34a44  ldr x1,[x22]
+00d34a48  add x0,sp,#0x8
+00d34a4c  bl 0x01a070e8
+00d34a50  ldr x8,[x19, #0x38]
+00d34a54  cbz x8,0x00d34a90
+00d34a58  ldp w2,w9,[x8, #0x18]
+00d34a5c  add w9,w9,#0x1
+00d34a60  cmp w2,#0x1
+00d34a64  stp wzr,w9,[x8, #0x18]
+00d34a68  b.lt 0x00d34a7c
+00d34a6c  ldr x0,[x8, #0x10]
+00d34a70  mov w1,wzr
+00d34a74  mov x3,xzr
+00d34a78  bl 0x02173bc0
+00d34a7c  ldp x19,x30,[sp, #0x40]
+00d34a80  ldp x21,x20,[sp, #0x30]
+00d34a84  ldp x23,x22,[sp, #0x20]
+00d34a88  add sp,sp,#0x50
+00d34a8c  ret
+00d34a90  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d34afc_PTPGameController__HandleActionPlayerStateChanged.txt
+================================================================================
+Function: PTPGameController$$HandleActionPlayerStateChanged @ 00d34afc
+
+--- Calls OUT ---
+  -> IOSNativePopUpManager$$showMessage @ 00d25960
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> PTPGameController$$CheckMatchState @ 00d34bc0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GameCenter_RTM$$Disconnect @ 00d0ec94
+  -> FUN_00b079b0 @ 00b079b0
+  -> PTPGameController$$cleanUpScene @ 00d34928
+
+--- Calls IN ---
+
+--- Listing ---
+00d34afc  str x22,[sp, #-0x30]!
+00d34b00  stp x21,x20,[sp, #0x10]
+00d34b04  stp x19,x30,[sp, #0x20]
+00d34b08  adrp x22,0x3571000
+00d34b0c  ldrb w8,[x22, #0xd3a]
+00d34b10  mov x20,x3
+00d34b14  mov w21,w2
+00d34b18  mov x19,x0
+00d34b1c  tbnz w8,#0x0,0x00d34b4c
+00d34b20  adrp x0,0x336b000
+00d34b24  ldr x0,[x0, #0x1c8]
+00d34b28  bl 0x00b0789c
+00d34b2c  adrp x0,0x3317000
+00d34b30  ldr x0,[x0, #0x38]
+00d34b34  bl 0x00b0789c
+00d34b38  adrp x0,0x3378000
+00d34b3c  ldr x0,[x0, #0xa60]
+00d34b40  bl 0x00b0789c
+00d34b44  mov w8,#0x1
+00d34b48  strb w8,[x22, #0xd3a]
+00d34b4c  cmp w21,#0x2
+00d34b50  b.ne 0x00d34ba4
+00d34b54  adrp x8,0x3378000
+00d34b58  adrp x9,0x3317000
+00d34b5c  ldr x8,[x8, #0xa60]
+00d34b60  ldr x9,[x9, #0x38]
+00d34b64  adrp x20,0x336b000
+00d34b68  mov x2,xzr
+00d34b6c  ldr x0,[x8]
+00d34b70  ldr x1,[x9]
+00d34b74  ldr x20,[x20, #0x1c8]
+00d34b78  bl 0x00d25960
+00d34b7c  ldr x0,[x20]
+00d34b80  bl 0x01e09dd4
+00d34b84  cbz x0,0x00d34bbc
+00d34b88  mov x1,xzr
+00d34b8c  bl 0x00d0ec94
+00d34b90  mov x0,x19
+00d34b94  ldp x19,x30,[sp, #0x20]
+00d34b98  ldp x21,x20,[sp, #0x10]
+00d34b9c  ldr x22,[sp], #0x30
+00d34ba0  b 0x00d34928
+00d34ba4  mov x0,x19
+00d34ba8  mov x1,x20
+00d34bac  ldp x19,x30,[sp, #0x20]
+00d34bb0  ldp x21,x20,[sp, #0x10]
+00d34bb4  ldr x22,[sp], #0x30
+00d34bb8  b 0x00d34bc0
+00d34bbc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d34bc0_PTPGameController__CheckMatchState.txt
+================================================================================
+Function: PTPGameController$$CheckMatchState @ 00d34bc0
+
+--- Calls OUT ---
+  -> UnityEngine.Behaviour$$set_enabled @ 024dd2a4
+  -> ISN_Logger$$Log @ 00d198ec
+  -> IOSNativePopUpManager$$showMessage @ 00d25960
+  -> HelloPackage$$.ctor @ 00d34dd0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> NetworkManagerExample$$send @ 00d34464
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> IOSNativePopUpManager$$dismissCurrentAlert @ 00d2591c
+
+--- Calls IN ---
+  <- PTPGameController$$HandleActionMatchStarted @ 00d34d4c
+  <- PTPGameController$$HandleActionPlayerStateChanged @ 00d34afc
+
+--- Listing ---
+00d34bc0  sub sp,sp,#0x30
+00d34bc4  stp x21,x20,[sp, #0x10]
+00d34bc8  stp x19,x30,[sp, #0x20]
+00d34bcc  adrp x21,0x3571000
+00d34bd0  ldrb w8,[x21, #0xd3c]
+00d34bd4  mov x20,x1
+00d34bd8  mov x19,x0
+00d34bdc  tbnz w8,#0x0,0x00d34c30
+00d34be0  adrp x0,0x337e000
+00d34be4  ldr x0,[x0, #0x6f0]
+00d34be8  bl 0x00b0789c
+00d34bec  adrp x0,0x331e000
+00d34bf0  ldr x0,[x0, #0x2d0]
+00d34bf4  bl 0x00b0789c
+00d34bf8  adrp x0,0x330f000
+00d34bfc  ldr x0,[x0, #0xb68]
+00d34c00  bl 0x00b0789c
+00d34c04  adrp x0,0x3379000
+00d34c08  ldr x0,[x0, #0xb40]
+00d34c0c  bl 0x00b0789c
+00d34c10  adrp x0,0x3351000
+00d34c14  ldr x0,[x0, #0xb20]
+00d34c18  bl 0x00b0789c
+00d34c1c  adrp x0,0x336b000
+00d34c20  ldr x0,[x0, #0xd38]
+00d34c24  bl 0x00b0789c
+00d34c28  mov w8,#0x1
+00d34c2c  strb w8,[x21, #0xd3c]
+00d34c30  mov x0,xzr
+00d34c34  str wzr,[sp, #0xc]
+00d34c38  bl 0x00d2591c
+00d34c3c  cbz x20,0x00d34d38
+00d34c40  ldr w20,[x20, #0x10]
+00d34c44  add x0,sp,#0xc
+00d34c48  mov x1,xzr
+00d34c4c  str w20,[sp, #0xc]
+00d34c50  bl 0x0214dc44
+00d34c54  mov x1,x0
+00d34c58  cbz w20,0x00d34c90
+00d34c5c  adrp x8,0x330f000
+00d34c60  ldr x8,[x8, #0xb68]
+00d34c64  adrp x19,0x331e000
+00d34c68  mov x2,xzr
+00d34c6c  ldr x0,[x8]
+00d34c70  ldr x19,[x19, #0x2d0]
+00d34c74  bl 0x01fd2850
+00d34c78  ldr x8,[x19]
+00d34c7c  mov x1,x0
+00d34c80  mov x2,xzr
+00d34c84  mov x0,x8
+00d34c88  bl 0x00d25960
+00d34c8c  b 0x00d34d38
+00d34c90  adrp x8,0x3351000
+00d34c94  ldr x8,[x8, #0xb20]
+00d34c98  adrp x20,0x3379000
+00d34c9c  mov x2,xzr
+00d34ca0  ldr x0,[x8]
+00d34ca4  ldr x20,[x20, #0xb40]
+00d34ca8  bl 0x01fd2850
+00d34cac  ldr x8,[x20]
+00d34cb0  mov x1,x0
+00d34cb4  mov x2,xzr
+00d34cb8  mov x0,x8
+00d34cbc  bl 0x00d25960
+00d34cc0  ldr x0,[x19, #0x30]
+00d34cc4  cbz x0,0x00d34d48
+00d34cc8  mov w1,#0x1
+00d34ccc  mov x2,xzr
+00d34cd0  bl 0x024dd2a4
+00d34cd4  ldr x0,[x19, #0x28]
+00d34cd8  cbz x0,0x00d34d48
+00d34cdc  mov w1,wzr
+00d34ce0  mov x2,xzr
+00d34ce4  bl 0x024dd2a4
+00d34ce8  ldr x0,[x19, #0x20]
+00d34cec  cbz x0,0x00d34d48
+00d34cf0  adrp x19,0x336b000
+00d34cf4  adrp x20,0x337e000
+00d34cf8  ldr x19,[x19, #0xd38]
+00d34cfc  ldr x20,[x20, #0x6f0]
+00d34d00  mov w1,#0x1
+00d34d04  mov x2,xzr
+00d34d08  bl 0x024dd2a4
+00d34d0c  ldr x0,[x19]
+00d34d10  mov w1,#0x3
+00d34d14  mov x2,xzr
+00d34d18  bl 0x00d198ec
+00d34d1c  ldr x0,[x20]
+00d34d20  bl 0x00b079a0
+00d34d24  cbz x0,0x00d34d48
+00d34d28  mov x19,x0
+00d34d2c  bl 0x00d34dd0
+00d34d30  mov x0,x19
+00d34d34  bl 0x00d34464
+00d34d38  ldp x19,x30,[sp, #0x20]
+00d34d3c  ldp x21,x20,[sp, #0x10]
+00d34d40  add sp,sp,#0x30
+00d34d44  ret
+00d34d48  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d34d4c_PTPGameController__HandleActionMatchStarted.txt
+================================================================================
+Function: PTPGameController$$HandleActionMatchStarted @ 00d34d4c
+
+--- Calls OUT ---
+  -> IOSNativePopUpManager$$showMessage @ 00d25960
+  -> PTPGameController$$CheckMatchState @ 00d34bc0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Result$$get_IsSucceeded @ 00c88a30
+
+--- Calls IN ---
+
+--- Listing ---
+00d34d4c  stp x21,x20,[sp, #-0x20]!
+00d34d50  stp x19,x30,[sp, #0x10]
+00d34d54  adrp x21,0x3571000
+00d34d58  ldrb w8,[x21, #0xd3b]
+00d34d5c  mov x19,x1
+00d34d60  mov x20,x0
+00d34d64  tbnz w8,#0x0,0x00d34d7c
+00d34d68  adrp x0,0x3381000
+00d34d6c  ldr x0,[x0, #0x9f8]
+00d34d70  bl 0x00b0789c
+00d34d74  mov w8,#0x1
+00d34d78  strb w8,[x21, #0xd3b]
+00d34d7c  cbz x19,0x00d34dcc
+00d34d80  mov x0,x19
+00d34d84  mov x1,xzr
+00d34d88  bl 0x00c88a30
+00d34d8c  tbz w0,#0x0,0x00d34da4
+00d34d90  ldr x1,[x19, #0x18]
+00d34d94  ldp x19,x30,[sp, #0x10]
+00d34d98  mov x0,x20
+00d34d9c  ldp x21,x20,[sp], #0x20
+00d34da0  b 0x00d34bc0
+00d34da4  ldr x8,[x19, #0x10]
+00d34da8  cbz x8,0x00d34dcc
+00d34dac  adrp x9,0x3381000
+00d34db0  ldr x9,[x9, #0x9f8]
+00d34db4  ldr x1,[x8, #0x18]
+00d34db8  ldp x19,x30,[sp, #0x10]
+00d34dbc  mov x2,xzr
+00d34dc0  ldr x0,[x9]
+00d34dc4  ldp x21,x20,[sp], #0x20
+00d34dc8  b 0x00d25960
+00d34dcc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d34e0c_PTPGameController__.ctor.txt
+================================================================================
+Function: PTPGameController$$.ctor @ 00d34e0c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d34e0c  stp x21,x20,[sp, #-0x20]!
+00d34e10  stp x19,x30,[sp, #0x10]
+00d34e14  adrp x20,0x3571000
+00d34e18  adrp x21,0x3365000
+00d34e1c  ldrb w8,[x20, #0xd3e]
+00d34e20  ldr x21,[x21, #0x638]
+00d34e24  mov x19,x0
+00d34e28  tbnz w8,#0x0,0x00d34e4c
+00d34e2c  adrp x0,0x336e000
+00d34e30  ldr x0,[x0, #0x958]
+00d34e34  bl 0x00b0789c
+00d34e38  adrp x0,0x3365000
+00d34e3c  ldr x0,[x0, #0x638]
+00d34e40  bl 0x00b0789c
+00d34e44  mov w8,#0x1
+00d34e48  strb w8,[x20, #0xd3e]
+00d34e4c  ldr x0,[x21]
+00d34e50  bl 0x00b079a0
+00d34e54  cbz x0,0x00d34e90
+00d34e58  adrp x8,0x336e000
+00d34e5c  ldr x8,[x8, #0x958]
+00d34e60  mov x20,x0
+00d34e64  ldr x1,[x8]
+00d34e68  bl 0x01bffe10
+00d34e6c  mov x0,x19
+00d34e70  str x20,[x0, #0x38]!
+00d34e74  mov x1,x20
+00d34e78  bl 0x00b07850
+00d34e7c  mov x0,x19
+00d34e80  ldp x19,x30,[sp, #0x10]
+00d34e84  mov x1,xzr
+00d34e88  ldp x21,x20,[sp], #0x20
+00d34e8c  b 0x024e45bc
+00d34e90  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 03799018_pthread_cond_timedwait.txt
+================================================================================
+Function: pthread_cond_timedwait @ 03799018
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_cond_timedwait @ 008d39d0
+
+--- Listing ---
+03799018  ?? ??
+
+
+================================================================================
+### FILE: 03799050_pthread_sigmask.txt
+================================================================================
+Function: pthread_sigmask @ 03799050
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_sigmask @ 008d3ab0
+
+--- Listing ---
+03799050  ?? ??
+
+
+================================================================================
+### FILE: 037990f0_pthread_mutex_lock.txt
+================================================================================
+Function: pthread_mutex_lock @ 037990f0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_mutex_lock @ 008d3d40
+
+--- Listing ---
+037990f0  ?? ??
+
+
+================================================================================
+### FILE: 03799158_pthread_atfork.txt
+================================================================================
+Function: pthread_atfork @ 03799158
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_atfork @ 008d3ee0
+
+--- Listing ---
+03799158  ?? ??
+
+
+================================================================================
+### FILE: 03799198_pthread_equal.txt
+================================================================================
+Function: pthread_equal @ 03799198
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_equal @ 008d4020
+
+--- Listing ---
+03799198  ?? ??
+
+
+================================================================================
+### FILE: 037991c8_pthread_attr_init.txt
+================================================================================
+Function: pthread_attr_init @ 037991c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_attr_init @ 008d40f0
+
+--- Listing ---
+037991c8  ?? ??
+
+
+================================================================================
+### FILE: 03799278_pthread_cond_wait.txt
+================================================================================
+Function: pthread_cond_wait @ 03799278
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_cond_wait @ 008d4360
+
+--- Listing ---
+03799278  ?? ??
+
+
+================================================================================
+### FILE: 037992a0_pthread_condattr_init.txt
+================================================================================
+Function: pthread_condattr_init @ 037992a0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_condattr_init @ 008d43c0
+
+--- Listing ---
+037992a0  ?? ??
+
+
+================================================================================
+### FILE: 037992a8_pthread_self.txt
+================================================================================
+Function: pthread_self @ 037992a8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_self @ 008d43d0
+
+--- Listing ---
+037992a8  ?? ??
+
+
+================================================================================
+### FILE: 037992c8_pthread_mutexattr_init.txt
+================================================================================
+Function: pthread_mutexattr_init @ 037992c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_mutexattr_init @ 008d44b0
+
+--- Listing ---
+037992c8  ?? ??
+
+
+================================================================================
+### FILE: 03799348_pthread_detach.txt
+================================================================================
+Function: pthread_detach @ 03799348
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_detach @ 008d4670
+
+--- Listing ---
+03799348  ?? ??
+
+
+================================================================================
+### FILE: 03799368_pthread_getattr_np.txt
+================================================================================
+Function: pthread_getattr_np @ 03799368
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_getattr_np @ 008d46e0
+
+--- Listing ---
+03799368  ?? ??
+
+
+================================================================================
+### FILE: 037993c8_pthread_getspecific.txt
+================================================================================
+Function: pthread_getspecific @ 037993c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_getspecific @ 008d48d0
+
+--- Listing ---
+037993c8  ?? ??
+
+
+================================================================================
+### FILE: 037993d0_pthread_cond_broadcast.txt
+================================================================================
+Function: pthread_cond_broadcast @ 037993d0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_cond_broadcast @ 008d48e0
+
+--- Listing ---
+037993d0  ?? ??
+
+
+================================================================================
+### FILE: 037993f0_pthread_attr_getstack.txt
+================================================================================
+Function: pthread_attr_getstack @ 037993f0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_attr_getstack @ 008d4940
+
+--- Listing ---
+037993f0  ?? ??
+
+
+================================================================================
+### FILE: 03799420_pthread_mutex_unlock.txt
+================================================================================
+Function: pthread_mutex_unlock @ 03799420
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_mutex_unlock @ 008d4a20
+
+--- Listing ---
+03799420  ?? ??
+
+
+================================================================================
+### FILE: 03799438_pthread_condattr_destroy.txt
+================================================================================
+Function: pthread_condattr_destroy @ 03799438
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_condattr_destroy @ 008d4a90
+
+--- Listing ---
+03799438  ?? ??
+
+
+================================================================================
+### FILE: 03799480_pthread_cond_destroy.txt
+================================================================================
+Function: pthread_cond_destroy @ 03799480
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_cond_destroy @ 008d4bb0
+
+--- Listing ---
+03799480  ?? ??
+
+
+================================================================================
+### FILE: 037994b8_pthread_key_create.txt
+================================================================================
+Function: pthread_key_create @ 037994b8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_key_create @ 008d4cb0
+
+--- Listing ---
+037994b8  ?? ??
+
+
+================================================================================
+### FILE: 03799508_pthread_once.txt
+================================================================================
+Function: pthread_once @ 03799508
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_once @ 008d4dc0
+
+--- Listing ---
+03799508  ?? ??
+
+
+================================================================================
+### FILE: 03799570_pthread_mutex_destroy.txt
+================================================================================
+Function: pthread_mutex_destroy @ 03799570
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_mutex_destroy @ 008d4f10
+
+--- Listing ---
+03799570  ?? ??
+
+
+================================================================================
+### FILE: 037995e0_pthread_setname_np.txt
+================================================================================
+Function: pthread_setname_np @ 037995e0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_setname_np @ 008d50e0
+
+--- Listing ---
+037995e0  ?? ??
+
+
+================================================================================
+### FILE: 03799600_pthread_join.txt
+================================================================================
+Function: pthread_join @ 03799600
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_join @ 008d51c0
+
+--- Listing ---
+03799600  ?? ??
+
+
+================================================================================
+### FILE: 03799638_pthread_setspecific.txt
+================================================================================
+Function: pthread_setspecific @ 03799638
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_setspecific @ 008d52f0
+
+--- Listing ---
+03799638  ?? ??
+
+
+================================================================================
+### FILE: 037996c8_pthread_cond_init.txt
+================================================================================
+Function: pthread_cond_init @ 037996c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_cond_init @ 008d5500
+
+--- Listing ---
+037996c8  ?? ??
+
+
+================================================================================
+### FILE: 03799720_pthread_create.txt
+================================================================================
+Function: pthread_create @ 03799720
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_create @ 008d5650
+
+--- Listing ---
+03799720  ?? ??
+
+
+================================================================================
+### FILE: 03799798_pthread_key_delete.txt
+================================================================================
+Function: pthread_key_delete @ 03799798
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_key_delete @ 008d57c0
+
+--- Listing ---
+03799798  ?? ??
+
+
+================================================================================
+### FILE: 037997c8_pthread_attr_destroy.txt
+================================================================================
+Function: pthread_attr_destroy @ 037997c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_attr_destroy @ 008d5840
+
+--- Listing ---
+037997c8  ?? ??
+
+
+================================================================================
+### FILE: 037997d8_pthread_mutexattr_settype.txt
+================================================================================
+Function: pthread_mutexattr_settype @ 037997d8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_mutexattr_settype @ 008d5870
+
+--- Listing ---
+037997d8  ?? ??
+
+
+================================================================================
+### FILE: 03799818_pthread_mutex_trylock.txt
+================================================================================
+Function: pthread_mutex_trylock @ 03799818
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_mutex_trylock @ 008d5950
+
+--- Listing ---
+03799818  ?? ??
+
+
+================================================================================
+### FILE: 03799868_pthread_kill.txt
+================================================================================
+Function: pthread_kill @ 03799868
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_kill @ 008d5a70
+
+--- Listing ---
+03799868  ?? ??
+
+
+================================================================================
+### FILE: 03799888_pthread_cond_signal.txt
+================================================================================
+Function: pthread_cond_signal @ 03799888
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_cond_signal @ 008d5ab0
+
+--- Listing ---
+03799888  ?? ??
+
+
+================================================================================
+### FILE: 037998a8_pthread_condattr_setclock.txt
+================================================================================
+Function: pthread_condattr_setclock @ 037998a8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_condattr_setclock @ 008d5b20
+
+--- Listing ---
+037998a8  ?? ??
+
+
+================================================================================
+### FILE: 037998e0_pthread_mutex_init.txt
+================================================================================
+Function: pthread_mutex_init @ 037998e0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_mutex_init @ 008d5c10
+
+--- Listing ---
+037998e0  ?? ??
+
+
+================================================================================
+### FILE: 03799910_pthread_mutexattr_destroy.txt
+================================================================================
+Function: pthread_mutexattr_destroy @ 03799910
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pthread_mutexattr_destroy @ 008d5ca0
+
+--- Listing ---
+03799910  ?? ??
+
+

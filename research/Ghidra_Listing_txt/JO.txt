@@ -1,0 +1,33 @@
+================================================================================
+### FILE: 00b896e0_join.txt
+================================================================================
+Function: join @ 00b896e0
+FuncComment: std::__ndk1::thread::join()
+
+--- Calls OUT ---
+  -> __throw_system_error @ 008d5980
+  -> pthread_join @ 008d51c0
+
+--- Calls IN ---
+
+--- Listing ---
+00b896e0  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::thread::join()
+00b896e4  stp x29,x30,[sp, #0x10]
+00b896e8  add x29,sp,#0x10
+00b896ec  mov x19,x0
+00b896f0  ldr x0,[x0]
+00b896f4  cbz x0,0x00b89714
+00b896f8  mov x1,xzr
+00b896fc  bl 0x008d51c0
+00b89700  cbnz w0,0x00b89718
+00b89704  str xzr,[x19]
+00b89708  ldp x29,x30,[sp, #0x10]
+00b8970c  ldr x19,[sp], #0x20
+00b89710  ret
+00b89714  mov w0,#0x16
+00b89718  adrp x1,0x2a0a000
+00b8971c  add x1,x1,#0x470
+00b89720  bl 0x008d5980
+
+

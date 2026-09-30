@@ -1,0 +1,553 @@
+================================================================================
+### FILE: 008d3b20__type_info.txt
+================================================================================
+Function: ~type_info @ 008d3b20
+
+--- Calls OUT ---
+  -> ~type_info @ 00b8e954
+
+--- Calls IN ---
+  <- FUN_00b8cdf0 @ 00b8cdf0
+  <- FUN_00b8cf10 @ 00b8cf10
+  <- FUN_00b8ce14 @ 00b8ce14
+  <- FUN_00b8cec8 @ 00b8cec8
+  <- FUN_00b8ceec @ 00b8ceec
+  <- FUN_00b8ce38 @ 00b8ce38
+  <- FUN_00b8cdcc @ 00b8cdcc
+  <- FUN_00b8ce5c @ 00b8ce5c
+  <- FUN_00b8cea4 @ 00b8cea4
+  <- ~type_info @ 00b8cdbc
+  <- FUN_00b8ce80 @ 00b8ce80
+
+--- Listing ---
+008d3b20  adrp x16,0x3307000
+008d3b24  ldr x17,[x16, #0x750]
+008d3b28  add x16,x16,#0x750
+008d3b2c  br x17
+
+
+================================================================================
+### FILE: 00b8cdbc__type_info.txt
+================================================================================
+Function: ~type_info @ 00b8cdbc
+
+--- Calls OUT ---
+  -> ~type_info @ 008d3b20
+
+--- Calls IN ---
+
+--- Listing ---
+00b8cdbc  b 0x008d3b20
+
+
+================================================================================
+### FILE: 00b8e954__type_info.txt
+================================================================================
+Function: ~type_info @ 00b8e954
+FuncComment: std::type_info::~type_info()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- ~type_info @ 008d3b20
+
+--- Listing ---
+00b8e954  ret
+    ; [PLATE] std::type_info::~type_info()
+
+
+================================================================================
+### FILE: 00b8e958__type_info.txt
+================================================================================
+Function: ~type_info @ 00b8e958
+FuncComment: std::type_info::~type_info()
+
+--- Calls OUT ---
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e958  b 0x008d3ed0
+    ; [PLATE] std::type_info::~type_info()
+
+
+================================================================================
+### FILE: 00d57184_Typewriter__Start.txt
+================================================================================
+Function: Typewriter$$Start @ 00d57184
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d57184  ret
+
+
+================================================================================
+### FILE: 00d57188_Typewriter__Update.txt
+================================================================================
+Function: Typewriter$$Update @ 00d57188
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d57188  ret
+
+
+================================================================================
+### FILE: 00d5718c_Typewriter__OnEnable.txt
+================================================================================
+Function: Typewriter$$OnEnable @ 00d5718c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> UnityEngine.MonoBehaviour$$StopCoroutine @ 024e4428
+  -> UnityEngine.MonoBehaviour$$StartCoroutine @ 024e3ec4
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00d5718c  str x22,[sp, #-0x30]!
+00d57190  stp x21,x20,[sp, #0x10]
+00d57194  stp x19,x30,[sp, #0x20]
+00d57198  adrp x20,0x3571000
+00d5719c  adrp x22,0x3321000
+00d571a0  ldrb w8,[x20, #0xe67]
+00d571a4  ldr x22,[x22, #0xca8]
+00d571a8  mov x19,x0
+00d571ac  tbnz w8,#0x0,0x00d571e8
+00d571b0  adrp x0,0x3324000
+00d571b4  ldr x0,[x0, #0x2a0]
+00d571b8  bl 0x00b0789c
+00d571bc  adrp x0,0x3378000
+00d571c0  ldr x0,[x0, #0x1e8]
+00d571c4  bl 0x00b0789c
+00d571c8  adrp x0,0x3321000
+00d571cc  ldr x0,[x0, #0xca8]
+00d571d0  bl 0x00b0789c
+00d571d4  adrp x0,0x336f000
+00d571d8  ldr x0,[x0, #0x448]
+00d571dc  bl 0x00b0789c
+00d571e0  mov w8,#0x1
+00d571e4  strb w8,[x20, #0xe67]
+00d571e8  mov x20,x19
+00d571ec  ldr x21,[x20, #0x38]!
+00d571f0  ldr x0,[x22]
+00d571f4  ldr w8,[x0, #0xe0]
+00d571f8  cbnz w8,0x00d57200
+00d571fc  bl 0x00b0798c
+00d57200  mov x0,x21
+00d57204  mov x1,xzr
+00d57208  mov x2,xzr
+00d5720c  bl 0x024c8180
+00d57210  tbz w0,#0x0,0x00d57238
+00d57214  adrp x8,0x3324000
+00d57218  ldr x8,[x8, #0x2a0]
+00d5721c  mov x0,x19
+00d57220  ldr x1,[x8]
+00d57224  bl 0x0176cbf8
+00d57228  mov x1,x0
+00d5722c  str x0,[x19, #0x38]
+00d57230  mov x0,x20
+00d57234  bl 0x00b07850
+00d57238  mov x20,x19
+00d5723c  ldr x21,[x20, #0x40]!
+00d57240  ldr x0,[x22]
+00d57244  ldr w8,[x0, #0xe0]
+00d57248  cbnz w8,0x00d57250
+00d5724c  bl 0x00b0798c
+00d57250  adrp x22,0x336f000
+00d57254  ldr x22,[x22, #0x448]
+00d57258  mov x0,x21
+00d5725c  mov x1,xzr
+00d57260  mov x2,xzr
+00d57264  bl 0x024c8180
+00d57268  tbz w0,#0x0,0x00d57290
+00d5726c  adrp x8,0x3378000
+00d57270  ldr x8,[x8, #0x1e8]
+00d57274  mov x0,x19
+00d57278  ldr x1,[x8]
+00d5727c  bl 0x0176cbf8
+00d57280  mov x1,x0
+00d57284  str x0,[x19, #0x40]
+00d57288  mov x0,x20
+00d5728c  bl 0x00b07850
+00d57290  ldr x1,[x22]
+00d57294  mov x0,x19
+00d57298  mov x2,xzr
+00d5729c  bl 0x024e4428
+00d572a0  ldr x1,[x22]
+00d572a4  mov x0,x19
+00d572a8  ldp x19,x30,[sp, #0x20]
+00d572ac  ldp x21,x20,[sp, #0x10]
+00d572b0  mov x2,xzr
+00d572b4  ldr x22,[sp], #0x30
+00d572b8  b 0x024e3ec4
+
+
+================================================================================
+### FILE: 00d572bc_Typewriter__OnDisable.txt
+================================================================================
+Function: Typewriter$$OnDisable @ 00d572bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.MonoBehaviour$$StopCoroutine @ 024e4428
+
+--- Calls IN ---
+
+--- Listing ---
+00d572bc  stp x21,x20,[sp, #-0x20]!
+00d572c0  stp x19,x30,[sp, #0x10]
+00d572c4  adrp x20,0x3571000
+00d572c8  adrp x21,0x336f000
+00d572cc  ldrb w8,[x20, #0xe68]
+00d572d0  ldr x21,[x21, #0x448]
+00d572d4  mov x19,x0
+00d572d8  tbnz w8,#0x0,0x00d572f0
+00d572dc  adrp x0,0x336f000
+00d572e0  ldr x0,[x0, #0x448]
+00d572e4  bl 0x00b0789c
+00d572e8  mov w8,#0x1
+00d572ec  strb w8,[x20, #0xe68]
+00d572f0  ldr x1,[x21]
+00d572f4  mov x0,x19
+00d572f8  ldp x19,x30,[sp, #0x10]
+00d572fc  mov x2,xzr
+00d57300  ldp x21,x20,[sp], #0x20
+00d57304  b 0x024e4428
+
+
+================================================================================
+### FILE: 00d57308_Typewriter__PlayTypewriter.txt
+================================================================================
+Function: Typewriter$$PlayTypewriter @ 00d57308
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d57308  stp x21,x20,[sp, #-0x20]!
+00d5730c  stp x19,x30,[sp, #0x10]
+00d57310  adrp x20,0x3571000
+00d57314  adrp x21,0x335b000
+00d57318  ldrb w8,[x20, #0xe69]
+00d5731c  ldr x21,[x21, #0x530]
+00d57320  mov x19,x0
+00d57324  tbnz w8,#0x0,0x00d5733c
+00d57328  adrp x0,0x335b000
+00d5732c  ldr x0,[x0, #0x530]
+00d57330  bl 0x00b0789c
+00d57334  mov w8,#0x1
+00d57338  strb w8,[x20, #0xe69]
+00d5733c  ldr x0,[x21]
+00d57340  bl 0x00b079a0
+00d57344  cbz x0,0x00d57378
+00d57348  mov x1,xzr
+00d5734c  mov x20,x0
+00d57350  bl 0x02194104
+00d57354  mov x0,x20
+00d57358  str wzr,[x20, #0x10]
+00d5735c  str x19,[x0, #0x20]!
+00d57360  mov x1,x19
+00d57364  bl 0x00b07850
+00d57368  ldp x19,x30,[sp, #0x10]
+00d5736c  mov x0,x20
+00d57370  ldp x21,x20,[sp], #0x20
+00d57374  ret
+00d57378  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d5737c_Typewriter._PlayTypewriter_d__10__.ctor.txt
+================================================================================
+Function: Typewriter.<PlayTypewriter>d__10$$.ctor @ 00d5737c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d5737c  str x20,[sp, #-0x20]!
+00d57380  stp x19,x30,[sp, #0x10]
+00d57384  mov w19,w1
+00d57388  mov x1,xzr
+00d5738c  mov x20,x0
+00d57390  bl 0x02194104
+00d57394  str w19,[x20, #0x10]
+00d57398  ldp x19,x30,[sp, #0x10]
+00d5739c  ldr x20,[sp], #0x20
+00d573a0  ret
+
+
+================================================================================
+### FILE: 00d573a4_Typewriter__.ctor.txt
+================================================================================
+Function: Typewriter$$.ctor @ 00d573a4
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d573a4  mov w8,#0xcccd
+00d573a8  movk w8,#0x3dcc, LSL #16
+00d573ac  mov x1,xzr
+00d573b0  str w8,[x0, #0x18]
+00d573b4  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d573b8_Typewriter._PlayTypewriter_d__10__System.IDisposable.Dispose.txt
+================================================================================
+Function: Typewriter.<PlayTypewriter>d__10$$System.IDisposable.Dispose @ 00d573b8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d573b8  ret
+
+
+================================================================================
+### FILE: 00d573bc_Typewriter._PlayTypewriter_d__10__MoveNext.txt
+================================================================================
+Function: Typewriter.<PlayTypewriter>d__10$$MoveNext @ 00d573bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Random$$Range @ 024d63b0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Time$$get_deltaTime @ 024dc048
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> FUN_00b079b8 @ 00b079b8
+  -> LimitVisibleCharacters$$set_visibleCharacterCount @ 00d567c4
+  -> UnityEngine.AudioSource$$PlayOneShot @ 024bbc20
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d573bc  str d8,[sp, #-0x30]!
+00d573c0  str x22,[sp, #0x8]
+00d573c4  stp x21,x20,[sp, #0x10]
+00d573c8  stp x19,x30,[sp, #0x20]
+00d573cc  adrp x20,0x3571000
+00d573d0  ldrb w8,[x20, #0xe6a]
+00d573d4  mov x19,x0
+00d573d8  tbnz w8,#0x0,0x00d573f0
+00d573dc  adrp x0,0x3321000
+00d573e0  ldr x0,[x0, #0xca8]
+00d573e4  bl 0x00b0789c
+00d573e8  mov w8,#0x1
+00d573ec  strb w8,[x20, #0xe6a]
+00d573f0  ldr w8,[x19, #0x10]
+00d573f4  ldr x21,[x19, #0x20]
+00d573f8  sub w9,w8,#0x1
+00d573fc  cmp w9,#0x2
+00d57400  b.cs 0x00d57478
+00d57404  mov w8,#0xffffffff
+00d57408  str w8,[x19, #0x10]
+00d5740c  cbz x21,0x00d575ec
+00d57410  ldr x8,[x21, #0x38]
+00d57414  cbz x8,0x00d575ec
+00d57418  ldr x0,[x21, #0x40]
+00d5741c  cbz x0,0x00d575ec
+00d57420  ldr x9,[x0]
+00d57424  ldr w20,[x8, #0x20]
+00d57428  ldr x8,[x9, #0x5d8]
+00d5742c  ldr x1,[x9, #0x5e0]
+00d57430  blr x8
+00d57434  cbz x0,0x00d575ec
+00d57438  ldr w8,[x0, #0x10]
+00d5743c  cmp w20,w8
+00d57440  b.le 0x00d574c0
+00d57444  ldr x0,[x21, #0x40]
+00d57448  cbz x0,0x00d575ec
+00d5744c  ldr x8,[x0]
+00d57450  ldr x19,[x21, #0x38]
+00d57454  ldr x9,[x8, #0x5d8]
+00d57458  ldr x1,[x8, #0x5e0]
+00d5745c  blr x9
+00d57460  cbz x0,0x00d575ec
+00d57464  cbz x19,0x00d575ec
+00d57468  ldr w1,[x0, #0x10]
+00d5746c  mov x0,x19
+00d57470  bl 0x00d567c4
+00d57474  b 0x00d574b8
+00d57478  cbnz w8,0x00d574b8
+00d5747c  mov w8,#0xffffffff
+00d57480  str w8,[x19, #0x10]
+00d57484  cbz x21,0x00d575ec
+00d57488  ldr x0,[x21, #0x38]
+00d5748c  str wzr,[x21, #0x30]
+00d57490  cbz x0,0x00d575ec
+00d57494  mov w1,wzr
+00d57498  bl 0x00d567c4
+00d5749c  str xzr,[x19, #0x18]!
+00d574a0  mov x0,x19
+00d574a4  mov x1,xzr
+00d574a8  bl 0x00b07850
+00d574ac  mov w0,#0x1
+00d574b0  stur w0,[x19, #-0x8]
+00d574b4  b 0x00d575d8
+00d574b8  mov w0,wzr
+00d574bc  b 0x00d575d8
+00d574c0  ldr s8,[x21, #0x30]
+00d574c4  mov x0,xzr
+00d574c8  bl 0x024dc048
+00d574cc  ldr x8,[x21, #0x20]
+00d574d0  fadd s0,s8,s0
+00d574d4  str s0,[x21, #0x30]
+00d574d8  cbz x8,0x00d5758c
+00d574dc  ldr x8,[x8, #0x18]
+00d574e0  cbz x8,0x00d5758c
+00d574e4  adrp x8,0x3321000
+00d574e8  ldr x8,[x8, #0xca8]
+00d574ec  ldr x20,[x21, #0x28]
+00d574f0  ldr x0,[x8]
+00d574f4  ldr w8,[x0, #0xe0]
+00d574f8  cbnz w8,0x00d57500
+00d574fc  bl 0x00b0798c
+00d57500  mov x0,x20
+00d57504  mov x1,xzr
+00d57508  mov x2,xzr
+00d5750c  bl 0x024de30c
+00d57510  tbz w0,#0x0,0x00d5758c
+00d57514  ldr x8,[x21, #0x38]
+00d57518  cbz x8,0x00d575ec
+00d5751c  ldr s0,[x21, #0x30]
+00d57520  ldr s1,[x21, #0x18]
+00d57524  mov w9,#0x7f800000
+00d57528  ldr w8,[x8, #0x20]
+00d5752c  fmov s2,w9
+00d57530  fdiv s0,s0,s1
+00d57534  fcvtzs w9,s0
+00d57538  fcmp s0,s2
+00d5753c  mov w10,#0x80000000
+00d57540  csel w9,w10,w9,eq
+00d57544  cmp w8,w9
+00d57548  b.eq 0x00d5758c
+00d5754c  ldr x22,[x21, #0x20]
+00d57550  cbz x22,0x00d575ec
+00d57554  ldr w1,[x22, #0x18]
+00d57558  ldr x20,[x21, #0x28]
+00d5755c  mov w0,wzr
+00d57560  mov x2,xzr
+00d57564  bl 0x024d63b0
+00d57568  ldr w8,[x22, #0x18]
+00d5756c  cmp w0,w8
+00d57570  b.cs 0x00d575f0
+00d57574  cbz x20,0x00d575ec
+00d57578  add x8,x22,w0, SXTW  #0x3
+00d5757c  ldr x1,[x8, #0x20]
+00d57580  mov x0,x20
+00d57584  mov x2,xzr
+00d57588  bl 0x024bbc20
+00d5758c  ldr x0,[x21, #0x38]
+00d57590  cbz x0,0x00d575ec
+00d57594  ldr s0,[x21, #0x18]
+00d57598  ldr s1,[x21, #0x30]
+00d5759c  mov w8,#0x7f800000
+00d575a0  fmov s2,w8
+00d575a4  mov w9,#0x80000000
+00d575a8  fdiv s0,s1,s0
+00d575ac  fcvtzs w8,s0
+00d575b0  fcmp s0,s2
+00d575b4  csel w1,w9,w8,eq
+00d575b8  bl 0x00d567c4
+00d575bc  str xzr,[x19, #0x18]!
+00d575c0  mov x0,x19
+00d575c4  mov x1,xzr
+00d575c8  bl 0x00b07850
+00d575cc  mov w8,#0x2
+00d575d0  stur w8,[x19, #-0x8]
+00d575d4  mov w0,#0x1
+00d575d8  ldp x19,x30,[sp, #0x20]
+00d575dc  ldp x21,x20,[sp, #0x10]
+00d575e0  ldr x22,[sp, #0x8]
+00d575e4  ldr d8,[sp], #0x30
+00d575e8  ret
+00d575ec  bl 0x00b079b0
+00d575f0  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00d575f4_Typewriter._PlayTypewriter_d__10__System.Collections.Generic.IEnumerator_System.Object_.get_Current.txt
+================================================================================
+Function: Typewriter.<PlayTypewriter>d__10$$System.Collections.Generic.IEnumerator<System.Object>.get_Current @ 00d575f4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d575f4  ldr x0,[x0, #0x18]
+00d575f8  ret
+
+
+================================================================================
+### FILE: 00d575fc_Typewriter._PlayTypewriter_d__10__System.Collections.IEnumerator.Reset.txt
+================================================================================
+Function: Typewriter.<PlayTypewriter>d__10$$System.Collections.IEnumerator.Reset @ 00d575fc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.NotSupportedException$$.ctor @ 021525a8
+  -> FUN_008d74f8 @ 008d74f8
+  -> FUN_00b07978 @ 00b07978
+
+--- Calls IN ---
+
+--- Listing ---
+00d575fc  stp x19,x30,[sp, #-0x10]!
+00d57600  adrp x0,0x335a000
+00d57604  ldr x0,[x0, #0xb88]
+00d57608  bl 0x00b078a0
+00d5760c  bl 0x00b079a0
+00d57610  mov x19,x0
+00d57614  bl 0x008d74f8
+00d57618  mov x0,x19
+00d5761c  mov x1,xzr
+00d57620  bl 0x021525a8
+00d57624  adrp x0,0x330a000
+00d57628  ldr x0,[x0, #0xb50]
+00d5762c  bl 0x00b078a0
+00d57630  mov x1,x0
+00d57634  mov x0,x19
+00d57638  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00d5763c_Typewriter._PlayTypewriter_d__10__System.Collections.IEnumerator.get_Current.txt
+================================================================================
+Function: Typewriter.<PlayTypewriter>d__10$$System.Collections.IEnumerator.get_Current @ 00d5763c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d5763c  ldr x0,[x0, #0x18]
+00d57640  ret
+
+

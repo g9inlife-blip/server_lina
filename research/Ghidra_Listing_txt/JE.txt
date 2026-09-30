@@ -1,0 +1,30 @@
+================================================================================
+### FILE: 024be384_JetBrains.Annotations.NotNullAttribute__.ctor.txt
+================================================================================
+Function: JetBrains.Annotations.NotNullAttribute$$.ctor @ 024be384
+
+--- Calls OUT ---
+  -> System.Attribute$$.ctor @ 0217926c
+
+--- Calls IN ---
+
+--- Listing ---
+024be384  mov x1,xzr
+024be388  b 0x0217926c
+
+
+================================================================================
+### FILE: 024be38c_JetBrains.Annotations.PureAttribute__.ctor.txt
+================================================================================
+Function: JetBrains.Annotations.PureAttribute$$.ctor @ 024be38c
+
+--- Calls OUT ---
+  -> System.Attribute$$.ctor @ 0217926c
+
+--- Calls IN ---
+
+--- Listing ---
+024be38c  mov x1,xzr
+024be390  b 0x0217926c
+
+

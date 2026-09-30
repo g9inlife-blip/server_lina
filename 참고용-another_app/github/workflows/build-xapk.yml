@@ -1,0 +1,159 @@
+name: Build & Release XAPK
+
+on:
+  workflow_dispatch:
+    inputs:
+      share_host:
+        description: "Server host baked into the APK (IP or domain)"
+        required: true
+      glogin_host:
+        description: "Browser URL host for Google-login bridge (real domain for Cloudflare cert). Defaults to share_host"
+        required: false
+      glogin_poll_host:
+        description: "Host for native glogin poller (IP, bypasses Cloudflare). Defaults to share_host"
+        required: false
+      glogin_poll_port:
+        description: "Port for native glogin poller (80 through origin Caddy for public builds)"
+        required: false
+        default: "80"
+      tag:
+        description: "Version, used as release name 'King Bug Castle <tag>' and file 'KingBugCastle_<tag>.xapk' (e.g. v173.0.00); if it already exists a timestamp suffix is appended"
+        required: false
+        default: "v173.0.00"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zipalign apksigner default-jre unzip curl wget
+          sudo curl -sL -o /usr/local/bin/apktool https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool
+          sudo curl -sL -o /usr/local/bin/apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v3.0.3/apktool_3.0.3.jar
+          sudo chmod +x /usr/local/bin/apktool /usr/local/bin/apktool.jar
+
+      - name: Install Python Dependencies
+        run: |
+          pip install -r server/requirements.txt
+
+      - name: Ensure Base XAPK source (v173.0.00)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f apk/xapk_extracted_v1730/com.awesomepiece.castle.apk ]; then
+            echo "Base XAPK source missing, downloading from release stock-v173.0.00..."
+            mkdir -p apk/xapk_extracted_v1730
+            gh release download stock-v173.0.00 --pattern "*.xapk" --dir /tmp/base_xapk --repo "$GITHUB_REPOSITORY"
+            unzip -o -q /tmp/base_xapk/*.xapk -d apk/xapk_extracted_v1730/
+            rm -rf /tmp/base_xapk
+          fi
+          test -f apk/xapk_extracted_v1730/com.awesomepiece.castle.apk
+          test -f apk/xapk_extracted_v1730/config.arm64_v8a.apk
+          test -f apk/xapk_extracted_v1730/base_assets.apk
+          test -f apk/xapk_extracted_v1730/manifest.json
+
+      - name: Setup Keystore
+        run: |
+          mkdir -p ~/.android
+          keytool -genkeypair -v -keystore ~/.android/debug.keystore \
+            -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android -dname "CN=Android Debug,O=Android,C=US"
+
+      - name: Build XAPK Mod
+        env:
+          SHARE_HOST: ${{ github.event.inputs.share_host }}
+          GLOGIN_HOST: ${{ github.event.inputs.glogin_host }}
+          GLOGIN_POLL_HOST: ${{ github.event.inputs.glogin_poll_host }}
+          GLOGIN_POLL_PORT: ${{ github.event.inputs.glogin_poll_port }}
+          KGC_APK_SRC: xapk_extracted_v1730
+        run: |
+          python3 server/builders/build_private.py --share
+
+      - name: Resolve Version
+        run: |
+          TAG="${{ github.event.inputs.tag }}"
+          [ -z "$TAG" ] && TAG="v173.0.00"
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+
+      - name: Prepare Release Asset
+        run: |
+          cp KingBugCastle_173.0.00.xapk "KingBugCastle_${TAG}.xapk"
+          ls -lh "KingBugCastle_${TAG}.xapk"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: KingBugCastle_${{ env.TAG }}
+          path: KingBugCastle_${{ env.TAG }}.xapk
+          if-no-files-found: error
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat > notes.md <<EOF
+          ## King Bug Castle — Private-Server Client
+
+          Custom client (v173.0.00, arm64) for the King Bug Castle private-server project: the
+          original King God Castle v173.0.00 game with compatibility patches so it connects to a
+          self-hosted private server instead of the official backend.
+
+          ### What is inside
+          - Game version: v173.0.00 (arm64)
+          - SSL verification bypass — works with self-signed server certificates
+          - Anti-cheat (XIGNCODE NEO) stub — the game boots normally without the official packer
+          - Stability fixes — patched crash/NRE sources (lobby, shop, PvP panels, event popups)
+          - Custom mail support — the server can push its own notification text
+          - Signed with a throwaway debug keystore
+
+          ### Install
+          1. Install with any XAPK-style installer (APKMirror Installer / APKPure), or unpack the
+             archive and run \`adb install-multiple\` on the three \`.apk\` files inside.
+          2. Open the app. A guest account is created automatically on first launch; Google
+             sign-in is also supported.
+          3. If a storage-permission prompt appears, allow it (needed by some patches on first
+             run).
+
+          ### Notes & troubleshooting
+          - The client cannot be updated through the official store — reinstall the new file
+            whenever a new version is released.
+          - First launch takes longer than usual (one-time unpacking).
+          - If the screen stays black after the splash, force-close and relaunch once.
+          - Close screen-recording apps if UI elements stop responding (some Unity versions
+            conflict with them).
+          EOF
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release $TAG already exists, updating asset..."
+            gh release upload "$TAG" "KingBugCastle_${TAG}.xapk" \
+              --repo "$GITHUB_REPOSITORY" \
+              --clobber
+            gh release edit "$TAG" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "King Bug Castle $TAG" \
+              --notes-file notes.md
+          else
+            gh release create "$TAG" "KingBugCastle_${TAG}.xapk" \
+              --repo "$GITHUB_REPOSITORY" \
+              --latest \
+              --title "King Bug Castle $TAG" \
+              --notes-file notes.md
+          fi
+
+      - name: Cleanup
+        if: always()
+        run: |
+          echo "Cleaning up stock files and build artifacts..."
+          rm -rf apk/xapk_extracted_v1730 KingBugCastle_173.0.00.xapk "KingBugCastle_${TAG}.xapk"

@@ -1,0 +1,95 @@
+================================================================================
+### FILE: 00df30c8_WordData__get_cn.txt
+================================================================================
+Function: WordData$$get_cn @ 00df30c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df30c8  ldr x0,[x0, #0x78]
+00df30cc  ret
+
+
+================================================================================
+### FILE: 00df30d0_WordData__get_name.txt
+================================================================================
+Function: WordData$$get_name @ 00df30d0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df30d0  ldr x0,[x0, #0x80]
+00df30d4  ret
+
+
+================================================================================
+### FILE: 00df30d8_WordData__.ctor.txt
+================================================================================
+Function: WordData$$.ctor @ 00df30d8
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.WordDataWrap$$__CreateInstance @ 015172d8
+
+--- Listing ---
+00df30d8  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00df30dc_WordRecord__.ctor.txt
+================================================================================
+Function: WordRecord$$.ctor @ 00df30dc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00df30dc  stp x21,x20,[sp, #-0x20]!
+00df30e0  stp x19,x30,[sp, #0x10]
+00df30e4  adrp x20,0x3572000
+00df30e8  adrp x21,0x333c000
+00df30ec  ldrb w8,[x20, #0x482]
+00df30f0  ldr x21,[x21, #0xba0]
+00df30f4  mov x19,x0
+00df30f8  tbnz w8,#0x0,0x00df311c
+00df30fc  adrp x0,0x3336000
+00df3100  ldr x0,[x0, #0x3b8]
+00df3104  bl 0x00b0789c
+00df3108  adrp x0,0x333c000
+00df310c  ldr x0,[x0, #0xba0]
+00df3110  bl 0x00b0789c
+00df3114  mov w8,#0x1
+00df3118  strb w8,[x20, #0x482]
+00df311c  ldr x0,[x21]
+00df3120  bl 0x00b079a0
+00df3124  cbz x0,0x00df3160
+00df3128  adrp x8,0x3336000
+00df312c  ldr x8,[x8, #0x3b8]
+00df3130  mov x20,x0
+00df3134  ldr x1,[x8]
+00df3138  bl 0x01bffe10
+00df313c  mov x0,x19
+00df3140  str x20,[x0, #0x18]!
+00df3144  mov x1,x20
+00df3148  bl 0x00b07850
+00df314c  mov x0,x19
+00df3150  ldp x19,x30,[sp, #0x10]
+00df3154  mov x1,xzr
+00df3158  ldp x21,x20,[sp], #0x20
+00df315c  b 0x024e277c
+00df3160  bl 0x00b079b0
+
+

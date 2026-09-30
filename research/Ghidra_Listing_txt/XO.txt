@@ -1,0 +1,930 @@
+================================================================================
+### FILE: 00dc6964_XorFloat__.ctor.txt
+================================================================================
+Function: XorFloat$$.ctor @ 00dc6964
+
+--- Calls OUT ---
+  -> XorFloat$$.ctor @ 00dc696c
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6964  fmov s0,wzr
+00dc6968  b 0x00dc696c
+
+
+================================================================================
+### FILE: 00dc696c_XorFloat__.ctor.txt
+================================================================================
+Function: XorFloat$$.ctor @ 00dc696c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> XorFloat$$Xor @ 00dc6a78
+  -> System.Object$$.ctor @ 02194104
+  -> XorFloat$$GenerateKey @ 00dc6a0c
+
+--- Calls IN ---
+  <- XorFloat$$.ctor @ 00dc6964
+  <- XorFloat$$op_Implicit @ 00dc6d70
+
+--- Listing ---
+00dc696c  str d8,[sp, #-0x30]!
+00dc6970  stp x21,x20,[sp, #0x10]
+00dc6974  stp x19,x30,[sp, #0x20]
+00dc6978  adrp x21,0x3572000
+00dc697c  adrp x20,0x334f000
+00dc6980  ldrb w8,[x21, #0x1bb]
+00dc6984  ldr x20,[x20, #0x28]
+00dc6988  mov v8.16B,v0.16B
+00dc698c  mov x19,x0
+00dc6990  tbnz w8,#0x0,0x00dc69a8
+00dc6994  adrp x0,0x334f000
+00dc6998  ldr x0,[x0, #0x28]
+00dc699c  bl 0x00b0789c
+00dc69a0  mov w8,#0x1
+00dc69a4  strb w8,[x21, #0x1bb]
+00dc69a8  ldr x0,[x20]
+00dc69ac  mov w1,#0x4
+00dc69b0  bl 0x00b078f8
+00dc69b4  mov x1,x0
+00dc69b8  mov x0,x19
+00dc69bc  str x1,[x0, #0x10]!
+00dc69c0  bl 0x00b07850
+00dc69c4  ldr x0,[x20]
+00dc69c8  mov w1,#0x4
+00dc69cc  bl 0x00b078f8
+00dc69d0  mov x1,x0
+00dc69d4  mov x0,x19
+00dc69d8  str x1,[x0, #0x18]!
+00dc69dc  bl 0x00b07850
+00dc69e0  mov x0,x19
+00dc69e4  mov x1,xzr
+00dc69e8  bl 0x02194104
+00dc69ec  mov x0,x19
+00dc69f0  bl 0x00dc6a0c
+00dc69f4  mov x0,x19
+00dc69f8  ldp x19,x30,[sp, #0x20]
+00dc69fc  ldp x21,x20,[sp, #0x10]
+00dc6a00  mov v0.16B,v8.16B
+00dc6a04  ldr d8,[sp], #0x30
+00dc6a08  b 0x00dc6a78
+
+
+================================================================================
+### FILE: 00dc6a0c_XorFloat__GenerateKey.txt
+================================================================================
+Function: XorFloat$$GenerateKey @ 00dc6a0c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Random$$.ctor @ 0216133c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XorFloat$$.ctor @ 00dc696c
+
+--- Listing ---
+00dc6a0c  stp x21,x20,[sp, #-0x20]!
+00dc6a10  stp x19,x30,[sp, #0x10]
+00dc6a14  adrp x20,0x3572000
+00dc6a18  adrp x21,0x3355000
+00dc6a1c  ldrb w8,[x20, #0x1bc]
+00dc6a20  ldr x21,[x21, #0x1e8]
+00dc6a24  mov x19,x0
+00dc6a28  tbnz w8,#0x0,0x00dc6a40
+00dc6a2c  adrp x0,0x3355000
+00dc6a30  ldr x0,[x0, #0x1e8]
+00dc6a34  bl 0x00b0789c
+00dc6a38  mov w8,#0x1
+00dc6a3c  strb w8,[x20, #0x1bc]
+00dc6a40  ldr x0,[x21]
+00dc6a44  bl 0x00b079a0
+00dc6a48  cbz x0,0x00dc6a74
+00dc6a4c  mov x1,xzr
+00dc6a50  mov x20,x0
+00dc6a54  bl 0x0216133c
+00dc6a58  ldr x8,[x20]
+00dc6a5c  ldr x1,[x19, #0x10]
+00dc6a60  ldp x19,x30,[sp, #0x10]
+00dc6a64  mov x0,x20
+00dc6a68  ldp x3,x2,[x8, #0x1c8]
+00dc6a6c  ldp x21,x20,[sp], #0x20
+00dc6a70  br x3
+00dc6a74  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc6a78_XorFloat__Xor.txt
+================================================================================
+Function: XorFloat$$Xor @ 00dc6a78
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.BitConverter$$GetBytes @ 020d84a0
+
+--- Calls IN ---
+  <- XorFloat$$set_value @ 00dc6d5c
+  <- XorFloat$$.ctor @ 00dc696c
+
+--- Listing ---
+00dc6a78  str d8,[sp, #-0x30]!
+00dc6a7c  stp x21,x20,[sp, #0x10]
+00dc6a80  stp x19,x30,[sp, #0x20]
+00dc6a84  adrp x20,0x3572000
+00dc6a88  adrp x21,0x3334000
+00dc6a8c  ldrb w8,[x20, #0x1bd]
+00dc6a90  ldr x21,[x21, #0x1f0]
+00dc6a94  mov v8.16B,v0.16B
+00dc6a98  mov x19,x0
+00dc6a9c  tbnz w8,#0x0,0x00dc6ab4
+00dc6aa0  adrp x0,0x3334000
+00dc6aa4  ldr x0,[x0, #0x1f0]
+00dc6aa8  bl 0x00b0789c
+00dc6aac  mov w8,#0x1
+00dc6ab0  strb w8,[x20, #0x1bd]
+00dc6ab4  ldr x0,[x21]
+00dc6ab8  ldr w8,[x0, #0xe0]
+00dc6abc  cbnz w8,0x00dc6ac4
+00dc6ac0  bl 0x00b0798c
+00dc6ac4  mov v0.16B,v8.16B
+00dc6ac8  mov x0,xzr
+00dc6acc  bl 0x020d84a0
+00dc6ad0  mov x20,x19
+00dc6ad4  str x0,[x20, #0x18]!
+00dc6ad8  mov x1,x0
+00dc6adc  mov x0,x20
+00dc6ae0  bl 0x00b07850
+00dc6ae4  ldr x8,[x20]
+00dc6ae8  cbz x8,0x00dc6bcc
+00dc6aec  ldr w9,[x8, #0x18]
+00dc6af0  cbz w9,0x00dc6bd0
+00dc6af4  ldr x9,[x19, #0x10]
+00dc6af8  cbz x9,0x00dc6bcc
+00dc6afc  ldr w10,[x9, #0x18]
+00dc6b00  cbz w10,0x00dc6bd0
+00dc6b04  ldrb w10,[x8, #0x20]
+00dc6b08  ldrb w9,[x9, #0x20]
+00dc6b0c  eor w9,w9,w10
+00dc6b10  strb w9,[x8, #0x20]
+00dc6b14  ldr x8,[x20]
+00dc6b18  cbz x8,0x00dc6bcc
+00dc6b1c  ldr w9,[x8, #0x18]
+00dc6b20  cmp w9,#0x1
+00dc6b24  b.ls 0x00dc6bd0
+00dc6b28  ldr x9,[x19, #0x10]
+00dc6b2c  cbz x9,0x00dc6bcc
+00dc6b30  ldr w10,[x9, #0x18]
+00dc6b34  cmp w10,#0x1
+00dc6b38  b.ls 0x00dc6bd0
+00dc6b3c  ldrb w10,[x8, #0x21]
+00dc6b40  ldrb w9,[x9, #0x21]
+00dc6b44  eor w9,w9,w10
+00dc6b48  strb w9,[x8, #0x21]
+00dc6b4c  ldr x8,[x20]
+00dc6b50  cbz x8,0x00dc6bcc
+00dc6b54  ldr w9,[x8, #0x18]
+00dc6b58  cmp w9,#0x2
+00dc6b5c  b.ls 0x00dc6bd0
+00dc6b60  ldr x9,[x19, #0x10]
+00dc6b64  cbz x9,0x00dc6bcc
+00dc6b68  ldr w10,[x9, #0x18]
+00dc6b6c  cmp w10,#0x2
+00dc6b70  b.ls 0x00dc6bd0
+00dc6b74  ldrb w10,[x8, #0x22]
+00dc6b78  ldrb w9,[x9, #0x22]
+00dc6b7c  eor w9,w9,w10
+00dc6b80  strb w9,[x8, #0x22]
+00dc6b84  ldr x8,[x20]
+00dc6b88  cbz x8,0x00dc6bcc
+00dc6b8c  ldr w9,[x8, #0x18]
+00dc6b90  cmp w9,#0x3
+00dc6b94  b.ls 0x00dc6bd0
+00dc6b98  ldr x9,[x19, #0x10]
+00dc6b9c  cbz x9,0x00dc6bcc
+00dc6ba0  ldr w10,[x9, #0x18]
+00dc6ba4  cmp w10,#0x3
+00dc6ba8  b.ls 0x00dc6bd0
+00dc6bac  ldrb w10,[x8, #0x23]
+00dc6bb0  ldrb w9,[x9, #0x23]
+00dc6bb4  eor w9,w9,w10
+00dc6bb8  strb w9,[x8, #0x23]
+00dc6bbc  ldp x19,x30,[sp, #0x20]
+00dc6bc0  ldp x21,x20,[sp, #0x10]
+00dc6bc4  ldr d8,[sp], #0x30
+00dc6bc8  ret
+00dc6bcc  bl 0x00b079b0
+00dc6bd0  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00dc6bd4_XorFloat__get_value.txt
+================================================================================
+Function: XorFloat$$get_value @ 00dc6bd4
+
+--- Calls OUT ---
+  -> XorFloat$$Xor @ 00dc6bd8
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6bd4  b 0x00dc6bd8
+
+
+================================================================================
+### FILE: 00dc6bd8_XorFloat__Xor.txt
+================================================================================
+Function: XorFloat$$Xor @ 00dc6bd8
+
+--- Calls OUT ---
+  -> System.BitConverter$$ToSingle @ 020d8830
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XorFloat$$op_Implicit @ 00dc6d60
+  <- XorFloat$$get_value @ 00dc6bd4
+  <- XorFloat$$ToString @ 00dc6e28
+  <- XorFloat$$ToString @ 00dc6df8
+  <- XorFloat$$ToString @ 00dc6e58
+  <- XorFloat$$ToString @ 00dc6dd8
+
+--- Listing ---
+00dc6bd8  stp x21,x20,[sp, #-0x20]!
+00dc6bdc  stp x19,x30,[sp, #0x10]
+00dc6be0  adrp x19,0x3572000
+00dc6be4  adrp x21,0x334f000
+00dc6be8  ldrb w8,[x19, #0x1be]
+00dc6bec  ldr x21,[x21, #0x28]
+00dc6bf0  mov x20,x0
+00dc6bf4  tbnz w8,#0x0,0x00dc6c18
+00dc6bf8  adrp x0,0x3334000
+00dc6bfc  ldr x0,[x0, #0x1f0]
+00dc6c00  bl 0x00b0789c
+00dc6c04  adrp x0,0x334f000
+00dc6c08  ldr x0,[x0, #0x28]
+00dc6c0c  bl 0x00b0789c
+00dc6c10  mov w8,#0x1
+00dc6c14  strb w8,[x19, #0x1be]
+00dc6c18  ldr x0,[x21]
+00dc6c1c  mov w1,#0x4
+00dc6c20  bl 0x00b078f8
+00dc6c24  ldr x9,[x20, #0x18]
+00dc6c28  cbz x9,0x00dc6d58
+00dc6c2c  ldr w8,[x9, #0x18]
+00dc6c30  cbz w8,0x00dc6d54
+00dc6c34  ldr x10,[x20, #0x10]
+00dc6c38  cbz x10,0x00dc6d58
+00dc6c3c  ldr w8,[x10, #0x18]
+00dc6c40  cbz w8,0x00dc6d54
+00dc6c44  mov x19,x0
+00dc6c48  cbz x0,0x00dc6d58
+00dc6c4c  ldr w8,[x19, #0x18]
+00dc6c50  cbz w8,0x00dc6d54
+00dc6c54  ldrb w9,[x9, #0x20]
+00dc6c58  ldrb w10,[x10, #0x20]
+00dc6c5c  eor w9,w10,w9
+00dc6c60  strb w9,[x19, #0x20]
+00dc6c64  ldr x9,[x20, #0x18]
+00dc6c68  cbz x9,0x00dc6d58
+00dc6c6c  ldr w10,[x9, #0x18]
+00dc6c70  cmp w10,#0x1
+00dc6c74  b.ls 0x00dc6d54
+00dc6c78  ldr x10,[x20, #0x10]
+00dc6c7c  cbz x10,0x00dc6d58
+00dc6c80  ldr w11,[x10, #0x18]
+00dc6c84  cmp w11,#0x1
+00dc6c88  b.ls 0x00dc6d54
+00dc6c8c  cmp w8,#0x1
+00dc6c90  b.ls 0x00dc6d54
+00dc6c94  ldrb w9,[x9, #0x21]
+00dc6c98  ldrb w10,[x10, #0x21]
+00dc6c9c  eor w9,w10,w9
+00dc6ca0  strb w9,[x19, #0x21]
+00dc6ca4  ldr x9,[x20, #0x18]
+00dc6ca8  cbz x9,0x00dc6d58
+00dc6cac  ldr w10,[x9, #0x18]
+00dc6cb0  cmp w10,#0x2
+00dc6cb4  b.ls 0x00dc6d54
+00dc6cb8  ldr x10,[x20, #0x10]
+00dc6cbc  cbz x10,0x00dc6d58
+00dc6cc0  ldr w11,[x10, #0x18]
+00dc6cc4  cmp w11,#0x2
+00dc6cc8  b.ls 0x00dc6d54
+00dc6ccc  cmp w8,#0x2
+00dc6cd0  b.ls 0x00dc6d54
+00dc6cd4  ldrb w9,[x9, #0x22]
+00dc6cd8  ldrb w10,[x10, #0x22]
+00dc6cdc  eor w9,w10,w9
+00dc6ce0  strb w9,[x19, #0x22]
+00dc6ce4  ldr x9,[x20, #0x18]
+00dc6ce8  cbz x9,0x00dc6d58
+00dc6cec  ldr w10,[x9, #0x18]
+00dc6cf0  cmp w10,#0x3
+00dc6cf4  b.ls 0x00dc6d54
+00dc6cf8  ldr x10,[x20, #0x10]
+00dc6cfc  cbz x10,0x00dc6d58
+00dc6d00  ldr w11,[x10, #0x18]
+00dc6d04  cmp w11,#0x3
+00dc6d08  b.ls 0x00dc6d54
+00dc6d0c  cmp w8,#0x3
+00dc6d10  b.ls 0x00dc6d54
+00dc6d14  ldrb w8,[x9, #0x23]
+00dc6d18  ldrb w9,[x10, #0x23]
+00dc6d1c  adrp x10,0x3334000
+00dc6d20  ldr x10,[x10, #0x1f0]
+00dc6d24  eor w8,w9,w8
+00dc6d28  strb w8,[x19, #0x23]
+00dc6d2c  ldr x0,[x10]
+00dc6d30  ldr w8,[x0, #0xe0]
+00dc6d34  cbnz w8,0x00dc6d3c
+00dc6d38  bl 0x00b0798c
+00dc6d3c  mov x0,x19
+00dc6d40  ldp x19,x30,[sp, #0x10]
+00dc6d44  mov w1,wzr
+00dc6d48  mov x2,xzr
+00dc6d4c  ldp x21,x20,[sp], #0x20
+00dc6d50  b 0x020d8830
+00dc6d54  bl 0x00b079b8
+00dc6d58  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc6d5c_XorFloat__set_value.txt
+================================================================================
+Function: XorFloat$$set_value @ 00dc6d5c
+
+--- Calls OUT ---
+  -> XorFloat$$Xor @ 00dc6a78
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6d5c  b 0x00dc6a78
+
+
+================================================================================
+### FILE: 00dc6d60_XorFloat__op_Implicit.txt
+================================================================================
+Function: XorFloat$$op_Implicit @ 00dc6d60
+
+--- Calls OUT ---
+  -> XorFloat$$Xor @ 00dc6bd8
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6d60  cbz x0,0x00dc6d68
+00dc6d64  b 0x00dc6bd8
+00dc6d68  fmov s0,wzr
+00dc6d6c  ret
+
+
+================================================================================
+### FILE: 00dc6d70_XorFloat__op_Implicit.txt
+================================================================================
+Function: XorFloat$$op_Implicit @ 00dc6d70
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> XorFloat$$.ctor @ 00dc696c
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6d70  str d8,[sp, #-0x20]!
+00dc6d74  str x20,[sp, #0x8]
+00dc6d78  stp x19,x30,[sp, #0x10]
+00dc6d7c  adrp x19,0x3572000
+00dc6d80  adrp x20,0x3325000
+00dc6d84  ldrb w8,[x19, #0x1bf]
+00dc6d88  ldr x20,[x20, #0xed0]
+00dc6d8c  mov v8.16B,v0.16B
+00dc6d90  tbnz w8,#0x0,0x00dc6da8
+00dc6d94  adrp x0,0x3325000
+00dc6d98  ldr x0,[x0, #0xed0]
+00dc6d9c  bl 0x00b0789c
+00dc6da0  mov w8,#0x1
+00dc6da4  strb w8,[x19, #0x1bf]
+00dc6da8  ldr x0,[x20]
+00dc6dac  bl 0x00b079a0
+00dc6db0  cbz x0,0x00dc6dd4
+00dc6db4  mov v0.16B,v8.16B
+00dc6db8  mov x19,x0
+00dc6dbc  bl 0x00dc696c
+00dc6dc0  mov x0,x19
+00dc6dc4  ldp x19,x30,[sp, #0x10]
+00dc6dc8  ldr x20,[sp, #0x8]
+00dc6dcc  ldr d8,[sp], #0x20
+00dc6dd0  ret
+00dc6dd4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc6dd8_XorFloat__ToString.txt
+================================================================================
+Function: XorFloat$$ToString @ 00dc6dd8
+
+--- Calls OUT ---
+  -> XorFloat$$Xor @ 00dc6bd8
+  -> System.Single$$ToString @ 021632b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6dd8  str x30,[sp, #-0x10]!
+00dc6ddc  bl 0x00dc6bd8
+00dc6de0  add x0,sp,#0xc
+00dc6de4  mov x1,xzr
+00dc6de8  str s0,[sp, #0xc]
+00dc6dec  bl 0x021632b0
+00dc6df0  ldr x30,[sp], #0x10
+00dc6df4  ret
+
+
+================================================================================
+### FILE: 00dc6df8_XorFloat__ToString.txt
+================================================================================
+Function: XorFloat$$ToString @ 00dc6df8
+
+--- Calls OUT ---
+  -> XorFloat$$Xor @ 00dc6bd8
+  -> System.Single$$ToString @ 021633b8
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6df8  sub sp,sp,#0x20
+00dc6dfc  stp x19,x30,[sp, #0x10]
+00dc6e00  mov x19,x1
+00dc6e04  bl 0x00dc6bd8
+00dc6e08  add x0,sp,#0xc
+00dc6e0c  mov x1,x19
+00dc6e10  mov x2,xzr
+00dc6e14  str s0,[sp, #0xc]
+00dc6e18  bl 0x021633b8
+00dc6e1c  ldp x19,x30,[sp, #0x10]
+00dc6e20  add sp,sp,#0x20
+00dc6e24  ret
+
+
+================================================================================
+### FILE: 00dc6e28_XorFloat__ToString.txt
+================================================================================
+Function: XorFloat$$ToString @ 00dc6e28
+
+--- Calls OUT ---
+  -> XorFloat$$Xor @ 00dc6bd8
+  -> System.Single$$ToString @ 0216332c
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6e28  sub sp,sp,#0x20
+00dc6e2c  stp x19,x30,[sp, #0x10]
+00dc6e30  mov x19,x1
+00dc6e34  bl 0x00dc6bd8
+00dc6e38  add x0,sp,#0xc
+00dc6e3c  mov x1,x19
+00dc6e40  mov x2,xzr
+00dc6e44  str s0,[sp, #0xc]
+00dc6e48  bl 0x0216332c
+00dc6e4c  ldp x19,x30,[sp, #0x10]
+00dc6e50  add sp,sp,#0x20
+00dc6e54  ret
+
+
+================================================================================
+### FILE: 00dc6e58_XorFloat__ToString.txt
+================================================================================
+Function: XorFloat$$ToString @ 00dc6e58
+
+--- Calls OUT ---
+  -> XorFloat$$Xor @ 00dc6bd8
+  -> System.Single$$ToString @ 02163440
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6e58  str x20,[sp, #-0x20]!
+00dc6e5c  stp x19,x30,[sp, #0x10]
+00dc6e60  mov x19,x2
+00dc6e64  mov x20,x1
+00dc6e68  bl 0x00dc6bd8
+00dc6e6c  add x0,sp,#0xc
+00dc6e70  mov x1,x20
+00dc6e74  mov x2,x19
+00dc6e78  mov x3,xzr
+00dc6e7c  str s0,[sp, #0xc]
+00dc6e80  bl 0x02163440
+00dc6e84  ldp x19,x30,[sp, #0x10]
+00dc6e88  ldr x20,[sp], #0x20
+00dc6e8c  ret
+
+
+================================================================================
+### FILE: 00dc6e90_XorInt__.ctor.txt
+================================================================================
+Function: XorInt$$.ctor @ 00dc6e90
+
+--- Calls OUT ---
+  -> XorInt$$GenerateKey @ 00dc6ef0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6e90  stp x19,x30,[sp, #-0x10]!
+00dc6e94  mov x1,xzr
+00dc6e98  mov x19,x0
+00dc6e9c  bl 0x02194104
+00dc6ea0  mov x0,x19
+00dc6ea4  bl 0x00dc6ef0
+00dc6ea8  ldr w8,[x19, #0x10]
+00dc6eac  str w8,[x19, #0x14]
+00dc6eb0  ldp x19,x30,[sp], #0x10
+00dc6eb4  ret
+
+
+================================================================================
+### FILE: 00dc6eb8_XorInt__.ctor.txt
+================================================================================
+Function: XorInt$$.ctor @ 00dc6eb8
+
+--- Calls OUT ---
+  -> XorInt$$GenerateKey @ 00dc6ef0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6eb8  str x20,[sp, #-0x20]!
+00dc6ebc  stp x19,x30,[sp, #0x10]
+00dc6ec0  mov w19,w1
+00dc6ec4  mov x1,xzr
+00dc6ec8  mov x20,x0
+00dc6ecc  bl 0x02194104
+00dc6ed0  mov x0,x20
+00dc6ed4  bl 0x00dc6ef0
+00dc6ed8  ldr w8,[x20, #0x10]
+00dc6edc  eor w8,w8,w19
+00dc6ee0  str w8,[x20, #0x14]
+00dc6ee4  ldp x19,x30,[sp, #0x10]
+00dc6ee8  ldr x20,[sp], #0x20
+00dc6eec  ret
+
+
+================================================================================
+### FILE: 00dc6ef0_XorInt__GenerateKey.txt
+================================================================================
+Function: XorInt$$GenerateKey @ 00dc6ef0
+
+--- Calls OUT ---
+  -> System.BitConverter$$ToInt32 @ 020d85fc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Random$$.ctor @ 0216133c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XorInt$$.ctor @ 00dc6eb8
+  <- XorInt$$.ctor @ 00dc6e90
+  <- XorInt$$op_Implicit @ 00dc7010
+
+--- Listing ---
+00dc6ef0  str x22,[sp, #-0x30]!
+00dc6ef4  stp x21,x20,[sp, #0x10]
+00dc6ef8  stp x19,x30,[sp, #0x20]
+00dc6efc  adrp x21,0x3572000
+00dc6f00  adrp x22,0x334f000
+00dc6f04  adrp x20,0x3355000
+00dc6f08  ldrb w8,[x21, #0x1c0]
+00dc6f0c  ldr x22,[x22, #0x28]
+00dc6f10  ldr x20,[x20, #0x1e8]
+00dc6f14  mov x19,x0
+00dc6f18  tbnz w8,#0x0,0x00dc6f48
+00dc6f1c  adrp x0,0x3334000
+00dc6f20  ldr x0,[x0, #0x1f0]
+00dc6f24  bl 0x00b0789c
+00dc6f28  adrp x0,0x334f000
+00dc6f2c  ldr x0,[x0, #0x28]
+00dc6f30  bl 0x00b0789c
+00dc6f34  adrp x0,0x3355000
+00dc6f38  ldr x0,[x0, #0x1e8]
+00dc6f3c  bl 0x00b0789c
+00dc6f40  mov w8,#0x1
+00dc6f44  strb w8,[x21, #0x1c0]
+00dc6f48  ldr x0,[x22]
+00dc6f4c  mov w1,#0x4
+00dc6f50  bl 0x00b078f8
+00dc6f54  ldr x8,[x20]
+00dc6f58  mov x20,x0
+00dc6f5c  mov x0,x8
+00dc6f60  bl 0x00b079a0
+00dc6f64  cbz x0,0x00dc6fc4
+00dc6f68  adrp x22,0x3334000
+00dc6f6c  ldr x22,[x22, #0x1f0]
+00dc6f70  mov x1,xzr
+00dc6f74  mov x21,x0
+00dc6f78  bl 0x0216133c
+00dc6f7c  ldr x8,[x21]
+00dc6f80  mov x0,x21
+00dc6f84  mov x1,x20
+00dc6f88  ldp x9,x2,[x8, #0x1c8]
+00dc6f8c  blr x9
+00dc6f90  ldr x0,[x22]
+00dc6f94  ldr w8,[x0, #0xe0]
+00dc6f98  cbnz w8,0x00dc6fa0
+00dc6f9c  bl 0x00b0798c
+00dc6fa0  mov x0,x20
+00dc6fa4  mov w1,wzr
+00dc6fa8  mov x2,xzr
+00dc6fac  bl 0x020d85fc
+00dc6fb0  str w0,[x19, #0x10]
+00dc6fb4  ldp x19,x30,[sp, #0x20]
+00dc6fb8  ldp x21,x20,[sp, #0x10]
+00dc6fbc  ldr x22,[sp], #0x30
+00dc6fc0  ret
+00dc6fc4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc6fc8_XorInt__Xor.txt
+================================================================================
+Function: XorInt$$Xor @ 00dc6fc8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6fc8  ldr w8,[x0, #0x10]
+00dc6fcc  eor w0,w8,w1
+00dc6fd0  ret
+
+
+================================================================================
+### FILE: 00dc6fd4_XorInt__get_rawValue.txt
+================================================================================
+Function: XorInt$$get_rawValue @ 00dc6fd4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6fd4  ldr w0,[x0, #0x14]
+00dc6fd8  ret
+
+
+================================================================================
+### FILE: 00dc6fdc_XorInt__set_rawValue.txt
+================================================================================
+Function: XorInt$$set_rawValue @ 00dc6fdc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6fdc  str w1,[x0, #0x14]
+00dc6fe0  ret
+
+
+================================================================================
+### FILE: 00dc6fe4_XorInt__get_value.txt
+================================================================================
+Function: XorInt$$get_value @ 00dc6fe4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6fe4  ldp w8,w9,[x0, #0x10]
+00dc6fe8  eor w0,w8,w9
+00dc6fec  ret
+
+
+================================================================================
+### FILE: 00dc6ff0_XorInt__set_value.txt
+================================================================================
+Function: XorInt$$set_value @ 00dc6ff0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc6ff0  ldr w8,[x0, #0x10]
+00dc6ff4  eor w8,w8,w1
+00dc6ff8  str w8,[x0, #0x14]
+00dc6ffc  ret
+
+
+================================================================================
+### FILE: 00dc7000_XorInt__op_Implicit.txt
+================================================================================
+Function: XorInt$$op_Implicit @ 00dc7000
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc7000  cbz x0,0x00dc700c
+00dc7004  ldp w8,w9,[x0, #0x10]
+00dc7008  eor w0,w8,w9
+00dc700c  ret
+
+
+================================================================================
+### FILE: 00dc7010_XorInt__op_Implicit.txt
+================================================================================
+Function: XorInt$$op_Implicit @ 00dc7010
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XorInt$$GenerateKey @ 00dc6ef0
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XorInt$$op_Increment @ 00dc7084
+  <- XorInt$$op_Decrement @ 00dc70a0
+
+--- Listing ---
+00dc7010  stp x21,x20,[sp, #-0x20]!
+00dc7014  stp x19,x30,[sp, #0x10]
+00dc7018  adrp x20,0x3572000
+00dc701c  adrp x21,0x333d000
+00dc7020  ldrb w8,[x20, #0x1c1]
+00dc7024  ldr x21,[x21, #0xb10]
+00dc7028  mov w19,w0
+00dc702c  tbnz w8,#0x0,0x00dc7044
+00dc7030  adrp x0,0x333d000
+00dc7034  ldr x0,[x0, #0xb10]
+00dc7038  bl 0x00b0789c
+00dc703c  mov w8,#0x1
+00dc7040  strb w8,[x20, #0x1c1]
+00dc7044  ldr x0,[x21]
+00dc7048  bl 0x00b079a0
+00dc704c  cbz x0,0x00dc7080
+00dc7050  mov x1,xzr
+00dc7054  mov x20,x0
+00dc7058  bl 0x02194104
+00dc705c  mov x0,x20
+00dc7060  bl 0x00dc6ef0
+00dc7064  ldr w8,[x20, #0x10]
+00dc7068  mov x0,x20
+00dc706c  eor w8,w8,w19
+00dc7070  str w8,[x20, #0x14]
+00dc7074  ldp x19,x30,[sp, #0x10]
+00dc7078  ldp x21,x20,[sp], #0x20
+00dc707c  ret
+00dc7080  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc7084_XorInt__op_Increment.txt
+================================================================================
+Function: XorInt$$op_Increment @ 00dc7084
+
+--- Calls OUT ---
+  -> XorInt$$op_Implicit @ 00dc7010
+
+--- Calls IN ---
+
+--- Listing ---
+00dc7084  cbz x0,0x00dc7098
+00dc7088  ldp w8,w9,[x0, #0x10]
+00dc708c  eor w8,w8,w9
+00dc7090  add w0,w8,#0x1
+00dc7094  b 0x00dc7010
+00dc7098  mov w0,#0x1
+00dc709c  b 0x00dc7010
+
+
+================================================================================
+### FILE: 00dc70a0_XorInt__op_Decrement.txt
+================================================================================
+Function: XorInt$$op_Decrement @ 00dc70a0
+
+--- Calls OUT ---
+  -> XorInt$$op_Implicit @ 00dc7010
+
+--- Calls IN ---
+
+--- Listing ---
+00dc70a0  cbz x0,0x00dc70b4
+00dc70a4  ldp w8,w9,[x0, #0x10]
+00dc70a8  eor w8,w8,w9
+00dc70ac  sub w0,w8,#0x1
+00dc70b0  b 0x00dc7010
+00dc70b4  mov w0,#0xffffffff
+00dc70b8  b 0x00dc7010
+
+
+================================================================================
+### FILE: 00dc70bc_XorInt__ToString.txt
+================================================================================
+Function: XorInt$$ToString @ 00dc70bc
+
+--- Calls OUT ---
+  -> System.Int32$$ToString @ 0214dc44
+
+--- Calls IN ---
+
+--- Listing ---
+00dc70bc  str x30,[sp, #-0x10]!
+00dc70c0  ldp w8,w9,[x0, #0x10]
+00dc70c4  add x0,sp,#0xc
+00dc70c8  mov x1,xzr
+00dc70cc  eor w8,w8,w9
+00dc70d0  str w8,[sp, #0xc]
+00dc70d4  bl 0x0214dc44
+00dc70d8  ldr x30,[sp], #0x10
+00dc70dc  ret
+
+
+================================================================================
+### FILE: 00dc70e0_XorInt__ToString.txt
+================================================================================
+Function: XorInt$$ToString @ 00dc70e0
+
+--- Calls OUT ---
+  -> System.Int32$$ToString @ 0214dcd8
+
+--- Calls IN ---
+
+--- Listing ---
+00dc70e0  str x30,[sp, #-0x10]!
+00dc70e4  ldp w8,w9,[x0, #0x10]
+00dc70e8  add x0,sp,#0xc
+00dc70ec  mov x2,xzr
+00dc70f0  eor w8,w8,w9
+00dc70f4  str w8,[sp, #0xc]
+00dc70f8  bl 0x0214dcd8
+00dc70fc  ldr x30,[sp], #0x10
+00dc7100  ret
+
+
+================================================================================
+### FILE: 00dc7104_XorInt__ToString.txt
+================================================================================
+Function: XorInt$$ToString @ 00dc7104
+
+--- Calls OUT ---
+  -> System.Int32$$ToString @ 0214dd88
+
+--- Calls IN ---
+
+--- Listing ---
+00dc7104  str x30,[sp, #-0x10]!
+00dc7108  ldp w8,w9,[x0, #0x10]
+00dc710c  add x0,sp,#0xc
+00dc7110  mov x2,xzr
+00dc7114  eor w8,w8,w9
+00dc7118  str w8,[sp, #0xc]
+00dc711c  bl 0x0214dd88
+00dc7120  ldr x30,[sp], #0x10
+00dc7124  ret
+
+
+================================================================================
+### FILE: 00dc7128_XorInt__ToString.txt
+================================================================================
+Function: XorInt$$ToString @ 00dc7128
+
+--- Calls OUT ---
+  -> System.Int32$$ToString @ 0214de20
+
+--- Calls IN ---
+
+--- Listing ---
+00dc7128  str x30,[sp, #-0x10]!
+00dc712c  ldp w8,w9,[x0, #0x10]
+00dc7130  add x0,sp,#0xc
+00dc7134  mov x3,xzr
+00dc7138  eor w8,w8,w9
+00dc713c  str w8,[sp, #0xc]
+00dc7140  bl 0x0214de20
+00dc7144  ldr x30,[sp], #0x10
+00dc7148  ret
+
+

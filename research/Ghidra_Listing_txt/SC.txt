@@ -1,0 +1,1170 @@
+================================================================================
+### FILE: 008d3e80_sched_yield.txt
+================================================================================
+Function: sched_yield @ 008d3e80
+
+--- Calls OUT ---
+  -> sched_yield @ 03799140
+
+--- Calls IN ---
+  <- FUN_00b3f490 @ 00b3f490
+  <- lock @ 00b81228
+  <- sched_yield @ 00b46d04
+  <- FUN_00b32d94 @ 00b32d94
+  <- FUN_00ae8300 @ 00ae8300
+
+--- Listing ---
+008d3e80  adrp x16,0x3307000
+008d3e84  ldr x17,[x16, #0x900]
+008d3e88  add x16,x16,#0x900
+008d3e8c  br x17
+
+
+================================================================================
+### FILE: 008d4460_scalbn.txt
+================================================================================
+Function: scalbn @ 008d4460
+
+--- Calls OUT ---
+  -> scalbn @ 037992c0
+
+--- Calls IN ---
+  <- FUN_00b073ec @ 00b073ec
+
+--- Listing ---
+008d4460  adrp x16,0x3307000
+008d4464  ldr x17,[x16, #0xbf0]
+008d4468  add x16,x16,#0xbf0
+008d446c  br x17
+
+
+================================================================================
+### FILE: 00b46d04_sched_yield.txt
+================================================================================
+Function: sched_yield @ 00b46d04
+
+--- Calls OUT ---
+  -> sched_yield @ 008d3e80
+
+--- Calls IN ---
+  <- FUN_00b04cc0 @ 00b04cc0
+
+--- Listing ---
+00b46d04  b 0x008d3e80
+
+
+================================================================================
+### FILE: 00cf1984_ScreenPlacement__Start.txt
+================================================================================
+Function: ScreenPlacement$$Start @ 00cf1984
+
+--- Calls OUT ---
+  -> ScreenPlacement$$placementCalculation @ 00cf1994
+
+--- Calls IN ---
+
+--- Listing ---
+00cf1984  ldrb w8,[x0, #0x25]
+00cf1988  cbz w8,0x00cf1990
+00cf198c  b 0x00cf1994
+00cf1990  ret
+
+
+================================================================================
+### FILE: 00cf1994_ScreenPlacement__placementCalculation.txt
+================================================================================
+Function: ScreenPlacement$$placementCalculation @ 00cf1994
+
+--- Calls OUT ---
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> UnityEngine.Camera$$get_main @ 024d83dc
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Rect$$get_width @ 024db068
+  -> UnityEngine.Bounds$$get_max @ 024da68c
+  -> UnityEngine.Bounds$$get_min @ 024da61c
+  -> UnityEngine.Rect$$get_height @ 024db078
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> UnityEngine.Renderer$$get_bounds @ 024c59e8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> ScreenPlacementExtension$$ScreenPlacement @ 00cf1cf4
+  -> UnityEngine.Camera$$WorldToScreenPoint @ 024d81a8
+  -> UnityEngine.Rect$$.ctor @ 024daef0
+  -> UnityEngine.Screen$$get_width @ 024d265c
+  -> UnityEngine.Screen$$get_height @ 024d2684
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- ScreenPlacement$$Start @ 00cf1984
+  <- ScreenPlacement$$FixedUpdate @ 00cf1ce4
+
+--- Listing ---
+00cf1994  sub sp,sp,#0xa0
+00cf1998  stp d11,d10,[sp, #0x50]
+00cf199c  stp d9,d8,[sp, #0x60]
+00cf19a0  str x22,[sp, #0x70]
+00cf19a4  stp x21,x20,[sp, #0x80]
+00cf19a8  stp x19,x30,[sp, #0x90]
+00cf19ac  adrp x21,0x3571000
+00cf19b0  adrp x20,0x3321000
+00cf19b4  ldrb w8,[x21, #0x9bc]
+00cf19b8  ldr x20,[x20, #0xca8]
+00cf19bc  mov x19,x0
+00cf19c0  tbnz w8,#0x0,0x00cf19e4
+00cf19c4  adrp x0,0x3309000
+00cf19c8  ldr x0,[x0, #0x608]
+00cf19cc  bl 0x00b0789c
+00cf19d0  adrp x0,0x3321000
+00cf19d4  ldr x0,[x0, #0xca8]
+00cf19d8  bl 0x00b0789c
+00cf19dc  mov w8,#0x1
+00cf19e0  strb w8,[x21, #0x9bc]
+00cf19e4  mov x0,x19
+00cf19e8  mov x1,xzr
+00cf19ec  stp xzr,xzr,[sp, #0x40]
+00cf19f0  stp xzr,xzr,[sp, #0x28]
+00cf19f4  str xzr,[sp, #0x20]
+00cf19f8  bl 0x024e4e98
+00cf19fc  ldr w1,[x19, #0x18]
+00cf1a00  ldp s0,s1,[x19, #0x1c]
+00cf1a04  bl 0x00cf1cf4
+00cf1a08  ldr x0,[x20]
+00cf1a0c  ldr x20,[x19, #0x28]
+00cf1a10  ldr w8,[x0, #0xe0]
+00cf1a14  cbnz w8,0x00cf1a1c
+00cf1a18  bl 0x00b0798c
+00cf1a1c  mov x0,x20
+00cf1a20  mov x1,xzr
+00cf1a24  mov x2,xzr
+00cf1a28  bl 0x024c8180
+00cf1a2c  tbz w0,#0x0,0x00cf1a44
+00cf1a30  mov x0,x19
+00cf1a34  mov x1,xzr
+00cf1a38  bl 0x024e4e98
+00cf1a3c  mov x20,x0
+00cf1a40  b 0x00cf1a48
+00cf1a44  ldr x20,[x19, #0x28]
+00cf1a48  mov x0,xzr
+00cf1a4c  bl 0x024d83dc
+00cf1a50  cbz x20,0x00cf1ce0
+00cf1a54  adrp x22,0x3309000
+00cf1a58  ldr x22,[x22, #0x608]
+00cf1a5c  mov x21,x0
+00cf1a60  mov x0,x20
+00cf1a64  ldr x1,[x22]
+00cf1a68  bl 0x0176cbf8
+00cf1a6c  cbz x0,0x00cf1ce0
+00cf1a70  add x8,sp,#0x8
+00cf1a74  mov x1,xzr
+00cf1a78  bl 0x024c59e8
+00cf1a7c  ldur q0,[sp, #0x8]
+00cf1a80  ldr x8,[sp, #0x18]
+00cf1a84  add x0,sp,#0x20
+00cf1a88  mov x1,xzr
+00cf1a8c  str q0,[sp, #0x20]
+00cf1a90  str x8,[sp, #0x30]
+00cf1a94  bl 0x024da61c
+00cf1a98  ldr x1,[x22]
+00cf1a9c  mov x0,x20
+00cf1aa0  mov v8.16B,v0.16B
+00cf1aa4  bl 0x0176cbf8
+00cf1aa8  cbz x0,0x00cf1ce0
+00cf1aac  add x8,sp,#0x8
+00cf1ab0  mov x1,xzr
+00cf1ab4  bl 0x024c59e8
+00cf1ab8  ldur q0,[sp, #0x8]
+00cf1abc  ldr x8,[sp, #0x18]
+00cf1ac0  add x0,sp,#0x20
+00cf1ac4  mov x1,xzr
+00cf1ac8  str q0,[sp, #0x20]
+00cf1acc  str x8,[sp, #0x30]
+00cf1ad0  bl 0x024da68c
+00cf1ad4  cbz x21,0x00cf1ce0
+00cf1ad8  fmov s2,wzr
+00cf1adc  mov x0,x21
+00cf1ae0  mov v0.16B,v8.16B
+00cf1ae4  mov x1,xzr
+00cf1ae8  bl 0x024d81a8
+00cf1aec  mov x0,xzr
+00cf1af0  mov v8.16B,v0.16B
+00cf1af4  mov v9.16B,v1.16B
+00cf1af8  bl 0x024d83dc
+00cf1afc  ldr x1,[x22]
+00cf1b00  mov x21,x0
+00cf1b04  mov x0,x20
+00cf1b08  bl 0x0176cbf8
+00cf1b0c  cbz x0,0x00cf1ce0
+00cf1b10  add x8,sp,#0x8
+00cf1b14  mov x1,xzr
+00cf1b18  bl 0x024c59e8
+00cf1b1c  ldur q0,[sp, #0x8]
+00cf1b20  ldr x8,[sp, #0x18]
+00cf1b24  add x0,sp,#0x20
+00cf1b28  mov x1,xzr
+00cf1b2c  str q0,[sp, #0x20]
+00cf1b30  str x8,[sp, #0x30]
+00cf1b34  bl 0x024da68c
+00cf1b38  ldr x1,[x22]
+00cf1b3c  mov x0,x20
+00cf1b40  mov v10.16B,v0.16B
+00cf1b44  bl 0x0176cbf8
+00cf1b48  cbz x0,0x00cf1ce0
+00cf1b4c  add x8,sp,#0x8
+00cf1b50  mov x1,xzr
+00cf1b54  bl 0x024c59e8
+00cf1b58  ldur q0,[sp, #0x8]
+00cf1b5c  ldr x8,[sp, #0x18]
+00cf1b60  add x0,sp,#0x20
+00cf1b64  mov x1,xzr
+00cf1b68  str q0,[sp, #0x20]
+00cf1b6c  str x8,[sp, #0x30]
+00cf1b70  bl 0x024da61c
+00cf1b74  cbz x21,0x00cf1ce0
+00cf1b78  fmov s2,wzr
+00cf1b7c  mov x0,x21
+00cf1b80  mov v0.16B,v10.16B
+00cf1b84  mov x1,xzr
+00cf1b88  bl 0x024d81a8
+00cf1b8c  mov x0,xzr
+00cf1b90  mov v10.16B,v0.16B
+00cf1b94  mov v11.16B,v1.16B
+00cf1b98  bl 0x024d2684
+00cf1b9c  scvtf s0,w0
+00cf1ba0  fsub s2,s10,s8
+00cf1ba4  fsub s1,s0,s9
+00cf1ba8  fsub s3,s9,s11
+00cf1bac  add x0,sp,#0x40
+00cf1bb0  mov v0.16B,v8.16B
+00cf1bb4  mov x1,xzr
+00cf1bb8  bl 0x024daef0
+00cf1bbc  ldrb w8,[x19, #0x24]
+00cf1bc0  cbz w8,0x00cf1c18
+00cf1bc4  mov x0,xzr
+00cf1bc8  bl 0x024d265c
+00cf1bcc  mov w20,#0x851f
+00cf1bd0  movk w20,#0x51eb, LSL #16
+00cf1bd4  ldr s0,[x19, #0x1c]
+00cf1bd8  smull x8,w0,w20
+00cf1bdc  lsr x9,x8,#0x20
+00cf1be0  lsr x8,x8,#0x3f
+00cf1be4  add w8,w8,w9, ASR #0x5
+00cf1be8  scvtf s1,w8
+00cf1bec  mov x0,xzr
+00cf1bf0  fmul s9,s0,s1
+00cf1bf4  bl 0x024d2684
+00cf1bf8  ldr s0,[x19, #0x20]
+00cf1bfc  smull x8,w0,w20
+00cf1c00  lsr x9,x8,#0x20
+00cf1c04  lsr x8,x8,#0x3f
+00cf1c08  add w8,w8,w9, ASR #0x5
+00cf1c0c  scvtf s1,w8
+00cf1c10  fmul s8,s0,s1
+00cf1c14  b 0x00cf1c1c
+00cf1c18  ldp s9,s8,[x19, #0x1c]
+00cf1c1c  ldr w8,[x19, #0x18]
+00cf1c20  cmp w8,#0x8
+00cf1c24  b.hi 0x00cf1cac
+00cf1c28  adrp x9,0x26db000
+00cf1c2c  add x9,x9,#0x684
+00cf1c30  adr x10,0xcf1c40
+00cf1c34  ldrb w11,[x9, x8, LSL ]
+00cf1c38  add x10,x10,x11, LSL #0x2
+00cf1c3c  br x10
+00cf1c40  add x0,sp,#0x40
+00cf1c44  mov x1,xzr
+00cf1c48  bl 0x024db068
+00cf1c4c  fmov s10,0x3f000000
+00cf1c50  fmul s0,s0,s10
+00cf1c54  fadd s0,s9,s0
+00cf1c58  add x0,sp,#0x40
+00cf1c5c  mov x1,xzr
+00cf1c60  str s0,[x19, #0x30]
+00cf1c64  bl 0x024db078
+00cf1c68  fmul s0,s0,s10
+00cf1c6c  b 0x00cf1ca4
+00cf1c70  add x0,sp,#0x40
+00cf1c74  mov x1,xzr
+00cf1c78  bl 0x024db068
+00cf1c7c  fmov s1,0x3f000000
+00cf1c80  fmul s0,s0,s1
+00cf1c84  fadd s0,s9,s0
+00cf1c88  str s0,[x19, #0x30]
+00cf1c8c  b 0x00cf1cac
+00cf1c90  add x0,sp,#0x40
+00cf1c94  mov x1,xzr
+00cf1c98  bl 0x024db078
+00cf1c9c  fmov s1,0x3f000000
+00cf1ca0  fmul s0,s0,s1
+00cf1ca4  fadd s0,s8,s0
+00cf1ca8  str s0,[x19, #0x34]
+00cf1cac  mov x0,x19
+00cf1cb0  mov x1,xzr
+00cf1cb4  bl 0x024e4e98
+00cf1cb8  ldr w1,[x19, #0x18]
+00cf1cbc  ldp s0,s1,[x19, #0x30]
+00cf1cc0  bl 0x00cf1cf4
+00cf1cc4  ldp x19,x30,[sp, #0x90]
+00cf1cc8  ldp x21,x20,[sp, #0x80]
+00cf1ccc  ldr x22,[sp, #0x70]
+00cf1cd0  ldp d9,d8,[sp, #0x60]
+00cf1cd4  ldp d11,d10,[sp, #0x50]
+00cf1cd8  add sp,sp,#0xa0
+00cf1cdc  ret
+00cf1ce0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf1ce4_ScreenPlacement__FixedUpdate.txt
+================================================================================
+Function: ScreenPlacement$$FixedUpdate @ 00cf1ce4
+
+--- Calls OUT ---
+  -> ScreenPlacement$$placementCalculation @ 00cf1994
+
+--- Calls IN ---
+
+--- Listing ---
+00cf1ce4  ldrb w8,[x0, #0x25]
+00cf1ce8  cbz w8,0x00cf1cf0
+00cf1cec  ret
+00cf1cf0  b 0x00cf1994
+
+
+================================================================================
+### FILE: 00cf1cf4_ScreenPlacementExtension__ScreenPlacement.txt
+================================================================================
+Function: ScreenPlacementExtension$$ScreenPlacement @ 00cf1cf4
+
+--- Calls OUT ---
+  -> ScreenPlacementExtension$$DoScreenPlacement @ 00cf1de0
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> UnityEngine.Camera$$get_main @ 024d83dc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ScreenPlacement$$placementCalculation @ 00cf1994
+
+--- Listing ---
+00cf1cf4  stp d9,d8,[sp, #-0x30]!
+00cf1cf8  str x20,[sp, #0x10]
+00cf1cfc  stp x19,x30,[sp, #0x20]
+00cf1d00  cbz x0,0x00cf1d48
+00cf1d04  mov w19,w1
+00cf1d08  mov x1,xzr
+00cf1d0c  mov v8.16B,v1.16B
+00cf1d10  mov v9.16B,v0.16B
+00cf1d14  bl 0x024e4e98
+00cf1d18  mov x20,x0
+00cf1d1c  mov x0,xzr
+00cf1d20  bl 0x024d83dc
+00cf1d24  mov x2,x0
+00cf1d28  mov x0,x20
+00cf1d2c  mov w1,w19
+00cf1d30  ldp x19,x30,[sp, #0x20]
+00cf1d34  ldr x20,[sp, #0x10]
+00cf1d38  mov v0.16B,v9.16B
+00cf1d3c  mov v1.16B,v8.16B
+00cf1d40  ldp d9,d8,[sp], #0x30
+00cf1d44  b 0x00cf1de0
+00cf1d48  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf1d4c_ScreenPlacement__.ctor.txt
+================================================================================
+Function: ScreenPlacement$$.ctor @ 00cf1d4c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00cf1d4c  mov w8,#0x1
+00cf1d50  mov x1,xzr
+00cf1d54  strb w8,[x0, #0x25]
+00cf1d58  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00cf1d5c_ScreenPlacementExtension__ScreenPlacement.txt
+================================================================================
+Function: ScreenPlacementExtension$$ScreenPlacement @ 00cf1d5c
+
+--- Calls OUT ---
+  -> ScreenPlacementExtension$$DoScreenPlacement @ 00cf1de0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> UnityEngine.Camera$$get_main @ 024d83dc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cf1d5c  stp d9,d8,[sp, #-0x30]!
+00cf1d60  stp x21,x20,[sp, #0x10]
+00cf1d64  stp x19,x30,[sp, #0x20]
+00cf1d68  cbz x0,0x00cf1ddc
+00cf1d6c  mov w19,w1
+00cf1d70  mov x1,xzr
+00cf1d74  bl 0x024de730
+00cf1d78  adrp x21,0x3570000
+00cf1d7c  ldrb w8,[x21, #0xffd]
+00cf1d80  mov x20,x0
+00cf1d84  cbnz w8,0x00cf1d9c
+00cf1d88  adrp x0,0x3365000
+00cf1d8c  ldr x0,[x0, #0x108]
+00cf1d90  bl 0x00b0789c
+00cf1d94  mov w8,#0x1
+00cf1d98  strb w8,[x21, #0xffd]
+00cf1d9c  adrp x8,0x3365000
+00cf1da0  ldr x8,[x8, #0x108]
+00cf1da4  mov x0,xzr
+00cf1da8  ldr x8,[x8]
+00cf1dac  ldr x8,[x8, #0xb8]
+00cf1db0  ldp s8,s9,[x8]
+00cf1db4  bl 0x024d83dc
+00cf1db8  mov x2,x0
+00cf1dbc  mov x0,x20
+00cf1dc0  mov w1,w19
+00cf1dc4  ldp x19,x30,[sp, #0x20]
+00cf1dc8  ldp x21,x20,[sp, #0x10]
+00cf1dcc  mov v0.16B,v8.16B
+00cf1dd0  mov v1.16B,v9.16B
+00cf1dd4  ldp d9,d8,[sp], #0x30
+00cf1dd8  b 0x00cf1de0
+00cf1ddc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf1de0_ScreenPlacementExtension__DoScreenPlacement.txt
+================================================================================
+Function: ScreenPlacementExtension$$DoScreenPlacement @ 00cf1de0
+
+--- Calls OUT ---
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> UnityEngine.Camera$$ScreenToWorldPoint @ 024d81c0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Screen$$get_width @ 024d265c
+  -> UnityEngine.Transform$$get_position @ 024f3684
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Transform$$set_position @ 024f3724
+  -> UnityEngine.Screen$$get_height @ 024d2684
+
+--- Calls IN ---
+  <- ScreenPlacementExtension$$ScreenPlacement @ 00cf2034
+  <- ScreenPlacementExtension$$ScreenPlacement @ 00cf20ac
+  <- ScreenPlacementExtension$$ScreenPlacement @ 00cf1d5c
+  <- ScreenPlacementExtension$$ScreenPlacement @ 00cf1cf4
+  <- ScreenPlacementExtension$$ScreenPlacement @ 00cf224c
+  <- ScreenPlacementExtension$$ScreenPlacement @ 00cf2150
+  <- ScreenPlacementExtension$$ScreenPlacement @ 00cf21d4
+  <- ScreenPlacementExtension$$ScreenPlacement @ 00cf2104
+
+--- Listing ---
+00cf1de0  stp d13,d12,[sp, #-0x60]!
+00cf1de4  stp d11,d10,[sp, #0x10]
+00cf1de8  stp d9,d8,[sp, #0x20]
+00cf1dec  str x22,[sp, #0x30]
+00cf1df0  stp x21,x20,[sp, #0x40]
+00cf1df4  stp x19,x30,[sp, #0x50]
+00cf1df8  adrp x22,0x3570000
+00cf1dfc  ldrb w8,[x22, #0xf0c]
+00cf1e00  mov x20,x2
+00cf1e04  mov v8.16B,v1.16B
+00cf1e08  mov v9.16B,v0.16B
+00cf1e0c  mov w21,w1
+00cf1e10  mov x19,x0
+00cf1e14  cbnz w8,0x00cf1e2c
+00cf1e18  adrp x0,0x3368000
+00cf1e1c  ldr x0,[x0, #0x9b8]
+00cf1e20  bl 0x00b0789c
+00cf1e24  mov w8,#0x1
+00cf1e28  strb w8,[x22, #0xf0c]
+00cf1e2c  cbz x20,0x00cf2030
+00cf1e30  adrp x8,0x3368000
+00cf1e34  ldr x8,[x8, #0x9b8]
+00cf1e38  mov x0,x20
+00cf1e3c  mov x1,xzr
+00cf1e40  ldr x8,[x8]
+00cf1e44  ldr x8,[x8, #0xb8]
+00cf1e48  ldp s10,s11,[x8]
+00cf1e4c  ldr s12,[x8, #0x8]
+00cf1e50  bl 0x024e4e98
+00cf1e54  cbz x0,0x00cf2030
+00cf1e58  mov x1,xzr
+00cf1e5c  bl 0x024f3684
+00cf1e60  cbz x19,0x00cf2030
+00cf1e64  mov x0,x19
+00cf1e68  mov x1,xzr
+00cf1e6c  mov v13.16B,v2.16B
+00cf1e70  bl 0x024f3684
+00cf1e74  cmp w21,#0x8
+00cf1e78  b.hi 0x00cf1ff4
+00cf1e7c  adrp x9,0x26db000
+00cf1e80  mov w8,w21
+00cf1e84  add x9,x9,#0x68d
+00cf1e88  adr x10,0xcf1e9c
+00cf1e8c  ldrb w11,[x9, x8, LSL ]
+00cf1e90  add x10,x10,x11, LSL #0x2
+00cf1e94  fsub s10,s2,s13
+00cf1e98  br x10
+00cf1e9c  mov x0,xzr
+00cf1ea0  bl 0x024d2684
+00cf1ea4  scvtf s0,w0
+00cf1ea8  b 0x00cf1f50
+00cf1eac  mov x0,xzr
+00cf1eb0  bl 0x024d265c
+00cf1eb4  mov w21,w0
+00cf1eb8  mov x0,xzr
+00cf1ebc  bl 0x024d2684
+00cf1ec0  cmp w21,#0x0
+00cf1ec4  cinc w8,w21,lt
+00cf1ec8  cmp w0,#0x0
+00cf1ecc  asr w8,w8,#0x1
+00cf1ed0  cinc w9,w0,lt
+00cf1ed4  scvtf s0,w8
+00cf1ed8  asr w8,w9,#0x1
+00cf1edc  fadd s0,s9,s0
+00cf1ee0  b 0x00cf1f88
+00cf1ee4  mov x0,xzr
+00cf1ee8  bl 0x024d265c
+00cf1eec  mov w21,w0
+00cf1ef0  mov x0,xzr
+00cf1ef4  bl 0x024d2684
+00cf1ef8  cmp w21,#0x0
+00cf1efc  cinc w8,w21,lt
+00cf1f00  asr w8,w8,#0x1
+00cf1f04  scvtf s0,w8
+00cf1f08  scvtf s1,w0
+00cf1f0c  fadd s0,s9,s0
+00cf1f10  b 0x00cf1f8c
+00cf1f14  mov x0,xzr
+00cf1f18  bl 0x024d265c
+00cf1f1c  mov w21,w0
+00cf1f20  mov x0,xzr
+00cf1f24  bl 0x024d2684
+00cf1f28  scvtf s0,w21
+00cf1f2c  scvtf s1,w0
+00cf1f30  fsub s0,s0,s9
+00cf1f34  b 0x00cf1f8c
+00cf1f38  mov x0,xzr
+00cf1f3c  bl 0x024d2684
+00cf1f40  cmp w0,#0x0
+00cf1f44  cinc w8,w0,lt
+00cf1f48  asr w8,w8,#0x1
+00cf1f4c  scvtf s0,w8
+00cf1f50  fsub s1,s0,s8
+00cf1f54  mov x0,x20
+00cf1f58  mov v0.16B,v9.16B
+00cf1f5c  b 0x00cf1fdc
+00cf1f60  mov x0,xzr
+00cf1f64  bl 0x024d265c
+00cf1f68  mov w21,w0
+00cf1f6c  mov x0,xzr
+00cf1f70  bl 0x024d2684
+00cf1f74  cmp w0,#0x0
+00cf1f78  scvtf s0,w21
+00cf1f7c  cinc w8,w0,lt
+00cf1f80  fsub s0,s0,s9
+00cf1f84  asr w8,w8,#0x1
+00cf1f88  scvtf s1,w8
+00cf1f8c  fsub s1,s1,s8
+00cf1f90  mov x0,x20
+00cf1f94  b 0x00cf1fdc
+00cf1f98  mov x0,x20
+00cf1f9c  mov v0.16B,v9.16B
+00cf1fa0  b 0x00cf1fd8
+00cf1fa4  mov x0,xzr
+00cf1fa8  bl 0x024d265c
+00cf1fac  cmp w0,#0x0
+00cf1fb0  cinc w8,w0,lt
+00cf1fb4  asr w8,w8,#0x1
+00cf1fb8  scvtf s0,w8
+00cf1fbc  fadd s0,s9,s0
+00cf1fc0  b 0x00cf1fd4
+00cf1fc4  mov x0,xzr
+00cf1fc8  bl 0x024d265c
+00cf1fcc  scvtf s0,w0
+00cf1fd0  fsub s0,s0,s9
+00cf1fd4  mov x0,x20
+00cf1fd8  mov v1.16B,v8.16B
+00cf1fdc  mov v2.16B,v10.16B
+00cf1fe0  mov x1,xzr
+00cf1fe4  bl 0x024d81c0
+00cf1fe8  mov v10.16B,v0.16B
+00cf1fec  mov v11.16B,v1.16B
+00cf1ff0  mov v12.16B,v2.16B
+00cf1ff4  mov x0,x19
+00cf1ff8  mov x1,xzr
+00cf1ffc  bl 0x024e4e98
+00cf2000  cbz x0,0x00cf2030
+00cf2004  mov v0.16B,v10.16B
+00cf2008  mov v1.16B,v11.16B
+00cf200c  ldp x19,x30,[sp, #0x50]
+00cf2010  ldp x21,x20,[sp, #0x40]
+00cf2014  ldr x22,[sp, #0x30]
+00cf2018  ldp d9,d8,[sp, #0x20]
+00cf201c  ldp d11,d10,[sp, #0x10]
+00cf2020  mov v2.16B,v12.16B
+00cf2024  mov x1,xzr
+00cf2028  ldp d13,d12,[sp], #0x60
+00cf202c  b 0x024f3724
+00cf2030  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf2034_ScreenPlacementExtension__ScreenPlacement.txt
+================================================================================
+Function: ScreenPlacementExtension$$ScreenPlacement @ 00cf2034
+
+--- Calls OUT ---
+  -> ScreenPlacementExtension$$DoScreenPlacement @ 00cf1de0
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cf2034  str x22,[sp, #-0x30]!
+00cf2038  stp x21,x20,[sp, #0x10]
+00cf203c  stp x19,x30,[sp, #0x20]
+00cf2040  cbz x0,0x00cf20a8
+00cf2044  mov w20,w1
+00cf2048  mov x1,xzr
+00cf204c  mov x19,x2
+00cf2050  bl 0x024de730
+00cf2054  adrp x22,0x3570000
+00cf2058  ldrb w8,[x22, #0xffd]
+00cf205c  mov x21,x0
+00cf2060  cbnz w8,0x00cf2078
+00cf2064  adrp x0,0x3365000
+00cf2068  ldr x0,[x0, #0x108]
+00cf206c  bl 0x00b0789c
+00cf2070  mov w8,#0x1
+00cf2074  strb w8,[x22, #0xffd]
+00cf2078  adrp x8,0x3365000
+00cf207c  ldr x8,[x8, #0x108]
+00cf2080  mov x0,x21
+00cf2084  mov w1,w20
+00cf2088  mov x2,x19
+00cf208c  ldr x8,[x8]
+00cf2090  ldp x19,x30,[sp, #0x20]
+00cf2094  ldp x21,x20,[sp, #0x10]
+00cf2098  ldr x8,[x8, #0xb8]
+00cf209c  ldp s0,s1,[x8]
+00cf20a0  ldr x22,[sp], #0x30
+00cf20a4  b 0x00cf1de0
+00cf20a8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf20ac_ScreenPlacementExtension__ScreenPlacement.txt
+================================================================================
+Function: ScreenPlacementExtension$$ScreenPlacement @ 00cf20ac
+
+--- Calls OUT ---
+  -> ScreenPlacementExtension$$DoScreenPlacement @ 00cf1de0
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Camera$$get_main @ 024d83dc
+
+--- Calls IN ---
+
+--- Listing ---
+00cf20ac  stp d9,d8,[sp, #-0x30]!
+00cf20b0  str x20,[sp, #0x10]
+00cf20b4  stp x19,x30,[sp, #0x20]
+00cf20b8  cbz x0,0x00cf2100
+00cf20bc  mov w19,w1
+00cf20c0  mov x1,xzr
+00cf20c4  mov v8.16B,v1.16B
+00cf20c8  mov v9.16B,v0.16B
+00cf20cc  bl 0x024de730
+00cf20d0  mov x20,x0
+00cf20d4  mov x0,xzr
+00cf20d8  bl 0x024d83dc
+00cf20dc  mov x2,x0
+00cf20e0  mov x0,x20
+00cf20e4  mov w1,w19
+00cf20e8  ldp x19,x30,[sp, #0x20]
+00cf20ec  ldr x20,[sp, #0x10]
+00cf20f0  mov v0.16B,v9.16B
+00cf20f4  mov v1.16B,v8.16B
+00cf20f8  ldp d9,d8,[sp], #0x30
+00cf20fc  b 0x00cf1de0
+00cf2100  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf2104_ScreenPlacementExtension__ScreenPlacement.txt
+================================================================================
+Function: ScreenPlacementExtension$$ScreenPlacement @ 00cf2104
+
+--- Calls OUT ---
+  -> ScreenPlacementExtension$$DoScreenPlacement @ 00cf1de0
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cf2104  stp d9,d8,[sp, #-0x30]!
+00cf2108  str x20,[sp, #0x10]
+00cf210c  stp x19,x30,[sp, #0x20]
+00cf2110  cbz x0,0x00cf214c
+00cf2114  mov w20,w1
+00cf2118  mov x1,xzr
+00cf211c  mov x19,x2
+00cf2120  mov v8.16B,v1.16B
+00cf2124  mov v9.16B,v0.16B
+00cf2128  bl 0x024de730
+00cf212c  mov w1,w20
+00cf2130  mov x2,x19
+00cf2134  ldp x19,x30,[sp, #0x20]
+00cf2138  ldr x20,[sp, #0x10]
+00cf213c  mov v0.16B,v9.16B
+00cf2140  mov v1.16B,v8.16B
+00cf2144  ldp d9,d8,[sp], #0x30
+00cf2148  b 0x00cf1de0
+00cf214c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf2150_ScreenPlacementExtension__ScreenPlacement.txt
+================================================================================
+Function: ScreenPlacementExtension$$ScreenPlacement @ 00cf2150
+
+--- Calls OUT ---
+  -> ScreenPlacementExtension$$DoScreenPlacement @ 00cf1de0
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Camera$$get_main @ 024d83dc
+
+--- Calls IN ---
+
+--- Listing ---
+00cf2150  stp d9,d8,[sp, #-0x30]!
+00cf2154  stp x21,x20,[sp, #0x10]
+00cf2158  stp x19,x30,[sp, #0x20]
+00cf215c  cbz x0,0x00cf21d0
+00cf2160  mov w19,w1
+00cf2164  mov x1,xzr
+00cf2168  bl 0x024e4e98
+00cf216c  adrp x21,0x3570000
+00cf2170  ldrb w8,[x21, #0xffd]
+00cf2174  mov x20,x0
+00cf2178  cbnz w8,0x00cf2190
+00cf217c  adrp x0,0x3365000
+00cf2180  ldr x0,[x0, #0x108]
+00cf2184  bl 0x00b0789c
+00cf2188  mov w8,#0x1
+00cf218c  strb w8,[x21, #0xffd]
+00cf2190  adrp x8,0x3365000
+00cf2194  ldr x8,[x8, #0x108]
+00cf2198  mov x0,xzr
+00cf219c  ldr x8,[x8]
+00cf21a0  ldr x8,[x8, #0xb8]
+00cf21a4  ldp s8,s9,[x8]
+00cf21a8  bl 0x024d83dc
+00cf21ac  mov x2,x0
+00cf21b0  mov x0,x20
+00cf21b4  mov w1,w19
+00cf21b8  ldp x19,x30,[sp, #0x20]
+00cf21bc  ldp x21,x20,[sp, #0x10]
+00cf21c0  mov v0.16B,v8.16B
+00cf21c4  mov v1.16B,v9.16B
+00cf21c8  ldp d9,d8,[sp], #0x30
+00cf21cc  b 0x00cf1de0
+00cf21d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf21d4_ScreenPlacementExtension__ScreenPlacement.txt
+================================================================================
+Function: ScreenPlacementExtension$$ScreenPlacement @ 00cf21d4
+
+--- Calls OUT ---
+  -> ScreenPlacementExtension$$DoScreenPlacement @ 00cf1de0
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cf21d4  str x22,[sp, #-0x30]!
+00cf21d8  stp x21,x20,[sp, #0x10]
+00cf21dc  stp x19,x30,[sp, #0x20]
+00cf21e0  cbz x0,0x00cf2248
+00cf21e4  mov w20,w1
+00cf21e8  mov x1,xzr
+00cf21ec  mov x19,x2
+00cf21f0  bl 0x024e4e98
+00cf21f4  adrp x22,0x3570000
+00cf21f8  ldrb w8,[x22, #0xffd]
+00cf21fc  mov x21,x0
+00cf2200  cbnz w8,0x00cf2218
+00cf2204  adrp x0,0x3365000
+00cf2208  ldr x0,[x0, #0x108]
+00cf220c  bl 0x00b0789c
+00cf2210  mov w8,#0x1
+00cf2214  strb w8,[x22, #0xffd]
+00cf2218  adrp x8,0x3365000
+00cf221c  ldr x8,[x8, #0x108]
+00cf2220  mov x0,x21
+00cf2224  mov w1,w20
+00cf2228  mov x2,x19
+00cf222c  ldr x8,[x8]
+00cf2230  ldp x19,x30,[sp, #0x20]
+00cf2234  ldp x21,x20,[sp, #0x10]
+00cf2238  ldr x8,[x8, #0xb8]
+00cf223c  ldp s0,s1,[x8]
+00cf2240  ldr x22,[sp], #0x30
+00cf2244  b 0x00cf1de0
+00cf2248  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf224c_ScreenPlacementExtension__ScreenPlacement.txt
+================================================================================
+Function: ScreenPlacementExtension$$ScreenPlacement @ 00cf224c
+
+--- Calls OUT ---
+  -> ScreenPlacementExtension$$DoScreenPlacement @ 00cf1de0
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cf224c  stp d9,d8,[sp, #-0x30]!
+00cf2250  str x20,[sp, #0x10]
+00cf2254  stp x19,x30,[sp, #0x20]
+00cf2258  cbz x0,0x00cf2294
+00cf225c  mov w20,w1
+00cf2260  mov x1,xzr
+00cf2264  mov x19,x2
+00cf2268  mov v8.16B,v1.16B
+00cf226c  mov v9.16B,v0.16B
+00cf2270  bl 0x024e4e98
+00cf2274  mov w1,w20
+00cf2278  mov x2,x19
+00cf227c  ldp x19,x30,[sp, #0x20]
+00cf2280  ldr x20,[sp, #0x10]
+00cf2284  mov v0.16B,v9.16B
+00cf2288  mov v1.16B,v8.16B
+00cf228c  ldp d9,d8,[sp], #0x30
+00cf2290  b 0x00cf1de0
+00cf2294  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf2298_ScreenScaler__Awake.txt
+================================================================================
+Function: ScreenScaler$$Awake @ 00cf2298
+
+--- Calls OUT ---
+  -> UnityEngine.Transform$$get_localScale @ 024f41b4
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> ScreenScaler$$placementCalculation @ 00cf2320
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cf2298  str d8,[sp, #-0x20]!
+00cf229c  stp x19,x30,[sp, #0x10]
+00cf22a0  mov x1,xzr
+00cf22a4  mov x19,x0
+00cf22a8  bl 0x024e4e98
+00cf22ac  cbz x0,0x00cf231c
+00cf22b0  mov x1,xzr
+00cf22b4  bl 0x024f41b4
+00cf22b8  mov x0,x19
+00cf22bc  mov x1,xzr
+00cf22c0  str s1,[x19, #0x20]
+00cf22c4  bl 0x024e4e98
+00cf22c8  cbz x0,0x00cf231c
+00cf22cc  mov x1,xzr
+00cf22d0  bl 0x024f41b4
+00cf22d4  mov x0,x19
+00cf22d8  mov x1,xzr
+00cf22dc  mov v8.16B,v0.16B
+00cf22e0  bl 0x024e4e98
+00cf22e4  cbz x0,0x00cf231c
+00cf22e8  mov x1,xzr
+00cf22ec  bl 0x024f41b4
+00cf22f0  ldrb w8,[x19, #0x18]
+00cf22f4  fdiv s0,s8,s1
+00cf22f8  str s0,[x19, #0x24]
+00cf22fc  cbz w8,0x00cf2310
+00cf2300  mov x0,x19
+00cf2304  ldp x19,x30,[sp, #0x10]
+00cf2308  ldr d8,[sp], #0x20
+00cf230c  b 0x00cf2320
+00cf2310  ldp x19,x30,[sp, #0x10]
+00cf2314  ldr d8,[sp], #0x20
+00cf2318  ret
+00cf231c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf2320_ScreenScaler__placementCalculation.txt
+================================================================================
+Function: ScreenScaler$$placementCalculation @ 00cf2320
+
+--- Calls OUT ---
+  -> UnityEngine.Rect$$get_height @ 024db078
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> UnityEngine.Transform$$get_localScale @ 024f41b4
+  -> PreviewScreenUtil$$getObjectBounds @ 00cf03dc
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> UnityEngine.Transform$$set_localScale @ 024f4254
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Screen$$get_height @ 024d2684
+
+--- Calls IN ---
+  <- ScreenScaler$$Awake @ 00cf2298
+  <- ScreenScaler$$Update @ 00cf2528
+
+--- Listing ---
+00cf2320  sub sp,sp,#0x60
+00cf2324  stp d13,d12,[sp, #0x10]
+00cf2328  stp d11,d10,[sp, #0x20]
+00cf232c  stp d9,d8,[sp, #0x30]
+00cf2330  str x20,[sp, #0x40]
+00cf2334  stp x19,x30,[sp, #0x50]
+00cf2338  mov x19,x0
+00cf233c  mov x0,xzr
+00cf2340  bl 0x024d2684
+00cf2344  ldr s0,[x19, #0x1c]
+00cf2348  mov w8,#0x42c80000
+00cf234c  scvtf s1,w0
+00cf2350  fmov s2,w8
+00cf2354  fdiv s1,s1,s2
+00cf2358  mov x0,x19
+00cf235c  mov x1,xzr
+00cf2360  fmul s12,s0,s1
+00cf2364  bl 0x024e4ed4
+00cf2368  mov x1,xzr
+00cf236c  bl 0x00cf03dc
+00cf2370  mov x0,sp
+00cf2374  mov x1,xzr
+00cf2378  stp s0,s1,[sp]
+00cf237c  stp s2,s3,[sp, #0x8]
+00cf2380  bl 0x024db078
+00cf2384  mov x0,sp
+00cf2388  mov x1,xzr
+00cf238c  mov v8.16B,v0.16B
+00cf2390  bl 0x024db078
+00cf2394  fcmp s8,s12
+00cf2398  b.pl 0x00cf2410
+00cf239c  fcmp s0,s12
+00cf23a0  b.pl 0x00cf2508
+00cf23a4  adrp x8,0x26db000
+00cf23a8  ldr s8,[x8, #0x680]
+00cf23ac  mov x0,x19
+00cf23b0  mov x1,xzr
+00cf23b4  bl 0x024e4ed4
+00cf23b8  mov x1,xzr
+00cf23bc  bl 0x00cf03dc
+00cf23c0  mov x0,x19
+00cf23c4  mov x1,xzr
+00cf23c8  stp s0,s1,[sp]
+00cf23cc  stp s2,s3,[sp, #0x8]
+00cf23d0  bl 0x024e4e98
+00cf23d4  cbz x0,0x00cf2524
+00cf23d8  ldp s1,s0,[x19, #0x20]
+00cf23dc  fmov s2,wzr
+00cf23e0  mov x1,xzr
+00cf23e4  fmul s0,s1,s0
+00cf23e8  bl 0x024f4254
+00cf23ec  ldr s0,[x19, #0x20]
+00cf23f0  mov x0,sp
+00cf23f4  mov x1,xzr
+00cf23f8  fadd s0,s0,s8
+00cf23fc  str s0,[x19, #0x20]
+00cf2400  bl 0x024db078
+00cf2404  fcmp s0,s12
+00cf2408  b.mi 0x00cf23ac
+00cf240c  b 0x00cf2508
+00cf2410  fcmp s0,s12
+00cf2414  b.le 0x00cf2508
+00cf2418  adrp x8,0x26db000
+00cf241c  ldr s13,[x8, #0x680]
+00cf2420  mov x0,x19
+00cf2424  mov x1,xzr
+00cf2428  bl 0x024e4ed4
+00cf242c  mov x1,xzr
+00cf2430  bl 0x00cf03dc
+00cf2434  mov x0,x19
+00cf2438  mov x1,xzr
+00cf243c  stp s0,s1,[sp]
+00cf2440  stp s2,s3,[sp, #0x8]
+00cf2444  bl 0x024e4e98
+00cf2448  mov x20,x0
+00cf244c  mov x0,x19
+00cf2450  mov x1,xzr
+00cf2454  bl 0x024e4e98
+00cf2458  cbz x0,0x00cf2524
+00cf245c  mov x1,xzr
+00cf2460  bl 0x024f41b4
+00cf2464  mov x0,x19
+00cf2468  mov x1,xzr
+00cf246c  mov v8.16B,v0.16B
+00cf2470  bl 0x024e4e98
+00cf2474  cbz x0,0x00cf2524
+00cf2478  mov x1,xzr
+00cf247c  bl 0x024f41b4
+00cf2480  mov x0,x19
+00cf2484  mov x1,xzr
+00cf2488  mov v9.16B,v0.16B
+00cf248c  bl 0x024e4e98
+00cf2490  cbz x0,0x00cf2524
+00cf2494  mov x1,xzr
+00cf2498  bl 0x024f41b4
+00cf249c  mov x0,x19
+00cf24a0  mov x1,xzr
+00cf24a4  mov v10.16B,v1.16B
+00cf24a8  bl 0x024e4e98
+00cf24ac  cbz x0,0x00cf2524
+00cf24b0  mov x1,xzr
+00cf24b4  bl 0x024f41b4
+00cf24b8  mov x0,x19
+00cf24bc  mov x1,xzr
+00cf24c0  mov v11.16B,v1.16B
+00cf24c4  bl 0x024e4e98
+00cf24c8  cbz x0,0x00cf2524
+00cf24cc  mov x1,xzr
+00cf24d0  bl 0x024f41b4
+00cf24d4  cbz x20,0x00cf2524
+00cf24d8  fmul s0,s11,s13
+00cf24dc  fmul s3,s9,s13
+00cf24e0  fsub s1,s10,s0
+00cf24e4  fsub s0,s8,s3
+00cf24e8  mov x0,x20
+00cf24ec  mov x1,xzr
+00cf24f0  bl 0x024f4254
+00cf24f4  mov x0,sp
+00cf24f8  mov x1,xzr
+00cf24fc  bl 0x024db078
+00cf2500  fcmp s0,s12
+00cf2504  b.gt 0x00cf2420
+00cf2508  ldp x19,x30,[sp, #0x50]
+00cf250c  ldr x20,[sp, #0x40]
+00cf2510  ldp d9,d8,[sp, #0x30]
+00cf2514  ldp d11,d10,[sp, #0x20]
+00cf2518  ldp d13,d12,[sp, #0x10]
+00cf251c  add sp,sp,#0x60
+00cf2520  ret
+00cf2524  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf2528_ScreenScaler__Update.txt
+================================================================================
+Function: ScreenScaler$$Update @ 00cf2528
+
+--- Calls OUT ---
+  -> ScreenScaler$$placementCalculation @ 00cf2320
+
+--- Calls IN ---
+
+--- Listing ---
+00cf2528  ldrb w8,[x0, #0x18]
+00cf252c  cbz w8,0x00cf2534
+00cf2530  ret
+00cf2534  b 0x00cf2320
+
+
+================================================================================
+### FILE: 00cf2538_ScreenScaler__.ctor.txt
+================================================================================
+Function: ScreenScaler$$.ctor @ 00cf2538
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00cf2538  adrp x8,0x26db000
+00cf253c  ldr d0,[x8, #0x6a0]
+00cf2540  mov w8,#0x1
+00cf2544  mov x1,xzr
+00cf2548  strb w8,[x0, #0x18]
+00cf254c  stur d0,[x0, #0x1c]
+00cf2550  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d984c8_SceneNameAttribute__.ctor.txt
+================================================================================
+Function: SceneNameAttribute$$.ctor @ 00d984c8
+
+--- Calls OUT ---
+  -> UnityEngine.PropertyAttribute$$.ctor @ 024dbdd8
+
+--- Calls IN ---
+
+--- Listing ---
+00d984c8  str x20,[sp, #-0x20]!
+00d984cc  stp x19,x30,[sp, #0x10]
+00d984d0  and w20,w1,#0x1
+00d984d4  mov w8,#0x1
+00d984d8  mov x1,xzr
+00d984dc  mov x19,x0
+00d984e0  strb w8,[x0, #0x18]
+00d984e4  bl 0x024dbdd8
+00d984e8  strb w20,[x19, #0x18]
+00d984ec  ldp x19,x30,[sp, #0x10]
+00d984f0  ldr x20,[sp], #0x20
+00d984f4  ret
+
+
+================================================================================
+### FILE: 00d984f8_SceneNameExample__.ctor.txt
+================================================================================
+Function: SceneNameExample$$.ctor @ 00d984f8
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d984f8  mov x1,xzr
+00d984fc  b 0x024e45bc
+
+
+================================================================================
+### FILE: 03799140_sched_yield.txt
+================================================================================
+Function: sched_yield @ 03799140
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- sched_yield @ 008d3e80
+
+--- Listing ---
+03799140  ?? ??
+
+
+================================================================================
+### FILE: 037992c0_scalbn.txt
+================================================================================
+Function: scalbn @ 037992c0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- scalbn @ 008d4460
+
+--- Listing ---
+037992c0  ?? ??
+
+

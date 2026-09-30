@@ -1,0 +1,622 @@
+================================================================================
+### FILE: 00dbfb68_WWWCacheSample__Start.txt
+================================================================================
+Function: WWWCacheSample$$Start @ 00dbfb68
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfb68  stp x21,x20,[sp, #-0x20]!
+00dbfb6c  stp x19,x30,[sp, #0x10]
+00dbfb70  adrp x20,0x3572000
+00dbfb74  adrp x21,0x3353000
+00dbfb78  ldrb w8,[x20, #0x164]
+00dbfb7c  ldr x21,[x21, #0xca8]
+00dbfb80  mov x19,x0
+00dbfb84  tbnz w8,#0x0,0x00dbfb9c
+00dbfb88  adrp x0,0x3353000
+00dbfb8c  ldr x0,[x0, #0xca8]
+00dbfb90  bl 0x00b0789c
+00dbfb94  mov w8,#0x1
+00dbfb98  strb w8,[x20, #0x164]
+00dbfb9c  ldr x0,[x21]
+00dbfba0  bl 0x00b079a0
+00dbfba4  cbz x0,0x00dbfbd8
+00dbfba8  mov x1,xzr
+00dbfbac  mov x20,x0
+00dbfbb0  bl 0x02194104
+00dbfbb4  mov x0,x20
+00dbfbb8  str wzr,[x20, #0x10]
+00dbfbbc  str x19,[x0, #0x20]!
+00dbfbc0  mov x1,x19
+00dbfbc4  bl 0x00b07850
+00dbfbc8  ldp x19,x30,[sp, #0x10]
+00dbfbcc  mov x0,x20
+00dbfbd0  ldp x21,x20,[sp], #0x20
+00dbfbd4  ret
+00dbfbd8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbfbdc_WWWCacheSample._Start_d__2__.ctor.txt
+================================================================================
+Function: WWWCacheSample.<Start>d__2$$.ctor @ 00dbfbdc
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfbdc  str x20,[sp, #-0x20]!
+00dbfbe0  stp x19,x30,[sp, #0x10]
+00dbfbe4  mov w19,w1
+00dbfbe8  mov x1,xzr
+00dbfbec  mov x20,x0
+00dbfbf0  bl 0x02194104
+00dbfbf4  str w19,[x20, #0x10]
+00dbfbf8  ldp x19,x30,[sp, #0x10]
+00dbfbfc  ldr x20,[sp], #0x20
+00dbfc00  ret
+
+
+================================================================================
+### FILE: 00dbfc04_WWWCacheSample__SampleCallback.txt
+================================================================================
+Function: WWWCacheSample$$SampleCallback @ 00dbfc04
+
+--- Calls OUT ---
+  -> AliothEngine.WWWRequest$$Make @ 0168c754
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+  -> AliothEngine.WWWRequest$$add_OnComplete @ 0168c2fc
+
+--- Calls IN ---
+  <- WWWCacheSample.<Start>d__2$$MoveNext @ 00dbfda0
+
+--- Listing ---
+00dbfc04  stp x21,x20,[sp, #-0x20]!
+00dbfc08  stp x19,x30,[sp, #0x10]
+00dbfc0c  adrp x19,0x3572000
+00dbfc10  adrp x21,0x335b000
+00dbfc14  ldrb w8,[x19, #0x165]
+00dbfc18  ldr x21,[x21, #0x668]
+00dbfc1c  mov x20,x0
+00dbfc20  tbnz w8,#0x0,0x00dbfc50
+00dbfc24  adrp x0,0x3352000
+00dbfc28  ldr x0,[x0, #0x458]
+00dbfc2c  bl 0x00b0789c
+00dbfc30  adrp x0,0x3370000
+00dbfc34  ldr x0,[x0, #0x378]
+00dbfc38  bl 0x00b0789c
+00dbfc3c  adrp x0,0x335b000
+00dbfc40  ldr x0,[x0, #0x668]
+00dbfc44  bl 0x00b0789c
+00dbfc48  mov w8,#0x1
+00dbfc4c  strb w8,[x19, #0x165]
+00dbfc50  ldr x0,[x21]
+00dbfc54  bl 0x00b079a0
+00dbfc58  cbz x0,0x00dbfcec
+00dbfc5c  adrp x21,0x3352000
+00dbfc60  ldr x21,[x21, #0x458]
+00dbfc64  mov x1,xzr
+00dbfc68  mov x19,x0
+00dbfc6c  bl 0x02194104
+00dbfc70  mov x0,x19
+00dbfc74  str x20,[x0, #0x10]!
+00dbfc78  mov x1,x20
+00dbfc7c  bl 0x00b07850
+00dbfc80  ldr x0,[x20, #0x20]
+00dbfc84  mov w1,#0x1
+00dbfc88  mov x2,xzr
+00dbfc8c  bl 0x0168c754
+00dbfc90  mov x1,x0
+00dbfc94  mov x20,x19
+00dbfc98  str x1,[x20, #0x18]!
+00dbfc9c  mov x0,x20
+00dbfca0  bl 0x00b07850
+00dbfca4  ldr x0,[x21]
+00dbfca8  ldr x20,[x20]
+00dbfcac  bl 0x00b079a0
+00dbfcb0  cbz x0,0x00dbfcec
+00dbfcb4  adrp x8,0x3370000
+00dbfcb8  ldr x8,[x8, #0x378]
+00dbfcbc  mov x1,x19
+00dbfcc0  mov x3,xzr
+00dbfcc4  mov x21,x0
+00dbfcc8  ldr x2,[x8]
+00dbfccc  bl 0x01909b80
+00dbfcd0  cbz x20,0x00dbfcec
+00dbfcd4  ldp x19,x30,[sp, #0x10]
+00dbfcd8  mov x0,x20
+00dbfcdc  mov x1,x21
+00dbfce0  mov x2,xzr
+00dbfce4  ldp x21,x20,[sp], #0x20
+00dbfce8  b 0x0168c2fc
+00dbfcec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbfcf0_WWWCacheSample.__c__DisplayClass3_0__.ctor.txt
+================================================================================
+Function: WWWCacheSample.<>c__DisplayClass3_0$$.ctor @ 00dbfcf0
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfcf0  mov x1,xzr
+00dbfcf4  b 0x02194104
+
+
+================================================================================
+### FILE: 00dbfcf8_WWWCacheSample__SampleCoroutine.txt
+================================================================================
+Function: WWWCacheSample$$SampleCoroutine @ 00dbfcf8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- WWWCacheSample.<Start>d__2$$MoveNext @ 00dbfda0
+
+--- Listing ---
+00dbfcf8  stp x21,x20,[sp, #-0x20]!
+00dbfcfc  stp x19,x30,[sp, #0x10]
+00dbfd00  adrp x20,0x3572000
+00dbfd04  adrp x21,0x334c000
+00dbfd08  ldrb w8,[x20, #0x166]
+00dbfd0c  ldr x21,[x21, #0xd68]
+00dbfd10  mov x19,x0
+00dbfd14  tbnz w8,#0x0,0x00dbfd2c
+00dbfd18  adrp x0,0x334c000
+00dbfd1c  ldr x0,[x0, #0xd68]
+00dbfd20  bl 0x00b0789c
+00dbfd24  mov w8,#0x1
+00dbfd28  strb w8,[x20, #0x166]
+00dbfd2c  ldr x0,[x21]
+00dbfd30  bl 0x00b079a0
+00dbfd34  cbz x0,0x00dbfd68
+00dbfd38  mov x1,xzr
+00dbfd3c  mov x20,x0
+00dbfd40  bl 0x02194104
+00dbfd44  mov x0,x20
+00dbfd48  str wzr,[x20, #0x10]
+00dbfd4c  str x19,[x0, #0x20]!
+00dbfd50  mov x1,x19
+00dbfd54  bl 0x00b07850
+00dbfd58  ldp x19,x30,[sp, #0x10]
+00dbfd5c  mov x0,x20
+00dbfd60  ldp x21,x20,[sp], #0x20
+00dbfd64  ret
+00dbfd68  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbfd6c_WWWCacheSample._SampleCoroutine_d__4__.ctor.txt
+================================================================================
+Function: WWWCacheSample.<SampleCoroutine>d__4$$.ctor @ 00dbfd6c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfd6c  str x20,[sp, #-0x20]!
+00dbfd70  stp x19,x30,[sp, #0x10]
+00dbfd74  mov w19,w1
+00dbfd78  mov x1,xzr
+00dbfd7c  mov x20,x0
+00dbfd80  bl 0x02194104
+00dbfd84  str w19,[x20, #0x10]
+00dbfd88  ldp x19,x30,[sp, #0x10]
+00dbfd8c  ldr x20,[sp], #0x20
+00dbfd90  ret
+
+
+================================================================================
+### FILE: 00dbfd94_WWWCacheSample__.ctor.txt
+================================================================================
+Function: WWWCacheSample$$.ctor @ 00dbfd94
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfd94  mov x1,xzr
+00dbfd98  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00dbfd9c_WWWCacheSample._Start_d__2__System.IDisposable.Dispose.txt
+================================================================================
+Function: WWWCacheSample.<Start>d__2$$System.IDisposable.Dispose @ 00dbfd9c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfd9c  ret
+
+
+================================================================================
+### FILE: 00dbfda0_WWWCacheSample._Start_d__2__MoveNext.txt
+================================================================================
+Function: WWWCacheSample.<Start>d__2$$MoveNext @ 00dbfda0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.MonoBehaviour$$StartCoroutine @ 024e4070
+  -> WWWCacheSample$$SampleCoroutine @ 00dbfcf8
+  -> FUN_00b079b0 @ 00b079b0
+  -> WWWCacheSample$$SampleCallback @ 00dbfc04
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfda0  str x20,[sp, #-0x20]!
+00dbfda4  stp x19,x30,[sp, #0x10]
+00dbfda8  ldr w8,[x0, #0x10]
+00dbfdac  ldr x20,[x0, #0x20]
+00dbfdb0  mov x19,x0
+00dbfdb4  cmp w8,#0x1
+00dbfdb8  b.eq 0x00dbfe00
+00dbfdbc  cbnz w8,0x00dbfe14
+00dbfdc0  mov w8,#0xffffffff
+00dbfdc4  str w8,[x19, #0x10]
+00dbfdc8  cbz x20,0x00dbfe24
+00dbfdcc  mov x0,x20
+00dbfdd0  bl 0x00dbfcf8
+00dbfdd4  mov x1,x0
+00dbfdd8  mov x0,x20
+00dbfddc  mov x2,xzr
+00dbfde0  bl 0x024e4070
+00dbfde4  str x0,[x19, #0x18]!
+00dbfde8  mov x1,x0
+00dbfdec  mov x0,x19
+00dbfdf0  bl 0x00b07850
+00dbfdf4  mov w0,#0x1
+00dbfdf8  stur w0,[x19, #-0x8]
+00dbfdfc  b 0x00dbfe18
+00dbfe00  mov w8,#0xffffffff
+00dbfe04  str w8,[x19, #0x10]
+00dbfe08  cbz x20,0x00dbfe24
+00dbfe0c  mov x0,x20
+00dbfe10  bl 0x00dbfc04
+00dbfe14  mov w0,wzr
+00dbfe18  ldp x19,x30,[sp, #0x10]
+00dbfe1c  ldr x20,[sp], #0x20
+00dbfe20  ret
+00dbfe24  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbfe28_WWWCacheSample._Start_d__2__System.Collections.Generic.IEnumerator_System.Object_.get_Current.txt
+================================================================================
+Function: WWWCacheSample.<Start>d__2$$System.Collections.Generic.IEnumerator<System.Object>.get_Current @ 00dbfe28
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfe28  ldr x0,[x0, #0x18]
+00dbfe2c  ret
+
+
+================================================================================
+### FILE: 00dbfe30_WWWCacheSample._Start_d__2__System.Collections.IEnumerator.Reset.txt
+================================================================================
+Function: WWWCacheSample.<Start>d__2$$System.Collections.IEnumerator.Reset @ 00dbfe30
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> System.NotSupportedException$$.ctor @ 021525a8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_008d74f8 @ 008d74f8
+  -> FUN_00b07978 @ 00b07978
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfe30  stp x19,x30,[sp, #-0x10]!
+00dbfe34  adrp x0,0x335a000
+00dbfe38  ldr x0,[x0, #0xb88]
+00dbfe3c  bl 0x00b078a0
+00dbfe40  bl 0x00b079a0
+00dbfe44  mov x19,x0
+00dbfe48  bl 0x008d74f8
+00dbfe4c  mov x0,x19
+00dbfe50  mov x1,xzr
+00dbfe54  bl 0x021525a8
+00dbfe58  adrp x0,0x333b000
+00dbfe5c  ldr x0,[x0, #0x330]
+00dbfe60  bl 0x00b078a0
+00dbfe64  mov x1,x0
+00dbfe68  mov x0,x19
+00dbfe6c  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00dbfe70_WWWCacheSample._Start_d__2__System.Collections.IEnumerator.get_Current.txt
+================================================================================
+Function: WWWCacheSample.<Start>d__2$$System.Collections.IEnumerator.get_Current @ 00dbfe70
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfe70  ldr x0,[x0, #0x18]
+00dbfe74  ret
+
+
+================================================================================
+### FILE: 00dbfe78_WWWCacheSample.__c__DisplayClass3_0___SampleCallback_b__0.txt
+================================================================================
+Function: WWWCacheSample.<>c__DisplayClass3_0$$<SampleCallback>b__0 @ 00dbfe78
+
+--- Calls OUT ---
+  -> UnityEngine.WWW$$get_textureNonReadable @ 026d8c44
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.RawImage$$set_texture @ 0259c40c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbfe78  stp x21,x20,[sp, #-0x20]!
+00dbfe7c  stp x19,x30,[sp, #0x10]
+00dbfe80  adrp x21,0x3572000
+00dbfe84  adrp x20,0x336b000
+00dbfe88  ldrb w8,[x21, #0x167]
+00dbfe8c  ldr x20,[x20, #0x7d0]
+00dbfe90  mov x19,x0
+00dbfe94  tbnz w8,#0x0,0x00dbfec4
+00dbfe98  adrp x0,0x336b000
+00dbfe9c  ldr x0,[x0, #0x7d0]
+00dbfea0  bl 0x00b0789c
+00dbfea4  adrp x0,0x3321000
+00dbfea8  ldr x0,[x0, #0xca8]
+00dbfeac  bl 0x00b0789c
+00dbfeb0  adrp x0,0x3376000
+00dbfeb4  ldr x0,[x0, #0x288]
+00dbfeb8  bl 0x00b0789c
+00dbfebc  mov w8,#0x1
+00dbfec0  strb w8,[x21, #0x167]
+00dbfec4  ldr x0,[x20]
+00dbfec8  adrp x20,0x3376000
+00dbfecc  ldr w8,[x0, #0xe0]
+00dbfed0  ldr x20,[x20, #0x288]
+00dbfed4  cbnz w8,0x00dbfedc
+00dbfed8  bl 0x00b0798c
+00dbfedc  ldr x0,[x20]
+00dbfee0  mov x1,xzr
+00dbfee4  bl 0x024c0104
+00dbfee8  ldr x8,[x19, #0x10]
+00dbfeec  cbz x8,0x00dbff6c
+00dbfef0  adrp x9,0x3321000
+00dbfef4  ldr x9,[x9, #0xca8]
+00dbfef8  ldr x20,[x8, #0x18]
+00dbfefc  ldr x0,[x9]
+00dbff00  ldr w9,[x0, #0xe0]
+00dbff04  cbnz w9,0x00dbff0c
+00dbff08  bl 0x00b0798c
+00dbff0c  mov x0,x20
+00dbff10  mov x1,xzr
+00dbff14  mov x2,xzr
+00dbff18  bl 0x024de30c
+00dbff1c  tbz w0,#0x0,0x00dbff60
+00dbff20  ldr x8,[x19, #0x10]
+00dbff24  cbz x8,0x00dbff6c
+00dbff28  ldr x9,[x19, #0x18]
+00dbff2c  cbz x9,0x00dbff6c
+00dbff30  ldr x0,[x9, #0x30]
+00dbff34  cbz x0,0x00dbff6c
+00dbff38  ldr x19,[x8, #0x18]
+00dbff3c  mov x1,xzr
+00dbff40  bl 0x026d8c44
+00dbff44  cbz x19,0x00dbff6c
+00dbff48  mov x1,x0
+00dbff4c  mov x0,x19
+00dbff50  ldp x19,x30,[sp, #0x10]
+00dbff54  mov x2,xzr
+00dbff58  ldp x21,x20,[sp], #0x20
+00dbff5c  b 0x0259c40c
+00dbff60  ldp x19,x30,[sp, #0x10]
+00dbff64  ldp x21,x20,[sp], #0x20
+00dbff68  ret
+00dbff6c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbff70_WWWCacheSample._SampleCoroutine_d__4__System.IDisposable.Dispose.txt
+================================================================================
+Function: WWWCacheSample.<SampleCoroutine>d__4$$System.IDisposable.Dispose @ 00dbff70
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbff70  ret
+
+
+================================================================================
+### FILE: 00dbff74_WWWCacheSample._SampleCoroutine_d__4__MoveNext.txt
+================================================================================
+Function: WWWCacheSample.<SampleCoroutine>d__4$$MoveNext @ 00dbff74
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothEngine.WWWRequest$$Make @ 0168c754
+  -> UnityEngine.WWW$$get_textureNonReadable @ 026d8c44
+  -> AliothEngine.WWWRequest$$WaitWWWFinished @ 0168c8cc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.RawImage$$set_texture @ 0259c40c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dbff74  stp x21,x20,[sp, #-0x20]!
+00dbff78  stp x19,x30,[sp, #0x10]
+00dbff7c  adrp x20,0x3572000
+00dbff80  ldrb w8,[x20, #0x168]
+00dbff84  mov x19,x0
+00dbff88  tbnz w8,#0x0,0x00dbffa0
+00dbff8c  adrp x0,0x3321000
+00dbff90  ldr x0,[x0, #0xca8]
+00dbff94  bl 0x00b0789c
+00dbff98  mov w8,#0x1
+00dbff9c  strb w8,[x20, #0x168]
+00dbffa0  ldr w8,[x19, #0x10]
+00dbffa4  ldr x21,[x19, #0x20]
+00dbffa8  cmp w8,#0x1
+00dbffac  b.eq 0x00dc0010
+00dbffb0  cbnz w8,0x00dc007c
+00dbffb4  mov w8,#0xffffffff
+00dbffb8  str w8,[x19, #0x10]
+00dbffbc  cbz x21,0x00dc0090
+00dbffc0  ldr x0,[x21, #0x20]
+00dbffc4  mov w1,#0x1
+00dbffc8  mov x2,xzr
+00dbffcc  mov w20,#0x1
+00dbffd0  bl 0x0168c754
+00dbffd4  mov x21,x19
+00dbffd8  str x0,[x21, #0x28]!
+00dbffdc  mov x1,x0
+00dbffe0  mov x0,x21
+00dbffe4  bl 0x00b07850
+00dbffe8  ldr x0,[x21]
+00dbffec  cbz x0,0x00dc0090
+00dbfff0  mov x1,xzr
+00dbfff4  bl 0x0168c8cc
+00dbfff8  str x0,[x19, #0x18]!
+00dbfffc  mov x1,x0
+00dc0000  mov x0,x19
+00dc0004  bl 0x00b07850
+00dc0008  stur w20,[x19, #-0x8]
+00dc000c  b 0x00dc0080
+00dc0010  mov w8,#0xffffffff
+00dc0014  str w8,[x19, #0x10]
+00dc0018  cbz x21,0x00dc0090
+00dc001c  adrp x8,0x3321000
+00dc0020  ldr x8,[x8, #0xca8]
+00dc0024  ldr x20,[x21, #0x18]
+00dc0028  ldr x0,[x8]
+00dc002c  ldr w8,[x0, #0xe0]
+00dc0030  cbnz w8,0x00dc0038
+00dc0034  bl 0x00b0798c
+00dc0038  mov x0,x20
+00dc003c  mov x1,xzr
+00dc0040  mov x2,xzr
+00dc0044  bl 0x024de30c
+00dc0048  tbz w0,#0x0,0x00dc007c
+00dc004c  ldr x8,[x19, #0x28]
+00dc0050  cbz x8,0x00dc0090
+00dc0054  ldr x0,[x8, #0x30]
+00dc0058  cbz x0,0x00dc0090
+00dc005c  ldr x19,[x21, #0x18]
+00dc0060  mov x1,xzr
+00dc0064  bl 0x026d8c44
+00dc0068  cbz x19,0x00dc0090
+00dc006c  mov x1,x0
+00dc0070  mov x0,x19
+00dc0074  mov x2,xzr
+00dc0078  bl 0x0259c40c
+00dc007c  mov w20,wzr
+00dc0080  ldp x19,x30,[sp, #0x10]
+00dc0084  mov w0,w20
+00dc0088  ldp x21,x20,[sp], #0x20
+00dc008c  ret
+00dc0090  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc0094_WWWCacheSample._SampleCoroutine_d__4__System.Collections.Generic.IEnumerator_System.Object_.get_Current.txt
+================================================================================
+Function: WWWCacheSample.<SampleCoroutine>d__4$$System.Collections.Generic.IEnumerator<System.Object>.get_Current @ 00dc0094
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc0094  ldr x0,[x0, #0x18]
+00dc0098  ret
+
+
+================================================================================
+### FILE: 00dc009c_WWWCacheSample._SampleCoroutine_d__4__System.Collections.IEnumerator.Reset.txt
+================================================================================
+Function: WWWCacheSample.<SampleCoroutine>d__4$$System.Collections.IEnumerator.Reset @ 00dc009c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> System.NotSupportedException$$.ctor @ 021525a8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_008d74f8 @ 008d74f8
+  -> FUN_00b07978 @ 00b07978
+
+--- Calls IN ---
+
+--- Listing ---
+00dc009c  stp x19,x30,[sp, #-0x10]!
+00dc00a0  adrp x0,0x335a000
+00dc00a4  ldr x0,[x0, #0xb88]
+00dc00a8  bl 0x00b078a0
+00dc00ac  bl 0x00b079a0
+00dc00b0  mov x19,x0
+00dc00b4  bl 0x008d74f8
+00dc00b8  mov x0,x19
+00dc00bc  mov x1,xzr
+00dc00c0  bl 0x021525a8
+00dc00c4  adrp x0,0x3329000
+00dc00c8  ldr x0,[x0, #0x310]
+00dc00cc  bl 0x00b078a0
+00dc00d0  mov x1,x0
+00dc00d4  mov x0,x19
+00dc00d8  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00dc00dc_WWWCacheSample._SampleCoroutine_d__4__System.Collections.IEnumerator.get_Current.txt
+================================================================================
+Function: WWWCacheSample.<SampleCoroutine>d__4$$System.Collections.IEnumerator.get_Current @ 00dc00dc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc00dc  ldr x0,[x0, #0x18]
+00dc00e0  ret
+
+

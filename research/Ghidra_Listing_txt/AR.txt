@@ -1,0 +1,133 @@
+================================================================================
+### FILE: 00da7d64_ArrayMetadata__get_ElementType.txt
+================================================================================
+Function: ArrayMetadata$$get_ElementType @ 00da7d64
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Type$$GetTypeFromHandle @ 0215f900
+  -> System.Type$$op_Equality @ 02168d68
+
+--- Calls IN ---
+  <- FUN_008db8b0 @ 008db8b0
+  <- JsonMapper$$ReadValue @ 00dab9e8
+
+--- Listing ---
+00da7d64  stp x21,x20,[sp, #-0x20]!
+00da7d68  stp x19,x30,[sp, #0x10]
+00da7d6c  adrp x20,0x3572000
+00da7d70  adrp x21,0x3347000
+00da7d74  ldrb w8,[x20, #0x91]
+00da7d78  ldr x21,[x21, #0xd68]
+00da7d7c  mov x19,x0
+00da7d80  tbnz w8,#0x0,0x00da7da4
+00da7d84  adrp x0,0x337c000
+00da7d88  ldr x0,[x0, #0x460]
+00da7d8c  bl 0x00b0789c
+00da7d90  adrp x0,0x3347000
+00da7d94  ldr x0,[x0, #0xd68]
+00da7d98  bl 0x00b0789c
+00da7d9c  mov w8,#0x1
+00da7da0  strb w8,[x20, #0x91]
+00da7da4  ldr x0,[x21]
+00da7da8  ldr x20,[x19]
+00da7dac  ldr w8,[x0, #0xe0]
+00da7db0  cbnz w8,0x00da7db8
+00da7db4  bl 0x00b0798c
+00da7db8  mov x0,x20
+00da7dbc  mov x1,xzr
+00da7dc0  mov x2,xzr
+00da7dc4  bl 0x02168d68
+00da7dc8  tbz w0,#0x0,0x00da7dfc
+00da7dcc  adrp x8,0x337c000
+00da7dd0  ldr x0,[x21]
+00da7dd4  ldr x8,[x8, #0x460]
+00da7dd8  ldr w9,[x0, #0xe0]
+00da7ddc  ldr x19,[x8]
+00da7de0  cbnz w9,0x00da7de8
+00da7de4  bl 0x00b0798c
+00da7de8  mov x0,x19
+00da7dec  ldp x19,x30,[sp, #0x10]
+00da7df0  mov x1,xzr
+00da7df4  ldp x21,x20,[sp], #0x20
+00da7df8  b 0x0215f900
+00da7dfc  ldr x0,[x19]
+00da7e00  ldp x19,x30,[sp, #0x10]
+00da7e04  ldp x21,x20,[sp], #0x20
+00da7e08  ret
+
+
+================================================================================
+### FILE: 00da7e0c_ArrayMetadata__set_ElementType.txt
+================================================================================
+Function: ArrayMetadata$$set_ElementType @ 00da7e0c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+00da7e0c  str x1,[x0]
+00da7e10  b 0x00b07850
+
+
+================================================================================
+### FILE: 00da7e14_ArrayMetadata__get_IsArray.txt
+================================================================================
+Function: ArrayMetadata$$get_IsArray @ 00da7e14
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da7e14  ldrb w0,[x0, #0x8]
+00da7e18  ret
+
+
+================================================================================
+### FILE: 00da7e1c_ArrayMetadata__set_IsArray.txt
+================================================================================
+Function: ArrayMetadata$$set_IsArray @ 00da7e1c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da7e1c  and w8,w1,#0x1
+00da7e20  strb w8,[x0, #0x8]
+00da7e24  ret
+
+
+================================================================================
+### FILE: 00da7e28_ArrayMetadata__get_IsList.txt
+================================================================================
+Function: ArrayMetadata$$get_IsList @ 00da7e28
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da7e28  ldrb w0,[x0, #0x9]
+00da7e2c  ret
+
+
+================================================================================
+### FILE: 00da7e30_ArrayMetadata__set_IsList.txt
+================================================================================
+Function: ArrayMetadata$$set_IsList @ 00da7e30
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da7e30  and w8,w1,#0x1
+00da7e34  strb w8,[x0, #0x9]
+00da7e38  ret
+
+
