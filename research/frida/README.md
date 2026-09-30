@@ -1,6 +1,6 @@
 # Frida 스크립트
 
-## justice_hook.js (v4.7)
+## justice_hook.js (v4.8)
 메인 후킹 스크립트. 로그인 플로우 전체 추적.
 
 **캡처 항목:**
@@ -8,6 +8,9 @@
 - `ProtocolGame_HttpRequest.Sign` — content, dict, sign (BEFORE/AFTER)
 - `ProtocolGame_HttpRequest.GetDefaultParams` — 기본 파라미터
 - `UnityWebRequest` — URL, 메서드, 헤더, 바디 (`[HTTP_CREATE]`, `[HTTP_HEADER]`)
+- `DownloadHandler.get_text` — HTTP 응답 바디 (`[HTTP_RESP]`)
+- `UnityWebRequest.get_responseCode` — HTTP 상태 코드
+- `ServerConst.GetURL` — 서버 URL (`[SERVER_URL]`, 리다이렉트용)
 - `String.Join` / `MD5HashString` — Sign 내부 추적
 
 **실행:**
