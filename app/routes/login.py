@@ -17,8 +17,12 @@ router = APIRouter()
 
 
 def parse_form_body(body: bytes) -> dict[str, str]:
-    """application/x-www-form-urlencoded 파싱."""
-    return dict(urllib.parse.parse_qsl(body.decode("utf-8")))
+    """application/x-www-form-urlencoded 파싱.
+    
+    중요: keep_blank_values=True 필수!
+    method="" 같은 빈 값도 Sign 계산에 포함되기 때문.
+    """
+    return dict(urllib.parse.parse_qsl(body.decode("utf-8"), keep_blank_values=True))
 
 
 @router.post("/v5/account/login")
