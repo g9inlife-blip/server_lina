@@ -4,7 +4,7 @@ from fastapi import APIRouter
 router = APIRouter()
 
 
-@router.post("/anon")
+@router.post("/v3/account/anon")
 def anon():
     # TODO: API_Anon 스펙 확정 후 구현
     return {"ret": 0, "msg": "ok"}
