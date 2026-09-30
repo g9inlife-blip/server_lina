@@ -483,3 +483,77 @@ BoxStatus +0x1C
 - `0x14 → BoxStatus`는 여전히 미확정
 
 다음 단계는 DH64 재분석이 아니라 **실제 Box 클릭 PCAP에서 opcode 0x14를 잡는 것**이다.
+
+
+## 15. 후속 정적분석 — 0x17 응답에서 Chapters 병합 경로
+
+현재까지 확인된 구조를 다시 대조했다.
+
+```
+NetworkCenter.TryHandleResponse @ 015b41e0
+        ↓
+DataCenter.ProccessRequestRes @ 016e203c
+        ↓
+OpInfo (x26 = x1)
+        ├─ Equipments +0xA8
+        ├─ Chapters   +0xC0
+        └─ Sections   +0xC8
+```
+
+`OpInfo$$get_Chapters @ 015aadec` / `set_Chapters @ 015aadf4`로 `OpInfo +0xC0 = Chapters`는 확정되어 있다.
+
+또한 `ProccessRequestRes` 내부에서 `MergeSectionSnapShot @ 016e5908` 계열 호출이 확인된다. 그러나 현재 Listing만으로는 `Chapters`를 `ProtoChapter`로 실제 병합하는 직접 호출이 아직 확인되지 않았다.
+
+따라서 0x17 response의 5749-byte 데이터에서 Chapter 객체가 실제로 들어있는지는 **protobuf 구조를 직접 역직렬화/필드 추적해야 확정**한다.
+
+## 16. BoxStatus의 현재 정적 근거
+
+`ProtoChapter$$get_BoxStatus @ 015acf84` / `set_BoxStatus @ 015acf8c`가 존재하며, `ProtoChapter$$IsBoxReceived @ 015acfe8`는:
+
+```
+ldr w8,[x0,#0x1c]
+tst w8,w1
+```
+
+형태이므로:
+
+```
+ProtoChapter + 0x1C = BoxStatus
+IsBoxReceived(indexMask) = (BoxStatus & mask) != 0
+```
+
+가 직접 확정된다.
+
+또한 `IsBoxReceived` Calls IN에는 `LayBoxItem`, `BattleMapMono.LayChapterItem`, `BattleSectionMono.SetStageBoxAndBar`가 있어 Chapter/Section Box UI가 동일 상태값을 참조한다.
+
+## 17. 분석 방향 변경
+
+따라서 다음 단계는 단순히 0x14 packet을 찾는 것만으로 끝내지 않는다.
+
+현재 확보된 0x17 response에 대해:
+
+```
+protobuf
+ ↓
+field #4 / nested messages
+ ↓
+Chapter 후보
+ ↓
+ProtoChapter 대응
+ ↓
++0x10 Id
++0x14 Status
++0x18 Progress
++0x1C BoxStatus
+```
+
+를 먼저 대조한다.
+
+여기서 BoxStatus가 발견되면, **0x17이 Chapter snapshot/state synchronization 역할을 하는지**를 확인할 수 있다.
+
+그 후 별도 Box reward 동작 PCAP에서 `0x14` request/response를 확보하여 동일 Chapter의 BoxStatus가 실제로 변경되는지 비교한다.
+
+현재 확정하지 않는 것:
+- 0x17 = Box reward 응답
+- 0x17 response의 특정 nested message = ProtoChapter
+- BoxStatus가 0x17에서만 갱신됨

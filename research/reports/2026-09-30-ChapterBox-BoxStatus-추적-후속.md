@@ -885,3 +885,664 @@ DH64::KeyPair
 - plaintext opcode: **미확정**
 - BoxStatus 갱신: **미확정**
 - 다음 병목: **이번 세션 DH64 private/session key 재현**
+
+
+## 27. 2026-09-30 후속 추적 — IsBoxReceived 호출부 및 추가 계정 PCAP 확인
+
+### 27.1 IsBoxReceived 호출부 3곳 확정
+
+`ProtoChapter$$IsBoxReceived @ 015acfe8`의 Calls IN Listing에서 다음 3개 호출부가 확인된다.
+
+```text
+ChapBoxMono$$LayBoxItem              @ 00e55c80
+BattleMapMono$$LayChapterItem        @ 00e4f918
+BattleSectionMono$$SetStageBoxAndBar @ 00e53380
+        ↓
+ProtoChapter.IsBoxReceived @ 015acfe8
+```
+
+따라서 Box 수령 상태는 Box 전용 UI뿐 아니라 Chapter Map과 Section Stage Box에서도 동일한 `ProtoChapter.BoxStatus` bitmask를 사용한다.
+
+### 27.2 실제 mask 값은 아직 미확인
+
+현재 GitHub Listing 검색에서는 위 3개 함수의 실제 본문 파일 경로가 검색 인덱스에 바로 노출되지 않아 `BL 015acfe8` 직전의 `w1` 설정값을 확보하지 못했다.
+
+```text
+ProtoChapter +0x1C = BoxStatus       확정
+IsBoxReceived(mask) = (BoxStatus & mask)!=0 확정
+boxIndex → mask 대응               미확정
+```
+
+특히 `boxIndex 5 → mask 1`은 아직 단정하지 않는다.
+
+### 27.3 다른 계정 PCAP 추가 확인
+
+사용자가 지정한:
+
+`research/PCAP/로그인부터던전2회이후box오픈_이후장비착용.json`
+
+파일명을 GitHub 검색으로 확인했으나 현재 connector 검색 인덱스에서는 정확한 파일명이 반환되지 않았다.
+
+따라서 파일이 Git에 없다고 단정하지 않고, 현재 연결된 GitHub 검색 결과에서는 직접 읽지 못한 상태로 기록한다.
+
+이 PCAP은 제목상 `던전 2회 → Box 오픈 → 보상 획득 → 장비 착용` 순서가 포함되어 있어 BoxStatus 전후 비교에 매우 유용한 후보이다.
+
+### 27.4 다음 추적 순서
+
+1. 해당 다른 계정 PCAP의 Git 존재/검색 가능 여부 재확인
+2. 확보되면 KCP session key 복구 후 Box 전후 response 복호화
+3. 동일 Chapter snapshot 전후 비교
+4. `field 43` Chapter snapshot의 `field 4` 전후 비교
+5. Ghidra에서 `00e55c80 / 00e4f918 / 00e53380`의 `IsBoxReceived` 호출 직전 `w1` 상수 확보
+6. ProtoChapter serializer/deserializer에서 BoxStatus protobuf field 번호 직접 확정
+
+### 27.5 현재 누적 결론
+
+```text
+ProtoChapter +0x1C = BoxStatus                  확정
+IsBoxReceived = (BoxStatus & mask) != 0         확정
+IsBoxReceived 호출부 3곳                         확정
+GetChapterBoxReward = opcode 0x14               확정
+0x14 request/response = 이벤트 Box PCAP 후보     유력
+0x14 response가 BoxStatus를 갱신                 미확정
+boxIndex → mask 값                               미확정
+다른 계정 PCAP 직접 비교                         아직 파일 미검색
+```
+
+다음 세션은 다른 계정 PCAP의 Git 존재/복호화 → BoxStatus 전후 비교부터 재개한다.
+
+
+## 28. 2026-09-30 다른 계정 PCAP 복호화 및 실제 0x14 검증
+
+### 28.1 Git 파일 존재 및 DH endian 정정
+
+`research/PCAP/로그인부터던전2회이후box오픈_이후장비착용.json`은 Git blob으로 실제 존재한다.
+
+- packet: 306
+- blob SHA: `faeb47f64d76158c731c36abb741773e376e46a2`
+- KCP client port: `51943`
+- KCP server: `182.92.62.79:8000`
+
+기존 기록의 candidate key에는 **server public 8-byte LE 해석 오류**가 있었다.
+
+실제 KCP Handshake2 기준 offset 17/25의 raw bytes:
+
+```
+server public #1 raw = cb 43 ff 46 bc 8a d1 d4
+server public #2 raw = a8 59 ce f7 2e 5f cc a8
+```
+
+BitConverter.ToUInt64 기준 실제 정수:
+
+```
+serverPublic1 = 0xd4d18abc46ff43cb
+serverPublic2 = 0xa8cc5f2ef7ce59a8
+```
+
+client public raw:
+
+```
+a6 0f f3 68 ac df 81 d8
+ee c2 4e ec ff 6a c7 3b
+```
+
+실제 정수:
+
+```
+clientPublic1 = 0xd881dfac68f30fa6
+clientPublic2 = 0x3bc76affec4ec2ee
+```
+
+discrete log으로 검증된 client private:
+
+```
+private1 = 0x1021bdff42518bc9
+private2 = 0x1711d8ad4dc70e26
+```
+
+shared secret:
+
+```
+secret1 = 0x490b1c9b2ce9abdc
+secret2 = 0xcf8fdf34709590da
+```
+
+따라서 이번 세션의 실제 KCP key:
+
+```
+dcabe92c9b1c0b49da90957034df8fcf
+```
+
+이 key로 실제 application ciphertext의 CBC/PKCS7 복호화가 성공했다.
+
+### 28.2 복호화 성공으로 암호화 경로 재검증
+
+예:
+
+```
+frame 260 C→S
+flag = 0x80
+opcode = 0x16
+```
+
+plaintext:
+
+```
+field 1 = serial
+field 2 = 0x16
+field 6 = 20000100
+field 7 = 21000080
+```
+
+또한:
+
+```
+frame 273 C→S
+opcode = 0x17
+```
+
+까지 정상 복호화되었다.
+
+따라서 새 계정 PCAP에서도:
+
+```
+DH64
+ ↓
+16-byte key
+ ↓
+Rijndael CBC/PKCS7
+ ↓
+KCP encrypted application
+ ↓
+protobuf-like OpInfo
+```
+
+경로가 실제 bytes 수준에서 검증된다.
+
+### 28.3 실제 Box reward request 확정
+
+**frame 283 C→S**:
+
+```
+KCP cmd = 0x51
+encrypted flag = 0x80
+plaintext:
+field 1 = serial
+field 2 = 0x14
+field 4 = { field 1 = 20000100, field 2 = 5 }
+field 6 = 20000100
+field 7 = 1
+```
+
+따라서:
+
+```
+opcode = 0x14
+chapterId = 20,000,100
+boxIndex = 5
+```
+
+가 실제 PCAP plaintext로 직접 확정된다.
+
+이는 정적 분석의:
+
+```
+ChapBoxMono.ClickGetReward
+ ↓
+GetChapterBoxReward(chapter.id, UIData.data)
+ ↓
+opcode 0x14
+ ↓
+chapterId + boxIndex
+```
+
+와 정확히 일치한다.
+
+### 28.4 실제 Box reward response 확정
+
+**frame 285 S→C**도 정상 복호화된다.
+
+Top-level:
+
+```
+field 1 = serial
+field 2 = 0x14
+```
+
+그리고:
+
+```
+field 43
+ ├─ field 1 = 20000100
+ └─ field 2 = nested Chapter data
+```
+
+nested Chapter data:
+
+```
+field 1 = 20000100
+field 3 = 12
+field 4 = 3
+field 9 = { field1 = 1, field2 = 15 }
+field10 = { field1 = 1, field2 = 15 }
+field11 = 1
+```
+
+즉 **0x14 response에 chapterId=20000100인 Chapter snapshot이 실제 포함**되는 것은 확정이다.
+
+### 28.5 BoxStatus 해석은 여기서 보류
+
+정적 분석으로:
+
+```
+ProtoChapter +0x1C = BoxStatus
+IsBoxReceived(mask) = (BoxStatus & mask) != 0
+mask = 1 << boxIndex
+```
+
+가 확정되어 있다.
+
+frame 283의 boxIndex=5이므로 UI 코드 기준 검사 mask는:
+
+```
+1 << 5 = 0x20
+```
+
+그런데 frame 285의 nested Chapter data에서 field 4 값은:
+
+```
+3
+```
+
+이다.
+
+따라서 **nested protobuf field 4 = BoxStatus라고 지금 단정하면 안 된다.**
+
+현재 안전한 결론:
+
+- 0x14 request의 chapterId=20000100: 확정
+- 0x14 request의 boxIndex=5: 확정
+- 0x14 response의 동일 Chapter snapshot: 확정
+- ProtoChapter +0x1C = BoxStatus: 확정
+- boxIndex 5의 UI 검사 mask = 0x20: 확정
+- response nested field 4 = BoxStatus: **보류**
+- 0x14 response가 BoxStatus +0x1C를 갱신: **아직 미확정**
+
+특히 field 4=3은 mask 0x20과 직접 일치하지 않으므로, **protobuf field 번호와 ProtoChapter 메모리 field 번호를 동일하다고 가정했던 이전 해석은 폐기**한다.
+
+### 28.6 현재 가장 중요한 다음 작업
+
+이제 암호/PCAP은 병목이 아니다.
+
+다음은 **ProtoChapter protobuf field tag ↔ C# property/메모리 offset 매핑**을 직접 확보하는 것이다.
+
+우선순위:
+
+1. ProtoChapter deserialize/merge 코드에서 field tag 처리 확인
+2. field 1 → Id 여부 확인
+3. field 2 → Status 여부 확인
+4. field 3 → Progress 여부 확인
+5. field 4 → BoxStatus 여부 확인
+6. field 9/10/11의 실제 property 확인
+7. 0x14 response에서 +0x1C write가 발생하는지 확인
+8. 필요하면 frame 285 직후 runtime state를 별도 hook으로 비교
+
+### 28.7 이번 단계 최종 상태
+
+```
+다른 계정 PCAP Git 존재              확정
+DH64 endian 정정                     확정
+실제 KCP session key                 dcabe92c9b1c0b49da90957034df8fcf
+실제 PCAP CBC/PKCS7 복호화            성공
+frame 283 opcode 0x14                확정
+frame 283 chapterId 20000100         확정
+frame 283 boxIndex 5                 확정
+frame 285 opcode 0x14 response       확정
+frame 285 Chapter snapshot           확정
+ProtoChapter +0x1C = BoxStatus       확정
+boxIndex 5 → mask 0x20              확정
+protobuf field4 = BoxStatus          보류
+0x14 → BoxStatus write               미확정
+```
+
+**현재 분석의 핵심 병목은 BoxStatus 값 자체가 아니라 protobuf field tag와 ProtoChapter 메모리 field의 대응 관계다.**
+
+## 29. 2026-09-30 ProtoChapter field mapping 재추적 결과
+
+### 29.1 ProtoChapter Listing 범위 확인
+
+Git의 `research/Ghidra_Listing_txt/AL`에서 `ProtoChapter$$`를 검색한 결과, 현재 저장된 Listing에는 다음 accessor/constructor가 확인된다.
+
+```
+get/set_Id
+get/set_Status
+get/set_Progress
+get/set_BoxStatus
+get/set_URL1
+get/set_URL2
+get/set_Readed
+get/set_Timeout
+get/set_OpeningTime
+IsBoxReceived
+.ctor
+```
+
+현재 Git Listing 검색 결과에는 `MergeFrom/ParseFrom/WriteTo/CalculateSize/Descriptor/Parser` 명시적 serializer 함수가 없다.
+
+### 29.2 현재 강한 정적 증거
+
+```
+Id         +0x10
+Status     +0x14
+Progress   +0x18
+BoxStatus  +0x1C
+```
+
+`get_BoxStatus`, `set_BoxStatus`, `IsBoxReceived` 모두 `+0x1C`를 직접 사용하므로 메모리 구조는 확정이다.
+
+반면 0x14 response Chapter snapshot은:
+
+```
+field 1 = 20000100
+field 3 = 12
+field 4 = 3
+field 9 = {1,15}
+field10 = {1,15}
+field11 = 1
+```
+
+이 값만으로 protobuf field tag와 C# property를 단순 1:1 대응시키면 안 된다.
+
+### 29.3 핵심 재평가
+
+가설 A는 `field 4 = BoxStatus`이지만, boxIndex=5의 단순 mask `1 << 5 = 0x20`과 field4=3이 직접 맞지 않는다.
+
+따라서 현재는 가설 B, 즉 protobuf field 번호와 메모리 offset/property 순서가 단순 대응하지 않을 가능성도 유지한다.
+
+### 29.4 0x14 이후 packet도 비교 대상
+
+Box request 이후:
+
+```
+frame 285  S→C  0x14 response
+frame 287  C→S
+frame 289  S→C
+frame 294  C→S
+frame 296  S→C
+```
+
+가 이어진다. 따라서 BoxStatus가 frame 285에서 즉시 반영되지 않고 후속 response에서 갱신될 가능성도 확인해야 한다.
+
+특히 `285 vs 289 vs 296`의 Chapter snapshot 변화가 중요하다.
+
+### 29.5 다음 정적 분석 목표
+
+1. `ProccessRequestRes @ 016e203c` 실제 Listing 확보
+2. response object의 Chapter collection 접근 확인
+3. Chapter 생성/병합 함수 확인
+4. 해당 함수의 `ProtoChapter.set_*` 또는 `+0x1C` write 확인
+5. `StarStatus`와 `BoxStatus`가 같은 merge 경로에서 갱신되는지 비교
+6. 0x14 후속 response의 Chapter snapshot 변화와 대조
+
+### 29.6 현재 상태
+
+```
+ProtoChapter +0x1C = BoxStatus              확정
+IsBoxReceived가 +0x1C를 읽음              확정
+0x14 request chapterId/boxIndex             확정
+0x14 response Chapter snapshot              확정
+protobuf field 4 = BoxStatus                미확정
+field 3/4/9/10/11 의미                     미확정
+0x14 response 직후 상태 갱신 시점            미확정
+serializer Listing 직접 확인                현재 Git 자료에 없음
+```
+
+**다음 실질 목표는 285 → 289 → 296의 Chapter snapshot을 비교하거나, 그 값을 생성하는 merge 함수에서 +0x1C write를 직접 잡는 것이다.**
+## 30. 2026-09-30 0x14 응답 Chapter snapshot 교차 비교
+
+### 30.1 다른 계정 frame 285
+
+실제 복호화된 frame 285의 field 43:
+
+```
+field 43
+ ├─ field 1 = 20000100
+ └─ field 2 = Chapter
+     ├─ field 1 = 20000100
+     ├─ field 3 = 12
+     ├─ field 4 = 3
+     ├─ field 9 = {1,15}
+     ├─ field10 = {1,15}
+     └─ field11 = 1
+```
+
+### 30.2 기존 통합 PCAP frame 430
+
+기존 계정 frame 430의 동일 구조:
+
+```
+field 43
+ ├─ field 1 = 20000100
+ └─ field 2 = Chapter
+     ├─ field 1 = 20000100
+     ├─ field 3 = 6
+     ├─ field 4 = 1
+     ├─ field 9 = {1,15}
+     ├─ field10 = {1,15}
+     └─ field11 = 1
+```
+
+두 계정에서 동일 chapterId에 대해 `account A: field3=6, field4=1`, `account B: field3=12, field4=3`가 관찰된다.
+
+### 30.3 핵심 관찰
+
+두 PCAP 모두 0x14 request는 `chapterId=20000100`, `boxIndex=5`이다. 그런데 response Chapter의 field4는 각각 1과 3이다.
+
+따라서 현재 데이터만으로 `field4 == BoxStatus`와 `boxIndex 5 == bit 5`를 동시에 만족하는 수령 완료 변화는 관찰되지 않는다.
+
+가능성은 분리한다:
+
+1. field4가 BoxStatus가 아니다.
+2. 0x14 response의 Chapter snapshot이 요청 처리 후 최종 BoxStatus가 아니라 기존/부분 snapshot이다.
+3. request boxIndex와 UI index가 동일하지 않다.
+
+단, UI의 `IsBoxReceived` 호출부에서는 실제 mask가 `1 << w23`임이 확인되었으므로 UI index와 request boxIndex의 동일성은 별도 검증이 필요하다.
+
+### 30.4 현재 결론 수정
+
+```
+ProtoChapter +0x1C = BoxStatus       확정
+protobuf Chapter field3 = Progress   유력
+protobuf Chapter field4 = 상태값     확정
+protobuf Chapter field4 = BoxStatus  유력하지만 미확정
+boxIndex → UI mask = 1 << index     정적 코드 확정
+request boxIndex == UI index         미확정
+0x14 response가 최종 BoxStatus 반환  미확정
+```
+
+### 30.5 다음 작업
+
+1. `GetChapterBoxReward @ 00ddeea8`에서 request 두 번째 값의 원천 추적
+2. `UIData.data` index와 request `+0x34` 관계 확인
+3. `DataCenter.ProccessRequestRes @ 016e203c`의 Chapter 관련 merge 분기 추적
+4. `MergeSectionSnapShot` 외 Chapter merge 후보 확인
+5. raw Listing 전체에서 `set_BoxStatus @ 015acf8c` callsite 주소 검색
+6. Box 요청 전 Chapter snapshot 확보
+
+## 31. 2026-09-30 ClickGetReward / Box index 직접 Listing 재검증
+
+### 31.1 ClickGetReward의 두 번째 인자는 변환 없이 UIData.data
+
+`ChapBoxMono$$ClickGetReward @ 00e5705c` 실제 CH.txt Listing에서 `BaseMono.GetUIData → UIData.get_data` 후 boxed int를 `ldr w19,[x0]`로 꺼내고, `BaseData.get_id` 결과와 함께 `GetChapterBoxReward @ 00ddeea8`로 전달한다.
+
+즉:
+
+```text
+UIData.data → boxed int 해제 → w19
+Chapter(+0xd0).BaseData.id → chapterId
+GetChapterBoxReward(chapterId, w19)
+```
+
+**boxIndex에 +1/-1 등의 별도 변환이 없다.**
+
+### 31.2 Box UI index와 IsBoxReceived mask도 같은 index
+
+`ChapBoxMono$$LayBoxItem @ 00e55c80`에서:
+
+```text
+00e55ebc  ldr w23,[x0]       ; UIData.data
+00e56024  ldr x0,[x19,#0xd8] ; Chapter runtime object
+00e56044  mov w8,#0x1
+00e56048  lsl w1,w8,w23
+00e56050  bl  0x015acfe8     ; ProtoChapter.IsBoxReceived
+```
+
+따라서 동일한 `UIData.data = i`가:
+
+```text
+수령 검사 → mask = 1 << i
+클릭 요청 → boxIndex = i
+```
+
+양쪽에 그대로 사용된다.
+
+실제 다른 계정 PCAP의 `boxIndex=5`는 정적 코드 기준 검사 mask `0x20`이 확정된다.
+
+### 31.3 Chapter reward pair에 대한 추가 증거
+
+`LayBoxItem`의 `List<KeyValuePair<int,int>>.get_Item @ 01ba5934` 반환값은 64비트 packed 값으로 취급된다.
+
+```text
+00e55ee4  mov x21,x0
+00e55f24  lsr x1,x21,#0x20
+00e55f2c  bl  0x01736d60   ; Ali.GetExcelData<object>
+```
+
+즉 pair의 **상위 32비트가 Excel data 조회 ID로 직접 사용**된다.
+
+동일한 `get_Item`/`lsr #0x20` 패턴이 `RewardPanelMono$$ShowItem @ 0100e49c`에서도 확인된다. 따라서 Chapter reward pair는 최소한:
+
+```text
+high 32 = Excel Item ID 계열
+low  32 = 수량/조건값 계열
+```
+
+로 좁혀진다. 다만 `SplitToInt32Dict @ 00df3f10` 본문을 직접 확보하기 전까지 threshold/rewardId의 key/value 방향은 최종 확정하지 않는다.
+
+### 31.4 BoxStatus 해석 정리
+
+현재 다음 3개는 모두 직접 확정된다.
+
+```text
+① request boxIndex = UIData.data
+② IsBoxReceived mask = 1 << UIData.data
+③ ProtoChapter +0x1C = BoxStatus
+```
+
+따라서 `boxIndex=5`의 최종 BoxStatus를 확인하려면 반드시 `0x20` bit를 확인해야 한다.
+
+현재 0x14 response snapshot의 nested field4 값 `1` 또는 `3`은 `0x20`과 일치하지 않는다. 따라서 아직:
+
+- response snapshot이 최종 수령 후 상태가 아닐 가능성
+- field4가 BoxStatus가 아닐 가능성
+- 후속 response에서 상태가 갱신될 가능성
+
+을 모두 유지한다.
+
+**현재 `protobuf field4 = BoxStatus`는 확정하지 않는다.**
+
+### 31.5 다음 작업
+
+1. 다른 계정 PCAP에서 0x14 이후 `Chapter 20000100` snapshot 검색
+2. 후속 response의 Chapter 상태값 변화 확인
+3. 다른 boxIndex의 0x14 요청이 있으면 `1 << index`와 response 상태 비교
+4. 이후 `DataCenter.ProccessRequestRes @ 016e203c` Chapter merge 경로 재추적
+
+
+## 32. 2026-09-30 실제 0x14 응답 재복호화 확인
+
+추가 계정 PCAP blob을 직접 다시 읽어 `frame 285`를 DH64 복구 key로 AES-CBC 복호화했다.
+
+```text
+KCP frame 285
+  flag = 0x84
+  IV   = 945ec753adab00499a5cf5fd41f9cf42
+  opcode = 0x14
+```
+
+복호화 protobuf top-level:
+
+```text
+field 1 = serial
+field 2 = 0x14
+field 4 = nested request/result data
+field 6 = 20000100
+field 7 = 1
+field 43 = Chapter snapshot container
+```
+
+field43:
+
+```text
+field1 = 20000100
+field2 = ProtoChapter-like nested message
+```
+
+nested Chapter:
+
+```text
+field1  = 20000100
+field3  = 12
+field4  = 3
+field9  = { field1=1, field2=15 }
+field10 = { field1=1, field2=15 }
+field11 = 1
+```
+
+따라서 기존에 확인했던 `frame 285 / field43 / Chapter 20000100 / field4=3`은 단순 패킷 추측이 아니라 **실제 AES-CBC 복호화 결과**로 재확인됐다.
+
+### 32.1 중요한 추가 확인
+
+동일 PCAP의 후속 `frame 289`도 같은 key로 복호화했으며:
+
+```text
+opcode = 0x11
+field6 = 10000001
+field43 없음
+```
+
+이었다.
+
+즉 frame 285의 Chapter snapshot이 frame 289에서 그대로 반복되는 구조는 아니다.
+
+`frame 296`은 현재 동일 단일-fragment 복호화 방식으로 유효 protobuf가 나오지 않아, 별도 재검증 대상으로 남긴다.
+
+### 32.2 현재 BoxStatus 판단
+
+정적 분석은:
+
+```text
+ProtoChapter +0x1C = BoxStatus
+IsBoxReceived(i) = (BoxStatus & (1 << i)) != 0
+```
+
+를 확정한다.
+
+실제 0x14 request는:
+
+```text
+chapterId = 20000100
+boxIndex  = 5
+```
+
+이므로 기대되는 수령 bit는:
+
+```text
+1 << 5 = 0x20
+```
+
+하지만 0x14 response의 Chapter nested `field4=3`은 `0x20`이 아니다.
+
+따라서 현재 증거로는 **protobuf field4를 BoxStatus라고 매핑하면 모순**이다.
+
+현재 가장 중요한 다음 작업은 `DataCenter.ProccessRequestRes @ 016e203c`에서 `OpInfo.Chapters`가 실제 `ProtoChapter` 객체로 병합되는 지점을 찾고, `set_BoxStatus @ 015acf8c`에 도달하는 값을 확인하는 것이다.
