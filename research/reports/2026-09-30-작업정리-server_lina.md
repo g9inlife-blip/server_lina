@@ -218,7 +218,9 @@ research/
   - `CSBehaviour.Connect` — 게임 서버 연결 시도 로깅 (1-4 args 자동 탐색)
   - `CSBehaviour.RequestOp` — opcode 전송 로깅
   - `NetworkCenter.Send` — raw 전송 로깅 (1-3 args 자동 탐색)
-- **v4.10.1**: Connect/Send 시그니처 자동 탐색으로 변경 (수동 지정 시 못 찾음)
+- **v4.10.2**: LoginGameServer/HandleLoginSuccess 후킹 추가
+  - `LoginManager.LoginGameServer` — 게임 서버 로그인 시작점 추적
+  - `LoginManager.HandleLoginSuccess` — 로그인 성공 핸들러 추적
 
 ## 9. 참고 자료
 
