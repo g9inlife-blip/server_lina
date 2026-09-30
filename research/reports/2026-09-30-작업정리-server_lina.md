@@ -160,8 +160,13 @@ research/
 - [ ] 게임 서버 (KCP) 연결 테스트
 
 ### Phase 3 — KCP 게임 서버
-- [ ] DH64 키교환 구현 (`p=2^64-59`)
-- [ ] AES-128-CBC 페이로드 복호화
+- [x] KCP 서버 뼈대 구현 (2026-09-30)
+  - `app/kcp/dh64.py` — DH64 키교환 (P=2^64-59, secret 계산, 16바이트 키 생성)
+  - `app/kcp/crypto.py` — AES-128-CBC 암복호화 (테스트 통과)
+  - `app/kcp/server.py` — 포트 8000 서버 스켈레톤
+  - `requirements.txt`에 pycryptodome 추가
+- [ ] DH 핸드셰이크 패킷 구조 확정 (GPT 분석 대기)
+- [ ] IV 결정 방식 확인
 - [ ] Opcode별 req/rsp 구현
 
 ### Phase 4 — 게임 로직
