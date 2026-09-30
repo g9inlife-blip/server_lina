@@ -977,9 +977,9 @@ async function main() {
     const LOCAL_BASE = 'http://127.0.0.1:8888';
     // URL 매핑: 원격 키 → 로컬 경로
     const URL_MAP = {
-        'API_Login': '/v5/account/login',
-        'API_Anon': '/v3/account/anon',
-        'API_Allin1': '/v3/ain1',
+        'API_Login': '/api/v5/account/login',
+        'API_Anon': '/api/v3/account/anon',
+        'API_Allin1': '/api/v3/ain1',
     };
     let il2cpp_string_new = null;
     try {
