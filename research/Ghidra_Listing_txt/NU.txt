@@ -1,0 +1,395 @@
+================================================================================
+### FILE: 00b76fcc_numpunct.txt
+================================================================================
+Function: numpunct @ 00b76fcc
+FuncComment: std::__ndk1::numpunct<char>::numpunct(unsigned long)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b76fcc  adrp x9,0x333f000
+    ; [PLATE] std::__ndk1::numpunct<char>::numpunct(unsigned long)
+00b76fd0  ldr x9,[x9, #0xfa8]
+00b76fd4  sub x8,x1,#0x1
+00b76fd8  mov w10,#0x2c2e
+00b76fdc  stp xzr,xzr,[x0, #0x20]
+00b76fe0  add x9,x9,#0x10
+00b76fe4  strh w10,[x0, #0x10]
+00b76fe8  stp x9,x8,[x0]
+00b76fec  str xzr,[x0, #0x18]
+00b76ff0  ret
+
+
+================================================================================
+### FILE: 00b76ff4_numpunct.txt
+================================================================================
+Function: numpunct @ 00b76ff4
+FuncComment: std::__ndk1::numpunct<wchar_t>::numpunct(unsigned long)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b76ff4  adrp x9,0x3378000
+    ; [PLATE] std::__ndk1::numpunct<wchar_t>::numpunct(unsigned long)
+00b76ff8  ldr x9,[x9, #0x348]
+00b76ffc  adrp x10,0x2a08000
+00b77000  ldr d0,[x10, #0xf0]
+00b77004  sub x8,x1,#0x1
+00b77008  add x9,x9,#0x10
+00b7700c  stp xzr,xzr,[x0, #0x20]
+00b77010  stp x9,x8,[x0]
+00b77014  str d0,[x0, #0x10]
+00b77018  str xzr,[x0, #0x18]
+00b7701c  ret
+
+
+================================================================================
+### FILE: 00b77020__numpunct.txt
+================================================================================
+Function: ~numpunct @ 00b77020
+FuncComment: std::__ndk1::numpunct<char>::~numpunct()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b77020  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct<char>::~numpunct()
+00b77024  stp x29,x30,[sp, #0x10]
+00b77028  add x29,sp,#0x10
+00b7702c  adrp x9,0x333f000
+00b77030  ldrb w8,[x0, #0x18]
+00b77034  ldr x9,[x9, #0xfa8]
+00b77038  mov x19,x0
+00b7703c  add x9,x9,#0x10
+00b77040  str x9,[x0]
+00b77044  tbz w8,#0x0,0x00b77050
+00b77048  ldr x0,[x19, #0x28]
+00b7704c  bl 0x008d3ed0
+00b77050  ldp x29,x30,[sp, #0x10]
+00b77054  mov x0,x19
+00b77058  ldr x19,[sp], #0x20
+00b7705c  b 0x008d4ca0
+
+
+================================================================================
+### FILE: 00b77060__numpunct.txt
+================================================================================
+Function: ~numpunct @ 00b77060
+FuncComment: std::__ndk1::numpunct<char>::~numpunct()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b77060  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct<char>::~numpunct()
+00b77064  stp x29,x30,[sp, #0x10]
+00b77068  add x29,sp,#0x10
+00b7706c  adrp x9,0x333f000
+00b77070  ldrb w8,[x0, #0x18]
+00b77074  ldr x9,[x9, #0xfa8]
+00b77078  mov x19,x0
+00b7707c  add x9,x9,#0x10
+00b77080  str x9,[x0]
+00b77084  tbz w8,#0x0,0x00b77090
+00b77088  ldr x0,[x19, #0x28]
+00b7708c  bl 0x008d3ed0
+00b77090  mov x0,x19
+00b77094  bl 0x008d4ca0
+00b77098  ldp x29,x30,[sp, #0x10]
+00b7709c  mov x0,x19
+00b770a0  ldr x19,[sp], #0x20
+00b770a4  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b770a8__numpunct.txt
+================================================================================
+Function: ~numpunct @ 00b770a8
+FuncComment: std::__ndk1::numpunct<wchar_t>::~numpunct()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b770a8  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct<wchar_t>::~numpunct()
+00b770ac  stp x29,x30,[sp, #0x10]
+00b770b0  add x29,sp,#0x10
+00b770b4  adrp x9,0x3378000
+00b770b8  ldrb w8,[x0, #0x18]
+00b770bc  ldr x9,[x9, #0x348]
+00b770c0  mov x19,x0
+00b770c4  add x9,x9,#0x10
+00b770c8  str x9,[x0]
+00b770cc  tbz w8,#0x0,0x00b770d8
+00b770d0  ldr x0,[x19, #0x28]
+00b770d4  bl 0x008d3ed0
+00b770d8  ldp x29,x30,[sp, #0x10]
+00b770dc  mov x0,x19
+00b770e0  ldr x19,[sp], #0x20
+00b770e4  b 0x008d4ca0
+
+
+================================================================================
+### FILE: 00b770e8__numpunct.txt
+================================================================================
+Function: ~numpunct @ 00b770e8
+FuncComment: std::__ndk1::numpunct<wchar_t>::~numpunct()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b770e8  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct<wchar_t>::~numpunct()
+00b770ec  stp x29,x30,[sp, #0x10]
+00b770f0  add x29,sp,#0x10
+00b770f4  adrp x9,0x3378000
+00b770f8  ldrb w8,[x0, #0x18]
+00b770fc  ldr x9,[x9, #0x348]
+00b77100  mov x19,x0
+00b77104  add x9,x9,#0x10
+00b77108  str x9,[x0]
+00b7710c  tbz w8,#0x0,0x00b77118
+00b77110  ldr x0,[x19, #0x28]
+00b77114  bl 0x008d3ed0
+00b77118  mov x0,x19
+00b7711c  bl 0x008d4ca0
+00b77120  ldp x29,x30,[sp, #0x10]
+00b77124  mov x0,x19
+00b77128  ldr x19,[sp], #0x20
+00b7712c  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b7725c_numpunct_byname.txt
+================================================================================
+Function: numpunct_byname @ 00b7725c
+FuncComment: std::__ndk1::numpunct_byname<char>::numpunct_byname(char const*, unsigned long)
+
+--- Calls OUT ---
+  -> __init @ 008d4c20
+
+--- Calls IN ---
+
+--- Listing ---
+00b7725c  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct_byname<char>::numpunct_byname(char const*, unsigned long)
+00b77260  stp x29,x30,[sp, #0x10]
+00b77264  add x29,sp,#0x10
+00b77268  str xzr,[x0, #0x28]
+00b7726c  adrp x10,0x335d000
+00b77270  ldr x10,[x10, #0x598]
+00b77274  mov w9,#0x2c2e
+00b77278  mov x19,x0
+00b7727c  sub x8,x2,#0x1
+00b77280  strh w9,[x0, #0x10]
+00b77284  add x9,x10,#0x10
+00b77288  stp x9,x8,[x0]
+00b7728c  stp xzr,xzr,[x0, #0x18]
+00b77290  bl 0x008d4c20
+    ; [PRE] try { // try from 00b77290 to 00b77293 has its CatchHandler @ 00b772a0
+    ; [POST] } // end try from 00b77290 to 00b77293
+00b77294  ldp x29,x30,[sp, #0x10]
+00b77298  ldp x20,x19,[sp], #0x20
+00b7729c  ret
+
+
+================================================================================
+### FILE: 00b77618_numpunct_byname.txt
+================================================================================
+Function: numpunct_byname @ 00b77618
+FuncComment: std::__ndk1::numpunct_byname<char>::numpunct_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long)
+
+--- Calls OUT ---
+  -> __init @ 008d4c20
+
+--- Calls IN ---
+
+--- Listing ---
+00b77618  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct_byname<char>::numpunct_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long)
+00b7761c  stp x29,x30,[sp, #0x10]
+00b77620  add x29,sp,#0x10
+00b77624  mov w9,#0x2c2e
+00b77628  str xzr,[x0, #0x28]
+00b7762c  strh w9,[x0, #0x10]
+00b77630  adrp x9,0x335d000
+00b77634  ldr x9,[x9, #0x598]
+00b77638  sub x8,x2,#0x1
+00b7763c  stp xzr,xzr,[x0, #0x18]
+00b77640  mov x19,x0
+00b77644  add x9,x9,#0x10
+00b77648  stp x9,x8,[x0]
+00b7764c  ldrb w8,[x1]
+00b77650  ldr x9,[x1, #0x10]
+00b77654  tst w8,#0x1
+00b77658  csinc x1,x9,x1,ne
+00b7765c  bl 0x008d4c20
+    ; [PRE] try { // try from 00b7765c to 00b7765f has its CatchHandler @ 00b7766c
+    ; [POST] } // end try from 00b7765c to 00b7765f
+00b77660  ldp x29,x30,[sp, #0x10]
+00b77664  ldp x20,x19,[sp], #0x20
+00b77668  ret
+
+
+================================================================================
+### FILE: 00b776a0__numpunct_byname.txt
+================================================================================
+Function: ~numpunct_byname @ 00b776a0
+FuncComment: std::__ndk1::numpunct_byname<char>::~numpunct_byname()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b776a0  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct_byname<char>::~numpunct_byname()
+00b776a4  stp x29,x30,[sp, #0x10]
+00b776a8  add x29,sp,#0x10
+00b776ac  adrp x9,0x333f000
+00b776b0  ldrb w8,[x0, #0x18]
+00b776b4  ldr x9,[x9, #0xfa8]
+00b776b8  mov x19,x0
+00b776bc  add x9,x9,#0x10
+00b776c0  str x9,[x0]
+00b776c4  tbz w8,#0x0,0x00b776d0
+00b776c8  ldr x0,[x19, #0x28]
+00b776cc  bl 0x008d3ed0
+00b776d0  mov x0,x19
+00b776d4  bl 0x008d4ca0
+00b776d8  ldp x29,x30,[sp, #0x10]
+00b776dc  mov x0,x19
+00b776e0  ldr x19,[sp], #0x20
+00b776e4  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b776e8_numpunct_byname.txt
+================================================================================
+Function: numpunct_byname @ 00b776e8
+FuncComment: std::__ndk1::numpunct_byname<wchar_t>::numpunct_byname(char const*, unsigned long)
+
+--- Calls OUT ---
+  -> __init @ 008d48b0
+
+--- Calls IN ---
+
+--- Listing ---
+00b776e8  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct_byname<wchar_t>::numpunct_byname(char const*, unsigned long)
+00b776ec  stp x29,x30,[sp, #0x10]
+00b776f0  add x29,sp,#0x10
+00b776f4  str xzr,[x0, #0x28]
+00b776f8  adrp x10,0x3372000
+00b776fc  adrp x9,0x2a08000
+00b77700  ldr x10,[x10, #0xa50]
+00b77704  ldr d0,[x9, #0xf0]
+00b77708  mov x19,x0
+00b7770c  sub x8,x2,#0x1
+00b77710  add x9,x10,#0x10
+00b77714  stp x9,x8,[x0]
+00b77718  str d0,[x0, #0x10]
+00b7771c  stp xzr,xzr,[x0, #0x18]
+00b77720  bl 0x008d48b0
+    ; [PRE] try { // try from 00b77720 to 00b77723 has its CatchHandler @ 00b77730
+    ; [POST] } // end try from 00b77720 to 00b77723
+00b77724  ldp x29,x30,[sp, #0x10]
+00b77728  ldp x20,x19,[sp], #0x20
+00b7772c  ret
+
+
+================================================================================
+### FILE: 00b779c8_numpunct_byname.txt
+================================================================================
+Function: numpunct_byname @ 00b779c8
+FuncComment: std::__ndk1::numpunct_byname<wchar_t>::numpunct_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long)
+
+--- Calls OUT ---
+  -> __init @ 008d48b0
+
+--- Calls IN ---
+
+--- Listing ---
+00b779c8  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct_byname<wchar_t>::numpunct_byname(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long)
+00b779cc  stp x29,x30,[sp, #0x10]
+00b779d0  add x29,sp,#0x10
+00b779d4  adrp x9,0x2a08000
+00b779d8  str xzr,[x0, #0x28]
+00b779dc  ldr d0,[x9, #0xf0]
+00b779e0  adrp x9,0x3372000
+00b779e4  ldr x9,[x9, #0xa50]
+00b779e8  sub x8,x2,#0x1
+00b779ec  str d0,[x0, #0x10]
+00b779f0  stp xzr,xzr,[x0, #0x18]
+00b779f4  add x9,x9,#0x10
+00b779f8  stp x9,x8,[x0]
+00b779fc  ldrb w8,[x1]
+00b77a00  ldr x9,[x1, #0x10]
+00b77a04  mov x19,x0
+00b77a08  tst w8,#0x1
+00b77a0c  csinc x1,x9,x1,ne
+00b77a10  bl 0x008d48b0
+    ; [PRE] try { // try from 00b77a10 to 00b77a13 has its CatchHandler @ 00b77a20
+    ; [POST] } // end try from 00b77a10 to 00b77a13
+00b77a14  ldp x29,x30,[sp, #0x10]
+00b77a18  ldp x20,x19,[sp], #0x20
+00b77a1c  ret
+
+
+================================================================================
+### FILE: 00b77a54__numpunct_byname.txt
+================================================================================
+Function: ~numpunct_byname @ 00b77a54
+FuncComment: std::__ndk1::numpunct_byname<wchar_t>::~numpunct_byname()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b77a54  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::numpunct_byname<wchar_t>::~numpunct_byname()
+00b77a58  stp x29,x30,[sp, #0x10]
+00b77a5c  add x29,sp,#0x10
+00b77a60  adrp x9,0x3378000
+00b77a64  ldrb w8,[x0, #0x18]
+00b77a68  ldr x9,[x9, #0x348]
+00b77a6c  mov x19,x0
+00b77a70  add x9,x9,#0x10
+00b77a74  str x9,[x0]
+00b77a78  tbz w8,#0x0,0x00b77a84
+00b77a7c  ldr x0,[x19, #0x28]
+00b77a80  bl 0x008d3ed0
+00b77a84  mov x0,x19
+00b77a88  bl 0x008d4ca0
+00b77a8c  ldp x29,x30,[sp, #0x10]
+00b77a90  mov x0,x19
+00b77a94  ldr x19,[sp], #0x20
+00b77a98  b 0x008d3ed0
+
+

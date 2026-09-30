@@ -1,0 +1,278 @@
+================================================================================
+### FILE: 008d4860_future_error.txt
+================================================================================
+Function: future_error @ 008d4860
+
+--- Calls OUT ---
+  -> future_error @ 00b8a414
+
+--- Calls IN ---
+  <- FUN_00b8a5a4 @ 00b8a5a4
+
+--- Listing ---
+008d4860  adrp x16,0x3307000
+008d4864  ldr x17,[x16, #0xdf0]
+008d4868  add x16,x16,#0xdf0
+008d486c  br x17
+
+
+================================================================================
+### FILE: 008d4be0__future_error.txt
+================================================================================
+Function: ~future_error @ 008d4be0
+
+--- Calls OUT ---
+  -> ~future_error @ 00b8a4b8
+
+--- Calls IN ---
+
+--- Listing ---
+008d4be0  adrp x16,0x3307000
+008d4be4  ldr x17,[x16, #0xfb0]
+008d4be8  add x16,x16,#0xfb0
+008d4bec  br x17
+
+
+================================================================================
+### FILE: 008d5410_futimens.txt
+================================================================================
+Function: futimens @ 008d5410
+
+--- Calls OUT ---
+  -> futimens @ 03799670
+
+--- Calls IN ---
+  <- SystemNative_CopyFile @ 00a99914
+
+--- Listing ---
+008d5410  adrp x16,0x3308000
+008d5414  ldr x17,[x16, #0x3c8]
+008d5418  add x16,x16,#0x3c8
+008d541c  br x17
+
+
+================================================================================
+### FILE: 00b8a390_future_category.txt
+================================================================================
+Function: future_category @ 00b8a390
+FuncComment: std::__ndk1::future_category()
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> __cxa_atexit @ 008d3de0
+  -> ~error_category @ 00b8961c
+  -> error_category @ 008d3c30
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8a390  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::future_category()
+00b8a394  stp x29,x30,[sp, #0x10]
+00b8a398  add x29,sp,#0x10
+00b8a39c  adrp x8,0x3585000
+00b8a3a0  add x8,x8,#0xd30
+00b8a3a4  ldarb w8,[x8]
+00b8a3a8  tbz w8,#0x0,0x00b8a3c0
+00b8a3ac  ldp x29,x30,[sp, #0x10]
+00b8a3b0  adrp x0,0x3585000
+00b8a3b4  add x0,x0,#0xd28
+00b8a3b8  ldr x19,[sp], #0x20
+00b8a3bc  ret
+00b8a3c0  adrp x0,0x3585000
+00b8a3c4  add x0,x0,#0xd30
+00b8a3c8  bl 0x008d3ef0
+00b8a3cc  cbz w0,0x00b8a3ac
+00b8a3d0  adrp x19,0x3585000
+00b8a3d4  add x19,x19,#0xd28
+00b8a3d8  mov x0,x19
+00b8a3dc  bl 0x008d3c30
+00b8a3e0  adrp x8,0x3304000
+00b8a3e4  add x8,x8,#0x6a8
+00b8a3e8  str x8,[x19]
+00b8a3ec  adrp x0,0x3358000
+00b8a3f0  ldr x0,[x0, #0xf30]
+00b8a3f4  adrp x2,0x31a4000
+00b8a3f8  add x2,x2,#0x660
+00b8a3fc  mov x1,x19
+00b8a400  bl 0x008d3de0
+00b8a404  adrp x0,0x3585000
+00b8a408  add x0,x0,#0xd30
+00b8a40c  bl 0x008d5bc0
+00b8a410  b 0x00b8a3ac
+
+
+================================================================================
+### FILE: 00b8a414_future_error.txt
+================================================================================
+Function: future_error @ 00b8a414
+FuncComment: std::__ndk1::future_error::future_error(std::__ndk1::error_code)
+
+--- Calls OUT ---
+  -> message @ 008d42e0
+  -> operator.delete @ 008d3ed0
+  -> logic_error @ 008d3e50
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- future_error @ 008d4860
+
+--- Listing ---
+00b8a414  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::future_error::future_error(std::__ndk1::error_code)
+00b8a418  stp x20,x19,[sp, #0x30]
+00b8a41c  stp x29,x30,[sp, #0x40]
+00b8a420  add x29,sp,#0x40
+00b8a424  mrs x20,tpidr_el0
+00b8a428  ldr x8,[x20, #0x28]
+00b8a42c  mov x19,x0
+00b8a430  add x0,sp,#0x18
+00b8a434  stur x8,[x29, #-0x18]
+00b8a438  mov x8,sp
+00b8a43c  stp x1,x2,[sp, #0x18]
+00b8a440  bl 0x008d42e0
+00b8a444  mov x1,sp
+    ; [PRE] try { // try from 00b8a444 to 00b8a44f has its CatchHandler @ 00b8a49c
+00b8a448  mov x0,x19
+00b8a44c  bl 0x008d3e50
+    ; [POST] } // end try from 00b8a444 to 00b8a44f
+00b8a450  ldrb w8,[sp]
+00b8a454  tbz w8,#0x0,0x00b8a460
+00b8a458  ldr x0,[sp, #0x10]
+00b8a45c  bl 0x008d3ed0
+00b8a460  adrp x8,0x3365000
+00b8a464  ldr x8,[x8, #0x890]
+00b8a468  add x8,x8,#0x10
+00b8a46c  str x8,[x19]
+00b8a470  ldur q0,[sp, #0x18]
+00b8a474  str q0,[x19, #0x10]
+00b8a478  ldr x8,[x20, #0x28]
+00b8a47c  ldur x9,[x29, #-0x18]
+00b8a480  cmp x8,x9
+00b8a484  b.ne 0x00b8a498
+00b8a488  ldp x29,x30,[sp, #0x40]
+00b8a48c  ldp x20,x19,[sp, #0x30]
+00b8a490  add sp,sp,#0x50
+00b8a494  ret
+00b8a498  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8a4b8__future_error.txt
+================================================================================
+Function: ~future_error @ 00b8a4b8
+FuncComment: std::__ndk1::future_error::~future_error()
+
+--- Calls OUT ---
+  -> ~logic_error @ 008d4040
+
+--- Calls IN ---
+  <- ~future_error @ 008d4be0
+  <- FUN_00b8a5a4 @ 00b8a5a4
+  <- FUN_00b8ae60 @ 00b8ae60
+
+--- Listing ---
+00b8a4b8  b 0x008d4040
+    ; [PLATE] std::__ndk1::future_error::~future_error()
+
+
+================================================================================
+### FILE: 00b8a4bc__future_error.txt
+================================================================================
+Function: ~future_error @ 00b8a4bc
+FuncComment: std::__ndk1::future_error::~future_error()
+
+--- Calls OUT ---
+  -> ~logic_error @ 008d4040
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8a4bc  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::future_error::~future_error()
+00b8a4c0  stp x29,x30,[sp, #0x10]
+00b8a4c4  add x29,sp,#0x10
+00b8a4c8  mov x19,x0
+00b8a4cc  bl 0x008d4040
+00b8a4d0  ldp x29,x30,[sp, #0x10]
+00b8a4d4  mov x0,x19
+00b8a4d8  ldr x19,[sp], #0x20
+00b8a4dc  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b8ab80_future.txt
+================================================================================
+Function: future @ 00b8ab80
+FuncComment: std::__ndk1::future<void>::future(std::__ndk1::__assoc_sub_state*)
+
+--- Calls OUT ---
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> unlock @ 008d5170
+  -> __add_shared @ 008d5b10
+  -> lock @ 008d3fc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8ab80  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::future<void>::future(std::__ndk1::__assoc_sub_state*)
+00b8ab84  stp x29,x30,[sp, #0x10]
+00b8ab88  add x29,sp,#0x10
+00b8ab8c  add x19,x1,#0x18
+00b8ab90  str x1,[x0]
+00b8ab94  mov x0,x19
+00b8ab98  mov x20,x1
+00b8ab9c  bl 0x008d3fc0
+00b8aba0  ldrb w8,[x20, #0x70]
+00b8aba4  tbnz w8,#0x1,0x00b8abcc
+00b8aba8  mov x0,x20
+00b8abac  bl 0x008d5b10
+00b8abb0  ldr w8,[x20, #0x70]
+00b8abb4  mov x0,x19
+00b8abb8  orr w8,w8,#0x2
+00b8abbc  str w8,[x20, #0x70]
+00b8abc0  ldp x29,x30,[sp, #0x10]
+00b8abc4  ldp x20,x19,[sp], #0x20
+00b8abc8  b 0x008d5170
+00b8abcc  mov w0,#0x1
+    ; [PRE] try { // try from 00b8abcc to 00b8abd3 has its CatchHandler @ 00b8abd4
+00b8abd0  bl 0x00b8a5a4
+    ; [POST] } // end try from 00b8abcc to 00b8abd3
+
+
+================================================================================
+### FILE: 00b8abe8__future.txt
+================================================================================
+Function: ~future @ 00b8abe8
+FuncComment: std::__ndk1::future<void>::~future()
+
+--- Calls OUT ---
+  -> __release_shared @ 008d54a0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8abe8  ldr x0,[x0]
+    ; [PLATE] std::__ndk1::future<void>::~future()
+00b8abec  cbz x0,0x00b8abf4
+00b8abf0  b 0x008d54a0
+00b8abf4  ret
+
+
+================================================================================
+### FILE: 03799670_futimens.txt
+================================================================================
+Function: futimens @ 03799670
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- futimens @ 008d5410
+
+--- Listing ---
+03799670  ?? ??
+
+

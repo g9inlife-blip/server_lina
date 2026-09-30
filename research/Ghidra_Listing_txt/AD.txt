@@ -1,0 +1,2097 @@
+================================================================================
+### FILE: 008d5b10___add_shared.txt
+================================================================================
+Function: __add_shared @ 008d5b10
+
+--- Calls OUT ---
+  -> __add_shared @ 00b810a0
+
+--- Calls IN ---
+  <- FUN_00b6e6fc @ 00b6e6fc
+  <- locale @ 00b704bc
+  <- FUN_00b6c974 @ 00b6c974
+  <- FUN_00b6cbd4 @ 00b6cbd4
+  <- FUN_00b6d094 @ 00b6d094
+  <- __global @ 00b703a0
+  <- FUN_00b6dc54 @ 00b6dc54
+  <- global @ 00b70884
+  <- FUN_00b6d6b8 @ 00b6d6b8
+  <- FUN_00b6db24 @ 00b6db24
+  <- FUN_00b6c4b4 @ 00b6c4b4
+  <- FUN_00b6dfe4 @ 00b6dfe4
+  <- locale @ 00b70490
+  <- FUN_00b6deb4 @ 00b6deb4
+  <- FUN_00b6d8c4 @ 00b6d8c4
+  <- locale @ 00b70730
+  <- future @ 00b8ab80
+  <- locale @ 00b70644
+  <- FUN_00b6cf64 @ 00b6cf64
+  <- operator= @ 00b704d4
+  <- FUN_00b6dd84 @ 00b6dd84
+  <- FUN_00b6bcd0 @ 00b6bcd0
+  <- FUN_00b89a90 @ 00b89a90
+  <- FUN_00b6c844 @ 00b6c844
+  <- FUN_00b6d4ac @ 00b6d4ac
+  <- FUN_00b70068 @ 00b70068
+  <- get_future @ 00b8aee0
+  <- FUN_00b6c5e4 @ 00b6c5e4
+  <- FUN_00b6caa4 @ 00b6caa4
+  <- FUN_00b6c714 @ 00b6c714
+  <- FUN_00b6d9f4 @ 00b6d9f4
+  <- __install_ctor @ 00b70810
+  <- FUN_00b6cd04 @ 00b6cd04
+  <- FUN_00b6d2a0 @ 00b6d2a0
+  <- FUN_00b6ce34 @ 00b6ce34
+  <- locale @ 00b70798
+  <- FUN_00b6a07c @ 00b6a07c
+  <- locale @ 00b705e8
+  <- locale @ 00b70514
+  <- operator= @ 00b8b0a4
+
+--- Listing ---
+008d5b10  adrp x16,0x3308000
+008d5b14  ldr x17,[x16, #0x748]
+008d5b18  add x16,x16,#0x748
+008d5b1c  br x17
+
+
+================================================================================
+### FILE: 00b810a0___add_shared.txt
+================================================================================
+Function: __add_shared @ 00b810a0
+FuncComment: std::__ndk1::__shared_count::__add_shared()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __add_shared @ 008d5b10
+
+--- Listing ---
+00b810a0  add x8,x0,#0x8
+    ; [PLATE] std::__ndk1::__shared_count::__add_shared()
+00b810a4  ldxr x9,[x8]
+00b810a8  add x9,x9,#0x1
+00b810ac  stxr w10,x9,[x8]
+00b810b0  cbnz w10,0x00b810a4
+00b810b4  ret
+
+
+================================================================================
+### FILE: 00b810fc___add_shared.txt
+================================================================================
+Function: __add_shared @ 00b810fc
+FuncComment: std::__ndk1::__shared_weak_count::__add_shared()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b810fc  add x8,x0,#0x8
+    ; [PLATE] std::__ndk1::__shared_weak_count::__add_shared()
+00b81100  ldxr x9,[x8]
+00b81104  add x9,x9,#0x1
+00b81108  stxr w10,x9,[x8]
+00b8110c  cbnz w10,0x00b81100
+00b81110  ret
+
+
+================================================================================
+### FILE: 00b81114___add_weak.txt
+================================================================================
+Function: __add_weak @ 00b81114
+FuncComment: std::__ndk1::__shared_weak_count::__add_weak()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b81114  add x8,x0,#0x10
+    ; [PLATE] std::__ndk1::__shared_weak_count::__add_weak()
+00b81118  ldxr x9,[x8]
+00b8111c  add x9,x9,#0x1
+00b81120  stxr w10,x9,[x8]
+00b81124  cbnz w10,0x00b81118
+00b81128  ret
+
+
+================================================================================
+### FILE: 00ce24e8_AddressBookController__add_OnContactsLoadedAction.txt
+================================================================================
+Function: AddressBookController$$add_OnContactsLoadedAction @ 00ce24e8
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- SA.AN.NATIVE_API.NativeApiTab$$LoadAdressBook @ 00cb5d80
+  <- AddressBookExample$$LoadAdressBook @ 00cf8598
+  <- AnOtherFeaturesPreview$$LoadAdressBook @ 00cfa114
+
+--- Listing ---
+00ce24e8  stp x23,x22,[sp, #-0x30]!
+00ce24ec  stp x21,x20,[sp, #0x10]
+00ce24f0  stp x19,x30,[sp, #0x20]
+00ce24f4  adrp x20,0x3571000
+00ce24f8  adrp x22,0x3345000
+00ce24fc  ldrb w8,[x20, #0x8eb]
+00ce2500  ldr x22,[x22, #0xcd8]
+00ce2504  mov x19,x0
+00ce2508  tbnz w8,#0x0,0x00ce252c
+00ce250c  adrp x0,0x3348000
+00ce2510  ldr x0,[x0, #0xcf8]
+00ce2514  bl 0x00b0789c
+00ce2518  adrp x0,0x3345000
+00ce251c  ldr x0,[x0, #0xcd8]
+00ce2520  bl 0x00b0789c
+00ce2524  mov w8,#0x1
+00ce2528  strb w8,[x20, #0x8eb]
+00ce252c  ldr x0,[x22]
+00ce2530  ldr w8,[x0, #0xe0]
+00ce2534  cbnz w8,0x00ce2540
+00ce2538  bl 0x00b0798c
+00ce253c  ldr x0,[x22]
+00ce2540  ldr x8,[x0, #0xb8]
+00ce2544  adrp x23,0x3348000
+00ce2548  ldr x20,[x8]
+00ce254c  ldr x23,[x23, #0xcf8]
+00ce2550  mov x0,x20
+00ce2554  mov x1,x19
+00ce2558  mov x2,xzr
+00ce255c  bl 0x02197810
+00ce2560  mov x21,x0
+00ce2564  cbz x0,0x00ce2578
+00ce2568  ldr x1,[x23]
+00ce256c  ldr x8,[x21]
+00ce2570  cmp x8,x1
+00ce2574  b.ne 0x00ce25b8
+00ce2578  ldr x0,[x22]
+00ce257c  ldr w8,[x0, #0xe0]
+00ce2580  cbnz w8,0x00ce258c
+00ce2584  bl 0x00b0798c
+00ce2588  ldr x0,[x22]
+00ce258c  ldr x0,[x0, #0xb8]
+00ce2590  mov x1,x21
+00ce2594  mov x2,x20
+00ce2598  bl 0x00ae526c
+00ce259c  cmp x20,x0
+00ce25a0  mov x20,x0
+00ce25a4  b.ne 0x00ce2550
+00ce25a8  ldp x19,x30,[sp, #0x20]
+00ce25ac  ldp x21,x20,[sp, #0x10]
+00ce25b0  ldp x23,x22,[sp], #0x30
+00ce25b4  ret
+00ce25b8  mov x0,x21
+00ce25bc  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00ce25c0_AddressBookController__remove_OnContactsLoadedAction.txt
+================================================================================
+Function: AddressBookController$$remove_OnContactsLoadedAction @ 00ce25c0
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- AddressBookExample$$OnContactsLoaded @ 00cf8664
+  <- AnOtherFeaturesPreview$$OnContactsLoaded @ 00cfa444
+  <- SA.AN.NATIVE_API.NativeApiTab$$OnContactsLoaded @ 00cb60b0
+
+--- Listing ---
+00ce25c0  stp x23,x22,[sp, #-0x30]!
+00ce25c4  stp x21,x20,[sp, #0x10]
+00ce25c8  stp x19,x30,[sp, #0x20]
+00ce25cc  adrp x20,0x3571000
+00ce25d0  adrp x22,0x3345000
+00ce25d4  ldrb w8,[x20, #0x8ec]
+00ce25d8  ldr x22,[x22, #0xcd8]
+00ce25dc  mov x19,x0
+00ce25e0  tbnz w8,#0x0,0x00ce2604
+00ce25e4  adrp x0,0x3348000
+00ce25e8  ldr x0,[x0, #0xcf8]
+00ce25ec  bl 0x00b0789c
+00ce25f0  adrp x0,0x3345000
+00ce25f4  ldr x0,[x0, #0xcd8]
+00ce25f8  bl 0x00b0789c
+00ce25fc  mov w8,#0x1
+00ce2600  strb w8,[x20, #0x8ec]
+00ce2604  ldr x0,[x22]
+00ce2608  ldr w8,[x0, #0xe0]
+00ce260c  cbnz w8,0x00ce2618
+00ce2610  bl 0x00b0798c
+00ce2614  ldr x0,[x22]
+00ce2618  ldr x8,[x0, #0xb8]
+00ce261c  adrp x23,0x3348000
+00ce2620  ldr x20,[x8]
+00ce2624  ldr x23,[x23, #0xcf8]
+00ce2628  mov x0,x20
+00ce262c  mov x1,x19
+00ce2630  mov x2,xzr
+00ce2634  bl 0x02197a1c
+00ce2638  mov x21,x0
+00ce263c  cbz x0,0x00ce2650
+00ce2640  ldr x1,[x23]
+00ce2644  ldr x8,[x21]
+00ce2648  cmp x8,x1
+00ce264c  b.ne 0x00ce2690
+00ce2650  ldr x0,[x22]
+00ce2654  ldr w8,[x0, #0xe0]
+00ce2658  cbnz w8,0x00ce2664
+00ce265c  bl 0x00b0798c
+00ce2660  ldr x0,[x22]
+00ce2664  ldr x0,[x0, #0xb8]
+00ce2668  mov x1,x21
+00ce266c  mov x2,x20
+00ce2670  bl 0x00ae526c
+00ce2674  cmp x20,x0
+00ce2678  mov x20,x0
+00ce267c  b.ne 0x00ce2628
+00ce2680  ldp x19,x30,[sp, #0x20]
+00ce2684  ldp x21,x20,[sp, #0x10]
+00ce2688  ldp x23,x22,[sp], #0x30
+00ce268c  ret
+00ce2690  mov x0,x21
+00ce2694  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00ce2698_AddressBookController__Awake.txt
+================================================================================
+Function: AddressBookController$$Awake @ 00ce2698
+
+--- Calls OUT ---
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$DontDestroyOnLoad @ 024e00c4
+
+--- Calls IN ---
+
+--- Listing ---
+00ce2698  stp x21,x20,[sp, #-0x20]!
+00ce269c  stp x19,x30,[sp, #0x10]
+00ce26a0  adrp x21,0x3571000
+00ce26a4  adrp x20,0x3321000
+00ce26a8  ldrb w8,[x21, #0x8ed]
+00ce26ac  ldr x20,[x20, #0xca8]
+00ce26b0  mov x19,x0
+00ce26b4  tbnz w8,#0x0,0x00ce26cc
+00ce26b8  adrp x0,0x3321000
+00ce26bc  ldr x0,[x0, #0xca8]
+00ce26c0  bl 0x00b0789c
+00ce26c4  mov w8,#0x1
+00ce26c8  strb w8,[x21, #0x8ed]
+00ce26cc  mov x0,x19
+00ce26d0  mov x1,xzr
+00ce26d4  bl 0x024e4ed4
+00ce26d8  ldr x8,[x20]
+00ce26dc  mov x19,x0
+00ce26e0  ldr w9,[x8, #0xe0]
+00ce26e4  cbnz w9,0x00ce26f0
+00ce26e8  mov x0,x8
+00ce26ec  bl 0x00b0798c
+00ce26f0  mov x0,x19
+00ce26f4  ldp x19,x30,[sp, #0x10]
+00ce26f8  mov x1,xzr
+00ce26fc  ldp x21,x20,[sp], #0x20
+00ce2700  b 0x024e00c4
+
+
+================================================================================
+### FILE: 00ce2704_AddressBookController__LoadContacts.txt
+================================================================================
+Function: AddressBookController$$LoadContacts @ 00ce2704
+
+--- Calls OUT ---
+  -> AndroidNative$$LoadContacts @ 00cd5b28
+
+--- Calls IN ---
+  <- SA.AN.NATIVE_API.NativeApiTab$$LoadAdressBook @ 00cb5d80
+  <- AddressBookExample$$LoadAdressBook @ 00cf8598
+  <- AnOtherFeaturesPreview$$LoadAdressBook @ 00cfa114
+
+--- Listing ---
+00ce2704  b 0x00cd5b28
+
+
+================================================================================
+### FILE: 00ce2708_AddressBookController__get_contacts.txt
+================================================================================
+Function: AddressBookController$$get_contacts @ 00ce2708
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00ce2708  ldr x0,[x0, #0x18]
+00ce270c  ret
+
+
+================================================================================
+### FILE: 00ce2710_AddressBookController__OnContactsLoaded.txt
+================================================================================
+Function: AddressBookController$$OnContactsLoaded @ 00ce2710
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AddressBookController$$parseContacts @ 00ce28a0
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> System.String$$Equals @ 01fde08c
+
+--- Calls IN ---
+
+--- Listing ---
+00ce2710  str x22,[sp, #-0x30]!
+00ce2714  stp x21,x20,[sp, #0x10]
+00ce2718  stp x19,x30,[sp, #0x20]
+00ce271c  adrp x21,0x3571000
+00ce2720  ldrb w8,[x21, #0x8ee]
+00ce2724  mov x20,x1
+00ce2728  mov x19,x0
+00ce272c  tbnz w8,#0x0,0x00ce2780
+00ce2730  adrp x0,0x3345000
+00ce2734  ldr x0,[x0, #0xcd8]
+00ce2738  bl 0x00b0789c
+00ce273c  adrp x0,0x336b000
+00ce2740  ldr x0,[x0, #0x7d0]
+00ce2744  bl 0x00b0789c
+00ce2748  adrp x0,0x332f000
+00ce274c  ldr x0,[x0, #0xda8]
+00ce2750  bl 0x00b0789c
+00ce2754  adrp x0,0x331b000
+00ce2758  ldr x0,[x0, #0x6c8]
+00ce275c  bl 0x00b0789c
+00ce2760  adrp x0,0x337f000
+00ce2764  ldr x0,[x0, #0x108]
+00ce2768  bl 0x00b0789c
+00ce276c  adrp x0,0x332e000
+00ce2770  ldr x0,[x0, #0x660]
+00ce2774  bl 0x00b0789c
+00ce2778  mov w8,#0x1
+00ce277c  strb w8,[x21, #0x8ee]
+00ce2780  str wzr,[sp, #0xc]
+00ce2784  cbz x20,0x00ce289c
+00ce2788  adrp x8,0x331b000
+00ce278c  ldr x8,[x8, #0x6c8]
+00ce2790  adrp x22,0x336b000
+00ce2794  mov x0,x20
+00ce2798  mov x2,xzr
+00ce279c  ldr x8,[x8]
+00ce27a0  ldr x8,[x8, #0xb8]
+00ce27a4  ldr x1,[x8]
+00ce27a8  ldr x22,[x22, #0x7d0]
+00ce27ac  bl 0x01fde08c
+00ce27b0  tbz w0,#0x0,0x00ce27dc
+00ce27b4  ldr x0,[x22]
+00ce27b8  adrp x19,0x337f000
+00ce27bc  ldr w8,[x0, #0xe0]
+00ce27c0  ldr x19,[x19, #0x108]
+00ce27c4  cbnz w8,0x00ce27cc
+00ce27c8  bl 0x00b0798c
+00ce27cc  ldr x0,[x19]
+00ce27d0  mov x1,xzr
+00ce27d4  bl 0x024c0104
+00ce27d8  b 0x00ce288c
+00ce27dc  adrp x21,0x3345000
+00ce27e0  ldr x21,[x21, #0xcd8]
+00ce27e4  mov x0,x19
+00ce27e8  mov x1,x20
+00ce27ec  bl 0x00ce28a0
+00ce27f0  ldr x0,[x21]
+00ce27f4  ldr w8,[x0, #0xe0]
+00ce27f8  cbnz w8,0x00ce2804
+00ce27fc  bl 0x00b0798c
+00ce2800  ldr x0,[x21]
+00ce2804  ldr x8,[x0, #0xb8]
+00ce2808  mov w9,#0x1
+00ce280c  strb w9,[x8, #0x8]
+00ce2810  ldr x8,[x19, #0x18]
+00ce2814  cbz x8,0x00ce289c
+00ce2818  ldr w8,[x8, #0x18]
+00ce281c  adrp x19,0x332e000
+00ce2820  ldr x19,[x19, #0x660]
+00ce2824  add x0,sp,#0xc
+00ce2828  mov x1,xzr
+00ce282c  str w8,[sp, #0xc]
+00ce2830  bl 0x0214dc44
+00ce2834  ldr x8,[x19]
+00ce2838  mov x1,x0
+00ce283c  mov x2,xzr
+00ce2840  mov x0,x8
+00ce2844  bl 0x01fd2850
+00ce2848  ldr x8,[x22]
+00ce284c  mov x19,x0
+00ce2850  ldr w9,[x8, #0xe0]
+00ce2854  cbnz w9,0x00ce2860
+00ce2858  mov x0,x8
+00ce285c  bl 0x00b0798c
+00ce2860  mov x0,x19
+00ce2864  mov x1,xzr
+00ce2868  bl 0x024c0104
+00ce286c  ldr x8,[x21]
+00ce2870  ldr x8,[x8, #0xb8]
+00ce2874  ldr x8,[x8]
+00ce2878  cbz x8,0x00ce289c
+00ce287c  ldr x9,[x8, #0x18]
+00ce2880  ldr x0,[x8, #0x40]
+00ce2884  ldr x1,[x8, #0x28]
+00ce2888  blr x9
+00ce288c  ldp x19,x30,[sp, #0x20]
+00ce2890  ldp x21,x20,[sp, #0x10]
+00ce2894  ldr x22,[sp], #0x30
+00ce2898  ret
+00ce289c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ce28a0_AddressBookController__parseContacts.txt
+================================================================================
+Function: AddressBookController$$parseContacts @ 00ce28a0
+
+--- Calls OUT ---
+  -> UnityEngine.ImageConversion$$LoadImage @ 0250f668
+  -> AddressBookController$$havePhoto @ 00ce3380
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Convert$$ToInt32 @ 020e1788
+  -> System.String$$Split @ 01fe0d68
+  -> AddressBookController$$isValid @ 00ce32f0
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+  -> System.Convert$$ToByte @ 020e07b0
+  -> System.Collections.Generic.List<byte>$$.ctor @ 01bc92d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$get_Chars @ 01fda110
+  -> System.Collections.Generic.List<byte>$$ToArray @ 01bcbbd4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Text.RegularExpressions.Regex$$Split @ 02327774
+  -> System.String$$Contains @ 01fe31fc
+  -> System.String$$Substring @ 01fe29c0
+  -> FUN_00b079b8 @ 00b079b8
+  -> UnityEngine.Texture2D$$.ctor @ 024cbfdc
+
+--- Calls IN ---
+  <- AddressBookController$$OnContactsLoaded @ 00ce2710
+
+--- Listing ---
+00ce28a0  sub sp,sp,#0x70
+00ce28a4  stp x28,x27,[sp, #0x10]
+00ce28a8  stp x26,x25,[sp, #0x20]
+00ce28ac  stp x24,x23,[sp, #0x30]
+00ce28b0  stp x22,x21,[sp, #0x40]
+00ce28b4  stp x20,x19,[sp, #0x50]
+00ce28b8  stp x29,x30,[sp, #0x60]
+00ce28bc  adrp x19,0x3571000
+00ce28c0  adrp x21,0x3342000
+00ce28c4  ldrb w8,[x19, #0x8ef]
+00ce28c8  ldr x21,[x21, #0x450]
+00ce28cc  mov x20,x1
+00ce28d0  mov x27,x0
+00ce28d4  tbnz w8,#0x0,0x00ce29ac
+00ce28d8  adrp x0,0x3363000
+00ce28dc  ldr x0,[x0, #0x7f8]
+00ce28e0  bl 0x00b0789c
+00ce28e4  adrp x0,0x3382000
+00ce28e8  ldr x0,[x0, #0x1e0]
+00ce28ec  bl 0x00b0789c
+00ce28f0  adrp x0,0x330e000
+00ce28f4  ldr x0,[x0, #0xd70]
+00ce28f8  bl 0x00b0789c
+00ce28fc  adrp x0,0x3352000
+00ce2900  ldr x0,[x0, #0x380]
+00ce2904  bl 0x00b0789c
+00ce2908  adrp x0,0x3308000
+00ce290c  ldr x0,[x0, #0xde8]
+00ce2910  bl 0x00b0789c
+00ce2914  adrp x0,0x3362000
+00ce2918  ldr x0,[x0, #0xe28]
+00ce291c  bl 0x00b0789c
+00ce2920  adrp x0,0x3320000
+00ce2924  ldr x0,[x0, #0xfb8]
+00ce2928  bl 0x00b0789c
+00ce292c  adrp x0,0x3378000
+00ce2930  ldr x0,[x0, #0x5a0]
+00ce2934  bl 0x00b0789c
+00ce2938  adrp x0,0x330e000
+00ce293c  ldr x0,[x0, #0x768]
+00ce2940  bl 0x00b0789c
+00ce2944  adrp x0,0x3326000
+00ce2948  ldr x0,[x0, #0x7f8]
+00ce294c  bl 0x00b0789c
+00ce2950  adrp x0,0x3348000
+00ce2954  ldr x0,[x0, #0xe48]
+00ce2958  bl 0x00b0789c
+00ce295c  adrp x0,0x3367000
+00ce2960  ldr x0,[x0, #0x250]
+00ce2964  bl 0x00b0789c
+00ce2968  adrp x0,0x332b000
+00ce296c  ldr x0,[x0, #0xf70]
+00ce2970  bl 0x00b0789c
+00ce2974  adrp x0,0x3371000
+00ce2978  ldr x0,[x0, #0x8d8]
+00ce297c  bl 0x00b0789c
+00ce2980  adrp x0,0x3322000
+00ce2984  ldr x0,[x0, #0x9f8]
+00ce2988  bl 0x00b0789c
+00ce298c  adrp x0,0x3342000
+00ce2990  ldr x0,[x0, #0x450]
+00ce2994  bl 0x00b0789c
+00ce2998  adrp x0,0x335c000
+00ce299c  ldr x0,[x0, #0x730]
+00ce29a0  bl 0x00b0789c
+00ce29a4  mov w8,#0x1
+00ce29a8  strb w8,[x19, #0x8ef]
+00ce29ac  ldr x0,[x21]
+00ce29b0  cbz x0,0x00ce32e8
+00ce29b4  mov w1,wzr
+00ce29b8  mov x2,xzr
+00ce29bc  bl 0x01fda110
+00ce29c0  cbz x20,0x00ce32e8
+00ce29c4  mov w1,w0
+00ce29c8  mov x0,x20
+00ce29cc  mov w2,wzr
+00ce29d0  mov x3,xzr
+00ce29d4  bl 0x01fe0d68
+00ce29d8  cbz x0,0x00ce32e8
+00ce29dc  ldr x8,[x0, #0x18]
+00ce29e0  mov x20,x0
+00ce29e4  cmp w8,#0x1
+00ce29e8  b.lt 0x00ce32c8
+00ce29ec  adrp x19,0x3308000
+00ce29f0  adrp x28,0x3371000
+00ce29f4  adrp x29,0x3367000
+00ce29f8  adrp x23,0x3378000
+00ce29fc  ldr x19,[x19, #0xde8]
+00ce2a00  ldr x28,[x28, #0x8d8]
+00ce2a04  ldr x29,[x29, #0x250]
+00ce2a08  ldr x23,[x23, #0x5a0]
+00ce2a0c  mov x26,xzr
+00ce2a10  and x8,x8,#0xffffffff
+00ce2a14  str x20,[sp, #0x8]
+00ce2a18  cmp x26,w8, UXTW 
+00ce2a1c  b.cs 0x00ce32ec
+00ce2a20  add x8,x20,x26, LSL #0x3
+00ce2a24  ldr x22,[x8, #0x20]
+00ce2a28  mov x1,x22
+00ce2a2c  bl 0x00ce32f0
+00ce2a30  tbz w0,#0x0,0x00ce32b8
+00ce2a34  ldr x0,[x19]
+00ce2a38  bl 0x00b079a0
+00ce2a3c  cbz x0,0x00ce32e8
+00ce2a40  mov x1,xzr
+00ce2a44  mov x21,x0
+00ce2a48  bl 0x02194104
+00ce2a4c  cbz x22,0x00ce32e8
+00ce2a50  ldr x1,[x28]
+00ce2a54  mov x0,x22
+00ce2a58  mov x2,xzr
+00ce2a5c  bl 0x01fe31fc
+00ce2a60  tbz w0,#0x0,0x00ce2bdc
+00ce2a64  ldr x0,[x29]
+00ce2a68  ldr w8,[x0, #0xe0]
+00ce2a6c  cbnz w8,0x00ce2a74
+00ce2a70  bl 0x00b0798c
+00ce2a74  ldr x1,[x28]
+00ce2a78  mov x0,x22
+00ce2a7c  mov x2,xzr
+00ce2a80  bl 0x02327774
+00ce2a84  cbz x0,0x00ce32e8
+00ce2a88  ldr w8,[x0, #0x18]
+00ce2a8c  mov x22,x0
+00ce2a90  cbz w8,0x00ce32ec
+00ce2a94  ldr x0,[x22, #0x20]
+00ce2a98  cbz x0,0x00ce32e8
+00ce2a9c  mov w1,#0x5
+00ce2aa0  mov x2,xzr
+00ce2aa4  bl 0x01fe29c0
+00ce2aa8  mov x1,x0
+00ce2aac  mov x0,x21
+00ce2ab0  str x1,[x0, #0x10]!
+00ce2ab4  bl 0x00b07850
+00ce2ab8  ldr w8,[x22, #0x18]
+00ce2abc  cmp w8,#0x1
+00ce2ac0  b.ls 0x00ce32ec
+00ce2ac4  ldr x0,[x22, #0x28]
+00ce2ac8  cbz x0,0x00ce32e8
+00ce2acc  mov w1,#0x6
+00ce2ad0  mov x2,xzr
+00ce2ad4  bl 0x01fe29c0
+00ce2ad8  mov x1,x0
+00ce2adc  mov x0,x21
+00ce2ae0  str x1,[x0, #0x18]!
+00ce2ae4  bl 0x00b07850
+00ce2ae8  adrp x8,0x330e000
+00ce2aec  ldr x8,[x8, #0xd70]
+00ce2af0  ldr x0,[x8]
+00ce2af4  bl 0x00b079a0
+00ce2af8  cbz x0,0x00ce32e8
+00ce2afc  mov x1,xzr
+00ce2b00  mov x24,x0
+00ce2b04  bl 0x02194104
+00ce2b08  mov x23,x21
+00ce2b0c  str x24,[x23, #0x28]!
+00ce2b10  mov x0,x23
+00ce2b14  mov x1,x24
+00ce2b18  bl 0x00b07850
+00ce2b1c  ldr w8,[x22, #0x18]
+00ce2b20  cmp w8,#0x2
+00ce2b24  b.ls 0x00ce32ec
+00ce2b28  ldr x0,[x22, #0x30]
+00ce2b2c  cbz x0,0x00ce32e8
+00ce2b30  adrp x8,0x3322000
+00ce2b34  ldr x8,[x8, #0x9f8]
+00ce2b38  mov x2,xzr
+00ce2b3c  ldr x1,[x8]
+00ce2b40  bl 0x01fe31fc
+00ce2b44  tbz w0,#0x0,0x00ce2bfc
+00ce2b48  ldr w8,[x22, #0x18]
+00ce2b4c  cmp w8,#0x2
+00ce2b50  b.ls 0x00ce32ec
+00ce2b54  ldr x0,[x29]
+00ce2b58  ldr x24,[x22, #0x30]
+00ce2b5c  ldr w8,[x0, #0xe0]
+00ce2b60  cbnz w8,0x00ce2b68
+00ce2b64  bl 0x00b0798c
+00ce2b68  adrp x8,0x3322000
+00ce2b6c  ldr x8,[x8, #0x9f8]
+00ce2b70  mov x0,x24
+00ce2b74  mov x2,xzr
+00ce2b78  ldr x1,[x8]
+00ce2b7c  bl 0x02327774
+00ce2b80  cbz x0,0x00ce32e8
+00ce2b84  ldr w8,[x0, #0x18]
+00ce2b88  mov x24,x0
+00ce2b8c  cbz w8,0x00ce32ec
+00ce2b90  ldr x0,[x24, #0x20]
+00ce2b94  cbz x0,0x00ce32e8
+00ce2b98  ldr x25,[x23]
+00ce2b9c  mov w1,#0x6
+00ce2ba0  mov x2,xzr
+00ce2ba4  bl 0x01fe29c0
+00ce2ba8  cbz x25,0x00ce32e8
+00ce2bac  str x0,[x25, #0x10]!
+00ce2bb0  mov x1,x0
+00ce2bb4  mov x0,x25
+00ce2bb8  bl 0x00b07850
+00ce2bbc  ldr w8,[x24, #0x18]
+00ce2bc0  cmp w8,#0x1
+00ce2bc4  b.ls 0x00ce32ec
+00ce2bc8  ldr x23,[x23]
+00ce2bcc  cbz x23,0x00ce32e8
+00ce2bd0  ldr x1,[x24, #0x28]
+00ce2bd4  str x1,[x23, #0x18]!
+00ce2bd8  b 0x00ce2c2c
+00ce2bdc  mov w1,#0x5
+00ce2be0  mov x0,x22
+00ce2be4  mov x2,xzr
+00ce2be8  bl 0x01fe29c0
+00ce2bec  mov x1,x0
+00ce2bf0  mov x0,x21
+00ce2bf4  str x1,[x0, #0x10]!
+00ce2bf8  b 0x00ce324c
+00ce2bfc  ldr w8,[x22, #0x18]
+00ce2c00  cmp w8,#0x2
+00ce2c04  b.ls 0x00ce32ec
+00ce2c08  ldr x0,[x22, #0x30]
+00ce2c0c  cbz x0,0x00ce32e8
+00ce2c10  ldr x23,[x23]
+00ce2c14  mov w1,#0x6
+00ce2c18  mov x2,xzr
+00ce2c1c  bl 0x01fe29c0
+00ce2c20  cbz x23,0x00ce32e8
+00ce2c24  mov x1,x0
+00ce2c28  str x0,[x23, #0x10]!
+00ce2c2c  mov x0,x23
+00ce2c30  bl 0x00b07850
+00ce2c34  ldr w8,[x22, #0x18]
+00ce2c38  cmp w8,#0x3
+00ce2c3c  b.ls 0x00ce32ec
+00ce2c40  ldr x0,[x22, #0x38]
+00ce2c44  cbz x0,0x00ce32e8
+00ce2c48  mov w1,#0x5
+00ce2c4c  mov x2,xzr
+00ce2c50  bl 0x01fe29c0
+00ce2c54  mov x1,x0
+00ce2c58  mov x0,x21
+00ce2c5c  str x1,[x0, #0x20]!
+00ce2c60  bl 0x00b07850
+00ce2c64  adrp x8,0x3382000
+00ce2c68  ldr x8,[x8, #0x1e0]
+00ce2c6c  ldr x0,[x8]
+00ce2c70  bl 0x00b079a0
+00ce2c74  cbz x0,0x00ce32e8
+00ce2c78  mov x1,xzr
+00ce2c7c  mov x24,x0
+00ce2c80  bl 0x02194104
+00ce2c84  mov x23,x21
+00ce2c88  str x24,[x23, #0x30]!
+00ce2c8c  mov x0,x23
+00ce2c90  mov x1,x24
+00ce2c94  bl 0x00b07850
+00ce2c98  ldr w8,[x22, #0x18]
+00ce2c9c  cmp w8,#0x4
+00ce2ca0  b.ls 0x00ce32ec
+00ce2ca4  ldr x0,[x22, #0x40]
+00ce2ca8  cbz x0,0x00ce32e8
+00ce2cac  adrp x8,0x3322000
+00ce2cb0  ldr x8,[x8, #0x9f8]
+00ce2cb4  mov x2,xzr
+00ce2cb8  ldr x1,[x8]
+00ce2cbc  bl 0x01fe31fc
+00ce2cc0  tbz w0,#0x0,0x00ce2d58
+00ce2cc4  ldr w8,[x22, #0x18]
+00ce2cc8  cmp w8,#0x4
+00ce2ccc  b.ls 0x00ce32ec
+00ce2cd0  ldr x0,[x29]
+00ce2cd4  ldr x24,[x22, #0x40]
+00ce2cd8  ldr w8,[x0, #0xe0]
+00ce2cdc  cbnz w8,0x00ce2ce4
+00ce2ce0  bl 0x00b0798c
+00ce2ce4  adrp x8,0x3322000
+00ce2ce8  ldr x8,[x8, #0x9f8]
+00ce2cec  mov x0,x24
+00ce2cf0  mov x2,xzr
+00ce2cf4  ldr x1,[x8]
+00ce2cf8  bl 0x02327774
+00ce2cfc  cbz x0,0x00ce32e8
+00ce2d00  ldr w8,[x0, #0x18]
+00ce2d04  mov x24,x0
+00ce2d08  cbz w8,0x00ce32ec
+00ce2d0c  ldr x0,[x24, #0x20]
+00ce2d10  cbz x0,0x00ce32e8
+00ce2d14  ldr x25,[x23]
+00ce2d18  mov w1,#0x5
+00ce2d1c  mov x2,xzr
+00ce2d20  bl 0x01fe29c0
+00ce2d24  cbz x25,0x00ce32e8
+00ce2d28  str x0,[x25, #0x10]!
+00ce2d2c  mov x1,x0
+00ce2d30  mov x0,x25
+00ce2d34  bl 0x00b07850
+00ce2d38  ldr w8,[x24, #0x18]
+00ce2d3c  cmp w8,#0x1
+00ce2d40  b.ls 0x00ce32ec
+00ce2d44  ldr x23,[x23]
+00ce2d48  cbz x23,0x00ce32e8
+00ce2d4c  ldr x1,[x24, #0x28]
+00ce2d50  str x1,[x23, #0x18]!
+00ce2d54  b 0x00ce2d88
+00ce2d58  ldr w8,[x22, #0x18]
+00ce2d5c  cmp w8,#0x4
+00ce2d60  b.ls 0x00ce32ec
+00ce2d64  ldr x0,[x22, #0x40]
+00ce2d68  cbz x0,0x00ce32e8
+00ce2d6c  ldr x23,[x23]
+00ce2d70  mov w1,#0x5
+00ce2d74  mov x2,xzr
+00ce2d78  bl 0x01fe29c0
+00ce2d7c  cbz x23,0x00ce32e8
+00ce2d80  mov x1,x0
+00ce2d84  str x0,[x23, #0x10]!
+00ce2d88  mov x0,x23
+00ce2d8c  bl 0x00b07850
+00ce2d90  adrp x8,0x3352000
+00ce2d94  ldr x8,[x8, #0x380]
+00ce2d98  ldr x0,[x8]
+00ce2d9c  bl 0x00b079a0
+00ce2da0  cbz x0,0x00ce32e8
+00ce2da4  mov x1,xzr
+00ce2da8  mov x24,x0
+00ce2dac  bl 0x02194104
+00ce2db0  mov x23,x21
+00ce2db4  str x24,[x23, #0x40]!
+00ce2db8  mov x0,x23
+00ce2dbc  mov x1,x24
+00ce2dc0  bl 0x00b07850
+00ce2dc4  ldr w8,[x22, #0x18]
+00ce2dc8  cmp w8,#0x5
+00ce2dcc  b.ls 0x00ce32ec
+00ce2dd0  ldr x0,[x22, #0x48]
+00ce2dd4  cbz x0,0x00ce32e8
+00ce2dd8  adrp x8,0x3322000
+00ce2ddc  ldr x8,[x8, #0x9f8]
+00ce2de0  mov x2,xzr
+00ce2de4  ldr x1,[x8]
+00ce2de8  bl 0x01fe31fc
+00ce2dec  tbz w0,#0x0,0x00ce2e84
+00ce2df0  ldr w8,[x22, #0x18]
+00ce2df4  cmp w8,#0x5
+00ce2df8  b.ls 0x00ce32ec
+00ce2dfc  ldr x0,[x29]
+00ce2e00  ldr x24,[x22, #0x48]
+00ce2e04  ldr w8,[x0, #0xe0]
+00ce2e08  cbnz w8,0x00ce2e10
+00ce2e0c  bl 0x00b0798c
+00ce2e10  adrp x8,0x3322000
+00ce2e14  ldr x8,[x8, #0x9f8]
+00ce2e18  mov x0,x24
+00ce2e1c  mov x2,xzr
+00ce2e20  ldr x1,[x8]
+00ce2e24  bl 0x02327774
+00ce2e28  cbz x0,0x00ce32e8
+00ce2e2c  ldr w8,[x0, #0x18]
+00ce2e30  mov x24,x0
+00ce2e34  cbz w8,0x00ce32ec
+00ce2e38  ldr x0,[x24, #0x20]
+00ce2e3c  cbz x0,0x00ce32e8
+00ce2e40  ldr x25,[x23]
+00ce2e44  mov w1,#0xd
+00ce2e48  mov x2,xzr
+00ce2e4c  bl 0x01fe29c0
+00ce2e50  cbz x25,0x00ce32e8
+00ce2e54  str x0,[x25, #0x10]!
+00ce2e58  mov x1,x0
+00ce2e5c  mov x0,x25
+00ce2e60  bl 0x00b07850
+00ce2e64  ldr w8,[x24, #0x18]
+00ce2e68  cmp w8,#0x1
+00ce2e6c  b.ls 0x00ce32ec
+00ce2e70  ldr x23,[x23]
+00ce2e74  cbz x23,0x00ce32e8
+00ce2e78  ldr x1,[x24, #0x28]
+00ce2e7c  str x1,[x23, #0x18]!
+00ce2e80  b 0x00ce2eb4
+00ce2e84  ldr w8,[x22, #0x18]
+00ce2e88  cmp w8,#0x5
+00ce2e8c  b.ls 0x00ce32ec
+00ce2e90  ldr x0,[x22, #0x48]
+00ce2e94  cbz x0,0x00ce32e8
+00ce2e98  ldr x23,[x23]
+00ce2e9c  mov w1,#0xd
+00ce2ea0  mov x2,xzr
+00ce2ea4  bl 0x01fe29c0
+00ce2ea8  cbz x23,0x00ce32e8
+00ce2eac  mov x1,x0
+00ce2eb0  str x0,[x23, #0x10]!
+00ce2eb4  mov x0,x23
+00ce2eb8  bl 0x00b07850
+00ce2ebc  ldr w8,[x22, #0x18]
+00ce2ec0  cmp w8,#0x6
+00ce2ec4  b.ls 0x00ce32ec
+00ce2ec8  ldr x0,[x22, #0x50]
+00ce2ecc  cbz x0,0x00ce32e8
+00ce2ed0  mov w1,#0x6
+00ce2ed4  mov x2,xzr
+00ce2ed8  bl 0x01fe29c0
+00ce2edc  mov x1,x0
+00ce2ee0  mov x23,x0
+00ce2ee4  bl 0x00ce3380
+00ce2ee8  tbz w0,#0x0,0x00ce30d0
+00ce2eec  adrp x8,0x335c000
+00ce2ef0  ldr x8,[x8, #0x730]
+00ce2ef4  ldr x0,[x8]
+00ce2ef8  cbz x0,0x00ce32e8
+00ce2efc  mov w1,wzr
+00ce2f00  mov x2,xzr
+00ce2f04  bl 0x01fda110
+00ce2f08  cbz x23,0x00ce32e8
+00ce2f0c  mov w1,w0
+00ce2f10  mov x0,x23
+00ce2f14  mov w2,wzr
+00ce2f18  mov x3,xzr
+00ce2f1c  mov x20,x19
+00ce2f20  mov x29,x27
+00ce2f24  bl 0x01fe0d68
+00ce2f28  adrp x8,0x3348000
+00ce2f2c  ldr x8,[x8, #0xe48]
+00ce2f30  mov x23,x0
+00ce2f34  ldr x8,[x8]
+00ce2f38  mov x0,x8
+00ce2f3c  bl 0x00b079a0
+00ce2f40  cbz x0,0x00ce32e8
+00ce2f44  adrp x8,0x3326000
+00ce2f48  ldr x8,[x8, #0x7f8]
+00ce2f4c  mov x24,x0
+00ce2f50  ldr x1,[x8]
+00ce2f54  bl 0x01bc92d4
+00ce2f58  cbz x23,0x00ce32e8
+00ce2f5c  ldr x8,[x23, #0x18]
+00ce2f60  adrp x9,0x3362000
+00ce2f64  ldr x9,[x9, #0xe28]
+00ce2f68  cmp w8,#0x1
+00ce2f6c  b.lt 0x00ce304c
+00ce2f70  mov x19,xzr
+00ce2f74  and x8,x8,#0xffffffff
+00ce2f78  add x27,x23,#0x20
+00ce2f7c  cmp x19,w8, UXTW 
+00ce2f80  b.cs 0x00ce32ec
+00ce2f84  ldr x0,[x9]
+00ce2f88  ldr x25,[x27, x19, LSL #0x3]
+00ce2f8c  mov x28,x9
+00ce2f90  ldr w8,[x0, #0xe0]
+00ce2f94  cbnz w8,0x00ce2f9c
+00ce2f98  bl 0x00b0798c
+00ce2f9c  mov x0,x25
+00ce2fa0  mov x1,xzr
+00ce2fa4  bl 0x020e1788
+00ce2fa8  mov w8,w0
+00ce2fac  ldr x0,[x28]
+00ce2fb0  add w10,w8,#0x100
+00ce2fb4  cmp w8,#0x0
+00ce2fb8  csel w25,w10,w8,lt
+00ce2fbc  ldr w9,[x0, #0xe0]
+00ce2fc0  cbnz w9,0x00ce2fc8
+00ce2fc4  bl 0x00b0798c
+00ce2fc8  mov w0,w25
+00ce2fcc  mov x1,xzr
+00ce2fd0  bl 0x020e07b0
+00ce2fd4  adrp x9,0x3320000
+00ce2fd8  ldr w10,[x24, #0x1c]
+00ce2fdc  ldr x8,[x24, #0x10]
+00ce2fe0  ldr x9,[x9, #0xfb8]
+00ce2fe4  add w10,w10,#0x1
+00ce2fe8  ldr x9,[x9]
+00ce2fec  str w10,[x24, #0x1c]
+00ce2ff0  cbz x8,0x00ce32e8
+00ce2ff4  ldrsw x10,[x24, #0x18]
+00ce2ff8  ldr w11,[x8, #0x18]
+00ce2ffc  mov w1,w0
+00ce3000  cmp w10,w11
+00ce3004  b.cs 0x00ce301c
+00ce3008  add w9,w10,#0x1
+00ce300c  add x8,x8,x10
+00ce3010  str w9,[x24, #0x18]
+00ce3014  strb w1,[x8, #0x20]
+00ce3018  b 0x00ce3034
+00ce301c  ldr x8,[x9, #0x20]
+00ce3020  mov x0,x24
+00ce3024  ldr x8,[x8, #0xc0]
+00ce3028  ldr x2,[x8, #0x58]
+00ce302c  ldr x8,[x2, #0x8]
+00ce3030  blr x8
+00ce3034  ldr w8,[x23, #0x18]
+00ce3038  adrp x9,0x3362000
+00ce303c  ldr x9,[x9, #0xe28]
+00ce3040  add x19,x19,#0x1
+00ce3044  cmp x19,w8, SXTW 
+00ce3048  b.lt 0x00ce2f7c
+00ce304c  adrp x8,0x330e000
+00ce3050  ldr x8,[x8, #0x768]
+00ce3054  mov x0,x24
+00ce3058  ldr x1,[x8]
+00ce305c  bl 0x01bcbbd4
+00ce3060  adrp x8,0x332b000
+00ce3064  ldr x8,[x8, #0xf70]
+00ce3068  mov x24,x0
+00ce306c  ldr x8,[x8]
+00ce3070  mov x0,x8
+00ce3074  bl 0x00b079a0
+00ce3078  cbz x0,0x00ce32e8
+00ce307c  mov w1,#0x96
+00ce3080  mov w2,#0x96
+00ce3084  mov x3,xzr
+00ce3088  mov x23,x0
+00ce308c  bl 0x024cbfdc
+00ce3090  mov x0,x23
+00ce3094  mov x1,x24
+00ce3098  mov x2,xzr
+00ce309c  bl 0x0250f668
+00ce30a0  mov x0,x21
+00ce30a4  str x23,[x0, #0x48]!
+00ce30a8  mov x1,x23
+00ce30ac  bl 0x00b07850
+00ce30b0  mov x27,x29
+00ce30b4  adrp x28,0x3371000
+00ce30b8  adrp x29,0x3367000
+00ce30bc  mov x19,x20
+00ce30c0  ldr x20,[sp, #0x8]
+00ce30c4  ldr x28,[x28, #0x8d8]
+00ce30c8  ldr x29,[x29, #0x250]
+00ce30cc  b 0x00ce30e0
+00ce30d0  mov x0,x21
+00ce30d4  str xzr,[x0, #0x48]!
+00ce30d8  mov x1,xzr
+00ce30dc  bl 0x00b07850
+00ce30e0  adrp x8,0x3363000
+00ce30e4  ldr x8,[x8, #0x7f8]
+00ce30e8  ldr x0,[x8]
+00ce30ec  bl 0x00b079a0
+00ce30f0  cbz x0,0x00ce32e8
+00ce30f4  mov x1,xzr
+00ce30f8  mov x24,x0
+00ce30fc  bl 0x02194104
+00ce3100  mov x23,x21
+00ce3104  str x24,[x23, #0x38]!
+00ce3108  mov x0,x23
+00ce310c  mov x1,x24
+00ce3110  bl 0x00b07850
+00ce3114  ldr w8,[x22, #0x18]
+00ce3118  cmp w8,#0x7
+00ce311c  b.ls 0x00ce32ec
+00ce3120  ldr x0,[x29]
+00ce3124  ldr x22,[x22, #0x58]
+00ce3128  ldr w8,[x0, #0xe0]
+00ce312c  cbnz w8,0x00ce3134
+00ce3130  bl 0x00b0798c
+00ce3134  adrp x8,0x3322000
+00ce3138  ldr x8,[x8, #0x9f8]
+00ce313c  mov x0,x22
+00ce3140  mov x2,xzr
+00ce3144  ldr x1,[x8]
+00ce3148  bl 0x02327774
+00ce314c  cbz x0,0x00ce32e8
+00ce3150  ldr w8,[x0, #0x18]
+00ce3154  mov x22,x0
+00ce3158  cbz w8,0x00ce32ec
+00ce315c  ldr x0,[x22, #0x20]
+00ce3160  cbz x0,0x00ce32e8
+00ce3164  ldr x24,[x23]
+00ce3168  mov w1,#0x8
+00ce316c  mov x2,xzr
+00ce3170  bl 0x01fe29c0
+00ce3174  cbz x24,0x00ce32e8
+00ce3178  str x0,[x24, #0x10]!
+00ce317c  mov x1,x0
+00ce3180  mov x0,x24
+00ce3184  bl 0x00b07850
+00ce3188  ldr w8,[x22, #0x18]
+00ce318c  cmp w8,#0x1
+00ce3190  b.ls 0x00ce32ec
+00ce3194  ldr x0,[x23]
+00ce3198  cbz x0,0x00ce32e8
+00ce319c  ldr x1,[x22, #0x28]
+00ce31a0  str x1,[x0, #0x18]!
+00ce31a4  bl 0x00b07850
+00ce31a8  ldr w8,[x22, #0x18]
+00ce31ac  cmp w8,#0x2
+00ce31b0  b.ls 0x00ce32ec
+00ce31b4  ldr x0,[x23]
+00ce31b8  cbz x0,0x00ce32e8
+00ce31bc  ldr x1,[x22, #0x30]
+00ce31c0  str x1,[x0, #0x20]!
+00ce31c4  bl 0x00b07850
+00ce31c8  ldr w8,[x22, #0x18]
+00ce31cc  cmp w8,#0x3
+00ce31d0  b.ls 0x00ce32ec
+00ce31d4  ldr x0,[x23]
+00ce31d8  cbz x0,0x00ce32e8
+00ce31dc  ldr x1,[x22, #0x38]
+00ce31e0  str x1,[x0, #0x28]!
+00ce31e4  bl 0x00b07850
+00ce31e8  ldr w8,[x22, #0x18]
+00ce31ec  cmp w8,#0x4
+00ce31f0  b.ls 0x00ce32ec
+00ce31f4  ldr x0,[x23]
+00ce31f8  cbz x0,0x00ce32e8
+00ce31fc  ldr x1,[x22, #0x40]
+00ce3200  str x1,[x0, #0x30]!
+00ce3204  bl 0x00b07850
+00ce3208  ldr w8,[x22, #0x18]
+00ce320c  cmp w8,#0x5
+00ce3210  b.ls 0x00ce32ec
+00ce3214  ldr x0,[x23]
+00ce3218  cbz x0,0x00ce32e8
+00ce321c  ldr x1,[x22, #0x48]
+00ce3220  str x1,[x0, #0x38]!
+00ce3224  bl 0x00b07850
+00ce3228  ldr w8,[x22, #0x18]
+00ce322c  cmp w8,#0x6
+00ce3230  b.ls 0x00ce32ec
+00ce3234  ldr x0,[x23]
+00ce3238  cbz x0,0x00ce32e8
+00ce323c  ldr x1,[x22, #0x50]
+00ce3240  adrp x23,0x3378000
+00ce3244  str x1,[x0, #0x40]!
+00ce3248  ldr x23,[x23, #0x5a0]
+00ce324c  bl 0x00b07850
+00ce3250  ldr x0,[x27, #0x18]
+00ce3254  cbz x0,0x00ce32e8
+00ce3258  ldr w10,[x0, #0x1c]
+00ce325c  ldr x8,[x0, #0x10]
+00ce3260  ldr x9,[x23]
+00ce3264  add w10,w10,#0x1
+00ce3268  str w10,[x0, #0x1c]
+00ce326c  cbz x8,0x00ce32e8
+00ce3270  ldrsw x10,[x0, #0x18]
+00ce3274  ldr w11,[x8, #0x18]
+00ce3278  cmp w10,w11
+00ce327c  b.cs 0x00ce32a0
+00ce3280  add w9,w10,#0x1
+00ce3284  add x8,x8,x10, LSL #0x3
+00ce3288  str w9,[x0, #0x18]
+00ce328c  str x21,[x8, #0x20]!
+00ce3290  mov x0,x8
+00ce3294  mov x1,x21
+00ce3298  bl 0x00b07850
+00ce329c  b 0x00ce32b8
+00ce32a0  ldr x8,[x9, #0x20]
+00ce32a4  mov x1,x21
+00ce32a8  ldr x8,[x8, #0xc0]
+00ce32ac  ldr x2,[x8, #0x58]
+00ce32b0  ldr x8,[x2, #0x8]
+00ce32b4  blr x8
+00ce32b8  ldr w8,[x20, #0x18]
+00ce32bc  add x26,x26,#0x1
+00ce32c0  cmp x26,w8, SXTW 
+00ce32c4  b.lt 0x00ce2a18
+00ce32c8  ldp x29,x30,[sp, #0x60]
+00ce32cc  ldp x20,x19,[sp, #0x50]
+00ce32d0  ldp x22,x21,[sp, #0x40]
+00ce32d4  ldp x24,x23,[sp, #0x30]
+00ce32d8  ldp x26,x25,[sp, #0x20]
+00ce32dc  ldp x28,x27,[sp, #0x10]
+00ce32e0  add sp,sp,#0x70
+00ce32e4  ret
+00ce32e8  bl 0x00b079b0
+00ce32ec  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00ce32f0_AddressBookController__isValid.txt
+================================================================================
+Function: AddressBookController$$isValid @ 00ce32f0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Contains @ 01fe31fc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- AddressBookController$$parseContacts @ 00ce28a0
+
+--- Listing ---
+00ce32f0  str x20,[sp, #-0x20]!
+00ce32f4  stp x19,x30,[sp, #0x10]
+00ce32f8  adrp x20,0x3571000
+00ce32fc  ldrb w8,[x20, #0x8f0]
+00ce3300  mov x19,x1
+00ce3304  tbnz w8,#0x0,0x00ce331c
+00ce3308  adrp x0,0x3372000
+00ce330c  ldr x0,[x0, #0x650]
+00ce3310  bl 0x00b0789c
+00ce3314  mov w8,#0x1
+00ce3318  strb w8,[x20, #0x8f0]
+00ce331c  cbz x19,0x00ce3340
+00ce3320  adrp x8,0x3372000
+00ce3324  ldr x8,[x8, #0x650]
+00ce3328  mov x0,x19
+00ce332c  ldp x19,x30,[sp, #0x10]
+00ce3330  mov x2,xzr
+00ce3334  ldr x1,[x8]
+00ce3338  ldr x20,[sp], #0x20
+00ce333c  b 0x01fe31fc
+00ce3340  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ce334c_AddressBookController__trimString.txt
+================================================================================
+Function: AddressBookController$$trimString @ 00ce334c
+
+--- Calls OUT ---
+  -> System.String$$Substring @ 01fe29c0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00ce334c  cbz x1,0x00ce3360
+00ce3350  mov x0,x1
+00ce3354  mov w1,w2
+00ce3358  mov x2,xzr
+00ce335c  b 0x01fe29c0
+00ce3360  str x30,[sp, #-0x10]!
+00ce3364  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ce3380_AddressBookController__havePhoto.txt
+================================================================================
+Function: AddressBookController$$havePhoto @ 00ce3380
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$Equals @ 01fde08c
+
+--- Calls IN ---
+  <- AddressBookController$$parseContacts @ 00ce28a0
+
+--- Listing ---
+00ce3380  str x20,[sp, #-0x20]!
+00ce3384  stp x19,x30,[sp, #0x10]
+00ce3388  adrp x20,0x3571000
+00ce338c  ldrb w8,[x20, #0x8f1]
+00ce3390  mov x19,x1
+00ce3394  tbnz w8,#0x0,0x00ce33ac
+00ce3398  adrp x0,0x3375000
+00ce339c  ldr x0,[x0, #0xea8]
+00ce33a0  bl 0x00b0789c
+00ce33a4  mov w8,#0x1
+00ce33a8  strb w8,[x20, #0x8f1]
+00ce33ac  cbz x19,0x00ce33dc
+00ce33b0  adrp x8,0x3375000
+00ce33b4  ldr x8,[x8, #0xea8]
+00ce33b8  mov x0,x19
+00ce33bc  mov x2,xzr
+00ce33c0  ldr x1,[x8]
+00ce33c4  bl 0x01fde08c
+00ce33c8  ldp x19,x30,[sp, #0x10]
+00ce33cc  mvn w8,w0
+00ce33d0  and w0,w8,#0x1
+00ce33d4  ldr x20,[sp], #0x20
+00ce33d8  ret
+00ce33dc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ce33e8_AddressBookController__get_isLoaded.txt
+================================================================================
+Function: AddressBookController$$get_isLoaded @ 00ce33e8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00ce33e8  str x20,[sp, #-0x20]!
+00ce33ec  stp x19,x30,[sp, #0x10]
+00ce33f0  adrp x20,0x3571000
+00ce33f4  adrp x19,0x3345000
+00ce33f8  ldrb w8,[x20, #0x8f2]
+00ce33fc  ldr x19,[x19, #0xcd8]
+00ce3400  tbnz w8,#0x0,0x00ce3418
+00ce3404  adrp x0,0x3345000
+00ce3408  ldr x0,[x0, #0xcd8]
+00ce340c  bl 0x00b0789c
+00ce3410  mov w8,#0x1
+00ce3414  strb w8,[x20, #0x8f2]
+00ce3418  ldr x0,[x19]
+00ce341c  ldr w8,[x0, #0xe0]
+00ce3420  cbnz w8,0x00ce342c
+00ce3424  bl 0x00b0798c
+00ce3428  ldr x0,[x19]
+00ce342c  ldr x8,[x0, #0xb8]
+00ce3430  ldp x19,x30,[sp, #0x10]
+00ce3434  ldrb w0,[x8, #0x8]
+00ce3438  ldr x20,[sp], #0x20
+00ce343c  ret
+
+
+================================================================================
+### FILE: 00ce3440_AddressBookController__.ctor.txt
+================================================================================
+Function: AddressBookController$$.ctor @ 00ce3440
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SA.Common.Pattern.Singleton<object>$$.ctor @ 01e0a43c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00ce3440  stp x21,x20,[sp, #-0x20]!
+00ce3444  stp x19,x30,[sp, #0x10]
+00ce3448  adrp x20,0x3571000
+00ce344c  adrp x21,0x3361000
+00ce3450  ldrb w8,[x20, #0x8f3]
+00ce3454  ldr x21,[x21, #0xd50]
+00ce3458  mov x19,x0
+00ce345c  tbnz w8,#0x0,0x00ce348c
+00ce3460  adrp x0,0x336f000
+00ce3464  ldr x0,[x0, #0x460]
+00ce3468  bl 0x00b0789c
+00ce346c  adrp x0,0x3361000
+00ce3470  ldr x0,[x0, #0xd50]
+00ce3474  bl 0x00b0789c
+00ce3478  adrp x0,0x3370000
+00ce347c  ldr x0,[x0, #0xae0]
+00ce3480  bl 0x00b0789c
+00ce3484  mov w8,#0x1
+00ce3488  strb w8,[x20, #0x8f3]
+00ce348c  ldr x0,[x21]
+00ce3490  bl 0x00b079a0
+00ce3494  cbz x0,0x00ce34d8
+00ce3498  adrp x8,0x336f000
+00ce349c  ldr x8,[x8, #0x460]
+00ce34a0  adrp x21,0x3370000
+00ce34a4  mov x20,x0
+00ce34a8  ldr x1,[x8]
+00ce34ac  ldr x21,[x21, #0xae0]
+00ce34b0  bl 0x01bffe10
+00ce34b4  mov x0,x19
+00ce34b8  str x20,[x0, #0x18]!
+00ce34bc  mov x1,x20
+00ce34c0  bl 0x00b07850
+00ce34c4  ldr x1,[x21]
+00ce34c8  mov x0,x19
+00ce34cc  ldp x19,x30,[sp, #0x10]
+00ce34d0  ldp x21,x20,[sp], #0x20
+00ce34d4  b 0x01e0a43c
+00ce34d8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ce34dc_AddressBookController__.cctor.txt
+================================================================================
+Function: AddressBookController$$.cctor @ 00ce34dc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Action$$.ctor @ 020d5760
+
+--- Calls IN ---
+
+--- Listing ---
+00ce34dc  stp x21,x20,[sp, #-0x20]!
+00ce34e0  stp x19,x30,[sp, #0x10]
+00ce34e4  adrp x20,0x3571000
+00ce34e8  adrp x19,0x3331000
+00ce34ec  ldrb w8,[x20, #0x8f4]
+00ce34f0  ldr x19,[x19, #0xa68]
+00ce34f4  tbnz w8,#0x0,0x00ce3530
+00ce34f8  adrp x0,0x3348000
+00ce34fc  ldr x0,[x0, #0xcf8]
+00ce3500  bl 0x00b0789c
+00ce3504  adrp x0,0x3345000
+00ce3508  ldr x0,[x0, #0xcd8]
+00ce350c  bl 0x00b0789c
+00ce3510  adrp x0,0x330b000
+00ce3514  ldr x0,[x0, #0xf08]
+00ce3518  bl 0x00b0789c
+00ce351c  adrp x0,0x3331000
+00ce3520  ldr x0,[x0, #0xa68]
+00ce3524  bl 0x00b0789c
+00ce3528  mov w8,#0x1
+00ce352c  strb w8,[x20, #0x8f4]
+00ce3530  ldr x0,[x19]
+00ce3534  adrp x21,0x3348000
+00ce3538  ldr w8,[x0, #0xe0]
+00ce353c  ldr x21,[x21, #0xcf8]
+00ce3540  cbnz w8,0x00ce354c
+00ce3544  bl 0x00b0798c
+00ce3548  ldr x0,[x19]
+00ce354c  ldr x8,[x0, #0xb8]
+00ce3550  ldr x0,[x21]
+00ce3554  ldr x20,[x8]
+00ce3558  bl 0x00b079a0
+00ce355c  cbz x0,0x00ce35b8
+00ce3560  adrp x8,0x330b000
+00ce3564  ldr x8,[x8, #0xf08]
+00ce3568  adrp x21,0x3345000
+00ce356c  mov x1,x20
+00ce3570  mov x3,xzr
+00ce3574  ldr x2,[x8]
+00ce3578  ldr x21,[x21, #0xcd8]
+00ce357c  mov x19,x0
+00ce3580  bl 0x020d5760
+00ce3584  ldr x8,[x21]
+00ce3588  mov x1,x19
+00ce358c  ldr x8,[x8, #0xb8]
+00ce3590  str x19,[x8]
+00ce3594  ldr x8,[x21]
+00ce3598  ldr x0,[x8, #0xb8]
+00ce359c  bl 0x00b07850
+00ce35a0  ldr x8,[x21]
+00ce35a4  ldr x8,[x8, #0xb8]
+00ce35a8  strb wzr,[x8, #0x8]
+00ce35ac  ldp x19,x30,[sp, #0x10]
+00ce35b0  ldp x21,x20,[sp], #0x20
+00ce35b4  ret
+00ce35b8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ce35bc_AddressBookController.__c__.cctor.txt
+================================================================================
+Function: AddressBookController.<>c$$.cctor @ 00ce35bc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00ce35bc  str x20,[sp, #-0x20]!
+00ce35c0  stp x19,x30,[sp, #0x10]
+00ce35c4  adrp x19,0x3571000
+00ce35c8  adrp x20,0x3331000
+00ce35cc  ldrb w8,[x19, #0x8f5]
+00ce35d0  ldr x20,[x20, #0xa68]
+00ce35d4  tbnz w8,#0x0,0x00ce35ec
+00ce35d8  adrp x0,0x3331000
+00ce35dc  ldr x0,[x0, #0xa68]
+00ce35e0  bl 0x00b0789c
+00ce35e4  mov w8,#0x1
+00ce35e8  strb w8,[x19, #0x8f5]
+00ce35ec  ldr x0,[x20]
+00ce35f0  bl 0x00b079a0
+00ce35f4  cbz x0,0x00ce3628
+00ce35f8  mov x1,xzr
+00ce35fc  mov x19,x0
+00ce3600  bl 0x02194104
+00ce3604  ldr x8,[x20]
+00ce3608  mov x1,x19
+00ce360c  ldr x8,[x8, #0xb8]
+00ce3610  str x19,[x8]
+00ce3614  ldr x8,[x20]
+00ce3618  ldp x19,x30,[sp, #0x10]
+00ce361c  ldr x0,[x8, #0xb8]
+00ce3620  ldr x20,[sp], #0x20
+00ce3624  b 0x00b07850
+00ce3628  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ce362c_AddressBookController.__c__.ctor.txt
+================================================================================
+Function: AddressBookController.<>c$$.ctor @ 00ce362c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00ce362c  mov x1,xzr
+00ce3630  b 0x02194104
+
+
+================================================================================
+### FILE: 00ce3634_AddressBookController.__c___.cctor_b__20_0.txt
+================================================================================
+Function: AddressBookController.<>c$$<.cctor>b__20_0 @ 00ce3634
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00ce3634  ret
+
+
+================================================================================
+### FILE: 00cf8598_AddressBookExample__LoadAdressBook.txt
+================================================================================
+Function: AddressBookExample$$LoadAdressBook @ 00cf8598
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AddressBookController$$add_OnContactsLoadedAction @ 00ce24e8
+  -> AddressBookController$$LoadContacts @ 00ce2704
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Action$$.ctor @ 020d5760
+
+--- Calls IN ---
+
+--- Listing ---
+00cf8598  stp x21,x20,[sp, #-0x20]!
+00cf859c  stp x19,x30,[sp, #0x10]
+00cf85a0  adrp x20,0x3571000
+00cf85a4  adrp x21,0x3334000
+00cf85a8  ldrb w8,[x20, #0xa08]
+00cf85ac  ldr x21,[x21, #0xcd0]
+00cf85b0  mov x19,x0
+00cf85b4  tbnz w8,#0x0,0x00cf85f0
+00cf85b8  adrp x0,0x3348000
+00cf85bc  ldr x0,[x0, #0xcf8]
+00cf85c0  bl 0x00b0789c
+00cf85c4  adrp x0,0x3345000
+00cf85c8  ldr x0,[x0, #0xcd8]
+00cf85cc  bl 0x00b0789c
+00cf85d0  adrp x0,0x3338000
+00cf85d4  ldr x0,[x0, #0xd88]
+00cf85d8  bl 0x00b0789c
+00cf85dc  adrp x0,0x3334000
+00cf85e0  ldr x0,[x0, #0xcd0]
+00cf85e4  bl 0x00b0789c
+00cf85e8  mov w8,#0x1
+00cf85ec  strb w8,[x20, #0xa08]
+00cf85f0  ldr x0,[x21]
+00cf85f4  bl 0x01e09dd4
+00cf85f8  cbz x0,0x00cf8660
+00cf85fc  adrp x20,0x3348000
+00cf8600  ldr x20,[x20, #0xcf8]
+00cf8604  mov x1,xzr
+00cf8608  bl 0x00ce2704
+00cf860c  ldr x0,[x20]
+00cf8610  bl 0x00b079a0
+00cf8614  cbz x0,0x00cf8660
+00cf8618  adrp x8,0x3338000
+00cf861c  ldr x8,[x8, #0xd88]
+00cf8620  adrp x21,0x3345000
+00cf8624  mov x1,x19
+00cf8628  mov x3,xzr
+00cf862c  ldr x2,[x8]
+00cf8630  ldr x21,[x21, #0xcd8]
+00cf8634  mov x20,x0
+00cf8638  bl 0x020d5760
+00cf863c  ldr x0,[x21]
+00cf8640  ldr w8,[x0, #0xe0]
+00cf8644  cbnz w8,0x00cf864c
+00cf8648  bl 0x00b0798c
+00cf864c  ldp x19,x30,[sp, #0x10]
+00cf8650  mov x0,x20
+00cf8654  mov x1,xzr
+00cf8658  ldp x21,x20,[sp], #0x20
+00cf865c  b 0x00ce24e8
+00cf8660  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf8664_AddressBookExample__OnContactsLoaded.txt
+================================================================================
+Function: AddressBookExample$$OnContactsLoaded @ 00cf8664
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Collections.Generic.List.Enumerator<object>$$Dispose @ 01a070e8
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Action$$.ctor @ 020d5760
+  -> System.String$$Concat @ 01fdebb8
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Collections.Generic.List<object>$$GetEnumerator @ 01c01338
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List.Enumerator<object>$$MoveNext @ 01a070ec
+  -> AddressBookController$$remove_OnContactsLoadedAction @ 00ce25c0
+  -> AN_PoupsProxy$$showMessage @ 00cdffac
+  -> SA_Label$$set_text @ 00cef7e8
+
+--- Calls IN ---
+
+--- Listing ---
+00cf8664  sub sp,sp,#0x70
+00cf8668  stp x23,x22,[sp, #0x40]
+00cf866c  stp x21,x20,[sp, #0x50]
+00cf8670  stp x19,x30,[sp, #0x60]
+00cf8674  adrp x21,0x3571000
+00cf8678  adrp x20,0x3348000
+00cf867c  ldrb w8,[x21, #0xa09]
+00cf8680  ldr x20,[x20, #0xcf8]
+00cf8684  mov x19,x0
+00cf8688  tbnz w8,#0x0,0x00cf876c
+00cf868c  adrp x0,0x3348000
+00cf8690  ldr x0,[x0, #0xcf8]
+00cf8694  bl 0x00b0789c
+00cf8698  adrp x0,0x3345000
+00cf869c  ldr x0,[x0, #0xcd8]
+00cf86a0  bl 0x00b0789c
+00cf86a4  adrp x0,0x3338000
+00cf86a8  ldr x0,[x0, #0xd88]
+00cf86ac  bl 0x00b0789c
+00cf86b0  adrp x0,0x3350000
+00cf86b4  ldr x0,[x0, #0x5b0]
+00cf86b8  bl 0x00b0789c
+00cf86bc  adrp x0,0x3312000
+00cf86c0  ldr x0,[x0, #0xca8]
+00cf86c4  bl 0x00b0789c
+00cf86c8  adrp x0,0x3363000
+00cf86cc  ldr x0,[x0, #0x750]
+00cf86d0  bl 0x00b0789c
+00cf86d4  adrp x0,0x3367000
+00cf86d8  ldr x0,[x0, #0x840]
+00cf86dc  bl 0x00b0789c
+00cf86e0  adrp x0,0x332f000
+00cf86e4  ldr x0,[x0, #0xda8]
+00cf86e8  bl 0x00b0789c
+00cf86ec  adrp x0,0x3334000
+00cf86f0  ldr x0,[x0, #0xcd0]
+00cf86f4  bl 0x00b0789c
+00cf86f8  adrp x0,0x330a000
+00cf86fc  ldr x0,[x0, #0x338]
+00cf8700  bl 0x00b0789c
+00cf8704  adrp x0,0x332a000
+00cf8708  ldr x0,[x0, #0x790]
+00cf870c  bl 0x00b0789c
+00cf8710  adrp x0,0x3347000
+00cf8714  ldr x0,[x0, #0x990]
+00cf8718  bl 0x00b0789c
+00cf871c  adrp x0,0x335b000
+00cf8720  ldr x0,[x0, #0x140]
+00cf8724  bl 0x00b0789c
+00cf8728  adrp x0,0x330d000
+00cf872c  ldr x0,[x0, #0x808]
+00cf8730  bl 0x00b0789c
+00cf8734  adrp x0,0x3309000
+00cf8738  ldr x0,[x0, #0x548]
+00cf873c  bl 0x00b0789c
+00cf8740  adrp x0,0x3341000
+00cf8744  ldr x0,[x0, #0x968]
+00cf8748  bl 0x00b0789c
+00cf874c  adrp x0,0x3316000
+00cf8750  ldr x0,[x0, #0x6d0]
+00cf8754  bl 0x00b0789c
+00cf8758  adrp x0,0x334e000
+00cf875c  ldr x0,[x0, #0xbd8]
+00cf8760  bl 0x00b0789c
+00cf8764  mov w8,#0x1
+00cf8768  strb w8,[x21, #0xa09]
+00cf876c  ldr x0,[x20]
+00cf8770  str wzr,[sp, #0x3c]
+00cf8774  stp xzr,xzr,[sp, #0x28]
+00cf8778  str xzr,[sp, #0x20]
+00cf877c  bl 0x00b079a0
+00cf8780  cbz x0,0x00cf89fc
+00cf8784  adrp x8,0x3338000
+00cf8788  ldr x8,[x8, #0xd88]
+00cf878c  adrp x22,0x3345000
+00cf8790  adrp x21,0x3334000
+00cf8794  mov x1,x19
+00cf8798  ldr x2,[x8]
+00cf879c  ldr x22,[x22, #0xcd8]
+00cf87a0  ldr x21,[x21, #0xcd0]
+00cf87a4  mov x3,xzr
+00cf87a8  mov x20,x0
+00cf87ac  bl 0x020d5760
+00cf87b0  ldr x0,[x22]
+00cf87b4  ldr w8,[x0, #0xe0]
+00cf87b8  cbnz w8,0x00cf87c0
+00cf87bc  bl 0x00b0798c
+00cf87c0  mov x0,x20
+00cf87c4  mov x1,xzr
+00cf87c8  bl 0x00ce25c0
+00cf87cc  ldr x0,[x21]
+00cf87d0  bl 0x01e09dd4
+00cf87d4  cbz x0,0x00cf89fc
+00cf87d8  ldr x1,[x0, #0x18]
+00cf87dc  mov x20,x19
+00cf87e0  str x1,[x20, #0x48]!
+00cf87e4  mov x0,x20
+00cf87e8  bl 0x00b07850
+00cf87ec  ldr x8,[x20]
+00cf87f0  cbz x8,0x00cf89fc
+00cf87f4  ldr w8,[x8, #0x18]
+00cf87f8  adrp x21,0x3341000
+00cf87fc  adrp x22,0x330a000
+00cf8800  adrp x23,0x3309000
+00cf8804  ldr x21,[x21, #0x968]
+00cf8808  ldr x22,[x22, #0x338]
+00cf880c  ldr x23,[x23, #0x548]
+00cf8810  add x0,sp,#0x3c
+00cf8814  mov x1,xzr
+00cf8818  str w8,[sp, #0x3c]
+00cf881c  bl 0x0214dc44
+00cf8820  ldr x8,[x21]
+00cf8824  ldr x2,[x22]
+00cf8828  mov x1,x0
+00cf882c  mov x3,xzr
+00cf8830  mov x0,x8
+00cf8834  bl 0x01fdebb8
+00cf8838  ldr x8,[x23]
+00cf883c  mov x1,x0
+00cf8840  mov w2,wzr
+00cf8844  mov x3,xzr
+00cf8848  mov x0,x8
+00cf884c  bl 0x00cdffac
+00cf8850  ldr x0,[x20]
+00cf8854  cbz x0,0x00cf89fc
+00cf8858  adrp x8,0x3367000
+00cf885c  ldr x8,[x8, #0x840]
+00cf8860  adrp x20,0x3312000
+00cf8864  adrp x21,0x3350000
+00cf8868  ldr x1,[x8]
+00cf886c  ldr x20,[x20, #0xca8]
+00cf8870  ldr x21,[x21, #0x5b0]
+00cf8874  add x8,sp,#0x8
+00cf8878  bl 0x01c01338
+00cf887c  ldur q0,[sp, #0x8]
+00cf8880  ldr x8,[sp, #0x18]
+00cf8884  ldr x1,[x20]
+00cf8888  str q0,[sp, #0x20]
+00cf888c  str x8,[sp, #0x30]
+00cf8890  add x0,sp,#0x20
+    ; [PRE] try { // try from 00cf8890 to 00cf8897 has its CatchHandler @ 00cf8a50
+00cf8894  bl 0x01a070ec
+    ; [POST] } // end try from 00cf8890 to 00cf8897
+00cf8898  tbz w0,#0x0,0x00cf89dc
+00cf889c  ldr x22,[sp, #0x30]
+00cf88a0  cbz x22,0x00cf8a00
+00cf88a4  adrp x8,0x3347000
+00cf88a8  ldr x8,[x8, #0x990]
+00cf88ac  ldr x20,[x19, #0x18]
+00cf88b0  ldr x1,[x22, #0x10]
+00cf88b4  ldr x0,[x8]
+00cf88b8  mov x2,xzr
+    ; [PRE] try { // try from 00cf88b8 to 00cf88d3 has its CatchHandler @ 00cf8a4c
+00cf88bc  bl 0x01fd2850
+00cf88c0  mov x1,x0
+00cf88c4  cbz x20,0x00cf8a04
+00cf88c8  mov x0,x20
+00cf88cc  mov x2,xzr
+00cf88d0  bl 0x00cef7e8
+    ; [POST] } // end try from 00cf88b8 to 00cf88d3
+00cf88d4  adrp x8,0x332a000
+00cf88d8  ldr x8,[x8, #0x790]
+00cf88dc  ldr x20,[x19, #0x20]
+00cf88e0  ldr x1,[x22, #0x18]
+00cf88e4  ldr x0,[x8]
+00cf88e8  mov x2,xzr
+    ; [PRE] try { // try from 00cf88e8 to 00cf8903 has its CatchHandler @ 00cf8a48
+00cf88ec  bl 0x01fd2850
+00cf88f0  mov x1,x0
+00cf88f4  cbz x20,0x00cf8a08
+00cf88f8  mov x0,x20
+00cf88fc  mov x2,xzr
+00cf8900  bl 0x00cef7e8
+    ; [POST] } // end try from 00cf88e8 to 00cf8903
+00cf8904  adrp x8,0x330d000
+00cf8908  ldr x8,[x8, #0x808]
+00cf890c  ldr x20,[x19, #0x28]
+00cf8910  ldr x1,[x22, #0x20]
+00cf8914  ldr x0,[x8]
+00cf8918  mov x2,xzr
+    ; [PRE] try { // try from 00cf8918 to 00cf8933 has its CatchHandler @ 00cf8a44
+00cf891c  bl 0x01fd2850
+00cf8920  mov x1,x0
+00cf8924  cbz x20,0x00cf8a0c
+00cf8928  mov x0,x20
+00cf892c  mov x2,xzr
+00cf8930  bl 0x00cef7e8
+    ; [POST] } // end try from 00cf8918 to 00cf8933
+00cf8934  ldr x8,[x22, #0x28]
+00cf8938  cbz x8,0x00cf8a10
+00cf893c  adrp x9,0x3316000
+00cf8940  ldr x9,[x9, #0x6d0]
+00cf8944  ldr x20,[x19, #0x30]
+00cf8948  ldr x1,[x8, #0x10]
+00cf894c  ldr x0,[x9]
+00cf8950  mov x2,xzr
+    ; [PRE] try { // try from 00cf8950 to 00cf896b has its CatchHandler @ 00cf8a40
+00cf8954  bl 0x01fd2850
+00cf8958  mov x1,x0
+00cf895c  cbz x20,0x00cf8a14
+00cf8960  mov x0,x20
+00cf8964  mov x2,xzr
+00cf8968  bl 0x00cef7e8
+    ; [POST] } // end try from 00cf8950 to 00cf896b
+00cf896c  ldr x8,[x22, #0x30]
+00cf8970  cbz x8,0x00cf8a18
+00cf8974  adrp x9,0x334e000
+00cf8978  ldr x9,[x9, #0xbd8]
+00cf897c  ldr x20,[x19, #0x38]
+00cf8980  ldr x1,[x8, #0x10]
+00cf8984  ldr x0,[x9]
+00cf8988  mov x2,xzr
+    ; [PRE] try { // try from 00cf8988 to 00cf89a3 has its CatchHandler @ 00cf8a3c
+00cf898c  bl 0x01fd2850
+00cf8990  mov x1,x0
+00cf8994  cbz x20,0x00cf8a1c
+00cf8998  mov x0,x20
+00cf899c  mov x2,xzr
+00cf89a0  bl 0x00cef7e8
+    ; [POST] } // end try from 00cf8988 to 00cf89a3
+00cf89a4  ldr x8,[x22, #0x38]
+00cf89a8  cbz x8,0x00cf8a20
+00cf89ac  adrp x9,0x335b000
+00cf89b0  ldr x9,[x9, #0x140]
+00cf89b4  ldr x19,[x19, #0x40]
+00cf89b8  ldr x1,[x8, #0x38]
+00cf89bc  ldr x0,[x9]
+00cf89c0  mov x2,xzr
+    ; [PRE] try { // try from 00cf89c0 to 00cf89db has its CatchHandler @ 00cf8a38
+00cf89c4  bl 0x01fd2850
+00cf89c8  mov x1,x0
+00cf89cc  cbz x19,0x00cf8a24
+00cf89d0  mov x0,x19
+00cf89d4  mov x2,xzr
+00cf89d8  bl 0x00cef7e8
+    ; [POST] } // end try from 00cf89c0 to 00cf89db
+00cf89dc  ldr x1,[x21]
+00cf89e0  add x0,sp,#0x20
+00cf89e4  bl 0x01a070e8
+00cf89e8  ldp x19,x30,[sp, #0x60]
+00cf89ec  ldp x21,x20,[sp, #0x50]
+00cf89f0  ldp x23,x22,[sp, #0x40]
+00cf89f4  add sp,sp,#0x70
+00cf89f8  ret
+00cf89fc  bl 0x00b079b0
+00cf8a00  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a00 to 00cf8a03 has its CatchHandler @ 00cf8a34
+    ; [POST] } // end try from 00cf8a00 to 00cf8a03
+00cf8a04  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a04 to 00cf8a07 has its CatchHandler @ 00cf8a4c
+    ; [POST] } // end try from 00cf8a04 to 00cf8a07
+00cf8a08  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a08 to 00cf8a0b has its CatchHandler @ 00cf8a48
+    ; [POST] } // end try from 00cf8a08 to 00cf8a0b
+00cf8a0c  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a0c to 00cf8a0f has its CatchHandler @ 00cf8a44
+    ; [POST] } // end try from 00cf8a0c to 00cf8a0f
+00cf8a10  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a10 to 00cf8a13 has its CatchHandler @ 00cf8a30
+    ; [POST] } // end try from 00cf8a10 to 00cf8a13
+00cf8a14  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a14 to 00cf8a17 has its CatchHandler @ 00cf8a40
+    ; [POST] } // end try from 00cf8a14 to 00cf8a17
+00cf8a18  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a18 to 00cf8a1b has its CatchHandler @ 00cf8a2c
+    ; [POST] } // end try from 00cf8a18 to 00cf8a1b
+00cf8a1c  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a1c to 00cf8a1f has its CatchHandler @ 00cf8a3c
+    ; [POST] } // end try from 00cf8a1c to 00cf8a1f
+00cf8a20  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a20 to 00cf8a23 has its CatchHandler @ 00cf8a28
+    ; [POST] } // end try from 00cf8a20 to 00cf8a23
+00cf8a24  bl 0x00b079b0
+    ; [PRE] try { // try from 00cf8a24 to 00cf8a27 has its CatchHandler @ 00cf8a38
+    ; [POST] } // end try from 00cf8a24 to 00cf8a27
+
+
+================================================================================
+### FILE: 00cf8ab4_AddressBookExample__.ctor.txt
+================================================================================
+Function: AddressBookExample$$.ctor @ 00cf8ab4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cf8ab4  stp x21,x20,[sp, #-0x20]!
+00cf8ab8  stp x19,x30,[sp, #0x10]
+00cf8abc  adrp x20,0x3571000
+00cf8ac0  adrp x21,0x3361000
+00cf8ac4  ldrb w8,[x20, #0xa0a]
+00cf8ac8  ldr x21,[x21, #0xd50]
+00cf8acc  mov x19,x0
+00cf8ad0  tbnz w8,#0x0,0x00cf8af4
+00cf8ad4  adrp x0,0x336f000
+00cf8ad8  ldr x0,[x0, #0x460]
+00cf8adc  bl 0x00b0789c
+00cf8ae0  adrp x0,0x3361000
+00cf8ae4  ldr x0,[x0, #0xd50]
+00cf8ae8  bl 0x00b0789c
+00cf8aec  mov w8,#0x1
+00cf8af0  strb w8,[x20, #0xa0a]
+00cf8af4  ldr x0,[x21]
+00cf8af8  bl 0x00b079a0
+00cf8afc  cbz x0,0x00cf8b38
+00cf8b00  adrp x8,0x336f000
+00cf8b04  ldr x8,[x8, #0x460]
+00cf8b08  mov x20,x0
+00cf8b0c  ldr x1,[x8]
+00cf8b10  bl 0x01bffe10
+00cf8b14  mov x0,x19
+00cf8b18  str x20,[x0, #0x48]!
+00cf8b1c  mov x1,x20
+00cf8b20  bl 0x00b07850
+00cf8b24  mov x0,x19
+00cf8b28  ldp x19,x30,[sp, #0x10]
+00cf8b2c  mov x1,xzr
+00cf8b30  ldp x21,x20,[sp], #0x20
+00cf8b34  b 0x024e45bc
+00cf8b38  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00fa1ed4_AdconfirmpanelNode__get_mask.txt
+================================================================================
+Function: AdconfirmpanelNode$$get_mask @ 00fa1ed4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fa1ed4  stp x21,x20,[sp, #-0x20]!
+00fa1ed8  stp x19,x30,[sp, #0x10]
+00fa1edc  adrp x20,0x3573000
+00fa1ee0  adrp x21,0x337b000
+00fa1ee4  ldrb w8,[x20, #0x573]
+00fa1ee8  ldr x21,[x21, #0x2b8]
+00fa1eec  mov x19,x0
+00fa1ef0  tbnz w8,#0x0,0x00fa1f08
+00fa1ef4  adrp x0,0x337b000
+00fa1ef8  ldr x0,[x0, #0x2b8]
+00fa1efc  bl 0x00b0789c
+00fa1f00  mov w8,#0x1
+00fa1f04  strb w8,[x20, #0x573]
+00fa1f08  ldr x1,[x21]
+00fa1f0c  mov x0,x19
+00fa1f10  ldp x19,x30,[sp, #0x10]
+00fa1f14  mov x2,xzr
+00fa1f18  ldp x21,x20,[sp], #0x20
+00fa1f1c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa1f20_AdconfirmpanelNode__get_ScrollView.txt
+================================================================================
+Function: AdconfirmpanelNode$$get_ScrollView @ 00fa1f20
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fa1f20  stp x21,x20,[sp, #-0x20]!
+00fa1f24  stp x19,x30,[sp, #0x10]
+00fa1f28  adrp x20,0x3573000
+00fa1f2c  adrp x21,0x3374000
+00fa1f30  ldrb w8,[x20, #0x574]
+00fa1f34  ldr x21,[x21, #0x8b0]
+00fa1f38  mov x19,x0
+00fa1f3c  tbnz w8,#0x0,0x00fa1f54
+00fa1f40  adrp x0,0x3374000
+00fa1f44  ldr x0,[x0, #0x8b0]
+00fa1f48  bl 0x00b0789c
+00fa1f4c  mov w8,#0x1
+00fa1f50  strb w8,[x20, #0x574]
+00fa1f54  ldr x1,[x21]
+00fa1f58  mov x0,x19
+00fa1f5c  ldp x19,x30,[sp, #0x10]
+00fa1f60  mov x2,xzr
+00fa1f64  ldp x21,x20,[sp], #0x20
+00fa1f68  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa1f6c_AdconfirmpanelNode__get_equipItemGrid.txt
+================================================================================
+Function: AdconfirmpanelNode$$get_equipItemGrid @ 00fa1f6c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fa1f6c  stp x21,x20,[sp, #-0x20]!
+00fa1f70  stp x19,x30,[sp, #0x10]
+00fa1f74  adrp x20,0x3573000
+00fa1f78  adrp x21,0x3367000
+00fa1f7c  ldrb w8,[x20, #0x575]
+00fa1f80  ldr x21,[x21, #0x950]
+00fa1f84  mov x19,x0
+00fa1f88  tbnz w8,#0x0,0x00fa1fa0
+00fa1f8c  adrp x0,0x3367000
+00fa1f90  ldr x0,[x0, #0x950]
+00fa1f94  bl 0x00b0789c
+00fa1f98  mov w8,#0x1
+00fa1f9c  strb w8,[x20, #0x575]
+00fa1fa0  ldr x1,[x21]
+00fa1fa4  mov x0,x19
+00fa1fa8  ldp x19,x30,[sp, #0x10]
+00fa1fac  mov x2,xzr
+00fa1fb0  ldp x21,x20,[sp], #0x20
+00fa1fb4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa1fb8_AdconfirmpanelNode__get_btn_submit.txt
+================================================================================
+Function: AdconfirmpanelNode$$get_btn_submit @ 00fa1fb8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fa1fb8  stp x21,x20,[sp, #-0x20]!
+00fa1fbc  stp x19,x30,[sp, #0x10]
+00fa1fc0  adrp x20,0x3573000
+00fa1fc4  adrp x21,0x3328000
+00fa1fc8  ldrb w8,[x20, #0x576]
+00fa1fcc  ldr x21,[x21, #0xec0]
+00fa1fd0  mov x19,x0
+00fa1fd4  tbnz w8,#0x0,0x00fa1fec
+00fa1fd8  adrp x0,0x3328000
+00fa1fdc  ldr x0,[x0, #0xec0]
+00fa1fe0  bl 0x00b0789c
+00fa1fe4  mov w8,#0x1
+00fa1fe8  strb w8,[x20, #0x576]
+00fa1fec  ldr x1,[x21]
+00fa1ff0  mov x0,x19
+00fa1ff4  ldp x19,x30,[sp, #0x10]
+00fa1ff8  mov x2,xzr
+00fa1ffc  ldp x21,x20,[sp], #0x20
+00fa2000  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa2004_AdconfirmpanelNode__get_btn_cancel.txt
+================================================================================
+Function: AdconfirmpanelNode$$get_btn_cancel @ 00fa2004
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fa2004  stp x21,x20,[sp, #-0x20]!
+00fa2008  stp x19,x30,[sp, #0x10]
+00fa200c  adrp x20,0x3573000
+00fa2010  adrp x21,0x3312000
+00fa2014  ldrb w8,[x20, #0x577]
+00fa2018  ldr x21,[x21, #0x200]
+00fa201c  mov x19,x0
+00fa2020  tbnz w8,#0x0,0x00fa2038
+00fa2024  adrp x0,0x3312000
+00fa2028  ldr x0,[x0, #0x200]
+00fa202c  bl 0x00b0789c
+00fa2030  mov w8,#0x1
+00fa2034  strb w8,[x20, #0x577]
+00fa2038  ldr x1,[x21]
+00fa203c  mov x0,x19
+00fa2040  ldp x19,x30,[sp, #0x10]
+00fa2044  mov x2,xzr
+00fa2048  ldp x21,x20,[sp], #0x20
+00fa204c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa2050_AdconfirmpanelNode__.ctor.txt
+================================================================================
+Function: AdconfirmpanelNode$$.ctor @ 00fa2050
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fa2050  mov x1,xzr
+00fa2054  b 0x00dc0e00
+
+

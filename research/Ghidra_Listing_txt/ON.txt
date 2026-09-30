@@ -1,0 +1,38 @@
+================================================================================
+### FILE: 00b70d34___on_zero_shared.txt
+================================================================================
+Function: __on_zero_shared @ 00b70d34
+FuncComment: std::__ndk1::locale::facet::__on_zero_shared()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b70d34  cbz x0,0x00b70d44
+    ; [PLATE] std::__ndk1::locale::facet::__on_zero_shared()
+00b70d38  ldr x8,[x0]
+00b70d3c  ldr x1,[x8, #0x8]
+00b70d40  br x1
+00b70d44  ret
+
+
+================================================================================
+### FILE: 00b8a4e0___on_zero_shared.txt
+================================================================================
+Function: __on_zero_shared @ 00b8a4e0
+FuncComment: std::__ndk1::__assoc_sub_state::__on_zero_shared()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8a4e0  cbz x0,0x00b8a4f0
+    ; [PLATE] std::__ndk1::__assoc_sub_state::__on_zero_shared()
+00b8a4e4  ldr x8,[x0]
+00b8a4e8  ldr x1,[x8, #0x8]
+00b8a4ec  br x1
+00b8a4f0  ret
+
+

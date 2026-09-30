@@ -1,0 +1,347 @@
+================================================================================
+### FILE: 008d3c30_error_category.txt
+================================================================================
+Function: error_category @ 008d3c30
+
+--- Calls OUT ---
+  -> error_category @ 00b88ae4
+
+--- Calls IN ---
+  <- FUN_00b53a58 @ 00b53a58
+  <- FUN_00b8a5a4 @ 00b8a5a4
+  <- ~promise @ 00b8ac98
+  <- future_category @ 00b8a390
+  <- iostream_category @ 00b53574
+
+--- Listing ---
+008d3c30  adrp x16,0x3307000
+008d3c34  ldr x17,[x16, #0x7d8]
+008d3c38  add x16,x16,#0x7d8
+008d3c3c  br x17
+
+
+================================================================================
+### FILE: 008d3f70___errno.txt
+================================================================================
+Function: __errno @ 008d3f70
+
+--- Calls OUT ---
+  -> __errno @ 03799178
+
+--- Calls IN ---
+  <- stol @ 00b85734
+  <- SystemNative_ReadDirR @ 00a995a0
+  <- FUN_00b3eef8 @ 00b3eef8
+  <- sleep_for @ 00b89788
+  <- FUN_00b3ee1c @ 00b3ee1c
+  <- SystemNative_ReadLink @ 00a99864
+  <- stof @ 00b86654
+  <- stold @ 00b86ddc
+  <- stold @ 00b86c04
+  <- FUN_00b80088 @ 00b80088
+  <- SystemNative_UTimes @ 00a99c8c
+  <- SystemNative_Unlink @ 00a9955c
+  <- FUN_00ae6c04 @ 00ae6c04
+  <- stof @ 00b86474
+  <- SystemNative_Rename @ 00a99894
+  <- FUN_00aa9cbc @ 00aa9cbc
+  <- stoi @ 00b8530c
+  <- FUN_00b80348 @ 00b80348
+  <- FUN_00aa9c50 @ 00aa9c50
+  <- FUN_00aa9354 @ 00aa9354
+  <- SystemNative_GetNonCryptographicallySecureRandomBytes @ 00a99b28
+  <- stoull @ 00b8628c
+  <- SystemNative_RmDir @ 00a998d8
+  <- FUN_00ae6cb8 @ 00ae6cb8
+  <- FUN_00b801e8 @ 00b801e8
+  <- FUN_00b34960 @ 00b34960
+  <- FUN_00ab07a8 @ 00ab07a8
+  <- FUN_00aa96b8 @ 00aa96b8
+  <- stol @ 00b85554
+  <- FUN_00ae6294 @ 00ae6294
+  <- FUN_00ae6e68 @ 00ae6e68
+  <- stoi @ 00b850cc
+  <- SystemNative_ChMod @ 00a997dc
+  <- FUN_00ae6d5c @ 00ae6d5c
+  <- SystemNative_Link @ 00a99820
+  <- FUN_00aa9b10 @ 00aa9b10
+  <- FUN_00ae659c @ 00ae659c
+  <- stoull @ 00b860ac
+  <- FUN_00b3eb74 @ 00b3eb74
+  <- FUN_00b88b70 @ 00b88b70
+  <- stod @ 00b8683c
+  <- FUN_00a8da50 @ 00a8da50
+  <- FUN_00b7fc7c @ 00b7fc7c
+  <- FUN_00aca37c @ 00aca37c
+  <- FUN_00ae6b50 @ 00ae6b50
+  <- SystemNative_MkDir @ 00a99798
+  <- FUN_00ae7818 @ 00ae7818
+  <- FUN_00b7ff20 @ 00b7ff20
+  <- FUN_00a8da64 @ 00a8da64
+  <- FUN_00ae6a84 @ 00ae6a84
+  <- FUN_00aa9d4c @ 00aa9d4c
+  <- FUN_00b80448 @ 00b80448
+  <- SystemNative_Stat2 @ 00a9943c
+  <- stoul @ 00b8591c
+  <- FUN_00aa9b78 @ 00aa9b78
+  <- FUN_00b7fb40 @ 00b7fb40
+  <- SystemNative_CopyFile @ 00a99914
+  <- stoul @ 00b85afc
+  <- stod @ 00b86a1c
+  <- FUN_00b80548 @ 00b80548
+  <- FUN_00aca404 @ 00aca404
+  <- FUN_00b7fdb8 @ 00b7fdb8
+  <- stoll @ 00b85ec4
+  <- FUN_00aa943c @ 00aa943c
+  <- stoll @ 00b85ce4
+
+--- Listing ---
+008d3f70  adrp x16,0x3307000
+008d3f74  ldr x17,[x16, #0x978]
+008d3f78  add x16,x16,#0x978
+008d3f7c  br x17
+
+
+================================================================================
+### FILE: 008d4220_erase.txt
+================================================================================
+Function: erase @ 008d4220
+
+--- Calls OUT ---
+  -> erase @ 00b827f8
+
+--- Calls IN ---
+  <- FUN_00b7cd60 @ 00b7cd60
+
+--- Listing ---
+008d4220  adrp x16,0x3307000
+008d4224  ldr x17,[x16, #0xad0]
+008d4228  add x16,x16,#0xad0
+008d422c  br x17
+
+
+================================================================================
+### FILE: 008d5000__error_category.txt
+================================================================================
+Function: ~error_category @ 008d5000
+
+--- Calls OUT ---
+  -> ~error_category @ 00b8961c
+
+--- Calls IN ---
+  <- FUN_00b53d5c @ 00b53d5c
+  <- FUN_00b8b18c @ 00b8b18c
+
+--- Listing ---
+008d5000  adrp x16,0x3308000
+008d5004  ldr x17,[x16, #0x1c0]
+008d5008  add x16,x16,#0x1c0
+008d500c  br x17
+
+
+================================================================================
+### FILE: 008d5010_erase.txt
+================================================================================
+Function: erase @ 008d5010
+
+--- Calls OUT ---
+  -> erase @ 00b84370
+
+--- Calls IN ---
+  <- FUN_00b7dd88 @ 00b7dd88
+
+--- Listing ---
+008d5010  adrp x16,0x3308000
+008d5014  ldr x17,[x16, #0x1c8]
+008d5018  add x16,x16,#0x1c8
+008d501c  br x17
+
+
+================================================================================
+### FILE: 00b827f8_erase.txt
+================================================================================
+Function: erase @ 00b827f8
+FuncComment: std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::erase(unsigned long, unsigned long)
+
+--- Calls OUT ---
+  -> memmove @ 008d3fa0
+  -> FUN_00a8f54c @ 00a8f54c
+
+--- Calls IN ---
+  <- erase @ 008d4220
+
+--- Listing ---
+00b827f8  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::erase(unsigned long, unsigned long)
+00b827fc  stp x20,x19,[sp, #0x10]
+00b82800  stp x29,x30,[sp, #0x20]
+00b82804  add x29,sp,#0x20
+00b82808  ldrb w8,[x0]
+00b8280c  mov x19,x0
+00b82810  tbnz w8,#0x0,0x00b82824
+00b82814  lsr x20,x8,#0x1
+00b82818  subs x9,x20,x1
+00b8281c  b.cs 0x00b82830
+00b82820  b 0x00b82894
+00b82824  ldr x20,[x19, #0x8]
+00b82828  subs x9,x20,x1
+00b8282c  b.cc 0x00b82894
+00b82830  cbz x2,0x00b82880
+00b82834  tbnz w8,#0x0,0x00b82840
+00b82838  add x21,x19,#0x1
+00b8283c  b 0x00b82844
+00b82840  ldr x21,[x19, #0x10]
+00b82844  cmp x9,x2
+00b82848  csel x22,x9,x2,cc
+00b8284c  subs x2,x9,x22
+00b82850  b.eq 0x00b82860
+00b82854  add x0,x21,x1
+00b82858  add x1,x0,x22
+00b8285c  bl 0x008d3fa0
+00b82860  ldrb w9,[x19]
+00b82864  sub x8,x20,x22
+00b82868  tbnz w9,#0x0,0x00b82878
+00b8286c  lsl w9,w8,#0x1
+00b82870  strb w9,[x19]
+00b82874  b 0x00b8287c
+00b82878  str x8,[x19, #0x8]
+00b8287c  strb wzr,[x21, x8, LSL ]
+00b82880  mov x0,x19
+00b82884  ldp x29,x30,[sp, #0x20]
+00b82888  ldp x20,x19,[sp, #0x10]
+00b8288c  ldp x22,x21,[sp], #0x30
+00b82890  ret
+00b82894  mov x0,x19
+00b82898  bl 0x00a8f54c
+
+
+================================================================================
+### FILE: 00b84370_erase.txt
+================================================================================
+Function: erase @ 00b84370
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::erase(unsigned long, unsigned long)
+
+--- Calls OUT ---
+  -> FUN_00a8f54c @ 00a8f54c
+  -> wmemmove @ 008d5660
+
+--- Calls IN ---
+  <- erase @ 008d5010
+
+--- Listing ---
+00b84370  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::erase(unsigned long, unsigned long)
+00b84374  stp x20,x19,[sp, #0x10]
+00b84378  stp x29,x30,[sp, #0x20]
+00b8437c  add x29,sp,#0x20
+00b84380  ldrb w8,[x0]
+00b84384  mov x19,x0
+00b84388  tbnz w8,#0x0,0x00b8439c
+00b8438c  lsr x20,x8,#0x1
+00b84390  subs x9,x20,x1
+00b84394  b.cs 0x00b843a8
+00b84398  b 0x00b8440c
+00b8439c  ldr x20,[x19, #0x8]
+00b843a0  subs x9,x20,x1
+00b843a4  b.cc 0x00b8440c
+00b843a8  cbz x2,0x00b843f8
+00b843ac  tbnz w8,#0x0,0x00b843b8
+00b843b0  add x21,x19,#0x4
+00b843b4  b 0x00b843bc
+00b843b8  ldr x21,[x19, #0x10]
+00b843bc  cmp x9,x2
+00b843c0  csel x22,x9,x2,cc
+00b843c4  subs x2,x9,x22
+00b843c8  b.eq 0x00b843dc
+00b843cc  add x0,x21,x1, LSL #0x2
+00b843d0  add x1,x0,x22, LSL #0x2
+00b843d4  bl 0x008d5660
+    ; [PRE] try { // try from 00b843d4 to 00b843d7 has its CatchHandler @ 00b84414
+    ; [POST] } // end try from 00b843d4 to 00b843d7
+00b843d8  ldrb w8,[x19]
+00b843dc  sub x9,x20,x22
+00b843e0  tbnz w8,#0x0,0x00b843f0
+00b843e4  lsl w8,w9,#0x1
+00b843e8  strb w8,[x19]
+00b843ec  b 0x00b843f4
+00b843f0  str x9,[x19, #0x8]
+00b843f4  str wzr,[x21, x9, LSL #0x2]
+00b843f8  mov x0,x19
+00b843fc  ldp x29,x30,[sp, #0x20]
+00b84400  ldp x20,x19,[sp, #0x10]
+00b84404  ldp x22,x21,[sp], #0x30
+00b84408  ret
+00b8440c  mov x0,x19
+00b84410  bl 0x00a8f54c
+
+
+================================================================================
+### FILE: 00b88ae4_error_category.txt
+================================================================================
+Function: error_category @ 00b88ae4
+FuncComment: std::__ndk1::error_category::error_category()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- error_category @ 008d3c30
+
+--- Listing ---
+00b88ae4  adrp x8,0x332a000
+    ; [PLATE] std::__ndk1::error_category::error_category()
+00b88ae8  ldr x8,[x8, #0xae8]
+00b88aec  add x8,x8,#0x10
+00b88af0  str x8,[x0]
+00b88af4  ret
+
+
+================================================================================
+### FILE: 00b88af8__error_category.txt
+================================================================================
+Function: ~error_category @ 00b88af8
+FuncComment: std::__ndk1::error_category::~error_category()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b88af8  brk #0x1
+    ; [PLATE] std::__ndk1::error_category::~error_category()
+
+
+================================================================================
+### FILE: 00b8961c__error_category.txt
+================================================================================
+Function: ~error_category @ 00b8961c
+FuncComment: std::__ndk1::error_category::~error_category()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- ~error_category @ 008d5000
+  <- FUN_00b53a58 @ 00b53a58
+  <- ~promise @ 00b8ac98
+  <- FUN_00b8a5a4 @ 00b8a5a4
+  <- future_category @ 00b8a390
+  <- iostream_category @ 00b53574
+
+--- Listing ---
+00b8961c  ret
+    ; [PLATE] std::__ndk1::error_category::~error_category()
+
+
+================================================================================
+### FILE: 03799178___errno.txt
+================================================================================
+Function: __errno @ 03799178
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- __errno @ 008d3f70
+
+--- Listing ---
+03799178  ?? ??
+
+

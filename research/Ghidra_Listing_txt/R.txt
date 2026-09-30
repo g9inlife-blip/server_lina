@@ -1,0 +1,106 @@
+================================================================================
+### FILE: 00b789ec___r.txt
+================================================================================
+Function: __r @ 00b789ec
+FuncComment: std::__ndk1::__time_get_c_storage<char>::__r() const
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> __cxa_atexit @ 008d3de0
+  -> FUN_00a8d568 @ 00a8d568
+  -> FUN_00a8d368 @ 00a8d368
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b789ec  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__time_get_c_storage<char>::__r() const
+00b789f0  stp x29,x30,[sp, #0x10]
+00b789f4  add x29,sp,#0x10
+00b789f8  adrp x8,0x3584000
+00b789fc  add x8,x8,#0xea8
+00b78a00  ldarb w8,[x8]
+00b78a04  tbz w8,#0x0,0x00b78a1c
+00b78a08  ldp x29,x30,[sp, #0x10]
+00b78a0c  adrp x0,0x3584000
+00b78a10  add x0,x0,#0xe90
+00b78a14  ldr x19,[sp], #0x20
+00b78a18  ret
+00b78a1c  adrp x0,0x3584000
+00b78a20  add x0,x0,#0xea8
+00b78a24  bl 0x008d3ef0
+00b78a28  cbz w0,0x00b78a08
+00b78a2c  adrp x0,0x3584000
+    ; [PRE] try { // try from 00b78a2c to 00b78a3f has its CatchHandler @ 00b78a6c
+00b78a30  adrp x1,0x2a08000
+00b78a34  add x0,x0,#0xe90
+00b78a38  add x1,x1,#0x45d
+00b78a3c  bl 0x00a8d368
+    ; [POST] } // end try from 00b78a2c to 00b78a3f
+00b78a40  adrp x0,0x334a000
+00b78a44  ldr x0,[x0, #0x48]
+00b78a48  adrp x1,0x3584000
+00b78a4c  adrp x2,0x31a4000
+00b78a50  add x1,x1,#0xe90
+00b78a54  add x2,x2,#0x660
+00b78a58  bl 0x008d3de0
+00b78a5c  adrp x0,0x3584000
+00b78a60  add x0,x0,#0xea8
+00b78a64  bl 0x008d5bc0
+00b78a68  b 0x00b78a08
+
+
+================================================================================
+### FILE: 00b78a84___r.txt
+================================================================================
+Function: __r @ 00b78a84
+FuncComment: std::__ndk1::__time_get_c_storage<wchar_t>::__r() const
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> ~basic_string @ 00b83500
+  -> __cxa_atexit @ 008d3de0
+  -> basic_string<decltype(nullptr)> @ 008d4a10
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b78a84  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__time_get_c_storage<wchar_t>::__r() const
+00b78a88  stp x29,x30,[sp, #0x10]
+00b78a8c  add x29,sp,#0x10
+00b78a90  adrp x8,0x3584000
+00b78a94  add x8,x8,#0xec8
+00b78a98  ldarb w8,[x8]
+00b78a9c  tbz w8,#0x0,0x00b78ab4
+00b78aa0  ldp x29,x30,[sp, #0x10]
+00b78aa4  adrp x0,0x3584000
+00b78aa8  add x0,x0,#0xeb0
+00b78aac  ldr x19,[sp], #0x20
+00b78ab0  ret
+00b78ab4  adrp x0,0x3584000
+00b78ab8  add x0,x0,#0xec8
+00b78abc  bl 0x008d3ef0
+00b78ac0  cbz w0,0x00b78aa0
+00b78ac4  adrp x0,0x3584000
+    ; [PRE] try { // try from 00b78ac4 to 00b78ad7 has its CatchHandler @ 00b78b04
+00b78ac8  adrp x1,0x2a08000
+00b78acc  add x0,x0,#0xeb0
+00b78ad0  add x1,x1,#0xfe0
+00b78ad4  bl 0x008d4a10
+    ; [POST] } // end try from 00b78ac4 to 00b78ad7
+00b78ad8  adrp x0,0x335b000
+00b78adc  ldr x0,[x0, #0xdd8]
+00b78ae0  adrp x1,0x3584000
+00b78ae4  adrp x2,0x31a4000
+00b78ae8  add x1,x1,#0xeb0
+00b78aec  add x2,x2,#0x660
+00b78af0  bl 0x008d3de0
+00b78af4  adrp x0,0x3584000
+00b78af8  add x0,x0,#0xec8
+00b78afc  bl 0x008d5bc0
+00b78b00  b 0x00b78aa0
+
+

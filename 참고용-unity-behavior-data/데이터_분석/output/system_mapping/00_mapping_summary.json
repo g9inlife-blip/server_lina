@@ -1,0 +1,26 @@
+{
+  "json_file_count": 74,
+  "parsed_file_count": 74,
+  "unique_record_ids": 118015,
+  "mapping_rows": 11847,
+  "localization_rows": 118015,
+  "localization_conflicts": 0,
+  "system_counts": {
+    "item": 952,
+    "item_package": 2028,
+    "reward": 1503,
+    "draw": 3034,
+    "shop": 154,
+    "daily": 3393,
+    "achievement": 682,
+    "event": 101
+  },
+  "rules": {
+    "kr_name_field": "m_cn",
+    "obscured_id": "hiddenValue XOR currentCryptoKey",
+    "max_chain_depth": 4,
+    "probability_inference": false,
+    "quantity_inference": false,
+    "price_inference": false
+  }
+}

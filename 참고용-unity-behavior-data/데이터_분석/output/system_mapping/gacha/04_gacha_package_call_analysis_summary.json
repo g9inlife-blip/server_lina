@@ -1,0 +1,25 @@
+{
+  "stage": "6.6",
+  "json_file_count": 74,
+  "parsed_file_count": 74,
+  "unique_record_ids": 118015,
+  "draw_records": 2922,
+  "unique_item_package_ids": 214,
+  "total_package_id_occurrences": 1463,
+  "package_ids_with_exact_record_definition": 0,
+  "package_ids_seen_in_key_or_id_context": 0,
+  "package_ids_seen_in_package_named_context": 0,
+  "package_ids_reused_across_multiple_groups": 6,
+  "compound_occurrence_rows": 0,
+  "parse_errors": 0,
+  "context_counts": {
+    "DRAW_PACKAGE_CALL_VALUE": 1463
+  },
+  "rules": {
+    "m_itemPackageId": "opaque call/lookup candidate, not assumed to be a Record ID",
+    "network_claim": "not confirmed by JSON alone",
+    "lookup_claim": "structural candidate only",
+    "id_restore": "hiddenValue XOR currentCryptoKey",
+    "semantic_inference": false
+  }
+}

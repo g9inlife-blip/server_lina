@@ -1,0 +1,86 @@
+================================================================================
+### FILE: 008d3fd0_fmod.txt
+================================================================================
+Function: fmod @ 008d3fd0
+
+--- Calls OUT ---
+  -> fmod @ 03799190
+
+--- Calls IN ---
+  <- FUN_00af2810 @ 00af2810
+  <- UnityEngine.Timeline.DirectorControlPlayable$$UpdateTime @ 02499d84
+  <- UnityEngine.Timeline.DirectorControlPlayable$$DetectOutOfSync @ 02499c38
+  <- TMPro.TMP_Text$$AddIntegerToInternalTextBackingArray @ 02450ddc
+  <- UnityEngine.Timeline.TimelineClip$$GetExtrapolatedTime @ 02485000
+
+--- Listing ---
+008d3fd0  adrp x16,0x3307000
+008d3fd4  ldr x17,[x16, #0x9a8]
+008d3fd8  add x16,x16,#0x9a8
+008d3fdc  br x17
+
+
+================================================================================
+### FILE: 008d4270_fmodf.txt
+================================================================================
+Function: fmodf @ 008d4270
+
+--- Calls OUT ---
+  -> fmodf @ 03799228
+
+--- Calls IN ---
+  <- DG.Tweening.Core.TweenManager$$Goto @ 01719d14
+  <- Spine.AnimationState$$QueueEvents @ 00d65000
+  <- UnityEngine.TextCore.Text.TextGenerator$$GenerateTextMesh @ 0254051c
+  <- AutoSrollText$$Update @ 00dc0664
+  <- TMPro.TMP_InputField.<CaretBlink>d__276$$MoveNext @ 02466938
+  <- Spine.Animation$$Apply @ 00d5e8bc
+  <- BattleCache$$get_actGroup @ 00ec1238
+  <- TerrainMono$$ShowSkillTip @ 016c9638
+  <- UnityEngine.UI.InputField.<CaretBlink>d__172$$MoveNext @ 02590bd4
+  <- Spine.AnimationState$$ApplyRotateTimeline @ 00d64a9c
+  <- UnityEngine.UIElements.StyleSheets.StylePropertyReader$$TryGetImageSourceFromValue @ 0260cc74
+  <- DG.Tweening.Core.Easing.Flash$$WeightedEase @ 0171e210
+  <- DG.Tweening.Plugins.QuaternionPlugin$$SetChangeValue @ 0170b1a4
+  <- Spine.PathConstraint$$ComputeWorldPositions @ 00d6e4b4
+  <- TMPro.TextMeshProUGUI$$GenerateTextMesh @ 02412704
+  <- TMPro.TextMeshPro$$GenerateTextMesh @ 0240ac3c
+  <- UnityEngine.Rendering.PostProcessing.GrainRenderer$$Render @ 023e8328
+  <- Spine.TrackEntry$$get_AnimationTime @ 00d649ec
+  <- DG.Tweening.EaseFactory.<>c__DisplayClass2_0$$<StopMotion>b__0 @ 016f6784
+
+--- Listing ---
+008d4270  adrp x16,0x3307000
+008d4274  ldr x17,[x16, #0xaf8]
+008d4278  add x16,x16,#0xaf8
+008d427c  br x17
+
+
+================================================================================
+### FILE: 03799190_fmod.txt
+================================================================================
+Function: fmod @ 03799190
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- fmod @ 008d3fd0
+
+--- Listing ---
+03799190  ?? ??
+
+
+================================================================================
+### FILE: 03799228_fmodf.txt
+================================================================================
+Function: fmodf @ 03799228
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- fmodf @ 008d4270
+
+--- Listing ---
+03799228  ?? ??
+
+

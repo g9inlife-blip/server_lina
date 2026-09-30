@@ -1,0 +1,1840 @@
+================================================================================
+### FILE: 008d50a0__mutex.txt
+================================================================================
+Function: ~mutex @ 008d50a0
+
+--- Calls OUT ---
+  -> ~mutex @ 00b81a94
+
+--- Calls IN ---
+  <- ~__assoc_sub_state @ 00b8b138
+  <- ~__assoc_sub_state @ 00b8b0ec
+  <- ~recursive_timed_mutex @ 00b816d0
+  <- ~timed_mutex @ 00b814fc
+
+--- Listing ---
+008d50a0  adrp x16,0x3308000
+008d50a4  ldr x17,[x16, #0x210]
+008d50a8  add x16,x16,#0x210
+008d50ac  br x17
+
+
+================================================================================
+### FILE: 008d56d0_munmap.txt
+================================================================================
+Function: munmap @ 008d56d0
+
+--- Calls OUT ---
+  -> munmap @ 03799750
+
+--- Calls IN ---
+  <- FUN_00aca77c @ 00aca77c
+
+--- Listing ---
+008d56d0  adrp x16,0x3308000
+008d56d4  ldr x17,[x16, #0x528]
+008d56d8  add x16,x16,#0x528
+008d56dc  br x17
+
+
+================================================================================
+### FILE: 00b81a94__mutex.txt
+================================================================================
+Function: ~mutex @ 00b81a94
+FuncComment: std::__ndk1::mutex::~mutex()
+
+--- Calls OUT ---
+  -> pthread_mutex_destroy @ 008d4f10
+
+--- Calls IN ---
+  <- ~mutex @ 008d50a0
+  <- _INIT_23 @ 008d6bc4
+
+--- Listing ---
+00b81a94  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::mutex::~mutex()
+00b81a98  mov x29,sp
+00b81a9c  bl 0x008d4f10
+    ; [PRE] try { // try from 00b81a9c to 00b81a9f has its CatchHandler @ 00b81aa8
+    ; [POST] } // end try from 00b81a9c to 00b81a9f
+00b81aa0  ldp x29,x30,[sp], #0x10
+00b81aa4  ret
+
+
+================================================================================
+### FILE: 00d32178_MultiplayerManagerExample__Awake.txt
+================================================================================
+Function: MultiplayerManagerExample$$Awake @ 00d32178
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> GameCenterInvitations$$add_ActionPlayerAcceptedInvitation @ 00d06e34
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> GameCenterManager$$Init @ 00d093c4
+  -> GameCenterInvitations$$add_ActionPlayerRequestedMatchWithRecipients @ 00d0701c
+  -> FUN_00b079b0 @ 00b079b0
+  -> GameCenter_RTM$$add_ActionDataReceived @ 00d0e63c
+  -> GameCenter_RTM$$add_ActionPlayerStateChanged @ 00d0e824
+  -> System.Action<Int32Enum,-object>$$.ctor @ 0190e4d0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> GameCenter_RTM$$add_ActionMatchStarted @ 00d0dcbc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Action<object,-object>$$.ctor @ 019104fc
+  -> System.Action<Int32Enum,-object,-object>$$.ctor @ 01911258
+  -> System.Action<object,-Int32Enum,-object>$$.ctor @ 01911f6c
+
+--- Calls IN ---
+
+--- Listing ---
+00d32178  str x22,[sp, #-0x30]!
+00d3217c  stp x21,x20,[sp, #0x10]
+00d32180  stp x19,x30,[sp, #0x20]
+00d32184  adrp x21,0x3571000
+00d32188  adrp x20,0x3338000
+00d3218c  ldrb w8,[x21, #0xd2a]
+00d32190  ldr x20,[x20, #0xea0]
+00d32194  mov x19,x0
+00d32198  tbnz w8,#0x0,0x00d32240
+00d3219c  adrp x0,0x3347000
+00d321a0  ldr x0,[x0, #0xc98]
+00d321a4  bl 0x00b0789c
+00d321a8  adrp x0,0x3362000
+00d321ac  ldr x0,[x0, #0x2d8]
+00d321b0  bl 0x00b0789c
+00d321b4  adrp x0,0x3356000
+00d321b8  ldr x0,[x0, #0x6b0]
+00d321bc  bl 0x00b0789c
+00d321c0  adrp x0,0x337d000
+00d321c4  ldr x0,[x0, #0x3d8]
+00d321c8  bl 0x00b0789c
+00d321cc  adrp x0,0x330a000
+00d321d0  ldr x0,[x0, #0x420]
+00d321d4  bl 0x00b0789c
+00d321d8  adrp x0,0x331d000
+00d321dc  ldr x0,[x0, #0x7f0]
+00d321e0  bl 0x00b0789c
+00d321e4  adrp x0,0x3338000
+00d321e8  ldr x0,[x0, #0xea0]
+00d321ec  bl 0x00b0789c
+00d321f0  adrp x0,0x331e000
+00d321f4  ldr x0,[x0, #0xe78]
+00d321f8  bl 0x00b0789c
+00d321fc  adrp x0,0x3371000
+00d32200  ldr x0,[x0, #0xff8]
+00d32204  bl 0x00b0789c
+00d32208  adrp x0,0x3340000
+00d3220c  ldr x0,[x0, #0x38]
+00d32210  bl 0x00b0789c
+00d32214  adrp x0,0x3333000
+00d32218  ldr x0,[x0, #0xfb8]
+00d3221c  bl 0x00b0789c
+00d32220  adrp x0,0x3356000
+00d32224  ldr x0,[x0, #0xc30]
+00d32228  bl 0x00b0789c
+00d3222c  adrp x0,0x336f000
+00d32230  ldr x0,[x0, #0x710]
+00d32234  bl 0x00b0789c
+00d32238  mov w8,#0x1
+00d3223c  strb w8,[x21, #0xd2a]
+00d32240  ldr x0,[x20]
+00d32244  adrp x20,0x3347000
+00d32248  ldr w8,[x0, #0xe0]
+00d3224c  ldr x20,[x20, #0xc98]
+00d32250  cbnz w8,0x00d32258
+00d32254  bl 0x00b0798c
+00d32258  mov x0,xzr
+00d3225c  bl 0x00d093c4
+00d32260  ldr x0,[x20]
+00d32264  bl 0x00b079a0
+00d32268  cbz x0,0x00d323c0
+00d3226c  adrp x8,0x3340000
+00d32270  ldr x8,[x8, #0x38]
+00d32274  adrp x22,0x331e000
+00d32278  adrp x21,0x330a000
+00d3227c  mov x1,x19
+00d32280  ldr x2,[x8]
+00d32284  ldr x22,[x22, #0xe78]
+00d32288  ldr x21,[x21, #0x420]
+00d3228c  mov x3,xzr
+00d32290  mov x20,x0
+00d32294  bl 0x01909b80
+00d32298  ldr x0,[x22]
+00d3229c  ldr w8,[x0, #0xe0]
+00d322a0  cbnz w8,0x00d322a8
+00d322a4  bl 0x00b0798c
+00d322a8  mov x0,x20
+00d322ac  mov x1,xzr
+00d322b0  bl 0x00d0dcbc
+00d322b4  ldr x0,[x21]
+00d322b8  bl 0x00b079a0
+00d322bc  cbz x0,0x00d323c0
+00d322c0  adrp x8,0x336f000
+00d322c4  ldr x8,[x8, #0x710]
+00d322c8  adrp x21,0x3362000
+00d322cc  mov x1,x19
+00d322d0  mov x3,xzr
+00d322d4  ldr x2,[x8]
+00d322d8  ldr x21,[x21, #0x2d8]
+00d322dc  mov x20,x0
+00d322e0  bl 0x01911f6c
+00d322e4  mov x0,x20
+00d322e8  mov x1,xzr
+00d322ec  bl 0x00d0e824
+00d322f0  ldr x0,[x21]
+00d322f4  bl 0x00b079a0
+00d322f8  cbz x0,0x00d323c0
+00d322fc  adrp x8,0x3371000
+00d32300  ldr x8,[x8, #0xff8]
+00d32304  adrp x21,0x337d000
+00d32308  mov x1,x19
+00d3230c  mov x3,xzr
+00d32310  ldr x2,[x8]
+00d32314  ldr x21,[x21, #0x3d8]
+00d32318  mov x20,x0
+00d3231c  bl 0x019104fc
+00d32320  mov x0,x20
+00d32324  mov x1,xzr
+00d32328  bl 0x00d0e63c
+00d3232c  ldr x0,[x21]
+00d32330  bl 0x00b079a0
+00d32334  cbz x0,0x00d323c0
+00d32338  adrp x8,0x3356000
+00d3233c  ldr x8,[x8, #0xc30]
+00d32340  adrp x22,0x331d000
+00d32344  adrp x21,0x3356000
+00d32348  mov x1,x19
+00d3234c  ldr x2,[x8]
+00d32350  ldr x22,[x22, #0x7f0]
+00d32354  ldr x21,[x21, #0x6b0]
+00d32358  mov x3,xzr
+00d3235c  mov x20,x0
+00d32360  bl 0x01911258
+00d32364  ldr x0,[x22]
+00d32368  ldr w8,[x0, #0xe0]
+00d3236c  cbnz w8,0x00d32374
+00d32370  bl 0x00b0798c
+00d32374  mov x0,x20
+00d32378  mov x1,xzr
+00d3237c  bl 0x00d0701c
+00d32380  ldr x0,[x21]
+00d32384  bl 0x00b079a0
+00d32388  cbz x0,0x00d323c0
+00d3238c  adrp x8,0x3333000
+00d32390  ldr x8,[x8, #0xfb8]
+00d32394  mov x1,x19
+00d32398  mov x3,xzr
+00d3239c  mov x20,x0
+00d323a0  ldr x2,[x8]
+00d323a4  bl 0x0190e4d0
+00d323a8  mov x0,x20
+00d323ac  ldp x19,x30,[sp, #0x20]
+00d323b0  ldp x21,x20,[sp, #0x10]
+00d323b4  mov x1,xzr
+00d323b8  ldr x22,[sp], #0x30
+00d323bc  b 0x00d06e34
+00d323c0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d323c4_MultiplayerManagerExample__HandleActionPlayerAcceptedInvitation.txt
+================================================================================
+Function: MultiplayerManagerExample$$HandleActionPlayerAcceptedInvitation @ 00d323c4
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> GameCenter_RTM$$StartMatchWithInvite @ 00d0ec70
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d323c4  stp x21,x20,[sp, #-0x20]!
+00d323c8  stp x19,x30,[sp, #0x10]
+00d323cc  adrp x20,0x3571000
+00d323d0  adrp x21,0x336b000
+00d323d4  ldrb w8,[x20, #0xd2b]
+00d323d8  ldr x21,[x21, #0x1c8]
+00d323dc  mov x19,x2
+00d323e0  tbnz w8,#0x0,0x00d323f8
+00d323e4  adrp x0,0x336b000
+00d323e8  ldr x0,[x0, #0x1c8]
+00d323ec  bl 0x00b0789c
+00d323f0  mov w8,#0x1
+00d323f4  strb w8,[x20, #0xd2b]
+00d323f8  ldr x0,[x21]
+00d323fc  bl 0x01e09dd4
+00d32400  cbz x0,0x00d3241c
+00d32404  mov x1,x19
+00d32408  ldp x19,x30,[sp, #0x10]
+00d3240c  mov w2,#0x1
+00d32410  mov x3,xzr
+00d32414  ldp x21,x20,[sp], #0x20
+00d32418  b 0x00d0ec70
+00d3241c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d32420_MultiplayerManagerExample__HandleActionPlayerRequestedMatchWithRecipients.txt
+================================================================================
+Function: MultiplayerManagerExample$$HandleActionPlayerRequestedMatchWithRecipients @ 00d32420
+
+--- Calls OUT ---
+  -> ISN_Logger$$Log @ 00d198ec
+  -> GameCenter_RTM$$FindMatchWithNativeUI @ 00d0ec64
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d32420  str x22,[sp, #-0x30]!
+00d32424  stp x21,x20,[sp, #0x10]
+00d32428  stp x19,x30,[sp, #0x20]
+00d3242c  adrp x21,0x3571000
+00d32430  adrp x22,0x3382000
+00d32434  ldrb w8,[x21, #0xd2c]
+00d32438  ldr x22,[x22, #0x828]
+00d3243c  mov x19,x2
+00d32440  mov w20,w1
+00d32444  tbnz w8,#0x0,0x00d32474
+00d32448  adrp x0,0x336b000
+00d3244c  ldr x0,[x0, #0x1c8]
+00d32450  bl 0x00b0789c
+00d32454  adrp x0,0x3380000
+00d32458  ldr x0,[x0, #0xc08]
+00d3245c  bl 0x00b0789c
+00d32460  adrp x0,0x3382000
+00d32464  ldr x0,[x0, #0x828]
+00d32468  bl 0x00b0789c
+00d3246c  mov w8,#0x1
+00d32470  strb w8,[x21, #0xd2c]
+00d32474  ldr x0,[x22]
+00d32478  mov w1,#0x3
+00d3247c  bl 0x00d198ec
+00d32480  cmp w20,#0x1
+00d32484  b.ne 0x00d324d0
+00d32488  adrp x8,0x3380000
+00d3248c  adrp x9,0x336b000
+00d32490  ldr x8,[x8, #0xc08]
+00d32494  ldr x9,[x9, #0x1c8]
+00d32498  ldr x20,[x8]
+00d3249c  ldr x0,[x9]
+00d324a0  bl 0x01e09dd4
+00d324a4  cbz x19,0x00d324e0
+00d324a8  cbz x0,0x00d324e0
+00d324ac  ldr w1,[x19, #0x18]
+00d324b0  mov x3,x20
+00d324b4  mov x4,x19
+00d324b8  ldp x19,x30,[sp, #0x20]
+00d324bc  ldp x21,x20,[sp, #0x10]
+00d324c0  mov w2,w1
+00d324c4  mov x5,xzr
+00d324c8  ldr x22,[sp], #0x30
+00d324cc  b 0x00d0ec64
+00d324d0  ldp x19,x30,[sp, #0x20]
+00d324d4  ldp x21,x20,[sp, #0x10]
+00d324d8  ldr x22,[sp], #0x30
+00d324dc  ret
+00d324e0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d324e4_MultiplayerManagerExample__OnGUI.txt
+================================================================================
+Function: MultiplayerManagerExample$$OnGUI @ 00d324e4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d324e4  ret
+
+
+================================================================================
+### FILE: 00d324e8_MultiplayerManagerExample__HandleActionPlayerStateChanged.txt
+================================================================================
+Function: MultiplayerManagerExample$$HandleActionPlayerStateChanged @ 00d324e8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> ISN_Logger$$Log @ 00d198ec
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fdf4c4
+  -> System.Enum$$ToString @ 02186100
+  -> System.Int32$$ToString @ 0214dc44
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+00d324e8  sub sp,sp,#0x50
+00d324ec  stp x23,x22,[sp, #0x20]
+00d324f0  stp x21,x20,[sp, #0x30]
+00d324f4  stp x19,x30,[sp, #0x40]
+00d324f8  adrp x23,0x3571000
+00d324fc  adrp x20,0x3308000
+00d32500  ldrb w8,[x23, #0xd2d]
+00d32504  ldr x20,[x20, #0x9a8]
+00d32508  mov x19,x3
+00d3250c  mov w21,w2
+00d32510  mov x22,x1
+00d32514  tbnz w8,#0x0,0x00d3255c
+00d32518  adrp x0,0x3341000
+00d3251c  ldr x0,[x0, #0x690]
+00d32520  bl 0x00b0789c
+00d32524  adrp x0,0x3308000
+00d32528  ldr x0,[x0, #0x9a8]
+00d3252c  bl 0x00b0789c
+00d32530  adrp x0,0x335b000
+00d32534  ldr x0,[x0, #0xcc0]
+00d32538  bl 0x00b0789c
+00d3253c  adrp x0,0x3314000
+00d32540  ldr x0,[x0, #0x650]
+00d32544  bl 0x00b0789c
+00d32548  adrp x0,0x334b000
+00d3254c  ldr x0,[x0, #0xa10]
+00d32550  bl 0x00b0789c
+00d32554  mov w8,#0x1
+00d32558  strb w8,[x23, #0xd2d]
+00d3255c  ldr x0,[x20]
+00d32560  mov w1,#0x6
+00d32564  str wzr,[sp, #0x1c]
+00d32568  bl 0x00b078f8
+00d3256c  cbz x0,0x00d32780
+00d32570  adrp x23,0x3314000
+00d32574  ldr x23,[x23, #0x650]
+00d32578  mov x20,x0
+00d3257c  ldr x1,[x23]
+00d32580  cbz x1,0x00d325a8
+00d32584  ldr x8,[x20]
+00d32588  mov x0,x1
+00d3258c  ldr x8,[x8, #0x40]
+00d32590  mov x1,x8
+00d32594  bl 0x00b07990
+00d32598  cbz x0,0x00d32774
+00d3259c  ldr x8,[x23]
+00d325a0  mov x1,x8
+00d325a4  b 0x00d325ac
+00d325a8  mov x8,xzr
+00d325ac  ldr w9,[x20, #0x18]
+00d325b0  cbz w9,0x00d32770
+00d325b4  mov x0,x20
+00d325b8  str x8,[x0, #0x20]!
+00d325bc  bl 0x00b07850
+00d325c0  cbz x22,0x00d32780
+00d325c4  ldr x22,[x22, #0x20]
+00d325c8  cbz x22,0x00d325e0
+00d325cc  ldr x8,[x20]
+00d325d0  mov x0,x22
+00d325d4  ldr x1,[x8, #0x40]
+00d325d8  bl 0x00b07990
+00d325dc  cbz x0,0x00d32774
+00d325e0  ldr w8,[x20, #0x18]
+00d325e4  cmp w8,#0x1
+00d325e8  b.ls 0x00d32770
+00d325ec  adrp x23,0x335b000
+00d325f0  ldr x23,[x23, #0xcc0]
+00d325f4  mov x0,x20
+00d325f8  str x22,[x0, #0x28]!
+00d325fc  mov x1,x22
+00d32600  bl 0x00b07850
+00d32604  ldr x1,[x23]
+00d32608  cbz x1,0x00d32630
+00d3260c  ldr x8,[x20]
+00d32610  mov x0,x1
+00d32614  ldr x8,[x8, #0x40]
+00d32618  mov x1,x8
+00d3261c  bl 0x00b07990
+00d32620  cbz x0,0x00d32774
+00d32624  ldr x8,[x23]
+00d32628  mov x1,x8
+00d3262c  b 0x00d32634
+00d32630  mov x8,xzr
+00d32634  ldr w9,[x20, #0x18]
+00d32638  cmp w9,#0x2
+00d3263c  b.ls 0x00d32770
+00d32640  adrp x22,0x3341000
+00d32644  ldr x22,[x22, #0x690]
+00d32648  mov x0,x20
+00d3264c  str x8,[x0, #0x30]!
+00d32650  bl 0x00b07850
+00d32654  ldr x8,[x22]
+00d32658  mov x9,#-0x1
+00d3265c  mov x0,sp
+00d32660  mov x1,xzr
+00d32664  stp x8,x9,[sp]
+00d32668  str w21,[sp, #0x10]
+00d3266c  bl 0x02186100
+00d32670  mov x21,x0
+00d32674  cbz x0,0x00d3268c
+00d32678  ldr x8,[x20]
+00d3267c  mov x0,x21
+00d32680  ldr x1,[x8, #0x40]
+00d32684  bl 0x00b07990
+00d32688  cbz x0,0x00d32774
+00d3268c  ldr w8,[x20, #0x18]
+00d32690  cmp w8,#0x3
+00d32694  b.ls 0x00d32770
+00d32698  adrp x22,0x334b000
+00d3269c  ldr x22,[x22, #0xa10]
+00d326a0  mov x0,x20
+00d326a4  str x21,[x0, #0x38]!
+00d326a8  mov x1,x21
+00d326ac  bl 0x00b07850
+00d326b0  ldr x1,[x22]
+00d326b4  cbz x1,0x00d326dc
+00d326b8  ldr x8,[x20]
+00d326bc  mov x0,x1
+00d326c0  ldr x8,[x8, #0x40]
+00d326c4  mov x1,x8
+00d326c8  bl 0x00b07990
+00d326cc  cbz x0,0x00d32774
+00d326d0  ldr x8,[x22]
+00d326d4  mov x1,x8
+00d326d8  b 0x00d326e0
+00d326dc  mov x8,xzr
+00d326e0  ldr w9,[x20, #0x18]
+00d326e4  cmp w9,#0x4
+00d326e8  b.ls 0x00d32770
+00d326ec  mov x0,x20
+00d326f0  str x8,[x0, #0x40]!
+00d326f4  bl 0x00b07850
+00d326f8  cbz x19,0x00d32780
+00d326fc  ldr w8,[x19, #0x10]
+00d32700  add x0,sp,#0x1c
+00d32704  mov x1,xzr
+00d32708  str w8,[sp, #0x1c]
+00d3270c  bl 0x0214dc44
+00d32710  mov x19,x0
+00d32714  cbz x0,0x00d3272c
+00d32718  ldr x8,[x20]
+00d3271c  mov x0,x19
+00d32720  ldr x1,[x8, #0x40]
+00d32724  bl 0x00b07990
+00d32728  cbz x0,0x00d32774
+00d3272c  ldr w8,[x20, #0x18]
+00d32730  cmp w8,#0x5
+00d32734  b.ls 0x00d32770
+00d32738  mov x0,x20
+00d3273c  str x19,[x0, #0x48]!
+00d32740  mov x1,x19
+00d32744  bl 0x00b07850
+00d32748  mov x0,x20
+00d3274c  mov x1,xzr
+00d32750  bl 0x01fdf4c4
+00d32754  mov w1,#0x3
+00d32758  bl 0x00d198ec
+00d3275c  ldp x19,x30,[sp, #0x40]
+00d32760  ldp x21,x20,[sp, #0x30]
+00d32764  ldp x23,x22,[sp, #0x20]
+00d32768  add sp,sp,#0x50
+00d3276c  ret
+00d32770  bl 0x00b079b8
+00d32774  bl 0x00b079d4
+00d32778  mov x1,xzr
+00d3277c  bl 0x00b07978
+00d32780  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d32784_MultiplayerManagerExample__HandleActionMatchStarted.txt
+================================================================================
+Function: MultiplayerManagerExample$$HandleActionMatchStarted @ 00d32784
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Result$$get_IsSucceeded @ 00c88a30
+
+--- Calls IN ---
+
+--- Listing ---
+00d32784  str x20,[sp, #-0x20]!
+00d32788  stp x19,x30,[sp, #0x10]
+00d3278c  adrp x20,0x3571000
+00d32790  ldrb w8,[x20, #0xd2e]
+00d32794  mov x19,x1
+00d32798  tbnz w8,#0x0,0x00d327d4
+00d3279c  adrp x0,0x335b000
+00d327a0  ldr x0,[x0, #0x818]
+00d327a4  bl 0x00b0789c
+00d327a8  adrp x0,0x3379000
+00d327ac  ldr x0,[x0, #0xb40]
+00d327b0  bl 0x00b0789c
+00d327b4  adrp x0,0x331d000
+00d327b8  ldr x0,[x0, #0x648]
+00d327bc  bl 0x00b0789c
+00d327c0  adrp x0,0x3335000
+00d327c4  ldr x0,[x0, #0xd28]
+00d327c8  bl 0x00b0789c
+00d327cc  mov w8,#0x1
+00d327d0  strb w8,[x20, #0xd2e]
+00d327d4  str wzr,[sp, #0xc]
+00d327d8  cbz x19,0x00d32864
+00d327dc  mov x0,x19
+00d327e0  mov x1,xzr
+00d327e4  bl 0x00c88a30
+00d327e8  tbz w0,#0x0,0x00d32830
+00d327ec  ldr x8,[x19, #0x18]
+00d327f0  cbz x8,0x00d32864
+00d327f4  ldr x8,[x8, #0x18]
+00d327f8  cbz x8,0x00d32864
+00d327fc  ldr w8,[x8, #0x18]
+00d32800  adrp x19,0x3335000
+00d32804  ldr x19,[x19, #0xd28]
+00d32808  add x0,sp,#0xc
+00d3280c  mov x1,xzr
+00d32810  str w8,[sp, #0xc]
+00d32814  bl 0x0214dc44
+00d32818  ldr x8,[x19]
+00d3281c  mov x1,x0
+00d32820  mov x2,xzr
+00d32824  mov x0,x8
+00d32828  bl 0x01fd2850
+00d3282c  b 0x00d32838
+00d32830  ldr x8,[x19, #0x10]
+00d32834  cbz x8,0x00d32864
+00d32838  adrp x19,0x3571000
+00d3283c  ldrb w8,[x19, #0xc7b]
+00d32840  tbnz w8,#0x0,0x00d32858
+00d32844  adrp x0,0x3366000
+00d32848  ldr x0,[x0, #0xac0]
+00d3284c  bl 0x00b0789c
+00d32850  mov w8,#0x1
+00d32854  strb w8,[x19, #0xc7b]
+00d32858  ldp x19,x30,[sp, #0x10]
+00d3285c  ldr x20,[sp], #0x20
+00d32860  ret
+00d32864  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d32868_MultiplayerManagerExample__HandleActionDataReceived.txt
+================================================================================
+Function: MultiplayerManagerExample$$HandleActionDataReceived @ 00d32868
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d32868  ret
+
+
+================================================================================
+### FILE: 00d3286c_MultiplayerManagerExample__.ctor.txt
+================================================================================
+Function: MultiplayerManagerExample$$.ctor @ 00d3286c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d3286c  mov x1,xzr
+00d32870  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d9a18c_MusicLayer__get_Volume.txt
+================================================================================
+Function: MusicLayer$$get_Volume @ 00d9a18c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a18c  ldr s0,[x0, #0x18]
+00d9a190  ret
+
+
+================================================================================
+### FILE: 00d9a194_MusicLayer__get_NumberOfPlays.txt
+================================================================================
+Function: MusicLayer$$get_NumberOfPlays @ 00d9a194
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a194  ldr w0,[x0, #0x2c]
+00d9a198  ret
+
+
+================================================================================
+### FILE: 00d9a19c_MusicLayer__Preload.txt
+================================================================================
+Function: MusicLayer$$Preload @ 00d9a19c
+
+--- Calls OUT ---
+  -> UnityEngine.AudioSource$$set_volume @ 024bb940
+  -> UnityEngine.AudioSource$$Play @ 024bbbe0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.AudioSource$$set_loop @ 024bc0a8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+  -> UnityEngine.AudioSource$$set_clip @ 024bbb58
+
+--- Calls IN ---
+  <- Safari2SoundManger$$UpdateMusicLayers @ 00d9c13c
+  <- Safari2SoundManger$$PlaySting @ 00d9cecc
+  <- Safari2SoundManger$$PlayMusic @ 00d9bc78
+
+--- Listing ---
+00d9a19c  str d8,[sp, #-0x40]!
+00d9a1a0  stp x23,x22,[sp, #0x10]
+00d9a1a4  stp x21,x20,[sp, #0x20]
+00d9a1a8  stp x19,x30,[sp, #0x30]
+00d9a1ac  adrp x23,0x3571000
+00d9a1b0  adrp x22,0x337b000
+00d9a1b4  ldrb w8,[x23, #0xff7]
+00d9a1b8  ldr x22,[x22, #0xac8]
+00d9a1bc  mov v8.16B,v0.16B
+00d9a1c0  mov w20,w2
+00d9a1c4  mov x21,x1
+00d9a1c8  mov x19,x0
+00d9a1cc  tbnz w8,#0x0,0x00d9a1e4
+00d9a1d0  adrp x0,0x337b000
+00d9a1d4  ldr x0,[x0, #0xac8]
+00d9a1d8  bl 0x00b0789c
+00d9a1dc  mov w8,#0x1
+00d9a1e0  strb w8,[x23, #0xff7]
+00d9a1e4  str s8,[x19, #0x18]
+00d9a1e8  str wzr,[x19, #0x1c]
+00d9a1ec  stp wzr,wzr,[x19, #0x2c]
+00d9a1f0  ldr x1,[x22]
+00d9a1f4  mov x0,x19
+00d9a1f8  bl 0x0176cbf8
+00d9a1fc  cbz x0,0x00d9a278
+00d9a200  fmov s0,wzr
+00d9a204  mov x1,xzr
+00d9a208  bl 0x024bb940
+00d9a20c  ldr x1,[x22]
+00d9a210  mov x0,x19
+00d9a214  bl 0x0176cbf8
+00d9a218  cbz x0,0x00d9a278
+00d9a21c  mov x1,x21
+00d9a220  mov x2,xzr
+00d9a224  bl 0x024bbb58
+00d9a228  ldr x1,[x22]
+00d9a22c  mov x0,x19
+00d9a230  bl 0x0176cbf8
+00d9a234  cbz x0,0x00d9a278
+00d9a238  and w1,w20,#0x1
+00d9a23c  mov x2,xzr
+00d9a240  bl 0x024bc0a8
+00d9a244  ldr x1,[x22]
+00d9a248  mov x0,x19
+00d9a24c  bl 0x0176cbf8
+00d9a250  cbz x0,0x00d9a278
+00d9a254  mov x1,xzr
+00d9a258  bl 0x024bbbe0
+00d9a25c  mov w8,#0x1
+00d9a260  str w8,[x19, #0x28]
+00d9a264  ldp x19,x30,[sp, #0x30]
+00d9a268  ldp x21,x20,[sp, #0x20]
+00d9a26c  ldp x23,x22,[sp, #0x10]
+00d9a270  ldr d8,[sp], #0x40
+00d9a274  ret
+00d9a278  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a27c_MusicLayer__IsWaitingToPlay.txt
+================================================================================
+Function: MusicLayer$$IsWaitingToPlay @ 00d9a27c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.AudioSource$$get_isPlaying @ 024bbd64
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- Safari2SoundManger$$UpdateMusicLayers @ 00d9c13c
+  <- Safari2SoundManger$$SwapMusicLayers @ 00d9c0c4
+  <- Safari2SoundManger$$Update @ 00d9cc70
+  <- Safari2SoundManger$$IsPlayingSting @ 00d9ce34
+
+--- Listing ---
+00d9a27c  stp x21,x20,[sp, #-0x20]!
+00d9a280  stp x19,x30,[sp, #0x10]
+00d9a284  adrp x20,0x3571000
+00d9a288  adrp x21,0x337b000
+00d9a28c  ldrb w8,[x20, #0xff8]
+00d9a290  ldr x21,[x21, #0xac8]
+00d9a294  mov x19,x0
+00d9a298  tbnz w8,#0x0,0x00d9a2b0
+00d9a29c  adrp x0,0x337b000
+00d9a2a0  ldr x0,[x0, #0xac8]
+00d9a2a4  bl 0x00b0789c
+00d9a2a8  mov w8,#0x1
+00d9a2ac  strb w8,[x20, #0xff8]
+00d9a2b0  ldr x1,[x21]
+00d9a2b4  mov x0,x19
+00d9a2b8  bl 0x0176cbf8
+00d9a2bc  cbz x0,0x00d9a2ec
+00d9a2c0  mov x1,xzr
+00d9a2c4  bl 0x024bbd64
+00d9a2c8  tbz w0,#0x0,0x00d9a2dc
+00d9a2cc  ldr w8,[x19, #0x28]
+00d9a2d0  cmp w8,#0x1
+00d9a2d4  cset w0,eq
+00d9a2d8  b 0x00d9a2e0
+00d9a2dc  mov w0,wzr
+00d9a2e0  ldp x19,x30,[sp, #0x10]
+00d9a2e4  ldp x21,x20,[sp], #0x20
+00d9a2e8  ret
+00d9a2ec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a2f0_MusicLayer__IsFadingIn.txt
+================================================================================
+Function: MusicLayer$$IsFadingIn @ 00d9a2f0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a2f0  ldr w8,[x0, #0x28]
+00d9a2f4  cmp w8,#0x2
+00d9a2f8  cset w0,eq
+00d9a2fc  ret
+
+
+================================================================================
+### FILE: 00d9a300_MusicLayer__IsFadingInOrPlaying.txt
+================================================================================
+Function: MusicLayer$$IsFadingInOrPlaying @ 00d9a300
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a300  ldr w8,[x0, #0x28]
+00d9a304  orr w8,w8,#0x1
+00d9a308  cmp w8,#0x3
+00d9a30c  cset w0,eq
+00d9a310  ret
+
+
+================================================================================
+### FILE: 00d9a314_MusicLayer__IsStopped.txt
+================================================================================
+Function: MusicLayer$$IsStopped @ 00d9a314
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a314  ldr w8,[x0, #0x28]
+00d9a318  cmp w8,#0x5
+00d9a31c  b.hi 0x00d9a33c
+00d9a320  mov w9,#0x1
+00d9a324  lsl w9,w9,w8
+00d9a328  mov w10,#0x31
+00d9a32c  tst w9,w10
+00d9a330  b.eq 0x00d9a33c
+00d9a334  mov w0,#0x1
+00d9a338  ret
+00d9a33c  orr w8,w8,#0x1
+00d9a340  cmp w8,#0x7
+00d9a344  cset w0,eq
+00d9a348  ret
+
+
+================================================================================
+### FILE: 00d9a34c_MusicLayer__GetClip.txt
+================================================================================
+Function: MusicLayer$$GetClip @ 00d9a34c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.AudioSource$$get_clip @ 024bbb1c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- Safari2SoundManger$$StopSting @ 00d9cf08
+  <- Safari2SoundManger$$UpdateMusicLayers @ 00d9c13c
+  <- Safari2SoundManger$$PlayMusic @ 00d9bc78
+
+--- Listing ---
+00d9a34c  stp x21,x20,[sp, #-0x20]!
+00d9a350  stp x19,x30,[sp, #0x10]
+00d9a354  adrp x20,0x3571000
+00d9a358  adrp x21,0x337b000
+00d9a35c  ldrb w8,[x20, #0xff9]
+00d9a360  ldr x21,[x21, #0xac8]
+00d9a364  mov x19,x0
+00d9a368  tbnz w8,#0x0,0x00d9a380
+00d9a36c  adrp x0,0x337b000
+00d9a370  ldr x0,[x0, #0xac8]
+00d9a374  bl 0x00b0789c
+00d9a378  mov w8,#0x1
+00d9a37c  strb w8,[x20, #0xff9]
+00d9a380  ldr x1,[x21]
+00d9a384  mov x0,x19
+00d9a388  bl 0x0176cbf8
+00d9a38c  cbz x0,0x00d9a3a0
+00d9a390  ldp x19,x30,[sp, #0x10]
+00d9a394  mov x1,xzr
+00d9a398  ldp x21,x20,[sp], #0x20
+00d9a39c  b 0x024bbb1c
+00d9a3a0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a3a4_MusicLayer__SetVolume.txt
+================================================================================
+Function: MusicLayer$$SetVolume @ 00d9a3a4
+
+--- Calls OUT ---
+  -> UnityEngine.AudioSource$$set_volume @ 024bb940
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- Safari2SoundManger$$SetMusicVolumeScale @ 00d9bb48
+  <- Safari2SoundManger$$PlayMusic @ 00d9bc78
+
+--- Listing ---
+00d9a3a4  str d8,[sp, #-0x20]!
+00d9a3a8  str x20,[sp, #0x8]
+00d9a3ac  stp x19,x30,[sp, #0x10]
+00d9a3b0  adrp x20,0x3571000
+00d9a3b4  ldrb w8,[x20, #0xffa]
+00d9a3b8  mov v8.16B,v0.16B
+00d9a3bc  mov x19,x0
+00d9a3c0  tbnz w8,#0x0,0x00d9a3d8
+00d9a3c4  adrp x0,0x337b000
+00d9a3c8  ldr x0,[x0, #0xac8]
+00d9a3cc  bl 0x00b0789c
+00d9a3d0  mov w8,#0x1
+00d9a3d4  strb w8,[x20, #0xffa]
+00d9a3d8  ldr w8,[x19, #0x28]
+00d9a3dc  str s8,[x19, #0x18]
+00d9a3e0  orr w8,w8,#0x1
+00d9a3e4  cmp w8,#0x3
+00d9a3e8  b.ne 0x00d9a41c
+00d9a3ec  adrp x8,0x337b000
+00d9a3f0  ldr x8,[x8, #0xac8]
+00d9a3f4  mov x0,x19
+00d9a3f8  ldr x1,[x8]
+00d9a3fc  bl 0x0176cbf8
+00d9a400  cbz x0,0x00d9a42c
+00d9a404  ldr s0,[x19, #0x18]
+00d9a408  ldp x19,x30,[sp, #0x10]
+00d9a40c  ldr x20,[sp, #0x8]
+00d9a410  mov x1,xzr
+00d9a414  ldr d8,[sp], #0x20
+00d9a418  b 0x024bb940
+00d9a41c  ldp x19,x30,[sp, #0x10]
+00d9a420  ldr x20,[sp, #0x8]
+00d9a424  ldr d8,[sp], #0x20
+00d9a428  ret
+00d9a42c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a430_MusicLayer__Play.txt
+================================================================================
+Function: MusicLayer$$Play @ 00d9a430
+
+--- Calls OUT ---
+  -> UnityEngine.AudioSource$$set_timeSamples @ 024bbad8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.AudioSource$$get_clip @ 024bbb1c
+  -> UnityEngine.Time$$get_realtimeSinceStartup @ 024dc3a8
+  -> UnityEngine.AudioClip$$get_samples @ 024bb4cc
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- Safari2SoundManger$$UpdateMusicLayers @ 00d9c13c
+  <- Safari2SoundManger$$Update @ 00d9cc70
+
+--- Listing ---
+00d9a430  str d8,[sp, #-0x30]!
+00d9a434  str x22,[sp, #0x8]
+00d9a438  stp x21,x20,[sp, #0x10]
+00d9a43c  stp x19,x30,[sp, #0x20]
+00d9a440  adrp x21,0x3571000
+00d9a444  adrp x22,0x337b000
+00d9a448  ldrb w8,[x21, #0xffb]
+00d9a44c  ldr x22,[x22, #0xac8]
+00d9a450  mov w20,w1
+00d9a454  mov v8.16B,v0.16B
+00d9a458  mov x19,x0
+00d9a45c  tbnz w8,#0x0,0x00d9a474
+00d9a460  adrp x0,0x337b000
+00d9a464  ldr x0,[x0, #0xac8]
+00d9a468  bl 0x00b0789c
+00d9a46c  mov w8,#0x1
+00d9a470  strb w8,[x21, #0xffb]
+00d9a474  ldr x1,[x22]
+00d9a478  mov x0,x19
+00d9a47c  bl 0x0176cbf8
+00d9a480  ldr x1,[x22]
+00d9a484  mov x21,x0
+00d9a488  mov x0,x19
+00d9a48c  bl 0x0176cbf8
+00d9a490  cbz x0,0x00d9a528
+00d9a494  mov x1,xzr
+00d9a498  bl 0x024bbb1c
+00d9a49c  cbz x0,0x00d9a528
+00d9a4a0  mov x1,xzr
+00d9a4a4  bl 0x024bb4cc
+00d9a4a8  cbz x21,0x00d9a528
+00d9a4ac  sdiv w8,w20,w0
+00d9a4b0  msub w1,w8,w0,w20
+00d9a4b4  mov x0,x21
+00d9a4b8  mov x2,xzr
+00d9a4bc  bl 0x024bbad8
+00d9a4c0  ldr x1,[x22]
+00d9a4c4  mov x0,x19
+00d9a4c8  bl 0x0176cbf8
+00d9a4cc  cbz x0,0x00d9a528
+00d9a4d0  mov x1,xzr
+00d9a4d4  bl 0x024bbb1c
+00d9a4d8  cbz x0,0x00d9a528
+00d9a4dc  mov x1,xzr
+00d9a4e0  bl 0x024bb4cc
+00d9a4e4  cbz x19,0x00d9a528
+00d9a4e8  cmp w0,#0x0
+00d9a4ec  cinc w8,w0,lt
+00d9a4f0  cmp w20,w8, ASR #0x1
+00d9a4f4  cset w8,lt
+00d9a4f8  mov x0,xzr
+00d9a4fc  stp w8,w20,[x19, #0x2c]
+00d9a500  str s8,[x19, #0x20]
+00d9a504  bl 0x024dc3a8
+00d9a508  mov w8,#0x2
+00d9a50c  str s0,[x19, #0x24]
+00d9a510  str w8,[x19, #0x28]
+00d9a514  ldp x19,x30,[sp, #0x20]
+00d9a518  ldp x21,x20,[sp, #0x10]
+00d9a51c  ldr x22,[sp, #0x8]
+00d9a520  ldr d8,[sp], #0x30
+00d9a524  ret
+00d9a528  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a52c_MusicLayer__Play.txt
+================================================================================
+Function: MusicLayer$$Play @ 00d9a52c
+
+--- Calls OUT ---
+  -> UnityEngine.Time$$get_realtimeSinceStartup @ 024dc3a8
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a52c  stp x19,x30,[sp, #-0x10]!
+00d9a530  mov x19,x0
+00d9a534  str s0,[x0, #0x20]
+00d9a538  mov x0,xzr
+00d9a53c  bl 0x024dc3a8
+00d9a540  mov w8,#0x2
+00d9a544  str s0,[x19, #0x24]
+00d9a548  str w8,[x19, #0x28]
+00d9a54c  ldp x19,x30,[sp], #0x10
+00d9a550  ret
+
+
+================================================================================
+### FILE: 00d9a554_MusicLayer__Stop.txt
+================================================================================
+Function: MusicLayer$$Stop @ 00d9a554
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.AudioSource$$get_volume @ 024bb904
+  -> UnityEngine.Time$$get_realtimeSinceStartup @ 024dc3a8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- Safari2SoundManger$$StopSting @ 00d9cf08
+  <- Safari2SoundManger$$UpdateMusicLayers @ 00d9c13c
+  <- Safari2SoundManger$$SwapMusicLayers @ 00d9c0c4
+  <- Safari2SoundManger$$StopMusic @ 00d9bbc0
+  <- Safari2SoundManger$$Update @ 00d9cc70
+
+--- Listing ---
+00d9a554  str d8,[sp, #-0x30]!
+00d9a558  stp x21,x20,[sp, #0x10]
+00d9a55c  stp x19,x30,[sp, #0x20]
+00d9a560  adrp x20,0x3571000
+00d9a564  adrp x21,0x337b000
+00d9a568  ldrb w8,[x20, #0xffc]
+00d9a56c  ldr x21,[x21, #0xac8]
+00d9a570  mov v8.16B,v0.16B
+00d9a574  mov x19,x0
+00d9a578  tbnz w8,#0x0,0x00d9a590
+00d9a57c  adrp x0,0x337b000
+00d9a580  ldr x0,[x0, #0xac8]
+00d9a584  bl 0x00b0789c
+00d9a588  mov w8,#0x1
+00d9a58c  strb w8,[x20, #0xffc]
+00d9a590  ldr x1,[x21]
+00d9a594  mov x0,x19
+00d9a598  bl 0x0176cbf8
+00d9a59c  cbz x0,0x00d9a5d0
+00d9a5a0  mov x1,xzr
+00d9a5a4  bl 0x024bb904
+00d9a5a8  mov x0,xzr
+00d9a5ac  stp s0,s8,[x19, #0x1c]
+00d9a5b0  bl 0x024dc3a8
+00d9a5b4  mov w8,#0x4
+00d9a5b8  str s0,[x19, #0x24]
+00d9a5bc  str w8,[x19, #0x28]
+00d9a5c0  ldp x19,x30,[sp, #0x20]
+00d9a5c4  ldp x21,x20,[sp, #0x10]
+00d9a5c8  ldr d8,[sp], #0x30
+00d9a5cc  ret
+00d9a5d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a5d4_MusicLayer__Pause.txt
+================================================================================
+Function: MusicLayer$$Pause @ 00d9a5d4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.AudioSource$$get_volume @ 024bb904
+  -> UnityEngine.Time$$get_realtimeSinceStartup @ 024dc3a8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- Safari2SoundManger$$Update @ 00d9cc70
+
+--- Listing ---
+00d9a5d4  str d8,[sp, #-0x20]!
+00d9a5d8  str x20,[sp, #0x8]
+00d9a5dc  stp x19,x30,[sp, #0x10]
+00d9a5e0  adrp x20,0x3571000
+00d9a5e4  ldrb w8,[x20, #0xffd]
+00d9a5e8  mov v8.16B,v0.16B
+00d9a5ec  mov x19,x0
+00d9a5f0  tbnz w8,#0x0,0x00d9a608
+00d9a5f4  adrp x0,0x337b000
+00d9a5f8  ldr x0,[x0, #0xac8]
+00d9a5fc  bl 0x00b0789c
+00d9a600  mov w8,#0x1
+00d9a604  strb w8,[x20, #0xffd]
+00d9a608  ldr w8,[x19, #0x28]
+00d9a60c  orr w8,w8,#0x1
+00d9a610  cmp w8,#0x3
+00d9a614  b.ne 0x00d9a650
+00d9a618  adrp x8,0x337b000
+00d9a61c  ldr x8,[x8, #0xac8]
+00d9a620  mov x0,x19
+00d9a624  ldr x1,[x8]
+00d9a628  bl 0x0176cbf8
+00d9a62c  cbz x0,0x00d9a660
+00d9a630  mov x1,xzr
+00d9a634  bl 0x024bb904
+00d9a638  mov x0,xzr
+00d9a63c  stp s0,s8,[x19, #0x1c]
+00d9a640  bl 0x024dc3a8
+00d9a644  mov w8,#0x5
+00d9a648  str s0,[x19, #0x24]
+00d9a64c  str w8,[x19, #0x28]
+00d9a650  ldp x19,x30,[sp, #0x10]
+00d9a654  ldr x20,[sp, #0x8]
+00d9a658  ldr d8,[sp], #0x20
+00d9a65c  ret
+00d9a660  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a664_MusicLayer__Duck.txt
+================================================================================
+Function: MusicLayer$$Duck @ 00d9a664
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.AudioSource$$get_volume @ 024bb904
+  -> UnityEngine.Time$$get_realtimeSinceStartup @ 024dc3a8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a664  stp d9,d8,[sp, #-0x30]!
+00d9a668  str x20,[sp, #0x10]
+00d9a66c  stp x19,x30,[sp, #0x20]
+00d9a670  adrp x20,0x3571000
+00d9a674  ldrb w8,[x20, #0xffe]
+00d9a678  mov v9.16B,v1.16B
+00d9a67c  mov v8.16B,v0.16B
+00d9a680  mov x19,x0
+00d9a684  tbnz w8,#0x0,0x00d9a69c
+00d9a688  adrp x0,0x337b000
+00d9a68c  ldr x0,[x0, #0xac8]
+00d9a690  bl 0x00b0789c
+00d9a694  mov w8,#0x1
+00d9a698  strb w8,[x20, #0xffe]
+00d9a69c  ldr w8,[x19, #0x28]
+00d9a6a0  orr w8,w8,#0x1
+00d9a6a4  cmp w8,#0x3
+00d9a6a8  b.ne 0x00d9a6e8
+00d9a6ac  adrp x8,0x337b000
+00d9a6b0  ldr x8,[x8, #0xac8]
+00d9a6b4  str s9,[x19, #0x18]
+00d9a6b8  mov x0,x19
+00d9a6bc  ldr x1,[x8]
+00d9a6c0  bl 0x0176cbf8
+00d9a6c4  cbz x0,0x00d9a6f8
+00d9a6c8  mov x1,xzr
+00d9a6cc  bl 0x024bb904
+00d9a6d0  mov x0,xzr
+00d9a6d4  stp s0,s8,[x19, #0x1c]
+00d9a6d8  bl 0x024dc3a8
+00d9a6dc  mov w8,#0x6
+00d9a6e0  str s0,[x19, #0x24]
+00d9a6e4  str w8,[x19, #0x28]
+00d9a6e8  ldp x19,x30,[sp, #0x20]
+00d9a6ec  ldr x20,[sp, #0x10]
+00d9a6f0  ldp d9,d8,[sp], #0x30
+00d9a6f4  ret
+00d9a6f8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a6fc_MusicLayer__Mute.txt
+================================================================================
+Function: MusicLayer$$Mute @ 00d9a6fc
+
+--- Calls OUT ---
+  -> UnityEngine.AudioSource$$set_volume @ 024bb940
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- Safari2SoundManger$$Update @ 00d9cc70
+
+--- Listing ---
+00d9a6fc  stp x21,x20,[sp, #-0x20]!
+00d9a700  stp x19,x30,[sp, #0x10]
+00d9a704  adrp x21,0x3571000
+00d9a708  adrp x20,0x337b000
+00d9a70c  ldrb w8,[x21, #0xfff]
+00d9a710  ldr x20,[x20, #0xac8]
+00d9a714  mov x19,x0
+00d9a718  tbnz w8,#0x0,0x00d9a730
+00d9a71c  adrp x0,0x337b000
+00d9a720  ldr x0,[x0, #0xac8]
+00d9a724  bl 0x00b0789c
+00d9a728  mov w8,#0x1
+00d9a72c  strb w8,[x21, #0xfff]
+00d9a730  mov w8,#0x7
+00d9a734  str w8,[x19, #0x28]
+00d9a738  ldr x1,[x20]
+00d9a73c  mov x0,x19
+00d9a740  bl 0x0176cbf8
+00d9a744  cbz x0,0x00d9a75c
+00d9a748  ldp x19,x30,[sp, #0x10]
+00d9a74c  fmov s0,wzr
+00d9a750  mov x1,xzr
+00d9a754  ldp x21,x20,[sp], #0x20
+00d9a758  b 0x024bb940
+00d9a75c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a760_MusicLayer__UpdateFade.txt
+================================================================================
+Function: MusicLayer$$UpdateFade @ 00d9a760
+
+--- Calls OUT ---
+  -> UnityEngine.AudioSource$$set_volume @ 024bb940
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Time$$get_realtimeSinceStartup @ 024dc3a8
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+  -> log10f @ 008d4700
+
+--- Calls IN ---
+  <- MusicLayer$$Update @ 00d9a968
+
+--- Listing ---
+00d9a760  stp d11,d10,[sp, #-0x40]!
+00d9a764  stp d9,d8,[sp, #0x10]
+00d9a768  str x20,[sp, #0x20]
+00d9a76c  stp x19,x30,[sp, #0x30]
+00d9a770  adrp x20,0x3572000
+00d9a774  ldrb w8,[x20]
+00d9a778  mov v8.16B,v0.16B
+00d9a77c  mov x19,x0
+00d9a780  tbnz w8,#0x0,0x00d9a798
+00d9a784  adrp x0,0x337b000
+00d9a788  ldr x0,[x0, #0xac8]
+00d9a78c  bl 0x00b0789c
+00d9a790  mov w8,#0x1
+00d9a794  strb w8,[x20]
+00d9a798  adrp x20,0x337b000
+00d9a79c  ldr x20,[x20, #0xac8]
+00d9a7a0  mov x0,xzr
+00d9a7a4  bl 0x024dc3a8
+00d9a7a8  ldp s1,s2,[x19, #0x20]
+00d9a7ac  fsub s0,s0,s2
+00d9a7b0  fcmp s0,s1
+00d9a7b4  b.le 0x00d9a7dc
+00d9a7b8  ldr x1,[x20]
+00d9a7bc  mov x0,x19
+00d9a7c0  bl 0x0176cbf8
+00d9a7c4  cbz x0,0x00d9a858
+00d9a7c8  mov v0.16B,v8.16B
+00d9a7cc  mov x1,xzr
+00d9a7d0  bl 0x024bb940
+00d9a7d4  mov w0,#0x1
+00d9a7d8  b 0x00d9a844
+00d9a7dc  ldr x1,[x20]
+00d9a7e0  mov x0,x19
+00d9a7e4  fdiv s11,s0,s1
+00d9a7e8  bl 0x0176cbf8
+00d9a7ec  fmov s10,0x3f800000
+00d9a7f0  fmov s0,0x41100000
+00d9a7f4  fmin s1,s11,s10
+00d9a7f8  ldr s9,[x19, #0x1c]
+00d9a7fc  fmul s0,s1,s0
+00d9a800  fadd s0,s0,s10
+00d9a804  fcmp s11,#0.0
+00d9a808  fcsel s0,s0,s10,pl
+00d9a80c  mov x20,x0
+00d9a810  bl 0x008d4700
+00d9a814  cbz x20,0x00d9a858
+00d9a818  fmin s2,s0,s10
+00d9a81c  fcmp s0,#0.0
+00d9a820  fmov s0,wzr
+00d9a824  fsub s1,s8,s9
+00d9a828  fcsel s0,s2,s0,pl
+00d9a82c  fmul s0,s0,s1
+00d9a830  fadd s0,s9,s0
+00d9a834  mov x0,x20
+00d9a838  mov x1,xzr
+00d9a83c  bl 0x024bb940
+00d9a840  mov w0,wzr
+00d9a844  ldp x19,x30,[sp, #0x30]
+00d9a848  ldr x20,[sp, #0x20]
+00d9a84c  ldp d9,d8,[sp, #0x10]
+00d9a850  ldp d11,d10,[sp], #0x40
+00d9a854  ret
+00d9a858  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a85c_MusicLayer__CheckLoop.txt
+================================================================================
+Function: MusicLayer$$CheckLoop @ 00d9a85c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.AudioSource$$get_clip @ 024bbb1c
+  -> UnityEngine.AudioClip$$get_samples @ 024bb4cc
+  -> UnityEngine.AudioSource$$get_timeSamples @ 024bba9c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- MusicLayer$$Update @ 00d9a968
+
+--- Listing ---
+00d9a85c  str x22,[sp, #-0x30]!
+00d9a860  stp x21,x20,[sp, #0x10]
+00d9a864  stp x19,x30,[sp, #0x20]
+00d9a868  adrp x20,0x3572000
+00d9a86c  adrp x22,0x337b000
+00d9a870  ldrb w8,[x20, #0x1]
+00d9a874  ldr x22,[x22, #0xac8]
+00d9a878  mov x19,x0
+00d9a87c  tbnz w8,#0x0,0x00d9a8a0
+00d9a880  adrp x0,0x337b000
+00d9a884  ldr x0,[x0, #0xac8]
+00d9a888  bl 0x00b0789c
+00d9a88c  adrp x0,0x3321000
+00d9a890  ldr x0,[x0, #0xca8]
+00d9a894  bl 0x00b0789c
+00d9a898  mov w8,#0x1
+00d9a89c  strb w8,[x20, #0x1]
+00d9a8a0  ldr x1,[x22]
+00d9a8a4  mov x0,x19
+00d9a8a8  bl 0x0176cbf8
+00d9a8ac  cbz x0,0x00d9a964
+00d9a8b0  mov x1,xzr
+00d9a8b4  bl 0x024bba9c
+00d9a8b8  ldr x1,[x22]
+00d9a8bc  mov w20,w0
+00d9a8c0  mov x0,x19
+00d9a8c4  bl 0x0176cbf8
+00d9a8c8  cbz x0,0x00d9a964
+00d9a8cc  adrp x21,0x3321000
+00d9a8d0  ldr x21,[x21, #0xca8]
+00d9a8d4  mov x1,xzr
+00d9a8d8  bl 0x024bbb1c
+00d9a8dc  ldr x8,[x21]
+00d9a8e0  mov x21,x0
+00d9a8e4  ldr w9,[x8, #0xe0]
+00d9a8e8  cbnz w9,0x00d9a8f4
+00d9a8ec  mov x0,x8
+00d9a8f0  bl 0x00b0798c
+00d9a8f4  mov x0,x21
+00d9a8f8  mov x1,xzr
+00d9a8fc  mov x2,xzr
+00d9a900  bl 0x024de30c
+00d9a904  tbz w0,#0x0,0x00d9a950
+00d9a908  ldr x1,[x22]
+00d9a90c  ldr w21,[x19, #0x30]
+00d9a910  mov x0,x19
+00d9a914  bl 0x0176cbf8
+00d9a918  cbz x0,0x00d9a964
+00d9a91c  mov x1,xzr
+00d9a920  bl 0x024bbb1c
+00d9a924  cbz x0,0x00d9a964
+00d9a928  mov x1,xzr
+00d9a92c  bl 0x024bb4cc
+00d9a930  cmp w0,#0x0
+00d9a934  cinc w8,w0,lt
+00d9a938  sub w8,w21,w8, ASR #0x1
+00d9a93c  cmp w20,w8
+00d9a940  b.ge 0x00d9a950
+00d9a944  ldr w8,[x19, #0x2c]
+00d9a948  add w8,w8,#0x1
+00d9a94c  str w8,[x19, #0x2c]
+00d9a950  str w20,[x19, #0x30]
+00d9a954  ldp x19,x30,[sp, #0x20]
+00d9a958  ldp x21,x20,[sp, #0x10]
+00d9a95c  ldr x22,[sp], #0x30
+00d9a960  ret
+00d9a964  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9a968_MusicLayer__Update.txt
+================================================================================
+Function: MusicLayer$$Update @ 00d9a968
+
+--- Calls OUT ---
+  -> MusicLayer$$CheckLoop @ 00d9a85c
+  -> MusicLayer$$UpdateFade @ 00d9a760
+  -> UnityEngine.AudioSource$$Stop @ 024bbd24
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.AudioSource$$get_loop @ 024bc06c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+  -> UnityEngine.AudioSource$$get_isPlaying @ 024bbd64
+  -> UnityEngine.AudioSource$$set_clip @ 024bbb58
+
+--- Calls IN ---
+
+--- Listing ---
+00d9a968  str x20,[sp, #-0x20]!
+00d9a96c  stp x19,x30,[sp, #0x10]
+00d9a970  adrp x20,0x3572000
+00d9a974  ldrb w8,[x20, #0x2]
+00d9a978  mov x19,x0
+00d9a97c  tbnz w8,#0x0,0x00d9a994
+00d9a980  adrp x0,0x337b000
+00d9a984  ldr x0,[x0, #0xac8]
+00d9a988  bl 0x00b0789c
+00d9a98c  mov w8,#0x1
+00d9a990  strb w8,[x20, #0x2]
+00d9a994  ldr w8,[x19, #0x28]
+00d9a998  sub w8,w8,#0x2
+00d9a99c  cmp w8,#0x4
+00d9a9a0  b.hi 0x00d9aa98
+00d9a9a4  adrp x9,0x26db000
+00d9a9a8  add x9,x9,#0xa48
+00d9a9ac  adrp x20,0x337b000
+00d9a9b0  adr x10,0xd9a9c4
+00d9a9b4  ldrb w11,[x9, x8, LSL ]
+00d9a9b8  add x10,x10,x11, LSL #0x2
+00d9a9bc  ldr x20,[x20, #0xac8]
+00d9a9c0  br x10
+00d9a9c4  ldr s0,[x19, #0x18]
+00d9a9c8  mov x0,x19
+00d9a9cc  bl 0x00d9a760
+00d9a9d0  tbz w0,#0x0,0x00d9aa84
+00d9a9d4  mov w8,#0x3
+00d9a9d8  str w8,[x19, #0x28]
+00d9a9dc  b 0x00d9aa84
+00d9a9e0  ldr s0,[x19, #0x18]
+00d9a9e4  b 0x00d9aa34
+00d9a9e8  fmov s0,wzr
+00d9a9ec  mov x0,x19
+00d9a9f0  bl 0x00d9a760
+00d9a9f4  tbz w0,#0x0,0x00d9aa98
+00d9a9f8  ldr x1,[x20]
+00d9a9fc  mov x0,x19
+00d9aa00  bl 0x0176cbf8
+00d9aa04  cbz x0,0x00d9aaa4
+00d9aa08  mov x1,xzr
+00d9aa0c  bl 0x024bbd24
+00d9aa10  ldr x1,[x20]
+00d9aa14  mov x0,x19
+00d9aa18  bl 0x0176cbf8
+00d9aa1c  cbz x0,0x00d9aaa4
+00d9aa20  mov x1,xzr
+00d9aa24  mov x2,xzr
+00d9aa28  bl 0x024bbb58
+00d9aa2c  b 0x00d9aa94
+00d9aa30  fmov s0,wzr
+00d9aa34  mov x0,x19
+00d9aa38  bl 0x00d9a760
+00d9aa3c  tbz w0,#0x0,0x00d9aa98
+00d9aa40  mov w8,#0x1
+00d9aa44  str w8,[x19, #0x28]
+00d9aa48  b 0x00d9aa98
+00d9aa4c  ldr x1,[x20]
+00d9aa50  mov x0,x19
+00d9aa54  bl 0x0176cbf8
+00d9aa58  cbz x0,0x00d9aaa4
+00d9aa5c  mov x1,xzr
+00d9aa60  bl 0x024bbd64
+00d9aa64  tbnz w0,#0x0,0x00d9aa84
+00d9aa68  ldr x1,[x20]
+00d9aa6c  mov x0,x19
+00d9aa70  bl 0x0176cbf8
+00d9aa74  cbz x0,0x00d9aaa4
+00d9aa78  mov x1,xzr
+00d9aa7c  bl 0x024bc06c
+00d9aa80  tbz w0,#0x0,0x00d9aa94
+00d9aa84  mov x0,x19
+00d9aa88  ldp x19,x30,[sp, #0x10]
+00d9aa8c  ldr x20,[sp], #0x20
+00d9aa90  b 0x00d9a85c
+00d9aa94  str wzr,[x19, #0x28]
+00d9aa98  ldp x19,x30,[sp, #0x10]
+00d9aa9c  ldr x20,[sp], #0x20
+00d9aaa0  ret
+00d9aaa4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9aaa8_MusicLayer__.ctor.txt
+================================================================================
+Function: MusicLayer$$.ctor @ 00d9aaa8
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d9aaa8  mov x1,xzr
+00d9aaac  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00dbc880_Murmur3__MurmurHash3_x86_32.txt
+================================================================================
+Function: Murmur3$$MurmurHash3_x86_32 @ 00dbc880
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.BitConverter$$ToUInt32 @ 020d8768
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- Murmur3$$VerificationTest @ 00dbca54
+
+--- Listing ---
+00dbc880  stp x27,x26,[sp, #-0x50]!
+00dbc884  stp x25,x24,[sp, #0x10]
+00dbc888  stp x23,x22,[sp, #0x20]
+00dbc88c  stp x21,x20,[sp, #0x30]
+00dbc890  stp x19,x30,[sp, #0x40]
+00dbc894  adrp x22,0x3572000
+00dbc898  ldrb w8,[x22, #0x139]
+00dbc89c  mov w20,w2
+00dbc8a0  mov w19,w1
+00dbc8a4  mov x21,x0
+00dbc8a8  tbnz w8,#0x0,0x00dbc8c0
+00dbc8ac  adrp x0,0x3334000
+00dbc8b0  ldr x0,[x0, #0x1f0]
+00dbc8b4  bl 0x00b0789c
+00dbc8b8  mov w8,#0x1
+00dbc8bc  strb w8,[x22, #0x139]
+00dbc8c0  mov w23,#0x2d51
+00dbc8c4  mov w24,#0x3593
+00dbc8c8  movk w23,#0xcc9e, LSL #16
+00dbc8cc  lsr w25,w19,#0x2
+00dbc8d0  movk w24,#0x1b87, LSL #16
+00dbc8d4  cbz w25,0x00dbc934
+00dbc8d8  adrp x26,0x3334000
+00dbc8dc  ldr x26,[x26, #0x1f0]
+00dbc8e0  mov w27,#0x6b64
+00dbc8e4  mov w22,wzr
+00dbc8e8  movk w27,#0xe654, LSL #16
+00dbc8ec  ldr x0,[x26]
+00dbc8f0  ldr w8,[x0, #0xe0]
+00dbc8f4  cbnz w8,0x00dbc8fc
+00dbc8f8  bl 0x00b0798c
+00dbc8fc  mov x0,x21
+00dbc900  mov w1,w22
+00dbc904  mov x2,xzr
+00dbc908  bl 0x020d8768
+00dbc90c  mul w8,w0,w23
+00dbc910  ror w8,w8,#0x11
+00dbc914  mul w8,w8,w24
+00dbc918  eor w8,w8,w20
+00dbc91c  ror w8,w8,#0x13
+00dbc920  add w8,w8,w8, LSL #0x2
+00dbc924  subs w25,w25,#0x1
+00dbc928  add w20,w8,w27
+00dbc92c  add w22,w22,#0x4
+00dbc930  b.ne 0x00dbc8ec
+00dbc934  sxtw x8,w19
+00dbc938  and w9,w19,#0x3
+00dbc93c  cmp w9,#0x3
+00dbc940  and x8,x8,#-0x4
+00dbc944  b.ne 0x00dbc96c
+00dbc948  cbz x21,0x00dbca18
+00dbc94c  ldr w10,[x21, #0x18]
+00dbc950  orr x9,x8,#0x2
+00dbc954  cmp w9,w10
+00dbc958  b.cs 0x00dbca14
+00dbc95c  add x9,x21,x9
+00dbc960  ldrb w9,[x9, #0x20]
+00dbc964  lsl w9,w9,#0x10
+00dbc968  b 0x00dbc97c
+00dbc96c  cmp w9,#0x2
+00dbc970  b.cc 0x00dbca04
+00dbc974  cbz x21,0x00dbca18
+00dbc978  mov w9,wzr
+00dbc97c  ldr w11,[x21, #0x18]
+00dbc980  sxtw x10,w8
+00dbc984  orr x10,x10,#0x1
+00dbc988  cmp w10,w11
+00dbc98c  b.cs 0x00dbca14
+00dbc990  add x10,x21,x10
+00dbc994  ldrb w10,[x10, #0x20]
+00dbc998  orr w9,w9,w10, LSL #0x8
+00dbc99c  ldr w10,[x21, #0x18]
+00dbc9a0  cmp w8,w10
+00dbc9a4  b.cs 0x00dbca14
+00dbc9a8  add x8,x21,w8, UXTW 
+00dbc9ac  ldrb w8,[x8, #0x20]
+00dbc9b0  eor w8,w9,w8
+00dbc9b4  mul w8,w8,w23
+00dbc9b8  ror w8,w8,#0x11
+00dbc9bc  mul w8,w8,w24
+00dbc9c0  eor w20,w8,w20
+00dbc9c4  eor w8,w20,w19
+00dbc9c8  mov w9,#0xca6b
+00dbc9cc  movk w9,#0x85eb, LSL #16
+00dbc9d0  eor w8,w8,w8, LSR #0x10
+00dbc9d4  mul w8,w8,w9
+00dbc9d8  mov w9,#0xae35
+00dbc9dc  ldp x19,x30,[sp, #0x40]
+00dbc9e0  ldp x21,x20,[sp, #0x30]
+00dbc9e4  ldp x23,x22,[sp, #0x20]
+00dbc9e8  ldp x25,x24,[sp, #0x10]
+00dbc9ec  eor w8,w8,w8, LSR #0xd
+00dbc9f0  movk w9,#0xc2b2, LSL #16
+00dbc9f4  mul w8,w8,w9
+00dbc9f8  eor w0,w8,w8, LSR #0x10
+00dbc9fc  ldp x27,x26,[sp], #0x50
+00dbca00  ret
+00dbca04  cbz w9,0x00dbc9c4
+00dbca08  cbz x21,0x00dbca18
+00dbca0c  mov w9,wzr
+00dbca10  b 0x00dbc99c
+00dbca14  bl 0x00b079b8
+00dbca18  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbca1c_Murmur3__rotl32.txt
+================================================================================
+Function: Murmur3$$rotl32 @ 00dbca1c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbca1c  mov w8,wzr
+00dbca20  sub w8,w8,w1, UXTB 
+00dbca24  ror w0,w0,w8
+00dbca28  ret
+
+
+================================================================================
+### FILE: 00dbca2c_Murmur3__fmix32.txt
+================================================================================
+Function: Murmur3$$fmix32 @ 00dbca2c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbca2c  mov w9,#0xca6b
+00dbca30  eor w8,w0,w0, LSR #0x10
+00dbca34  movk w9,#0x85eb, LSL #16
+00dbca38  mul w8,w8,w9
+00dbca3c  mov w9,#0xae35
+00dbca40  eor w8,w8,w8, LSR #0xd
+00dbca44  movk w9,#0xc2b2, LSL #16
+00dbca48  mul w8,w8,w9
+00dbca4c  eor w0,w8,w8, LSR #0x10
+00dbca50  ret
+
+
+================================================================================
+### FILE: 00dbca54_Murmur3__VerificationTest.txt
+================================================================================
+Function: Murmur3$$VerificationTest @ 00dbca54
+
+--- Calls OUT ---
+  -> Murmur3$$MurmurHash3_x86_32 @ 00dbc880
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Buffer$$BlockCopy @ 0217cb44
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.BitConverter$$GetBytes @ 020d8354
+
+--- Calls IN ---
+
+--- Listing ---
+00dbca54  str x26,[sp, #-0x50]!
+00dbca58  stp x25,x24,[sp, #0x10]
+00dbca5c  stp x23,x22,[sp, #0x20]
+00dbca60  stp x21,x20,[sp, #0x30]
+00dbca64  stp x19,x30,[sp, #0x40]
+00dbca68  adrp x20,0x3572000
+00dbca6c  adrp x19,0x334f000
+00dbca70  ldrb w8,[x20, #0x13a]
+00dbca74  ldr x19,[x19, #0x28]
+00dbca78  tbnz w8,#0x0,0x00dbca9c
+00dbca7c  adrp x0,0x3334000
+00dbca80  ldr x0,[x0, #0x1f0]
+00dbca84  bl 0x00b0789c
+00dbca88  adrp x0,0x334f000
+00dbca8c  ldr x0,[x0, #0x28]
+00dbca90  bl 0x00b0789c
+00dbca94  mov w8,#0x1
+00dbca98  strb w8,[x20, #0x13a]
+00dbca9c  ldr x0,[x19]
+00dbcaa0  mov w1,#0x100
+00dbcaa4  bl 0x00b078f8
+00dbcaa8  ldr x8,[x19]
+00dbcaac  mov x19,x0
+00dbcab0  mov w1,#0x400
+00dbcab4  mov x0,x8
+00dbcab8  bl 0x00b078f8
+00dbcabc  cbz x19,0x00dbcb88
+00dbcac0  adrp x25,0x3334000
+00dbcac4  ldr x25,[x25, #0x1f0]
+00dbcac8  mov x20,x0
+00dbcacc  mov w21,wzr
+00dbcad0  mov x22,xzr
+00dbcad4  add x26,x19,#0x20
+00dbcad8  mov w23,#0x100
+00dbcadc  ldr w8,[x19, #0x18]
+00dbcae0  cmp x22,x8
+00dbcae4  b.cs 0x00dbcb84
+00dbcae8  mov x0,x19
+00dbcaec  mov w1,w22
+00dbcaf0  mov w2,w23
+00dbcaf4  strb w22,[x26, x22, LSL ]
+00dbcaf8  bl 0x00dbc880
+00dbcafc  ldr x8,[x25]
+00dbcb00  mov w24,w0
+00dbcb04  ldr w9,[x8, #0xe0]
+00dbcb08  cbnz w9,0x00dbcb14
+00dbcb0c  mov x0,x8
+00dbcb10  bl 0x00b0798c
+00dbcb14  mov w0,w24
+00dbcb18  mov x1,xzr
+00dbcb1c  bl 0x020d8354
+00dbcb20  mov w4,#0x4
+00dbcb24  mov w1,wzr
+00dbcb28  mov x2,x20
+00dbcb2c  mov w3,w21
+00dbcb30  mov x5,xzr
+00dbcb34  bl 0x0217cb44
+00dbcb38  add x22,x22,#0x1
+00dbcb3c  add w21,w21,#0x4
+00dbcb40  cmp x22,#0x100
+00dbcb44  sub w23,w23,#0x1
+00dbcb48  b.ne 0x00dbcadc
+00dbcb4c  mov w1,#0x400
+00dbcb50  mov x0,x20
+00dbcb54  mov w2,wzr
+00dbcb58  bl 0x00dbc880
+00dbcb5c  mov w8,#0x7ee3
+00dbcb60  ldp x19,x30,[sp, #0x40]
+00dbcb64  ldp x21,x20,[sp, #0x30]
+00dbcb68  ldp x23,x22,[sp, #0x20]
+00dbcb6c  ldp x25,x24,[sp, #0x10]
+00dbcb70  movk w8,#0xb0f5, LSL #16
+00dbcb74  cmp w0,w8
+00dbcb78  cset w0,eq
+00dbcb7c  ldr x26,[sp], #0x50
+00dbcb80  ret
+00dbcb84  bl 0x00b079b8
+00dbcb88  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbcb8c_Murmur3__.ctor.txt
+================================================================================
+Function: Murmur3$$.ctor @ 00dbcb8c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbcb8c  mov x1,xzr
+00dbcb90  b 0x02194104
+
+
+================================================================================
+### FILE: 03799750_munmap.txt
+================================================================================
+Function: munmap @ 03799750
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- munmap @ 008d56d0
+
+--- Listing ---
+03799750  ?? ??
+
+

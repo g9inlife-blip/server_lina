@@ -1,0 +1,3887 @@
+================================================================================
+### FILE: 008d4760_bind.txt
+================================================================================
+Function: bind @ 008d4760
+
+--- Calls OUT ---
+  -> bind @ 03799390
+
+--- Calls IN ---
+  <- FUN_00ae63b0 @ 00ae63b0
+  <- FUN_00ae6520 @ 00ae6520
+  <- FUN_00ae6494 @ 00ae6494
+
+--- Listing ---
+008d4760  adrp x16,0x3307000
+008d4764  ldr x17,[x16, #0xd70]
+008d4768  add x16,x16,#0xd70
+008d476c  br x17
+
+
+================================================================================
+### FILE: 00bab394_BillingResult__.ctor.txt
+================================================================================
+Function: BillingResult$$.ctor @ 00bab394
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- AN_InApp_EditorClient$$Consume @ 00bad744
+  <- AN_InApp_EditorClient$$OnPurchaseFinishedCallback @ 00bad84c
+  <- AN_InAppAndroidClient$$OnConsumeFinishedCallBack @ 00bab3e8
+  <- AN_InApp_EditorClient$$OnConsumeFinishedCallBack @ 00badbdc
+  <- AN_InAppAndroidClient$$OnPurchaseFinishedCallback @ 00baad10
+  <- AN_InApp_EditorClient$$OnPurchaseComplete @ 00bad540
+
+--- Listing ---
+00bab394  str x22,[sp, #-0x30]!
+00bab398  stp x21,x20,[sp, #0x10]
+00bab39c  stp x19,x30,[sp, #0x20]
+00bab3a0  mov w21,w1
+00bab3a4  mov x1,xzr
+00bab3a8  mov x19,x3
+00bab3ac  mov x20,x2
+00bab3b0  mov x22,x0
+00bab3b4  bl 0x02194104
+00bab3b8  mov x0,x22
+00bab3bc  str w21,[x22, #0x10]
+00bab3c0  str x20,[x0, #0x18]!
+00bab3c4  mov x1,x20
+00bab3c8  bl 0x00b07850
+00bab3cc  str x19,[x22, #0x20]!
+00bab3d0  mov x1,x19
+00bab3d4  ldp x19,x30,[sp, #0x20]
+00bab3d8  ldp x21,x20,[sp, #0x10]
+00bab3dc  mov x0,x22
+00bab3e0  ldr x22,[sp], #0x30
+00bab3e4  b 0x00b07850
+
+
+================================================================================
+### FILE: 00bab870_BillingResult__.ctor.txt
+================================================================================
+Function: BillingResult$$.ctor @ 00bab870
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00bab870  stp x21,x20,[sp, #-0x20]!
+00bab874  stp x19,x30,[sp, #0x10]
+00bab878  mov w20,w1
+00bab87c  mov x1,xzr
+00bab880  mov x19,x2
+00bab884  mov x21,x0
+00bab888  bl 0x02194104
+00bab88c  str x19,[x21, #0x18]!
+00bab890  stur w20,[x21, #-0x8]
+00bab894  mov x1,x19
+00bab898  ldp x19,x30,[sp, #0x10]
+00bab89c  mov x0,x21
+00bab8a0  ldp x21,x20,[sp], #0x20
+00bab8a4  b 0x00b07850
+
+
+================================================================================
+### FILE: 00bab8a8_BillingResult__get_IsSuccess.txt
+================================================================================
+Function: BillingResult$$get_IsSuccess @ 00bab8a8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- GameBillingManagerExample$$OnProductConsumed @ 00cf37b8
+  <- GPaymnetManagerExample$$OnProductConsumed @ 00cf4990
+  <- GameBillingManagerExample$$OnProductPurchased @ 00cf3678
+  <- GPaymnetManagerExample$$OnProductPurchased @ 00cf4824
+  <- GameBillingManagerExample$$OnBillingConnected @ 00cf38f8
+  <- GPaymnetManagerExample$$OnRetrieveProductsFinised @ 00cf4d78
+  <- GameBillingManagerExample$$OnRetrieveProductsFinised @ 00cf3b74
+  <- GPaymnetManagerExample$$OnBillingConnected @ 00cf4afc
+
+--- Listing ---
+00bab8a8  ldr w8,[x0, #0x10]
+00bab8ac  cmp w8,#0x0
+00bab8b0  cset w0,eq
+00bab8b4  ret
+
+
+================================================================================
+### FILE: 00bae1b0_BillingResponseCodes__.ctor.txt
+================================================================================
+Function: BillingResponseCodes$$.ctor @ 00bae1b0
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00bae1b0  mov x1,xzr
+00bae1b4  b 0x02194104
+
+
+================================================================================
+### FILE: 00baf2ec_BillingResult__get_purchase.txt
+================================================================================
+Function: BillingResult$$get_purchase @ 00baf2ec
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00baf2ec  ldr x0,[x0, #0x20]
+00baf2f0  ret
+
+
+================================================================================
+### FILE: 00baf2f4_BillingResult__get_Purchase.txt
+================================================================================
+Function: BillingResult$$get_Purchase @ 00baf2f4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00baf2f4  ldr x0,[x0, #0x20]
+00baf2f8  ret
+
+
+================================================================================
+### FILE: 00baf2fc_BillingResult__get_response.txt
+================================================================================
+Function: BillingResult$$get_response @ 00baf2fc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00baf2fc  ldr w0,[x0, #0x10]
+00baf300  ret
+
+
+================================================================================
+### FILE: 00baf304_BillingResult__get_Response.txt
+================================================================================
+Function: BillingResult$$get_Response @ 00baf304
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00baf304  ldr w0,[x0, #0x10]
+00baf308  ret
+
+
+================================================================================
+### FILE: 00baf30c_BillingResult__get_message.txt
+================================================================================
+Function: BillingResult$$get_message @ 00baf30c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00baf30c  ldr x0,[x0, #0x18]
+00baf310  ret
+
+
+================================================================================
+### FILE: 00baf314_BillingResult__get_Message.txt
+================================================================================
+Function: BillingResult$$get_Message @ 00baf314
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00baf314  ldr x0,[x0, #0x18]
+00baf318  ret
+
+
+================================================================================
+### FILE: 00baf31c_BillingResult__get_isSuccess.txt
+================================================================================
+Function: BillingResult$$get_isSuccess @ 00baf31c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00baf31c  ldr w8,[x0, #0x10]
+00baf320  cmp w8,#0x0
+00baf324  cset w0,eq
+00baf328  ret
+
+
+================================================================================
+### FILE: 00baf32c_BillingResult__get_isFailure.txt
+================================================================================
+Function: BillingResult$$get_isFailure @ 00baf32c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00baf32c  ldr w8,[x0, #0x10]
+00baf330  cmp w8,#0x0
+00baf334  cset w0,ne
+00baf338  ret
+
+
+================================================================================
+### FILE: 00baf33c_BillingResult__get_IsFailure.txt
+================================================================================
+Function: BillingResult$$get_IsFailure @ 00baf33c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00baf33c  ldr w8,[x0, #0x10]
+00baf340  cmp w8,#0x0
+00baf344  cset w0,ne
+00baf348  ret
+
+
+================================================================================
+### FILE: 00d9f088_BiliSDKManager__OnBSGameSdkCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnBSGameSdkCallback @ 00d9f088
+
+--- Calls OUT ---
+  -> JsonMapper$$ToObject @ 00d9f4f4
+  -> System.String$$op_Equality @ 01fd05b0
+  -> BiliSDKManager$$OnGetUserInfoCallback @ 00d9fe84
+  -> BiliSDKManager$$OnRegisterCallback @ 00da02c4
+  -> JsonData$$op_Explicit @ 00d9f6f8
+  -> <PrivateImplementationDetails>$$ComputeStringHash @ 016bc794
+  -> BiliSDKManager$$OnPayCallback @ 00da03b8
+  -> System.String$$Concat @ 01fd2850
+  -> JsonData$$get_Item @ 00d9f648
+  -> FUN_00b079b0 @ 00b079b0
+  -> BiliSDKManager$$OnLoginCallback @ 00d9f7d8
+  -> BiliSDKManager$$OnAccountInvalidCallback @ 00da0778
+  -> BiliSDKManager$$OnIsLoginCallback @ 00d9fc18
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> JsonData$$op_Explicit @ 00d9f768
+  -> BiliSDKManager$$OnLogoutCallback @ 00d9fd90
+  -> BiliSDKManager$$OnIsRealNameAuthCallback @ 00da0850
+
+--- Calls IN ---
+
+--- Listing ---
+00d9f088  stp x23,x22,[sp, #-0x30]!
+00d9f08c  stp x21,x20,[sp, #0x10]
+00d9f090  stp x19,x30,[sp, #0x20]
+00d9f094  adrp x22,0x3572000
+00d9f098  adrp x23,0x3382000
+00d9f09c  adrp x21,0x3313000
+00d9f0a0  ldrb w8,[x22, #0x35]
+00d9f0a4  ldr x23,[x23, #0xa08]
+00d9f0a8  ldr x21,[x21, #0xaf8]
+00d9f0ac  mov x20,x1
+00d9f0b0  mov x19,x0
+00d9f0b4  tbnz w8,#0x0,0x00d9f168
+00d9f0b8  adrp x0,0x3313000
+00d9f0bc  ldr x0,[x0, #0xaf8]
+00d9f0c0  bl 0x00b0789c
+00d9f0c4  adrp x0,0x3367000
+00d9f0c8  ldr x0,[x0, #0xad8]
+00d9f0cc  bl 0x00b0789c
+00d9f0d0  adrp x0,0x3382000
+00d9f0d4  ldr x0,[x0, #0xa08]
+00d9f0d8  bl 0x00b0789c
+00d9f0dc  adrp x0,0x330a000
+00d9f0e0  ldr x0,[x0, #0x410]
+00d9f0e4  bl 0x00b0789c
+00d9f0e8  adrp x0,0x331f000
+00d9f0ec  ldr x0,[x0, #0xbf8]
+00d9f0f0  bl 0x00b0789c
+00d9f0f4  adrp x0,0x3360000
+00d9f0f8  ldr x0,[x0, #0xd90]
+00d9f0fc  bl 0x00b0789c
+00d9f100  adrp x0,0x3321000
+00d9f104  ldr x0,[x0, #0x100]
+00d9f108  bl 0x00b0789c
+00d9f10c  adrp x0,0x330b000
+00d9f110  ldr x0,[x0, #0xbd8]
+00d9f114  bl 0x00b0789c
+00d9f118  adrp x0,0x3327000
+00d9f11c  ldr x0,[x0, #0x578]
+00d9f120  bl 0x00b0789c
+00d9f124  adrp x0,0x3370000
+00d9f128  ldr x0,[x0, #0x3c8]
+00d9f12c  bl 0x00b0789c
+00d9f130  adrp x0,0x3380000
+00d9f134  ldr x0,[x0, #0xd80]
+00d9f138  bl 0x00b0789c
+00d9f13c  adrp x0,0x3366000
+00d9f140  ldr x0,[x0, #0xc70]
+00d9f144  bl 0x00b0789c
+00d9f148  adrp x0,0x3324000
+00d9f14c  ldr x0,[x0, #0x3f0]
+00d9f150  bl 0x00b0789c
+00d9f154  adrp x0,0x3356000
+00d9f158  ldr x0,[x0, #0xb98]
+00d9f15c  bl 0x00b0789c
+00d9f160  mov w8,#0x1
+00d9f164  strb w8,[x22, #0x35]
+00d9f168  ldr x0,[x23]
+00d9f16c  mov x1,x20
+00d9f170  mov x2,xzr
+00d9f174  bl 0x01fd2850
+00d9f178  ldr x0,[x21]
+00d9f17c  ldr w8,[x0, #0xe0]
+00d9f180  cbnz w8,0x00d9f188
+00d9f184  bl 0x00b0798c
+00d9f188  mov x0,x20
+00d9f18c  bl 0x00d9f4f4
+00d9f190  cbz x0,0x00d9f4ec
+00d9f194  adrp x8,0x3356000
+00d9f198  ldr x8,[x8, #0xb98]
+00d9f19c  adrp x20,0x3360000
+00d9f1a0  adrp x23,0x3370000
+00d9f1a4  mov x21,x0
+00d9f1a8  ldr x1,[x8]
+00d9f1ac  ldr x20,[x20, #0xd90]
+00d9f1b0  ldr x23,[x23, #0x3c8]
+00d9f1b4  bl 0x00d9f648
+00d9f1b8  bl 0x00d9f6f8
+00d9f1bc  ldr x1,[x20]
+00d9f1c0  mov x22,x0
+00d9f1c4  mov x0,x21
+00d9f1c8  bl 0x00d9f648
+00d9f1cc  bl 0x00d9f768
+00d9f1d0  ldr x1,[x23]
+00d9f1d4  mov w20,w0
+00d9f1d8  mov x0,x21
+00d9f1dc  bl 0x00d9f648
+00d9f1e0  mov x21,x0
+00d9f1e4  mov x0,x22
+00d9f1e8  mov x1,xzr
+00d9f1ec  bl 0x016bc794
+00d9f1f0  mov w8,#0xebd2
+00d9f1f4  movk w8,#0x55ed, LSL #16
+00d9f1f8  cmp w0,w8
+00d9f1fc  b.hi 0x00d9f26c
+00d9f200  mov w8,#0xc9e0
+00d9f204  movk w8,#0x2739, LSL #16
+00d9f208  cmp w0,w8
+00d9f20c  b.hi 0x00d9f2e4
+00d9f210  mov w8,#0xf3ef
+00d9f214  movk w8,#0x99d, LSL #16
+00d9f218  cmp w0,w8
+00d9f21c  b.eq 0x00d9f3ac
+00d9f220  mov w8,#0xc9e0
+00d9f224  movk w8,#0x2739, LSL #16
+00d9f228  cmp w0,w8
+00d9f22c  b.ne 0x00d9f4dc
+00d9f230  adrp x8,0x3324000
+00d9f234  ldr x8,[x8, #0x3f0]
+00d9f238  mov x0,x22
+00d9f23c  mov x2,xzr
+00d9f240  ldr x1,[x8]
+00d9f244  bl 0x01fd05b0
+00d9f248  tbz w0,#0x0,0x00d9f4dc
+00d9f24c  mov x0,x21
+00d9f250  bl 0x00d9f6f8
+00d9f254  mov w1,w20
+00d9f258  ldp x19,x30,[sp, #0x20]
+00d9f25c  ldp x21,x20,[sp, #0x10]
+00d9f260  mov x2,x0
+00d9f264  ldp x23,x22,[sp], #0x30
+00d9f268  b 0x00da02c4
+00d9f26c  mov w8,#0x1f93
+00d9f270  movk w8,#0x96de, LSL #16
+00d9f274  cmp w0,w8
+00d9f278  b.hi 0x00d9f344
+00d9f27c  mov w8,#0x6a0b
+00d9f280  movk w8,#0x877a, LSL #16
+00d9f284  cmp w0,w8
+00d9f288  b.eq 0x00d9f3ec
+00d9f28c  mov w8,#0x1f93
+00d9f290  movk w8,#0x96de, LSL #16
+00d9f294  cmp w0,w8
+00d9f298  b.ne 0x00d9f4dc
+00d9f29c  adrp x8,0x330a000
+00d9f2a0  ldr x8,[x8, #0x410]
+00d9f2a4  mov x0,x22
+00d9f2a8  mov x2,xzr
+00d9f2ac  ldr x1,[x8]
+00d9f2b0  bl 0x01fd05b0
+00d9f2b4  tbz w0,#0x0,0x00d9f4dc
+00d9f2b8  mov x0,x21
+00d9f2bc  bl 0x00d9f6f8
+00d9f2c0  ldr x8,[x19]
+00d9f2c4  mov x2,x0
+00d9f2c8  mov x0,x19
+00d9f2cc  mov w1,w20
+00d9f2d0  ldp x4,x3,[x8, #0x1a8]
+00d9f2d4  ldp x19,x30,[sp, #0x20]
+00d9f2d8  ldp x21,x20,[sp, #0x10]
+00d9f2dc  ldp x23,x22,[sp], #0x30
+00d9f2e0  br x4
+00d9f2e4  mov w8,#0xd118
+00d9f2e8  movk w8,#0x2b7e, LSL #16
+00d9f2ec  cmp w0,w8
+00d9f2f0  b.eq 0x00d9f428
+00d9f2f4  mov w8,#0xebd2
+00d9f2f8  movk w8,#0x55ed, LSL #16
+00d9f2fc  cmp w0,w8
+00d9f300  b.ne 0x00d9f4dc
+00d9f304  adrp x8,0x3367000
+00d9f308  ldr x8,[x8, #0xad8]
+00d9f30c  mov x0,x22
+00d9f310  mov x2,xzr
+00d9f314  ldr x1,[x8]
+00d9f318  bl 0x01fd05b0
+00d9f31c  tbz w0,#0x0,0x00d9f4dc
+00d9f320  mov x0,x21
+00d9f324  bl 0x00d9f6f8
+00d9f328  mov x2,x0
+00d9f32c  mov x0,x19
+00d9f330  mov w1,w20
+00d9f334  ldp x19,x30,[sp, #0x20]
+00d9f338  ldp x21,x20,[sp, #0x10]
+00d9f33c  ldp x23,x22,[sp], #0x30
+00d9f340  b 0x00d9f7d8
+00d9f344  mov w8,#0x729
+00d9f348  movk w8,#0xc35b, LSL #16
+00d9f34c  cmp w0,w8
+00d9f350  b.eq 0x00d9f464
+00d9f354  mov w8,#0x6262
+00d9f358  movk w8,#0xcf84, LSL #16
+00d9f35c  cmp w0,w8
+00d9f360  b.eq 0x00d9f4a4
+00d9f364  mov w8,#0x6b84
+00d9f368  movk w8,#0xfe07, LSL #16
+00d9f36c  cmp w0,w8
+00d9f370  b.ne 0x00d9f4dc
+00d9f374  adrp x8,0x3380000
+00d9f378  ldr x8,[x8, #0xd80]
+00d9f37c  mov x0,x22
+00d9f380  mov x2,xzr
+00d9f384  ldr x1,[x8]
+00d9f388  bl 0x01fd05b0
+00d9f38c  tbz w0,#0x0,0x00d9f4dc
+00d9f390  mov x0,x19
+00d9f394  mov w1,w20
+00d9f398  mov x2,x21
+00d9f39c  ldp x19,x30,[sp, #0x20]
+00d9f3a0  ldp x21,x20,[sp, #0x10]
+00d9f3a4  ldp x23,x22,[sp], #0x30
+00d9f3a8  b 0x00da0850
+00d9f3ac  adrp x8,0x3321000
+00d9f3b0  ldr x8,[x8, #0x100]
+00d9f3b4  mov x0,x22
+00d9f3b8  mov x2,xzr
+00d9f3bc  ldr x1,[x8]
+00d9f3c0  bl 0x01fd05b0
+00d9f3c4  tbz w0,#0x0,0x00d9f4dc
+00d9f3c8  mov x0,x21
+00d9f3cc  bl 0x00d9f6f8
+00d9f3d0  mov x2,x0
+00d9f3d4  mov x0,x19
+00d9f3d8  mov w1,w20
+00d9f3dc  ldp x19,x30,[sp, #0x20]
+00d9f3e0  ldp x21,x20,[sp, #0x10]
+00d9f3e4  ldp x23,x22,[sp], #0x30
+00d9f3e8  b 0x00da0778
+00d9f3ec  adrp x8,0x3327000
+00d9f3f0  ldr x8,[x8, #0x578]
+00d9f3f4  mov x0,x22
+00d9f3f8  mov x2,xzr
+00d9f3fc  ldr x1,[x8]
+00d9f400  bl 0x01fd05b0
+00d9f404  tbz w0,#0x0,0x00d9f4dc
+00d9f408  mov x0,x21
+00d9f40c  bl 0x00d9f6f8
+00d9f410  mov w1,w20
+00d9f414  ldp x19,x30,[sp, #0x20]
+00d9f418  ldp x21,x20,[sp, #0x10]
+00d9f41c  mov x2,x0
+00d9f420  ldp x23,x22,[sp], #0x30
+00d9f424  b 0x00d9fd90
+00d9f428  adrp x8,0x331f000
+00d9f42c  ldr x8,[x8, #0xbf8]
+00d9f430  mov x0,x22
+00d9f434  mov x2,xzr
+00d9f438  ldr x1,[x8]
+00d9f43c  bl 0x01fd05b0
+00d9f440  tbz w0,#0x0,0x00d9f4dc
+00d9f444  mov x0,x21
+00d9f448  bl 0x00d9f6f8
+00d9f44c  mov w1,w20
+00d9f450  ldp x19,x30,[sp, #0x20]
+00d9f454  ldp x21,x20,[sp, #0x10]
+00d9f458  mov x2,x0
+00d9f45c  ldp x23,x22,[sp], #0x30
+00d9f460  b 0x00d9fe84
+00d9f464  adrp x8,0x3366000
+00d9f468  ldr x8,[x8, #0xc70]
+00d9f46c  mov x0,x22
+00d9f470  mov x2,xzr
+00d9f474  ldr x1,[x8]
+00d9f478  bl 0x01fd05b0
+00d9f47c  tbz w0,#0x0,0x00d9f4dc
+00d9f480  mov x0,x21
+00d9f484  bl 0x00d9f6f8
+00d9f488  mov x2,x0
+00d9f48c  mov x0,x19
+00d9f490  mov w1,w20
+00d9f494  ldp x19,x30,[sp, #0x20]
+00d9f498  ldp x21,x20,[sp, #0x10]
+00d9f49c  ldp x23,x22,[sp], #0x30
+00d9f4a0  b 0x00da03b8
+00d9f4a4  adrp x8,0x330b000
+00d9f4a8  ldr x8,[x8, #0xbd8]
+00d9f4ac  mov x0,x22
+00d9f4b0  mov x2,xzr
+00d9f4b4  ldr x1,[x8]
+00d9f4b8  bl 0x01fd05b0
+00d9f4bc  tbz w0,#0x0,0x00d9f4dc
+00d9f4c0  mov x0,x19
+00d9f4c4  mov w1,w20
+00d9f4c8  mov x2,x21
+00d9f4cc  ldp x19,x30,[sp, #0x20]
+00d9f4d0  ldp x21,x20,[sp, #0x10]
+00d9f4d4  ldp x23,x22,[sp], #0x30
+00d9f4d8  b 0x00d9fc18
+00d9f4dc  ldp x19,x30,[sp, #0x20]
+00d9f4e0  ldp x21,x20,[sp, #0x10]
+00d9f4e4  ldp x23,x22,[sp], #0x30
+00d9f4e8  ret
+00d9f4ec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9f4f0_BiliSDKManager__log.txt
+================================================================================
+Function: BiliSDKManager$$log @ 00d9f4f0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d9f4f0  ret
+
+
+================================================================================
+### FILE: 00d9f7d8_BiliSDKManager__OnLoginCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnLoginCallback @ 00d9f7d8
+
+--- Calls OUT ---
+  -> JsonMapper$$ToObject @ 00d9f4f4
+  -> JsonData$$op_Explicit @ 00d9f6f8
+  -> System.String$$Concat @ 01fdf4c4
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> JsonData$$get_Item @ 00d9f648
+  -> FUN_00b07978 @ 00b07978
+  -> LoginManager$$LoginCanel @ 00dd6adc
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> LoginManager$$Login @ 00dd5aac
+  -> System.Int32$$Parse @ 0214df74
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BSGameSdk$$showToast @ 00da09c8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+  <- BiliSDKManager$$OnBSGameSdkCallback @ 00d9f088
+
+--- Listing ---
+00d9f7d8  sub sp,sp,#0x40
+00d9f7dc  stp x23,x22,[sp, #0x10]
+00d9f7e0  stp x21,x20,[sp, #0x20]
+00d9f7e4  stp x19,x30,[sp, #0x30]
+00d9f7e8  adrp x23,0x3572000
+00d9f7ec  str w1,[sp, #0xc]
+00d9f7f0  adrp x22,0x3355000
+00d9f7f4  ldrb w8,[x23, #0x36]
+00d9f7f8  ldr x22,[x22, #0x708]
+00d9f7fc  mov x19,x2
+00d9f800  mov w20,w1
+00d9f804  mov x21,x0
+00d9f808  tbnz w8,#0x0,0x00d9f8b0
+00d9f80c  adrp x0,0x3313000
+00d9f810  ldr x0,[x0, #0xaf8]
+00d9f814  bl 0x00b0789c
+00d9f818  adrp x0,0x333c000
+00d9f81c  ldr x0,[x0, #0x8f8]
+00d9f820  bl 0x00b0789c
+00d9f824  adrp x0,0x3308000
+00d9f828  ldr x0,[x0, #0x9a8]
+00d9f82c  bl 0x00b0789c
+00d9f830  adrp x0,0x331e000
+00d9f834  ldr x0,[x0, #0x558]
+00d9f838  bl 0x00b0789c
+00d9f83c  adrp x0,0x3352000
+00d9f840  ldr x0,[x0, #0x810]
+00d9f844  bl 0x00b0789c
+00d9f848  adrp x0,0x334a000
+00d9f84c  ldr x0,[x0, #0x4f8]
+00d9f850  bl 0x00b0789c
+00d9f854  adrp x0,0x3378000
+00d9f858  ldr x0,[x0, #0x4b8]
+00d9f85c  bl 0x00b0789c
+00d9f860  adrp x0,0x3345000
+00d9f864  ldr x0,[x0, #0x3e8]
+00d9f868  bl 0x00b0789c
+00d9f86c  adrp x0,0x333f000
+00d9f870  ldr x0,[x0, #0x6e8]
+00d9f874  bl 0x00b0789c
+00d9f878  adrp x0,0x333e000
+00d9f87c  ldr x0,[x0, #0x2e8]
+00d9f880  bl 0x00b0789c
+00d9f884  adrp x0,0x3355000
+00d9f888  ldr x0,[x0, #0x708]
+00d9f88c  bl 0x00b0789c
+00d9f890  adrp x0,0x334c000
+00d9f894  ldr x0,[x0, #0x6c8]
+00d9f898  bl 0x00b0789c
+00d9f89c  adrp x0,0x3343000
+00d9f8a0  ldr x0,[x0, #0x6f0]
+00d9f8a4  bl 0x00b0789c
+00d9f8a8  mov w8,#0x1
+00d9f8ac  strb w8,[x23, #0x36]
+00d9f8b0  ldr x0,[x22]
+00d9f8b4  adrp x23,0x333c000
+00d9f8b8  ldr x23,[x23, #0x8f8]
+00d9f8bc  mov x1,x19
+00d9f8c0  mov x2,xzr
+00d9f8c4  bl 0x01fd2850
+00d9f8c8  mov w8,#0x271a
+00d9f8cc  cmp w20,w8
+00d9f8d0  b.ne 0x00d9fa00
+00d9f8d4  adrp x8,0x3313000
+00d9f8d8  ldr x8,[x8, #0xaf8]
+00d9f8dc  ldr x0,[x8]
+00d9f8e0  ldr w8,[x0, #0xe0]
+00d9f8e4  cbnz w8,0x00d9f8ec
+00d9f8e8  bl 0x00b0798c
+00d9f8ec  mov x0,x19
+00d9f8f0  bl 0x00d9f4f4
+00d9f8f4  cbz x0,0x00d9fc04
+00d9f8f8  adrp x8,0x333e000
+00d9f8fc  ldr x8,[x8, #0x2e8]
+00d9f900  adrp x20,0x331e000
+00d9f904  adrp x22,0x3343000
+00d9f908  mov x19,x0
+00d9f90c  ldr x1,[x8]
+00d9f910  ldr x20,[x20, #0x558]
+00d9f914  ldr x22,[x22, #0x6f0]
+00d9f918  bl 0x00d9f648
+00d9f91c  bl 0x00d9f6f8
+00d9f920  ldr x1,[x20]
+00d9f924  mov x20,x0
+00d9f928  mov x0,x19
+00d9f92c  bl 0x00d9f648
+00d9f930  bl 0x00d9f6f8
+00d9f934  ldr x1,[x22]
+00d9f938  mov x22,x0
+00d9f93c  mov x0,x19
+00d9f940  bl 0x00d9f648
+00d9f944  bl 0x00d9f6f8
+00d9f948  mov x19,x0
+00d9f94c  mov x0,x22
+00d9f950  mov x1,xzr
+00d9f954  bl 0x0214df74
+00d9f958  str w0,[x21, #0x20]
+00d9f95c  mov x0,x21
+00d9f960  str x20,[x0, #0x28]!
+00d9f964  mov x1,x20
+00d9f968  bl 0x00b07850
+00d9f96c  str x19,[x21, #0x30]!
+00d9f970  mov x0,x21
+00d9f974  mov x1,x19
+00d9f978  bl 0x00b07850
+00d9f97c  ldr x0,[x23]
+00d9f980  bl 0x01e0894c
+00d9f984  cbz x0,0x00d9fc04
+00d9f988  ldr x0,[x0, #0x20]
+00d9f98c  cbz x0,0x00d9fc04
+00d9f990  str x22,[x0, #0x18]!
+00d9f994  mov x1,x22
+00d9f998  bl 0x00b07850
+00d9f99c  ldr x0,[x23]
+00d9f9a0  bl 0x01e0894c
+00d9f9a4  cbz x0,0x00d9fc04
+00d9f9a8  adrp x21,0x3308000
+00d9f9ac  ldr x21,[x21, #0x9a8]
+00d9f9b0  mov x1,xzr
+00d9f9b4  bl 0x00dd5aac
+00d9f9b8  ldr x0,[x21]
+00d9f9bc  mov w1,#0x6
+00d9f9c0  bl 0x00b078f8
+00d9f9c4  cbz x0,0x00d9fc04
+00d9f9c8  adrp x23,0x3378000
+00d9f9cc  ldr x23,[x23, #0x4b8]
+00d9f9d0  mov x21,x0
+00d9f9d4  ldr x1,[x23]
+00d9f9d8  cbz x1,0x00d9fa90
+00d9f9dc  ldr x8,[x21]
+00d9f9e0  mov x0,x1
+00d9f9e4  ldr x8,[x8, #0x40]
+00d9f9e8  mov x1,x8
+00d9f9ec  bl 0x00b07990
+00d9f9f0  cbz x0,0x00d9fc0c
+00d9f9f4  ldr x8,[x23]
+00d9f9f8  mov x1,x8
+00d9f9fc  b 0x00d9fa94
+00d9fa00  str wzr,[x21, #0x20]
+00d9fa04  ldr x0,[x23]
+00d9fa08  bl 0x01e0894c
+00d9fa0c  cbz x0,0x00d9fc04
+00d9fa10  ldr x0,[x0, #0x20]
+00d9fa14  cbz x0,0x00d9fc04
+00d9fa18  adrp x8,0x334c000
+00d9fa1c  ldr x8,[x8, #0x6c8]
+00d9fa20  ldr x1,[x8]
+00d9fa24  str x1,[x0, #0x18]!
+00d9fa28  bl 0x00b07850
+00d9fa2c  ldr x0,[x23]
+00d9fa30  bl 0x01e0894c
+00d9fa34  cbz x0,0x00d9fc04
+00d9fa38  adrp x20,0x3352000
+00d9fa3c  adrp x21,0x333f000
+00d9fa40  ldr x20,[x20, #0x810]
+00d9fa44  ldr x21,[x21, #0x6e8]
+00d9fa48  mov x1,xzr
+00d9fa4c  bl 0x00dd6adc
+00d9fa50  add x0,sp,#0xc
+00d9fa54  mov x1,xzr
+00d9fa58  bl 0x0214dc44
+00d9fa5c  ldr x8,[x20]
+00d9fa60  ldr x2,[x21]
+00d9fa64  mov x1,x0
+00d9fa68  mov x3,x19
+00d9fa6c  mov x0,x8
+00d9fa70  mov x4,xzr
+00d9fa74  bl 0x01fdf3bc
+00d9fa78  bl 0x00da09c8
+00d9fa7c  ldp x19,x30,[sp, #0x30]
+00d9fa80  ldp x21,x20,[sp, #0x20]
+00d9fa84  ldp x23,x22,[sp, #0x10]
+00d9fa88  add sp,sp,#0x40
+00d9fa8c  ret
+00d9fa90  mov x8,xzr
+00d9fa94  ldr w9,[x21, #0x18]
+00d9fa98  cbz w9,0x00d9fc08
+00d9fa9c  mov x0,x21
+00d9faa0  str x8,[x0, #0x20]!
+00d9faa4  bl 0x00b07850
+00d9faa8  cbz x22,0x00d9fac0
+00d9faac  ldr x8,[x21]
+00d9fab0  mov x0,x22
+00d9fab4  ldr x1,[x8, #0x40]
+00d9fab8  bl 0x00b07990
+00d9fabc  cbz x0,0x00d9fc0c
+00d9fac0  ldr w8,[x21, #0x18]
+00d9fac4  cmp w8,#0x1
+00d9fac8  b.ls 0x00d9fc08
+00d9facc  adrp x23,0x3345000
+00d9fad0  ldr x23,[x23, #0x3e8]
+00d9fad4  mov x0,x21
+00d9fad8  str x22,[x0, #0x28]!
+00d9fadc  mov x1,x22
+00d9fae0  bl 0x00b07850
+00d9fae4  ldr x1,[x23]
+00d9fae8  cbz x1,0x00d9fb10
+00d9faec  ldr x8,[x21]
+00d9faf0  mov x0,x1
+00d9faf4  ldr x8,[x8, #0x40]
+00d9faf8  mov x1,x8
+00d9fafc  bl 0x00b07990
+00d9fb00  cbz x0,0x00d9fc0c
+00d9fb04  ldr x8,[x23]
+00d9fb08  mov x1,x8
+00d9fb0c  b 0x00d9fb14
+00d9fb10  mov x8,xzr
+00d9fb14  ldr w9,[x21, #0x18]
+00d9fb18  cmp w9,#0x2
+00d9fb1c  b.ls 0x00d9fc08
+00d9fb20  mov x0,x21
+00d9fb24  str x8,[x0, #0x30]!
+00d9fb28  bl 0x00b07850
+00d9fb2c  cbz x20,0x00d9fb44
+00d9fb30  ldr x8,[x21]
+00d9fb34  mov x0,x20
+00d9fb38  ldr x1,[x8, #0x40]
+00d9fb3c  bl 0x00b07990
+00d9fb40  cbz x0,0x00d9fc0c
+00d9fb44  ldr w8,[x21, #0x18]
+00d9fb48  cmp w8,#0x3
+00d9fb4c  b.ls 0x00d9fc08
+00d9fb50  adrp x22,0x334a000
+00d9fb54  ldr x22,[x22, #0x4f8]
+00d9fb58  mov x0,x21
+00d9fb5c  str x20,[x0, #0x38]!
+00d9fb60  mov x1,x20
+00d9fb64  bl 0x00b07850
+00d9fb68  ldr x1,[x22]
+00d9fb6c  cbz x1,0x00d9fb94
+00d9fb70  ldr x8,[x21]
+00d9fb74  mov x0,x1
+00d9fb78  ldr x8,[x8, #0x40]
+00d9fb7c  mov x1,x8
+00d9fb80  bl 0x00b07990
+00d9fb84  cbz x0,0x00d9fc0c
+00d9fb88  ldr x8,[x22]
+00d9fb8c  mov x1,x8
+00d9fb90  b 0x00d9fb98
+00d9fb94  mov x8,xzr
+00d9fb98  ldr w9,[x21, #0x18]
+00d9fb9c  cmp w9,#0x4
+00d9fba0  b.ls 0x00d9fc08
+00d9fba4  mov x0,x21
+00d9fba8  str x8,[x0, #0x40]!
+00d9fbac  bl 0x00b07850
+00d9fbb0  cbz x19,0x00d9fbc8
+00d9fbb4  ldr x8,[x21]
+00d9fbb8  mov x0,x19
+00d9fbbc  ldr x1,[x8, #0x40]
+00d9fbc0  bl 0x00b07990
+00d9fbc4  cbz x0,0x00d9fc0c
+00d9fbc8  ldr w8,[x21, #0x18]
+00d9fbcc  cmp w8,#0x5
+00d9fbd0  b.ls 0x00d9fc08
+00d9fbd4  mov x0,x21
+00d9fbd8  str x19,[x0, #0x48]!
+00d9fbdc  mov x1,x19
+00d9fbe0  bl 0x00b07850
+00d9fbe4  mov x0,x21
+00d9fbe8  mov x1,xzr
+00d9fbec  bl 0x01fdf4c4
+00d9fbf0  ldp x19,x30,[sp, #0x30]
+00d9fbf4  ldp x21,x20,[sp, #0x20]
+00d9fbf8  ldp x23,x22,[sp, #0x10]
+00d9fbfc  add sp,sp,#0x40
+00d9fc00  b 0x00da09c8
+00d9fc04  bl 0x00b079b0
+00d9fc08  bl 0x00b079b8
+00d9fc0c  bl 0x00b079d4
+00d9fc10  mov x1,xzr
+00d9fc14  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00d9fc18_BiliSDKManager__OnIsLoginCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnIsLoginCallback @ 00d9fc18
+
+--- Calls OUT ---
+  -> System.Boolean$$ToString @ 020d8f78
+  -> System.String$$Concat @ 01fdf3bc
+  -> JsonData$$op_Explicit @ 00d9f6f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> BSGameSdk$$showToast @ 00da09c8
+  -> System.String$$Concat @ 01fd2850
+  -> JsonData$$op_Explicit @ 00da0a7c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Nullable<bool>$$.ctor @ 01d26334
+
+--- Calls IN ---
+  <- BiliSDKManager$$OnBSGameSdkCallback @ 00d9f088
+
+--- Listing ---
+00d9fc18  sub sp,sp,#0x40
+00d9fc1c  stp x23,x22,[sp, #0x10]
+00d9fc20  stp x21,x20,[sp, #0x20]
+00d9fc24  stp x19,x30,[sp, #0x30]
+00d9fc28  adrp x23,0x3572000
+00d9fc2c  str w1,[sp, #0xc]
+00d9fc30  adrp x22,0x330f000
+00d9fc34  ldrb w8,[x23, #0x37]
+00d9fc38  ldr x22,[x22, #0x5a0]
+00d9fc3c  mov x20,x2
+00d9fc40  mov w21,w1
+00d9fc44  mov x19,x0
+00d9fc48  tbnz w8,#0x0,0x00d9fc90
+00d9fc4c  adrp x0,0x337b000
+00d9fc50  ldr x0,[x0, #0x488]
+00d9fc54  bl 0x00b0789c
+00d9fc58  adrp x0,0x3355000
+00d9fc5c  ldr x0,[x0, #0x258]
+00d9fc60  bl 0x00b0789c
+00d9fc64  adrp x0,0x3369000
+00d9fc68  ldr x0,[x0, #0x618]
+00d9fc6c  bl 0x00b0789c
+00d9fc70  adrp x0,0x333f000
+00d9fc74  ldr x0,[x0, #0x6e8]
+00d9fc78  bl 0x00b0789c
+00d9fc7c  adrp x0,0x330f000
+00d9fc80  ldr x0,[x0, #0x5a0]
+00d9fc84  bl 0x00b0789c
+00d9fc88  mov w8,#0x1
+00d9fc8c  strb w8,[x23, #0x37]
+00d9fc90  ldr x22,[x22]
+00d9fc94  strb wzr,[sp, #0x8]
+00d9fc98  cbz x20,0x00d9fcb4
+00d9fc9c  ldr x8,[x20]
+00d9fca0  mov x0,x20
+00d9fca4  ldp x9,x1,[x8, #0x168]
+00d9fca8  blr x9
+00d9fcac  mov x1,x0
+00d9fcb0  b 0x00d9fcb8
+00d9fcb4  mov x1,xzr
+00d9fcb8  mov x0,x22
+00d9fcbc  mov x2,xzr
+00d9fcc0  bl 0x01fd2850
+00d9fcc4  cbz x19,0x00d9fd8c
+00d9fcc8  mov w8,#0x271a
+00d9fccc  cmp w21,w8
+00d9fcd0  b.ne 0x00d9fd30
+00d9fcd4  adrp x21,0x337b000
+00d9fcd8  adrp x22,0x3355000
+00d9fcdc  ldr x21,[x21, #0x488]
+00d9fce0  ldr x22,[x22, #0x258]
+00d9fce4  mov x0,x20
+00d9fce8  bl 0x00da0a7c
+00d9fcec  ldr x2,[x21]
+00d9fcf0  and w1,w0,#0x1
+00d9fcf4  add x0,sp,#0x4
+00d9fcf8  strb w1,[sp, #0x8]
+00d9fcfc  strh wzr,[sp, #0x4]
+00d9fd00  bl 0x01d26334
+00d9fd04  ldrh w8,[sp, #0x4]
+00d9fd08  add x0,sp,#0x8
+00d9fd0c  mov x1,xzr
+00d9fd10  strh w8,[x19, #0x1a]
+00d9fd14  bl 0x020d8f78
+00d9fd18  ldr x8,[x22]
+00d9fd1c  mov x1,x0
+00d9fd20  mov x2,xzr
+00d9fd24  mov x0,x8
+00d9fd28  bl 0x01fd2850
+00d9fd2c  b 0x00d9fd74
+00d9fd30  adrp x21,0x3369000
+00d9fd34  adrp x22,0x333f000
+00d9fd38  ldr x21,[x21, #0x618]
+00d9fd3c  ldr x22,[x22, #0x6e8]
+00d9fd40  mov x0,x20
+00d9fd44  bl 0x00d9f6f8
+00d9fd48  mov x19,x0
+00d9fd4c  add x0,sp,#0xc
+00d9fd50  mov x1,xzr
+00d9fd54  bl 0x0214dc44
+00d9fd58  ldr x8,[x21]
+00d9fd5c  ldr x2,[x22]
+00d9fd60  mov x1,x0
+00d9fd64  mov x3,x19
+00d9fd68  mov x0,x8
+00d9fd6c  mov x4,xzr
+00d9fd70  bl 0x01fdf3bc
+00d9fd74  bl 0x00da09c8
+00d9fd78  ldp x19,x30,[sp, #0x30]
+00d9fd7c  ldp x21,x20,[sp, #0x20]
+00d9fd80  ldp x23,x22,[sp, #0x10]
+00d9fd84  add sp,sp,#0x40
+00d9fd88  ret
+00d9fd8c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9fd90_BiliSDKManager__OnLogoutCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnLogoutCallback @ 00d9fd90
+
+--- Calls OUT ---
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> BSGameSdk$$showToast @ 00da09c8
+  -> System.String$$Concat @ 01fd2850
+
+--- Calls IN ---
+  <- BiliSDKManager$$OnBSGameSdkCallback @ 00d9f088
+
+--- Listing ---
+00d9fd90  str x22,[sp, #-0x30]!
+00d9fd94  stp x21,x20,[sp, #0x10]
+00d9fd98  stp x19,x30,[sp, #0x20]
+00d9fd9c  adrp x21,0x3572000
+00d9fda0  str w1,[sp, #0xc]
+00d9fda4  adrp x22,0x331a000
+00d9fda8  ldrb w8,[x21, #0x39]
+00d9fdac  ldr x22,[x22, #0x990]
+00d9fdb0  mov x19,x2
+00d9fdb4  mov w20,w1
+00d9fdb8  tbnz w8,#0x0,0x00d9fdf4
+00d9fdbc  adrp x0,0x337b000
+00d9fdc0  ldr x0,[x0, #0x7a8]
+00d9fdc4  bl 0x00b0789c
+00d9fdc8  adrp x0,0x336e000
+00d9fdcc  ldr x0,[x0, #0x300]
+00d9fdd0  bl 0x00b0789c
+00d9fdd4  adrp x0,0x333f000
+00d9fdd8  ldr x0,[x0, #0x6e8]
+00d9fddc  bl 0x00b0789c
+00d9fde0  adrp x0,0x331a000
+00d9fde4  ldr x0,[x0, #0x990]
+00d9fde8  bl 0x00b0789c
+00d9fdec  mov w8,#0x1
+00d9fdf0  strb w8,[x21, #0x39]
+00d9fdf4  ldr x0,[x22]
+00d9fdf8  mov x1,x19
+00d9fdfc  mov x2,xzr
+00d9fe00  bl 0x01fd2850
+00d9fe04  mov w8,#0x271a
+00d9fe08  cmp w20,w8
+00d9fe0c  b.ne 0x00d9fe38
+00d9fe10  adrp x8,0x337b000
+00d9fe14  ldr x8,[x8, #0x7a8]
+00d9fe18  mov x1,x19
+00d9fe1c  mov x2,xzr
+00d9fe20  ldr x0,[x8]
+00d9fe24  bl 0x01fd2850
+00d9fe28  ldp x19,x30,[sp, #0x20]
+00d9fe2c  ldp x21,x20,[sp, #0x10]
+00d9fe30  ldr x22,[sp], #0x30
+00d9fe34  b 0x00da09c8
+00d9fe38  adrp x20,0x336e000
+00d9fe3c  adrp x21,0x333f000
+00d9fe40  ldr x20,[x20, #0x300]
+00d9fe44  ldr x21,[x21, #0x6e8]
+00d9fe48  add x0,sp,#0xc
+00d9fe4c  mov x1,xzr
+00d9fe50  bl 0x0214dc44
+00d9fe54  ldr x8,[x20]
+00d9fe58  ldr x2,[x21]
+00d9fe5c  mov x1,x0
+00d9fe60  mov x3,x19
+00d9fe64  mov x0,x8
+00d9fe68  mov x4,xzr
+00d9fe6c  bl 0x01fdf3bc
+00d9fe70  bl 0x00da09c8
+00d9fe74  ldp x19,x30,[sp, #0x20]
+00d9fe78  ldp x21,x20,[sp, #0x10]
+00d9fe7c  ldr x22,[sp], #0x30
+00d9fe80  ret
+
+
+================================================================================
+### FILE: 00d9fe84_BiliSDKManager__OnGetUserInfoCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnGetUserInfoCallback @ 00d9fe84
+
+--- Calls OUT ---
+  -> JsonMapper$$ToObject @ 00d9f4f4
+  -> JsonData$$op_Explicit @ 00d9f6f8
+  -> System.String$$Concat @ 01fdf4c4
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> JsonData$$get_Item @ 00d9f648
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BSGameSdk$$showToast @ 00da09c8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+
+--- Calls IN ---
+  <- BiliSDKManager$$OnBSGameSdkCallback @ 00d9f088
+
+--- Listing ---
+00d9fe84  sub sp,sp,#0x50
+00d9fe88  stp x25,x24,[sp, #0x10]
+00d9fe8c  stp x23,x22,[sp, #0x20]
+00d9fe90  stp x21,x20,[sp, #0x30]
+00d9fe94  stp x19,x30,[sp, #0x40]
+00d9fe98  adrp x21,0x3572000
+00d9fe9c  str w1,[sp, #0xc]
+00d9fea0  adrp x22,0x3367000
+00d9fea4  ldrb w8,[x21, #0x3a]
+00d9fea8  ldr x22,[x22, #0x870]
+00d9feac  mov x19,x2
+00d9feb0  mov w20,w1
+00d9feb4  tbnz w8,#0x0,0x00d9ff5c
+00d9feb8  adrp x0,0x3313000
+00d9febc  ldr x0,[x0, #0xaf8]
+00d9fec0  bl 0x00b0789c
+00d9fec4  adrp x0,0x3308000
+00d9fec8  ldr x0,[x0, #0x9a8]
+00d9fecc  bl 0x00b0789c
+00d9fed0  adrp x0,0x337f000
+00d9fed4  ldr x0,[x0, #0x100]
+00d9fed8  bl 0x00b0789c
+00d9fedc  adrp x0,0x3353000
+00d9fee0  ldr x0,[x0, #0x20]
+00d9fee4  bl 0x00b0789c
+00d9fee8  adrp x0,0x3360000
+00d9feec  ldr x0,[x0, #0xbc8]
+00d9fef0  bl 0x00b0789c
+00d9fef4  adrp x0,0x331d000
+00d9fef8  ldr x0,[x0, #0x398]
+00d9fefc  bl 0x00b0789c
+00d9ff00  adrp x0,0x3377000
+00d9ff04  ldr x0,[x0, #0x748]
+00d9ff08  bl 0x00b0789c
+00d9ff0c  adrp x0,0x331e000
+00d9ff10  ldr x0,[x0, #0xe18]
+00d9ff14  bl 0x00b0789c
+00d9ff18  adrp x0,0x3367000
+00d9ff1c  ldr x0,[x0, #0x870]
+00d9ff20  bl 0x00b0789c
+00d9ff24  adrp x0,0x3325000
+00d9ff28  ldr x0,[x0, #0xd98]
+00d9ff2c  bl 0x00b0789c
+00d9ff30  adrp x0,0x333f000
+00d9ff34  ldr x0,[x0, #0x6e8]
+00d9ff38  bl 0x00b0789c
+00d9ff3c  adrp x0,0x331d000
+00d9ff40  ldr x0,[x0, #0xea8]
+00d9ff44  bl 0x00b0789c
+00d9ff48  adrp x0,0x333e000
+00d9ff4c  ldr x0,[x0, #0x2e8]
+00d9ff50  bl 0x00b0789c
+00d9ff54  mov w8,#0x1
+00d9ff58  strb w8,[x21, #0x3a]
+00d9ff5c  ldr x0,[x22]
+00d9ff60  mov x1,x19
+00d9ff64  mov x2,xzr
+00d9ff68  bl 0x01fd2850
+00d9ff6c  mov w8,#0x271a
+00d9ff70  cmp w20,w8
+00d9ff74  b.ne 0x00da0060
+00d9ff78  adrp x8,0x3313000
+00d9ff7c  ldr x8,[x8, #0xaf8]
+00d9ff80  ldr x0,[x8]
+00d9ff84  ldr w8,[x0, #0xe0]
+00d9ff88  cbnz w8,0x00d9ff90
+00d9ff8c  bl 0x00b0798c
+00d9ff90  mov x0,x19
+00d9ff94  bl 0x00d9f4f4
+00d9ff98  cbz x0,0x00da02c0
+00d9ff9c  adrp x8,0x333e000
+00d9ffa0  ldr x8,[x8, #0x2e8]
+00d9ffa4  adrp x20,0x3360000
+00d9ffa8  ldr x20,[x20, #0xbc8]
+00d9ffac  adrp x21,0x331e000
+00d9ffb0  ldr x1,[x8]
+00d9ffb4  adrp x24,0x337f000
+00d9ffb8  adrp x25,0x3308000
+00d9ffbc  ldr x21,[x21, #0xe18]
+00d9ffc0  ldr x24,[x24, #0x100]
+00d9ffc4  ldr x25,[x25, #0x9a8]
+00d9ffc8  mov x19,x0
+00d9ffcc  bl 0x00d9f648
+00d9ffd0  bl 0x00d9f6f8
+00d9ffd4  ldr x1,[x20]
+00d9ffd8  mov x23,x0
+00d9ffdc  mov x0,x19
+00d9ffe0  bl 0x00d9f648
+00d9ffe4  bl 0x00d9f6f8
+00d9ffe8  ldr x1,[x21]
+00d9ffec  mov x22,x0
+00d9fff0  mov x0,x19
+00d9fff4  bl 0x00d9f648
+00d9fff8  bl 0x00d9f6f8
+00d9fffc  ldr x1,[x24]
+00da0000  mov x21,x0
+00da0004  mov x0,x19
+00da0008  bl 0x00d9f648
+00da000c  bl 0x00d9f6f8
+00da0010  ldr x8,[x25]
+00da0014  mov x19,x0
+00da0018  mov w1,#0x8
+00da001c  mov x0,x8
+00da0020  bl 0x00b078f8
+00da0024  cbz x0,0x00da02c0
+00da0028  adrp x24,0x3377000
+00da002c  ldr x24,[x24, #0x748]
+00da0030  mov x20,x0
+00da0034  ldr x1,[x24]
+00da0038  cbz x1,0x00da00b4
+00da003c  ldr x8,[x20]
+00da0040  mov x0,x1
+00da0044  ldr x8,[x8, #0x40]
+00da0048  mov x1,x8
+00da004c  bl 0x00b07990
+00da0050  cbz x0,0x00da02b4
+00da0054  ldr x8,[x24]
+00da0058  mov x1,x8
+00da005c  b 0x00da00b8
+00da0060  adrp x20,0x3353000
+00da0064  adrp x21,0x333f000
+00da0068  ldr x20,[x20, #0x20]
+00da006c  ldr x21,[x21, #0x6e8]
+00da0070  add x0,sp,#0xc
+00da0074  mov x1,xzr
+00da0078  bl 0x0214dc44
+00da007c  ldr x8,[x20]
+00da0080  ldr x2,[x21]
+00da0084  mov x1,x0
+00da0088  mov x3,x19
+00da008c  mov x0,x8
+00da0090  mov x4,xzr
+00da0094  bl 0x01fdf3bc
+00da0098  bl 0x00da09c8
+00da009c  ldp x19,x30,[sp, #0x40]
+00da00a0  ldp x21,x20,[sp, #0x30]
+00da00a4  ldp x23,x22,[sp, #0x20]
+00da00a8  ldp x25,x24,[sp, #0x10]
+00da00ac  add sp,sp,#0x50
+00da00b0  ret
+00da00b4  mov x8,xzr
+00da00b8  ldr w9,[x20, #0x18]
+00da00bc  cbz w9,0x00da02b0
+00da00c0  mov x0,x20
+00da00c4  str x8,[x0, #0x20]!
+00da00c8  bl 0x00b07850
+00da00cc  cbz x23,0x00da00e4
+00da00d0  ldr x8,[x20]
+00da00d4  mov x0,x23
+00da00d8  ldr x1,[x8, #0x40]
+00da00dc  bl 0x00b07990
+00da00e0  cbz x0,0x00da02b4
+00da00e4  ldr w8,[x20, #0x18]
+00da00e8  cmp w8,#0x1
+00da00ec  b.ls 0x00da02b0
+00da00f0  adrp x24,0x331d000
+00da00f4  ldr x24,[x24, #0xea8]
+00da00f8  mov x0,x20
+00da00fc  str x23,[x0, #0x28]!
+00da0100  mov x1,x23
+00da0104  bl 0x00b07850
+00da0108  ldr x1,[x24]
+00da010c  cbz x1,0x00da0134
+00da0110  ldr x8,[x20]
+00da0114  mov x0,x1
+00da0118  ldr x8,[x8, #0x40]
+00da011c  mov x1,x8
+00da0120  bl 0x00b07990
+00da0124  cbz x0,0x00da02b4
+00da0128  ldr x8,[x24]
+00da012c  mov x1,x8
+00da0130  b 0x00da0138
+00da0134  mov x8,xzr
+00da0138  ldr w9,[x20, #0x18]
+00da013c  cmp w9,#0x2
+00da0140  b.ls 0x00da02b0
+00da0144  mov x0,x20
+00da0148  str x8,[x0, #0x30]!
+00da014c  bl 0x00b07850
+00da0150  cbz x22,0x00da0168
+00da0154  ldr x8,[x20]
+00da0158  mov x0,x22
+00da015c  ldr x1,[x8, #0x40]
+00da0160  bl 0x00b07990
+00da0164  cbz x0,0x00da02b4
+00da0168  ldr w8,[x20, #0x18]
+00da016c  cmp w8,#0x3
+00da0170  b.ls 0x00da02b0
+00da0174  adrp x23,0x331d000
+00da0178  ldr x23,[x23, #0x398]
+00da017c  mov x0,x20
+00da0180  str x22,[x0, #0x38]!
+00da0184  mov x1,x22
+00da0188  bl 0x00b07850
+00da018c  ldr x1,[x23]
+00da0190  cbz x1,0x00da01b8
+00da0194  ldr x8,[x20]
+00da0198  mov x0,x1
+00da019c  ldr x8,[x8, #0x40]
+00da01a0  mov x1,x8
+00da01a4  bl 0x00b07990
+00da01a8  cbz x0,0x00da02b4
+00da01ac  ldr x8,[x23]
+00da01b0  mov x1,x8
+00da01b4  b 0x00da01bc
+00da01b8  mov x8,xzr
+00da01bc  ldr w9,[x20, #0x18]
+00da01c0  cmp w9,#0x4
+00da01c4  b.ls 0x00da02b0
+00da01c8  mov x0,x20
+00da01cc  str x8,[x0, #0x40]!
+00da01d0  bl 0x00b07850
+00da01d4  cbz x21,0x00da01ec
+00da01d8  ldr x8,[x20]
+00da01dc  mov x0,x21
+00da01e0  ldr x1,[x8, #0x40]
+00da01e4  bl 0x00b07990
+00da01e8  cbz x0,0x00da02b4
+00da01ec  ldr w8,[x20, #0x18]
+00da01f0  cmp w8,#0x5
+00da01f4  b.ls 0x00da02b0
+00da01f8  adrp x22,0x3325000
+00da01fc  ldr x22,[x22, #0xd98]
+00da0200  mov x0,x20
+00da0204  str x21,[x0, #0x48]!
+00da0208  mov x1,x21
+00da020c  bl 0x00b07850
+00da0210  ldr x1,[x22]
+00da0214  cbz x1,0x00da023c
+00da0218  ldr x8,[x20]
+00da021c  mov x0,x1
+00da0220  ldr x8,[x8, #0x40]
+00da0224  mov x1,x8
+00da0228  bl 0x00b07990
+00da022c  cbz x0,0x00da02b4
+00da0230  ldr x8,[x22]
+00da0234  mov x1,x8
+00da0238  b 0x00da0240
+00da023c  mov x8,xzr
+00da0240  ldr w9,[x20, #0x18]
+00da0244  cmp w9,#0x6
+00da0248  b.ls 0x00da02b0
+00da024c  mov x0,x20
+00da0250  str x8,[x0, #0x50]!
+00da0254  bl 0x00b07850
+00da0258  cbz x19,0x00da0270
+00da025c  ldr x8,[x20]
+00da0260  mov x0,x19
+00da0264  ldr x1,[x8, #0x40]
+00da0268  bl 0x00b07990
+00da026c  cbz x0,0x00da02b4
+00da0270  ldr w8,[x20, #0x18]
+00da0274  cmp w8,#0x7
+00da0278  b.ls 0x00da02b0
+00da027c  mov x0,x20
+00da0280  str x19,[x0, #0x58]!
+00da0284  mov x1,x19
+00da0288  bl 0x00b07850
+00da028c  mov x0,x20
+00da0290  mov x1,xzr
+00da0294  bl 0x01fdf4c4
+00da0298  ldp x19,x30,[sp, #0x40]
+00da029c  ldp x21,x20,[sp, #0x30]
+00da02a0  ldp x23,x22,[sp, #0x20]
+00da02a4  ldp x25,x24,[sp, #0x10]
+00da02a8  add sp,sp,#0x50
+00da02ac  b 0x00da09c8
+00da02b0  bl 0x00b079b8
+00da02b4  bl 0x00b079d4
+00da02b8  mov x1,xzr
+00da02bc  bl 0x00b07978
+00da02c0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da02c4_BiliSDKManager__OnRegisterCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnRegisterCallback @ 00da02c4
+
+--- Calls OUT ---
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> BSGameSdk$$showToast @ 00da09c8
+  -> System.String$$Concat @ 01fd2850
+
+--- Calls IN ---
+  <- BiliSDKManager$$OnBSGameSdkCallback @ 00d9f088
+
+--- Listing ---
+00da02c4  str x22,[sp, #-0x30]!
+00da02c8  stp x21,x20,[sp, #0x10]
+00da02cc  stp x19,x30,[sp, #0x20]
+00da02d0  adrp x21,0x3572000
+00da02d4  str w1,[sp, #0xc]
+00da02d8  adrp x22,0x337c000
+00da02dc  ldrb w8,[x21, #0x3b]
+00da02e0  ldr x22,[x22, #0x5a0]
+00da02e4  mov x19,x2
+00da02e8  mov w20,w1
+00da02ec  tbnz w8,#0x0,0x00da0328
+00da02f0  adrp x0,0x337c000
+00da02f4  ldr x0,[x0, #0x5a0]
+00da02f8  bl 0x00b0789c
+00da02fc  adrp x0,0x3310000
+00da0300  ldr x0,[x0, #0x78]
+00da0304  bl 0x00b0789c
+00da0308  adrp x0,0x335f000
+00da030c  ldr x0,[x0, #0x9b0]
+00da0310  bl 0x00b0789c
+00da0314  adrp x0,0x333f000
+00da0318  ldr x0,[x0, #0x6e8]
+00da031c  bl 0x00b0789c
+00da0320  mov w8,#0x1
+00da0324  strb w8,[x21, #0x3b]
+00da0328  ldr x0,[x22]
+00da032c  mov x1,x19
+00da0330  mov x2,xzr
+00da0334  bl 0x01fd2850
+00da0338  mov w8,#0x271a
+00da033c  cmp w20,w8
+00da0340  b.ne 0x00da036c
+00da0344  adrp x8,0x335f000
+00da0348  ldr x8,[x8, #0x9b0]
+00da034c  mov x1,x19
+00da0350  mov x2,xzr
+00da0354  ldr x0,[x8]
+00da0358  bl 0x01fd2850
+00da035c  ldp x19,x30,[sp, #0x20]
+00da0360  ldp x21,x20,[sp, #0x10]
+00da0364  ldr x22,[sp], #0x30
+00da0368  b 0x00da09c8
+00da036c  adrp x20,0x3310000
+00da0370  adrp x21,0x333f000
+00da0374  ldr x20,[x20, #0x78]
+00da0378  ldr x21,[x21, #0x6e8]
+00da037c  add x0,sp,#0xc
+00da0380  mov x1,xzr
+00da0384  bl 0x0214dc44
+00da0388  ldr x8,[x20]
+00da038c  ldr x2,[x21]
+00da0390  mov x1,x0
+00da0394  mov x3,x19
+00da0398  mov x0,x8
+00da039c  mov x4,xzr
+00da03a0  bl 0x01fdf3bc
+00da03a4  bl 0x00da09c8
+00da03a8  ldp x19,x30,[sp, #0x20]
+00da03ac  ldp x21,x20,[sp, #0x10]
+00da03b0  ldr x22,[sp], #0x30
+00da03b4  ret
+
+
+================================================================================
+### FILE: 00da03b8_BiliSDKManager__OnPayCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnPayCallback @ 00da03b8
+
+--- Calls OUT ---
+  -> JsonMapper$$ToObject @ 00d9f4f4
+  -> JsonData$$op_Explicit @ 00d9f6f8
+  -> System.String$$Concat @ 01fdf4c4
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+  -> JsonData$$get_Item @ 00d9f648
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BSGameSdk$$showToast @ 00da09c8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+  <- BiliSDKManager$$OnBSGameSdkCallback @ 00d9f088
+
+--- Listing ---
+00da03b8  str x24,[sp, #-0x40]!
+00da03bc  stp x23,x22,[sp, #0x10]
+00da03c0  stp x21,x20,[sp, #0x20]
+00da03c4  stp x19,x30,[sp, #0x30]
+00da03c8  adrp x23,0x3572000
+00da03cc  str w1,[sp, #0xc]
+00da03d0  adrp x24,0x337b000
+00da03d4  adrp x19,0x3313000
+00da03d8  ldrb w8,[x23, #0x3c]
+00da03dc  ldr x24,[x24, #0xc88]
+00da03e0  ldr x19,[x19, #0xaf8]
+00da03e4  mov x20,x2
+00da03e8  mov w22,w1
+00da03ec  mov x21,x0
+00da03f0  tbnz w8,#0x0,0x00da0474
+00da03f4  adrp x0,0x3313000
+00da03f8  ldr x0,[x0, #0xaf8]
+00da03fc  bl 0x00b0789c
+00da0400  adrp x0,0x3308000
+00da0404  ldr x0,[x0, #0x9a8]
+00da0408  bl 0x00b0789c
+00da040c  adrp x0,0x3371000
+00da0410  ldr x0,[x0, #0x768]
+00da0414  bl 0x00b0789c
+00da0418  adrp x0,0x3335000
+00da041c  ldr x0,[x0, #0x430]
+00da0420  bl 0x00b0789c
+00da0424  adrp x0,0x337b000
+00da0428  ldr x0,[x0, #0xc88]
+00da042c  bl 0x00b0789c
+00da0430  adrp x0,0x3341000
+00da0434  ldr x0,[x0, #0xa00]
+00da0438  bl 0x00b0789c
+00da043c  adrp x0,0x3366000
+00da0440  ldr x0,[x0, #0x828]
+00da0444  bl 0x00b0789c
+00da0448  adrp x0,0x333f000
+00da044c  ldr x0,[x0, #0x6e8]
+00da0450  bl 0x00b0789c
+00da0454  adrp x0,0x336d000
+00da0458  ldr x0,[x0, #0xa50]
+00da045c  bl 0x00b0789c
+00da0460  adrp x0,0x3339000
+00da0464  ldr x0,[x0, #0xec8]
+00da0468  bl 0x00b0789c
+00da046c  mov w8,#0x1
+00da0470  strb w8,[x23, #0x3c]
+00da0474  ldr x0,[x24]
+00da0478  mov x1,x20
+00da047c  mov x2,xzr
+00da0480  bl 0x01fd2850
+00da0484  ldr x0,[x19]
+00da0488  ldr w8,[x0, #0xe0]
+00da048c  cbnz w8,0x00da0494
+00da0490  bl 0x00b0798c
+00da0494  mov x0,x20
+00da0498  bl 0x00d9f4f4
+00da049c  cbz x0,0x00da0768
+00da04a0  adrp x24,0x3366000
+00da04a4  ldr x24,[x24, #0x828]
+00da04a8  mov w8,#0x271a
+00da04ac  mov x23,x0
+00da04b0  cmp w22,w8
+00da04b4  b.ne 0x00da0544
+00da04b8  ldr x1,[x24]
+00da04bc  adrp x19,0x3341000
+00da04c0  ldr x19,[x19, #0xa00]
+00da04c4  mov x0,x23
+00da04c8  bl 0x00d9f648
+00da04cc  bl 0x00d9f6f8
+00da04d0  ldr x1,[x19]
+00da04d4  mov x19,x0
+00da04d8  mov x0,x23
+00da04dc  bl 0x00d9f648
+00da04e0  bl 0x00d9f6f8
+00da04e4  ldr x8,[x21, #0x48]
+00da04e8  cbz x8,0x00da0768
+00da04ec  mov x21,x0
+00da04f0  ldr x9,[x8, #0x18]
+00da04f4  ldr x0,[x8, #0x40]
+00da04f8  ldr x3,[x8, #0x28]
+00da04fc  adrp x22,0x3339000
+00da0500  adrp x23,0x3335000
+00da0504  ldr x22,[x22, #0xec8]
+00da0508  ldr x23,[x23, #0x430]
+00da050c  mov w1,#0x271a
+00da0510  mov x2,x20
+00da0514  blr x9
+00da0518  ldr x0,[x22]
+00da051c  ldr x2,[x23]
+00da0520  mov x1,x19
+00da0524  mov x3,x21
+00da0528  mov x4,xzr
+00da052c  bl 0x01fdf3bc
+00da0530  ldp x19,x30,[sp, #0x30]
+00da0534  ldp x21,x20,[sp, #0x20]
+00da0538  ldp x23,x22,[sp, #0x10]
+00da053c  ldr x24,[sp], #0x40
+00da0540  b 0x00da09c8
+00da0544  adrp x8,0x336d000
+00da0548  ldr x8,[x8, #0xa50]
+00da054c  mov x0,x23
+00da0550  ldr x1,[x8]
+00da0554  bl 0x00d9f648
+00da0558  bl 0x00d9f6f8
+00da055c  ldr x1,[x24]
+00da0560  mov x19,x0
+00da0564  mov x0,x23
+00da0568  bl 0x00d9f648
+00da056c  bl 0x00d9f6f8
+00da0570  ldr x8,[x21, #0x50]
+00da0574  cbz x8,0x00da0768
+00da0578  mov x21,x0
+00da057c  ldr x9,[x8, #0x18]
+00da0580  ldr x0,[x8, #0x40]
+00da0584  ldr x3,[x8, #0x28]
+00da0588  adrp x23,0x3308000
+00da058c  ldr x23,[x23, #0x9a8]
+00da0590  mov w1,w22
+00da0594  mov x2,x20
+00da0598  blr x9
+00da059c  ldr x0,[x23]
+00da05a0  mov w1,#0x6
+00da05a4  bl 0x00b078f8
+00da05a8  cbz x0,0x00da0768
+00da05ac  adrp x22,0x3371000
+00da05b0  ldr x22,[x22, #0x768]
+00da05b4  mov x20,x0
+00da05b8  ldr x1,[x22]
+00da05bc  cbz x1,0x00da05e4
+00da05c0  ldr x8,[x20]
+00da05c4  mov x0,x1
+00da05c8  ldr x8,[x8, #0x40]
+00da05cc  mov x1,x8
+00da05d0  bl 0x00b07990
+00da05d4  cbz x0,0x00da076c
+00da05d8  ldr x8,[x22]
+00da05dc  mov x1,x8
+00da05e0  b 0x00da05e8
+00da05e4  mov x8,xzr
+00da05e8  ldr w9,[x20, #0x18]
+00da05ec  cbz w9,0x00da0764
+00da05f0  mov x0,x20
+00da05f4  str x8,[x0, #0x20]!
+00da05f8  bl 0x00b07850
+00da05fc  add x0,sp,#0xc
+00da0600  mov x1,xzr
+00da0604  bl 0x0214dc44
+00da0608  mov x22,x0
+00da060c  cbz x0,0x00da0624
+00da0610  ldr x8,[x20]
+00da0614  mov x0,x22
+00da0618  ldr x1,[x8, #0x40]
+00da061c  bl 0x00b07990
+00da0620  cbz x0,0x00da076c
+00da0624  ldr w8,[x20, #0x18]
+00da0628  cmp w8,#0x1
+00da062c  b.ls 0x00da0764
+00da0630  mov x0,x20
+00da0634  str x22,[x0, #0x28]!
+00da0638  mov x1,x22
+00da063c  bl 0x00b07850
+00da0640  ldr x1,[x24]
+00da0644  cbz x1,0x00da066c
+00da0648  ldr x8,[x20]
+00da064c  mov x0,x1
+00da0650  ldr x8,[x8, #0x40]
+00da0654  mov x1,x8
+00da0658  bl 0x00b07990
+00da065c  cbz x0,0x00da076c
+00da0660  ldr x8,[x24]
+00da0664  mov x1,x8
+00da0668  b 0x00da0670
+00da066c  mov x8,xzr
+00da0670  ldr w9,[x20, #0x18]
+00da0674  cmp w9,#0x2
+00da0678  b.ls 0x00da0764
+00da067c  mov x0,x20
+00da0680  str x8,[x0, #0x30]!
+00da0684  bl 0x00b07850
+00da0688  cbz x21,0x00da06a0
+00da068c  ldr x8,[x20]
+00da0690  mov x0,x21
+00da0694  ldr x1,[x8, #0x40]
+00da0698  bl 0x00b07990
+00da069c  cbz x0,0x00da076c
+00da06a0  ldr w8,[x20, #0x18]
+00da06a4  cmp w8,#0x3
+00da06a8  b.ls 0x00da0764
+00da06ac  adrp x22,0x333f000
+00da06b0  ldr x22,[x22, #0x6e8]
+00da06b4  mov x0,x20
+00da06b8  str x21,[x0, #0x38]!
+00da06bc  mov x1,x21
+00da06c0  bl 0x00b07850
+00da06c4  ldr x1,[x22]
+00da06c8  cbz x1,0x00da06f0
+00da06cc  ldr x8,[x20]
+00da06d0  mov x0,x1
+00da06d4  ldr x8,[x8, #0x40]
+00da06d8  mov x1,x8
+00da06dc  bl 0x00b07990
+00da06e0  cbz x0,0x00da076c
+00da06e4  ldr x8,[x22]
+00da06e8  mov x1,x8
+00da06ec  b 0x00da06f4
+00da06f0  mov x8,xzr
+00da06f4  ldr w9,[x20, #0x18]
+00da06f8  cmp w9,#0x4
+00da06fc  b.ls 0x00da0764
+00da0700  mov x0,x20
+00da0704  str x8,[x0, #0x40]!
+00da0708  bl 0x00b07850
+00da070c  cbz x19,0x00da0724
+00da0710  ldr x8,[x20]
+00da0714  mov x0,x19
+00da0718  ldr x1,[x8, #0x40]
+00da071c  bl 0x00b07990
+00da0720  cbz x0,0x00da076c
+00da0724  ldr w8,[x20, #0x18]
+00da0728  cmp w8,#0x5
+00da072c  b.ls 0x00da0764
+00da0730  mov x0,x20
+00da0734  str x19,[x0, #0x48]!
+00da0738  mov x1,x19
+00da073c  bl 0x00b07850
+00da0740  mov x0,x20
+00da0744  mov x1,xzr
+00da0748  bl 0x01fdf4c4
+00da074c  bl 0x00da09c8
+00da0750  ldp x19,x30,[sp, #0x30]
+00da0754  ldp x21,x20,[sp, #0x20]
+00da0758  ldp x23,x22,[sp, #0x10]
+00da075c  ldr x24,[sp], #0x40
+00da0760  ret
+00da0764  bl 0x00b079b8
+00da0768  bl 0x00b079b0
+00da076c  bl 0x00b079d4
+00da0770  mov x1,xzr
+00da0774  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00da0778_BiliSDKManager__OnAccountInvalidCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnAccountInvalidCallback @ 00da0778
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BSGameSdk$$showToast @ 00da09c8
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> SDKManager$$LogOut @ 00dec3fc
+
+--- Calls IN ---
+  <- BiliSDKManager$$OnBSGameSdkCallback @ 00d9f088
+
+--- Listing ---
+00da0778  stp x23,x22,[sp, #-0x30]!
+00da077c  stp x21,x20,[sp, #0x10]
+00da0780  stp x19,x30,[sp, #0x20]
+00da0784  adrp x22,0x3572000
+00da0788  adrp x23,0x3312000
+00da078c  ldrb w8,[x22, #0x3d]
+00da0790  ldr x23,[x23, #0x8d0]
+00da0794  mov x19,x2
+00da0798  mov w21,w1
+00da079c  mov x20,x0
+00da07a0  tbnz w8,#0x0,0x00da07d0
+00da07a4  adrp x0,0x336b000
+00da07a8  ldr x0,[x0, #0xd18]
+00da07ac  bl 0x00b0789c
+00da07b0  adrp x0,0x3312000
+00da07b4  ldr x0,[x0, #0x8d0]
+00da07b8  bl 0x00b0789c
+00da07bc  adrp x0,0x335b000
+00da07c0  ldr x0,[x0, #0xa88]
+00da07c4  bl 0x00b0789c
+00da07c8  mov w8,#0x1
+00da07cc  strb w8,[x22, #0x3d]
+00da07d0  ldr x0,[x23]
+00da07d4  mov x1,x19
+00da07d8  mov x2,xzr
+00da07dc  bl 0x01fd2850
+00da07e0  mov w8,#0x271a
+00da07e4  cmp w21,w8
+00da07e8  b.ne 0x00da083c
+00da07ec  adrp x8,0x336b000
+00da07f0  ldr x8,[x8, #0xd18]
+00da07f4  str wzr,[x20, #0x20]
+00da07f8  ldr x8,[x8]
+00da07fc  ldr x8,[x8, #0xb8]
+00da0800  ldr x0,[x8]
+00da0804  cbz x0,0x00da084c
+00da0808  adrp x20,0x335b000
+00da080c  ldr x20,[x20, #0xa88]
+00da0810  mov w1,#0x1
+00da0814  mov x2,xzr
+00da0818  bl 0x00dec3fc
+00da081c  ldr x0,[x20]
+00da0820  mov x1,x19
+00da0824  mov x2,xzr
+00da0828  bl 0x01fd2850
+00da082c  ldp x19,x30,[sp, #0x20]
+00da0830  ldp x21,x20,[sp, #0x10]
+00da0834  ldp x23,x22,[sp], #0x30
+00da0838  b 0x00da09c8
+00da083c  ldp x19,x30,[sp, #0x20]
+00da0840  ldp x21,x20,[sp, #0x10]
+00da0844  ldp x23,x22,[sp], #0x30
+00da0848  ret
+00da084c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da0850_BiliSDKManager__OnIsRealNameAuthCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnIsRealNameAuthCallback @ 00da0850
+
+--- Calls OUT ---
+  -> System.Boolean$$ToString @ 020d8f78
+  -> System.String$$Concat @ 01fdf3bc
+  -> JsonData$$op_Explicit @ 00d9f6f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> BSGameSdk$$showToast @ 00da09c8
+  -> System.String$$Concat @ 01fd2850
+  -> JsonData$$op_Explicit @ 00da0a7c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Nullable<bool>$$.ctor @ 01d26334
+
+--- Calls IN ---
+  <- BiliSDKManager$$OnBSGameSdkCallback @ 00d9f088
+
+--- Listing ---
+00da0850  sub sp,sp,#0x40
+00da0854  stp x23,x22,[sp, #0x10]
+00da0858  stp x21,x20,[sp, #0x20]
+00da085c  stp x19,x30,[sp, #0x30]
+00da0860  adrp x23,0x3572000
+00da0864  str w1,[sp, #0xc]
+00da0868  adrp x22,0x3376000
+00da086c  ldrb w8,[x23, #0x38]
+00da0870  ldr x22,[x22, #0x570]
+00da0874  mov x20,x2
+00da0878  mov w21,w1
+00da087c  mov x19,x0
+00da0880  tbnz w8,#0x0,0x00da08c8
+00da0884  adrp x0,0x337b000
+00da0888  ldr x0,[x0, #0x488]
+00da088c  bl 0x00b0789c
+00da0890  adrp x0,0x3376000
+00da0894  ldr x0,[x0, #0x570]
+00da0898  bl 0x00b0789c
+00da089c  adrp x0,0x3355000
+00da08a0  ldr x0,[x0, #0x1b0]
+00da08a4  bl 0x00b0789c
+00da08a8  adrp x0,0x330b000
+00da08ac  ldr x0,[x0, #0x30]
+00da08b0  bl 0x00b0789c
+00da08b4  adrp x0,0x333f000
+00da08b8  ldr x0,[x0, #0x6e8]
+00da08bc  bl 0x00b0789c
+00da08c0  mov w8,#0x1
+00da08c4  strb w8,[x23, #0x38]
+00da08c8  ldr x22,[x22]
+00da08cc  strb wzr,[sp, #0x8]
+00da08d0  cbz x20,0x00da08ec
+00da08d4  ldr x8,[x20]
+00da08d8  mov x0,x20
+00da08dc  ldp x9,x1,[x8, #0x168]
+00da08e0  blr x9
+00da08e4  mov x1,x0
+00da08e8  b 0x00da08f0
+00da08ec  mov x1,xzr
+00da08f0  mov x0,x22
+00da08f4  mov x2,xzr
+00da08f8  bl 0x01fd2850
+00da08fc  cbz x19,0x00da09c4
+00da0900  mov w8,#0x271a
+00da0904  cmp w21,w8
+00da0908  b.ne 0x00da0968
+00da090c  adrp x21,0x337b000
+00da0910  adrp x22,0x330b000
+00da0914  ldr x21,[x21, #0x488]
+00da0918  ldr x22,[x22, #0x30]
+00da091c  mov x0,x20
+00da0920  bl 0x00da0a7c
+00da0924  ldr x2,[x21]
+00da0928  and w1,w0,#0x1
+00da092c  add x0,sp,#0x4
+00da0930  strb w1,[sp, #0x8]
+00da0934  strh wzr,[sp, #0x4]
+00da0938  bl 0x01d26334
+00da093c  ldrh w8,[sp, #0x4]
+00da0940  add x0,sp,#0x8
+00da0944  mov x1,xzr
+00da0948  strh w8,[x19, #0x1c]
+00da094c  bl 0x020d8f78
+00da0950  ldr x8,[x22]
+00da0954  mov x1,x0
+00da0958  mov x2,xzr
+00da095c  mov x0,x8
+00da0960  bl 0x01fd2850
+00da0964  b 0x00da09ac
+00da0968  adrp x21,0x3355000
+00da096c  adrp x22,0x333f000
+00da0970  ldr x21,[x21, #0x1b0]
+00da0974  ldr x22,[x22, #0x6e8]
+00da0978  mov x0,x20
+00da097c  bl 0x00d9f6f8
+00da0980  mov x19,x0
+00da0984  add x0,sp,#0xc
+00da0988  mov x1,xzr
+00da098c  bl 0x0214dc44
+00da0990  ldr x8,[x21]
+00da0994  ldr x2,[x22]
+00da0998  mov x1,x0
+00da099c  mov x3,x19
+00da09a0  mov x0,x8
+00da09a4  mov x4,xzr
+00da09a8  bl 0x01fdf3bc
+00da09ac  bl 0x00da09c8
+00da09b0  ldp x19,x30,[sp, #0x30]
+00da09b4  ldp x21,x20,[sp, #0x20]
+00da09b8  ldp x23,x22,[sp, #0x10]
+00da09bc  add sp,sp,#0x40
+00da09c0  ret
+00da09c4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da0aec_BiliSDKManager__OnInitCallback.txt
+================================================================================
+Function: BiliSDKManager$$OnInitCallback @ 00da0aec
+
+--- Calls OUT ---
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BSGameSdk$$showToast @ 00da09c8
+  -> System.Int32$$ToString @ 0214dc44
+  -> System.String$$Concat @ 01fd2850
+
+--- Calls IN ---
+
+--- Listing ---
+00da0aec  sub sp,sp,#0x40
+00da0af0  stp x23,x22,[sp, #0x10]
+00da0af4  stp x21,x20,[sp, #0x20]
+00da0af8  stp x19,x30,[sp, #0x30]
+00da0afc  adrp x22,0x3572000
+00da0b00  str w1,[sp, #0xc]
+00da0b04  adrp x23,0x337f000
+00da0b08  ldrb w8,[x22, #0x3e]
+00da0b0c  ldr x23,[x23, #0x7d0]
+00da0b10  mov x19,x2
+00da0b14  mov w21,w1
+00da0b18  mov x20,x0
+00da0b1c  tbnz w8,#0x0,0x00da0b58
+00da0b20  adrp x0,0x3350000
+00da0b24  ldr x0,[x0, #0x548]
+00da0b28  bl 0x00b0789c
+00da0b2c  adrp x0,0x337f000
+00da0b30  ldr x0,[x0, #0x7d0]
+00da0b34  bl 0x00b0789c
+00da0b38  adrp x0,0x3357000
+00da0b3c  ldr x0,[x0, #0x848]
+00da0b40  bl 0x00b0789c
+00da0b44  adrp x0,0x333f000
+00da0b48  ldr x0,[x0, #0x6e8]
+00da0b4c  bl 0x00b0789c
+00da0b50  mov w8,#0x1
+00da0b54  strb w8,[x22, #0x3e]
+00da0b58  ldr x0,[x23]
+00da0b5c  mov x1,x19
+00da0b60  mov x2,xzr
+00da0b64  bl 0x01fd2850
+00da0b68  mov w8,#0x271a
+00da0b6c  cmp w21,w8
+00da0b70  b.ne 0x00da0b9c
+00da0b74  adrp x8,0x3357000
+00da0b78  ldr x8,[x8, #0x848]
+00da0b7c  mov x1,x19
+00da0b80  mov x2,xzr
+00da0b84  ldr x0,[x8]
+00da0b88  bl 0x01fd2850
+00da0b8c  bl 0x00da09c8
+00da0b90  mov w8,#0x1
+00da0b94  strb w8,[x20, #0x19]
+00da0b98  b 0x00da0bd8
+00da0b9c  adrp x20,0x3350000
+00da0ba0  adrp x21,0x333f000
+00da0ba4  ldr x20,[x20, #0x548]
+00da0ba8  ldr x21,[x21, #0x6e8]
+00da0bac  add x0,sp,#0xc
+00da0bb0  mov x1,xzr
+00da0bb4  bl 0x0214dc44
+00da0bb8  ldr x8,[x20]
+00da0bbc  ldr x2,[x21]
+00da0bc0  mov x1,x0
+00da0bc4  mov x3,x19
+00da0bc8  mov x0,x8
+00da0bcc  mov x4,xzr
+00da0bd0  bl 0x01fdf3bc
+00da0bd4  bl 0x00da09c8
+00da0bd8  ldp x19,x30,[sp, #0x30]
+00da0bdc  ldp x21,x20,[sp, #0x20]
+00da0be0  ldp x23,x22,[sp, #0x10]
+00da0be4  add sp,sp,#0x40
+00da0be8  ret
+
+
+================================================================================
+### FILE: 00da0bec_BiliSDKManager__add_ActionOnPurchaseSuccess.txt
+================================================================================
+Function: BiliSDKManager$$add_ActionOnPurchaseSuccess @ 00da0bec
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- AliothEngine.StoreManager_BiliBili$$Awake @ 0165aa90
+
+--- Listing ---
+00da0bec  str x24,[sp, #-0x40]!
+00da0bf0  stp x23,x22,[sp, #0x10]
+00da0bf4  stp x21,x20,[sp, #0x20]
+00da0bf8  stp x19,x30,[sp, #0x30]
+00da0bfc  adrp x21,0x3572000
+00da0c00  ldrb w8,[x21, #0x3f]
+00da0c04  mov x19,x1
+00da0c08  mov x20,x0
+00da0c0c  tbnz w8,#0x0,0x00da0c24
+00da0c10  adrp x0,0x3336000
+00da0c14  ldr x0,[x0, #0xc48]
+00da0c18  bl 0x00b0789c
+00da0c1c  mov w8,#0x1
+00da0c20  strb w8,[x21, #0x3f]
+00da0c24  adrp x24,0x3336000
+00da0c28  ldr x21,[x20, #0x48]!
+00da0c2c  ldr x24,[x24, #0xc48]
+00da0c30  mov x0,x21
+00da0c34  mov x1,x19
+00da0c38  mov x2,xzr
+00da0c3c  bl 0x02197810
+00da0c40  cbz x0,0x00da0c60
+00da0c44  ldr x23,[x24]
+00da0c48  mov x22,x0
+00da0c4c  mov x1,x23
+00da0c50  bl 0x00b07990
+00da0c54  mov x1,x0
+00da0c58  cbnz x0,0x00da0c64
+00da0c5c  b 0x00da0c90
+00da0c60  mov x1,xzr
+00da0c64  mov x0,x20
+00da0c68  mov x2,x21
+00da0c6c  bl 0x00ae526c
+00da0c70  cmp x21,x0
+00da0c74  mov x21,x0
+00da0c78  b.ne 0x00da0c30
+00da0c7c  ldp x19,x30,[sp, #0x30]
+00da0c80  ldp x21,x20,[sp, #0x20]
+00da0c84  ldp x23,x22,[sp, #0x10]
+00da0c88  ldr x24,[sp], #0x40
+00da0c8c  ret
+00da0c90  mov x0,x22
+00da0c94  mov x1,x23
+00da0c98  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00da0c9c_BiliSDKManager__remove_ActionOnPurchaseSuccess.txt
+================================================================================
+Function: BiliSDKManager$$remove_ActionOnPurchaseSuccess @ 00da0c9c
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- AliothEngine.StoreManager_BiliBili$$OnDestroy @ 0165ac90
+
+--- Listing ---
+00da0c9c  str x24,[sp, #-0x40]!
+00da0ca0  stp x23,x22,[sp, #0x10]
+00da0ca4  stp x21,x20,[sp, #0x20]
+00da0ca8  stp x19,x30,[sp, #0x30]
+00da0cac  adrp x21,0x3572000
+00da0cb0  ldrb w8,[x21, #0x40]
+00da0cb4  mov x19,x1
+00da0cb8  mov x20,x0
+00da0cbc  tbnz w8,#0x0,0x00da0cd4
+00da0cc0  adrp x0,0x3336000
+00da0cc4  ldr x0,[x0, #0xc48]
+00da0cc8  bl 0x00b0789c
+00da0ccc  mov w8,#0x1
+00da0cd0  strb w8,[x21, #0x40]
+00da0cd4  adrp x24,0x3336000
+00da0cd8  ldr x21,[x20, #0x48]!
+00da0cdc  ldr x24,[x24, #0xc48]
+00da0ce0  mov x0,x21
+00da0ce4  mov x1,x19
+00da0ce8  mov x2,xzr
+00da0cec  bl 0x02197a1c
+00da0cf0  cbz x0,0x00da0d10
+00da0cf4  ldr x23,[x24]
+00da0cf8  mov x22,x0
+00da0cfc  mov x1,x23
+00da0d00  bl 0x00b07990
+00da0d04  mov x1,x0
+00da0d08  cbnz x0,0x00da0d14
+00da0d0c  b 0x00da0d40
+00da0d10  mov x1,xzr
+00da0d14  mov x0,x20
+00da0d18  mov x2,x21
+00da0d1c  bl 0x00ae526c
+00da0d20  cmp x21,x0
+00da0d24  mov x21,x0
+00da0d28  b.ne 0x00da0ce0
+00da0d2c  ldp x19,x30,[sp, #0x30]
+00da0d30  ldp x21,x20,[sp, #0x20]
+00da0d34  ldp x23,x22,[sp, #0x10]
+00da0d38  ldr x24,[sp], #0x40
+00da0d3c  ret
+00da0d40  mov x0,x22
+00da0d44  mov x1,x23
+00da0d48  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00da0d4c_BiliSDKManager__add_ActionOnPurchaseFailed.txt
+================================================================================
+Function: BiliSDKManager$$add_ActionOnPurchaseFailed @ 00da0d4c
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- AliothEngine.StoreManager_BiliBili$$Awake @ 0165aa90
+
+--- Listing ---
+00da0d4c  str x24,[sp, #-0x40]!
+00da0d50  stp x23,x22,[sp, #0x10]
+00da0d54  stp x21,x20,[sp, #0x20]
+00da0d58  stp x19,x30,[sp, #0x30]
+00da0d5c  adrp x21,0x3572000
+00da0d60  ldrb w8,[x21, #0x41]
+00da0d64  mov x19,x1
+00da0d68  mov x20,x0
+00da0d6c  tbnz w8,#0x0,0x00da0d84
+00da0d70  adrp x0,0x3336000
+00da0d74  ldr x0,[x0, #0xc48]
+00da0d78  bl 0x00b0789c
+00da0d7c  mov w8,#0x1
+00da0d80  strb w8,[x21, #0x41]
+00da0d84  adrp x24,0x3336000
+00da0d88  ldr x21,[x20, #0x50]!
+00da0d8c  ldr x24,[x24, #0xc48]
+00da0d90  mov x0,x21
+00da0d94  mov x1,x19
+00da0d98  mov x2,xzr
+00da0d9c  bl 0x02197810
+00da0da0  cbz x0,0x00da0dc0
+00da0da4  ldr x23,[x24]
+00da0da8  mov x22,x0
+00da0dac  mov x1,x23
+00da0db0  bl 0x00b07990
+00da0db4  mov x1,x0
+00da0db8  cbnz x0,0x00da0dc4
+00da0dbc  b 0x00da0df0
+00da0dc0  mov x1,xzr
+00da0dc4  mov x0,x20
+00da0dc8  mov x2,x21
+00da0dcc  bl 0x00ae526c
+00da0dd0  cmp x21,x0
+00da0dd4  mov x21,x0
+00da0dd8  b.ne 0x00da0d90
+00da0ddc  ldp x19,x30,[sp, #0x30]
+00da0de0  ldp x21,x20,[sp, #0x20]
+00da0de4  ldp x23,x22,[sp, #0x10]
+00da0de8  ldr x24,[sp], #0x40
+00da0dec  ret
+00da0df0  mov x0,x22
+00da0df4  mov x1,x23
+00da0df8  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00da0dfc_BiliSDKManager__remove_ActionOnPurchaseFailed.txt
+================================================================================
+Function: BiliSDKManager$$remove_ActionOnPurchaseFailed @ 00da0dfc
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- AliothEngine.StoreManager_BiliBili$$OnDestroy @ 0165ac90
+
+--- Listing ---
+00da0dfc  str x24,[sp, #-0x40]!
+00da0e00  stp x23,x22,[sp, #0x10]
+00da0e04  stp x21,x20,[sp, #0x20]
+00da0e08  stp x19,x30,[sp, #0x30]
+00da0e0c  adrp x21,0x3572000
+00da0e10  ldrb w8,[x21, #0x42]
+00da0e14  mov x19,x1
+00da0e18  mov x20,x0
+00da0e1c  tbnz w8,#0x0,0x00da0e34
+00da0e20  adrp x0,0x3336000
+00da0e24  ldr x0,[x0, #0xc48]
+00da0e28  bl 0x00b0789c
+00da0e2c  mov w8,#0x1
+00da0e30  strb w8,[x21, #0x42]
+00da0e34  adrp x24,0x3336000
+00da0e38  ldr x21,[x20, #0x50]!
+00da0e3c  ldr x24,[x24, #0xc48]
+00da0e40  mov x0,x21
+00da0e44  mov x1,x19
+00da0e48  mov x2,xzr
+00da0e4c  bl 0x02197a1c
+00da0e50  cbz x0,0x00da0e70
+00da0e54  ldr x23,[x24]
+00da0e58  mov x22,x0
+00da0e5c  mov x1,x23
+00da0e60  bl 0x00b07990
+00da0e64  mov x1,x0
+00da0e68  cbnz x0,0x00da0e74
+00da0e6c  b 0x00da0ea0
+00da0e70  mov x1,xzr
+00da0e74  mov x0,x20
+00da0e78  mov x2,x21
+00da0e7c  bl 0x00ae526c
+00da0e80  cmp x21,x0
+00da0e84  mov x21,x0
+00da0e88  b.ne 0x00da0e40
+00da0e8c  ldp x19,x30,[sp, #0x30]
+00da0e90  ldp x21,x20,[sp, #0x20]
+00da0e94  ldp x23,x22,[sp, #0x10]
+00da0e98  ldr x24,[sp], #0x40
+00da0e9c  ret
+00da0ea0  mov x0,x22
+00da0ea4  mov x1,x23
+00da0ea8  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00da0eac_BiliSDKManager__get_isInit.txt
+================================================================================
+Function: BiliSDKManager$$get_isInit @ 00da0eac
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da0eac  ldrb w0,[x0, #0x19]
+00da0eb0  ret
+
+
+================================================================================
+### FILE: 00da0eb4_BiliSDKManager__Awake.txt
+================================================================================
+Function: BiliSDKManager$$Awake @ 00da0eb4
+
+--- Calls OUT ---
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> UnityEngine.Application$$get_platform @ 024f2b84
+  -> BSGameSdk$$init @ 00da0fb4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$Awake @ 01e090dc
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Object$$set_name @ 024df584
+
+--- Calls IN ---
+
+--- Listing ---
+00da0eb4  stp x21,x20,[sp, #-0x20]!
+00da0eb8  stp x19,x30,[sp, #0x10]
+00da0ebc  adrp x20,0x3572000
+00da0ec0  adrp x21,0x336f000
+00da0ec4  ldrb w8,[x20, #0x43]
+00da0ec8  ldr x21,[x21, #0x698]
+00da0ecc  mov x19,x0
+00da0ed0  tbnz w8,#0x0,0x00da0f24
+00da0ed4  adrp x0,0x336f000
+00da0ed8  ldr x0,[x0, #0x698]
+00da0edc  bl 0x00b0789c
+00da0ee0  adrp x0,0x335e000
+00da0ee4  ldr x0,[x0, #0x828]
+00da0ee8  bl 0x00b0789c
+00da0eec  adrp x0,0x3329000
+00da0ef0  ldr x0,[x0, #0x870]
+00da0ef4  bl 0x00b0789c
+00da0ef8  adrp x0,0x3372000
+00da0efc  ldr x0,[x0, #0x8e0]
+00da0f00  bl 0x00b0789c
+00da0f04  adrp x0,0x334d000
+00da0f08  ldr x0,[x0, #0x138]
+00da0f0c  bl 0x00b0789c
+00da0f10  adrp x0,0x336d000
+00da0f14  ldr x0,[x0, #0x9c8]
+00da0f18  bl 0x00b0789c
+00da0f1c  mov w8,#0x1
+00da0f20  strb w8,[x20, #0x43]
+00da0f24  ldr x1,[x21]
+00da0f28  mov x0,x19
+00da0f2c  bl 0x01e090dc
+00da0f30  mov x0,x19
+00da0f34  mov x1,xzr
+00da0f38  bl 0x024e4ed4
+00da0f3c  cbz x0,0x00da0fb0
+00da0f40  adrp x8,0x336d000
+00da0f44  ldr x8,[x8, #0x9c8]
+00da0f48  mov x2,xzr
+00da0f4c  ldr x1,[x8]
+00da0f50  bl 0x024df584
+00da0f54  mov x0,xzr
+00da0f58  bl 0x024f2b84
+00da0f5c  cmp w0,#0xb
+00da0f60  b.ne 0x00da0fa4
+00da0f64  adrp x8,0x3372000
+00da0f68  adrp x9,0x3329000
+00da0f6c  adrp x10,0x334d000
+00da0f70  adrp x11,0x335e000
+00da0f74  ldr x8,[x8, #0x8e0]
+00da0f78  ldr x9,[x9, #0x870]
+00da0f7c  ldr x10,[x10, #0x138]
+00da0f80  ldr x11,[x11, #0x828]
+00da0f84  ldr x1,[x8]
+00da0f88  ldr x2,[x9]
+00da0f8c  ldr x3,[x10]
+00da0f90  ldr x4,[x11]
+00da0f94  ldp x19,x30,[sp, #0x10]
+00da0f98  mov w0,wzr
+00da0f9c  ldp x21,x20,[sp], #0x20
+00da0fa0  b 0x00da0fb4
+00da0fa4  ldp x19,x30,[sp, #0x10]
+00da0fa8  ldp x21,x20,[sp], #0x20
+00da0fac  ret
+00da0fb0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da118c_BiliSDKManager__Purchase.txt
+================================================================================
+Function: BiliSDKManager$$Purchase @ 00da118c
+
+--- Calls OUT ---
+  -> UnityEngine.Application$$get_platform @ 024f2b84
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BSGameSdk$$pay @ 00da1268
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+
+--- Calls IN ---
+  <- AliothEngine.StoreManager_BiliBili$$OnResponseCreateBiliPayOrder @ 0165af34
+
+--- Listing ---
+00da118c  sub sp,sp,#0x80
+00da1190  str x26,[sp, #0x30]
+00da1194  stp x25,x24,[sp, #0x40]
+00da1198  stp x23,x22,[sp, #0x50]
+00da119c  stp x21,x20,[sp, #0x60]
+00da11a0  stp x19,x30,[sp, #0x70]
+00da11a4  adrp x26,0x3572000
+00da11a8  ldrb w8,[x26, #0x44]
+00da11ac  mov x23,x7
+00da11b0  mov x19,x6
+00da11b4  mov x20,x5
+00da11b8  mov w21,w4
+00da11bc  mov w22,w3
+00da11c0  mov w24,w1
+00da11c4  mov x25,x0
+00da11c8  tbnz w8,#0x0,0x00da11e0
+00da11cc  adrp x0,0x334d000
+00da11d0  ldr x0,[x0, #0x138]
+00da11d4  bl 0x00b0789c
+00da11d8  mov w8,#0x1
+00da11dc  strb w8,[x26, #0x44]
+00da11e0  ldr x0,[x25, #0x28]
+00da11e4  mov x1,xzr
+00da11e8  bl 0x01fdf3a0
+00da11ec  tbnz w0,#0x0,0x00da124c
+00da11f0  ldr x0,[x25, #0x38]
+00da11f4  mov x1,xzr
+00da11f8  bl 0x01fdf3a0
+00da11fc  tbnz w0,#0x0,0x00da124c
+00da1200  mov x0,xzr
+00da1204  bl 0x024f2b84
+00da1208  cmp w0,#0xb
+00da120c  b.ne 0x00da124c
+00da1210  adrp x11,0x334d000
+00da1214  ldr x11,[x11, #0x138]
+00da1218  ldp x9,x8,[sp, #0x88]
+00da121c  ldr x10,[sp, #0x80]
+00da1220  ldr x1,[x25, #0x28]
+00da1224  ldr x2,[x25, #0x38]
+00da1228  ldr x3,[x11]
+00da122c  mov w0,w24
+00da1230  mov w4,w22
+00da1234  mov w5,w21
+00da1238  mov x6,x20
+00da123c  mov x7,x19
+00da1240  stp x9,x8,[sp, #0x10]
+00da1244  stp x23,x10,[sp]
+00da1248  bl 0x00da1268
+00da124c  ldp x19,x30,[sp, #0x70]
+00da1250  ldp x21,x20,[sp, #0x60]
+00da1254  ldp x23,x22,[sp, #0x50]
+00da1258  ldp x25,x24,[sp, #0x40]
+00da125c  ldr x26,[sp, #0x30]
+00da1260  add sp,sp,#0x80
+00da1264  ret
+
+
+================================================================================
+### FILE: 00da1600_BiliSDKManager__Login.txt
+================================================================================
+Function: BiliSDKManager$$Login @ 00da1600
+
+--- Calls OUT ---
+  -> BSGameSdk$$login @ 00da1604
+
+--- Calls IN ---
+
+--- Listing ---
+00da1600  b 0x00da1604
+
+
+================================================================================
+### FILE: 00da1698_BiliSDKManager__Logout.txt
+================================================================================
+Function: BiliSDKManager$$Logout @ 00da1698
+
+--- Calls OUT ---
+  -> BSGameSdk$$logout @ 00da169c
+
+--- Calls IN ---
+
+--- Listing ---
+00da1698  b 0x00da169c
+
+
+================================================================================
+### FILE: 00da1730_BiliSDKManager__NotifyZone.txt
+================================================================================
+Function: BiliSDKManager$$NotifyZone @ 00da1730
+
+--- Calls OUT ---
+  -> UserInfo$$get_Id @ 00dd1884
+  -> BSGameSdk$$notifyZone @ 00da1914
+  -> UnityEngine.Debug$$LogFormat @ 024c0324
+  -> System.Int64$$ToString @ 0214ed58
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UserInfo$$get_Name @ 00dd1988
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> UnityEngine.Application$$get_platform @ 024f2b84
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+
+--- Listing ---
+00da1730  str x26,[sp, #-0x50]!
+00da1734  stp x25,x24,[sp, #0x10]
+00da1738  stp x23,x22,[sp, #0x20]
+00da173c  stp x21,x20,[sp, #0x30]
+00da1740  stp x19,x30,[sp, #0x40]
+00da1744  adrp x20,0x3572000
+00da1748  adrp x21,0x3347000
+00da174c  ldrb w8,[x20, #0x45]
+00da1750  ldr x21,[x21, #0x410]
+00da1754  mov x19,x0
+00da1758  tbnz w8,#0x0,0x00da17ac
+00da175c  adrp x0,0x336b000
+00da1760  ldr x0,[x0, #0x7d0]
+00da1764  bl 0x00b0789c
+00da1768  adrp x0,0x3370000
+00da176c  ldr x0,[x0, #0x778]
+00da1770  bl 0x00b0789c
+00da1774  adrp x0,0x3347000
+00da1778  ldr x0,[x0, #0x410]
+00da177c  bl 0x00b0789c
+00da1780  adrp x0,0x334d000
+00da1784  ldr x0,[x0, #0x138]
+00da1788  bl 0x00b0789c
+00da178c  adrp x0,0x3315000
+00da1790  ldr x0,[x0, #0x3d8]
+00da1794  bl 0x00b0789c
+00da1798  adrp x0,0x331b000
+00da179c  ldr x0,[x0, #0x4f0]
+00da17a0  bl 0x00b0789c
+00da17a4  mov w8,#0x1
+00da17a8  strb w8,[x20, #0x45]
+00da17ac  ldr x0,[x21]
+00da17b0  str xzr,[sp, #0x8]
+00da17b4  bl 0x01e0894c
+00da17b8  cbz x0,0x00da1900
+00da17bc  ldr x0,[x0, #0x28]
+00da17c0  cbz x0,0x00da1900
+00da17c4  mov x1,xzr
+00da17c8  bl 0x00dd1884
+00da17cc  str x0,[sp, #0x8]
+00da17d0  add x0,sp,#0x8
+00da17d4  mov x1,xzr
+00da17d8  bl 0x0214ed58
+00da17dc  mov x20,x19
+00da17e0  str x0,[x20, #0x38]!
+00da17e4  mov x1,x0
+00da17e8  mov x0,x20
+00da17ec  bl 0x00b07850
+00da17f0  ldr x0,[x21]
+00da17f4  bl 0x01e0894c
+00da17f8  cbz x0,0x00da1900
+00da17fc  ldr x0,[x0, #0x28]
+00da1800  cbz x0,0x00da1900
+00da1804  mov x1,xzr
+00da1808  bl 0x00dd1988
+00da180c  str x0,[x19, #0x40]!
+00da1810  mov x1,x0
+00da1814  mov x0,x19
+00da1818  bl 0x00b07850
+00da181c  mov x0,xzr
+00da1820  bl 0x024f2b84
+00da1824  cmp w0,#0xb
+00da1828  b.ne 0x00da18e8
+00da182c  adrp x8,0x3315000
+00da1830  ldr x8,[x8, #0x3d8]
+00da1834  ldr x1,[x19]
+00da1838  adrp x21,0x3370000
+00da183c  mov x2,xzr
+00da1840  ldr x0,[x8]
+00da1844  ldr x21,[x21, #0x778]
+00da1848  bl 0x01fd2850
+00da184c  ldr x8,[x21]
+00da1850  mov x21,x0
+00da1854  mov w1,#0x1
+00da1858  mov x0,x8
+00da185c  bl 0x00b078f8
+00da1860  cbz x0,0x00da1900
+00da1864  ldr x23,[x20]
+00da1868  mov x22,x0
+00da186c  cbz x23,0x00da1884
+00da1870  ldr x8,[x22]
+00da1874  mov x0,x23
+00da1878  ldr x1,[x8, #0x40]
+00da187c  bl 0x00b07990
+00da1880  cbz x0,0x00da1908
+00da1884  ldr w8,[x22, #0x18]
+00da1888  cbz w8,0x00da1904
+00da188c  adrp x26,0x336b000
+00da1890  adrp x24,0x334d000
+00da1894  adrp x25,0x331b000
+00da1898  ldr x26,[x26, #0x7d0]
+00da189c  ldr x24,[x24, #0x138]
+00da18a0  ldr x25,[x25, #0x4f0]
+00da18a4  mov x0,x22
+00da18a8  str x23,[x0, #0x20]!
+00da18ac  mov x1,x23
+00da18b0  bl 0x00b07850
+00da18b4  ldr x0,[x26]
+00da18b8  ldr w8,[x0, #0xe0]
+00da18bc  cbnz w8,0x00da18c4
+00da18c0  bl 0x00b0798c
+00da18c4  mov x0,x21
+00da18c8  mov x1,x22
+00da18cc  mov x2,xzr
+00da18d0  bl 0x024c0324
+00da18d4  ldr x2,[x20]
+00da18d8  ldr x3,[x19]
+00da18dc  ldr x0,[x24]
+00da18e0  ldr x1,[x25]
+00da18e4  bl 0x00da1914
+00da18e8  ldp x19,x30,[sp, #0x40]
+00da18ec  ldp x21,x20,[sp, #0x30]
+00da18f0  ldp x23,x22,[sp, #0x20]
+00da18f4  ldp x25,x24,[sp, #0x10]
+00da18f8  ldr x26,[sp], #0x50
+00da18fc  ret
+00da1900  bl 0x00b079b0
+00da1904  bl 0x00b079b8
+00da1908  bl 0x00b079d4
+00da190c  mov x1,xzr
+00da1910  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00da1a80_BiliSDKManager__CreateRole.txt
+================================================================================
+Function: BiliSDKManager$$CreateRole @ 00da1a80
+
+--- Calls OUT ---
+  -> UserInfo$$get_Id @ 00dd1884
+  -> UnityEngine.Debug$$LogFormat @ 024c0324
+  -> System.Int64$$ToString @ 0214ed58
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UserInfo$$get_Name @ 00dd1988
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Application$$get_platform @ 024f2b84
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> BSGameSdk$$createRole @ 00da1c2c
+
+--- Calls IN ---
+
+--- Listing ---
+00da1a80  str x24,[sp, #-0x40]!
+00da1a84  stp x23,x22,[sp, #0x10]
+00da1a88  stp x21,x20,[sp, #0x20]
+00da1a8c  stp x19,x30,[sp, #0x30]
+00da1a90  adrp x20,0x3572000
+00da1a94  adrp x21,0x3347000
+00da1a98  ldrb w8,[x20, #0x46]
+00da1a9c  ldr x21,[x21, #0x410]
+00da1aa0  mov x19,x0
+00da1aa4  tbnz w8,#0x0,0x00da1ae0
+00da1aa8  adrp x0,0x336b000
+00da1aac  ldr x0,[x0, #0x7d0]
+00da1ab0  bl 0x00b0789c
+00da1ab4  adrp x0,0x3370000
+00da1ab8  ldr x0,[x0, #0x778]
+00da1abc  bl 0x00b0789c
+00da1ac0  adrp x0,0x3347000
+00da1ac4  ldr x0,[x0, #0x410]
+00da1ac8  bl 0x00b0789c
+00da1acc  adrp x0,0x3349000
+00da1ad0  ldr x0,[x0, #0x888]
+00da1ad4  bl 0x00b0789c
+00da1ad8  mov w8,#0x1
+00da1adc  strb w8,[x20, #0x46]
+00da1ae0  ldr x0,[x21]
+00da1ae4  str xzr,[sp, #0x8]
+00da1ae8  bl 0x01e0894c
+00da1aec  cbz x0,0x00da1c18
+00da1af0  ldr x0,[x0, #0x28]
+00da1af4  cbz x0,0x00da1c18
+00da1af8  mov x1,xzr
+00da1afc  bl 0x00dd1884
+00da1b00  str x0,[sp, #0x8]
+00da1b04  add x0,sp,#0x8
+00da1b08  mov x1,xzr
+00da1b0c  bl 0x0214ed58
+00da1b10  mov x20,x19
+00da1b14  str x0,[x20, #0x38]!
+00da1b18  mov x1,x0
+00da1b1c  mov x0,x20
+00da1b20  bl 0x00b07850
+00da1b24  ldr x0,[x21]
+00da1b28  bl 0x01e0894c
+00da1b2c  cbz x0,0x00da1c18
+00da1b30  ldr x0,[x0, #0x28]
+00da1b34  cbz x0,0x00da1c18
+00da1b38  mov x1,xzr
+00da1b3c  bl 0x00dd1988
+00da1b40  str x0,[x19, #0x40]!
+00da1b44  mov x1,x0
+00da1b48  mov x0,x19
+00da1b4c  bl 0x00b07850
+00da1b50  mov x0,xzr
+00da1b54  bl 0x024f2b84
+00da1b58  cmp w0,#0xb
+00da1b5c  b.ne 0x00da1c04
+00da1b60  adrp x8,0x3349000
+00da1b64  ldr x8,[x8, #0x888]
+00da1b68  ldr x1,[x19]
+00da1b6c  adrp x21,0x3370000
+00da1b70  mov x2,xzr
+00da1b74  ldr x0,[x8]
+00da1b78  ldr x21,[x21, #0x778]
+00da1b7c  bl 0x01fd2850
+00da1b80  ldr x8,[x21]
+00da1b84  mov x21,x0
+00da1b88  mov w1,#0x1
+00da1b8c  mov x0,x8
+00da1b90  bl 0x00b078f8
+00da1b94  cbz x0,0x00da1c18
+00da1b98  ldr x23,[x20]
+00da1b9c  mov x22,x0
+00da1ba0  cbz x23,0x00da1bb8
+00da1ba4  ldr x8,[x22]
+00da1ba8  mov x0,x23
+00da1bac  ldr x1,[x8, #0x40]
+00da1bb0  bl 0x00b07990
+00da1bb4  cbz x0,0x00da1c20
+00da1bb8  ldr w8,[x22, #0x18]
+00da1bbc  cbz w8,0x00da1c1c
+00da1bc0  adrp x24,0x336b000
+00da1bc4  ldr x24,[x24, #0x7d0]
+00da1bc8  mov x0,x22
+00da1bcc  str x23,[x0, #0x20]!
+00da1bd0  mov x1,x23
+00da1bd4  bl 0x00b07850
+00da1bd8  ldr x0,[x24]
+00da1bdc  ldr w8,[x0, #0xe0]
+00da1be0  cbnz w8,0x00da1be8
+00da1be4  bl 0x00b0798c
+00da1be8  mov x0,x21
+00da1bec  mov x1,x22
+00da1bf0  mov x2,xzr
+00da1bf4  bl 0x024c0324
+00da1bf8  ldr x0,[x19]
+00da1bfc  ldr x1,[x20]
+00da1c00  bl 0x00da1c2c
+00da1c04  ldp x19,x30,[sp, #0x30]
+00da1c08  ldp x21,x20,[sp, #0x20]
+00da1c0c  ldp x23,x22,[sp, #0x10]
+00da1c10  ldr x24,[sp], #0x40
+00da1c14  ret
+00da1c18  bl 0x00b079b0
+00da1c1c  bl 0x00b079b8
+00da1c20  bl 0x00b079d4
+00da1c24  mov x1,xzr
+00da1c28  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00da1d20_BiliSDKManager__.ctor.txt
+================================================================================
+Function: BiliSDKManager$$.ctor @ 00da1d20
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$.ctor @ 01e09460
+  -> System.Action<int,-object>$$.ctor @ 0190e3e8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00da1d20  stp x23,x22,[sp, #-0x30]!
+00da1d24  stp x21,x20,[sp, #0x10]
+00da1d28  stp x19,x30,[sp, #0x20]
+00da1d2c  adrp x20,0x3572000
+00da1d30  adrp x22,0x3350000
+00da1d34  ldrb w8,[x20, #0x47]
+00da1d38  ldr x22,[x22, #0x4c0]
+00da1d3c  mov x19,x0
+00da1d40  tbnz w8,#0x0,0x00da1d88
+00da1d44  adrp x0,0x3336000
+00da1d48  ldr x0,[x0, #0xc48]
+00da1d4c  bl 0x00b0789c
+00da1d50  adrp x0,0x3341000
+00da1d54  ldr x0,[x0, #0x2d0]
+00da1d58  bl 0x00b0789c
+00da1d5c  adrp x0,0x331c000
+00da1d60  ldr x0,[x0, #0x278]
+00da1d64  bl 0x00b0789c
+00da1d68  adrp x0,0x3329000
+00da1d6c  ldr x0,[x0, #0xc98]
+00da1d70  bl 0x00b0789c
+00da1d74  adrp x0,0x3350000
+00da1d78  ldr x0,[x0, #0x4c0]
+00da1d7c  bl 0x00b0789c
+00da1d80  mov w8,#0x1
+00da1d84  strb w8,[x20, #0x47]
+00da1d88  ldr x0,[x22]
+00da1d8c  ldr w8,[x0, #0xe0]
+00da1d90  cbnz w8,0x00da1d9c
+00da1d94  bl 0x00b0798c
+00da1d98  ldr x0,[x22]
+00da1d9c  ldr x8,[x0, #0xb8]
+00da1da0  adrp x23,0x3336000
+00da1da4  ldr x20,[x8, #0x8]
+00da1da8  ldr x23,[x23, #0xc48]
+00da1dac  cbnz x20,0x00da1e04
+00da1db0  ldr w8,[x0, #0xe0]
+00da1db4  cbnz w8,0x00da1dc0
+00da1db8  bl 0x00b0798c
+00da1dbc  ldr x0,[x22]
+00da1dc0  ldr x8,[x0, #0xb8]
+00da1dc4  ldr x0,[x23]
+00da1dc8  ldr x21,[x8]
+00da1dcc  bl 0x00b079a0
+00da1dd0  cbz x0,0x00da1ebc
+00da1dd4  adrp x8,0x331c000
+00da1dd8  ldr x8,[x8, #0x278]
+00da1ddc  mov x1,x21
+00da1de0  mov x3,xzr
+00da1de4  mov x20,x0
+00da1de8  ldr x2,[x8]
+00da1dec  bl 0x0190e3e8
+00da1df0  ldr x8,[x22]
+00da1df4  mov x1,x20
+00da1df8  ldr x0,[x8, #0xb8]
+00da1dfc  str x20,[x0, #0x8]!
+00da1e00  bl 0x00b07850
+00da1e04  cbz x19,0x00da1ebc
+00da1e08  mov x0,x19
+00da1e0c  str x20,[x0, #0x48]!
+00da1e10  mov x1,x20
+00da1e14  bl 0x00b07850
+00da1e18  ldr x0,[x22]
+00da1e1c  ldr w8,[x0, #0xe0]
+00da1e20  cbnz w8,0x00da1e2c
+00da1e24  bl 0x00b0798c
+00da1e28  ldr x0,[x22]
+00da1e2c  ldr x8,[x0, #0xb8]
+00da1e30  ldr x20,[x8, #0x10]
+00da1e34  cbnz x20,0x00da1e8c
+00da1e38  ldr w8,[x0, #0xe0]
+00da1e3c  cbnz w8,0x00da1e48
+00da1e40  bl 0x00b0798c
+00da1e44  ldr x0,[x22]
+00da1e48  ldr x8,[x0, #0xb8]
+00da1e4c  ldr x0,[x23]
+00da1e50  ldr x21,[x8]
+00da1e54  bl 0x00b079a0
+00da1e58  cbz x0,0x00da1ebc
+00da1e5c  adrp x8,0x3329000
+00da1e60  ldr x8,[x8, #0xc98]
+00da1e64  mov x1,x21
+00da1e68  mov x3,xzr
+00da1e6c  mov x20,x0
+00da1e70  ldr x2,[x8]
+00da1e74  bl 0x0190e3e8
+00da1e78  ldr x8,[x22]
+00da1e7c  mov x1,x20
+00da1e80  ldr x0,[x8, #0xb8]
+00da1e84  str x20,[x0, #0x10]!
+00da1e88  bl 0x00b07850
+00da1e8c  adrp x21,0x3341000
+00da1e90  ldr x21,[x21, #0x2d0]
+00da1e94  mov x0,x19
+00da1e98  str x20,[x0, #0x50]!
+00da1e9c  mov x1,x20
+00da1ea0  bl 0x00b07850
+00da1ea4  ldr x1,[x21]
+00da1ea8  mov x0,x19
+00da1eac  ldp x19,x30,[sp, #0x20]
+00da1eb0  ldp x21,x20,[sp, #0x10]
+00da1eb4  ldp x23,x22,[sp], #0x30
+00da1eb8  b 0x01e09460
+00da1ebc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da1ec0_BiliSDKManager.__c__.cctor.txt
+================================================================================
+Function: BiliSDKManager.<>c$$.cctor @ 00da1ec0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00da1ec0  str x20,[sp, #-0x20]!
+00da1ec4  stp x19,x30,[sp, #0x10]
+00da1ec8  adrp x19,0x3572000
+00da1ecc  adrp x20,0x3350000
+00da1ed0  ldrb w8,[x19, #0x48]
+00da1ed4  ldr x20,[x20, #0x4c0]
+00da1ed8  tbnz w8,#0x0,0x00da1ef0
+00da1edc  adrp x0,0x3350000
+00da1ee0  ldr x0,[x0, #0x4c0]
+00da1ee4  bl 0x00b0789c
+00da1ee8  mov w8,#0x1
+00da1eec  strb w8,[x19, #0x48]
+00da1ef0  ldr x0,[x20]
+00da1ef4  bl 0x00b079a0
+00da1ef8  cbz x0,0x00da1f2c
+00da1efc  mov x1,xzr
+00da1f00  mov x19,x0
+00da1f04  bl 0x02194104
+00da1f08  ldr x8,[x20]
+00da1f0c  mov x1,x19
+00da1f10  ldr x8,[x8, #0xb8]
+00da1f14  str x19,[x8]
+00da1f18  ldr x8,[x20]
+00da1f1c  ldp x19,x30,[sp, #0x10]
+00da1f20  ldr x0,[x8, #0xb8]
+00da1f24  ldr x20,[sp], #0x20
+00da1f28  b 0x00b07850
+00da1f2c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da1f30_BiliSDKManager.__c__.ctor.txt
+================================================================================
+Function: BiliSDKManager.<>c$$.ctor @ 00da1f30
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00da1f30  mov x1,xzr
+00da1f34  b 0x02194104
+
+
+================================================================================
+### FILE: 00da1f38_BiliSDKManager.__c___.ctor_b__51_0.txt
+================================================================================
+Function: BiliSDKManager.<>c$$<.ctor>b__51_0 @ 00da1f38
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da1f38  ret
+
+
+================================================================================
+### FILE: 00da1f3c_BiliSDKManager.__c___.ctor_b__51_1.txt
+================================================================================
+Function: BiliSDKManager.<>c$$<.ctor>b__51_1 @ 00da1f3c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da1f3c  ret
+
+
+================================================================================
+### FILE: 00f65800_BindPanel_krMono__get_m_node.txt
+================================================================================
+Function: BindPanel_krMono$$get_m_node @ 00f65800
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp655 @ 010b58a4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GUIScreenBaseMono$$GetNode<object> @ 01794be4
+
+--- Calls IN ---
+  <- BindPanel_krMono$$RegisterCallBack @ 00f658e8
+
+--- Listing ---
+00f65800  stp x21,x20,[sp, #-0x20]!
+00f65804  stp x19,x30,[sp, #0x10]
+00f65808  adrp x20,0x3573000
+00f6580c  adrp x21,0x332a000
+00f65810  ldrb w8,[x20, #0x2c7]
+00f65814  ldr x21,[x21, #0xc48]
+00f65818  mov x19,x0
+00f6581c  tbnz w8,#0x0,0x00f65840
+00f65820  adrp x0,0x332a000
+00f65824  ldr x0,[x0, #0xc48]
+00f65828  bl 0x00b0789c
+00f6582c  adrp x0,0x3317000
+00f65830  ldr x0,[x0, #0x840]
+00f65834  bl 0x00b0789c
+00f65838  mov w8,#0x1
+00f6583c  strb w8,[x20, #0x2c7]
+00f65840  ldr x8,[x21]
+00f65844  ldr x8,[x8, #0xb8]
+00f65848  ldr x0,[x8]
+00f6584c  cbz x0,0x00f65864
+00f65850  mov x1,x19
+00f65854  ldp x19,x30,[sp, #0x10]
+00f65858  mov x2,xzr
+00f6585c  ldp x21,x20,[sp], #0x20
+00f65860  b 0x010b58a4
+00f65864  adrp x8,0x3317000
+00f65868  ldr x8,[x8, #0x840]
+00f6586c  mov x0,x19
+00f65870  ldp x19,x30,[sp, #0x10]
+00f65874  ldr x1,[x8]
+00f65878  ldp x21,x20,[sp], #0x20
+00f6587c  b 0x01794be4
+
+
+================================================================================
+### FILE: 00f65880_BindPanel_krMono__get_LayerType.txt
+================================================================================
+Function: BindPanel_krMono$$get_LayerType @ 00f65880
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp491 @ 0109f3ac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00f65880  stp x21,x20,[sp, #-0x20]!
+00f65884  stp x19,x30,[sp, #0x10]
+00f65888  adrp x20,0x3573000
+00f6588c  adrp x21,0x332a000
+00f65890  ldrb w8,[x20, #0x2c8]
+00f65894  ldr x21,[x21, #0xc48]
+00f65898  mov x19,x0
+00f6589c  tbnz w8,#0x0,0x00f658b4
+00f658a0  adrp x0,0x332a000
+00f658a4  ldr x0,[x0, #0xc48]
+00f658a8  bl 0x00b0789c
+00f658ac  mov w8,#0x1
+00f658b0  strb w8,[x20, #0x2c8]
+00f658b4  ldr x8,[x21]
+00f658b8  ldr x8,[x8, #0xb8]
+00f658bc  ldr x0,[x8, #0x8]
+00f658c0  cbz x0,0x00f658d8
+00f658c4  mov x1,x19
+00f658c8  ldp x19,x30,[sp, #0x10]
+00f658cc  mov x2,xzr
+00f658d0  ldp x21,x20,[sp], #0x20
+00f658d4  b 0x0109f3ac
+00f658d8  ldp x19,x30,[sp, #0x10]
+00f658dc  mov w0,#0x3
+00f658e0  ldp x21,x20,[sp], #0x20
+00f658e4  ret
+
+
+================================================================================
+### FILE: 00f658e8_BindPanel_krMono__RegisterCallBack.txt
+================================================================================
+Function: BindPanel_krMono$$RegisterCallBack @ 00f658e8
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> Bindpanel_KrNode$$get_btn_naver @ 00fa8f48
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> BaseMono$$AddNotifyListener @ 00e1cfa8
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> FUN_00b079b0 @ 00b079b0
+  -> Bindpanel_KrNode$$get_btn_facebook @ 00fa8efc
+  -> Bindpanel_KrNode$$get_btn_ok @ 00fa8f94
+  -> Ali.NotifyDelegate$$.ctor @ 00e10f80
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GUIScreenBaseMono$$RegisterCallBack @ 00f21d5c
+  -> UIEventListener$$Get @ 00e34224
+  -> BindPanel_krMono$$get_m_node @ 00f65800
+  -> Bindpanel_KrNode$$get_btn_google @ 00fa8eb0
+  -> Bindpanel_KrNode$$get_btn_apple @ 00fa8e64
+
+--- Calls IN ---
+
+--- Listing ---
+00f658e8  str x22,[sp, #-0x30]!
+00f658ec  stp x21,x20,[sp, #0x10]
+00f658f0  stp x19,x30,[sp, #0x20]
+00f658f4  adrp x20,0x3573000
+00f658f8  adrp x21,0x332a000
+00f658fc  ldrb w8,[x20, #0x2c9]
+00f65900  ldr x21,[x21, #0xc48]
+00f65904  mov x19,x0
+00f65908  tbnz w8,#0x0,0x00f65998
+00f6590c  adrp x0,0x3348000
+00f65910  ldr x0,[x0, #0x138]
+00f65914  bl 0x00b0789c
+00f65918  adrp x0,0x3326000
+00f6591c  ldr x0,[x0, #0x1d8]
+00f65920  bl 0x00b0789c
+00f65924  adrp x0,0x3345000
+00f65928  ldr x0,[x0, #0xbf0]
+00f6592c  bl 0x00b0789c
+00f65930  adrp x0,0x3333000
+00f65934  ldr x0,[x0, #0xb20]
+00f65938  bl 0x00b0789c
+00f6593c  adrp x0,0x3355000
+00f65940  ldr x0,[x0, #0xed0]
+00f65944  bl 0x00b0789c
+00f65948  adrp x0,0x3335000
+00f6594c  ldr x0,[x0, #0xb98]
+00f65950  bl 0x00b0789c
+00f65954  adrp x0,0x332a000
+00f65958  ldr x0,[x0, #0xc48]
+00f6595c  bl 0x00b0789c
+00f65960  adrp x0,0x333a000
+00f65964  ldr x0,[x0, #0x628]
+00f65968  bl 0x00b0789c
+00f6596c  adrp x0,0x332d000
+00f65970  ldr x0,[x0, #0xd38]
+00f65974  bl 0x00b0789c
+00f65978  adrp x0,0x3360000
+00f6597c  ldr x0,[x0, #0x750]
+00f65980  bl 0x00b0789c
+00f65984  adrp x0,0x3326000
+00f65988  ldr x0,[x0, #0x720]
+00f6598c  bl 0x00b0789c
+00f65990  mov w8,#0x1
+00f65994  strb w8,[x20, #0x2c9]
+00f65998  ldr x8,[x21]
+00f6599c  ldr x8,[x8, #0xb8]
+00f659a0  ldr x0,[x8, #0x10]
+00f659a4  cbz x0,0x00f659c0
+00f659a8  mov x1,x19
+00f659ac  ldp x19,x30,[sp, #0x20]
+00f659b0  ldp x21,x20,[sp, #0x10]
+00f659b4  mov x2,xzr
+00f659b8  ldr x22,[sp], #0x30
+00f659bc  b 0x01060dac
+00f659c0  mov x0,x19
+00f659c4  mov x1,xzr
+00f659c8  bl 0x00f21d5c
+00f659cc  mov x0,x19
+00f659d0  bl 0x00f65800
+00f659d4  cbz x0,0x00f65cd8
+00f659d8  mov x1,xzr
+00f659dc  bl 0x00fa8efc
+00f659e0  cbz x0,0x00f65cd8
+00f659e4  adrp x8,0x332d000
+00f659e8  ldr x8,[x8, #0xd38]
+00f659ec  adrp x22,0x3360000
+00f659f0  ldr x20,[x0, #0x18]
+00f659f4  ldr x8,[x8]
+00f659f8  ldr w9,[x8, #0xe0]
+00f659fc  ldr x22,[x22, #0x750]
+00f65a00  cbnz w9,0x00f65a0c
+00f65a04  mov x0,x8
+00f65a08  bl 0x00b0798c
+00f65a0c  mov w1,#0x1
+00f65a10  mov x0,x20
+00f65a14  mov x2,xzr
+00f65a18  bl 0x00e34224
+00f65a1c  ldr x8,[x22]
+00f65a20  mov x20,x0
+00f65a24  mov x0,x8
+00f65a28  bl 0x00b079a0
+00f65a2c  cbz x0,0x00f65cd8
+00f65a30  adrp x8,0x3345000
+00f65a34  ldr x8,[x8, #0xbf0]
+00f65a38  mov x1,x19
+00f65a3c  mov x3,xzr
+00f65a40  mov x21,x0
+00f65a44  ldr x2,[x8]
+00f65a48  bl 0x00e35bd0
+00f65a4c  cbz x20,0x00f65cd8
+00f65a50  str x21,[x20, #0x38]!
+00f65a54  mov x0,x20
+00f65a58  mov x1,x21
+00f65a5c  bl 0x00b07850
+00f65a60  mov x0,x19
+00f65a64  bl 0x00f65800
+00f65a68  cbz x0,0x00f65cd8
+00f65a6c  mov x1,xzr
+00f65a70  bl 0x00fa8eb0
+00f65a74  cbz x0,0x00f65cd8
+00f65a78  ldr x0,[x0, #0x18]
+00f65a7c  mov w1,#0x1
+00f65a80  mov x2,xzr
+00f65a84  bl 0x00e34224
+00f65a88  ldr x8,[x22]
+00f65a8c  mov x20,x0
+00f65a90  mov x0,x8
+00f65a94  bl 0x00b079a0
+00f65a98  cbz x0,0x00f65cd8
+00f65a9c  adrp x8,0x3333000
+00f65aa0  ldr x8,[x8, #0xb20]
+00f65aa4  mov x1,x19
+00f65aa8  mov x3,xzr
+00f65aac  mov x21,x0
+00f65ab0  ldr x2,[x8]
+00f65ab4  bl 0x00e35bd0
+00f65ab8  cbz x20,0x00f65cd8
+00f65abc  str x21,[x20, #0x38]!
+00f65ac0  mov x0,x20
+00f65ac4  mov x1,x21
+00f65ac8  bl 0x00b07850
+00f65acc  mov x0,x19
+00f65ad0  bl 0x00f65800
+00f65ad4  cbz x0,0x00f65cd8
+00f65ad8  mov x1,xzr
+00f65adc  bl 0x00fa8e64
+00f65ae0  cbz x0,0x00f65cd8
+00f65ae4  ldr x0,[x0, #0x18]
+00f65ae8  mov w1,#0x1
+00f65aec  mov x2,xzr
+00f65af0  bl 0x00e34224
+00f65af4  ldr x8,[x22]
+00f65af8  mov x20,x0
+00f65afc  mov x0,x8
+00f65b00  bl 0x00b079a0
+00f65b04  cbz x0,0x00f65cd8
+00f65b08  adrp x8,0x3326000
+00f65b0c  ldr x8,[x8, #0x1d8]
+00f65b10  mov x1,x19
+00f65b14  mov x3,xzr
+00f65b18  mov x21,x0
+00f65b1c  ldr x2,[x8]
+00f65b20  bl 0x00e35bd0
+00f65b24  cbz x20,0x00f65cd8
+00f65b28  str x21,[x20, #0x38]!
+00f65b2c  mov x0,x20
+00f65b30  mov x1,x21
+00f65b34  bl 0x00b07850
+00f65b38  mov x0,x19
+00f65b3c  bl 0x00f65800
+00f65b40  cbz x0,0x00f65cd8
+00f65b44  mov x1,xzr
+00f65b48  bl 0x00fa8f48
+00f65b4c  cbz x0,0x00f65cd8
+00f65b50  ldr x0,[x0, #0x18]
+00f65b54  mov w1,#0x1
+00f65b58  mov x2,xzr
+00f65b5c  bl 0x00e34224
+00f65b60  ldr x8,[x22]
+00f65b64  mov x20,x0
+00f65b68  mov x0,x8
+00f65b6c  bl 0x00b079a0
+00f65b70  cbz x0,0x00f65cd8
+00f65b74  adrp x8,0x3355000
+00f65b78  ldr x8,[x8, #0xed0]
+00f65b7c  mov x1,x19
+00f65b80  mov x3,xzr
+00f65b84  mov x21,x0
+00f65b88  ldr x2,[x8]
+00f65b8c  bl 0x00e35bd0
+00f65b90  cbz x20,0x00f65cd8
+00f65b94  str x21,[x20, #0x38]!
+00f65b98  mov x0,x20
+00f65b9c  mov x1,x21
+00f65ba0  bl 0x00b07850
+00f65ba4  mov x0,x19
+00f65ba8  bl 0x00f65800
+00f65bac  cbz x0,0x00f65cd8
+00f65bb0  mov x1,xzr
+00f65bb4  bl 0x00fa8f94
+00f65bb8  cbz x0,0x00f65cd8
+00f65bbc  ldr x0,[x0, #0x18]
+00f65bc0  mov w1,#0x1
+00f65bc4  mov x2,xzr
+00f65bc8  bl 0x00e34224
+00f65bcc  ldr x8,[x22]
+00f65bd0  mov x20,x0
+00f65bd4  mov x0,x8
+00f65bd8  bl 0x00b079a0
+00f65bdc  cbz x0,0x00f65cd8
+00f65be0  cbz x19,0x00f65cd8
+00f65be4  ldr x8,[x19]
+00f65be8  mov x1,x19
+00f65bec  mov x3,xzr
+00f65bf0  mov x21,x0
+00f65bf4  ldr x2,[x8, #0x450]
+00f65bf8  bl 0x00e35bd0
+00f65bfc  cbz x20,0x00f65cd8
+00f65c00  str x21,[x20, #0x38]!
+00f65c04  mov x0,x20
+00f65c08  mov x1,x21
+00f65c0c  bl 0x00b07850
+00f65c10  mov x0,x19
+00f65c14  bl 0x00f65800
+00f65c18  cbz x0,0x00f65cd8
+00f65c1c  mov x1,xzr
+00f65c20  bl 0x00fa8e64
+00f65c24  cbz x0,0x00f65cd8
+00f65c28  adrp x8,0x3348000
+00f65c2c  ldr x8,[x8, #0x138]
+00f65c30  ldr x20,[x0, #0x18]
+00f65c34  ldr x8,[x8]
+00f65c38  ldr w9,[x8, #0xe0]
+00f65c3c  cbnz w9,0x00f65c48
+00f65c40  mov x0,x8
+00f65c44  bl 0x00b0798c
+00f65c48  mov x0,x20
+00f65c4c  mov w1,wzr
+00f65c50  mov x2,xzr
+00f65c54  bl 0x00e13880
+00f65c58  mov x0,x19
+00f65c5c  bl 0x00f65800
+00f65c60  cbz x0,0x00f65cd8
+00f65c64  mov x1,xzr
+00f65c68  bl 0x00fa8eb0
+00f65c6c  cbz x0,0x00f65cd8
+00f65c70  ldr x0,[x0, #0x18]
+00f65c74  adrp x20,0x333a000
+00f65c78  ldr x20,[x20, #0x628]
+00f65c7c  mov w1,#0x1
+00f65c80  mov x2,xzr
+00f65c84  bl 0x00e13880
+00f65c88  ldr x0,[x20]
+00f65c8c  bl 0x00b079a0
+00f65c90  cbz x0,0x00f65cd8
+00f65c94  adrp x8,0x3335000
+00f65c98  ldr x8,[x8, #0xb98]
+00f65c9c  adrp x21,0x3326000
+00f65ca0  mov x1,x19
+00f65ca4  mov x3,xzr
+00f65ca8  ldr x2,[x8]
+00f65cac  ldr x21,[x21, #0x720]
+00f65cb0  mov x20,x0
+00f65cb4  bl 0x00e10f80
+00f65cb8  ldr x1,[x21]
+00f65cbc  mov x0,x19
+00f65cc0  mov x2,x20
+00f65cc4  ldp x19,x30,[sp, #0x20]
+00f65cc8  ldp x21,x20,[sp, #0x10]
+00f65ccc  mov x3,xzr
+00f65cd0  ldr x22,[sp], #0x30
+00f65cd4  b 0x00e1cfa8
+00f65cd8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f65cdc_BindPanel_krMono__OnClickNaver.txt
+================================================================================
+Function: BindPanel_krMono$$OnClickNaver @ 00f65cdc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+
+--- Listing ---
+00f65cdc  str x22,[sp, #-0x30]!
+00f65ce0  stp x21,x20,[sp, #0x10]
+00f65ce4  stp x19,x30,[sp, #0x20]
+00f65ce8  adrp x21,0x3573000
+00f65cec  adrp x22,0x332a000
+00f65cf0  ldrb w8,[x21, #0x2ca]
+00f65cf4  ldr x22,[x22, #0xc48]
+00f65cf8  mov x19,x1
+00f65cfc  mov x20,x0
+00f65d00  tbnz w8,#0x0,0x00f65d18
+00f65d04  adrp x0,0x332a000
+00f65d08  ldr x0,[x0, #0xc48]
+00f65d0c  bl 0x00b0789c
+00f65d10  mov w8,#0x1
+00f65d14  strb w8,[x21, #0x2ca]
+00f65d18  ldr x8,[x22]
+00f65d1c  ldr x8,[x8, #0xb8]
+00f65d20  ldr x0,[x8, #0x18]
+00f65d24  cbz x0,0x00f65d44
+00f65d28  mov x1,x20
+00f65d2c  mov x2,x19
+00f65d30  ldp x19,x30,[sp, #0x20]
+00f65d34  ldp x21,x20,[sp, #0x10]
+00f65d38  mov x3,xzr
+00f65d3c  ldr x22,[sp], #0x30
+00f65d40  b 0x0106125c
+00f65d44  ldp x19,x30,[sp, #0x20]
+00f65d48  ldp x21,x20,[sp, #0x10]
+00f65d4c  ldr x22,[sp], #0x30
+00f65d50  ret
+
+
+================================================================================
+### FILE: 00f65d54_BindPanel_krMono__OnClickApple.txt
+================================================================================
+Function: BindPanel_krMono$$OnClickApple @ 00f65d54
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+
+--- Listing ---
+00f65d54  str x22,[sp, #-0x30]!
+00f65d58  stp x21,x20,[sp, #0x10]
+00f65d5c  stp x19,x30,[sp, #0x20]
+00f65d60  adrp x21,0x3573000
+00f65d64  adrp x22,0x332a000
+00f65d68  ldrb w8,[x21, #0x2cb]
+00f65d6c  ldr x22,[x22, #0xc48]
+00f65d70  mov x19,x1
+00f65d74  mov x20,x0
+00f65d78  tbnz w8,#0x0,0x00f65d90
+00f65d7c  adrp x0,0x332a000
+00f65d80  ldr x0,[x0, #0xc48]
+00f65d84  bl 0x00b0789c
+00f65d88  mov w8,#0x1
+00f65d8c  strb w8,[x21, #0x2cb]
+00f65d90  ldr x8,[x22]
+00f65d94  ldr x8,[x8, #0xb8]
+00f65d98  ldr x0,[x8, #0x20]
+00f65d9c  cbz x0,0x00f65dbc
+00f65da0  mov x1,x20
+00f65da4  mov x2,x19
+00f65da8  ldp x19,x30,[sp, #0x20]
+00f65dac  ldp x21,x20,[sp, #0x10]
+00f65db0  mov x3,xzr
+00f65db4  ldr x22,[sp], #0x30
+00f65db8  b 0x0106125c
+00f65dbc  ldp x19,x30,[sp, #0x20]
+00f65dc0  ldp x21,x20,[sp, #0x10]
+00f65dc4  ldr x22,[sp], #0x30
+00f65dc8  ret
+
+
+================================================================================
+### FILE: 00f65dcc_BindPanel_krMono__OnClickGoogleButton.txt
+================================================================================
+Function: BindPanel_krMono$$OnClickGoogleButton @ 00f65dcc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+
+--- Listing ---
+00f65dcc  str x22,[sp, #-0x30]!
+00f65dd0  stp x21,x20,[sp, #0x10]
+00f65dd4  stp x19,x30,[sp, #0x20]
+00f65dd8  adrp x21,0x3573000
+00f65ddc  adrp x22,0x332a000
+00f65de0  ldrb w8,[x21, #0x2cc]
+00f65de4  ldr x22,[x22, #0xc48]
+00f65de8  mov x19,x1
+00f65dec  mov x20,x0
+00f65df0  tbnz w8,#0x0,0x00f65e08
+00f65df4  adrp x0,0x332a000
+00f65df8  ldr x0,[x0, #0xc48]
+00f65dfc  bl 0x00b0789c
+00f65e00  mov w8,#0x1
+00f65e04  strb w8,[x21, #0x2cc]
+00f65e08  ldr x8,[x22]
+00f65e0c  ldr x8,[x8, #0xb8]
+00f65e10  ldr x0,[x8, #0x28]
+00f65e14  cbz x0,0x00f65e34
+00f65e18  mov x1,x20
+00f65e1c  mov x2,x19
+00f65e20  ldp x19,x30,[sp, #0x20]
+00f65e24  ldp x21,x20,[sp, #0x10]
+00f65e28  mov x3,xzr
+00f65e2c  ldr x22,[sp], #0x30
+00f65e30  b 0x0106125c
+00f65e34  ldp x19,x30,[sp, #0x20]
+00f65e38  ldp x21,x20,[sp, #0x10]
+00f65e3c  ldr x22,[sp], #0x30
+00f65e40  ret
+
+
+================================================================================
+### FILE: 00f65e44_BindPanel_krMono__OnClickFacebookButton.txt
+================================================================================
+Function: BindPanel_krMono$$OnClickFacebookButton @ 00f65e44
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+
+--- Listing ---
+00f65e44  str x22,[sp, #-0x30]!
+00f65e48  stp x21,x20,[sp, #0x10]
+00f65e4c  stp x19,x30,[sp, #0x20]
+00f65e50  adrp x21,0x3573000
+00f65e54  adrp x22,0x332a000
+00f65e58  ldrb w8,[x21, #0x2cd]
+00f65e5c  ldr x22,[x22, #0xc48]
+00f65e60  mov x19,x1
+00f65e64  mov x20,x0
+00f65e68  tbnz w8,#0x0,0x00f65e80
+00f65e6c  adrp x0,0x332a000
+00f65e70  ldr x0,[x0, #0xc48]
+00f65e74  bl 0x00b0789c
+00f65e78  mov w8,#0x1
+00f65e7c  strb w8,[x21, #0x2cd]
+00f65e80  ldr x8,[x22]
+00f65e84  ldr x8,[x8, #0xb8]
+00f65e88  ldr x0,[x8, #0x30]
+00f65e8c  cbz x0,0x00f65eac
+00f65e90  mov x1,x20
+00f65e94  mov x2,x19
+00f65e98  ldp x19,x30,[sp, #0x20]
+00f65e9c  ldp x21,x20,[sp, #0x10]
+00f65ea0  mov x3,xzr
+00f65ea4  ldr x22,[sp], #0x30
+00f65ea8  b 0x0106125c
+00f65eac  ldp x19,x30,[sp, #0x20]
+00f65eb0  ldp x21,x20,[sp, #0x10]
+00f65eb4  ldr x22,[sp], #0x30
+00f65eb8  ret
+
+
+================================================================================
+### FILE: 00f65ebc_BindPanel_krMono__OnLinkupdate.txt
+================================================================================
+Function: BindPanel_krMono$$OnLinkupdate @ 00f65ebc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> BindPanel_krMono$$linkingStatusUpdate @ 00f65f38
+
+--- Calls IN ---
+
+--- Listing ---
+00f65ebc  str x22,[sp, #-0x30]!
+00f65ec0  stp x21,x20,[sp, #0x10]
+00f65ec4  stp x19,x30,[sp, #0x20]
+00f65ec8  adrp x21,0x3573000
+00f65ecc  adrp x22,0x332a000
+00f65ed0  ldrb w8,[x21, #0x2ce]
+00f65ed4  ldr x22,[x22, #0xc48]
+00f65ed8  mov x19,x1
+00f65edc  mov x20,x0
+00f65ee0  tbnz w8,#0x0,0x00f65ef8
+00f65ee4  adrp x0,0x332a000
+00f65ee8  ldr x0,[x0, #0xc48]
+00f65eec  bl 0x00b0789c
+00f65ef0  mov w8,#0x1
+00f65ef4  strb w8,[x21, #0x2ce]
+00f65ef8  ldr x8,[x22]
+00f65efc  ldr x8,[x8, #0xb8]
+00f65f00  ldr x0,[x8, #0x38]
+00f65f04  cbz x0,0x00f65f24
+00f65f08  mov x1,x20
+00f65f0c  mov x2,x19
+00f65f10  ldp x19,x30,[sp, #0x20]
+00f65f14  ldp x21,x20,[sp, #0x10]
+00f65f18  mov x3,xzr
+00f65f1c  ldr x22,[sp], #0x30
+00f65f20  b 0x0106125c
+00f65f24  mov x0,x20
+00f65f28  ldp x19,x30,[sp, #0x20]
+00f65f2c  ldp x21,x20,[sp, #0x10]
+00f65f30  ldr x22,[sp], #0x30
+00f65f34  b 0x00f65f38
+
+
+================================================================================
+### FILE: 00f65f38_BindPanel_krMono__linkingStatusUpdate.txt
+================================================================================
+Function: BindPanel_krMono$$linkingStatusUpdate @ 00f65f38
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BindPanel_krMono$$OnLinkupdate @ 00f65ebc
+
+--- Listing ---
+00f65f38  stp x21,x20,[sp, #-0x20]!
+00f65f3c  stp x19,x30,[sp, #0x10]
+00f65f40  adrp x20,0x3573000
+00f65f44  adrp x21,0x332a000
+00f65f48  ldrb w8,[x20, #0x2cf]
+00f65f4c  ldr x21,[x21, #0xc48]
+00f65f50  mov x19,x0
+00f65f54  tbnz w8,#0x0,0x00f65f6c
+00f65f58  adrp x0,0x332a000
+00f65f5c  ldr x0,[x0, #0xc48]
+00f65f60  bl 0x00b0789c
+00f65f64  mov w8,#0x1
+00f65f68  strb w8,[x20, #0x2cf]
+00f65f6c  ldr x8,[x21]
+00f65f70  ldr x8,[x8, #0xb8]
+00f65f74  ldr x0,[x8, #0x40]
+00f65f78  cbz x0,0x00f65f90
+00f65f7c  mov x1,x19
+00f65f80  ldp x19,x30,[sp, #0x10]
+00f65f84  mov x2,xzr
+00f65f88  ldp x21,x20,[sp], #0x20
+00f65f8c  b 0x01060dac
+00f65f90  ldp x19,x30,[sp, #0x10]
+00f65f94  ldp x21,x20,[sp], #0x20
+00f65f98  ret
+
+
+================================================================================
+### FILE: 00f65f9c_BindPanel_krMono__.ctor.txt
+================================================================================
+Function: BindPanel_krMono$$.ctor @ 00f65f9c
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.BindPanel_krMonoWrap$$__CreateInstance @ 012156b8
+
+--- Listing ---
+00f65f9c  stp x21,x20,[sp, #-0x20]!
+00f65fa0  stp x19,x30,[sp, #0x10]
+00f65fa4  adrp x21,0x3573000
+00f65fa8  adrp x20,0x332a000
+00f65fac  ldrb w8,[x21, #0x2d0]
+00f65fb0  ldr x20,[x20, #0xc48]
+00f65fb4  mov x19,x0
+00f65fb8  tbnz w8,#0x0,0x00f65fd0
+00f65fbc  adrp x0,0x332a000
+00f65fc0  ldr x0,[x0, #0xc48]
+00f65fc4  bl 0x00b0789c
+00f65fc8  mov w8,#0x1
+00f65fcc  strb w8,[x21, #0x2d0]
+00f65fd0  mov x0,x19
+00f65fd4  mov x1,xzr
+00f65fd8  bl 0x00f1c130
+00f65fdc  ldr x8,[x20]
+00f65fe0  ldr x8,[x8, #0xb8]
+00f65fe4  ldr x0,[x8, #0x48]
+00f65fe8  cbz x0,0x00f66000
+00f65fec  mov x1,x19
+00f65ff0  ldp x19,x30,[sp, #0x10]
+00f65ff4  mov x2,xzr
+00f65ff8  ldp x21,x20,[sp], #0x20
+00f65ffc  b 0x01060dac
+00f66000  ldp x19,x30,[sp, #0x10]
+00f66004  ldp x21,x20,[sp], #0x20
+00f66008  ret
+
+
+================================================================================
+### FILE: 00f6600c_BindPanel_krMono____xLuaBaseProxy_get_LayerType.txt
+================================================================================
+Function: BindPanel_krMono$$<>xLuaBaseProxy_get_LayerType @ 00f6600c
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$get_LayerType @ 016711a8
+
+--- Calls IN ---
+
+--- Listing ---
+00f6600c  mov x1,xzr
+00f66010  b 0x016711a8
+
+
+================================================================================
+### FILE: 00f66014_BindPanel_krMono____xLuaBaseProxy_RegisterCallBack.txt
+================================================================================
+Function: BindPanel_krMono$$<>xLuaBaseProxy_RegisterCallBack @ 00f66014
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$RegisterCallBack @ 00f21d5c
+
+--- Calls IN ---
+
+--- Listing ---
+00f66014  mov x1,xzr
+00f66018  b 0x00f21d5c
+
+
+================================================================================
+### FILE: 00fa8e18_Bindpanel_KrNode__get_LoginBtnGroup.txt
+================================================================================
+Function: Bindpanel_KrNode$$get_LoginBtnGroup @ 00fa8e18
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fa8e18  stp x21,x20,[sp, #-0x20]!
+00fa8e1c  stp x19,x30,[sp, #0x10]
+00fa8e20  adrp x20,0x3573000
+00fa8e24  adrp x21,0x3382000
+00fa8e28  ldrb w8,[x20, #0x6e8]
+00fa8e2c  ldr x21,[x21, #0xda0]
+00fa8e30  mov x19,x0
+00fa8e34  tbnz w8,#0x0,0x00fa8e4c
+00fa8e38  adrp x0,0x3382000
+00fa8e3c  ldr x0,[x0, #0xda0]
+00fa8e40  bl 0x00b0789c
+00fa8e44  mov w8,#0x1
+00fa8e48  strb w8,[x20, #0x6e8]
+00fa8e4c  ldr x1,[x21]
+00fa8e50  mov x0,x19
+00fa8e54  ldp x19,x30,[sp, #0x10]
+00fa8e58  mov x2,xzr
+00fa8e5c  ldp x21,x20,[sp], #0x20
+00fa8e60  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa8e64_Bindpanel_KrNode__get_btn_apple.txt
+================================================================================
+Function: Bindpanel_KrNode$$get_btn_apple @ 00fa8e64
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BindPanel_krMono$$RegisterCallBack @ 00f658e8
+
+--- Listing ---
+00fa8e64  stp x21,x20,[sp, #-0x20]!
+00fa8e68  stp x19,x30,[sp, #0x10]
+00fa8e6c  adrp x20,0x3573000
+00fa8e70  adrp x21,0x3328000
+00fa8e74  ldrb w8,[x20, #0x6e9]
+00fa8e78  ldr x21,[x21, #0x5e8]
+00fa8e7c  mov x19,x0
+00fa8e80  tbnz w8,#0x0,0x00fa8e98
+00fa8e84  adrp x0,0x3328000
+00fa8e88  ldr x0,[x0, #0x5e8]
+00fa8e8c  bl 0x00b0789c
+00fa8e90  mov w8,#0x1
+00fa8e94  strb w8,[x20, #0x6e9]
+00fa8e98  ldr x1,[x21]
+00fa8e9c  mov x0,x19
+00fa8ea0  ldp x19,x30,[sp, #0x10]
+00fa8ea4  mov x2,xzr
+00fa8ea8  ldp x21,x20,[sp], #0x20
+00fa8eac  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa8eb0_Bindpanel_KrNode__get_btn_google.txt
+================================================================================
+Function: Bindpanel_KrNode$$get_btn_google @ 00fa8eb0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BindPanel_krMono$$RegisterCallBack @ 00f658e8
+
+--- Listing ---
+00fa8eb0  stp x21,x20,[sp, #-0x20]!
+00fa8eb4  stp x19,x30,[sp, #0x10]
+00fa8eb8  adrp x20,0x3573000
+00fa8ebc  adrp x21,0x3353000
+00fa8ec0  ldrb w8,[x20, #0x6ea]
+00fa8ec4  ldr x21,[x21, #0xb88]
+00fa8ec8  mov x19,x0
+00fa8ecc  tbnz w8,#0x0,0x00fa8ee4
+00fa8ed0  adrp x0,0x3353000
+00fa8ed4  ldr x0,[x0, #0xb88]
+00fa8ed8  bl 0x00b0789c
+00fa8edc  mov w8,#0x1
+00fa8ee0  strb w8,[x20, #0x6ea]
+00fa8ee4  ldr x1,[x21]
+00fa8ee8  mov x0,x19
+00fa8eec  ldp x19,x30,[sp, #0x10]
+00fa8ef0  mov x2,xzr
+00fa8ef4  ldp x21,x20,[sp], #0x20
+00fa8ef8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa8efc_Bindpanel_KrNode__get_btn_facebook.txt
+================================================================================
+Function: Bindpanel_KrNode$$get_btn_facebook @ 00fa8efc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BindPanel_krMono$$RegisterCallBack @ 00f658e8
+
+--- Listing ---
+00fa8efc  stp x21,x20,[sp, #-0x20]!
+00fa8f00  stp x19,x30,[sp, #0x10]
+00fa8f04  adrp x20,0x3573000
+00fa8f08  adrp x21,0x331a000
+00fa8f0c  ldrb w8,[x20, #0x6eb]
+00fa8f10  ldr x21,[x21, #0x408]
+00fa8f14  mov x19,x0
+00fa8f18  tbnz w8,#0x0,0x00fa8f30
+00fa8f1c  adrp x0,0x331a000
+00fa8f20  ldr x0,[x0, #0x408]
+00fa8f24  bl 0x00b0789c
+00fa8f28  mov w8,#0x1
+00fa8f2c  strb w8,[x20, #0x6eb]
+00fa8f30  ldr x1,[x21]
+00fa8f34  mov x0,x19
+00fa8f38  ldp x19,x30,[sp, #0x10]
+00fa8f3c  mov x2,xzr
+00fa8f40  ldp x21,x20,[sp], #0x20
+00fa8f44  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa8f48_Bindpanel_KrNode__get_btn_naver.txt
+================================================================================
+Function: Bindpanel_KrNode$$get_btn_naver @ 00fa8f48
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BindPanel_krMono$$RegisterCallBack @ 00f658e8
+
+--- Listing ---
+00fa8f48  stp x21,x20,[sp, #-0x20]!
+00fa8f4c  stp x19,x30,[sp, #0x10]
+00fa8f50  adrp x20,0x3573000
+00fa8f54  adrp x21,0x3346000
+00fa8f58  ldrb w8,[x20, #0x6ec]
+00fa8f5c  ldr x21,[x21, #0x900]
+00fa8f60  mov x19,x0
+00fa8f64  tbnz w8,#0x0,0x00fa8f7c
+00fa8f68  adrp x0,0x3346000
+00fa8f6c  ldr x0,[x0, #0x900]
+00fa8f70  bl 0x00b0789c
+00fa8f74  mov w8,#0x1
+00fa8f78  strb w8,[x20, #0x6ec]
+00fa8f7c  ldr x1,[x21]
+00fa8f80  mov x0,x19
+00fa8f84  ldp x19,x30,[sp, #0x10]
+00fa8f88  mov x2,xzr
+00fa8f8c  ldp x21,x20,[sp], #0x20
+00fa8f90  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa8f94_Bindpanel_KrNode__get_btn_ok.txt
+================================================================================
+Function: Bindpanel_KrNode$$get_btn_ok @ 00fa8f94
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BindPanel_krMono$$RegisterCallBack @ 00f658e8
+
+--- Listing ---
+00fa8f94  stp x21,x20,[sp, #-0x20]!
+00fa8f98  stp x19,x30,[sp, #0x10]
+00fa8f9c  adrp x20,0x3573000
+00fa8fa0  adrp x21,0x3331000
+00fa8fa4  ldrb w8,[x20, #0x6ed]
+00fa8fa8  ldr x21,[x21, #0xfd8]
+00fa8fac  mov x19,x0
+00fa8fb0  tbnz w8,#0x0,0x00fa8fc8
+00fa8fb4  adrp x0,0x3331000
+00fa8fb8  ldr x0,[x0, #0xfd8]
+00fa8fbc  bl 0x00b0789c
+00fa8fc0  mov w8,#0x1
+00fa8fc4  strb w8,[x20, #0x6ed]
+00fa8fc8  ldr x1,[x21]
+00fa8fcc  mov x0,x19
+00fa8fd0  ldp x19,x30,[sp, #0x10]
+00fa8fd4  mov x2,xzr
+00fa8fd8  ldp x21,x20,[sp], #0x20
+00fa8fdc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fa8fe0_Bindpanel_KrNode__.ctor.txt
+================================================================================
+Function: Bindpanel_KrNode$$.ctor @ 00fa8fe0
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fa8fe0  mov x1,xzr
+00fa8fe4  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 03799390_bind.txt
+================================================================================
+Function: bind @ 03799390
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- bind @ 008d4760
+
+--- Listing ---
+03799390  ?? ??
+
+

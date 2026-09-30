@@ -1,0 +1,120 @@
+================================================================================
+### FILE: 008d4e10_pipe.txt
+================================================================================
+Function: pipe @ 008d4e10
+
+--- Calls OUT ---
+  -> pipe @ 03799528
+
+--- Calls IN ---
+  <- FUN_00b02f48 @ 00b02f48
+  <- FUN_00aa9354 @ 00aa9354
+
+--- Listing ---
+008d4e10  adrp x16,0x3308000
+008d4e14  ldr x17,[x16, #0xc8]
+008d4e18  add x16,x16,#0xc8
+008d4e1c  br x17
+
+
+================================================================================
+### FILE: 00dbead0_PixelPerfectCamera__Awake.txt
+================================================================================
+Function: PixelPerfectCamera$$Awake @ 00dbead0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00dbead0  stp x21,x20,[sp, #-0x20]!
+00dbead4  stp x19,x30,[sp, #0x10]
+00dbead8  adrp x20,0x3572000
+00dbeadc  adrp x21,0x334f000
+00dbeae0  ldrb w8,[x20, #0x157]
+00dbeae4  ldr x21,[x21, #0xde0]
+00dbeae8  mov x19,x0
+00dbeaec  tbnz w8,#0x0,0x00dbeb04
+00dbeaf0  adrp x0,0x334f000
+00dbeaf4  ldr x0,[x0, #0xde0]
+00dbeaf8  bl 0x00b0789c
+00dbeafc  mov w8,#0x1
+00dbeb00  strb w8,[x20, #0x157]
+00dbeb04  ldr x1,[x21]
+00dbeb08  mov x0,x19
+00dbeb0c  bl 0x0176cbf8
+00dbeb10  str x0,[x19, #0x18]!
+00dbeb14  mov x1,x0
+00dbeb18  mov x0,x19
+00dbeb1c  ldp x19,x30,[sp, #0x10]
+00dbeb20  ldp x21,x20,[sp], #0x20
+00dbeb24  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dbeb28_PixelPerfectCamera__Update.txt
+================================================================================
+Function: PixelPerfectCamera$$Update @ 00dbeb28
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Screen$$get_height @ 024d2684
+  -> UnityEngine.Camera$$set_orthographicSize @ 024d7280
+
+--- Calls IN ---
+
+--- Listing ---
+00dbeb28  str x20,[sp, #-0x20]!
+00dbeb2c  stp x19,x30,[sp, #0x10]
+00dbeb30  ldr x19,[x0, #0x18]
+00dbeb34  mov x20,x0
+00dbeb38  mov x0,xzr
+00dbeb3c  bl 0x024d2684
+00dbeb40  cbz x19,0x00dbeb6c
+00dbeb44  ldr s0,[x20, #0x20]
+00dbeb48  scvtf s1,w0
+00dbeb4c  mov x0,x19
+00dbeb50  ldp x19,x30,[sp, #0x10]
+00dbeb54  fdiv s0,s1,s0
+00dbeb58  fmov s1,0x3f000000
+00dbeb5c  fmul s0,s0,s1
+00dbeb60  mov x1,xzr
+00dbeb64  ldr x20,[sp], #0x20
+00dbeb68  b 0x024d7280
+00dbeb6c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dbeb70_PixelPerfectCamera__.ctor.txt
+================================================================================
+Function: PixelPerfectCamera$$.ctor @ 00dbeb70
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dbeb70  mov w8,#0x42c80000
+00dbeb74  mov x1,xzr
+00dbeb78  str w8,[x0, #0x20]
+00dbeb7c  b 0x024e45bc
+
+
+================================================================================
+### FILE: 03799528_pipe.txt
+================================================================================
+Function: pipe @ 03799528
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- pipe @ 008d4e10
+
+--- Listing ---
+03799528  ?? ??
+
+

@@ -1,0 +1,377 @@
+================================================================================
+### FILE: 00e458d8_CCCurveAni__.ctor.txt
+================================================================================
+Function: CCCurveAni$$.ctor @ 00e458d8
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CCCurveAniWrap$$__CreateInstance @ 01229ad0
+
+--- Listing ---
+00e458d8  stp x21,x20,[sp, #-0x20]!
+00e458dc  stp x19,x30,[sp, #0x10]
+00e458e0  adrp x21,0x3572000
+00e458e4  adrp x20,0x336f000
+00e458e8  ldrb w8,[x21, #0x880]
+00e458ec  ldr x20,[x20, #0xd68]
+00e458f0  mov x19,x0
+00e458f4  tbnz w8,#0x0,0x00e4590c
+00e458f8  adrp x0,0x336f000
+00e458fc  ldr x0,[x0, #0xd68]
+00e45900  bl 0x00b0789c
+00e45904  mov w8,#0x1
+00e45908  strb w8,[x21, #0x880]
+00e4590c  mov x0,x19
+00e45910  mov x1,xzr
+00e45914  bl 0x024e45bc
+00e45918  ldr x8,[x20]
+00e4591c  ldr x8,[x8, #0xb8]
+00e45920  ldr x0,[x8]
+00e45924  cbz x0,0x00e4593c
+00e45928  mov x1,x19
+00e4592c  ldp x19,x30,[sp, #0x10]
+00e45930  mov x2,xzr
+00e45934  ldp x21,x20,[sp], #0x20
+00e45938  b 0x01060dac
+00e4593c  ldp x19,x30,[sp, #0x10]
+00e45940  ldp x21,x20,[sp], #0x20
+00e45944  ret
+
+
+================================================================================
+### FILE: 00e45948_CCTable__RefreshGrid.txt
+================================================================================
+Function: CCTable$$RefreshGrid @ 00e45948
+
+--- Calls OUT ---
+  -> UnityEngine.Transform$$GetEnumerator @ 024f59cc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.RectTransform$$set_anchorMin @ 024f627c
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> UnityEngine.RectTransform$$set_pivot @ 024f66ec
+  -> UnityEngine.Transform$$set_localPosition @ 024f385c
+  -> UnityEngine.RectTransform$$set_sizeDelta @ 024f65d0
+  -> UnityEngine.RectTransform$$set_anchorMax @ 024f6398
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00aaac8c @ 00aaac8c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> UnityEngine.RectTransform$$get_sizeDelta @ 024f6540
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- CCTable$$TimeToRefreshExclaMark @ 00e45d38
+
+--- Listing ---
+00e45948  stp d9,d8,[sp, #-0x50]!
+00e4594c  str x24,[sp, #0x10]
+00e45950  stp x23,x22,[sp, #0x20]
+00e45954  stp x21,x20,[sp, #0x30]
+00e45958  stp x19,x30,[sp, #0x40]
+00e4595c  adrp x20,0x3572000
+00e45960  adrp x21,0x3358000
+00e45964  ldrb w8,[x20, #0x881]
+00e45968  ldr x21,[x21, #0xdf0]
+00e4596c  mov x19,x0
+00e45970  tbnz w8,#0x0,0x00e459b8
+00e45974  adrp x0,0x3358000
+00e45978  ldr x0,[x0, #0xdf0]
+00e4597c  bl 0x00b0789c
+00e45980  adrp x0,0x332d000
+00e45984  ldr x0,[x0, #0x198]
+00e45988  bl 0x00b0789c
+00e4598c  adrp x0,0x337d000
+00e45990  ldr x0,[x0, #0x848]
+00e45994  bl 0x00b0789c
+00e45998  adrp x0,0x3364000
+00e4599c  ldr x0,[x0, #0xeb0]
+00e459a0  bl 0x00b0789c
+00e459a4  adrp x0,0x3335000
+00e459a8  ldr x0,[x0, #0x6e8]
+00e459ac  bl 0x00b0789c
+00e459b0  mov w8,#0x1
+00e459b4  strb w8,[x20, #0x881]
+00e459b8  ldr x8,[x21]
+00e459bc  ldr x8,[x8, #0xb8]
+00e459c0  ldr x0,[x8]
+00e459c4  cbz x0,0x00e459e8
+00e459c8  mov x1,x19
+00e459cc  ldp x19,x30,[sp, #0x40]
+00e459d0  ldp x21,x20,[sp, #0x30]
+00e459d4  ldp x23,x22,[sp, #0x20]
+00e459d8  ldr x24,[sp, #0x10]
+00e459dc  mov x2,xzr
+00e459e0  ldp d9,d8,[sp], #0x50
+00e459e4  b 0x01060dac
+00e459e8  mov x0,x19
+00e459ec  mov x1,xzr
+00e459f0  str wzr,[x19, #0x18]
+00e459f4  bl 0x024e4e98
+00e459f8  cbz x0,0x00e45c50
+00e459fc  adrp x23,0x337d000
+00e45a00  ldr x23,[x23, #0x848]
+00e45a04  mov x1,xzr
+00e45a08  bl 0x024f59cc
+00e45a0c  mov x20,x0
+00e45a10  cbz x0,0x00e45c54
+00e45a14  adrp x22,0x3364000
+00e45a18  adrp x24,0x3335000
+00e45a1c  ldr x22,[x22, #0xeb0]
+00e45a20  ldr x24,[x24, #0x6e8]
+00e45a24  fmov s8,0x3f800000
+00e45a28  ldr x8,[x20]
+00e45a2c  ldr x1,[x22]
+00e45a30  ldrh w9,[x8, #0x12a]
+00e45a34  cbz x9,0x00e45a58
+00e45a38  ldr x10,[x8, #0xb0]
+00e45a3c  add x10,x10,#0x8
+00e45a40  ldur x11,[x10, #-0x8]
+00e45a44  cmp x11,x1
+00e45a48  b.eq 0x00e45a68
+00e45a4c  subs x9,x9,#0x1
+00e45a50  add x10,x10,#0x10
+00e45a54  b.ne 0x00e45a40
+00e45a58  mov x0,x20
+    ; [PRE] try { // try from 00e45a58 to 00e45a7f has its CatchHandler @ 00e45c84
+00e45a5c  mov w2,wzr
+00e45a60  bl 0x00b2ae24
+00e45a64  b 0x00e45a74
+00e45a68  ldrsw x9,[x10]
+00e45a6c  add x8,x8,x9, LSL #0x4
+00e45a70  add x0,x8,#0x138
+00e45a74  ldp x8,x1,[x0]
+00e45a78  mov x0,x20
+00e45a7c  blr x8
+    ; [POST] } // end try from 00e45a58 to 00e45a7f
+00e45a80  tbz w0,#0x0,0x00e45b6c
+00e45a84  ldr x8,[x20]
+00e45a88  ldr x1,[x22]
+00e45a8c  ldrh w9,[x8, #0x12a]
+00e45a90  cbz x9,0x00e45ab4
+00e45a94  ldr x10,[x8, #0xb0]
+00e45a98  add x10,x10,#0x8
+00e45a9c  ldur x11,[x10, #-0x8]
+00e45aa0  cmp x11,x1
+00e45aa4  b.eq 0x00e45ac4
+00e45aa8  subs x9,x9,#0x1
+00e45aac  add x10,x10,#0x10
+00e45ab0  b.ne 0x00e45a9c
+00e45ab4  mov w2,#0x1
+    ; [PRE] try { // try from 00e45ab4 to 00e45adf has its CatchHandler @ 00e45c80
+00e45ab8  mov x0,x20
+00e45abc  bl 0x00b2ae24
+00e45ac0  b 0x00e45ad4
+00e45ac4  ldr w9,[x10]
+00e45ac8  add w9,w9,#0x1
+00e45acc  add x8,x8,w9, SXTW  #0x4
+00e45ad0  add x0,x8,#0x138
+00e45ad4  ldp x8,x1,[x0]
+00e45ad8  mov x0,x20
+00e45adc  blr x8
+    ; [POST] } // end try from 00e45ab4 to 00e45adf
+00e45ae0  mov x21,x0
+00e45ae4  cbz x0,0x00e45c4c
+00e45ae8  ldr x1,[x24]
+00e45aec  ldr x8,[x21]
+00e45af0  cmp x8,x1
+00e45af4  b.ne 0x00e45c44
+00e45af8  fmov s0,wzr
+    ; [PRE] try { // try from 00e45af8 to 00e45b0b has its CatchHandler @ 00e45c6c
+00e45afc  mov x0,x21
+00e45b00  mov v1.16B,v8.16B
+00e45b04  mov x1,xzr
+00e45b08  bl 0x024f6398
+    ; [POST] } // end try from 00e45af8 to 00e45b0b
+00e45b0c  fmov s0,wzr
+    ; [PRE] try { // try from 00e45b0c to 00e45b1f has its CatchHandler @ 00e45c7c
+00e45b10  mov x0,x21
+00e45b14  mov v1.16B,v8.16B
+00e45b18  mov x1,xzr
+00e45b1c  bl 0x024f627c
+    ; [POST] } // end try from 00e45b0c to 00e45b1f
+00e45b20  fmov s0,wzr
+    ; [PRE] try { // try from 00e45b20 to 00e45b33 has its CatchHandler @ 00e45c70
+00e45b24  mov x0,x21
+00e45b28  mov v1.16B,v8.16B
+00e45b2c  mov x1,xzr
+00e45b30  bl 0x024f66ec
+    ; [POST] } // end try from 00e45b20 to 00e45b33
+00e45b34  ldr s0,[x19, #0x18]
+00e45b38  fneg s1,s0
+00e45b3c  fmov s0,wzr
+    ; [PRE] try { // try from 00e45b3c to 00e45b4f has its CatchHandler @ 00e45c74
+00e45b40  fmov s2,wzr
+00e45b44  mov x0,x21
+00e45b48  mov x1,xzr
+00e45b4c  bl 0x024f385c
+    ; [POST] } // end try from 00e45b3c to 00e45b4f
+00e45b50  ldr s9,[x19, #0x18]
+00e45b54  mov x0,x21
+    ; [PRE] try { // try from 00e45b54 to 00e45b5f has its CatchHandler @ 00e45c78
+00e45b58  mov x1,xzr
+00e45b5c  bl 0x024f6540
+    ; [POST] } // end try from 00e45b54 to 00e45b5f
+00e45b60  fadd s0,s9,s1
+00e45b64  str s0,[x19, #0x18]
+00e45b68  b 0x00e45a28
+00e45b6c  mov x21,xzr
+00e45b70  mov w22,#0x5
+00e45b74  ldr x1,[x23]
+00e45b78  mov x0,x20
+00e45b7c  bl 0x00b07990
+00e45b80  cbz x0,0x00e45be0
+00e45b84  ldr x8,[x0]
+00e45b88  ldr x1,[x23]
+00e45b8c  mov x20,x0
+00e45b90  ldrh w9,[x8, #0x12a]
+00e45b94  cbz x9,0x00e45bb8
+00e45b98  ldr x10,[x8, #0xb0]
+00e45b9c  add x10,x10,#0x8
+00e45ba0  ldur x11,[x10, #-0x8]
+00e45ba4  cmp x11,x1
+00e45ba8  b.eq 0x00e45bc8
+00e45bac  subs x9,x9,#0x1
+00e45bb0  add x10,x10,#0x10
+00e45bb4  b.ne 0x00e45ba0
+00e45bb8  mov x0,x20
+00e45bbc  mov w2,wzr
+00e45bc0  bl 0x00b2ae24
+00e45bc4  b 0x00e45bd4
+00e45bc8  ldrsw x9,[x10]
+00e45bcc  add x8,x8,x9, LSL #0x4
+00e45bd0  add x0,x8,#0x138
+00e45bd4  ldp x8,x1,[x0]
+00e45bd8  mov x0,x20
+00e45bdc  blr x8
+00e45be0  cbnz x21,0x00e45c58
+00e45be4  cmp w22,#0x5
+00e45be8  b.eq 0x00e45bf0
+00e45bec  cbnz w22,0x00e45c2c
+00e45bf0  adrp x8,0x332d000
+00e45bf4  ldr x8,[x8, #0x198]
+00e45bf8  mov x0,x19
+00e45bfc  ldr x1,[x8]
+00e45c00  bl 0x0176cbf8
+00e45c04  cbz x0,0x00e45c50
+00e45c08  ldr s1,[x19, #0x18]
+00e45c0c  ldp x19,x30,[sp, #0x40]
+00e45c10  ldp x21,x20,[sp, #0x30]
+00e45c14  ldp x23,x22,[sp, #0x20]
+00e45c18  ldr x24,[sp, #0x10]
+00e45c1c  fmov s0,wzr
+00e45c20  mov x1,xzr
+00e45c24  ldp d9,d8,[sp], #0x50
+00e45c28  b 0x024f65d0
+00e45c2c  ldp x19,x30,[sp, #0x40]
+00e45c30  ldp x21,x20,[sp, #0x30]
+00e45c34  ldp x23,x22,[sp, #0x20]
+00e45c38  ldr x24,[sp, #0x10]
+00e45c3c  ldp d9,d8,[sp], #0x50
+00e45c40  ret
+00e45c44  mov x0,x21
+    ; [PRE] try { // try from 00e45c44 to 00e45c4b has its CatchHandler @ 00e45c68
+00e45c48  bl 0x00b07c6c
+    ; [POST] } // end try from 00e45c44 to 00e45c4b
+00e45c4c  bl 0x00b079b0
+    ; [PRE] try { // try from 00e45c4c to 00e45c4f has its CatchHandler @ 00e45c64
+    ; [POST] } // end try from 00e45c4c to 00e45c4f
+00e45c50  bl 0x00b079b0
+00e45c54  bl 0x00b079b0
+    ; [PRE] try { // try from 00e45c54 to 00e45c57 has its CatchHandler @ 00e45c60
+    ; [POST] } // end try from 00e45c54 to 00e45c57
+00e45c58  mov x0,x21
+00e45c5c  bl 0x00aaac8c
+
+
+================================================================================
+### FILE: 00e45d38_CCTable__TimeToRefreshExclaMark.txt
+================================================================================
+Function: CCTable$$TimeToRefreshExclaMark @ 00e45d38
+
+--- Calls OUT ---
+  -> CCTable$$RefreshGrid @ 00e45948
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CCTableWrap$$_m_TimeToRefreshExclaMark @ 0122a520
+
+--- Listing ---
+00e45d38  stp x21,x20,[sp, #-0x20]!
+00e45d3c  stp x19,x30,[sp, #0x10]
+00e45d40  adrp x20,0x3572000
+00e45d44  adrp x21,0x3358000
+00e45d48  ldrb w8,[x20, #0x882]
+00e45d4c  ldr x21,[x21, #0xdf0]
+00e45d50  mov x19,x0
+00e45d54  tbnz w8,#0x0,0x00e45d6c
+00e45d58  adrp x0,0x3358000
+00e45d5c  ldr x0,[x0, #0xdf0]
+00e45d60  bl 0x00b0789c
+00e45d64  mov w8,#0x1
+00e45d68  strb w8,[x20, #0x882]
+00e45d6c  ldr x8,[x21]
+00e45d70  ldr x8,[x8, #0xb8]
+00e45d74  ldr x0,[x8, #0x8]
+00e45d78  cbz x0,0x00e45d90
+00e45d7c  mov x1,x19
+00e45d80  ldp x19,x30,[sp, #0x10]
+00e45d84  mov x2,xzr
+00e45d88  ldp x21,x20,[sp], #0x20
+00e45d8c  b 0x01060dac
+00e45d90  mov x0,x19
+00e45d94  ldp x19,x30,[sp, #0x10]
+00e45d98  ldp x21,x20,[sp], #0x20
+00e45d9c  b 0x00e45948
+
+
+================================================================================
+### FILE: 00e45da0_CCTable__.ctor.txt
+================================================================================
+Function: CCTable$$.ctor @ 00e45da0
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CCTableWrap$$__CreateInstance @ 0122a368
+
+--- Listing ---
+00e45da0  stp x21,x20,[sp, #-0x20]!
+00e45da4  stp x19,x30,[sp, #0x10]
+00e45da8  adrp x21,0x3572000
+00e45dac  adrp x20,0x3358000
+00e45db0  ldrb w8,[x21, #0x883]
+00e45db4  ldr x20,[x20, #0xdf0]
+00e45db8  mov x19,x0
+00e45dbc  tbnz w8,#0x0,0x00e45dd4
+00e45dc0  adrp x0,0x3358000
+00e45dc4  ldr x0,[x0, #0xdf0]
+00e45dc8  bl 0x00b0789c
+00e45dcc  mov w8,#0x1
+00e45dd0  strb w8,[x21, #0x883]
+00e45dd4  mov x0,x19
+00e45dd8  mov x1,xzr
+00e45ddc  bl 0x024e45bc
+00e45de0  ldr x8,[x20]
+00e45de4  ldr x8,[x8, #0xb8]
+00e45de8  ldr x0,[x8, #0x10]
+00e45dec  cbz x0,0x00e45e04
+00e45df0  mov x1,x19
+00e45df4  ldp x19,x30,[sp, #0x10]
+00e45df8  mov x2,xzr
+00e45dfc  ldp x21,x20,[sp], #0x20
+00e45e00  b 0x01060dac
+00e45e04  ldp x19,x30,[sp, #0x10]
+00e45e08  ldp x21,x20,[sp], #0x20
+00e45e0c  ret
+
+

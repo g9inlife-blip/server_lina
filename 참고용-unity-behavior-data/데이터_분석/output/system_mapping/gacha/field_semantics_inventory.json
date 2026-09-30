@@ -1,0 +1,16 @@
+{
+  "probability_candidates": 3034,
+  "cost_candidates": 0,
+  "period_candidates": 3034,
+  "top_fields": [
+    [
+      "m_period",
+      3034
+    ],
+    [
+      "m_probability",
+      3034
+    ]
+  ],
+  "note": "field name alone does not confirm semantic meaning"
+}

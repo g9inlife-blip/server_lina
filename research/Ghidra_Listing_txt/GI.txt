@@ -1,0 +1,817 @@
+================================================================================
+### FILE: 00df0508_GiftcodeData__get_distinguish.txt
+================================================================================
+Function: GiftcodeData$$get_distinguish @ 00df0508
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0508  ldr x0,[x0, #0x78]
+00df050c  ret
+
+
+================================================================================
+### FILE: 00df0510_GiftcodeData__get_repeat.txt
+================================================================================
+Function: GiftcodeData$$get_repeat @ 00df0510
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0510  ldr w0,[x0, #0x80]
+00df0514  ret
+
+
+================================================================================
+### FILE: 00df0518_GiftcodeData__get_group.txt
+================================================================================
+Function: GiftcodeData$$get_group @ 00df0518
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0518  ldr w0,[x0, #0x84]
+00df051c  ret
+
+
+================================================================================
+### FILE: 00df0520_GiftcodeData__get_channel.txt
+================================================================================
+Function: GiftcodeData$$get_channel @ 00df0520
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0520  ldr x0,[x0, #0x88]
+00df0524  ret
+
+
+================================================================================
+### FILE: 00df0528_GiftcodeData__get_itemId.txt
+================================================================================
+Function: GiftcodeData$$get_itemId @ 00df0528
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df0528  ldr x0,[x0, #0x90]
+00df052c  ret
+
+
+================================================================================
+### FILE: 00df0530_GiftcodeData__.ctor.txt
+================================================================================
+Function: GiftcodeData$$.ctor @ 00df0530
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.GiftcodeDataWrap$$__CreateInstance @ 012a8850
+
+--- Listing ---
+00df0530  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00df0534_GiftcodeRecord__.ctor.txt
+================================================================================
+Function: GiftcodeRecord$$.ctor @ 00df0534
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00df0534  stp x21,x20,[sp, #-0x20]!
+00df0538  stp x19,x30,[sp, #0x10]
+00df053c  adrp x20,0x3572000
+00df0540  adrp x21,0x336b000
+00df0544  ldrb w8,[x20, #0x44b]
+00df0548  ldr x21,[x21, #0xc38]
+00df054c  mov x19,x0
+00df0550  tbnz w8,#0x0,0x00df0574
+00df0554  adrp x0,0x3318000
+00df0558  ldr x0,[x0, #0x8b0]
+00df055c  bl 0x00b0789c
+00df0560  adrp x0,0x336b000
+00df0564  ldr x0,[x0, #0xc38]
+00df0568  bl 0x00b0789c
+00df056c  mov w8,#0x1
+00df0570  strb w8,[x20, #0x44b]
+00df0574  ldr x0,[x21]
+00df0578  bl 0x00b079a0
+00df057c  cbz x0,0x00df05b8
+00df0580  adrp x8,0x3318000
+00df0584  ldr x8,[x8, #0x8b0]
+00df0588  mov x20,x0
+00df058c  ldr x1,[x8]
+00df0590  bl 0x01bffe10
+00df0594  mov x0,x19
+00df0598  str x20,[x0, #0x18]!
+00df059c  mov x1,x20
+00df05a0  bl 0x00b07850
+00df05a4  mov x0,x19
+00df05a8  ldp x19,x30,[sp, #0x10]
+00df05ac  mov x1,xzr
+00df05b0  ldp x21,x20,[sp], #0x20
+00df05b4  b 0x024e277c
+00df05b8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f66dc0_GiftCardPanelMono__get_m_node.txt
+================================================================================
+Function: GiftCardPanelMono$$get_m_node @ 00f66dc0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp658 @ 010b5f58
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+
+--- Calls IN ---
+  <- GiftCardPanelMono$$ClickSendCode @ 00f67208
+  <- GiftCardPanelMono$$Start @ 00f66f44
+
+--- Listing ---
+00f66dc0  str x22,[sp, #-0x30]!
+00f66dc4  stp x21,x20,[sp, #0x10]
+00f66dc8  stp x19,x30,[sp, #0x20]
+00f66dcc  adrp x20,0x3573000
+00f66dd0  adrp x21,0x331b000
+00f66dd4  ldrb w8,[x20, #0x2dc]
+00f66dd8  ldr x21,[x21, #0x670]
+00f66ddc  mov x19,x0
+00f66de0  tbnz w8,#0x0,0x00f66e1c
+00f66de4  adrp x0,0x3315000
+00f66de8  ldr x0,[x0, #0x9f0]
+00f66dec  bl 0x00b0789c
+00f66df0  adrp x0,0x3348000
+00f66df4  ldr x0,[x0, #0x138]
+00f66df8  bl 0x00b0789c
+00f66dfc  adrp x0,0x331b000
+00f66e00  ldr x0,[x0, #0x670]
+00f66e04  bl 0x00b0789c
+00f66e08  adrp x0,0x3321000
+00f66e0c  ldr x0,[x0, #0xca8]
+00f66e10  bl 0x00b0789c
+00f66e14  mov w8,#0x1
+00f66e18  strb w8,[x20, #0x2dc]
+00f66e1c  ldr x8,[x21]
+00f66e20  ldr x8,[x8, #0xb8]
+00f66e24  ldr x0,[x8]
+00f66e28  cbz x0,0x00f66e44
+00f66e2c  mov x1,x19
+00f66e30  ldp x19,x30,[sp, #0x20]
+00f66e34  ldp x21,x20,[sp, #0x10]
+00f66e38  mov x2,xzr
+00f66e3c  ldr x22,[sp], #0x30
+00f66e40  b 0x010b5f58
+00f66e44  adrp x8,0x3321000
+00f66e48  ldr x8,[x8, #0xca8]
+00f66e4c  mov x20,x19
+00f66e50  ldr x21,[x20, #0xc8]!
+00f66e54  ldr x0,[x8]
+00f66e58  ldr w8,[x0, #0xe0]
+00f66e5c  cbnz w8,0x00f66e64
+00f66e60  bl 0x00b0798c
+00f66e64  mov x0,x21
+00f66e68  mov x1,xzr
+00f66e6c  mov x2,xzr
+00f66e70  bl 0x024c8180
+00f66e74  tbz w0,#0x0,0x00f66ec8
+00f66e78  adrp x22,0x3348000
+00f66e7c  adrp x21,0x3315000
+00f66e80  ldr x22,[x22, #0x138]
+00f66e84  ldr x21,[x21, #0x9f0]
+00f66e88  mov x0,x19
+00f66e8c  mov x1,xzr
+00f66e90  bl 0x024e4ed4
+00f66e94  ldr x8,[x22]
+00f66e98  mov x19,x0
+00f66e9c  ldr w9,[x8, #0xe0]
+00f66ea0  cbnz w9,0x00f66eac
+00f66ea4  mov x0,x8
+00f66ea8  bl 0x00b0798c
+00f66eac  ldr x1,[x21]
+00f66eb0  mov x0,x19
+00f66eb4  bl 0x017372ac
+00f66eb8  mov x1,x0
+00f66ebc  str x0,[x20]
+00f66ec0  mov x0,x20
+00f66ec4  bl 0x00b07850
+00f66ec8  ldr x0,[x20]
+00f66ecc  ldp x19,x30,[sp, #0x20]
+00f66ed0  ldp x21,x20,[sp, #0x10]
+00f66ed4  ldr x22,[sp], #0x30
+00f66ed8  ret
+
+
+================================================================================
+### FILE: 00f66edc_GiftCardPanelMono__get_LayerType.txt
+================================================================================
+Function: GiftCardPanelMono$$get_LayerType @ 00f66edc
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp491 @ 0109f3ac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00f66edc  stp x21,x20,[sp, #-0x20]!
+00f66ee0  stp x19,x30,[sp, #0x10]
+00f66ee4  adrp x20,0x3573000
+00f66ee8  adrp x21,0x331b000
+00f66eec  ldrb w8,[x20, #0x2dd]
+00f66ef0  ldr x21,[x21, #0x670]
+00f66ef4  mov x19,x0
+00f66ef8  tbnz w8,#0x0,0x00f66f10
+00f66efc  adrp x0,0x331b000
+00f66f00  ldr x0,[x0, #0x670]
+00f66f04  bl 0x00b0789c
+00f66f08  mov w8,#0x1
+00f66f0c  strb w8,[x20, #0x2dd]
+00f66f10  ldr x8,[x21]
+00f66f14  ldr x8,[x8, #0xb8]
+00f66f18  ldr x0,[x8, #0x8]
+00f66f1c  cbz x0,0x00f66f34
+00f66f20  mov x1,x19
+00f66f24  ldp x19,x30,[sp, #0x10]
+00f66f28  mov x2,xzr
+00f66f2c  ldp x21,x20,[sp], #0x20
+00f66f30  b 0x0109f3ac
+00f66f34  ldp x19,x30,[sp, #0x10]
+00f66f38  mov w0,#0x3
+00f66f3c  ldp x21,x20,[sp], #0x20
+00f66f40  ret
+
+
+================================================================================
+### FILE: 00f66f44_GiftCardPanelMono__Start.txt
+================================================================================
+Function: GiftCardPanelMono$$Start @ 00f66f44
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> FUN_00b079b0 @ 00b079b0
+  -> GiftcardpanelNode$$get_inp_codeinput @ 00fb812c
+  -> UINode$$get_InputField @ 00dc495c
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> GiftcardpanelNode$$get_btn_docode @ 00fb8210
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UIEventListener$$Get @ 00e34224
+  -> GiftcardpanelNode$$get_lbl_waitcodetext @ 00fb8178
+  -> UINode$$get_Text @ 00dc47dc
+  -> AliothExtensions$$SetTextExt @ 00e14168
+  -> TMPro.TMP_InputField$$set_text @ 0243e9b8
+  -> GiftcardpanelNode$$get_btn_hidecode @ 00fb80e0
+  -> GiftCardPanelMono$$get_m_node @ 00f66dc0
+  -> FUN_00b2ac40 @ 00b2ac40
+  -> GiftcardpanelNode$$get_obj_codeexboard @ 00fb8094
+
+--- Calls IN ---
+
+--- Listing ---
+00f66f44  str x22,[sp, #-0x30]!
+00f66f48  stp x21,x20,[sp, #0x10]
+00f66f4c  stp x19,x30,[sp, #0x20]
+00f66f50  adrp x20,0x3573000
+00f66f54  adrp x21,0x331b000
+00f66f58  ldrb w8,[x20, #0x2de]
+00f66f5c  ldr x21,[x21, #0x670]
+00f66f60  mov x19,x0
+00f66f64  tbnz w8,#0x0,0x00f66fc4
+00f66f68  adrp x0,0x3348000
+00f66f6c  ldr x0,[x0, #0x138]
+00f66f70  bl 0x00b0789c
+00f66f74  adrp x0,0x335b000
+00f66f78  ldr x0,[x0, #0x650]
+00f66f7c  bl 0x00b0789c
+00f66f80  adrp x0,0x3336000
+00f66f84  ldr x0,[x0, #0xb60]
+00f66f88  bl 0x00b0789c
+00f66f8c  adrp x0,0x331b000
+00f66f90  ldr x0,[x0, #0x670]
+00f66f94  bl 0x00b0789c
+00f66f98  adrp x0,0x332d000
+00f66f9c  ldr x0,[x0, #0xd38]
+00f66fa0  bl 0x00b0789c
+00f66fa4  adrp x0,0x3360000
+00f66fa8  ldr x0,[x0, #0x750]
+00f66fac  bl 0x00b0789c
+00f66fb0  adrp x0,0x332c000
+00f66fb4  ldr x0,[x0, #0x2c0]
+00f66fb8  bl 0x00b0789c
+00f66fbc  mov w8,#0x1
+00f66fc0  strb w8,[x20, #0x2de]
+00f66fc4  ldr x8,[x21]
+00f66fc8  ldr x8,[x8, #0xb8]
+00f66fcc  ldr x0,[x8, #0x10]
+00f66fd0  cbz x0,0x00f66fec
+00f66fd4  mov x1,x19
+00f66fd8  ldp x19,x30,[sp, #0x20]
+00f66fdc  ldp x21,x20,[sp, #0x10]
+00f66fe0  mov x2,xzr
+00f66fe4  ldr x22,[sp], #0x30
+00f66fe8  b 0x01060dac
+00f66fec  mov x0,x19
+00f66ff0  bl 0x00f66dc0
+00f66ff4  cbz x0,0x00f67204
+00f66ff8  mov x1,xzr
+00f66ffc  bl 0x00fb80e0
+00f67000  cbz x0,0x00f67204
+00f67004  adrp x8,0x332d000
+00f67008  ldr x8,[x8, #0xd38]
+00f6700c  adrp x22,0x3360000
+00f67010  ldr x20,[x0, #0x18]
+00f67014  ldr x8,[x8]
+00f67018  ldr w9,[x8, #0xe0]
+00f6701c  ldr x22,[x22, #0x750]
+00f67020  cbnz w9,0x00f6702c
+00f67024  mov x0,x8
+00f67028  bl 0x00b0798c
+00f6702c  mov w1,#0x1
+00f67030  mov x0,x20
+00f67034  mov x2,xzr
+00f67038  bl 0x00e34224
+00f6703c  ldr x8,[x22]
+00f67040  mov x20,x0
+00f67044  mov x0,x8
+00f67048  bl 0x00b079a0
+00f6704c  cbz x0,0x00f67204
+00f67050  cbz x19,0x00f67204
+00f67054  ldr x8,[x19]
+00f67058  mov x1,x19
+00f6705c  mov x3,xzr
+00f67060  mov x21,x0
+00f67064  ldr x2,[x8, #0x450]
+00f67068  bl 0x00e35bd0
+00f6706c  cbz x20,0x00f67204
+00f67070  str x21,[x20, #0x38]!
+00f67074  mov x0,x20
+00f67078  mov x1,x21
+00f6707c  bl 0x00b07850
+00f67080  mov x0,x19
+00f67084  bl 0x00f66dc0
+00f67088  cbz x0,0x00f67204
+00f6708c  mov x1,xzr
+00f67090  bl 0x00fb8210
+00f67094  cbz x0,0x00f67204
+00f67098  ldr x0,[x0, #0x18]
+00f6709c  mov w1,#0x1
+00f670a0  mov x2,xzr
+00f670a4  bl 0x00e34224
+00f670a8  ldr x8,[x22]
+00f670ac  mov x20,x0
+00f670b0  mov x0,x8
+00f670b4  bl 0x00b079a0
+00f670b8  cbz x0,0x00f67204
+00f670bc  adrp x8,0x3336000
+00f670c0  ldr x8,[x8, #0xb60]
+00f670c4  mov x1,x19
+00f670c8  mov x3,xzr
+00f670cc  mov x21,x0
+00f670d0  ldr x2,[x8]
+00f670d4  bl 0x00e35bd0
+00f670d8  cbz x20,0x00f67204
+00f670dc  str x21,[x20, #0x38]!
+00f670e0  mov x0,x20
+00f670e4  mov x1,x21
+00f670e8  bl 0x00b07850
+00f670ec  mov x0,x19
+00f670f0  bl 0x00f66dc0
+00f670f4  cbz x0,0x00f67204
+00f670f8  mov x1,xzr
+00f670fc  bl 0x00fb812c
+00f67100  cbz x0,0x00f67204
+00f67104  mov x1,xzr
+00f67108  bl 0x00dc495c
+00f6710c  cbz x0,0x00f67204
+00f67110  adrp x8,0x332c000
+00f67114  ldr x8,[x8, #0x2c0]
+00f67118  mov x2,xzr
+00f6711c  ldr x1,[x8]
+00f67120  bl 0x0243e9b8
+00f67124  mov x0,x19
+00f67128  bl 0x00f66dc0
+00f6712c  cbz x0,0x00f67204
+00f67130  mov x1,xzr
+00f67134  bl 0x00fb8094
+00f67138  cbz x0,0x00f67204
+00f6713c  adrp x8,0x3348000
+00f67140  ldr x8,[x8, #0x138]
+00f67144  ldr x20,[x0, #0x18]
+00f67148  ldr x8,[x8]
+00f6714c  ldr w9,[x8, #0xe0]
+00f67150  cbnz w9,0x00f6715c
+00f67154  mov x0,x8
+00f67158  bl 0x00b0798c
+00f6715c  mov w1,#0x1
+00f67160  mov x0,x20
+00f67164  mov x2,xzr
+00f67168  bl 0x00e13880
+00f6716c  mov x0,x19
+00f67170  bl 0x00f66dc0
+00f67174  cbz x0,0x00f67204
+00f67178  mov x1,xzr
+00f6717c  bl 0x00fb8178
+00f67180  cbz x0,0x00f67204
+00f67184  adrp x19,0x335b000
+00f67188  ldr x19,[x19, #0x650]
+00f6718c  mov x1,xzr
+00f67190  bl 0x00dc47dc
+00f67194  ldr x20,[x19]
+00f67198  mov x19,x0
+00f6719c  ldr x8,[x20, #0x38]
+00f671a0  ldr x8,[x8]
+00f671a4  ldrb w9,[x8, #0x132]
+00f671a8  tbnz w9,#0x0,0x00f671b8
+00f671ac  mov x0,x8
+00f671b0  bl 0x00b2ac40
+00f671b4  mov x8,x0
+00f671b8  ldr w9,[x8, #0xe0]
+00f671bc  cbnz w9,0x00f671c8
+00f671c0  mov x0,x8
+00f671c4  bl 0x00b0798c
+00f671c8  ldr x8,[x20, #0x38]
+00f671cc  ldr x0,[x8]
+00f671d0  ldrb w8,[x0, #0x132]
+00f671d4  tbnz w8,#0x0,0x00f671dc
+00f671d8  bl 0x00b2ac40
+00f671dc  ldr x8,[x0, #0xb8]
+00f671e0  mov x0,x19
+00f671e4  ldp x19,x30,[sp, #0x20]
+00f671e8  ldp x21,x20,[sp, #0x10]
+00f671ec  ldr x2,[x8]
+00f671f0  mov w1,#0x8497
+00f671f4  movk w1,#0x4c8, LSL #16
+00f671f8  mov x3,xzr
+00f671fc  ldr x22,[sp], #0x30
+00f67200  b 0x00e14168
+00f67204  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f67208_GiftCardPanelMono__ClickSendCode.txt
+================================================================================
+Function: GiftCardPanelMono$$ClickSendCode @ 00f67208
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> UINode$$get_InputField @ 00dc495c
+  -> GiftcardpanelNode$$get_inp_codeinput @ 00fb812c
+  -> GiftCardPanelMono$$get_m_node @ 00f66dc0
+
+--- Calls IN ---
+
+--- Listing ---
+00f67208  str x22,[sp, #-0x30]!
+00f6720c  stp x21,x20,[sp, #0x10]
+00f67210  stp x19,x30,[sp, #0x20]
+00f67214  adrp x21,0x3573000
+00f67218  adrp x22,0x331b000
+00f6721c  ldrb w8,[x21, #0x2df]
+00f67220  ldr x22,[x22, #0x670]
+00f67224  mov x20,x1
+00f67228  mov x19,x0
+00f6722c  tbnz w8,#0x0,0x00f67244
+00f67230  adrp x0,0x331b000
+00f67234  ldr x0,[x0, #0x670]
+00f67238  bl 0x00b0789c
+00f6723c  mov w8,#0x1
+00f67240  strb w8,[x21, #0x2df]
+00f67244  ldr x8,[x22]
+00f67248  ldr x8,[x8, #0xb8]
+00f6724c  ldr x0,[x8, #0x18]
+00f67250  cbz x0,0x00f67270
+00f67254  mov x1,x19
+00f67258  mov x2,x20
+00f6725c  ldp x19,x30,[sp, #0x20]
+00f67260  ldp x21,x20,[sp, #0x10]
+00f67264  mov x3,xzr
+00f67268  ldr x22,[sp], #0x30
+00f6726c  b 0x0106125c
+00f67270  mov x0,x19
+00f67274  bl 0x00f66dc0
+00f67278  cbz x0,0x00f672ac
+00f6727c  mov x1,xzr
+00f67280  bl 0x00fb812c
+00f67284  cbz x0,0x00f672ac
+00f67288  mov x1,xzr
+00f6728c  bl 0x00dc495c
+00f67290  cbz x0,0x00f672ac
+00f67294  ldr x0,[x0, #0x218]
+00f67298  ldp x19,x30,[sp, #0x20]
+00f6729c  ldp x21,x20,[sp, #0x10]
+00f672a0  mov x1,xzr
+00f672a4  ldr x22,[sp], #0x30
+00f672a8  b 0x01fdf3a0
+00f672ac  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f672b0_GiftCardPanelMono__.ctor.txt
+================================================================================
+Function: GiftCardPanelMono$$.ctor @ 00f672b0
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.GiftCardPanelMonoWrap$$__CreateInstance @ 012a82c4
+
+--- Listing ---
+00f672b0  stp x21,x20,[sp, #-0x20]!
+00f672b4  stp x19,x30,[sp, #0x10]
+00f672b8  adrp x21,0x3573000
+00f672bc  adrp x20,0x331b000
+00f672c0  ldrb w8,[x21, #0x2e0]
+00f672c4  ldr x20,[x20, #0x670]
+00f672c8  mov x19,x0
+00f672cc  tbnz w8,#0x0,0x00f672e4
+00f672d0  adrp x0,0x331b000
+00f672d4  ldr x0,[x0, #0x670]
+00f672d8  bl 0x00b0789c
+00f672dc  mov w8,#0x1
+00f672e0  strb w8,[x21, #0x2e0]
+00f672e4  mov x0,x19
+00f672e8  mov x1,xzr
+00f672ec  bl 0x00f1c130
+00f672f0  ldr x8,[x20]
+00f672f4  ldr x8,[x8, #0xb8]
+00f672f8  ldr x0,[x8, #0x20]
+00f672fc  cbz x0,0x00f67314
+00f67300  mov x1,x19
+00f67304  ldp x19,x30,[sp, #0x10]
+00f67308  mov x2,xzr
+00f6730c  ldp x21,x20,[sp], #0x20
+00f67310  b 0x01060dac
+00f67314  ldp x19,x30,[sp, #0x10]
+00f67318  ldp x21,x20,[sp], #0x20
+00f6731c  ret
+
+
+================================================================================
+### FILE: 00f67320_GiftCardPanelMono____xLuaBaseProxy_get_LayerType.txt
+================================================================================
+Function: GiftCardPanelMono$$<>xLuaBaseProxy_get_LayerType @ 00f67320
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$get_LayerType @ 016711a8
+
+--- Calls IN ---
+
+--- Listing ---
+00f67320  mov x1,xzr
+00f67324  b 0x016711a8
+
+
+================================================================================
+### FILE: 00fb8094_GiftcardpanelNode__get_obj_codeexboard.txt
+================================================================================
+Function: GiftcardpanelNode$$get_obj_codeexboard @ 00fb8094
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- GiftCardPanelMono$$Start @ 00f66f44
+
+--- Listing ---
+00fb8094  stp x21,x20,[sp, #-0x20]!
+00fb8098  stp x19,x30,[sp, #0x10]
+00fb809c  adrp x20,0x3573000
+00fb80a0  adrp x21,0x3336000
+00fb80a4  ldrb w8,[x20, #0x9dd]
+00fb80a8  ldr x21,[x21, #0x450]
+00fb80ac  mov x19,x0
+00fb80b0  tbnz w8,#0x0,0x00fb80c8
+00fb80b4  adrp x0,0x3336000
+00fb80b8  ldr x0,[x0, #0x450]
+00fb80bc  bl 0x00b0789c
+00fb80c0  mov w8,#0x1
+00fb80c4  strb w8,[x20, #0x9dd]
+00fb80c8  ldr x1,[x21]
+00fb80cc  mov x0,x19
+00fb80d0  ldp x19,x30,[sp, #0x10]
+00fb80d4  mov x2,xzr
+00fb80d8  ldp x21,x20,[sp], #0x20
+00fb80dc  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fb80e0_GiftcardpanelNode__get_btn_hidecode.txt
+================================================================================
+Function: GiftcardpanelNode$$get_btn_hidecode @ 00fb80e0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- GiftCardPanelMono$$Start @ 00f66f44
+
+--- Listing ---
+00fb80e0  stp x21,x20,[sp, #-0x20]!
+00fb80e4  stp x19,x30,[sp, #0x10]
+00fb80e8  adrp x20,0x3573000
+00fb80ec  adrp x21,0x3353000
+00fb80f0  ldrb w8,[x20, #0x9de]
+00fb80f4  ldr x21,[x21, #0x188]
+00fb80f8  mov x19,x0
+00fb80fc  tbnz w8,#0x0,0x00fb8114
+00fb8100  adrp x0,0x3353000
+00fb8104  ldr x0,[x0, #0x188]
+00fb8108  bl 0x00b0789c
+00fb810c  mov w8,#0x1
+00fb8110  strb w8,[x20, #0x9de]
+00fb8114  ldr x1,[x21]
+00fb8118  mov x0,x19
+00fb811c  ldp x19,x30,[sp, #0x10]
+00fb8120  mov x2,xzr
+00fb8124  ldp x21,x20,[sp], #0x20
+00fb8128  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fb812c_GiftcardpanelNode__get_inp_codeinput.txt
+================================================================================
+Function: GiftcardpanelNode$$get_inp_codeinput @ 00fb812c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- GiftCardPanelMono$$ClickSendCode @ 00f67208
+  <- GiftCardPanelMono$$Start @ 00f66f44
+
+--- Listing ---
+00fb812c  stp x21,x20,[sp, #-0x20]!
+00fb8130  stp x19,x30,[sp, #0x10]
+00fb8134  adrp x20,0x3573000
+00fb8138  adrp x21,0x332b000
+00fb813c  ldrb w8,[x20, #0x9df]
+00fb8140  ldr x21,[x21, #0xc00]
+00fb8144  mov x19,x0
+00fb8148  tbnz w8,#0x0,0x00fb8160
+00fb814c  adrp x0,0x332b000
+00fb8150  ldr x0,[x0, #0xc00]
+00fb8154  bl 0x00b0789c
+00fb8158  mov w8,#0x1
+00fb815c  strb w8,[x20, #0x9df]
+00fb8160  ldr x1,[x21]
+00fb8164  mov x0,x19
+00fb8168  ldp x19,x30,[sp, #0x10]
+00fb816c  mov x2,xzr
+00fb8170  ldp x21,x20,[sp], #0x20
+00fb8174  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fb8178_GiftcardpanelNode__get_lbl_waitcodetext.txt
+================================================================================
+Function: GiftcardpanelNode$$get_lbl_waitcodetext @ 00fb8178
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- GiftCardPanelMono$$Start @ 00f66f44
+
+--- Listing ---
+00fb8178  stp x21,x20,[sp, #-0x20]!
+00fb817c  stp x19,x30,[sp, #0x10]
+00fb8180  adrp x20,0x3573000
+00fb8184  adrp x21,0x332d000
+00fb8188  ldrb w8,[x20, #0x9e0]
+00fb818c  ldr x21,[x21, #0xf98]
+00fb8190  mov x19,x0
+00fb8194  tbnz w8,#0x0,0x00fb81ac
+00fb8198  adrp x0,0x332d000
+00fb819c  ldr x0,[x0, #0xf98]
+00fb81a0  bl 0x00b0789c
+00fb81a4  mov w8,#0x1
+00fb81a8  strb w8,[x20, #0x9e0]
+00fb81ac  ldr x1,[x21]
+00fb81b0  mov x0,x19
+00fb81b4  ldp x19,x30,[sp, #0x10]
+00fb81b8  mov x2,xzr
+00fb81bc  ldp x21,x20,[sp], #0x20
+00fb81c0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fb81c4_GiftcardpanelNode__get_lbl_codenum.txt
+================================================================================
+Function: GiftcardpanelNode$$get_lbl_codenum @ 00fb81c4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fb81c4  stp x21,x20,[sp, #-0x20]!
+00fb81c8  stp x19,x30,[sp, #0x10]
+00fb81cc  adrp x20,0x3573000
+00fb81d0  adrp x21,0x333f000
+00fb81d4  ldrb w8,[x20, #0x9e1]
+00fb81d8  ldr x21,[x21, #0xa40]
+00fb81dc  mov x19,x0
+00fb81e0  tbnz w8,#0x0,0x00fb81f8
+00fb81e4  adrp x0,0x333f000
+00fb81e8  ldr x0,[x0, #0xa40]
+00fb81ec  bl 0x00b0789c
+00fb81f0  mov w8,#0x1
+00fb81f4  strb w8,[x20, #0x9e1]
+00fb81f8  ldr x1,[x21]
+00fb81fc  mov x0,x19
+00fb8200  ldp x19,x30,[sp, #0x10]
+00fb8204  mov x2,xzr
+00fb8208  ldp x21,x20,[sp], #0x20
+00fb820c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fb8210_GiftcardpanelNode__get_btn_docode.txt
+================================================================================
+Function: GiftcardpanelNode$$get_btn_docode @ 00fb8210
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- GiftCardPanelMono$$Start @ 00f66f44
+
+--- Listing ---
+00fb8210  stp x21,x20,[sp, #-0x20]!
+00fb8214  stp x19,x30,[sp, #0x10]
+00fb8218  adrp x20,0x3573000
+00fb821c  adrp x21,0x3351000
+00fb8220  ldrb w8,[x20, #0x9e2]
+00fb8224  ldr x21,[x21, #0x680]
+00fb8228  mov x19,x0
+00fb822c  tbnz w8,#0x0,0x00fb8244
+00fb8230  adrp x0,0x3351000
+00fb8234  ldr x0,[x0, #0x680]
+00fb8238  bl 0x00b0789c
+00fb823c  mov w8,#0x1
+00fb8240  strb w8,[x20, #0x9e2]
+00fb8244  ldr x1,[x21]
+00fb8248  mov x0,x19
+00fb824c  ldp x19,x30,[sp, #0x10]
+00fb8250  mov x2,xzr
+00fb8254  ldp x21,x20,[sp], #0x20
+00fb8258  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fb825c_GiftcardpanelNode__.ctor.txt
+================================================================================
+Function: GiftcardpanelNode$$.ctor @ 00fb825c
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fb825c  mov x1,xzr
+00fb8260  b 0x00dc0e00
+
+

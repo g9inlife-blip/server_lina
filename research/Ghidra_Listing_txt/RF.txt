@@ -1,0 +1,136 @@
+================================================================================
+### FILE: 00b82d04_rfind.txt
+================================================================================
+Function: rfind @ 00b82d04
+FuncComment: std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::rfind(char, unsigned long) const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b82d04  ldrb w9,[x0]
+    ; [PLATE] std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::rfind(char, unsigned long) const
+00b82d08  tbnz w9,#0x0,0x00b82d1c
+00b82d0c  add x8,x0,#0x1
+00b82d10  lsr x9,x9,#0x1
+00b82d14  cbnz x9,0x00b82d24
+00b82d18  b 0x00b82d48
+00b82d1c  ldp x9,x8,[x0, #0x8]
+00b82d20  cbz x9,0x00b82d48
+00b82d24  cmp x9,x2
+00b82d28  csinc x0,x9,x2,ls
+00b82d2c  cbz x0,0x00b82d48
+00b82d30  add x9,x8,x0
+00b82d34  ldurb w9,[x9, #-0x1]
+00b82d38  sub x0,x0,#0x1
+00b82d3c  cmp w9,w1, UXTB 
+00b82d40  b.ne 0x00b82d2c
+00b82d44  ret
+00b82d48  mov x0,#-0x1
+00b82d4c  ret
+
+
+================================================================================
+### FILE: 00b84994_rfind.txt
+================================================================================
+Function: rfind @ 00b84994
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::rfind(wchar_t const*, unsigned long, unsigned long) const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b84994  ldrb w9,[x0]
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::rfind(wchar_t const*, unsigned long, unsigned long) const
+00b84998  tbnz w9,#0x0,0x00b849a8
+00b8499c  add x8,x0,#0x4
+00b849a0  lsr x9,x9,#0x1
+00b849a4  b 0x00b849ac
+00b849a8  ldp x9,x8,[x0, #0x8]
+00b849ac  cmp x9,x2
+00b849b0  csel x10,x9,x2,cc
+00b849b4  sub x11,x9,x10
+00b849b8  add x10,x10,x3
+00b849bc  cmp x11,x3
+00b849c0  csel x11,x10,x9,hi
+00b849c4  add x9,x8,x11, LSL #0x2
+00b849c8  cbz x3,0x00b849dc
+00b849cc  sbfx x10,x3,#0x0,#0x3e
+00b849d0  lsl x11,x11,#0x2
+00b849d4  cmp x10,x11, ASR #0x2
+00b849d8  b.le 0x00b849e4
+00b849dc  mov x10,x9
+00b849e0  b 0x00b84a54
+00b849e4  lsl x13,x3,#0x2
+00b849e8  add x11,x8,x10, LSL #0x2
+00b849ec  mov w14,#0x4
+00b849f0  add x12,x13,x1
+00b849f4  add x10,x1,x13
+00b849f8  sub x11,x11,#0x4
+00b849fc  sub x12,x12,#0x8
+00b84a00  sub x13,x14,x13
+00b84a04  mov x15,x9
+00b84a08  cmp x11,x15
+00b84a0c  b.eq 0x00b849dc
+00b84a10  mov x14,x15
+00b84a14  ldr w16,[x15, #-0x4]!
+00b84a18  ldur w17,[x10, #-0x4]
+00b84a1c  cmp w16,w17
+00b84a20  b.ne 0x00b84a08
+00b84a24  mov x16,xzr
+00b84a28  cmp x13,x16
+00b84a2c  b.eq 0x00b84a4c
+00b84a30  add x17,x14,x16
+00b84a34  ldur w17,[x17, #-0x8]
+00b84a38  ldr w0,[x12, x16, LSL #0x0]
+00b84a3c  sub x16,x16,#0x4
+00b84a40  cmp w17,w0
+00b84a44  b.eq 0x00b84a28
+00b84a48  b 0x00b84a08
+00b84a4c  add x10,x14,x16
+00b84a50  sub x10,x10,#0x4
+00b84a54  sub x8,x10,x8
+00b84a58  cmp x10,x9
+00b84a5c  ccmp x3,#0x0,#0x4,eq
+00b84a60  asr x8,x8,#0x2
+00b84a64  csinv x0,x8,xzr,eq
+00b84a68  ret
+
+
+================================================================================
+### FILE: 00b84a6c_rfind.txt
+================================================================================
+Function: rfind @ 00b84a6c
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::rfind(wchar_t, unsigned long) const
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b84a6c  ldrb w9,[x0]
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::rfind(wchar_t, unsigned long) const
+00b84a70  tbnz w9,#0x0,0x00b84a84
+00b84a74  add x8,x0,#0x4
+00b84a78  lsr x9,x9,#0x1
+00b84a7c  cbnz x9,0x00b84a8c
+00b84a80  b 0x00b84ab8
+00b84a84  ldp x9,x8,[x0, #0x8]
+00b84a88  cbz x9,0x00b84ab8
+00b84a8c  cmp x9,x2
+00b84a90  csinc x9,x9,x2,ls
+00b84a94  lsl x9,x9,#0x2
+00b84a98  cbz x9,0x00b84ab8
+00b84a9c  add x10,x8,x9
+00b84aa0  ldur w10,[x10, #-0x4]
+00b84aa4  sub x9,x9,#0x4
+00b84aa8  cmp w10,w1
+00b84aac  b.ne 0x00b84a98
+00b84ab0  asr x0,x9,#0x2
+00b84ab4  ret
+00b84ab8  mov x0,#-0x1
+00b84abc  ret
+
+

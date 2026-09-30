@@ -1,0 +1,397 @@
+================================================================================
+### FILE: 00b8e7e4__out_of_range.txt
+================================================================================
+Function: ~out_of_range @ 00b8e7e4
+FuncComment: std::out_of_range::~out_of_range()
+
+--- Calls OUT ---
+  -> operator.delete @ 008d3ed0
+  -> ~exception @ 008d3cf0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e7e4  str x19,[sp, #-0x20]!
+    ; [PLATE] std::out_of_range::~out_of_range()
+00b8e7e8  stp x29,x30,[sp, #0x10]
+00b8e7ec  add x29,sp,#0x10
+00b8e7f0  adrp x9,0x3350000
+00b8e7f4  ldr x8,[x0, #0x8]
+00b8e7f8  ldr x9,[x9, #0xe28]
+00b8e7fc  mov x19,x0
+00b8e800  add x9,x9,#0x10
+00b8e804  str x9,[x0]
+00b8e808  sub x9,x8,#0x8
+00b8e80c  ldaxr w10,[x9]
+00b8e810  subs w10,w10,#0x1
+00b8e814  stlxr w11,w10,[x9]
+00b8e818  cbnz w11,0x00b8e80c
+00b8e81c  b.pl 0x00b8e828
+00b8e820  sub x0,x8,#0x18
+00b8e824  bl 0x008d3ed0
+00b8e828  mov x0,x19
+00b8e82c  bl 0x008d3cf0
+00b8e830  ldp x29,x30,[sp, #0x10]
+00b8e834  mov x0,x19
+00b8e838  ldr x19,[sp], #0x20
+00b8e83c  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00e215c0_OutLineColor__GrayColor.txt
+================================================================================
+Function: OutLineColor$$GrayColor @ 00e215c0
+
+--- Calls OUT ---
+  -> UnityEngine.UI.Extensions.NicerOutline$$set_effectColor @ 015c595c
+  -> OutLineColor$$get_m_line @ 00e28194
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> OutLineColor$$GetOldColor @ 00e2827c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- BaseMono$$BtnState @ 00e21270
+  <- XLua.CSObjectWrap.OutLineColorWrap$$_m_GrayColor @ 013048fc
+  <- UIEventListener$$CheckCondition @ 00e34680
+
+--- Listing ---
+00e215c0  stp x21,x20,[sp, #-0x20]!
+00e215c4  stp x19,x30,[sp, #0x10]
+00e215c8  adrp x20,0x3572000
+00e215cc  adrp x21,0x336d000
+00e215d0  ldrb w8,[x20, #0x702]
+00e215d4  ldr x21,[x21, #0x3b0]
+00e215d8  mov x19,x0
+00e215dc  tbnz w8,#0x0,0x00e21600
+00e215e0  adrp x0,0x3321000
+00e215e4  ldr x0,[x0, #0xca8]
+00e215e8  bl 0x00b0789c
+00e215ec  adrp x0,0x336d000
+00e215f0  ldr x0,[x0, #0x3b0]
+00e215f4  bl 0x00b0789c
+00e215f8  mov w8,#0x1
+00e215fc  strb w8,[x20, #0x702]
+00e21600  ldr x8,[x21]
+00e21604  ldr x8,[x8, #0xb8]
+00e21608  ldr x0,[x8, #0x18]
+00e2160c  cbz x0,0x00e21624
+00e21610  mov x1,x19
+00e21614  ldp x19,x30,[sp, #0x10]
+00e21618  mov x2,xzr
+00e2161c  ldp x21,x20,[sp], #0x20
+00e21620  b 0x01060dac
+00e21624  adrp x20,0x3321000
+00e21628  ldr x20,[x20, #0xca8]
+00e2162c  mov x0,x19
+00e21630  bl 0x00e28194
+00e21634  ldr x8,[x20]
+00e21638  mov x20,x0
+00e2163c  ldr w9,[x8, #0xe0]
+00e21640  cbnz w9,0x00e2164c
+00e21644  mov x0,x8
+00e21648  bl 0x00b0798c
+00e2164c  mov x0,x20
+00e21650  mov x1,xzr
+00e21654  mov x2,xzr
+00e21658  bl 0x024de30c
+00e2165c  tbz w0,#0x0,0x00e2169c
+00e21660  mov x0,x19
+00e21664  bl 0x00e2827c
+00e21668  mov x0,x19
+00e2166c  bl 0x00e28194
+00e21670  cbz x0,0x00e216a8
+00e21674  adrp x8,0x26db000
+00e21678  adrp x9,0x26db000
+00e2167c  ldr s0,[x8, #0xc84]
+00e21680  ldr s3,[x9, #0xc88]
+00e21684  ldp x19,x30,[sp, #0x10]
+00e21688  mov x1,xzr
+00e2168c  mov v1.16B,v0.16B
+00e21690  mov v2.16B,v0.16B
+00e21694  ldp x21,x20,[sp], #0x20
+00e21698  b 0x015c595c
+00e2169c  ldp x19,x30,[sp, #0x10]
+00e216a0  ldp x21,x20,[sp], #0x20
+00e216a4  ret
+00e216a8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e216ac_OutLineColor__ResetColor.txt
+================================================================================
+Function: OutLineColor$$ResetColor @ 00e216ac
+
+--- Calls OUT ---
+  -> UnityEngine.UI.Extensions.NicerOutline$$set_effectColor @ 015c595c
+  -> OutLineColor$$get_m_line @ 00e28194
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> OutLineColor$$GetOldColor @ 00e2827c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- BaseMono$$BtnState @ 00e21270
+  <- XLua.CSObjectWrap.OutLineColorWrap$$_m_ResetColor @ 01304760
+  <- UIEventListener$$CheckCondition @ 00e34680
+
+--- Listing ---
+00e216ac  stp x21,x20,[sp, #-0x20]!
+00e216b0  stp x19,x30,[sp, #0x10]
+00e216b4  adrp x20,0x3572000
+00e216b8  adrp x21,0x336d000
+00e216bc  ldrb w8,[x20, #0x701]
+00e216c0  ldr x21,[x21, #0x3b0]
+00e216c4  mov x19,x0
+00e216c8  tbnz w8,#0x0,0x00e216ec
+00e216cc  adrp x0,0x3321000
+00e216d0  ldr x0,[x0, #0xca8]
+00e216d4  bl 0x00b0789c
+00e216d8  adrp x0,0x336d000
+00e216dc  ldr x0,[x0, #0x3b0]
+00e216e0  bl 0x00b0789c
+00e216e4  mov w8,#0x1
+00e216e8  strb w8,[x20, #0x701]
+00e216ec  ldr x8,[x21]
+00e216f0  ldr x8,[x8, #0xb8]
+00e216f4  ldr x0,[x8, #0x10]
+00e216f8  cbz x0,0x00e21710
+00e216fc  mov x1,x19
+00e21700  ldp x19,x30,[sp, #0x10]
+00e21704  mov x2,xzr
+00e21708  ldp x21,x20,[sp], #0x20
+00e2170c  b 0x01060dac
+00e21710  adrp x20,0x3321000
+00e21714  ldr x20,[x20, #0xca8]
+00e21718  mov x0,x19
+00e2171c  bl 0x00e28194
+00e21720  ldr x8,[x20]
+00e21724  mov x20,x0
+00e21728  ldr w9,[x8, #0xe0]
+00e2172c  cbnz w9,0x00e21738
+00e21730  mov x0,x8
+00e21734  bl 0x00b0798c
+00e21738  mov x0,x20
+00e2173c  mov x1,xzr
+00e21740  mov x2,xzr
+00e21744  bl 0x024de30c
+00e21748  tbz w0,#0x0,0x00e21778
+00e2174c  mov x0,x19
+00e21750  bl 0x00e2827c
+00e21754  mov x0,x19
+00e21758  bl 0x00e28194
+00e2175c  cbz x0,0x00e21784
+00e21760  ldp s2,s3,[x19, #0x20]
+00e21764  ldp s0,s1,[x19, #0x18]
+00e21768  ldp x19,x30,[sp, #0x10]
+00e2176c  mov x1,xzr
+00e21770  ldp x21,x20,[sp], #0x20
+00e21774  b 0x015c595c
+00e21778  ldp x19,x30,[sp, #0x10]
+00e2177c  ldp x21,x20,[sp], #0x20
+00e21780  ret
+00e21784  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e28194_OutLineColor__get_m_line.txt
+================================================================================
+Function: OutLineColor$$get_m_line @ 00e28194
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp462 @ 0109b51c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+
+--- Calls IN ---
+  <- OutLineColor$$GrayColor @ 00e215c0
+  <- OutLineColor$$GetOldColor @ 00e2827c
+  <- OutLineColor$$ResetColor @ 00e216ac
+
+--- Listing ---
+00e28194  stp x21,x20,[sp, #-0x20]!
+00e28198  stp x19,x30,[sp, #0x10]
+00e2819c  adrp x20,0x3572000
+00e281a0  adrp x21,0x336d000
+00e281a4  ldrb w8,[x20, #0x6ff]
+00e281a8  ldr x21,[x21, #0x3b0]
+00e281ac  mov x19,x0
+00e281b0  tbnz w8,#0x0,0x00e281e0
+00e281b4  adrp x0,0x332e000
+00e281b8  ldr x0,[x0, #0x5f0]
+00e281bc  bl 0x00b0789c
+00e281c0  adrp x0,0x3321000
+00e281c4  ldr x0,[x0, #0xca8]
+00e281c8  bl 0x00b0789c
+00e281cc  adrp x0,0x336d000
+00e281d0  ldr x0,[x0, #0x3b0]
+00e281d4  bl 0x00b0789c
+00e281d8  mov w8,#0x1
+00e281dc  strb w8,[x20, #0x6ff]
+00e281e0  ldr x8,[x21]
+00e281e4  ldr x8,[x8, #0xb8]
+00e281e8  ldr x0,[x8]
+00e281ec  cbz x0,0x00e28204
+00e281f0  mov x1,x19
+00e281f4  ldp x19,x30,[sp, #0x10]
+00e281f8  mov x2,xzr
+00e281fc  ldp x21,x20,[sp], #0x20
+00e28200  b 0x0109b51c
+00e28204  adrp x8,0x3321000
+00e28208  ldr x8,[x8, #0xca8]
+00e2820c  mov x20,x19
+00e28210  ldr x21,[x20, #0x30]!
+00e28214  ldr x0,[x8]
+00e28218  ldr w8,[x0, #0xe0]
+00e2821c  cbnz w8,0x00e28224
+00e28220  bl 0x00b0798c
+00e28224  mov x0,x21
+00e28228  mov x1,xzr
+00e2822c  mov x2,xzr
+00e28230  bl 0x024c8180
+00e28234  tbz w0,#0x0,0x00e28268
+00e28238  mov x0,x19
+00e2823c  mov x1,xzr
+00e28240  bl 0x024e4ed4
+00e28244  cbz x0,0x00e28278
+00e28248  adrp x8,0x332e000
+00e2824c  ldr x8,[x8, #0x5f0]
+00e28250  ldr x1,[x8]
+00e28254  bl 0x01794e94
+00e28258  mov x1,x0
+00e2825c  str x0,[x20]
+00e28260  mov x0,x20
+00e28264  bl 0x00b07850
+00e28268  ldr x0,[x20]
+00e2826c  ldp x19,x30,[sp, #0x10]
+00e28270  ldp x21,x20,[sp], #0x20
+00e28274  ret
+00e28278  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e2827c_OutLineColor__GetOldColor.txt
+================================================================================
+Function: OutLineColor$$GetOldColor @ 00e2827c
+
+--- Calls OUT ---
+  -> OutLineColor$$get_m_line @ 00e28194
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- OutLineColor$$GrayColor @ 00e215c0
+  <- OutLineColor$$ResetColor @ 00e216ac
+
+--- Listing ---
+00e2827c  stp x21,x20,[sp, #-0x20]!
+00e28280  stp x19,x30,[sp, #0x10]
+00e28284  adrp x20,0x3572000
+00e28288  adrp x21,0x336d000
+00e2828c  ldrb w8,[x20, #0x700]
+00e28290  ldr x21,[x21, #0x3b0]
+00e28294  mov x19,x0
+00e28298  tbnz w8,#0x0,0x00e282bc
+00e2829c  adrp x0,0x3321000
+00e282a0  ldr x0,[x0, #0xca8]
+00e282a4  bl 0x00b0789c
+00e282a8  adrp x0,0x336d000
+00e282ac  ldr x0,[x0, #0x3b0]
+00e282b0  bl 0x00b0789c
+00e282b4  mov w8,#0x1
+00e282b8  strb w8,[x20, #0x700]
+00e282bc  ldr x8,[x21]
+00e282c0  ldr x8,[x8, #0xb8]
+00e282c4  ldr x0,[x8, #0x8]
+00e282c8  cbz x0,0x00e282e0
+00e282cc  mov x1,x19
+00e282d0  ldp x19,x30,[sp, #0x10]
+00e282d4  mov x2,xzr
+00e282d8  ldp x21,x20,[sp], #0x20
+00e282dc  b 0x01060dac
+00e282e0  ldrb w8,[x19, #0x28]
+00e282e4  cbnz w8,0x00e28340
+00e282e8  adrp x20,0x3321000
+00e282ec  ldr x20,[x20, #0xca8]
+00e282f0  mov w8,#0x1
+00e282f4  mov x0,x19
+00e282f8  strb w8,[x19, #0x28]
+00e282fc  bl 0x00e28194
+00e28300  ldr x8,[x20]
+00e28304  mov x20,x0
+00e28308  ldr w9,[x8, #0xe0]
+00e2830c  cbnz w9,0x00e28318
+00e28310  mov x0,x8
+00e28314  bl 0x00b0798c
+00e28318  mov x0,x20
+00e2831c  mov x1,xzr
+00e28320  mov x2,xzr
+00e28324  bl 0x024de30c
+00e28328  tbz w0,#0x0,0x00e28340
+00e2832c  mov x0,x19
+00e28330  bl 0x00e28194
+00e28334  cbz x0,0x00e2834c
+00e28338  ldr q0,[x0, #0x20]
+00e2833c  stur q0,[x19, #0x18]
+00e28340  ldp x19,x30,[sp, #0x10]
+00e28344  ldp x21,x20,[sp], #0x20
+00e28348  ret
+00e2834c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e28350_OutLineColor__.ctor.txt
+================================================================================
+Function: OutLineColor$$.ctor @ 00e28350
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.OutLineColorWrap$$__CreateInstance @ 013045a8
+
+--- Listing ---
+00e28350  stp x21,x20,[sp, #-0x20]!
+00e28354  stp x19,x30,[sp, #0x10]
+00e28358  adrp x21,0x3572000
+00e2835c  adrp x20,0x336d000
+00e28360  ldrb w8,[x21, #0x703]
+00e28364  ldr x20,[x20, #0x3b0]
+00e28368  mov x19,x0
+00e2836c  tbnz w8,#0x0,0x00e28384
+00e28370  adrp x0,0x336d000
+00e28374  ldr x0,[x0, #0x3b0]
+00e28378  bl 0x00b0789c
+00e2837c  mov w8,#0x1
+00e28380  strb w8,[x21, #0x703]
+00e28384  mov x0,x19
+00e28388  mov x1,xzr
+00e2838c  bl 0x024e45bc
+00e28390  ldr x8,[x20]
+00e28394  ldr x8,[x8, #0xb8]
+00e28398  ldr x0,[x8, #0x20]
+00e2839c  cbz x0,0x00e283b4
+00e283a0  mov x1,x19
+00e283a4  ldp x19,x30,[sp, #0x10]
+00e283a8  mov x2,xzr
+00e283ac  ldp x21,x20,[sp], #0x20
+00e283b0  b 0x01060dac
+00e283b4  ldp x19,x30,[sp, #0x10]
+00e283b8  ldp x21,x20,[sp], #0x20
+00e283bc  ret
+
+

@@ -1,0 +1,72 @@
+================================================================================
+### FILE: 00b5383c_pword.txt
+================================================================================
+Function: pword @ 00b5383c
+FuncComment: std::__ndk1::ios_base::pword(int)
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> realloc @ 008d4c90
+
+--- Calls IN ---
+
+--- Listing ---
+00b5383c  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::ios_base::pword(int)
+00b53840  stp x20,x19,[sp, #0x10]
+00b53844  stp x29,x30,[sp, #0x20]
+00b53848  add x29,sp,#0x20
+00b5384c  ldr x8,[x0, #0x80]
+00b53850  sxtw x20,w1
+00b53854  add x21,x20,#0x1
+00b53858  mov x19,x0
+00b5385c  cmp x21,x8
+00b53860  b.ls 0x00b53884
+00b53864  orr x8,xzr,#0xffffffffffffffe
+00b53868  cmp x21,x8
+00b5386c  b.hi 0x00b5388c
+00b53870  ldr x8,[x19, #0x68]
+00b53874  lsl x8,x8,#0x1
+00b53878  cmp x8,x21
+00b5387c  csel x22,x21,x8,cc
+00b53880  b 0x00b53890
+00b53884  ldp x0,x8,[x19, #0x70]
+00b53888  b 0x00b538cc
+00b5388c  mov x22,#0x1fffffffffffffff
+00b53890  ldr x0,[x19, #0x70]
+00b53894  lsl x1,x22,#0x3
+00b53898  bl 0x008d4c90
+00b5389c  cbz x0,0x00b538ec
+00b538a0  ldr x8,[x19, #0x78]
+00b538a4  str x0,[x19, #0x70]
+00b538a8  cmp x8,x22
+00b538ac  b.ge 0x00b538c8
+00b538b0  add x9,x0,x8, LSL #0x3
+00b538b4  str xzr,[x9], #0x8
+00b538b8  ldr x0,[x19, #0x70]
+00b538bc  add x10,x0,x22, LSL #0x3
+00b538c0  cmp x9,x10
+00b538c4  b.cc 0x00b538b4
+00b538c8  str x22,[x19, #0x80]
+00b538cc  cmp x8,x21
+00b538d0  csel x8,x21,x8,cc
+00b538d4  add x0,x0,x20, LSL #0x3
+00b538d8  str x8,[x19, #0x78]
+00b538dc  ldp x29,x30,[sp, #0x20]
+00b538e0  ldp x20,x19,[sp, #0x10]
+00b538e4  ldp x22,x21,[sp], #0x30
+00b538e8  ret
+00b538ec  ldp w8,w9,[x19, #0x20]
+00b538f0  orr w8,w8,#0x1
+00b538f4  tst w9,w8
+00b538f8  str w8,[x19, #0x20]
+00b538fc  b.ne 0x00b53910
+00b53900  adrp x0,0x3584000
+00b53904  add x0,x0,#0xb60
+00b53908  str xzr,[x0]
+00b5390c  b 0x00b538dc
+00b53910  adrp x0,0x2a07000
+00b53914  add x0,x0,#0xcf4
+00b53918  bl 0x00b53a58
+
+

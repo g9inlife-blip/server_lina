@@ -1,0 +1,33 @@
+# Local reverse-engineering inputs
+local/
+apk/
+ghidra/
+work/
+*.apk
+*.aab
+*.so
+*.dll
+*.dat
+*.bin
+*.dmp
+#*.zip
+*.7z
+*.rar
+
+# Large generated decompiler outputs
+il2cpp_decompile/
+dump.cs
+il2cpp.h
+script.json
+stringliteral.json
+
+# IDE / Ghidra generated data
+*.gpr
+*.rep/
+.godot/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,2810 @@
+================================================================================
+### FILE: 008d3b60___append_forward_unsafe_char__.txt
+================================================================================
+Function: __append_forward_unsafe<char*> @ 008d3b60
+
+--- Calls OUT ---
+  -> __append_forward_unsafe<char*> @ 00b8066c
+
+--- Calls IN ---
+  <- do_get @ 00b65a24
+
+--- Listing ---
+008d3b60  adrp x16,0x3307000
+008d3b64  ldr x17,[x16, #0x770]
+008d3b68  add x16,x16,#0x770
+008d3b6c  br x17
+
+
+================================================================================
+### FILE: 008d4420___append_forward_unsafe_wchar_t__.txt
+================================================================================
+Function: __append_forward_unsafe<wchar_t*> @ 008d4420
+
+--- Calls OUT ---
+  -> __append_forward_unsafe<wchar_t*> @ 00b8091c
+
+--- Calls IN ---
+  <- do_get @ 00b6784c
+
+--- Listing ---
+008d4420  adrp x16,0x3307000
+008d4424  ldr x17,[x16, #0xbd0]
+008d4428  add x16,x16,#0xbd0
+008d442c  br x17
+
+
+================================================================================
+### FILE: 008d5710_append.txt
+================================================================================
+Function: append @ 008d5710
+
+--- Calls OUT ---
+  -> append @ 00b83a14
+
+--- Calls IN ---
+  <- append @ 00b83c3c
+  <- __append_forward_unsafe<wchar_t*> @ 00b8091c
+  <- append @ 00b839c8
+
+--- Listing ---
+008d5710  adrp x16,0x3308000
+008d5714  ldr x17,[x16, #0x548]
+008d5718  add x16,x16,#0x548
+008d571c  br x17
+
+
+================================================================================
+### FILE: 008d5960_append.txt
+================================================================================
+Function: append @ 008d5960
+
+--- Calls OUT ---
+  -> append @ 00b836c4
+
+--- Calls IN ---
+  <- resize @ 00b8365c
+  <- to_wstring @ 00b88904
+  <- to_wstring @ 00b8871c
+  <- to_wstring @ 00b88530
+
+--- Listing ---
+008d5960  adrp x16,0x3308000
+008d5964  ldr x17,[x16, #0x670]
+008d5968  add x16,x16,#0x670
+008d596c  br x17
+
+
+================================================================================
+### FILE: 00b8066c___append_forward_unsafe_char__.txt
+================================================================================
+Function: __append_forward_unsafe<char*> @ 00b8066c
+FuncComment: std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::__append_forward_unsafe<char*>(char*, char*)
+
+--- Calls OUT ---
+  -> FUN_00aab79c @ 00aab79c
+  -> operator.new @ 008d4f40
+  -> operator.delete @ 008d3ed0
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> FUN_00a8efe8 @ 00a8efe8
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- __append_forward_unsafe<char*> @ 008d3b60
+
+--- Listing ---
+00b8066c  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >& std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::__append_forward_unsafe<char*>(char*, char*)
+00b80670  stp x24,x23,[sp, #0x20]
+00b80674  stp x22,x21,[sp, #0x30]
+00b80678  stp x20,x19,[sp, #0x40]
+00b8067c  stp x29,x30,[sp, #0x50]
+00b80680  add x29,sp,#0x50
+00b80684  mrs x23,tpidr_el0
+00b80688  ldr x8,[x23, #0x28]
+00b8068c  mov x20,x2
+00b80690  mov x19,x0
+00b80694  mov x21,x1
+00b80698  str x8,[sp, #0x18]
+00b8069c  ldrb w9,[x0]
+00b806a0  tbnz w9,#0x0,0x00b806d0
+00b806a4  lsr x22,x9,#0x1
+00b806a8  mov w1,#0x16
+00b806ac  mov w8,w9
+00b806b0  subs x24,x20,x21
+00b806b4  b.eq 0x00b808c8
+00b806b8  tbnz w9,#0x0,0x00b806e8
+00b806bc  add x10,x19,#0x1
+00b806c0  lsr x9,x9,#0x1
+00b806c4  cmp x10,x21
+00b806c8  b.ls 0x00b806f4
+00b806cc  b 0x00b80740
+00b806d0  ldp x8,x22,[x19]
+00b806d4  and x10,x8,#-0x2
+00b806d8  sub x1,x10,#0x1
+00b806dc  subs x24,x20,x21
+00b806e0  b.ne 0x00b806b8
+00b806e4  b 0x00b808c8
+00b806e8  ldp x9,x10,[x19, #0x8]
+00b806ec  cmp x10,x21
+00b806f0  b.hi 0x00b80740
+00b806f4  add x9,x10,x9
+00b806f8  cmp x9,x21
+00b806fc  b.ls 0x00b80740
+00b80700  cmn x24,#0x10
+00b80704  stp xzr,xzr,[sp, #0x8]
+00b80708  str xzr,[sp]
+00b8070c  b.cs 0x00b808f8
+00b80710  cmp x24,#0x16
+00b80714  b.hi 0x00b80820
+00b80718  lsl w8,w24,#0x1
+00b8071c  mov x9,sp
+00b80720  strb w8,[sp]
+00b80724  orr x0,x9,#0x1
+00b80728  cmp x21,x20
+00b8072c  b.eq 0x00b80890
+00b80730  cmp x24,#0x20
+00b80734  b.cs 0x00b80848
+00b80738  mov x9,x21
+00b8073c  b 0x00b80880
+00b80740  sub x9,x1,x22
+00b80744  cmp x9,x24
+00b80748  b.cs 0x00b80770
+00b8074c  add x8,x22,x24
+00b80750  sub x2,x8,x1
+00b80754  mov x0,x19
+00b80758  mov x3,x22
+00b8075c  mov x4,x22
+00b80760  mov x5,xzr
+00b80764  mov x6,xzr
+00b80768  bl 0x00aab79c
+00b8076c  ldrb w8,[x19]
+00b80770  tbnz w8,#0x0,0x00b8077c
+00b80774  add x9,x19,#0x1
+00b80778  b 0x00b80780
+00b8077c  ldr x9,[x19, #0x10]
+00b80780  cmp x21,x20
+00b80784  add x8,x9,x22
+00b80788  b.eq 0x00b807fc
+00b8078c  cmp x24,#0x20
+00b80790  b.cc 0x00b807ec
+00b80794  cmp x8,x20
+00b80798  b.cs 0x00b807b0
+00b8079c  sub x10,x22,x21
+00b807a0  add x10,x20,x10
+00b807a4  add x10,x9,x10
+00b807a8  cmp x10,x21
+00b807ac  b.hi 0x00b807ec
+00b807b0  and x10,x24,#-0x20
+00b807b4  add x9,x22,x9
+00b807b8  add x11,x21,#0x10
+00b807bc  add x8,x8,x10
+00b807c0  add x21,x21,x10
+00b807c4  add x9,x9,#0x10
+00b807c8  mov x12,x10
+00b807cc  ldp q0,q1,[x11, #-0x10]
+00b807d0  add x11,x11,#0x20
+00b807d4  subs x12,x12,#0x20
+00b807d8  stp q0,q1,[x9, #-0x10]
+00b807dc  add x9,x9,#0x20
+00b807e0  b.ne 0x00b807cc
+00b807e4  cmp x24,x10
+00b807e8  b.eq 0x00b807fc
+00b807ec  ldrb w9,[x21], #0x1
+00b807f0  cmp x20,x21
+00b807f4  strb w9,[x8], #0x1
+00b807f8  b.ne 0x00b807ec
+00b807fc  strb wzr,[x8]
+00b80800  ldrb w9,[x19]
+00b80804  add x8,x22,x24
+00b80808  tbnz w9,#0x0,0x00b80818
+00b8080c  lsl w8,w8,#0x1
+00b80810  strb w8,[x19]
+00b80814  b 0x00b808c8
+00b80818  str x8,[x19, #0x8]
+00b8081c  b 0x00b808c8
+00b80820  add x8,x24,#0x10
+00b80824  and x22,x8,#-0x10
+00b80828  mov x0,x22
+00b8082c  bl 0x008d4f40
+00b80830  orr x8,x22,#0x1
+00b80834  stp x8,x24,[sp]
+00b80838  str x0,[sp, #0x10]
+00b8083c  cmp x21,x20
+00b80840  b.ne 0x00b80730
+00b80844  b 0x00b80890
+00b80848  and x10,x24,#-0x20
+00b8084c  add x11,x0,#0x10
+00b80850  add x9,x21,x10
+00b80854  add x0,x0,x10
+00b80858  add x12,x21,#0x10
+00b8085c  mov x13,x10
+00b80860  ldp q0,q1,[x12, #-0x10]
+00b80864  subs x13,x13,#0x20
+00b80868  add x12,x12,#0x20
+00b8086c  stp q0,q1,[x11, #-0x10]
+00b80870  add x11,x11,#0x20
+00b80874  b.ne 0x00b80860
+00b80878  cmp x24,x10
+00b8087c  b.eq 0x00b80890
+00b80880  ldrb w10,[x9], #0x1
+00b80884  cmp x20,x9
+00b80888  strb w10,[x0], #0x1
+00b8088c  b.ne 0x00b80880
+00b80890  strb wzr,[x0]
+00b80894  ldp x12,x11,[sp, #0x8]
+00b80898  mov x9,sp
+00b8089c  ubfx w10,w8,#0x1,#0x7
+00b808a0  tst w8,#0x1
+00b808a4  orr x8,x9,#0x1
+00b808a8  csel x1,x8,x11,eq
+00b808ac  csel x2,x10,x12,eq
+00b808b0  mov x0,x19
+    ; [PRE] try { // try from 00b808b0 to 00b808b7 has its CatchHandler @ 00b80900
+00b808b4  bl 0x00a8efe8
+    ; [POST] } // end try from 00b808b0 to 00b808b7
+00b808b8  ldrb w8,[sp]
+00b808bc  tbz w8,#0x0,0x00b808c8
+00b808c0  ldr x0,[sp, #0x10]
+00b808c4  bl 0x008d3ed0
+00b808c8  ldr x8,[x23, #0x28]
+00b808cc  ldr x9,[sp, #0x18]
+00b808d0  cmp x8,x9
+00b808d4  b.ne 0x00b808f4
+00b808d8  mov x0,x19
+00b808dc  ldp x29,x30,[sp, #0x50]
+00b808e0  ldp x20,x19,[sp, #0x40]
+00b808e4  ldp x22,x21,[sp, #0x30]
+00b808e8  ldp x24,x23,[sp, #0x20]
+00b808ec  add sp,sp,#0x60
+00b808f0  ret
+00b808f4  bl 0x008d4c50
+00b808f8  mov x0,sp
+00b808fc  bl 0x00a8cdb8
+
+
+================================================================================
+### FILE: 00b8091c___append_forward_unsafe_wchar_t__.txt
+================================================================================
+Function: __append_forward_unsafe<wchar_t*> @ 00b8091c
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >& std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::__append_forward_unsafe<wchar_t*>(wchar_t*, wchar_t*)
+
+--- Calls OUT ---
+  -> FUN_00a8cdc8 @ 00a8cdc8
+  -> __grow_by @ 008d3e90
+  -> operator.new @ 008d4f40
+  -> append @ 008d5710
+  -> operator.delete @ 008d3ed0
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- __append_forward_unsafe<wchar_t*> @ 008d4420
+
+--- Listing ---
+00b8091c  sub sp,sp,#0x70
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >& std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::__append_forward_unsafe<wchar_t*>(wchar_t*, wchar_t*)
+00b80920  str x25,[sp, #0x20]
+00b80924  stp x24,x23,[sp, #0x30]
+00b80928  stp x22,x21,[sp, #0x40]
+00b8092c  stp x20,x19,[sp, #0x50]
+00b80930  stp x29,x30,[sp, #0x60]
+00b80934  add x29,sp,#0x60
+00b80938  mrs x23,tpidr_el0
+00b8093c  ldr x8,[x23, #0x28]
+00b80940  mov x20,x2
+00b80944  mov x19,x0
+00b80948  mov x21,x1
+00b8094c  str x8,[sp, #0x18]
+00b80950  ldrb w9,[x0]
+00b80954  tbnz w9,#0x0,0x00b8097c
+00b80958  lsr x22,x9,#0x1
+00b8095c  mov w1,#0x4
+00b80960  mov w8,w9
+00b80964  subs x25,x20,x21
+00b80968  b.eq 0x00b80bac
+00b8096c  tbnz w9,#0x0,0x00b80994
+00b80970  add x10,x19,#0x4
+00b80974  lsr x9,x9,#0x1
+00b80978  b 0x00b80998
+00b8097c  ldp x8,x22,[x19]
+00b80980  and x10,x8,#-0x2
+00b80984  sub x1,x10,#0x1
+00b80988  subs x25,x20,x21
+00b8098c  b.ne 0x00b8096c
+00b80990  b 0x00b80bac
+00b80994  ldp x9,x10,[x19, #0x8]
+00b80998  cmp x10,x21
+00b8099c  asr x24,x25,#0x2
+00b809a0  b.hi 0x00b809e8
+00b809a4  add x9,x10,x9, LSL #0x2
+00b809a8  cmp x9,x21
+00b809ac  b.ls 0x00b809e8
+00b809b0  orr x8,xzr,#0x3ffffffffffffff0
+00b809b4  cmp x24,x8
+00b809b8  stp xzr,xzr,[sp, #0x8]
+00b809bc  str xzr,[sp]
+00b809c0  b.cs 0x00b80be0
+00b809c4  cmp x24,#0x4
+00b809c8  b.hi 0x00b80ae0
+00b809cc  lsr x8,x25,#0x1
+00b809d0  mov x9,sp
+00b809d4  strb w8,[sp]
+00b809d8  orr x0,x9,#0x4
+00b809dc  cmp x21,x20
+00b809e0  b.ne 0x00b80b0c
+00b809e4  b 0x00b80b74
+00b809e8  sub x9,x1,x22
+00b809ec  cmp x9,x24
+00b809f0  b.cs 0x00b80a18
+00b809f4  add x8,x22,x24
+00b809f8  sub x2,x8,x1
+00b809fc  mov x0,x19
+00b80a00  mov x3,x22
+00b80a04  mov x4,x22
+00b80a08  mov x5,xzr
+00b80a0c  mov x6,xzr
+00b80a10  bl 0x008d3e90
+00b80a14  ldrb w8,[x19]
+00b80a18  tbnz w8,#0x0,0x00b80a24
+00b80a1c  add x10,x19,#0x4
+00b80a20  b 0x00b80a28
+00b80a24  ldr x10,[x19, #0x10]
+00b80a28  cmp x21,x20
+00b80a2c  add x8,x10,x22, LSL #0x2
+00b80a30  b.eq 0x00b80abc
+00b80a34  sub x9,x25,#0x4
+00b80a38  lsr x11,x9,#0x2
+00b80a3c  add x9,x11,#0x1
+00b80a40  cmp x9,#0x8
+00b80a44  b.cc 0x00b80aac
+00b80a48  add x12,x21,x11, LSL #0x2
+00b80a4c  add x12,x12,#0x4
+00b80a50  cmp x8,x12
+00b80a54  b.cs 0x00b80a6c
+00b80a58  add x11,x22,x11
+00b80a5c  add x11,x10,x11, LSL #0x2
+00b80a60  add x11,x11,#0x4
+00b80a64  cmp x11,x21
+00b80a68  b.hi 0x00b80aac
+00b80a6c  and x11,x9,#0x7ffffffffffffff8
+00b80a70  add x10,x10,x22, LSL #0x2
+00b80a74  lsl x13,x11,#0x2
+00b80a78  add x12,x21,#0x10
+00b80a7c  add x8,x8,x13
+00b80a80  add x21,x21,x13
+00b80a84  add x10,x10,#0x10
+00b80a88  mov x13,x11
+00b80a8c  ldp q0,q1,[x12, #-0x10]
+00b80a90  add x12,x12,#0x20
+00b80a94  subs x13,x13,#0x8
+00b80a98  stp q0,q1,[x10, #-0x10]
+00b80a9c  add x10,x10,#0x20
+00b80aa0  b.ne 0x00b80a8c
+00b80aa4  cmp x9,x11
+00b80aa8  b.eq 0x00b80abc
+00b80aac  ldr w9,[x21], #0x4
+00b80ab0  cmp x20,x21
+00b80ab4  str w9,[x8], #0x4
+00b80ab8  b.ne 0x00b80aac
+00b80abc  str wzr,[x8]
+00b80ac0  ldrb w9,[x19]
+00b80ac4  add x8,x22,x24
+00b80ac8  tbnz w9,#0x0,0x00b80ad8
+00b80acc  lsl w8,w8,#0x1
+00b80ad0  strb w8,[x19]
+00b80ad4  b 0x00b80bac
+00b80ad8  str x8,[x19, #0x8]
+00b80adc  b 0x00b80bac
+00b80ae0  add x8,x24,#0x4
+00b80ae4  lsr x9,x8,#0x3e
+00b80ae8  cbnz x9,0x00b80be8
+00b80aec  and x22,x8,#-0x4
+00b80af0  lsl x0,x22,#0x2
+00b80af4  bl 0x008d4f40
+00b80af8  orr x8,x22,#0x1
+00b80afc  stp x8,x24,[sp]
+00b80b00  str x0,[sp, #0x10]
+00b80b04  cmp x21,x20
+00b80b08  b.eq 0x00b80b74
+00b80b0c  sub x9,x25,#0x4
+00b80b10  lsr x9,x9,#0x2
+00b80b14  add x10,x9,#0x1
+00b80b18  cmp x10,#0x8
+00b80b1c  b.cs 0x00b80b28
+00b80b20  mov x9,x21
+00b80b24  b 0x00b80b64
+00b80b28  and x11,x10,#0x7ffffffffffffff8
+00b80b2c  lsl x13,x11,#0x2
+00b80b30  add x12,x0,#0x10
+00b80b34  add x9,x21,x13
+00b80b38  add x0,x0,x13
+00b80b3c  add x13,x21,#0x10
+00b80b40  mov x14,x11
+00b80b44  ldp q0,q1,[x13, #-0x10]
+00b80b48  subs x14,x14,#0x8
+00b80b4c  add x13,x13,#0x20
+00b80b50  stp q0,q1,[x12, #-0x10]
+00b80b54  add x12,x12,#0x20
+00b80b58  b.ne 0x00b80b44
+00b80b5c  cmp x10,x11
+00b80b60  b.eq 0x00b80b74
+00b80b64  ldr w10,[x9], #0x4
+00b80b68  cmp x20,x9
+00b80b6c  str w10,[x0], #0x4
+00b80b70  b.ne 0x00b80b64
+00b80b74  str wzr,[x0]
+00b80b78  ldp x12,x11,[sp, #0x8]
+00b80b7c  mov x9,sp
+00b80b80  ubfx w10,w8,#0x1,#0x7
+00b80b84  tst w8,#0x1
+00b80b88  orr x8,x9,#0x4
+00b80b8c  csel x1,x8,x11,eq
+00b80b90  csel x2,x10,x12,eq
+00b80b94  mov x0,x19
+    ; [PRE] try { // try from 00b80b94 to 00b80b9b has its CatchHandler @ 00b80bf4
+00b80b98  bl 0x008d5710
+    ; [POST] } // end try from 00b80b94 to 00b80b9b
+00b80b9c  ldrb w8,[sp]
+00b80ba0  tbz w8,#0x0,0x00b80bac
+00b80ba4  ldr x0,[sp, #0x10]
+00b80ba8  bl 0x008d3ed0
+00b80bac  ldr x8,[x23, #0x28]
+00b80bb0  ldr x9,[sp, #0x18]
+00b80bb4  cmp x8,x9
+00b80bb8  b.ne 0x00b80bdc
+00b80bbc  mov x0,x19
+00b80bc0  ldp x29,x30,[sp, #0x60]
+00b80bc4  ldp x20,x19,[sp, #0x50]
+00b80bc8  ldp x22,x21,[sp, #0x40]
+00b80bcc  ldp x24,x23,[sp, #0x30]
+00b80bd0  ldr x25,[sp, #0x20]
+00b80bd4  add sp,sp,#0x70
+00b80bd8  ret
+00b80bdc  bl 0x008d4c50
+00b80be0  mov x0,sp
+00b80be4  bl 0x00a8cdb8
+00b80be8  adrp x0,0x293c000
+00b80bec  add x0,x0,#0xc4
+00b80bf0  bl 0x00a8cdc8
+
+
+================================================================================
+### FILE: 00b823a0_append.txt
+================================================================================
+Function: append @ 00b823a0
+FuncComment: std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::append(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long, unsigned long)
+
+--- Calls OUT ---
+  -> FUN_00a8f54c @ 00a8f54c
+  -> FUN_00a8efe8 @ 00a8efe8
+
+--- Calls IN ---
+
+--- Listing ---
+00b823a0  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::append(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&, unsigned long, unsigned long)
+00b823a4  mov x29,sp
+00b823a8  ldrb w8,[x1]
+00b823ac  ldr x9,[x1, #0x8]
+00b823b0  lsr x10,x8,#0x1
+00b823b4  tst w8,#0x1
+00b823b8  csel x9,x10,x9,eq
+00b823bc  subs x9,x9,x2
+00b823c0  b.cc 0x00b823e4
+00b823c4  ldr x10,[x1, #0x10]
+00b823c8  tst w8,#0x1
+00b823cc  csinc x8,x10,x1,ne
+00b823d0  cmp x9,x3
+00b823d4  add x1,x8,x2
+00b823d8  csel x2,x9,x3,cc
+00b823dc  ldp x29,x30,[sp], #0x10
+00b823e0  b 0x00a8efe8
+00b823e4  bl 0x00a8f54c
+
+
+================================================================================
+### FILE: 00b823e8_append.txt
+================================================================================
+Function: append @ 00b823e8
+FuncComment: std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::append(char const*)
+
+--- Calls OUT ---
+  -> strlen @ 008d39a0
+  -> FUN_00a8efe8 @ 00a8efe8
+
+--- Calls IN ---
+
+--- Listing ---
+00b823e8  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> >::append(char const*)
+00b823ec  stp x29,x30,[sp, #0x10]
+00b823f0  add x29,sp,#0x10
+00b823f4  mov x20,x0
+00b823f8  mov x0,x1
+00b823fc  mov x19,x1
+00b82400  bl 0x008d39a0
+00b82404  ldp x29,x30,[sp, #0x10]
+00b82408  mov x2,x0
+00b8240c  mov x0,x20
+00b82410  mov x1,x19
+00b82414  ldp x20,x19,[sp], #0x20
+00b82418  b 0x00a8efe8
+
+
+================================================================================
+### FILE: 00b836c4_append.txt
+================================================================================
+Function: append @ 00b836c4
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::append(unsigned long, wchar_t)
+
+--- Calls OUT ---
+  -> __grow_by @ 008d3e90
+  -> wmemset @ 008d5b30
+
+--- Calls IN ---
+  <- append @ 008d5960
+
+--- Listing ---
+00b836c4  str x23,[sp, #-0x40]!
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::append(unsigned long, wchar_t)
+00b836c8  stp x22,x21,[sp, #0x10]
+00b836cc  stp x20,x19,[sp, #0x20]
+00b836d0  stp x29,x30,[sp, #0x30]
+00b836d4  add x29,sp,#0x30
+00b836d8  mov x19,x0
+00b836dc  cbz x1,0x00b83778
+00b836e0  ldrb w8,[x19]
+00b836e4  mov w21,w2
+00b836e8  mov x20,x1
+00b836ec  tbnz w8,#0x0,0x00b836fc
+00b836f0  lsr x22,x8,#0x1
+00b836f4  mov w1,#0x4
+00b836f8  b 0x00b83708
+00b836fc  ldp x8,x22,[x19]
+00b83700  and x9,x8,#-0x2
+00b83704  sub x1,x9,#0x1
+00b83708  sub x9,x1,x22
+00b8370c  cmp x9,x20
+00b83710  b.cs 0x00b83738
+00b83714  add x8,x22,x20
+00b83718  sub x2,x8,x1
+00b8371c  mov x0,x19
+00b83720  mov x3,x22
+00b83724  mov x4,x22
+00b83728  mov x5,xzr
+00b8372c  mov x6,xzr
+00b83730  bl 0x008d3e90
+00b83734  ldrb w8,[x19]
+00b83738  tbnz w8,#0x0,0x00b83744
+00b8373c  add x23,x19,#0x4
+00b83740  b 0x00b83748
+00b83744  ldr x23,[x19, #0x10]
+00b83748  add x0,x23,x22, LSL #0x2
+00b8374c  mov w1,w21
+    ; [PRE] try { // try from 00b8374c to 00b83757 has its CatchHandler @ 00b83790
+00b83750  mov x2,x20
+00b83754  bl 0x008d5b30
+    ; [POST] } // end try from 00b8374c to 00b83757
+00b83758  ldrb w9,[x19]
+00b8375c  add x8,x22,x20
+00b83760  tbnz w9,#0x0,0x00b83770
+00b83764  lsl w9,w8,#0x1
+00b83768  strb w9,[x19]
+00b8376c  b 0x00b83774
+00b83770  str x8,[x19, #0x8]
+00b83774  str wzr,[x23, x8, LSL #0x2]
+00b83778  mov x0,x19
+00b8377c  ldp x29,x30,[sp, #0x30]
+00b83780  ldp x20,x19,[sp, #0x20]
+00b83784  ldp x22,x21,[sp, #0x10]
+00b83788  ldr x23,[sp], #0x40
+00b8378c  ret
+
+
+================================================================================
+### FILE: 00b839c8_append.txt
+================================================================================
+Function: append @ 00b839c8
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::append(std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> > const&, unsigned long, unsigned long)
+
+--- Calls OUT ---
+  -> append @ 008d5710
+  -> FUN_00a8f54c @ 00a8f54c
+
+--- Calls IN ---
+
+--- Listing ---
+00b839c8  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::append(std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> > const&, unsigned long, unsigned long)
+00b839cc  mov x29,sp
+00b839d0  ldrb w8,[x1]
+00b839d4  ldr x9,[x1, #0x8]
+00b839d8  lsr x10,x8,#0x1
+00b839dc  tst w8,#0x1
+00b839e0  csel x9,x10,x9,eq
+00b839e4  subs x9,x9,x2
+00b839e8  b.cc 0x00b83a10
+00b839ec  ldr x10,[x1, #0x10]
+00b839f0  add x11,x1,#0x4
+00b839f4  tst w8,#0x1
+00b839f8  csel x8,x11,x10,eq
+00b839fc  cmp x9,x3
+00b83a00  add x1,x8,x2, LSL #0x2
+00b83a04  csel x2,x9,x3,cc
+00b83a08  ldp x29,x30,[sp], #0x10
+00b83a0c  b 0x008d5710
+00b83a10  bl 0x00a8f54c
+
+
+================================================================================
+### FILE: 00b83a14_append.txt
+================================================================================
+Function: append @ 00b83a14
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::append(wchar_t const*, unsigned long)
+
+--- Calls OUT ---
+  -> wmemcpy @ 008d5720
+  -> __grow_by_and_replace @ 008d4ad0
+
+--- Calls IN ---
+  <- append @ 008d5710
+
+--- Listing ---
+00b83a14  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::append(wchar_t const*, unsigned long)
+00b83a18  stp x20,x19,[sp, #0x10]
+00b83a1c  stp x29,x30,[sp, #0x20]
+00b83a20  add x29,sp,#0x20
+00b83a24  ldrb w8,[x0]
+00b83a28  mov x20,x2
+00b83a2c  mov x19,x0
+00b83a30  mov x7,x1
+00b83a34  tbnz w8,#0x0,0x00b83a44
+00b83a38  lsr x21,x8,#0x1
+00b83a3c  mov w1,#0x4
+00b83a40  b 0x00b83a50
+00b83a44  ldp x9,x21,[x19]
+00b83a48  and x9,x9,#-0x2
+00b83a4c  sub x1,x9,#0x1
+00b83a50  sub x9,x1,x21
+00b83a54  cmp x9,x20
+00b83a58  b.cs 0x00b83a80
+00b83a5c  add x8,x21,x20
+00b83a60  sub x2,x8,x1
+00b83a64  mov x0,x19
+00b83a68  mov x3,x21
+00b83a6c  mov x4,x21
+00b83a70  mov x5,xzr
+00b83a74  mov x6,x20
+00b83a78  bl 0x008d4ad0
+00b83a7c  b 0x00b83ac4
+00b83a80  cbz x20,0x00b83ac4
+00b83a84  tbnz w8,#0x0,0x00b83a90
+00b83a88  add x22,x19,#0x4
+00b83a8c  b 0x00b83a94
+00b83a90  ldr x22,[x19, #0x10]
+00b83a94  add x0,x22,x21, LSL #0x2
+00b83a98  mov x1,x7
+    ; [PRE] try { // try from 00b83a98 to 00b83aa3 has its CatchHandler @ 00b83ad8
+00b83a9c  mov x2,x20
+00b83aa0  bl 0x008d5720
+    ; [POST] } // end try from 00b83a98 to 00b83aa3
+00b83aa4  ldrb w9,[x19]
+00b83aa8  add x8,x21,x20
+00b83aac  tbnz w9,#0x0,0x00b83abc
+00b83ab0  lsl w9,w8,#0x1
+00b83ab4  strb w9,[x19]
+00b83ab8  b 0x00b83ac0
+00b83abc  str x8,[x19, #0x8]
+00b83ac0  str wzr,[x22, x8, LSL #0x2]
+00b83ac4  mov x0,x19
+00b83ac8  ldp x29,x30,[sp, #0x20]
+00b83acc  ldp x20,x19,[sp, #0x10]
+00b83ad0  ldp x22,x21,[sp], #0x30
+00b83ad4  ret
+
+
+================================================================================
+### FILE: 00b83c3c_append.txt
+================================================================================
+Function: append @ 00b83c3c
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::append(wchar_t const*)
+
+--- Calls OUT ---
+  -> append @ 008d5710
+  -> wcslen @ 008d4660
+
+--- Calls IN ---
+
+--- Listing ---
+00b83c3c  stp x20,x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::append(wchar_t const*)
+00b83c40  stp x29,x30,[sp, #0x10]
+00b83c44  add x29,sp,#0x10
+00b83c48  mov x20,x0
+00b83c4c  mov x0,x1
+00b83c50  mov x19,x1
+00b83c54  bl 0x008d4660
+00b83c58  ldp x29,x30,[sp, #0x10]
+00b83c5c  mov x2,x0
+00b83c60  mov x0,x20
+00b83c64  mov x1,x19
+00b83c68  ldp x20,x19,[sp], #0x20
+00b83c6c  b 0x008d5710
+
+
+================================================================================
+### FILE: 00ba326c_AppLovinEvents__.ctor.txt
+================================================================================
+Function: AppLovinEvents$$.ctor @ 00ba326c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- FUN_00ab0cc4 @ 00ab0cc4
+
+--- Listing ---
+00ba326c  mov x1,xzr
+00ba3270  b 0x02194104
+
+
+================================================================================
+### FILE: 00ba3274_AppLovinEvents.Types__.ctor.txt
+================================================================================
+Function: AppLovinEvents.Types$$.ctor @ 00ba3274
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00ba3274  mov x1,xzr
+00ba3278  b 0x02194104
+
+
+================================================================================
+### FILE: 00ba327c_AppLovinEvents.Parameters__.ctor.txt
+================================================================================
+Function: AppLovinEvents.Parameters$$.ctor @ 00ba327c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00ba327c  mov x1,xzr
+00ba3280  b 0x02194104
+
+
+================================================================================
+### FILE: 00ba328c_AppsFlyerTrackerCallbacks__Start.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$Start @ 00ba328c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba328c  str x20,[sp, #-0x20]!
+00ba3290  stp x19,x30,[sp, #0x10]
+00ba3294  adrp x19,0x3570000
+00ba3298  adrp x20,0x3383000
+00ba329c  ldrb w8,[x19, #0xb10]
+00ba32a0  ldr x20,[x20, #0x7f8]
+00ba32a4  tbnz w8,#0x0,0x00ba32bc
+00ba32a8  adrp x0,0x3383000
+00ba32ac  ldr x0,[x0, #0x7f8]
+00ba32b0  bl 0x00b0789c
+00ba32b4  mov w8,#0x1
+00ba32b8  strb w8,[x19, #0xb10]
+00ba32bc  ldr x1,[x20]
+00ba32c0  ldp x19,x30,[sp, #0x10]
+00ba32c4  ldr x20,[sp], #0x20
+00ba32c8  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba32cc_AppsFlyerTrackerCallbacks__printCallback.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- AppsFlyerTrackerCallbacks$$onAppOpenAttributionFailure @ 00ba34cc
+  <- AppsFlyerTrackerCallbacks$$onInviteLinkGenerated @ 00ba35b4
+  <- AppsFlyerTrackerCallbacks$$onAppOpenAttribution @ 00ba3478
+  <- AppsFlyerTrackerCallbacks$$onInAppBillingFailure @ 00ba3560
+  <- AppsFlyerTrackerCallbacks$$didReceiveConversionData @ 00ba3328
+  <- AppsFlyerTrackerCallbacks$$Start @ 00ba328c
+  <- AppsFlyerTrackerCallbacks$$didReceiveConversionDataWithError @ 00ba337c
+  <- AppsFlyerTrackerCallbacks$$didFinishValidateReceipt @ 00ba33d0
+  <- AppsFlyerTrackerCallbacks$$didFinishValidateReceiptWithError @ 00ba3424
+  <- AppsFlyerTrackerCallbacks$$onInAppBillingSuccess @ 00ba3520
+
+--- Listing ---
+00ba32cc  stp x21,x20,[sp, #-0x20]!
+00ba32d0  stp x19,x30,[sp, #0x10]
+00ba32d4  adrp x20,0x3570000
+00ba32d8  adrp x21,0x336b000
+00ba32dc  ldrb w8,[x20, #0xb1a]
+00ba32e0  ldr x21,[x21, #0x7d0]
+00ba32e4  mov x19,x1
+00ba32e8  tbnz w8,#0x0,0x00ba3300
+00ba32ec  adrp x0,0x336b000
+00ba32f0  ldr x0,[x0, #0x7d0]
+00ba32f4  bl 0x00b0789c
+00ba32f8  mov w8,#0x1
+00ba32fc  strb w8,[x20, #0xb1a]
+00ba3300  ldr x0,[x21]
+00ba3304  ldr w8,[x0, #0xe0]
+00ba3308  cbnz w8,0x00ba3310
+00ba330c  bl 0x00b0798c
+00ba3310  mov x0,x19
+00ba3314  ldp x19,x30,[sp, #0x10]
+00ba3318  mov x1,xzr
+00ba331c  ldp x21,x20,[sp], #0x20
+00ba3320  b 0x024c0104
+
+
+================================================================================
+### FILE: 00ba3324_AppsFlyerTrackerCallbacks__Update.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$Update @ 00ba3324
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00ba3324  ret
+
+
+================================================================================
+### FILE: 00ba3328_AppsFlyerTrackerCallbacks__didReceiveConversionData.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$didReceiveConversionData @ 00ba3328
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba3328  stp x21,x20,[sp, #-0x20]!
+00ba332c  stp x19,x30,[sp, #0x10]
+00ba3330  adrp x20,0x3570000
+00ba3334  adrp x21,0x3383000
+00ba3338  ldrb w8,[x20, #0xb11]
+00ba333c  ldr x21,[x21, #0xa68]
+00ba3340  mov x19,x1
+00ba3344  tbnz w8,#0x0,0x00ba335c
+00ba3348  adrp x0,0x3383000
+00ba334c  ldr x0,[x0, #0xa68]
+00ba3350  bl 0x00b0789c
+00ba3354  mov w8,#0x1
+00ba3358  strb w8,[x20, #0xb11]
+00ba335c  ldr x0,[x21]
+00ba3360  mov x1,x19
+00ba3364  mov x2,xzr
+00ba3368  bl 0x01fd2850
+00ba336c  ldp x19,x30,[sp, #0x10]
+00ba3370  mov x1,x0
+00ba3374  ldp x21,x20,[sp], #0x20
+00ba3378  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba337c_AppsFlyerTrackerCallbacks__didReceiveConversionDataWithError.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$didReceiveConversionDataWithError @ 00ba337c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba337c  stp x21,x20,[sp, #-0x20]!
+00ba3380  stp x19,x30,[sp, #0x10]
+00ba3384  adrp x20,0x3570000
+00ba3388  adrp x21,0x3318000
+00ba338c  ldrb w8,[x20, #0xb12]
+00ba3390  ldr x21,[x21, #0x100]
+00ba3394  mov x19,x1
+00ba3398  tbnz w8,#0x0,0x00ba33b0
+00ba339c  adrp x0,0x3318000
+00ba33a0  ldr x0,[x0, #0x100]
+00ba33a4  bl 0x00b0789c
+00ba33a8  mov w8,#0x1
+00ba33ac  strb w8,[x20, #0xb12]
+00ba33b0  ldr x0,[x21]
+00ba33b4  mov x1,x19
+00ba33b8  mov x2,xzr
+00ba33bc  bl 0x01fd2850
+00ba33c0  ldp x19,x30,[sp, #0x10]
+00ba33c4  mov x1,x0
+00ba33c8  ldp x21,x20,[sp], #0x20
+00ba33cc  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba33d0_AppsFlyerTrackerCallbacks__didFinishValidateReceipt.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$didFinishValidateReceipt @ 00ba33d0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba33d0  stp x21,x20,[sp, #-0x20]!
+00ba33d4  stp x19,x30,[sp, #0x10]
+00ba33d8  adrp x20,0x3570000
+00ba33dc  adrp x21,0x3345000
+00ba33e0  ldrb w8,[x20, #0xb13]
+00ba33e4  ldr x21,[x21, #0xdf8]
+00ba33e8  mov x19,x1
+00ba33ec  tbnz w8,#0x0,0x00ba3404
+00ba33f0  adrp x0,0x3345000
+00ba33f4  ldr x0,[x0, #0xdf8]
+00ba33f8  bl 0x00b0789c
+00ba33fc  mov w8,#0x1
+00ba3400  strb w8,[x20, #0xb13]
+00ba3404  ldr x0,[x21]
+00ba3408  mov x1,x19
+00ba340c  mov x2,xzr
+00ba3410  bl 0x01fd2850
+00ba3414  ldp x19,x30,[sp, #0x10]
+00ba3418  mov x1,x0
+00ba341c  ldp x21,x20,[sp], #0x20
+00ba3420  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba3424_AppsFlyerTrackerCallbacks__didFinishValidateReceiptWithError.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$didFinishValidateReceiptWithError @ 00ba3424
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba3424  stp x21,x20,[sp, #-0x20]!
+00ba3428  stp x19,x30,[sp, #0x10]
+00ba342c  adrp x20,0x3570000
+00ba3430  adrp x21,0x3308000
+00ba3434  ldrb w8,[x20, #0xb14]
+00ba3438  ldr x21,[x21, #0xce0]
+00ba343c  mov x19,x1
+00ba3440  tbnz w8,#0x0,0x00ba3458
+00ba3444  adrp x0,0x3308000
+00ba3448  ldr x0,[x0, #0xce0]
+00ba344c  bl 0x00b0789c
+00ba3450  mov w8,#0x1
+00ba3454  strb w8,[x20, #0xb14]
+00ba3458  ldr x0,[x21]
+00ba345c  mov x1,x19
+00ba3460  mov x2,xzr
+00ba3464  bl 0x01fd2850
+00ba3468  ldp x19,x30,[sp, #0x10]
+00ba346c  mov x1,x0
+00ba3470  ldp x21,x20,[sp], #0x20
+00ba3474  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba3478_AppsFlyerTrackerCallbacks__onAppOpenAttribution.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$onAppOpenAttribution @ 00ba3478
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba3478  stp x21,x20,[sp, #-0x20]!
+00ba347c  stp x19,x30,[sp, #0x10]
+00ba3480  adrp x20,0x3570000
+00ba3484  adrp x21,0x330b000
+00ba3488  ldrb w8,[x20, #0xb15]
+00ba348c  ldr x21,[x21, #0xcf8]
+00ba3490  mov x19,x1
+00ba3494  tbnz w8,#0x0,0x00ba34ac
+00ba3498  adrp x0,0x330b000
+00ba349c  ldr x0,[x0, #0xcf8]
+00ba34a0  bl 0x00b0789c
+00ba34a4  mov w8,#0x1
+00ba34a8  strb w8,[x20, #0xb15]
+00ba34ac  ldr x0,[x21]
+00ba34b0  mov x1,x19
+00ba34b4  mov x2,xzr
+00ba34b8  bl 0x01fd2850
+00ba34bc  ldp x19,x30,[sp, #0x10]
+00ba34c0  mov x1,x0
+00ba34c4  ldp x21,x20,[sp], #0x20
+00ba34c8  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba34cc_AppsFlyerTrackerCallbacks__onAppOpenAttributionFailure.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$onAppOpenAttributionFailure @ 00ba34cc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba34cc  stp x21,x20,[sp, #-0x20]!
+00ba34d0  stp x19,x30,[sp, #0x10]
+00ba34d4  adrp x20,0x3570000
+00ba34d8  adrp x21,0x3352000
+00ba34dc  ldrb w8,[x20, #0xb16]
+00ba34e0  ldr x21,[x21, #0x610]
+00ba34e4  mov x19,x1
+00ba34e8  tbnz w8,#0x0,0x00ba3500
+00ba34ec  adrp x0,0x3352000
+00ba34f0  ldr x0,[x0, #0x610]
+00ba34f4  bl 0x00b0789c
+00ba34f8  mov w8,#0x1
+00ba34fc  strb w8,[x20, #0xb16]
+00ba3500  ldr x0,[x21]
+00ba3504  mov x1,x19
+00ba3508  mov x2,xzr
+00ba350c  bl 0x01fd2850
+00ba3510  ldp x19,x30,[sp, #0x10]
+00ba3514  mov x1,x0
+00ba3518  ldp x21,x20,[sp], #0x20
+00ba351c  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba3520_AppsFlyerTrackerCallbacks__onInAppBillingSuccess.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$onInAppBillingSuccess @ 00ba3520
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba3520  str x20,[sp, #-0x20]!
+00ba3524  stp x19,x30,[sp, #0x10]
+00ba3528  adrp x19,0x3570000
+00ba352c  adrp x20,0x3367000
+00ba3530  ldrb w8,[x19, #0xb17]
+00ba3534  ldr x20,[x20, #0x308]
+00ba3538  tbnz w8,#0x0,0x00ba3550
+00ba353c  adrp x0,0x3367000
+00ba3540  ldr x0,[x0, #0x308]
+00ba3544  bl 0x00b0789c
+00ba3548  mov w8,#0x1
+00ba354c  strb w8,[x19, #0xb17]
+00ba3550  ldr x1,[x20]
+00ba3554  ldp x19,x30,[sp, #0x10]
+00ba3558  ldr x20,[sp], #0x20
+00ba355c  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba3560_AppsFlyerTrackerCallbacks__onInAppBillingFailure.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$onInAppBillingFailure @ 00ba3560
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba3560  stp x21,x20,[sp, #-0x20]!
+00ba3564  stp x19,x30,[sp, #0x10]
+00ba3568  adrp x20,0x3570000
+00ba356c  adrp x21,0x3374000
+00ba3570  ldrb w8,[x20, #0xb18]
+00ba3574  ldr x21,[x21, #0x468]
+00ba3578  mov x19,x1
+00ba357c  tbnz w8,#0x0,0x00ba3594
+00ba3580  adrp x0,0x3374000
+00ba3584  ldr x0,[x0, #0x468]
+00ba3588  bl 0x00b0789c
+00ba358c  mov w8,#0x1
+00ba3590  strb w8,[x20, #0xb18]
+00ba3594  ldr x0,[x21]
+00ba3598  mov x1,x19
+00ba359c  mov x2,xzr
+00ba35a0  bl 0x01fd2850
+00ba35a4  ldp x19,x30,[sp, #0x10]
+00ba35a8  mov x1,x0
+00ba35ac  ldp x21,x20,[sp], #0x20
+00ba35b0  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba35b4_AppsFlyerTrackerCallbacks__onInviteLinkGenerated.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$onInviteLinkGenerated @ 00ba35b4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> AppsFlyerTrackerCallbacks$$printCallback @ 00ba32cc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba35b4  stp x21,x20,[sp, #-0x20]!
+00ba35b8  stp x19,x30,[sp, #0x10]
+00ba35bc  adrp x20,0x3570000
+00ba35c0  adrp x21,0x3319000
+00ba35c4  ldrb w8,[x20, #0xb19]
+00ba35c8  ldr x21,[x21, #0xa80]
+00ba35cc  mov x19,x1
+00ba35d0  tbnz w8,#0x0,0x00ba35e8
+00ba35d4  adrp x0,0x3319000
+00ba35d8  ldr x0,[x0, #0xa80]
+00ba35dc  bl 0x00b0789c
+00ba35e0  mov w8,#0x1
+00ba35e4  strb w8,[x20, #0xb19]
+00ba35e8  ldr x0,[x21]
+00ba35ec  mov x1,x19
+00ba35f0  mov x2,xzr
+00ba35f4  bl 0x01fd2850
+00ba35f8  ldp x19,x30,[sp, #0x10]
+00ba35fc  mov x1,x0
+00ba3600  ldp x21,x20,[sp], #0x20
+00ba3604  b 0x00ba32cc
+
+
+================================================================================
+### FILE: 00ba3608_AppsFlyerTrackerCallbacks__.ctor.txt
+================================================================================
+Function: AppsFlyerTrackerCallbacks$$.ctor @ 00ba3608
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00ba3608  mov x1,xzr
+00ba360c  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d36e70_AppEventHandlerExample__Awake.txt
+================================================================================
+Function: AppEventHandlerExample$$Awake @ 00d36e70
+
+--- Calls OUT ---
+  -> SA.IOSNative.Core.AppController$$add_OnApplicationDidBecomeActive @ 00c9b29c
+  -> UnityEngine.MonoBehaviour$$Invoke @ 024e3c44
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA.IOSNative.Core.AppController$$add_OnContinueUserActivity @ 00c9bb64
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.IOSNative.Core.AppController$$add_OnOpenURL @ 00c9b97c
+  -> System.Action$$.ctor @ 020d5760
+  -> SA.IOSNative.Core.AppController$$add_OnApplicationDidReceiveMemoryWarning @ 00c9b454
+  -> SA.IOSNative.Core.AppController$$Subscribe @ 00c9bdb8
+
+--- Calls IN ---
+
+--- Listing ---
+00d36e70  stp x21,x20,[sp, #-0x20]!
+00d36e74  stp x19,x30,[sp, #0x10]
+00d36e78  adrp x21,0x3571000
+00d36e7c  adrp x20,0x3375000
+00d36e80  ldrb w8,[x21, #0xd52]
+00d36e84  ldr x20,[x20, #0x9f0]
+00d36e88  mov x19,x0
+00d36e8c  tbnz w8,#0x0,0x00d36f04
+00d36e90  adrp x0,0x334b000
+00d36e94  ldr x0,[x0, #0x3c8]
+00d36e98  bl 0x00b0789c
+00d36e9c  adrp x0,0x330f000
+00d36ea0  ldr x0,[x0, #0xfd0]
+00d36ea4  bl 0x00b0789c
+00d36ea8  adrp x0,0x3348000
+00d36eac  ldr x0,[x0, #0xcf8]
+00d36eb0  bl 0x00b0789c
+00d36eb4  adrp x0,0x3375000
+00d36eb8  ldr x0,[x0, #0x9f0]
+00d36ebc  bl 0x00b0789c
+00d36ec0  adrp x0,0x333b000
+00d36ec4  ldr x0,[x0, #0xcf0]
+00d36ec8  bl 0x00b0789c
+00d36ecc  adrp x0,0x3331000
+00d36ed0  ldr x0,[x0, #0xa58]
+00d36ed4  bl 0x00b0789c
+00d36ed8  adrp x0,0x3359000
+00d36edc  ldr x0,[x0, #0xf10]
+00d36ee0  bl 0x00b0789c
+00d36ee4  adrp x0,0x333a000
+00d36ee8  ldr x0,[x0, #0x230]
+00d36eec  bl 0x00b0789c
+00d36ef0  adrp x0,0x3315000
+00d36ef4  ldr x0,[x0, #0x2c0]
+00d36ef8  bl 0x00b0789c
+00d36efc  mov w8,#0x1
+00d36f00  strb w8,[x21, #0xd52]
+00d36f04  ldr x0,[x20]
+00d36f08  adrp x21,0x3348000
+00d36f0c  ldr w8,[x0, #0xe0]
+00d36f10  ldr x21,[x21, #0xcf8]
+00d36f14  cbnz w8,0x00d36f1c
+00d36f18  bl 0x00b0798c
+00d36f1c  mov x0,xzr
+00d36f20  bl 0x00c9bdb8
+00d36f24  ldr x0,[x21]
+00d36f28  bl 0x00b079a0
+00d36f2c  cbz x0,0x00d37028
+00d36f30  adrp x8,0x3331000
+00d36f34  ldr x8,[x8, #0xa58]
+00d36f38  mov x1,x19
+00d36f3c  mov x3,xzr
+00d36f40  mov x20,x0
+00d36f44  ldr x2,[x8]
+00d36f48  bl 0x020d5760
+00d36f4c  mov x0,x20
+00d36f50  mov x1,xzr
+00d36f54  bl 0x00c9b454
+00d36f58  ldr x0,[x21]
+00d36f5c  bl 0x00b079a0
+00d36f60  cbz x0,0x00d37028
+00d36f64  adrp x8,0x333b000
+00d36f68  ldr x8,[x8, #0xcf0]
+00d36f6c  adrp x21,0x330f000
+00d36f70  mov x1,x19
+00d36f74  mov x3,xzr
+00d36f78  ldr x2,[x8]
+00d36f7c  ldr x21,[x21, #0xfd0]
+00d36f80  mov x20,x0
+00d36f84  bl 0x020d5760
+00d36f88  mov x0,x20
+00d36f8c  mov x1,xzr
+00d36f90  bl 0x00c9b29c
+00d36f94  ldr x0,[x21]
+00d36f98  bl 0x00b079a0
+00d36f9c  cbz x0,0x00d37028
+00d36fa0  adrp x8,0x333a000
+00d36fa4  ldr x8,[x8, #0x230]
+00d36fa8  adrp x21,0x334b000
+00d36fac  mov x1,x19
+00d36fb0  mov x3,xzr
+00d36fb4  ldr x2,[x8]
+00d36fb8  ldr x21,[x21, #0x3c8]
+00d36fbc  mov x20,x0
+00d36fc0  bl 0x01909b80
+00d36fc4  mov x0,x20
+00d36fc8  mov x1,xzr
+00d36fcc  bl 0x00c9b97c
+00d36fd0  ldr x0,[x21]
+00d36fd4  bl 0x00b079a0
+00d36fd8  cbz x0,0x00d37028
+00d36fdc  adrp x8,0x3359000
+00d36fe0  ldr x8,[x8, #0xf10]
+00d36fe4  adrp x21,0x3315000
+00d36fe8  mov x1,x19
+00d36fec  mov x3,xzr
+00d36ff0  ldr x2,[x8]
+00d36ff4  ldr x21,[x21, #0x2c0]
+00d36ff8  mov x20,x0
+00d36ffc  bl 0x01909b80
+00d37000  mov x0,x20
+00d37004  mov x1,xzr
+00d37008  bl 0x00c9bb64
+00d3700c  ldr x1,[x21]
+00d37010  mov x0,x19
+00d37014  ldp x19,x30,[sp, #0x10]
+00d37018  fmov s0,0x40000000
+00d3701c  mov x2,xzr
+00d37020  ldp x21,x20,[sp], #0x20
+00d37024  b 0x024e3c44
+00d37028  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d3702c_AppEventHandlerExample__TryDetectURL.txt
+================================================================================
+Function: AppEventHandlerExample$$TryDetectURL @ 00d3702c
+
+--- Calls OUT ---
+  -> SA.IOSNative.Models.UniversalLink$$get_IsEmpty @ 00c92840
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA.IOSNative.Models.LaunchUrl$$get_IsEmpty @ 00c926c8
+  -> SA.IOSNative.Core.AppController$$get_LaunchUrl @ 00c9be0c
+  -> IOSMessage$$Create @ 00d26010
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.IOSNative.Core.AppController$$get_LaunchUniversalLink @ 00c9be8c
+
+--- Calls IN ---
+
+--- Listing ---
+00d3702c  str x20,[sp, #-0x20]!
+00d37030  stp x19,x30,[sp, #0x10]
+00d37034  adrp x19,0x3571000
+00d37038  adrp x20,0x3375000
+00d3703c  ldrb w8,[x19, #0xd53]
+00d37040  ldr x20,[x20, #0x9f0]
+00d37044  tbnz w8,#0x0,0x00d37074
+00d37048  adrp x0,0x3375000
+00d3704c  ldr x0,[x0, #0x9f0]
+00d37050  bl 0x00b0789c
+00d37054  adrp x0,0x3375000
+00d37058  ldr x0,[x0, #0x250]
+00d3705c  bl 0x00b0789c
+00d37060  adrp x0,0x3349000
+00d37064  ldr x0,[x0, #0x740]
+00d37068  bl 0x00b0789c
+00d3706c  mov w8,#0x1
+00d37070  strb w8,[x19, #0xd53]
+00d37074  ldr x0,[x20]
+00d37078  ldr w8,[x0, #0xe0]
+00d3707c  cbnz w8,0x00d37084
+00d37080  bl 0x00b0798c
+00d37084  mov x0,xzr
+00d37088  bl 0x00c9be0c
+00d3708c  cbz x0,0x00d37110
+00d37090  mov x1,xzr
+00d37094  mov x19,x0
+00d37098  bl 0x00c926c8
+00d3709c  tbnz w0,#0x0,0x00d370b8
+00d370a0  adrp x8,0x3375000
+00d370a4  ldr x8,[x8, #0x250]
+00d370a8  ldr x1,[x19, #0x18]
+00d370ac  mov x2,xzr
+00d370b0  ldr x0,[x8]
+00d370b4  bl 0x00d26010
+00d370b8  ldr x0,[x20]
+00d370bc  ldr w8,[x0, #0xe0]
+00d370c0  cbnz w8,0x00d370c8
+00d370c4  bl 0x00b0798c
+00d370c8  mov x0,xzr
+00d370cc  bl 0x00c9be8c
+00d370d0  cbz x0,0x00d37110
+00d370d4  mov x1,xzr
+00d370d8  mov x19,x0
+00d370dc  bl 0x00c92840
+00d370e0  tbz w0,#0x0,0x00d370f0
+00d370e4  ldp x19,x30,[sp, #0x10]
+00d370e8  ldr x20,[sp], #0x20
+00d370ec  ret
+00d370f0  adrp x8,0x3349000
+00d370f4  ldr x8,[x8, #0x740]
+00d370f8  ldr x1,[x19, #0x18]
+00d370fc  ldp x19,x30,[sp, #0x10]
+00d37100  mov x2,xzr
+00d37104  ldr x0,[x8]
+00d37108  ldr x20,[sp], #0x20
+00d3710c  b 0x00d26010
+00d37110  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d37114_AppEventHandlerExample__OnContinueUserActivity.txt
+================================================================================
+Function: AppEventHandlerExample$$OnContinueUserActivity @ 00d37114
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> IOSMessage$$Create @ 00d26010
+
+--- Calls IN ---
+
+--- Listing ---
+00d37114  str x20,[sp, #-0x20]!
+00d37118  stp x19,x30,[sp, #0x10]
+00d3711c  adrp x20,0x3571000
+00d37120  ldrb w8,[x20, #0xd54]
+00d37124  mov x19,x1
+00d37128  tbnz w8,#0x0,0x00d37140
+00d3712c  adrp x0,0x337e000
+00d37130  ldr x0,[x0, #0x2d8]
+00d37134  bl 0x00b0789c
+00d37138  mov w8,#0x1
+00d3713c  strb w8,[x20, #0xd54]
+00d37140  cbz x19,0x00d37164
+00d37144  adrp x8,0x337e000
+00d37148  ldr x8,[x8, #0x2d8]
+00d3714c  ldr x1,[x19, #0x18]
+00d37150  ldp x19,x30,[sp, #0x10]
+00d37154  mov x2,xzr
+00d37158  ldr x0,[x8]
+00d3715c  ldr x20,[sp], #0x20
+00d37160  b 0x00d26010
+00d37164  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d37168_AppEventHandlerExample__OnDestroy.txt
+================================================================================
+Function: AppEventHandlerExample$$OnDestroy @ 00d37168
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> SA.IOSNative.Core.AppController$$remove_OnApplicationDidBecomeActive @ 00c9b378
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Action$$.ctor @ 020d5760
+  -> SA.IOSNative.Core.AppController$$remove_OnOpenURL @ 00c9ba70
+  -> SA.IOSNative.Core.AppController$$remove_OnApplicationDidReceiveMemoryWarning @ 00c9b530
+
+--- Calls IN ---
+
+--- Listing ---
+00d37168  str x22,[sp, #-0x30]!
+00d3716c  stp x21,x20,[sp, #0x10]
+00d37170  stp x19,x30,[sp, #0x20]
+00d37174  adrp x20,0x3571000
+00d37178  adrp x21,0x3348000
+00d3717c  ldrb w8,[x20, #0xd55]
+00d37180  ldr x21,[x21, #0xcf8]
+00d37184  mov x19,x0
+00d37188  tbnz w8,#0x0,0x00d371dc
+00d3718c  adrp x0,0x330f000
+00d37190  ldr x0,[x0, #0xfd0]
+00d37194  bl 0x00b0789c
+00d37198  adrp x0,0x3348000
+00d3719c  ldr x0,[x0, #0xcf8]
+00d371a0  bl 0x00b0789c
+00d371a4  adrp x0,0x3375000
+00d371a8  ldr x0,[x0, #0x9f0]
+00d371ac  bl 0x00b0789c
+00d371b0  adrp x0,0x333b000
+00d371b4  ldr x0,[x0, #0xcf0]
+00d371b8  bl 0x00b0789c
+00d371bc  adrp x0,0x3331000
+00d371c0  ldr x0,[x0, #0xa58]
+00d371c4  bl 0x00b0789c
+00d371c8  adrp x0,0x333a000
+00d371cc  ldr x0,[x0, #0x230]
+00d371d0  bl 0x00b0789c
+00d371d4  mov w8,#0x1
+00d371d8  strb w8,[x20, #0xd55]
+00d371dc  ldr x0,[x21]
+00d371e0  bl 0x00b079a0
+00d371e4  cbz x0,0x00d372a4
+00d371e8  adrp x8,0x3331000
+00d371ec  ldr x8,[x8, #0xa58]
+00d371f0  adrp x22,0x3375000
+00d371f4  mov x1,x19
+00d371f8  mov x3,xzr
+00d371fc  ldr x2,[x8]
+00d37200  ldr x22,[x22, #0x9f0]
+00d37204  mov x20,x0
+00d37208  bl 0x020d5760
+00d3720c  ldr x0,[x22]
+00d37210  ldr w8,[x0, #0xe0]
+00d37214  cbnz w8,0x00d3721c
+00d37218  bl 0x00b0798c
+00d3721c  mov x0,x20
+00d37220  mov x1,xzr
+00d37224  bl 0x00c9b530
+00d37228  ldr x0,[x21]
+00d3722c  bl 0x00b079a0
+00d37230  cbz x0,0x00d372a4
+00d37234  adrp x8,0x333b000
+00d37238  ldr x8,[x8, #0xcf0]
+00d3723c  adrp x21,0x330f000
+00d37240  mov x1,x19
+00d37244  mov x3,xzr
+00d37248  ldr x2,[x8]
+00d3724c  ldr x21,[x21, #0xfd0]
+00d37250  mov x20,x0
+00d37254  bl 0x020d5760
+00d37258  mov x0,x20
+00d3725c  mov x1,xzr
+00d37260  bl 0x00c9b378
+00d37264  ldr x0,[x21]
+00d37268  bl 0x00b079a0
+00d3726c  cbz x0,0x00d372a4
+00d37270  adrp x8,0x333a000
+00d37274  ldr x8,[x8, #0x230]
+00d37278  mov x1,x19
+00d3727c  mov x3,xzr
+00d37280  mov x20,x0
+00d37284  ldr x2,[x8]
+00d37288  bl 0x01909b80
+00d3728c  mov x0,x20
+00d37290  ldp x19,x30,[sp, #0x20]
+00d37294  ldp x21,x20,[sp, #0x10]
+00d37298  mov x1,xzr
+00d3729c  ldr x22,[sp], #0x30
+00d372a0  b 0x00c9ba70
+00d372a4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d372a8_AppEventHandlerExample__OnOpenURL.txt
+================================================================================
+Function: AppEventHandlerExample$$OnOpenURL @ 00d372a8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> IOSMessage$$Create @ 00d26010
+
+--- Calls IN ---
+
+--- Listing ---
+00d372a8  str x20,[sp, #-0x20]!
+00d372ac  stp x19,x30,[sp, #0x10]
+00d372b0  adrp x20,0x3571000
+00d372b4  ldrb w8,[x20, #0xd56]
+00d372b8  mov x19,x1
+00d372bc  tbnz w8,#0x0,0x00d372d4
+00d372c0  adrp x0,0x3375000
+00d372c4  ldr x0,[x0, #0x250]
+00d372c8  bl 0x00b0789c
+00d372cc  mov w8,#0x1
+00d372d0  strb w8,[x20, #0xd56]
+00d372d4  cbz x19,0x00d372f8
+00d372d8  adrp x8,0x3375000
+00d372dc  ldr x8,[x8, #0x250]
+00d372e0  ldr x1,[x19, #0x18]
+00d372e4  ldp x19,x30,[sp, #0x10]
+00d372e8  mov x2,xzr
+00d372ec  ldr x0,[x8]
+00d372f0  ldr x20,[sp], #0x20
+00d372f4  b 0x00d26010
+00d372f8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d372fc_AppEventHandlerExample__HandleOnApplicationDidBecomeActive.txt
+================================================================================
+Function: AppEventHandlerExample$$HandleOnApplicationDidBecomeActive @ 00d372fc
+
+--- Calls OUT ---
+  -> ISN_Logger$$Log @ 00d198ec
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d372fc  str x20,[sp, #-0x20]!
+00d37300  stp x19,x30,[sp, #0x10]
+00d37304  adrp x19,0x3571000
+00d37308  adrp x20,0x337d000
+00d3730c  ldrb w8,[x19, #0xd57]
+00d37310  ldr x20,[x20, #0x5a8]
+00d37314  tbnz w8,#0x0,0x00d3732c
+00d37318  adrp x0,0x337d000
+00d3731c  ldr x0,[x0, #0x5a8]
+00d37320  bl 0x00b0789c
+00d37324  mov w8,#0x1
+00d37328  strb w8,[x19, #0xd57]
+00d3732c  ldr x0,[x20]
+00d37330  ldp x19,x30,[sp, #0x10]
+00d37334  mov w1,#0x3
+00d37338  mov x2,xzr
+00d3733c  ldr x20,[sp], #0x20
+00d37340  b 0x00d198ec
+
+
+================================================================================
+### FILE: 00d37344_AppEventHandlerExample__OnApplicationDidReceiveMemoryWarning.txt
+================================================================================
+Function: AppEventHandlerExample$$OnApplicationDidReceiveMemoryWarning @ 00d37344
+
+--- Calls OUT ---
+  -> ISN_Logger$$Log @ 00d198ec
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d37344  str x20,[sp, #-0x20]!
+00d37348  stp x19,x30,[sp, #0x10]
+00d3734c  adrp x19,0x3571000
+00d37350  adrp x20,0x334d000
+00d37354  ldrb w8,[x19, #0xd58]
+00d37358  ldr x20,[x20, #0xb98]
+00d3735c  tbnz w8,#0x0,0x00d37374
+00d37360  adrp x0,0x334d000
+00d37364  ldr x0,[x0, #0xb98]
+00d37368  bl 0x00b0789c
+00d3736c  mov w8,#0x1
+00d37370  strb w8,[x19, #0xd58]
+00d37374  ldr x0,[x20]
+00d37378  ldp x19,x30,[sp, #0x10]
+00d3737c  mov w1,#0x3
+00d37380  mov x2,xzr
+00d37384  ldr x20,[sp], #0x20
+00d37388  b 0x00d198ec
+
+
+================================================================================
+### FILE: 00d3738c_AppEventHandlerExample__.ctor.txt
+================================================================================
+Function: AppEventHandlerExample$$.ctor @ 00d3738c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d3738c  mov x1,xzr
+00d37390  b 0x024e45bc
+
+
+================================================================================
+### FILE: 016da964_AppConst__get_GooglePlay_Base64.txt
+================================================================================
+Function: AppConst$$get_GooglePlay_Base64 @ 016da964
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp279 @ 01083814
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.SingletonScriptableObject<object>$$get_Instance @ 01e09560
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.AppConstWrap$$_g_get_GooglePlay_Base64 @ 011abf30
+
+--- Listing ---
+016da964  str x20,[sp, #-0x20]!
+016da968  stp x19,x30,[sp, #0x10]
+016da96c  adrp x20,0x3577000
+016da970  adrp x19,0x330e000
+016da974  ldrb w8,[x20, #0xd7c]
+016da978  ldr x19,[x19, #0x290]
+016da97c  tbnz w8,#0x0,0x016da9d0
+016da980  adrp x0,0x330e000
+016da984  ldr x0,[x0, #0x290]
+016da988  bl 0x00b0789c
+016da98c  adrp x0,0x333f000
+016da990  ldr x0,[x0, #0x50]
+016da994  bl 0x00b0789c
+016da998  adrp x0,0x3355000
+016da99c  ldr x0,[x0, #0x550]
+016da9a0  bl 0x00b0789c
+016da9a4  adrp x0,0x332a000
+016da9a8  ldr x0,[x0, #0x5f8]
+016da9ac  bl 0x00b0789c
+016da9b0  adrp x0,0x3324000
+016da9b4  ldr x0,[x0, #0x5a0]
+016da9b8  bl 0x00b0789c
+016da9bc  adrp x0,0x3330000
+016da9c0  ldr x0,[x0, #0x928]
+016da9c4  bl 0x00b0789c
+016da9c8  mov w8,#0x1
+016da9cc  strb w8,[x20, #0xd7c]
+016da9d0  ldr x0,[x19]
+016da9d4  ldr w8,[x0, #0xe0]
+016da9d8  cbnz w8,0x016da9e4
+016da9dc  bl 0x00b0798c
+016da9e0  ldr x0,[x19]
+016da9e4  ldr x8,[x0, #0xb8]
+016da9e8  ldr x0,[x8, #0x8]
+016da9ec  cbz x0,0x016daa00
+016da9f0  ldp x19,x30,[sp, #0x10]
+016da9f4  mov x1,xzr
+016da9f8  ldr x20,[sp], #0x20
+016da9fc  b 0x01083814
+016daa00  adrp x8,0x333f000
+016daa04  ldr x8,[x8, #0x50]
+016daa08  ldr x0,[x8]
+016daa0c  bl 0x01e09560
+016daa10  cbz x0,0x016daa6c
+016daa14  ldr w8,[x0, #0x1c]
+016daa18  cmp w8,#0x4
+016daa1c  b.eq 0x016daa48
+016daa20  cmp w8,#0x6
+016daa24  b.eq 0x016daa3c
+016daa28  cmp w8,#0x5
+016daa2c  b.ne 0x016daa54
+016daa30  adrp x8,0x332a000
+016daa34  ldr x8,[x8, #0x5f8]
+016daa38  b 0x016daa5c
+016daa3c  adrp x8,0x3330000
+016daa40  ldr x8,[x8, #0x928]
+016daa44  b 0x016daa5c
+016daa48  adrp x8,0x3324000
+016daa4c  ldr x8,[x8, #0x5a0]
+016daa50  b 0x016daa5c
+016daa54  adrp x8,0x3355000
+016daa58  ldr x8,[x8, #0x550]
+016daa5c  ldr x0,[x8]
+016daa60  ldp x19,x30,[sp, #0x10]
+016daa64  ldr x20,[sp], #0x20
+016daa68  ret
+016daa6c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016daa70_AppConst__get_STEAM_APPID.txt
+================================================================================
+Function: AppConst$$get_STEAM_APPID @ 016daa70
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonScriptableObject<object>$$get_Instance @ 01e09560
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp280 @ 01083958
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.AppConstWrap$$_g_get_STEAM_APPID @ 011ac074
+
+--- Listing ---
+016daa70  str x20,[sp, #-0x20]!
+016daa74  stp x19,x30,[sp, #0x10]
+016daa78  adrp x20,0x3577000
+016daa7c  adrp x19,0x330e000
+016daa80  ldrb w8,[x20, #0xd7d]
+016daa84  ldr x19,[x19, #0x290]
+016daa88  tbnz w8,#0x0,0x016daaac
+016daa8c  adrp x0,0x330e000
+016daa90  ldr x0,[x0, #0x290]
+016daa94  bl 0x00b0789c
+016daa98  adrp x0,0x333f000
+016daa9c  ldr x0,[x0, #0x50]
+016daaa0  bl 0x00b0789c
+016daaa4  mov w8,#0x1
+016daaa8  strb w8,[x20, #0xd7d]
+016daaac  ldr x0,[x19]
+016daab0  ldr w8,[x0, #0xe0]
+016daab4  cbnz w8,0x016daac0
+016daab8  bl 0x00b0798c
+016daabc  ldr x0,[x19]
+016daac0  ldr x8,[x0, #0xb8]
+016daac4  ldr x0,[x8, #0x10]
+016daac8  cbz x0,0x016daadc
+016daacc  ldp x19,x30,[sp, #0x10]
+016daad0  mov x1,xzr
+016daad4  ldr x20,[sp], #0x20
+016daad8  b 0x01083958
+016daadc  adrp x8,0x333f000
+016daae0  ldr x8,[x8, #0x50]
+016daae4  ldr x0,[x8]
+016daae8  bl 0x01e09560
+016daaec  cbz x0,0x016dab18
+016daaf0  ldr w8,[x0, #0x18]
+016daaf4  ldp x19,x30,[sp, #0x10]
+016daaf8  mov w9,#0xebea
+016daafc  movk w9,#0x15, LSL #16
+016dab00  cmp w8,#0xbb9
+016dab04  mov w8,#0x8f82
+016dab08  movk w8,#0x11, LSL #16
+016dab0c  csel w0,w8,w9,eq
+016dab10  ldr x20,[sp], #0x20
+016dab14  ret
+016dab18  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dab1c_AppConst__get_IOS_APPID.txt
+================================================================================
+Function: AppConst$$get_IOS_APPID @ 016dab1c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp279 @ 01083814
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonScriptableObject<object>$$get_Instance @ 01e09560
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.AppConstWrap$$_g_get_IOS_APPID @ 011ac1b8
+
+--- Listing ---
+016dab1c  str x20,[sp, #-0x20]!
+016dab20  stp x19,x30,[sp, #0x10]
+016dab24  adrp x20,0x3577000
+016dab28  adrp x19,0x330e000
+016dab2c  ldrb w8,[x20, #0xd7e]
+016dab30  ldr x19,[x19, #0x290]
+016dab34  tbnz w8,#0x0,0x016dab88
+016dab38  adrp x0,0x330e000
+016dab3c  ldr x0,[x0, #0x290]
+016dab40  bl 0x00b0789c
+016dab44  adrp x0,0x333f000
+016dab48  ldr x0,[x0, #0x50]
+016dab4c  bl 0x00b0789c
+016dab50  adrp x0,0x3370000
+016dab54  ldr x0,[x0, #0x138]
+016dab58  bl 0x00b0789c
+016dab5c  adrp x0,0x3312000
+016dab60  ldr x0,[x0, #0xa48]
+016dab64  bl 0x00b0789c
+016dab68  adrp x0,0x337b000
+016dab6c  ldr x0,[x0, #0x9c8]
+016dab70  bl 0x00b0789c
+016dab74  adrp x0,0x3344000
+016dab78  ldr x0,[x0, #0xa0]
+016dab7c  bl 0x00b0789c
+016dab80  mov w8,#0x1
+016dab84  strb w8,[x20, #0xd7e]
+016dab88  ldr x0,[x19]
+016dab8c  ldr w8,[x0, #0xe0]
+016dab90  cbnz w8,0x016dab9c
+016dab94  bl 0x00b0798c
+016dab98  ldr x0,[x19]
+016dab9c  ldr x8,[x0, #0xb8]
+016daba0  ldr x0,[x8, #0x18]
+016daba4  cbz x0,0x016dabb8
+016daba8  ldp x19,x30,[sp, #0x10]
+016dabac  mov x1,xzr
+016dabb0  ldr x20,[sp], #0x20
+016dabb4  b 0x01083814
+016dabb8  adrp x8,0x333f000
+016dabbc  ldr x8,[x8, #0x50]
+016dabc0  ldr x0,[x8]
+016dabc4  bl 0x01e09560
+016dabc8  cbz x0,0x016dac24
+016dabcc  ldr w8,[x0, #0x1c]
+016dabd0  cmp w8,#0x4
+016dabd4  b.eq 0x016dac00
+016dabd8  cmp w8,#0x6
+016dabdc  b.eq 0x016dabf4
+016dabe0  cmp w8,#0x5
+016dabe4  b.ne 0x016dac0c
+016dabe8  adrp x8,0x3344000
+016dabec  ldr x8,[x8, #0xa0]
+016dabf0  b 0x016dac14
+016dabf4  adrp x8,0x3312000
+016dabf8  ldr x8,[x8, #0xa48]
+016dabfc  b 0x016dac14
+016dac00  adrp x8,0x3370000
+016dac04  ldr x8,[x8, #0x138]
+016dac08  b 0x016dac14
+016dac0c  adrp x8,0x337b000
+016dac10  ldr x8,[x8, #0x9c8]
+016dac14  ldr x0,[x8]
+016dac18  ldp x19,x30,[sp, #0x10]
+016dac1c  ldr x20,[sp], #0x20
+016dac20  ret
+016dac24  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dac28_AppConst__get_GoogleWebClient.txt
+================================================================================
+Function: AppConst$$get_GoogleWebClient @ 016dac28
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp279 @ 01083814
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.SingletonScriptableObject<object>$$get_Instance @ 01e09560
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.AppConstWrap$$_g_get_GoogleWebClient @ 011ac2fc
+
+--- Listing ---
+016dac28  str x20,[sp, #-0x20]!
+016dac2c  stp x19,x30,[sp, #0x10]
+016dac30  adrp x20,0x3577000
+016dac34  adrp x19,0x330e000
+016dac38  ldrb w8,[x20, #0xd7f]
+016dac3c  ldr x19,[x19, #0x290]
+016dac40  tbnz w8,#0x0,0x016dac7c
+016dac44  adrp x0,0x330e000
+016dac48  ldr x0,[x0, #0x290]
+016dac4c  bl 0x00b0789c
+016dac50  adrp x0,0x333f000
+016dac54  ldr x0,[x0, #0x50]
+016dac58  bl 0x00b0789c
+016dac5c  adrp x0,0x332e000
+016dac60  ldr x0,[x0, #0xd20]
+016dac64  bl 0x00b0789c
+016dac68  adrp x0,0x3328000
+016dac6c  ldr x0,[x0, #0x378]
+016dac70  bl 0x00b0789c
+016dac74  mov w8,#0x1
+016dac78  strb w8,[x20, #0xd7f]
+016dac7c  ldr x0,[x19]
+016dac80  ldr w8,[x0, #0xe0]
+016dac84  cbnz w8,0x016dac90
+016dac88  bl 0x00b0798c
+016dac8c  ldr x0,[x19]
+016dac90  ldr x8,[x0, #0xb8]
+016dac94  ldr x0,[x8, #0x20]
+016dac98  cbz x0,0x016dacac
+016dac9c  ldp x19,x30,[sp, #0x10]
+016daca0  mov x1,xzr
+016daca4  ldr x20,[sp], #0x20
+016daca8  b 0x01083814
+016dacac  adrp x8,0x333f000
+016dacb0  ldr x8,[x8, #0x50]
+016dacb4  ldr x0,[x8]
+016dacb8  bl 0x01e09560
+016dacbc  cbz x0,0x016dacf4
+016dacc0  ldr w8,[x0, #0x1c]
+016dacc4  cmp w8,#0x4
+016dacc8  b.eq 0x016dacdc
+016daccc  cmp w8,#0x5
+016dacd0  adrp x8,0x3328000
+016dacd4  ldr x8,[x8, #0x378]
+016dacd8  b 0x016dace4
+016dacdc  adrp x8,0x332e000
+016dace0  ldr x8,[x8, #0xd20]
+016dace4  ldr x0,[x8]
+016dace8  ldp x19,x30,[sp, #0x10]
+016dacec  ldr x20,[sp], #0x20
+016dacf0  ret
+016dacf4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dacf8_AppConst__get_Mark.txt
+================================================================================
+Function: AppConst$$get_Mark @ 016dacf8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp279 @ 01083814
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonScriptableObject<object>$$get_Instance @ 01e09560
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> AliothEngine.Android.VasDollyHelper$$GetChannel @ 016a857c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.AppConstWrap$$_g_get_Mark @ 011ac440
+  <- ProtocolGame_HttpRequest$$GetRegisterURL @ 00ddac14
+  <- ProtocolGame_HttpRequest$$V3_POST_Anon @ 00dd6180
+  <- QuickSDKListener_S1$$onSucceed @ 00db8ed8
+  <- AliothEngine.GameUpdateService.<VersionCheckUpdate>d__54$$MoveNext @ 01680e68
+  <- ProtocolGame_HttpRequest$$GetDefaultParams @ 00ddbf58
+  <- LoginGateMono$$RequestGetAllinOne @ 00f91e18
+  <- ProtocolGame_HttpRequest$$GetBindingURL @ 00ddb610
+
+--- Listing ---
+016dacf8  str x20,[sp, #-0x20]!
+016dacfc  stp x19,x30,[sp, #0x10]
+016dad00  adrp x20,0x3577000
+016dad04  adrp x19,0x330e000
+016dad08  ldrb w8,[x20, #0xd80]
+016dad0c  ldr x19,[x19, #0x290]
+016dad10  tbnz w8,#0x0,0x016dad70
+016dad14  adrp x0,0x330e000
+016dad18  ldr x0,[x0, #0x290]
+016dad1c  bl 0x00b0789c
+016dad20  adrp x0,0x333f000
+016dad24  ldr x0,[x0, #0x50]
+016dad28  bl 0x00b0789c
+016dad2c  adrp x0,0x3340000
+016dad30  ldr x0,[x0, #0x418]
+016dad34  bl 0x00b0789c
+016dad38  adrp x0,0x335a000
+016dad3c  ldr x0,[x0, #0xc00]
+016dad40  bl 0x00b0789c
+016dad44  adrp x0,0x3338000
+016dad48  ldr x0,[x0, #0x9e0]
+016dad4c  bl 0x00b0789c
+016dad50  adrp x0,0x331e000
+016dad54  ldr x0,[x0, #0x910]
+016dad58  bl 0x00b0789c
+016dad5c  adrp x0,0x3376000
+016dad60  ldr x0,[x0, #0x4e0]
+016dad64  bl 0x00b0789c
+016dad68  mov w8,#0x1
+016dad6c  strb w8,[x20, #0xd80]
+016dad70  ldr x0,[x19]
+016dad74  ldr w8,[x0, #0xe0]
+016dad78  cbnz w8,0x016dad84
+016dad7c  bl 0x00b0798c
+016dad80  ldr x0,[x19]
+016dad84  ldr x8,[x0, #0xb8]
+016dad88  ldr x0,[x8, #0x28]
+016dad8c  cbz x0,0x016dada0
+016dad90  ldp x19,x30,[sp, #0x10]
+016dad94  mov x1,xzr
+016dad98  ldr x20,[sp], #0x20
+016dad9c  b 0x01083814
+016dada0  bl 0x016a857c
+016dada4  mov x1,xzr
+016dada8  mov x19,x0
+016dadac  bl 0x01fdf3a0
+016dadb0  tbz w0,#0x0,0x016dae2c
+016dadb4  adrp x8,0x333f000
+016dadb8  ldr x8,[x8, #0x50]
+016dadbc  ldr x0,[x8]
+016dadc0  bl 0x01e09560
+016dadc4  cbz x0,0x016dae3c
+016dadc8  ldr w8,[x0, #0x1c]
+016dadcc  sub w8,w8,#0x3
+016dadd0  cmp w8,#0x4
+016dadd4  b.hi 0x016dae20
+016dadd8  adrp x9,0x26dd000
+016daddc  add x9,x9,#0x110
+016dade0  adr x10,0x16dadf0
+016dade4  ldrb w11,[x9, x8, LSL ]
+016dade8  add x10,x10,x11, LSL #0x2
+016dadec  br x10
+016dadf0  adrp x8,0x331e000
+016dadf4  ldr x8,[x8, #0x910]
+016dadf8  b 0x016dae28
+016dadfc  adrp x8,0x3338000
+016dae00  ldr x8,[x8, #0x9e0]
+016dae04  b 0x016dae28
+016dae08  adrp x8,0x3340000
+016dae0c  ldr x8,[x8, #0x418]
+016dae10  b 0x016dae28
+016dae14  adrp x8,0x335a000
+016dae18  ldr x8,[x8, #0xc00]
+016dae1c  b 0x016dae28
+016dae20  adrp x8,0x3376000
+016dae24  ldr x8,[x8, #0x4e0]
+016dae28  ldr x19,[x8]
+016dae2c  mov x0,x19
+016dae30  ldp x19,x30,[sp, #0x10]
+016dae34  ldr x20,[sp], #0x20
+016dae38  ret
+016dae3c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dae40_AppConst__get_platform.txt
+================================================================================
+Function: AppConst$$get_platform @ 016dae40
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp281 @ 01083a9c
+  -> UnityEngine.Application$$get_platform @ 024f2b84
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.AppConstWrap$$_g_get_platform @ 011ac584
+  <- ProtocolGame_HttpRequest$$get_platform @ 00ddaad0
+
+--- Listing ---
+016dae40  str x20,[sp, #-0x20]!
+016dae44  stp x19,x30,[sp, #0x10]
+016dae48  adrp x20,0x3577000
+016dae4c  adrp x19,0x330e000
+016dae50  ldrb w8,[x20, #0xd81]
+016dae54  ldr x19,[x19, #0x290]
+016dae58  tbnz w8,#0x0,0x016dae70
+016dae5c  adrp x0,0x330e000
+016dae60  ldr x0,[x0, #0x290]
+016dae64  bl 0x00b0789c
+016dae68  mov w8,#0x1
+016dae6c  strb w8,[x20, #0xd81]
+016dae70  ldr x0,[x19]
+016dae74  ldr w8,[x0, #0xe0]
+016dae78  cbnz w8,0x016dae84
+016dae7c  bl 0x00b0798c
+016dae80  ldr x0,[x19]
+016dae84  ldr x8,[x0, #0xb8]
+016dae88  ldr x0,[x8, #0x30]
+016dae8c  cbz x0,0x016daea0
+016dae90  ldp x19,x30,[sp, #0x10]
+016dae94  mov x1,xzr
+016dae98  ldr x20,[sp], #0x20
+016dae9c  b 0x01083a9c
+016daea0  bl 0x024f2b84
+016daea4  cmp w0,#0x8
+016daea8  b.ne 0x016daeb4
+016daeac  mov w0,#0x1
+016daeb0  b 0x016daec0
+016daeb4  mov x0,xzr
+016daeb8  bl 0x024f2b84
+016daebc  mov w0,wzr
+016daec0  ldp x19,x30,[sp, #0x10]
+016daec4  ldr x20,[sp], #0x20
+016daec8  ret
+
+
+================================================================================
+### FILE: 016daecc_AppConst__.cctor.txt
+================================================================================
+Function: AppConst$$.cctor @ 016daecc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+016daecc  stp x21,x20,[sp, #-0x20]!
+016daed0  stp x19,x30,[sp, #0x10]
+016daed4  adrp x19,0x3577000
+016daed8  adrp x20,0x3308000
+016daedc  ldrb w8,[x19, #0xd82]
+016daee0  ldr x20,[x20, #0x9a8]
+016daee4  tbnz w8,#0x0,0x016db04c
+016daee8  adrp x0,0x330e000
+016daeec  ldr x0,[x0, #0x290]
+016daef0  bl 0x00b0789c
+016daef4  adrp x0,0x3308000
+016daef8  ldr x0,[x0, #0x9a8]
+016daefc  bl 0x00b0789c
+016daf00  adrp x0,0x335c000
+016daf04  ldr x0,[x0, #0xe20]
+016daf08  bl 0x00b0789c
+016daf0c  adrp x0,0x3351000
+016daf10  ldr x0,[x0, #0xa10]
+016daf14  bl 0x00b0789c
+016daf18  adrp x0,0x3314000
+016daf1c  ldr x0,[x0, #0x2c0]
+016daf20  bl 0x00b0789c
+016daf24  adrp x0,0x3352000
+016daf28  ldr x0,[x0, #0x9b0]
+016daf2c  bl 0x00b0789c
+016daf30  adrp x0,0x3345000
+016daf34  ldr x0,[x0, #0x790]
+016daf38  bl 0x00b0789c
+016daf3c  adrp x0,0x3382000
+016daf40  ldr x0,[x0, #0x968]
+016daf44  bl 0x00b0789c
+016daf48  adrp x0,0x335f000
+016daf4c  ldr x0,[x0, #0xe30]
+016daf50  bl 0x00b0789c
+016daf54  adrp x0,0x3313000
+016daf58  ldr x0,[x0, #0xb50]
+016daf5c  bl 0x00b0789c
+016daf60  adrp x0,0x3361000
+016daf64  ldr x0,[x0, #0xe30]
+016daf68  bl 0x00b0789c
+016daf6c  adrp x0,0x3348000
+016daf70  ldr x0,[x0, #0xc18]
+016daf74  bl 0x00b0789c
+016daf78  adrp x0,0x330c000
+016daf7c  ldr x0,[x0, #0x440]
+016daf80  bl 0x00b0789c
+016daf84  adrp x0,0x3358000
+016daf88  ldr x0,[x0, #0x108]
+016daf8c  bl 0x00b0789c
+016daf90  adrp x0,0x3382000
+016daf94  ldr x0,[x0, #0x780]
+016daf98  bl 0x00b0789c
+016daf9c  adrp x0,0x3319000
+016dafa0  ldr x0,[x0, #0x5a0]
+016dafa4  bl 0x00b0789c
+016dafa8  adrp x0,0x3354000
+016dafac  ldr x0,[x0, #0x860]
+016dafb0  bl 0x00b0789c
+016dafb4  adrp x0,0x337b000
+016dafb8  ldr x0,[x0, #0x930]
+016dafbc  bl 0x00b0789c
+016dafc0  adrp x0,0x3336000
+016dafc4  ldr x0,[x0, #0x5f8]
+016dafc8  bl 0x00b0789c
+016dafcc  adrp x0,0x336d000
+016dafd0  ldr x0,[x0, #0x548]
+016dafd4  bl 0x00b0789c
+016dafd8  adrp x0,0x3370000
+016dafdc  ldr x0,[x0, #0x4e0]
+016dafe0  bl 0x00b0789c
+016dafe4  adrp x0,0x3335000
+016dafe8  ldr x0,[x0, #0xd70]
+016dafec  bl 0x00b0789c
+016daff0  adrp x0,0x334a000
+016daff4  ldr x0,[x0, #0xea8]
+016daff8  bl 0x00b0789c
+016daffc  adrp x0,0x3311000
+016db000  ldr x0,[x0, #0x520]
+016db004  bl 0x00b0789c
+016db008  adrp x0,0x335f000
+016db00c  ldr x0,[x0, #0xed0]
+016db010  bl 0x00b0789c
+016db014  adrp x0,0x3353000
+016db018  ldr x0,[x0, #0xe48]
+016db01c  bl 0x00b0789c
+016db020  adrp x0,0x333a000
+016db024  ldr x0,[x0, #0xd20]
+016db028  bl 0x00b0789c
+016db02c  adrp x0,0x3357000
+016db030  ldr x0,[x0, #0x7d0]
+016db034  bl 0x00b0789c
+016db038  adrp x0,0x333a000
+016db03c  ldr x0,[x0, #0x778]
+016db040  bl 0x00b0789c
+016db044  mov w8,#0x1
+016db048  strb w8,[x19, #0xd82]
+016db04c  ldr x0,[x20]
+016db050  mov w1,#0x1b
+016db054  bl 0x00b078f8
+016db058  cbz x0,0x016db90c
+016db05c  adrp x20,0x3336000
+016db060  ldr x20,[x20, #0x5f8]
+016db064  mov x19,x0
+016db068  ldr x1,[x20]
+016db06c  cbz x1,0x016db094
+016db070  ldr x8,[x19]
+016db074  mov x0,x1
+016db078  ldr x8,[x8, #0x40]
+016db07c  mov x1,x8
+016db080  bl 0x00b07990
+016db084  cbz x0,0x016db900
+016db088  ldr x8,[x20]
+016db08c  mov x1,x8
+016db090  b 0x016db098
+016db094  mov x8,xzr
+016db098  mov x20,x19
+016db09c  ldr w9,[x20, #0x18]!
+016db0a0  cbz w9,0x016db8fc
+016db0a4  adrp x21,0x335f000
+016db0a8  ldr x21,[x21, #0xe30]
+016db0ac  mov x0,x19
+016db0b0  str x8,[x0, #0x20]!
+016db0b4  bl 0x00b07850
+016db0b8  ldr x1,[x21]
+016db0bc  cbz x1,0x016db0e4
+016db0c0  ldr x8,[x19]
+016db0c4  mov x0,x1
+016db0c8  ldr x8,[x8, #0x40]
+016db0cc  mov x1,x8
+016db0d0  bl 0x00b07990
+016db0d4  cbz x0,0x016db900
+016db0d8  ldr x8,[x21]
+016db0dc  mov x1,x8
+016db0e0  b 0x016db0e8
+016db0e4  mov x8,xzr
+016db0e8  ldr w9,[x20]
+016db0ec  cmp w9,#0x1
+016db0f0  b.ls 0x016db8fc
+016db0f4  adrp x21,0x3354000
+016db0f8  ldr x21,[x21, #0x860]
+016db0fc  mov x0,x19
+016db100  str x8,[x0, #0x28]!
+016db104  bl 0x00b07850
+016db108  ldr x1,[x21]
+016db10c  cbz x1,0x016db134
+016db110  ldr x8,[x19]
+016db114  mov x0,x1
+016db118  ldr x8,[x8, #0x40]
+016db11c  mov x1,x8
+016db120  bl 0x00b07990
+016db124  cbz x0,0x016db900
+016db128  ldr x8,[x21]
+016db12c  mov x1,x8
+016db130  b 0x016db138
+016db134  mov x8,xzr
+016db138  ldr w9,[x20]
+016db13c  cmp w9,#0x2
+016db140  b.ls 0x016db8fc
+016db144  adrp x21,0x336d000
+016db148  ldr x21,[x21, #0x548]
+016db14c  mov x0,x19
+016db150  str x8,[x0, #0x30]!
+016db154  bl 0x00b07850
+016db158  ldr x1,[x21]
+016db15c  cbz x1,0x016db184
+016db160  ldr x8,[x19]
+016db164  mov x0,x1
+016db168  ldr x8,[x8, #0x40]
+016db16c  mov x1,x8
+016db170  bl 0x00b07990
+016db174  cbz x0,0x016db900
+016db178  ldr x8,[x21]
+016db17c  mov x1,x8
+016db180  b 0x016db188
+016db184  mov x8,xzr
+016db188  ldr w9,[x20]
+016db18c  cmp w9,#0x3
+016db190  b.ls 0x016db8fc
+016db194  adrp x21,0x3382000
+016db198  ldr x21,[x21, #0x968]
+016db19c  mov x0,x19
+016db1a0  str x8,[x0, #0x38]!
+016db1a4  bl 0x00b07850
+016db1a8  ldr x1,[x21]
+016db1ac  cbz x1,0x016db1d4
+016db1b0  ldr x8,[x19]
+016db1b4  mov x0,x1
+016db1b8  ldr x8,[x8, #0x40]
+016db1bc  mov x1,x8
+016db1c0  bl 0x00b07990
+016db1c4  cbz x0,0x016db900
+016db1c8  ldr x8,[x21]
+016db1cc  mov x1,x8
+016db1d0  b 0x016db1d8
+016db1d4  mov x8,xzr
+016db1d8  ldr w9,[x20]
+016db1dc  cmp w9,#0x4
+016db1e0  b.ls 0x016db8fc
+016db1e4  adrp x21,0x330c000
+016db1e8  ldr x21,[x21, #0x440]
+016db1ec  mov x0,x19
+016db1f0  str x8,[x0, #0x40]!
+016db1f4  bl 0x00b07850
+016db1f8  ldr x1,[x21]
+016db1fc  cbz x1,0x016db224
+016db200  ldr x8,[x19]
+016db204  mov x0,x1
+016db208  ldr x8,[x8, #0x40]
+016db20c  mov x1,x8
+016db210  bl 0x00b07990
+016db214  cbz x0,0x016db900
+016db218  ldr x8,[x21]
+016db21c  mov x1,x8
+016db220  b 0x016db228
+016db224  mov x8,xzr
+016db228  ldr w9,[x20]
+016db22c  cmp w9,#0x5
+016db230  b.ls 0x016db8fc
+016db234  adrp x21,0x335c000
+016db238  ldr x21,[x21, #0xe20]
+016db23c  mov x0,x19
+016db240  str x8,[x0, #0x48]!
+016db244  bl 0x00b07850
+016db248  ldr x1,[x21]
+016db24c  cbz x1,0x016db274
+016db250  ldr x8,[x19]
+016db254  mov x0,x1
+016db258  ldr x8,[x8, #0x40]
+016db25c  mov x1,x8
+016db260  bl 0x00b07990
+016db264  cbz x0,0x016db900
+016db268  ldr x8,[x21]
+016db26c  mov x1,x8
+016db270  b 0x016db278
+016db274  mov x8,xzr
+016db278  ldr w9,[x20]
+016db27c  cmp w9,#0x6
+016db280  b.ls 0x016db8fc
+016db284  adrp x21,0x3319000
+016db288  ldr x21,[x21, #0x5a0]
+016db28c  mov x0,x19
+016db290  str x8,[x0, #0x50]!
+016db294  bl 0x00b07850
+016db298  ldr x1,[x21]
+016db29c  cbz x1,0x016db2c4
+016db2a0  ldr x8,[x19]
+016db2a4  mov x0,x1
+016db2a8  ldr x8,[x8, #0x40]
+016db2ac  mov x1,x8
+016db2b0  bl 0x00b07990
+016db2b4  cbz x0,0x016db900
+016db2b8  ldr x8,[x21]
+016db2bc  mov x1,x8
+016db2c0  b 0x016db2c8
+016db2c4  mov x8,xzr
+016db2c8  ldr w9,[x20]
+016db2cc  cmp w9,#0x7
+016db2d0  b.ls 0x016db8fc
+016db2d4  adrp x21,0x3313000
+016db2d8  ldr x21,[x21, #0xb50]
+016db2dc  mov x0,x19
+016db2e0  str x8,[x0, #0x58]!
+016db2e4  bl 0x00b07850
+016db2e8  ldr x1,[x21]
+016db2ec  cbz x1,0x016db314
+016db2f0  ldr x8,[x19]
+016db2f4  mov x0,x1
+016db2f8  ldr x8,[x8, #0x40]
+016db2fc  mov x1,x8
+016db300  bl 0x00b07990
+016db304  cbz x0,0x016db900
+016db308  ldr x8,[x21]
+016db30c  mov x1,x8
+016db310  b 0x016db318
+016db314  mov x8,xzr
+016db318  ldr w9,[x20]
+016db31c  cmp w9,#0x8
+016db320  b.ls 0x016db8fc
+016db324  adrp x21,0x3311000
+016db328  ldr x21,[x21, #0x520]
+016db32c  mov x0,x19
+016db330  str x8,[x0, #0x60]!
+016db334  bl 0x00b07850
+016db338  ldr x1,[x21]
+016db33c  cbz x1,0x016db364
+016db340  ldr x8,[x19]
+016db344  mov x0,x1
+016db348  ldr x8,[x8, #0x40]
+016db34c  mov x1,x8
+016db350  bl 0x00b07990
+016db354  cbz x0,0x016db900
+016db358  ldr x8,[x21]
+016db35c  mov x1,x8
+016db360  b 0x016db368
+016db364  mov x8,xzr
+016db368  ldr w9,[x20]
+016db36c  cmp w9,#0x9
+016db370  b.ls 0x016db8fc
+016db374  adrp x21,0x3353000
+016db378  ldr x21,[x21, #0xe48]
+016db37c  mov x0,x19
+016db380  str x8,[x0, #0x68]!
+016db384  bl 0x00b07850
+016db388  ldr x1,[x21]
+016db38c  cbz x1,0x016db3b4
+016db390  ldr x8,[x19]
+016db394  mov x0,x1
+016db398  ldr x8,[x8, #0x40]
+016db39c  mov x1,x8
+016db3a0  bl 0x00b07990
+016db3a4  cbz x0,0x016db900
+016db3a8  ldr x8,[x21]
+016db3ac  mov x1,x8
+016db3b0  b 0x016db3b8
+016db3b4  mov x8,xzr
+016db3b8  ldr w9,[x20]
+016db3bc  cmp w9,#0xa
+016db3c0  b.ls 0x016db8fc
+016db3c4  adrp x21,0x3358000
+016db3c8  ldr x21,[x21, #0x108]
+016db3cc  mov x0,x19
+016db3d0  str x8,[x0, #0x70]!
+016db3d4  bl 0x00b07850
+016db3d8  ldr x1,[x21]
+016db3dc  cbz x1,0x016db404
+016db3e0  ldr x8,[x19]
+016db3e4  mov x0,x1
+016db3e8  ldr x8,[x8, #0x40]
+016db3ec  mov x1,x8
+016db3f0  bl 0x00b07990
+016db3f4  cbz x0,0x016db900
+016db3f8  ldr x8,[x21]
+016db3fc  mov x1,x8
+016db400  b 0x016db408
+016db404  mov x8,xzr
+016db408  ldr w9,[x20]
+016db40c  cmp w9,#0xb
+016db410  b.ls 0x016db8fc
+016db414  adrp x21,0x3335000
+016db418  ldr x21,[x21, #0xd70]
+016db41c  mov x0,x19
+016db420  str x8,[x0, #0x78]!
+016db424  bl 0x00b07850
+016db428  ldr x1,[x21]
+016db42c  cbz x1,0x016db454
+016db430  ldr x8,[x19]
+016db434  mov x0,x1
+016db438  ldr x8,[x8, #0x40]
+016db43c  mov x1,x8
+016db440  bl 0x00b07990
+016db444  cbz x0,0x016db900
+016db448  ldr x8,[x21]
+016db44c  mov x1,x8
+016db450  b 0x016db458
+016db454  mov x8,xzr
+016db458  ldr w9,[x20]
+016db45c  cmp w9,#0xc
+016db460  b.ls 0x016db8fc
+016db464  adrp x21,0x3357000
+016db468  ldr x21,[x21, #0x7d0]
+016db46c  mov x0,x19
+016db470  str x8,[x0, #0x80]!
+016db474  bl 0x00b07850
+016db478  ldr x1,[x21]
+016db47c  cbz x1,0x016db4a4
+016db480  ldr x8,[x19]
+016db484  mov x0,x1
+016db488  ldr x8,[x8, #0x40]
+016db48c  mov x1,x8
+016db490  bl 0x00b07990
+016db494  cbz x0,0x016db900
+016db498  ldr x8,[x21]
+016db49c  mov x1,x8
+016db4a0  b 0x016db4a8
+016db4a4  mov x8,xzr
+016db4a8  ldr w9,[x20]
+016db4ac  cmp w9,#0xd
+016db4b0  b.ls 0x016db8fc
+016db4b4  adrp x21,0x3370000
+016db4b8  ldr x21,[x21, #0x4e0]
+016db4bc  mov x0,x19
+016db4c0  str x8,[x0, #0x88]!
+016db4c4  bl 0x00b07850
+016db4c8  ldr x1,[x21]
+016db4cc  cbz x1,0x016db4f4
+016db4d0  ldr x8,[x19]
+016db4d4  mov x0,x1
+016db4d8  ldr x8,[x8, #0x40]
+016db4dc  mov x1,x8
+016db4e0  bl 0x00b07990
+016db4e4  cbz x0,0x016db900
+016db4e8  ldr x8,[x21]
+016db4ec  mov x1,x8
+016db4f0  b 0x016db4f8
+016db4f4  mov x8,xzr
+016db4f8  ldr w9,[x20]
+016db4fc  cmp w9,#0xe
+016db500  b.ls 0x016db8fc
+016db504  adrp x21,0x3352000
+016db508  ldr x21,[x21, #0x9b0]
+016db50c  mov x0,x19
+016db510  str x8,[x0, #0x90]!
+016db514  bl 0x00b07850
+016db518  ldr x1,[x21]
+016db51c  cbz x1,0x016db544
+016db520  ldr x8,[x19]
+016db524  mov x0,x1
+016db528  ldr x8,[x8, #0x40]
+016db52c  mov x1,x8
+016db530  bl 0x00b07990
+016db534  cbz x0,0x016db900
+016db538  ldr x8,[x21]
+016db53c  mov x1,x8
+016db540  b 0x016db548
+016db544  mov x8,xzr
+016db548  ldr w9,[x20]
+016db54c  cmp w9,#0xf
+016db550  b.ls 0x016db8fc
+016db554  adrp x21,0x337b000
+016db558  ldr x21,[x21, #0x930]
+016db55c  mov x0,x19
+016db560  str x8,[x0, #0x98]!
+016db564  bl 0x00b07850
+016db568  ldr x1,[x21]
+016db56c  cbz x1,0x016db594
+016db570  ldr x8,[x19]
+016db574  mov x0,x1
+016db578  ldr x8,[x8, #0x40]
+016db57c  mov x1,x8
+016db580  bl 0x00b07990
+016db584  cbz x0,0x016db900
+016db588  ldr x8,[x21]
+016db58c  mov x1,x8
+016db590  b 0x016db598
+016db594  mov x8,xzr
+016db598  ldr w9,[x20]
+016db59c  cmp w9,#0x10
+016db5a0  b.ls 0x016db8fc
+016db5a4  adrp x21,0x3351000
+016db5a8  ldr x21,[x21, #0xa10]
+016db5ac  mov x0,x19
+016db5b0  str x8,[x0, #0xa0]!
+016db5b4  bl 0x00b07850
+016db5b8  ldr x1,[x21]
+016db5bc  cbz x1,0x016db5e4
+016db5c0  ldr x8,[x19]
+016db5c4  mov x0,x1
+016db5c8  ldr x8,[x8, #0x40]
+016db5cc  mov x1,x8
+016db5d0  bl 0x00b07990
+016db5d4  cbz x0,0x016db900
+016db5d8  ldr x8,[x21]
+016db5dc  mov x1,x8
+016db5e0  b 0x016db5e8
+016db5e4  mov x8,xzr
+016db5e8  ldr w9,[x20]
+016db5ec  cmp w9,#0x11
+016db5f0  b.ls 0x016db8fc
+016db5f4  adrp x21,0x3345000
+016db5f8  ldr x21,[x21, #0x790]
+016db5fc  mov x0,x19
+016db600  str x8,[x0, #0xa8]!
+016db604  bl 0x00b07850
+016db608  ldr x1,[x21]
+016db60c  cbz x1,0x016db634
+016db610  ldr x8,[x19]
+016db614  mov x0,x1
+016db618  ldr x8,[x8, #0x40]
+016db61c  mov x1,x8
+016db620  bl 0x00b07990
+016db624  cbz x0,0x016db900
+016db628  ldr x8,[x21]
+016db62c  mov x1,x8
+016db630  b 0x016db638
+016db634  mov x8,xzr
+016db638  ldr w9,[x20]
+016db63c  cmp w9,#0x12
+016db640  b.ls 0x016db8fc
+016db644  adrp x21,0x335f000
+016db648  ldr x21,[x21, #0xed0]
+016db64c  mov x0,x19
+016db650  str x8,[x0, #0xb0]!
+016db654  bl 0x00b07850
+016db658  ldr x1,[x21]
+016db65c  cbz x1,0x016db684
+016db660  ldr x8,[x19]
+016db664  mov x0,x1
+016db668  ldr x8,[x8, #0x40]
+016db66c  mov x1,x8
+016db670  bl 0x00b07990
+016db674  cbz x0,0x016db900
+016db678  ldr x8,[x21]
+016db67c  mov x1,x8
+016db680  b 0x016db688
+016db684  mov x8,xzr
+016db688  ldr w9,[x20]
+016db68c  cmp w9,#0x13
+016db690  b.ls 0x016db8fc
+016db694  adrp x21,0x333a000
+016db698  ldr x21,[x21, #0x778]
+016db69c  mov x0,x19
+016db6a0  str x8,[x0, #0xb8]!
+016db6a4  bl 0x00b07850
+016db6a8  ldr x1,[x21]
+016db6ac  cbz x1,0x016db6d4
+016db6b0  ldr x8,[x19]
+016db6b4  mov x0,x1
+016db6b8  ldr x8,[x8, #0x40]
+016db6bc  mov x1,x8
+016db6c0  bl 0x00b07990
+016db6c4  cbz x0,0x016db900
+016db6c8  ldr x8,[x21]
+016db6cc  mov x1,x8
+016db6d0  b 0x016db6d8
+016db6d4  mov x8,xzr
+016db6d8  ldr w9,[x20]
+016db6dc  cmp w9,#0x14
+016db6e0  b.ls 0x016db8fc
+016db6e4  adrp x21,0x3314000
+016db6e8  ldr x21,[x21, #0x2c0]
+016db6ec  mov x0,x19
+016db6f0  str x8,[x0, #0xc0]!
+016db6f4  bl 0x00b07850
+016db6f8  ldr x1,[x21]
+016db6fc  cbz x1,0x016db724
+016db700  ldr x8,[x19]
+016db704  mov x0,x1
+016db708  ldr x8,[x8, #0x40]
+016db70c  mov x1,x8
+016db710  bl 0x00b07990
+016db714  cbz x0,0x016db900
+016db718  ldr x8,[x21]
+016db71c  mov x1,x8
+016db720  b 0x016db728
+016db724  mov x8,xzr
+016db728  ldr w9,[x20]
+016db72c  cmp w9,#0x15
+016db730  b.ls 0x016db8fc
+016db734  adrp x21,0x3382000
+016db738  ldr x21,[x21, #0x780]
+016db73c  mov x0,x19
+016db740  str x8,[x0, #0xc8]!
+016db744  bl 0x00b07850
+016db748  ldr x1,[x21]
+016db74c  cbz x1,0x016db774
+016db750  ldr x8,[x19]
+016db754  mov x0,x1
+016db758  ldr x8,[x8, #0x40]
+016db75c  mov x1,x8
+016db760  bl 0x00b07990
+016db764  cbz x0,0x016db900
+016db768  ldr x8,[x21]
+016db76c  mov x1,x8
+016db770  b 0x016db778
+016db774  mov x8,xzr
+016db778  ldr w9,[x20]
+016db77c  cmp w9,#0x16
+016db780  b.ls 0x016db8fc
+016db784  adrp x21,0x333a000
+016db788  ldr x21,[x21, #0xd20]
+016db78c  mov x0,x19
+016db790  str x8,[x0, #0xd0]!
+016db794  bl 0x00b07850
+016db798  ldr x1,[x21]
+016db79c  cbz x1,0x016db7c4
+016db7a0  ldr x8,[x19]
+016db7a4  mov x0,x1
+016db7a8  ldr x8,[x8, #0x40]
+016db7ac  mov x1,x8
+016db7b0  bl 0x00b07990
+016db7b4  cbz x0,0x016db900
+016db7b8  ldr x8,[x21]
+016db7bc  mov x1,x8
+016db7c0  b 0x016db7c8
+016db7c4  mov x8,xzr
+016db7c8  ldr w9,[x20]
+016db7cc  cmp w9,#0x17
+016db7d0  b.ls 0x016db8fc
+016db7d4  adrp x21,0x3361000
+016db7d8  ldr x21,[x21, #0xe30]
+016db7dc  mov x0,x19
+016db7e0  str x8,[x0, #0xd8]!
+016db7e4  bl 0x00b07850
+016db7e8  ldr x1,[x21]
+016db7ec  cbz x1,0x016db814
+016db7f0  ldr x8,[x19]
+016db7f4  mov x0,x1
+016db7f8  ldr x8,[x8, #0x40]
+016db7fc  mov x1,x8
+016db800  bl 0x00b07990
+016db804  cbz x0,0x016db900
+016db808  ldr x8,[x21]
+016db80c  mov x1,x8
+016db810  b 0x016db818
+016db814  mov x8,xzr
+016db818  ldr w9,[x20]
+016db81c  cmp w9,#0x18
+016db820  b.ls 0x016db8fc
+016db824  adrp x21,0x3348000
+016db828  ldr x21,[x21, #0xc18]
+016db82c  mov x0,x19
+016db830  str x8,[x0, #0xe0]!
+016db834  bl 0x00b07850
+016db838  ldr x1,[x21]
+016db83c  cbz x1,0x016db864
+016db840  ldr x8,[x19]
+016db844  mov x0,x1
+016db848  ldr x8,[x8, #0x40]
+016db84c  mov x1,x8
+016db850  bl 0x00b07990
+016db854  cbz x0,0x016db900
+016db858  ldr x8,[x21]
+016db85c  mov x1,x8
+016db860  b 0x016db868
+016db864  mov x8,xzr
+016db868  ldr w9,[x20]
+016db86c  cmp w9,#0x19
+016db870  b.ls 0x016db8fc
+016db874  adrp x21,0x334a000
+016db878  ldr x21,[x21, #0xea8]
+016db87c  mov x0,x19
+016db880  str x8,[x0, #0xe8]!
+016db884  bl 0x00b07850
+016db888  ldr x1,[x21]
+016db88c  cbz x1,0x016db8b4
+016db890  ldr x8,[x19]
+016db894  mov x0,x1
+016db898  ldr x8,[x8, #0x40]
+016db89c  mov x1,x8
+016db8a0  bl 0x00b07990
+016db8a4  cbz x0,0x016db900
+016db8a8  ldr x8,[x21]
+016db8ac  mov x1,x8
+016db8b0  b 0x016db8b8
+016db8b4  mov x8,xzr
+016db8b8  ldr w9,[x20]
+016db8bc  cmp w9,#0x1a
+016db8c0  b.ls 0x016db8fc
+016db8c4  adrp x20,0x330e000
+016db8c8  ldr x20,[x20, #0x290]
+016db8cc  mov x0,x19
+016db8d0  str x8,[x0, #0xf0]!
+016db8d4  bl 0x00b07850
+016db8d8  ldr x8,[x20]
+016db8dc  mov x1,x19
+016db8e0  ldr x8,[x8, #0xb8]
+016db8e4  str x19,[x8]
+016db8e8  ldr x8,[x20]
+016db8ec  ldp x19,x30,[sp, #0x10]
+016db8f0  ldr x0,[x8, #0xb8]
+016db8f4  ldp x21,x20,[sp], #0x20
+016db8f8  b 0x00b07850
+016db8fc  bl 0x00b079b8
+016db900  bl 0x00b079d4
+016db904  mov x1,xzr
+016db908  bl 0x00b07978
+016db90c  bl 0x00b079b0
+
+

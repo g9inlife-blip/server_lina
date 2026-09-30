@@ -1,0 +1,1434 @@
+================================================================================
+### FILE: 00dc4e2c_Cipher__.cctor.txt
+================================================================================
+Function: Cipher$$.cctor @ 00dc4e2c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00dc4e2c  str x22,[sp, #-0x30]!
+00dc4e30  stp x21,x20,[sp, #0x10]
+00dc4e34  stp x19,x30,[sp, #0x20]
+00dc4e38  adrp x22,0x3572000
+00dc4e3c  adrp x21,0x330f000
+00dc4e40  adrp x19,0x3356000
+00dc4e44  adrp x20,0x3351000
+00dc4e48  ldrb w8,[x22, #0x1a8]
+00dc4e4c  ldr x21,[x21, #0x588]
+00dc4e50  ldr x19,[x19, #0x290]
+00dc4e54  ldr x20,[x20, #0xa60]
+00dc4e58  tbnz w8,#0x0,0x00dc4e88
+00dc4e5c  adrp x0,0x3356000
+00dc4e60  ldr x0,[x0, #0x290]
+00dc4e64  bl 0x00b0789c
+00dc4e68  adrp x0,0x3351000
+00dc4e6c  ldr x0,[x0, #0xa60]
+00dc4e70  bl 0x00b0789c
+00dc4e74  adrp x0,0x330f000
+00dc4e78  ldr x0,[x0, #0x588]
+00dc4e7c  bl 0x00b0789c
+00dc4e80  mov w8,#0x1
+00dc4e84  strb w8,[x22, #0x1a8]
+00dc4e88  ldr x8,[x19]
+00dc4e8c  ldr x9,[x21]
+00dc4e90  ldr x8,[x8, #0xb8]
+00dc4e94  str x9,[x8]
+00dc4e98  ldr x8,[x19]
+00dc4e9c  ldr x1,[x21]
+00dc4ea0  ldr x0,[x8, #0xb8]
+00dc4ea4  bl 0x00b07850
+00dc4ea8  ldr x8,[x19]
+00dc4eac  ldr x1,[x20]
+00dc4eb0  ldr x0,[x8, #0xb8]
+00dc4eb4  str x1,[x0, #0x8]!
+00dc4eb8  ldp x19,x30,[sp, #0x20]
+00dc4ebc  ldp x21,x20,[sp, #0x10]
+00dc4ec0  ldr x22,[sp], #0x30
+00dc4ec4  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dc4ec8_Cipher__EncryptRJ128.txt
+================================================================================
+Function: Cipher$$EncryptRJ128 @ 00dc4ec8
+
+--- Calls OUT ---
+  -> Cipher$$EncryptRJ128Byte @ 00dc4f60
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Text.Encoding$$get_UTF8 @ 01ff8ca0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00dc4ec8  str x22,[sp, #-0x30]!
+00dc4ecc  stp x21,x20,[sp, #0x10]
+00dc4ed0  stp x19,x30,[sp, #0x20]
+00dc4ed4  adrp x22,0x3572000
+00dc4ed8  ldrb w8,[x22, #0x1a9]
+00dc4edc  mov x21,x2
+00dc4ee0  mov x19,x1
+00dc4ee4  mov x20,x0
+00dc4ee8  tbnz w8,#0x0,0x00dc4f00
+00dc4eec  adrp x0,0x3356000
+00dc4ef0  ldr x0,[x0, #0x290]
+00dc4ef4  bl 0x00b0789c
+00dc4ef8  mov w8,#0x1
+00dc4efc  strb w8,[x22, #0x1a9]
+00dc4f00  mov x0,xzr
+00dc4f04  bl 0x01ff8ca0
+00dc4f08  cbz x0,0x00dc4f5c
+00dc4f0c  ldr x8,[x0]
+00dc4f10  adrp x22,0x3356000
+00dc4f14  mov x1,x21
+00dc4f18  ldr x9,[x8, #0x268]
+00dc4f1c  ldr x2,[x8, #0x270]
+00dc4f20  ldr x22,[x22, #0x290]
+00dc4f24  blr x9
+00dc4f28  ldr x8,[x22]
+00dc4f2c  mov x21,x0
+00dc4f30  ldr w9,[x8, #0xe0]
+00dc4f34  cbnz w9,0x00dc4f40
+00dc4f38  mov x0,x8
+00dc4f3c  bl 0x00b0798c
+00dc4f40  mov x0,x20
+00dc4f44  mov x1,x19
+00dc4f48  mov x2,x21
+00dc4f4c  ldp x19,x30,[sp, #0x20]
+00dc4f50  ldp x21,x20,[sp, #0x10]
+00dc4f54  ldr x22,[sp], #0x30
+00dc4f58  b 0x00dc4f60
+00dc4f5c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc4f60_Cipher__EncryptRJ128Byte.txt
+================================================================================
+Function: Cipher$$EncryptRJ128Byte @ 00dc4f60
+
+--- Calls OUT ---
+  -> System.Security.Cryptography.CryptoStream$$.ctor @ 02005eb4
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Security.Cryptography.RijndaelManaged$$.ctor @ 0200fef4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.IO.MemoryStream$$.ctor @ 020a3bd8
+  -> System.Text.Encoding$$get_UTF8 @ 01ff8ca0
+  -> System.Convert$$ToBase64String @ 020e3f88
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Security.Cryptography.CryptoStream$$FlushFinalBlock @ 02006338
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- Cipher$$EncryptRJ128 @ 00dc4ec8
+
+--- Listing ---
+00dc4f60  stp x23,x22,[sp, #-0x30]!
+00dc4f64  stp x21,x20,[sp, #0x10]
+00dc4f68  stp x19,x30,[sp, #0x20]
+00dc4f6c  adrp x22,0x3572000
+00dc4f70  adrp x23,0x336a000
+00dc4f74  ldrb w8,[x22, #0x1aa]
+00dc4f78  ldr x23,[x23, #0xfc0]
+00dc4f7c  mov x19,x2
+00dc4f80  mov x20,x1
+00dc4f84  mov x21,x0
+00dc4f88  tbnz w8,#0x0,0x00dc4fc4
+00dc4f8c  adrp x0,0x3362000
+00dc4f90  ldr x0,[x0, #0xe28]
+00dc4f94  bl 0x00b0789c
+00dc4f98  adrp x0,0x3322000
+00dc4f9c  ldr x0,[x0, #0x688]
+00dc4fa0  bl 0x00b0789c
+00dc4fa4  adrp x0,0x3368000
+00dc4fa8  ldr x0,[x0, #0xf58]
+00dc4fac  bl 0x00b0789c
+00dc4fb0  adrp x0,0x336a000
+00dc4fb4  ldr x0,[x0, #0xfc0]
+00dc4fb8  bl 0x00b0789c
+00dc4fbc  mov w8,#0x1
+00dc4fc0  strb w8,[x22, #0x1aa]
+00dc4fc4  ldr x0,[x23]
+00dc4fc8  bl 0x00b079a0
+00dc4fcc  cbz x0,0x00dc5168
+00dc4fd0  mov x1,xzr
+00dc4fd4  mov x22,x0
+00dc4fd8  bl 0x0200fef4
+00dc4fdc  ldr x8,[x22]
+00dc4fe0  mov w1,#0x2
+00dc4fe4  mov x0,x22
+00dc4fe8  ldr x9,[x8, #0x268]
+00dc4fec  ldr x2,[x8, #0x270]
+00dc4ff0  blr x9
+00dc4ff4  ldr x8,[x22]
+00dc4ff8  mov w1,#0x1
+00dc4ffc  mov x0,x22
+00dc5000  ldr x9,[x8, #0x248]
+00dc5004  ldr x2,[x8, #0x250]
+00dc5008  blr x9
+00dc500c  ldr x8,[x22]
+00dc5010  mov w1,#0x100
+00dc5014  mov x0,x22
+00dc5018  ldr x9,[x8, #0x228]
+00dc501c  ldr x2,[x8, #0x230]
+00dc5020  blr x9
+00dc5024  ldr x8,[x22]
+00dc5028  mov w1,#0x80
+00dc502c  mov x0,x22
+00dc5030  ldp x9,x2,[x8, #0x1a8]
+00dc5034  blr x9
+00dc5038  mov x0,xzr
+00dc503c  bl 0x01ff8ca0
+00dc5040  cbz x0,0x00dc5168
+00dc5044  ldr x8,[x0]
+00dc5048  mov x1,x21
+00dc504c  ldr x9,[x8, #0x268]
+00dc5050  ldr x2,[x8, #0x270]
+00dc5054  blr x9
+00dc5058  mov x21,x0
+00dc505c  mov x0,xzr
+00dc5060  bl 0x01ff8ca0
+00dc5064  cbz x0,0x00dc5168
+00dc5068  ldr x8,[x0]
+00dc506c  adrp x23,0x3368000
+00dc5070  mov x1,x20
+00dc5074  ldr x9,[x8, #0x268]
+00dc5078  ldr x2,[x8, #0x270]
+00dc507c  ldr x23,[x23, #0xf58]
+00dc5080  blr x9
+00dc5084  ldr x8,[x22]
+00dc5088  mov x2,x0
+00dc508c  mov x0,x22
+00dc5090  mov x1,x21
+00dc5094  ldr x9,[x8, #0x288]
+00dc5098  ldr x3,[x8, #0x290]
+00dc509c  blr x9
+00dc50a0  ldr x8,[x23]
+00dc50a4  mov x22,x0
+00dc50a8  mov x0,x8
+00dc50ac  bl 0x00b079a0
+00dc50b0  cbz x0,0x00dc5168
+00dc50b4  adrp x21,0x3322000
+00dc50b8  ldr x21,[x21, #0x688]
+00dc50bc  mov x1,xzr
+00dc50c0  mov x20,x0
+00dc50c4  bl 0x020a3bd8
+00dc50c8  ldr x0,[x21]
+00dc50cc  bl 0x00b079a0
+00dc50d0  cbz x0,0x00dc5168
+00dc50d4  mov w3,#0x1
+00dc50d8  mov x1,x20
+00dc50dc  mov x2,x22
+00dc50e0  mov x4,xzr
+00dc50e4  mov x21,x0
+00dc50e8  bl 0x02005eb4
+00dc50ec  cbz x19,0x00dc5168
+00dc50f0  ldr x8,[x21]
+00dc50f4  ldr w3,[x19, #0x18]
+00dc50f8  adrp x22,0x3362000
+00dc50fc  mov x0,x21
+00dc5100  ldr x9,[x8, #0x368]
+00dc5104  ldr x4,[x8, #0x370]
+00dc5108  ldr x22,[x22, #0xe28]
+00dc510c  mov x1,x19
+00dc5110  mov w2,wzr
+00dc5114  blr x9
+00dc5118  mov x0,x21
+00dc511c  mov x1,xzr
+00dc5120  bl 0x02006338
+00dc5124  ldr x8,[x20]
+00dc5128  mov x0,x20
+00dc512c  ldr x9,[x8, #0x3c8]
+00dc5130  ldr x1,[x8, #0x3d0]
+00dc5134  blr x9
+00dc5138  ldr x8,[x22]
+00dc513c  mov x19,x0
+00dc5140  ldr w9,[x8, #0xe0]
+00dc5144  cbnz w9,0x00dc5150
+00dc5148  mov x0,x8
+00dc514c  bl 0x00b0798c
+00dc5150  mov x0,x19
+00dc5154  ldp x19,x30,[sp, #0x20]
+00dc5158  ldp x21,x20,[sp, #0x10]
+00dc515c  mov x1,xzr
+00dc5160  ldp x23,x22,[sp], #0x30
+00dc5164  b 0x020e3f88
+00dc5168  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc516c_Cipher__DecryptRJ128.txt
+================================================================================
+Function: Cipher$$DecryptRJ128 @ 00dc516c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Text.Encoding$$get_UTF8 @ 01ff8ca0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> Cipher$$DecryptRJ128Byte @ 00dc5214
+
+--- Calls IN ---
+
+--- Listing ---
+00dc516c  stp x23,x22,[sp, #-0x30]!
+00dc5170  stp x21,x20,[sp, #0x10]
+00dc5174  stp x19,x30,[sp, #0x20]
+00dc5178  adrp x22,0x3572000
+00dc517c  adrp x23,0x3356000
+00dc5180  ldrb w8,[x22, #0x1ab]
+00dc5184  ldr x23,[x23, #0x290]
+00dc5188  mov x19,x2
+00dc518c  mov x20,x1
+00dc5190  mov x21,x0
+00dc5194  tbnz w8,#0x0,0x00dc51ac
+00dc5198  adrp x0,0x3356000
+00dc519c  ldr x0,[x0, #0x290]
+00dc51a0  bl 0x00b0789c
+00dc51a4  mov w8,#0x1
+00dc51a8  strb w8,[x22, #0x1ab]
+00dc51ac  ldr x0,[x23]
+00dc51b0  ldr w8,[x0, #0xe0]
+00dc51b4  cbnz w8,0x00dc51bc
+00dc51b8  bl 0x00b0798c
+00dc51bc  mov x0,x21
+00dc51c0  mov x1,x20
+00dc51c4  mov x2,x19
+00dc51c8  bl 0x00dc5214
+00dc51cc  cbz x0,0x00dc5200
+00dc51d0  mov x19,x0
+00dc51d4  mov x0,xzr
+00dc51d8  bl 0x01ff8ca0
+00dc51dc  cbz x0,0x00dc5210
+00dc51e0  ldr x8,[x0]
+00dc51e4  mov x1,x19
+00dc51e8  ldp x19,x30,[sp, #0x20]
+00dc51ec  ldp x21,x20,[sp, #0x10]
+00dc51f0  ldr x3,[x8, #0x378]
+00dc51f4  ldr x2,[x8, #0x380]
+00dc51f8  ldp x23,x22,[sp], #0x30
+00dc51fc  br x3
+00dc5200  ldp x19,x30,[sp, #0x20]
+00dc5204  ldp x21,x20,[sp, #0x10]
+00dc5208  ldp x23,x22,[sp], #0x30
+00dc520c  ret
+00dc5210  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc5214_Cipher__DecryptRJ128Byte.txt
+================================================================================
+Function: Cipher$$DecryptRJ128Byte @ 00dc5214
+
+--- Calls OUT ---
+  -> System.Security.Cryptography.CryptoStream$$.ctor @ 02005eb4
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Convert$$FromBase64String @ 020e4acc
+  -> System.Security.Cryptography.RijndaelManaged$$.ctor @ 0200fef4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Text.Encoding$$get_UTF8 @ 01ff8ca0
+  -> System.Array$$Resize<byte> @ 018df250
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.IO.MemoryStream$$.ctor @ 020a3d4c
+
+--- Calls IN ---
+  <- Cipher$$DecryptRJ128 @ 00dc516c
+
+--- Listing ---
+00dc5214  sub sp,sp,#0x40
+00dc5218  stp x23,x22,[sp, #0x10]
+00dc521c  stp x21,x20,[sp, #0x20]
+00dc5220  stp x19,x30,[sp, #0x30]
+00dc5224  adrp x23,0x3572000
+00dc5228  adrp x22,0x336a000
+00dc522c  ldrb w8,[x23, #0x1ac]
+00dc5230  ldr x22,[x22, #0xfc0]
+00dc5234  mov x19,x2
+00dc5238  mov x20,x1
+00dc523c  mov x21,x0
+00dc5240  tbnz w8,#0x0,0x00dc5294
+00dc5244  adrp x0,0x336b000
+00dc5248  ldr x0,[x0, #0xd20]
+00dc524c  bl 0x00b0789c
+00dc5250  adrp x0,0x334f000
+00dc5254  ldr x0,[x0, #0x28]
+00dc5258  bl 0x00b0789c
+00dc525c  adrp x0,0x3362000
+00dc5260  ldr x0,[x0, #0xe28]
+00dc5264  bl 0x00b0789c
+00dc5268  adrp x0,0x3322000
+00dc526c  ldr x0,[x0, #0x688]
+00dc5270  bl 0x00b0789c
+00dc5274  adrp x0,0x3368000
+00dc5278  ldr x0,[x0, #0xf58]
+00dc527c  bl 0x00b0789c
+00dc5280  adrp x0,0x336a000
+00dc5284  ldr x0,[x0, #0xfc0]
+00dc5288  bl 0x00b0789c
+00dc528c  mov w8,#0x1
+00dc5290  strb w8,[x23, #0x1ac]
+00dc5294  ldr x0,[x22]
+00dc5298  str xzr,[sp, #0x8]
+00dc529c  bl 0x00b079a0
+00dc52a0  cbz x0,0x00dc5464
+00dc52a4  mov x1,xzr
+00dc52a8  mov x22,x0
+00dc52ac  bl 0x0200fef4
+00dc52b0  ldr x8,[x22]
+00dc52b4  mov w1,#0x2
+00dc52b8  mov x0,x22
+00dc52bc  ldr x9,[x8, #0x268]
+00dc52c0  ldr x2,[x8, #0x270]
+00dc52c4  blr x9
+00dc52c8  ldr x8,[x22]
+00dc52cc  mov w1,#0x1
+00dc52d0  mov x0,x22
+00dc52d4  ldr x9,[x8, #0x248]
+00dc52d8  ldr x2,[x8, #0x250]
+00dc52dc  blr x9
+00dc52e0  ldr x8,[x22]
+00dc52e4  mov w1,#0x100
+00dc52e8  mov x0,x22
+00dc52ec  ldr x9,[x8, #0x228]
+00dc52f0  ldr x2,[x8, #0x230]
+00dc52f4  blr x9
+00dc52f8  ldr x8,[x22]
+00dc52fc  mov w1,#0x80
+00dc5300  mov x0,x22
+00dc5304  ldp x9,x2,[x8, #0x1a8]
+00dc5308  blr x9
+00dc530c  mov x0,xzr
+00dc5310  bl 0x01ff8ca0
+00dc5314  cbz x0,0x00dc5464
+00dc5318  ldr x8,[x0]
+00dc531c  mov x1,x21
+00dc5320  ldr x9,[x8, #0x268]
+00dc5324  ldr x2,[x8, #0x270]
+00dc5328  blr x9
+00dc532c  mov x21,x0
+00dc5330  mov x0,xzr
+00dc5334  bl 0x01ff8ca0
+00dc5338  cbz x0,0x00dc5464
+00dc533c  ldr x8,[x0]
+00dc5340  adrp x23,0x3362000
+00dc5344  mov x1,x20
+00dc5348  ldr x9,[x8, #0x268]
+00dc534c  ldr x2,[x8, #0x270]
+00dc5350  ldr x23,[x23, #0xe28]
+00dc5354  blr x9
+00dc5358  ldr x8,[x22]
+00dc535c  mov x2,x0
+00dc5360  mov x0,x22
+00dc5364  mov x1,x21
+00dc5368  ldr x9,[x8, #0x2a8]
+00dc536c  ldr x3,[x8, #0x2b0]
+00dc5370  blr x9
+00dc5374  ldr x8,[x23]
+00dc5378  mov x20,x0
+00dc537c  ldr w9,[x8, #0xe0]
+00dc5380  cbnz w9,0x00dc538c
+00dc5384  mov x0,x8
+00dc5388  bl 0x00b0798c
+00dc538c  mov x0,x19
+00dc5390  mov x1,xzr
+00dc5394  bl 0x020e4acc
+00dc5398  cbz x0,0x00dc5464
+00dc539c  adrp x8,0x334f000
+00dc53a0  ldr x8,[x8, #0x28]
+00dc53a4  mov x21,x0
+00dc53a8  ldr w1,[x21, #0x18]
+00dc53ac  adrp x19,0x3368000
+00dc53b0  ldr x0,[x8]
+00dc53b4  ldr x19,[x19, #0xf58]
+00dc53b8  bl 0x00b078f8
+00dc53bc  ldr x8,[x19]
+00dc53c0  mov x19,x0
+00dc53c4  str x0,[sp, #0x8]
+00dc53c8  mov x0,x8
+00dc53cc  bl 0x00b079a0
+00dc53d0  cbz x0,0x00dc5464
+00dc53d4  adrp x23,0x3322000
+00dc53d8  ldr x23,[x23, #0x688]
+00dc53dc  mov x1,x21
+00dc53e0  mov x2,xzr
+00dc53e4  mov x22,x0
+00dc53e8  bl 0x020a3d4c
+00dc53ec  ldr x0,[x23]
+00dc53f0  bl 0x00b079a0
+00dc53f4  cbz x0,0x00dc5464
+00dc53f8  mov x1,x22
+00dc53fc  mov x2,x20
+00dc5400  mov w3,wzr
+00dc5404  mov x4,xzr
+00dc5408  mov x21,x0
+00dc540c  bl 0x02005eb4
+00dc5410  cbz x19,0x00dc5464
+00dc5414  ldr x8,[x21]
+00dc5418  ldr w3,[x19, #0x18]
+00dc541c  adrp x20,0x336b000
+00dc5420  mov x0,x21
+00dc5424  ldr x9,[x8, #0x338]
+00dc5428  ldr x4,[x8, #0x340]
+00dc542c  ldr x20,[x20, #0xd20]
+00dc5430  mov x1,x19
+00dc5434  mov w2,wzr
+00dc5438  blr x9
+00dc543c  ldr x2,[x20]
+00dc5440  mov w1,w0
+00dc5444  add x0,sp,#0x8
+00dc5448  bl 0x018df250
+00dc544c  ldr x0,[sp, #0x8]
+00dc5450  ldp x19,x30,[sp, #0x30]
+00dc5454  ldp x21,x20,[sp, #0x20]
+00dc5458  ldp x23,x22,[sp, #0x10]
+00dc545c  add sp,sp,#0x40
+00dc5460  ret
+00dc5464  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc5468_Cipher__verify.txt
+================================================================================
+Function: Cipher$$verify @ 00dc5468
+
+--- Calls OUT ---
+  -> System.Convert$$FromBase64String @ 020e4acc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> Cipher$$SHA256Hash @ 00dc5cf4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Security.Cryptography.RSAPKCS1SignatureDeformatter$$.ctor @ 020232c8
+  -> FUN_00b079b0 @ 00b079b0
+  -> Cipher$$DecodeX509PublicKey @ 00dc55ac
+
+--- Calls IN ---
+
+--- Listing ---
+00dc5468  stp x23,x22,[sp, #-0x30]!
+00dc546c  stp x21,x20,[sp, #0x10]
+00dc5470  stp x19,x30,[sp, #0x20]
+00dc5474  adrp x22,0x3572000
+00dc5478  adrp x21,0x3362000
+00dc547c  ldrb w8,[x22, #0x1ad]
+00dc5480  ldr x21,[x21, #0xe28]
+00dc5484  mov x20,x1
+00dc5488  mov x19,x0
+00dc548c  tbnz w8,#0x0,0x00dc54d4
+00dc5490  adrp x0,0x3356000
+00dc5494  ldr x0,[x0, #0x290]
+00dc5498  bl 0x00b0789c
+00dc549c  adrp x0,0x3362000
+00dc54a0  ldr x0,[x0, #0xe28]
+00dc54a4  bl 0x00b0789c
+00dc54a8  adrp x0,0x332b000
+00dc54ac  ldr x0,[x0, #0x648]
+00dc54b0  bl 0x00b0789c
+00dc54b4  adrp x0,0x335c000
+00dc54b8  ldr x0,[x0, #0x850]
+00dc54bc  bl 0x00b0789c
+00dc54c0  adrp x0,0x3334000
+00dc54c4  ldr x0,[x0, #0xa80]
+00dc54c8  bl 0x00b0789c
+00dc54cc  mov w8,#0x1
+00dc54d0  strb w8,[x22, #0x1ad]
+00dc54d4  ldr x0,[x21]
+00dc54d8  adrp x23,0x3334000
+00dc54dc  adrp x21,0x3356000
+00dc54e0  ldr w8,[x0, #0xe0]
+00dc54e4  ldr x23,[x23, #0xa80]
+00dc54e8  ldr x21,[x21, #0x290]
+00dc54ec  cbnz w8,0x00dc54f4
+00dc54f0  bl 0x00b0798c
+00dc54f4  adrp x22,0x332b000
+00dc54f8  ldr x22,[x22, #0x648]
+00dc54fc  mov x0,x20
+00dc5500  mov x1,xzr
+00dc5504  bl 0x020e4acc
+00dc5508  ldr x8,[x23]
+00dc550c  mov x20,x0
+00dc5510  mov x1,xzr
+00dc5514  mov x0,x8
+00dc5518  bl 0x020e4acc
+00dc551c  ldr x8,[x21]
+00dc5520  mov x21,x0
+00dc5524  ldr w9,[x8, #0xe0]
+00dc5528  cbnz w9,0x00dc5534
+00dc552c  mov x0,x8
+00dc5530  bl 0x00b0798c
+00dc5534  mov x0,x21
+00dc5538  bl 0x00dc55ac
+00dc553c  ldr x8,[x22]
+00dc5540  mov x22,x0
+00dc5544  mov x0,x8
+00dc5548  bl 0x00b079a0
+00dc554c  cbz x0,0x00dc55a8
+00dc5550  adrp x23,0x335c000
+00dc5554  ldr x23,[x23, #0x850]
+00dc5558  mov x1,x22
+00dc555c  mov x2,xzr
+00dc5560  mov x21,x0
+00dc5564  bl 0x020232c8
+00dc5568  ldr x8,[x21]
+00dc556c  ldr x1,[x23]
+00dc5570  mov x0,x21
+00dc5574  ldp x9,x2,[x8, #0x188]
+00dc5578  blr x9
+00dc557c  mov x0,x19
+00dc5580  bl 0x00dc5cf4
+00dc5584  ldr x8,[x21]
+00dc5588  mov x1,x0
+00dc558c  mov x0,x21
+00dc5590  mov x2,x20
+00dc5594  ldp x4,x3,[x8, #0x198]
+00dc5598  ldp x19,x30,[sp, #0x20]
+00dc559c  ldp x21,x20,[sp, #0x10]
+00dc55a0  ldp x23,x22,[sp], #0x30
+00dc55a4  br x4
+00dc55a8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc55ac_Cipher__DecodeX509PublicKey.txt
+================================================================================
+Function: Cipher$$DecodeX509PublicKey @ 00dc55ac
+
+--- Calls OUT ---
+  -> System.BitConverter$$ToInt32 @ 020d85fc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Runtime.CompilerServices.RuntimeHelpers$$InitializeArray @ 020842f0
+  -> System.IO.BinaryReader$$.ctor @ 020b95bc
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.IO.MemoryStream$$.ctor @ 020a3d4c
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> FUN_00aaac8c @ 00aaac8c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> Cipher$$CompareBytearrays @ 00dc5df0
+  -> System.Security.Cryptography.RSACryptoServiceProvider$$.ctor @ 02014dd0
+
+--- Calls IN ---
+  <- Cipher$$verify @ 00dc5468
+
+--- Listing ---
+00dc55ac  sub sp,sp,#0x100
+00dc55b0  str x28,[sp, #0xc0]
+00dc55b4  stp x23,x22,[sp, #0xd0]
+00dc55b8  stp x21,x20,[sp, #0xe0]
+00dc55bc  stp x19,x30,[sp, #0xf0]
+00dc55c0  adrp x23,0x3572000
+00dc55c4  adrp x22,0x334f000
+00dc55c8  adrp x19,0x3310000
+00dc55cc  adrp x21,0x3368000
+00dc55d0  ldrb w8,[x23, #0x1ae]
+00dc55d4  ldr x22,[x22, #0x28]
+00dc55d8  ldr x19,[x19, #0xd60]
+00dc55dc  ldr x21,[x21, #0xf58]
+00dc55e0  mov x20,x0
+00dc55e4  tbnz w8,#0x0,0x00dc5644
+00dc55e8  adrp x0,0x335f000
+00dc55ec  ldr x0,[x0, #0x320]
+00dc55f0  bl 0x00b0789c
+00dc55f4  adrp x0,0x3334000
+00dc55f8  ldr x0,[x0, #0x1f0]
+00dc55fc  bl 0x00b0789c
+00dc5600  adrp x0,0x334f000
+00dc5604  ldr x0,[x0, #0x28]
+00dc5608  bl 0x00b0789c
+00dc560c  adrp x0,0x3356000
+00dc5610  ldr x0,[x0, #0x290]
+00dc5614  bl 0x00b0789c
+00dc5618  adrp x0,0x3368000
+00dc561c  ldr x0,[x0, #0xf58]
+00dc5620  bl 0x00b0789c
+00dc5624  adrp x0,0x3351000
+00dc5628  ldr x0,[x0, #0x9d8]
+00dc562c  bl 0x00b0789c
+00dc5630  adrp x0,0x3310000
+00dc5634  ldr x0,[x0, #0xd60]
+00dc5638  bl 0x00b0789c
+00dc563c  mov w8,#0x1
+00dc5640  strb w8,[x23, #0x1ae]
+00dc5644  ldr x0,[x22]
+00dc5648  movi v0.2D,#0x0
+00dc564c  mov w1,#0xf
+00dc5650  str xzr,[sp, #0xc8]
+00dc5654  stp q0,q0,[sp, #0x60]
+00dc5658  stp q0,q0,[sp, #0x40]
+00dc565c  bl 0x00b078f8
+00dc5660  ldr x1,[x19]
+00dc5664  mov x2,xzr
+00dc5668  mov x19,x0
+00dc566c  bl 0x020842f0
+00dc5670  ldr x0,[x22]
+00dc5674  mov w1,#0xf
+00dc5678  bl 0x00b078f8
+00dc567c  ldr x0,[x21]
+00dc5680  bl 0x00b079a0
+00dc5684  cbz x0,0x00dc5ad8
+00dc5688  adrp x23,0x335f000
+00dc568c  ldr x23,[x23, #0x320]
+00dc5690  mov x1,x20
+00dc5694  mov x2,xzr
+00dc5698  mov x21,x0
+00dc569c  bl 0x020a3d4c
+00dc56a0  ldr x0,[x23]
+00dc56a4  bl 0x00b079a0
+00dc56a8  cbz x0,0x00dc5ad8
+00dc56ac  mov x1,x21
+00dc56b0  mov x2,xzr
+00dc56b4  mov x20,x0
+00dc56b8  bl 0x020b95bc
+00dc56bc  str x20,[sp, #0xc8]
+00dc56c0  ldr x8,[x20]
+00dc56c4  ldr x1,[x8, #0x220]
+00dc56c8  ldr x9,[x8, #0x218]
+00dc56cc  mov x0,x20
+    ; [PRE] try { // try from 00dc56cc to 00dc56d3 has its CatchHandler @ 00dc5c20
+00dc56d0  blr x9
+    ; [POST] } // end try from 00dc56cc to 00dc56d3
+00dc56d4  and w8,w0,#0xffff
+00dc56d8  mov w9,#0x8130
+00dc56dc  cmp w8,w9
+00dc56e0  b.eq 0x00dc570c
+00dc56e4  mov w9,#0x8230
+00dc56e8  cmp w8,w9
+00dc56ec  b.ne 0x00dc57e8
+00dc56f0  ldr x0,[sp, #0xc8]
+00dc56f4  cbz x0,0x00dc5ae8
+00dc56f8  ldr x8,[x0]
+00dc56fc  ldr x1,[x8, #0x210]
+00dc5700  ldr x9,[x8, #0x208]
+00dc5704  blr x9
+    ; [PRE] try { // try from 00dc5704 to 00dc5707 has its CatchHandler @ 00dc5c14
+    ; [POST] } // end try from 00dc5704 to 00dc5707
+00dc5708  b 0x00dc5720
+00dc570c  ldr x0,[sp, #0xc8]
+00dc5710  cbz x0,0x00dc5aec
+00dc5714  ldr x8,[x0]
+00dc5718  ldp x9,x1,[x8, #0x1d8]
+00dc571c  blr x9
+    ; [PRE] try { // try from 00dc571c to 00dc571f has its CatchHandler @ 00dc5c10
+    ; [POST] } // end try from 00dc571c to 00dc571f
+00dc5720  ldr x0,[sp, #0xc8]
+00dc5724  cbz x0,0x00dc5ae4
+00dc5728  ldr x8,[x0]
+00dc572c  ldr x9,[x8, #0x2c8]
+00dc5730  ldr x2,[x8, #0x2d0]
+00dc5734  mov w1,#0xf
+    ; [PRE] try { // try from 00dc5734 to 00dc573b has its CatchHandler @ 00dc5c1c
+00dc5738  blr x9
+    ; [POST] } // end try from 00dc5734 to 00dc573b
+00dc573c  adrp x8,0x3356000
+00dc5740  ldr x8,[x8, #0x290]
+00dc5744  mov x20,x0
+00dc5748  ldr x0,[x8]
+00dc574c  ldr w8,[x0, #0xe0]
+00dc5750  cbnz w8,0x00dc5758
+00dc5754  bl 0x00b0798c
+    ; [PRE] try { // try from 00dc5754 to 00dc5757 has its CatchHandler @ 00dc5c08
+    ; [POST] } // end try from 00dc5754 to 00dc5757
+00dc5758  mov x0,x20
+    ; [PRE] try { // try from 00dc5758 to 00dc5763 has its CatchHandler @ 00dc5c18
+00dc575c  mov x1,x19
+00dc5760  bl 0x00dc5df0
+    ; [POST] } // end try from 00dc5758 to 00dc5763
+00dc5764  tbz w0,#0x0,0x00dc57e8
+00dc5768  ldr x0,[sp, #0xc8]
+00dc576c  cbz x0,0x00dc5af0
+00dc5770  ldr x8,[x0]
+00dc5774  ldr x1,[x8, #0x220]
+00dc5778  ldr x9,[x8, #0x218]
+00dc577c  blr x9
+    ; [PRE] try { // try from 00dc577c to 00dc577f has its CatchHandler @ 00dc5c0c
+    ; [POST] } // end try from 00dc577c to 00dc577f
+00dc5780  and w8,w0,#0xffff
+00dc5784  mov w9,#0x8103
+00dc5788  cmp w8,w9
+00dc578c  b.eq 0x00dc57b8
+00dc5790  mov w9,#0x8203
+00dc5794  cmp w8,w9
+00dc5798  b.ne 0x00dc57e8
+00dc579c  ldr x0,[sp, #0xc8]
+00dc57a0  cbz x0,0x00dc5af8
+00dc57a4  ldr x8,[x0]
+00dc57a8  ldr x1,[x8, #0x210]
+00dc57ac  ldr x9,[x8, #0x208]
+00dc57b0  blr x9
+    ; [PRE] try { // try from 00dc57b0 to 00dc57b3 has its CatchHandler @ 00dc5c00
+    ; [POST] } // end try from 00dc57b0 to 00dc57b3
+00dc57b4  b 0x00dc57cc
+00dc57b8  ldr x0,[sp, #0xc8]
+00dc57bc  cbz x0,0x00dc5afc
+00dc57c0  ldr x8,[x0]
+00dc57c4  ldp x9,x1,[x8, #0x1d8]
+00dc57c8  blr x9
+    ; [PRE] try { // try from 00dc57c8 to 00dc57cb has its CatchHandler @ 00dc5bfc
+    ; [POST] } // end try from 00dc57c8 to 00dc57cb
+00dc57cc  ldr x0,[sp, #0xc8]
+00dc57d0  cbz x0,0x00dc5af4
+00dc57d4  ldr x8,[x0]
+00dc57d8  ldp x9,x1,[x8, #0x1d8]
+00dc57dc  blr x9
+    ; [PRE] try { // try from 00dc57dc to 00dc57df has its CatchHandler @ 00dc5c04
+    ; [POST] } // end try from 00dc57dc to 00dc57df
+00dc57e0  tst w0,#0xff
+00dc57e4  b.eq 0x00dc5824
+00dc57e8  mov x21,xzr
+00dc57ec  mov x19,xzr
+00dc57f0  ldr x0,[sp, #0xc8]
+00dc57f4  cbz x0,0x00dc5ad8
+00dc57f8  ldr x8,[x0]
+00dc57fc  ldp x9,x1,[x8, #0x198]
+00dc5800  blr x9
+00dc5804  cbnz x21,0x00dc5adc
+00dc5808  mov x0,x19
+00dc580c  ldp x19,x30,[sp, #0xf0]
+00dc5810  ldp x21,x20,[sp, #0xe0]
+00dc5814  ldp x23,x22,[sp, #0xd0]
+00dc5818  ldr x28,[sp, #0xc0]
+00dc581c  add sp,sp,#0x100
+00dc5820  ret
+00dc5824  ldr x0,[sp, #0xc8]
+00dc5828  cbz x0,0x00dc5b00
+00dc582c  ldr x8,[x0]
+00dc5830  ldr x1,[x8, #0x220]
+00dc5834  ldr x9,[x8, #0x218]
+00dc5838  blr x9
+    ; [PRE] try { // try from 00dc5838 to 00dc583b has its CatchHandler @ 00dc5bf8
+    ; [POST] } // end try from 00dc5838 to 00dc583b
+00dc583c  and w8,w0,#0xffff
+00dc5840  mov w9,#0x8130
+00dc5844  cmp w8,w9
+00dc5848  b.eq 0x00dc5874
+00dc584c  mov w9,#0x8230
+00dc5850  cmp w8,w9
+00dc5854  b.ne 0x00dc57e8
+00dc5858  ldr x0,[sp, #0xc8]
+00dc585c  cbz x0,0x00dc5b28
+00dc5860  ldr x8,[x0]
+00dc5864  ldr x1,[x8, #0x210]
+00dc5868  ldr x9,[x8, #0x208]
+00dc586c  blr x9
+    ; [PRE] try { // try from 00dc586c to 00dc586f has its CatchHandler @ 00dc5bd0
+    ; [POST] } // end try from 00dc586c to 00dc586f
+00dc5870  b 0x00dc5888
+00dc5874  ldr x0,[sp, #0xc8]
+00dc5878  cbz x0,0x00dc5b2c
+00dc587c  ldr x8,[x0]
+00dc5880  ldp x9,x1,[x8, #0x1d8]
+00dc5884  blr x9
+    ; [PRE] try { // try from 00dc5884 to 00dc5887 has its CatchHandler @ 00dc5bcc
+    ; [POST] } // end try from 00dc5884 to 00dc5887
+00dc5888  ldr x0,[sp, #0xc8]
+00dc588c  cbz x0,0x00dc5b04
+00dc5890  ldr x8,[x0]
+00dc5894  ldr x1,[x8, #0x220]
+00dc5898  ldr x9,[x8, #0x218]
+00dc589c  blr x9
+    ; [PRE] try { // try from 00dc589c to 00dc589f has its CatchHandler @ 00dc5bf4
+    ; [POST] } // end try from 00dc589c to 00dc589f
+00dc58a0  and w8,w0,#0xffff
+00dc58a4  mov w9,#0x8102
+00dc58a8  cmp w8,w9
+00dc58ac  b.eq 0x00dc58f0
+00dc58b0  mov w9,#0x8202
+00dc58b4  cmp w8,w9
+00dc58b8  b.ne 0x00dc57e8
+00dc58bc  ldr x0,[sp, #0xc8]
+00dc58c0  cbz x0,0x00dc5b30
+00dc58c4  ldr x8,[x0]
+00dc58c8  ldp x9,x1,[x8, #0x1d8]
+00dc58cc  blr x9
+    ; [PRE] try { // try from 00dc58cc to 00dc58cf has its CatchHandler @ 00dc5bc8
+    ; [POST] } // end try from 00dc58cc to 00dc58cf
+00dc58d0  mov w19,w0
+00dc58d4  ldr x0,[sp, #0xc8]
+00dc58d8  cbz x0,0x00dc5b38
+00dc58dc  ldr x8,[x0]
+00dc58e0  ldp x9,x1,[x8, #0x1d8]
+00dc58e4  blr x9
+    ; [PRE] try { // try from 00dc58e4 to 00dc58e7 has its CatchHandler @ 00dc5bc0
+    ; [POST] } // end try from 00dc58e4 to 00dc58e7
+00dc58e8  mov w20,w0
+00dc58ec  b 0x00dc590c
+00dc58f0  ldr x0,[sp, #0xc8]
+00dc58f4  cbz x0,0x00dc5b34
+00dc58f8  ldr x8,[x0]
+00dc58fc  ldp x9,x1,[x8, #0x1d8]
+00dc5900  blr x9
+    ; [PRE] try { // try from 00dc5900 to 00dc5903 has its CatchHandler @ 00dc5bc4
+    ; [POST] } // end try from 00dc5900 to 00dc5903
+00dc5904  mov w20,w0
+00dc5908  mov w19,wzr
+00dc590c  ldr x0,[x22]
+00dc5910  mov w1,#0x4
+    ; [PRE] try { // try from 00dc5910 to 00dc5917 has its CatchHandler @ 00dc5bf0
+00dc5914  bl 0x00b078f8
+    ; [POST] } // end try from 00dc5910 to 00dc5917
+00dc5918  mov x21,x0
+00dc591c  cbz x0,0x00dc5b08
+00dc5920  ldr w8,[x21, #0x18]
+00dc5924  cbz w8,0x00dc5b0c
+00dc5928  cmp w8,#0x1
+00dc592c  strb w20,[x21, #0x20]
+00dc5930  b.eq 0x00dc5b10
+00dc5934  adrp x8,0x3334000
+00dc5938  ldr x8,[x8, #0x1f0]
+00dc593c  strb w19,[x21, #0x21]
+00dc5940  ldr x0,[x8]
+00dc5944  ldr w8,[x0, #0xe0]
+00dc5948  cbnz w8,0x00dc5950
+00dc594c  bl 0x00b0798c
+    ; [PRE] try { // try from 00dc594c to 00dc594f has its CatchHandler @ 00dc5ba8
+    ; [POST] } // end try from 00dc594c to 00dc594f
+00dc5950  mov x0,x21
+    ; [PRE] try { // try from 00dc5950 to 00dc595f has its CatchHandler @ 00dc5bec
+00dc5954  mov w1,wzr
+00dc5958  mov x2,xzr
+00dc595c  bl 0x020d85fc
+    ; [POST] } // end try from 00dc5950 to 00dc595f
+00dc5960  mov w19,w0
+00dc5964  ldr x0,[sp, #0xc8]
+00dc5968  cbz x0,0x00dc5b14
+00dc596c  ldr x8,[x0]
+00dc5970  ldp x9,x1,[x8, #0x1d8]
+00dc5974  blr x9
+    ; [PRE] try { // try from 00dc5974 to 00dc5977 has its CatchHandler @ 00dc5be8
+    ; [POST] } // end try from 00dc5974 to 00dc5977
+00dc5978  mov w20,w0
+00dc597c  ldr x0,[sp, #0xc8]
+00dc5980  cbz x0,0x00dc5b18
+00dc5984  ldr x8,[x0]
+00dc5988  ldp x9,x1,[x8, #0x188]
+00dc598c  blr x9
+    ; [PRE] try { // try from 00dc598c to 00dc598f has its CatchHandler @ 00dc5be4
+    ; [POST] } // end try from 00dc598c to 00dc598f
+00dc5990  cbz x0,0x00dc5b1c
+00dc5994  ldr x8,[x0]
+00dc5998  ldr x9,[x8, #0x318]
+00dc599c  ldr x3,[x8, #0x320]
+00dc59a0  mov x1,#-0x1
+    ; [PRE] try { // try from 00dc59a0 to 00dc59ab has its CatchHandler @ 00dc5be0
+00dc59a4  mov w2,#0x1
+00dc59a8  blr x9
+    ; [POST] } // end try from 00dc59a0 to 00dc59ab
+00dc59ac  tst w20,#0xff
+00dc59b0  b.ne 0x00dc59cc
+00dc59b4  ldr x0,[sp, #0xc8]
+00dc59b8  cbz x0,0x00dc5b48
+00dc59bc  ldr x8,[x0]
+00dc59c0  ldp x9,x1,[x8, #0x1d8]
+00dc59c4  blr x9
+    ; [PRE] try { // try from 00dc59c4 to 00dc59c7 has its CatchHandler @ 00dc5ba4
+    ; [POST] } // end try from 00dc59c4 to 00dc59c7
+00dc59c8  sub w19,w19,#0x1
+00dc59cc  ldr x0,[sp, #0xc8]
+00dc59d0  cbz x0,0x00dc5b20
+00dc59d4  ldr x8,[x0]
+00dc59d8  ldr x9,[x8, #0x2c8]
+00dc59dc  ldr x2,[x8, #0x2d0]
+00dc59e0  mov w1,w19
+    ; [PRE] try { // try from 00dc59e0 to 00dc59e7 has its CatchHandler @ 00dc5bdc
+00dc59e4  blr x9
+    ; [POST] } // end try from 00dc59e0 to 00dc59e7
+00dc59e8  mov x20,x0
+00dc59ec  ldr x0,[sp, #0xc8]
+00dc59f0  cbz x0,0x00dc5b24
+00dc59f4  ldr x8,[x0]
+00dc59f8  ldp x9,x1,[x8, #0x1d8]
+00dc59fc  blr x9
+    ; [PRE] try { // try from 00dc59fc to 00dc59ff has its CatchHandler @ 00dc5bd8
+    ; [POST] } // end try from 00dc59fc to 00dc59ff
+00dc5a00  and w8,w0,#0xff
+00dc5a04  cmp w8,#0x2
+00dc5a08  b.ne 0x00dc57e8
+00dc5a0c  ldr x0,[sp, #0xc8]
+00dc5a10  cbz x0,0x00dc5b3c
+00dc5a14  ldr x8,[x0]
+00dc5a18  ldp x9,x1,[x8, #0x1d8]
+00dc5a1c  blr x9
+    ; [PRE] try { // try from 00dc5a1c to 00dc5a1f has its CatchHandler @ 00dc5bbc
+    ; [POST] } // end try from 00dc5a1c to 00dc5a1f
+00dc5a20  ldr x8,[sp, #0xc8]
+00dc5a24  cbz x8,0x00dc5b40
+00dc5a28  ldr x9,[x8]
+00dc5a2c  and w1,w0,#0xff
+00dc5a30  ldr x10,[x9, #0x2c8]
+00dc5a34  ldr x2,[x9, #0x2d0]
+00dc5a38  mov x0,x8
+    ; [PRE] try { // try from 00dc5a38 to 00dc5a3f has its CatchHandler @ 00dc5bb8
+00dc5a3c  blr x10
+    ; [POST] } // end try from 00dc5a38 to 00dc5a3f
+00dc5a40  adrp x8,0x3351000
+00dc5a44  ldr x8,[x8, #0x9d8]
+00dc5a48  mov x21,x0
+00dc5a4c  ldr x0,[x8]
+00dc5a50  bl 0x00b079a0
+    ; [PRE] try { // try from 00dc5a50 to 00dc5a67 has its CatchHandler @ 00dc5bd4
+00dc5a54  mov x19,x0
+00dc5a58  cbz x0,0x00dc5b44
+00dc5a5c  mov x0,x19
+00dc5a60  mov x1,xzr
+00dc5a64  bl 0x02014dd0
+    ; [POST] } // end try from 00dc5a50 to 00dc5a67
+00dc5a68  add x8,sp,#0x40
+00dc5a6c  movi v0.2D,#0x0
+00dc5a70  orr x0,x8,#0x8
+00dc5a74  stp q0,q0,[sp, #0x40]
+00dc5a78  stp q0,q0,[sp, #0x60]
+00dc5a7c  str x20,[sp, #0x48]
+00dc5a80  mov x1,x20
+    ; [PRE] try { // try from 00dc5a80 to 00dc5a87 has its CatchHandler @ 00dc5bb4
+00dc5a84  bl 0x00b07850
+    ; [POST] } // end try from 00dc5a80 to 00dc5a87
+00dc5a88  str x21,[sp, #0x40]
+00dc5a8c  add x0,sp,#0x40
+    ; [PRE] try { // try from 00dc5a8c to 00dc5a97 has its CatchHandler @ 00dc5bb0
+00dc5a90  mov x1,x21
+00dc5a94  bl 0x00b07850
+    ; [POST] } // end try from 00dc5a8c to 00dc5a97
+00dc5a98  ldp q2,q0,[sp, #0x50]
+00dc5a9c  ldr q1,[sp, #0x40]
+00dc5aa0  ldr q3,[sp, #0x70]
+00dc5aa4  stp q2,q0,[sp, #0x10]
+00dc5aa8  str q1,[sp]
+00dc5aac  str q3,[sp, #0x30]
+00dc5ab0  ldr x8,[x19]
+00dc5ab4  ldr x9,[x8, #0x1f8]
+00dc5ab8  stp q1,q2,[sp, #0x80]
+00dc5abc  stp q0,q3,[sp, #0xa0]
+00dc5ac0  ldr x2,[x8, #0x200]
+00dc5ac4  add x1,sp,#0x80
+    ; [PRE] try { // try from 00dc5ac4 to 00dc5acf has its CatchHandler @ 00dc5bac
+00dc5ac8  mov x0,x19
+00dc5acc  blr x9
+    ; [POST] } // end try from 00dc5ac4 to 00dc5acf
+00dc5ad0  mov x21,xzr
+00dc5ad4  b 0x00dc57f0
+00dc5ad8  bl 0x00b079b0
+00dc5adc  mov x0,x21
+00dc5ae0  bl 0x00aaac8c
+00dc5ae4  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5ae4 to 00dc5ae7 has its CatchHandler @ 00dc5ba0
+    ; [POST] } // end try from 00dc5ae4 to 00dc5ae7
+00dc5ae8  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5ae8 to 00dc5aeb has its CatchHandler @ 00dc5b9c
+    ; [POST] } // end try from 00dc5ae8 to 00dc5aeb
+00dc5aec  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5aec to 00dc5aef has its CatchHandler @ 00dc5b98
+    ; [POST] } // end try from 00dc5aec to 00dc5aef
+00dc5af0  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5af0 to 00dc5af3 has its CatchHandler @ 00dc5b94
+    ; [POST] } // end try from 00dc5af0 to 00dc5af3
+00dc5af4  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5af4 to 00dc5af7 has its CatchHandler @ 00dc5b90
+    ; [POST] } // end try from 00dc5af4 to 00dc5af7
+00dc5af8  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5af8 to 00dc5afb has its CatchHandler @ 00dc5b8c
+    ; [POST] } // end try from 00dc5af8 to 00dc5afb
+00dc5afc  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5afc to 00dc5aff has its CatchHandler @ 00dc5b88
+    ; [POST] } // end try from 00dc5afc to 00dc5aff
+00dc5b00  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b00 to 00dc5b03 has its CatchHandler @ 00dc5b84
+    ; [POST] } // end try from 00dc5b00 to 00dc5b03
+00dc5b04  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b04 to 00dc5b07 has its CatchHandler @ 00dc5b7c
+    ; [POST] } // end try from 00dc5b04 to 00dc5b07
+00dc5b08  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b08 to 00dc5b0f has its CatchHandler @ 00dc5b80
+00dc5b0c  bl 0x00b079b8
+    ; [POST] } // end try from 00dc5b08 to 00dc5b0f
+00dc5b10  bl 0x00b079b8
+    ; [PRE] try { // try from 00dc5b10 to 00dc5b13 has its CatchHandler @ 00dc5ba8
+    ; [POST] } // end try from 00dc5b10 to 00dc5b13
+00dc5b14  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b14 to 00dc5b17 has its CatchHandler @ 00dc5b78
+    ; [POST] } // end try from 00dc5b14 to 00dc5b17
+00dc5b18  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b18 to 00dc5b1b has its CatchHandler @ 00dc5b74
+    ; [POST] } // end try from 00dc5b18 to 00dc5b1b
+00dc5b1c  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b1c to 00dc5b1f has its CatchHandler @ 00dc5be4
+    ; [POST] } // end try from 00dc5b1c to 00dc5b1f
+00dc5b20  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b20 to 00dc5b23 has its CatchHandler @ 00dc5b70
+    ; [POST] } // end try from 00dc5b20 to 00dc5b23
+00dc5b24  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b24 to 00dc5b27 has its CatchHandler @ 00dc5b6c
+    ; [POST] } // end try from 00dc5b24 to 00dc5b27
+00dc5b28  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b28 to 00dc5b2b has its CatchHandler @ 00dc5b68
+    ; [POST] } // end try from 00dc5b28 to 00dc5b2b
+00dc5b2c  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b2c to 00dc5b2f has its CatchHandler @ 00dc5b64
+    ; [POST] } // end try from 00dc5b2c to 00dc5b2f
+00dc5b30  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b30 to 00dc5b33 has its CatchHandler @ 00dc5b60
+    ; [POST] } // end try from 00dc5b30 to 00dc5b33
+00dc5b34  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b34 to 00dc5b37 has its CatchHandler @ 00dc5b5c
+    ; [POST] } // end try from 00dc5b34 to 00dc5b37
+00dc5b38  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b38 to 00dc5b3b has its CatchHandler @ 00dc5b58
+    ; [POST] } // end try from 00dc5b38 to 00dc5b3b
+00dc5b3c  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b3c to 00dc5b3f has its CatchHandler @ 00dc5b54
+    ; [POST] } // end try from 00dc5b3c to 00dc5b3f
+00dc5b40  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b40 to 00dc5b43 has its CatchHandler @ 00dc5b50
+    ; [POST] } // end try from 00dc5b40 to 00dc5b43
+00dc5b44  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b44 to 00dc5b47 has its CatchHandler @ 00dc5bd4
+    ; [POST] } // end try from 00dc5b44 to 00dc5b47
+00dc5b48  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5b48 to 00dc5b4b has its CatchHandler @ 00dc5b4c
+    ; [POST] } // end try from 00dc5b48 to 00dc5b4b
+
+
+================================================================================
+### FILE: 00dc5cf4_Cipher__SHA256Hash.txt
+================================================================================
+Function: Cipher$$SHA256Hash @ 00dc5cf4
+
+--- Calls OUT ---
+  -> System.Security.Cryptography.SHA256$$Create @ 0201738c
+  -> System.Text.Encoding$$get_UTF8 @ 01ff8ca0
+  -> System.Security.Cryptography.HashAlgorithm$$ComputeHash @ 0200a324
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- Cipher$$verify @ 00dc5468
+
+--- Listing ---
+00dc5cf4  stp x19,x30,[sp, #-0x10]!
+00dc5cf8  mov x19,x0
+00dc5cfc  mov x0,xzr
+00dc5d00  bl 0x01ff8ca0
+00dc5d04  cbz x0,0x00dc5d40
+00dc5d08  ldr x8,[x0]
+00dc5d0c  mov x1,x19
+00dc5d10  ldr x9,[x8, #0x268]
+00dc5d14  ldr x2,[x8, #0x270]
+00dc5d18  blr x9
+00dc5d1c  mov x19,x0
+00dc5d20  mov x0,xzr
+    ; [PRE] try { // try from 00dc5d20 to 00dc5d27 has its CatchHandler @ 00dc5d50
+00dc5d24  bl 0x0201738c
+    ; [POST] } // end try from 00dc5d20 to 00dc5d27
+00dc5d28  cbz x0,0x00dc5d44
+00dc5d2c  mov x1,x19
+    ; [PRE] try { // try from 00dc5d2c to 00dc5d37 has its CatchHandler @ 00dc5d4c
+00dc5d30  mov x2,xzr
+00dc5d34  bl 0x0200a324
+    ; [POST] } // end try from 00dc5d2c to 00dc5d37
+00dc5d38  ldp x19,x30,[sp], #0x10
+00dc5d3c  ret
+00dc5d40  bl 0x00b079b0
+00dc5d44  bl 0x00b079b0
+    ; [PRE] try { // try from 00dc5d44 to 00dc5d47 has its CatchHandler @ 00dc5d48
+    ; [POST] } // end try from 00dc5d44 to 00dc5d47
+
+
+================================================================================
+### FILE: 00dc5df0_Cipher__CompareBytearrays.txt
+================================================================================
+Function: Cipher$$CompareBytearrays @ 00dc5df0
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- Cipher$$DecodeX509PublicKey @ 00dc55ac
+
+--- Listing ---
+00dc5df0  str x30,[sp, #-0x10]!
+00dc5df4  cbz x0,0x00dc5e5c
+00dc5df8  cbz x1,0x00dc5e5c
+00dc5dfc  ldr w8,[x0, #0x18]
+00dc5e00  ldr w9,[x1, #0x18]
+00dc5e04  cmp w8,w9
+00dc5e08  b.ne 0x00dc5e4c
+00dc5e0c  cmp w8,#0x1
+00dc5e10  b.lt 0x00dc5e44
+00dc5e14  mov w9,wzr
+00dc5e18  cmp w8,w9
+00dc5e1c  b.eq 0x00dc5e58
+00dc5e20  add x10,x0,w9, SXTW 
+00dc5e24  add x11,x1,w9, SXTW 
+00dc5e28  ldrb w10,[x10, #0x20]
+00dc5e2c  ldrb w11,[x11, #0x20]
+00dc5e30  cmp w10,w11
+00dc5e34  b.ne 0x00dc5e4c
+00dc5e38  add w9,w9,#0x1
+00dc5e3c  cmp w8,w9
+00dc5e40  b.ne 0x00dc5e18
+00dc5e44  mov w0,#0x1
+00dc5e48  b 0x00dc5e50
+00dc5e4c  mov w0,wzr
+00dc5e50  ldr x30,[sp], #0x10
+00dc5e54  ret
+00dc5e58  bl 0x00b079b8
+00dc5e5c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc5e60_Cipher__.ctor.txt
+================================================================================
+Function: Cipher$$.ctor @ 00dc5e60
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dc5e60  mov x1,xzr
+00dc5e64  b 0x02194104
+
+
+================================================================================
+### FILE: 01f49b2c_CircularList_object___.ctor.txt
+================================================================================
+Function: CircularList<object>$$.ctor @ 01f49b2c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b078f8 @ 00b078f8
+  -> System.Object$$.ctor @ 02194104
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+01f49b2c  stp x21,x20,[sp, #-0x20]!
+01f49b30  stp x19,x30,[sp, #0x10]
+01f49b34  mov w20,w1
+01f49b38  mov x1,xzr
+01f49b3c  mov x21,x2
+01f49b40  mov x19,x0
+01f49b44  bl 0x02194104
+01f49b48  ldr x8,[x21, #0x20]
+01f49b4c  ldr x8,[x8, #0xc0]
+01f49b50  ldr x0,[x8]
+01f49b54  ldrb w8,[x0, #0x132]
+01f49b58  tbnz w8,#0x0,0x01f49b60
+01f49b5c  bl 0x00b2ac40
+01f49b60  mov w1,w20
+01f49b64  bl 0x00b078f8
+01f49b68  str x0,[x19, #0x18]!
+01f49b6c  mov x1,x0
+01f49b70  mov x0,x19
+01f49b74  ldp x19,x30,[sp, #0x10]
+01f49b78  ldp x21,x20,[sp], #0x20
+01f49b7c  b 0x00b07850
+
+
+================================================================================
+### FILE: 01f49b80_CircularList_object___get_Capacity.txt
+================================================================================
+Function: CircularList<object>$$get_Capacity @ 01f49b80
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+01f49b80  str x30,[sp, #-0x10]!
+01f49b84  ldr x8,[x0, #0x18]
+01f49b88  cbz x8,0x01f49b98
+01f49b8c  ldr w0,[x8, #0x18]
+01f49b90  ldr x30,[sp], #0x10
+01f49b94  ret
+01f49b98  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 01f49b9c_CircularList_object___get_Count.txt
+================================================================================
+Function: CircularList<object>$$get_Count @ 01f49b9c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+01f49b9c  ldr w0,[x0, #0x14]
+01f49ba0  ret
+
+
+================================================================================
+### FILE: 01f49ba4_CircularList_object___Add.txt
+================================================================================
+Function: CircularList<object>$$Add @ 01f49ba4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+01f49ba4  stp x19,x30,[sp, #-0x10]!
+01f49ba8  ldr x8,[x0, #0x18]
+01f49bac  cbz x8,0x01f49c1c
+01f49bb0  ldp w9,w10,[x0, #0x10]
+01f49bb4  ldr w11,[x8, #0x18]
+01f49bb8  mov x19,x0
+01f49bbc  add w9,w9,w10
+01f49bc0  sdiv w10,w9,w11
+01f49bc4  msub w9,w10,w11,w9
+01f49bc8  cmp w9,w11
+01f49bcc  b.cs 0x01f49c20
+01f49bd0  add x0,x8,w9, SXTW  #0x3
+01f49bd4  str x1,[x0, #0x20]!
+01f49bd8  bl 0x00b07850
+01f49bdc  ldr x9,[x19, #0x18]
+01f49be0  cbz x9,0x01f49c1c
+01f49be4  ldr w8,[x19, #0x14]
+01f49be8  ldr w9,[x9, #0x18]
+01f49bec  cmp w8,w9
+01f49bf0  b.ne 0x01f49c0c
+01f49bf4  ldr w9,[x19, #0x10]
+01f49bf8  add w9,w9,#0x1
+01f49bfc  sdiv w10,w9,w8
+01f49c00  msub w8,w10,w8,w9
+01f49c04  str w8,[x19, #0x10]
+01f49c08  b 0x01f49c14
+01f49c0c  add w8,w8,#0x1
+01f49c10  str w8,[x19, #0x14]
+01f49c14  ldp x19,x30,[sp], #0x10
+01f49c18  ret
+01f49c1c  bl 0x00b079b0
+01f49c20  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 01f49c24_CircularList_object___Clear.txt
+================================================================================
+Function: CircularList<object>$$Clear @ 01f49c24
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+01f49c24  str xzr,[x0, #0x10]
+01f49c28  ret
+
+
+================================================================================
+### FILE: 01f49c2c_CircularList_object___get_Item.txt
+================================================================================
+Function: CircularList<object>$$get_Item @ 01f49c2c
+
+--- Calls OUT ---
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+01f49c2c  str x30,[sp, #-0x10]!
+01f49c30  ldr x8,[x0, #0x18]
+01f49c34  cbz x8,0x01f49c64
+01f49c38  ldr w9,[x0, #0x10]
+01f49c3c  ldr w10,[x8, #0x18]
+01f49c40  add w9,w9,w1
+01f49c44  sdiv w11,w9,w10
+01f49c48  msub w9,w11,w10,w9
+01f49c4c  cmp w9,w10
+01f49c50  b.cs 0x01f49c68
+01f49c54  add x8,x8,w9, SXTW  #0x3
+01f49c58  ldr x0,[x8, #0x20]
+01f49c5c  ldr x30,[sp], #0x10
+01f49c60  ret
+01f49c64  bl 0x00b079b0
+01f49c68  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 01f49c6c_CircularList_object___set_Item.txt
+================================================================================
+Function: CircularList<object>$$set_Item @ 01f49c6c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+01f49c6c  str x30,[sp, #-0x10]!
+01f49c70  ldr x8,[x0, #0x18]
+01f49c74  cbz x8,0x01f49ca8
+01f49c78  ldr w9,[x0, #0x10]
+01f49c7c  ldr w10,[x8, #0x18]
+01f49c80  add w9,w9,w1
+01f49c84  sdiv w11,w9,w10
+01f49c88  msub w9,w11,w10,w9
+01f49c8c  cmp w9,w10
+01f49c90  b.cs 0x01f49cac
+01f49c94  add x0,x8,w9, SXTW  #0x3
+01f49c98  str x2,[x0, #0x20]!
+01f49c9c  mov x1,x2
+01f49ca0  ldr x30,[sp], #0x10
+01f49ca4  b 0x00b07850
+01f49ca8  bl 0x00b079b0
+01f49cac  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 01f49cb0_CircularList_object___GetArray.txt
+================================================================================
+Function: CircularList<object>$$GetArray @ 01f49cb0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+01f49cb0  ldr x0,[x0, #0x18]
+01f49cb4  ret
+
+
+================================================================================
+### FILE: 01f49cb8_CircularList_object___get_HeadIndex.txt
+================================================================================
+Function: CircularList<object>$$get_HeadIndex @ 01f49cb8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+01f49cb8  ldr w0,[x0, #0x10]
+01f49cbc  ret
+
+
+================================================================================
+### FILE: 01f49cc0_CircularList_object___Reset.txt
+================================================================================
+Function: CircularList<object>$$Reset @ 01f49cc0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+01f49cc0  stp w1,w2,[x0, #0x10]
+01f49cc4  ret
+
+

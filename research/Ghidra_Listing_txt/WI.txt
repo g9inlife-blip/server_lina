@@ -1,0 +1,1481 @@
+================================================================================
+### FILE: 008d3a70___widen_and_group_float.txt
+================================================================================
+Function: __widen_and_group_float @ 008d3a70
+
+--- Calls OUT ---
+  -> __widen_and_group_float @ 00b5cc74
+
+--- Calls IN ---
+  <- do_put @ 00b5c69c
+  <- do_put @ 00b5d248
+
+--- Listing ---
+008d3a70  adrp x16,0x3307000
+008d3a74  ldr x17,[x16, #0x6f8]
+008d3a78  add x16,x16,#0x6f8
+008d3a7c  br x17
+
+
+================================================================================
+### FILE: 008d3e10___widen_and_group_int.txt
+================================================================================
+Function: __widen_and_group_int @ 008d3e10
+
+--- Calls OUT ---
+  -> __widen_and_group_int @ 00b5bb1c
+
+--- Calls IN ---
+  <- do_put @ 00b5c198
+  <- do_put @ 00b5c41c
+  <- do_put @ 00b5bf30
+  <- do_put @ 00b5b6b4
+
+--- Listing ---
+008d3e10  adrp x16,0x3307000
+008d3e14  ldr x17,[x16, #0x8c8]
+008d3e18  add x16,x16,#0x8c8
+008d3e1c  br x17
+
+
+================================================================================
+### FILE: 008d4fd0___widen_and_group_int.txt
+================================================================================
+Function: __widen_and_group_int @ 008d4fd0
+
+--- Calls OUT ---
+  -> __widen_and_group_int @ 00b5dd78
+
+--- Calls IN ---
+  <- do_put @ 00b5e874
+  <- do_put @ 00b5e368
+  <- do_put @ 00b5daf0
+  <- do_put @ 00b5e5ec
+
+--- Listing ---
+008d4fd0  adrp x16,0x3308000
+008d4fd4  ldr x17,[x16, #0x1a8]
+008d4fd8  add x16,x16,#0x1a8
+008d4fdc  br x17
+
+
+================================================================================
+### FILE: 008d5520___widen_and_group_float.txt
+================================================================================
+Function: __widen_and_group_float @ 008d5520
+
+--- Calls OUT ---
+  -> __widen_and_group_float @ 00b5ef2c
+
+--- Calls IN ---
+  <- do_put @ 00b5f510
+  <- do_put @ 00b5eaf8
+
+--- Listing ---
+008d5520  adrp x16,0x3308000
+008d5524  ldr x17,[x16, #0x450]
+008d5528  add x16,x16,#0x450
+008d552c  br x17
+
+
+================================================================================
+### FILE: 00b5bb1c___widen_and_group_int.txt
+================================================================================
+Function: __widen_and_group_int @ 00b5bb1c
+FuncComment: std::__ndk1::__num_put<char>::__widen_and_group_int(char*, char*, char*, char*, char*&, char*&, std::__ndk1::locale const&)
+
+--- Calls OUT ---
+  -> FUN_00af4fc0 @ 00af4fc0
+  -> FUN_00b7f6ec @ 00b7f6ec
+  -> operator.delete @ 008d3ed0
+  -> __call_once @ 008d4f80
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- __widen_and_group_int @ 008d3e10
+
+--- Listing ---
+00b5bb1c  sub sp,sp,#0xb0
+    ; [PLATE] std::__ndk1::__num_put<char>::__widen_and_group_int(char*, char*, char*, char*, char*&, char*&, std::__ndk1::locale const&)
+00b5bb20  stp x28,x27,[sp, #0x50]
+00b5bb24  stp x26,x25,[sp, #0x60]
+00b5bb28  stp x24,x23,[sp, #0x70]
+00b5bb2c  stp x22,x21,[sp, #0x80]
+00b5bb30  stp x20,x19,[sp, #0x90]
+00b5bb34  stp x29,x30,[sp, #0xa0]
+00b5bb38  add x29,sp,#0xa0
+00b5bb3c  stp x1,x3,[sp, #0x10]
+00b5bb40  mrs x27,tpidr_el0
+00b5bb44  adrp x22,0x3384000
+00b5bb48  adrp x19,0x3364000
+00b5bb4c  ldr x22,[x22, #0xc8]
+00b5bb50  ldr x8,[x27, #0x28]
+00b5bb54  ldr x19,[x19, #0xf88]
+00b5bb58  movi v0.2D,#0x0
+00b5bb5c  mov x26,x6
+00b5bb60  str x8,[sp, #0x48]
+00b5bb64  mov v0.D[0x0],x19
+00b5bb68  ldr x24,[x6]
+00b5bb6c  str x22,[sp, #0x20]
+00b5bb70  stur q0,[sp, #0x28]
+00b5bb74  ldar x8,[x22]
+00b5bb78  mov x23,x5
+00b5bb7c  mov x28,x4
+00b5bb80  mov x20,x2
+00b5bb84  cmn x8,#0x1
+00b5bb88  mov x21,x0
+00b5bb8c  b.eq 0x00b5bbb4
+00b5bb90  add x8,sp,#0x20
+00b5bb94  add x9,sp,#0x40
+00b5bb98  stp x9,x8,[sp, #0x38]
+00b5bb9c  adrp x0,0x3384000
+00b5bba0  ldr x0,[x0, #0xc8]
+00b5bba4  adrp x2,0xb7f000
+00b5bba8  add x2,x2,#0x6ec
+00b5bbac  add x1,sp,#0x38
+00b5bbb0  bl 0x008d4f80
+00b5bbb4  ldrsw x9,[x22, #0x8]
+00b5bbb8  ldp x8,x10,[x24, #0x10]
+00b5bbbc  sub x9,x9,#0x1
+00b5bbc0  sub x10,x10,x8
+00b5bbc4  cmp x9,x10, ASR #0x3
+00b5bbc8  b.cs 0x00b5bf00
+00b5bbcc  ldr x25,[x8, x9, LSL #0x3]
+00b5bbd0  cbz x25,0x00b5bf00
+00b5bbd4  adrp x24,0x3314000
+00b5bbd8  ldr x22,[x26]
+00b5bbdc  ldr x24,[x24, #0xaa0]
+00b5bbe0  movi v0.2D,#0x0
+00b5bbe4  mov v0.D[0x0],x19
+00b5bbe8  stur q0,[sp, #0x28]
+00b5bbec  str x24,[sp, #0x20]
+00b5bbf0  ldar x8,[x24]
+00b5bbf4  cmn x8,#0x1
+00b5bbf8  b.eq 0x00b5bc20
+00b5bbfc  add x8,sp,#0x20
+00b5bc00  add x9,sp,#0x40
+00b5bc04  stp x9,x8,[sp, #0x38]
+00b5bc08  adrp x0,0x3314000
+00b5bc0c  ldr x0,[x0, #0xaa0]
+00b5bc10  adrp x2,0xb7f000
+00b5bc14  add x2,x2,#0x6ec
+00b5bc18  add x1,sp,#0x38
+00b5bc1c  bl 0x008d4f80
+00b5bc20  ldrsw x9,[x24, #0x8]
+00b5bc24  ldp x8,x10,[x22, #0x10]
+00b5bc28  sub x9,x9,#0x1
+00b5bc2c  sub x10,x10,x8
+00b5bc30  cmp x9,x10, ASR #0x3
+00b5bc34  b.cs 0x00b5bf00
+00b5bc38  ldr x26,[x8, x9, LSL #0x3]
+00b5bc3c  cbz x26,0x00b5bf00
+00b5bc40  ldr x8,[x26]
+00b5bc44  mov x0,x26
+00b5bc48  ldr x9,[x8, #0x28]
+00b5bc4c  add x8,sp,#0x20
+00b5bc50  blr x9
+00b5bc54  ldrb w8,[sp, #0x20]
+00b5bc58  ldr x9,[sp, #0x28]
+00b5bc5c  ldr x19,[sp, #0x18]
+00b5bc60  lsr x10,x8,#0x1
+00b5bc64  tst w8,#0x1
+00b5bc68  csel x8,x10,x9,eq
+00b5bc6c  cbz x8,0x00b5be70
+00b5bc70  str x19,[x23]
+00b5bc74  ldrb w1,[x21]
+00b5bc78  cmp w1,#0x2d
+00b5bc7c  b.eq 0x00b5bc8c
+00b5bc80  cmp w1,#0x2b
+00b5bc84  mov x24,x21
+00b5bc88  b.ne 0x00b5bcb0
+00b5bc8c  ldr x8,[x25]
+00b5bc90  ldr x8,[x8, #0x38]
+00b5bc94  mov x0,x25
+    ; [PRE] try { // try from 00b5bc94 to 00b5bd0f has its CatchHandler @ 00b5bf10
+00b5bc98  blr x8
+00b5bc9c  ldr x8,[x23]
+00b5bca0  add x24,x21,#0x1
+00b5bca4  add x9,x8,#0x1
+00b5bca8  str x9,[x23]
+00b5bcac  strb w0,[x8]
+00b5bcb0  sub x8,x20,x24
+00b5bcb4  cmp x8,#0x2
+00b5bcb8  b.lt 0x00b5bd24
+00b5bcbc  ldrb w8,[x24]
+00b5bcc0  cmp w8,#0x30
+00b5bcc4  b.ne 0x00b5bd24
+00b5bcc8  ldrb w8,[x24, #0x1]
+00b5bccc  orr w8,w8,#0x20
+00b5bcd0  cmp w8,#0x78
+00b5bcd4  b.ne 0x00b5bd24
+00b5bcd8  ldr x8,[x25]
+00b5bcdc  ldr x8,[x8, #0x38]
+00b5bce0  mov w1,#0x30
+00b5bce4  mov x0,x25
+00b5bce8  blr x8
+00b5bcec  ldr x8,[x23]
+00b5bcf0  add x9,x8,#0x1
+00b5bcf4  str x9,[x23]
+00b5bcf8  strb w0,[x8]
+00b5bcfc  ldr x8,[x25]
+00b5bd00  ldrb w1,[x24, #0x1]
+00b5bd04  ldr x8,[x8, #0x38]
+00b5bd08  mov x0,x25
+00b5bd0c  blr x8
+    ; [POST] } // end try from 00b5bc94 to 00b5bd0f
+00b5bd10  ldr x8,[x23]
+00b5bd14  add x24,x24,#0x2
+00b5bd18  add x9,x8,#0x1
+00b5bd1c  str x9,[x23]
+00b5bd20  strb w0,[x8]
+00b5bd24  cmp x24,x20
+00b5bd28  stp x28,x27,[sp]
+00b5bd2c  b.eq 0x00b5bd5c
+00b5bd30  sub x8,x20,#0x1
+00b5bd34  cmp x8,x24
+00b5bd38  b.ls 0x00b5bd5c
+00b5bd3c  add x9,x24,#0x1
+00b5bd40  ldrb w10,[x8]
+00b5bd44  ldurb w11,[x9, #-0x1]
+00b5bd48  sturb w10,[x9, #-0x1]
+00b5bd4c  strb w11,[x8], #-0x1
+00b5bd50  cmp x9,x8
+00b5bd54  add x9,x9,#0x1
+00b5bd58  b.cc 0x00b5bd40
+00b5bd5c  ldr x8,[x26]
+00b5bd60  ldr x8,[x8, #0x20]
+00b5bd64  mov x0,x26
+    ; [PRE] try { // try from 00b5bd64 to 00b5bd6b has its CatchHandler @ 00b5bf0c
+00b5bd68  blr x8
+    ; [POST] } // end try from 00b5bd64 to 00b5bd6b
+00b5bd6c  cmp x24,x20
+00b5bd70  b.cs 0x00b5be18
+00b5bd74  add x8,sp,#0x20
+00b5bd78  mov w26,w0
+00b5bd7c  mov w19,wzr
+00b5bd80  mov w27,wzr
+00b5bd84  orr x22,x8,#0x1
+00b5bd88  mov x28,x24
+00b5bd8c  ldrb w9,[sp, #0x20]
+00b5bd90  ldr x10,[sp, #0x30]
+00b5bd94  mov w8,w19
+00b5bd98  tst w9,#0x1
+00b5bd9c  csel x9,x22,x10,eq
+00b5bda0  ldrb w9,[x9, x8, LSL ]
+00b5bda4  cbz w9,0x00b5bde4
+00b5bda8  cmp w27,w9
+00b5bdac  b.ne 0x00b5bde4
+00b5bdb0  ldr x9,[x23]
+00b5bdb4  mov w27,wzr
+00b5bdb8  add x10,x9,#0x1
+00b5bdbc  str x10,[x23]
+00b5bdc0  strb w26,[x9]
+00b5bdc4  ldrb w9,[sp, #0x20]
+00b5bdc8  ldr x10,[sp, #0x28]
+00b5bdcc  lsr x11,x9,#0x1
+00b5bdd0  tst w9,#0x1
+00b5bdd4  csel x9,x11,x10,eq
+00b5bdd8  sub x9,x9,#0x1
+00b5bddc  cmp x9,x8
+00b5bde0  cinc w19,w19,hi
+00b5bde4  ldr x8,[x25]
+00b5bde8  ldrb w1,[x28]
+00b5bdec  ldr x8,[x8, #0x38]
+00b5bdf0  mov x0,x25
+    ; [PRE] try { // try from 00b5bdf0 to 00b5bdf7 has its CatchHandler @ 00b5bf14
+00b5bdf4  blr x8
+    ; [POST] } // end try from 00b5bdf0 to 00b5bdf7
+00b5bdf8  ldr x8,[x23]
+00b5bdfc  add x28,x28,#0x1
+00b5be00  cmp x20,x28
+00b5be04  add w27,w27,#0x1
+00b5be08  add x9,x8,#0x1
+00b5be0c  str x9,[x23]
+00b5be10  strb w0,[x8]
+00b5be14  b.ne 0x00b5bd8c
+00b5be18  ldr x19,[sp, #0x18]
+00b5be1c  ldr x9,[x23]
+00b5be20  sub x10,x24,x21
+00b5be24  add x11,x19,x10
+00b5be28  cmp x11,x9
+00b5be2c  b.eq 0x00b5bea0
+00b5be30  ldp x28,x27,[sp]
+00b5be34  ldr x12,[sp, #0x10]
+00b5be38  sub x8,x9,#0x1
+00b5be3c  cmp x8,x11
+00b5be40  b.ls 0x00b5beac
+00b5be44  add x9,x10,x19
+00b5be48  add x9,x9,#0x1
+00b5be4c  ldrb w10,[x8]
+00b5be50  ldurb w11,[x9, #-0x1]
+00b5be54  sturb w10,[x9, #-0x1]
+00b5be58  strb w11,[x8], #-0x1
+00b5be5c  cmp x9,x8
+00b5be60  add x9,x9,#0x1
+00b5be64  b.cc 0x00b5be4c
+00b5be68  ldr x9,[x23]
+00b5be6c  b 0x00b5beac
+00b5be70  ldr x8,[x25]
+00b5be74  ldr x8,[x8, #0x40]
+00b5be78  mov x0,x25
+    ; [PRE] try { // try from 00b5be78 to 00b5be8b has its CatchHandler @ 00b5bf08
+00b5be7c  mov x1,x21
+00b5be80  mov x2,x20
+00b5be84  mov x3,x19
+00b5be88  blr x8
+    ; [POST] } // end try from 00b5be78 to 00b5be8b
+00b5be8c  ldr x12,[sp, #0x10]
+00b5be90  sub x8,x20,x21
+00b5be94  add x9,x19,x8
+00b5be98  str x9,[x23]
+00b5be9c  b 0x00b5beac
+00b5bea0  ldp x28,x27,[sp]
+00b5bea4  ldr x12,[sp, #0x10]
+00b5bea8  mov x9,x11
+00b5beac  sub x8,x12,x21
+00b5beb0  add x8,x19,x8
+00b5beb4  cmp x12,x20
+00b5beb8  csel x8,x9,x8,eq
+00b5bebc  str x8,[x28]
+00b5bec0  ldrb w8,[sp, #0x20]
+00b5bec4  tbz w8,#0x0,0x00b5bed0
+00b5bec8  ldr x0,[sp, #0x30]
+00b5becc  bl 0x008d3ed0
+00b5bed0  ldr x8,[x27, #0x28]
+00b5bed4  ldr x9,[sp, #0x48]
+00b5bed8  cmp x8,x9
+00b5bedc  b.ne 0x00b5bf04
+00b5bee0  ldp x29,x30,[sp, #0xa0]
+00b5bee4  ldp x20,x19,[sp, #0x90]
+00b5bee8  ldp x22,x21,[sp, #0x80]
+00b5beec  ldp x24,x23,[sp, #0x70]
+00b5bef0  ldp x26,x25,[sp, #0x60]
+00b5bef4  ldp x28,x27,[sp, #0x50]
+00b5bef8  add sp,sp,#0xb0
+00b5befc  ret
+00b5bf00  bl 0x00af4fc0
+00b5bf04  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b5cc74___widen_and_group_float.txt
+================================================================================
+Function: __widen_and_group_float @ 00b5cc74
+FuncComment: std::__ndk1::__num_put<char>::__widen_and_group_float(char*, char*, char*, char*, char*&, char*&, std::__ndk1::locale const&)
+
+--- Calls OUT ---
+  -> newlocale @ 008d49c0
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> FUN_00af4fc0 @ 00af4fc0
+  -> FUN_00b7f6ec @ 00b7f6ec
+  -> isxdigit @ 008d4ae0
+  -> operator.delete @ 008d3ed0
+  -> __call_once @ 008d4f80
+  -> __cxa_guard_release @ 008d5bc0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- __widen_and_group_float @ 008d3a70
+
+--- Listing ---
+00b5cc74  sub sp,sp,#0xc0
+    ; [PLATE] std::__ndk1::__num_put<char>::__widen_and_group_float(char*, char*, char*, char*, char*&, char*&, std::__ndk1::locale const&)
+00b5cc78  stp x28,x27,[sp, #0x60]
+00b5cc7c  stp x26,x25,[sp, #0x70]
+00b5cc80  stp x24,x23,[sp, #0x80]
+00b5cc84  stp x22,x21,[sp, #0x90]
+00b5cc88  stp x20,x19,[sp, #0xa0]
+00b5cc8c  stp x29,x30,[sp, #0xb0]
+00b5cc90  add x29,sp,#0xb0
+00b5cc94  str x3,[sp, #0x20]
+00b5cc98  mrs x28,tpidr_el0
+00b5cc9c  adrp x23,0x3384000
+00b5cca0  adrp x21,0x3364000
+00b5cca4  ldr x23,[x23, #0xc8]
+00b5cca8  ldr x8,[x28, #0x28]
+00b5ccac  ldr x21,[x21, #0xf88]
+00b5ccb0  movi v0.2D,#0x0
+00b5ccb4  mov x19,x6
+00b5ccb8  str x8,[sp, #0x58]
+00b5ccbc  mov v0.D[0x0],x21
+00b5ccc0  ldr x24,[x6]
+00b5ccc4  stp x0,x23,[sp, #0x28]
+00b5ccc8  stur q0,[sp, #0x38]
+00b5cccc  ldar x8,[x23]
+00b5ccd0  mov x20,x5
+00b5ccd4  mov x27,x4
+00b5ccd8  mov x22,x2
+00b5ccdc  mov x26,x1
+00b5cce0  cmn x8,#0x1
+00b5cce4  b.eq 0x00b5cd0c
+00b5cce8  add x8,sp,#0x30
+00b5ccec  add x9,sp,#0x50
+00b5ccf0  stp x9,x8,[sp, #0x48]
+00b5ccf4  adrp x0,0x3384000
+00b5ccf8  ldr x0,[x0, #0xc8]
+00b5ccfc  adrp x2,0xb7f000
+00b5cd00  add x2,x2,#0x6ec
+00b5cd04  add x1,sp,#0x48
+00b5cd08  bl 0x008d4f80
+00b5cd0c  ldrsw x9,[x23, #0x8]
+00b5cd10  ldp x8,x10,[x24, #0x10]
+00b5cd14  sub x9,x9,#0x1
+00b5cd18  sub x10,x10,x8
+00b5cd1c  cmp x9,x10, ASR #0x3
+00b5cd20  b.cs 0x00b5d1f4
+00b5cd24  ldr x25,[x8, x9, LSL #0x3]
+00b5cd28  cbz x25,0x00b5d1f4
+00b5cd2c  adrp x23,0x3314000
+00b5cd30  ldr x19,[x19]
+00b5cd34  ldr x23,[x23, #0xaa0]
+00b5cd38  movi v0.2D,#0x0
+00b5cd3c  mov v0.D[0x0],x21
+00b5cd40  stur q0,[sp, #0x38]
+00b5cd44  str x23,[sp, #0x30]
+00b5cd48  ldar x8,[x23]
+00b5cd4c  ldr x24,[sp, #0x20]
+00b5cd50  cmn x8,#0x1
+00b5cd54  b.eq 0x00b5cd7c
+00b5cd58  add x8,sp,#0x30
+00b5cd5c  add x9,sp,#0x50
+00b5cd60  stp x9,x8,[sp, #0x48]
+00b5cd64  adrp x0,0x3314000
+00b5cd68  ldr x0,[x0, #0xaa0]
+00b5cd6c  adrp x2,0xb7f000
+00b5cd70  add x2,x2,#0x6ec
+00b5cd74  add x1,sp,#0x48
+00b5cd78  bl 0x008d4f80
+00b5cd7c  str x26,[sp, #0x18]
+00b5cd80  ldrsw x9,[x23, #0x8]
+00b5cd84  ldp x8,x10,[x19, #0x10]
+00b5cd88  sub x9,x9,#0x1
+00b5cd8c  sub x10,x10,x8
+00b5cd90  cmp x9,x10, ASR #0x3
+00b5cd94  b.cs 0x00b5d1f4
+00b5cd98  ldr x21,[x8, x9, LSL #0x3]
+00b5cd9c  cbz x21,0x00b5d1f4
+00b5cda0  ldr x8,[x21]
+00b5cda4  mov x0,x21
+00b5cda8  ldr x9,[x8, #0x28]
+00b5cdac  add x8,sp,#0x30
+00b5cdb0  blr x9
+00b5cdb4  ldr x23,[sp, #0x28]
+00b5cdb8  str x24,[x20]
+00b5cdbc  ldrb w1,[x23]
+00b5cdc0  cmp w1,#0x2d
+00b5cdc4  b.eq 0x00b5cdd4
+00b5cdc8  cmp w1,#0x2b
+00b5cdcc  mov x26,x23
+00b5cdd0  b.ne 0x00b5cdf8
+00b5cdd4  ldr x8,[x25]
+00b5cdd8  ldr x8,[x8, #0x38]
+00b5cddc  mov x0,x25
+    ; [PRE] try { // try from 00b5cddc to 00b5cde3 has its CatchHandler @ 00b5d220
+00b5cde0  blr x8
+    ; [POST] } // end try from 00b5cddc to 00b5cde3
+00b5cde4  ldr x8,[x20]
+00b5cde8  add x26,x23,#0x1
+00b5cdec  add x9,x8,#0x1
+00b5cdf0  str x9,[x20]
+00b5cdf4  strb w0,[x8]
+00b5cdf8  sub x8,x22,x26
+00b5cdfc  adrp x19,0x3584000
+00b5ce00  cmp x8,#0x2
+00b5ce04  add x19,x19,#0xcb0
+00b5ce08  stp x21,x27,[sp, #0x8]
+00b5ce0c  b.lt 0x00b5cee4
+00b5ce10  ldrb w8,[x26]
+00b5ce14  cmp w8,#0x30
+00b5ce18  b.ne 0x00b5cee4
+00b5ce1c  ldrb w8,[x26, #0x1]
+00b5ce20  orr w8,w8,#0x20
+00b5ce24  cmp w8,#0x78
+00b5ce28  b.ne 0x00b5cee4
+00b5ce2c  ldr x8,[x25]
+00b5ce30  ldr x8,[x8, #0x38]
+00b5ce34  mov w1,#0x30
+    ; [PRE] try { // try from 00b5ce34 to 00b5ce63 has its CatchHandler @ 00b5d224
+00b5ce38  mov x0,x25
+00b5ce3c  blr x8
+00b5ce40  ldr x8,[x20]
+00b5ce44  add x9,x8,#0x1
+00b5ce48  str x9,[x20]
+00b5ce4c  strb w0,[x8]
+00b5ce50  ldr x8,[x25]
+00b5ce54  ldrb w1,[x26, #0x1]
+00b5ce58  ldr x8,[x8, #0x38]
+00b5ce5c  mov x0,x25
+00b5ce60  blr x8
+    ; [POST] } // end try from 00b5ce34 to 00b5ce63
+00b5ce64  ldr x8,[x20]
+00b5ce68  add x26,x26,#0x2
+00b5ce6c  cmp x26,x22
+00b5ce70  mov x27,x26
+00b5ce74  add x9,x8,#0x1
+00b5ce78  str x9,[x20]
+00b5ce7c  strb w0,[x8]
+00b5ce80  b.cs 0x00b5cf58
+00b5ce84  ldrb w23,[x27]
+00b5ce88  ldarb w8,[x19]
+00b5ce8c  tbz w8,#0x0,0x00b5ceac
+00b5ce90  mov w0,w23
+00b5ce94  bl 0x008d4ae0
+00b5ce98  cbz w0,0x00b5d1e0
+00b5ce9c  add x27,x27,#0x1
+00b5cea0  cmp x22,x27
+00b5cea4  b.ne 0x00b5ce84
+00b5cea8  b 0x00b5d1e8
+00b5ceac  mov x0,x19
+00b5ceb0  bl 0x008d3ef0
+00b5ceb4  cbz w0,0x00b5ce90
+00b5ceb8  adrp x1,0x2a0b000
+    ; [PRE] try { // try from 00b5ceb8 to 00b5cecb has its CatchHandler @ 00b5d1fc
+00b5cebc  mov w0,#0x1fbf
+00b5cec0  add x1,x1,#0xd5d
+00b5cec4  mov x2,xzr
+00b5cec8  bl 0x008d49c0
+    ; [POST] } // end try from 00b5ceb8 to 00b5cecb
+00b5cecc  adrp x8,0x3584000
+00b5ced0  str x0,[x8, #0xca8]
+00b5ced4  mov x0,x19
+00b5ced8  bl 0x008d5bc0
+00b5cedc  ldr x24,[sp, #0x20]
+00b5cee0  b 0x00b5ce90
+00b5cee4  mov x27,x26
+00b5cee8  cmp x26,x22
+00b5ceec  b.cs 0x00b5cf58
+00b5cef0  ldrb w21,[x27]
+00b5cef4  ldarb w8,[x19]
+00b5cef8  tbz w8,#0x0,0x00b5cf18
+00b5cefc  sub w8,w21,#0x30
+00b5cf00  cmp w8,#0x9
+00b5cf04  b.hi 0x00b5cf54
+00b5cf08  add x27,x27,#0x1
+00b5cf0c  cmp x22,x27
+00b5cf10  b.ne 0x00b5cef0
+00b5cf14  b 0x00b5cf50
+00b5cf18  mov x0,x19
+00b5cf1c  bl 0x008d3ef0
+00b5cf20  adrp x1,0x2a0b000
+00b5cf24  add x1,x1,#0xd5d
+00b5cf28  cbz w0,0x00b5cefc
+00b5cf2c  mov w0,#0x1fbf
+    ; [PRE] try { // try from 00b5cf2c to 00b5cf37 has its CatchHandler @ 00b5d200
+00b5cf30  mov x2,xzr
+00b5cf34  bl 0x008d49c0
+    ; [POST] } // end try from 00b5cf2c to 00b5cf37
+00b5cf38  adrp x8,0x3584000
+00b5cf3c  str x0,[x8, #0xca8]
+00b5cf40  mov x0,x19
+00b5cf44  bl 0x008d5bc0
+00b5cf48  ldp x24,x23,[sp, #0x20]
+00b5cf4c  b 0x00b5cefc
+00b5cf50  mov x27,x22
+00b5cf54  ldr x21,[sp, #0x8]
+00b5cf58  ldrb w8,[sp, #0x30]
+00b5cf5c  ldr x9,[sp, #0x38]
+00b5cf60  lsr x10,x8,#0x1
+00b5cf64  tst w8,#0x1
+00b5cf68  csel x8,x10,x9,eq
+00b5cf6c  cbz x8,0x00b5d0bc
+00b5cf70  cmp x26,x27
+00b5cf74  b.eq 0x00b5cfa4
+00b5cf78  sub x8,x27,#0x1
+00b5cf7c  cmp x8,x26
+00b5cf80  b.ls 0x00b5cfa4
+00b5cf84  add x9,x26,#0x1
+00b5cf88  ldrb w10,[x8]
+00b5cf8c  ldurb w11,[x9, #-0x1]
+00b5cf90  sturb w10,[x9, #-0x1]
+00b5cf94  strb w11,[x8], #-0x1
+00b5cf98  cmp x9,x8
+00b5cf9c  add x9,x9,#0x1
+00b5cfa0  b.cc 0x00b5cf88
+00b5cfa4  ldr x8,[x21]
+00b5cfa8  str x28,[sp]
+00b5cfac  ldr x8,[x8, #0x20]
+00b5cfb0  mov x0,x21
+    ; [PRE] try { // try from 00b5cfb0 to 00b5cfb7 has its CatchHandler @ 00b5d21c
+00b5cfb4  blr x8
+    ; [POST] } // end try from 00b5cfb0 to 00b5cfb7
+00b5cfb8  cmp x26,x27
+00b5cfbc  b.cs 0x00b5d064
+00b5cfc0  add x8,sp,#0x30
+00b5cfc4  mov w19,w0
+00b5cfc8  mov w23,wzr
+00b5cfcc  mov w21,wzr
+00b5cfd0  orr x24,x8,#0x1
+00b5cfd4  mov x28,x26
+00b5cfd8  ldrb w9,[sp, #0x30]
+00b5cfdc  ldr x10,[sp, #0x40]
+00b5cfe0  mov w8,w23
+00b5cfe4  tst w9,#0x1
+00b5cfe8  csel x9,x24,x10,eq
+00b5cfec  ldrb w9,[x9, x8, LSL ]
+00b5cff0  cbz w9,0x00b5d030
+00b5cff4  cmp w21,w9
+00b5cff8  b.ne 0x00b5d030
+00b5cffc  ldr x9,[x20]
+00b5d000  mov w21,wzr
+00b5d004  add x10,x9,#0x1
+00b5d008  str x10,[x20]
+00b5d00c  strb w19,[x9]
+00b5d010  ldrb w9,[sp, #0x30]
+00b5d014  ldr x10,[sp, #0x38]
+00b5d018  lsr x11,x9,#0x1
+00b5d01c  tst w9,#0x1
+00b5d020  csel x9,x11,x10,eq
+00b5d024  sub x9,x9,#0x1
+00b5d028  cmp x9,x8
+00b5d02c  cinc w23,w23,hi
+00b5d030  ldr x8,[x25]
+00b5d034  ldrb w1,[x28]
+00b5d038  ldr x8,[x8, #0x38]
+00b5d03c  mov x0,x25
+    ; [PRE] try { // try from 00b5d03c to 00b5d043 has its CatchHandler @ 00b5d22c
+00b5d040  blr x8
+    ; [POST] } // end try from 00b5d03c to 00b5d043
+00b5d044  ldr x8,[x20]
+00b5d048  add x28,x28,#0x1
+00b5d04c  cmp x27,x28
+00b5d050  add w21,w21,#0x1
+00b5d054  add x9,x8,#0x1
+00b5d058  str x9,[x20]
+00b5d05c  strb w0,[x8]
+00b5d060  b.ne 0x00b5cfd8
+00b5d064  ldp x24,x23,[sp, #0x20]
+00b5d068  ldr x8,[x20]
+00b5d06c  ldr x28,[sp]
+00b5d070  sub x9,x26,x23
+00b5d074  add x10,x24,x9
+00b5d078  cmp x10,x8
+00b5d07c  b.eq 0x00b5d0b0
+00b5d080  sub x8,x8,#0x1
+00b5d084  cmp x8,x10
+00b5d088  b.ls 0x00b5d0b0
+00b5d08c  add x9,x9,x24
+00b5d090  add x9,x9,#0x1
+00b5d094  ldrb w10,[x8]
+00b5d098  ldurb w11,[x9, #-0x1]
+00b5d09c  sturb w10,[x9, #-0x1]
+00b5d0a0  strb w11,[x8], #-0x1
+00b5d0a4  cmp x9,x8
+00b5d0a8  add x9,x9,#0x1
+00b5d0ac  b.cc 0x00b5d094
+00b5d0b0  cmp x27,x22
+00b5d0b4  b.cc 0x00b5d0f0
+00b5d0b8  b 0x00b5d158
+00b5d0bc  ldr x8,[x25]
+00b5d0c0  ldr x3,[x20]
+00b5d0c4  ldr x8,[x8, #0x40]
+00b5d0c8  mov x0,x25
+    ; [PRE] try { // try from 00b5d0c8 to 00b5d0d7 has its CatchHandler @ 00b5d224
+00b5d0cc  mov x1,x26
+00b5d0d0  mov x2,x27
+00b5d0d4  blr x8
+    ; [POST] } // end try from 00b5d0c8 to 00b5d0d7
+00b5d0d8  ldr x8,[x20]
+00b5d0dc  sub x9,x27,x26
+00b5d0e0  add x8,x8,x9
+00b5d0e4  str x8,[x20]
+00b5d0e8  cmp x27,x22
+00b5d0ec  b.cs 0x00b5d158
+00b5d0f0  ldr x19,[sp, #0x8]
+00b5d0f4  ldrb w1,[x27]
+00b5d0f8  cmp w1,#0x2e
+00b5d0fc  b.eq 0x00b5d134
+00b5d100  ldr x8,[x25]
+00b5d104  ldr x8,[x8, #0x38]
+00b5d108  mov x0,x25
+    ; [PRE] try { // try from 00b5d108 to 00b5d10f has its CatchHandler @ 00b5d228
+00b5d10c  blr x8
+    ; [POST] } // end try from 00b5d108 to 00b5d10f
+00b5d110  ldr x8,[x20]
+00b5d114  add x27,x27,#0x1
+00b5d118  cmp x22,x27
+00b5d11c  add x9,x8,#0x1
+00b5d120  str x9,[x20]
+00b5d124  strb w0,[x8]
+00b5d128  b.ne 0x00b5d0f4
+00b5d12c  mov x27,x22
+00b5d130  b 0x00b5d158
+00b5d134  ldr x8,[x19]
+00b5d138  ldr x8,[x8, #0x18]
+00b5d13c  mov x0,x19
+    ; [PRE] try { // try from 00b5d13c to 00b5d173 has its CatchHandler @ 00b5d224
+00b5d140  blr x8
+00b5d144  ldr x8,[x20]
+00b5d148  add x27,x27,#0x1
+00b5d14c  add x9,x8,#0x1
+00b5d150  str x9,[x20]
+00b5d154  strb w0,[x8]
+00b5d158  ldr x8,[x25]
+00b5d15c  ldr x3,[x20]
+00b5d160  ldr x8,[x8, #0x40]
+00b5d164  mov x0,x25
+00b5d168  mov x1,x27
+00b5d16c  mov x2,x22
+00b5d170  blr x8
+    ; [POST] } // end try from 00b5d13c to 00b5d173
+00b5d174  ldr x9,[x20]
+00b5d178  ldr x11,[sp, #0x18]
+00b5d17c  sub x8,x22,x27
+00b5d180  add x8,x9,x8
+00b5d184  ldr x9,[sp, #0x10]
+00b5d188  sub x10,x11,x23
+00b5d18c  cmp x11,x22
+00b5d190  add x10,x24,x10
+00b5d194  str x8,[x20]
+00b5d198  csel x8,x8,x10,eq
+00b5d19c  str x8,[x9]
+00b5d1a0  ldrb w8,[sp, #0x30]
+00b5d1a4  tbz w8,#0x0,0x00b5d1b0
+00b5d1a8  ldr x0,[sp, #0x40]
+00b5d1ac  bl 0x008d3ed0
+00b5d1b0  ldr x8,[x28, #0x28]
+00b5d1b4  ldr x9,[sp, #0x58]
+00b5d1b8  cmp x8,x9
+00b5d1bc  b.ne 0x00b5d1f8
+00b5d1c0  ldp x29,x30,[sp, #0xb0]
+00b5d1c4  ldp x20,x19,[sp, #0xa0]
+00b5d1c8  ldp x22,x21,[sp, #0x90]
+00b5d1cc  ldp x24,x23,[sp, #0x80]
+00b5d1d0  ldp x26,x25,[sp, #0x70]
+00b5d1d4  ldp x28,x27,[sp, #0x60]
+00b5d1d8  add sp,sp,#0xc0
+00b5d1dc  ret
+00b5d1e0  ldr x23,[sp, #0x28]
+00b5d1e4  b 0x00b5cf58
+00b5d1e8  ldr x23,[sp, #0x28]
+00b5d1ec  mov x27,x22
+00b5d1f0  b 0x00b5cf58
+00b5d1f4  bl 0x00af4fc0
+00b5d1f8  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b5dd78___widen_and_group_int.txt
+================================================================================
+Function: __widen_and_group_int @ 00b5dd78
+FuncComment: std::__ndk1::__num_put<wchar_t>::__widen_and_group_int(char*, char*, char*, wchar_t*, wchar_t*&, wchar_t*&, std::__ndk1::locale const&)
+
+--- Calls OUT ---
+  -> FUN_00af4fc0 @ 00af4fc0
+  -> FUN_00b7f6ec @ 00b7f6ec
+  -> operator.delete @ 008d3ed0
+  -> __call_once @ 008d4f80
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- __widen_and_group_int @ 008d4fd0
+
+--- Listing ---
+00b5dd78  sub sp,sp,#0xb0
+    ; [PLATE] std::__ndk1::__num_put<wchar_t>::__widen_and_group_int(char*, char*, char*, wchar_t*, wchar_t*&, wchar_t*&, std::__ndk1::locale const&)
+00b5dd7c  stp x28,x27,[sp, #0x50]
+00b5dd80  stp x26,x25,[sp, #0x60]
+00b5dd84  stp x24,x23,[sp, #0x70]
+00b5dd88  stp x22,x21,[sp, #0x80]
+00b5dd8c  stp x20,x19,[sp, #0x90]
+00b5dd90  stp x29,x30,[sp, #0xa0]
+00b5dd94  add x29,sp,#0xa0
+00b5dd98  stp x1,x3,[sp, #0x10]
+00b5dd9c  mrs x27,tpidr_el0
+00b5dda0  adrp x23,0x3360000
+00b5dda4  adrp x19,0x3364000
+00b5dda8  ldr x23,[x23, #0x810]
+00b5ddac  ldr x8,[x27, #0x28]
+00b5ddb0  ldr x19,[x19, #0xf88]
+00b5ddb4  movi v0.2D,#0x0
+00b5ddb8  mov x26,x6
+00b5ddbc  str x8,[sp, #0x48]
+00b5ddc0  mov v0.D[0x0],x19
+00b5ddc4  ldr x24,[x6]
+00b5ddc8  str x23,[sp, #0x20]
+00b5ddcc  stur q0,[sp, #0x28]
+00b5ddd0  ldar x8,[x23]
+00b5ddd4  mov x20,x5
+00b5ddd8  mov x28,x4
+00b5dddc  mov x22,x2
+00b5dde0  cmn x8,#0x1
+00b5dde4  mov x21,x0
+00b5dde8  b.eq 0x00b5de10
+00b5ddec  add x8,sp,#0x20
+00b5ddf0  add x9,sp,#0x40
+00b5ddf4  stp x9,x8,[sp, #0x38]
+00b5ddf8  adrp x0,0x3360000
+00b5ddfc  ldr x0,[x0, #0x810]
+00b5de00  adrp x2,0xb7f000
+00b5de04  add x2,x2,#0x6ec
+00b5de08  add x1,sp,#0x38
+00b5de0c  bl 0x008d4f80
+00b5de10  ldrsw x9,[x23, #0x8]
+00b5de14  ldp x8,x10,[x24, #0x10]
+00b5de18  sub x9,x9,#0x1
+00b5de1c  sub x10,x10,x8
+00b5de20  cmp x9,x10, ASR #0x3
+00b5de24  b.cs 0x00b5e150
+00b5de28  ldr x25,[x8, x9, LSL #0x3]
+00b5de2c  cbz x25,0x00b5e150
+00b5de30  adrp x24,0x335d000
+00b5de34  ldr x23,[x26]
+00b5de38  ldr x24,[x24, #0xc28]
+00b5de3c  movi v0.2D,#0x0
+00b5de40  mov v0.D[0x0],x19
+00b5de44  stur q0,[sp, #0x28]
+00b5de48  str x24,[sp, #0x20]
+00b5de4c  ldar x8,[x24]
+00b5de50  cmn x8,#0x1
+00b5de54  b.eq 0x00b5de7c
+00b5de58  add x8,sp,#0x20
+00b5de5c  add x9,sp,#0x40
+00b5de60  stp x9,x8,[sp, #0x38]
+00b5de64  adrp x0,0x335d000
+00b5de68  ldr x0,[x0, #0xc28]
+00b5de6c  adrp x2,0xb7f000
+00b5de70  add x2,x2,#0x6ec
+00b5de74  add x1,sp,#0x38
+00b5de78  bl 0x008d4f80
+00b5de7c  ldrsw x9,[x24, #0x8]
+00b5de80  ldp x8,x10,[x23, #0x10]
+00b5de84  sub x9,x9,#0x1
+00b5de88  sub x10,x10,x8
+00b5de8c  cmp x9,x10, ASR #0x3
+00b5de90  b.cs 0x00b5e150
+00b5de94  ldr x26,[x8, x9, LSL #0x3]
+00b5de98  cbz x26,0x00b5e150
+00b5de9c  ldr x8,[x26]
+00b5dea0  mov x0,x26
+00b5dea4  ldr x9,[x8, #0x28]
+00b5dea8  add x8,sp,#0x20
+00b5deac  blr x9
+00b5deb0  ldrb w8,[sp, #0x20]
+00b5deb4  ldr x9,[sp, #0x28]
+00b5deb8  ldr x19,[sp, #0x18]
+00b5debc  lsr x10,x8,#0x1
+00b5dec0  tst w8,#0x1
+00b5dec4  csel x8,x10,x9,eq
+00b5dec8  cbz x8,0x00b5e080
+00b5decc  str x19,[x20]
+00b5ded0  ldrb w1,[x21]
+00b5ded4  cmp w1,#0x2d
+00b5ded8  b.eq 0x00b5dee8
+00b5dedc  cmp w1,#0x2b
+00b5dee0  mov x24,x21
+00b5dee4  b.ne 0x00b5df0c
+00b5dee8  ldr x8,[x25]
+00b5deec  ldr x8,[x8, #0x58]
+00b5def0  mov x0,x25
+    ; [PRE] try { // try from 00b5def0 to 00b5df6b has its CatchHandler @ 00b5e160
+00b5def4  blr x8
+00b5def8  ldr x8,[x20]
+00b5defc  add x24,x21,#0x1
+00b5df00  add x9,x8,#0x4
+00b5df04  str x9,[x20]
+00b5df08  str w0,[x8]
+00b5df0c  sub x8,x22,x24
+00b5df10  cmp x8,#0x2
+00b5df14  b.lt 0x00b5df80
+00b5df18  ldrb w8,[x24]
+00b5df1c  cmp w8,#0x30
+00b5df20  b.ne 0x00b5df80
+00b5df24  ldrb w8,[x24, #0x1]
+00b5df28  orr w8,w8,#0x20
+00b5df2c  cmp w8,#0x78
+00b5df30  b.ne 0x00b5df80
+00b5df34  ldr x8,[x25]
+00b5df38  ldr x8,[x8, #0x58]
+00b5df3c  mov w1,#0x30
+00b5df40  mov x0,x25
+00b5df44  blr x8
+00b5df48  ldr x8,[x20]
+00b5df4c  add x9,x8,#0x4
+00b5df50  str x9,[x20]
+00b5df54  str w0,[x8]
+00b5df58  ldr x8,[x25]
+00b5df5c  ldrb w1,[x24, #0x1]
+00b5df60  ldr x8,[x8, #0x58]
+00b5df64  mov x0,x25
+00b5df68  blr x8
+    ; [POST] } // end try from 00b5def0 to 00b5df6b
+00b5df6c  ldr x8,[x20]
+00b5df70  add x24,x24,#0x2
+00b5df74  add x9,x8,#0x4
+00b5df78  str x9,[x20]
+00b5df7c  str w0,[x8]
+00b5df80  cmp x24,x22
+00b5df84  b.eq 0x00b5dfb4
+00b5df88  sub x8,x22,#0x1
+00b5df8c  cmp x8,x24
+00b5df90  b.ls 0x00b5dfb4
+00b5df94  add x9,x24,#0x1
+00b5df98  ldrb w10,[x8]
+00b5df9c  ldurb w11,[x9, #-0x1]
+00b5dfa0  sturb w10,[x9, #-0x1]
+00b5dfa4  strb w11,[x8], #-0x1
+00b5dfa8  cmp x9,x8
+00b5dfac  add x9,x9,#0x1
+00b5dfb0  b.cc 0x00b5df98
+00b5dfb4  ldr x8,[x26]
+00b5dfb8  ldr x8,[x8, #0x20]
+00b5dfbc  mov x0,x26
+    ; [PRE] try { // try from 00b5dfbc to 00b5dfc3 has its CatchHandler @ 00b5e15c
+00b5dfc0  blr x8
+    ; [POST] } // end try from 00b5dfbc to 00b5dfc3
+00b5dfc4  cmp x24,x22
+00b5dfc8  b.cs 0x00b5e0b0
+00b5dfcc  add x8,sp,#0x20
+00b5dfd0  mov w26,w0
+00b5dfd4  stp x28,x27,[sp]
+00b5dfd8  mov w19,wzr
+00b5dfdc  mov w27,wzr
+00b5dfe0  orr x23,x8,#0x1
+00b5dfe4  mov x28,x24
+00b5dfe8  ldrb w9,[sp, #0x20]
+00b5dfec  ldr x10,[sp, #0x30]
+00b5dff0  mov w8,w19
+00b5dff4  tst w9,#0x1
+00b5dff8  csel x9,x23,x10,eq
+00b5dffc  ldrb w9,[x9, x8, LSL ]
+00b5e000  cbz w9,0x00b5e040
+00b5e004  cmp w27,w9
+00b5e008  b.ne 0x00b5e040
+00b5e00c  ldr x9,[x20]
+00b5e010  mov w27,wzr
+00b5e014  add x10,x9,#0x4
+00b5e018  str x10,[x20]
+00b5e01c  str w26,[x9]
+00b5e020  ldrb w9,[sp, #0x20]
+00b5e024  ldr x10,[sp, #0x28]
+00b5e028  lsr x11,x9,#0x1
+00b5e02c  tst w9,#0x1
+00b5e030  csel x9,x11,x10,eq
+00b5e034  sub x9,x9,#0x1
+00b5e038  cmp x9,x8
+00b5e03c  cinc w19,w19,hi
+00b5e040  ldr x8,[x25]
+00b5e044  ldrb w1,[x28]
+00b5e048  ldr x8,[x8, #0x58]
+00b5e04c  mov x0,x25
+    ; [PRE] try { // try from 00b5e04c to 00b5e053 has its CatchHandler @ 00b5e164
+00b5e050  blr x8
+    ; [POST] } // end try from 00b5e04c to 00b5e053
+00b5e054  ldr x9,[x20]
+00b5e058  add x28,x28,#0x1
+00b5e05c  cmp x22,x28
+00b5e060  add w27,w27,#0x1
+00b5e064  add x8,x9,#0x4
+00b5e068  str x8,[x20]
+00b5e06c  str w0,[x9]
+00b5e070  b.ne 0x00b5dfe8
+00b5e074  ldp x28,x27,[sp]
+00b5e078  ldr x19,[sp, #0x18]
+00b5e07c  b 0x00b5e0b4
+00b5e080  ldr x8,[x25]
+00b5e084  ldr x8,[x8, #0x60]
+00b5e088  mov x0,x25
+    ; [PRE] try { // try from 00b5e088 to 00b5e09b has its CatchHandler @ 00b5e158
+00b5e08c  mov x1,x21
+00b5e090  mov x2,x22
+00b5e094  mov x3,x19
+00b5e098  blr x8
+    ; [POST] } // end try from 00b5e088 to 00b5e09b
+00b5e09c  ldr x12,[sp, #0x10]
+00b5e0a0  sub x8,x22,x21
+00b5e0a4  add x8,x19,x8, LSL #0x2
+00b5e0a8  str x8,[x20]
+00b5e0ac  b 0x00b5e0f8
+00b5e0b0  ldr x8,[x20]
+00b5e0b4  ldr x12,[sp, #0x10]
+00b5e0b8  sub x9,x24,x21
+00b5e0bc  add x10,x19,x9, LSL #0x2
+00b5e0c0  cmp x10,x8
+00b5e0c4  b.eq 0x00b5e0f8
+00b5e0c8  sub x8,x8,#0x4
+00b5e0cc  cmp x8,x10
+00b5e0d0  b.ls 0x00b5e0f8
+00b5e0d4  add x9,x19,x9, LSL #0x2
+00b5e0d8  add x9,x9,#0x4
+00b5e0dc  ldr w10,[x8]
+00b5e0e0  ldur w11,[x9, #-0x4]
+00b5e0e4  stur w10,[x9, #-0x4]
+00b5e0e8  str w11,[x8], #-0x4
+00b5e0ec  cmp x9,x8
+00b5e0f0  add x9,x9,#0x4
+00b5e0f4  b.cc 0x00b5e0dc
+00b5e0f8  ldr x8,[x20]
+00b5e0fc  sub x9,x12,x21
+00b5e100  add x9,x19,x9, LSL #0x2
+00b5e104  cmp x12,x22
+00b5e108  csel x8,x8,x9,eq
+00b5e10c  str x8,[x28]
+00b5e110  ldrb w8,[sp, #0x20]
+00b5e114  tbz w8,#0x0,0x00b5e120
+00b5e118  ldr x0,[sp, #0x30]
+00b5e11c  bl 0x008d3ed0
+00b5e120  ldr x8,[x27, #0x28]
+00b5e124  ldr x9,[sp, #0x48]
+00b5e128  cmp x8,x9
+00b5e12c  b.ne 0x00b5e154
+00b5e130  ldp x29,x30,[sp, #0xa0]
+00b5e134  ldp x20,x19,[sp, #0x90]
+00b5e138  ldp x22,x21,[sp, #0x80]
+00b5e13c  ldp x24,x23,[sp, #0x70]
+00b5e140  ldp x26,x25,[sp, #0x60]
+00b5e144  ldp x28,x27,[sp, #0x50]
+00b5e148  add sp,sp,#0xb0
+00b5e14c  ret
+00b5e150  bl 0x00af4fc0
+00b5e154  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b5ef2c___widen_and_group_float.txt
+================================================================================
+Function: __widen_and_group_float @ 00b5ef2c
+FuncComment: std::__ndk1::__num_put<wchar_t>::__widen_and_group_float(char*, char*, char*, wchar_t*, wchar_t*&, wchar_t*&, std::__ndk1::locale const&)
+
+--- Calls OUT ---
+  -> newlocale @ 008d49c0
+  -> FUN_00af4fc0 @ 00af4fc0
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> FUN_00b7f6ec @ 00b7f6ec
+  -> isxdigit @ 008d4ae0
+  -> operator.delete @ 008d3ed0
+  -> __call_once @ 008d4f80
+  -> __cxa_guard_release @ 008d5bc0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- __widen_and_group_float @ 008d5520
+
+--- Listing ---
+00b5ef2c  sub sp,sp,#0xc0
+    ; [PLATE] std::__ndk1::__num_put<wchar_t>::__widen_and_group_float(char*, char*, char*, wchar_t*, wchar_t*&, wchar_t*&, std::__ndk1::locale const&)
+00b5ef30  stp x28,x27,[sp, #0x60]
+00b5ef34  stp x26,x25,[sp, #0x70]
+00b5ef38  stp x24,x23,[sp, #0x80]
+00b5ef3c  stp x22,x21,[sp, #0x90]
+00b5ef40  stp x20,x19,[sp, #0xa0]
+00b5ef44  stp x29,x30,[sp, #0xb0]
+00b5ef48  add x29,sp,#0xb0
+00b5ef4c  str x3,[sp, #0x20]
+00b5ef50  mrs x8,tpidr_el0
+00b5ef54  adrp x23,0x3360000
+00b5ef58  ldr x23,[x23, #0x810]
+00b5ef5c  str x8,[sp, #0x18]
+00b5ef60  adrp x21,0x3364000
+00b5ef64  ldr x8,[x8, #0x28]
+00b5ef68  ldr x21,[x21, #0xf88]
+00b5ef6c  movi v0.2D,#0x0
+00b5ef70  mov x19,x6
+00b5ef74  str x8,[sp, #0x58]
+00b5ef78  mov v0.D[0x0],x21
+00b5ef7c  ldr x24,[x6]
+00b5ef80  stp x0,x23,[sp, #0x28]
+00b5ef84  stur q0,[sp, #0x38]
+00b5ef88  ldar x8,[x23]
+00b5ef8c  mov x20,x5
+00b5ef90  mov x27,x4
+00b5ef94  mov x22,x2
+00b5ef98  mov x26,x1
+00b5ef9c  cmn x8,#0x1
+00b5efa0  b.eq 0x00b5efc8
+00b5efa4  add x8,sp,#0x30
+00b5efa8  add x9,sp,#0x50
+00b5efac  stp x9,x8,[sp, #0x48]
+00b5efb0  adrp x0,0x3360000
+00b5efb4  ldr x0,[x0, #0x810]
+00b5efb8  adrp x2,0xb7f000
+00b5efbc  add x2,x2,#0x6ec
+00b5efc0  add x1,sp,#0x48
+00b5efc4  bl 0x008d4f80
+00b5efc8  ldrsw x9,[x23, #0x8]
+00b5efcc  ldp x8,x10,[x24, #0x10]
+00b5efd0  sub x9,x9,#0x1
+00b5efd4  sub x10,x10,x8
+00b5efd8  cmp x9,x10, ASR #0x3
+00b5efdc  b.cs 0x00b5f4bc
+00b5efe0  ldr x25,[x8, x9, LSL #0x3]
+00b5efe4  cbz x25,0x00b5f4bc
+00b5efe8  adrp x23,0x335d000
+00b5efec  ldr x19,[x19]
+00b5eff0  ldr x23,[x23, #0xc28]
+00b5eff4  movi v0.2D,#0x0
+00b5eff8  mov v0.D[0x0],x21
+00b5effc  stur q0,[sp, #0x38]
+00b5f000  str x23,[sp, #0x30]
+00b5f004  ldar x8,[x23]
+00b5f008  ldr x28,[sp, #0x20]
+00b5f00c  cmn x8,#0x1
+00b5f010  b.eq 0x00b5f038
+00b5f014  add x8,sp,#0x30
+00b5f018  add x9,sp,#0x50
+00b5f01c  stp x9,x8,[sp, #0x48]
+00b5f020  adrp x0,0x335d000
+00b5f024  ldr x0,[x0, #0xc28]
+00b5f028  adrp x2,0xb7f000
+00b5f02c  add x2,x2,#0x6ec
+00b5f030  add x1,sp,#0x48
+00b5f034  bl 0x008d4f80
+00b5f038  str x26,[sp, #0x10]
+00b5f03c  ldrsw x9,[x23, #0x8]
+00b5f040  ldp x8,x10,[x19, #0x10]
+00b5f044  sub x9,x9,#0x1
+00b5f048  sub x10,x10,x8
+00b5f04c  cmp x9,x10, ASR #0x3
+00b5f050  b.cs 0x00b5f4bc
+00b5f054  ldr x21,[x8, x9, LSL #0x3]
+00b5f058  cbz x21,0x00b5f4bc
+00b5f05c  ldr x8,[x21]
+00b5f060  mov x0,x21
+00b5f064  ldr x9,[x8, #0x28]
+00b5f068  add x8,sp,#0x30
+00b5f06c  blr x9
+00b5f070  ldr x23,[sp, #0x28]
+00b5f074  str x28,[x20]
+00b5f078  ldrb w1,[x23]
+00b5f07c  cmp w1,#0x2d
+00b5f080  b.eq 0x00b5f090
+00b5f084  cmp w1,#0x2b
+00b5f088  mov x26,x23
+00b5f08c  b.ne 0x00b5f0b4
+00b5f090  ldr x8,[x25]
+00b5f094  ldr x8,[x8, #0x58]
+00b5f098  mov x0,x25
+    ; [PRE] try { // try from 00b5f098 to 00b5f09f has its CatchHandler @ 00b5f4e8
+00b5f09c  blr x8
+    ; [POST] } // end try from 00b5f098 to 00b5f09f
+00b5f0a0  ldr x8,[x20]
+00b5f0a4  add x26,x23,#0x1
+00b5f0a8  add x9,x8,#0x4
+00b5f0ac  str x9,[x20]
+00b5f0b0  str w0,[x8]
+00b5f0b4  sub x8,x22,x26
+00b5f0b8  adrp x19,0x3584000
+00b5f0bc  cmp x8,#0x2
+00b5f0c0  add x19,x19,#0xcb0
+00b5f0c4  adrp x24,0x3584000
+00b5f0c8  str x27,[sp, #0x8]
+00b5f0cc  b.lt 0x00b5f1a0
+00b5f0d0  ldrb w8,[x26]
+00b5f0d4  cmp w8,#0x30
+00b5f0d8  b.ne 0x00b5f1a0
+00b5f0dc  ldrb w8,[x26, #0x1]
+00b5f0e0  orr w8,w8,#0x20
+00b5f0e4  cmp w8,#0x78
+00b5f0e8  b.ne 0x00b5f1a0
+00b5f0ec  ldr x8,[x25]
+00b5f0f0  ldr x8,[x8, #0x58]
+00b5f0f4  mov w1,#0x30
+    ; [PRE] try { // try from 00b5f0f4 to 00b5f123 has its CatchHandler @ 00b5f4ec
+00b5f0f8  mov x0,x25
+00b5f0fc  blr x8
+00b5f100  ldr x8,[x20]
+00b5f104  add x9,x8,#0x4
+00b5f108  str x9,[x20]
+00b5f10c  str w0,[x8]
+00b5f110  ldr x8,[x25]
+00b5f114  ldrb w1,[x26, #0x1]
+00b5f118  ldr x8,[x8, #0x58]
+00b5f11c  mov x0,x25
+00b5f120  blr x8
+    ; [POST] } // end try from 00b5f0f4 to 00b5f123
+00b5f124  ldr x8,[x20]
+00b5f128  add x26,x26,#0x2
+00b5f12c  cmp x26,x22
+00b5f130  mov x27,x26
+00b5f134  add x9,x8,#0x4
+00b5f138  str x9,[x20]
+00b5f13c  str w0,[x8]
+00b5f140  b.cs 0x00b5f220
+00b5f144  ldrb w23,[x27]
+00b5f148  ldarb w8,[x19]
+00b5f14c  tbz w8,#0x0,0x00b5f16c
+00b5f150  mov w0,w23
+00b5f154  bl 0x008d4ae0
+00b5f158  cbz w0,0x00b5f4a8
+00b5f15c  add x27,x27,#0x1
+00b5f160  cmp x22,x27
+00b5f164  b.ne 0x00b5f144
+00b5f168  b 0x00b5f4b0
+00b5f16c  mov x0,x19
+00b5f170  bl 0x008d3ef0
+00b5f174  cbz w0,0x00b5f150
+00b5f178  adrp x1,0x2a0b000
+    ; [PRE] try { // try from 00b5f178 to 00b5f18b has its CatchHandler @ 00b5f4c4
+00b5f17c  mov w0,#0x1fbf
+00b5f180  add x1,x1,#0xd5d
+00b5f184  mov x2,xzr
+00b5f188  bl 0x008d49c0
+    ; [POST] } // end try from 00b5f178 to 00b5f18b
+00b5f18c  str x0,[x24, #0xca8]
+00b5f190  mov x0,x19
+00b5f194  bl 0x008d5bc0
+00b5f198  ldr x28,[sp, #0x20]
+00b5f19c  b 0x00b5f150
+00b5f1a0  cmp x26,x22
+00b5f1a4  b.cs 0x00b5f210
+00b5f1a8  mov x24,x21
+00b5f1ac  mov x27,x26
+00b5f1b0  ldrb w21,[x27]
+00b5f1b4  ldarb w8,[x19]
+00b5f1b8  tbz w8,#0x0,0x00b5f1d8
+00b5f1bc  sub w8,w21,#0x30
+00b5f1c0  cmp w8,#0x9
+00b5f1c4  b.hi 0x00b5f21c
+00b5f1c8  add x27,x27,#0x1
+00b5f1cc  cmp x22,x27
+00b5f1d0  b.ne 0x00b5f1b0
+00b5f1d4  b 0x00b5f218
+00b5f1d8  mov x0,x19
+00b5f1dc  bl 0x008d3ef0
+00b5f1e0  adrp x1,0x2a0b000
+00b5f1e4  add x1,x1,#0xd5d
+00b5f1e8  cbz w0,0x00b5f1bc
+00b5f1ec  mov w0,#0x1fbf
+    ; [PRE] try { // try from 00b5f1ec to 00b5f1f7 has its CatchHandler @ 00b5f4c8
+00b5f1f0  mov x2,xzr
+00b5f1f4  bl 0x008d49c0
+    ; [POST] } // end try from 00b5f1ec to 00b5f1f7
+00b5f1f8  adrp x8,0x3584000
+00b5f1fc  str x0,[x8, #0xca8]
+00b5f200  mov x0,x19
+00b5f204  bl 0x008d5bc0
+00b5f208  ldp x28,x23,[sp, #0x20]
+00b5f20c  b 0x00b5f1bc
+00b5f210  mov x27,x26
+00b5f214  b 0x00b5f220
+00b5f218  mov x27,x22
+00b5f21c  mov x21,x24
+00b5f220  ldrb w8,[sp, #0x30]
+00b5f224  ldr x9,[sp, #0x38]
+00b5f228  lsr x10,x8,#0x1
+00b5f22c  tst w8,#0x1
+00b5f230  csel x8,x10,x9,eq
+00b5f234  cbz x8,0x00b5f338
+00b5f238  cmp x26,x27
+00b5f23c  b.eq 0x00b5f26c
+00b5f240  sub x8,x27,#0x1
+00b5f244  cmp x8,x26
+00b5f248  b.ls 0x00b5f26c
+00b5f24c  add x9,x26,#0x1
+00b5f250  ldrb w10,[x8]
+00b5f254  ldurb w11,[x9, #-0x1]
+00b5f258  sturb w10,[x9, #-0x1]
+00b5f25c  strb w11,[x8], #-0x1
+00b5f260  cmp x9,x8
+00b5f264  add x9,x9,#0x1
+00b5f268  b.cc 0x00b5f250
+00b5f26c  ldr x8,[x21]
+00b5f270  ldr x8,[x8, #0x20]
+00b5f274  mov x0,x21
+    ; [PRE] try { // try from 00b5f274 to 00b5f27b has its CatchHandler @ 00b5f4e4
+00b5f278  blr x8
+    ; [POST] } // end try from 00b5f274 to 00b5f27b
+00b5f27c  cmp x26,x27
+00b5f280  b.cs 0x00b5f370
+00b5f284  add x8,sp,#0x30
+00b5f288  mov w19,w0
+00b5f28c  str x21,[sp]
+00b5f290  mov w23,wzr
+00b5f294  mov w21,wzr
+00b5f298  orr x24,x8,#0x1
+00b5f29c  mov x28,x26
+00b5f2a0  ldrb w9,[sp, #0x30]
+00b5f2a4  ldr x10,[sp, #0x40]
+00b5f2a8  mov w8,w23
+00b5f2ac  tst w9,#0x1
+00b5f2b0  csel x9,x24,x10,eq
+00b5f2b4  ldrb w9,[x9, x8, LSL ]
+00b5f2b8  cbz w9,0x00b5f2f8
+00b5f2bc  cmp w21,w9
+00b5f2c0  b.ne 0x00b5f2f8
+00b5f2c4  ldr x9,[x20]
+00b5f2c8  mov w21,wzr
+00b5f2cc  add x10,x9,#0x4
+00b5f2d0  str x10,[x20]
+00b5f2d4  str w19,[x9]
+00b5f2d8  ldrb w9,[sp, #0x30]
+00b5f2dc  ldr x10,[sp, #0x38]
+00b5f2e0  lsr x11,x9,#0x1
+00b5f2e4  tst w9,#0x1
+00b5f2e8  csel x9,x11,x10,eq
+00b5f2ec  sub x9,x9,#0x1
+00b5f2f0  cmp x9,x8
+00b5f2f4  cinc w23,w23,hi
+00b5f2f8  ldr x8,[x25]
+00b5f2fc  ldrb w1,[x28]
+00b5f300  ldr x8,[x8, #0x58]
+00b5f304  mov x0,x25
+    ; [PRE] try { // try from 00b5f304 to 00b5f30b has its CatchHandler @ 00b5f4f4
+00b5f308  blr x8
+    ; [POST] } // end try from 00b5f304 to 00b5f30b
+00b5f30c  ldr x8,[x20]
+00b5f310  add x28,x28,#0x1
+00b5f314  cmp x27,x28
+00b5f318  add w21,w21,#0x1
+00b5f31c  add x3,x8,#0x4
+00b5f320  str x3,[x20]
+00b5f324  str w0,[x8]
+00b5f328  b.ne 0x00b5f2a0
+00b5f32c  ldp x28,x23,[sp, #0x20]
+00b5f330  ldr x21,[sp]
+00b5f334  b 0x00b5f374
+00b5f338  ldr x8,[x25]
+00b5f33c  ldr x3,[x20]
+00b5f340  ldr x8,[x8, #0x60]
+00b5f344  mov x0,x25
+    ; [PRE] try { // try from 00b5f344 to 00b5f353 has its CatchHandler @ 00b5f4ec
+00b5f348  mov x1,x26
+00b5f34c  mov x2,x27
+00b5f350  blr x8
+    ; [POST] } // end try from 00b5f344 to 00b5f353
+00b5f354  ldr x8,[x20]
+00b5f358  sub x9,x27,x26
+00b5f35c  add x3,x8,x9, LSL #0x2
+00b5f360  str x3,[x20]
+00b5f364  cmp x27,x22
+00b5f368  b.cc 0x00b5f3bc
+00b5f36c  b 0x00b5f420
+00b5f370  ldr x3,[x20]
+00b5f374  sub x9,x26,x23
+00b5f378  add x10,x28,x9, LSL #0x2
+00b5f37c  cmp x10,x3
+00b5f380  b.eq 0x00b5f3b4
+00b5f384  sub x8,x3,#0x4
+00b5f388  cmp x8,x10
+00b5f38c  b.ls 0x00b5f3b4
+00b5f390  add x9,x28,x9, LSL #0x2
+00b5f394  add x9,x9,#0x4
+00b5f398  ldr w10,[x8]
+00b5f39c  ldur w11,[x9, #-0x4]
+00b5f3a0  stur w10,[x9, #-0x4]
+00b5f3a4  str w11,[x8], #-0x4
+00b5f3a8  cmp x9,x8
+00b5f3ac  add x9,x9,#0x4
+00b5f3b0  b.cc 0x00b5f398
+00b5f3b4  cmp x27,x22
+00b5f3b8  b.cs 0x00b5f420
+00b5f3bc  ldrb w1,[x27]
+00b5f3c0  cmp w1,#0x2e
+00b5f3c4  b.eq 0x00b5f3fc
+00b5f3c8  ldr x8,[x25]
+00b5f3cc  ldr x8,[x8, #0x58]
+00b5f3d0  mov x0,x25
+    ; [PRE] try { // try from 00b5f3d0 to 00b5f3d7 has its CatchHandler @ 00b5f4f0
+00b5f3d4  blr x8
+    ; [POST] } // end try from 00b5f3d0 to 00b5f3d7
+00b5f3d8  ldr x8,[x20]
+00b5f3dc  add x27,x27,#0x1
+00b5f3e0  cmp x22,x27
+00b5f3e4  add x3,x8,#0x4
+00b5f3e8  str x3,[x20]
+00b5f3ec  str w0,[x8]
+00b5f3f0  b.ne 0x00b5f3bc
+00b5f3f4  mov x27,x22
+00b5f3f8  b 0x00b5f420
+00b5f3fc  ldr x8,[x21]
+00b5f400  ldr x8,[x8, #0x18]
+00b5f404  mov x0,x21
+    ; [PRE] try { // try from 00b5f404 to 00b5f437 has its CatchHandler @ 00b5f4ec
+00b5f408  blr x8
+00b5f40c  ldr x8,[x20]
+00b5f410  add x27,x27,#0x1
+00b5f414  add x3,x8,#0x4
+00b5f418  str x3,[x20]
+00b5f41c  str w0,[x8]
+00b5f420  ldr x8,[x25]
+00b5f424  ldr x8,[x8, #0x60]
+00b5f428  mov x0,x25
+00b5f42c  mov x1,x27
+00b5f430  mov x2,x22
+00b5f434  blr x8
+    ; [POST] } // end try from 00b5f404 to 00b5f437
+00b5f438  ldr x9,[x20]
+00b5f43c  ldr x11,[sp, #0x10]
+00b5f440  sub x8,x22,x27
+00b5f444  add x8,x9,x8, LSL #0x2
+00b5f448  ldr x9,[sp, #0x8]
+00b5f44c  sub x10,x11,x23
+00b5f450  cmp x11,x22
+00b5f454  add x10,x28,x10, LSL #0x2
+00b5f458  str x8,[x20]
+00b5f45c  csel x8,x8,x10,eq
+00b5f460  str x8,[x9]
+00b5f464  ldrb w8,[sp, #0x30]
+00b5f468  tbz w8,#0x0,0x00b5f474
+00b5f46c  ldr x0,[sp, #0x40]
+00b5f470  bl 0x008d3ed0
+00b5f474  ldr x8,[sp, #0x18]
+00b5f478  ldr x8,[x8, #0x28]
+00b5f47c  ldr x9,[sp, #0x58]
+00b5f480  cmp x8,x9
+00b5f484  b.ne 0x00b5f4c0
+00b5f488  ldp x29,x30,[sp, #0xb0]
+00b5f48c  ldp x20,x19,[sp, #0xa0]
+00b5f490  ldp x22,x21,[sp, #0x90]
+00b5f494  ldp x24,x23,[sp, #0x80]
+00b5f498  ldp x26,x25,[sp, #0x70]
+00b5f49c  ldp x28,x27,[sp, #0x60]
+00b5f4a0  add sp,sp,#0xc0
+00b5f4a4  ret
+00b5f4a8  ldr x23,[sp, #0x28]
+00b5f4ac  b 0x00b5f220
+00b5f4b0  ldr x23,[sp, #0x28]
+00b5f4b4  mov x27,x22
+00b5f4b8  b 0x00b5f220
+00b5f4bc  bl 0x00af4fc0
+00b5f4c0  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b76f84____widen_from_utf8.txt
+================================================================================
+Function: ~__widen_from_utf8 @ 00b76f84
+FuncComment: std::__ndk1::__widen_from_utf8<16ul>::~__widen_from_utf8()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b76f84  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__widen_from_utf8<16ul>::~__widen_from_utf8()
+00b76f88  stp x29,x30,[sp, #0x10]
+00b76f8c  add x29,sp,#0x10
+00b76f90  mov x19,x0
+00b76f94  bl 0x008d4ca0
+00b76f98  ldp x29,x30,[sp, #0x10]
+00b76f9c  mov x0,x19
+00b76fa0  ldr x19,[sp], #0x20
+00b76fa4  b 0x008d3ed0
+
+
+================================================================================
+### FILE: 00b76fa8____widen_from_utf8.txt
+================================================================================
+Function: ~__widen_from_utf8 @ 00b76fa8
+FuncComment: std::__ndk1::__widen_from_utf8<32ul>::~__widen_from_utf8()
+
+--- Calls OUT ---
+  -> ~__shared_count @ 008d4ca0
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00b76fa8  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__widen_from_utf8<32ul>::~__widen_from_utf8()
+00b76fac  stp x29,x30,[sp, #0x10]
+00b76fb0  add x29,sp,#0x10
+00b76fb4  mov x19,x0
+00b76fb8  bl 0x008d4ca0
+00b76fbc  ldp x29,x30,[sp, #0x10]
+00b76fc0  mov x0,x19
+00b76fc4  ldr x19,[sp], #0x20
+00b76fc8  b 0x008d3ed0
+
+

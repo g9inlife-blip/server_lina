@@ -1,0 +1,3111 @@
+================================================================================
+### FILE: 00db5690_EventHandle__showLog.txt
+================================================================================
+Function: EventHandle$$showLog @ 00db5690
+
+--- Calls OUT ---
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- EventHandle$$onSucceed @ 00db7af4
+  <- EventHandle$$onPayCancel @ 00db75dc
+  <- EventHandle$$onGetGoodsInfos @ 00db68d4
+  <- EventHandle$$onGetConfigValue @ 00db6ad0
+  <- EventHandle$$onInitSuccess @ 00db6bb8
+  <- EventHandle$$ongetDeviceId @ 00db5888
+  <- EventHandle$$onLogoutSuccess @ 00db7308
+  <- EventHandle$$onUserId @ 00db6948
+  <- EventHandle$$onSwitchAccountSuccess @ 00db6f8c
+  <- EventHandle$$onLoginFailed @ 00db7294
+  <- EventHandle$$onFailed @ 00db7b3c
+  <- EventHandle$$onLoginSuccess @ 00db6c84
+  <- EventHandle$$onExitSuccess @ 00db7a84
+  <- EventHandle$$onInitFailed @ 00db6c10
+  <- EventHandle$$onPayFailed @ 00db7830
+  <- EventHandle$$onFuctionSupport @ 00db6a34
+  <- EventHandle$$onChannelType @ 00db699c
+  <- EventHandle$$onPaySuccess @ 00db7388
+
+--- Listing ---
+00db5690  str x24,[sp, #-0x40]!
+00db5694  stp x23,x22,[sp, #0x10]
+00db5698  stp x21,x20,[sp, #0x20]
+00db569c  stp x19,x30,[sp, #0x30]
+00db56a0  adrp x22,0x3572000
+00db56a4  adrp x23,0x331f000
+00db56a8  adrp x24,0x3372000
+00db56ac  adrp x21,0x336b000
+00db56b0  ldrb w8,[x22, #0xe1]
+00db56b4  ldr x23,[x23, #0x4f0]
+00db56b8  ldr x24,[x24, #0x8c8]
+00db56bc  ldr x21,[x21, #0x7d0]
+00db56c0  mov x19,x2
+00db56c4  mov x20,x1
+00db56c8  tbnz w8,#0x0,0x00db56f8
+00db56cc  adrp x0,0x336b000
+00db56d0  ldr x0,[x0, #0x7d0]
+00db56d4  bl 0x00b0789c
+00db56d8  adrp x0,0x331f000
+00db56dc  ldr x0,[x0, #0x4f0]
+00db56e0  bl 0x00b0789c
+00db56e4  adrp x0,0x3372000
+00db56e8  ldr x0,[x0, #0x8c8]
+00db56ec  bl 0x00b0789c
+00db56f0  mov w8,#0x1
+00db56f4  strb w8,[x22, #0xe1]
+00db56f8  ldr x0,[x23]
+00db56fc  ldr x2,[x24]
+00db5700  mov x1,x20
+00db5704  mov x3,x19
+00db5708  mov x4,xzr
+00db570c  bl 0x01fdf3bc
+00db5710  ldr x8,[x21]
+00db5714  mov x19,x0
+00db5718  ldr w9,[x8, #0xe0]
+00db571c  cbnz w9,0x00db5728
+00db5720  mov x0,x8
+00db5724  bl 0x00b0798c
+00db5728  mov x0,x19
+00db572c  ldp x19,x30,[sp, #0x30]
+00db5730  ldp x21,x20,[sp, #0x20]
+00db5734  ldp x23,x22,[sp, #0x10]
+00db5738  mov x1,xzr
+00db573c  ldr x24,[sp], #0x40
+00db5740  b 0x024c0104
+
+
+================================================================================
+### FILE: 00db5744_EventHandle__Start.txt
+================================================================================
+Function: EventHandle$$Start @ 00db5744
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$Find @ 024def7c
+  -> quicksdk.QuickSDK$$setListener @ 01633ca4
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00db5744  stp x21,x20,[sp, #-0x20]!
+00db5748  stp x19,x30,[sp, #0x10]
+00db574c  adrp x21,0x3572000
+00db5750  adrp x20,0x336b000
+00db5754  ldrb w8,[x21, #0xe2]
+00db5758  ldr x20,[x20, #0x7d0]
+00db575c  mov x19,x0
+00db5760  tbnz w8,#0x0,0x00db579c
+00db5764  adrp x0,0x336b000
+00db5768  ldr x0,[x0, #0x7d0]
+00db576c  bl 0x00b0789c
+00db5770  adrp x0,0x3321000
+00db5774  ldr x0,[x0, #0xca8]
+00db5778  bl 0x00b0789c
+00db577c  adrp x0,0x3356000
+00db5780  ldr x0,[x0, #0x148]
+00db5784  bl 0x00b0789c
+00db5788  adrp x0,0x3342000
+00db578c  ldr x0,[x0, #0xfc8]
+00db5790  bl 0x00b0789c
+00db5794  mov w8,#0x1
+00db5798  strb w8,[x21, #0xe2]
+00db579c  ldr x0,[x20]
+00db57a0  adrp x20,0x3342000
+00db57a4  ldr w8,[x0, #0xe0]
+00db57a8  ldr x20,[x20, #0xfc8]
+00db57ac  cbnz w8,0x00db57b4
+00db57b0  bl 0x00b0798c
+00db57b4  ldr x0,[x20]
+00db57b8  mov x1,xzr
+00db57bc  bl 0x024c0104
+00db57c0  mov x0,xzr
+00db57c4  bl 0x01633c0c
+00db57c8  cbz x0,0x00db5854
+00db57cc  adrp x20,0x3356000
+00db57d0  adrp x21,0x3321000
+00db57d4  ldr x20,[x20, #0x148]
+00db57d8  ldr x21,[x21, #0xca8]
+00db57dc  mov x1,x19
+00db57e0  mov x2,xzr
+00db57e4  bl 0x01633ca4
+00db57e8  ldr x0,[x20]
+00db57ec  mov x1,xzr
+00db57f0  bl 0x024def7c
+00db57f4  mov x1,x0
+00db57f8  str x1,[x19, #0x20]!
+00db57fc  mov x0,x19
+00db5800  bl 0x00b07850
+00db5804  ldr x0,[x21]
+00db5808  ldr x20,[x19]
+00db580c  ldr w8,[x0, #0xe0]
+00db5810  cbnz w8,0x00db5818
+00db5814  bl 0x00b0798c
+00db5818  mov x0,x20
+00db581c  mov x1,xzr
+00db5820  mov x2,xzr
+00db5824  bl 0x024de30c
+00db5828  tbz w0,#0x0,0x00db5848
+00db582c  ldr x0,[x19]
+00db5830  cbz x0,0x00db5854
+00db5834  ldp x19,x30,[sp, #0x10]
+00db5838  mov w1,wzr
+00db583c  mov x2,xzr
+00db5840  ldp x21,x20,[sp], #0x20
+00db5844  b 0x024de86c
+00db5848  ldp x19,x30,[sp, #0x10]
+00db584c  ldp x21,x20,[sp], #0x20
+00db5850  ret
+00db5854  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db5858_EventHandle__Update.txt
+================================================================================
+Function: EventHandle$$Update @ 00db5858
+
+--- Calls OUT ---
+  -> UnityEngine.Input$$GetKeyDown @ 0252f97c
+
+--- Calls IN ---
+
+--- Listing ---
+00db5858  mov w0,#0x1b
+00db585c  mov x1,xzr
+00db5860  b 0x0252f97c
+
+
+================================================================================
+### FILE: 00db5864_EventHandle__onLogin.txt
+================================================================================
+Function: EventHandle$$onLogin @ 00db5864
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$login @ 01633dd4
+  -> EventHandle$$ongetDeviceId @ 00db5888
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db5864  str x30,[sp, #-0x10]!
+00db5868  bl 0x00db5888
+00db586c  mov x0,xzr
+00db5870  bl 0x01633c0c
+00db5874  cbz x0,0x00db5884
+00db5878  mov x1,xzr
+00db587c  ldr x30,[sp], #0x10
+00db5880  b 0x01633dd4
+00db5884  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db5888_EventHandle__ongetDeviceId.txt
+================================================================================
+Function: EventHandle$$ongetDeviceId @ 00db5888
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> quicksdk.QuickSDK$$getDeviceId @ 01633ec4
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- EventHandle$$onLogin @ 00db5864
+
+--- Listing ---
+00db5888  stp x19,x30,[sp, #-0x10]!
+00db588c  adrp x19,0x3572000
+00db5890  ldrb w8,[x19, #0xec]
+00db5894  tbnz w8,#0x0,0x00db58ac
+00db5898  adrp x0,0x332f000
+00db589c  ldr x0,[x0, #0xaa0]
+00db58a0  bl 0x00b0789c
+00db58a4  mov w8,#0x1
+00db58a8  strb w8,[x19, #0xec]
+00db58ac  mov x0,xzr
+00db58b0  bl 0x01633c0c
+00db58b4  cbz x0,0x00db58d8
+00db58b8  adrp x19,0x332f000
+00db58bc  ldr x19,[x19, #0xaa0]
+00db58c0  mov x1,xzr
+00db58c4  bl 0x01633ec4
+00db58c8  ldr x1,[x19]
+00db58cc  mov x2,x0
+00db58d0  ldp x19,x30,[sp], #0x10
+00db58d4  b 0x00db5690
+00db58d8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db58dc_EventHandle__onLogout.txt
+================================================================================
+Function: EventHandle$$onLogout @ 00db58dc
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$logout @ 01633e04
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db58dc  str x30,[sp, #-0x10]!
+00db58e0  mov x0,xzr
+00db58e4  bl 0x01633c0c
+00db58e8  cbz x0,0x00db58f8
+00db58ec  mov x1,xzr
+00db58f0  ldr x30,[sp], #0x10
+00db58f4  b 0x01633e04
+00db58f8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db58fc_EventHandle__onPay.txt
+================================================================================
+Function: EventHandle$$onPay @ 00db58fc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> quicksdk.QuickSDK$$pay @ 01633e34
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> quicksdk.GameRoleInfo$$.ctor @ 01634308
+  -> FUN_00b079b0 @ 00b079b0
+  -> quicksdk.OrderInfo$$.ctor @ 01634300
+
+--- Calls IN ---
+
+--- Listing ---
+00db58fc  stp x28,x27,[sp, #-0x60]!
+00db5900  stp x26,x25,[sp, #0x10]
+00db5904  stp x24,x23,[sp, #0x20]
+00db5908  stp x22,x21,[sp, #0x30]
+00db590c  stp x20,x19,[sp, #0x40]
+00db5910  stp x29,x30,[sp, #0x50]
+00db5914  adrp x19,0x3572000
+00db5918  adrp x20,0x3312000
+00db591c  ldrb w8,[x19, #0xe3]
+00db5920  ldr x20,[x20, #0xce0]
+00db5924  tbnz w8,#0x0,0x00db59e4
+00db5928  adrp x0,0x330f000
+00db592c  ldr x0,[x0, #0x788]
+00db5930  bl 0x00b0789c
+00db5934  adrp x0,0x3312000
+00db5938  ldr x0,[x0, #0xce0]
+00db593c  bl 0x00b0789c
+00db5940  adrp x0,0x337e000
+00db5944  ldr x0,[x0, #0x838]
+00db5948  bl 0x00b0789c
+00db594c  adrp x0,0x335e000
+00db5950  ldr x0,[x0, #0x168]
+00db5954  bl 0x00b0789c
+00db5958  adrp x0,0x3321000
+00db595c  ldr x0,[x0, #0x210]
+00db5960  bl 0x00b0789c
+00db5964  adrp x0,0x3375000
+00db5968  ldr x0,[x0, #0x718]
+00db596c  bl 0x00b0789c
+00db5970  adrp x0,0x3323000
+00db5974  ldr x0,[x0, #0x850]
+00db5978  bl 0x00b0789c
+00db597c  adrp x0,0x3322000
+00db5980  ldr x0,[x0, #0xcd8]
+00db5984  bl 0x00b0789c
+00db5988  adrp x0,0x3325000
+00db598c  ldr x0,[x0, #0x2e8]
+00db5990  bl 0x00b0789c
+00db5994  adrp x0,0x332b000
+00db5998  ldr x0,[x0, #0x338]
+00db599c  bl 0x00b0789c
+00db59a0  adrp x0,0x332c000
+00db59a4  ldr x0,[x0, #0x2c0]
+00db59a8  bl 0x00b0789c
+00db59ac  adrp x0,0x3365000
+00db59b0  ldr x0,[x0, #0x868]
+00db59b4  bl 0x00b0789c
+00db59b8  adrp x0,0x331b000
+00db59bc  ldr x0,[x0, #0xb0]
+00db59c0  bl 0x00b0789c
+00db59c4  adrp x0,0x3384000
+00db59c8  ldr x0,[x0, #0xb60]
+00db59cc  bl 0x00b0789c
+00db59d0  adrp x0,0x334c000
+00db59d4  ldr x0,[x0, #0x6c8]
+00db59d8  bl 0x00b0789c
+00db59dc  mov w8,#0x1
+00db59e0  strb w8,[x19, #0xe3]
+00db59e4  ldr x0,[x20]
+00db59e8  bl 0x00b079a0
+00db59ec  cbz x0,0x00db5bcc
+00db59f0  adrp x20,0x330f000
+00db59f4  ldr x20,[x20, #0x788]
+00db59f8  mov x1,xzr
+00db59fc  mov x19,x0
+00db5a00  bl 0x01634300
+00db5a04  ldr x0,[x20]
+00db5a08  bl 0x00b079a0
+00db5a0c  cbz x0,0x00db5bcc
+00db5a10  adrp x21,0x3365000
+00db5a14  adrp x29,0x3325000
+00db5a18  adrp x22,0x331b000
+00db5a1c  adrp x23,0x337e000
+00db5a20  adrp x24,0x332b000
+00db5a24  adrp x25,0x332c000
+00db5a28  adrp x28,0x3323000
+00db5a2c  adrp x27,0x334c000
+00db5a30  adrp x26,0x3384000
+00db5a34  ldr x21,[x21, #0x868]
+00db5a38  ldr x29,[x29, #0x2e8]
+00db5a3c  ldr x22,[x22, #0xb0]
+00db5a40  ldr x23,[x23, #0x838]
+00db5a44  ldr x24,[x24, #0x338]
+00db5a48  ldr x25,[x25, #0x2c0]
+00db5a4c  ldr x28,[x28, #0x850]
+00db5a50  ldr x27,[x27, #0x6c8]
+00db5a54  ldr x26,[x26, #0xb60]
+00db5a58  mov x1,xzr
+00db5a5c  mov x20,x0
+00db5a60  bl 0x01634308
+00db5a64  ldr x1,[x21]
+00db5a68  mov x0,x19
+00db5a6c  str x1,[x0, #0x10]!
+00db5a70  bl 0x00b07850
+00db5a74  ldr x1,[x29]
+00db5a78  mov x0,x19
+00db5a7c  str x1,[x0, #0x18]!
+00db5a80  bl 0x00b07850
+00db5a84  ldr x1,[x22]
+00db5a88  mov x0,x19
+00db5a8c  str x1,[x0, #0x20]!
+00db5a90  bl 0x00b07850
+00db5a94  ldr x1,[x23]
+00db5a98  mov x0,x19
+00db5a9c  str x1,[x0, #0x28]!
+00db5aa0  bl 0x00b07850
+00db5aa4  ldr x1,[x24]
+00db5aa8  mov x0,x19
+00db5aac  str x1,[x0, #0x40]!
+00db5ab0  bl 0x00b07850
+00db5ab4  adrp x8,0x26db000
+00db5ab8  ldr q0,[x8, #0xc00]
+00db5abc  mov w8,#0xa
+00db5ac0  str w8,[x19, #0x58]
+00db5ac4  mov x0,x19
+00db5ac8  stur q0,[x19, #0x48]
+00db5acc  ldr x1,[x25]
+00db5ad0  str x1,[x0, #0x38]!
+00db5ad4  bl 0x00b07850
+00db5ad8  ldr x1,[x28]
+00db5adc  mov x0,x19
+00db5ae0  str x1,[x0, #0x30]!
+00db5ae4  bl 0x00b07850
+00db5ae8  ldr x1,[x27]
+00db5aec  mov x0,x20
+00db5af0  str x1,[x0, #0x30]!
+00db5af4  bl 0x00b07850
+00db5af8  ldr x1,[x26]
+00db5afc  mov x0,x20
+00db5b00  str x1,[x0, #0x28]!
+00db5b04  bl 0x00b07850
+00db5b08  ldr x1,[x21]
+00db5b0c  mov x0,x20
+00db5b10  str x1,[x0, #0x40]!
+00db5b14  bl 0x00b07850
+00db5b18  adrp x8,0x3375000
+00db5b1c  ldr x8,[x8, #0x718]
+00db5b20  mov x0,x20
+00db5b24  ldr x1,[x8]
+00db5b28  str x1,[x0, #0x20]!
+00db5b2c  bl 0x00b07850
+00db5b30  adrp x8,0x3321000
+00db5b34  ldr x8,[x8, #0x210]
+00db5b38  mov x0,x20
+00db5b3c  ldr x1,[x8]
+00db5b40  str x1,[x0, #0x48]!
+00db5b44  bl 0x00b07850
+00db5b48  ldr x1,[x21]
+00db5b4c  mov x0,x20
+00db5b50  str x1,[x0, #0x18]!
+00db5b54  bl 0x00b07850
+00db5b58  adrp x8,0x3322000
+00db5b5c  ldr x8,[x8, #0xcd8]
+00db5b60  mov x0,x20
+00db5b64  ldr x1,[x8]
+00db5b68  str x1,[x0, #0x10]!
+00db5b6c  bl 0x00b07850
+00db5b70  ldr x1,[x21]
+00db5b74  mov x0,x20
+00db5b78  str x1,[x0, #0x38]!
+00db5b7c  bl 0x00b07850
+00db5b80  adrp x8,0x335e000
+00db5b84  ldr x8,[x8, #0x168]
+00db5b88  mov x0,x20
+00db5b8c  ldr x1,[x8]
+00db5b90  str x1,[x0, #0x50]!
+00db5b94  bl 0x00b07850
+00db5b98  mov x0,xzr
+00db5b9c  bl 0x01633c0c
+00db5ba0  cbz x0,0x00db5bcc
+00db5ba4  mov x1,x19
+00db5ba8  mov x2,x20
+00db5bac  ldp x29,x30,[sp, #0x50]
+00db5bb0  ldp x20,x19,[sp, #0x40]
+00db5bb4  ldp x22,x21,[sp, #0x30]
+00db5bb8  ldp x24,x23,[sp, #0x20]
+00db5bbc  ldp x26,x25,[sp, #0x10]
+00db5bc0  mov x3,xzr
+00db5bc4  ldp x28,x27,[sp], #0x60
+00db5bc8  b 0x01633e34
+00db5bcc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db5bd0_EventHandle__onEnterYunKeFuCenter.txt
+================================================================================
+Function: EventHandle$$onEnterYunKeFuCenter @ 00db5bd0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> quicksdk.GameRoleInfo$$.ctor @ 01634308
+  -> FUN_00b079b0 @ 00b079b0
+  -> quicksdk.QuickSDK$$enterYunKeFuCenter @ 01633f78
+
+--- Calls IN ---
+
+--- Listing ---
+00db5bd0  str x26,[sp, #-0x50]!
+00db5bd4  stp x25,x24,[sp, #0x10]
+00db5bd8  stp x23,x22,[sp, #0x20]
+00db5bdc  stp x21,x20,[sp, #0x30]
+00db5be0  stp x19,x30,[sp, #0x40]
+00db5be4  adrp x19,0x3572000
+00db5be8  adrp x20,0x330f000
+00db5bec  ldrb w8,[x19, #0xe4]
+00db5bf0  ldr x20,[x20, #0x788]
+00db5bf4  tbnz w8,#0x0,0x00db5c60
+00db5bf8  adrp x0,0x330f000
+00db5bfc  ldr x0,[x0, #0x788]
+00db5c00  bl 0x00b0789c
+00db5c04  adrp x0,0x335e000
+00db5c08  ldr x0,[x0, #0x168]
+00db5c0c  bl 0x00b0789c
+00db5c10  adrp x0,0x3321000
+00db5c14  ldr x0,[x0, #0x210]
+00db5c18  bl 0x00b0789c
+00db5c1c  adrp x0,0x3375000
+00db5c20  ldr x0,[x0, #0x718]
+00db5c24  bl 0x00b0789c
+00db5c28  adrp x0,0x3322000
+00db5c2c  ldr x0,[x0, #0xcd8]
+00db5c30  bl 0x00b0789c
+00db5c34  adrp x0,0x3365000
+00db5c38  ldr x0,[x0, #0x868]
+00db5c3c  bl 0x00b0789c
+00db5c40  adrp x0,0x3384000
+00db5c44  ldr x0,[x0, #0xb60]
+00db5c48  bl 0x00b0789c
+00db5c4c  adrp x0,0x334c000
+00db5c50  ldr x0,[x0, #0x6c8]
+00db5c54  bl 0x00b0789c
+00db5c58  mov w8,#0x1
+00db5c5c  strb w8,[x19, #0xe4]
+00db5c60  ldr x0,[x20]
+00db5c64  bl 0x00b079a0
+00db5c68  cbz x0,0x00db5d6c
+00db5c6c  adrp x22,0x334c000
+00db5c70  adrp x23,0x3384000
+00db5c74  adrp x21,0x3365000
+00db5c78  adrp x24,0x3375000
+00db5c7c  adrp x25,0x3321000
+00db5c80  adrp x26,0x3322000
+00db5c84  adrp x20,0x335e000
+00db5c88  ldr x22,[x22, #0x6c8]
+00db5c8c  ldr x23,[x23, #0xb60]
+00db5c90  ldr x21,[x21, #0x868]
+00db5c94  ldr x24,[x24, #0x718]
+00db5c98  ldr x25,[x25, #0x210]
+00db5c9c  ldr x26,[x26, #0xcd8]
+00db5ca0  ldr x20,[x20, #0x168]
+00db5ca4  mov x1,xzr
+00db5ca8  mov x19,x0
+00db5cac  bl 0x01634308
+00db5cb0  ldr x1,[x22]
+00db5cb4  mov x0,x19
+00db5cb8  str x1,[x0, #0x30]!
+00db5cbc  bl 0x00b07850
+00db5cc0  ldr x1,[x23]
+00db5cc4  mov x0,x19
+00db5cc8  str x1,[x0, #0x28]!
+00db5ccc  bl 0x00b07850
+00db5cd0  ldr x1,[x21]
+00db5cd4  mov x0,x19
+00db5cd8  str x1,[x0, #0x40]!
+00db5cdc  bl 0x00b07850
+00db5ce0  ldr x1,[x24]
+00db5ce4  mov x0,x19
+00db5ce8  str x1,[x0, #0x20]!
+00db5cec  bl 0x00b07850
+00db5cf0  ldr x1,[x25]
+00db5cf4  mov x0,x19
+00db5cf8  str x1,[x0, #0x48]!
+00db5cfc  bl 0x00b07850
+00db5d00  ldr x1,[x21]
+00db5d04  mov x0,x19
+00db5d08  str x1,[x0, #0x18]!
+00db5d0c  bl 0x00b07850
+00db5d10  ldr x1,[x26]
+00db5d14  mov x0,x19
+00db5d18  str x1,[x0, #0x10]!
+00db5d1c  bl 0x00b07850
+00db5d20  ldr x1,[x21]
+00db5d24  mov x0,x19
+00db5d28  str x1,[x0, #0x38]!
+00db5d2c  bl 0x00b07850
+00db5d30  ldr x1,[x20]
+00db5d34  mov x0,x19
+00db5d38  str x1,[x0, #0x50]!
+00db5d3c  bl 0x00b07850
+00db5d40  mov x0,xzr
+00db5d44  bl 0x01633c0c
+00db5d48  cbz x0,0x00db5d6c
+00db5d4c  mov x1,x19
+00db5d50  ldp x19,x30,[sp, #0x40]
+00db5d54  ldp x21,x20,[sp, #0x30]
+00db5d58  ldp x23,x22,[sp, #0x20]
+00db5d5c  ldp x25,x24,[sp, #0x10]
+00db5d60  mov x2,xzr
+00db5d64  ldr x26,[sp], #0x50
+00db5d68  b 0x01633f78
+00db5d6c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db5d70_EventHandle__onCallSDKShare.txt
+================================================================================
+Function: EventHandle$$onCallSDKShare @ 00db5d70
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> quicksdk.QuickSDK$$callSDKShare @ 01633fc4
+  -> quicksdk.ShareInfo$$.ctor @ 01634310
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db5d70  stp x25,x24,[sp, #-0x40]!
+00db5d74  stp x23,x22,[sp, #0x10]
+00db5d78  stp x21,x20,[sp, #0x20]
+00db5d7c  stp x19,x30,[sp, #0x30]
+00db5d80  adrp x19,0x3572000
+00db5d84  adrp x20,0x3353000
+00db5d88  ldrb w8,[x19, #0xe5]
+00db5d8c  ldr x20,[x20, #0xdc0]
+00db5d90  tbnz w8,#0x0,0x00db5df0
+00db5d94  adrp x0,0x3353000
+00db5d98  ldr x0,[x0, #0xdc0]
+00db5d9c  bl 0x00b0789c
+00db5da0  adrp x0,0x334a000
+00db5da4  ldr x0,[x0, #0xdd0]
+00db5da8  bl 0x00b0789c
+00db5dac  adrp x0,0x330f000
+00db5db0  ldr x0,[x0, #0x468]
+00db5db4  bl 0x00b0789c
+00db5db8  adrp x0,0x330e000
+00db5dbc  ldr x0,[x0, #0x940]
+00db5dc0  bl 0x00b0789c
+00db5dc4  adrp x0,0x331e000
+00db5dc8  ldr x0,[x0, #0x618]
+00db5dcc  bl 0x00b0789c
+00db5dd0  adrp x0,0x3335000
+00db5dd4  ldr x0,[x0, #0xdd8]
+00db5dd8  bl 0x00b0789c
+00db5ddc  adrp x0,0x334c000
+00db5de0  ldr x0,[x0, #0x6c8]
+00db5de4  bl 0x00b0789c
+00db5de8  mov w8,#0x1
+00db5dec  strb w8,[x19, #0xe5]
+00db5df0  ldr x0,[x20]
+00db5df4  bl 0x00b079a0
+00db5df8  cbz x0,0x00db5ee0
+00db5dfc  adrp x21,0x334a000
+00db5e00  adrp x22,0x331e000
+00db5e04  adrp x23,0x3335000
+00db5e08  adrp x24,0x330f000
+00db5e0c  adrp x25,0x334c000
+00db5e10  adrp x20,0x330e000
+00db5e14  ldr x21,[x21, #0xdd0]
+00db5e18  ldr x22,[x22, #0x618]
+00db5e1c  ldr x23,[x23, #0xdd8]
+00db5e20  ldr x24,[x24, #0x468]
+00db5e24  ldr x25,[x25, #0x6c8]
+00db5e28  ldr x20,[x20, #0x940]
+00db5e2c  mov x1,xzr
+00db5e30  mov x19,x0
+00db5e34  bl 0x01634310
+00db5e38  ldr x1,[x21]
+00db5e3c  mov x0,x19
+00db5e40  str x1,[x0, #0x10]!
+00db5e44  bl 0x00b07850
+00db5e48  ldr x1,[x22]
+00db5e4c  mov x0,x19
+00db5e50  str x1,[x0, #0x18]!
+00db5e54  bl 0x00b07850
+00db5e58  ldr x1,[x23]
+00db5e5c  mov x0,x19
+00db5e60  str x1,[x0, #0x20]!
+00db5e64  bl 0x00b07850
+00db5e68  ldr x1,[x23]
+00db5e6c  mov x0,x19
+00db5e70  str x1,[x0, #0x28]!
+00db5e74  bl 0x00b07850
+00db5e78  ldr x1,[x23]
+00db5e7c  mov x0,x19
+00db5e80  str x1,[x0, #0x30]!
+00db5e84  bl 0x00b07850
+00db5e88  ldr x1,[x24]
+00db5e8c  mov x0,x19
+00db5e90  str x1,[x0, #0x38]!
+00db5e94  bl 0x00b07850
+00db5e98  ldr x1,[x25]
+00db5e9c  mov x0,x19
+00db5ea0  str x1,[x0, #0x40]!
+00db5ea4  bl 0x00b07850
+00db5ea8  ldr x1,[x20]
+00db5eac  mov x0,x19
+00db5eb0  str x1,[x0, #0x48]!
+00db5eb4  bl 0x00b07850
+00db5eb8  mov x0,xzr
+00db5ebc  bl 0x01633c0c
+00db5ec0  cbz x0,0x00db5ee0
+00db5ec4  mov x1,x19
+00db5ec8  ldp x19,x30,[sp, #0x30]
+00db5ecc  ldp x21,x20,[sp, #0x20]
+00db5ed0  ldp x23,x22,[sp, #0x10]
+00db5ed4  mov x2,xzr
+00db5ed8  ldp x25,x24,[sp], #0x40
+00db5edc  b 0x01633fc4
+00db5ee0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db5ee4_EventHandle__onCreatRole.txt
+================================================================================
+Function: EventHandle$$onCreatRole @ 00db5ee4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> quicksdk.QuickSDK$$createRole @ 01633ef4
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> quicksdk.GameRoleInfo$$.ctor @ 01634308
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db5ee4  stp x28,x27,[sp, #-0x60]!
+00db5ee8  stp x26,x25,[sp, #0x10]
+00db5eec  stp x24,x23,[sp, #0x20]
+00db5ef0  stp x22,x21,[sp, #0x30]
+00db5ef4  stp x20,x19,[sp, #0x40]
+00db5ef8  stp x29,x30,[sp, #0x50]
+00db5efc  adrp x19,0x3572000
+00db5f00  adrp x20,0x330f000
+00db5f04  ldrb w8,[x19, #0xe6]
+00db5f08  ldr x20,[x20, #0x788]
+00db5f0c  tbnz w8,#0x0,0x00db5fcc
+00db5f10  adrp x0,0x330f000
+00db5f14  ldr x0,[x0, #0x788]
+00db5f18  bl 0x00b0789c
+00db5f1c  adrp x0,0x3384000
+00db5f20  ldr x0,[x0, #0x448]
+00db5f24  bl 0x00b0789c
+00db5f28  adrp x0,0x3345000
+00db5f2c  ldr x0,[x0, #0xc98]
+00db5f30  bl 0x00b0789c
+00db5f34  adrp x0,0x335e000
+00db5f38  ldr x0,[x0, #0x168]
+00db5f3c  bl 0x00b0789c
+00db5f40  adrp x0,0x332a000
+00db5f44  ldr x0,[x0, #0x5e8]
+00db5f48  bl 0x00b0789c
+00db5f4c  adrp x0,0x3321000
+00db5f50  ldr x0,[x0, #0x210]
+00db5f54  bl 0x00b0789c
+00db5f58  adrp x0,0x3375000
+00db5f5c  ldr x0,[x0, #0x718]
+00db5f60  bl 0x00b0789c
+00db5f64  adrp x0,0x330b000
+00db5f68  ldr x0,[x0, #0x378]
+00db5f6c  bl 0x00b0789c
+00db5f70  adrp x0,0x3320000
+00db5f74  ldr x0,[x0, #0x420]
+00db5f78  bl 0x00b0789c
+00db5f7c  adrp x0,0x3337000
+00db5f80  ldr x0,[x0, #0xf98]
+00db5f84  bl 0x00b0789c
+00db5f88  adrp x0,0x3322000
+00db5f8c  ldr x0,[x0, #0xcd8]
+00db5f90  bl 0x00b0789c
+00db5f94  adrp x0,0x336c000
+00db5f98  ldr x0,[x0, #0x6e8]
+00db5f9c  bl 0x00b0789c
+00db5fa0  adrp x0,0x3365000
+00db5fa4  ldr x0,[x0, #0x868]
+00db5fa8  bl 0x00b0789c
+00db5fac  adrp x0,0x3384000
+00db5fb0  ldr x0,[x0, #0xb60]
+00db5fb4  bl 0x00b0789c
+00db5fb8  adrp x0,0x334c000
+00db5fbc  ldr x0,[x0, #0x6c8]
+00db5fc0  bl 0x00b0789c
+00db5fc4  mov w8,#0x1
+00db5fc8  strb w8,[x19, #0xe6]
+00db5fcc  ldr x0,[x20]
+00db5fd0  bl 0x00b079a0
+00db5fd4  cbz x0,0x00db6194
+00db5fd8  adrp x20,0x334c000
+00db5fdc  adrp x22,0x3384000
+00db5fe0  adrp x21,0x3365000
+00db5fe4  adrp x23,0x3375000
+00db5fe8  adrp x24,0x3321000
+00db5fec  adrp x29,0x3322000
+00db5ff0  adrp x28,0x335e000
+00db5ff4  adrp x27,0x332a000
+00db5ff8  adrp x26,0x3320000
+00db5ffc  adrp x25,0x3384000
+00db6000  ldr x20,[x20, #0x6c8]
+00db6004  ldr x22,[x22, #0xb60]
+00db6008  ldr x21,[x21, #0x868]
+00db600c  ldr x23,[x23, #0x718]
+00db6010  ldr x24,[x24, #0x210]
+00db6014  ldr x29,[x29, #0xcd8]
+00db6018  ldr x28,[x28, #0x168]
+00db601c  ldr x27,[x27, #0x5e8]
+00db6020  ldr x26,[x26, #0x420]
+00db6024  ldr x25,[x25, #0x448]
+00db6028  mov x1,xzr
+00db602c  mov x19,x0
+00db6030  bl 0x01634308
+00db6034  ldr x1,[x20]
+00db6038  mov x0,x19
+00db603c  str x1,[x0, #0x30]!
+00db6040  bl 0x00b07850
+00db6044  ldr x1,[x22]
+00db6048  mov x0,x19
+00db604c  str x1,[x0, #0x28]!
+00db6050  bl 0x00b07850
+00db6054  ldr x1,[x21]
+00db6058  mov x0,x19
+00db605c  str x1,[x0, #0x40]!
+00db6060  bl 0x00b07850
+00db6064  ldr x1,[x23]
+00db6068  mov x0,x19
+00db606c  str x1,[x0, #0x20]!
+00db6070  bl 0x00b07850
+00db6074  ldr x1,[x24]
+00db6078  mov x0,x19
+00db607c  str x1,[x0, #0x48]!
+00db6080  bl 0x00b07850
+00db6084  ldr x1,[x21]
+00db6088  mov x0,x19
+00db608c  str x1,[x0, #0x18]!
+00db6090  bl 0x00b07850
+00db6094  ldr x1,[x29]
+00db6098  mov x0,x19
+00db609c  str x1,[x0, #0x10]!
+00db60a0  bl 0x00b07850
+00db60a4  ldr x1,[x21]
+00db60a8  mov x0,x19
+00db60ac  str x1,[x0, #0x38]!
+00db60b0  bl 0x00b07850
+00db60b4  ldr x1,[x28]
+00db60b8  mov x0,x19
+00db60bc  str x1,[x0, #0x50]!
+00db60c0  bl 0x00b07850
+00db60c4  ldr x1,[x27]
+00db60c8  mov x0,x19
+00db60cc  str x1,[x0, #0x58]!
+00db60d0  bl 0x00b07850
+00db60d4  ldr x1,[x26]
+00db60d8  mov x0,x19
+00db60dc  str x1,[x0, #0x60]!
+00db60e0  bl 0x00b07850
+00db60e4  ldr x1,[x25]
+00db60e8  mov x0,x19
+00db60ec  str x1,[x0, #0x68]!
+00db60f0  bl 0x00b07850
+00db60f4  adrp x8,0x330b000
+00db60f8  ldr x8,[x8, #0x378]
+00db60fc  mov x0,x19
+00db6100  ldr x1,[x8]
+00db6104  str x1,[x0, #0x70]!
+00db6108  bl 0x00b07850
+00db610c  adrp x8,0x336c000
+00db6110  ldr x8,[x8, #0x6e8]
+00db6114  mov x0,x19
+00db6118  ldr x1,[x8]
+00db611c  str x1,[x0, #0x78]!
+00db6120  bl 0x00b07850
+00db6124  ldr x1,[x21]
+00db6128  mov x0,x19
+00db612c  str x1,[x0, #0x80]!
+00db6130  bl 0x00b07850
+00db6134  adrp x8,0x3337000
+00db6138  ldr x8,[x8, #0xf98]
+00db613c  mov x0,x19
+00db6140  ldr x1,[x8]
+00db6144  str x1,[x0, #0x88]!
+00db6148  bl 0x00b07850
+00db614c  adrp x8,0x3345000
+00db6150  ldr x8,[x8, #0xc98]
+00db6154  mov x0,x19
+00db6158  ldr x1,[x8]
+00db615c  str x1,[x0, #0x90]!
+00db6160  bl 0x00b07850
+00db6164  mov x0,xzr
+00db6168  bl 0x01633c0c
+00db616c  cbz x0,0x00db6194
+00db6170  mov x1,x19
+00db6174  ldp x29,x30,[sp, #0x50]
+00db6178  ldp x20,x19,[sp, #0x40]
+00db617c  ldp x22,x21,[sp, #0x30]
+00db6180  ldp x24,x23,[sp, #0x20]
+00db6184  ldp x26,x25,[sp, #0x10]
+00db6188  mov x2,xzr
+00db618c  ldp x28,x27,[sp], #0x60
+00db6190  b 0x01633ef4
+00db6194  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6198_EventHandle__onEnterGame.txt
+================================================================================
+Function: EventHandle$$onEnterGame @ 00db6198
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> UnityEngine.Application$$LoadLevel @ 024f33d0
+  -> quicksdk.QuickSDK$$callFunction @ 016340cc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> quicksdk.QuickSDK$$enterGame @ 01633f20
+  -> quicksdk.GameRoleInfo$$.ctor @ 01634308
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db6198  stp x28,x27,[sp, #-0x60]!
+00db619c  stp x26,x25,[sp, #0x10]
+00db61a0  stp x24,x23,[sp, #0x20]
+00db61a4  stp x22,x21,[sp, #0x30]
+00db61a8  stp x20,x19,[sp, #0x40]
+00db61ac  stp x29,x30,[sp, #0x50]
+00db61b0  adrp x19,0x3572000
+00db61b4  ldrb w8,[x19, #0xe7]
+00db61b8  tbnz w8,#0x0,0x00db6284
+00db61bc  adrp x0,0x330f000
+00db61c0  ldr x0,[x0, #0x788]
+00db61c4  bl 0x00b0789c
+00db61c8  adrp x0,0x3384000
+00db61cc  ldr x0,[x0, #0x448]
+00db61d0  bl 0x00b0789c
+00db61d4  adrp x0,0x3345000
+00db61d8  ldr x0,[x0, #0xc98]
+00db61dc  bl 0x00b0789c
+00db61e0  adrp x0,0x335e000
+00db61e4  ldr x0,[x0, #0x168]
+00db61e8  bl 0x00b0789c
+00db61ec  adrp x0,0x336c000
+00db61f0  ldr x0,[x0, #0x810]
+00db61f4  bl 0x00b0789c
+00db61f8  adrp x0,0x332a000
+00db61fc  ldr x0,[x0, #0x5e8]
+00db6200  bl 0x00b0789c
+00db6204  adrp x0,0x3321000
+00db6208  ldr x0,[x0, #0x210]
+00db620c  bl 0x00b0789c
+00db6210  adrp x0,0x3375000
+00db6214  ldr x0,[x0, #0x718]
+00db6218  bl 0x00b0789c
+00db621c  adrp x0,0x330b000
+00db6220  ldr x0,[x0, #0x378]
+00db6224  bl 0x00b0789c
+00db6228  adrp x0,0x3320000
+00db622c  ldr x0,[x0, #0x420]
+00db6230  bl 0x00b0789c
+00db6234  adrp x0,0x3337000
+00db6238  ldr x0,[x0, #0xf98]
+00db623c  bl 0x00b0789c
+00db6240  adrp x0,0x3322000
+00db6244  ldr x0,[x0, #0xcd8]
+00db6248  bl 0x00b0789c
+00db624c  adrp x0,0x336c000
+00db6250  ldr x0,[x0, #0x6e8]
+00db6254  bl 0x00b0789c
+00db6258  adrp x0,0x3365000
+00db625c  ldr x0,[x0, #0x868]
+00db6260  bl 0x00b0789c
+00db6264  adrp x0,0x3384000
+00db6268  ldr x0,[x0, #0xb60]
+00db626c  bl 0x00b0789c
+00db6270  adrp x0,0x334c000
+00db6274  ldr x0,[x0, #0x6c8]
+00db6278  bl 0x00b0789c
+00db627c  mov w8,#0x1
+00db6280  strb w8,[x19, #0xe7]
+00db6284  mov x0,xzr
+00db6288  bl 0x01633c0c
+00db628c  cbz x0,0x00db6480
+00db6290  adrp x19,0x330f000
+00db6294  ldr x19,[x19, #0x788]
+00db6298  mov w1,#0x69
+00db629c  mov x2,xzr
+00db62a0  bl 0x016340cc
+00db62a4  ldr x0,[x19]
+00db62a8  bl 0x00b079a0
+00db62ac  cbz x0,0x00db6480
+00db62b0  adrp x20,0x334c000
+00db62b4  adrp x22,0x3384000
+00db62b8  adrp x21,0x3365000
+00db62bc  adrp x23,0x3375000
+00db62c0  adrp x24,0x3321000
+00db62c4  adrp x29,0x3322000
+00db62c8  adrp x28,0x335e000
+00db62cc  adrp x27,0x332a000
+00db62d0  adrp x26,0x3320000
+00db62d4  adrp x25,0x3384000
+00db62d8  ldr x20,[x20, #0x6c8]
+00db62dc  ldr x22,[x22, #0xb60]
+00db62e0  ldr x21,[x21, #0x868]
+00db62e4  ldr x23,[x23, #0x718]
+00db62e8  ldr x24,[x24, #0x210]
+00db62ec  ldr x29,[x29, #0xcd8]
+00db62f0  ldr x28,[x28, #0x168]
+00db62f4  ldr x27,[x27, #0x5e8]
+00db62f8  ldr x26,[x26, #0x420]
+00db62fc  ldr x25,[x25, #0x448]
+00db6300  mov x1,xzr
+00db6304  mov x19,x0
+00db6308  bl 0x01634308
+00db630c  ldr x1,[x20]
+00db6310  mov x0,x19
+00db6314  str x1,[x0, #0x30]!
+00db6318  bl 0x00b07850
+00db631c  ldr x1,[x22]
+00db6320  mov x0,x19
+00db6324  str x1,[x0, #0x28]!
+00db6328  bl 0x00b07850
+00db632c  ldr x1,[x21]
+00db6330  mov x0,x19
+00db6334  str x1,[x0, #0x40]!
+00db6338  bl 0x00b07850
+00db633c  ldr x1,[x23]
+00db6340  mov x0,x19
+00db6344  str x1,[x0, #0x20]!
+00db6348  bl 0x00b07850
+00db634c  ldr x1,[x24]
+00db6350  mov x0,x19
+00db6354  str x1,[x0, #0x48]!
+00db6358  bl 0x00b07850
+00db635c  ldr x1,[x21]
+00db6360  mov x0,x19
+00db6364  str x1,[x0, #0x18]!
+00db6368  bl 0x00b07850
+00db636c  ldr x1,[x29]
+00db6370  mov x0,x19
+00db6374  str x1,[x0, #0x10]!
+00db6378  bl 0x00b07850
+00db637c  ldr x1,[x21]
+00db6380  mov x0,x19
+00db6384  str x1,[x0, #0x38]!
+00db6388  bl 0x00b07850
+00db638c  ldr x1,[x28]
+00db6390  mov x0,x19
+00db6394  str x1,[x0, #0x50]!
+00db6398  bl 0x00b07850
+00db639c  ldr x1,[x27]
+00db63a0  mov x0,x19
+00db63a4  str x1,[x0, #0x58]!
+00db63a8  bl 0x00b07850
+00db63ac  ldr x1,[x26]
+00db63b0  mov x0,x19
+00db63b4  str x1,[x0, #0x60]!
+00db63b8  bl 0x00b07850
+00db63bc  ldr x1,[x25]
+00db63c0  mov x0,x19
+00db63c4  str x1,[x0, #0x68]!
+00db63c8  bl 0x00b07850
+00db63cc  adrp x8,0x330b000
+00db63d0  ldr x8,[x8, #0x378]
+00db63d4  mov x0,x19
+00db63d8  ldr x1,[x8]
+00db63dc  str x1,[x0, #0x70]!
+00db63e0  bl 0x00b07850
+00db63e4  adrp x8,0x336c000
+00db63e8  ldr x8,[x8, #0x6e8]
+00db63ec  mov x0,x19
+00db63f0  ldr x1,[x8]
+00db63f4  str x1,[x0, #0x78]!
+00db63f8  bl 0x00b07850
+00db63fc  ldr x1,[x21]
+00db6400  mov x0,x19
+00db6404  str x1,[x0, #0x80]!
+00db6408  bl 0x00b07850
+00db640c  adrp x8,0x3337000
+00db6410  ldr x8,[x8, #0xf98]
+00db6414  mov x0,x19
+00db6418  ldr x1,[x8]
+00db641c  str x1,[x0, #0x88]!
+00db6420  bl 0x00b07850
+00db6424  adrp x8,0x3345000
+00db6428  ldr x8,[x8, #0xc98]
+00db642c  mov x0,x19
+00db6430  ldr x1,[x8]
+00db6434  str x1,[x0, #0x90]!
+00db6438  bl 0x00b07850
+00db643c  mov x0,xzr
+00db6440  bl 0x01633c0c
+00db6444  cbz x0,0x00db6480
+00db6448  adrp x20,0x336c000
+00db644c  ldr x20,[x20, #0x810]
+00db6450  mov x1,x19
+00db6454  mov x2,xzr
+00db6458  bl 0x01633f20
+00db645c  ldr x0,[x20]
+00db6460  ldp x29,x30,[sp, #0x50]
+00db6464  ldp x20,x19,[sp, #0x40]
+00db6468  ldp x22,x21,[sp, #0x30]
+00db646c  ldp x24,x23,[sp, #0x20]
+00db6470  ldp x26,x25,[sp, #0x10]
+00db6474  mov x1,xzr
+00db6478  ldp x28,x27,[sp], #0x60
+00db647c  b 0x024f33d0
+00db6480  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6484_EventHandle__onUpdateRoleInfo.txt
+================================================================================
+Function: EventHandle$$onUpdateRoleInfo @ 00db6484
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> quicksdk.QuickSDK$$updateRole @ 01633f4c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> quicksdk.GameRoleInfo$$.ctor @ 01634308
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db6484  stp x28,x27,[sp, #-0x60]!
+00db6488  stp x26,x25,[sp, #0x10]
+00db648c  stp x24,x23,[sp, #0x20]
+00db6490  stp x22,x21,[sp, #0x30]
+00db6494  stp x20,x19,[sp, #0x40]
+00db6498  stp x29,x30,[sp, #0x50]
+00db649c  adrp x19,0x3572000
+00db64a0  adrp x20,0x330f000
+00db64a4  ldrb w8,[x19, #0xe8]
+00db64a8  ldr x20,[x20, #0x788]
+00db64ac  tbnz w8,#0x0,0x00db656c
+00db64b0  adrp x0,0x330f000
+00db64b4  ldr x0,[x0, #0x788]
+00db64b8  bl 0x00b0789c
+00db64bc  adrp x0,0x3384000
+00db64c0  ldr x0,[x0, #0x448]
+00db64c4  bl 0x00b0789c
+00db64c8  adrp x0,0x3345000
+00db64cc  ldr x0,[x0, #0xc98]
+00db64d0  bl 0x00b0789c
+00db64d4  adrp x0,0x335e000
+00db64d8  ldr x0,[x0, #0x168]
+00db64dc  bl 0x00b0789c
+00db64e0  adrp x0,0x332a000
+00db64e4  ldr x0,[x0, #0x5e8]
+00db64e8  bl 0x00b0789c
+00db64ec  adrp x0,0x3321000
+00db64f0  ldr x0,[x0, #0x210]
+00db64f4  bl 0x00b0789c
+00db64f8  adrp x0,0x3375000
+00db64fc  ldr x0,[x0, #0x718]
+00db6500  bl 0x00b0789c
+00db6504  adrp x0,0x330b000
+00db6508  ldr x0,[x0, #0x378]
+00db650c  bl 0x00b0789c
+00db6510  adrp x0,0x3320000
+00db6514  ldr x0,[x0, #0x420]
+00db6518  bl 0x00b0789c
+00db651c  adrp x0,0x3337000
+00db6520  ldr x0,[x0, #0xf98]
+00db6524  bl 0x00b0789c
+00db6528  adrp x0,0x3322000
+00db652c  ldr x0,[x0, #0xcd8]
+00db6530  bl 0x00b0789c
+00db6534  adrp x0,0x336c000
+00db6538  ldr x0,[x0, #0x6e8]
+00db653c  bl 0x00b0789c
+00db6540  adrp x0,0x3365000
+00db6544  ldr x0,[x0, #0x868]
+00db6548  bl 0x00b0789c
+00db654c  adrp x0,0x3384000
+00db6550  ldr x0,[x0, #0xb60]
+00db6554  bl 0x00b0789c
+00db6558  adrp x0,0x334c000
+00db655c  ldr x0,[x0, #0x6c8]
+00db6560  bl 0x00b0789c
+00db6564  mov w8,#0x1
+00db6568  strb w8,[x19, #0xe8]
+00db656c  ldr x0,[x20]
+00db6570  bl 0x00b079a0
+00db6574  cbz x0,0x00db6734
+00db6578  adrp x20,0x334c000
+00db657c  adrp x22,0x3384000
+00db6580  adrp x21,0x3365000
+00db6584  adrp x23,0x3375000
+00db6588  adrp x24,0x3321000
+00db658c  adrp x29,0x3322000
+00db6590  adrp x28,0x335e000
+00db6594  adrp x27,0x332a000
+00db6598  adrp x26,0x3320000
+00db659c  adrp x25,0x3384000
+00db65a0  ldr x20,[x20, #0x6c8]
+00db65a4  ldr x22,[x22, #0xb60]
+00db65a8  ldr x21,[x21, #0x868]
+00db65ac  ldr x23,[x23, #0x718]
+00db65b0  ldr x24,[x24, #0x210]
+00db65b4  ldr x29,[x29, #0xcd8]
+00db65b8  ldr x28,[x28, #0x168]
+00db65bc  ldr x27,[x27, #0x5e8]
+00db65c0  ldr x26,[x26, #0x420]
+00db65c4  ldr x25,[x25, #0x448]
+00db65c8  mov x1,xzr
+00db65cc  mov x19,x0
+00db65d0  bl 0x01634308
+00db65d4  ldr x1,[x20]
+00db65d8  mov x0,x19
+00db65dc  str x1,[x0, #0x30]!
+00db65e0  bl 0x00b07850
+00db65e4  ldr x1,[x22]
+00db65e8  mov x0,x19
+00db65ec  str x1,[x0, #0x28]!
+00db65f0  bl 0x00b07850
+00db65f4  ldr x1,[x21]
+00db65f8  mov x0,x19
+00db65fc  str x1,[x0, #0x40]!
+00db6600  bl 0x00b07850
+00db6604  ldr x1,[x23]
+00db6608  mov x0,x19
+00db660c  str x1,[x0, #0x20]!
+00db6610  bl 0x00b07850
+00db6614  ldr x1,[x24]
+00db6618  mov x0,x19
+00db661c  str x1,[x0, #0x48]!
+00db6620  bl 0x00b07850
+00db6624  ldr x1,[x21]
+00db6628  mov x0,x19
+00db662c  str x1,[x0, #0x18]!
+00db6630  bl 0x00b07850
+00db6634  ldr x1,[x29]
+00db6638  mov x0,x19
+00db663c  str x1,[x0, #0x10]!
+00db6640  bl 0x00b07850
+00db6644  ldr x1,[x21]
+00db6648  mov x0,x19
+00db664c  str x1,[x0, #0x38]!
+00db6650  bl 0x00b07850
+00db6654  ldr x1,[x28]
+00db6658  mov x0,x19
+00db665c  str x1,[x0, #0x50]!
+00db6660  bl 0x00b07850
+00db6664  ldr x1,[x27]
+00db6668  mov x0,x19
+00db666c  str x1,[x0, #0x58]!
+00db6670  bl 0x00b07850
+00db6674  ldr x1,[x26]
+00db6678  mov x0,x19
+00db667c  str x1,[x0, #0x60]!
+00db6680  bl 0x00b07850
+00db6684  ldr x1,[x25]
+00db6688  mov x0,x19
+00db668c  str x1,[x0, #0x68]!
+00db6690  bl 0x00b07850
+00db6694  adrp x8,0x330b000
+00db6698  ldr x8,[x8, #0x378]
+00db669c  mov x0,x19
+00db66a0  ldr x1,[x8]
+00db66a4  str x1,[x0, #0x70]!
+00db66a8  bl 0x00b07850
+00db66ac  adrp x8,0x336c000
+00db66b0  ldr x8,[x8, #0x6e8]
+00db66b4  mov x0,x19
+00db66b8  ldr x1,[x8]
+00db66bc  str x1,[x0, #0x78]!
+00db66c0  bl 0x00b07850
+00db66c4  ldr x1,[x21]
+00db66c8  mov x0,x19
+00db66cc  str x1,[x0, #0x80]!
+00db66d0  bl 0x00b07850
+00db66d4  adrp x8,0x3337000
+00db66d8  ldr x8,[x8, #0xf98]
+00db66dc  mov x0,x19
+00db66e0  ldr x1,[x8]
+00db66e4  str x1,[x0, #0x88]!
+00db66e8  bl 0x00b07850
+00db66ec  adrp x8,0x3345000
+00db66f0  ldr x8,[x8, #0xc98]
+00db66f4  mov x0,x19
+00db66f8  ldr x1,[x8]
+00db66fc  str x1,[x0, #0x90]!
+00db6700  bl 0x00b07850
+00db6704  mov x0,xzr
+00db6708  bl 0x01633c0c
+00db670c  cbz x0,0x00db6734
+00db6710  mov x1,x19
+00db6714  ldp x29,x30,[sp, #0x50]
+00db6718  ldp x20,x19,[sp, #0x40]
+00db671c  ldp x22,x21,[sp, #0x30]
+00db6720  ldp x24,x23,[sp, #0x20]
+00db6724  ldp x26,x25,[sp, #0x10]
+00db6728  mov x2,xzr
+00db672c  ldp x28,x27,[sp], #0x60
+00db6730  b 0x01633f4c
+00db6734  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6738_EventHandle__onNext.txt
+================================================================================
+Function: EventHandle$$onNext @ 00db6738
+
+--- Calls OUT ---
+  -> UnityEngine.Application$$LoadLevel @ 024f33d0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00db6738  str x20,[sp, #-0x20]!
+00db673c  stp x19,x30,[sp, #0x10]
+00db6740  adrp x19,0x3572000
+00db6744  adrp x20,0x332e000
+00db6748  ldrb w8,[x19, #0xe9]
+00db674c  ldr x20,[x20, #0x1a0]
+00db6750  tbnz w8,#0x0,0x00db6768
+00db6754  adrp x0,0x332e000
+00db6758  ldr x0,[x0, #0x1a0]
+00db675c  bl 0x00b0789c
+00db6760  mov w8,#0x1
+00db6764  strb w8,[x19, #0xe9]
+00db6768  ldr x0,[x20]
+00db676c  ldp x19,x30,[sp, #0x10]
+00db6770  mov x1,xzr
+00db6774  ldr x20,[sp], #0x20
+00db6778  b 0x024f33d0
+
+
+================================================================================
+### FILE: 00db677c_EventHandle__onExit.txt
+================================================================================
+Function: EventHandle$$onExit @ 00db677c
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$exit @ 01633da4
+  -> quicksdk.QuickSDK$$isChannelHasExitDialog @ 0163423c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+
+--- Calls IN ---
+
+--- Listing ---
+00db677c  stp x19,x30,[sp, #-0x10]!
+00db6780  mov x19,x0
+00db6784  mov x0,xzr
+00db6788  bl 0x01633c0c
+00db678c  cbz x0,0x00db67cc
+00db6790  mov x1,xzr
+00db6794  bl 0x0163423c
+00db6798  tbz w0,#0x0,0x00db67b4
+00db679c  mov x0,xzr
+00db67a0  bl 0x01633c0c
+00db67a4  cbz x0,0x00db67cc
+00db67a8  mov x1,xzr
+00db67ac  ldp x19,x30,[sp], #0x10
+00db67b0  b 0x01633da4
+00db67b4  ldr x0,[x19, #0x20]
+00db67b8  cbz x0,0x00db67cc
+00db67bc  mov w1,#0x1
+00db67c0  mov x2,xzr
+00db67c4  ldp x19,x30,[sp], #0x10
+00db67c8  b 0x024de86c
+00db67cc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db67d0_EventHandle__onExitCancel.txt
+================================================================================
+Function: EventHandle$$onExitCancel @ 00db67d0
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+
+--- Calls IN ---
+
+--- Listing ---
+00db67d0  str x30,[sp, #-0x10]!
+00db67d4  ldr x0,[x0, #0x20]
+00db67d8  cbz x0,0x00db67ec
+00db67dc  mov w1,wzr
+00db67e0  mov x2,xzr
+00db67e4  ldr x30,[sp], #0x10
+00db67e8  b 0x024de86c
+00db67ec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db67f0_EventHandle__onExitConfirm.txt
+================================================================================
+Function: EventHandle$$onExitConfirm @ 00db67f0
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$exit @ 01633da4
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db67f0  str x30,[sp, #-0x10]!
+00db67f4  ldr x0,[x0, #0x20]
+00db67f8  cbz x0,0x00db6820
+00db67fc  mov w1,wzr
+00db6800  mov x2,xzr
+00db6804  bl 0x024de86c
+00db6808  mov x0,xzr
+00db680c  bl 0x01633c0c
+00db6810  cbz x0,0x00db6820
+00db6814  mov x1,xzr
+00db6818  ldr x30,[sp], #0x10
+00db681c  b 0x01633da4
+00db6820  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6824_EventHandle__onShowToolbar.txt
+================================================================================
+Function: EventHandle$$onShowToolbar @ 00db6824
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$showToolBar @ 01634024
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db6824  str x30,[sp, #-0x10]!
+00db6828  mov x0,xzr
+00db682c  bl 0x01633c0c
+00db6830  cbz x0,0x00db6844
+00db6834  mov w1,#0x5
+00db6838  mov x2,xzr
+00db683c  ldr x30,[sp], #0x10
+00db6840  b 0x01634024
+00db6844  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6848_EventHandle__onHideToolbar.txt
+================================================================================
+Function: EventHandle$$onHideToolbar @ 00db6848
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> FUN_00b079b0 @ 00b079b0
+  -> quicksdk.QuickSDK$$hideToolBar @ 01634058
+
+--- Calls IN ---
+
+--- Listing ---
+00db6848  str x30,[sp, #-0x10]!
+00db684c  mov x0,xzr
+00db6850  bl 0x01633c0c
+00db6854  cbz x0,0x00db6864
+00db6858  mov x1,xzr
+00db685c  ldr x30,[sp], #0x10
+00db6860  b 0x01634058
+00db6864  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6868_EventHandle__onEnterUserCenter.txt
+================================================================================
+Function: EventHandle$$onEnterUserCenter @ 00db6868
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$callFunction @ 016340cc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db6868  str x30,[sp, #-0x10]!
+00db686c  mov x0,xzr
+00db6870  bl 0x01633c0c
+00db6874  cbz x0,0x00db6888
+00db6878  mov w1,#0x66
+00db687c  mov x2,xzr
+00db6880  ldr x30,[sp], #0x10
+00db6884  b 0x016340cc
+00db6888  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db688c_EventHandle__onEnterBBS.txt
+================================================================================
+Function: EventHandle$$onEnterBBS @ 00db688c
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$callFunction @ 016340cc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db688c  str x30,[sp, #-0x10]!
+00db6890  mov x0,xzr
+00db6894  bl 0x01633c0c
+00db6898  cbz x0,0x00db68ac
+00db689c  mov w1,#0x65
+00db68a0  mov x2,xzr
+00db68a4  ldr x30,[sp], #0x10
+00db68a8  b 0x016340cc
+00db68ac  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db68b0_EventHandle__onEnterCustomer.txt
+================================================================================
+Function: EventHandle$$onEnterCustomer @ 00db68b0
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$callFunction @ 016340cc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db68b0  str x30,[sp, #-0x10]!
+00db68b4  mov x0,xzr
+00db68b8  bl 0x01633c0c
+00db68bc  cbz x0,0x00db68d0
+00db68c0  mov w1,#0x6c
+00db68c4  mov x2,xzr
+00db68c8  ldr x30,[sp], #0x10
+00db68cc  b 0x016340cc
+00db68d0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db68d4_EventHandle__onGetGoodsInfos.txt
+================================================================================
+Function: EventHandle$$onGetGoodsInfos @ 00db68d4
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$callFunction @ 016340cc
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db68d4  stp x21,x20,[sp, #-0x20]!
+00db68d8  stp x19,x30,[sp, #0x10]
+00db68dc  adrp x19,0x3572000
+00db68e0  adrp x20,0x3311000
+00db68e4  adrp x21,0x3372000
+00db68e8  ldrb w8,[x19, #0xea]
+00db68ec  ldr x20,[x20, #0xd48]
+00db68f0  ldr x21,[x21, #0xdb0]
+00db68f4  tbnz w8,#0x0,0x00db6918
+00db68f8  adrp x0,0x3372000
+00db68fc  ldr x0,[x0, #0xdb0]
+00db6900  bl 0x00b0789c
+00db6904  adrp x0,0x3311000
+00db6908  ldr x0,[x0, #0xd48]
+00db690c  bl 0x00b0789c
+00db6910  mov w8,#0x1
+00db6914  strb w8,[x19, #0xea]
+00db6918  ldr x1,[x20]
+00db691c  ldr x2,[x21]
+00db6920  bl 0x00db5690
+00db6924  mov x0,xzr
+00db6928  bl 0x01633c0c
+00db692c  cbz x0,0x00db6944
+00db6930  ldp x19,x30,[sp, #0x10]
+00db6934  mov w1,#0x6d
+00db6938  mov x2,xzr
+00db693c  ldp x21,x20,[sp], #0x20
+00db6940  b 0x016340cc
+00db6944  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6948_EventHandle__onUserId.txt
+================================================================================
+Function: EventHandle$$onUserId @ 00db6948
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$userId @ 01633e94
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db6948  stp x19,x30,[sp, #-0x10]!
+00db694c  adrp x19,0x3572000
+00db6950  ldrb w8,[x19, #0xeb]
+00db6954  tbnz w8,#0x0,0x00db696c
+00db6958  adrp x0,0x3324000
+00db695c  ldr x0,[x0, #0x380]
+00db6960  bl 0x00b0789c
+00db6964  mov w8,#0x1
+00db6968  strb w8,[x19, #0xeb]
+00db696c  mov x0,xzr
+00db6970  bl 0x01633c0c
+00db6974  cbz x0,0x00db6998
+00db6978  adrp x19,0x3324000
+00db697c  ldr x19,[x19, #0x380]
+00db6980  mov x1,xzr
+00db6984  bl 0x01633e94
+00db6988  ldr x1,[x19]
+00db698c  mov x2,x0
+00db6990  ldp x19,x30,[sp], #0x10
+00db6994  b 0x00db5690
+00db6998  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db699c_EventHandle__onChannelType.txt
+================================================================================
+Function: EventHandle$$onChannelType @ 00db699c
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Int32$$ToString @ 0214dc44
+  -> FUN_00b079b0 @ 00b079b0
+  -> quicksdk.QuickSDK$$channelType @ 0163416c
+
+--- Calls IN ---
+
+--- Listing ---
+00db699c  str x20,[sp, #-0x20]!
+00db69a0  stp x19,x30,[sp, #0x10]
+00db69a4  adrp x20,0x3572000
+00db69a8  ldrb w8,[x20, #0xed]
+00db69ac  mov x19,x0
+00db69b0  tbnz w8,#0x0,0x00db69d4
+00db69b4  adrp x0,0x3358000
+00db69b8  ldr x0,[x0, #0x7f8]
+00db69bc  bl 0x00b0789c
+00db69c0  adrp x0,0x332c000
+00db69c4  ldr x0,[x0, #0x2c0]
+00db69c8  bl 0x00b0789c
+00db69cc  mov w8,#0x1
+00db69d0  strb w8,[x20, #0xed]
+00db69d4  mov x0,xzr
+00db69d8  str wzr,[sp, #0xc]
+00db69dc  bl 0x01633c0c
+00db69e0  cbz x0,0x00db6a30
+00db69e4  mov x1,xzr
+00db69e8  bl 0x0163416c
+00db69ec  str w0,[sp, #0xc]
+00db69f0  add x0,sp,#0xc
+00db69f4  mov x1,xzr
+00db69f8  bl 0x0214dc44
+00db69fc  cbz x19,0x00db6a30
+00db6a00  adrp x8,0x332c000
+00db6a04  ldr x8,[x8, #0x2c0]
+00db6a08  adrp x9,0x3358000
+00db6a0c  ldr x9,[x9, #0x7f8]
+00db6a10  cmp x0,#0x0
+00db6a14  ldr x8,[x8]
+00db6a18  ldr x1,[x9]
+00db6a1c  csel x2,x8,x0,eq
+00db6a20  bl 0x00db5690
+00db6a24  ldp x19,x30,[sp, #0x10]
+00db6a28  ldr x20,[sp], #0x20
+00db6a2c  ret
+00db6a30  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6a34_EventHandle__onFuctionSupport.txt
+================================================================================
+Function: EventHandle$$onFuctionSupport @ 00db6a34
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> EventHandle$$showLog @ 00db5690
+  -> quicksdk.QuickSDK$$isFunctionSupported @ 0163408c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db6a34  stp x21,x20,[sp, #-0x20]!
+00db6a38  stp x19,x30,[sp, #0x10]
+00db6a3c  adrp x21,0x3572000
+00db6a40  ldrb w8,[x21, #0xee]
+00db6a44  mov w20,w1
+00db6a48  mov x19,x0
+00db6a4c  tbnz w8,#0x0,0x00db6a7c
+00db6a50  adrp x0,0x3383000
+00db6a54  ldr x0,[x0, #0xfb0]
+00db6a58  bl 0x00b0789c
+00db6a5c  adrp x0,0x3351000
+00db6a60  ldr x0,[x0, #0xf70]
+00db6a64  bl 0x00b0789c
+00db6a68  adrp x0,0x3378000
+00db6a6c  ldr x0,[x0, #0x738]
+00db6a70  bl 0x00b0789c
+00db6a74  mov w8,#0x1
+00db6a78  strb w8,[x21, #0xee]
+00db6a7c  mov x0,xzr
+00db6a80  bl 0x01633c0c
+00db6a84  cbz x0,0x00db6acc
+00db6a88  mov w1,w20
+00db6a8c  mov x2,xzr
+00db6a90  bl 0x0163408c
+00db6a94  cbz x19,0x00db6acc
+00db6a98  adrp x8,0x3351000
+00db6a9c  adrp x9,0x3383000
+00db6aa0  ldr x8,[x8, #0xf70]
+00db6aa4  ldr x9,[x9, #0xfb0]
+00db6aa8  adrp x10,0x3378000
+00db6aac  ldr x10,[x10, #0x738]
+00db6ab0  tst w0,#0x1
+00db6ab4  csel x8,x8,x9,ne
+00db6ab8  ldr x2,[x8]
+00db6abc  ldr x1,[x10]
+00db6ac0  ldp x19,x30,[sp, #0x10]
+00db6ac4  ldp x21,x20,[sp], #0x20
+00db6ac8  b 0x00db5690
+00db6acc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6ad0_EventHandle__onGetConfigValue.txt
+================================================================================
+Function: EventHandle$$onGetConfigValue @ 00db6ad0
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> quicksdk.QuickSDK$$getConfigValue @ 016341cc
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$Concat @ 01fdebb8
+
+--- Calls IN ---
+
+--- Listing ---
+00db6ad0  stp x21,x20,[sp, #-0x20]!
+00db6ad4  stp x19,x30,[sp, #0x10]
+00db6ad8  adrp x20,0x3572000
+00db6adc  ldrb w8,[x20, #0xef]
+00db6ae0  mov x19,x1
+00db6ae4  tbnz w8,#0x0,0x00db6b08
+00db6ae8  adrp x0,0x3313000
+00db6aec  ldr x0,[x0, #0x320]
+00db6af0  bl 0x00b0789c
+00db6af4  adrp x0,0x3351000
+00db6af8  ldr x0,[x0, #0x950]
+00db6afc  bl 0x00b0789c
+00db6b00  mov w8,#0x1
+00db6b04  strb w8,[x20, #0xef]
+00db6b08  mov x0,xzr
+00db6b0c  bl 0x01633c0c
+00db6b10  cbz x0,0x00db6b58
+00db6b14  adrp x20,0x3313000
+00db6b18  adrp x21,0x3351000
+00db6b1c  ldr x20,[x20, #0x320]
+00db6b20  ldr x21,[x21, #0x950]
+00db6b24  mov x1,x19
+00db6b28  mov x2,xzr
+00db6b2c  bl 0x016341cc
+00db6b30  ldr x1,[x20]
+00db6b34  mov x2,x0
+00db6b38  mov x0,x19
+00db6b3c  mov x3,xzr
+00db6b40  bl 0x01fdebb8
+00db6b44  ldr x1,[x21]
+00db6b48  ldp x19,x30,[sp, #0x10]
+00db6b4c  mov x2,x0
+00db6b50  ldp x21,x20,[sp], #0x20
+00db6b54  b 0x00db5690
+00db6b58  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6b5c_EventHandle__onOk.txt
+================================================================================
+Function: EventHandle$$onOk @ 00db6b5c
+
+--- Calls OUT ---
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db6b5c  str x30,[sp, #-0x10]!
+00db6b60  ldr x0,[x0, #0x18]
+00db6b64  cbz x0,0x00db6b78
+00db6b68  mov w1,wzr
+00db6b6c  mov x2,xzr
+00db6b70  ldr x30,[sp], #0x10
+00db6b74  b 0x024de86c
+00db6b78  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6b7c_EventHandle__onPauseGame.txt
+================================================================================
+Function: EventHandle$$onPauseGame @ 00db6b7c
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> quicksdk.QuickSDK$$callFunction @ 016340cc
+  -> UnityEngine.Time$$set_timeScale @ 024dc320
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db6b7c  str x30,[sp, #-0x10]!
+00db6b80  fmov s0,wzr
+00db6b84  mov x0,xzr
+00db6b88  bl 0x024dc320
+00db6b8c  mov x0,xzr
+00db6b90  bl 0x01633c0c
+00db6b94  cbz x0,0x00db6ba8
+00db6b98  mov w1,#0x6b
+00db6b9c  mov x2,xzr
+00db6ba0  ldr x30,[sp], #0x10
+00db6ba4  b 0x016340cc
+00db6ba8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6bac_EventHandle__onResumeGame.txt
+================================================================================
+Function: EventHandle$$onResumeGame @ 00db6bac
+
+--- Calls OUT ---
+  -> UnityEngine.Time$$set_timeScale @ 024dc320
+
+--- Calls IN ---
+
+--- Listing ---
+00db6bac  fmov s0,0x3f800000
+00db6bb0  mov x0,xzr
+00db6bb4  b 0x024dc320
+
+
+================================================================================
+### FILE: 00db6bb8_EventHandle__onInitSuccess.txt
+================================================================================
+Function: EventHandle$$onInitSuccess @ 00db6bb8
+
+--- Calls OUT ---
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00db6bb8  stp x21,x20,[sp, #-0x20]!
+00db6bbc  stp x19,x30,[sp, #0x10]
+00db6bc0  adrp x19,0x3572000
+00db6bc4  adrp x20,0x337e000
+00db6bc8  adrp x21,0x332c000
+00db6bcc  ldrb w8,[x19, #0xf0]
+00db6bd0  ldr x20,[x20, #0x90]
+00db6bd4  ldr x21,[x21, #0x2c0]
+00db6bd8  tbnz w8,#0x0,0x00db6bfc
+00db6bdc  adrp x0,0x337e000
+00db6be0  ldr x0,[x0, #0x90]
+00db6be4  bl 0x00b0789c
+00db6be8  adrp x0,0x332c000
+00db6bec  ldr x0,[x0, #0x2c0]
+00db6bf0  bl 0x00b0789c
+00db6bf4  mov w8,#0x1
+00db6bf8  strb w8,[x19, #0xf0]
+00db6bfc  ldr x1,[x20]
+00db6c00  ldr x2,[x21]
+00db6c04  ldp x19,x30,[sp, #0x10]
+00db6c08  ldp x21,x20,[sp], #0x20
+00db6c0c  b 0x00db5690
+
+
+================================================================================
+### FILE: 00db6c10_EventHandle__onInitFailed.txt
+================================================================================
+Function: EventHandle$$onInitFailed @ 00db6c10
+
+--- Calls OUT ---
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db6c10  str x20,[sp, #-0x20]!
+00db6c14  stp x19,x30,[sp, #0x10]
+00db6c18  adrp x20,0x3572000
+00db6c1c  ldrb w8,[x20, #0xf1]
+00db6c20  mov x19,x1
+00db6c24  tbnz w8,#0x0,0x00db6c48
+00db6c28  adrp x0,0x3364000
+00db6c2c  ldr x0,[x0, #0x3b8]
+00db6c30  bl 0x00b0789c
+00db6c34  adrp x0,0x3318000
+00db6c38  ldr x0,[x0, #0xd08]
+00db6c3c  bl 0x00b0789c
+00db6c40  mov w8,#0x1
+00db6c44  strb w8,[x20, #0xf1]
+00db6c48  cbz x19,0x00db6c80
+00db6c4c  adrp x8,0x3318000
+00db6c50  ldr x8,[x8, #0xd08]
+00db6c54  ldr x1,[x19, #0x10]
+00db6c58  adrp x19,0x3364000
+00db6c5c  mov x2,xzr
+00db6c60  ldr x0,[x8]
+00db6c64  ldr x19,[x19, #0x3b8]
+00db6c68  bl 0x01fd2850
+00db6c6c  ldr x1,[x19]
+00db6c70  ldp x19,x30,[sp, #0x10]
+00db6c74  mov x2,x0
+00db6c78  ldr x20,[sp], #0x20
+00db6c7c  b 0x00db5690
+00db6c80  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6c84_EventHandle__onLoginSuccess.txt
+================================================================================
+Function: EventHandle$$onLoginSuccess @ 00db6c84
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Application$$LoadLevel @ 024f33d0
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fdf4c4
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+00db6c84  str x22,[sp, #-0x30]!
+00db6c88  stp x21,x20,[sp, #0x10]
+00db6c8c  stp x19,x30,[sp, #0x20]
+00db6c90  adrp x20,0x3572000
+00db6c94  adrp x21,0x3308000
+00db6c98  ldrb w8,[x20, #0xf2]
+00db6c9c  ldr x21,[x21, #0x9a8]
+00db6ca0  mov x19,x1
+00db6ca4  tbnz w8,#0x0,0x00db6d04
+00db6ca8  adrp x0,0x3308000
+00db6cac  ldr x0,[x0, #0x9a8]
+00db6cb0  bl 0x00b0789c
+00db6cb4  adrp x0,0x334b000
+00db6cb8  ldr x0,[x0, #0xe58]
+00db6cbc  bl 0x00b0789c
+00db6cc0  adrp x0,0x331b000
+00db6cc4  ldr x0,[x0, #0xf90]
+00db6cc8  bl 0x00b0789c
+00db6ccc  adrp x0,0x3328000
+00db6cd0  ldr x0,[x0, #0x18]
+00db6cd4  bl 0x00b0789c
+00db6cd8  adrp x0,0x331f000
+00db6cdc  ldr x0,[x0, #0xe88]
+00db6ce0  bl 0x00b0789c
+00db6ce4  adrp x0,0x333c000
+00db6ce8  ldr x0,[x0, #0xb8]
+00db6cec  bl 0x00b0789c
+00db6cf0  adrp x0,0x3375000
+00db6cf4  ldr x0,[x0, #0x140]
+00db6cf8  bl 0x00b0789c
+00db6cfc  mov w8,#0x1
+00db6d00  strb w8,[x20, #0xf2]
+00db6d04  ldr x0,[x21]
+00db6d08  mov w1,#0x8
+00db6d0c  bl 0x00b078f8
+00db6d10  cbz x0,0x00db6f88
+00db6d14  adrp x21,0x334b000
+00db6d18  ldr x21,[x21, #0xe58]
+00db6d1c  mov x20,x0
+00db6d20  ldr x1,[x21]
+00db6d24  cbz x1,0x00db6d4c
+00db6d28  ldr x8,[x20]
+00db6d2c  mov x0,x1
+00db6d30  ldr x8,[x8, #0x40]
+00db6d34  mov x1,x8
+00db6d38  bl 0x00b07990
+00db6d3c  cbz x0,0x00db6f7c
+00db6d40  ldr x8,[x21]
+00db6d44  mov x1,x8
+00db6d48  b 0x00db6d50
+00db6d4c  mov x8,xzr
+00db6d50  ldr w9,[x20, #0x18]
+00db6d54  cbz w9,0x00db6f78
+00db6d58  mov x0,x20
+00db6d5c  str x8,[x0, #0x20]!
+00db6d60  bl 0x00b07850
+00db6d64  cbz x19,0x00db6f88
+00db6d68  ldr x21,[x19, #0x18]
+00db6d6c  cbz x21,0x00db6d84
+00db6d70  ldr x8,[x20]
+00db6d74  mov x0,x21
+00db6d78  ldr x1,[x8, #0x40]
+00db6d7c  bl 0x00b07990
+00db6d80  cbz x0,0x00db6f7c
+00db6d84  ldr w8,[x20, #0x18]
+00db6d88  cmp w8,#0x1
+00db6d8c  b.ls 0x00db6f78
+00db6d90  adrp x22,0x331b000
+00db6d94  ldr x22,[x22, #0xf90]
+00db6d98  mov x0,x20
+00db6d9c  str x21,[x0, #0x28]!
+00db6da0  mov x1,x21
+00db6da4  bl 0x00b07850
+00db6da8  ldr x1,[x22]
+00db6dac  cbz x1,0x00db6dd4
+00db6db0  ldr x8,[x20]
+00db6db4  mov x0,x1
+00db6db8  ldr x8,[x8, #0x40]
+00db6dbc  mov x1,x8
+00db6dc0  bl 0x00b07990
+00db6dc4  cbz x0,0x00db6f7c
+00db6dc8  ldr x8,[x22]
+00db6dcc  mov x1,x8
+00db6dd0  b 0x00db6dd8
+00db6dd4  mov x8,xzr
+00db6dd8  ldr w9,[x20, #0x18]
+00db6ddc  cmp w9,#0x2
+00db6de0  b.ls 0x00db6f78
+00db6de4  mov x0,x20
+00db6de8  str x8,[x0, #0x30]!
+00db6dec  bl 0x00b07850
+00db6df0  ldr x21,[x19, #0x20]
+00db6df4  cbz x21,0x00db6e0c
+00db6df8  ldr x8,[x20]
+00db6dfc  mov x0,x21
+00db6e00  ldr x1,[x8, #0x40]
+00db6e04  bl 0x00b07990
+00db6e08  cbz x0,0x00db6f7c
+00db6e0c  ldr w8,[x20, #0x18]
+00db6e10  cmp w8,#0x3
+00db6e14  b.ls 0x00db6f78
+00db6e18  adrp x22,0x3375000
+00db6e1c  ldr x22,[x22, #0x140]
+00db6e20  mov x0,x20
+00db6e24  str x21,[x0, #0x38]!
+00db6e28  mov x1,x21
+00db6e2c  bl 0x00b07850
+00db6e30  ldr x1,[x22]
+00db6e34  cbz x1,0x00db6e5c
+00db6e38  ldr x8,[x20]
+00db6e3c  mov x0,x1
+00db6e40  ldr x8,[x8, #0x40]
+00db6e44  mov x1,x8
+00db6e48  bl 0x00b07990
+00db6e4c  cbz x0,0x00db6f7c
+00db6e50  ldr x8,[x22]
+00db6e54  mov x1,x8
+00db6e58  b 0x00db6e60
+00db6e5c  mov x8,xzr
+00db6e60  ldr w9,[x20, #0x18]
+00db6e64  cmp w9,#0x4
+00db6e68  b.ls 0x00db6f78
+00db6e6c  mov x0,x20
+00db6e70  str x8,[x0, #0x40]!
+00db6e74  bl 0x00b07850
+00db6e78  ldr x21,[x19, #0x28]
+00db6e7c  cbz x21,0x00db6e94
+00db6e80  ldr x8,[x20]
+00db6e84  mov x0,x21
+00db6e88  ldr x1,[x8, #0x40]
+00db6e8c  bl 0x00b07990
+00db6e90  cbz x0,0x00db6f7c
+00db6e94  ldr w8,[x20, #0x18]
+00db6e98  cmp w8,#0x5
+00db6e9c  b.ls 0x00db6f78
+00db6ea0  adrp x22,0x333c000
+00db6ea4  ldr x22,[x22, #0xb8]
+00db6ea8  mov x0,x20
+00db6eac  str x21,[x0, #0x48]!
+00db6eb0  mov x1,x21
+00db6eb4  bl 0x00b07850
+00db6eb8  ldr x1,[x22]
+00db6ebc  cbz x1,0x00db6ee4
+00db6ec0  ldr x8,[x20]
+00db6ec4  mov x0,x1
+00db6ec8  ldr x8,[x8, #0x40]
+00db6ecc  mov x1,x8
+00db6ed0  bl 0x00b07990
+00db6ed4  cbz x0,0x00db6f7c
+00db6ed8  ldr x8,[x22]
+00db6edc  mov x1,x8
+00db6ee0  b 0x00db6ee8
+00db6ee4  mov x8,xzr
+00db6ee8  ldr w9,[x20, #0x18]
+00db6eec  cmp w9,#0x6
+00db6ef0  b.ls 0x00db6f78
+00db6ef4  mov x0,x20
+00db6ef8  str x8,[x0, #0x50]!
+00db6efc  bl 0x00b07850
+00db6f00  ldr x19,[x19, #0x10]
+00db6f04  cbz x19,0x00db6f1c
+00db6f08  ldr x8,[x20]
+00db6f0c  mov x0,x19
+00db6f10  ldr x1,[x8, #0x40]
+00db6f14  bl 0x00b07990
+00db6f18  cbz x0,0x00db6f7c
+00db6f1c  ldr w8,[x20, #0x18]
+00db6f20  cmp w8,#0x7
+00db6f24  b.ls 0x00db6f78
+00db6f28  adrp x21,0x331f000
+00db6f2c  adrp x22,0x3328000
+00db6f30  ldr x21,[x21, #0xe88]
+00db6f34  ldr x22,[x22, #0x18]
+00db6f38  mov x0,x20
+00db6f3c  str x19,[x0, #0x58]!
+00db6f40  mov x1,x19
+00db6f44  bl 0x00b07850
+00db6f48  mov x0,x20
+00db6f4c  mov x1,xzr
+00db6f50  bl 0x01fdf4c4
+00db6f54  ldr x1,[x21]
+00db6f58  mov x2,x0
+00db6f5c  bl 0x00db5690
+00db6f60  ldr x0,[x22]
+00db6f64  ldp x19,x30,[sp, #0x20]
+00db6f68  ldp x21,x20,[sp, #0x10]
+00db6f6c  mov x1,xzr
+00db6f70  ldr x22,[sp], #0x30
+00db6f74  b 0x024f33d0
+00db6f78  bl 0x00b079b8
+00db6f7c  bl 0x00b079d4
+00db6f80  mov x1,xzr
+00db6f84  bl 0x00b07978
+00db6f88  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db6f8c_EventHandle__onSwitchAccountSuccess.txt
+================================================================================
+Function: EventHandle$$onSwitchAccountSuccess @ 00db6f8c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Application$$LoadLevel @ 024f33d0
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fdf4c4
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+00db6f8c  str x22,[sp, #-0x30]!
+00db6f90  stp x21,x20,[sp, #0x10]
+00db6f94  stp x19,x30,[sp, #0x20]
+00db6f98  adrp x20,0x3572000
+00db6f9c  adrp x21,0x3308000
+00db6fa0  ldrb w8,[x20, #0xf3]
+00db6fa4  ldr x21,[x21, #0x9a8]
+00db6fa8  mov x19,x1
+00db6fac  tbnz w8,#0x0,0x00db700c
+00db6fb0  adrp x0,0x3308000
+00db6fb4  ldr x0,[x0, #0x9a8]
+00db6fb8  bl 0x00b0789c
+00db6fbc  adrp x0,0x334b000
+00db6fc0  ldr x0,[x0, #0xe58]
+00db6fc4  bl 0x00b0789c
+00db6fc8  adrp x0,0x331b000
+00db6fcc  ldr x0,[x0, #0xf90]
+00db6fd0  bl 0x00b0789c
+00db6fd4  adrp x0,0x3328000
+00db6fd8  ldr x0,[x0, #0x18]
+00db6fdc  bl 0x00b0789c
+00db6fe0  adrp x0,0x331f000
+00db6fe4  ldr x0,[x0, #0xe88]
+00db6fe8  bl 0x00b0789c
+00db6fec  adrp x0,0x333c000
+00db6ff0  ldr x0,[x0, #0xb8]
+00db6ff4  bl 0x00b0789c
+00db6ff8  adrp x0,0x3375000
+00db6ffc  ldr x0,[x0, #0x140]
+00db7000  bl 0x00b0789c
+00db7004  mov w8,#0x1
+00db7008  strb w8,[x20, #0xf3]
+00db700c  ldr x0,[x21]
+00db7010  mov w1,#0x8
+00db7014  bl 0x00b078f8
+00db7018  cbz x0,0x00db7290
+00db701c  adrp x21,0x334b000
+00db7020  ldr x21,[x21, #0xe58]
+00db7024  mov x20,x0
+00db7028  ldr x1,[x21]
+00db702c  cbz x1,0x00db7054
+00db7030  ldr x8,[x20]
+00db7034  mov x0,x1
+00db7038  ldr x8,[x8, #0x40]
+00db703c  mov x1,x8
+00db7040  bl 0x00b07990
+00db7044  cbz x0,0x00db7284
+00db7048  ldr x8,[x21]
+00db704c  mov x1,x8
+00db7050  b 0x00db7058
+00db7054  mov x8,xzr
+00db7058  ldr w9,[x20, #0x18]
+00db705c  cbz w9,0x00db7280
+00db7060  mov x0,x20
+00db7064  str x8,[x0, #0x20]!
+00db7068  bl 0x00b07850
+00db706c  cbz x19,0x00db7290
+00db7070  ldr x21,[x19, #0x18]
+00db7074  cbz x21,0x00db708c
+00db7078  ldr x8,[x20]
+00db707c  mov x0,x21
+00db7080  ldr x1,[x8, #0x40]
+00db7084  bl 0x00b07990
+00db7088  cbz x0,0x00db7284
+00db708c  ldr w8,[x20, #0x18]
+00db7090  cmp w8,#0x1
+00db7094  b.ls 0x00db7280
+00db7098  adrp x22,0x331b000
+00db709c  ldr x22,[x22, #0xf90]
+00db70a0  mov x0,x20
+00db70a4  str x21,[x0, #0x28]!
+00db70a8  mov x1,x21
+00db70ac  bl 0x00b07850
+00db70b0  ldr x1,[x22]
+00db70b4  cbz x1,0x00db70dc
+00db70b8  ldr x8,[x20]
+00db70bc  mov x0,x1
+00db70c0  ldr x8,[x8, #0x40]
+00db70c4  mov x1,x8
+00db70c8  bl 0x00b07990
+00db70cc  cbz x0,0x00db7284
+00db70d0  ldr x8,[x22]
+00db70d4  mov x1,x8
+00db70d8  b 0x00db70e0
+00db70dc  mov x8,xzr
+00db70e0  ldr w9,[x20, #0x18]
+00db70e4  cmp w9,#0x2
+00db70e8  b.ls 0x00db7280
+00db70ec  mov x0,x20
+00db70f0  str x8,[x0, #0x30]!
+00db70f4  bl 0x00b07850
+00db70f8  ldr x21,[x19, #0x20]
+00db70fc  cbz x21,0x00db7114
+00db7100  ldr x8,[x20]
+00db7104  mov x0,x21
+00db7108  ldr x1,[x8, #0x40]
+00db710c  bl 0x00b07990
+00db7110  cbz x0,0x00db7284
+00db7114  ldr w8,[x20, #0x18]
+00db7118  cmp w8,#0x3
+00db711c  b.ls 0x00db7280
+00db7120  adrp x22,0x3375000
+00db7124  ldr x22,[x22, #0x140]
+00db7128  mov x0,x20
+00db712c  str x21,[x0, #0x38]!
+00db7130  mov x1,x21
+00db7134  bl 0x00b07850
+00db7138  ldr x1,[x22]
+00db713c  cbz x1,0x00db7164
+00db7140  ldr x8,[x20]
+00db7144  mov x0,x1
+00db7148  ldr x8,[x8, #0x40]
+00db714c  mov x1,x8
+00db7150  bl 0x00b07990
+00db7154  cbz x0,0x00db7284
+00db7158  ldr x8,[x22]
+00db715c  mov x1,x8
+00db7160  b 0x00db7168
+00db7164  mov x8,xzr
+00db7168  ldr w9,[x20, #0x18]
+00db716c  cmp w9,#0x4
+00db7170  b.ls 0x00db7280
+00db7174  mov x0,x20
+00db7178  str x8,[x0, #0x40]!
+00db717c  bl 0x00b07850
+00db7180  ldr x21,[x19, #0x28]
+00db7184  cbz x21,0x00db719c
+00db7188  ldr x8,[x20]
+00db718c  mov x0,x21
+00db7190  ldr x1,[x8, #0x40]
+00db7194  bl 0x00b07990
+00db7198  cbz x0,0x00db7284
+00db719c  ldr w8,[x20, #0x18]
+00db71a0  cmp w8,#0x5
+00db71a4  b.ls 0x00db7280
+00db71a8  adrp x22,0x333c000
+00db71ac  ldr x22,[x22, #0xb8]
+00db71b0  mov x0,x20
+00db71b4  str x21,[x0, #0x48]!
+00db71b8  mov x1,x21
+00db71bc  bl 0x00b07850
+00db71c0  ldr x1,[x22]
+00db71c4  cbz x1,0x00db71ec
+00db71c8  ldr x8,[x20]
+00db71cc  mov x0,x1
+00db71d0  ldr x8,[x8, #0x40]
+00db71d4  mov x1,x8
+00db71d8  bl 0x00b07990
+00db71dc  cbz x0,0x00db7284
+00db71e0  ldr x8,[x22]
+00db71e4  mov x1,x8
+00db71e8  b 0x00db71f0
+00db71ec  mov x8,xzr
+00db71f0  ldr w9,[x20, #0x18]
+00db71f4  cmp w9,#0x6
+00db71f8  b.ls 0x00db7280
+00db71fc  mov x0,x20
+00db7200  str x8,[x0, #0x50]!
+00db7204  bl 0x00b07850
+00db7208  ldr x19,[x19, #0x10]
+00db720c  cbz x19,0x00db7224
+00db7210  ldr x8,[x20]
+00db7214  mov x0,x19
+00db7218  ldr x1,[x8, #0x40]
+00db721c  bl 0x00b07990
+00db7220  cbz x0,0x00db7284
+00db7224  ldr w8,[x20, #0x18]
+00db7228  cmp w8,#0x7
+00db722c  b.ls 0x00db7280
+00db7230  adrp x21,0x331f000
+00db7234  adrp x22,0x3328000
+00db7238  ldr x21,[x21, #0xe88]
+00db723c  ldr x22,[x22, #0x18]
+00db7240  mov x0,x20
+00db7244  str x19,[x0, #0x58]!
+00db7248  mov x1,x19
+00db724c  bl 0x00b07850
+00db7250  mov x0,x20
+00db7254  mov x1,xzr
+00db7258  bl 0x01fdf4c4
+00db725c  ldr x1,[x21]
+00db7260  mov x2,x0
+00db7264  bl 0x00db5690
+00db7268  ldr x0,[x22]
+00db726c  ldp x19,x30,[sp, #0x20]
+00db7270  ldp x21,x20,[sp, #0x10]
+00db7274  mov x1,xzr
+00db7278  ldr x22,[sp], #0x30
+00db727c  b 0x024f33d0
+00db7280  bl 0x00b079b8
+00db7284  bl 0x00b079d4
+00db7288  mov x1,xzr
+00db728c  bl 0x00b07978
+00db7290  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db7294_EventHandle__onLoginFailed.txt
+================================================================================
+Function: EventHandle$$onLoginFailed @ 00db7294
+
+--- Calls OUT ---
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db7294  str x20,[sp, #-0x20]!
+00db7298  stp x19,x30,[sp, #0x10]
+00db729c  adrp x20,0x3572000
+00db72a0  ldrb w8,[x20, #0xf4]
+00db72a4  mov x19,x1
+00db72a8  tbnz w8,#0x0,0x00db72cc
+00db72ac  adrp x0,0x3318000
+00db72b0  ldr x0,[x0, #0xd08]
+00db72b4  bl 0x00b0789c
+00db72b8  adrp x0,0x3350000
+00db72bc  ldr x0,[x0, #0x868]
+00db72c0  bl 0x00b0789c
+00db72c4  mov w8,#0x1
+00db72c8  strb w8,[x20, #0xf4]
+00db72cc  cbz x19,0x00db7304
+00db72d0  adrp x8,0x3318000
+00db72d4  ldr x8,[x8, #0xd08]
+00db72d8  ldr x1,[x19, #0x10]
+00db72dc  adrp x19,0x3350000
+00db72e0  mov x2,xzr
+00db72e4  ldr x0,[x8]
+00db72e8  ldr x19,[x19, #0x868]
+00db72ec  bl 0x01fd2850
+00db72f0  ldr x1,[x19]
+00db72f4  ldp x19,x30,[sp, #0x10]
+00db72f8  mov x2,x0
+00db72fc  ldr x20,[sp], #0x20
+00db7300  b 0x00db5690
+00db7304  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db7308_EventHandle__onLogoutSuccess.txt
+================================================================================
+Function: EventHandle$$onLogoutSuccess @ 00db7308
+
+--- Calls OUT ---
+  -> UnityEngine.Application$$LoadLevel @ 024f33d0
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00db7308  str x22,[sp, #-0x30]!
+00db730c  stp x21,x20,[sp, #0x10]
+00db7310  stp x19,x30,[sp, #0x20]
+00db7314  adrp x20,0x3572000
+00db7318  adrp x21,0x3329000
+00db731c  adrp x22,0x332c000
+00db7320  adrp x19,0x332a000
+00db7324  ldrb w8,[x20, #0xf5]
+00db7328  ldr x21,[x21, #0x5b0]
+00db732c  ldr x22,[x22, #0x2c0]
+00db7330  ldr x19,[x19, #0x668]
+00db7334  tbnz w8,#0x0,0x00db7364
+00db7338  adrp x0,0x3329000
+00db733c  ldr x0,[x0, #0x5b0]
+00db7340  bl 0x00b0789c
+00db7344  adrp x0,0x332a000
+00db7348  ldr x0,[x0, #0x668]
+00db734c  bl 0x00b0789c
+00db7350  adrp x0,0x332c000
+00db7354  ldr x0,[x0, #0x2c0]
+00db7358  bl 0x00b0789c
+00db735c  mov w8,#0x1
+00db7360  strb w8,[x20, #0xf5]
+00db7364  ldr x1,[x21]
+00db7368  ldr x2,[x22]
+00db736c  bl 0x00db5690
+00db7370  ldr x0,[x19]
+00db7374  ldp x19,x30,[sp, #0x20]
+00db7378  ldp x21,x20,[sp, #0x10]
+00db737c  mov x1,xzr
+00db7380  ldr x22,[sp], #0x30
+00db7384  b 0x024f33d0
+
+
+================================================================================
+### FILE: 00db7388_EventHandle__onPaySuccess.txt
+================================================================================
+Function: EventHandle$$onPaySuccess @ 00db7388
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fdf4c4
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+00db7388  str x22,[sp, #-0x30]!
+00db738c  stp x21,x20,[sp, #0x10]
+00db7390  stp x19,x30,[sp, #0x20]
+00db7394  adrp x20,0x3572000
+00db7398  adrp x21,0x3308000
+00db739c  ldrb w8,[x20, #0xf6]
+00db73a0  ldr x21,[x21, #0x9a8]
+00db73a4  mov x19,x1
+00db73a8  tbnz w8,#0x0,0x00db73f0
+00db73ac  adrp x0,0x3308000
+00db73b0  ldr x0,[x0, #0x9a8]
+00db73b4  bl 0x00b0789c
+00db73b8  adrp x0,0x336d000
+00db73bc  ldr x0,[x0, #0xcd8]
+00db73c0  bl 0x00b0789c
+00db73c4  adrp x0,0x3310000
+00db73c8  ldr x0,[x0, #0xc70]
+00db73cc  bl 0x00b0789c
+00db73d0  adrp x0,0x337b000
+00db73d4  ldr x0,[x0, #0xd50]
+00db73d8  bl 0x00b0789c
+00db73dc  adrp x0,0x3354000
+00db73e0  ldr x0,[x0, #0xa70]
+00db73e4  bl 0x00b0789c
+00db73e8  mov w8,#0x1
+00db73ec  strb w8,[x20, #0xf6]
+00db73f0  ldr x0,[x21]
+00db73f4  mov w1,#0x6
+00db73f8  bl 0x00b078f8
+00db73fc  cbz x0,0x00db75d8
+00db7400  adrp x21,0x3354000
+00db7404  ldr x21,[x21, #0xa70]
+00db7408  mov x20,x0
+00db740c  ldr x1,[x21]
+00db7410  cbz x1,0x00db7438
+00db7414  ldr x8,[x20]
+00db7418  mov x0,x1
+00db741c  ldr x8,[x8, #0x40]
+00db7420  mov x1,x8
+00db7424  bl 0x00b07990
+00db7428  cbz x0,0x00db75cc
+00db742c  ldr x8,[x21]
+00db7430  mov x1,x8
+00db7434  b 0x00db743c
+00db7438  mov x8,xzr
+00db743c  ldr w9,[x20, #0x18]
+00db7440  cbz w9,0x00db75c8
+00db7444  mov x0,x20
+00db7448  str x8,[x0, #0x20]!
+00db744c  bl 0x00b07850
+00db7450  cbz x19,0x00db75d8
+00db7454  ldr x21,[x19, #0x10]
+00db7458  cbz x21,0x00db7470
+00db745c  ldr x8,[x20]
+00db7460  mov x0,x21
+00db7464  ldr x1,[x8, #0x40]
+00db7468  bl 0x00b07990
+00db746c  cbz x0,0x00db75cc
+00db7470  ldr w8,[x20, #0x18]
+00db7474  cmp w8,#0x1
+00db7478  b.ls 0x00db75c8
+00db747c  adrp x22,0x336d000
+00db7480  ldr x22,[x22, #0xcd8]
+00db7484  mov x0,x20
+00db7488  str x21,[x0, #0x28]!
+00db748c  mov x1,x21
+00db7490  bl 0x00b07850
+00db7494  ldr x1,[x22]
+00db7498  cbz x1,0x00db74c0
+00db749c  ldr x8,[x20]
+00db74a0  mov x0,x1
+00db74a4  ldr x8,[x8, #0x40]
+00db74a8  mov x1,x8
+00db74ac  bl 0x00b07990
+00db74b0  cbz x0,0x00db75cc
+00db74b4  ldr x8,[x22]
+00db74b8  mov x1,x8
+00db74bc  b 0x00db74c4
+00db74c0  mov x8,xzr
+00db74c4  ldr w9,[x20, #0x18]
+00db74c8  cmp w9,#0x2
+00db74cc  b.ls 0x00db75c8
+00db74d0  mov x0,x20
+00db74d4  str x8,[x0, #0x30]!
+00db74d8  bl 0x00b07850
+00db74dc  ldr x21,[x19, #0x18]
+00db74e0  cbz x21,0x00db74f8
+00db74e4  ldr x8,[x20]
+00db74e8  mov x0,x21
+00db74ec  ldr x1,[x8, #0x40]
+00db74f0  bl 0x00b07990
+00db74f4  cbz x0,0x00db75cc
+00db74f8  ldr w8,[x20, #0x18]
+00db74fc  cmp w8,#0x3
+00db7500  b.ls 0x00db75c8
+00db7504  adrp x22,0x3310000
+00db7508  ldr x22,[x22, #0xc70]
+00db750c  mov x0,x20
+00db7510  str x21,[x0, #0x38]!
+00db7514  mov x1,x21
+00db7518  bl 0x00b07850
+00db751c  ldr x1,[x22]
+00db7520  cbz x1,0x00db7548
+00db7524  ldr x8,[x20]
+00db7528  mov x0,x1
+00db752c  ldr x8,[x8, #0x40]
+00db7530  mov x1,x8
+00db7534  bl 0x00b07990
+00db7538  cbz x0,0x00db75cc
+00db753c  ldr x8,[x22]
+00db7540  mov x1,x8
+00db7544  b 0x00db754c
+00db7548  mov x8,xzr
+00db754c  ldr w9,[x20, #0x18]
+00db7550  cmp w9,#0x4
+00db7554  b.ls 0x00db75c8
+00db7558  mov x0,x20
+00db755c  str x8,[x0, #0x40]!
+00db7560  bl 0x00b07850
+00db7564  ldr x19,[x19, #0x20]
+00db7568  cbz x19,0x00db7580
+00db756c  ldr x8,[x20]
+00db7570  mov x0,x19
+00db7574  ldr x1,[x8, #0x40]
+00db7578  bl 0x00b07990
+00db757c  cbz x0,0x00db75cc
+00db7580  ldr w8,[x20, #0x18]
+00db7584  cmp w8,#0x5
+00db7588  b.ls 0x00db75c8
+00db758c  adrp x21,0x337b000
+00db7590  ldr x21,[x21, #0xd50]
+00db7594  mov x0,x20
+00db7598  str x19,[x0, #0x48]!
+00db759c  mov x1,x19
+00db75a0  bl 0x00b07850
+00db75a4  mov x0,x20
+00db75a8  mov x1,xzr
+00db75ac  bl 0x01fdf4c4
+00db75b0  ldr x1,[x21]
+00db75b4  ldp x19,x30,[sp, #0x20]
+00db75b8  ldp x21,x20,[sp, #0x10]
+00db75bc  mov x2,x0
+00db75c0  ldr x22,[sp], #0x30
+00db75c4  b 0x00db5690
+00db75c8  bl 0x00b079b8
+00db75cc  bl 0x00b079d4
+00db75d0  mov x1,xzr
+00db75d4  bl 0x00b07978
+00db75d8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db75dc_EventHandle__onPayCancel.txt
+================================================================================
+Function: EventHandle$$onPayCancel @ 00db75dc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> System.String$$Concat @ 01fdf4c4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+00db75dc  str x22,[sp, #-0x30]!
+00db75e0  stp x21,x20,[sp, #0x10]
+00db75e4  stp x19,x30,[sp, #0x20]
+00db75e8  adrp x20,0x3572000
+00db75ec  adrp x21,0x3308000
+00db75f0  ldrb w8,[x20, #0xf7]
+00db75f4  ldr x21,[x21, #0x9a8]
+00db75f8  mov x19,x1
+00db75fc  tbnz w8,#0x0,0x00db7644
+00db7600  adrp x0,0x3308000
+00db7604  ldr x0,[x0, #0x9a8]
+00db7608  bl 0x00b0789c
+00db760c  adrp x0,0x336d000
+00db7610  ldr x0,[x0, #0xcd8]
+00db7614  bl 0x00b0789c
+00db7618  adrp x0,0x3310000
+00db761c  ldr x0,[x0, #0xc70]
+00db7620  bl 0x00b0789c
+00db7624  adrp x0,0x3348000
+00db7628  ldr x0,[x0, #0xc68]
+00db762c  bl 0x00b0789c
+00db7630  adrp x0,0x3354000
+00db7634  ldr x0,[x0, #0xa70]
+00db7638  bl 0x00b0789c
+00db763c  mov w8,#0x1
+00db7640  strb w8,[x20, #0xf7]
+00db7644  ldr x0,[x21]
+00db7648  mov w1,#0x6
+00db764c  bl 0x00b078f8
+00db7650  cbz x0,0x00db782c
+00db7654  adrp x21,0x3354000
+00db7658  ldr x21,[x21, #0xa70]
+00db765c  mov x20,x0
+00db7660  ldr x1,[x21]
+00db7664  cbz x1,0x00db768c
+00db7668  ldr x8,[x20]
+00db766c  mov x0,x1
+00db7670  ldr x8,[x8, #0x40]
+00db7674  mov x1,x8
+00db7678  bl 0x00b07990
+00db767c  cbz x0,0x00db7820
+00db7680  ldr x8,[x21]
+00db7684  mov x1,x8
+00db7688  b 0x00db7690
+00db768c  mov x8,xzr
+00db7690  ldr w9,[x20, #0x18]
+00db7694  cbz w9,0x00db781c
+00db7698  mov x0,x20
+00db769c  str x8,[x0, #0x20]!
+00db76a0  bl 0x00b07850
+00db76a4  cbz x19,0x00db782c
+00db76a8  ldr x21,[x19, #0x10]
+00db76ac  cbz x21,0x00db76c4
+00db76b0  ldr x8,[x20]
+00db76b4  mov x0,x21
+00db76b8  ldr x1,[x8, #0x40]
+00db76bc  bl 0x00b07990
+00db76c0  cbz x0,0x00db7820
+00db76c4  ldr w8,[x20, #0x18]
+00db76c8  cmp w8,#0x1
+00db76cc  b.ls 0x00db781c
+00db76d0  adrp x22,0x336d000
+00db76d4  ldr x22,[x22, #0xcd8]
+00db76d8  mov x0,x20
+00db76dc  str x21,[x0, #0x28]!
+00db76e0  mov x1,x21
+00db76e4  bl 0x00b07850
+00db76e8  ldr x1,[x22]
+00db76ec  cbz x1,0x00db7714
+00db76f0  ldr x8,[x20]
+00db76f4  mov x0,x1
+00db76f8  ldr x8,[x8, #0x40]
+00db76fc  mov x1,x8
+00db7700  bl 0x00b07990
+00db7704  cbz x0,0x00db7820
+00db7708  ldr x8,[x22]
+00db770c  mov x1,x8
+00db7710  b 0x00db7718
+00db7714  mov x8,xzr
+00db7718  ldr w9,[x20, #0x18]
+00db771c  cmp w9,#0x2
+00db7720  b.ls 0x00db781c
+00db7724  mov x0,x20
+00db7728  str x8,[x0, #0x30]!
+00db772c  bl 0x00b07850
+00db7730  ldr x21,[x19, #0x18]
+00db7734  cbz x21,0x00db774c
+00db7738  ldr x8,[x20]
+00db773c  mov x0,x21
+00db7740  ldr x1,[x8, #0x40]
+00db7744  bl 0x00b07990
+00db7748  cbz x0,0x00db7820
+00db774c  ldr w8,[x20, #0x18]
+00db7750  cmp w8,#0x3
+00db7754  b.ls 0x00db781c
+00db7758  adrp x22,0x3310000
+00db775c  ldr x22,[x22, #0xc70]
+00db7760  mov x0,x20
+00db7764  str x21,[x0, #0x38]!
+00db7768  mov x1,x21
+00db776c  bl 0x00b07850
+00db7770  ldr x1,[x22]
+00db7774  cbz x1,0x00db779c
+00db7778  ldr x8,[x20]
+00db777c  mov x0,x1
+00db7780  ldr x8,[x8, #0x40]
+00db7784  mov x1,x8
+00db7788  bl 0x00b07990
+00db778c  cbz x0,0x00db7820
+00db7790  ldr x8,[x22]
+00db7794  mov x1,x8
+00db7798  b 0x00db77a0
+00db779c  mov x8,xzr
+00db77a0  ldr w9,[x20, #0x18]
+00db77a4  cmp w9,#0x4
+00db77a8  b.ls 0x00db781c
+00db77ac  mov x0,x20
+00db77b0  str x8,[x0, #0x40]!
+00db77b4  bl 0x00b07850
+00db77b8  ldr x19,[x19, #0x20]
+00db77bc  cbz x19,0x00db77d4
+00db77c0  ldr x8,[x20]
+00db77c4  mov x0,x19
+00db77c8  ldr x1,[x8, #0x40]
+00db77cc  bl 0x00b07990
+00db77d0  cbz x0,0x00db7820
+00db77d4  ldr w8,[x20, #0x18]
+00db77d8  cmp w8,#0x5
+00db77dc  b.ls 0x00db781c
+00db77e0  adrp x21,0x3348000
+00db77e4  ldr x21,[x21, #0xc68]
+00db77e8  mov x0,x20
+00db77ec  str x19,[x0, #0x48]!
+00db77f0  mov x1,x19
+00db77f4  bl 0x00b07850
+00db77f8  mov x0,x20
+00db77fc  mov x1,xzr
+00db7800  bl 0x01fdf4c4
+00db7804  ldr x1,[x21]
+00db7808  ldp x19,x30,[sp, #0x20]
+00db780c  ldp x21,x20,[sp, #0x10]
+00db7810  mov x2,x0
+00db7814  ldr x22,[sp], #0x30
+00db7818  b 0x00db5690
+00db781c  bl 0x00b079b8
+00db7820  bl 0x00b079d4
+00db7824  mov x1,xzr
+00db7828  bl 0x00b07978
+00db782c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db7830_EventHandle__onPayFailed.txt
+================================================================================
+Function: EventHandle$$onPayFailed @ 00db7830
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> System.String$$Concat @ 01fdf4c4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+00db7830  str x22,[sp, #-0x30]!
+00db7834  stp x21,x20,[sp, #0x10]
+00db7838  stp x19,x30,[sp, #0x20]
+00db783c  adrp x20,0x3572000
+00db7840  adrp x21,0x3308000
+00db7844  ldrb w8,[x20, #0xf8]
+00db7848  ldr x21,[x21, #0x9a8]
+00db784c  mov x19,x1
+00db7850  tbnz w8,#0x0,0x00db7898
+00db7854  adrp x0,0x3308000
+00db7858  ldr x0,[x0, #0x9a8]
+00db785c  bl 0x00b0789c
+00db7860  adrp x0,0x336d000
+00db7864  ldr x0,[x0, #0xcd8]
+00db7868  bl 0x00b0789c
+00db786c  adrp x0,0x3310000
+00db7870  ldr x0,[x0, #0xc70]
+00db7874  bl 0x00b0789c
+00db7878  adrp x0,0x337f000
+00db787c  ldr x0,[x0, #0xfc8]
+00db7880  bl 0x00b0789c
+00db7884  adrp x0,0x3354000
+00db7888  ldr x0,[x0, #0xa70]
+00db788c  bl 0x00b0789c
+00db7890  mov w8,#0x1
+00db7894  strb w8,[x20, #0xf8]
+00db7898  ldr x0,[x21]
+00db789c  mov w1,#0x6
+00db78a0  bl 0x00b078f8
+00db78a4  cbz x0,0x00db7a80
+00db78a8  adrp x21,0x3354000
+00db78ac  ldr x21,[x21, #0xa70]
+00db78b0  mov x20,x0
+00db78b4  ldr x1,[x21]
+00db78b8  cbz x1,0x00db78e0
+00db78bc  ldr x8,[x20]
+00db78c0  mov x0,x1
+00db78c4  ldr x8,[x8, #0x40]
+00db78c8  mov x1,x8
+00db78cc  bl 0x00b07990
+00db78d0  cbz x0,0x00db7a74
+00db78d4  ldr x8,[x21]
+00db78d8  mov x1,x8
+00db78dc  b 0x00db78e4
+00db78e0  mov x8,xzr
+00db78e4  ldr w9,[x20, #0x18]
+00db78e8  cbz w9,0x00db7a70
+00db78ec  mov x0,x20
+00db78f0  str x8,[x0, #0x20]!
+00db78f4  bl 0x00b07850
+00db78f8  cbz x19,0x00db7a80
+00db78fc  ldr x21,[x19, #0x10]
+00db7900  cbz x21,0x00db7918
+00db7904  ldr x8,[x20]
+00db7908  mov x0,x21
+00db790c  ldr x1,[x8, #0x40]
+00db7910  bl 0x00b07990
+00db7914  cbz x0,0x00db7a74
+00db7918  ldr w8,[x20, #0x18]
+00db791c  cmp w8,#0x1
+00db7920  b.ls 0x00db7a70
+00db7924  adrp x22,0x336d000
+00db7928  ldr x22,[x22, #0xcd8]
+00db792c  mov x0,x20
+00db7930  str x21,[x0, #0x28]!
+00db7934  mov x1,x21
+00db7938  bl 0x00b07850
+00db793c  ldr x1,[x22]
+00db7940  cbz x1,0x00db7968
+00db7944  ldr x8,[x20]
+00db7948  mov x0,x1
+00db794c  ldr x8,[x8, #0x40]
+00db7950  mov x1,x8
+00db7954  bl 0x00b07990
+00db7958  cbz x0,0x00db7a74
+00db795c  ldr x8,[x22]
+00db7960  mov x1,x8
+00db7964  b 0x00db796c
+00db7968  mov x8,xzr
+00db796c  ldr w9,[x20, #0x18]
+00db7970  cmp w9,#0x2
+00db7974  b.ls 0x00db7a70
+00db7978  mov x0,x20
+00db797c  str x8,[x0, #0x30]!
+00db7980  bl 0x00b07850
+00db7984  ldr x21,[x19, #0x18]
+00db7988  cbz x21,0x00db79a0
+00db798c  ldr x8,[x20]
+00db7990  mov x0,x21
+00db7994  ldr x1,[x8, #0x40]
+00db7998  bl 0x00b07990
+00db799c  cbz x0,0x00db7a74
+00db79a0  ldr w8,[x20, #0x18]
+00db79a4  cmp w8,#0x3
+00db79a8  b.ls 0x00db7a70
+00db79ac  adrp x22,0x3310000
+00db79b0  ldr x22,[x22, #0xc70]
+00db79b4  mov x0,x20
+00db79b8  str x21,[x0, #0x38]!
+00db79bc  mov x1,x21
+00db79c0  bl 0x00b07850
+00db79c4  ldr x1,[x22]
+00db79c8  cbz x1,0x00db79f0
+00db79cc  ldr x8,[x20]
+00db79d0  mov x0,x1
+00db79d4  ldr x8,[x8, #0x40]
+00db79d8  mov x1,x8
+00db79dc  bl 0x00b07990
+00db79e0  cbz x0,0x00db7a74
+00db79e4  ldr x8,[x22]
+00db79e8  mov x1,x8
+00db79ec  b 0x00db79f4
+00db79f0  mov x8,xzr
+00db79f4  ldr w9,[x20, #0x18]
+00db79f8  cmp w9,#0x4
+00db79fc  b.ls 0x00db7a70
+00db7a00  mov x0,x20
+00db7a04  str x8,[x0, #0x40]!
+00db7a08  bl 0x00b07850
+00db7a0c  ldr x19,[x19, #0x20]
+00db7a10  cbz x19,0x00db7a28
+00db7a14  ldr x8,[x20]
+00db7a18  mov x0,x19
+00db7a1c  ldr x1,[x8, #0x40]
+00db7a20  bl 0x00b07990
+00db7a24  cbz x0,0x00db7a74
+00db7a28  ldr w8,[x20, #0x18]
+00db7a2c  cmp w8,#0x5
+00db7a30  b.ls 0x00db7a70
+00db7a34  adrp x21,0x337f000
+00db7a38  ldr x21,[x21, #0xfc8]
+00db7a3c  mov x0,x20
+00db7a40  str x19,[x0, #0x48]!
+00db7a44  mov x1,x19
+00db7a48  bl 0x00b07850
+00db7a4c  mov x0,x20
+00db7a50  mov x1,xzr
+00db7a54  bl 0x01fdf4c4
+00db7a58  ldr x1,[x21]
+00db7a5c  ldp x19,x30,[sp, #0x20]
+00db7a60  ldp x21,x20,[sp, #0x10]
+00db7a64  mov x2,x0
+00db7a68  ldr x22,[sp], #0x30
+00db7a6c  b 0x00db5690
+00db7a70  bl 0x00b079b8
+00db7a74  bl 0x00b079d4
+00db7a78  mov x1,xzr
+00db7a7c  bl 0x00b07978
+00db7a80  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db7a84_EventHandle__onExitSuccess.txt
+================================================================================
+Function: EventHandle$$onExitSuccess @ 00db7a84
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDK$$getInstance @ 01633c0c
+  -> EventHandle$$showLog @ 00db5690
+  -> quicksdk.QuickSDK$$exitGame @ 0163420c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00db7a84  stp x21,x20,[sp, #-0x20]!
+00db7a88  stp x19,x30,[sp, #0x10]
+00db7a8c  adrp x19,0x3572000
+00db7a90  adrp x20,0x331f000
+00db7a94  adrp x21,0x332c000
+00db7a98  ldrb w8,[x19, #0xf9]
+00db7a9c  ldr x20,[x20, #0x600]
+00db7aa0  ldr x21,[x21, #0x2c0]
+00db7aa4  tbnz w8,#0x0,0x00db7ac8
+00db7aa8  adrp x0,0x331f000
+00db7aac  ldr x0,[x0, #0x600]
+00db7ab0  bl 0x00b0789c
+00db7ab4  adrp x0,0x332c000
+00db7ab8  ldr x0,[x0, #0x2c0]
+00db7abc  bl 0x00b0789c
+00db7ac0  mov w8,#0x1
+00db7ac4  strb w8,[x19, #0xf9]
+00db7ac8  ldr x1,[x20]
+00db7acc  ldr x2,[x21]
+00db7ad0  bl 0x00db5690
+00db7ad4  mov x0,xzr
+00db7ad8  bl 0x01633c0c
+00db7adc  cbz x0,0x00db7af0
+00db7ae0  ldp x19,x30,[sp, #0x10]
+00db7ae4  mov x1,xzr
+00db7ae8  ldp x21,x20,[sp], #0x20
+00db7aec  b 0x0163420c
+00db7af0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00db7af4_EventHandle__onSucceed.txt
+================================================================================
+Function: EventHandle$$onSucceed @ 00db7af4
+
+--- Calls OUT ---
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00db7af4  stp x21,x20,[sp, #-0x20]!
+00db7af8  stp x19,x30,[sp, #0x10]
+00db7afc  adrp x20,0x3572000
+00db7b00  adrp x21,0x3327000
+00db7b04  ldrb w8,[x20, #0xfa]
+00db7b08  ldr x21,[x21, #0x8f0]
+00db7b0c  mov x19,x1
+00db7b10  tbnz w8,#0x0,0x00db7b28
+00db7b14  adrp x0,0x3327000
+00db7b18  ldr x0,[x0, #0x8f0]
+00db7b1c  bl 0x00b0789c
+00db7b20  mov w8,#0x1
+00db7b24  strb w8,[x20, #0xfa]
+00db7b28  ldr x1,[x21]
+00db7b2c  mov x2,x19
+00db7b30  ldp x19,x30,[sp, #0x10]
+00db7b34  ldp x21,x20,[sp], #0x20
+00db7b38  b 0x00db5690
+
+
+================================================================================
+### FILE: 00db7b3c_EventHandle__onFailed.txt
+================================================================================
+Function: EventHandle$$onFailed @ 00db7b3c
+
+--- Calls OUT ---
+  -> EventHandle$$showLog @ 00db5690
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+
+--- Calls IN ---
+
+--- Listing ---
+00db7b3c  str x22,[sp, #-0x30]!
+00db7b40  stp x21,x20,[sp, #0x10]
+00db7b44  stp x19,x30,[sp, #0x20]
+00db7b48  adrp x21,0x3572000
+00db7b4c  adrp x22,0x3318000
+00db7b50  adrp x20,0x3380000
+00db7b54  ldrb w8,[x21, #0xfb]
+00db7b58  ldr x22,[x22, #0xd08]
+00db7b5c  ldr x20,[x20, #0x5a0]
+00db7b60  mov x19,x1
+00db7b64  tbnz w8,#0x0,0x00db7b88
+00db7b68  adrp x0,0x3318000
+00db7b6c  ldr x0,[x0, #0xd08]
+00db7b70  bl 0x00b0789c
+00db7b74  adrp x0,0x3380000
+00db7b78  ldr x0,[x0, #0x5a0]
+00db7b7c  bl 0x00b0789c
+00db7b80  mov w8,#0x1
+00db7b84  strb w8,[x21, #0xfb]
+00db7b88  ldr x0,[x22]
+00db7b8c  mov x1,x19
+00db7b90  mov x2,xzr
+00db7b94  bl 0x01fd2850
+00db7b98  ldr x1,[x20]
+00db7b9c  ldp x19,x30,[sp, #0x20]
+00db7ba0  ldp x21,x20,[sp, #0x10]
+00db7ba4  mov x2,x0
+00db7ba8  ldr x22,[sp], #0x30
+00db7bac  b 0x00db5690
+
+
+================================================================================
+### FILE: 00db7bb0_EventHandle__.ctor.txt
+================================================================================
+Function: EventHandle$$.ctor @ 00db7bb0
+
+--- Calls OUT ---
+  -> quicksdk.QuickSDKListener$$.ctor @ 01637568
+
+--- Calls IN ---
+
+--- Listing ---
+00db7bb0  mov x1,xzr
+00db7bb4  b 0x01637568
+
+

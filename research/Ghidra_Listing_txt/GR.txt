@@ -1,0 +1,1582 @@
+================================================================================
+### FILE: 008d3e90___grow_by.txt
+================================================================================
+Function: __grow_by @ 008d3e90
+
+--- Calls OUT ---
+  -> __grow_by @ 00b83c70
+
+--- Calls IN ---
+  <- init @ 00b7e1ac
+  <- init @ 00b7d590
+  <- assign @ 00b83ec8
+  <- init @ 00b7a50c
+  <- push_back @ 00b83da4
+  <- __append_forward_unsafe<wchar_t*> @ 00b8091c
+  <- append @ 00b836c4
+  <- insert @ 00b84278
+  <- replace @ 00b84694
+  <- insert @ 00b8415c
+
+--- Listing ---
+008d3e90  adrp x16,0x3307000
+008d3e94  ldr x17,[x16, #0x908]
+008d3e98  add x16,x16,#0x908
+008d3e9c  br x17
+
+
+================================================================================
+### FILE: 008d4ad0___grow_by_and_replace.txt
+================================================================================
+Function: __grow_by_and_replace @ 008d4ad0
+
+--- Calls OUT ---
+  -> __grow_by_and_replace @ 00b83adc
+
+--- Calls IN ---
+  <- append @ 00b83a14
+  <- replace @ 00b84464
+  <- insert @ 00b83fe8
+  <- assign @ 00b83560
+
+--- Listing ---
+008d4ad0  adrp x16,0x3307000
+008d4ad4  ldr x17,[x16, #0xf28]
+008d4ad8  add x16,x16,#0xf28
+008d4adc  br x17
+
+
+================================================================================
+### FILE: 00b83adc___grow_by_and_replace.txt
+================================================================================
+Function: __grow_by_and_replace @ 00b83adc
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::__grow_by_and_replace(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, wchar_t const*)
+
+--- Calls OUT ---
+  -> FUN_00a8cdc8 @ 00a8cdc8
+  -> operator.new @ 008d4f40
+  -> wmemcpy @ 008d5720
+  -> operator.delete @ 008d3ed0
+  -> FUN_00a8cdb8 @ 00a8cdb8
+
+--- Calls IN ---
+  <- __grow_by_and_replace @ 008d4ad0
+
+--- Listing ---
+00b83adc  stp x28,x27,[sp, #-0x60]!
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::__grow_by_and_replace(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, wchar_t const*)
+00b83ae0  stp x26,x25,[sp, #0x10]
+00b83ae4  stp x24,x23,[sp, #0x20]
+00b83ae8  stp x22,x21,[sp, #0x30]
+00b83aec  stp x20,x19,[sp, #0x40]
+00b83af0  stp x29,x30,[sp, #0x50]
+00b83af4  add x29,sp,#0x50
+00b83af8  mov x8,#-0x12
+00b83afc  movk x8,#0x3fff, LSL #48
+00b83b00  sub x9,x8,x1
+00b83b04  cmp x9,x2
+00b83b08  mov x20,x0
+00b83b0c  b.cc 0x00b83c1c
+00b83b10  ldrb w9,[x20]
+00b83b14  mov x26,x7
+00b83b18  mov x19,x6
+00b83b1c  mov x22,x5
+00b83b20  mov x24,x4
+00b83b24  mov x25,x3
+00b83b28  mov x21,x1
+00b83b2c  tbnz w9,#0x0,0x00b83b38
+00b83b30  add x23,x20,#0x4
+00b83b34  b 0x00b83b3c
+00b83b38  ldr x23,[x20, #0x10]
+00b83b3c  mov x9,#-0x1a
+00b83b40  movk x9,#0x1fff, LSL #48
+00b83b44  cmp x21,x9
+00b83b48  b.hi 0x00b83b6c
+00b83b4c  add x8,x2,x21
+00b83b50  lsl x9,x21,#0x1
+00b83b54  cmp x8,x9
+00b83b58  csel x8,x9,x8,cc
+00b83b5c  cmp x8,#0x5
+00b83b60  b.cs 0x00b83b74
+00b83b64  mov w28,#0x5
+00b83b68  b 0x00b83b84
+00b83b6c  add x28,x8,#0x1
+00b83b70  b 0x00b83b84
+00b83b74  add x8,x8,#0x4
+00b83b78  lsr x9,x8,#0x3e
+00b83b7c  cbnz x9,0x00b83c24
+00b83b80  and x28,x8,#-0x4
+00b83b84  lsl x0,x28,#0x2
+00b83b88  bl 0x008d4f40
+00b83b8c  mov x27,x0
+00b83b90  cbz x24,0x00b83ba4
+00b83b94  mov x0,x27
+    ; [PRE] try { // try from 00b83b94 to 00b83ba3 has its CatchHandler @ 00b83c38
+00b83b98  mov x1,x23
+00b83b9c  mov x2,x24
+00b83ba0  bl 0x008d5720
+    ; [POST] } // end try from 00b83b94 to 00b83ba3
+00b83ba4  cbz x19,0x00b83bb8
+00b83ba8  add x0,x27,x24, LSL #0x2
+00b83bac  mov x1,x26
+    ; [PRE] try { // try from 00b83bac to 00b83bb7 has its CatchHandler @ 00b83c34
+00b83bb0  mov x2,x19
+00b83bb4  bl 0x008d5720
+    ; [POST] } // end try from 00b83bac to 00b83bb7
+00b83bb8  sub x25,x25,x22
+00b83bbc  subs x2,x25,x24
+00b83bc0  b.eq 0x00b83bdc
+00b83bc4  lsl x8,x24,#0x2
+00b83bc8  add x9,x27,x8
+00b83bcc  add x8,x23,x8
+00b83bd0  add x0,x9,x19, LSL #0x2
+00b83bd4  add x1,x8,x22, LSL #0x2
+00b83bd8  bl 0x008d5720
+    ; [PRE] try { // try from 00b83bd8 to 00b83bdb has its CatchHandler @ 00b83c30
+    ; [POST] } // end try from 00b83bd8 to 00b83bdb
+00b83bdc  cmp x21,#0x4
+00b83be0  b.eq 0x00b83bec
+00b83be4  mov x0,x23
+00b83be8  bl 0x008d3ed0
+00b83bec  orr x8,x28,#0x1
+00b83bf0  add x9,x25,x19
+00b83bf4  str x8,[x20]
+00b83bf8  stp x9,x27,[x20, #0x8]
+00b83bfc  ldp x29,x30,[sp, #0x50]
+00b83c00  ldp x20,x19,[sp, #0x40]
+00b83c04  ldp x22,x21,[sp, #0x30]
+00b83c08  ldp x24,x23,[sp, #0x20]
+00b83c0c  ldp x26,x25,[sp, #0x10]
+00b83c10  str wzr,[x27, x9, LSL #0x2]
+00b83c14  ldp x28,x27,[sp], #0x60
+00b83c18  ret
+00b83c1c  mov x0,x20
+00b83c20  bl 0x00a8cdb8
+00b83c24  adrp x0,0x293c000
+00b83c28  add x0,x0,#0xc4
+00b83c2c  bl 0x00a8cdc8
+
+
+================================================================================
+### FILE: 00b83c70___grow_by.txt
+================================================================================
+Function: __grow_by @ 00b83c70
+FuncComment: std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
+
+--- Calls OUT ---
+  -> FUN_00a8cdc8 @ 00a8cdc8
+  -> operator.new @ 008d4f40
+  -> wmemcpy @ 008d5720
+  -> operator.delete @ 008d3ed0
+  -> FUN_00a8cdb8 @ 00a8cdb8
+
+--- Calls IN ---
+  <- __grow_by @ 008d3e90
+
+--- Listing ---
+00b83c70  str x27,[sp, #-0x60]!
+    ; [PLATE] std::__ndk1::basic_string<wchar_t, std::__ndk1::char_traits<wchar_t>, std::__ndk1::allocator<wchar_t> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
+00b83c74  stp x26,x25,[sp, #0x10]
+00b83c78  stp x24,x23,[sp, #0x20]
+00b83c7c  stp x22,x21,[sp, #0x30]
+00b83c80  stp x20,x19,[sp, #0x40]
+00b83c84  stp x29,x30,[sp, #0x50]
+00b83c88  add x29,sp,#0x50
+00b83c8c  mov x27,#-0x11
+00b83c90  movk x27,#0x3fff, LSL #48
+00b83c94  sub x8,x27,x1
+00b83c98  cmp x8,x2
+00b83c9c  mov x19,x0
+00b83ca0  b.cc 0x00b83d88
+00b83ca4  ldrb w8,[x19]
+00b83ca8  mov x21,x6
+00b83cac  mov x22,x5
+00b83cb0  mov x24,x4
+00b83cb4  mov x25,x3
+00b83cb8  mov x20,x1
+00b83cbc  tbnz w8,#0x0,0x00b83cc8
+00b83cc0  add x23,x19,#0x4
+00b83cc4  b 0x00b83ccc
+00b83cc8  ldr x23,[x19, #0x10]
+00b83ccc  mov x8,#-0x1a
+00b83cd0  movk x8,#0x1fff, LSL #48
+00b83cd4  cmp x20,x8
+00b83cd8  b.hi 0x00b83d0c
+00b83cdc  add x8,x2,x20
+00b83ce0  lsl x9,x20,#0x1
+00b83ce4  cmp x8,x9
+00b83ce8  csel x8,x9,x8,cc
+00b83cec  cmp x8,#0x5
+00b83cf0  b.cs 0x00b83cfc
+00b83cf4  mov w27,#0x5
+00b83cf8  b 0x00b83d0c
+00b83cfc  add x8,x8,#0x4
+00b83d00  lsr x9,x8,#0x3e
+00b83d04  cbnz x9,0x00b83d90
+00b83d08  and x27,x8,#-0x4
+00b83d0c  lsl x0,x27,#0x2
+00b83d10  bl 0x008d4f40
+00b83d14  mov x26,x0
+00b83d18  cbz x24,0x00b83d2c
+00b83d1c  mov x0,x26
+    ; [PRE] try { // try from 00b83d1c to 00b83d2b has its CatchHandler @ 00b83da0
+00b83d20  mov x1,x23
+00b83d24  mov x2,x24
+00b83d28  bl 0x008d5720
+    ; [POST] } // end try from 00b83d1c to 00b83d2b
+00b83d2c  sub x8,x25,x22
+00b83d30  subs x2,x8,x24
+00b83d34  b.eq 0x00b83d50
+00b83d38  lsl x8,x24,#0x2
+00b83d3c  add x9,x26,x8
+00b83d40  add x8,x23,x8
+00b83d44  add x0,x9,x21, LSL #0x2
+00b83d48  add x1,x8,x22, LSL #0x2
+00b83d4c  bl 0x008d5720
+    ; [PRE] try { // try from 00b83d4c to 00b83d4f has its CatchHandler @ 00b83d9c
+    ; [POST] } // end try from 00b83d4c to 00b83d4f
+00b83d50  cmp x20,#0x4
+00b83d54  b.eq 0x00b83d60
+00b83d58  mov x0,x23
+00b83d5c  bl 0x008d3ed0
+00b83d60  orr x8,x27,#0x1
+00b83d64  str x26,[x19, #0x10]
+00b83d68  str x8,[x19]
+00b83d6c  ldp x29,x30,[sp, #0x50]
+00b83d70  ldp x20,x19,[sp, #0x40]
+00b83d74  ldp x22,x21,[sp, #0x30]
+00b83d78  ldp x24,x23,[sp, #0x20]
+00b83d7c  ldp x26,x25,[sp, #0x10]
+00b83d80  ldr x27,[sp], #0x60
+00b83d84  ret
+00b83d88  mov x0,x19
+00b83d8c  bl 0x00a8cdb8
+00b83d90  adrp x0,0x293c000
+00b83d94  add x0,x0,#0xc4
+00b83d98  bl 0x00a8cdc8
+
+
+================================================================================
+### FILE: 00d55698_GradientColor__.ctor.txt
+================================================================================
+Function: GradientColor$$.ctor @ 00d55698
+
+--- Calls OUT ---
+  -> UnityEngine.UI.BaseMeshEffect$$.ctor @ 025af0fc
+
+--- Calls IN ---
+
+--- Listing ---
+00d55698  adrp x8,0x26db000
+00d5569c  ldr q0,[x8, #0x460]
+00d556a0  fmov v1.4S,#0x3f800000
+00d556a4  mov w8,#0x1
+00d556a8  mov x1,xzr
+00d556ac  stur q1,[x0, #0x2c]
+00d556b0  stur q0,[x0, #0x3c]
+00d556b4  strb w8,[x0, #0x4c]
+00d556b8  b 0x025af0fc
+
+
+================================================================================
+### FILE: 00d556bc_GradientColor__get_gradientMode.txt
+================================================================================
+Function: GradientColor$$get_gradientMode @ 00d556bc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d556bc  ldr w0,[x0, #0x20]
+00d556c0  ret
+
+
+================================================================================
+### FILE: 00d556c4_GradientColor__set_gradientMode.txt
+================================================================================
+Function: GradientColor$$set_gradientMode @ 00d556c4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d556c4  str x22,[sp, #-0x30]!
+00d556c8  stp x21,x20,[sp, #0x10]
+00d556cc  stp x19,x30,[sp, #0x20]
+00d556d0  adrp x22,0x3571000
+00d556d4  adrp x21,0x3321000
+00d556d8  ldrb w8,[x22, #0xe5d]
+00d556dc  ldr x21,[x21, #0xca8]
+00d556e0  mov w20,w1
+00d556e4  mov x19,x0
+00d556e8  tbnz w8,#0x0,0x00d55700
+00d556ec  adrp x0,0x3321000
+00d556f0  ldr x0,[x0, #0xca8]
+00d556f4  bl 0x00b0789c
+00d556f8  mov w8,#0x1
+00d556fc  strb w8,[x22, #0xe5d]
+00d55700  mov x0,x19
+00d55704  mov x1,xzr
+00d55708  str w20,[x19, #0x20]
+00d5570c  bl 0x025aeccc
+00d55710  ldr x8,[x21]
+00d55714  mov x20,x0
+00d55718  ldr w9,[x8, #0xe0]
+00d5571c  cbnz w9,0x00d55728
+00d55720  mov x0,x8
+00d55724  bl 0x00b0798c
+00d55728  mov x0,x20
+00d5572c  mov x1,xzr
+00d55730  mov x2,xzr
+00d55734  bl 0x024de30c
+00d55738  tbz w0,#0x0,0x00d55768
+00d5573c  mov x0,x19
+00d55740  mov x1,xzr
+00d55744  bl 0x025aeccc
+00d55748  cbz x0,0x00d55778
+00d5574c  ldr x8,[x0]
+00d55750  ldp x19,x30,[sp, #0x20]
+00d55754  ldp x21,x20,[sp, #0x10]
+00d55758  ldr x2,[x8, #0x2f8]
+00d5575c  ldr x1,[x8, #0x300]
+00d55760  ldr x22,[sp], #0x30
+00d55764  br x2
+00d55768  ldp x19,x30,[sp, #0x20]
+00d5576c  ldp x21,x20,[sp, #0x10]
+00d55770  ldr x22,[sp], #0x30
+00d55774  ret
+00d55778  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d5577c_GradientColor__get_gradientDirection.txt
+================================================================================
+Function: GradientColor$$get_gradientDirection @ 00d5577c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d5577c  ldr w0,[x0, #0x24]
+00d55780  ret
+
+
+================================================================================
+### FILE: 00d55784_GradientColor__set_gradientDirection.txt
+================================================================================
+Function: GradientColor$$set_gradientDirection @ 00d55784
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d55784  str x22,[sp, #-0x30]!
+00d55788  stp x21,x20,[sp, #0x10]
+00d5578c  stp x19,x30,[sp, #0x20]
+00d55790  adrp x22,0x3571000
+00d55794  adrp x21,0x3321000
+00d55798  ldrb w8,[x22, #0xe5e]
+00d5579c  ldr x21,[x21, #0xca8]
+00d557a0  mov w20,w1
+00d557a4  mov x19,x0
+00d557a8  tbnz w8,#0x0,0x00d557c0
+00d557ac  adrp x0,0x3321000
+00d557b0  ldr x0,[x0, #0xca8]
+00d557b4  bl 0x00b0789c
+00d557b8  mov w8,#0x1
+00d557bc  strb w8,[x22, #0xe5e]
+00d557c0  mov x0,x19
+00d557c4  mov x1,xzr
+00d557c8  str w20,[x19, #0x24]
+00d557cc  bl 0x025aeccc
+00d557d0  ldr x8,[x21]
+00d557d4  mov x20,x0
+00d557d8  ldr w9,[x8, #0xe0]
+00d557dc  cbnz w9,0x00d557e8
+00d557e0  mov x0,x8
+00d557e4  bl 0x00b0798c
+00d557e8  mov x0,x20
+00d557ec  mov x1,xzr
+00d557f0  mov x2,xzr
+00d557f4  bl 0x024de30c
+00d557f8  tbz w0,#0x0,0x00d55828
+00d557fc  mov x0,x19
+00d55800  mov x1,xzr
+00d55804  bl 0x025aeccc
+00d55808  cbz x0,0x00d55838
+00d5580c  ldr x8,[x0]
+00d55810  ldp x19,x30,[sp, #0x20]
+00d55814  ldp x21,x20,[sp, #0x10]
+00d55818  ldr x2,[x8, #0x2f8]
+00d5581c  ldr x1,[x8, #0x300]
+00d55820  ldr x22,[sp], #0x30
+00d55824  br x2
+00d55828  ldp x19,x30,[sp, #0x20]
+00d5582c  ldp x21,x20,[sp, #0x10]
+00d55830  ldr x22,[sp], #0x30
+00d55834  ret
+00d55838  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d5583c_GradientColor__get_colorMode.txt
+================================================================================
+Function: GradientColor$$get_colorMode @ 00d5583c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d5583c  ldr w0,[x0, #0x28]
+00d55840  ret
+
+
+================================================================================
+### FILE: 00d55844_GradientColor__set_colorMode.txt
+================================================================================
+Function: GradientColor$$set_colorMode @ 00d55844
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d55844  str x22,[sp, #-0x30]!
+00d55848  stp x21,x20,[sp, #0x10]
+00d5584c  stp x19,x30,[sp, #0x20]
+00d55850  adrp x22,0x3571000
+00d55854  adrp x21,0x3321000
+00d55858  ldrb w8,[x22, #0xe5f]
+00d5585c  ldr x21,[x21, #0xca8]
+00d55860  mov w20,w1
+00d55864  mov x19,x0
+00d55868  tbnz w8,#0x0,0x00d55880
+00d5586c  adrp x0,0x3321000
+00d55870  ldr x0,[x0, #0xca8]
+00d55874  bl 0x00b0789c
+00d55878  mov w8,#0x1
+00d5587c  strb w8,[x22, #0xe5f]
+00d55880  mov x0,x19
+00d55884  mov x1,xzr
+00d55888  str w20,[x19, #0x28]
+00d5588c  bl 0x025aeccc
+00d55890  ldr x8,[x21]
+00d55894  mov x20,x0
+00d55898  ldr w9,[x8, #0xe0]
+00d5589c  cbnz w9,0x00d558a8
+00d558a0  mov x0,x8
+00d558a4  bl 0x00b0798c
+00d558a8  mov x0,x20
+00d558ac  mov x1,xzr
+00d558b0  mov x2,xzr
+00d558b4  bl 0x024de30c
+00d558b8  tbz w0,#0x0,0x00d558e8
+00d558bc  mov x0,x19
+00d558c0  mov x1,xzr
+00d558c4  bl 0x025aeccc
+00d558c8  cbz x0,0x00d558f8
+00d558cc  ldr x8,[x0]
+00d558d0  ldp x19,x30,[sp, #0x20]
+00d558d4  ldp x21,x20,[sp, #0x10]
+00d558d8  ldr x2,[x8, #0x2f8]
+00d558dc  ldr x1,[x8, #0x300]
+00d558e0  ldr x22,[sp], #0x30
+00d558e4  br x2
+00d558e8  ldp x19,x30,[sp, #0x20]
+00d558ec  ldp x21,x20,[sp, #0x10]
+00d558f0  ldr x22,[sp], #0x30
+00d558f4  ret
+00d558f8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d558fc_GradientColor__get_firstColor.txt
+================================================================================
+Function: GradientColor$$get_firstColor @ 00d558fc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d558fc  ldp s0,s1,[x0, #0x2c]
+00d55900  ldp s2,s3,[x0, #0x34]
+00d55904  ret
+
+
+================================================================================
+### FILE: 00d55908_GradientColor__set_firstColor.txt
+================================================================================
+Function: GradientColor$$set_firstColor @ 00d55908
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d55908  stp d11,d10,[sp, #-0x40]!
+00d5590c  stp d9,d8,[sp, #0x10]
+00d55910  stp x21,x20,[sp, #0x20]
+00d55914  stp x19,x30,[sp, #0x30]
+00d55918  adrp x21,0x3571000
+00d5591c  adrp x20,0x3321000
+00d55920  ldrb w8,[x21, #0xe60]
+00d55924  ldr x20,[x20, #0xca8]
+00d55928  mov v8.16B,v3.16B
+00d5592c  mov v9.16B,v2.16B
+00d55930  mov v10.16B,v1.16B
+00d55934  mov v11.16B,v0.16B
+00d55938  mov x19,x0
+00d5593c  tbnz w8,#0x0,0x00d55954
+00d55940  adrp x0,0x3321000
+00d55944  ldr x0,[x0, #0xca8]
+00d55948  bl 0x00b0789c
+00d5594c  mov w8,#0x1
+00d55950  strb w8,[x21, #0xe60]
+00d55954  mov x0,x19
+00d55958  mov x1,xzr
+00d5595c  stp s11,s10,[x19, #0x2c]
+00d55960  stp s9,s8,[x19, #0x34]
+00d55964  bl 0x025aeccc
+00d55968  ldr x8,[x20]
+00d5596c  mov x20,x0
+00d55970  ldr w9,[x8, #0xe0]
+00d55974  cbnz w9,0x00d55980
+00d55978  mov x0,x8
+00d5597c  bl 0x00b0798c
+00d55980  mov x0,x20
+00d55984  mov x1,xzr
+00d55988  mov x2,xzr
+00d5598c  bl 0x024de30c
+00d55990  tbz w0,#0x0,0x00d559c4
+00d55994  mov x0,x19
+00d55998  mov x1,xzr
+00d5599c  bl 0x025aeccc
+00d559a0  cbz x0,0x00d559d8
+00d559a4  ldr x8,[x0]
+00d559a8  ldp x19,x30,[sp, #0x30]
+00d559ac  ldp x21,x20,[sp, #0x20]
+00d559b0  ldp d9,d8,[sp, #0x10]
+00d559b4  ldr x2,[x8, #0x2f8]
+00d559b8  ldr x1,[x8, #0x300]
+00d559bc  ldp d11,d10,[sp], #0x40
+00d559c0  br x2
+00d559c4  ldp x19,x30,[sp, #0x30]
+00d559c8  ldp x21,x20,[sp, #0x20]
+00d559cc  ldp d9,d8,[sp, #0x10]
+00d559d0  ldp d11,d10,[sp], #0x40
+00d559d4  ret
+00d559d8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d559dc_GradientColor__get_secondColor.txt
+================================================================================
+Function: GradientColor$$get_secondColor @ 00d559dc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d559dc  ldp s0,s1,[x0, #0x3c]
+00d559e0  ldp s2,s3,[x0, #0x44]
+00d559e4  ret
+
+
+================================================================================
+### FILE: 00d559e8_GradientColor__set_secondColor.txt
+================================================================================
+Function: GradientColor$$set_secondColor @ 00d559e8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d559e8  stp d11,d10,[sp, #-0x40]!
+00d559ec  stp d9,d8,[sp, #0x10]
+00d559f0  stp x21,x20,[sp, #0x20]
+00d559f4  stp x19,x30,[sp, #0x30]
+00d559f8  adrp x21,0x3571000
+00d559fc  adrp x20,0x3321000
+00d55a00  ldrb w8,[x21, #0xe61]
+00d55a04  ldr x20,[x20, #0xca8]
+00d55a08  mov v8.16B,v3.16B
+00d55a0c  mov v9.16B,v2.16B
+00d55a10  mov v10.16B,v1.16B
+00d55a14  mov v11.16B,v0.16B
+00d55a18  mov x19,x0
+00d55a1c  tbnz w8,#0x0,0x00d55a34
+00d55a20  adrp x0,0x3321000
+00d55a24  ldr x0,[x0, #0xca8]
+00d55a28  bl 0x00b0789c
+00d55a2c  mov w8,#0x1
+00d55a30  strb w8,[x21, #0xe61]
+00d55a34  mov x0,x19
+00d55a38  mov x1,xzr
+00d55a3c  stp s11,s10,[x19, #0x3c]
+00d55a40  stp s9,s8,[x19, #0x44]
+00d55a44  bl 0x025aeccc
+00d55a48  ldr x8,[x20]
+00d55a4c  mov x20,x0
+00d55a50  ldr w9,[x8, #0xe0]
+00d55a54  cbnz w9,0x00d55a60
+00d55a58  mov x0,x8
+00d55a5c  bl 0x00b0798c
+00d55a60  mov x0,x20
+00d55a64  mov x1,xzr
+00d55a68  mov x2,xzr
+00d55a6c  bl 0x024de30c
+00d55a70  tbz w0,#0x0,0x00d55aa4
+00d55a74  mov x0,x19
+00d55a78  mov x1,xzr
+00d55a7c  bl 0x025aeccc
+00d55a80  cbz x0,0x00d55ab8
+00d55a84  ldr x8,[x0]
+00d55a88  ldp x19,x30,[sp, #0x30]
+00d55a8c  ldp x21,x20,[sp, #0x20]
+00d55a90  ldp d9,d8,[sp, #0x10]
+00d55a94  ldr x2,[x8, #0x2f8]
+00d55a98  ldr x1,[x8, #0x300]
+00d55a9c  ldp d11,d10,[sp], #0x40
+00d55aa0  br x2
+00d55aa4  ldp x19,x30,[sp, #0x30]
+00d55aa8  ldp x21,x20,[sp, #0x20]
+00d55aac  ldp d9,d8,[sp, #0x10]
+00d55ab0  ldp d11,d10,[sp], #0x40
+00d55ab4  ret
+00d55ab8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d55abc_GradientColor__get_useGraphicAlpha.txt
+================================================================================
+Function: GradientColor$$get_useGraphicAlpha @ 00d55abc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d55abc  ldrb w0,[x0, #0x4c]
+00d55ac0  ret
+
+
+================================================================================
+### FILE: 00d55ac4_GradientColor__set_useGraphicAlpha.txt
+================================================================================
+Function: GradientColor$$set_useGraphicAlpha @ 00d55ac4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d55ac4  str x22,[sp, #-0x30]!
+00d55ac8  stp x21,x20,[sp, #0x10]
+00d55acc  stp x19,x30,[sp, #0x20]
+00d55ad0  adrp x22,0x3571000
+00d55ad4  adrp x20,0x3321000
+00d55ad8  ldrb w8,[x22, #0xe62]
+00d55adc  ldr x20,[x20, #0xca8]
+00d55ae0  mov x19,x0
+00d55ae4  and w21,w1,#0x1
+00d55ae8  tbnz w8,#0x0,0x00d55b00
+00d55aec  adrp x0,0x3321000
+00d55af0  ldr x0,[x0, #0xca8]
+00d55af4  bl 0x00b0789c
+00d55af8  mov w8,#0x1
+00d55afc  strb w8,[x22, #0xe62]
+00d55b00  mov x0,x19
+00d55b04  mov x1,xzr
+00d55b08  strb w21,[x19, #0x4c]
+00d55b0c  bl 0x025aeccc
+00d55b10  ldr x8,[x20]
+00d55b14  mov x20,x0
+00d55b18  ldr w9,[x8, #0xe0]
+00d55b1c  cbnz w9,0x00d55b28
+00d55b20  mov x0,x8
+00d55b24  bl 0x00b0798c
+00d55b28  mov x0,x20
+00d55b2c  mov x1,xzr
+00d55b30  mov x2,xzr
+00d55b34  bl 0x024de30c
+00d55b38  tbz w0,#0x0,0x00d55b68
+00d55b3c  mov x0,x19
+00d55b40  mov x1,xzr
+00d55b44  bl 0x025aeccc
+00d55b48  cbz x0,0x00d55b78
+00d55b4c  ldr x8,[x0]
+00d55b50  ldp x19,x30,[sp, #0x20]
+00d55b54  ldp x21,x20,[sp, #0x10]
+00d55b58  ldr x2,[x8, #0x2f8]
+00d55b5c  ldr x1,[x8, #0x300]
+00d55b60  ldr x22,[sp], #0x30
+00d55b64  br x2
+00d55b68  ldp x19,x30,[sp, #0x20]
+00d55b6c  ldp x21,x20,[sp, #0x10]
+00d55b70  ldr x22,[sp], #0x30
+00d55b74  ret
+00d55b78  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d55b7c_GradientColor__ModifyMesh.txt
+================================================================================
+Function: GradientColor$$ModifyMesh @ 00d55b7c
+
+--- Calls OUT ---
+  -> GradientColor$$CalculateColor @ 00d5676c
+  -> UnityEngine.UI.VertexHelper$$AddUIVertexTriangleStream @ 025aeb8c
+  -> modf @ 008d41a0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.UI.VertexHelper$$GetUIVertexStream @ 025aebdc
+  -> UnityEngine.RectTransform$$get_rect @ 024f6150
+  -> UnityEngine.UI.VertexHelper$$Clear @ 0259d54c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Rect$$get_yMin @ 024dafa8
+  -> System.Collections.Generic.List<UIVertex>$$set_Item @ 01c898f4
+  -> UnityEngine.Rect$$get_yMax @ 024db024
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Rect$$get_xMin @ 024dafa0
+  -> System.Collections.Generic.List<UIVertex>$$.ctor @ 01c89320
+  -> System.Collections.Generic.List<UIVertex>$$get_Item @ 01c89890
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+  -> UnityEngine.Rect$$get_xMax @ 024db014
+
+--- Calls IN ---
+
+--- Listing ---
+00d55b7c  stp d15,d14,[sp, #-0xa0]!
+00d55b80  stp d13,d12,[sp, #0x10]
+00d55b84  stp d11,d10,[sp, #0x20]
+00d55b88  stp d9,d8,[sp, #0x30]
+00d55b8c  stp x28,x27,[sp, #0x40]
+00d55b90  stp x26,x25,[sp, #0x50]
+00d55b94  stp x24,x23,[sp, #0x60]
+00d55b98  stp x22,x21,[sp, #0x70]
+00d55b9c  stp x20,x19,[sp, #0x80]
+00d55ba0  stp x29,x30,[sp, #0x90]
+00d55ba4  sub sp,sp,#0x170
+00d55ba8  adrp x19,0x3571000
+00d55bac  ldrb w8,[x19, #0xe63]
+00d55bb0  mov x22,x1
+00d55bb4  mov x20,x0
+00d55bb8  tbnz w8,#0x0,0x00d55c0c
+00d55bbc  adrp x0,0x332d000
+00d55bc0  ldr x0,[x0, #0x198]
+00d55bc4  bl 0x00b0789c
+00d55bc8  adrp x0,0x331a000
+00d55bcc  ldr x0,[x0, #0x450]
+00d55bd0  bl 0x00b0789c
+00d55bd4  adrp x0,0x3343000
+00d55bd8  ldr x0,[x0, #0x138]
+00d55bdc  bl 0x00b0789c
+00d55be0  adrp x0,0x3352000
+00d55be4  ldr x0,[x0, #0x130]
+00d55be8  bl 0x00b0789c
+00d55bec  adrp x0,0x335b000
+00d55bf0  ldr x0,[x0, #0x138]
+00d55bf4  bl 0x00b0789c
+00d55bf8  adrp x0,0x3311000
+00d55bfc  ldr x0,[x0, #0x9f8]
+00d55c00  bl 0x00b0789c
+00d55c04  mov w8,#0x1
+00d55c08  strb w8,[x19, #0xe63]
+00d55c0c  movi v0.2D,#0x0
+00d55c10  stp xzr,xzr,[sp, #0xf0]
+00d55c14  stp xzr,xzr,[sp, #0xd0]
+00d55c18  str xzr,[sp, #0xe0]
+00d55c1c  str wzr,[sp, #0xe8]
+00d55c20  str xzr,[sp, #0x80]
+00d55c24  stp q0,q0,[sp, #0x90]
+00d55c28  stp q0,q0,[sp, #0xb0]
+00d55c2c  stp q0,q0,[sp, #0x60]
+00d55c30  stp q0,q0,[sp, #0x20]
+00d55c34  stp q0,q0,[sp, #0x40]
+00d55c38  ldr x8,[x20]
+00d55c3c  mov x0,x20
+00d55c40  ldp x9,x1,[x8, #0x1c8]
+00d55c44  blr x9
+00d55c48  tbz w0,#0x0,0x00d56738
+00d55c4c  adrp x8,0x3311000
+00d55c50  ldr x8,[x8, #0x9f8]
+00d55c54  ldr x0,[x8]
+00d55c58  bl 0x00b079a0
+00d55c5c  cbz x0,0x00d56768
+00d55c60  adrp x8,0x331a000
+00d55c64  ldr x8,[x8, #0x450]
+00d55c68  mov x21,x0
+00d55c6c  ldr x1,[x8]
+00d55c70  bl 0x01c89320
+00d55c74  cbz x22,0x00d56768
+00d55c78  mov x0,x22
+00d55c7c  mov x1,x21
+00d55c80  mov x2,xzr
+00d55c84  bl 0x025aebdc
+00d55c88  ldr w8,[x21, #0x18]
+00d55c8c  cbz w8,0x00d56738
+00d55c90  adrp x23,0x3352000
+00d55c94  ldr x23,[x23, #0x130]
+00d55c98  ldr w9,[x20, #0x20]
+00d55c9c  fmov s11,0x3f800000
+00d55ca0  str x22,[sp, #0x8]
+00d55ca4  sub w9,w9,#0x1
+00d55ca8  cmp w9,#0x2
+00d55cac  b.cs 0x00d55d54
+00d55cb0  adrp x19,0x3570000
+00d55cb4  ldrb w8,[x19, #0xffd]
+00d55cb8  cbnz w8,0x00d55cd0
+00d55cbc  adrp x0,0x3365000
+00d55cc0  ldr x0,[x0, #0x108]
+00d55cc4  bl 0x00b0789c
+00d55cc8  mov w8,#0x1
+00d55ccc  strb w8,[x19, #0xffd]
+00d55cd0  ldr w8,[x20, #0x20]
+00d55cd4  cmp w8,#0x2
+00d55cd8  b.ne 0x00d56160
+00d55cdc  adrp x8,0x332d000
+00d55ce0  ldr x8,[x8, #0x198]
+00d55ce4  mov x0,x20
+00d55ce8  ldr x1,[x8]
+00d55cec  bl 0x0176cbf8
+00d55cf0  cbz x0,0x00d56768
+00d55cf4  mov x1,xzr
+00d55cf8  bl 0x024f6150
+00d55cfc  add x0,sp,#0xf0
+00d55d00  mov x1,xzr
+00d55d04  stp s0,s1,[sp, #0xf0]
+00d55d08  stp s2,s3,[sp, #0xf8]
+00d55d0c  bl 0x024dafa0
+00d55d10  add x0,sp,#0xf0
+00d55d14  mov x1,xzr
+00d55d18  mov v8.16B,v0.16B
+00d55d1c  bl 0x024db024
+00d55d20  add x0,sp,#0xf0
+00d55d24  mov x1,xzr
+00d55d28  fmov w19,s8
+00d55d2c  fmov w26,s0
+00d55d30  bl 0x024db014
+00d55d34  add x0,sp,#0xf0
+00d55d38  mov x1,xzr
+00d55d3c  mov v8.16B,v0.16B
+00d55d40  bl 0x024dafa8
+00d55d44  ldr w8,[x21, #0x18]
+00d55d48  fmov w27,s8
+00d55d4c  fmov w28,s0
+00d55d50  b 0x00d562bc
+00d55d54  cmp w8,#0x1
+00d55d58  b.lt 0x00d56718
+00d55d5c  add x8,sp,#0x100
+00d55d60  mov w25,#0xaaab
+00d55d64  mov w22,wzr
+00d55d68  movk w25,#0xaaaa, LSL #16
+00d55d6c  mov w26,#0x6
+00d55d70  mov w27,#0x437f0000
+00d55d74  fmov s14,wzr
+00d55d78  mov w28,#0x1
+00d55d7c  add x29,x8,#0x2c
+00d55d80  ldr x2,[x23]
+00d55d84  umull x8,w22,w25
+00d55d88  lsr x8,x8,#0x22
+00d55d8c  msub w19,w8,w26,w22
+00d55d90  add x8,sp,#0x100
+00d55d94  mov x0,x21
+00d55d98  mov w1,w22
+00d55d9c  bl 0x01c89890
+00d55da0  ldp q1,q0,[sp, #0x100]
+00d55da4  ldr x8,[sp, #0x120]
+00d55da8  ldp q2,q3,[x29, #0x20]
+00d55dac  ldr w11,[sp, #0x128]
+00d55db0  stp q1,q0,[sp, #0x60]
+00d55db4  ldp q1,q0,[x29]
+00d55db8  str x8,[sp, #0x80]
+00d55dbc  stp q2,q3,[sp, #0x40]
+00d55dc0  ubfx w10,w11,#0x8,#0x8
+00d55dc4  stp q1,q0,[sp, #0x20]
+00d55dc8  ldr w12,[x20, #0x24]
+00d55dcc  ubfx w9,w11,#0x10,#0x8
+00d55dd0  lsr w8,w11,#0x18
+00d55dd4  cmp w19,#0x5
+00d55dd8  cbz w12,0x00d55dec
+00d55ddc  b.hi 0x00d55e0c
+00d55de0  lsl w12,w28,w19
+00d55de4  mov w13,#0x31
+00d55de8  b 0x00d55df8
+00d55dec  b.hi 0x00d55e0c
+00d55df0  lsl w12,w28,w19
+00d55df4  mov w13,#0x23
+00d55df8  tst w12,w13
+00d55dfc  b.eq 0x00d55e0c
+00d55e00  ldp s4,s5,[x20, #0x2c]
+00d55e04  ldp s6,s7,[x20, #0x34]
+00d55e08  b 0x00d55e14
+00d55e0c  ldp s4,s5,[x20, #0x3c]
+00d55e10  ldp s6,s7,[x20, #0x44]
+00d55e14  and w11,w11,#0xff
+00d55e18  ldr w1,[x20, #0x28]
+00d55e1c  fmov s12,w27
+00d55e20  ucvtf s0,w10
+00d55e24  ucvtf s3,w11
+00d55e28  ucvtf s2,w9
+00d55e2c  fdiv s1,s0,s12
+00d55e30  fdiv s0,s3,s12
+00d55e34  ucvtf s3,w8
+00d55e38  fdiv s2,s2,s12
+00d55e3c  fdiv s3,s3,s12
+00d55e40  bl 0x00d5676c
+00d55e44  mov v10.16B,v1.16B
+00d55e48  fmin s1,s0,s11
+00d55e4c  fmul s1,s1,s12
+00d55e50  fcmp s0,#0.0
+00d55e54  fcsel s12,s1,s14,pl
+00d55e58  fcvt d0,s12
+00d55e5c  add x0,sp,#0x100
+00d55e60  mov v9.16B,v2.16B
+00d55e64  mov v8.16B,v3.16B
+00d55e68  bl 0x008d41a0
+00d55e6c  fcmp s12,#0.0
+00d55e70  b.ge 0x00d55e98
+00d55e74  fmov d1,-0x4020000000000000
+00d55e78  fcmp d0,d1
+00d55e7c  b.ne 0x00d55ec0
+00d55e80  ldr d0,[sp, #0x100]
+00d55e84  fmov s1,0xbf800000
+00d55e88  fcvtzs x8,d0
+00d55e8c  fcvt s0,d0
+00d55e90  fadd s1,s0,s1
+00d55e94  b 0x00d55eb4
+00d55e98  fmov d1,0x3fe0000000000000
+00d55e9c  fcmp d0,d1
+00d55ea0  b.ne 0x00d55ed0
+00d55ea4  ldr d0,[sp, #0x100]
+00d55ea8  fcvtzs x8,d0
+00d55eac  fcvt s0,d0
+00d55eb0  fadd s1,s0,s11
+00d55eb4  tst x8,#0x1
+00d55eb8  fcsel s13,s0,s1,eq
+00d55ebc  b 0x00d55edc
+00d55ec0  fmov s0,0xbf000000
+00d55ec4  fadd s0,s12,s0
+00d55ec8  frintp s13,s0
+00d55ecc  b 0x00d55edc
+00d55ed0  fmov s0,0x3f000000
+00d55ed4  fadd s0,s12,s0
+00d55ed8  frintm s13,s0
+00d55edc  fmin s0,s10,s11
+00d55ee0  fmov s1,w27
+00d55ee4  fmul s0,s0,s1
+00d55ee8  fcmp s10,#0.0
+00d55eec  fcsel s10,s0,s14,pl
+00d55ef0  fcvt d0,s10
+00d55ef4  add x0,sp,#0x100
+00d55ef8  bl 0x008d41a0
+00d55efc  fcmp s10,#0.0
+00d55f00  b.ge 0x00d55f28
+00d55f04  fmov d1,-0x4020000000000000
+00d55f08  fcmp d0,d1
+00d55f0c  b.ne 0x00d55f50
+00d55f10  ldr d0,[sp, #0x100]
+00d55f14  fmov s1,0xbf800000
+00d55f18  fcvtzs x8,d0
+00d55f1c  fcvt s0,d0
+00d55f20  fadd s1,s0,s1
+00d55f24  b 0x00d55f44
+00d55f28  fmov d1,0x3fe0000000000000
+00d55f2c  fcmp d0,d1
+00d55f30  b.ne 0x00d55f60
+00d55f34  ldr d0,[sp, #0x100]
+00d55f38  fcvtzs x8,d0
+00d55f3c  fcvt s0,d0
+00d55f40  fadd s1,s0,s11
+00d55f44  tst x8,#0x1
+00d55f48  fcsel s10,s0,s1,eq
+00d55f4c  b 0x00d55f6c
+00d55f50  fmov s0,0xbf000000
+00d55f54  fadd s0,s10,s0
+00d55f58  frintp s10,s0
+00d55f5c  b 0x00d55f6c
+00d55f60  fmov s0,0x3f000000
+00d55f64  fadd s0,s10,s0
+00d55f68  frintm s10,s0
+00d55f6c  fmin s0,s9,s11
+00d55f70  fmov s1,w27
+00d55f74  fmul s0,s0,s1
+00d55f78  fcmp s9,#0.0
+00d55f7c  fcsel s9,s0,s14,pl
+00d55f80  fcvt d0,s9
+00d55f84  add x0,sp,#0x100
+00d55f88  bl 0x008d41a0
+00d55f8c  fcmp s9,#0.0
+00d55f90  b.ge 0x00d55fb8
+00d55f94  fmov d1,-0x4020000000000000
+00d55f98  fcmp d0,d1
+00d55f9c  b.ne 0x00d55fe0
+00d55fa0  ldr d0,[sp, #0x100]
+00d55fa4  fmov s1,0xbf800000
+00d55fa8  fcvtzs x8,d0
+00d55fac  fcvt s0,d0
+00d55fb0  fadd s1,s0,s1
+00d55fb4  b 0x00d55fd4
+00d55fb8  fmov d1,0x3fe0000000000000
+00d55fbc  fcmp d0,d1
+00d55fc0  b.ne 0x00d55ff0
+00d55fc4  ldr d0,[sp, #0x100]
+00d55fc8  fcvtzs x8,d0
+00d55fcc  fcvt s0,d0
+00d55fd0  fadd s1,s0,s11
+00d55fd4  tst x8,#0x1
+00d55fd8  fcsel s9,s0,s1,eq
+00d55fdc  b 0x00d55ffc
+00d55fe0  fmov s0,0xbf000000
+00d55fe4  fadd s0,s9,s0
+00d55fe8  frintp s9,s0
+00d55fec  b 0x00d55ffc
+00d55ff0  fmov s0,0x3f000000
+00d55ff4  fadd s0,s9,s0
+00d55ff8  frintm s9,s0
+00d55ffc  fmin s0,s8,s11
+00d56000  fmov s1,w27
+00d56004  fmul s0,s0,s1
+00d56008  fcmp s8,#0.0
+00d5600c  fcsel s8,s0,s14,pl
+00d56010  fcvt d0,s8
+00d56014  add x0,sp,#0x100
+00d56018  bl 0x008d41a0
+00d5601c  fcmp s8,#0.0
+00d56020  b.ge 0x00d56048
+00d56024  fmov d1,-0x4020000000000000
+00d56028  fcmp d0,d1
+00d5602c  b.ne 0x00d56070
+00d56030  ldr d0,[sp, #0x100]
+00d56034  fmov s1,0xbf800000
+00d56038  fcvtzs x8,d0
+00d5603c  fcvt s0,d0
+00d56040  fadd s1,s0,s1
+00d56044  b 0x00d56064
+00d56048  fmov d1,0x3fe0000000000000
+00d5604c  fcmp d0,d1
+00d56050  b.ne 0x00d56080
+00d56054  ldr d0,[sp, #0x100]
+00d56058  fcvtzs x8,d0
+00d5605c  fcvt s0,d0
+00d56060  fadd s1,s0,s11
+00d56064  tst x8,#0x1
+00d56068  fcsel s0,s0,s1,eq
+00d5606c  b 0x00d5608c
+00d56070  fmov s0,0xbf000000
+00d56074  fadd s0,s8,s0
+00d56078  frintp s0,s0
+00d5607c  b 0x00d5608c
+00d56080  fmov s0,0x3f000000
+00d56084  fadd s0,s8,s0
+00d56088  frintm s0,s0
+00d5608c  fcvtzs w8,s13
+00d56090  fcmp s13,#0.0
+00d56094  fcvtzs w9,s10
+00d56098  csel w8,w8,w8,mi
+00d5609c  fcmp s10,#0.0
+00d560a0  and w19,w8,#0xff
+00d560a4  csel w8,w9,w9,mi
+00d560a8  and w8,w8,#0xff
+00d560ac  fcvtzs w10,s9
+00d560b0  bfm w19,w8,#0x18,#0x7
+00d560b4  ldrb w8,[x20, #0x4c]
+00d560b8  fcmp s9,#0.0
+00d560bc  fcvtzs w11,s0
+00d560c0  csel w9,w10,w10,mi
+00d560c4  fcmp s0,#0.0
+00d560c8  and w9,w9,#0xff
+00d560cc  csel w10,w11,w11,mi
+00d560d0  and w24,w10,#0xff
+00d560d4  bfm w19,w9,#0x10,#0x7
+00d560d8  cbz w8,0x00d56108
+00d560dc  ldr x2,[x23]
+00d560e0  add x8,sp,#0x100
+00d560e4  mov x0,x21
+00d560e8  mov w1,w22
+00d560ec  bl 0x01c89890
+00d560f0  ldrb w8,[sp, #0x12b]
+00d560f4  mov w9,#0x8081
+00d560f8  movk w9,#0x8080, LSL #16
+00d560fc  mul w8,w24,w8
+00d56100  umull x8,w8,w9
+00d56104  lsr x24,x8,#0x27
+00d56108  adrp x8,0x335b000
+00d5610c  ldr x8,[x8, #0x138]
+00d56110  ldp q1,q0,[sp, #0x60]
+00d56114  ldp q3,q2,[sp, #0x40]
+00d56118  bfm w19,w24,#0x8,#0x7
+00d5611c  ldr x3,[x8]
+00d56120  ldr x8,[sp, #0x80]
+00d56124  stp q1,q0,[sp, #0x100]
+00d56128  ldp q1,q0,[sp, #0x20]
+00d5612c  add x2,sp,#0x100
+00d56130  mov x0,x21
+00d56134  mov w1,w22
+00d56138  str w19,[sp, #0x128]
+00d5613c  str x8,[sp, #0x120]
+00d56140  stp q3,q2,[x29, #0x20]
+00d56144  stp q1,q0,[x29]
+00d56148  bl 0x01c898f4
+00d5614c  ldr w8,[x21, #0x18]
+00d56150  add w22,w22,#0x1
+00d56154  cmp w22,w8
+00d56158  b.lt 0x00d55d80
+00d5615c  b 0x00d56718
+00d56160  ldr x2,[x23]
+00d56164  add x8,sp,#0x100
+00d56168  mov x0,x21
+00d5616c  mov w1,wzr
+00d56170  bl 0x01c89890
+00d56174  ldr w8,[x21, #0x18]
+00d56178  ldr x2,[x23]
+00d5617c  ldr w26,[sp, #0x104]
+00d56180  ldr w19,[sp, #0x100]
+00d56184  sub w1,w8,#0x1
+00d56188  add x8,sp,#0x100
+00d5618c  mov x0,x21
+00d56190  bl 0x01c89890
+00d56194  ldr w8,[x21, #0x18]
+00d56198  ldr w28,[sp, #0x104]
+00d5619c  ldr w27,[sp, #0x100]
+00d561a0  cmp w8,#0x1
+00d561a4  b.lt 0x00d562bc
+00d561a8  mov w22,wzr
+00d561ac  fmov s8,w28
+00d561b0  fmov s9,w27
+00d561b4  fmov s10,w26
+00d561b8  fmov s12,w19
+00d561bc  ldr x2,[x23]
+00d561c0  add x8,sp,#0x100
+00d561c4  mov x0,x21
+00d561c8  mov w1,w22
+00d561cc  bl 0x01c89890
+00d561d0  ldr s0,[sp, #0x100]
+00d561d4  fcmp s0,s12
+00d561d8  b.pl 0x00d561f8
+00d561dc  ldr x2,[x23]
+00d561e0  add x8,sp,#0x100
+00d561e4  mov x0,x21
+00d561e8  mov w1,w22
+00d561ec  bl 0x01c89890
+00d561f0  ldr w19,[sp, #0x100]
+00d561f4  fmov s12,w19
+00d561f8  ldr x2,[x23]
+00d561fc  add x8,sp,#0x100
+00d56200  mov x0,x21
+00d56204  mov w1,w22
+00d56208  bl 0x01c89890
+00d5620c  ldr s0,[sp, #0x104]
+00d56210  fcmp s0,s10
+00d56214  b.le 0x00d56234
+00d56218  ldr x2,[x23]
+00d5621c  add x8,sp,#0x100
+00d56220  mov x0,x21
+00d56224  mov w1,w22
+00d56228  bl 0x01c89890
+00d5622c  ldr w26,[sp, #0x104]
+00d56230  fmov s10,w26
+00d56234  ldr x2,[x23]
+00d56238  add x8,sp,#0x100
+00d5623c  mov x0,x21
+00d56240  mov w1,w22
+00d56244  bl 0x01c89890
+00d56248  ldr s0,[sp, #0x100]
+00d5624c  fcmp s0,s9
+00d56250  b.le 0x00d56270
+00d56254  ldr x2,[x23]
+00d56258  add x8,sp,#0x100
+00d5625c  mov x0,x21
+00d56260  mov w1,w22
+00d56264  bl 0x01c89890
+00d56268  ldr w27,[sp, #0x100]
+00d5626c  fmov s9,w27
+00d56270  ldr x2,[x23]
+00d56274  add x8,sp,#0x100
+00d56278  mov x0,x21
+00d5627c  mov w1,w22
+00d56280  bl 0x01c89890
+00d56284  ldr s0,[sp, #0x104]
+00d56288  fcmp s0,s8
+00d5628c  b.pl 0x00d562ac
+00d56290  ldr x2,[x23]
+00d56294  add x8,sp,#0x100
+00d56298  mov x0,x21
+00d5629c  mov w1,w22
+00d562a0  bl 0x01c89890
+00d562a4  ldr w28,[sp, #0x104]
+00d562a8  fmov s8,w28
+00d562ac  ldr w8,[x21, #0x18]
+00d562b0  add w22,w22,#0x1
+00d562b4  cmp w22,w8
+00d562b8  b.lt 0x00d561bc
+00d562bc  cmp w8,#0x1
+00d562c0  b.lt 0x00d56718
+00d562c4  fmov s1,w26
+00d562c8  fmov s0,w28
+00d562cc  fsub s0,s1,s0
+00d562d0  stp s0,s1,[sp, #0x10]
+00d562d4  fmov s0,w27
+00d562d8  fmov s1,w19
+00d562dc  add x8,sp,#0x100
+00d562e0  mov w22,wzr
+00d562e4  add x25,sp,#0xd0
+00d562e8  fsub s0,s0,s1
+00d562ec  fmov s12,wzr
+00d562f0  mov w26,#0x437f0000
+00d562f4  add x27,x8,#0xc
+00d562f8  add x28,x8,#0x2c
+00d562fc  stp s0,s1,[sp, #0x18]
+00d56300  ldr x2,[x23]
+00d56304  add x8,sp,#0x100
+00d56308  mov x0,x21
+00d5630c  mov w1,w22
+00d56310  bl 0x01c89890
+00d56314  ldr q0,[x27]
+00d56318  ldur q1,[x27, #0xc]
+00d5631c  ldp q2,q3,[x28]
+00d56320  ldp q4,q5,[x28, #0x20]
+00d56324  ldr w8,[sp, #0x128]
+00d56328  stur q1,[x25, #0xc]
+00d5632c  stp q2,q3,[sp, #0x90]
+00d56330  stp q5,q0,[sp, #0xc0]
+00d56334  str q4,[sp, #0xb0]
+00d56338  ldp s2,s1,[x20, #0x2c]
+00d5633c  ldp s0,s3,[x20, #0x34]
+00d56340  ldp s4,s5,[x20, #0x3c]
+00d56344  ldp s16,s17,[x20, #0x44]
+00d56348  ldr s13,[sp, #0x104]
+00d5634c  ldr s15,[sp, #0x100]
+00d56350  ldr w19,[sp, #0x108]
+00d56354  ldr w12,[x20, #0x24]
+00d56358  ubfx w10,w8,#0x8,#0x8
+00d5635c  ubfx w9,w8,#0x10,#0x8
+00d56360  fsub s7,s4,s2
+00d56364  fsub s6,s5,s1
+00d56368  fsub s5,s16,s0
+00d5636c  fsub s4,s17,s3
+00d56370  lsr w11,w8,#0x18
+00d56374  cbz w12,0x00d5638c
+00d56378  ldp s17,s16,[sp, #0x18]
+00d5637c  and w8,w8,#0xff
+00d56380  fmov s14,w26
+00d56384  fsub s16,s15,s16
+00d56388  b 0x00d5639c
+00d5638c  ldp s17,s16,[sp, #0x10]
+00d56390  and w8,w8,#0xff
+00d56394  fmov s14,w26
+00d56398  fsub s16,s16,s13
+00d5639c  fdiv s16,s16,s17
+00d563a0  fcmp s16,#0.0
+00d563a4  fmin s16,s16,s11
+00d563a8  fcsel s16,s16,s12,pl
+00d563ac  ldr w1,[x20, #0x28]
+00d563b0  fmul s7,s16,s7
+00d563b4  fmul s6,s16,s6
+00d563b8  fmul s17,s16,s5
+00d563bc  fmul s16,s16,s4
+00d563c0  ucvtf s18,w10
+00d563c4  fadd s4,s2,s7
+00d563c8  ucvtf s2,w9
+00d563cc  fadd s5,s1,s6
+00d563d0  ucvtf s19,w11
+00d563d4  fadd s6,s0,s17
+00d563d8  ucvtf s0,w8
+00d563dc  fdiv s1,s18,s14
+00d563e0  fdiv s2,s2,s14
+00d563e4  fdiv s0,s0,s14
+00d563e8  fadd s7,s3,s16
+00d563ec  fdiv s3,s19,s14
+00d563f0  bl 0x00d5676c
+00d563f4  mov v10.16B,v1.16B
+00d563f8  fmin s1,s0,s11
+00d563fc  fmul s1,s1,s14
+00d56400  fcmp s0,#0.0
+00d56404  fcsel s14,s1,s12,pl
+00d56408  fcvt d0,s14
+00d5640c  add x0,sp,#0x100
+00d56410  mov v9.16B,v2.16B
+00d56414  mov v8.16B,v3.16B
+00d56418  bl 0x008d41a0
+00d5641c  fcmp s14,#0.0
+00d56420  b.ge 0x00d56448
+00d56424  fmov d1,-0x4020000000000000
+00d56428  fcmp d0,d1
+00d5642c  b.ne 0x00d56470
+00d56430  ldr d0,[sp, #0x100]
+00d56434  fmov s1,0xbf800000
+00d56438  fcvtzs x8,d0
+00d5643c  fcvt s0,d0
+00d56440  fadd s1,s0,s1
+00d56444  b 0x00d56464
+00d56448  fmov d1,0x3fe0000000000000
+00d5644c  fcmp d0,d1
+00d56450  b.ne 0x00d56480
+00d56454  ldr d0,[sp, #0x100]
+00d56458  fcvtzs x8,d0
+00d5645c  fcvt s0,d0
+00d56460  fadd s1,s0,s11
+00d56464  tst x8,#0x1
+00d56468  fcsel s14,s0,s1,eq
+00d5646c  b 0x00d5648c
+00d56470  fmov s0,0xbf000000
+00d56474  fadd s0,s14,s0
+00d56478  frintp s14,s0
+00d5647c  b 0x00d5648c
+00d56480  fmov s0,0x3f000000
+00d56484  fadd s0,s14,s0
+00d56488  frintm s14,s0
+00d5648c  fmin s0,s10,s11
+00d56490  fmov s1,w26
+00d56494  fmul s0,s0,s1
+00d56498  fcmp s10,#0.0
+00d5649c  fcsel s10,s0,s12,pl
+00d564a0  fcvt d0,s10
+00d564a4  add x0,sp,#0x100
+00d564a8  bl 0x008d41a0
+00d564ac  fcmp s10,#0.0
+00d564b0  b.ge 0x00d564d8
+00d564b4  fmov d1,-0x4020000000000000
+00d564b8  fcmp d0,d1
+00d564bc  b.ne 0x00d56500
+00d564c0  ldr d0,[sp, #0x100]
+00d564c4  fmov s1,0xbf800000
+00d564c8  fcvtzs x8,d0
+00d564cc  fcvt s0,d0
+00d564d0  fadd s1,s0,s1
+00d564d4  b 0x00d564f4
+00d564d8  fmov d1,0x3fe0000000000000
+00d564dc  fcmp d0,d1
+00d564e0  b.ne 0x00d56510
+00d564e4  ldr d0,[sp, #0x100]
+00d564e8  fcvtzs x8,d0
+00d564ec  fcvt s0,d0
+00d564f0  fadd s1,s0,s11
+00d564f4  tst x8,#0x1
+00d564f8  fcsel s10,s0,s1,eq
+00d564fc  b 0x00d5651c
+00d56500  fmov s0,0xbf000000
+00d56504  fadd s0,s10,s0
+00d56508  frintp s10,s0
+00d5650c  b 0x00d5651c
+00d56510  fmov s0,0x3f000000
+00d56514  fadd s0,s10,s0
+00d56518  frintm s10,s0
+00d5651c  fmin s0,s9,s11
+00d56520  fmov s1,w26
+00d56524  fmul s0,s0,s1
+00d56528  fcmp s9,#0.0
+00d5652c  fcsel s9,s0,s12,pl
+00d56530  fcvt d0,s9
+00d56534  add x0,sp,#0x100
+00d56538  bl 0x008d41a0
+00d5653c  fcmp s9,#0.0
+00d56540  b.ge 0x00d56568
+00d56544  fmov d1,-0x4020000000000000
+00d56548  fcmp d0,d1
+00d5654c  b.ne 0x00d56590
+00d56550  ldr d0,[sp, #0x100]
+00d56554  fmov s1,0xbf800000
+00d56558  fcvtzs x8,d0
+00d5655c  fcvt s0,d0
+00d56560  fadd s1,s0,s1
+00d56564  b 0x00d56584
+00d56568  fmov d1,0x3fe0000000000000
+00d5656c  fcmp d0,d1
+00d56570  b.ne 0x00d565a0
+00d56574  ldr d0,[sp, #0x100]
+00d56578  fcvtzs x8,d0
+00d5657c  fcvt s0,d0
+00d56580  fadd s1,s0,s11
+00d56584  tst x8,#0x1
+00d56588  fcsel s9,s0,s1,eq
+00d5658c  b 0x00d565ac
+00d56590  fmov s0,0xbf000000
+00d56594  fadd s0,s9,s0
+00d56598  frintp s9,s0
+00d5659c  b 0x00d565ac
+00d565a0  fmov s0,0x3f000000
+00d565a4  fadd s0,s9,s0
+00d565a8  frintm s9,s0
+00d565ac  fmin s0,s8,s11
+00d565b0  fmov s1,w26
+00d565b4  fmul s0,s0,s1
+00d565b8  fcmp s8,#0.0
+00d565bc  fcsel s8,s0,s12,pl
+00d565c0  fcvt d0,s8
+00d565c4  add x0,sp,#0x100
+00d565c8  bl 0x008d41a0
+00d565cc  fcmp s8,#0.0
+00d565d0  b.ge 0x00d565f8
+00d565d4  fmov d1,-0x4020000000000000
+00d565d8  fcmp d0,d1
+00d565dc  b.ne 0x00d56620
+00d565e0  ldr d0,[sp, #0x100]
+00d565e4  fmov s1,0xbf800000
+00d565e8  fcvtzs x8,d0
+00d565ec  fcvt s0,d0
+00d565f0  fadd s1,s0,s1
+00d565f4  b 0x00d56614
+00d565f8  fmov d1,0x3fe0000000000000
+00d565fc  fcmp d0,d1
+00d56600  b.ne 0x00d56630
+00d56604  ldr d0,[sp, #0x100]
+00d56608  fcvtzs x8,d0
+00d5660c  fcvt s0,d0
+00d56610  fadd s1,s0,s11
+00d56614  tst x8,#0x1
+00d56618  fcsel s0,s0,s1,eq
+00d5661c  b 0x00d5663c
+00d56620  fmov s0,0xbf000000
+00d56624  fadd s0,s8,s0
+00d56628  frintp s0,s0
+00d5662c  b 0x00d5663c
+00d56630  fmov s0,0x3f000000
+00d56634  fadd s0,s8,s0
+00d56638  frintm s0,s0
+00d5663c  fcvtzs w8,s14
+00d56640  fcmp s14,#0.0
+00d56644  fcvtzs w9,s10
+00d56648  csel w8,w8,w8,mi
+00d5664c  fcmp s10,#0.0
+00d56650  and w24,w8,#0xff
+00d56654  csel w8,w9,w9,mi
+00d56658  and w8,w8,#0xff
+00d5665c  fcvtzs w10,s9
+00d56660  bfm w24,w8,#0x18,#0x7
+00d56664  ldrb w8,[x20, #0x4c]
+00d56668  fcmp s9,#0.0
+00d5666c  fcvtzs w11,s0
+00d56670  csel w9,w10,w10,mi
+00d56674  fcmp s0,#0.0
+00d56678  and w9,w9,#0xff
+00d5667c  csel w10,w11,w11,mi
+00d56680  and w29,w10,#0xff
+00d56684  bfm w24,w9,#0x10,#0x7
+00d56688  cbz w8,0x00d566b8
+00d5668c  ldr x2,[x23]
+00d56690  add x8,sp,#0x100
+00d56694  mov x0,x21
+00d56698  mov w1,w22
+00d5669c  bl 0x01c89890
+00d566a0  ldrb w8,[sp, #0x12b]
+00d566a4  mov w9,#0x8081
+00d566a8  movk w9,#0x8080, LSL #16
+00d566ac  mul w8,w29,w8
+00d566b0  umull x8,w8,w9
+00d566b4  lsr x29,x8,#0x27
+00d566b8  adrp x8,0x335b000
+00d566bc  ldr x8,[x8, #0x138]
+00d566c0  ldur q0,[x25, #0xc]
+00d566c4  ldp q2,q1,[sp, #0xc0]
+00d566c8  str s13,[sp, #0x104]
+00d566cc  ldr x3,[x8]
+00d566d0  str s15,[sp, #0x100]
+00d566d4  str w19,[sp, #0x108]
+00d566d8  stur q0,[x27, #0xc]
+00d566dc  str q1,[x27]
+00d566e0  ldp q0,q3,[sp, #0xa0]
+00d566e4  ldr q1,[sp, #0x90]
+00d566e8  bfm w24,w29,#0x8,#0x7
+00d566ec  add x2,sp,#0x100
+00d566f0  mov x0,x21
+00d566f4  mov w1,w22
+00d566f8  str w24,[sp, #0x128]
+00d566fc  stp q3,q2,[x28, #0x20]
+00d56700  stp q1,q0,[x28]
+00d56704  bl 0x01c898f4
+00d56708  ldr w8,[x21, #0x18]
+00d5670c  add w22,w22,#0x1
+00d56710  cmp w22,w8
+00d56714  b.lt 0x00d56300
+00d56718  ldr x19,[sp, #0x8]
+00d5671c  mov x1,xzr
+00d56720  mov x0,x19
+00d56724  bl 0x0259d54c
+00d56728  mov x0,x19
+00d5672c  mov x1,x21
+00d56730  mov x2,xzr
+00d56734  bl 0x025aeb8c
+00d56738  add sp,sp,#0x170
+00d5673c  ldp x29,x30,[sp, #0x90]
+00d56740  ldp x20,x19,[sp, #0x80]
+00d56744  ldp x22,x21,[sp, #0x70]
+00d56748  ldp x24,x23,[sp, #0x60]
+00d5674c  ldp x26,x25,[sp, #0x50]
+00d56750  ldp x28,x27,[sp, #0x40]
+00d56754  ldp d9,d8,[sp, #0x30]
+00d56758  ldp d11,d10,[sp, #0x20]
+00d5675c  ldp d13,d12,[sp, #0x10]
+00d56760  ldp d15,d14,[sp], #0xa0
+00d56764  ret
+00d56768  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d5676c_GradientColor__CalculateColor.txt
+================================================================================
+Function: GradientColor$$CalculateColor @ 00d5676c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- GradientColor$$ModifyMesh @ 00d55b7c
+
+--- Listing ---
+00d5676c  cmp w1,#0x2
+00d56770  b.eq 0x00d56790
+00d56774  cmp w1,#0x1
+00d56778  b.ne 0x00d567a0
+00d5677c  fadd s4,s0,s4
+00d56780  fadd s5,s1,s5
+00d56784  fadd s6,s2,s6
+00d56788  fadd s7,s3,s7
+00d5678c  b 0x00d567a0
+00d56790  fmul s4,s0,s4
+00d56794  fmul s5,s1,s5
+00d56798  fmul s6,s2,s6
+00d5679c  fmul s7,s3,s7
+00d567a0  mov v0.16B,v4.16B
+00d567a4  mov v1.16B,v5.16B
+00d567a8  mov v2.16B,v6.16B
+00d567ac  mov v3.16B,v7.16B
+00d567b0  ret
+
+

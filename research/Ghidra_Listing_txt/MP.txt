@@ -1,0 +1,316 @@
+================================================================================
+### FILE: 008d5630_mprotect.txt
+================================================================================
+Function: mprotect @ 008d5630
+
+--- Calls OUT ---
+  -> mprotect @ 03799718
+
+--- Calls IN ---
+  <- FUN_00b34960 @ 00b34960
+
+--- Listing ---
+008d5630  adrp x16,0x3308000
+008d5634  ldr x17,[x16, #0x4d8]
+008d5638  add x16,x16,#0x4d8
+008d563c  br x17
+
+
+================================================================================
+### FILE: 00d21b24_MP_MediaItem__.ctor.txt
+================================================================================
+Function: MP_MediaItem$$.ctor @ 00d21b24
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- ISN_MediaController$$ParseMediaItemData @ 00d219dc
+
+--- Listing ---
+00d21b24  stp x27,x26,[sp, #-0x50]!
+00d21b28  stp x25,x24,[sp, #0x10]
+00d21b2c  stp x23,x22,[sp, #0x20]
+00d21b30  stp x21,x20,[sp, #0x30]
+00d21b34  stp x19,x30,[sp, #0x40]
+00d21b38  ldr x26,[sp, #0x50]
+00d21b3c  mov x25,x1
+00d21b40  mov x1,xzr
+00d21b44  mov x19,x7
+00d21b48  mov x20,x6
+00d21b4c  mov x21,x5
+00d21b50  mov x22,x4
+00d21b54  mov x23,x3
+00d21b58  mov x24,x2
+00d21b5c  mov x27,x0
+00d21b60  bl 0x02194104
+00d21b64  mov x0,x27
+00d21b68  str x25,[x0, #0x10]!
+00d21b6c  mov x1,x25
+00d21b70  bl 0x00b07850
+00d21b74  mov x0,x27
+00d21b78  str x24,[x0, #0x18]!
+00d21b7c  mov x1,x24
+00d21b80  bl 0x00b07850
+00d21b84  mov x0,x27
+00d21b88  str x23,[x0, #0x20]!
+00d21b8c  mov x1,x23
+00d21b90  bl 0x00b07850
+00d21b94  mov x0,x27
+00d21b98  str x22,[x0, #0x28]!
+00d21b9c  mov x1,x22
+00d21ba0  bl 0x00b07850
+00d21ba4  mov x0,x27
+00d21ba8  str x21,[x0, #0x30]!
+00d21bac  mov x1,x21
+00d21bb0  bl 0x00b07850
+00d21bb4  mov x0,x27
+00d21bb8  str x20,[x0, #0x38]!
+00d21bbc  mov x1,x20
+00d21bc0  bl 0x00b07850
+00d21bc4  mov x0,x27
+00d21bc8  str x19,[x0, #0x40]!
+00d21bcc  mov x1,x19
+00d21bd0  bl 0x00b07850
+00d21bd4  str x26,[x27, #0x48]!
+00d21bd8  ldp x19,x30,[sp, #0x40]
+00d21bdc  ldp x21,x20,[sp, #0x30]
+00d21be0  ldp x23,x22,[sp, #0x20]
+00d21be4  ldp x25,x24,[sp, #0x10]
+00d21be8  mov x0,x27
+00d21bec  mov x1,x26
+00d21bf0  ldp x27,x26,[sp], #0x50
+00d21bf4  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d21ce8_MP_MediaPickerResult__.ctor.txt
+================================================================================
+Function: MP_MediaPickerResult$$.ctor @ 00d21ce8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SA.Common.Models.Result$$.ctor @ 00c889e0
+
+--- Calls IN ---
+
+--- Listing ---
+00d21ce8  str x20,[sp, #-0x20]!
+00d21cec  stp x19,x30,[sp, #0x10]
+00d21cf0  mov x19,x1
+00d21cf4  mov x1,xzr
+00d21cf8  mov x20,x0
+00d21cfc  bl 0x00c889e0
+00d21d00  str x19,[x20, #0x18]!
+00d21d04  mov x1,x19
+00d21d08  ldp x19,x30,[sp, #0x10]
+00d21d0c  mov x0,x20
+00d21d10  ldr x20,[sp], #0x20
+00d21d14  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d21db8_MP_MediaPickerResult__.ctor.txt
+================================================================================
+Function: MP_MediaPickerResult$$.ctor @ 00d21db8
+
+--- Calls OUT ---
+  -> SA.Common.Models.Result$$.ctor @ 00c889e8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Error$$.ctor @ 00c88240
+
+--- Calls IN ---
+  <- ISN_MediaController$$OnMediaPickerFailed @ 00d21f44
+  <- ISN_MediaController$$OnQueueUpdateFailed @ 00d21d18
+
+--- Listing ---
+00d21db8  str x22,[sp, #-0x30]!
+00d21dbc  stp x21,x20,[sp, #0x10]
+00d21dc0  stp x19,x30,[sp, #0x20]
+00d21dc4  adrp x21,0x3571000
+00d21dc8  adrp x22,0x336f000
+00d21dcc  ldrb w8,[x21, #0xc41]
+00d21dd0  ldr x22,[x22, #0x200]
+00d21dd4  mov x20,x1
+00d21dd8  mov x19,x0
+00d21ddc  tbnz w8,#0x0,0x00d21df4
+00d21de0  adrp x0,0x336f000
+00d21de4  ldr x0,[x0, #0x200]
+00d21de8  bl 0x00b0789c
+00d21dec  mov w8,#0x1
+00d21df0  strb w8,[x21, #0xc41]
+00d21df4  ldr x0,[x22]
+00d21df8  bl 0x00b079a0
+00d21dfc  cbz x0,0x00d21e2c
+00d21e00  mov x1,x20
+00d21e04  mov x2,xzr
+00d21e08  mov x21,x0
+00d21e0c  bl 0x00c88240
+00d21e10  mov x0,x19
+00d21e14  mov x1,x21
+00d21e18  ldp x19,x30,[sp, #0x20]
+00d21e1c  ldp x21,x20,[sp, #0x10]
+00d21e20  mov x2,xzr
+00d21e24  ldr x22,[sp], #0x30
+00d21e28  b 0x00c889e8
+00d21e2c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d22464_MP_MediaItem__get_Id.txt
+================================================================================
+Function: MP_MediaItem$$get_Id @ 00d22464
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d22464  ldr x0,[x0, #0x10]
+00d22468  ret
+
+
+================================================================================
+### FILE: 00d2246c_MP_MediaItem__get_Title.txt
+================================================================================
+Function: MP_MediaItem$$get_Title @ 00d2246c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d2246c  ldr x0,[x0, #0x18]
+00d22470  ret
+
+
+================================================================================
+### FILE: 00d22474_MP_MediaItem__get_Artist.txt
+================================================================================
+Function: MP_MediaItem$$get_Artist @ 00d22474
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d22474  ldr x0,[x0, #0x20]
+00d22478  ret
+
+
+================================================================================
+### FILE: 00d2247c_MP_MediaItem__get_AlbumTitle.txt
+================================================================================
+Function: MP_MediaItem$$get_AlbumTitle @ 00d2247c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d2247c  ldr x0,[x0, #0x28]
+00d22480  ret
+
+
+================================================================================
+### FILE: 00d22484_MP_MediaItem__get_AlbumArtist.txt
+================================================================================
+Function: MP_MediaItem$$get_AlbumArtist @ 00d22484
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d22484  ldr x0,[x0, #0x30]
+00d22488  ret
+
+
+================================================================================
+### FILE: 00d2248c_MP_MediaItem__get_PlaybackDuration.txt
+================================================================================
+Function: MP_MediaItem$$get_PlaybackDuration @ 00d2248c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d2248c  ldr x0,[x0, #0x40]
+00d22490  ret
+
+
+================================================================================
+### FILE: 00d22494_MP_MediaItem__get_Genre.txt
+================================================================================
+Function: MP_MediaItem$$get_Genre @ 00d22494
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d22494  ldr x0,[x0, #0x38]
+00d22498  ret
+
+
+================================================================================
+### FILE: 00d2249c_MP_MediaItem__get_Composer.txt
+================================================================================
+Function: MP_MediaItem$$get_Composer @ 00d2249c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d2249c  ldr x0,[x0, #0x48]
+00d224a0  ret
+
+
+================================================================================
+### FILE: 00d224a4_MP_MediaPickerResult__get_SelectedmediaItems.txt
+================================================================================
+Function: MP_MediaPickerResult$$get_SelectedmediaItems @ 00d224a4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d224a4  ldr x0,[x0, #0x18]
+00d224a8  ret
+
+
+================================================================================
+### FILE: 00d224ac_MP_MediaPickerResult__get_Items.txt
+================================================================================
+Function: MP_MediaPickerResult$$get_Items @ 00d224ac
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- ISNMediaExample$$HandleActionQueueUpdated @ 00d3d1dc
+
+--- Listing ---
+00d224ac  ldr x0,[x0, #0x18]
+00d224b0  ret
+
+
+================================================================================
+### FILE: 03799718_mprotect.txt
+================================================================================
+Function: mprotect @ 03799718
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- mprotect @ 008d5630
+
+--- Listing ---
+03799718  ?? ??
+
+

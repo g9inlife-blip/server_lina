@@ -1,0 +1,56 @@
+================================================================================
+### FILE: 00ac6b94_JNI_OnLoad.txt
+================================================================================
+Function: JNI_OnLoad @ 00ac6b94
+
+--- Calls OUT ---
+  -> FUN_00ae9ffc @ 00ae9ffc
+  -> __android_log_print @ 008d4d60
+  -> FUN_00ac6bd8 @ 00ac6bd8
+
+--- Calls IN ---
+
+--- Listing ---
+00ac6b94  stp x19,x30,[sp, #-0x10]!
+00ac6b98  adrp x1,0x2953000
+00ac6b9c  adrp x2,0x2953000
+00ac6ba0  mov x19,x0
+00ac6ba4  add x1,x1,#0x525
+00ac6ba8  add x2,x2,#0x52c
+00ac6bac  mov w0,#0x4
+00ac6bb0  bl 0x008d4d60
+00ac6bb4  adrp x0,0xac6000
+00ac6bb8  adrp x8,0x3581000
+00ac6bbc  add x0,x0,#0xbd8
+00ac6bc0  str x19,[x8, #0xfd8]
+00ac6bc4  bl 0x00ae9ffc
+00ac6bc8  mov w0,#0x6
+00ac6bcc  movk w0,#0x1, LSL #16
+00ac6bd0  ldp x19,x30,[sp], #0x10
+00ac6bd4  ret
+
+
+================================================================================
+### FILE: 00ac6eb4_JNI_OnUnload.txt
+================================================================================
+Function: JNI_OnUnload @ 00ac6eb4
+
+--- Calls OUT ---
+  -> __android_log_print @ 008d4d60
+
+--- Calls IN ---
+
+--- Listing ---
+00ac6eb4  str x30,[sp, #-0x10]!
+00ac6eb8  adrp x1,0x2953000
+00ac6ebc  adrp x2,0x2953000
+00ac6ec0  add x1,x1,#0x525
+00ac6ec4  add x2,x2,#0x537
+00ac6ec8  mov w0,#0x4
+00ac6ecc  bl 0x008d4d60
+00ac6ed0  adrp x8,0x3581000
+00ac6ed4  str xzr,[x8, #0xfd8]
+00ac6ed8  ldr x30,[sp], #0x10
+00ac6edc  ret
+
+

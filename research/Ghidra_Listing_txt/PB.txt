@@ -1,0 +1,52 @@
+================================================================================
+### FILE: 00b47dd8_pbump.txt
+================================================================================
+Function: pbump @ 00b47dd8
+FuncComment: std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::pbump(int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47dd8  ldr x8,[x0, #0x30]
+    ; [PLATE] std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::pbump(int)
+00b47ddc  add x8,x8,w1, SXTW 
+00b47de0  str x8,[x0, #0x30]
+00b47de4  ret
+
+
+================================================================================
+### FILE: 00b48230_pbump.txt
+================================================================================
+Function: pbump @ 00b48230
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::pbump(int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48230  ldr x8,[x0, #0x30]
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::pbump(int)
+00b48234  add x8,x8,w1, SXTW  #0x2
+00b48238  str x8,[x0, #0x30]
+00b4823c  ret
+
+
+================================================================================
+### FILE: 00b48398_pbackfail.txt
+================================================================================
+Function: pbackfail @ 00b48398
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::pbackfail(unsigned int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48398  mov w0,#0xffffffff
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::pbackfail(unsigned int)
+00b4839c  ret
+
+

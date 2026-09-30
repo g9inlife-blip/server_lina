@@ -1,0 +1,21 @@
+================================================================================
+### FILE: 00b5371c_xalloc.txt
+================================================================================
+Function: xalloc @ 00b5371c
+FuncComment: std::__ndk1::ios_base::xalloc()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b5371c  adrp x8,0x3379000
+    ; [PLATE] std::__ndk1::ios_base::xalloc()
+00b53720  ldr x8,[x8, #0xcc8]
+00b53724  ldaxr w0,[x8]
+00b53728  add w9,w0,#0x1
+00b5372c  stlxr w10,w9,[x8]
+00b53730  cbnz w10,0x00b53724
+00b53734  ret
+
+

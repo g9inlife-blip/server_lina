@@ -1,0 +1,1255 @@
+================================================================================
+### FILE: 00defaf4_EmojiData__get_firstName.txt
+================================================================================
+Function: EmojiData$$get_firstName @ 00defaf4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defaf4  ldr x0,[x0, #0x78]
+00defaf8  ret
+
+
+================================================================================
+### FILE: 00defafc_EmojiData__get_firstNum.txt
+================================================================================
+Function: EmojiData$$get_firstNum @ 00defafc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defafc  ldr w0,[x0, #0x80]
+00defb00  ret
+
+
+================================================================================
+### FILE: 00defb04_EmojiData__get_number.txt
+================================================================================
+Function: EmojiData$$get_number @ 00defb04
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defb04  ldr w0,[x0, #0x84]
+00defb08  ret
+
+
+================================================================================
+### FILE: 00defb0c_EmojiData__get_interval.txt
+================================================================================
+Function: EmojiData$$get_interval @ 00defb0c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defb0c  ldr s0,[x0, #0x88]
+00defb10  ret
+
+
+================================================================================
+### FILE: 00defb14_EmojiData__get_seqencing.txt
+================================================================================
+Function: EmojiData$$get_seqencing @ 00defb14
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00defb14  ldr w0,[x0, #0x8c]
+00defb18  ret
+
+
+================================================================================
+### FILE: 00defb1c_EmojiData__.ctor.txt
+================================================================================
+Function: EmojiData$$.ctor @ 00defb1c
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EmojiDataWrap$$__CreateInstance @ 01279540
+
+--- Listing ---
+00defb1c  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00defb20_EmojiRecord__.ctor.txt
+================================================================================
+Function: EmojiRecord$$.ctor @ 00defb20
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00defb20  stp x21,x20,[sp, #-0x20]!
+00defb24  stp x19,x30,[sp, #0x10]
+00defb28  adrp x20,0x3572000
+00defb2c  adrp x21,0x332e000
+00defb30  ldrb w8,[x20, #0x43c]
+00defb34  ldr x21,[x21, #0xf70]
+00defb38  mov x19,x0
+00defb3c  tbnz w8,#0x0,0x00defb60
+00defb40  adrp x0,0x332d000
+00defb44  ldr x0,[x0, #0x868]
+00defb48  bl 0x00b0789c
+00defb4c  adrp x0,0x332e000
+00defb50  ldr x0,[x0, #0xf70]
+00defb54  bl 0x00b0789c
+00defb58  mov w8,#0x1
+00defb5c  strb w8,[x20, #0x43c]
+00defb60  ldr x0,[x21]
+00defb64  bl 0x00b079a0
+00defb68  cbz x0,0x00defba4
+00defb6c  adrp x8,0x332d000
+00defb70  ldr x8,[x8, #0x868]
+00defb74  mov x20,x0
+00defb78  ldr x1,[x8]
+00defb7c  bl 0x01bffe10
+00defb80  mov x0,x19
+00defb84  str x20,[x0, #0x18]!
+00defb88  mov x1,x20
+00defb8c  bl 0x00b07850
+00defb90  mov x0,x19
+00defb94  ldp x19,x30,[sp, #0x10]
+00defb98  mov x1,xzr
+00defb9c  ldp x21,x20,[sp], #0x20
+00defba0  b 0x024e277c
+00defba4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f84058_EmojiPlayMono__get_p_img.txt
+================================================================================
+Function: EmojiPlayMono$$get_p_img @ 00f84058
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp671 @ 010b7c64
+
+--- Calls IN ---
+  <- EmojiPlayMono$$get_img @ 00f84144
+
+--- Listing ---
+00f84058  stp x21,x20,[sp, #-0x20]!
+00f8405c  stp x19,x30,[sp, #0x10]
+00f84060  adrp x20,0x3573000
+00f84064  adrp x21,0x332e000
+00f84068  ldrb w8,[x20, #0x3e4]
+00f8406c  ldr x21,[x21, #0x588]
+00f84070  mov x19,x0
+00f84074  tbnz w8,#0x0,0x00f8408c
+00f84078  adrp x0,0x332e000
+00f8407c  ldr x0,[x0, #0x588]
+00f84080  bl 0x00b0789c
+00f84084  mov w8,#0x1
+00f84088  strb w8,[x20, #0x3e4]
+00f8408c  ldr x8,[x21]
+00f84090  ldr x8,[x8, #0xb8]
+00f84094  ldr x0,[x8]
+00f84098  cbz x0,0x00f840b0
+00f8409c  mov x1,x19
+00f840a0  ldp x19,x30,[sp, #0x10]
+00f840a4  mov x2,xzr
+00f840a8  ldp x21,x20,[sp], #0x20
+00f840ac  b 0x010b7c64
+00f840b0  ldr x0,[x19, #0x38]
+00f840b4  ldp x19,x30,[sp, #0x10]
+00f840b8  ldp x21,x20,[sp], #0x20
+00f840bc  ret
+
+
+================================================================================
+### FILE: 00f840c0_EmojiPlayMono__set_p_img.txt
+================================================================================
+Function: EmojiPlayMono$$set_p_img @ 00f840c0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EmojiPlayMono$$get_img @ 00f84144
+
+--- Listing ---
+00f840c0  str x22,[sp, #-0x30]!
+00f840c4  stp x21,x20,[sp, #0x10]
+00f840c8  stp x19,x30,[sp, #0x20]
+00f840cc  adrp x21,0x3573000
+00f840d0  adrp x22,0x332e000
+00f840d4  ldrb w8,[x21, #0x3e5]
+00f840d8  ldr x22,[x22, #0x588]
+00f840dc  mov x19,x1
+00f840e0  mov x20,x0
+00f840e4  tbnz w8,#0x0,0x00f840fc
+00f840e8  adrp x0,0x332e000
+00f840ec  ldr x0,[x0, #0x588]
+00f840f0  bl 0x00b0789c
+00f840f4  mov w8,#0x1
+00f840f8  strb w8,[x21, #0x3e5]
+00f840fc  ldr x8,[x22]
+00f84100  ldr x8,[x8, #0xb8]
+00f84104  ldr x0,[x8, #0x8]
+00f84108  cbz x0,0x00f84128
+00f8410c  mov x1,x20
+00f84110  mov x2,x19
+00f84114  ldp x19,x30,[sp, #0x20]
+00f84118  ldp x21,x20,[sp, #0x10]
+00f8411c  mov x3,xzr
+00f84120  ldr x22,[sp], #0x30
+00f84124  b 0x0106125c
+00f84128  str x19,[x20, #0x38]!
+00f8412c  mov x0,x20
+00f84130  mov x1,x19
+00f84134  ldp x19,x30,[sp, #0x20]
+00f84138  ldp x21,x20,[sp, #0x10]
+00f8413c  ldr x22,[sp], #0x30
+00f84140  b 0x00b07850
+
+
+================================================================================
+### FILE: 00f84144_EmojiPlayMono__get_img.txt
+================================================================================
+Function: EmojiPlayMono$$get_img @ 00f84144
+
+--- Calls OUT ---
+  -> EmojiPlayMono$$get_p_img @ 00f84058
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> EmojiPlayMono$$set_p_img @ 00f840c0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp671 @ 010b7c64
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EmojiPlayMonoWrap$$_g_get_img @ 0127a8a0
+  <- EmojiPlayMono$$Show @ 00f846c8
+
+--- Listing ---
+00f84144  stp x21,x20,[sp, #-0x20]!
+00f84148  stp x19,x30,[sp, #0x10]
+00f8414c  adrp x20,0x3573000
+00f84150  adrp x21,0x332e000
+00f84154  ldrb w8,[x20, #0x3e6]
+00f84158  ldr x21,[x21, #0x588]
+00f8415c  mov x19,x0
+00f84160  tbnz w8,#0x0,0x00f84190
+00f84164  adrp x0,0x332e000
+00f84168  ldr x0,[x0, #0x588]
+00f8416c  bl 0x00b0789c
+00f84170  adrp x0,0x3372000
+00f84174  ldr x0,[x0, #0x2a0]
+00f84178  bl 0x00b0789c
+00f8417c  adrp x0,0x3321000
+00f84180  ldr x0,[x0, #0xca8]
+00f84184  bl 0x00b0789c
+00f84188  mov w8,#0x1
+00f8418c  strb w8,[x20, #0x3e6]
+00f84190  ldr x8,[x21]
+00f84194  ldr x8,[x8, #0xb8]
+00f84198  ldr x0,[x8, #0x10]
+00f8419c  cbz x0,0x00f841b4
+00f841a0  mov x1,x19
+00f841a4  ldp x19,x30,[sp, #0x10]
+00f841a8  mov x2,xzr
+00f841ac  ldp x21,x20,[sp], #0x20
+00f841b0  b 0x010b7c64
+00f841b4  adrp x20,0x3321000
+00f841b8  ldr x20,[x20, #0xca8]
+00f841bc  mov x0,x19
+00f841c0  bl 0x00f84058
+00f841c4  ldr x8,[x20]
+00f841c8  mov x20,x0
+00f841cc  ldr w9,[x8, #0xe0]
+00f841d0  cbnz w9,0x00f841dc
+00f841d4  mov x0,x8
+00f841d8  bl 0x00b0798c
+00f841dc  mov x0,x20
+00f841e0  mov x1,xzr
+00f841e4  mov x2,xzr
+00f841e8  bl 0x024c8180
+00f841ec  tbz w0,#0x0,0x00f8421c
+00f841f0  mov x0,x19
+00f841f4  mov x1,xzr
+00f841f8  bl 0x024e4ed4
+00f841fc  cbz x0,0x00f8422c
+00f84200  adrp x8,0x3372000
+00f84204  ldr x8,[x8, #0x2a0]
+00f84208  ldr x1,[x8]
+00f8420c  bl 0x01794e94
+00f84210  mov x1,x0
+00f84214  mov x0,x19
+00f84218  bl 0x00f840c0
+00f8421c  mov x0,x19
+00f84220  ldp x19,x30,[sp, #0x10]
+00f84224  ldp x21,x20,[sp], #0x20
+00f84228  b 0x00f84058
+00f8422c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f84230_EmojiPlayMono__Init.txt
+================================================================================
+Function: EmojiPlayMono$$Init @ 00f84230
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp63 @ 01067254
+  -> EmojiPlayMono$$set_Imgs @ 00f843e0
+  -> EmojiPlayMono$$set_IsVisible @ 00f84648
+  -> UnityEngine.Time$$get_time @ 024dbfa8
+  -> EmojiPlayMono$$set_Data @ 00f844cc
+  -> EmojiPlayMono$$set_EmojiID @ 00f84364
+  -> FUN_00b079b0 @ 00b079b0
+  -> EmojiPlayMono$$set_lastFrame @ 00f845cc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EmojiPlayMono$$Show @ 00f846c8
+  -> EmojiPlayMono$$set_Index @ 00f84550
+  -> EmojiPlayMono$$get_EmojiID @ 00f84464
+  -> Ali$$GetExcelData<object> @ 01736d60
+
+--- Calls IN ---
+  <- LiaotianPanelMono$$InitItem @ 00f881bc
+  <- XLua.CSObjectWrap.EmojiPlayMonoWrap$$_m_Init @ 0127a470
+
+--- Listing ---
+00f84230  stp x23,x22,[sp, #-0x30]!
+00f84234  stp x21,x20,[sp, #0x10]
+00f84238  stp x19,x30,[sp, #0x20]
+00f8423c  adrp x22,0x3573000
+00f84240  adrp x23,0x332e000
+00f84244  ldrb w8,[x22, #0x3e7]
+00f84248  ldr x23,[x23, #0x588]
+00f8424c  mov x20,x2
+00f84250  mov w21,w1
+00f84254  mov x19,x0
+00f84258  tbnz w8,#0x0,0x00f84288
+00f8425c  adrp x0,0x335b000
+00f84260  ldr x0,[x0, #0x330]
+00f84264  bl 0x00b0789c
+00f84268  adrp x0,0x335f000
+00f8426c  ldr x0,[x0, #0x20]
+00f84270  bl 0x00b0789c
+00f84274  adrp x0,0x332e000
+00f84278  ldr x0,[x0, #0x588]
+00f8427c  bl 0x00b0789c
+00f84280  mov w8,#0x1
+00f84284  strb w8,[x22, #0x3e7]
+00f84288  ldr x8,[x23]
+00f8428c  ldr x8,[x8, #0xb8]
+00f84290  ldr x0,[x8, #0x18]
+00f84294  cbz x0,0x00f842b8
+00f84298  mov x1,x19
+00f8429c  mov w2,w21
+00f842a0  mov x3,x20
+00f842a4  ldp x19,x30,[sp, #0x20]
+00f842a8  ldp x21,x20,[sp, #0x10]
+00f842ac  mov x4,xzr
+00f842b0  ldp x23,x22,[sp], #0x30
+00f842b4  b 0x01067254
+00f842b8  adrp x22,0x335f000
+00f842bc  ldr x22,[x22, #0x20]
+00f842c0  mov x0,x19
+00f842c4  mov w1,w21
+00f842c8  bl 0x00f84364
+00f842cc  mov x0,x19
+00f842d0  mov x1,x20
+00f842d4  bl 0x00f843e0
+00f842d8  ldr x0,[x22]
+00f842dc  ldr w8,[x0, #0xe0]
+00f842e0  cbnz w8,0x00f842ec
+00f842e4  bl 0x00b0798c
+00f842e8  ldr x0,[x22]
+00f842ec  ldr x8,[x0, #0xb8]
+00f842f0  mov x0,x19
+00f842f4  ldr x20,[x8, #0x10]
+00f842f8  bl 0x00f84464
+00f842fc  cbz x20,0x00f84360
+00f84300  adrp x8,0x335b000
+00f84304  ldr x8,[x8, #0x330]
+00f84308  mov w1,w0
+00f8430c  mov x0,x20
+00f84310  ldr x2,[x8]
+00f84314  bl 0x01736d60
+00f84318  mov x1,x0
+00f8431c  mov x0,x19
+00f84320  bl 0x00f844cc
+00f84324  mov x0,x19
+00f84328  mov w1,wzr
+00f8432c  bl 0x00f84550
+00f84330  mov x0,xzr
+00f84334  bl 0x024dbfa8
+00f84338  mov x0,x19
+00f8433c  bl 0x00f845cc
+00f84340  mov w1,#0x1
+00f84344  mov x0,x19
+00f84348  bl 0x00f84648
+00f8434c  mov x0,x19
+00f84350  ldp x19,x30,[sp, #0x20]
+00f84354  ldp x21,x20,[sp, #0x10]
+00f84358  ldp x23,x22,[sp], #0x30
+00f8435c  b 0x00f846c8
+00f84360  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f84364_EmojiPlayMono__set_EmojiID.txt
+================================================================================
+Function: EmojiPlayMono$$set_EmojiID @ 00f84364
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- EmojiPlayMono$$Init @ 00f84230
+
+--- Listing ---
+00f84364  str x22,[sp, #-0x30]!
+00f84368  stp x21,x20,[sp, #0x10]
+00f8436c  stp x19,x30,[sp, #0x20]
+00f84370  adrp x21,0x3573000
+00f84374  adrp x22,0x332e000
+00f84378  ldrb w8,[x21, #0x3e9]
+00f8437c  ldr x22,[x22, #0x588]
+00f84380  mov w19,w1
+00f84384  mov x20,x0
+00f84388  tbnz w8,#0x0,0x00f843a0
+00f8438c  adrp x0,0x332e000
+00f84390  ldr x0,[x0, #0x588]
+00f84394  bl 0x00b0789c
+00f84398  mov w8,#0x1
+00f8439c  strb w8,[x21, #0x3e9]
+00f843a0  ldr x8,[x22]
+00f843a4  ldr x8,[x8, #0xb8]
+00f843a8  ldr x0,[x8, #0x28]
+00f843ac  cbz x0,0x00f843cc
+00f843b0  mov x1,x20
+00f843b4  mov w2,w19
+00f843b8  ldp x19,x30,[sp, #0x20]
+00f843bc  ldp x21,x20,[sp, #0x10]
+00f843c0  mov x3,xzr
+00f843c4  ldr x22,[sp], #0x30
+00f843c8  b 0x0106155c
+00f843cc  str w19,[x20, #0x40]
+00f843d0  ldp x19,x30,[sp, #0x20]
+00f843d4  ldp x21,x20,[sp, #0x10]
+00f843d8  ldr x22,[sp], #0x30
+00f843dc  ret
+
+
+================================================================================
+### FILE: 00f843e0_EmojiPlayMono__set_Imgs.txt
+================================================================================
+Function: EmojiPlayMono$$set_Imgs @ 00f843e0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EmojiPlayMono$$Init @ 00f84230
+
+--- Listing ---
+00f843e0  str x22,[sp, #-0x30]!
+00f843e4  stp x21,x20,[sp, #0x10]
+00f843e8  stp x19,x30,[sp, #0x20]
+00f843ec  adrp x21,0x3573000
+00f843f0  adrp x22,0x332e000
+00f843f4  ldrb w8,[x21, #0x3eb]
+00f843f8  ldr x22,[x22, #0x588]
+00f843fc  mov x19,x1
+00f84400  mov x20,x0
+00f84404  tbnz w8,#0x0,0x00f8441c
+00f84408  adrp x0,0x332e000
+00f8440c  ldr x0,[x0, #0x588]
+00f84410  bl 0x00b0789c
+00f84414  mov w8,#0x1
+00f84418  strb w8,[x21, #0x3eb]
+00f8441c  ldr x8,[x22]
+00f84420  ldr x8,[x8, #0xb8]
+00f84424  ldr x0,[x8, #0x38]
+00f84428  cbz x0,0x00f84448
+00f8442c  mov x1,x20
+00f84430  mov x2,x19
+00f84434  ldp x19,x30,[sp, #0x20]
+00f84438  ldp x21,x20,[sp, #0x10]
+00f8443c  mov x3,xzr
+00f84440  ldr x22,[sp], #0x30
+00f84444  b 0x0106125c
+00f84448  str x19,[x20, #0x48]!
+00f8444c  mov x0,x20
+00f84450  mov x1,x19
+00f84454  ldp x19,x30,[sp, #0x20]
+00f84458  ldp x21,x20,[sp, #0x10]
+00f8445c  ldr x22,[sp], #0x30
+00f84460  b 0x00b07850
+
+
+================================================================================
+### FILE: 00f84464_EmojiPlayMono__get_EmojiID.txt
+================================================================================
+Function: EmojiPlayMono$$get_EmojiID @ 00f84464
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- EmojiPlayMono$$Init @ 00f84230
+
+--- Listing ---
+00f84464  stp x21,x20,[sp, #-0x20]!
+00f84468  stp x19,x30,[sp, #0x10]
+00f8446c  adrp x20,0x3573000
+00f84470  adrp x21,0x332e000
+00f84474  ldrb w8,[x20, #0x3e8]
+00f84478  ldr x21,[x21, #0x588]
+00f8447c  mov x19,x0
+00f84480  tbnz w8,#0x0,0x00f84498
+00f84484  adrp x0,0x332e000
+00f84488  ldr x0,[x0, #0x588]
+00f8448c  bl 0x00b0789c
+00f84490  mov w8,#0x1
+00f84494  strb w8,[x20, #0x3e8]
+00f84498  ldr x8,[x21]
+00f8449c  ldr x8,[x8, #0xb8]
+00f844a0  ldr x0,[x8, #0x20]
+00f844a4  cbz x0,0x00f844bc
+00f844a8  mov x1,x19
+00f844ac  ldp x19,x30,[sp, #0x10]
+00f844b0  mov x2,xzr
+00f844b4  ldp x21,x20,[sp], #0x20
+00f844b8  b 0x01060c2c
+00f844bc  ldr w0,[x19, #0x40]
+00f844c0  ldp x19,x30,[sp, #0x10]
+00f844c4  ldp x21,x20,[sp], #0x20
+00f844c8  ret
+
+
+================================================================================
+### FILE: 00f844cc_EmojiPlayMono__set_Data.txt
+================================================================================
+Function: EmojiPlayMono$$set_Data @ 00f844cc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- EmojiPlayMono$$Init @ 00f84230
+
+--- Listing ---
+00f844cc  str x22,[sp, #-0x30]!
+00f844d0  stp x21,x20,[sp, #0x10]
+00f844d4  stp x19,x30,[sp, #0x20]
+00f844d8  adrp x21,0x3573000
+00f844dc  adrp x22,0x332e000
+00f844e0  ldrb w8,[x21, #0x3ed]
+00f844e4  ldr x22,[x22, #0x588]
+00f844e8  mov x19,x1
+00f844ec  mov x20,x0
+00f844f0  tbnz w8,#0x0,0x00f84508
+00f844f4  adrp x0,0x332e000
+00f844f8  ldr x0,[x0, #0x588]
+00f844fc  bl 0x00b0789c
+00f84500  mov w8,#0x1
+00f84504  strb w8,[x21, #0x3ed]
+00f84508  ldr x8,[x22]
+00f8450c  ldr x8,[x8, #0xb8]
+00f84510  ldr x0,[x8, #0x48]
+00f84514  cbz x0,0x00f84534
+00f84518  mov x1,x20
+00f8451c  mov x2,x19
+00f84520  ldp x19,x30,[sp, #0x20]
+00f84524  ldp x21,x20,[sp, #0x10]
+00f84528  mov x3,xzr
+00f8452c  ldr x22,[sp], #0x30
+00f84530  b 0x0106125c
+00f84534  str x19,[x20, #0x50]!
+00f84538  mov x0,x20
+00f8453c  mov x1,x19
+00f84540  ldp x19,x30,[sp, #0x20]
+00f84544  ldp x21,x20,[sp, #0x10]
+00f84548  ldr x22,[sp], #0x30
+00f8454c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00f84550_EmojiPlayMono__set_Index.txt
+================================================================================
+Function: EmojiPlayMono$$set_Index @ 00f84550
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp16 @ 0106155c
+
+--- Calls IN ---
+  <- EmojiPlayMono$$Init @ 00f84230
+  <- EmojiPlayMono$$Show @ 00f846c8
+
+--- Listing ---
+00f84550  str x22,[sp, #-0x30]!
+00f84554  stp x21,x20,[sp, #0x10]
+00f84558  stp x19,x30,[sp, #0x20]
+00f8455c  adrp x21,0x3573000
+00f84560  adrp x22,0x332e000
+00f84564  ldrb w8,[x21, #0x3ef]
+00f84568  ldr x22,[x22, #0x588]
+00f8456c  mov w19,w1
+00f84570  mov x20,x0
+00f84574  tbnz w8,#0x0,0x00f8458c
+00f84578  adrp x0,0x332e000
+00f8457c  ldr x0,[x0, #0x588]
+00f84580  bl 0x00b0789c
+00f84584  mov w8,#0x1
+00f84588  strb w8,[x21, #0x3ef]
+00f8458c  ldr x8,[x22]
+00f84590  ldr x8,[x8, #0xb8]
+00f84594  ldr x0,[x8, #0x58]
+00f84598  cbz x0,0x00f845b8
+00f8459c  mov x1,x20
+00f845a0  mov w2,w19
+00f845a4  ldp x19,x30,[sp, #0x20]
+00f845a8  ldp x21,x20,[sp, #0x10]
+00f845ac  mov x3,xzr
+00f845b0  ldr x22,[sp], #0x30
+00f845b4  b 0x0106155c
+00f845b8  str w19,[x20, #0x58]
+00f845bc  ldp x19,x30,[sp, #0x20]
+00f845c0  ldp x21,x20,[sp, #0x10]
+00f845c4  ldr x22,[sp], #0x30
+00f845c8  ret
+
+
+================================================================================
+### FILE: 00f845cc_EmojiPlayMono__set_lastFrame.txt
+================================================================================
+Function: EmojiPlayMono$$set_lastFrame @ 00f845cc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp20 @ 01061c3c
+
+--- Calls IN ---
+  <- EmojiPlayMono$$FixedUpdate @ 00f84a10
+  <- EmojiPlayMono$$Init @ 00f84230
+
+--- Listing ---
+00f845cc  str d8,[sp, #-0x30]!
+00f845d0  stp x21,x20,[sp, #0x10]
+00f845d4  stp x19,x30,[sp, #0x20]
+00f845d8  adrp x20,0x3573000
+00f845dc  adrp x21,0x332e000
+00f845e0  ldrb w8,[x20, #0x3f3]
+00f845e4  ldr x21,[x21, #0x588]
+00f845e8  mov v8.16B,v0.16B
+00f845ec  mov x19,x0
+00f845f0  tbnz w8,#0x0,0x00f84608
+00f845f4  adrp x0,0x332e000
+00f845f8  ldr x0,[x0, #0x588]
+00f845fc  bl 0x00b0789c
+00f84600  mov w8,#0x1
+00f84604  strb w8,[x20, #0x3f3]
+00f84608  ldr x8,[x21]
+00f8460c  ldr x8,[x8, #0xb8]
+00f84610  ldr x0,[x8, #0x78]
+00f84614  cbz x0,0x00f84634
+00f84618  mov x1,x19
+00f8461c  ldp x19,x30,[sp, #0x20]
+00f84620  ldp x21,x20,[sp, #0x10]
+00f84624  mov v0.16B,v8.16B
+00f84628  mov x2,xzr
+00f8462c  ldr d8,[sp], #0x30
+00f84630  b 0x01061c3c
+00f84634  str s8,[x19, #0x60]
+00f84638  ldp x19,x30,[sp, #0x20]
+00f8463c  ldp x21,x20,[sp, #0x10]
+00f84640  ldr d8,[sp], #0x30
+00f84644  ret
+
+
+================================================================================
+### FILE: 00f84648_EmojiPlayMono__set_IsVisible.txt
+================================================================================
+Function: EmojiPlayMono$$set_IsVisible @ 00f84648
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp15 @ 010613e4
+
+--- Calls IN ---
+  <- EmojiPlayMono$$Init @ 00f84230
+  <- EmojiPlayMono$$OnBecameVisible @ 00f84b54
+  <- EmojiPlayMono$$OnBecameInvisible @ 00f84ae8
+
+--- Listing ---
+00f84648  str x22,[sp, #-0x30]!
+00f8464c  stp x21,x20,[sp, #0x10]
+00f84650  stp x19,x30,[sp, #0x20]
+00f84654  adrp x21,0x3573000
+00f84658  adrp x22,0x332e000
+00f8465c  ldrb w8,[x21, #0x3f1]
+00f84660  ldr x22,[x22, #0x588]
+00f84664  mov w20,w1
+00f84668  mov x19,x0
+00f8466c  tbnz w8,#0x0,0x00f84684
+00f84670  adrp x0,0x332e000
+00f84674  ldr x0,[x0, #0x588]
+00f84678  bl 0x00b0789c
+00f8467c  mov w8,#0x1
+00f84680  strb w8,[x21, #0x3f1]
+00f84684  ldr x8,[x22]
+00f84688  ldr x8,[x8, #0xb8]
+00f8468c  ldr x0,[x8, #0x68]
+00f84690  cbz x0,0x00f846b0
+00f84694  and w2,w20,#0x1
+00f84698  mov x1,x19
+00f8469c  ldp x19,x30,[sp, #0x20]
+00f846a0  ldp x21,x20,[sp, #0x10]
+00f846a4  mov x3,xzr
+00f846a8  ldr x22,[sp], #0x30
+00f846ac  b 0x010613e4
+00f846b0  and w8,w20,#0x1
+00f846b4  strb w8,[x19, #0x5c]
+00f846b8  ldp x19,x30,[sp, #0x20]
+00f846bc  ldp x21,x20,[sp, #0x10]
+00f846c0  ldr x22,[sp], #0x30
+00f846c4  ret
+
+
+================================================================================
+### FILE: 00f846c8_EmojiPlayMono__Show.txt
+================================================================================
+Function: EmojiPlayMono$$Show @ 00f846c8
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetSprite @ 00e14c70
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> EmojiPlayMono$$get_Imgs @ 00f84808
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EmojiPlayMono$$get_img @ 00f84144
+  -> FUN_00b079b8 @ 00b079b8
+  -> EmojiPlayMono$$set_Index @ 00f84550
+  -> EmojiPlayMono$$get_Index @ 00f848d8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EmojiPlayMonoWrap$$_m_Show @ 0127a704
+  <- EmojiPlayMono$$FixedUpdate @ 00f84a10
+  <- EmojiPlayMono$$Init @ 00f84230
+
+--- Listing ---
+00f846c8  stp x21,x20,[sp, #-0x20]!
+00f846cc  stp x19,x30,[sp, #0x10]
+00f846d0  adrp x20,0x3573000
+00f846d4  adrp x21,0x332e000
+00f846d8  ldrb w8,[x20, #0x3f5]
+00f846dc  ldr x21,[x21, #0x588]
+00f846e0  mov x19,x0
+00f846e4  tbnz w8,#0x0,0x00f84708
+00f846e8  adrp x0,0x3348000
+00f846ec  ldr x0,[x0, #0x138]
+00f846f0  bl 0x00b0789c
+00f846f4  adrp x0,0x332e000
+00f846f8  ldr x0,[x0, #0x588]
+00f846fc  bl 0x00b0789c
+00f84700  mov w8,#0x1
+00f84704  strb w8,[x20, #0x3f5]
+00f84708  ldr x8,[x21]
+00f8470c  ldr x8,[x8, #0xb8]
+00f84710  ldr x0,[x8, #0x88]
+00f84714  cbz x0,0x00f8472c
+00f84718  mov x1,x19
+00f8471c  ldp x19,x30,[sp, #0x10]
+00f84720  mov x2,xzr
+00f84724  ldp x21,x20,[sp], #0x20
+00f84728  b 0x01060dac
+00f8472c  mov x0,x19
+00f84730  bl 0x00f84808
+00f84734  cbz x0,0x00f847f4
+00f84738  mov x0,x19
+00f8473c  bl 0x00f848d8
+00f84740  mov w20,w0
+00f84744  mov x0,x19
+00f84748  bl 0x00f84808
+00f8474c  cbz x0,0x00f84800
+00f84750  ldr w8,[x0, #0x18]
+00f84754  cmp w20,w8
+00f84758  b.lt 0x00f84768
+00f8475c  mov x0,x19
+00f84760  mov w1,wzr
+00f84764  bl 0x00f84550
+00f84768  mov x0,x19
+00f8476c  bl 0x00f84144
+00f84770  mov x20,x0
+00f84774  mov x0,x19
+00f84778  bl 0x00f84808
+00f8477c  mov x21,x0
+00f84780  mov x0,x19
+00f84784  bl 0x00f848d8
+00f84788  cbz x21,0x00f84800
+00f8478c  ldr w8,[x21, #0x18]
+00f84790  cmp w0,w8
+00f84794  b.cs 0x00f84804
+00f84798  adrp x8,0x3348000
+00f8479c  ldr x8,[x8, #0x138]
+00f847a0  add x9,x21,w0, SXTW  #0x3
+00f847a4  ldr x21,[x9, #0x20]
+00f847a8  ldr x8,[x8]
+00f847ac  ldr w10,[x8, #0xe0]
+00f847b0  cbnz w10,0x00f847bc
+00f847b4  mov x0,x8
+00f847b8  bl 0x00b0798c
+00f847bc  fmov s0,wzr
+00f847c0  mov x0,x20
+00f847c4  mov x1,x21
+00f847c8  mov x2,xzr
+00f847cc  mov w3,wzr
+00f847d0  mov x4,xzr
+00f847d4  bl 0x00e14c70
+00f847d8  mov x0,x19
+00f847dc  bl 0x00f848d8
+00f847e0  add w1,w0,#0x1
+00f847e4  mov x0,x19
+00f847e8  ldp x19,x30,[sp, #0x10]
+00f847ec  ldp x21,x20,[sp], #0x20
+00f847f0  b 0x00f84550
+00f847f4  ldp x19,x30,[sp, #0x10]
+00f847f8  ldp x21,x20,[sp], #0x20
+00f847fc  ret
+00f84800  bl 0x00b079b0
+00f84804  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00f84808_EmojiPlayMono__get_Imgs.txt
+================================================================================
+Function: EmojiPlayMono$$get_Imgs @ 00f84808
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp151 @ 010729c4
+
+--- Calls IN ---
+  <- EmojiPlayMono$$Show @ 00f846c8
+
+--- Listing ---
+00f84808  stp x21,x20,[sp, #-0x20]!
+00f8480c  stp x19,x30,[sp, #0x10]
+00f84810  adrp x20,0x3573000
+00f84814  adrp x21,0x332e000
+00f84818  ldrb w8,[x20, #0x3ea]
+00f8481c  ldr x21,[x21, #0x588]
+00f84820  mov x19,x0
+00f84824  tbnz w8,#0x0,0x00f8483c
+00f84828  adrp x0,0x332e000
+00f8482c  ldr x0,[x0, #0x588]
+00f84830  bl 0x00b0789c
+00f84834  mov w8,#0x1
+00f84838  strb w8,[x20, #0x3ea]
+00f8483c  ldr x8,[x21]
+00f84840  ldr x8,[x8, #0xb8]
+00f84844  ldr x0,[x8, #0x30]
+00f84848  cbz x0,0x00f84860
+00f8484c  mov x1,x19
+00f84850  ldp x19,x30,[sp, #0x10]
+00f84854  mov x2,xzr
+00f84858  ldp x21,x20,[sp], #0x20
+00f8485c  b 0x010729c4
+00f84860  ldr x0,[x19, #0x48]
+00f84864  ldp x19,x30,[sp, #0x10]
+00f84868  ldp x21,x20,[sp], #0x20
+00f8486c  ret
+
+
+================================================================================
+### FILE: 00f84870_EmojiPlayMono__get_Data.txt
+================================================================================
+Function: EmojiPlayMono$$get_Data @ 00f84870
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp672 @ 010b7ea0
+
+--- Calls IN ---
+  <- EmojiPlayMono$$FixedUpdate @ 00f84a10
+
+--- Listing ---
+00f84870  stp x21,x20,[sp, #-0x20]!
+00f84874  stp x19,x30,[sp, #0x10]
+00f84878  adrp x20,0x3573000
+00f8487c  adrp x21,0x332e000
+00f84880  ldrb w8,[x20, #0x3ec]
+00f84884  ldr x21,[x21, #0x588]
+00f84888  mov x19,x0
+00f8488c  tbnz w8,#0x0,0x00f848a4
+00f84890  adrp x0,0x332e000
+00f84894  ldr x0,[x0, #0x588]
+00f84898  bl 0x00b0789c
+00f8489c  mov w8,#0x1
+00f848a0  strb w8,[x20, #0x3ec]
+00f848a4  ldr x8,[x21]
+00f848a8  ldr x8,[x8, #0xb8]
+00f848ac  ldr x0,[x8, #0x40]
+00f848b0  cbz x0,0x00f848c8
+00f848b4  mov x1,x19
+00f848b8  ldp x19,x30,[sp, #0x10]
+00f848bc  mov x2,xzr
+00f848c0  ldp x21,x20,[sp], #0x20
+00f848c4  b 0x010b7ea0
+00f848c8  ldr x0,[x19, #0x50]
+00f848cc  ldp x19,x30,[sp, #0x10]
+00f848d0  ldp x21,x20,[sp], #0x20
+00f848d4  ret
+
+
+================================================================================
+### FILE: 00f848d8_EmojiPlayMono__get_Index.txt
+================================================================================
+Function: EmojiPlayMono$$get_Index @ 00f848d8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp10 @ 01060c2c
+
+--- Calls IN ---
+  <- EmojiPlayMono$$Show @ 00f846c8
+
+--- Listing ---
+00f848d8  stp x21,x20,[sp, #-0x20]!
+00f848dc  stp x19,x30,[sp, #0x10]
+00f848e0  adrp x20,0x3573000
+00f848e4  adrp x21,0x332e000
+00f848e8  ldrb w8,[x20, #0x3ee]
+00f848ec  ldr x21,[x21, #0x588]
+00f848f0  mov x19,x0
+00f848f4  tbnz w8,#0x0,0x00f8490c
+00f848f8  adrp x0,0x332e000
+00f848fc  ldr x0,[x0, #0x588]
+00f84900  bl 0x00b0789c
+00f84904  mov w8,#0x1
+00f84908  strb w8,[x20, #0x3ee]
+00f8490c  ldr x8,[x21]
+00f84910  ldr x8,[x8, #0xb8]
+00f84914  ldr x0,[x8, #0x50]
+00f84918  cbz x0,0x00f84930
+00f8491c  mov x1,x19
+00f84920  ldp x19,x30,[sp, #0x10]
+00f84924  mov x2,xzr
+00f84928  ldp x21,x20,[sp], #0x20
+00f8492c  b 0x01060c2c
+00f84930  ldr w0,[x19, #0x58]
+00f84934  ldp x19,x30,[sp, #0x10]
+00f84938  ldp x21,x20,[sp], #0x20
+00f8493c  ret
+
+
+================================================================================
+### FILE: 00f84940_EmojiPlayMono__get_IsVisible.txt
+================================================================================
+Function: EmojiPlayMono$$get_IsVisible @ 00f84940
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+  <- EmojiPlayMono$$FixedUpdate @ 00f84a10
+
+--- Listing ---
+00f84940  stp x21,x20,[sp, #-0x20]!
+00f84944  stp x19,x30,[sp, #0x10]
+00f84948  adrp x20,0x3573000
+00f8494c  adrp x21,0x332e000
+00f84950  ldrb w8,[x20, #0x3f0]
+00f84954  ldr x21,[x21, #0x588]
+00f84958  mov x19,x0
+00f8495c  tbnz w8,#0x0,0x00f84974
+00f84960  adrp x0,0x332e000
+00f84964  ldr x0,[x0, #0x588]
+00f84968  bl 0x00b0789c
+00f8496c  mov w8,#0x1
+00f84970  strb w8,[x20, #0x3f0]
+00f84974  ldr x8,[x21]
+00f84978  ldr x8,[x8, #0xb8]
+00f8497c  ldr x0,[x8, #0x60]
+00f84980  cbz x0,0x00f84998
+00f84984  mov x1,x19
+00f84988  ldp x19,x30,[sp, #0x10]
+00f8498c  mov x2,xzr
+00f84990  ldp x21,x20,[sp], #0x20
+00f84994  b 0x01060aac
+00f84998  ldrb w0,[x19, #0x5c]
+00f8499c  ldp x19,x30,[sp, #0x10]
+00f849a0  ldp x21,x20,[sp], #0x20
+00f849a4  ret
+
+
+================================================================================
+### FILE: 00f849a8_EmojiPlayMono__get_lastFrame.txt
+================================================================================
+Function: EmojiPlayMono$$get_lastFrame @ 00f849a8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp32 @ 01063698
+
+--- Calls IN ---
+  <- EmojiPlayMono$$FixedUpdate @ 00f84a10
+
+--- Listing ---
+00f849a8  stp x21,x20,[sp, #-0x20]!
+00f849ac  stp x19,x30,[sp, #0x10]
+00f849b0  adrp x20,0x3573000
+00f849b4  adrp x21,0x332e000
+00f849b8  ldrb w8,[x20, #0x3f2]
+00f849bc  ldr x21,[x21, #0x588]
+00f849c0  mov x19,x0
+00f849c4  tbnz w8,#0x0,0x00f849dc
+00f849c8  adrp x0,0x332e000
+00f849cc  ldr x0,[x0, #0x588]
+00f849d0  bl 0x00b0789c
+00f849d4  mov w8,#0x1
+00f849d8  strb w8,[x20, #0x3f2]
+00f849dc  ldr x8,[x21]
+00f849e0  ldr x8,[x8, #0xb8]
+00f849e4  ldr x0,[x8, #0x70]
+00f849e8  cbz x0,0x00f84a00
+00f849ec  mov x1,x19
+00f849f0  ldp x19,x30,[sp, #0x10]
+00f849f4  mov x2,xzr
+00f849f8  ldp x21,x20,[sp], #0x20
+00f849fc  b 0x01063698
+00f84a00  ldr s0,[x19, #0x60]
+00f84a04  ldp x19,x30,[sp, #0x10]
+00f84a08  ldp x21,x20,[sp], #0x20
+00f84a0c  ret
+
+
+================================================================================
+### FILE: 00f84a10_EmojiPlayMono__FixedUpdate.txt
+================================================================================
+Function: EmojiPlayMono$$FixedUpdate @ 00f84a10
+
+--- Calls OUT ---
+  -> EmojiPlayMono$$set_lastFrame @ 00f845cc
+  -> EmojiPlayMono$$get_Data @ 00f84870
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EmojiPlayMono$$get_IsVisible @ 00f84940
+  -> EmojiPlayMono$$Show @ 00f846c8
+  -> UnityEngine.Time$$get_time @ 024dbfa8
+  -> FUN_00b079b0 @ 00b079b0
+  -> EmojiPlayMono$$get_lastFrame @ 00f849a8
+
+--- Calls IN ---
+
+--- Listing ---
+00f84a10  stp d9,d8,[sp, #-0x30]!
+00f84a14  stp x21,x20,[sp, #0x10]
+00f84a18  stp x19,x30,[sp, #0x20]
+00f84a1c  adrp x20,0x3573000
+00f84a20  adrp x21,0x332e000
+00f84a24  ldrb w8,[x20, #0x3f4]
+00f84a28  ldr x21,[x21, #0x588]
+00f84a2c  mov x19,x0
+00f84a30  tbnz w8,#0x0,0x00f84a48
+00f84a34  adrp x0,0x332e000
+00f84a38  ldr x0,[x0, #0x588]
+00f84a3c  bl 0x00b0789c
+00f84a40  mov w8,#0x1
+00f84a44  strb w8,[x20, #0x3f4]
+00f84a48  ldr x8,[x21]
+00f84a4c  ldr x8,[x8, #0xb8]
+00f84a50  ldr x0,[x8, #0x80]
+00f84a54  cbz x0,0x00f84a70
+00f84a58  mov x1,x19
+00f84a5c  ldp x19,x30,[sp, #0x20]
+00f84a60  ldp x21,x20,[sp, #0x10]
+00f84a64  mov x2,xzr
+00f84a68  ldp d9,d8,[sp], #0x30
+00f84a6c  b 0x01060dac
+00f84a70  mov x0,x19
+00f84a74  bl 0x00f84940
+00f84a78  tbz w0,#0x0,0x00f84ab0
+00f84a7c  mov x0,xzr
+00f84a80  bl 0x024dbfa8
+00f84a84  mov x0,x19
+00f84a88  mov v8.16B,v0.16B
+00f84a8c  bl 0x00f849a8
+00f84a90  mov x0,x19
+00f84a94  mov v9.16B,v0.16B
+00f84a98  bl 0x00f84870
+00f84a9c  cbz x0,0x00f84ae4
+00f84aa0  ldr s0,[x0, #0x88]
+00f84aa4  fsub s1,s8,s9
+00f84aa8  fcmp s1,s0
+00f84aac  b.ge 0x00f84ac0
+00f84ab0  ldp x19,x30,[sp, #0x20]
+00f84ab4  ldp x21,x20,[sp, #0x10]
+00f84ab8  ldp d9,d8,[sp], #0x30
+00f84abc  ret
+00f84ac0  mov x0,x19
+00f84ac4  bl 0x00f846c8
+00f84ac8  mov x0,xzr
+00f84acc  bl 0x024dbfa8
+00f84ad0  mov x0,x19
+00f84ad4  ldp x19,x30,[sp, #0x20]
+00f84ad8  ldp x21,x20,[sp, #0x10]
+00f84adc  ldp d9,d8,[sp], #0x30
+00f84ae0  b 0x00f845cc
+00f84ae4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f84ae8_EmojiPlayMono__OnBecameInvisible.txt
+================================================================================
+Function: EmojiPlayMono$$OnBecameInvisible @ 00f84ae8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EmojiPlayMono$$set_IsVisible @ 00f84648
+
+--- Calls IN ---
+
+--- Listing ---
+00f84ae8  stp x21,x20,[sp, #-0x20]!
+00f84aec  stp x19,x30,[sp, #0x10]
+00f84af0  adrp x20,0x3573000
+00f84af4  adrp x21,0x332e000
+00f84af8  ldrb w8,[x20, #0x3f6]
+00f84afc  ldr x21,[x21, #0x588]
+00f84b00  mov x19,x0
+00f84b04  tbnz w8,#0x0,0x00f84b1c
+00f84b08  adrp x0,0x332e000
+00f84b0c  ldr x0,[x0, #0x588]
+00f84b10  bl 0x00b0789c
+00f84b14  mov w8,#0x1
+00f84b18  strb w8,[x20, #0x3f6]
+00f84b1c  ldr x8,[x21]
+00f84b20  ldr x8,[x8, #0xb8]
+00f84b24  ldr x0,[x8, #0x90]
+00f84b28  cbz x0,0x00f84b40
+00f84b2c  mov x1,x19
+00f84b30  ldp x19,x30,[sp, #0x10]
+00f84b34  mov x2,xzr
+00f84b38  ldp x21,x20,[sp], #0x20
+00f84b3c  b 0x01060dac
+00f84b40  mov x0,x19
+00f84b44  ldp x19,x30,[sp, #0x10]
+00f84b48  mov w1,wzr
+00f84b4c  ldp x21,x20,[sp], #0x20
+00f84b50  b 0x00f84648
+
+
+================================================================================
+### FILE: 00f84b54_EmojiPlayMono__OnBecameVisible.txt
+================================================================================
+Function: EmojiPlayMono$$OnBecameVisible @ 00f84b54
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> EmojiPlayMono$$set_IsVisible @ 00f84648
+
+--- Calls IN ---
+
+--- Listing ---
+00f84b54  stp x21,x20,[sp, #-0x20]!
+00f84b58  stp x19,x30,[sp, #0x10]
+00f84b5c  adrp x20,0x3573000
+00f84b60  adrp x21,0x332e000
+00f84b64  ldrb w8,[x20, #0x3f7]
+00f84b68  ldr x21,[x21, #0x588]
+00f84b6c  mov x19,x0
+00f84b70  tbnz w8,#0x0,0x00f84b88
+00f84b74  adrp x0,0x332e000
+00f84b78  ldr x0,[x0, #0x588]
+00f84b7c  bl 0x00b0789c
+00f84b80  mov w8,#0x1
+00f84b84  strb w8,[x20, #0x3f7]
+00f84b88  ldr x8,[x21]
+00f84b8c  ldr x8,[x8, #0xb8]
+00f84b90  ldr x0,[x8, #0x98]
+00f84b94  cbz x0,0x00f84bac
+00f84b98  mov x1,x19
+00f84b9c  ldp x19,x30,[sp, #0x10]
+00f84ba0  mov x2,xzr
+00f84ba4  ldp x21,x20,[sp], #0x20
+00f84ba8  b 0x01060dac
+00f84bac  mov x0,x19
+00f84bb0  ldp x19,x30,[sp, #0x10]
+00f84bb4  mov w1,#0x1
+00f84bb8  ldp x21,x20,[sp], #0x20
+00f84bbc  b 0x00f84648
+
+
+================================================================================
+### FILE: 00f84bc0_EmojiPlayMono__.ctor.txt
+================================================================================
+Function: EmojiPlayMono$$.ctor @ 00f84bc0
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> BaseMono$$.ctor @ 00e1c6b4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EmojiPlayMonoWrap$$__CreateInstance @ 0127a2b8
+
+--- Listing ---
+00f84bc0  stp x21,x20,[sp, #-0x20]!
+00f84bc4  stp x19,x30,[sp, #0x10]
+00f84bc8  adrp x21,0x3573000
+00f84bcc  adrp x20,0x332e000
+00f84bd0  ldrb w8,[x21, #0x3f8]
+00f84bd4  ldr x20,[x20, #0x588]
+00f84bd8  mov x19,x0
+00f84bdc  tbnz w8,#0x0,0x00f84bf4
+00f84be0  adrp x0,0x332e000
+00f84be4  ldr x0,[x0, #0x588]
+00f84be8  bl 0x00b0789c
+00f84bec  mov w8,#0x1
+00f84bf0  strb w8,[x21, #0x3f8]
+00f84bf4  mov x0,x19
+00f84bf8  mov x1,xzr
+00f84bfc  bl 0x00e1c6b4
+00f84c00  ldr x8,[x20]
+00f84c04  ldr x8,[x8, #0xb8]
+00f84c08  ldr x0,[x8, #0xa0]
+00f84c0c  cbz x0,0x00f84c24
+00f84c10  mov x1,x19
+00f84c14  ldp x19,x30,[sp, #0x10]
+00f84c18  mov x2,xzr
+00f84c1c  ldp x21,x20,[sp], #0x20
+00f84c20  b 0x01060dac
+00f84c24  ldp x19,x30,[sp, #0x10]
+00f84c28  ldp x21,x20,[sp], #0x20
+00f84c2c  ret
+
+

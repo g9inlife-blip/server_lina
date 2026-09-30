@@ -1,0 +1,130 @@
+# Local Data Catalog
+
+정규화 데이터의 실제 구조를 요약한 카탈로그이다.
+
+## 규모
+- Record: 118,015
+- 고유 ID: 118,015
+- 원본 파일: 69
+
+## System candidate
+- other: 77,977
+- skill: 23,470
+- item: 6,222
+- gacha: 3,034
+- shop: 2,868
+- item_package: 2,028
+- equipment: 1,523
+- reward: 1,503
+- achievement: 682
+- daily: 393
+- monster: 242
+- event: 101
+
+## 주요 Field
+- m_id: 118,015
+- baseDataType: 118,015
+- m_icon: 118,015
+- m_quality: 118,015
+- m_frame: 118,015
+- m_surface: 118,015
+- m_period: 118,015
+- m_star: 118,015
+- m_type: 118,015
+- m_specialShow: 118,015
+- m_nameId: 118,015
+- m_describeId: 118,015
+- m_describe1Id: 118,015
+- m_obtainSound: 118,015
+- m_PumpingCard1: 118,015
+- m_PumpingCard2: 118,015
+- m_iconshow: 118,015
+- m_cn: 37,823
+- m_name: 36,020
+- m_parameterA: 14,807
+- m_parameterB: 14,807
+- m_probability: 14,405
+- m_priority: 13,230
+- m_power: 13,139
+- m_effectLevel: 12,471
+- m_attribute: 12,184
+- m_target: 12,125
+- m_trigger: 11,674
+- m_sensitiveChar: 11,548
+- m_actionType: 11,401
+- m_source: 11,371
+- m_targetType: 11,371
+- m_triggerRound: 11,371
+- m_hpPer: 11,371
+- m_triggerSkillType: 11,371
+- m_dodge: 11,371
+- m_didden: 11,371
+- m_effTime: 11,371
+- m_userIds: 11,371
+- m_targetIds: 11,371
+- m_userGroup: 11,371
+- m_targetGroup: 11,371
+- m_partExist: 11,371
+- m_partLost: 11,371
+- m_criticalLevel: 11,371
+- m_dodgeLevel: 11,371
+- m_skilleffPre: 11,371
+- m_skilleffNeg: 11,371
+- m_buffLevel: 11,371
+- m_targetBuffLevel: 11,371
+- m_isTarget: 11,371
+- m_failureTips: 11,371
+- m_breakType: 11,371
+- m_speciality1: 11,371
+- m_skillShowId: 11,371
+- m_displayStatus: 11,371
+- m_frontRange: 11,371
+- m_backRange: 11,371
+- m_versionOpen: 11,002
+- m_seqencing: 10,649
+- m_position: 10,518
+- m_group: 10,172
+- m_reward: 7,596
+- m_level: 7,141
+- m_itemPackageId: 6,305
+- m_display: 6,300
+- m_skillId: 6,293
+- m_itemId: 6,024
+- m_sound: 5,785
+- m_limit: 5,636
+- m_skillEff: 5,460
+- m_turnTo: 5,426
+- m_showEff: 5,274
+- m_CD: 5,274
+- m_mainSkillEff: 5,274
+- m_tendency: 5,274
+- m_pathfinding: 5,274
+- m_hitEffects: 5,030
+- m_weight: 4,841
+- m_parentId: 4,577
+- m_activityData: 4,577
+- m_condition1: 4,577
+- m_condition2: 4,577
+- m_mainTemplateId: 4,577
+- m_desc: 4,526
+- m_nextId: 4,075
+- m_order: 4,017
+- m_offset1: 3,985
+- m_offset2: 3,985
+- m_offset3: 3,985
+- m_nameId1: 3,984
+- m_soundIDs: 3,958
+- m_flash: 3,958
+- m_shake: 3,958
+- m_model1: 3,958
+- m_idle1: 3,958
+- m_act1: 3,958
+- m_scale1: 3,958
+- m_nameId2: 3,958
+- m_model2: 3,958
+
+## 규칙
+- 의미를 새로 추론하지 않는다.
+- 미해결 참조를 오류로 취급하지 않는다.
+- 서버 데이터를 생성하지 않는다.
+- 구현에 필요한 시스템만 이후 GameData schema로 추출한다.

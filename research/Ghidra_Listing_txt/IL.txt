@@ -1,0 +1,4101 @@
+================================================================================
+### FILE: 008d3ba0_il2cpp_class_from_type.txt
+================================================================================
+Function: il2cpp_class_from_type @ 008d3ba0
+
+--- Calls OUT ---
+  -> il2cpp_class_from_type @ 00af2ba8
+
+--- Calls IN ---
+  <- FUN_00b0383c @ 00b0383c
+  <- FUN_00aaf574 @ 00aaf574
+
+--- Listing ---
+008d3ba0  adrp x16,0x3307000
+008d3ba4  ldr x17,[x16, #0x790]
+008d3ba8  add x16,x16,#0x790
+008d3bac  br x17
+
+
+================================================================================
+### FILE: 008d3c20_il2cpp_string_new.txt
+================================================================================
+Function: il2cpp_string_new @ 008d3c20
+
+--- Calls OUT ---
+  -> il2cpp_string_new @ 00af357c
+
+--- Calls IN ---
+  <- FUN_00b312a0 @ 00b312a0
+  <- FUN_00b31368 @ 00b31368
+  <- FUN_00b30c20 @ 00b30c20
+  <- FUN_00b30f20 @ 00b30f20
+  <- FUN_00a9b29c @ 00a9b29c
+  <- FUN_00b3147c @ 00b3147c
+
+--- Listing ---
+008d3c20  adrp x16,0x3307000
+008d3c24  ldr x17,[x16, #0x7d0]
+008d3c28  add x16,x16,#0x7d0
+008d3c2c  br x17
+
+
+================================================================================
+### FILE: 008d40a0_il2cpp_method_get_object.txt
+================================================================================
+Function: il2cpp_method_get_object @ 008d40a0
+
+--- Calls OUT ---
+  -> il2cpp_method_get_object @ 00af347c
+
+--- Calls IN ---
+  <- FUN_00b1f870 @ 00b1f870
+
+--- Listing ---
+008d40a0  adrp x16,0x3307000
+008d40a4  ldr x17,[x16, #0xa10]
+008d40a8  add x16,x16,#0xa10
+008d40ac  br x17
+
+
+================================================================================
+### FILE: 008d43b0_il2cpp_array_new.txt
+================================================================================
+Function: il2cpp_array_new @ 008d43b0
+
+--- Calls OUT ---
+  -> il2cpp_array_new @ 00af2b04
+
+--- Calls IN ---
+  <- FUN_00b31714 @ 00b31714
+
+--- Listing ---
+008d43b0  adrp x16,0x3307000
+008d43b4  ldr x17,[x16, #0xb98]
+008d43b8  add x16,x16,#0xb98
+008d43bc  br x17
+
+
+================================================================================
+### FILE: 008d46a0_il2cpp_array_element_size.txt
+================================================================================
+Function: il2cpp_array_element_size @ 008d46a0
+
+--- Calls OUT ---
+  -> il2cpp_array_element_size @ 00af2b18
+
+--- Calls IN ---
+  <- FUN_00acdb70 @ 00acdb70
+  <- FUN_00ab033c @ 00ab033c
+  <- FUN_00a9b574 @ 00a9b574
+  <- FUN_00a9ba08 @ 00a9ba08
+  <- FUN_00acde64 @ 00acde64
+  <- FUN_00ab0384 @ 00ab0384
+  <- FUN_00ab03d8 @ 00ab03d8
+
+--- Listing ---
+008d46a0  adrp x16,0x3307000
+008d46a4  ldr x17,[x16, #0xd10]
+008d46a8  add x16,x16,#0xd10
+008d46ac  br x17
+
+
+================================================================================
+### FILE: 008d4850_il2cpp_object_unbox.txt
+================================================================================
+Function: il2cpp_object_unbox @ 008d4850
+
+--- Calls OUT ---
+  -> il2cpp_object_unbox @ 00af3538
+
+--- Calls IN ---
+  <- FUN_00aaf658 @ 00aaf658
+
+--- Listing ---
+008d4850  adrp x16,0x3307000
+008d4854  ldr x17,[x16, #0xde8]
+008d4858  add x16,x16,#0xde8
+008d485c  br x17
+
+
+================================================================================
+### FILE: 008d4a70_il2cpp_monitor_exit.txt
+================================================================================
+Function: il2cpp_monitor_exit @ 008d4a70
+
+--- Calls OUT ---
+  -> il2cpp_monitor_exit @ 00af3548
+
+--- Calls IN ---
+  <- FUN_00b2a8b0 @ 00b2a8b0
+  <- FUN_00b03b00 @ 00b03b00
+
+--- Listing ---
+008d4a70  adrp x16,0x3307000
+008d4a74  ldr x17,[x16, #0xef8]
+008d4a78  add x16,x16,#0xef8
+008d4a7c  br x17
+
+
+================================================================================
+### FILE: 008d5140_il2cpp_bounded_array_class_get.txt
+================================================================================
+Function: il2cpp_bounded_array_class_get @ 008d5140
+
+--- Calls OUT ---
+  -> il2cpp_bounded_array_class_get @ 00af2b10
+
+--- Calls IN ---
+  <- FUN_00a9ff9c @ 00a9ff9c
+
+--- Listing ---
+008d5140  adrp x16,0x3308000
+008d5144  ldr x17,[x16, #0x260]
+008d5148  add x16,x16,#0x260
+008d514c  br x17
+
+
+================================================================================
+### FILE: 008d52a0_il2cpp_array_new_specific.txt
+================================================================================
+Function: il2cpp_array_new_specific @ 008d52a0
+
+--- Calls OUT ---
+  -> il2cpp_array_new_specific @ 00af2b08
+
+--- Calls IN ---
+  <- FUN_00b31368 @ 00b31368
+  <- FUN_00b2a998 @ 00b2a998
+  <- FUN_00b30f20 @ 00b30f20
+  <- FUN_00aaf658 @ 00aaf658
+  <- FUN_00b3147c @ 00b3147c
+
+--- Listing ---
+008d52a0  adrp x16,0x3308000
+008d52a4  ldr x17,[x16, #0x310]
+008d52a8  add x16,x16,#0x310
+008d52ac  br x17
+
+
+================================================================================
+### FILE: 008d54d0_il2cpp_class_from_il2cpp_type.txt
+================================================================================
+Function: il2cpp_class_from_il2cpp_type @ 008d54d0
+
+--- Calls OUT ---
+  -> il2cpp_class_from_il2cpp_type @ 00af2b40
+
+--- Calls IN ---
+  <- FUN_00b1f870 @ 00b1f870
+  <- FUN_00a9ff9c @ 00a9ff9c
+  <- FUN_00b1f560 @ 00b1f560
+
+--- Listing ---
+008d54d0  adrp x16,0x3308000
+008d54d4  ldr x17,[x16, #0x428]
+008d54d8  add x16,x16,#0x428
+008d54dc  br x17
+
+
+================================================================================
+### FILE: 008d56e0_il2cpp_raise_exception.txt
+================================================================================
+Function: il2cpp_raise_exception @ 008d56e0
+
+--- Calls OUT ---
+  -> il2cpp_raise_exception @ 00af3178
+
+--- Calls IN ---
+  <- FUN_00aaf574 @ 00aaf574
+  <- FUN_00a9f944 @ 00a9f944
+
+--- Listing ---
+008d56e0  adrp x16,0x3308000
+008d56e4  ldr x17,[x16, #0x530]
+008d56e8  add x16,x16,#0x530
+008d56ec  br x17
+
+
+================================================================================
+### FILE: 008d59e0_il2cpp_object_new.txt
+================================================================================
+Function: il2cpp_object_new @ 008d59e0
+
+--- Calls OUT ---
+  -> il2cpp_object_new @ 00af3518
+
+--- Calls IN ---
+  <- FUN_00b2035c @ 00b2035c
+  <- FUN_00a9f740 @ 00a9f740
+  <- FUN_00b31714 @ 00b31714
+
+--- Listing ---
+008d59e0  adrp x16,0x3308000
+008d59e4  ldr x17,[x16, #0x6b0]
+008d59e8  add x16,x16,#0x6b0
+008d59ec  br x17
+
+
+================================================================================
+### FILE: 008d5a40_il2cpp_monitor_enter.txt
+================================================================================
+Function: il2cpp_monitor_enter @ 008d5a40
+
+--- Calls OUT ---
+  -> il2cpp_monitor_enter @ 00af3540
+
+--- Calls IN ---
+  <- FUN_00b2a8b0 @ 00b2a8b0
+  <- FUN_00b03b00 @ 00b03b00
+
+--- Listing ---
+008d5a40  adrp x16,0x3308000
+008d5a44  ldr x17,[x16, #0x6e0]
+008d5a48  add x16,x16,#0x6e0
+008d5a4c  br x17
+
+
+================================================================================
+### FILE: 008d5af0_il2cpp_array_class_get.txt
+================================================================================
+Function: il2cpp_array_class_get @ 008d5af0
+
+--- Calls OUT ---
+  -> il2cpp_array_class_get @ 00af2af8
+
+--- Calls IN ---
+  <- FUN_00b31368 @ 00b31368
+  <- FUN_00a9ff9c @ 00a9ff9c
+  <- FUN_00b2a998 @ 00b2a998
+  <- FUN_00b30f20 @ 00b30f20
+  <- FUN_00aaf658 @ 00aaf658
+  <- FUN_00b3147c @ 00b3147c
+
+--- Listing ---
+008d5af0  adrp x16,0x3308000
+008d5af4  ldr x17,[x16, #0x738]
+008d5af8  add x16,x16,#0x738
+008d5afc  br x17
+
+
+================================================================================
+### FILE: 00af29f8_il2cpp_init.txt
+================================================================================
+Function: il2cpp_init @ 00af29f8
+
+--- Calls OUT ---
+  -> FUN_00aace0c @ 00aace0c
+  -> setlocale @ 008d4de0
+
+--- Calls IN ---
+
+--- Listing ---
+00af29f8  stp x19,x30,[sp, #-0x10]!
+00af29fc  adrp x1,0x293d000
+00af2a00  mov x19,x0
+00af2a04  add x1,x1,#0x58
+00af2a08  mov w0,#0x6
+00af2a0c  bl 0x008d4de0
+00af2a10  mov x0,x19
+00af2a14  bl 0x00aace0c
+00af2a18  and w0,w0,#0x1
+00af2a1c  ldp x19,x30,[sp], #0x10
+00af2a20  ret
+
+
+================================================================================
+### FILE: 00af2a24_il2cpp_init_utf16.txt
+================================================================================
+Function: il2cpp_init_utf16 @ 00af2a24
+
+--- Calls OUT ---
+  -> setlocale @ 008d4de0
+  -> FUN_00aace0c @ 00aace0c
+  -> FUN_00aeb314 @ 00aeb314
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00af2a24  sub sp,sp,#0x40
+00af2a28  stp x21,x20,[sp, #0x20]
+00af2a2c  stp x19,x30,[sp, #0x30]
+00af2a30  add x8,sp,#0x8
+00af2a34  add x19,sp,#0x8
+00af2a38  bl 0x00aeb314
+00af2a3c  ldrb w20,[sp, #0x8]
+00af2a40  ldr x21,[sp, #0x18]
+00af2a44  adrp x1,0x293d000
+    ; [PRE] try { // try from 00af2a44 to 00af2a63 has its CatchHandler @ 00af2a8c
+00af2a48  add x1,x1,#0x58
+00af2a4c  mov w0,#0x6
+00af2a50  bl 0x008d4de0
+00af2a54  orr x8,x19,#0x1
+00af2a58  tst w20,#0x1
+00af2a5c  csel x0,x8,x21,eq
+00af2a60  bl 0x00aace0c
+    ; [POST] } // end try from 00af2a44 to 00af2a63
+00af2a64  ldrb w8,[sp, #0x8]
+00af2a68  and w19,w0,#0x1
+00af2a6c  tbz w8,#0x0,0x00af2a78
+00af2a70  ldr x0,[sp, #0x18]
+00af2a74  bl 0x008d3ed0
+00af2a78  mov w0,w19
+00af2a7c  ldp x19,x30,[sp, #0x30]
+00af2a80  ldp x21,x20,[sp, #0x20]
+00af2a84  add sp,sp,#0x40
+00af2a88  ret
+
+
+================================================================================
+### FILE: 00af2aa8_il2cpp_shutdown.txt
+================================================================================
+Function: il2cpp_shutdown @ 00af2aa8
+
+--- Calls OUT ---
+  -> FUN_00aadeb8 @ 00aadeb8
+
+--- Calls IN ---
+
+--- Listing ---
+00af2aa8  b 0x00aadeb8
+
+
+================================================================================
+### FILE: 00af2aac_il2cpp_set_config_dir.txt
+================================================================================
+Function: il2cpp_set_config_dir @ 00af2aac
+
+--- Calls OUT ---
+  -> FUN_00aae004 @ 00aae004
+
+--- Calls IN ---
+
+--- Listing ---
+00af2aac  b 0x00aae004
+
+
+================================================================================
+### FILE: 00af2ab0_il2cpp_set_data_dir.txt
+================================================================================
+Function: il2cpp_set_data_dir @ 00af2ab0
+
+--- Calls OUT ---
+  -> FUN_00ac8c64 @ 00ac8c64
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ab0  b 0x00ac8c64
+
+
+================================================================================
+### FILE: 00af2ab4_il2cpp_set_temp_dir.txt
+================================================================================
+Function: il2cpp_set_temp_dir @ 00af2ab4
+
+--- Calls OUT ---
+  -> FUN_00b2b6fc @ 00b2b6fc
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ab4  b 0x00b2b6fc
+
+
+================================================================================
+### FILE: 00af2ab8_il2cpp_set_commandline_arguments.txt
+================================================================================
+Function: il2cpp_set_commandline_arguments @ 00af2ab8
+
+--- Calls OUT ---
+  -> FUN_00aead80 @ 00aead80
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ab8  mov w8,w0
+00af2abc  mov x0,x1
+00af2ac0  mov w1,w8
+00af2ac4  b 0x00aead80
+
+
+================================================================================
+### FILE: 00af2ac8_il2cpp_set_commandline_arguments_utf16.txt
+================================================================================
+Function: il2cpp_set_commandline_arguments_utf16 @ 00af2ac8
+
+--- Calls OUT ---
+  -> FUN_00aeaec4 @ 00aeaec4
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ac8  mov w8,w0
+00af2acc  mov x0,x1
+00af2ad0  mov w1,w8
+00af2ad4  b 0x00aeaec4
+
+
+================================================================================
+### FILE: 00af2ad8_il2cpp_set_config_utf16.txt
+================================================================================
+Function: il2cpp_set_config_utf16 @ 00af2ad8
+
+--- Calls OUT ---
+  -> FUN_00aae02c @ 00aae02c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ad8  b 0x00aae02c
+
+
+================================================================================
+### FILE: 00af2adc_il2cpp_set_config.txt
+================================================================================
+Function: il2cpp_set_config @ 00af2adc
+
+--- Calls OUT ---
+  -> FUN_00aae07c @ 00aae07c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2adc  b 0x00aae07c
+
+
+================================================================================
+### FILE: 00af2ae0_il2cpp_set_memory_callbacks.txt
+================================================================================
+Function: il2cpp_set_memory_callbacks @ 00af2ae0
+
+--- Calls OUT ---
+  -> FUN_00acaf20 @ 00acaf20
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ae0  b 0x00acaf20
+
+
+================================================================================
+### FILE: 00af2ae4_il2cpp_get_corlib.txt
+================================================================================
+Function: il2cpp_get_corlib @ 00af2ae4
+
+--- Calls OUT ---
+  -> FUN_00b0f788 @ 00b0f788
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ae4  b 0x00b0f788
+
+
+================================================================================
+### FILE: 00af2ae8_il2cpp_add_internal_call.txt
+================================================================================
+Function: il2cpp_add_internal_call @ 00af2ae8
+
+--- Calls OUT ---
+  -> FUN_00aee2e8 @ 00aee2e8
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ae8  b 0x00aee2e8
+
+
+================================================================================
+### FILE: 00af2aec_il2cpp_resolve_icall.txt
+================================================================================
+Function: il2cpp_resolve_icall @ 00af2aec
+
+--- Calls OUT ---
+  -> FUN_00aee36c @ 00aee36c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2aec  b 0x00aee36c
+
+
+================================================================================
+### FILE: 00af2af0_il2cpp_alloc.txt
+================================================================================
+Function: il2cpp_alloc @ 00af2af0
+
+--- Calls OUT ---
+  -> malloc @ 00acaf44
+
+--- Calls IN ---
+
+--- Listing ---
+00af2af0  b 0x00acaf44
+
+
+================================================================================
+### FILE: 00af2af4_il2cpp_free.txt
+================================================================================
+Function: il2cpp_free @ 00af2af4
+
+--- Calls OUT ---
+  -> free @ 00acaf5c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2af4  b 0x00acaf5c
+
+
+================================================================================
+### FILE: 00af2af8_il2cpp_array_class_get.txt
+================================================================================
+Function: il2cpp_array_class_get @ 00af2af8
+
+--- Calls OUT ---
+  -> FUN_00ab18bc @ 00ab18bc
+
+--- Calls IN ---
+  <- il2cpp_array_class_get @ 008d5af0
+
+--- Listing ---
+00af2af8  b 0x00ab18bc
+
+
+================================================================================
+### FILE: 00af2afc_il2cpp_array_length.txt
+================================================================================
+Function: il2cpp_array_length @ 00af2afc
+
+--- Calls OUT ---
+  -> FUN_00acdb68 @ 00acdb68
+
+--- Calls IN ---
+
+--- Listing ---
+00af2afc  b 0x00acdb68
+
+
+================================================================================
+### FILE: 00af2b00_il2cpp_array_get_byte_length.txt
+================================================================================
+Function: il2cpp_array_get_byte_length @ 00af2b00
+
+--- Calls OUT ---
+  -> FUN_00acddfc @ 00acddfc
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b00  b 0x00acddfc
+
+
+================================================================================
+### FILE: 00af2b04_il2cpp_array_new.txt
+================================================================================
+Function: il2cpp_array_new @ 00af2b04
+
+--- Calls OUT ---
+  -> FUN_00acde48 @ 00acde48
+
+--- Calls IN ---
+  <- il2cpp_array_new @ 008d43b0
+
+--- Listing ---
+00af2b04  b 0x00acde48
+
+
+================================================================================
+### FILE: 00af2b08_il2cpp_array_new_specific.txt
+================================================================================
+Function: il2cpp_array_new_specific @ 00af2b08
+
+--- Calls OUT ---
+  -> FUN_00acde64 @ 00acde64
+
+--- Calls IN ---
+  <- il2cpp_array_new_specific @ 008d52a0
+
+--- Listing ---
+00af2b08  b 0x00acde64
+
+
+================================================================================
+### FILE: 00af2b0c_il2cpp_array_new_full.txt
+================================================================================
+Function: il2cpp_array_new_full @ 00af2b0c
+
+--- Calls OUT ---
+  -> FUN_00acdb70 @ 00acdb70
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b0c  b 0x00acdb70
+
+
+================================================================================
+### FILE: 00af2b10_il2cpp_bounded_array_class_get.txt
+================================================================================
+Function: il2cpp_bounded_array_class_get @ 00af2b10
+
+--- Calls OUT ---
+  -> FUN_00ab18a0 @ 00ab18a0
+
+--- Calls IN ---
+  <- il2cpp_bounded_array_class_get @ 008d5140
+
+--- Listing ---
+00af2b10  and w2,w2,#0x1
+00af2b14  b 0x00ab18a0
+
+
+================================================================================
+### FILE: 00af2b18_il2cpp_array_element_size.txt
+================================================================================
+Function: il2cpp_array_element_size @ 00af2b18
+
+--- Calls OUT ---
+  -> FUN_00acdb60 @ 00acdb60
+
+--- Calls IN ---
+  <- il2cpp_array_element_size @ 008d46a0
+
+--- Listing ---
+00af2b18  b 0x00acdb60
+
+
+================================================================================
+### FILE: 00af2b1c_il2cpp_assembly_get_image.txt
+================================================================================
+Function: il2cpp_assembly_get_image @ 00af2b1c
+
+--- Calls OUT ---
+  -> FUN_00ace06c @ 00ace06c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b1c  b 0x00ace06c
+
+
+================================================================================
+### FILE: 00af2b20_il2cpp_class_enum_basetype.txt
+================================================================================
+Function: il2cpp_class_enum_basetype @ 00af2b20
+
+--- Calls OUT ---
+  -> FUN_00ab1cdc @ 00ab1cdc
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b20  b 0x00ab1cdc
+
+
+================================================================================
+### FILE: 00af2b24_il2cpp_class_from_system_type.txt
+================================================================================
+Function: il2cpp_class_from_system_type @ 00af2b24
+
+--- Calls OUT ---
+  -> FUN_00ab1b4c @ 00ab1b4c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b24  b 0x00ab1b4c
+
+
+================================================================================
+### FILE: 00af2b28_il2cpp_class_is_generic.txt
+================================================================================
+Function: il2cpp_class_is_generic @ 00af2b28
+
+--- Calls OUT ---
+  -> FUN_00ab310c @ 00ab310c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b28  b 0x00ab310c
+
+
+================================================================================
+### FILE: 00af2b2c_il2cpp_class_is_inflated.txt
+================================================================================
+Function: il2cpp_class_is_inflated @ 00af2b2c
+
+--- Calls OUT ---
+  -> FUN_00ab3118 @ 00ab3118
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b2c  b 0x00ab3118
+
+
+================================================================================
+### FILE: 00af2b30_il2cpp_class_is_assignable_from.txt
+================================================================================
+Function: il2cpp_class_is_assignable_from @ 00af2b30
+
+--- Calls OUT ---
+  -> FUN_00ab2a7c @ 00ab2a7c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b30  b 0x00ab2a7c
+
+
+================================================================================
+### FILE: 00af2b34_il2cpp_class_is_subclass_of.txt
+================================================================================
+Function: il2cpp_class_is_subclass_of @ 00af2b34
+
+--- Calls OUT ---
+  -> FUN_00ab3128 @ 00ab3128
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b34  and w2,w2,#0x1
+00af2b38  b 0x00ab3128
+
+
+================================================================================
+### FILE: 00af2b3c_il2cpp_class_has_parent.txt
+================================================================================
+Function: il2cpp_class_has_parent @ 00af2b3c
+
+--- Calls OUT ---
+  -> FUN_00ab2940 @ 00ab2940
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b3c  b 0x00ab2940
+
+
+================================================================================
+### FILE: 00af2b40_il2cpp_class_from_il2cpp_type.txt
+================================================================================
+Function: il2cpp_class_from_il2cpp_type @ 00af2b40
+
+--- Calls OUT ---
+  -> FUN_00ab1648 @ 00ab1648
+
+--- Calls IN ---
+  <- il2cpp_class_from_il2cpp_type @ 008d54d0
+
+--- Listing ---
+00af2b40  mov w1,#0x1
+00af2b44  b 0x00ab1648
+
+
+================================================================================
+### FILE: 00af2b48_il2cpp_class_from_name.txt
+================================================================================
+Function: il2cpp_class_from_name @ 00af2b48
+
+--- Calls OUT ---
+  -> thunk_FUN_00b0f960 @ 00ab4780
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b48  b 0x00ab4780
+
+
+================================================================================
+### FILE: 00af2b4c_il2cpp_class_get_element_class.txt
+================================================================================
+Function: il2cpp_class_get_element_class @ 00af2b4c
+
+--- Calls OUT ---
+  -> FUN_00ab1cd4 @ 00ab1cd4
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b4c  b 0x00ab1cd4
+
+
+================================================================================
+### FILE: 00af2b50_il2cpp_class_get_events.txt
+================================================================================
+Function: il2cpp_class_get_events @ 00af2b50
+
+--- Calls OUT ---
+  -> FUN_00ab1cf0 @ 00ab1cf0
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b50  b 0x00ab1cf0
+
+
+================================================================================
+### FILE: 00af2b54_il2cpp_class_get_fields.txt
+================================================================================
+Function: il2cpp_class_get_fields @ 00af2b54
+
+--- Calls OUT ---
+  -> FUN_00ab1e54 @ 00ab1e54
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b54  b 0x00ab1e54
+
+
+================================================================================
+### FILE: 00af2b58_il2cpp_class_get_nested_types.txt
+================================================================================
+Function: il2cpp_class_get_nested_types @ 00af2b58
+
+--- Calls OUT ---
+  -> FUN_00ab2450 @ 00ab2450
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b58  b 0x00ab2450
+
+
+================================================================================
+### FILE: 00af2b5c_il2cpp_class_get_interfaces.txt
+================================================================================
+Function: il2cpp_class_get_interfaces @ 00af2b5c
+
+--- Calls OUT ---
+  -> FUN_00ab205c @ 00ab205c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b5c  b 0x00ab205c
+
+
+================================================================================
+### FILE: 00af2b60_il2cpp_class_get_properties.txt
+================================================================================
+Function: il2cpp_class_get_properties @ 00af2b60
+
+--- Calls OUT ---
+  -> FUN_00ab25e0 @ 00ab25e0
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b60  b 0x00ab25e0
+
+
+================================================================================
+### FILE: 00af2b64_il2cpp_class_get_property_from_name.txt
+================================================================================
+Function: il2cpp_class_get_property_from_name @ 00af2b64
+
+--- Calls OUT ---
+  -> FUN_00ab2744 @ 00ab2744
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b64  b 0x00ab2744
+
+
+================================================================================
+### FILE: 00af2b68_il2cpp_class_get_field_from_name.txt
+================================================================================
+Function: il2cpp_class_get_field_from_name @ 00af2b68
+
+--- Calls OUT ---
+  -> FUN_00ab1fac @ 00ab1fac
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b68  b 0x00ab1fac
+
+
+================================================================================
+### FILE: 00af2b6c_il2cpp_class_get_methods.txt
+================================================================================
+Function: il2cpp_class_get_methods @ 00af2b6c
+
+--- Calls OUT ---
+  -> FUN_00ab21b8 @ 00ab21b8
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b6c  b 0x00ab21b8
+
+
+================================================================================
+### FILE: 00af2b70_il2cpp_class_get_method_from_name.txt
+================================================================================
+Function: il2cpp_class_get_method_from_name @ 00af2b70
+
+--- Calls OUT ---
+  -> FUN_00ab231c @ 00ab231c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b70  b 0x00ab231c
+
+
+================================================================================
+### FILE: 00af2b74_il2cpp_class_get_name.txt
+================================================================================
+Function: il2cpp_class_get_name @ 00af2b74
+
+--- Calls OUT ---
+  -> FUN_00ab2440 @ 00ab2440
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b74  b 0x00ab2440
+
+
+================================================================================
+### FILE: 00af2b78_il2cpp_class_get_namespace.txt
+================================================================================
+Function: il2cpp_class_get_namespace @ 00af2b78
+
+--- Calls OUT ---
+  -> FUN_00ab2448 @ 00ab2448
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b78  b 0x00ab2448
+
+
+================================================================================
+### FILE: 00af2b7c_il2cpp_class_get_parent.txt
+================================================================================
+Function: il2cpp_class_get_parent @ 00af2b7c
+
+--- Calls OUT ---
+  -> FUN_00ab25d8 @ 00ab25d8
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b7c  b 0x00ab25d8
+
+
+================================================================================
+### FILE: 00af2b80_il2cpp_class_get_declaring_type.txt
+================================================================================
+Function: il2cpp_class_get_declaring_type @ 00af2b80
+
+--- Calls OUT ---
+  -> FUN_00ab5394 @ 00ab5394
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b80  b 0x00ab5394
+
+
+================================================================================
+### FILE: 00af2b84_il2cpp_class_instance_size.txt
+================================================================================
+Function: il2cpp_class_instance_size @ 00af2b84
+
+--- Calls OUT ---
+  -> FUN_00ab2054 @ 00ab2054
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b84  b 0x00ab2054
+
+
+================================================================================
+### FILE: 00af2b88_il2cpp_class_num_fields.txt
+================================================================================
+Function: il2cpp_class_num_fields @ 00af2b88
+
+--- Calls OUT ---
+  -> FUN_00ab25d0 @ 00ab25d0
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b88  b 0x00ab25d0
+
+
+================================================================================
+### FILE: 00af2b8c_il2cpp_class_is_valuetype.txt
+================================================================================
+Function: il2cpp_class_is_valuetype @ 00af2b8c
+
+--- Calls OUT ---
+  -> FUN_00ab32a0 @ 00ab32a0
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b8c  b 0x00ab32a0
+
+
+================================================================================
+### FILE: 00af2b90_il2cpp_class_is_blittable.txt
+================================================================================
+Function: il2cpp_class_is_blittable @ 00af2b90
+
+--- Calls OUT ---
+  -> FUN_00ab32ac @ 00ab32ac
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b90  b 0x00ab32ac
+
+
+================================================================================
+### FILE: 00af2b94_il2cpp_class_value_size.txt
+================================================================================
+Function: il2cpp_class_value_size @ 00af2b94
+
+--- Calls OUT ---
+  -> FUN_00ab27ac @ 00ab27ac
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b94  b 0x00ab27ac
+
+
+================================================================================
+### FILE: 00af2b98_il2cpp_class_get_flags.txt
+================================================================================
+Function: il2cpp_class_get_flags @ 00af2b98
+
+--- Calls OUT ---
+  -> FUN_00ab49fc @ 00ab49fc
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b98  b 0x00ab49fc
+
+
+================================================================================
+### FILE: 00af2b9c_il2cpp_class_is_abstract.txt
+================================================================================
+Function: il2cpp_class_is_abstract @ 00af2b9c
+
+--- Calls OUT ---
+  -> FUN_00ab4a04 @ 00ab4a04
+
+--- Calls IN ---
+
+--- Listing ---
+00af2b9c  b 0x00ab4a04
+
+
+================================================================================
+### FILE: 00af2ba0_il2cpp_class_is_interface.txt
+================================================================================
+Function: il2cpp_class_is_interface @ 00af2ba0
+
+--- Calls OUT ---
+  -> FUN_00ab3048 @ 00ab3048
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ba0  b 0x00ab3048
+
+
+================================================================================
+### FILE: 00af2ba4_il2cpp_class_array_element_size.txt
+================================================================================
+Function: il2cpp_class_array_element_size @ 00af2ba4
+
+--- Calls OUT ---
+  -> FUN_00ab4a10 @ 00ab4a10
+
+--- Calls IN ---
+
+--- Listing ---
+00af2ba4  b 0x00ab4a10
+
+
+================================================================================
+### FILE: 00af2ba8_il2cpp_class_from_type.txt
+================================================================================
+Function: il2cpp_class_from_type @ 00af2ba8
+
+--- Calls OUT ---
+  -> FUN_00ab1648 @ 00ab1648
+
+--- Calls IN ---
+  <- il2cpp_class_from_type @ 008d3ba0
+
+--- Listing ---
+00af2ba8  mov w1,#0x1
+00af2bac  b 0x00ab1648
+
+
+================================================================================
+### FILE: 00af2bb0_il2cpp_class_get_type.txt
+================================================================================
+Function: il2cpp_class_get_type @ 00af2bb0
+
+--- Calls OUT ---
+  -> FUN_00ab4ad8 @ 00ab4ad8
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bb0  b 0x00ab4ad8
+
+
+================================================================================
+### FILE: 00af2bb4_il2cpp_class_get_type_token.txt
+================================================================================
+Function: il2cpp_class_get_type_token @ 00af2bb4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bb4  ldr w0,[x0, #0x118]
+00af2bb8  ret
+
+
+================================================================================
+### FILE: 00af2bbc_il2cpp_class_has_attribute.txt
+================================================================================
+Function: il2cpp_class_has_attribute @ 00af2bbc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ad232c @ 00ab4fc8
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bbc  b 0x00ab4fc8
+
+
+================================================================================
+### FILE: 00af2bc0_il2cpp_class_has_references.txt
+================================================================================
+Function: il2cpp_class_has_references @ 00af2bc0
+
+--- Calls OUT ---
+  -> FUN_00ab5014 @ 00ab5014
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bc0  b 0x00ab5014
+
+
+================================================================================
+### FILE: 00af2bc4_il2cpp_class_is_enum.txt
+================================================================================
+Function: il2cpp_class_is_enum @ 00af2bc4
+
+--- Calls OUT ---
+  -> FUN_00ab4fcc @ 00ab4fcc
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bc4  b 0x00ab4fcc
+
+
+================================================================================
+### FILE: 00af2bc8_il2cpp_class_get_image.txt
+================================================================================
+Function: il2cpp_class_get_image @ 00af2bc8
+
+--- Calls OUT ---
+  -> FUN_00ab4fd8 @ 00ab4fd8
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bc8  b 0x00ab4fd8
+
+
+================================================================================
+### FILE: 00af2bcc_il2cpp_class_get_assemblyname.txt
+================================================================================
+Function: il2cpp_class_get_assemblyname @ 00af2bcc
+
+--- Calls OUT ---
+  -> FUN_00ab51fc @ 00ab51fc
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bcc  b 0x00ab51fc
+
+
+================================================================================
+### FILE: 00af2bd0_il2cpp_class_get_rank.txt
+================================================================================
+Function: il2cpp_class_get_rank @ 00af2bd0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bd0  ldrb w0,[x0, #0x12e]
+00af2bd4  ret
+
+
+================================================================================
+### FILE: 00af2bd8_il2cpp_class_get_data_size.txt
+================================================================================
+Function: il2cpp_class_get_data_size @ 00af2bd8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bd8  ldr w0,[x0, #0x108]
+00af2bdc  ret
+
+
+================================================================================
+### FILE: 00af2be0_il2cpp_class_get_static_field_data.txt
+================================================================================
+Function: il2cpp_class_get_static_field_data @ 00af2be0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af2be0  ldr x0,[x0, #0xb8]
+00af2be4  ret
+
+
+================================================================================
+### FILE: 00af2be8_il2cpp_class_get_bitmap_size.txt
+================================================================================
+Function: il2cpp_class_get_bitmap_size @ 00af2be8
+
+--- Calls OUT ---
+  -> FUN_00ab5048 @ 00ab5048
+
+--- Calls IN ---
+
+--- Listing ---
+00af2be8  b 0x00ab5048
+
+
+================================================================================
+### FILE: 00af2bec_il2cpp_class_get_bitmap.txt
+================================================================================
+Function: il2cpp_class_get_bitmap @ 00af2bec
+
+--- Calls OUT ---
+  -> FUN_00ab505c @ 00ab505c
+
+--- Calls IN ---
+
+--- Listing ---
+00af2bec  str x30,[sp, #-0x10]!
+00af2bf0  add x2,sp,#0x8
+00af2bf4  str xzr,[sp, #0x8]
+00af2bf8  bl 0x00ab505c
+00af2bfc  ldr x30,[sp], #0x10
+00af2c00  ret
+
+
+================================================================================
+### FILE: 00af2c04_il2cpp_stats_dump_to_file.txt
+================================================================================
+Function: il2cpp_stats_dump_to_file @ 00af2c04
+
+--- Calls OUT ---
+  -> FUN_00af50cc @ 00af50cc
+  -> ~ios_base @ 008d56f0
+  -> init @ 008d5c00
+  -> FUN_00af2f10 @ 00af2f10
+  -> FUN_00af4368 @ 00af4368
+  -> FUN_00af2f4c @ 00af2f4c
+  -> FUN_00af5340 @ 00af5340
+  -> clear @ 008d4970
+  -> FUN_00af43f0 @ 00af43f0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00af2c04  sub sp,sp,#0x1a0
+00af2c08  stp x28,x24,[sp, #0x160]
+00af2c0c  stp x23,x22,[sp, #0x170]
+00af2c10  stp x21,x20,[sp, #0x180]
+00af2c14  stp x19,x30,[sp, #0x190]
+00af2c18  adrp x23,0x335f000
+00af2c1c  adrp x9,0x3347000
+00af2c20  mrs x22,tpidr_el0
+00af2c24  ldr x23,[x23, #0x388]
+00af2c28  ldr x9,[x9, #0xf68]
+00af2c2c  ldr x10,[x22, #0x28]
+00af2c30  mov x8,sp
+00af2c34  movi v0.2D,#0x0
+00af2c38  add x11,x9,#0x18
+00af2c3c  mov x21,x0
+00af2c40  add x19,x8,#0xc0
+00af2c44  mov v0.D[0x0],x11
+00af2c48  add x24,x23,#0x40
+00af2c4c  add x20,x8,#0x18
+00af2c50  add x8,x9,#0x40
+00af2c54  str x10,[sp, #0x158]
+00af2c58  str x8,[sp, #0xc0]
+00af2c5c  str x24,[sp, #0x10]
+00af2c60  str q0,[sp]
+00af2c64  mov x0,x19
+    ; [PRE] try { // try from 00af2c64 to 00af2c6f has its CatchHandler @ 00af2ed4
+00af2c68  mov x1,x20
+00af2c6c  bl 0x008d5c00
+    ; [POST] } // end try from 00af2c64 to 00af2c6f
+00af2c70  mov w8,#0xffffffff
+00af2c74  add x9,x23,#0x18
+00af2c78  add x10,x23,#0x68
+00af2c7c  str w8,[sp, #0x150]
+00af2c80  str x24,[sp, #0x10]
+00af2c84  str x9,[sp]
+00af2c88  str xzr,[sp, #0x148]
+00af2c8c  str x10,[sp, #0xc0]
+00af2c90  mov x0,x20
+    ; [PRE] try { // try from 00af2c90 to 00af2c97 has its CatchHandler @ 00af2ed0
+00af2c94  bl 0x00af50cc
+    ; [POST] } // end try from 00af2c90 to 00af2c97
+00af2c98  mov x0,sp
+    ; [PRE] try { // try from 00af2c98 to 00af2e77 has its CatchHandler @ 00af2edc
+00af2c9c  mov w2,#0x30
+00af2ca0  mov x1,x21
+00af2ca4  mov x24,sp
+00af2ca8  bl 0x00af2f10
+00af2cac  add x21,x24,#0x10
+00af2cb0  adrp x1,0x2989000
+00af2cb4  add x1,x1,#0xc20
+00af2cb8  mov w2,#0x12
+00af2cbc  mov x0,x21
+00af2cc0  bl 0x00af5340
+00af2cc4  adrp x8,0x3582000
+00af2cc8  add x8,x8,#0x5e8
+00af2ccc  ldar x1,[x8]
+00af2cd0  bl 0x00af2f4c
+00af2cd4  adrp x1,0x2a02000
+00af2cd8  add x1,x1,#0x3b
+00af2cdc  mov w2,#0x1
+00af2ce0  bl 0x00af5340
+00af2ce4  adrp x1,0x2989000
+00af2ce8  add x1,x1,#0xc33
+00af2cec  mov w2,#0xe
+00af2cf0  mov x0,x21
+00af2cf4  bl 0x00af5340
+00af2cf8  adrp x8,0x3582000
+00af2cfc  add x8,x8,#0x5f8
+00af2d00  ldar x1,[x8]
+00af2d04  bl 0x00af2f4c
+00af2d08  adrp x1,0x2a02000
+00af2d0c  add x1,x1,#0x3b
+00af2d10  mov w2,#0x1
+00af2d14  bl 0x00af5340
+00af2d18  adrp x1,0x2989000
+00af2d1c  add x1,x1,#0xc42
+00af2d20  mov w2,#0x18
+00af2d24  mov x0,x21
+00af2d28  bl 0x00af5340
+00af2d2c  adrp x8,0x3582000
+00af2d30  add x8,x8,#0x600
+00af2d34  ldar x1,[x8]
+00af2d38  bl 0x00af2f4c
+00af2d3c  adrp x1,0x2a02000
+00af2d40  add x1,x1,#0x3b
+00af2d44  mov w2,#0x1
+00af2d48  bl 0x00af5340
+00af2d4c  adrp x1,0x2989000
+00af2d50  add x1,x1,#0xc5b
+00af2d54  mov w2,#0x17
+00af2d58  mov x0,x21
+00af2d5c  bl 0x00af5340
+00af2d60  adrp x8,0x3582000
+00af2d64  add x8,x8,#0x618
+00af2d68  ldar x1,[x8]
+00af2d6c  bl 0x00af2f4c
+00af2d70  adrp x1,0x2a02000
+00af2d74  add x1,x1,#0x3b
+00af2d78  mov w2,#0x1
+00af2d7c  bl 0x00af5340
+00af2d80  adrp x1,0x2989000
+00af2d84  add x1,x1,#0xc73
+00af2d88  mov w2,#0x15
+00af2d8c  mov x0,x21
+00af2d90  bl 0x00af5340
+00af2d94  adrp x8,0x3582000
+00af2d98  add x8,x8,#0x620
+00af2d9c  ldar x1,[x8]
+00af2da0  bl 0x00af2f4c
+00af2da4  adrp x1,0x2a02000
+00af2da8  add x1,x1,#0x3b
+00af2dac  mov w2,#0x1
+00af2db0  bl 0x00af5340
+00af2db4  adrp x1,0x2989000
+00af2db8  add x1,x1,#0xc89
+00af2dbc  mov w2,#0x19
+00af2dc0  mov x0,x21
+00af2dc4  bl 0x00af5340
+00af2dc8  adrp x8,0x3582000
+00af2dcc  add x8,x8,#0x5f0
+00af2dd0  ldar x1,[x8]
+00af2dd4  bl 0x00af2f4c
+00af2dd8  adrp x1,0x2a02000
+00af2ddc  add x1,x1,#0x3b
+00af2de0  mov w2,#0x1
+00af2de4  bl 0x00af5340
+00af2de8  adrp x1,0x2989000
+00af2dec  add x1,x1,#0xca3
+00af2df0  mov w2,#0x18
+00af2df4  mov x0,x21
+00af2df8  bl 0x00af5340
+00af2dfc  adrp x8,0x3582000
+00af2e00  add x8,x8,#0x608
+00af2e04  ldar x1,[x8]
+00af2e08  bl 0x00af2f4c
+00af2e0c  adrp x1,0x2a02000
+00af2e10  add x1,x1,#0x3b
+00af2e14  mov w2,#0x1
+00af2e18  bl 0x00af5340
+00af2e1c  adrp x1,0x2989000
+00af2e20  add x1,x1,#0xcbc
+00af2e24  mov w2,#0x15
+00af2e28  mov x0,x21
+00af2e2c  bl 0x00af5340
+00af2e30  adrp x8,0x3582000
+00af2e34  add x8,x8,#0x610
+00af2e38  ldar x1,[x8]
+00af2e3c  bl 0x00af2f4c
+00af2e40  adrp x1,0x2a02000
+00af2e44  add x1,x1,#0x3b
+00af2e48  mov w2,#0x1
+00af2e4c  bl 0x00af5340
+00af2e50  mov x0,x20
+00af2e54  bl 0x00af43f0
+00af2e58  cbnz x0,0x00af2e78
+00af2e5c  ldr x8,[sp]
+00af2e60  mov x9,sp
+00af2e64  ldur x8,[x8, #-0x18]
+00af2e68  add x0,x9,x8
+00af2e6c  ldr w8,[x0, #0x20]
+00af2e70  orr w1,w8,#0x4
+00af2e74  bl 0x008d4970
+    ; [POST] } // end try from 00af2c98 to 00af2e77
+00af2e78  add x8,x23,#0x18
+00af2e7c  add x9,x23,#0x68
+00af2e80  add x10,x23,#0x40
+00af2e84  mov x0,x20
+00af2e88  str x8,[sp]
+00af2e8c  str x9,[sp, #0xc0]
+00af2e90  str x10,[sp, #0x10]
+00af2e94  bl 0x00af4368
+00af2e98  mov x0,x19
+00af2e9c  bl 0x008d56f0
+00af2ea0  ldr x8,[x22, #0x28]
+00af2ea4  ldr x9,[sp, #0x158]
+00af2ea8  cmp x8,x9
+00af2eac  b.ne 0x00af2ecc
+00af2eb0  ldp x19,x30,[sp, #0x190]
+00af2eb4  ldp x21,x20,[sp, #0x180]
+00af2eb8  ldp x23,x22,[sp, #0x170]
+00af2ebc  ldp x28,x24,[sp, #0x160]
+00af2ec0  mov w0,#0x1
+00af2ec4  add sp,sp,#0x1a0
+00af2ec8  ret
+00af2ecc  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00af30e4_il2cpp_stats_get_value.txt
+================================================================================
+Function: il2cpp_stats_get_value @ 00af30e4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af30e4  cmp w0,#0x7
+00af30e8  b.hi 0x00af3100
+00af30ec  adrp x8,0x3301000
+00af30f0  add x8,x8,#0x2f0
+00af30f4  ldr x8,[x8, w0, SXTW #0x3]
+00af30f8  ldar x0,[x8]
+00af30fc  ret
+00af3100  mov x0,xzr
+00af3104  ret
+
+
+================================================================================
+### FILE: 00af3144_il2cpp_domain_get.txt
+================================================================================
+Function: il2cpp_domain_get @ 00af3144
+
+--- Calls OUT ---
+  -> FUN_00af9614 @ 00af9614
+
+--- Calls IN ---
+
+--- Listing ---
+00af3144  b 0x00af9614
+
+
+================================================================================
+### FILE: 00af3148_il2cpp_domain_assembly_open.txt
+================================================================================
+Function: il2cpp_domain_assembly_open @ 00af3148
+
+--- Calls OUT ---
+  -> FUN_00ace074 @ 00ace074
+
+--- Calls IN ---
+
+--- Listing ---
+00af3148  mov x0,x1
+00af314c  b 0x00ace074
+
+
+================================================================================
+### FILE: 00af3150_il2cpp_domain_get_assemblies.txt
+================================================================================
+Function: il2cpp_domain_get_assemblies @ 00af3150
+
+--- Calls OUT ---
+  -> FUN_00ace008 @ 00ace008
+
+--- Calls IN ---
+
+--- Listing ---
+00af3150  stp x19,x30,[sp, #-0x10]!
+00af3154  mov x19,x1
+00af3158  bl 0x00ace008
+00af315c  ldp x8,x9,[x0]
+00af3160  sub x9,x9,x8
+00af3164  asr x9,x9,#0x3
+00af3168  str x9,[x19]
+00af316c  mov x0,x8
+00af3170  ldp x19,x30,[sp], #0x10
+00af3174  ret
+
+
+================================================================================
+### FILE: 00af3178_il2cpp_raise_exception.txt
+================================================================================
+Function: il2cpp_raise_exception @ 00af3178
+
+--- Calls OUT ---
+  -> FUN_00aecc58 @ 00aecc58
+
+--- Calls IN ---
+  <- il2cpp_raise_exception @ 008d56e0
+
+--- Listing ---
+00af3178  str x30,[sp, #-0x10]!
+00af317c  mov x1,xzr
+00af3180  bl 0x00aecc58
+
+
+================================================================================
+### FILE: 00af3184_il2cpp_exception_from_name_msg.txt
+================================================================================
+Function: il2cpp_exception_from_name_msg @ 00af3184
+
+--- Calls OUT ---
+  -> FUN_00aed700 @ 00aed700
+
+--- Calls IN ---
+
+--- Listing ---
+00af3184  b 0x00aed700
+
+
+================================================================================
+### FILE: 00af3188_il2cpp_get_exception_argument_null.txt
+================================================================================
+Function: il2cpp_get_exception_argument_null @ 00af3188
+
+--- Calls OUT ---
+  -> FUN_00aed860 @ 00aed860
+
+--- Calls IN ---
+
+--- Listing ---
+00af3188  b 0x00aed860
+
+
+================================================================================
+### FILE: 00af318c_il2cpp_format_exception.txt
+================================================================================
+Function: il2cpp_format_exception @ 00af318c
+
+--- Calls OUT ---
+  -> strncpy @ 008d5040
+  -> operator.delete @ 008d3ed0
+  -> FUN_00aca94c @ 00aca94c
+
+--- Calls IN ---
+
+--- Listing ---
+00af318c  sub sp,sp,#0x40
+00af3190  stp x21,x20,[sp, #0x20]
+00af3194  stp x19,x30,[sp, #0x30]
+00af3198  add x8,sp,#0x8
+00af319c  mov w19,w2
+00af31a0  mov x20,x1
+00af31a4  add x21,sp,#0x8
+00af31a8  bl 0x00aca94c
+00af31ac  ldrb w8,[sp, #0x8]
+00af31b0  ldr x9,[sp, #0x18]
+00af31b4  orr x10,x21,#0x1
+00af31b8  sxtw x2,w19
+00af31bc  tst w8,#0x1
+00af31c0  csel x1,x10,x9,eq
+00af31c4  mov x0,x20
+00af31c8  bl 0x008d5040
+00af31cc  ldrb w8,[sp, #0x8]
+00af31d0  tbz w8,#0x0,0x00af31dc
+00af31d4  ldr x0,[sp, #0x18]
+00af31d8  bl 0x008d3ed0
+00af31dc  ldp x19,x30,[sp, #0x30]
+00af31e0  ldp x21,x20,[sp, #0x20]
+00af31e4  add sp,sp,#0x40
+00af31e8  ret
+
+
+================================================================================
+### FILE: 00af31ec_il2cpp_format_stack_trace.txt
+================================================================================
+Function: il2cpp_format_stack_trace @ 00af31ec
+
+--- Calls OUT ---
+  -> FUN_00acac98 @ 00acac98
+  -> strncpy @ 008d5040
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00af31ec  sub sp,sp,#0x40
+00af31f0  stp x21,x20,[sp, #0x20]
+00af31f4  stp x19,x30,[sp, #0x30]
+00af31f8  add x8,sp,#0x8
+00af31fc  mov w19,w2
+00af3200  mov x20,x1
+00af3204  add x21,sp,#0x8
+00af3208  bl 0x00acac98
+00af320c  ldrb w8,[sp, #0x8]
+00af3210  ldr x9,[sp, #0x18]
+00af3214  orr x10,x21,#0x1
+00af3218  sxtw x2,w19
+00af321c  tst w8,#0x1
+00af3220  csel x1,x10,x9,eq
+00af3224  mov x0,x20
+00af3228  bl 0x008d5040
+00af322c  ldrb w8,[sp, #0x8]
+00af3230  tbz w8,#0x0,0x00af323c
+00af3234  ldr x0,[sp, #0x18]
+00af3238  bl 0x008d3ed0
+00af323c  ldp x19,x30,[sp, #0x30]
+00af3240  ldp x21,x20,[sp, #0x20]
+00af3244  add sp,sp,#0x40
+00af3248  ret
+
+
+================================================================================
+### FILE: 00af324c_il2cpp_unhandled_exception.txt
+================================================================================
+Function: il2cpp_unhandled_exception @ 00af324c
+
+--- Calls OUT ---
+  -> FUN_00aae9cc @ 00aae9cc
+
+--- Calls IN ---
+
+--- Listing ---
+00af324c  b 0x00aae9cc
+
+
+================================================================================
+### FILE: 00af3250_il2cpp_native_stack_trace.txt
+================================================================================
+Function: il2cpp_native_stack_trace @ 00af3250
+
+--- Calls OUT ---
+  -> malloc @ 00acaf44
+  -> thunk_FUN_00ab0cd8 @ 00ab0df0
+  -> FUN_00ab0df4 @ 00ab0df4
+  -> FUN_00acdb68 @ 00acdb68
+
+--- Calls IN ---
+
+--- Listing ---
+00af3250  stp x23,x22,[sp, #-0x30]!
+00af3254  stp x21,x20,[sp, #0x10]
+00af3258  stp x19,x30,[sp, #0x20]
+00af325c  mov x19,x4
+00af3260  mov x20,x3
+00af3264  mov x23,x2
+00af3268  mov x22,x1
+00af326c  cbz x0,0x00af32d4
+00af3270  mov x21,x0
+00af3274  ldr x0,[x0, #0x80]
+00af3278  cbz x0,0x00af32d4
+00af327c  bl 0x00acdb68
+00af3280  cmp w0,#0x0
+00af3284  str w0,[x23]
+00af3288  b.le 0x00af32e0
+00af328c  sbfiz x0,x0,#0x3,#0x20
+00af3290  bl 0x00acaf44
+00af3294  str x0,[x22]
+00af3298  ldrsw x8,[x23]
+00af329c  cmp w8,#0x1
+00af32a0  b.lt 0x00af32c4
+00af32a4  ldr x10,[x21, #0x80]
+00af32a8  mov x9,xzr
+00af32ac  add x10,x10,#0x20
+00af32b0  ldr x11,[x10, x9, LSL #0x3]
+00af32b4  str x11,[x0, x9, LSL #0x3]
+00af32b8  add x9,x9,#0x1
+00af32bc  cmp x9,x8
+00af32c0  b.lt 0x00af32b0
+00af32c4  bl 0x00ab0df0
+00af32c8  str x0,[x20]
+00af32cc  bl 0x00ab0df4
+00af32d0  b 0x00af32ec
+00af32d4  mov x0,xzr
+00af32d8  str wzr,[x23]
+00af32dc  b 0x00af32e4
+00af32e0  mov x0,xzr
+00af32e4  str xzr,[x22]
+00af32e8  str xzr,[x20]
+00af32ec  str x0,[x19]
+00af32f0  ldp x19,x30,[sp, #0x20]
+00af32f4  ldp x21,x20,[sp, #0x10]
+00af32f8  ldp x23,x22,[sp], #0x30
+00af32fc  ret
+
+
+================================================================================
+### FILE: 00af3300_il2cpp_field_get_name.txt
+================================================================================
+Function: il2cpp_field_get_name @ 00af3300
+
+--- Calls OUT ---
+  -> FUN_00aac148 @ 00aac148
+
+--- Calls IN ---
+
+--- Listing ---
+00af3300  b 0x00aac148
+
+
+================================================================================
+### FILE: 00af3304_il2cpp_field_get_flags.txt
+================================================================================
+Function: il2cpp_field_get_flags @ 00af3304
+
+--- Calls OUT ---
+  -> FUN_00aac158 @ 00aac158
+
+--- Calls IN ---
+
+--- Listing ---
+00af3304  b 0x00aac158
+
+
+================================================================================
+### FILE: 00af3308_il2cpp_field_get_parent.txt
+================================================================================
+Function: il2cpp_field_get_parent @ 00af3308
+
+--- Calls OUT ---
+  -> FUN_00aac150 @ 00aac150
+
+--- Calls IN ---
+
+--- Listing ---
+00af3308  b 0x00aac150
+
+
+================================================================================
+### FILE: 00af330c_il2cpp_field_get_offset.txt
+================================================================================
+Function: il2cpp_field_get_offset @ 00af330c
+
+--- Calls OUT ---
+  -> FUN_00aac164 @ 00aac164
+
+--- Calls IN ---
+
+--- Listing ---
+00af330c  b 0x00aac164
+
+
+================================================================================
+### FILE: 00af3310_il2cpp_field_get_type.txt
+================================================================================
+Function: il2cpp_field_get_type @ 00af3310
+
+--- Calls OUT ---
+  -> FUN_00aac8f8 @ 00aac8f8
+
+--- Calls IN ---
+
+--- Listing ---
+00af3310  b 0x00aac8f8
+
+
+================================================================================
+### FILE: 00af3314_il2cpp_field_get_value.txt
+================================================================================
+Function: il2cpp_field_get_value @ 00af3314
+
+--- Calls OUT ---
+  -> FUN_00aac16c @ 00aac16c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3314  b 0x00aac16c
+
+
+================================================================================
+### FILE: 00af3318_il2cpp_field_get_value_object.txt
+================================================================================
+Function: il2cpp_field_get_value_object @ 00af3318
+
+--- Calls OUT ---
+  -> FUN_00aac350 @ 00aac350
+
+--- Calls IN ---
+
+--- Listing ---
+00af3318  b 0x00aac350
+
+
+================================================================================
+### FILE: 00af331c_il2cpp_field_has_attribute.txt
+================================================================================
+Function: il2cpp_field_has_attribute @ 00af331c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ad22f4 @ 00aac900
+
+--- Calls IN ---
+
+--- Listing ---
+00af331c  b 0x00aac900
+
+
+================================================================================
+### FILE: 00af3320_il2cpp_field_set_value.txt
+================================================================================
+Function: il2cpp_field_set_value @ 00af3320
+
+--- Calls OUT ---
+  -> FUN_00aac90c @ 00aac90c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3320  b 0x00aac90c
+
+
+================================================================================
+### FILE: 00af3324_il2cpp_field_set_value_object.txt
+================================================================================
+Function: il2cpp_field_set_value_object @ 00af3324
+
+--- Calls OUT ---
+  -> FUN_00aacaa4 @ 00aacaa4
+
+--- Calls IN ---
+
+--- Listing ---
+00af3324  b 0x00aacaa4
+
+
+================================================================================
+### FILE: 00af3328_il2cpp_field_static_get_value.txt
+================================================================================
+Function: il2cpp_field_static_get_value @ 00af3328
+
+--- Calls OUT ---
+  -> FUN_00aac924 @ 00aac924
+
+--- Calls IN ---
+
+--- Listing ---
+00af3328  b 0x00aac924
+
+
+================================================================================
+### FILE: 00af332c_il2cpp_field_static_set_value.txt
+================================================================================
+Function: il2cpp_field_static_set_value @ 00af332c
+
+--- Calls OUT ---
+  -> FUN_00aac9fc @ 00aac9fc
+
+--- Calls IN ---
+
+--- Listing ---
+00af332c  b 0x00aac9fc
+
+
+================================================================================
+### FILE: 00af3330_il2cpp_field_is_literal.txt
+================================================================================
+Function: il2cpp_field_is_literal @ 00af3330
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3330  ldr x8,[x0, #0x8]
+00af3334  ldrb w8,[x8, #0x8]
+00af3338  ubfx w0,w8,#0x6,#0x1
+00af333c  ret
+
+
+================================================================================
+### FILE: 00af3340_il2cpp_gc_collect.txt
+================================================================================
+Function: il2cpp_gc_collect @ 00af3340
+
+--- Calls OUT ---
+  -> thunk_FUN_00b374f4 @ 00ae0924
+
+--- Calls IN ---
+
+--- Listing ---
+00af3340  b 0x00ae0924
+
+
+================================================================================
+### FILE: 00af3344_il2cpp_gc_collect_a_little.txt
+================================================================================
+Function: il2cpp_gc_collect_a_little @ 00af3344
+
+--- Calls OUT ---
+  -> thunk_FUN_00b35644 @ 00ae0928
+
+--- Calls IN ---
+
+--- Listing ---
+00af3344  b 0x00ae0928
+
+
+================================================================================
+### FILE: 00af3348_il2cpp_gc_start_incremental_collection.txt
+================================================================================
+Function: il2cpp_gc_start_incremental_collection @ 00af3348
+
+--- Calls OUT ---
+  -> thunk_FUN_00b35624 @ 00ae092c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3348  b 0x00ae092c
+
+
+================================================================================
+### FILE: 00af334c_il2cpp_gc_enable.txt
+================================================================================
+Function: il2cpp_gc_enable @ 00af334c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b3d848 @ 00ae0958
+
+--- Calls IN ---
+
+--- Listing ---
+00af334c  b 0x00ae0958
+
+
+================================================================================
+### FILE: 00af3350_il2cpp_gc_disable.txt
+================================================================================
+Function: il2cpp_gc_disable @ 00af3350
+
+--- Calls OUT ---
+  -> thunk_FUN_00b3d8b8 @ 00ae0954
+
+--- Calls IN ---
+
+--- Listing ---
+00af3350  b 0x00ae0954
+
+
+================================================================================
+### FILE: 00af3354_il2cpp_gc_is_disabled.txt
+================================================================================
+Function: il2cpp_gc_is_disabled @ 00af3354
+
+--- Calls OUT ---
+  -> FUN_00ae095c @ 00ae095c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3354  b 0x00ae095c
+
+
+================================================================================
+### FILE: 00af3358_il2cpp_gc_set_mode.txt
+================================================================================
+Function: il2cpp_gc_set_mode @ 00af3358
+
+--- Calls OUT ---
+  -> FUN_00ae0974 @ 00ae0974
+
+--- Calls IN ---
+
+--- Listing ---
+00af3358  b 0x00ae0974
+
+
+================================================================================
+### FILE: 00af335c_il2cpp_gc_is_incremental.txt
+================================================================================
+Function: il2cpp_gc_is_incremental @ 00af335c
+
+--- Calls OUT ---
+  -> FUN_00ae0af8 @ 00ae0af8
+
+--- Calls IN ---
+
+--- Listing ---
+00af335c  b 0x00ae0af8
+
+
+================================================================================
+### FILE: 00af3360_il2cpp_gc_get_max_time_slice_ns.txt
+================================================================================
+Function: il2cpp_gc_get_max_time_slice_ns @ 00af3360
+
+--- Calls OUT ---
+  -> thunk_FUN_00b3dab0 @ 00ae0af0
+
+--- Calls IN ---
+
+--- Listing ---
+00af3360  b 0x00ae0af0
+
+
+================================================================================
+### FILE: 00af3364_il2cpp_gc_set_max_time_slice_ns.txt
+================================================================================
+Function: il2cpp_gc_set_max_time_slice_ns @ 00af3364
+
+--- Calls OUT ---
+  -> thunk_FUN_00b3daa4 @ 00ae0af4
+
+--- Calls IN ---
+
+--- Listing ---
+00af3364  b 0x00ae0af4
+
+
+================================================================================
+### FILE: 00af3368_il2cpp_gc_get_used_size.txt
+================================================================================
+Function: il2cpp_gc_get_used_size @ 00af3368
+
+--- Calls OUT ---
+  -> FUN_00ae0934 @ 00ae0934
+
+--- Calls IN ---
+
+--- Listing ---
+00af3368  b 0x00ae0934
+
+
+================================================================================
+### FILE: 00af336c_il2cpp_gc_get_heap_size.txt
+================================================================================
+Function: il2cpp_gc_get_heap_size @ 00af336c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b3d0e4 @ 00ae0950
+
+--- Calls IN ---
+
+--- Listing ---
+00af336c  b 0x00ae0950
+
+
+================================================================================
+### FILE: 00af3370_il2cpp_gc_foreach_heap.txt
+================================================================================
+Function: il2cpp_gc_foreach_heap @ 00af3370
+
+--- Calls OUT ---
+  -> FUN_00afbf90 @ 00afbf90
+  -> thunk_FUN_00b3e204 @ 00ae0b10
+
+--- Calls IN ---
+
+--- Listing ---
+00af3370  sub sp,sp,#0x20
+00af3374  stp x1,x30,[sp, #0x8]
+00af3378  str x0,[sp]
+00af337c  adrp x1,0x334c000
+00af3380  ldr x1,[x1, #0x148]
+00af3384  mov x0,sp
+00af3388  bl 0x00ae0b10
+00af338c  ldr x30,[sp, #0x10]
+00af3390  add sp,sp,#0x20
+00af3394  ret
+
+
+================================================================================
+### FILE: 00af3398_il2cpp_stop_gc_world.txt
+================================================================================
+Function: il2cpp_stop_gc_world @ 00af3398
+
+--- Calls OUT ---
+  -> thunk_FUN_00b3dabc @ 00ae0ae0
+
+--- Calls IN ---
+
+--- Listing ---
+00af3398  b 0x00ae0ae0
+
+
+================================================================================
+### FILE: 00af339c_il2cpp_start_gc_world.txt
+================================================================================
+Function: il2cpp_start_gc_world @ 00af339c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b3daf4 @ 00ae0ae4
+
+--- Calls IN ---
+
+--- Listing ---
+00af339c  b 0x00ae0ae4
+
+
+================================================================================
+### FILE: 00af33a0_il2cpp_gc_alloc_fixed.txt
+================================================================================
+Function: il2cpp_gc_alloc_fixed @ 00af33a0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b3820c @ 00ae0ae8
+
+--- Calls IN ---
+
+--- Listing ---
+00af33a0  mov x1,xzr
+00af33a4  b 0x00ae0ae8
+
+
+================================================================================
+### FILE: 00af33a8_il2cpp_gc_free_fixed.txt
+================================================================================
+Function: il2cpp_gc_free_fixed @ 00af33a8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b38214 @ 00ae0aec
+
+--- Calls IN ---
+
+--- Listing ---
+00af33a8  b 0x00ae0aec
+
+
+================================================================================
+### FILE: 00af33ac_il2cpp_gchandle_new.txt
+================================================================================
+Function: il2cpp_gchandle_new @ 00af33ac
+
+--- Calls OUT ---
+  -> FUN_00ae0c10 @ 00ae0c10
+
+--- Calls IN ---
+
+--- Listing ---
+00af33ac  and w1,w1,#0x1
+00af33b0  b 0x00ae0c10
+
+
+================================================================================
+### FILE: 00af33b4_il2cpp_gchandle_new_weakref.txt
+================================================================================
+Function: il2cpp_gchandle_new_weakref @ 00af33b4
+
+--- Calls OUT ---
+  -> FUN_00ae1084 @ 00ae1084
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00af33b4  sub sp,sp,#0x40
+00af33b8  stp x19,x30,[sp, #0x30]
+00af33bc  and w1,w1,#0x1
+00af33c0  mov x8,sp
+00af33c4  bl 0x00ae1084
+00af33c8  ldrb w8,[sp, #0x10]
+00af33cc  ldr w19,[sp]
+00af33d0  tbz w8,#0x0,0x00af33dc
+00af33d4  ldr x0,[sp, #0x20]
+00af33d8  bl 0x008d3ed0
+00af33dc  mov w0,w19
+00af33e0  ldp x19,x30,[sp, #0x30]
+00af33e4  add sp,sp,#0x40
+00af33e8  ret
+
+
+================================================================================
+### FILE: 00af33ec_il2cpp_gchandle_get_target.txt
+================================================================================
+Function: il2cpp_gchandle_get_target @ 00af33ec
+
+--- Calls OUT ---
+  -> FUN_00ae114c @ 00ae114c
+
+--- Calls IN ---
+
+--- Listing ---
+00af33ec  b 0x00ae114c
+
+
+================================================================================
+### FILE: 00af33f0_il2cpp_gchandle_foreach_get_target.txt
+================================================================================
+Function: il2cpp_gchandle_foreach_get_target @ 00af33f0
+
+--- Calls OUT ---
+  -> FUN_00ae1704 @ 00ae1704
+  -> FUN_00afbfbc @ 00afbfbc
+
+--- Calls IN ---
+
+--- Listing ---
+00af33f0  sub sp,sp,#0x20
+00af33f4  stp x1,x30,[sp, #0x8]
+00af33f8  str x0,[sp]
+00af33fc  adrp x0,0x334e000
+00af3400  ldr x0,[x0, #0xd18]
+00af3404  mov x1,sp
+00af3408  bl 0x00ae1704
+00af340c  ldr x30,[sp, #0x10]
+00af3410  add sp,sp,#0x20
+00af3414  ret
+
+
+================================================================================
+### FILE: 00af3418_il2cpp_gc_wbarrier_set_field.txt
+================================================================================
+Function: il2cpp_gc_wbarrier_set_field @ 00af3418
+
+--- Calls OUT ---
+  -> FUN_00ae22e8 @ 00ae22e8
+
+--- Calls IN ---
+
+--- Listing ---
+00af3418  mov x0,x1
+00af341c  mov x1,x2
+00af3420  b 0x00ae22e8
+
+
+================================================================================
+### FILE: 00af3424_il2cpp_gc_has_strict_wbarriers.txt
+================================================================================
+Function: il2cpp_gc_has_strict_wbarriers @ 00af3424
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3424  mov w0,wzr
+00af3428  ret
+
+
+================================================================================
+### FILE: 00af342c_il2cpp_gc_set_external_allocation_tracker.txt
+================================================================================
+Function: il2cpp_gc_set_external_allocation_tracker @ 00af342c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af342c  ret
+
+
+================================================================================
+### FILE: 00af3430_il2cpp_gc_set_external_wbarrier_tracker.txt
+================================================================================
+Function: il2cpp_gc_set_external_wbarrier_tracker @ 00af3430
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3430  ret
+
+
+================================================================================
+### FILE: 00af3434_il2cpp_gchandle_free.txt
+================================================================================
+Function: il2cpp_gchandle_free @ 00af3434
+
+--- Calls OUT ---
+  -> FUN_00ae1300 @ 00ae1300
+
+--- Calls IN ---
+
+--- Listing ---
+00af3434  b 0x00ae1300
+
+
+================================================================================
+### FILE: 00af3438_il2cpp_object_header_size.txt
+================================================================================
+Function: il2cpp_object_header_size @ 00af3438
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3438  mov w0,#0x10
+00af343c  ret
+
+
+================================================================================
+### FILE: 00af3440_il2cpp_array_object_header_size.txt
+================================================================================
+Function: il2cpp_array_object_header_size @ 00af3440
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3440  mov w0,#0x20
+00af3444  ret
+
+
+================================================================================
+### FILE: 00af3448_il2cpp_offset_of_array_length_in_array_object_header.txt
+================================================================================
+Function: il2cpp_offset_of_array_length_in_array_object_header @ 00af3448
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3448  mov w0,#0x18
+00af344c  ret
+
+
+================================================================================
+### FILE: 00af3450_il2cpp_offset_of_array_bounds_in_array_object_header.txt
+================================================================================
+Function: il2cpp_offset_of_array_bounds_in_array_object_header @ 00af3450
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3450  mov w0,#0x10
+00af3454  ret
+
+
+================================================================================
+### FILE: 00af3458_il2cpp_allocation_granularity.txt
+================================================================================
+Function: il2cpp_allocation_granularity @ 00af3458
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3458  mov w0,#0x10
+00af345c  ret
+
+
+================================================================================
+### FILE: 00af3460_il2cpp_unity_liveness_allocate_struct.txt
+================================================================================
+Function: il2cpp_unity_liveness_allocate_struct @ 00af3460
+
+--- Calls OUT ---
+  -> FUN_00aeecbc @ 00aeecbc
+
+--- Calls IN ---
+
+--- Listing ---
+00af3460  b 0x00aeecbc
+
+
+================================================================================
+### FILE: 00af3464_il2cpp_unity_liveness_calculation_from_root.txt
+================================================================================
+Function: il2cpp_unity_liveness_calculation_from_root @ 00af3464
+
+--- Calls OUT ---
+  -> FUN_00aeed48 @ 00aeed48
+
+--- Calls IN ---
+
+--- Listing ---
+00af3464  b 0x00aeed48
+
+
+================================================================================
+### FILE: 00af3468_il2cpp_unity_liveness_calculation_from_statics.txt
+================================================================================
+Function: il2cpp_unity_liveness_calculation_from_statics @ 00af3468
+
+--- Calls OUT ---
+  -> FUN_00aeed90 @ 00aeed90
+
+--- Calls IN ---
+
+--- Listing ---
+00af3468  b 0x00aeed90
+
+
+================================================================================
+### FILE: 00af346c_il2cpp_unity_liveness_finalize.txt
+================================================================================
+Function: il2cpp_unity_liveness_finalize @ 00af346c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aee738 @ 00aeed44
+
+--- Calls IN ---
+
+--- Listing ---
+00af346c  b 0x00aeed44
+
+
+================================================================================
+### FILE: 00af3470_il2cpp_unity_liveness_free_struct.txt
+================================================================================
+Function: il2cpp_unity_liveness_free_struct @ 00af3470
+
+--- Calls OUT ---
+  -> FUN_00aeed24 @ 00aeed24
+
+--- Calls IN ---
+
+--- Listing ---
+00af3470  b 0x00aeed24
+
+
+================================================================================
+### FILE: 00af3474_il2cpp_method_get_return_type.txt
+================================================================================
+Function: il2cpp_method_get_return_type @ 00af3474
+
+--- Calls OUT ---
+  -> FUN_00afc6b8 @ 00afc6b8
+
+--- Calls IN ---
+
+--- Listing ---
+00af3474  b 0x00afc6b8
+
+
+================================================================================
+### FILE: 00af3478_il2cpp_method_get_from_reflection.txt
+================================================================================
+Function: il2cpp_method_get_from_reflection @ 00af3478
+
+--- Calls OUT ---
+  -> FUN_00acff68 @ 00acff68
+
+--- Calls IN ---
+
+--- Listing ---
+00af3478  b 0x00acff68
+
+
+================================================================================
+### FILE: 00af347c_il2cpp_method_get_object.txt
+================================================================================
+Function: il2cpp_method_get_object @ 00af347c
+
+--- Calls OUT ---
+  -> FUN_00acff70 @ 00acff70
+
+--- Calls IN ---
+  <- il2cpp_method_get_object @ 008d40a0
+
+--- Listing ---
+00af347c  b 0x00acff70
+
+
+================================================================================
+### FILE: 00af3480_il2cpp_method_get_name.txt
+================================================================================
+Function: il2cpp_method_get_name @ 00af3480
+
+--- Calls OUT ---
+  -> FUN_00afc6c8 @ 00afc6c8
+
+--- Calls IN ---
+
+--- Listing ---
+00af3480  b 0x00afc6c8
+
+
+================================================================================
+### FILE: 00af3484_il2cpp_method_is_generic.txt
+================================================================================
+Function: il2cpp_method_is_generic @ 00af3484
+
+--- Calls OUT ---
+  -> FUN_00afc81c @ 00afc81c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3484  b 0x00afc81c
+
+
+================================================================================
+### FILE: 00af3488_il2cpp_method_is_inflated.txt
+================================================================================
+Function: il2cpp_method_is_inflated @ 00af3488
+
+--- Calls OUT ---
+  -> FUN_00afc828 @ 00afc828
+
+--- Calls IN ---
+
+--- Listing ---
+00af3488  b 0x00afc828
+
+
+================================================================================
+### FILE: 00af348c_il2cpp_method_is_instance.txt
+================================================================================
+Function: il2cpp_method_is_instance @ 00af348c
+
+--- Calls OUT ---
+  -> FUN_00afc8bc @ 00afc8bc
+
+--- Calls IN ---
+
+--- Listing ---
+00af348c  b 0x00afc8bc
+
+
+================================================================================
+### FILE: 00af3490_il2cpp_method_get_param_count.txt
+================================================================================
+Function: il2cpp_method_get_param_count @ 00af3490
+
+--- Calls OUT ---
+  -> FUN_00afc8cc @ 00afc8cc
+
+--- Calls IN ---
+
+--- Listing ---
+00af3490  b 0x00afc8cc
+
+
+================================================================================
+### FILE: 00af3494_il2cpp_method_get_param.txt
+================================================================================
+Function: il2cpp_method_get_param @ 00af3494
+
+--- Calls OUT ---
+  -> FUN_00afc8f0 @ 00afc8f0
+
+--- Calls IN ---
+
+--- Listing ---
+00af3494  b 0x00afc8f0
+
+
+================================================================================
+### FILE: 00af3498_il2cpp_method_get_class.txt
+================================================================================
+Function: il2cpp_method_get_class @ 00af3498
+
+--- Calls OUT ---
+  -> FUN_00afc964 @ 00afc964
+
+--- Calls IN ---
+
+--- Listing ---
+00af3498  b 0x00afc964
+
+
+================================================================================
+### FILE: 00af349c_il2cpp_method_has_attribute.txt
+================================================================================
+Function: il2cpp_method_has_attribute @ 00af349c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ad2310 @ 00afc96c
+
+--- Calls IN ---
+
+--- Listing ---
+00af349c  b 0x00afc96c
+
+
+================================================================================
+### FILE: 00af34a0_il2cpp_method_get_declaring_type.txt
+================================================================================
+Function: il2cpp_method_get_declaring_type @ 00af34a0
+
+--- Calls OUT ---
+  -> FUN_00afc6c0 @ 00afc6c0
+
+--- Calls IN ---
+
+--- Listing ---
+00af34a0  b 0x00afc6c0
+
+
+================================================================================
+### FILE: 00af34a4_il2cpp_method_get_flags.txt
+================================================================================
+Function: il2cpp_method_get_flags @ 00af34a4
+
+--- Calls OUT ---
+  -> FUN_00afc970 @ 00afc970
+  -> FUN_00afc978 @ 00afc978
+
+--- Calls IN ---
+
+--- Listing ---
+00af34a4  str x20,[sp, #-0x20]!
+00af34a8  stp x19,x30,[sp, #0x10]
+00af34ac  mov x19,x0
+00af34b0  cbz x1,0x00af34c4
+00af34b4  mov x0,x19
+00af34b8  mov x20,x1
+00af34bc  bl 0x00afc970
+00af34c0  str w0,[x20]
+00af34c4  mov x0,x19
+00af34c8  ldp x19,x30,[sp, #0x10]
+00af34cc  ldr x20,[sp], #0x20
+00af34d0  b 0x00afc978
+
+
+================================================================================
+### FILE: 00af34d4_il2cpp_method_get_token.txt
+================================================================================
+Function: il2cpp_method_get_token @ 00af34d4
+
+--- Calls OUT ---
+  -> FUN_00afc980 @ 00afc980
+
+--- Calls IN ---
+
+--- Listing ---
+00af34d4  b 0x00afc980
+
+
+================================================================================
+### FILE: 00af34d8_il2cpp_method_get_param_name.txt
+================================================================================
+Function: il2cpp_method_get_param_name @ 00af34d8
+
+--- Calls OUT ---
+  -> FUN_00afc910 @ 00afc910
+
+--- Calls IN ---
+
+--- Listing ---
+00af34d8  b 0x00afc910
+
+
+================================================================================
+### FILE: 00af34dc_il2cpp_profiler_install.txt
+================================================================================
+Function: il2cpp_profiler_install @ 00af34dc
+
+--- Calls OUT ---
+  -> FUN_00aef074 @ 00aef074
+
+--- Calls IN ---
+
+--- Listing ---
+00af34dc  b 0x00aef074
+
+
+================================================================================
+### FILE: 00af34e0_il2cpp_profiler_set_events.txt
+================================================================================
+Function: il2cpp_profiler_set_events @ 00af34e0
+
+--- Calls OUT ---
+  -> FUN_00aef0b8 @ 00aef0b8
+
+--- Calls IN ---
+
+--- Listing ---
+00af34e0  b 0x00aef0b8
+
+
+================================================================================
+### FILE: 00af34e4_il2cpp_profiler_install_enter_leave.txt
+================================================================================
+Function: il2cpp_profiler_install_enter_leave @ 00af34e4
+
+--- Calls OUT ---
+  -> FUN_00aef100 @ 00aef100
+
+--- Calls IN ---
+
+--- Listing ---
+00af34e4  b 0x00aef100
+
+
+================================================================================
+### FILE: 00af34e8_il2cpp_profiler_install_allocation.txt
+================================================================================
+Function: il2cpp_profiler_install_allocation @ 00af34e8
+
+--- Calls OUT ---
+  -> FUN_00aef12c @ 00aef12c
+
+--- Calls IN ---
+
+--- Listing ---
+00af34e8  b 0x00aef12c
+
+
+================================================================================
+### FILE: 00af34ec_il2cpp_profiler_install_gc.txt
+================================================================================
+Function: il2cpp_profiler_install_gc @ 00af34ec
+
+--- Calls OUT ---
+  -> FUN_00aef150 @ 00aef150
+
+--- Calls IN ---
+
+--- Listing ---
+00af34ec  b 0x00aef150
+
+
+================================================================================
+### FILE: 00af34f0_il2cpp_profiler_install_fileio.txt
+================================================================================
+Function: il2cpp_profiler_install_fileio @ 00af34f0
+
+--- Calls OUT ---
+  -> FUN_00aef17c @ 00aef17c
+
+--- Calls IN ---
+
+--- Listing ---
+00af34f0  b 0x00aef17c
+
+
+================================================================================
+### FILE: 00af34f4_il2cpp_profiler_install_thread.txt
+================================================================================
+Function: il2cpp_profiler_install_thread @ 00af34f4
+
+--- Calls OUT ---
+  -> FUN_00aef1a0 @ 00aef1a0
+
+--- Calls IN ---
+
+--- Listing ---
+00af34f4  b 0x00aef1a0
+
+
+================================================================================
+### FILE: 00af34f8_il2cpp_property_get_name.txt
+================================================================================
+Function: il2cpp_property_get_name @ 00af34f8
+
+--- Calls OUT ---
+  -> FUN_00b10a64 @ 00b10a64
+
+--- Calls IN ---
+
+--- Listing ---
+00af34f8  b 0x00b10a64
+
+
+================================================================================
+### FILE: 00af34fc_il2cpp_property_get_get_method.txt
+================================================================================
+Function: il2cpp_property_get_get_method @ 00af34fc
+
+--- Calls OUT ---
+  -> FUN_00b10a54 @ 00b10a54
+
+--- Calls IN ---
+
+--- Listing ---
+00af34fc  b 0x00b10a54
+
+
+================================================================================
+### FILE: 00af3500_il2cpp_property_get_set_method.txt
+================================================================================
+Function: il2cpp_property_get_set_method @ 00af3500
+
+--- Calls OUT ---
+  -> FUN_00b10a5c @ 00b10a5c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3500  b 0x00b10a5c
+
+
+================================================================================
+### FILE: 00af3504_il2cpp_property_get_parent.txt
+================================================================================
+Function: il2cpp_property_get_parent @ 00af3504
+
+--- Calls OUT ---
+  -> FUN_00b10a6c @ 00b10a6c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3504  b 0x00b10a6c
+
+
+================================================================================
+### FILE: 00af3508_il2cpp_property_get_flags.txt
+================================================================================
+Function: il2cpp_property_get_flags @ 00af3508
+
+--- Calls OUT ---
+  -> FUN_00b10a4c @ 00b10a4c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3508  b 0x00b10a4c
+
+
+================================================================================
+### FILE: 00af350c_il2cpp_object_get_class.txt
+================================================================================
+Function: il2cpp_object_get_class @ 00af350c
+
+--- Calls OUT ---
+  -> FUN_00ace4dc @ 00ace4dc
+
+--- Calls IN ---
+
+--- Listing ---
+00af350c  b 0x00ace4dc
+
+
+================================================================================
+### FILE: 00af3510_il2cpp_object_get_size.txt
+================================================================================
+Function: il2cpp_object_get_size @ 00af3510
+
+--- Calls OUT ---
+  -> FUN_00ace4f8 @ 00ace4f8
+
+--- Calls IN ---
+
+--- Listing ---
+00af3510  b 0x00ace4f8
+
+
+================================================================================
+### FILE: 00af3514_il2cpp_object_get_virtual_method.txt
+================================================================================
+Function: il2cpp_object_get_virtual_method @ 00af3514
+
+--- Calls OUT ---
+  -> FUN_00ace568 @ 00ace568
+
+--- Calls IN ---
+
+--- Listing ---
+00af3514  b 0x00ace568
+
+
+================================================================================
+### FILE: 00af3518_il2cpp_object_new.txt
+================================================================================
+Function: il2cpp_object_new @ 00af3518
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00ace418
+
+--- Calls IN ---
+  <- il2cpp_object_new @ 008d59e0
+
+--- Listing ---
+00af3518  str x30,[sp, #-0x10]!
+00af351c  bl 0x00ace418
+    ; [PRE] try { // try from 00af351c to 00af351f has its CatchHandler @ 00af3528
+    ; [POST] } // end try from 00af351c to 00af351f
+00af3520  ldr x30,[sp], #0x10
+00af3524  ret
+
+
+================================================================================
+### FILE: 00af3538_il2cpp_object_unbox.txt
+================================================================================
+Function: il2cpp_object_unbox @ 00af3538
+
+--- Calls OUT ---
+  -> FUN_00ace8b4 @ 00ace8b4
+
+--- Calls IN ---
+  <- il2cpp_object_unbox @ 008d4850
+
+--- Listing ---
+00af3538  b 0x00ace8b4
+
+
+================================================================================
+### FILE: 00af353c_il2cpp_value_box.txt
+================================================================================
+Function: il2cpp_value_box @ 00af353c
+
+--- Calls OUT ---
+  -> FUN_00ace368 @ 00ace368
+
+--- Calls IN ---
+
+--- Listing ---
+00af353c  b 0x00ace368
+
+
+================================================================================
+### FILE: 00af3540_il2cpp_monitor_enter.txt
+================================================================================
+Function: il2cpp_monitor_enter @ 00af3540
+
+--- Calls OUT ---
+  -> FUN_00afccb0 @ 00afccb0
+
+--- Calls IN ---
+  <- il2cpp_monitor_enter @ 008d5a40
+
+--- Listing ---
+00af3540  b 0x00afccb0
+
+
+================================================================================
+### FILE: 00af3544_il2cpp_monitor_try_enter.txt
+================================================================================
+Function: il2cpp_monitor_try_enter @ 00af3544
+
+--- Calls OUT ---
+  -> FUN_00afccb8 @ 00afccb8
+
+--- Calls IN ---
+
+--- Listing ---
+00af3544  b 0x00afccb8
+
+
+================================================================================
+### FILE: 00af3548_il2cpp_monitor_exit.txt
+================================================================================
+Function: il2cpp_monitor_exit @ 00af3548
+
+--- Calls OUT ---
+  -> FUN_00afd05c @ 00afd05c
+
+--- Calls IN ---
+  <- il2cpp_monitor_exit @ 008d4a70
+
+--- Listing ---
+00af3548  b 0x00afd05c
+
+
+================================================================================
+### FILE: 00af354c_il2cpp_monitor_pulse.txt
+================================================================================
+Function: il2cpp_monitor_pulse @ 00af354c
+
+--- Calls OUT ---
+  -> FUN_00afd1d4 @ 00afd1d4
+
+--- Calls IN ---
+
+--- Listing ---
+00af354c  b 0x00afd1d4
+
+
+================================================================================
+### FILE: 00af3550_il2cpp_monitor_pulse_all.txt
+================================================================================
+Function: il2cpp_monitor_pulse_all @ 00af3550
+
+--- Calls OUT ---
+  -> FUN_00afd254 @ 00afd254
+
+--- Calls IN ---
+
+--- Listing ---
+00af3550  b 0x00afd254
+
+
+================================================================================
+### FILE: 00af3554_il2cpp_monitor_wait.txt
+================================================================================
+Function: il2cpp_monitor_wait @ 00af3554
+
+--- Calls OUT ---
+  -> FUN_00afd25c @ 00afd25c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3554  b 0x00afd25c
+
+
+================================================================================
+### FILE: 00af3558_il2cpp_monitor_try_wait.txt
+================================================================================
+Function: il2cpp_monitor_try_wait @ 00af3558
+
+--- Calls OUT ---
+  -> FUN_00afd264 @ 00afd264
+
+--- Calls IN ---
+
+--- Listing ---
+00af3558  b 0x00afd264
+
+
+================================================================================
+### FILE: 00af355c_il2cpp_runtime_invoke_convert_args.txt
+================================================================================
+Function: il2cpp_runtime_invoke_convert_args @ 00af355c
+
+--- Calls OUT ---
+  -> FUN_00aae558 @ 00aae558
+
+--- Calls IN ---
+
+--- Listing ---
+00af355c  b 0x00aae558
+
+
+================================================================================
+### FILE: 00af3560_il2cpp_runtime_invoke.txt
+================================================================================
+Function: il2cpp_runtime_invoke @ 00af3560
+
+--- Calls OUT ---
+  -> FUN_00aae218 @ 00aae218
+
+--- Calls IN ---
+
+--- Listing ---
+00af3560  b 0x00aae218
+
+
+================================================================================
+### FILE: 00af3564_il2cpp_runtime_class_init.txt
+================================================================================
+Function: il2cpp_runtime_class_init @ 00af3564
+
+--- Calls OUT ---
+  -> FUN_00aac4e0 @ 00aac4e0
+
+--- Calls IN ---
+
+--- Listing ---
+00af3564  b 0x00aac4e0
+
+
+================================================================================
+### FILE: 00af3568_il2cpp_runtime_object_init.txt
+================================================================================
+Function: il2cpp_runtime_object_init @ 00af3568
+
+--- Calls OUT ---
+  -> FUN_00aae95c @ 00aae95c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3568  b 0x00aae95c
+
+
+================================================================================
+### FILE: 00af356c_il2cpp_runtime_object_init_exception.txt
+================================================================================
+Function: il2cpp_runtime_object_init_exception @ 00af356c
+
+--- Calls OUT ---
+  -> FUN_00aae964 @ 00aae964
+
+--- Calls IN ---
+
+--- Listing ---
+00af356c  b 0x00aae964
+
+
+================================================================================
+### FILE: 00af3570_il2cpp_runtime_unhandled_exception_policy_set.txt
+================================================================================
+Function: il2cpp_runtime_unhandled_exception_policy_set @ 00af3570
+
+--- Calls OUT ---
+  -> FUN_00aae9c0 @ 00aae9c0
+
+--- Calls IN ---
+
+--- Listing ---
+00af3570  b 0x00aae9c0
+
+
+================================================================================
+### FILE: 00af3574_il2cpp_string_length.txt
+================================================================================
+Function: il2cpp_string_length @ 00af3574
+
+--- Calls OUT ---
+  -> FUN_00aeb820 @ 00aeb820
+
+--- Calls IN ---
+
+--- Listing ---
+00af3574  b 0x00aeb820
+
+
+================================================================================
+### FILE: 00af3578_il2cpp_string_chars.txt
+================================================================================
+Function: il2cpp_string_chars @ 00af3578
+
+--- Calls OUT ---
+  -> FUN_00aeb818 @ 00aeb818
+
+--- Calls IN ---
+
+--- Listing ---
+00af3578  b 0x00aeb818
+
+
+================================================================================
+### FILE: 00af357c_il2cpp_string_new.txt
+================================================================================
+Function: il2cpp_string_new @ 00af357c
+
+--- Calls OUT ---
+  -> FUN_00b2b808 @ 00b2b808
+
+--- Calls IN ---
+  <- il2cpp_string_new @ 008d3c20
+
+--- Listing ---
+00af357c  b 0x00b2b808
+
+
+================================================================================
+### FILE: 00af3580_il2cpp_string_new_wrapper.txt
+================================================================================
+Function: il2cpp_string_new_wrapper @ 00af3580
+
+--- Calls OUT ---
+  -> FUN_00b2b8b8 @ 00b2b8b8
+
+--- Calls IN ---
+
+--- Listing ---
+00af3580  b 0x00b2b8b8
+
+
+================================================================================
+### FILE: 00af3584_il2cpp_string_new_utf16.txt
+================================================================================
+Function: il2cpp_string_new_utf16 @ 00af3584
+
+--- Calls OUT ---
+  -> FUN_00b2b8d4 @ 00b2b8d4
+
+--- Calls IN ---
+
+--- Listing ---
+00af3584  b 0x00b2b8d4
+
+
+================================================================================
+### FILE: 00af3588_il2cpp_string_new_len.txt
+================================================================================
+Function: il2cpp_string_new_len @ 00af3588
+
+--- Calls OUT ---
+  -> FUN_00b2b824 @ 00b2b824
+
+--- Calls IN ---
+
+--- Listing ---
+00af3588  b 0x00b2b824
+
+
+================================================================================
+### FILE: 00af358c_il2cpp_string_intern.txt
+================================================================================
+Function: il2cpp_string_intern @ 00af358c
+
+--- Calls OUT ---
+  -> FUN_00b2b9d0 @ 00b2b9d0
+
+--- Calls IN ---
+
+--- Listing ---
+00af358c  b 0x00b2b9d0
+
+
+================================================================================
+### FILE: 00af3590_il2cpp_string_is_interned.txt
+================================================================================
+Function: il2cpp_string_is_interned @ 00af3590
+
+--- Calls OUT ---
+  -> FUN_00b2be3c @ 00b2be3c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3590  b 0x00b2be3c
+
+
+================================================================================
+### FILE: 00af3594_il2cpp_thread_current.txt
+================================================================================
+Function: il2cpp_thread_current @ 00af3594
+
+--- Calls OUT ---
+  -> FUN_00af96e8 @ 00af96e8
+
+--- Calls IN ---
+
+--- Listing ---
+00af3594  b 0x00af96e8
+
+
+================================================================================
+### FILE: 00af3598_il2cpp_thread_attach.txt
+================================================================================
+Function: il2cpp_thread_attach @ 00af3598
+
+--- Calls OUT ---
+  -> FUN_00afd630 @ 00afd630
+
+--- Calls IN ---
+
+--- Listing ---
+00af3598  b 0x00afd630
+
+
+================================================================================
+### FILE: 00af359c_il2cpp_thread_detach.txt
+================================================================================
+Function: il2cpp_thread_detach @ 00af359c
+
+--- Calls OUT ---
+  -> FUN_00afd6dc @ 00afd6dc
+
+--- Calls IN ---
+
+--- Listing ---
+00af359c  b 0x00afd6dc
+
+
+================================================================================
+### FILE: 00af35a0_il2cpp_thread_get_all_attached_threads.txt
+================================================================================
+Function: il2cpp_thread_get_all_attached_threads @ 00af35a0
+
+--- Calls OUT ---
+  -> FUN_00afe068 @ 00afe068
+
+--- Calls IN ---
+
+--- Listing ---
+00af35a0  b 0x00afe068
+
+
+================================================================================
+### FILE: 00af35a4_il2cpp_is_vm_thread.txt
+================================================================================
+Function: il2cpp_is_vm_thread @ 00af35a4
+
+--- Calls OUT ---
+  -> FUN_00afec20 @ 00afec20
+
+--- Calls IN ---
+
+--- Listing ---
+00af35a4  b 0x00afec20
+
+
+================================================================================
+### FILE: 00af35a8_il2cpp_current_thread_walk_frame_stack.txt
+================================================================================
+Function: il2cpp_current_thread_walk_frame_stack @ 00af35a8
+
+--- Calls OUT ---
+  -> FUN_00aaf138 @ 00aaf138
+
+--- Calls IN ---
+
+--- Listing ---
+00af35a8  b 0x00aaf138
+
+
+================================================================================
+### FILE: 00af35ac_il2cpp_thread_walk_frame_stack.txt
+================================================================================
+Function: il2cpp_thread_walk_frame_stack @ 00af35ac
+
+--- Calls OUT ---
+  -> FUN_00aaf270 @ 00aaf270
+
+--- Calls IN ---
+
+--- Listing ---
+00af35ac  b 0x00aaf270
+
+
+================================================================================
+### FILE: 00af35b0_il2cpp_current_thread_get_top_frame.txt
+================================================================================
+Function: il2cpp_current_thread_get_top_frame @ 00af35b0
+
+--- Calls OUT ---
+  -> FUN_00aaf0ec @ 00aaf0ec
+
+--- Calls IN ---
+
+--- Listing ---
+00af35b0  mov x1,x0
+00af35b4  mov w0,wzr
+00af35b8  b 0x00aaf0ec
+
+
+================================================================================
+### FILE: 00af35bc_il2cpp_thread_get_top_frame.txt
+================================================================================
+Function: il2cpp_thread_get_top_frame @ 00af35bc
+
+--- Calls OUT ---
+  -> FUN_00aaf3dc @ 00aaf3dc
+
+--- Calls IN ---
+
+--- Listing ---
+00af35bc  b 0x00aaf3dc
+
+
+================================================================================
+### FILE: 00af35c0_il2cpp_current_thread_get_frame_at.txt
+================================================================================
+Function: il2cpp_current_thread_get_frame_at @ 00af35c0
+
+--- Calls OUT ---
+  -> FUN_00aaf0ec @ 00aaf0ec
+
+--- Calls IN ---
+
+--- Listing ---
+00af35c0  b 0x00aaf0ec
+
+
+================================================================================
+### FILE: 00af35c4_il2cpp_thread_get_frame_at.txt
+================================================================================
+Function: il2cpp_thread_get_frame_at @ 00af35c4
+
+--- Calls OUT ---
+  -> FUN_00aaf18c @ 00aaf18c
+
+--- Calls IN ---
+
+--- Listing ---
+00af35c4  b 0x00aaf18c
+
+
+================================================================================
+### FILE: 00af35c8_il2cpp_current_thread_get_stack_depth.txt
+================================================================================
+Function: il2cpp_current_thread_get_stack_depth @ 00af35c8
+
+--- Calls OUT ---
+  -> FUN_00aaefd0 @ 00aaefd0
+
+--- Calls IN ---
+
+--- Listing ---
+00af35c8  str x30,[sp, #-0x10]!
+00af35cc  bl 0x00aaefd0
+00af35d0  ldp x8,x9,[x0]
+00af35d4  sub x8,x9,x8
+00af35d8  lsr x0,x8,#0x5
+00af35dc  ldr x30,[sp], #0x10
+00af35e0  ret
+
+
+================================================================================
+### FILE: 00af35e4_il2cpp_thread_get_stack_depth.txt
+================================================================================
+Function: il2cpp_thread_get_stack_depth @ 00af35e4
+
+--- Calls OUT ---
+  -> FUN_00aaf344 @ 00aaf344
+
+--- Calls IN ---
+
+--- Listing ---
+00af35e4  b 0x00aaf344
+
+
+================================================================================
+### FILE: 00af35e8_il2cpp_set_default_thread_affinity.txt
+================================================================================
+Function: il2cpp_set_default_thread_affinity @ 00af35e8
+
+--- Calls OUT ---
+  -> FUN_00aff348 @ 00aff348
+
+--- Calls IN ---
+
+--- Listing ---
+00af35e8  b 0x00aff348
+
+
+================================================================================
+### FILE: 00af35ec_il2cpp_override_stack_backtrace.txt
+================================================================================
+Function: il2cpp_override_stack_backtrace @ 00af35ec
+
+--- Calls OUT ---
+  -> FUN_00b01b2c @ 00b01b2c
+
+--- Calls IN ---
+
+--- Listing ---
+00af35ec  b 0x00b01b2c
+
+
+================================================================================
+### FILE: 00af35f0_il2cpp_type_get_object.txt
+================================================================================
+Function: il2cpp_type_get_object @ 00af35f0
+
+--- Calls OUT ---
+  -> FUN_00acfd14 @ 00acfd14
+
+--- Calls IN ---
+
+--- Listing ---
+00af35f0  b 0x00acfd14
+
+
+================================================================================
+### FILE: 00af35f4_il2cpp_type_get_type.txt
+================================================================================
+Function: il2cpp_type_get_type @ 00af35f4
+
+--- Calls OUT ---
+  -> FUN_00b128d8 @ 00b128d8
+
+--- Calls IN ---
+
+--- Listing ---
+00af35f4  b 0x00b128d8
+
+
+================================================================================
+### FILE: 00af35f8_il2cpp_type_get_class_or_element_class.txt
+================================================================================
+Function: il2cpp_type_get_class_or_element_class @ 00af35f8
+
+--- Calls OUT ---
+  -> FUN_00b13704 @ 00b13704
+
+--- Calls IN ---
+
+--- Listing ---
+00af35f8  b 0x00b13704
+
+
+================================================================================
+### FILE: 00af35fc_il2cpp_type_get_name.txt
+================================================================================
+Function: il2cpp_type_get_name @ 00af35fc
+
+--- Calls OUT ---
+  -> FUN_00b1308c @ 00b1308c
+  -> memcpy @ 008d4920
+  -> malloc @ 00acaf44
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00af35fc  sub sp,sp,#0x40
+00af3600  str x20,[sp, #0x20]
+00af3604  stp x19,x30,[sp, #0x30]
+00af3608  add x8,sp,#0x8
+00af360c  mov w1,wzr
+00af3610  add x20,sp,#0x8
+00af3614  bl 0x00b1308c
+00af3618  ldrb w8,[sp, #0x8]
+00af361c  ldr x9,[sp, #0x10]
+00af3620  lsr x10,x8,#0x1
+00af3624  tst w8,#0x1
+00af3628  csel x8,x10,x9,eq
+00af362c  add x0,x8,#0x1
+00af3630  bl 0x00acaf44
+    ; [PRE] try { // try from 00af3630 to 00af3633 has its CatchHandler @ 00af3680
+    ; [POST] } // end try from 00af3630 to 00af3633
+00af3634  ldrb w8,[sp, #0x8]
+00af3638  ldp x10,x9,[sp, #0x10]
+00af363c  orr x11,x20,#0x1
+00af3640  mov x19,x0
+00af3644  lsr x12,x8,#0x1
+00af3648  tst w8,#0x1
+00af364c  csel x8,x12,x10,eq
+00af3650  csel x1,x11,x9,eq
+00af3654  add x2,x8,#0x1
+00af3658  bl 0x008d4920
+00af365c  ldrb w8,[sp, #0x8]
+00af3660  tbz w8,#0x0,0x00af366c
+00af3664  ldr x0,[sp, #0x18]
+00af3668  bl 0x008d3ed0
+00af366c  mov x0,x19
+00af3670  ldp x19,x30,[sp, #0x30]
+00af3674  ldr x20,[sp, #0x20]
+00af3678  add sp,sp,#0x40
+00af367c  ret
+
+
+================================================================================
+### FILE: 00af369c_il2cpp_type_get_assembly_qualified_name.txt
+================================================================================
+Function: il2cpp_type_get_assembly_qualified_name @ 00af369c
+
+--- Calls OUT ---
+  -> FUN_00b1308c @ 00b1308c
+  -> memcpy @ 008d4920
+  -> malloc @ 00acaf44
+  -> operator.delete @ 008d3ed0
+
+--- Calls IN ---
+
+--- Listing ---
+00af369c  sub sp,sp,#0x40
+00af36a0  str x20,[sp, #0x20]
+00af36a4  stp x19,x30,[sp, #0x30]
+00af36a8  add x8,sp,#0x8
+00af36ac  mov w1,#0x3
+00af36b0  add x20,sp,#0x8
+00af36b4  bl 0x00b1308c
+00af36b8  ldrb w8,[sp, #0x8]
+00af36bc  ldr x9,[sp, #0x10]
+00af36c0  lsr x10,x8,#0x1
+00af36c4  tst w8,#0x1
+00af36c8  csel x8,x10,x9,eq
+00af36cc  add x0,x8,#0x1
+00af36d0  bl 0x00acaf44
+    ; [PRE] try { // try from 00af36d0 to 00af36d3 has its CatchHandler @ 00af3720
+    ; [POST] } // end try from 00af36d0 to 00af36d3
+00af36d4  ldrb w8,[sp, #0x8]
+00af36d8  ldp x10,x9,[sp, #0x10]
+00af36dc  orr x11,x20,#0x1
+00af36e0  mov x19,x0
+00af36e4  lsr x12,x8,#0x1
+00af36e8  tst w8,#0x1
+00af36ec  csel x8,x12,x10,eq
+00af36f0  csel x1,x11,x9,eq
+00af36f4  add x2,x8,#0x1
+00af36f8  bl 0x008d4920
+00af36fc  ldrb w8,[sp, #0x8]
+00af3700  tbz w8,#0x0,0x00af370c
+00af3704  ldr x0,[sp, #0x18]
+00af3708  bl 0x008d3ed0
+00af370c  mov x0,x19
+00af3710  ldp x19,x30,[sp, #0x30]
+00af3714  ldr x20,[sp, #0x20]
+00af3718  add sp,sp,#0x40
+00af371c  ret
+
+
+================================================================================
+### FILE: 00af373c_il2cpp_type_is_byref.txt
+================================================================================
+Function: il2cpp_type_is_byref @ 00af373c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af373c  ldrb w8,[x0, #0xb]
+00af3740  ubfx w0,w8,#0x5,#0x1
+00af3744  ret
+
+
+================================================================================
+### FILE: 00af3748_il2cpp_type_get_attrs.txt
+================================================================================
+Function: il2cpp_type_get_attrs @ 00af3748
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3748  ldrh w0,[x0, #0x8]
+00af374c  ret
+
+
+================================================================================
+### FILE: 00af3750_il2cpp_type_equals.txt
+================================================================================
+Function: il2cpp_type_equals @ 00af3750
+
+--- Calls OUT ---
+  -> thunk_FUN_00b1a670 @ 00b1395c
+
+--- Calls IN ---
+
+--- Listing ---
+00af3750  b 0x00b1395c
+
+
+================================================================================
+### FILE: 00af3754_il2cpp_type_is_static.txt
+================================================================================
+Function: il2cpp_type_is_static @ 00af3754
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3754  ldrb w8,[x0, #0x8]
+00af3758  ubfx w0,w8,#0x4,#0x1
+00af375c  ret
+
+
+================================================================================
+### FILE: 00af3760_il2cpp_type_is_pointer_type.txt
+================================================================================
+Function: il2cpp_type_is_pointer_type @ 00af3760
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3760  ldrb w8,[x0, #0xa]
+00af3764  lsl w8,w8,#0x10
+00af3768  cmp w8,#0xf0, LSL #12
+00af376c  cset w0,eq
+00af3770  ret
+
+
+================================================================================
+### FILE: 00af3774_il2cpp_image_get_assembly.txt
+================================================================================
+Function: il2cpp_image_get_assembly @ 00af3774
+
+--- Calls OUT ---
+  -> FUN_00b0f658 @ 00b0f658
+
+--- Calls IN ---
+
+--- Listing ---
+00af3774  b 0x00b0f658
+
+
+================================================================================
+### FILE: 00af3778_il2cpp_image_get_name.txt
+================================================================================
+Function: il2cpp_image_get_name @ 00af3778
+
+--- Calls OUT ---
+  -> FUN_00b0f7f4 @ 00b0f7f4
+
+--- Calls IN ---
+
+--- Listing ---
+00af3778  b 0x00b0f7f4
+
+
+================================================================================
+### FILE: 00af377c_il2cpp_image_get_filename.txt
+================================================================================
+Function: il2cpp_image_get_filename @ 00af377c
+
+--- Calls OUT ---
+  -> FUN_00b0f7fc @ 00b0f7fc
+
+--- Calls IN ---
+
+--- Listing ---
+00af377c  b 0x00b0f7fc
+
+
+================================================================================
+### FILE: 00af3780_il2cpp_image_get_entry_point.txt
+================================================================================
+Function: il2cpp_image_get_entry_point @ 00af3780
+
+--- Calls OUT ---
+  -> thunk_FUN_00afa5ec @ 00b0f804
+
+--- Calls IN ---
+
+--- Listing ---
+00af3780  b 0x00b0f804
+
+
+================================================================================
+### FILE: 00af3784_il2cpp_image_get_class_count.txt
+================================================================================
+Function: il2cpp_image_get_class_count @ 00af3784
+
+--- Calls OUT ---
+  -> FUN_00b0fdd0 @ 00b0fdd0
+
+--- Calls IN ---
+
+--- Listing ---
+00af3784  str x30,[sp, #-0x10]!
+00af3788  bl 0x00b0fdd0
+00af378c  mov w0,w0
+00af3790  ldr x30,[sp], #0x10
+00af3794  ret
+
+
+================================================================================
+### FILE: 00af3798_il2cpp_image_get_class.txt
+================================================================================
+Function: il2cpp_image_get_class @ 00af3798
+
+--- Calls OUT ---
+  -> FUN_00b0fe98 @ 00b0fe98
+
+--- Calls IN ---
+
+--- Listing ---
+00af3798  b 0x00b0fe98
+
+
+================================================================================
+### FILE: 00af379c_il2cpp_capture_memory_snapshot.txt
+================================================================================
+Function: il2cpp_capture_memory_snapshot @ 00af379c
+
+--- Calls OUT ---
+  -> FUN_00afbfc4 @ 00afbfc4
+
+--- Calls IN ---
+
+--- Listing ---
+00af379c  b 0x00afbfc4
+
+
+================================================================================
+### FILE: 00af37a0_il2cpp_free_captured_memory_snapshot.txt
+================================================================================
+Function: il2cpp_free_captured_memory_snapshot @ 00af37a0
+
+--- Calls OUT ---
+  -> FUN_00afc5e0 @ 00afc5e0
+
+--- Calls IN ---
+
+--- Listing ---
+00af37a0  b 0x00afc5e0
+
+
+================================================================================
+### FILE: 00af37a4_il2cpp_set_find_plugin_callback.txt
+================================================================================
+Function: il2cpp_set_find_plugin_callback @ 00af37a4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ae9ffc @ 00ace9dc
+
+--- Calls IN ---
+
+--- Listing ---
+00af37a4  b 0x00ace9dc
+
+
+================================================================================
+### FILE: 00af37a8_il2cpp_register_log_callback.txt
+================================================================================
+Function: il2cpp_register_log_callback @ 00af37a8
+
+--- Calls OUT ---
+  -> FUN_00acaef8 @ 00acaef8
+
+--- Calls IN ---
+
+--- Listing ---
+00af37a8  b 0x00acaef8
+
+
+================================================================================
+### FILE: 00af37ac_il2cpp_debugger_set_agent_options.txt
+================================================================================
+Function: il2cpp_debugger_set_agent_options @ 00af37ac
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af37ac  ret
+
+
+================================================================================
+### FILE: 00af37b0_il2cpp_is_debugger_attached.txt
+================================================================================
+Function: il2cpp_is_debugger_attached @ 00af37b0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b0de54 @ 00aaac88
+
+--- Calls IN ---
+
+--- Listing ---
+00af37b0  b 0x00aaac88
+
+
+================================================================================
+### FILE: 00af37b4_il2cpp_register_debugger_agent_transport.txt
+================================================================================
+Function: il2cpp_register_debugger_agent_transport @ 00af37b4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af37b4  ret
+
+
+================================================================================
+### FILE: 00af37b8_il2cpp_debug_get_method_info.txt
+================================================================================
+Function: il2cpp_debug_get_method_info @ 00af37b8
+
+--- Calls OUT ---
+  -> FUN_00aab0b4 @ 00aab0b4
+
+--- Calls IN ---
+
+--- Listing ---
+00af37b8  b 0x00aab0b4
+
+
+================================================================================
+### FILE: 00af37bc_il2cpp_unity_install_unitytls_interface.txt
+================================================================================
+Function: il2cpp_unity_install_unitytls_interface @ 00af37bc
+
+--- Calls OUT ---
+  -> FUN_00aae0d0 @ 00aae0d0
+
+--- Calls IN ---
+
+--- Listing ---
+00af37bc  b 0x00aae0d0
+
+
+================================================================================
+### FILE: 00af37c0_il2cpp_custom_attrs_from_class.txt
+================================================================================
+Function: il2cpp_custom_attrs_from_class @ 00af37c0
+
+--- Calls OUT ---
+  -> thunk_FUN_00afa924 @ 00ab76c4
+
+--- Calls IN ---
+
+--- Listing ---
+00af37c0  ldr x8,[x0]
+00af37c4  ldr w1,[x0, #0x118]
+00af37c8  mov x0,x8
+00af37cc  b 0x00ab76c4
+
+
+================================================================================
+### FILE: 00af37d0_il2cpp_custom_attrs_from_method.txt
+================================================================================
+Function: il2cpp_custom_attrs_from_method @ 00af37d0
+
+--- Calls OUT ---
+  -> thunk_FUN_00afa924 @ 00ab76c4
+
+--- Calls IN ---
+
+--- Listing ---
+00af37d0  ldr x8,[x0, #0x20]
+00af37d4  ldr w1,[x0, #0x48]
+00af37d8  ldr x8,[x8]
+00af37dc  mov x0,x8
+00af37e0  b 0x00ab76c4
+
+
+================================================================================
+### FILE: 00af37e4_il2cpp_custom_attrs_has_attr.txt
+================================================================================
+Function: il2cpp_custom_attrs_has_attr @ 00af37e4
+
+--- Calls OUT ---
+  -> thunk_FUN_00afada8 @ 00ab76d4
+
+--- Calls IN ---
+
+--- Listing ---
+00af37e4  b 0x00ab76d4
+
+
+================================================================================
+### FILE: 00af37e8_il2cpp_custom_attrs_get_attr.txt
+================================================================================
+Function: il2cpp_custom_attrs_get_attr @ 00af37e8
+
+--- Calls OUT ---
+  -> FUN_00ad1da4 @ 00ad1da4
+
+--- Calls IN ---
+
+--- Listing ---
+00af37e8  b 0x00ad1da4
+
+
+================================================================================
+### FILE: 00af37ec_il2cpp_custom_attrs_construct.txt
+================================================================================
+Function: il2cpp_custom_attrs_construct @ 00af37ec
+
+--- Calls OUT ---
+  -> FUN_00ad1e30 @ 00ad1e30
+
+--- Calls IN ---
+
+--- Listing ---
+00af37ec  b 0x00ad1e30
+
+
+================================================================================
+### FILE: 00af37f0_il2cpp_custom_attrs_free.txt
+================================================================================
+Function: il2cpp_custom_attrs_free @ 00af37f0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af37f0  ret
+
+
+================================================================================
+### FILE: 00af37f4_il2cpp_type_get_name_chunked.txt
+================================================================================
+Function: il2cpp_type_get_name_chunked @ 00af37f4
+
+--- Calls OUT ---
+  -> FUN_00b136f4 @ 00b136f4
+
+--- Calls IN ---
+
+--- Listing ---
+00af37f4  mov x3,x2
+00af37f8  mov x2,x1
+00af37fc  mov w1,wzr
+00af3800  b 0x00b136f4
+
+
+================================================================================
+### FILE: 00af3804_il2cpp_class_set_userdata.txt
+================================================================================
+Function: il2cpp_class_set_userdata @ 00af3804
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af3804  str x1,[x0, #0xd0]
+00af3808  ret
+
+
+================================================================================
+### FILE: 00af380c_il2cpp_class_get_userdata_offset.txt
+================================================================================
+Function: il2cpp_class_get_userdata_offset @ 00af380c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00af380c  mov w0,#0xd0
+00af3810  ret
+
+
+================================================================================
+### FILE: 00af3814_il2cpp_class_for_each.txt
+================================================================================
+Function: il2cpp_class_for_each @ 00af3814
+
+--- Calls OUT ---
+  -> FUN_00afbed0 @ 00afbed0
+
+--- Calls IN ---
+
+--- Listing ---
+00af3814  b 0x00afbed0
+
+

@@ -1,0 +1,30 @@
+================================================================================
+### FILE: 00b48358_uflow.txt
+================================================================================
+Function: uflow @ 00b48358
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::uflow()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48358  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::uflow()
+00b4835c  stp x29,x30,[sp, #0x10]
+00b48360  add x29,sp,#0x10
+00b48364  ldr x8,[x0]
+00b48368  mov x19,x0
+00b4836c  ldr x8,[x8, #0x48]
+00b48370  blr x8
+00b48374  cmn w0,#0x1
+00b48378  b.eq 0x00b4838c
+00b4837c  ldr x8,[x19, #0x18]
+00b48380  add x9,x8,#0x4
+00b48384  str x9,[x19, #0x18]
+00b48388  ldr w0,[x8]
+00b4838c  ldp x29,x30,[sp, #0x10]
+00b48390  ldr x19,[sp], #0x20
+00b48394  ret
+
+

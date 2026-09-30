@@ -1,0 +1,1796 @@
+================================================================================
+### FILE: 00b4aa40_peek.txt
+================================================================================
+Function: peek @ 00b4aa40
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::peek()
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+
+--- Calls IN ---
+
+--- Listing ---
+00b4aa40  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::peek()
+00b4aa44  stp x29,x30,[sp, #0x10]
+00b4aa48  add x29,sp,#0x10
+00b4aa4c  ldr x8,[x0]
+00b4aa50  str xzr,[x0, #0x8]
+00b4aa54  ldur x8,[x8, #-0x18]
+00b4aa58  add x9,x0,x8
+00b4aa5c  ldr w10,[x9, #0x20]
+00b4aa60  cbz w10,0x00b4aa90
+00b4aa64  ldr x8,[x9, #0x28]
+00b4aa68  cmp x8,#0x0
+00b4aa6c  ldr w8,[x9, #0x24]
+00b4aa70  cset w11,eq
+00b4aa74  orr w10,w10,w11
+00b4aa78  orr w10,w10,#0x4
+00b4aa7c  tst w10,w8
+00b4aa80  str w10,[x9, #0x20]
+00b4aa84  b.ne 0x00b4ab2c
+00b4aa88  mov w8,#0xffffffff
+00b4aa8c  b 0x00b4ab1c
+00b4aa90  mov x19,x0
+00b4aa94  ldr x0,[x9, #0x88]
+00b4aa98  cbz x0,0x00b4aab4
+00b4aa9c  bl 0x00af5708
+00b4aaa0  ldr x8,[x19]
+00b4aaa4  ldur x8,[x8, #-0x18]
+00b4aaa8  add x9,x19,x8
+00b4aaac  ldr w9,[x9, #0x20]
+00b4aab0  cbnz w9,0x00b4aa88
+00b4aab4  add x8,x19,x8
+00b4aab8  ldr x0,[x8, #0x28]
+00b4aabc  ldp x8,x9,[x0, #0x18]
+00b4aac0  cmp x8,x9
+00b4aac4  b.eq 0x00b4aad0
+00b4aac8  ldrb w8,[x8]
+00b4aacc  b 0x00b4aae0
+00b4aad0  ldr x8,[x0]
+00b4aad4  ldr x8,[x8, #0x48]
+00b4aad8  blr x8
+    ; [PRE] try { // try from 00b4aad8 to 00b4aadb has its CatchHandler @ 00b4ab38
+    ; [POST] } // end try from 00b4aad8 to 00b4aadb
+00b4aadc  mov w8,w0
+00b4aae0  cmn w8,#0x1
+00b4aae4  cset w9,eq
+00b4aae8  lsl w9,w9,#0x1
+00b4aaec  ldr x10,[x19]
+00b4aaf0  ldur x10,[x10, #-0x18]
+00b4aaf4  add x10,x19,x10
+00b4aaf8  ldr x12,[x10, #0x28]
+00b4aafc  ldp w11,w13,[x10, #0x20]
+00b4ab00  cmp x12,#0x0
+00b4ab04  orr w9,w11,w9
+00b4ab08  cset w11,eq
+00b4ab0c  orr w9,w9,w11
+00b4ab10  tst w9,w13
+00b4ab14  str w9,[x10, #0x20]
+00b4ab18  b.ne 0x00b4ab2c
+00b4ab1c  ldp x29,x30,[sp, #0x10]
+00b4ab20  mov w0,w8
+00b4ab24  ldr x19,[sp], #0x20
+00b4ab28  ret
+00b4ab2c  adrp x0,0x2a07000
+00b4ab30  add x0,x0,#0xcf4
+00b4ab34  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4de9c_peek.txt
+================================================================================
+Function: peek @ 00b4de9c
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::peek()
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+
+--- Listing ---
+00b4de9c  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::peek()
+00b4dea0  stp x29,x30,[sp, #0x10]
+00b4dea4  add x29,sp,#0x10
+00b4dea8  ldr x8,[x0]
+00b4deac  str xzr,[x0, #0x8]
+00b4deb0  ldur x8,[x8, #-0x18]
+00b4deb4  add x9,x0,x8
+00b4deb8  ldr w10,[x9, #0x20]
+00b4debc  cbz w10,0x00b4deec
+00b4dec0  ldr x8,[x9, #0x28]
+00b4dec4  cmp x8,#0x0
+00b4dec8  ldr w8,[x9, #0x24]
+00b4decc  cset w11,eq
+00b4ded0  orr w10,w10,w11
+00b4ded4  orr w10,w10,#0x4
+00b4ded8  tst w10,w8
+00b4dedc  str w10,[x9, #0x20]
+00b4dee0  b.ne 0x00b4df88
+00b4dee4  mov w8,#0xffffffff
+00b4dee8  b 0x00b4df78
+00b4deec  mov x19,x0
+00b4def0  ldr x0,[x9, #0x88]
+00b4def4  cbz x0,0x00b4df10
+00b4def8  bl 0x008d5a30
+00b4defc  ldr x8,[x19]
+00b4df00  ldur x8,[x8, #-0x18]
+00b4df04  add x9,x19,x8
+00b4df08  ldr w9,[x9, #0x20]
+00b4df0c  cbnz w9,0x00b4dee4
+00b4df10  add x8,x19,x8
+00b4df14  ldr x0,[x8, #0x28]
+00b4df18  ldp x8,x9,[x0, #0x18]
+00b4df1c  cmp x8,x9
+00b4df20  b.eq 0x00b4df2c
+00b4df24  ldr w8,[x8]
+00b4df28  b 0x00b4df3c
+00b4df2c  ldr x8,[x0]
+00b4df30  ldr x8,[x8, #0x48]
+00b4df34  blr x8
+    ; [PRE] try { // try from 00b4df34 to 00b4df37 has its CatchHandler @ 00b4df94
+    ; [POST] } // end try from 00b4df34 to 00b4df37
+00b4df38  mov w8,w0
+00b4df3c  cmn w8,#0x1
+00b4df40  cset w9,eq
+00b4df44  lsl w9,w9,#0x1
+00b4df48  ldr x10,[x19]
+00b4df4c  ldur x10,[x10, #-0x18]
+00b4df50  add x10,x19,x10
+00b4df54  ldr x12,[x10, #0x28]
+00b4df58  ldp w11,w13,[x10, #0x20]
+00b4df5c  cmp x12,#0x0
+00b4df60  orr w9,w11,w9
+00b4df64  cset w11,eq
+00b4df68  orr w9,w9,w11
+00b4df6c  tst w9,w13
+00b4df70  str w9,[x10, #0x20]
+00b4df74  b.ne 0x00b4df88
+00b4df78  ldp x29,x30,[sp, #0x10]
+00b4df7c  mov w0,w8
+00b4df80  ldr x19,[sp], #0x20
+00b4df84  ret
+00b4df88  adrp x0,0x2a07000
+00b4df8c  add x0,x0,#0xcf4
+00b4df90  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00ceac50_PermissionsManager__add_ActionPermissionsRequestCompleted.txt
+================================================================================
+Function: PermissionsManager$$add_ActionPermissionsRequestCompleted @ 00ceac50
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- PermissionsAPIExample$$Awake @ 00cfb264
+
+--- Listing ---
+00ceac50  stp x25,x24,[sp, #-0x40]!
+00ceac54  stp x23,x22,[sp, #0x10]
+00ceac58  stp x21,x20,[sp, #0x20]
+00ceac5c  stp x19,x30,[sp, #0x30]
+00ceac60  adrp x20,0x3571000
+00ceac64  adrp x24,0x330c000
+00ceac68  ldrb w8,[x20, #0x952]
+00ceac6c  ldr x24,[x24, #0x9e0]
+00ceac70  mov x19,x0
+00ceac74  tbnz w8,#0x0,0x00ceac98
+00ceac78  adrp x0,0x336a000
+00ceac7c  ldr x0,[x0, #0x7d8]
+00ceac80  bl 0x00b0789c
+00ceac84  adrp x0,0x330c000
+00ceac88  ldr x0,[x0, #0x9e0]
+00ceac8c  bl 0x00b0789c
+00ceac90  mov w8,#0x1
+00ceac94  strb w8,[x20, #0x952]
+00ceac98  ldr x0,[x24]
+00ceac9c  ldr w8,[x0, #0xe0]
+00ceaca0  cbnz w8,0x00ceacac
+00ceaca4  bl 0x00b0798c
+00ceaca8  ldr x0,[x24]
+00ceacac  ldr x8,[x0, #0xb8]
+00ceacb0  adrp x25,0x336a000
+00ceacb4  ldr x20,[x8]
+00ceacb8  ldr x25,[x25, #0x7d8]
+00ceacbc  mov x0,x20
+00ceacc0  mov x1,x19
+00ceacc4  mov x2,xzr
+00ceacc8  bl 0x02197810
+00ceaccc  cbz x0,0x00ceacec
+00ceacd0  ldr x23,[x25]
+00ceacd4  mov x22,x0
+00ceacd8  mov x1,x23
+00ceacdc  bl 0x00b07990
+00ceace0  mov x21,x0
+00ceace4  cbnz x0,0x00ceacf0
+00ceace8  b 0x00cead34
+00ceacec  mov x21,xzr
+00ceacf0  ldr x0,[x24]
+00ceacf4  ldr w8,[x0, #0xe0]
+00ceacf8  cbnz w8,0x00cead04
+00ceacfc  bl 0x00b0798c
+00cead00  ldr x0,[x24]
+00cead04  ldr x0,[x0, #0xb8]
+00cead08  mov x1,x21
+00cead0c  mov x2,x20
+00cead10  bl 0x00ae526c
+00cead14  cmp x20,x0
+00cead18  mov x20,x0
+00cead1c  b.ne 0x00ceacbc
+00cead20  ldp x19,x30,[sp, #0x30]
+00cead24  ldp x21,x20,[sp, #0x20]
+00cead28  ldp x23,x22,[sp, #0x10]
+00cead2c  ldp x25,x24,[sp], #0x40
+00cead30  ret
+00cead34  mov x0,x22
+00cead38  mov x1,x23
+00cead3c  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00cead40_PermissionsManager__remove_ActionPermissionsRequestCompleted.txt
+================================================================================
+Function: PermissionsManager$$remove_ActionPermissionsRequestCompleted @ 00cead40
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+
+--- Listing ---
+00cead40  stp x25,x24,[sp, #-0x40]!
+00cead44  stp x23,x22,[sp, #0x10]
+00cead48  stp x21,x20,[sp, #0x20]
+00cead4c  stp x19,x30,[sp, #0x30]
+00cead50  adrp x20,0x3571000
+00cead54  adrp x24,0x330c000
+00cead58  ldrb w8,[x20, #0x953]
+00cead5c  ldr x24,[x24, #0x9e0]
+00cead60  mov x19,x0
+00cead64  tbnz w8,#0x0,0x00cead88
+00cead68  adrp x0,0x336a000
+00cead6c  ldr x0,[x0, #0x7d8]
+00cead70  bl 0x00b0789c
+00cead74  adrp x0,0x330c000
+00cead78  ldr x0,[x0, #0x9e0]
+00cead7c  bl 0x00b0789c
+00cead80  mov w8,#0x1
+00cead84  strb w8,[x20, #0x953]
+00cead88  ldr x0,[x24]
+00cead8c  ldr w8,[x0, #0xe0]
+00cead90  cbnz w8,0x00cead9c
+00cead94  bl 0x00b0798c
+00cead98  ldr x0,[x24]
+00cead9c  ldr x8,[x0, #0xb8]
+00ceada0  adrp x25,0x336a000
+00ceada4  ldr x20,[x8]
+00ceada8  ldr x25,[x25, #0x7d8]
+00ceadac  mov x0,x20
+00ceadb0  mov x1,x19
+00ceadb4  mov x2,xzr
+00ceadb8  bl 0x02197a1c
+00ceadbc  cbz x0,0x00ceaddc
+00ceadc0  ldr x23,[x25]
+00ceadc4  mov x22,x0
+00ceadc8  mov x1,x23
+00ceadcc  bl 0x00b07990
+00ceadd0  mov x21,x0
+00ceadd4  cbnz x0,0x00ceade0
+00ceadd8  b 0x00ceae24
+00ceaddc  mov x21,xzr
+00ceade0  ldr x0,[x24]
+00ceade4  ldr w8,[x0, #0xe0]
+00ceade8  cbnz w8,0x00ceadf4
+00ceadec  bl 0x00b0798c
+00ceadf0  ldr x0,[x24]
+00ceadf4  ldr x0,[x0, #0xb8]
+00ceadf8  mov x1,x21
+00ceadfc  mov x2,x20
+00ceae00  bl 0x00ae526c
+00ceae04  cmp x20,x0
+00ceae08  mov x20,x0
+00ceae0c  b.ne 0x00ceadac
+00ceae10  ldp x19,x30,[sp, #0x30]
+00ceae14  ldp x21,x20,[sp, #0x20]
+00ceae18  ldp x23,x22,[sp, #0x10]
+00ceae1c  ldp x25,x24,[sp], #0x40
+00ceae20  ret
+00ceae24  mov x0,x22
+00ceae28  mov x1,x23
+00ceae2c  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00ceae30_PermissionsManager__Awake.txt
+================================================================================
+Function: PermissionsManager$$Awake @ 00ceae30
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$DontDestroyOnLoad @ 024e00c4
+
+--- Calls IN ---
+
+--- Listing ---
+00ceae30  stp x21,x20,[sp, #-0x20]!
+00ceae34  stp x19,x30,[sp, #0x10]
+00ceae38  adrp x21,0x3571000
+00ceae3c  adrp x20,0x3321000
+00ceae40  ldrb w8,[x21, #0x954]
+00ceae44  ldr x20,[x20, #0xca8]
+00ceae48  mov x19,x0
+00ceae4c  tbnz w8,#0x0,0x00ceae64
+00ceae50  adrp x0,0x3321000
+00ceae54  ldr x0,[x0, #0xca8]
+00ceae58  bl 0x00b0789c
+00ceae5c  mov w8,#0x1
+00ceae60  strb w8,[x21, #0x954]
+00ceae64  mov x0,x19
+00ceae68  mov x1,xzr
+00ceae6c  bl 0x024e4ed4
+00ceae70  ldr x8,[x20]
+00ceae74  mov x19,x0
+00ceae78  ldr w9,[x8, #0xe0]
+00ceae7c  cbnz w9,0x00ceae88
+00ceae80  mov x0,x8
+00ceae84  bl 0x00b0798c
+00ceae88  mov x0,x19
+00ceae8c  ldp x19,x30,[sp, #0x10]
+00ceae90  mov x1,xzr
+00ceae94  ldp x21,x20,[sp], #0x20
+00ceae98  b 0x024e00c4
+
+
+================================================================================
+### FILE: 00ceae9c_PermissionsManager__IsPermissionGranted.txt
+================================================================================
+Function: PermissionsManager$$IsPermissionGranted @ 00ceae9c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AN_PermissionMethods$$GetFullName @ 00ce23e0
+  -> PermissionsManager$$IsPermissionGranted @ 00ceaf00
+
+--- Calls IN ---
+  <- PermissionsAPIExample$$CheckPermission @ 00cfb308
+
+--- Listing ---
+00ceae9c  stp x21,x20,[sp, #-0x20]!
+00ceaea0  stp x19,x30,[sp, #0x10]
+00ceaea4  adrp x21,0x3571000
+00ceaea8  adrp x20,0x330c000
+00ceaeac  ldrb w8,[x21, #0x955]
+00ceaeb0  ldr x20,[x20, #0x9e0]
+00ceaeb4  mov w19,w0
+00ceaeb8  tbnz w8,#0x0,0x00ceaed0
+00ceaebc  adrp x0,0x330c000
+00ceaec0  ldr x0,[x0, #0x9e0]
+00ceaec4  bl 0x00b0789c
+00ceaec8  mov w8,#0x1
+00ceaecc  strb w8,[x21, #0x955]
+00ceaed0  mov w0,w19
+00ceaed4  bl 0x00ce23e0
+00ceaed8  ldr x8,[x20]
+00ceaedc  mov x19,x0
+00ceaee0  ldr w9,[x8, #0xe0]
+00ceaee4  cbnz w9,0x00ceaef0
+00ceaee8  mov x0,x8
+00ceaeec  bl 0x00b0798c
+00ceaef0  mov x0,x19
+00ceaef4  ldp x19,x30,[sp, #0x10]
+00ceaef8  ldp x21,x20,[sp], #0x20
+00ceaefc  b 0x00ceaf00
+
+
+================================================================================
+### FILE: 00ceaf00_PermissionsManager__IsPermissionGranted.txt
+================================================================================
+Function: PermissionsManager$$IsPermissionGranted @ 00ceaf00
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> AN_ProxyPool$$CallStatic<bool> @ 01735d9c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+  <- PermissionsManager$$IsPermissionGranted @ 00ceae9c
+
+--- Listing ---
+00ceaf00  str x24,[sp, #-0x40]!
+00ceaf04  stp x23,x22,[sp, #0x10]
+00ceaf08  stp x21,x20,[sp, #0x20]
+00ceaf0c  stp x19,x30,[sp, #0x30]
+00ceaf10  adrp x20,0x3571000
+00ceaf14  adrp x21,0x3370000
+00ceaf18  ldrb w8,[x20, #0x956]
+00ceaf1c  ldr x21,[x21, #0x778]
+00ceaf20  mov x19,x0
+00ceaf24  tbnz w8,#0x0,0x00ceaf6c
+00ceaf28  adrp x0,0x3326000
+00ceaf2c  ldr x0,[x0, #0x698]
+00ceaf30  bl 0x00b0789c
+00ceaf34  adrp x0,0x336b000
+00ceaf38  ldr x0,[x0, #0xac0]
+00ceaf3c  bl 0x00b0789c
+00ceaf40  adrp x0,0x3370000
+00ceaf44  ldr x0,[x0, #0x778]
+00ceaf48  bl 0x00b0789c
+00ceaf4c  adrp x0,0x3329000
+00ceaf50  ldr x0,[x0, #0x5f0]
+00ceaf54  bl 0x00b0789c
+00ceaf58  adrp x0,0x335b000
+00ceaf5c  ldr x0,[x0, #0x128]
+00ceaf60  bl 0x00b0789c
+00ceaf64  mov w8,#0x1
+00ceaf68  strb w8,[x20, #0x956]
+00ceaf6c  ldr x0,[x21]
+00ceaf70  mov w1,#0x1
+00ceaf74  bl 0x00b078f8
+00ceaf78  cbz x0,0x00ceb004
+00ceaf7c  mov x20,x0
+00ceaf80  cbz x19,0x00ceaf98
+00ceaf84  ldr x8,[x20]
+00ceaf88  mov x0,x19
+00ceaf8c  ldr x1,[x8, #0x40]
+00ceaf90  bl 0x00b07990
+00ceaf94  cbz x0,0x00ceb00c
+00ceaf98  ldr w8,[x20, #0x18]
+00ceaf9c  cbz w8,0x00ceb008
+00ceafa0  adrp x24,0x336b000
+00ceafa4  adrp x21,0x335b000
+00ceafa8  adrp x22,0x3329000
+00ceafac  adrp x23,0x3326000
+00ceafb0  ldr x24,[x24, #0xac0]
+00ceafb4  ldr x21,[x21, #0x128]
+00ceafb8  ldr x22,[x22, #0x5f0]
+00ceafbc  ldr x23,[x23, #0x698]
+00ceafc0  mov x0,x20
+00ceafc4  str x19,[x0, #0x20]!
+00ceafc8  mov x1,x19
+00ceafcc  bl 0x00b07850
+00ceafd0  ldr x0,[x24]
+00ceafd4  ldr w8,[x0, #0xe0]
+00ceafd8  cbnz w8,0x00ceafe0
+00ceafdc  bl 0x00b0798c
+00ceafe0  ldr x0,[x21]
+00ceafe4  ldr x1,[x22]
+00ceafe8  ldr x3,[x23]
+00ceafec  mov x2,x20
+00ceaff0  ldp x19,x30,[sp, #0x30]
+00ceaff4  ldp x21,x20,[sp, #0x20]
+00ceaff8  ldp x23,x22,[sp, #0x10]
+00ceaffc  ldr x24,[sp], #0x40
+00ceb000  b 0x01735d9c
+00ceb004  bl 0x00b079b0
+00ceb008  bl 0x00b079b8
+00ceb00c  bl 0x00b079d4
+00ceb010  mov x1,xzr
+00ceb014  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00ceb018_PermissionsManager__ShouldShowRequestPermission.txt
+================================================================================
+Function: PermissionsManager$$ShouldShowRequestPermission @ 00ceb018
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> AN_ProxyPool$$CallStatic<bool> @ 01735d9c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AN_PermissionMethods$$GetFullName @ 00ce23e0
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+  <- PermissionsAPIExample$$CheckShouldRequestPermission @ 00cfb408
+
+--- Listing ---
+00ceb018  str x24,[sp, #-0x40]!
+00ceb01c  stp x23,x22,[sp, #0x10]
+00ceb020  stp x21,x20,[sp, #0x20]
+00ceb024  stp x19,x30,[sp, #0x30]
+00ceb028  adrp x19,0x3571000
+00ceb02c  adrp x21,0x3370000
+00ceb030  ldrb w8,[x19, #0x957]
+00ceb034  ldr x21,[x21, #0x778]
+00ceb038  mov w20,w0
+00ceb03c  tbnz w8,#0x0,0x00ceb084
+00ceb040  adrp x0,0x3326000
+00ceb044  ldr x0,[x0, #0x698]
+00ceb048  bl 0x00b0789c
+00ceb04c  adrp x0,0x336b000
+00ceb050  ldr x0,[x0, #0xac0]
+00ceb054  bl 0x00b0789c
+00ceb058  adrp x0,0x3370000
+00ceb05c  ldr x0,[x0, #0x778]
+00ceb060  bl 0x00b0789c
+00ceb064  adrp x0,0x337c000
+00ceb068  ldr x0,[x0, #0x1e0]
+00ceb06c  bl 0x00b0789c
+00ceb070  adrp x0,0x335b000
+00ceb074  ldr x0,[x0, #0x128]
+00ceb078  bl 0x00b0789c
+00ceb07c  mov w8,#0x1
+00ceb080  strb w8,[x19, #0x957]
+00ceb084  ldr x0,[x21]
+00ceb088  mov w1,#0x1
+00ceb08c  bl 0x00b078f8
+00ceb090  mov x19,x0
+00ceb094  mov w0,w20
+00ceb098  bl 0x00ce23e0
+00ceb09c  cbz x19,0x00ceb128
+00ceb0a0  mov x20,x0
+00ceb0a4  cbz x0,0x00ceb0bc
+00ceb0a8  ldr x8,[x19]
+00ceb0ac  mov x0,x20
+00ceb0b0  ldr x1,[x8, #0x40]
+00ceb0b4  bl 0x00b07990
+00ceb0b8  cbz x0,0x00ceb130
+00ceb0bc  ldr w8,[x19, #0x18]
+00ceb0c0  cbz w8,0x00ceb12c
+00ceb0c4  adrp x24,0x336b000
+00ceb0c8  adrp x21,0x335b000
+00ceb0cc  adrp x22,0x337c000
+00ceb0d0  adrp x23,0x3326000
+00ceb0d4  ldr x24,[x24, #0xac0]
+00ceb0d8  ldr x21,[x21, #0x128]
+00ceb0dc  ldr x22,[x22, #0x1e0]
+00ceb0e0  ldr x23,[x23, #0x698]
+00ceb0e4  mov x0,x19
+00ceb0e8  str x20,[x0, #0x20]!
+00ceb0ec  mov x1,x20
+00ceb0f0  bl 0x00b07850
+00ceb0f4  ldr x0,[x24]
+00ceb0f8  ldr w8,[x0, #0xe0]
+00ceb0fc  cbnz w8,0x00ceb104
+00ceb100  bl 0x00b0798c
+00ceb104  ldr x0,[x21]
+00ceb108  ldr x1,[x22]
+00ceb10c  ldr x3,[x23]
+00ceb110  mov x2,x19
+00ceb114  ldp x19,x30,[sp, #0x30]
+00ceb118  ldp x21,x20,[sp, #0x20]
+00ceb11c  ldp x23,x22,[sp, #0x10]
+00ceb120  ldr x24,[sp], #0x40
+00ceb124  b 0x01735d9c
+00ceb128  bl 0x00b079b0
+00ceb12c  bl 0x00b079b8
+00ceb130  bl 0x00b079d4
+00ceb134  mov x1,xzr
+00ceb138  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00ceb13c_PermissionsManager__RequestPermissions.txt
+================================================================================
+Function: PermissionsManager$$RequestPermissions @ 00ceb13c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> PermissionsManager$$RequestPermissions @ 00ceb288
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> AN_PermissionMethods$$GetFullName @ 00ce23e0
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.List<object>$$ToArray @ 01c02720
+
+--- Calls IN ---
+  <- PermissionsAPIExample$$RequestPermission @ 00cfb4d8
+
+--- Listing ---
+00ceb13c  stp x23,x22,[sp, #-0x30]!
+00ceb140  stp x21,x20,[sp, #0x10]
+00ceb144  stp x19,x30,[sp, #0x20]
+00ceb148  adrp x20,0x3571000
+00ceb14c  adrp x21,0x3331000
+00ceb150  ldrb w8,[x20, #0x958]
+00ceb154  ldr x21,[x21, #0x9c0]
+00ceb158  mov x19,x1
+00ceb15c  tbnz w8,#0x0,0x00ceb198
+00ceb160  adrp x0,0x3362000
+00ceb164  ldr x0,[x0, #0xde0]
+00ceb168  bl 0x00b0789c
+00ceb16c  adrp x0,0x3348000
+00ceb170  ldr x0,[x0, #0xca0]
+00ceb174  bl 0x00b0789c
+00ceb178  adrp x0,0x331a000
+00ceb17c  ldr x0,[x0, #0xe40]
+00ceb180  bl 0x00b0789c
+00ceb184  adrp x0,0x3331000
+00ceb188  ldr x0,[x0, #0x9c0]
+00ceb18c  bl 0x00b0789c
+00ceb190  mov w8,#0x1
+00ceb194  strb w8,[x20, #0x958]
+00ceb198  ldr x0,[x21]
+00ceb19c  bl 0x00b079a0
+00ceb1a0  cbz x0,0x00ceb284
+00ceb1a4  adrp x8,0x331a000
+00ceb1a8  ldr x8,[x8, #0xe40]
+00ceb1ac  mov x20,x0
+00ceb1b0  ldr x1,[x8]
+00ceb1b4  bl 0x01bffe10
+00ceb1b8  cbz x19,0x00ceb284
+00ceb1bc  ldr x8,[x19, #0x18]
+00ceb1c0  cmp w8,#0x1
+00ceb1c4  b.lt 0x00ceb258
+00ceb1c8  adrp x22,0x3362000
+00ceb1cc  ldr x22,[x22, #0xde0]
+00ceb1d0  mov x21,xzr
+00ceb1d4  and x8,x8,#0xffffffff
+00ceb1d8  add x23,x19,#0x20
+00ceb1dc  cmp x21,w8, UXTW 
+00ceb1e0  b.cs 0x00ceb280
+00ceb1e4  ldr w0,[x23, x21, LSL #0x2]
+00ceb1e8  bl 0x00ce23e0
+00ceb1ec  ldr w10,[x20, #0x1c]
+00ceb1f0  ldr x8,[x20, #0x10]
+00ceb1f4  ldr x9,[x22]
+00ceb1f8  add w10,w10,#0x1
+00ceb1fc  str w10,[x20, #0x1c]
+00ceb200  cbz x8,0x00ceb284
+00ceb204  ldrsw x10,[x20, #0x18]
+00ceb208  ldr w11,[x8, #0x18]
+00ceb20c  mov x1,x0
+00ceb210  cmp w10,w11
+00ceb214  b.cs 0x00ceb230
+00ceb218  add w9,w10,#0x1
+00ceb21c  add x0,x8,x10, LSL #0x3
+00ceb220  str w9,[x20, #0x18]
+00ceb224  str x1,[x0, #0x20]!
+00ceb228  bl 0x00b07850
+00ceb22c  b 0x00ceb248
+00ceb230  ldr x8,[x9, #0x20]
+00ceb234  mov x0,x20
+00ceb238  ldr x8,[x8, #0xc0]
+00ceb23c  ldr x2,[x8, #0x58]
+00ceb240  ldr x8,[x2, #0x8]
+00ceb244  blr x8
+00ceb248  ldr w8,[x19, #0x18]
+00ceb24c  add x21,x21,#0x1
+00ceb250  cmp x21,w8, SXTW 
+00ceb254  b.lt 0x00ceb1dc
+00ceb258  adrp x8,0x3348000
+00ceb25c  ldr x8,[x8, #0xca0]
+00ceb260  mov x0,x20
+00ceb264  ldr x1,[x8]
+00ceb268  bl 0x01c02720
+00ceb26c  ldp x19,x30,[sp, #0x20]
+00ceb270  ldp x21,x20,[sp, #0x10]
+00ceb274  mov x1,x0
+00ceb278  ldp x23,x22,[sp], #0x30
+00ceb27c  b 0x00ceb288
+00ceb280  bl 0x00b079b8
+00ceb284  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ceb288_PermissionsManager__RequestPermissions.txt
+================================================================================
+Function: PermissionsManager$$RequestPermissions @ 00ceb288
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> AN_ProxyPool$$CallStatic @ 00cd64e0
+  -> AndroidNative$$ArrayToString @ 00cd4940
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+  <- PermissionsManager$$RequestPermissions @ 00ceb13c
+
+--- Listing ---
+00ceb288  stp x23,x22,[sp, #-0x30]!
+00ceb28c  stp x21,x20,[sp, #0x10]
+00ceb290  stp x19,x30,[sp, #0x20]
+00ceb294  adrp x19,0x3571000
+00ceb298  adrp x21,0x3370000
+00ceb29c  ldrb w8,[x19, #0x959]
+00ceb2a0  ldr x21,[x21, #0x778]
+00ceb2a4  mov x20,x1
+00ceb2a8  tbnz w8,#0x0,0x00ceb2e4
+00ceb2ac  adrp x0,0x336b000
+00ceb2b0  ldr x0,[x0, #0xac0]
+00ceb2b4  bl 0x00b0789c
+00ceb2b8  adrp x0,0x3370000
+00ceb2bc  ldr x0,[x0, #0x778]
+00ceb2c0  bl 0x00b0789c
+00ceb2c4  adrp x0,0x3333000
+00ceb2c8  ldr x0,[x0, #0x4f8]
+00ceb2cc  bl 0x00b0789c
+00ceb2d0  adrp x0,0x335b000
+00ceb2d4  ldr x0,[x0, #0x128]
+00ceb2d8  bl 0x00b0789c
+00ceb2dc  mov w8,#0x1
+00ceb2e0  strb w8,[x19, #0x959]
+00ceb2e4  ldr x0,[x21]
+00ceb2e8  mov w1,#0x1
+00ceb2ec  bl 0x00b078f8
+00ceb2f0  mov x19,x0
+00ceb2f4  mov x0,x20
+00ceb2f8  bl 0x00cd4940
+00ceb2fc  cbz x19,0x00ceb378
+00ceb300  mov x20,x0
+00ceb304  cbz x0,0x00ceb31c
+00ceb308  ldr x8,[x19]
+00ceb30c  mov x0,x20
+00ceb310  ldr x1,[x8, #0x40]
+00ceb314  bl 0x00b07990
+00ceb318  cbz x0,0x00ceb380
+00ceb31c  ldr w8,[x19, #0x18]
+00ceb320  cbz w8,0x00ceb37c
+00ceb324  adrp x23,0x336b000
+00ceb328  adrp x21,0x335b000
+00ceb32c  adrp x22,0x3333000
+00ceb330  ldr x23,[x23, #0xac0]
+00ceb334  ldr x21,[x21, #0x128]
+00ceb338  ldr x22,[x22, #0x4f8]
+00ceb33c  mov x0,x19
+00ceb340  str x20,[x0, #0x20]!
+00ceb344  mov x1,x20
+00ceb348  bl 0x00b07850
+00ceb34c  ldr x0,[x23]
+00ceb350  ldr w8,[x0, #0xe0]
+00ceb354  cbnz w8,0x00ceb35c
+00ceb358  bl 0x00b0798c
+00ceb35c  ldr x0,[x21]
+00ceb360  ldr x1,[x22]
+00ceb364  mov x2,x19
+00ceb368  ldp x19,x30,[sp, #0x20]
+00ceb36c  ldp x21,x20,[sp, #0x10]
+00ceb370  ldp x23,x22,[sp], #0x30
+00ceb374  b 0x00cd64e0
+00ceb378  bl 0x00b079b0
+00ceb37c  bl 0x00b079b8
+00ceb380  bl 0x00b079d4
+00ceb384  mov x1,xzr
+00ceb388  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00ceb38c_PermissionsManager__OnPermissionsResult.txt
+================================================================================
+Function: PermissionsManager$$OnPermissionsResult @ 00ceb38c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> AndroidNative$$StringToArray @ 00cd48d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Split @ 01fe1cd0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AN_GrantPermissionsResult$$.ctor @ 00ceb620
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00ceb38c  str x24,[sp, #-0x40]!
+00ceb390  stp x23,x22,[sp, #0x10]
+00ceb394  stp x21,x20,[sp, #0x20]
+00ceb398  stp x19,x30,[sp, #0x30]
+00ceb39c  adrp x21,0x3571000
+00ceb3a0  adrp x20,0x336a000
+00ceb3a4  adrp x22,0x336b000
+00ceb3a8  ldrb w8,[x21, #0x95a]
+00ceb3ac  ldr x20,[x20, #0xc08]
+00ceb3b0  ldr x22,[x22, #0x7d0]
+00ceb3b4  mov x19,x1
+00ceb3b8  tbnz w8,#0x0,0x00ceb40c
+00ceb3bc  adrp x0,0x3351000
+00ceb3c0  ldr x0,[x0, #0xa48]
+00ceb3c4  bl 0x00b0789c
+00ceb3c8  adrp x0,0x336b000
+00ceb3cc  ldr x0,[x0, #0x7d0]
+00ceb3d0  bl 0x00b0789c
+00ceb3d4  adrp x0,0x330c000
+00ceb3d8  ldr x0,[x0, #0x9e0]
+00ceb3dc  bl 0x00b0789c
+00ceb3e0  adrp x0,0x3308000
+00ceb3e4  ldr x0,[x0, #0x9a8]
+00ceb3e8  bl 0x00b0789c
+00ceb3ec  adrp x0,0x3345000
+00ceb3f0  ldr x0,[x0, #0x658]
+00ceb3f4  bl 0x00b0789c
+00ceb3f8  adrp x0,0x336a000
+00ceb3fc  ldr x0,[x0, #0xc08]
+00ceb400  bl 0x00b0789c
+00ceb404  mov w8,#0x1
+00ceb408  strb w8,[x21, #0x95a]
+00ceb40c  ldr x0,[x20]
+00ceb410  adrp x21,0x3308000
+00ceb414  ldr x21,[x21, #0x9a8]
+00ceb418  mov x1,x19
+00ceb41c  mov x2,xzr
+00ceb420  bl 0x01fd2850
+00ceb424  ldr x8,[x22]
+00ceb428  mov x20,x0
+00ceb42c  ldr w9,[x8, #0xe0]
+00ceb430  cbnz w9,0x00ceb43c
+00ceb434  mov x0,x8
+00ceb438  bl 0x00b0798c
+00ceb43c  mov x0,x20
+00ceb440  mov x1,xzr
+00ceb444  bl 0x024c0104
+00ceb448  ldr x0,[x21]
+00ceb44c  mov w1,#0x1
+00ceb450  bl 0x00b078f8
+00ceb454  cbz x0,0x00ceb610
+00ceb458  adrp x21,0x3345000
+00ceb45c  ldr x21,[x21, #0x658]
+00ceb460  mov x20,x0
+00ceb464  ldr x1,[x21]
+00ceb468  cbz x1,0x00ceb490
+00ceb46c  ldr x8,[x20]
+00ceb470  mov x0,x1
+00ceb474  ldr x8,[x8, #0x40]
+00ceb478  mov x1,x8
+00ceb47c  bl 0x00b07990
+00ceb480  cbz x0,0x00ceb614
+00ceb484  ldr x8,[x21]
+00ceb488  mov x1,x8
+00ceb48c  b 0x00ceb494
+00ceb490  mov x8,xzr
+00ceb494  ldr w9,[x20, #0x18]
+00ceb498  cbz w9,0x00ceb60c
+00ceb49c  mov x0,x20
+00ceb4a0  str x8,[x0, #0x20]!
+00ceb4a4  bl 0x00b07850
+00ceb4a8  cbz x19,0x00ceb610
+00ceb4ac  mov x0,x19
+00ceb4b0  mov x1,x20
+00ceb4b4  mov w2,wzr
+00ceb4b8  mov x3,xzr
+00ceb4bc  bl 0x01fe1cd0
+00ceb4c0  cbz x0,0x00ceb610
+00ceb4c4  ldr w8,[x0, #0x18]
+00ceb4c8  mov x20,x0
+00ceb4cc  cbz w8,0x00ceb60c
+00ceb4d0  ldr x0,[x20, #0x20]
+00ceb4d4  bl 0x00cd48d4
+00ceb4d8  ldr w8,[x20, #0x18]
+00ceb4dc  cmp w8,#0x1
+00ceb4e0  b.ls 0x00ceb60c
+00ceb4e4  mov x19,x0
+00ceb4e8  ldr x0,[x20, #0x28]
+00ceb4ec  bl 0x00cd48d4
+00ceb4f0  cbz x19,0x00ceb610
+00ceb4f4  ldr x8,[x19, #0x18]
+00ceb4f8  mov x20,x0
+00ceb4fc  cmp w8,#0x1
+00ceb500  b.lt 0x00ceb548
+00ceb504  mov x23,xzr
+00ceb508  and x8,x8,#0xffffffff
+00ceb50c  add x24,x19,#0x20
+00ceb510  cmp x23,w8, UXTW 
+00ceb514  b.cs 0x00ceb60c
+00ceb518  ldr x0,[x22]
+00ceb51c  ldr x21,[x24, x23, LSL #0x3]
+00ceb520  ldr w8,[x0, #0xe0]
+00ceb524  cbnz w8,0x00ceb52c
+00ceb528  bl 0x00b0798c
+00ceb52c  mov x0,x21
+00ceb530  mov x1,xzr
+00ceb534  bl 0x024c0104
+00ceb538  ldr w8,[x19, #0x18]
+00ceb53c  add x23,x23,#0x1
+00ceb540  cmp x23,w8, SXTW 
+00ceb544  b.lt 0x00ceb510
+00ceb548  cbz x20,0x00ceb610
+00ceb54c  ldr x8,[x20, #0x18]
+00ceb550  cmp w8,#0x1
+00ceb554  b.lt 0x00ceb59c
+00ceb558  mov x23,xzr
+00ceb55c  and x8,x8,#0xffffffff
+00ceb560  add x24,x20,#0x20
+00ceb564  cmp x23,w8, UXTW 
+00ceb568  b.cs 0x00ceb60c
+00ceb56c  ldr x0,[x22]
+00ceb570  ldr x21,[x24, x23, LSL #0x3]
+00ceb574  ldr w8,[x0, #0xe0]
+00ceb578  cbnz w8,0x00ceb580
+00ceb57c  bl 0x00b0798c
+00ceb580  mov x0,x21
+00ceb584  mov x1,xzr
+00ceb588  bl 0x024c0104
+00ceb58c  ldr w8,[x20, #0x18]
+00ceb590  add x23,x23,#0x1
+00ceb594  cmp x23,w8, SXTW 
+00ceb598  b.lt 0x00ceb564
+00ceb59c  adrp x8,0x3351000
+00ceb5a0  ldr x8,[x8, #0xa48]
+00ceb5a4  ldr x0,[x8]
+00ceb5a8  bl 0x00b079a0
+00ceb5ac  cbz x0,0x00ceb610
+00ceb5b0  adrp x22,0x330c000
+00ceb5b4  ldr x22,[x22, #0x9e0]
+00ceb5b8  mov x1,x19
+00ceb5bc  mov x2,x20
+00ceb5c0  mov x21,x0
+00ceb5c4  bl 0x00ceb620
+00ceb5c8  ldr x0,[x22]
+00ceb5cc  ldr w8,[x0, #0xe0]
+00ceb5d0  cbnz w8,0x00ceb5dc
+00ceb5d4  bl 0x00b0798c
+00ceb5d8  ldr x0,[x22]
+00ceb5dc  ldr x8,[x0, #0xb8]
+00ceb5e0  ldr x8,[x8]
+00ceb5e4  cbz x8,0x00ceb610
+00ceb5e8  ldr x3,[x8, #0x18]
+00ceb5ec  ldr x0,[x8, #0x40]
+00ceb5f0  ldr x2,[x8, #0x28]
+00ceb5f4  mov x1,x21
+00ceb5f8  ldp x19,x30,[sp, #0x30]
+00ceb5fc  ldp x21,x20,[sp, #0x20]
+00ceb600  ldp x23,x22,[sp, #0x10]
+00ceb604  ldr x24,[sp], #0x40
+00ceb608  br x3
+00ceb60c  bl 0x00b079b8
+00ceb610  bl 0x00b079b0
+00ceb614  bl 0x00b079d4
+00ceb618  mov x1,xzr
+00ceb61c  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00ceb7bc_PermissionsManager__GetPermissionByName.txt
+================================================================================
+Function: PermissionsManager$$GetPermissionByName @ 00ceb7bc
+
+--- Calls OUT ---
+  -> System.Array$$GetEnumerator @ 02176aec
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> AN_PermissionMethods$$GetFullName @ 00ce23e0
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> FUN_00b07c6c @ 00b07c6c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00aaac8c @ 00aaac8c
+  -> System.Type$$GetTypeFromHandle @ 0215f900
+  -> thunk_FUN_00ace8b4 @ 00b07998
+  -> System.String$$Equals @ 01fde08c
+  -> System.Enum$$GetValues @ 02184748
+
+--- Calls IN ---
+  <- AN_GrantPermissionsResult$$.ctor @ 00ceb620
+
+--- Listing ---
+00ceb7bc  str x24,[sp, #-0x40]!
+00ceb7c0  stp x23,x22,[sp, #0x10]
+00ceb7c4  stp x21,x20,[sp, #0x20]
+00ceb7c8  stp x19,x30,[sp, #0x30]
+00ceb7cc  adrp x22,0x3571000
+00ceb7d0  adrp x19,0x3357000
+00ceb7d4  adrp x21,0x3347000
+00ceb7d8  ldrb w8,[x22, #0x95b]
+00ceb7dc  ldr x19,[x19, #0x900]
+00ceb7e0  ldr x21,[x21, #0xd68]
+00ceb7e4  mov x20,x0
+00ceb7e8  tbnz w8,#0x0,0x00ceb83c
+00ceb7ec  adrp x0,0x3357000
+00ceb7f0  ldr x0,[x0, #0x900]
+00ceb7f4  bl 0x00b0789c
+00ceb7f8  adrp x0,0x334b000
+00ceb7fc  ldr x0,[x0, #0xc10]
+00ceb800  bl 0x00b0789c
+00ceb804  adrp x0,0x3358000
+00ceb808  ldr x0,[x0, #0xa10]
+00ceb80c  bl 0x00b0789c
+00ceb810  adrp x0,0x337d000
+00ceb814  ldr x0,[x0, #0x848]
+00ceb818  bl 0x00b0789c
+00ceb81c  adrp x0,0x3364000
+00ceb820  ldr x0,[x0, #0xeb0]
+00ceb824  bl 0x00b0789c
+00ceb828  adrp x0,0x3347000
+00ceb82c  ldr x0,[x0, #0xd68]
+00ceb830  bl 0x00b0789c
+00ceb834  mov w8,#0x1
+00ceb838  strb w8,[x22, #0x95b]
+00ceb83c  ldr x0,[x21]
+00ceb840  adrp x21,0x3358000
+00ceb844  ldr x19,[x19]
+00ceb848  ldr w8,[x0, #0xe0]
+00ceb84c  ldr x21,[x21, #0xa10]
+00ceb850  cbnz w8,0x00ceb858
+00ceb854  bl 0x00b0798c
+00ceb858  mov x0,x19
+00ceb85c  mov x1,xzr
+00ceb860  bl 0x0215f900
+00ceb864  ldr x8,[x21]
+00ceb868  mov x19,x0
+00ceb86c  ldr w9,[x8, #0xe0]
+00ceb870  cbnz w9,0x00ceb87c
+00ceb874  mov x0,x8
+00ceb878  bl 0x00b0798c
+00ceb87c  mov x0,x19
+00ceb880  mov x1,xzr
+00ceb884  bl 0x02184748
+00ceb888  cbz x0,0x00ceba60
+00ceb88c  adrp x22,0x337d000
+00ceb890  ldr x22,[x22, #0x848]
+00ceb894  mov x1,xzr
+00ceb898  bl 0x02176aec
+00ceb89c  mov x19,x0
+00ceb8a0  cbz x0,0x00ceba64
+00ceb8a4  adrp x23,0x3364000
+00ceb8a8  adrp x24,0x334b000
+00ceb8ac  ldr x23,[x23, #0xeb0]
+00ceb8b0  ldr x24,[x24, #0xc10]
+00ceb8b4  ldr x8,[x19]
+00ceb8b8  ldr x1,[x23]
+00ceb8bc  ldrh w9,[x8, #0x12a]
+00ceb8c0  cbz x9,0x00ceb8e4
+00ceb8c4  ldr x10,[x8, #0xb0]
+00ceb8c8  add x10,x10,#0x8
+00ceb8cc  ldur x11,[x10, #-0x8]
+00ceb8d0  cmp x11,x1
+00ceb8d4  b.eq 0x00ceb8f4
+00ceb8d8  subs x9,x9,#0x1
+00ceb8dc  add x10,x10,#0x10
+00ceb8e0  b.ne 0x00ceb8cc
+00ceb8e4  mov x0,x19
+    ; [PRE] try { // try from 00ceb8e4 to 00ceb90b has its CatchHandler @ 00ceba84
+00ceb8e8  mov w2,wzr
+00ceb8ec  bl 0x00b2ae24
+00ceb8f0  b 0x00ceb900
+00ceb8f4  ldrsw x9,[x10]
+00ceb8f8  add x8,x8,x9, LSL #0x4
+00ceb8fc  add x0,x8,#0x138
+00ceb900  ldp x8,x1,[x0]
+00ceb904  mov x0,x19
+00ceb908  blr x8
+    ; [POST] } // end try from 00ceb8e4 to 00ceb90b
+00ceb90c  tbz w0,#0x0,0x00ceb9b8
+00ceb910  ldr x8,[x19]
+00ceb914  ldr x1,[x23]
+00ceb918  ldrh w9,[x8, #0x12a]
+00ceb91c  cbz x9,0x00ceb940
+00ceb920  ldr x10,[x8, #0xb0]
+00ceb924  add x10,x10,#0x8
+00ceb928  ldur x11,[x10, #-0x8]
+00ceb92c  cmp x11,x1
+00ceb930  b.eq 0x00ceb950
+00ceb934  subs x9,x9,#0x1
+00ceb938  add x10,x10,#0x10
+00ceb93c  b.ne 0x00ceb928
+00ceb940  mov w2,#0x1
+    ; [PRE] try { // try from 00ceb940 to 00ceb98b has its CatchHandler @ 00ceba88
+00ceb944  mov x0,x19
+00ceb948  bl 0x00b2ae24
+00ceb94c  b 0x00ceb960
+00ceb950  ldr w9,[x10]
+00ceb954  add w9,w9,#0x1
+00ceb958  add x8,x8,w9, SXTW  #0x4
+00ceb95c  add x0,x8,#0x138
+00ceb960  ldp x8,x1,[x0]
+00ceb964  mov x0,x19
+00ceb968  blr x8
+00ceb96c  cbz x0,0x00ceba58
+00ceb970  ldr x8,[x0]
+00ceb974  ldr x1,[x24]
+00ceb978  ldr x8,[x8, #0x40]
+00ceb97c  ldr x9,[x1, #0x40]
+00ceb980  cmp x8,x9
+00ceb984  b.ne 0x00ceba54
+00ceb988  bl 0x00b07998
+    ; [POST] } // end try from 00ceb940 to 00ceb98b
+00ceb98c  ldr w21,[x0]
+00ceb990  mov w0,w21
+    ; [PRE] try { // try from 00ceb990 to 00ceb997 has its CatchHandler @ 00ceba7c
+00ceb994  bl 0x00ce23e0
+    ; [POST] } // end try from 00ceb990 to 00ceb997
+00ceb998  cbz x0,0x00ceba5c
+00ceb99c  mov x1,x20
+    ; [PRE] try { // try from 00ceb99c to 00ceb9a7 has its CatchHandler @ 00ceba80
+00ceb9a0  mov x2,xzr
+00ceb9a4  bl 0x01fde08c
+    ; [POST] } // end try from 00ceb99c to 00ceb9a7
+00ceb9a8  tbz w0,#0x0,0x00ceb8b4
+00ceb9ac  mov x20,xzr
+00ceb9b0  mov w23,#0x4
+00ceb9b4  b 0x00ceb9c4
+00ceb9b8  mov x20,xzr
+00ceb9bc  mov w21,wzr
+00ceb9c0  mov w23,#0x5
+00ceb9c4  ldr x1,[x22]
+00ceb9c8  mov x0,x19
+00ceb9cc  bl 0x00b07990
+00ceb9d0  cbz x0,0x00ceba30
+00ceb9d4  ldr x8,[x0]
+00ceb9d8  ldr x1,[x22]
+00ceb9dc  mov x19,x0
+00ceb9e0  ldrh w9,[x8, #0x12a]
+00ceb9e4  cbz x9,0x00ceba08
+00ceb9e8  ldr x10,[x8, #0xb0]
+00ceb9ec  add x10,x10,#0x8
+00ceb9f0  ldur x11,[x10, #-0x8]
+00ceb9f4  cmp x11,x1
+00ceb9f8  b.eq 0x00ceba18
+00ceb9fc  subs x9,x9,#0x1
+00ceba00  add x10,x10,#0x10
+00ceba04  b.ne 0x00ceb9f0
+00ceba08  mov x0,x19
+00ceba0c  mov w2,wzr
+00ceba10  bl 0x00b2ae24
+00ceba14  b 0x00ceba24
+00ceba18  ldrsw x9,[x10]
+00ceba1c  add x8,x8,x9, LSL #0x4
+00ceba20  add x0,x8,#0x138
+00ceba24  ldp x8,x1,[x0]
+00ceba28  mov x0,x19
+00ceba2c  blr x8
+00ceba30  cbnz x20,0x00ceba68
+00ceba34  cmp w23,#0x4
+00ceba38  mov w8,#0x3d
+00ceba3c  csel w0,w21,w8,eq
+00ceba40  ldp x19,x30,[sp, #0x30]
+00ceba44  ldp x21,x20,[sp, #0x20]
+00ceba48  ldp x23,x22,[sp, #0x10]
+00ceba4c  ldr x24,[sp], #0x40
+00ceba50  ret
+00ceba54  bl 0x00b07c6c
+    ; [PRE] try { // try from 00ceba54 to 00ceba5b has its CatchHandler @ 00ceba78
+00ceba58  bl 0x00b079b0
+    ; [POST] } // end try from 00ceba54 to 00ceba5b
+00ceba5c  bl 0x00b079b0
+    ; [PRE] try { // try from 00ceba5c to 00ceba5f has its CatchHandler @ 00ceba74
+    ; [POST] } // end try from 00ceba5c to 00ceba5f
+00ceba60  bl 0x00b079b0
+00ceba64  bl 0x00b079b0
+    ; [PRE] try { // try from 00ceba64 to 00ceba67 has its CatchHandler @ 00ceba70
+    ; [POST] } // end try from 00ceba64 to 00ceba67
+00ceba68  mov x0,x20
+00ceba6c  bl 0x00aaac8c
+
+
+================================================================================
+### FILE: 00cebb40_PermissionsManager__.ctor.txt
+================================================================================
+Function: PermissionsManager$$.ctor @ 00cebb40
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$.ctor @ 01e0a43c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00cebb40  stp x21,x20,[sp, #-0x20]!
+00cebb44  stp x19,x30,[sp, #0x10]
+00cebb48  adrp x20,0x3571000
+00cebb4c  adrp x21,0x336a000
+00cebb50  ldrb w8,[x20, #0x95c]
+00cebb54  ldr x21,[x21, #0x2e8]
+00cebb58  mov x19,x0
+00cebb5c  tbnz w8,#0x0,0x00cebb74
+00cebb60  adrp x0,0x336a000
+00cebb64  ldr x0,[x0, #0x2e8]
+00cebb68  bl 0x00b0789c
+00cebb6c  mov w8,#0x1
+00cebb70  strb w8,[x20, #0x95c]
+00cebb74  ldr x1,[x21]
+00cebb78  mov x0,x19
+00cebb7c  ldp x19,x30,[sp, #0x10]
+00cebb80  ldp x21,x20,[sp], #0x20
+00cebb84  b 0x01e0a43c
+
+
+================================================================================
+### FILE: 00cebb88_PermissionsManager__.cctor.txt
+================================================================================
+Function: PermissionsManager$$.cctor @ 00cebb88
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cebb88  stp x21,x20,[sp, #-0x20]!
+00cebb8c  stp x19,x30,[sp, #0x10]
+00cebb90  adrp x20,0x3571000
+00cebb94  adrp x19,0x3365000
+00cebb98  ldrb w8,[x20, #0x95d]
+00cebb9c  ldr x19,[x19, #0xad0]
+00cebba0  tbnz w8,#0x0,0x00cebbdc
+00cebba4  adrp x0,0x336a000
+00cebba8  ldr x0,[x0, #0x7d8]
+00cebbac  bl 0x00b0789c
+00cebbb0  adrp x0,0x330c000
+00cebbb4  ldr x0,[x0, #0x9e0]
+00cebbb8  bl 0x00b0789c
+00cebbbc  adrp x0,0x3384000
+00cebbc0  ldr x0,[x0, #0x748]
+00cebbc4  bl 0x00b0789c
+00cebbc8  adrp x0,0x3365000
+00cebbcc  ldr x0,[x0, #0xad0]
+00cebbd0  bl 0x00b0789c
+00cebbd4  mov w8,#0x1
+00cebbd8  strb w8,[x20, #0x95d]
+00cebbdc  ldr x0,[x19]
+00cebbe0  adrp x21,0x336a000
+00cebbe4  ldr w8,[x0, #0xe0]
+00cebbe8  ldr x21,[x21, #0x7d8]
+00cebbec  cbnz w8,0x00cebbf8
+00cebbf0  bl 0x00b0798c
+00cebbf4  ldr x0,[x19]
+00cebbf8  ldr x8,[x0, #0xb8]
+00cebbfc  ldr x0,[x21]
+00cebc00  ldr x20,[x8]
+00cebc04  bl 0x00b079a0
+00cebc08  cbz x0,0x00cebc54
+00cebc0c  adrp x8,0x3384000
+00cebc10  ldr x8,[x8, #0x748]
+00cebc14  adrp x21,0x330c000
+00cebc18  mov x1,x20
+00cebc1c  mov x3,xzr
+00cebc20  ldr x2,[x8]
+00cebc24  ldr x21,[x21, #0x9e0]
+00cebc28  mov x19,x0
+00cebc2c  bl 0x01909b80
+00cebc30  ldr x8,[x21]
+00cebc34  mov x1,x19
+00cebc38  ldr x8,[x8, #0xb8]
+00cebc3c  str x19,[x8]
+00cebc40  ldr x8,[x21]
+00cebc44  ldp x19,x30,[sp, #0x10]
+00cebc48  ldr x0,[x8, #0xb8]
+00cebc4c  ldp x21,x20,[sp], #0x20
+00cebc50  b 0x00b07850
+00cebc54  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cebc58_PermissionsManager.__c__.cctor.txt
+================================================================================
+Function: PermissionsManager.<>c$$.cctor @ 00cebc58
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00cebc58  str x20,[sp, #-0x20]!
+00cebc5c  stp x19,x30,[sp, #0x10]
+00cebc60  adrp x19,0x3571000
+00cebc64  adrp x20,0x3365000
+00cebc68  ldrb w8,[x19, #0x95e]
+00cebc6c  ldr x20,[x20, #0xad0]
+00cebc70  tbnz w8,#0x0,0x00cebc88
+00cebc74  adrp x0,0x3365000
+00cebc78  ldr x0,[x0, #0xad0]
+00cebc7c  bl 0x00b0789c
+00cebc80  mov w8,#0x1
+00cebc84  strb w8,[x19, #0x95e]
+00cebc88  ldr x0,[x20]
+00cebc8c  bl 0x00b079a0
+00cebc90  cbz x0,0x00cebcc4
+00cebc94  mov x1,xzr
+00cebc98  mov x19,x0
+00cebc9c  bl 0x02194104
+00cebca0  ldr x8,[x20]
+00cebca4  mov x1,x19
+00cebca8  ldr x8,[x8, #0xb8]
+00cebcac  str x19,[x8]
+00cebcb0  ldr x8,[x20]
+00cebcb4  ldp x19,x30,[sp, #0x10]
+00cebcb8  ldr x0,[x8, #0xb8]
+00cebcbc  ldr x20,[sp], #0x20
+00cebcc0  b 0x00b07850
+00cebcc4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cebcc8_PermissionsManager.__c__.ctor.txt
+================================================================================
+Function: PermissionsManager.<>c$$.ctor @ 00cebcc8
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00cebcc8  mov x1,xzr
+00cebccc  b 0x02194104
+
+
+================================================================================
+### FILE: 00cebcd0_PermissionsManager.__c___.cctor_b__13_0.txt
+================================================================================
+Function: PermissionsManager.<>c$$<.cctor>b__13_0 @ 00cebcd0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00cebcd0  ret
+
+
+================================================================================
+### FILE: 00cfb264_PermissionsAPIExample__Awake.txt
+================================================================================
+Function: PermissionsAPIExample$$Awake @ 00cfb264
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> PermissionsManager$$add_ActionPermissionsRequestCompleted @ 00ceac50
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cfb264  stp x21,x20,[sp, #-0x20]!
+00cfb268  stp x19,x30,[sp, #0x10]
+00cfb26c  adrp x20,0x3571000
+00cfb270  adrp x21,0x336a000
+00cfb274  ldrb w8,[x20, #0xa2f]
+00cfb278  ldr x21,[x21, #0x7d8]
+00cfb27c  mov x19,x0
+00cfb280  tbnz w8,#0x0,0x00cfb2b0
+00cfb284  adrp x0,0x336a000
+00cfb288  ldr x0,[x0, #0x7d8]
+00cfb28c  bl 0x00b0789c
+00cfb290  adrp x0,0x3349000
+00cfb294  ldr x0,[x0, #0x448]
+00cfb298  bl 0x00b0789c
+00cfb29c  adrp x0,0x330c000
+00cfb2a0  ldr x0,[x0, #0x9e0]
+00cfb2a4  bl 0x00b0789c
+00cfb2a8  mov w8,#0x1
+00cfb2ac  strb w8,[x20, #0xa2f]
+00cfb2b0  ldr x0,[x21]
+00cfb2b4  bl 0x00b079a0
+00cfb2b8  cbz x0,0x00cfb304
+00cfb2bc  adrp x8,0x3349000
+00cfb2c0  ldr x8,[x8, #0x448]
+00cfb2c4  adrp x21,0x330c000
+00cfb2c8  mov x1,x19
+00cfb2cc  mov x3,xzr
+00cfb2d0  ldr x2,[x8]
+00cfb2d4  ldr x21,[x21, #0x9e0]
+00cfb2d8  mov x20,x0
+00cfb2dc  bl 0x01909b80
+00cfb2e0  ldr x0,[x21]
+00cfb2e4  ldr w8,[x0, #0xe0]
+00cfb2e8  cbnz w8,0x00cfb2f0
+00cfb2ec  bl 0x00b0798c
+00cfb2f0  ldp x19,x30,[sp, #0x10]
+00cfb2f4  mov x0,x20
+00cfb2f8  mov x1,xzr
+00cfb2fc  ldp x21,x20,[sp], #0x20
+00cfb300  b 0x00ceac50
+00cfb304  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cfb308_PermissionsAPIExample__CheckPermission.txt
+================================================================================
+Function: PermissionsAPIExample$$CheckPermission @ 00cfb308
+
+--- Calls OUT ---
+  -> PermissionsAPIExample$$CheckShouldRequestPermission @ 00cfb408
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> PermissionsManager$$IsPermissionGranted @ 00ceae9c
+
+--- Calls IN ---
+
+--- Listing ---
+00cfb308  str x20,[sp, #-0x20]!
+00cfb30c  stp x19,x30,[sp, #0x10]
+00cfb310  adrp x20,0x3571000
+00cfb314  adrp x19,0x336b000
+00cfb318  ldrb w8,[x20, #0xa30]
+00cfb31c  ldr x19,[x19, #0x7d0]
+00cfb320  tbnz w8,#0x0,0x00cfb35c
+00cfb324  adrp x0,0x337c000
+00cfb328  ldr x0,[x0, #0xf70]
+00cfb32c  bl 0x00b0789c
+00cfb330  adrp x0,0x336b000
+00cfb334  ldr x0,[x0, #0x7d0]
+00cfb338  bl 0x00b0789c
+00cfb33c  adrp x0,0x330c000
+00cfb340  ldr x0,[x0, #0x9e0]
+00cfb344  bl 0x00b0789c
+00cfb348  adrp x0,0x3322000
+00cfb34c  ldr x0,[x0, #0x680]
+00cfb350  bl 0x00b0789c
+00cfb354  mov w8,#0x1
+00cfb358  strb w8,[x20, #0xa30]
+00cfb35c  ldr x0,[x19]
+00cfb360  adrp x19,0x3322000
+00cfb364  adrp x20,0x330c000
+00cfb368  ldr w8,[x0, #0xe0]
+00cfb36c  ldr x19,[x19, #0x680]
+00cfb370  ldr x20,[x20, #0x9e0]
+00cfb374  cbnz w8,0x00cfb37c
+00cfb378  bl 0x00b0798c
+00cfb37c  ldr x0,[x19]
+00cfb380  adrp x19,0x337c000
+00cfb384  ldr x19,[x19, #0xf70]
+00cfb388  mov x1,xzr
+00cfb38c  bl 0x024c0104
+00cfb390  ldr x0,[x20]
+00cfb394  ldr w8,[x0, #0xe0]
+00cfb398  cbnz w8,0x00cfb3a0
+00cfb39c  bl 0x00b0798c
+00cfb3a0  mov w0,#0x3c
+00cfb3a4  mov x1,xzr
+00cfb3a8  bl 0x00ceae9c
+00cfb3ac  ldr x8,[x19]
+00cfb3b0  and w9,w0,#0x1
+00cfb3b4  add x1,sp,#0xc
+00cfb3b8  strb w9,[sp, #0xc]
+00cfb3bc  mov x0,x8
+00cfb3c0  bl 0x00b07994
+00cfb3c4  mov x1,xzr
+00cfb3c8  bl 0x024c0104
+00cfb3cc  mov w0,#0x10
+00cfb3d0  mov x1,xzr
+00cfb3d4  bl 0x00ceae9c
+00cfb3d8  ldr x8,[x19]
+00cfb3dc  and w9,w0,#0x1
+00cfb3e0  add x1,sp,#0x8
+00cfb3e4  strb w9,[sp, #0x8]
+00cfb3e8  mov x0,x8
+00cfb3ec  bl 0x00b07994
+00cfb3f0  mov x1,xzr
+00cfb3f4  bl 0x024c0104
+00cfb3f8  bl 0x00cfb408
+00cfb3fc  ldp x19,x30,[sp, #0x10]
+00cfb400  ldr x20,[sp], #0x20
+00cfb404  ret
+
+
+================================================================================
+### FILE: 00cfb408_PermissionsAPIExample__CheckShouldRequestPermission.txt
+================================================================================
+Function: PermissionsAPIExample$$CheckShouldRequestPermission @ 00cfb408
+
+--- Calls OUT ---
+  -> System.Boolean$$ToString @ 020d8f78
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> PermissionsManager$$ShouldShowRequestPermission @ 00ceb018
+
+--- Calls IN ---
+  <- PermissionsAPIExample$$CheckPermission @ 00cfb308
+
+--- Listing ---
+00cfb408  str x20,[sp, #-0x20]!
+00cfb40c  stp x19,x30,[sp, #0x10]
+00cfb410  adrp x20,0x3571000
+00cfb414  adrp x19,0x330c000
+00cfb418  ldrb w8,[x20, #0xa32]
+00cfb41c  ldr x19,[x19, #0x9e0]
+00cfb420  tbnz w8,#0x0,0x00cfb450
+00cfb424  adrp x0,0x336b000
+00cfb428  ldr x0,[x0, #0x7d0]
+00cfb42c  bl 0x00b0789c
+00cfb430  adrp x0,0x330c000
+00cfb434  ldr x0,[x0, #0x9e0]
+00cfb438  bl 0x00b0789c
+00cfb43c  adrp x0,0x3311000
+00cfb440  ldr x0,[x0, #0xda0]
+00cfb444  bl 0x00b0789c
+00cfb448  mov w8,#0x1
+00cfb44c  strb w8,[x20, #0xa32]
+00cfb450  ldr x0,[x19]
+00cfb454  strb wzr,[sp, #0xc]
+00cfb458  adrp x20,0x3311000
+00cfb45c  adrp x19,0x336b000
+00cfb460  ldr w8,[x0, #0xe0]
+00cfb464  ldr x20,[x20, #0xda0]
+00cfb468  ldr x19,[x19, #0x7d0]
+00cfb46c  cbnz w8,0x00cfb474
+00cfb470  bl 0x00b0798c
+00cfb474  mov w0,#0x3c
+00cfb478  mov x1,xzr
+00cfb47c  bl 0x00ceb018
+00cfb480  and w8,w0,#0x1
+00cfb484  add x0,sp,#0xc
+00cfb488  mov x1,xzr
+00cfb48c  strb w8,[sp, #0xc]
+00cfb490  bl 0x020d8f78
+00cfb494  ldr x8,[x20]
+00cfb498  mov x1,x0
+00cfb49c  mov x2,xzr
+00cfb4a0  mov x0,x8
+00cfb4a4  bl 0x01fd2850
+00cfb4a8  ldr x8,[x19]
+00cfb4ac  mov x19,x0
+00cfb4b0  ldr w9,[x8, #0xe0]
+00cfb4b4  cbnz w9,0x00cfb4c0
+00cfb4b8  mov x0,x8
+00cfb4bc  bl 0x00b0798c
+00cfb4c0  mov x0,x19
+00cfb4c4  mov x1,xzr
+00cfb4c8  bl 0x024c0104
+00cfb4cc  ldp x19,x30,[sp, #0x10]
+00cfb4d0  ldr x20,[sp], #0x20
+00cfb4d4  ret
+
+
+================================================================================
+### FILE: 00cfb4d8_PermissionsAPIExample__RequestPermission.txt
+================================================================================
+Function: PermissionsAPIExample$$RequestPermission @ 00cfb4d8
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> PermissionsManager$$RequestPermissions @ 00ceb13c
+
+--- Calls IN ---
+
+--- Listing ---
+00cfb4d8  stp x21,x20,[sp, #-0x20]!
+00cfb4dc  stp x19,x30,[sp, #0x10]
+00cfb4e0  adrp x20,0x3571000
+00cfb4e4  adrp x21,0x333d000
+00cfb4e8  adrp x19,0x332b000
+00cfb4ec  ldrb w8,[x20, #0xa31]
+00cfb4f0  ldr x21,[x21, #0x390]
+00cfb4f4  ldr x19,[x19, #0x6e8]
+00cfb4f8  tbnz w8,#0x0,0x00cfb51c
+00cfb4fc  adrp x0,0x332b000
+00cfb500  ldr x0,[x0, #0x6e8]
+00cfb504  bl 0x00b0789c
+00cfb508  adrp x0,0x333d000
+00cfb50c  ldr x0,[x0, #0x390]
+00cfb510  bl 0x00b0789c
+00cfb514  mov w8,#0x1
+00cfb518  strb w8,[x20, #0xa31]
+00cfb51c  ldr x0,[x21]
+00cfb520  bl 0x01e09dd4
+00cfb524  ldr x8,[x19]
+00cfb528  mov x19,x0
+00cfb52c  mov w1,#0x2
+00cfb530  mov x0,x8
+00cfb534  bl 0x00b078f8
+00cfb538  cbz x0,0x00cfb57c
+00cfb53c  ldr w8,[x0, #0x18]
+00cfb540  mov x1,x0
+00cfb544  cbz w8,0x00cfb578
+00cfb548  mov w9,#0x3c
+00cfb54c  cmp w8,#0x1
+00cfb550  str w9,[x1, #0x20]
+00cfb554  b.eq 0x00cfb578
+00cfb558  mov w8,#0x27
+00cfb55c  str w8,[x1, #0x24]
+00cfb560  cbz x19,0x00cfb57c
+00cfb564  mov x0,x19
+00cfb568  ldp x19,x30,[sp, #0x10]
+00cfb56c  mov x2,xzr
+00cfb570  ldp x21,x20,[sp], #0x20
+00cfb574  b 0x00ceb13c
+00cfb578  bl 0x00b079b8
+00cfb57c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cfb580_PermissionsAPIExample__HandleActionPermissionsRequestCompleted.txt
+================================================================================
+Function: PermissionsAPIExample$$HandleActionPermissionsRequestCompleted @ 00cfb580
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary.Enumerator<Int32Enum,-Int32Enum>$$Dispose @ 01a44314
+  -> System.Collections.Generic.Dictionary.Enumerator<Int32Enum,-Int32Enum>$$MoveNext @ 01a4421c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Enum$$ToString @ 02186100
+  -> AN_PermissionMethods$$GetFullName @ 00ce23e0
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> System.Collections.Generic.Dictionary<Int32Enum,-Int32Enum>$$GetEnumerator @ 0193d388
+  -> System.String$$Concat @ 01fdebb8
+
+--- Calls IN ---
+
+--- Listing ---
+00cfb580  sub sp,sp,#0x90
+00cfb584  str x26,[sp, #0x40]
+00cfb588  stp x25,x24,[sp, #0x50]
+00cfb58c  stp x23,x22,[sp, #0x60]
+00cfb590  stp x21,x20,[sp, #0x70]
+00cfb594  stp x19,x30,[sp, #0x80]
+00cfb598  adrp x20,0x3571000
+00cfb59c  adrp x21,0x336b000
+00cfb5a0  ldrb w8,[x20, #0xa33]
+00cfb5a4  ldr x21,[x21, #0x7d0]
+00cfb5a8  mov x19,x1
+00cfb5ac  tbnz w8,#0x0,0x00cfb630
+00cfb5b0  adrp x0,0x3359000
+00cfb5b4  ldr x0,[x0, #0x8f8]
+00cfb5b8  bl 0x00b0789c
+00cfb5bc  adrp x0,0x336b000
+00cfb5c0  ldr x0,[x0, #0x7d0]
+00cfb5c4  bl 0x00b0789c
+00cfb5c8  adrp x0,0x3311000
+00cfb5cc  ldr x0,[x0, #0xb88]
+00cfb5d0  bl 0x00b0789c
+00cfb5d4  adrp x0,0x3334000
+00cfb5d8  ldr x0,[x0, #0x50]
+00cfb5dc  bl 0x00b0789c
+00cfb5e0  adrp x0,0x331d000
+00cfb5e4  ldr x0,[x0, #0xd8]
+00cfb5e8  bl 0x00b0789c
+00cfb5ec  adrp x0,0x3313000
+00cfb5f0  ldr x0,[x0, #0x38]
+00cfb5f4  bl 0x00b0789c
+00cfb5f8  adrp x0,0x3349000
+00cfb5fc  ldr x0,[x0, #0xcb8]
+00cfb600  bl 0x00b0789c
+00cfb604  adrp x0,0x3359000
+00cfb608  ldr x0,[x0, #0xa60]
+00cfb60c  bl 0x00b0789c
+00cfb610  adrp x0,0x3341000
+00cfb614  ldr x0,[x0, #0x908]
+00cfb618  bl 0x00b0789c
+00cfb61c  adrp x0,0x3354000
+00cfb620  ldr x0,[x0, #0xb58]
+00cfb624  bl 0x00b0789c
+00cfb628  mov w8,#0x1
+00cfb62c  strb w8,[x20, #0xa33]
+00cfb630  ldr x0,[x21]
+00cfb634  movi v0.2D,#0x0
+00cfb638  stp q0,q0,[sp, #0x20]
+00cfb63c  adrp x20,0x3341000
+00cfb640  ldr w8,[x0, #0xe0]
+00cfb644  ldr x20,[x20, #0x908]
+00cfb648  cbnz w8,0x00cfb650
+00cfb64c  bl 0x00b0798c
+00cfb650  ldr x0,[x20]
+00cfb654  mov x1,xzr
+00cfb658  bl 0x024c0104
+00cfb65c  cbz x19,0x00cfb740
+00cfb660  ldr x0,[x19, #0x18]
+00cfb664  cbz x0,0x00cfb740
+00cfb668  adrp x8,0x3311000
+00cfb66c  ldr x8,[x8, #0xb88]
+00cfb670  adrp x23,0x331d000
+00cfb674  ldr x23,[x23, #0xd8]
+00cfb678  adrp x24,0x3359000
+00cfb67c  ldr x1,[x8]
+00cfb680  adrp x25,0x3354000
+00cfb684  adrp x22,0x3334000
+00cfb688  ldr x24,[x24, #0x8f8]
+00cfb68c  ldr x25,[x25, #0xb58]
+00cfb690  ldr x22,[x22, #0x50]
+00cfb694  add x8,sp,#0x20
+00cfb698  bl 0x0193d388
+00cfb69c  mov x26,#-0x1
+00cfb6a0  ldr x1,[x23]
+00cfb6a4  add x0,sp,#0x20
+    ; [PRE] try { // try from 00cfb6a4 to 00cfb6ab has its CatchHandler @ 00cfb74c
+00cfb6a8  bl 0x01a4421c
+    ; [POST] } // end try from 00cfb6a4 to 00cfb6ab
+00cfb6ac  tbz w0,#0x0,0x00cfb718
+00cfb6b0  ldr x20,[sp, #0x30]
+00cfb6b4  mov w0,w20
+    ; [PRE] try { // try from 00cfb6b4 to 00cfb6bf has its CatchHandler @ 00cfb744
+00cfb6b8  mov x1,xzr
+00cfb6bc  bl 0x00ce23e0
+    ; [POST] } // end try from 00cfb6b4 to 00cfb6bf
+00cfb6c0  ldr x8,[x24]
+00cfb6c4  mov x19,x0
+00cfb6c8  lsr x9,x20,#0x20
+00cfb6cc  str w9,[sp, #0x18]
+00cfb6d0  stp x8,x26,[sp, #0x8]
+00cfb6d4  add x0,sp,#0x8
+    ; [PRE] try { // try from 00cfb6d4 to 00cfb6df has its CatchHandler @ 00cfb748
+00cfb6d8  mov x1,xzr
+00cfb6dc  bl 0x02186100
+    ; [POST] } // end try from 00cfb6d4 to 00cfb6df
+00cfb6e0  ldr x1,[x25]
+00cfb6e4  mov x2,x0
+00cfb6e8  mov x0,x19
+    ; [PRE] try { // try from 00cfb6e8 to 00cfb713 has its CatchHandler @ 00cfb750
+00cfb6ec  mov x3,xzr
+00cfb6f0  bl 0x01fdebb8
+00cfb6f4  mov x19,x0
+00cfb6f8  ldr x0,[x21]
+00cfb6fc  ldr w8,[x0, #0xe0]
+00cfb700  cbnz w8,0x00cfb708
+00cfb704  bl 0x00b0798c
+00cfb708  mov x0,x19
+00cfb70c  mov x1,xzr
+00cfb710  bl 0x024c0104
+    ; [POST] } // end try from 00cfb6e8 to 00cfb713
+00cfb714  b 0x00cfb6a0
+00cfb718  ldr x1,[x22]
+00cfb71c  add x0,sp,#0x20
+00cfb720  bl 0x01a44314
+00cfb724  ldp x19,x30,[sp, #0x80]
+00cfb728  ldp x21,x20,[sp, #0x70]
+00cfb72c  ldp x23,x22,[sp, #0x60]
+00cfb730  ldp x25,x24,[sp, #0x50]
+00cfb734  ldr x26,[sp, #0x40]
+00cfb738  add sp,sp,#0x90
+00cfb73c  ret
+00cfb740  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cfb7b8_PermissionsAPIExample__.ctor.txt
+================================================================================
+Function: PermissionsAPIExample$$.ctor @ 00cfb7b8
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00cfb7b8  mov x1,xzr
+00cfb7bc  b 0x024e45bc
+
+

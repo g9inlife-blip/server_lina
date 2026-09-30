@@ -1,0 +1,202 @@
+"""Leaderboards.
+
+All twelve boards answered an empty auto-generated model, so each rendered as a
+blank list with no row for the player either. There is nobody else on a private
+server, so the honest board is one row: you, first.
+
+An empty `ranking` with a filled `playerRank` is not equivalent - several panels
+scan the list to find themselves and show "unranked" when they cannot - so the two
+must agree, which is the thing worth asserting.
+"""
+import sys, tempfile
+from pathlib import Path
+
+_SERVER = Path(__file__).resolve().parent.parent
+for _p in (_SERVER, _SERVER / "routes", _SERVER / "builders", _SERVER / "cli"):
+    _sp = str(_p)
+    if _sp not in sys.path:
+        sys.path.insert(0, _sp)
+
+import playerdb
+playerdb.DB_PATH = Path(tempfile.mkdtemp()) / "players.db"
+
+from tests.seed import one_account
+one_account()          # multiplayer needs a session; load_state() has no fallback
+import server
+
+BOARDS = {
+    "/ranking/ranking": server.r_ranking,
+    "/ranking/pvp-ranking": server.r_pvp_ranking,
+    "/ranking/colosseum-ranking": server.r_colosseum_ranking,
+    "/ranking/roguelike-ranking": server.r_roguelike_ranking,
+    "/ranking/challenge-mode-ranking": server.r_challenge_ranking,
+}
+
+
+def check_every_ranking_route_is_wired():
+    routed = [p for p in server.DYNAMIC_OVERRIDES if p.startswith("/ranking/")]
+    import route_coverage
+    client = [p for p in route_coverage.client_paths() if p.startswith("/ranking/")]
+    missing = sorted(set(client) - set(routed))
+    assert not missing, f"the client calls these boards and nothing answers: {missing}"
+    print(f"ok wired: {len(routed)} ranking routes for {len(client)} the client calls")
+
+
+def check_player_appears_in_their_own_board():
+    st = server.load_state()
+    for path, fn in BOARDS.items():
+        out = fn({}, st)
+        assert out["ranking"], f"{path} returned an empty board"
+        assert out["playerRank"], f"{path} has no player row"
+        assert out["ranking"][0]["accountId"] == out["playerRank"]["accountId"], \
+            f"{path}: the listed row is a different account from playerRank"
+        assert out["ranking"][0]["rank"] == 1, f"{path}: the only player is not first"
+        assert out["playerRank"]["userName"], f"{path}: the player row has no name"
+    print(f"ok rows: {len(BOARDS)} boards each list the player at rank 1")
+
+
+def check_elite_score_flows_through_game_complete():
+    """The ranking-stage battle submits its score inside /game/complete
+    (GameCompleteRequestModel.eliteRankingScore); the board must report it."""
+    st = server.load_state()
+    server.r_game_complete({"gameId": "g-1", "win": True, "theme": 10, "stage": 1,
+                            "eliteRankingScore": 12345}, st)
+    out = server.r_ranking({}, st)
+    assert out["ranking"][0]["score"] == 12345, out["ranking"][0]["score"]
+    assert out["playerRank"]["score"] == 12345
+    server.r_game_complete({"gameId": "g-2", "win": True, "theme": 10, "stage": 1,
+                            "eliteRankingScore": 999}, st)
+    assert server.r_ranking({}, st)["ranking"][0]["score"] == 12345, \
+        "a worse later run must not lower the score"
+    print("ok elite: /game/complete eliteRankingScore reaches the board")
+
+
+def check_player_row_is_a_copy():
+    """playerRank and ranking[0] must not be the same object, or a client-side edit to
+    one silently rewrites the other after serialisation round-trips in tests."""
+    out = server.r_pvp_ranking({}, server.load_state())
+    assert out["playerRank"] is not out["ranking"][0]
+    out["playerRank"]["rank"] = 99
+    assert out["ranking"][0]["rank"] == 1, "the two rows share state"
+    print("ok copy: playerRank is a separate row")
+
+
+def check_generic_board_carries_a_deck():
+    st = server.load_state()
+    out = server.r_ranking({}, st)
+    deck = out["ranking"][0]["deck"]
+    assert deck, "the generic board draws hero portraits and got none"
+    assert all(isinstance(u, int) and u > 0 for u in deck), f"bad deck {deck}"
+    known = set(st.get("cards", {}))
+    assert all(str(u) in known for u in deck), "the board lists heroes the player has not got"
+    print(f"ok deck: {len(deck)} heroes on the generic board")
+
+
+def check_deck_falls_back_to_a_filled_preset():
+    st = server.load_state()
+    presets = st.get("decks") or []
+    filled = next(i for i, d in enumerate(presets) if d.get("deck"))
+    empty = next((i for i, d in enumerate(presets) if not d.get("deck")), None)
+    if empty is None:
+        presets.append({"presetIndex": len(presets), "deck": []})
+        empty = len(presets) - 1
+    st["currentDeckPreset"] = empty
+    server.save_state(st)
+    deck = server.r_ranking({}, server.load_state())["ranking"][0]["deck"]
+    assert deck, f"preset {empty} is empty and the board fell back to nothing"
+    st["currentDeckPreset"] = filled
+    server.save_state(st)
+    print(f"ok fallback: empty preset {empty} still draws a deck")
+
+
+def check_scores_track_state():
+    st = server.load_state()
+    st["colosseumScore"] = 4321
+    st["rogueLikeScore"] = 77
+    server.save_state(st)
+    assert server.r_colosseum_ranking({}, server.load_state())["playerRank"]["score"] == 4321
+    rl = server.r_roguelike_ranking({}, server.load_state())["playerRank"]
+    assert rl["score"] == 77
+    assert "building" in rl, "the roguelike row is missing its building field"
+    print("ok scores: boards read the player's own score, not a constant")
+
+
+def test_dimension_rift_difficulty_progresses_sequentially(tmp_path, monkeypatch):
+    monkeypatch.setattr(playerdb, "DB_PATH", tmp_path / "players.db")
+    playerdb.init()
+    uid = "dimension-rift-test"
+    st = server.copy.deepcopy(server.DEFAULT_PLAYER)
+    st["uid"] = uid
+    st["rogueLikePlayedCount"] = 4
+    st.pop("keyValues", None)
+    playerdb.save(uid, st)
+    playerdb.set_active(uid)
+
+    def status(state):
+        return {kv["key"]: kv["value"] for kv in state.get("keyValues", [])}
+
+    server.r_player({}, st)
+    keys = status(playerdb.load(uid))
+    assert keys[server.DIMENSION_RIFT_PLAY_COUNT] == "4"
+    assert keys[server.DIMENSION_RIFT_MAX_CLEARED_CHALLENGE] == "-1"
+
+    # Four prior runs are not enough to select challenge 0. The fifth run only
+    # opens the button; it must not let a forged request skip the gate early.
+    out = server.r_dimension_rift_complete({
+        "win": True, "rogueLikeChallengeLevel": 0,
+        "rogueLikeBaseScore": 123, "rogueLikeScore": 9999,
+    }, playerdb.load(uid))
+    assert out["rogueLikeScore"] == 123
+    keys = status(playerdb.load(uid))
+    assert keys[server.DIMENSION_RIFT_PLAY_COUNT] == "5"
+    assert keys[server.DIMENSION_RIFT_MAX_CLEARED_CHALLENGE] == "-1"
+
+    server.r_dimension_rift_complete({
+        "win": True, "rogueLikeChallengeLevel": 0, "rogueLikeBaseScore": 200,
+    }, playerdb.load(uid))
+    server.r_dimension_rift_complete({
+        "win": True, "rogueLikeChallengeLevel": 2, "rogueLikeBaseScore": 50,
+    }, playerdb.load(uid))
+    keys = status(playerdb.load(uid))
+    assert keys[server.DIMENSION_RIFT_MAX_CLEARED_CHALLENGE] == "0", \
+        "a forged request skipped challenge 1"
+
+    out = server.r_dimension_rift_complete({
+        "win": True, "rogueLikeChallengeLevel": 1, "rogueLikeBaseScore": 50,
+    }, playerdb.load(uid))
+    saved = playerdb.load(uid)
+    keys = status(saved)
+    assert keys[server.DIMENSION_RIFT_MAX_CLEARED_CHALLENGE] == "1"
+    assert out["rogueLikeScore"] == 50, "the panel received the historical best"
+    rank = server.r_roguelike_ranking({}, saved)["playerRank"]
+    assert rank["score"] == 200 and rank["challenge"] == 1
+
+
+def check_clan_board_is_empty_without_a_clan():
+    st = server.load_state()
+    st.pop("clanId", None)
+    server.save_state(st)
+    out = server.r_clan_point_ranking({}, server.load_state())
+    assert out["ranking"] == [], "a player in no clan was listed on the clan board"
+    assert out["playerClanRank"]["clanId"] == 0
+    print("ok clan: no clan, no row")
+
+
+def check_unit_statistics_invents_nothing():
+    out = server.r_unit_statistics({}, server.load_state())
+    assert out == {"topPotentialUsage": [], "topTreasureUsage": [], "topAccessoryUsage": []}, \
+        "usage rates were invented from a one-player sample"
+    print("ok stats: no fabricated usage rates")
+
+
+if __name__ == "__main__":
+    check_every_ranking_route_is_wired()
+    check_player_appears_in_their_own_board()
+    check_player_row_is_a_copy()
+    check_generic_board_carries_a_deck()
+    check_deck_falls_back_to_a_filled_preset()
+    check_elite_score_flows_through_game_complete()
+    check_scores_track_state()
+    check_clan_board_is_empty_without_a_clan()
+    check_unit_statistics_invents_nothing()
+    print("\nall ranking checks passed")

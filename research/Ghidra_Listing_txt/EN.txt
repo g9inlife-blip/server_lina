@@ -1,0 +1,2276 @@
+================================================================================
+### FILE: 008d5cc0_entry.txt
+================================================================================
+Function: entry @ 008d5cc0
+
+--- Calls OUT ---
+  -> __cxa_atexit @ 008d3de0
+  -> FUN_00a8f15c @ 00a8f15c
+
+--- Calls IN ---
+
+--- Listing ---
+008d5cc0  str x30,[sp, #-0x10]!
+008d5cc4  adrp x1,0x3581000
+008d5cc8  adrp x0,0xa8f000
+008d5ccc  adrp x2,0x31a4000
+008d5cd0  add x1,x1,#0x228
+008d5cd4  add x0,x0,#0x15c
+008d5cd8  add x2,x2,#0x660
+008d5cdc  stp xzr,xzr,[x1]
+008d5ce0  str xzr,[x1, #0x10]
+008d5ce4  bl 0x008d3de0
+008d5ce8  adrp x8,0x3581000
+008d5cec  add x8,x8,#0x240
+008d5cf0  movi v0.2D,#0x0
+008d5cf4  stp q0,q0,[x8]
+008d5cf8  stp q0,q0,[x8, #0x20]
+008d5cfc  stur q0,[x8, #0x3c]
+008d5d00  ldr x30,[sp], #0x10
+008d5d04  ret
+
+
+================================================================================
+### FILE: 00d4d114_EnableCameraDepthInForward__Start.txt
+================================================================================
+Function: EnableCameraDepthInForward$$Start @ 00d4d114
+
+--- Calls OUT ---
+  -> EnableCameraDepthInForward$$Set @ 00d4d118
+
+--- Calls IN ---
+
+--- Listing ---
+00d4d114  b 0x00d4d118
+
+
+================================================================================
+### FILE: 00d4d118_EnableCameraDepthInForward__Set.txt
+================================================================================
+Function: EnableCameraDepthInForward$$Set @ 00d4d118
+
+--- Calls OUT ---
+  -> UnityEngine.Camera$$set_depthTextureMode @ 024d7788
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Camera$$get_depthTextureMode @ 024d774c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+  <- EnableCameraDepthInForward$$Start @ 00d4d114
+
+--- Listing ---
+00d4d118  stp x21,x20,[sp, #-0x20]!
+00d4d11c  stp x19,x30,[sp, #0x10]
+00d4d120  adrp x21,0x3571000
+00d4d124  adrp x20,0x334f000
+00d4d128  ldrb w8,[x21, #0xe2e]
+00d4d12c  ldr x20,[x20, #0xde0]
+00d4d130  mov x19,x0
+00d4d134  tbnz w8,#0x0,0x00d4d14c
+00d4d138  adrp x0,0x334f000
+00d4d13c  ldr x0,[x0, #0xde0]
+00d4d140  bl 0x00b0789c
+00d4d144  mov w8,#0x1
+00d4d148  strb w8,[x21, #0xe2e]
+00d4d14c  ldr x1,[x20]
+00d4d150  mov x0,x19
+00d4d154  bl 0x0176cbf8
+00d4d158  cbz x0,0x00d4d198
+00d4d15c  mov x1,xzr
+00d4d160  bl 0x024d774c
+00d4d164  cbz w0,0x00d4d174
+00d4d168  ldp x19,x30,[sp, #0x10]
+00d4d16c  ldp x21,x20,[sp], #0x20
+00d4d170  ret
+00d4d174  ldr x1,[x20]
+00d4d178  mov x0,x19
+00d4d17c  bl 0x0176cbf8
+00d4d180  cbz x0,0x00d4d198
+00d4d184  ldp x19,x30,[sp, #0x10]
+00d4d188  mov w1,#0x1
+00d4d18c  mov x2,xzr
+00d4d190  ldp x21,x20,[sp], #0x20
+00d4d194  b 0x024d7788
+00d4d198  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d4d19c_EnableCameraDepthInForward__.ctor.txt
+================================================================================
+Function: EnableCameraDepthInForward$$.ctor @ 00d4d19c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d4d19c  mov x1,xzr
+00d4d1a0  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d98110_EnumLabelAttribute__.ctor.txt
+================================================================================
+Function: EnumLabelAttribute$$.ctor @ 00d98110
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.PropertyAttribute$$.ctor @ 024dbdd8
+
+--- Calls IN ---
+
+--- Listing ---
+00d98110  str x20,[sp, #-0x20]!
+00d98114  stp x19,x30,[sp, #0x10]
+00d98118  mov x19,x1
+00d9811c  mov x1,xzr
+00d98120  mov x20,x0
+00d98124  bl 0x024dbdd8
+00d98128  str x19,[x20, #0x18]!
+00d9812c  mov x1,x19
+00d98130  ldp x19,x30,[sp, #0x10]
+00d98134  mov x0,x20
+00d98138  ldr x20,[sp], #0x20
+00d9813c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d98140_EnumLabelExample__.ctor.txt
+================================================================================
+Function: EnumLabelExample$$.ctor @ 00d98140
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d98140  mov x1,xzr
+00d98144  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d9880c_EnumFlagAttribute__.ctor.txt
+================================================================================
+Function: EnumFlagAttribute$$.ctor @ 00d9880c
+
+--- Calls OUT ---
+  -> UnityEngine.PropertyAttribute$$.ctor @ 024dbdd8
+
+--- Calls IN ---
+
+--- Listing ---
+00d9880c  mov x1,xzr
+00d98810  b 0x024dbdd8
+
+
+================================================================================
+### FILE: 00dff26c_EntryPoint__GotoEntryScene.txt
+================================================================================
+Function: EntryPoint$$GotoEntryScene @ 00dff26c
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp0 @ 0105fbf0
+  -> UnityEngine.SceneManagement.SceneManager$$LoadScene @ 025021fc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.GUIScreenManager$$CloseAllScreen @ 0167aebc
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EntryPointWrap$$_m_GotoEntryScene_xlua_st_ @ 0127d584
+  <- Ali$$GameRestart @ 00e0921c
+
+--- Listing ---
+00dff26c  str x20,[sp, #-0x20]!
+00dff270  stp x19,x30,[sp, #0x10]
+00dff274  adrp x19,0x3572000
+00dff278  adrp x20,0x330f000
+00dff27c  ldrb w8,[x19, #0x50c]
+00dff280  ldr x20,[x20, #0x778]
+00dff284  tbnz w8,#0x0,0x00dff2b4
+00dff288  adrp x0,0x330f000
+00dff28c  ldr x0,[x0, #0x778]
+00dff290  bl 0x00b0789c
+00dff294  adrp x0,0x337b000
+00dff298  ldr x0,[x0, #0xb98]
+00dff29c  bl 0x00b0789c
+00dff2a0  adrp x0,0x3365000
+00dff2a4  ldr x0,[x0, #0x7e0]
+00dff2a8  bl 0x00b0789c
+00dff2ac  mov w8,#0x1
+00dff2b0  strb w8,[x19, #0x50c]
+00dff2b4  ldr x8,[x20]
+00dff2b8  ldr x8,[x8, #0xb8]
+00dff2bc  ldr x0,[x8]
+00dff2c0  cbz x0,0x00dff2d4
+00dff2c4  ldp x19,x30,[sp, #0x10]
+00dff2c8  mov x1,xzr
+00dff2cc  ldr x20,[sp], #0x20
+00dff2d0  b 0x0105fbf0
+00dff2d4  adrp x8,0x337b000
+00dff2d8  ldr x8,[x8, #0xb98]
+00dff2dc  adrp x19,0x3365000
+00dff2e0  ldr x0,[x8]
+00dff2e4  ldr w8,[x0, #0xe0]
+00dff2e8  ldr x19,[x19, #0x7e0]
+00dff2ec  cbnz w8,0x00dff2f4
+00dff2f0  bl 0x00b0798c
+00dff2f4  mov w0,#0x1
+00dff2f8  mov x1,xzr
+00dff2fc  bl 0x0167aebc
+00dff300  ldr x0,[x19]
+00dff304  ldr w8,[x0, #0xe0]
+00dff308  cbnz w8,0x00dff310
+00dff30c  bl 0x00b0798c
+00dff310  ldp x19,x30,[sp, #0x10]
+00dff314  mov w0,wzr
+00dff318  mov w1,wzr
+00dff31c  mov x2,xzr
+00dff320  ldr x20,[sp], #0x20
+00dff324  b 0x025021fc
+
+
+================================================================================
+### FILE: 00dff328_EntryPoint__GotoGameStart.txt
+================================================================================
+Function: EntryPoint$$GotoGameStart @ 00dff328
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp0 @ 0105fbf0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.GUIScreenManager$$CloseAllScreen @ 0167aebc
+  -> UnityEngine.SceneManagement.SceneManager$$LoadScene @ 024f3428
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EntryPointWrap$$_m_GotoGameStart_xlua_st_ @ 0127d67c
+  <- GameUpdatePanelMono.<>c$$<GameStart>b__30_0 @ 010403c8
+  <- Main.<>c$$<Start>b__1_0 @ 00e39f24
+
+--- Listing ---
+00dff328  str x20,[sp, #-0x20]!
+00dff32c  stp x19,x30,[sp, #0x10]
+00dff330  adrp x19,0x3572000
+00dff334  adrp x20,0x330f000
+00dff338  ldrb w8,[x19, #0x50d]
+00dff33c  ldr x20,[x20, #0x778]
+00dff340  tbnz w8,#0x0,0x00dff37c
+00dff344  adrp x0,0x330f000
+00dff348  ldr x0,[x0, #0x778]
+00dff34c  bl 0x00b0789c
+00dff350  adrp x0,0x337b000
+00dff354  ldr x0,[x0, #0xb98]
+00dff358  bl 0x00b0789c
+00dff35c  adrp x0,0x3365000
+00dff360  ldr x0,[x0, #0x7e0]
+00dff364  bl 0x00b0789c
+00dff368  adrp x0,0x3363000
+00dff36c  ldr x0,[x0, #0x780]
+00dff370  bl 0x00b0789c
+00dff374  mov w8,#0x1
+00dff378  strb w8,[x19, #0x50d]
+00dff37c  ldr x8,[x20]
+00dff380  ldr x8,[x8, #0xb8]
+00dff384  ldr x0,[x8, #0x8]
+00dff388  cbz x0,0x00dff39c
+00dff38c  ldp x19,x30,[sp, #0x10]
+00dff390  mov x1,xzr
+00dff394  ldr x20,[sp], #0x20
+00dff398  b 0x0105fbf0
+00dff39c  adrp x8,0x337b000
+00dff3a0  ldr x8,[x8, #0xb98]
+00dff3a4  adrp x20,0x3365000
+00dff3a8  ldr x0,[x8]
+00dff3ac  ldr w8,[x0, #0xe0]
+00dff3b0  ldr x20,[x20, #0x7e0]
+00dff3b4  cbnz w8,0x00dff3bc
+00dff3b8  bl 0x00b0798c
+00dff3bc  adrp x19,0x3363000
+00dff3c0  ldr x19,[x19, #0x780]
+00dff3c4  mov w0,#0x1
+00dff3c8  mov x1,xzr
+00dff3cc  bl 0x0167aebc
+00dff3d0  ldr x0,[x20]
+00dff3d4  ldr w8,[x0, #0xe0]
+00dff3d8  cbnz w8,0x00dff3e0
+00dff3dc  bl 0x00b0798c
+00dff3e0  ldr x0,[x19]
+00dff3e4  ldp x19,x30,[sp, #0x10]
+00dff3e8  mov w1,wzr
+00dff3ec  mov x2,xzr
+00dff3f0  ldr x20,[sp], #0x20
+00dff3f4  b 0x024f3428
+
+
+================================================================================
+### FILE: 00dff3f8_EntryPoint__GotoGameMain.txt
+================================================================================
+Function: EntryPoint$$GotoGameMain @ 00dff3f8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp0 @ 0105fbf0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.SceneManagement.SceneManager$$LoadScene @ 024f3428
+  -> AliothEngine.GUIScreenManager$$CloseAllScreen @ 0167aebc
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EntryPointWrap$$_m_GotoGameMain_xlua_st_ @ 0127d774
+
+--- Listing ---
+00dff3f8  str x20,[sp, #-0x20]!
+00dff3fc  stp x19,x30,[sp, #0x10]
+00dff400  adrp x19,0x3572000
+00dff404  adrp x20,0x330f000
+00dff408  ldrb w8,[x19, #0x50e]
+00dff40c  ldr x20,[x20, #0x778]
+00dff410  tbnz w8,#0x0,0x00dff44c
+00dff414  adrp x0,0x330f000
+00dff418  ldr x0,[x0, #0x778]
+00dff41c  bl 0x00b0789c
+00dff420  adrp x0,0x337b000
+00dff424  ldr x0,[x0, #0xb98]
+00dff428  bl 0x00b0789c
+00dff42c  adrp x0,0x3365000
+00dff430  ldr x0,[x0, #0x7e0]
+00dff434  bl 0x00b0789c
+00dff438  adrp x0,0x3336000
+00dff43c  ldr x0,[x0, #0x310]
+00dff440  bl 0x00b0789c
+00dff444  mov w8,#0x1
+00dff448  strb w8,[x19, #0x50e]
+00dff44c  ldr x8,[x20]
+00dff450  ldr x8,[x8, #0xb8]
+00dff454  ldr x0,[x8, #0x10]
+00dff458  cbz x0,0x00dff46c
+00dff45c  ldp x19,x30,[sp, #0x10]
+00dff460  mov x1,xzr
+00dff464  ldr x20,[sp], #0x20
+00dff468  b 0x0105fbf0
+00dff46c  adrp x8,0x337b000
+00dff470  ldr x8,[x8, #0xb98]
+00dff474  adrp x20,0x3365000
+00dff478  ldr x0,[x8]
+00dff47c  ldr w8,[x0, #0xe0]
+00dff480  ldr x20,[x20, #0x7e0]
+00dff484  cbnz w8,0x00dff48c
+00dff488  bl 0x00b0798c
+00dff48c  adrp x19,0x3336000
+00dff490  ldr x19,[x19, #0x310]
+00dff494  mov w0,#0x1
+00dff498  mov x1,xzr
+00dff49c  bl 0x0167aebc
+00dff4a0  ldr x0,[x20]
+00dff4a4  ldr w8,[x0, #0xe0]
+00dff4a8  cbnz w8,0x00dff4b0
+00dff4ac  bl 0x00b0798c
+00dff4b0  ldr x0,[x19]
+00dff4b4  ldp x19,x30,[sp, #0x10]
+00dff4b8  mov w1,wzr
+00dff4bc  mov x2,xzr
+00dff4c0  ldr x20,[sp], #0x20
+00dff4c4  b 0x024f3428
+
+
+================================================================================
+### FILE: 00dff4c8_EntryPoint__GotoGameUpdate.txt
+================================================================================
+Function: EntryPoint$$GotoGameUpdate @ 00dff4c8
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp0 @ 0105fbf0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.GUIScreenManager$$ShowScreen @ 0167a614
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EntryPointWrap$$_m_GotoGameUpdate_xlua_st_ @ 0127d86c
+  <- Main.<>c$$<Start>b__1_0 @ 00e39f24
+
+--- Listing ---
+00dff4c8  str x20,[sp, #-0x20]!
+00dff4cc  stp x19,x30,[sp, #0x10]
+00dff4d0  adrp x19,0x3572000
+00dff4d4  adrp x20,0x330f000
+00dff4d8  ldrb w8,[x19, #0x50f]
+00dff4dc  ldr x20,[x20, #0x778]
+00dff4e0  tbnz w8,#0x0,0x00dff510
+00dff4e4  adrp x0,0x330f000
+00dff4e8  ldr x0,[x0, #0x778]
+00dff4ec  bl 0x00b0789c
+00dff4f0  adrp x0,0x337b000
+00dff4f4  ldr x0,[x0, #0xb98]
+00dff4f8  bl 0x00b0789c
+00dff4fc  adrp x0,0x337b000
+00dff500  ldr x0,[x0, #0xc00]
+00dff504  bl 0x00b0789c
+00dff508  mov w8,#0x1
+00dff50c  strb w8,[x19, #0x50f]
+00dff510  ldr x8,[x20]
+00dff514  ldr x8,[x8, #0xb8]
+00dff518  ldr x0,[x8, #0x18]
+00dff51c  cbz x0,0x00dff530
+00dff520  ldp x19,x30,[sp, #0x10]
+00dff524  mov x1,xzr
+00dff528  ldr x20,[sp], #0x20
+00dff52c  b 0x0105fbf0
+00dff530  adrp x8,0x337b000
+00dff534  ldr x8,[x8, #0xb98]
+00dff538  adrp x19,0x337b000
+00dff53c  ldr x0,[x8]
+00dff540  ldr w8,[x0, #0xe0]
+00dff544  ldr x19,[x19, #0xc00]
+00dff548  cbnz w8,0x00dff550
+00dff54c  bl 0x00b0798c
+00dff550  ldr x0,[x19]
+00dff554  ldp x19,x30,[sp, #0x10]
+00dff558  mov w3,#0x1
+00dff55c  mov w4,#0x1
+00dff560  mov x1,xzr
+00dff564  mov x2,xzr
+00dff568  mov x5,xzr
+00dff56c  ldr x20,[sp], #0x20
+00dff570  b 0x0167a614
+
+
+================================================================================
+### FILE: 00dff574_EntryPoint__.ctor.txt
+================================================================================
+Function: EntryPoint$$.ctor @ 00dff574
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EntryPointWrap$$__CreateInstance @ 0127d3cc
+
+--- Listing ---
+00dff574  stp x21,x20,[sp, #-0x20]!
+00dff578  stp x19,x30,[sp, #0x10]
+00dff57c  adrp x21,0x3572000
+00dff580  adrp x20,0x330f000
+00dff584  ldrb w8,[x21, #0x510]
+00dff588  ldr x20,[x20, #0x778]
+00dff58c  mov x19,x0
+00dff590  tbnz w8,#0x0,0x00dff5a8
+00dff594  adrp x0,0x330f000
+00dff598  ldr x0,[x0, #0x778]
+00dff59c  bl 0x00b0789c
+00dff5a0  mov w8,#0x1
+00dff5a4  strb w8,[x21, #0x510]
+00dff5a8  mov x0,x19
+00dff5ac  mov x1,xzr
+00dff5b0  bl 0x02194104
+00dff5b4  ldr x8,[x20]
+00dff5b8  ldr x8,[x8, #0xb8]
+00dff5bc  ldr x0,[x8, #0x20]
+00dff5c0  cbz x0,0x00dff5d8
+00dff5c4  mov x1,x19
+00dff5c8  ldp x19,x30,[sp, #0x10]
+00dff5cc  mov x2,xzr
+00dff5d0  ldp x21,x20,[sp], #0x20
+00dff5d4  b 0x01060dac
+00dff5d8  ldp x19,x30,[sp, #0x10]
+00dff5dc  ldp x21,x20,[sp], #0x20
+00dff5e0  ret
+
+
+================================================================================
+### FILE: 00ebbd40_EntranceScript__Awake.txt
+================================================================================
+Function: EntranceScript$$Awake @ 00ebbd40
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$GetInstance @ 01e08f7c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EntranceScriptWrap$$_m_Awake @ 0127c8e0
+
+--- Listing ---
+00ebbd40  stp x21,x20,[sp, #-0x20]!
+00ebbd44  stp x19,x30,[sp, #0x10]
+00ebbd48  adrp x20,0x3572000
+00ebbd4c  adrp x21,0x3360000
+00ebbd50  ldrb w8,[x20, #0xcaf]
+00ebbd54  ldr x21,[x21, #0xb50]
+00ebbd58  mov x19,x0
+00ebbd5c  tbnz w8,#0x0,0x00ebbd80
+00ebbd60  adrp x0,0x3360000
+00ebbd64  ldr x0,[x0, #0xb50]
+00ebbd68  bl 0x00b0789c
+00ebbd6c  adrp x0,0x3370000
+00ebbd70  ldr x0,[x0, #0xbb8]
+00ebbd74  bl 0x00b0789c
+00ebbd78  mov w8,#0x1
+00ebbd7c  strb w8,[x20, #0xcaf]
+00ebbd80  ldr x8,[x21]
+00ebbd84  ldr x8,[x8, #0xb8]
+00ebbd88  ldr x0,[x8]
+00ebbd8c  cbz x0,0x00ebbda4
+00ebbd90  mov x1,x19
+00ebbd94  ldp x19,x30,[sp, #0x10]
+00ebbd98  mov x2,xzr
+00ebbd9c  ldp x21,x20,[sp], #0x20
+00ebbda0  b 0x01060dac
+00ebbda4  adrp x8,0x3370000
+00ebbda8  ldr x8,[x8, #0xbb8]
+00ebbdac  ldp x19,x30,[sp, #0x10]
+00ebbdb0  ldr x0,[x8]
+00ebbdb4  ldp x21,x20,[sp], #0x20
+00ebbdb8  b 0x01e08f7c
+
+
+================================================================================
+### FILE: 00ebbdbc_EntranceScript__Start.txt
+================================================================================
+Function: EntranceScript$$Start @ 00ebbdbc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp55 @ 01066218
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EntranceScriptWrap$$_m_Start @ 0127ca7c
+
+--- Listing ---
+00ebbdbc  stp x21,x20,[sp, #-0x20]!
+00ebbdc0  stp x19,x30,[sp, #0x10]
+00ebbdc4  adrp x20,0x3572000
+00ebbdc8  adrp x21,0x3360000
+00ebbdcc  ldrb w8,[x20, #0xcb0]
+00ebbdd0  ldr x21,[x21, #0xb50]
+00ebbdd4  mov x19,x0
+00ebbdd8  tbnz w8,#0x0,0x00ebbdfc
+00ebbddc  adrp x0,0x3360000
+00ebbde0  ldr x0,[x0, #0xb50]
+00ebbde4  bl 0x00b0789c
+00ebbde8  adrp x0,0x3354000
+00ebbdec  ldr x0,[x0, #0x258]
+00ebbdf0  bl 0x00b0789c
+00ebbdf4  mov w8,#0x1
+00ebbdf8  strb w8,[x20, #0xcb0]
+00ebbdfc  ldr x8,[x21]
+00ebbe00  ldr x8,[x8, #0xb8]
+00ebbe04  ldr x0,[x8, #0x8]
+00ebbe08  cbz x0,0x00ebbe20
+00ebbe0c  mov x1,x19
+00ebbe10  ldp x19,x30,[sp, #0x10]
+00ebbe14  mov x2,xzr
+00ebbe18  ldp x21,x20,[sp], #0x20
+00ebbe1c  b 0x01066218
+00ebbe20  adrp x8,0x3354000
+00ebbe24  ldr x8,[x8, #0x258]
+00ebbe28  ldr x0,[x8]
+00ebbe2c  bl 0x00b079a0
+00ebbe30  cbz x0,0x00ebbe64
+00ebbe34  mov x1,xzr
+00ebbe38  mov x20,x0
+00ebbe3c  bl 0x02194104
+00ebbe40  mov x0,x20
+00ebbe44  str wzr,[x20, #0x10]
+00ebbe48  str x19,[x0, #0x20]!
+00ebbe4c  mov x1,x19
+00ebbe50  bl 0x00b07850
+00ebbe54  ldp x19,x30,[sp, #0x10]
+00ebbe58  mov x0,x20
+00ebbe5c  ldp x21,x20,[sp], #0x20
+00ebbe60  ret
+00ebbe64  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebbe68_EntranceScript._Start_d__1__.ctor.txt
+================================================================================
+Function: EntranceScript.<Start>d__1$$.ctor @ 00ebbe68
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00ebbe68  str x20,[sp, #-0x20]!
+00ebbe6c  stp x19,x30,[sp, #0x10]
+00ebbe70  mov w19,w1
+00ebbe74  mov x1,xzr
+00ebbe78  mov x20,x0
+00ebbe7c  bl 0x02194104
+00ebbe80  str w19,[x20, #0x10]
+00ebbe84  ldp x19,x30,[sp, #0x10]
+00ebbe88  ldr x20,[sp], #0x20
+00ebbe8c  ret
+
+
+================================================================================
+### FILE: 00ebbe90_EntranceScript__Open.txt
+================================================================================
+Function: EntranceScript$$Open @ 00ebbe90
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> FUN_00b079b0 @ 00b079b0
+  -> DataCenter$$InitDataCenter @ 016dfb3c
+  -> AliothEngine.GUIScreenManager$$ShowScreen @ 0167a614
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EntranceScriptWrap$$_m_Open @ 0127cc3c
+  <- EntranceScript$$<Start>b__1_0 @ 00ebc3a8
+
+--- Listing ---
+00ebbe90  str x22,[sp, #-0x30]!
+00ebbe94  stp x21,x20,[sp, #0x10]
+00ebbe98  stp x19,x30,[sp, #0x20]
+00ebbe9c  adrp x20,0x3572000
+00ebbea0  adrp x21,0x3360000
+00ebbea4  ldrb w8,[x20, #0xcb1]
+00ebbea8  ldr x21,[x21, #0xb50]
+00ebbeac  mov x19,x0
+00ebbeb0  tbnz w8,#0x0,0x00ebbf04
+00ebbeb4  adrp x0,0x334a000
+00ebbeb8  ldr x0,[x0, #0xf38]
+00ebbebc  bl 0x00b0789c
+00ebbec0  adrp x0,0x3359000
+00ebbec4  ldr x0,[x0, #0x918]
+00ebbec8  bl 0x00b0789c
+00ebbecc  adrp x0,0x3360000
+00ebbed0  ldr x0,[x0, #0xb50]
+00ebbed4  bl 0x00b0789c
+00ebbed8  adrp x0,0x337b000
+00ebbedc  ldr x0,[x0, #0xb98]
+00ebbee0  bl 0x00b0789c
+00ebbee4  adrp x0,0x3347000
+00ebbee8  ldr x0,[x0, #0x410]
+00ebbeec  bl 0x00b0789c
+00ebbef0  adrp x0,0x333f000
+00ebbef4  ldr x0,[x0, #0x238]
+00ebbef8  bl 0x00b0789c
+00ebbefc  mov w8,#0x1
+00ebbf00  strb w8,[x20, #0xcb1]
+00ebbf04  ldr x8,[x21]
+00ebbf08  ldr x8,[x8, #0xb8]
+00ebbf0c  ldr x0,[x8, #0x10]
+00ebbf10  cbz x0,0x00ebbf2c
+00ebbf14  mov x1,x19
+00ebbf18  ldp x19,x30,[sp, #0x20]
+00ebbf1c  ldp x21,x20,[sp, #0x10]
+00ebbf20  mov x2,xzr
+00ebbf24  ldr x22,[sp], #0x30
+00ebbf28  b 0x01060dac
+00ebbf2c  adrp x8,0x3347000
+00ebbf30  ldr x8,[x8, #0x410]
+00ebbf34  ldr x0,[x8]
+00ebbf38  bl 0x01e0894c
+00ebbf3c  cbz x0,0x00ebbfc0
+00ebbf40  adrp x20,0x334a000
+00ebbf44  ldr x20,[x20, #0xf38]
+00ebbf48  mov x1,xzr
+00ebbf4c  bl 0x016dfb3c
+00ebbf50  ldr x0,[x20]
+00ebbf54  bl 0x00b079a0
+00ebbf58  cbz x0,0x00ebbfc0
+00ebbf5c  adrp x8,0x3359000
+00ebbf60  ldr x8,[x8, #0x918]
+00ebbf64  adrp x22,0x337b000
+00ebbf68  adrp x21,0x333f000
+00ebbf6c  mov x1,x19
+00ebbf70  ldr x2,[x8]
+00ebbf74  ldr x22,[x22, #0xb98]
+00ebbf78  ldr x21,[x21, #0x238]
+00ebbf7c  mov x3,xzr
+00ebbf80  mov x20,x0
+00ebbf84  bl 0x01909b80
+00ebbf88  ldr x0,[x22]
+00ebbf8c  ldr w8,[x0, #0xe0]
+00ebbf90  cbnz w8,0x00ebbf98
+00ebbf94  bl 0x00b0798c
+00ebbf98  ldr x0,[x21]
+00ebbf9c  mov x1,x20
+00ebbfa0  ldp x19,x30,[sp, #0x20]
+00ebbfa4  ldp x21,x20,[sp, #0x10]
+00ebbfa8  mov x2,xzr
+00ebbfac  mov w3,wzr
+00ebbfb0  mov w4,wzr
+00ebbfb4  mov x5,xzr
+00ebbfb8  ldr x22,[sp], #0x30
+00ebbfbc  b 0x0167a614
+00ebbfc0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebbfc4_EntranceScript__OpenNext.txt
+================================================================================
+Function: EntranceScript$$OpenNext @ 00ebbfc4
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> EntranceScript$$GoToLoginGate @ 00ebc1d0
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> GamePlayerInfomation$$set_PlayedGameOpenning @ 00e36724
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GamePlayerInfomation$$get_PlayedGameOpenning @ 00e3669c
+  -> Ali$$GetExcelData<object> @ 01736d60
+  -> Ali$$VersionOpen @ 00e001d0
+  -> AliothEngine.GUIScreenManager$$ShowScreen @ 0167a614
+
+--- Calls IN ---
+  <- EntranceScript$$<Open>b__2_1 @ 00ebc57c
+  <- EntranceScript$$<Start>b__1_0 @ 00ebc3a8
+  <- XLua.CSObjectWrap.EntranceScriptWrap$$_m_OpenNext @ 0127cdd8
+
+--- Listing ---
+00ebbfc4  str x22,[sp, #-0x30]!
+00ebbfc8  stp x21,x20,[sp, #0x10]
+00ebbfcc  stp x19,x30,[sp, #0x20]
+00ebbfd0  adrp x20,0x3572000
+00ebbfd4  adrp x21,0x3360000
+00ebbfd8  ldrb w8,[x20, #0xcb2]
+00ebbfdc  ldr x21,[x21, #0xb50]
+00ebbfe0  mov x19,x0
+00ebbfe4  tbnz w8,#0x0,0x00ebc050
+00ebbfe8  adrp x0,0x334a000
+00ebbfec  ldr x0,[x0, #0xf38]
+00ebbff0  bl 0x00b0789c
+00ebbff4  adrp x0,0x330d000
+00ebbff8  ldr x0,[x0, #0x6f0]
+00ebbffc  bl 0x00b0789c
+00ebc000  adrp x0,0x335f000
+00ebc004  ldr x0,[x0, #0x20]
+00ebc008  bl 0x00b0789c
+00ebc00c  adrp x0,0x3360000
+00ebc010  ldr x0,[x0, #0xb50]
+00ebc014  bl 0x00b0789c
+00ebc018  adrp x0,0x337b000
+00ebc01c  ldr x0,[x0, #0xb98]
+00ebc020  bl 0x00b0789c
+00ebc024  adrp x0,0x3374000
+00ebc028  ldr x0,[x0, #0xda8]
+00ebc02c  bl 0x00b0789c
+00ebc030  adrp x0,0x3360000
+00ebc034  ldr x0,[x0, #0x108]
+00ebc038  bl 0x00b0789c
+00ebc03c  adrp x0,0x3310000
+00ebc040  ldr x0,[x0, #0x7b8]
+00ebc044  bl 0x00b0789c
+00ebc048  mov w8,#0x1
+00ebc04c  strb w8,[x20, #0xcb2]
+00ebc050  ldr x8,[x21]
+00ebc054  ldr x8,[x8, #0xb8]
+00ebc058  ldr x0,[x8, #0x18]
+00ebc05c  cbz x0,0x00ebc078
+00ebc060  mov x1,x19
+00ebc064  ldp x19,x30,[sp, #0x20]
+00ebc068  ldp x21,x20,[sp, #0x10]
+00ebc06c  mov x2,xzr
+00ebc070  ldr x22,[sp], #0x30
+00ebc074  b 0x01060dac
+00ebc078  adrp x19,0x335f000
+00ebc07c  ldr x19,[x19, #0x20]
+00ebc080  ldr x0,[x19]
+00ebc084  ldr w8,[x0, #0xe0]
+00ebc088  cbnz w8,0x00ebc094
+00ebc08c  bl 0x00b0798c
+00ebc090  ldr x0,[x19]
+00ebc094  ldr x8,[x0, #0xb8]
+00ebc098  ldr x19,[x8, #0x10]
+00ebc09c  cbz x19,0x00ebc1cc
+00ebc0a0  adrp x8,0x330d000
+00ebc0a4  ldr x8,[x8, #0x6f0]
+00ebc0a8  mov w1,#0x88c6
+00ebc0ac  movk w1,#0x5a6, LSL #16
+00ebc0b0  mov x0,x19
+00ebc0b4  ldr x2,[x8]
+00ebc0b8  bl 0x01736d60
+00ebc0bc  cbz x0,0x00ebc1cc
+00ebc0c0  ldr x1,[x0, #0x90]
+00ebc0c4  mov x0,x19
+00ebc0c8  mov x2,xzr
+00ebc0cc  bl 0x00e001d0
+00ebc0d0  tbz w0,#0x0,0x00ebc0e0
+00ebc0d4  mov x0,xzr
+00ebc0d8  bl 0x00e3669c
+00ebc0dc  tbz w0,#0x0,0x00ebc0f0
+00ebc0e0  ldp x19,x30,[sp, #0x20]
+00ebc0e4  ldp x21,x20,[sp, #0x10]
+00ebc0e8  ldr x22,[sp], #0x30
+00ebc0ec  b 0x00ebc1d0
+00ebc0f0  adrp x22,0x3360000
+00ebc0f4  ldr x22,[x22, #0x108]
+00ebc0f8  adrp x19,0x3310000
+00ebc0fc  ldr x0,[x22]
+00ebc100  ldr w8,[x0, #0xe0]
+00ebc104  ldr x19,[x19, #0x7b8]
+00ebc108  cbnz w8,0x00ebc114
+00ebc10c  bl 0x00b0798c
+00ebc110  ldr x0,[x22]
+00ebc114  ldr x8,[x0, #0xb8]
+00ebc118  ldr x19,[x19]
+00ebc11c  ldr x20,[x8, #0x28]
+00ebc120  cbnz x20,0x00ebc180
+00ebc124  adrp x20,0x334a000
+00ebc128  ldr w8,[x0, #0xe0]
+00ebc12c  ldr x20,[x20, #0xf38]
+00ebc130  cbnz w8,0x00ebc13c
+00ebc134  bl 0x00b0798c
+00ebc138  ldr x0,[x22]
+00ebc13c  ldr x8,[x0, #0xb8]
+00ebc140  ldr x0,[x20]
+00ebc144  ldr x21,[x8]
+00ebc148  bl 0x00b079a0
+00ebc14c  cbz x0,0x00ebc1cc
+00ebc150  adrp x8,0x3374000
+00ebc154  ldr x8,[x8, #0xda8]
+00ebc158  mov x1,x21
+00ebc15c  mov x3,xzr
+00ebc160  mov x20,x0
+00ebc164  ldr x2,[x8]
+00ebc168  bl 0x01909b80
+00ebc16c  ldr x8,[x22]
+00ebc170  mov x1,x20
+00ebc174  ldr x0,[x8, #0xb8]
+00ebc178  str x20,[x0, #0x28]!
+00ebc17c  bl 0x00b07850
+00ebc180  adrp x8,0x337b000
+00ebc184  ldr x8,[x8, #0xb98]
+00ebc188  ldr x0,[x8]
+00ebc18c  ldr w8,[x0, #0xe0]
+00ebc190  cbnz w8,0x00ebc198
+00ebc194  bl 0x00b0798c
+00ebc198  mov x0,x19
+00ebc19c  mov x1,x20
+00ebc1a0  mov x2,xzr
+00ebc1a4  mov w3,wzr
+00ebc1a8  mov w4,wzr
+00ebc1ac  mov x5,xzr
+00ebc1b0  bl 0x0167a614
+00ebc1b4  ldp x19,x30,[sp, #0x20]
+00ebc1b8  ldp x21,x20,[sp, #0x10]
+00ebc1bc  mov w0,#0x1
+00ebc1c0  mov x1,xzr
+00ebc1c4  ldr x22,[sp], #0x30
+00ebc1c8  b 0x00e36724
+00ebc1cc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebc1d0_EntranceScript__GoToLoginGate.txt
+================================================================================
+Function: EntranceScript$$GoToLoginGate @ 00ebc1d0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp0 @ 0105fbf0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.GUIScreenManager$$ShowScreen @ 0167a614
+
+--- Calls IN ---
+  <- EntranceScript$$OpenNext @ 00ebbfc4
+  <- LoginGateMono.<>c$$<OnClickOpeningVideo>b__38_2 @ 00f94544
+  <- XLua.CSObjectWrap.EntranceScriptWrap$$_m_GoToLoginGate_xlua_st_ @ 0127cf74
+  <- EntranceScript.<>c$$<OpenNext>b__3_1 @ 00ebcd80
+
+--- Listing ---
+00ebc1d0  str x22,[sp, #-0x30]!
+00ebc1d4  stp x21,x20,[sp, #0x10]
+00ebc1d8  stp x19,x30,[sp, #0x20]
+00ebc1dc  adrp x19,0x3572000
+00ebc1e0  adrp x20,0x3360000
+00ebc1e4  ldrb w8,[x19, #0xcb3]
+00ebc1e8  ldr x20,[x20, #0xb50]
+00ebc1ec  tbnz w8,#0x0,0x00ebc240
+00ebc1f0  adrp x0,0x334a000
+00ebc1f4  ldr x0,[x0, #0xf38]
+00ebc1f8  bl 0x00b0789c
+00ebc1fc  adrp x0,0x3360000
+00ebc200  ldr x0,[x0, #0xb50]
+00ebc204  bl 0x00b0789c
+00ebc208  adrp x0,0x337b000
+00ebc20c  ldr x0,[x0, #0xb98]
+00ebc210  bl 0x00b0789c
+00ebc214  adrp x0,0x333c000
+00ebc218  ldr x0,[x0, #0xec8]
+00ebc21c  bl 0x00b0789c
+00ebc220  adrp x0,0x3360000
+00ebc224  ldr x0,[x0, #0x108]
+00ebc228  bl 0x00b0789c
+00ebc22c  adrp x0,0x3376000
+00ebc230  ldr x0,[x0, #0x728]
+00ebc234  bl 0x00b0789c
+00ebc238  mov w8,#0x1
+00ebc23c  strb w8,[x19, #0xcb3]
+00ebc240  ldr x8,[x20]
+00ebc244  ldr x8,[x8, #0xb8]
+00ebc248  ldr x0,[x8, #0x20]
+00ebc24c  cbz x0,0x00ebc264
+00ebc250  ldp x19,x30,[sp, #0x20]
+00ebc254  ldp x21,x20,[sp, #0x10]
+00ebc258  mov x1,xzr
+00ebc25c  ldr x22,[sp], #0x30
+00ebc260  b 0x0105fbf0
+00ebc264  adrp x22,0x3360000
+00ebc268  ldr x22,[x22, #0x108]
+00ebc26c  adrp x19,0x3376000
+00ebc270  ldr x0,[x22]
+00ebc274  ldr w8,[x0, #0xe0]
+00ebc278  ldr x19,[x19, #0x728]
+00ebc27c  cbnz w8,0x00ebc288
+00ebc280  bl 0x00b0798c
+00ebc284  ldr x0,[x22]
+00ebc288  ldr x8,[x0, #0xb8]
+00ebc28c  ldr x19,[x19]
+00ebc290  ldr x20,[x8, #0x38]
+00ebc294  cbnz x20,0x00ebc2f4
+00ebc298  adrp x20,0x334a000
+00ebc29c  ldr w8,[x0, #0xe0]
+00ebc2a0  ldr x20,[x20, #0xf38]
+00ebc2a4  cbnz w8,0x00ebc2b0
+00ebc2a8  bl 0x00b0798c
+00ebc2ac  ldr x0,[x22]
+00ebc2b0  ldr x8,[x0, #0xb8]
+00ebc2b4  ldr x0,[x20]
+00ebc2b8  ldr x21,[x8]
+00ebc2bc  bl 0x00b079a0
+00ebc2c0  cbz x0,0x00ebc334
+00ebc2c4  adrp x8,0x333c000
+00ebc2c8  ldr x8,[x8, #0xec8]
+00ebc2cc  mov x1,x21
+00ebc2d0  mov x3,xzr
+00ebc2d4  mov x20,x0
+00ebc2d8  ldr x2,[x8]
+00ebc2dc  bl 0x01909b80
+00ebc2e0  ldr x8,[x22]
+00ebc2e4  mov x1,x20
+00ebc2e8  ldr x0,[x8, #0xb8]
+00ebc2ec  str x20,[x0, #0x38]!
+00ebc2f0  bl 0x00b07850
+00ebc2f4  adrp x8,0x337b000
+00ebc2f8  ldr x8,[x8, #0xb98]
+00ebc2fc  ldr x0,[x8]
+00ebc300  ldr w8,[x0, #0xe0]
+00ebc304  cbnz w8,0x00ebc30c
+00ebc308  bl 0x00b0798c
+00ebc30c  mov x0,x19
+00ebc310  mov x1,x20
+00ebc314  ldp x19,x30,[sp, #0x20]
+00ebc318  ldp x21,x20,[sp, #0x10]
+00ebc31c  mov x2,xzr
+00ebc320  mov w3,wzr
+00ebc324  mov w4,wzr
+00ebc328  mov x5,xzr
+00ebc32c  ldr x22,[sp], #0x30
+00ebc330  b 0x0167a614
+00ebc334  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebc338_EntranceScript__.ctor.txt
+================================================================================
+Function: EntranceScript$$.ctor @ 00ebc338
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> BaseMono$$.ctor @ 00e1c6b4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EntranceScriptWrap$$__CreateInstance @ 0127c728
+
+--- Listing ---
+00ebc338  stp x21,x20,[sp, #-0x20]!
+00ebc33c  stp x19,x30,[sp, #0x10]
+00ebc340  adrp x21,0x3572000
+00ebc344  adrp x20,0x3360000
+00ebc348  ldrb w8,[x21, #0xcb4]
+00ebc34c  ldr x20,[x20, #0xb50]
+00ebc350  mov x19,x0
+00ebc354  tbnz w8,#0x0,0x00ebc36c
+00ebc358  adrp x0,0x3360000
+00ebc35c  ldr x0,[x0, #0xb50]
+00ebc360  bl 0x00b0789c
+00ebc364  mov w8,#0x1
+00ebc368  strb w8,[x21, #0xcb4]
+00ebc36c  mov x0,x19
+00ebc370  mov x1,xzr
+00ebc374  bl 0x00e1c6b4
+00ebc378  ldr x8,[x20]
+00ebc37c  ldr x8,[x8, #0xb8]
+00ebc380  ldr x0,[x8, #0x28]
+00ebc384  cbz x0,0x00ebc39c
+00ebc388  mov x1,x19
+00ebc38c  ldp x19,x30,[sp, #0x10]
+00ebc390  mov x2,xzr
+00ebc394  ldp x21,x20,[sp], #0x20
+00ebc398  b 0x01060dac
+00ebc39c  ldp x19,x30,[sp, #0x10]
+00ebc3a0  ldp x21,x20,[sp], #0x20
+00ebc3a4  ret
+
+
+================================================================================
+### FILE: 00ebc3a8_EntranceScript___Start_b__1_0.txt
+================================================================================
+Function: EntranceScript$$<Start>b__1_0 @ 00ebc3a8
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreenManager$$GetScreenFromName @ 016737dc
+  -> EntranceScript$$OpenNext @ 00ebbfc4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> Ali$$get_GlobalUIManager @ 00e02d94
+  -> EntranceScript$$Open @ 00ebbe90
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> GlobalUIManager$$InitExitUI @ 00f1f78c
+
+--- Calls IN ---
+
+--- Listing ---
+00ebc3a8  str x22,[sp, #-0x30]!
+00ebc3ac  stp x21,x20,[sp, #0x10]
+00ebc3b0  stp x19,x30,[sp, #0x20]
+00ebc3b4  adrp x21,0x3572000
+00ebc3b8  adrp x20,0x335f000
+00ebc3bc  ldrb w8,[x21, #0xcb5]
+00ebc3c0  ldr x20,[x20, #0x20]
+00ebc3c4  mov x19,x0
+00ebc3c8  tbnz w8,#0x0,0x00ebc404
+00ebc3cc  adrp x0,0x335f000
+00ebc3d0  ldr x0,[x0, #0x20]
+00ebc3d4  bl 0x00b0789c
+00ebc3d8  adrp x0,0x337b000
+00ebc3dc  ldr x0,[x0, #0xb98]
+00ebc3e0  bl 0x00b0789c
+00ebc3e4  adrp x0,0x3321000
+00ebc3e8  ldr x0,[x0, #0xca8]
+00ebc3ec  bl 0x00b0789c
+00ebc3f0  adrp x0,0x333f000
+00ebc3f4  ldr x0,[x0, #0x238]
+00ebc3f8  bl 0x00b0789c
+00ebc3fc  mov w8,#0x1
+00ebc400  strb w8,[x21, #0xcb5]
+00ebc404  ldr x0,[x20]
+00ebc408  ldr w8,[x0, #0xe0]
+00ebc40c  cbnz w8,0x00ebc418
+00ebc410  bl 0x00b0798c
+00ebc414  ldr x0,[x20]
+00ebc418  ldr x8,[x0, #0xb8]
+00ebc41c  ldr x0,[x8, #0x10]
+00ebc420  cbz x0,0x00ebc4c0
+00ebc424  mov x1,xzr
+00ebc428  bl 0x00e02d94
+00ebc42c  cbz x0,0x00ebc4c0
+00ebc430  adrp x22,0x337b000
+00ebc434  adrp x21,0x333f000
+00ebc438  adrp x20,0x3321000
+00ebc43c  ldr x22,[x22, #0xb98]
+00ebc440  ldr x21,[x21, #0x238]
+00ebc444  ldr x20,[x20, #0xca8]
+00ebc448  mov x1,xzr
+00ebc44c  bl 0x00f1f78c
+00ebc450  ldr x0,[x22]
+00ebc454  ldr w8,[x0, #0xe0]
+00ebc458  cbnz w8,0x00ebc460
+00ebc45c  bl 0x00b0798c
+00ebc460  ldr x0,[x21]
+00ebc464  mov x1,xzr
+00ebc468  bl 0x016737dc
+00ebc46c  ldr x8,[x20]
+00ebc470  mov x20,x0
+00ebc474  ldr w9,[x8, #0xe0]
+00ebc478  cbnz w9,0x00ebc484
+00ebc47c  mov x0,x8
+00ebc480  bl 0x00b0798c
+00ebc484  mov x0,x20
+00ebc488  mov x1,xzr
+00ebc48c  mov x2,xzr
+00ebc490  bl 0x024c8180
+00ebc494  tbz w0,#0x0,0x00ebc4ac
+00ebc498  mov x0,x19
+00ebc49c  ldp x19,x30,[sp, #0x20]
+00ebc4a0  ldp x21,x20,[sp, #0x10]
+00ebc4a4  ldr x22,[sp], #0x30
+00ebc4a8  b 0x00ebbe90
+00ebc4ac  mov x0,x19
+00ebc4b0  ldp x19,x30,[sp, #0x20]
+00ebc4b4  ldp x21,x20,[sp, #0x10]
+00ebc4b8  ldr x22,[sp], #0x30
+00ebc4bc  b 0x00ebbfc4
+00ebc4c0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebc4c4_EntranceScript___Open_b__2_0.txt
+================================================================================
+Function: EntranceScript$$<Open>b__2_0 @ 00ebc4c4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00ebc4c4  stp x21,x20,[sp, #-0x20]!
+00ebc4c8  stp x19,x30,[sp, #0x10]
+00ebc4cc  adrp x21,0x3572000
+00ebc4d0  ldrb w8,[x21, #0xcb6]
+00ebc4d4  mov x20,x1
+00ebc4d8  mov x19,x0
+00ebc4dc  tbnz w8,#0x0,0x00ebc50c
+00ebc4e0  adrp x0,0x334a000
+00ebc4e4  ldr x0,[x0, #0xf38]
+00ebc4e8  bl 0x00b0789c
+00ebc4ec  adrp x0,0x3309000
+00ebc4f0  ldr x0,[x0, #0xd0]
+00ebc4f4  bl 0x00b0789c
+00ebc4f8  adrp x0,0x3381000
+00ebc4fc  ldr x0,[x0, #0x3c0]
+00ebc500  bl 0x00b0789c
+00ebc504  mov w8,#0x1
+00ebc508  strb w8,[x21, #0xcb6]
+00ebc50c  cbz x20,0x00ebc578
+00ebc510  adrp x8,0x3309000
+00ebc514  ldr x8,[x8, #0xd0]
+00ebc518  adrp x21,0x334a000
+00ebc51c  mov x0,x20
+00ebc520  ldr x1,[x8]
+00ebc524  ldr x21,[x21, #0xf38]
+00ebc528  bl 0x0176cbf8
+00ebc52c  ldr x8,[x21]
+00ebc530  mov x20,x0
+00ebc534  mov x0,x8
+00ebc538  bl 0x00b079a0
+00ebc53c  cbz x0,0x00ebc578
+00ebc540  adrp x8,0x3381000
+00ebc544  ldr x8,[x8, #0x3c0]
+00ebc548  mov x1,x19
+00ebc54c  mov x3,xzr
+00ebc550  mov x21,x0
+00ebc554  ldr x2,[x8]
+00ebc558  bl 0x01909b80
+00ebc55c  cbz x20,0x00ebc578
+00ebc560  str x21,[x20, #0x68]!
+00ebc564  ldp x19,x30,[sp, #0x10]
+00ebc568  mov x0,x20
+00ebc56c  mov x1,x21
+00ebc570  ldp x21,x20,[sp], #0x20
+00ebc574  b 0x00b07850
+00ebc578  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebc57c_EntranceScript___Open_b__2_1.txt
+================================================================================
+Function: EntranceScript$$<Open>b__2_1 @ 00ebc57c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> EntranceScript$$OpenNext @ 00ebbfc4
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.GUIScreenManager$$ShowScreen @ 0167a614
+
+--- Calls IN ---
+
+--- Listing ---
+00ebc57c  stp x25,x24,[sp, #-0x40]!
+00ebc580  stp x23,x22,[sp, #0x10]
+00ebc584  stp x21,x20,[sp, #0x20]
+00ebc588  stp x19,x30,[sp, #0x30]
+00ebc58c  adrp x20,0x3572000
+00ebc590  adrp x23,0x3360000
+00ebc594  ldrb w8,[x20, #0xcb7]
+00ebc598  ldr x23,[x23, #0x108]
+00ebc59c  mov x19,x0
+00ebc5a0  tbnz w8,#0x0,0x00ebc618
+00ebc5a4  adrp x0,0x334a000
+00ebc5a8  ldr x0,[x0, #0xf38]
+00ebc5ac  bl 0x00b0789c
+00ebc5b0  adrp x0,0x337b000
+00ebc5b4  ldr x0,[x0, #0xb98]
+00ebc5b8  bl 0x00b0789c
+00ebc5bc  adrp x0,0x3338000
+00ebc5c0  ldr x0,[x0, #0x398]
+00ebc5c4  bl 0x00b0789c
+00ebc5c8  adrp x0,0x3380000
+00ebc5cc  ldr x0,[x0, #0x3d8]
+00ebc5d0  bl 0x00b0789c
+00ebc5d4  adrp x0,0x334a000
+00ebc5d8  ldr x0,[x0, #0x3a8]
+00ebc5dc  bl 0x00b0789c
+00ebc5e0  adrp x0,0x3360000
+00ebc5e4  ldr x0,[x0, #0x108]
+00ebc5e8  bl 0x00b0789c
+00ebc5ec  adrp x0,0x3311000
+00ebc5f0  ldr x0,[x0, #0x658]
+00ebc5f4  bl 0x00b0789c
+00ebc5f8  adrp x0,0x3308000
+00ebc5fc  ldr x0,[x0, #0xf58]
+00ebc600  bl 0x00b0789c
+00ebc604  adrp x0,0x3312000
+00ebc608  ldr x0,[x0, #0xc40]
+00ebc60c  bl 0x00b0789c
+00ebc610  mov w8,#0x1
+00ebc614  strb w8,[x20, #0xcb7]
+00ebc618  ldr x0,[x23]
+00ebc61c  adrp x20,0x3312000
+00ebc620  ldr w8,[x0, #0xe0]
+00ebc624  ldr x20,[x20, #0xc40]
+00ebc628  cbnz w8,0x00ebc634
+00ebc62c  bl 0x00b0798c
+00ebc630  ldr x0,[x23]
+00ebc634  ldr x8,[x0, #0xb8]
+00ebc638  adrp x24,0x334a000
+00ebc63c  ldr x20,[x20]
+00ebc640  ldr x21,[x8, #0x8]
+00ebc644  ldr x24,[x24, #0xf38]
+00ebc648  cbnz x21,0x00ebc6a0
+00ebc64c  ldr w8,[x0, #0xe0]
+00ebc650  cbnz w8,0x00ebc65c
+00ebc654  bl 0x00b0798c
+00ebc658  ldr x0,[x23]
+00ebc65c  ldr x8,[x0, #0xb8]
+00ebc660  ldr x0,[x24]
+00ebc664  ldr x22,[x8]
+00ebc668  bl 0x00b079a0
+00ebc66c  cbz x0,0x00ebc844
+00ebc670  adrp x8,0x3338000
+00ebc674  ldr x8,[x8, #0x398]
+00ebc678  mov x1,x22
+00ebc67c  mov x3,xzr
+00ebc680  mov x21,x0
+00ebc684  ldr x2,[x8]
+00ebc688  bl 0x01909b80
+00ebc68c  ldr x8,[x23]
+00ebc690  mov x1,x21
+00ebc694  ldr x0,[x8, #0xb8]
+00ebc698  str x21,[x0, #0x8]!
+00ebc69c  bl 0x00b07850
+00ebc6a0  adrp x25,0x337b000
+00ebc6a4  ldr x25,[x25, #0xb98]
+00ebc6a8  ldr x0,[x25]
+00ebc6ac  ldr w8,[x0, #0xe0]
+00ebc6b0  cbnz w8,0x00ebc6b8
+00ebc6b4  bl 0x00b0798c
+00ebc6b8  adrp x22,0x3311000
+00ebc6bc  ldr x22,[x22, #0x658]
+00ebc6c0  mov x0,x20
+00ebc6c4  mov x1,x21
+00ebc6c8  mov x2,xzr
+00ebc6cc  mov w3,wzr
+00ebc6d0  mov w4,wzr
+00ebc6d4  mov x5,xzr
+00ebc6d8  bl 0x0167a614
+00ebc6dc  ldr x0,[x23]
+00ebc6e0  ldr w8,[x0, #0xe0]
+00ebc6e4  cbnz w8,0x00ebc6f0
+00ebc6e8  bl 0x00b0798c
+00ebc6ec  ldr x0,[x23]
+00ebc6f0  ldr x8,[x0, #0xb8]
+00ebc6f4  ldr x20,[x22]
+00ebc6f8  ldr x21,[x8, #0x10]
+00ebc6fc  cbnz x21,0x00ebc754
+00ebc700  ldr w8,[x0, #0xe0]
+00ebc704  cbnz w8,0x00ebc710
+00ebc708  bl 0x00b0798c
+00ebc70c  ldr x0,[x23]
+00ebc710  ldr x8,[x0, #0xb8]
+00ebc714  ldr x0,[x24]
+00ebc718  ldr x22,[x8]
+00ebc71c  bl 0x00b079a0
+00ebc720  cbz x0,0x00ebc844
+00ebc724  adrp x8,0x3380000
+00ebc728  ldr x8,[x8, #0x3d8]
+00ebc72c  mov x1,x22
+00ebc730  mov x3,xzr
+00ebc734  mov x21,x0
+00ebc738  ldr x2,[x8]
+00ebc73c  bl 0x01909b80
+00ebc740  ldr x8,[x23]
+00ebc744  mov x1,x21
+00ebc748  ldr x0,[x8, #0xb8]
+00ebc74c  str x21,[x0, #0x10]!
+00ebc750  bl 0x00b07850
+00ebc754  ldr x0,[x25]
+00ebc758  ldr w8,[x0, #0xe0]
+00ebc75c  cbnz w8,0x00ebc764
+00ebc760  bl 0x00b0798c
+00ebc764  adrp x22,0x3308000
+00ebc768  ldr x22,[x22, #0xf58]
+00ebc76c  mov x0,x20
+00ebc770  mov x1,x21
+00ebc774  mov x2,xzr
+00ebc778  mov w3,wzr
+00ebc77c  mov w4,wzr
+00ebc780  mov x5,xzr
+00ebc784  bl 0x0167a614
+00ebc788  ldr x0,[x23]
+00ebc78c  ldr w8,[x0, #0xe0]
+00ebc790  cbnz w8,0x00ebc79c
+00ebc794  bl 0x00b0798c
+00ebc798  ldr x0,[x23]
+00ebc79c  ldr x8,[x0, #0xb8]
+00ebc7a0  ldr x20,[x22]
+00ebc7a4  ldr x21,[x8, #0x18]
+00ebc7a8  cbnz x21,0x00ebc800
+00ebc7ac  ldr w8,[x0, #0xe0]
+00ebc7b0  cbnz w8,0x00ebc7bc
+00ebc7b4  bl 0x00b0798c
+00ebc7b8  ldr x0,[x23]
+00ebc7bc  ldr x8,[x0, #0xb8]
+00ebc7c0  ldr x0,[x24]
+00ebc7c4  ldr x22,[x8]
+00ebc7c8  bl 0x00b079a0
+00ebc7cc  cbz x0,0x00ebc844
+00ebc7d0  adrp x8,0x334a000
+00ebc7d4  ldr x8,[x8, #0x3a8]
+00ebc7d8  mov x1,x22
+00ebc7dc  mov x3,xzr
+00ebc7e0  mov x21,x0
+00ebc7e4  ldr x2,[x8]
+00ebc7e8  bl 0x01909b80
+00ebc7ec  ldr x8,[x23]
+00ebc7f0  mov x1,x21
+00ebc7f4  ldr x0,[x8, #0xb8]
+00ebc7f8  str x21,[x0, #0x18]!
+00ebc7fc  bl 0x00b07850
+00ebc800  ldr x0,[x25]
+00ebc804  ldr w8,[x0, #0xe0]
+00ebc808  cbnz w8,0x00ebc810
+00ebc80c  bl 0x00b0798c
+00ebc810  mov x0,x20
+00ebc814  mov x1,x21
+00ebc818  mov x2,xzr
+00ebc81c  mov w3,wzr
+00ebc820  mov w4,wzr
+00ebc824  mov x5,xzr
+00ebc828  bl 0x0167a614
+00ebc82c  mov x0,x19
+00ebc830  ldp x19,x30,[sp, #0x30]
+00ebc834  ldp x21,x20,[sp, #0x20]
+00ebc838  ldp x23,x22,[sp, #0x10]
+00ebc83c  ldp x25,x24,[sp], #0x40
+00ebc840  b 0x00ebbfc4
+00ebc844  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebc848_EntranceScript._Start_d__1__System.IDisposable.Dispose.txt
+================================================================================
+Function: EntranceScript.<Start>d__1$$System.IDisposable.Dispose @ 00ebc848
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00ebc848  ret
+
+
+================================================================================
+### FILE: 00ebc84c_EntranceScript._Start_d__1__MoveNext.txt
+================================================================================
+Function: EntranceScript.<Start>d__1$$MoveNext @ 00ebc84c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> Ali$$Notify @ 00e039c4
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> Ali$$Init @ 00e019f8
+  -> AliothEngine.AliothEngineInitialize$$get_isReady @ 01649884
+  -> System.Action$$.ctor @ 020d5760
+  -> FUN_00b2ac40 @ 00b2ac40
+  -> AliothEngine.NotificationManager$$Register @ 01657608
+
+--- Calls IN ---
+
+--- Listing ---
+00ebc84c  stp x23,x22,[sp, #-0x30]!
+00ebc850  stp x21,x20,[sp, #0x10]
+00ebc854  stp x19,x30,[sp, #0x20]
+00ebc858  adrp x20,0x3572000
+00ebc85c  ldrb w8,[x20, #0xcb8]
+00ebc860  mov x19,x0
+00ebc864  tbnz w8,#0x0,0x00ebc8b8
+00ebc868  adrp x0,0x3348000
+00ebc86c  ldr x0,[x0, #0xcf8]
+00ebc870  bl 0x00b0789c
+00ebc874  adrp x0,0x335f000
+00ebc878  ldr x0,[x0, #0x20]
+00ebc87c  bl 0x00b0789c
+00ebc880  adrp x0,0x335b000
+00ebc884  ldr x0,[x0, #0x650]
+00ebc888  bl 0x00b0789c
+00ebc88c  adrp x0,0x3356000
+00ebc890  ldr x0,[x0, #0x2c8]
+00ebc894  bl 0x00b0789c
+00ebc898  adrp x0,0x330d000
+00ebc89c  ldr x0,[x0, #0x330]
+00ebc8a0  bl 0x00b0789c
+00ebc8a4  adrp x0,0x332c000
+00ebc8a8  ldr x0,[x0, #0x2c0]
+00ebc8ac  bl 0x00b0789c
+00ebc8b0  mov w8,#0x1
+00ebc8b4  strb w8,[x20, #0xcb8]
+00ebc8b8  ldr w8,[x19, #0x10]
+00ebc8bc  adrp x22,0x335f000
+00ebc8c0  ldr x20,[x19, #0x20]
+00ebc8c4  ldr x22,[x22, #0x20]
+00ebc8c8  cmp w8,#0x1
+00ebc8cc  b.eq 0x00ebc964
+00ebc8d0  cbnz w8,0x00ebc9ec
+00ebc8d4  mov w8,#0xffffffff
+00ebc8d8  str w8,[x19, #0x10]
+00ebc8dc  ldr x8,[x22]
+00ebc8e0  adrp x21,0x335b000
+00ebc8e4  ldr w9,[x8, #0xe0]
+00ebc8e8  ldr x21,[x21, #0x650]
+00ebc8ec  cbnz w9,0x00ebc8fc
+00ebc8f0  mov x0,x8
+00ebc8f4  bl 0x00b0798c
+00ebc8f8  ldr x8,[x22]
+00ebc8fc  ldr x23,[x21]
+00ebc900  ldr x8,[x8, #0xb8]
+00ebc904  ldr x9,[x23, #0x38]
+00ebc908  ldr x21,[x8, #0x10]
+00ebc90c  ldr x0,[x9]
+00ebc910  ldrb w9,[x0, #0x132]
+00ebc914  tbnz w9,#0x0,0x00ebc91c
+00ebc918  bl 0x00b2ac40
+00ebc91c  ldr w8,[x0, #0xe0]
+00ebc920  cbnz w8,0x00ebc928
+00ebc924  bl 0x00b0798c
+00ebc928  ldr x8,[x23, #0x38]
+00ebc92c  ldr x0,[x8]
+00ebc930  ldrb w8,[x0, #0x132]
+00ebc934  tbnz w8,#0x0,0x00ebc93c
+00ebc938  bl 0x00b2ac40
+00ebc93c  cbz x21,0x00ebca1c
+00ebc940  adrp x9,0x330d000
+00ebc944  ldr x8,[x0, #0xb8]
+00ebc948  ldr x9,[x9, #0x330]
+00ebc94c  mov x0,x21
+00ebc950  mov x3,xzr
+00ebc954  ldr x2,[x8]
+00ebc958  ldr x1,[x9]
+00ebc95c  bl 0x00e039c4
+00ebc960  b 0x00ebc96c
+00ebc964  mov w8,#0xffffffff
+00ebc968  str w8,[x19, #0x10]
+00ebc96c  mov x0,xzr
+00ebc970  bl 0x01649884
+00ebc974  tbz w0,#0x0,0x00ebc9f4
+00ebc978  adrp x8,0x332c000
+00ebc97c  ldr x8,[x8, #0x2c0]
+00ebc980  adrp x21,0x3348000
+00ebc984  mov x1,xzr
+00ebc988  ldr x0,[x8]
+00ebc98c  ldr x21,[x21, #0xcf8]
+00ebc990  bl 0x01657608
+00ebc994  ldr x0,[x22]
+00ebc998  ldr w8,[x0, #0xe0]
+00ebc99c  cbnz w8,0x00ebc9a8
+00ebc9a0  bl 0x00b0798c
+00ebc9a4  ldr x0,[x22]
+00ebc9a8  ldr x8,[x0, #0xb8]
+00ebc9ac  ldr x0,[x21]
+00ebc9b0  ldr x19,[x8, #0x10]
+00ebc9b4  bl 0x00b079a0
+00ebc9b8  cbz x0,0x00ebca1c
+00ebc9bc  adrp x8,0x3356000
+00ebc9c0  ldr x8,[x8, #0x2c8]
+00ebc9c4  mov x1,x20
+00ebc9c8  mov x3,xzr
+00ebc9cc  mov x21,x0
+00ebc9d0  ldr x2,[x8]
+00ebc9d4  bl 0x020d5760
+00ebc9d8  cbz x19,0x00ebca1c
+00ebc9dc  mov x0,x19
+00ebc9e0  mov x1,x21
+00ebc9e4  mov x2,xzr
+00ebc9e8  bl 0x00e019f8
+00ebc9ec  mov w0,wzr
+00ebc9f0  b 0x00ebca0c
+00ebc9f4  str xzr,[x19, #0x18]!
+00ebc9f8  mov x0,x19
+00ebc9fc  mov x1,xzr
+00ebca00  bl 0x00b07850
+00ebca04  mov w0,#0x1
+00ebca08  stur w0,[x19, #-0x8]
+00ebca0c  ldp x19,x30,[sp, #0x20]
+00ebca10  ldp x21,x20,[sp, #0x10]
+00ebca14  ldp x23,x22,[sp], #0x30
+00ebca18  ret
+00ebca1c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebca20_EntranceScript._Start_d__1__System.Collections.Generic.IEnumerator_System.Object_.get_Current.txt
+================================================================================
+Function: EntranceScript.<Start>d__1$$System.Collections.Generic.IEnumerator<System.Object>.get_Current @ 00ebca20
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00ebca20  ldr x0,[x0, #0x18]
+00ebca24  ret
+
+
+================================================================================
+### FILE: 00ebca28_EntranceScript._Start_d__1__System.Collections.IEnumerator.Reset.txt
+================================================================================
+Function: EntranceScript.<Start>d__1$$System.Collections.IEnumerator.Reset @ 00ebca28
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> System.NotSupportedException$$.ctor @ 021525a8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_008d74f8 @ 008d74f8
+  -> FUN_00b07978 @ 00b07978
+
+--- Calls IN ---
+
+--- Listing ---
+00ebca28  stp x19,x30,[sp, #-0x10]!
+00ebca2c  adrp x0,0x335a000
+00ebca30  ldr x0,[x0, #0xb88]
+00ebca34  bl 0x00b078a0
+00ebca38  bl 0x00b079a0
+00ebca3c  mov x19,x0
+00ebca40  bl 0x008d74f8
+00ebca44  mov x0,x19
+00ebca48  mov x1,xzr
+00ebca4c  bl 0x021525a8
+00ebca50  adrp x0,0x333c000
+00ebca54  ldr x0,[x0, #0x4c8]
+00ebca58  bl 0x00b078a0
+00ebca5c  mov x1,x0
+00ebca60  mov x0,x19
+00ebca64  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00ebca68_EntranceScript._Start_d__1__System.Collections.IEnumerator.get_Current.txt
+================================================================================
+Function: EntranceScript.<Start>d__1$$System.Collections.IEnumerator.get_Current @ 00ebca68
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00ebca68  ldr x0,[x0, #0x18]
+00ebca6c  ret
+
+
+================================================================================
+### FILE: 00ebca70_EntranceScript.__c__.cctor.txt
+================================================================================
+Function: EntranceScript.<>c$$.cctor @ 00ebca70
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00ebca70  str x20,[sp, #-0x20]!
+00ebca74  stp x19,x30,[sp, #0x10]
+00ebca78  adrp x19,0x3572000
+00ebca7c  adrp x20,0x3360000
+00ebca80  ldrb w8,[x19, #0xcb9]
+00ebca84  ldr x20,[x20, #0x108]
+00ebca88  tbnz w8,#0x0,0x00ebcaa0
+00ebca8c  adrp x0,0x3360000
+00ebca90  ldr x0,[x0, #0x108]
+00ebca94  bl 0x00b0789c
+00ebca98  mov w8,#0x1
+00ebca9c  strb w8,[x19, #0xcb9]
+00ebcaa0  ldr x0,[x20]
+00ebcaa4  bl 0x00b079a0
+00ebcaa8  cbz x0,0x00ebcadc
+00ebcaac  mov x1,xzr
+00ebcab0  mov x19,x0
+00ebcab4  bl 0x02194104
+00ebcab8  ldr x8,[x20]
+00ebcabc  mov x1,x19
+00ebcac0  ldr x8,[x8, #0xb8]
+00ebcac4  str x19,[x8]
+00ebcac8  ldr x8,[x20]
+00ebcacc  ldp x19,x30,[sp, #0x10]
+00ebcad0  ldr x0,[x8, #0xb8]
+00ebcad4  ldr x20,[sp], #0x20
+00ebcad8  b 0x00b07850
+00ebcadc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebcae0_EntranceScript.__c__.ctor.txt
+================================================================================
+Function: EntranceScript.<>c$$.ctor @ 00ebcae0
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00ebcae0  mov x1,xzr
+00ebcae4  b 0x02194104
+
+
+================================================================================
+### FILE: 00ebcae8_EntranceScript.__c___Open_b__2_2.txt
+================================================================================
+Function: EntranceScript.<>c$$<Open>b__2_2 @ 00ebcae8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$get_name @ 024c9a1c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00ebcae8  str x20,[sp, #-0x20]!
+00ebcaec  stp x19,x30,[sp, #0x10]
+00ebcaf0  adrp x20,0x3572000
+00ebcaf4  ldrb w8,[x20, #0xcba]
+00ebcaf8  mov x19,x1
+00ebcafc  tbnz w8,#0x0,0x00ebcb14
+00ebcb00  adrp x0,0x336b000
+00ebcb04  ldr x0,[x0, #0x7d0]
+00ebcb08  bl 0x00b0789c
+00ebcb0c  mov w8,#0x1
+00ebcb10  strb w8,[x20, #0xcba]
+00ebcb14  cbz x19,0x00ebcb58
+00ebcb18  adrp x20,0x336b000
+00ebcb1c  ldr x20,[x20, #0x7d0]
+00ebcb20  mov x0,x19
+00ebcb24  mov x1,xzr
+00ebcb28  bl 0x024c9a1c
+00ebcb2c  ldr x8,[x20]
+00ebcb30  mov x19,x0
+00ebcb34  ldr w9,[x8, #0xe0]
+00ebcb38  cbnz w9,0x00ebcb44
+00ebcb3c  mov x0,x8
+00ebcb40  bl 0x00b0798c
+00ebcb44  mov x0,x19
+00ebcb48  ldp x19,x30,[sp, #0x10]
+00ebcb4c  mov x1,xzr
+00ebcb50  ldr x20,[sp], #0x20
+00ebcb54  b 0x024c0104
+00ebcb58  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebcb5c_EntranceScript.__c___Open_b__2_3.txt
+================================================================================
+Function: EntranceScript.<>c$$<Open>b__2_3 @ 00ebcb5c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$get_name @ 024c9a1c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00ebcb5c  str x20,[sp, #-0x20]!
+00ebcb60  stp x19,x30,[sp, #0x10]
+00ebcb64  adrp x20,0x3572000
+00ebcb68  ldrb w8,[x20, #0xcbb]
+00ebcb6c  mov x19,x1
+00ebcb70  tbnz w8,#0x0,0x00ebcb88
+00ebcb74  adrp x0,0x336b000
+00ebcb78  ldr x0,[x0, #0x7d0]
+00ebcb7c  bl 0x00b0789c
+00ebcb80  mov w8,#0x1
+00ebcb84  strb w8,[x20, #0xcbb]
+00ebcb88  cbz x19,0x00ebcbcc
+00ebcb8c  adrp x20,0x336b000
+00ebcb90  ldr x20,[x20, #0x7d0]
+00ebcb94  mov x0,x19
+00ebcb98  mov x1,xzr
+00ebcb9c  bl 0x024c9a1c
+00ebcba0  ldr x8,[x20]
+00ebcba4  mov x19,x0
+00ebcba8  ldr w9,[x8, #0xe0]
+00ebcbac  cbnz w9,0x00ebcbb8
+00ebcbb0  mov x0,x8
+00ebcbb4  bl 0x00b0798c
+00ebcbb8  mov x0,x19
+00ebcbbc  ldp x19,x30,[sp, #0x10]
+00ebcbc0  mov x1,xzr
+00ebcbc4  ldr x20,[sp], #0x20
+00ebcbc8  b 0x024c0104
+00ebcbcc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebcbd0_EntranceScript.__c___Open_b__2_4.txt
+================================================================================
+Function: EntranceScript.<>c$$<Open>b__2_4 @ 00ebcbd0
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$get_name @ 024c9a1c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00ebcbd0  str x20,[sp, #-0x20]!
+00ebcbd4  stp x19,x30,[sp, #0x10]
+00ebcbd8  adrp x20,0x3572000
+00ebcbdc  ldrb w8,[x20, #0xcbc]
+00ebcbe0  mov x19,x1
+00ebcbe4  tbnz w8,#0x0,0x00ebcbfc
+00ebcbe8  adrp x0,0x336b000
+00ebcbec  ldr x0,[x0, #0x7d0]
+00ebcbf0  bl 0x00b0789c
+00ebcbf4  mov w8,#0x1
+00ebcbf8  strb w8,[x20, #0xcbc]
+00ebcbfc  cbz x19,0x00ebcc40
+00ebcc00  adrp x20,0x336b000
+00ebcc04  ldr x20,[x20, #0x7d0]
+00ebcc08  mov x0,x19
+00ebcc0c  mov x1,xzr
+00ebcc10  bl 0x024c9a1c
+00ebcc14  ldr x8,[x20]
+00ebcc18  mov x19,x0
+00ebcc1c  ldr w9,[x8, #0xe0]
+00ebcc20  cbnz w9,0x00ebcc2c
+00ebcc24  mov x0,x8
+00ebcc28  bl 0x00b0798c
+00ebcc2c  mov x0,x19
+00ebcc30  ldp x19,x30,[sp, #0x10]
+00ebcc34  mov x1,xzr
+00ebcc38  ldr x20,[sp], #0x20
+00ebcc3c  b 0x024c0104
+00ebcc40  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebcc44_EntranceScript.__c___OpenNext_b__3_0.txt
+================================================================================
+Function: EntranceScript.<>c$$<OpenNext>b__3_0 @ 00ebcc44
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Action$$.ctor @ 020d5760
+
+--- Calls IN ---
+
+--- Listing ---
+00ebcc44  str x22,[sp, #-0x30]!
+00ebcc48  stp x21,x20,[sp, #0x10]
+00ebcc4c  stp x19,x30,[sp, #0x20]
+00ebcc50  adrp x20,0x3572000
+00ebcc54  adrp x22,0x3360000
+00ebcc58  ldrb w8,[x20, #0xcbd]
+00ebcc5c  ldr x22,[x22, #0x108]
+00ebcc60  mov x19,x1
+00ebcc64  tbnz w8,#0x0,0x00ebcca0
+00ebcc68  adrp x0,0x3348000
+00ebcc6c  ldr x0,[x0, #0xcf8]
+00ebcc70  bl 0x00b0789c
+00ebcc74  adrp x0,0x3340000
+00ebcc78  ldr x0,[x0, #0xc10]
+00ebcc7c  bl 0x00b0789c
+00ebcc80  adrp x0,0x3360000
+00ebcc84  ldr x0,[x0, #0x108]
+00ebcc88  bl 0x00b0789c
+00ebcc8c  adrp x0,0x3347000
+00ebcc90  ldr x0,[x0, #0x730]
+00ebcc94  bl 0x00b0789c
+00ebcc98  mov w8,#0x1
+00ebcc9c  strb w8,[x20, #0xcbd]
+00ebcca0  ldr x0,[x22]
+00ebcca4  adrp x20,0x3347000
+00ebcca8  ldr w8,[x0, #0xe0]
+00ebccac  ldr x20,[x20, #0x730]
+00ebccb0  cbnz w8,0x00ebccbc
+00ebccb4  bl 0x00b0798c
+00ebccb8  ldr x0,[x22]
+00ebccbc  ldr x8,[x0, #0xb8]
+00ebccc0  ldr x21,[x8, #0x20]
+00ebccc4  ldr x8,[x20]
+00ebccc8  cbz x19,0x00ebccf8
+00ebcccc  ldr x9,[x19]
+00ebccd0  cmp x9,x8
+00ebccd4  csel x20,x19,xzr,eq
+00ebccd8  cbz x21,0x00ebcd00
+00ebccdc  cbz x19,0x00ebcd7c
+00ebcce0  ldr x9,[x19]
+00ebcce4  mov x20,x19
+00ebcce8  cmp x9,x8
+00ebccec  b.ne 0x00ebcd7c
+00ebccf0  cbnz x20,0x00ebcd60
+00ebccf4  b 0x00ebcd7c
+00ebccf8  mov x20,xzr
+00ebccfc  cbnz x21,0x00ebccdc
+00ebcd00  adrp x21,0x3348000
+00ebcd04  ldr w8,[x0, #0xe0]
+00ebcd08  ldr x21,[x21, #0xcf8]
+00ebcd0c  cbnz w8,0x00ebcd18
+00ebcd10  bl 0x00b0798c
+00ebcd14  ldr x0,[x22]
+00ebcd18  ldr x8,[x0, #0xb8]
+00ebcd1c  ldr x0,[x21]
+00ebcd20  ldr x19,[x8]
+00ebcd24  bl 0x00b079a0
+00ebcd28  cbz x0,0x00ebcd7c
+00ebcd2c  adrp x8,0x3340000
+00ebcd30  ldr x8,[x8, #0xc10]
+00ebcd34  mov x1,x19
+00ebcd38  mov x3,xzr
+00ebcd3c  mov x21,x0
+00ebcd40  ldr x2,[x8]
+00ebcd44  bl 0x020d5760
+00ebcd48  ldr x8,[x22]
+00ebcd4c  mov x1,x21
+00ebcd50  ldr x0,[x8, #0xb8]
+00ebcd54  str x21,[x0, #0x20]!
+00ebcd58  bl 0x00b07850
+00ebcd5c  cbz x20,0x00ebcd7c
+00ebcd60  str x21,[x20, #0xd8]!
+00ebcd64  mov x0,x20
+00ebcd68  mov x1,x21
+00ebcd6c  ldp x19,x30,[sp, #0x20]
+00ebcd70  ldp x21,x20,[sp, #0x10]
+00ebcd74  ldr x22,[sp], #0x30
+00ebcd78  b 0x00b07850
+00ebcd7c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebcd80_EntranceScript.__c___OpenNext_b__3_1.txt
+================================================================================
+Function: EntranceScript.<>c$$<OpenNext>b__3_1 @ 00ebcd80
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BaseMono$$Notify @ 00e1d098
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> EntranceScript$$GoToLoginGate @ 00ebc1d0
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+
+--- Listing ---
+00ebcd80  sub sp,sp,#0x30
+00ebcd84  stp x21,x20,[sp, #0x10]
+00ebcd88  stp x19,x30,[sp, #0x20]
+00ebcd8c  adrp x19,0x3572000
+00ebcd90  adrp x21,0x3370000
+00ebcd94  adrp x20,0x3332000
+00ebcd98  ldrb w8,[x19, #0xcbe]
+00ebcd9c  ldr x21,[x21, #0x778]
+00ebcda0  ldr x20,[x20, #0x38]
+00ebcda4  tbnz w8,#0x0,0x00ebcdd4
+00ebcda8  adrp x0,0x3332000
+00ebcdac  ldr x0,[x0, #0x38]
+00ebcdb0  bl 0x00b0789c
+00ebcdb4  adrp x0,0x3370000
+00ebcdb8  ldr x0,[x0, #0x778]
+00ebcdbc  bl 0x00b0789c
+00ebcdc0  adrp x0,0x3375000
+00ebcdc4  ldr x0,[x0, #0x998]
+00ebcdc8  bl 0x00b0789c
+00ebcdcc  mov w8,#0x1
+00ebcdd0  strb w8,[x19, #0xcbe]
+00ebcdd4  ldr x0,[x21]
+00ebcdd8  mov w1,#0x1
+00ebcddc  bl 0x00b078f8
+00ebcde0  mov x19,x0
+00ebcde4  ldr x0,[x20]
+00ebcde8  mov w8,#0x6913
+00ebcdec  movk w8,#0x478, LSL #16
+00ebcdf0  add x1,sp,#0xc
+00ebcdf4  str w8,[sp, #0xc]
+00ebcdf8  bl 0x00b07994
+00ebcdfc  cbz x19,0x00ebce60
+00ebce00  mov x20,x0
+00ebce04  cbz x0,0x00ebce1c
+00ebce08  ldr x8,[x19]
+00ebce0c  mov x0,x20
+00ebce10  ldr x1,[x8, #0x40]
+00ebce14  bl 0x00b07990
+00ebce18  cbz x0,0x00ebce68
+00ebce1c  ldr w8,[x19, #0x18]
+00ebce20  cbz w8,0x00ebce64
+00ebce24  adrp x21,0x3375000
+00ebce28  ldr x21,[x21, #0x998]
+00ebce2c  mov x0,x19
+00ebce30  str x20,[x0, #0x20]!
+00ebce34  mov x1,x20
+00ebce38  bl 0x00b07850
+00ebce3c  ldr x0,[x21]
+00ebce40  mov x1,x19
+00ebce44  mov x2,xzr
+00ebce48  bl 0x00e1d098
+00ebce4c  bl 0x00ebc1d0
+00ebce50  ldp x19,x30,[sp, #0x20]
+00ebce54  ldp x21,x20,[sp, #0x10]
+00ebce58  add sp,sp,#0x30
+00ebce5c  ret
+00ebce60  bl 0x00b079b0
+00ebce64  bl 0x00b079b8
+00ebce68  bl 0x00b079d4
+00ebce6c  mov x1,xzr
+00ebce70  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00ebce74_EntranceScript.__c___GoToLoginGate_b__4_0.txt
+================================================================================
+Function: EntranceScript.<>c$$<GoToLoginGate>b__4_0 @ 00ebce74
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00ebce74  str x22,[sp, #-0x30]!
+00ebce78  stp x21,x20,[sp, #0x10]
+00ebce7c  stp x19,x30,[sp, #0x20]
+00ebce80  adrp x20,0x3572000
+00ebce84  adrp x22,0x3360000
+00ebce88  ldrb w8,[x20, #0xcbf]
+00ebce8c  ldr x22,[x22, #0x108]
+00ebce90  mov x19,x1
+00ebce94  tbnz w8,#0x0,0x00ebcec4
+00ebce98  adrp x0,0x334a000
+00ebce9c  ldr x0,[x0, #0xf38]
+00ebcea0  bl 0x00b0789c
+00ebcea4  adrp x0,0x333a000
+00ebcea8  ldr x0,[x0, #0x28]
+00ebceac  bl 0x00b0789c
+00ebceb0  adrp x0,0x3360000
+00ebceb4  ldr x0,[x0, #0x108]
+00ebceb8  bl 0x00b0789c
+00ebcebc  mov w8,#0x1
+00ebcec0  strb w8,[x20, #0xcbf]
+00ebcec4  ldr x0,[x22]
+00ebcec8  ldr w8,[x0, #0xe0]
+00ebcecc  cbnz w8,0x00ebced8
+00ebced0  bl 0x00b0798c
+00ebced4  ldr x0,[x22]
+00ebced8  ldr x8,[x0, #0xb8]
+00ebcedc  ldr x20,[x8, #0x30]
+00ebcee0  cbnz x20,0x00ebcf40
+00ebcee4  adrp x20,0x334a000
+00ebcee8  ldr w8,[x0, #0xe0]
+00ebceec  ldr x20,[x20, #0xf38]
+00ebcef0  cbnz w8,0x00ebcefc
+00ebcef4  bl 0x00b0798c
+00ebcef8  ldr x0,[x22]
+00ebcefc  ldr x8,[x0, #0xb8]
+00ebcf00  ldr x0,[x20]
+00ebcf04  ldr x21,[x8]
+00ebcf08  bl 0x00b079a0
+00ebcf0c  cbz x0,0x00ebcf60
+00ebcf10  adrp x8,0x333a000
+00ebcf14  ldr x8,[x8, #0x28]
+00ebcf18  mov x1,x21
+00ebcf1c  mov x3,xzr
+00ebcf20  mov x20,x0
+00ebcf24  ldr x2,[x8]
+00ebcf28  bl 0x01909b80
+00ebcf2c  ldr x8,[x22]
+00ebcf30  mov x1,x20
+00ebcf34  ldr x0,[x8, #0xb8]
+00ebcf38  str x20,[x0, #0x30]!
+00ebcf3c  bl 0x00b07850
+00ebcf40  cbz x19,0x00ebcf60
+00ebcf44  str x20,[x19, #0x68]!
+00ebcf48  mov x0,x19
+00ebcf4c  mov x1,x20
+00ebcf50  ldp x19,x30,[sp, #0x20]
+00ebcf54  ldp x21,x20,[sp, #0x10]
+00ebcf58  ldr x22,[sp], #0x30
+00ebcf5c  b 0x00b07850
+00ebcf60  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00ebcf64_EntranceScript.__c___GoToLoginGate_b__4_1.txt
+================================================================================
+Function: EntranceScript.<>c$$<GoToLoginGate>b__4_1 @ 00ebcf64
+
+--- Calls OUT ---
+  -> BaseMono$$Notify @ 00e1d098
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00ebcf64  str x20,[sp, #-0x20]!
+00ebcf68  stp x19,x30,[sp, #0x10]
+00ebcf6c  adrp x19,0x3572000
+00ebcf70  adrp x20,0x335b000
+00ebcf74  ldrb w8,[x19, #0xcc0]
+00ebcf78  ldr x20,[x20, #0x650]
+00ebcf7c  tbnz w8,#0x0,0x00ebcfa0
+00ebcf80  adrp x0,0x335b000
+00ebcf84  ldr x0,[x0, #0x650]
+00ebcf88  bl 0x00b0789c
+00ebcf8c  adrp x0,0x331f000
+00ebcf90  ldr x0,[x0, #0x698]
+00ebcf94  bl 0x00b0789c
+00ebcf98  mov w8,#0x1
+00ebcf9c  strb w8,[x19, #0xcc0]
+00ebcfa0  ldr x19,[x20]
+00ebcfa4  ldr x8,[x19, #0x38]
+00ebcfa8  ldr x0,[x8]
+00ebcfac  ldrb w8,[x0, #0x132]
+00ebcfb0  tbnz w8,#0x0,0x00ebcfb8
+00ebcfb4  bl 0x00b2ac40
+00ebcfb8  ldr w8,[x0, #0xe0]
+00ebcfbc  cbnz w8,0x00ebcfc4
+00ebcfc0  bl 0x00b0798c
+00ebcfc4  ldr x8,[x19, #0x38]
+00ebcfc8  adrp x19,0x331f000
+00ebcfcc  ldr x0,[x8]
+00ebcfd0  ldrb w8,[x0, #0x132]
+00ebcfd4  ldr x19,[x19, #0x698]
+00ebcfd8  tbnz w8,#0x0,0x00ebcfe0
+00ebcfdc  bl 0x00b2ac40
+00ebcfe0  ldr x8,[x0, #0xb8]
+00ebcfe4  ldr x0,[x19]
+00ebcfe8  ldp x19,x30,[sp, #0x10]
+00ebcfec  mov x2,xzr
+00ebcff0  ldr x1,[x8]
+00ebcff4  ldr x20,[sp], #0x20
+00ebcff8  b 0x00e1d098
+
+
+================================================================================
+### FILE: 00fb0278_EnemynamestyleNode__get_lbl_enemyName.txt
+================================================================================
+Function: EnemynamestyleNode$$get_lbl_enemyName @ 00fb0278
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- ReadyMono$$RefreshEnemyNameStyle @ 00e61c04
+
+--- Listing ---
+00fb0278  stp x21,x20,[sp, #-0x20]!
+00fb027c  stp x19,x30,[sp, #0x10]
+00fb0280  adrp x20,0x3573000
+00fb0284  adrp x21,0x3384000
+00fb0288  ldrb w8,[x20, #0x86c]
+00fb028c  ldr x21,[x21, #0xc68]
+00fb0290  mov x19,x0
+00fb0294  tbnz w8,#0x0,0x00fb02ac
+00fb0298  adrp x0,0x3384000
+00fb029c  ldr x0,[x0, #0xc68]
+00fb02a0  bl 0x00b0789c
+00fb02a4  mov w8,#0x1
+00fb02a8  strb w8,[x20, #0x86c]
+00fb02ac  ldr x1,[x21]
+00fb02b0  mov x0,x19
+00fb02b4  ldp x19,x30,[sp, #0x10]
+00fb02b8  mov x2,xzr
+00fb02bc  ldp x21,x20,[sp], #0x20
+00fb02c0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fb02c4_EnemynamestyleNode__.ctor.txt
+================================================================================
+Function: EnemynamestyleNode$$.ctor @ 00fb02c4
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fb02c4  mov x1,xzr
+00fb02c8  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 0131c534_EnemyWeight__NextIndex.txt
+================================================================================
+Function: EnemyWeight$$NextIndex @ 0131c534
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp50 @ 01065848
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EnemyWeightWrap$$_m_NextIndex @ 0127aeb8
+
+--- Listing ---
+0131c534  stp d9,d8,[sp, #-0x30]!
+0131c538  stp x21,x20,[sp, #0x10]
+0131c53c  stp x19,x30,[sp, #0x20]
+0131c540  adrp x20,0x3575000
+0131c544  adrp x21,0x3366000
+0131c548  ldrb w8,[x20, #0xd53]
+0131c54c  ldr x21,[x21, #0x4a8]
+0131c550  mov v9.16B,v1.16B
+0131c554  mov v8.16B,v0.16B
+0131c558  mov x19,x0
+0131c55c  tbnz w8,#0x0,0x0131c574
+0131c560  adrp x0,0x3366000
+0131c564  ldr x0,[x0, #0x4a8]
+0131c568  bl 0x00b0789c
+0131c56c  mov w8,#0x1
+0131c570  strb w8,[x20, #0xd53]
+0131c574  ldr x8,[x21]
+0131c578  ldr x8,[x8, #0xb8]
+0131c57c  ldr x0,[x8]
+0131c580  cbz x0,0x0131c5b8
+0131c584  mov x1,x19
+0131c588  mov v0.16B,v8.16B
+0131c58c  mov v1.16B,v9.16B
+0131c590  mov x2,xzr
+0131c594  bl 0x01065848
+0131c598  mov v8.16B,v0.16B
+0131c59c  mov v9.16B,v1.16B
+0131c5a0  ldp x19,x30,[sp, #0x20]
+0131c5a4  ldp x21,x20,[sp, #0x10]
+0131c5a8  mov v0.16B,v8.16B
+0131c5ac  mov v1.16B,v9.16B
+0131c5b0  ldp d9,d8,[sp], #0x30
+0131c5b4  ret
+0131c5b8  ldr s0,[x19, #0x18]
+0131c5bc  fcmp s0,#0.0
+0131c5c0  b.ne 0x0131c5ec
+0131c5c4  ldr s1,[x19, #0x1c]
+0131c5c8  fcmp s1,#0.0
+0131c5cc  b.ne 0x0131c5ec
+0131c5d0  ldr s0,[x19, #0x14]
+0131c5d4  fmov s1,0x3f800000
+0131c5d8  fmov s2,0xbf800000
+0131c5dc  fcmp s0,s9
+0131c5e0  fcsel s1,s2,s1,gt
+0131c5e4  fadd s9,s0,s1
+0131c5e8  b 0x0131c5a0
+0131c5ec  ldr s1,[x19, #0x10]
+0131c5f0  fcmp s1,s8
+0131c5f4  b.le 0x0131c608
+0131c5f8  ldrb w8,[x19, #0x20]
+0131c5fc  cbz w8,0x0131c614
+0131c600  fadd s8,s8,s0
+0131c604  b 0x0131c5a0
+0131c608  b.pl 0x0131c5a0
+0131c60c  ldrb w8,[x19, #0x20]
+0131c610  cbz w8,0x0131c600
+0131c614  fsub s8,s8,s0
+0131c618  b 0x0131c5a0
+
+
+================================================================================
+### FILE: 0131c61c_EnemyWeight__.ctor.txt
+================================================================================
+Function: EnemyWeight$$.ctor @ 0131c61c
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.EnemyWeightWrap$$__CreateInstance @ 0127ad00
+
+--- Listing ---
+0131c61c  stp x21,x20,[sp, #-0x20]!
+0131c620  stp x19,x30,[sp, #0x10]
+0131c624  adrp x21,0x3575000
+0131c628  adrp x20,0x3366000
+0131c62c  ldrb w8,[x21, #0xd54]
+0131c630  ldr x20,[x20, #0x4a8]
+0131c634  mov x19,x0
+0131c638  tbnz w8,#0x0,0x0131c650
+0131c63c  adrp x0,0x3366000
+0131c640  ldr x0,[x0, #0x4a8]
+0131c644  bl 0x00b0789c
+0131c648  mov w8,#0x1
+0131c64c  strb w8,[x21, #0xd54]
+0131c650  mov x0,x19
+0131c654  mov x1,xzr
+0131c658  bl 0x02194104
+0131c65c  ldr x8,[x20]
+0131c660  ldr x8,[x8, #0xb8]
+0131c664  ldr x0,[x8, #0x8]
+0131c668  cbz x0,0x0131c680
+0131c66c  mov x1,x19
+0131c670  ldp x19,x30,[sp, #0x10]
+0131c674  mov x2,xzr
+0131c678  ldp x21,x20,[sp], #0x20
+0131c67c  b 0x01060dac
+0131c680  ldp x19,x30,[sp, #0x10]
+0131c684  ldp x21,x20,[sp], #0x20
+0131c688  ret
+
+

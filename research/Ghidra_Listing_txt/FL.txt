@@ -1,0 +1,242 @@
+================================================================================
+### FILE: 008d4800_Flush.txt
+================================================================================
+Function: Flush @ 008d4800
+
+--- Calls OUT ---
+  -> Flush @ 00b01084
+
+--- Calls IN ---
+  <- System.IO.Compression.DeflateStreamNative$$Flush @ 0231748c
+
+--- Listing ---
+008d4800  adrp x16,0x3307000
+008d4804  ldr x17,[x16, #0xdc0]
+008d4808  add x16,x16,#0xdc0
+008d480c  br x17
+
+
+================================================================================
+### FILE: 008d5a30_flush.txt
+================================================================================
+Function: flush @ 008d5a30
+
+--- Calls OUT ---
+  -> flush @ 00b4bb40
+
+--- Calls IN ---
+  <- putback @ 00b4e2e0
+  <- unget @ 00b4e48c
+  <- get @ 00b4d7ac
+  <- sentry @ 00b51010
+  <- sentry @ 00b4b8f4
+  <- seekp @ 00b53060
+  <- operator<< @ 00b51974
+  <- operator<< @ 00b52704
+  <- write @ 00b52ec0
+  <- peek @ 00b4de9c
+  <- operator<< @ 00b52adc
+  <- getline @ 00b4da2c
+  <- operator<< @ 00b51364
+  <- get @ 00b4d254
+  <- operator<< @ 00b51764
+  <- read @ 00b4dfe8
+  <- sync @ 00b4e624
+  <- get @ 00b4d4b8
+  <- operator<< @ 00b51174
+  <- operator<< @ 00b52514
+  <- operator<< @ 00b51f44
+  <- operator<< @ 00b52324
+  <- operator<< @ 00b528ec
+  <- flush @ 00b4bb40
+  <- ignore @ 00b4dca0
+  <- seekg @ 00b4e890
+  <- readsome @ 00b4e134
+  <- operator<< @ 00b51d54
+  <- put @ 00b52d58
+  <- seekp @ 00b5318c
+  <- operator<< @ 00b51574
+  <- operator<< @ 00b51b64
+  <- operator<< @ 00b52134
+  <- operator>> @ 00b4bce8
+  <- seekg @ 00b4ea04
+  <- tellg @ 00b4e758
+
+--- Listing ---
+008d5a30  adrp x16,0x3308000
+008d5a34  ldr x17,[x16, #0x6d8]
+008d5a38  add x16,x16,#0x6d8
+008d5a3c  br x17
+
+
+================================================================================
+### FILE: 00b01084_Flush.txt
+================================================================================
+Function: Flush @ 00b01084
+
+--- Calls OUT ---
+  -> FUN_00b01214 @ 00b01214
+  -> FUN_00b44350 @ 00b44350
+
+--- Calls IN ---
+  <- Flush @ 008d4800
+
+--- Listing ---
+00b01084  stp x19,x30,[sp, #-0x10]!
+00b01088  ldrb w8,[x0, #0x20]
+00b0108c  cbz w8,0x00b010b4
+00b01090  mov x19,x0
+00b01094  ldr x0,[x0]
+00b01098  mov w1,#0x1
+00b0109c  bl 0x00b44350
+00b010a0  cmp w0,#0x1
+00b010a4  b.hi 0x00b010b8
+00b010a8  mov x0,x19
+00b010ac  ldp x19,x30,[sp], #0x10
+00b010b0  b 0x00b01214
+00b010b4  mov w0,wzr
+00b010b8  ldp x19,x30,[sp], #0x10
+00b010bc  ret
+
+
+================================================================================
+### FILE: 00b4bb40_flush.txt
+================================================================================
+Function: flush @ 00b4bb40
+FuncComment: std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::flush()
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> ~sentry @ 008d4a30
+  -> FUN_00b53a58 @ 00b53a58
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- flush @ 008d5a30
+
+--- Listing ---
+00b4bb40  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::flush()
+00b4bb44  str x21,[sp, #0x20]
+00b4bb48  stp x20,x19,[sp, #0x30]
+00b4bb4c  stp x29,x30,[sp, #0x40]
+00b4bb50  add x29,sp,#0x40
+00b4bb54  mrs x21,tpidr_el0
+00b4bb58  ldr x8,[x21, #0x28]
+00b4bb5c  mov x19,x0
+00b4bb60  str x8,[sp, #0x18]
+00b4bb64  ldr x8,[x0]
+00b4bb68  ldur x9,[x8, #-0x18]
+00b4bb6c  add x9,x0,x9
+00b4bb70  ldr x9,[x9, #0x28]
+00b4bb74  cbz x9,0x00b4bbf0
+00b4bb78  strb wzr,[sp, #0x8]
+00b4bb7c  str x19,[sp, #0x10]
+00b4bb80  ldur x9,[x8, #-0x18]
+00b4bb84  add x9,x19,x9
+00b4bb88  ldr w10,[x9, #0x20]
+00b4bb8c  cbnz w10,0x00b4bbe8
+00b4bb90  ldr x0,[x9, #0x88]
+00b4bb94  cbz x0,0x00b4bba0
+00b4bb98  bl 0x008d5a30
+    ; [PRE] try { // try from 00b4bb98 to 00b4bb9b has its CatchHandler @ 00b4bc28
+    ; [POST] } // end try from 00b4bb98 to 00b4bb9b
+00b4bb9c  ldr x8,[x19]
+00b4bba0  mov w9,#0x1
+00b4bba4  strb w9,[sp, #0x8]
+00b4bba8  ldur x8,[x8, #-0x18]
+00b4bbac  add x8,x19,x8
+00b4bbb0  ldr x0,[x8, #0x28]
+00b4bbb4  ldr x8,[x0]
+00b4bbb8  ldr x8,[x8, #0x30]
+00b4bbbc  blr x8
+    ; [PRE] try { // try from 00b4bbbc to 00b4bbbf has its CatchHandler @ 00b4bc30
+    ; [POST] } // end try from 00b4bbbc to 00b4bbbf
+00b4bbc0  cmn w0,#0x1
+00b4bbc4  b.ne 0x00b4bbe8
+00b4bbc8  ldr x8,[x19]
+00b4bbcc  ldur x8,[x8, #-0x18]
+00b4bbd0  add x8,x19,x8
+00b4bbd4  ldp w9,w10,[x8, #0x20]
+00b4bbd8  orr w9,w9,#0x1
+00b4bbdc  tst w10,w9
+00b4bbe0  str w9,[x8, #0x20]
+00b4bbe4  b.ne 0x00b4bc1c
+00b4bbe8  add x0,sp,#0x8
+00b4bbec  bl 0x008d4a30
+00b4bbf0  ldr x8,[x21, #0x28]
+00b4bbf4  ldr x9,[sp, #0x18]
+00b4bbf8  cmp x8,x9
+00b4bbfc  b.ne 0x00b4bc18
+00b4bc00  mov x0,x19
+00b4bc04  ldp x29,x30,[sp, #0x40]
+00b4bc08  ldp x20,x19,[sp, #0x30]
+00b4bc0c  ldr x21,[sp, #0x20]
+00b4bc10  add sp,sp,#0x50
+00b4bc14  ret
+00b4bc18  bl 0x008d4c50
+00b4bc1c  adrp x0,0x2a07000
+    ; [PRE] try { // try from 00b4bc1c to 00b4bc27 has its CatchHandler @ 00b4bc30
+00b4bc20  add x0,x0,#0xcf4
+00b4bc24  bl 0x00b53a58
+    ; [POST] } // end try from 00b4bc1c to 00b4bc27
+
+
+================================================================================
+### FILE: 00c13e04_FlyingWormConsole3.ConsoleProRemoteServer__Awake.txt
+================================================================================
+Function: FlyingWormConsole3.ConsoleProRemoteServer$$Awake @ 00c13e04
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00c13e04  str x20,[sp, #-0x20]!
+00c13e08  stp x19,x30,[sp, #0x10]
+00c13e0c  adrp x20,0x3571000
+00c13e10  adrp x19,0x336b000
+00c13e14  ldrb w8,[x20, #0x2f]
+00c13e18  ldr x19,[x19, #0x7d0]
+00c13e1c  tbnz w8,#0x0,0x00c13e40
+00c13e20  adrp x0,0x336b000
+00c13e24  ldr x0,[x0, #0x7d0]
+00c13e28  bl 0x00b0789c
+00c13e2c  adrp x0,0x337e000
+00c13e30  ldr x0,[x0, #0x7e0]
+00c13e34  bl 0x00b0789c
+00c13e38  mov w8,#0x1
+00c13e3c  strb w8,[x20, #0x2f]
+00c13e40  ldr x0,[x19]
+00c13e44  adrp x19,0x337e000
+00c13e48  ldr w8,[x0, #0xe0]
+00c13e4c  ldr x19,[x19, #0x7e0]
+00c13e50  cbnz w8,0x00c13e58
+00c13e54  bl 0x00b0798c
+00c13e58  ldr x0,[x19]
+00c13e5c  ldp x19,x30,[sp, #0x10]
+00c13e60  mov x1,xzr
+00c13e64  ldr x20,[sp], #0x20
+00c13e68  b 0x024c0104
+
+
+================================================================================
+### FILE: 00c13e6c_FlyingWormConsole3.ConsoleProRemoteServer__.ctor.txt
+================================================================================
+Function: FlyingWormConsole3.ConsoleProRemoteServer$$.ctor @ 00c13e6c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00c13e6c  mov w8,#0xc738
+00c13e70  mov x1,xzr
+00c13e74  str w8,[x0, #0x1c]
+00c13e78  b 0x024e45bc
+
+

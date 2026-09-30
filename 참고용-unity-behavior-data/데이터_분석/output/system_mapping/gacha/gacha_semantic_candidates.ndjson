@@ -1,0 +1,4 @@
+{"record_type":["DrawRecord"],"field":"m_period","tag":"period","count":2922}
+{"record_type":["DrawRecord"],"field":"m_probability","tag":"probability","count":2922}
+{"record_type":["DrawPreviewRecord"],"field":"m_period","tag":"period","count":112}
+{"record_type":["DrawPreviewRecord"],"field":"m_probability","tag":"probability","count":112}

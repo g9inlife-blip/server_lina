@@ -1,0 +1,2047 @@
+{
+  "record_count": 118015,
+  "fields": {
+    "m_id": {
+      "object": 118015
+    },
+    "baseDataType": {
+      "int": 118015
+    },
+    "m_icon": {
+      "string": 118015
+    },
+    "m_quality": {
+      "int": 118015
+    },
+    "m_frame": {
+      "string": 118015
+    },
+    "m_surface": {
+      "string": 118015
+    },
+    "m_period": {
+      "int": 118015
+    },
+    "m_star": {
+      "int": 118015
+    },
+    "m_type": {
+      "int": 118015
+    },
+    "m_specialShow": {
+      "int": 118015
+    },
+    "m_nameId": {
+      "int": 118015
+    },
+    "m_describeId": {
+      "int": 118015
+    },
+    "m_describe1Id": {
+      "int": 118015
+    },
+    "m_obtainSound": {
+      "int": 118015
+    },
+    "m_PumpingCard1": {
+      "int": 118015
+    },
+    "m_PumpingCard2": {
+      "int": 118015
+    },
+    "m_iconshow": {
+      "int": 118015
+    },
+    "m_parentId": {
+      "int": 4577
+    },
+    "m_activityData": {
+      "string": 4577
+    },
+    "m_condition1": {
+      "string": 4577
+    },
+    "m_condition2": {
+      "string": 4577
+    },
+    "m_reward": {
+      "string": 7596
+    },
+    "m_position": {
+      "string": 6560,
+      "int": 3958
+    },
+    "m_display": {
+      "int": 6300
+    },
+    "m_mainTemplateId": {
+      "int": 4577
+    },
+    "m_turnTo": {
+      "string": 5426
+    },
+    "m_seqencing": {
+      "int": 10649
+    },
+    "m_showType": {
+      "int": 1645
+    },
+    "m_isShowTime": {
+      "int": 1491
+    },
+    "m_bookmark": {
+      "int": 1645
+    },
+    "m_order": {
+      "int": 4017
+    },
+    "m_sysconfID": {
+      "int": 1491
+    },
+    "m_endType": {
+      "int": 1491
+    },
+    "m_endParameters": {
+      "string": 1491
+    },
+    "m_preOpenDate": {
+      "string": 1491
+    },
+    "m_preCloseDate": {
+      "string": 1491
+    },
+    "m_openDate": {
+      "string": 1575
+    },
+    "m_closeDate": {
+      "string": 1491
+    },
+    "m_bannerJump": {
+      "string": 1491
+    },
+    "m_activityJump": {
+      "string": 1491
+    },
+    "m_activityicon": {
+      "string": 1491
+    },
+    "m_presentation": {
+      "string": 1491
+    },
+    "m_activityTaskWord": {
+      "string": 1491
+    },
+    "m_publicityIcon": {
+      "string": 1491
+    },
+    "m_button1": {
+      "int": 1491
+    },
+    "m_function1": {
+      "int": 1491
+    },
+    "m_Jump1": {
+      "string": 1491
+    },
+    "m_button2": {
+      "int": 1491
+    },
+    "m_function2": {
+      "int": 1491
+    },
+    "m_Jump2": {
+      "string": 1491
+    },
+    "m_name2Id": {
+      "int": 1491
+    },
+    "m_tab": {
+      "string": 1491
+    },
+    "m_versionOpen": {
+      "string": 11002
+    },
+    "m_name": {
+      "string": 35919,
+      "int": 101
+    },
+    "m_actorId": {
+      "int": 298
+    },
+    "m_breachLevel": {
+      "int": 252
+    },
+    "m_showLevel": {
+      "int": 252
+    },
+    "m_maxLevel": {
+      "int": 272
+    },
+    "m_hp": {
+      "object": 1352
+    },
+    "m_atk": {
+      "object": 1352
+    },
+    "m_def": {
+      "object": 1352
+    },
+    "m_magicDef": {
+      "object": 1352
+    },
+    "m_hurtplus": {
+      "object": 1352
+    },
+    "m_hurtdef": {
+      "object": 1352
+    },
+    "m_talentPoint": {
+      "int": 252
+    },
+    "m_stigmataNum": {
+      "int": 252
+    },
+    "m_cost": {
+      "string": 1666
+    },
+    "m_location": {
+      "int": 3447
+    },
+    "m_race": {
+      "int": 1126
+    },
+    "m_initial": {
+      "string": 1100
+    },
+    "m_group": {
+      "int": 10172
+    },
+    "m_effectLevel": {
+      "object": 12471
+    },
+    "m_threat": {
+      "int": 1100
+    },
+    "m_initiative": {
+      "string": 1100
+    },
+    "m_skillId1": {
+      "string": 1100
+    },
+    "m_skillId2": {
+      "string": 1100,
+      "int": 599
+    },
+    "m_skillRelease": {
+      "string": 1100
+    },
+    "m_Isplug": {
+      "int": 1100
+    },
+    "m_plug": {
+      "string": 1100
+    },
+    "m_actionTimes": {
+      "object": 1100
+    },
+    "m_weaponId": {
+      "string": 1100,
+      "int": 299
+    },
+    "m_actorShowId": {
+      "int": 1100
+    },
+    "m_initialPower": {
+      "int": 1100
+    },
+    "m_repel": {
+      "int": 1100
+    },
+    "m_collision": {
+      "int": 1100
+    },
+    "m_takeEffect": {
+      "int": 1100
+    },
+    "m_hpPct": {
+      "object": 1100
+    },
+    "m_atkPct": {
+      "object": 1100
+    },
+    "m_defPct": {
+      "object": 1100
+    },
+    "m_magicDefPct": {
+      "object": 1100
+    },
+    "m_critchance": {
+      "object": 1100
+    },
+    "m_critcoefficient": {
+      "object": 1100
+    },
+    "m_critdef": {
+      "object": 1100
+    },
+    "m_cd": {
+      "object": 1100
+    },
+    "m_shield": {
+      "object": 1100
+    },
+    "m_hurtmin": {
+      "object": 1100
+    },
+    "m_phurtplus": {
+      "object": 1100
+    },
+    "m_phurtdef": {
+      "object": 1100
+    },
+    "m_mhurtplus": {
+      "object": 1100
+    },
+    "m_mhurtdef": {
+      "object": 1100
+    },
+    "m_humanplus": {
+      "object": 1100
+    },
+    "m_biochemistryplus": {
+      "object": 1100
+    },
+    "m_machineplus": {
+      "object": 1100
+    },
+    "m_humandef": {
+      "object": 1100
+    },
+    "m_biochemistrydef": {
+      "object": 1100
+    },
+    "m_machinedef": {
+      "object": 1100
+    },
+    "m_helpplus": {
+      "object": 1100
+    },
+    "m_bearhelpplus": {
+      "object": 1100
+    },
+    "m_skillplus": {
+      "object": 1100
+    },
+    "m_normalskillplus": {
+      "object": 1100
+    },
+    "m_zxcplus1": {
+      "object": 1100
+    },
+    "m_normalskilldef": {
+      "object": 1100
+    },
+    "m_zxcdef1": {
+      "object": 1100
+    },
+    "m_moveRange": {
+      "object": 1100
+    },
+    "m_passiveRange": {
+      "string": 1100
+    },
+    "m_passiveIcon": {
+      "string": 1100
+    },
+    "m_avatarId": {
+      "int": 1100
+    },
+    "m_describe2Id": {
+      "int": 1490
+    },
+    "m_sdkEventId": {
+      "int": 2289
+    },
+    "m_roleBefore": {
+      "string": 411
+    },
+    "m_stateIds": {
+      "int": 411
+    },
+    "m_resources": {
+      "int": 567
+    },
+    "m_fashionID": {
+      "int": 411
+    },
+    "m_bone": {
+      "string": 411
+    },
+    "m_hurtAni": {
+      "string": 411
+    },
+    "m_changeAni": {
+      "string": 1010
+    },
+    "m_startAni": {
+      "string": 411
+    },
+    "m_idle1Ani": {
+      "string": 411
+    },
+    "m_idle2Ani": {
+      "string": 411
+    },
+    "m_readyAni": {
+      "string": 411
+    },
+    "m_loseAni": {
+      "string": 411
+    },
+    "m_loseidleAni": {
+      "string": 411
+    },
+    "m_blockAni": {
+      "string": 411
+    },
+    "m_weakAni": {
+      "string": 411
+    },
+    "m_deadAni": {
+      "string": 411
+    },
+    "m_runAni": {
+      "string": 411
+    },
+    "m_downAni": {
+      "string": 411
+    },
+    "m_formRange": {
+      "string": 411
+    },
+    "m_winAni": {
+      "string": 411
+    },
+    "m_winIdleAni": {
+      "string": 411
+    },
+    "m_partDestroy1": {
+      "string": 411
+    },
+    "m_partDestroy2": {
+      "string": 411
+    },
+    "m_partDestroy3": {
+      "string": 411
+    },
+    "m_partDestroy12": {
+      "string": 411
+    },
+    "m_partDestroy23": {
+      "string": 411
+    },
+    "m_partDestroy13": {
+      "string": 411
+    },
+    "m_dressupAni": {
+      "string": 411
+    },
+    "m_modelSize": {
+      "float": 411
+    },
+    "m_battleModelSize": {
+      "float": 411
+    },
+    "m_setModelSize": {
+      "float": 411
+    },
+    "m_failedIcon": {
+      "string": 411
+    },
+    "m_age": {
+      "int": 437
+    },
+    "m_gender": {
+      "int": 437
+    },
+    "m_birthday": {
+      "int": 437
+    },
+    "m_taste": {
+      "int": 437
+    },
+    "m_character": {
+      "int": 437
+    },
+    "m_like": {
+      "int": 437
+    },
+    "m_hate": {
+      "int": 437
+    },
+    "m_cv": {
+      "int": 411
+    },
+    "m_characterBackground": {
+      "int": 437
+    },
+    "m_aoyiAudio": {
+      "int": 411
+    },
+    "m_breakAudio": {
+      "int": 411
+    },
+    "m_clickAudio": {
+      "string": 411
+    },
+    "m_interfaceClickAudio": {
+      "string": 411
+    },
+    "m_describe": {
+      "string": 66
+    },
+    "m_range": {
+      "int": 22,
+      "string": 7
+    },
+    "m_target": {
+      "int": 22,
+      "string": 12103
+    },
+    "m_property": {
+      "int": 22
+    },
+    "m_value": {
+      "string": 231,
+      "float": 1395,
+      "object": 237
+    },
+    "m_part": {
+      "string": 242,
+      "int": 1395
+    },
+    "m_partSort": {
+      "int": 242
+    },
+    "m_preCondition": {
+      "string": 242
+    },
+    "m_pos": {
+      "string": 242
+    },
+    "m_breakpart": {
+      "int": 242
+    },
+    "m_breakVaule": {
+      "float": 242
+    },
+    "m_effBone": {
+      "string": 242
+    },
+    "m_breakSkin": {
+      "string": 242
+    },
+    "m_breakProcessAni": {
+      "string": 242
+    },
+    "m_breakEffId": {
+      "int": 242
+    },
+    "m_breakSign": {
+      "int": 242
+    },
+    "m_itemPackageId": {
+      "string": 6305
+    },
+    "m_articleID": {
+      "int": 713,
+      "string": 112
+    },
+    "m_template": {
+      "int": 713
+    },
+    "m_condition": {
+      "string": 431
+    },
+    "m_describeId2": {
+      "int": 84
+    },
+    "m_sorting": {
+      "int": 84
+    },
+    "m_chapterType": {
+      "int": 84
+    },
+    "m_grouping": {
+      "int": 84
+    },
+    "m_groupingName": {
+      "int": 84
+    },
+    "m_restrictedType": {
+      "int": 84
+    },
+    "m_unlockCondition": {
+      "string": 766
+    },
+    "m_precedentChapter": {
+      "int": 84
+    },
+    "m_front": {
+      "int": 84
+    },
+    "m_restrictedTime": {
+      "int": 84
+    },
+    "m_includeMisson": {
+      "string": 84
+    },
+    "m_chapterReward": {
+      "string": 84
+    },
+    "m_openHours": {
+      "string": 84
+    },
+    "m_countdown": {
+      "int": 84
+    },
+    "m_groupingIcon": {
+      "string": 84
+    },
+    "m_weaponIcon": {
+      "string": 84
+    },
+    "m_bust": {
+      "string": 240
+    },
+    "m_team": {
+      "int": 84
+    },
+    "m_days": {
+      "int": 3000
+    },
+    "m_signedAwards": {
+      "string": 3000
+    },
+    "m_grandTotal": {
+      "string": 3000
+    },
+    "m_times": {
+      "int": 101
+    },
+    "m_stigmatacost": {
+      "int": 101
+    },
+    "m_exchangeCost": {
+      "string": 101
+    },
+    "m_honorCost": {
+      "string": 101
+    },
+    "m_exploreCost": {
+      "string": 101
+    },
+    "m_rewardMail": {
+      "string": 101
+    },
+    "m_warehouseCeilinge": {
+      "int": 101
+    },
+    "m_warehouseCost": {
+      "string": 101
+    },
+    "m_Level": {
+      "int": 505
+    },
+    "m_RequiredExp": {
+      "int": 505
+    },
+    "m_RequiredGeneralExp": {
+      "int": 505
+    },
+    "m_Award1": {
+      "string": 505
+    },
+    "m_Award2": {
+      "string": 505
+    },
+    "m_showIcon": {
+      "string": 26
+    },
+    "m_nameId1": {
+      "int": 3984
+    },
+    "m_voteSound": {
+      "int": 26
+    },
+    "m_rankCV": {
+      "string": 26
+    },
+    "m_rankRole": {
+      "string": 26
+    },
+    "m_HeroFigure": {
+      "string": 182
+    },
+    "m_Show": {
+      "string": 26
+    },
+    "m_soundIds": {
+      "string": 26
+    },
+    "m_day": {
+      "int": 366
+    },
+    "m_metaphysicsBonus": {
+      "string": 366,
+      "float": 1395
+    },
+    "m_luckyBonus": {
+      "string": 366,
+      "float": 1395
+    },
+    "m_stigmataTimes": {
+      "int": 366
+    },
+    "m_stigmataTimesLimit": {
+      "int": 366
+    },
+    "m_stigmataBonus": {
+      "string": 366
+    },
+    "m_stigmataReduce": {
+      "string": 366
+    },
+    "m_stigmataCostIncrease": {
+      "string": 366
+    },
+    "m_stigmataCostReduce": {
+      "string": 366
+    },
+    "m_soundIDs": {
+      "string": 3958
+    },
+    "m_nextId": {
+      "int": 4075
+    },
+    "m_flash": {
+      "int": 3958
+    },
+    "m_shake": {
+      "int": 3958
+    },
+    "m_model1": {
+      "string": 3958
+    },
+    "m_offset1": {
+      "string": 3985
+    },
+    "m_idle1": {
+      "string": 3958
+    },
+    "m_act1": {
+      "string": 3958
+    },
+    "m_scale1": {
+      "float": 3958
+    },
+    "m_nameId2": {
+      "int": 3958
+    },
+    "m_model2": {
+      "string": 3958
+    },
+    "m_offset2": {
+      "string": 3985
+    },
+    "m_idle2": {
+      "string": 3958
+    },
+    "m_act2": {
+      "string": 3958
+    },
+    "m_scale2": {
+      "float": 3958
+    },
+    "m_nameId3": {
+      "int": 3958
+    },
+    "m_model3": {
+      "string": 3958
+    },
+    "m_offset3": {
+      "string": 3985
+    },
+    "m_idle3": {
+      "string": 3958
+    },
+    "m_act3": {
+      "string": 3958
+    },
+    "m_scale3": {
+      "float": 3958
+    },
+    "m_nameId4": {
+      "int": 3958
+    },
+    "m_model4": {
+      "string": 3958
+    },
+    "m_offset4": {
+      "string": 3958
+    },
+    "m_idle4": {
+      "string": 3958
+    },
+    "m_act4": {
+      "string": 3958
+    },
+    "m_scale4": {
+      "float": 3958
+    },
+    "m_probability": {
+      "float": 14405
+    },
+    "m_limit": {
+      "int": 5636
+    },
+    "m_desc": {
+      "string": 4526
+    },
+    "m_resourcesId": {
+      "int": 1292
+    },
+    "m_effModel": {
+      "string": 1292
+    },
+    "m_effAni": {
+      "string": 1292
+    },
+    "m_leftEffAni": {
+      "string": 1292
+    },
+    "m_loopAni": {
+      "string": 1292
+    },
+    "m_loop": {
+      "int": 1292
+    },
+    "m_rotate": {
+      "int": 1292
+    },
+    "m_positionUp": {
+      "float": 1292
+    },
+    "m_positionDown": {
+      "float": 1292
+    },
+    "m_positionLeft": {
+      "float": 1292
+    },
+    "m_positionRight": {
+      "float": 1292
+    },
+    "m_leftPosition": {
+      "string": 1292
+    },
+    "m_time": {
+      "float": 1292,
+      "string": 2132
+    },
+    "m_directionType": {
+      "int": 1292
+    },
+    "m_angle": {
+      "int": 1292
+    },
+    "m_boneName": {
+      "string": 1292
+    },
+    "m_scale": {
+      "float": 1409
+    },
+    "m_orderType": {
+      "int": 1292
+    },
+    "m_demandLevel": {
+      "int": 924
+    },
+    "m_suitId": {
+      "object": 924,
+      "int": 599
+    },
+    "m_attribute1": {
+      "object": 924
+    },
+    "m_attribute2": {
+      "object": 924
+    },
+    "m_attribute3": {
+      "object": 924
+    },
+    "m_attribute4": {
+      "object": 924
+    },
+    "m_decompose": {
+      "string": 924
+    },
+    "m_strengthenCost": {
+      "string": 924
+    },
+    "m_strengthenValue": {
+      "string": 924
+    },
+    "m_videoDisplay": {
+      "string": 1523
+    },
+    "m_rewardRange": {
+      "int": 216
+    },
+    "m_floor": {
+      "int": 784
+    },
+    "m_challenge": {
+      "int": 784
+    },
+    "m_power": {
+      "int": 13139
+    },
+    "m_ActivityMainId": {
+      "int": 784
+    },
+    "m_exploreRandomId1": {
+      "string": 784
+    },
+    "m_exploreRandomId2": {
+      "string": 784
+    },
+    "m_exploreRandomId3": {
+      "string": 784
+    },
+    "m_rewardShow": {
+      "string": 784
+    },
+    "m_maxTime": {
+      "int": 984
+    },
+    "m_necessaryActor": {
+      "string": 984
+    },
+    "m_actorID": {
+      "string": 984
+    },
+    "m_optionId": {
+      "int": 984
+    },
+    "m_level": {
+      "int": 6721,
+      "object": 420
+    },
+    "m_heroExp": {
+      "int": 1182
+    },
+    "m_heroGeneralExp": {
+      "int": 500
+    },
+    "m_userExp": {
+      "int": 1182
+    },
+    "m_userGeneralExp": {
+      "int": 500
+    },
+    "m_weaponExp": {
+      "string": 500,
+      "int": 682
+    },
+    "m_weaponGeneralExp": {
+      "string": 500
+    },
+    "m_hero": {
+      "int": 156
+    },
+    "m_open": {
+      "int": 156
+    },
+    "m_exchange": {
+      "string": 156
+    },
+    "m_description": {
+      "int": 156
+    },
+    "m_attribute": {
+      "string": 156,
+      "int": 11608,
+      "object": 420
+    },
+    "m_fashion": {
+      "string": 156
+    },
+    "m_background": {
+      "int": 156,
+      "string": 27
+    },
+    "m_吃": {
+      "string": 156
+    },
+    "m_sound": {
+      "int": 2497,
+      "string": 3288
+    },
+    "m_hitAudio": {
+      "int": 156
+    },
+    "m_deathAudio": {
+      "int": 156
+    },
+    "m_spineID": {
+      "int": 156
+    },
+    "m_skillSpineID": {
+      "int": 156
+    },
+    "m_callID": {
+      "int": 156
+    },
+    "m_skillShow": {
+      "string": 156
+    },
+    "m_HeroPosFlip": {
+      "int": 156
+    },
+    "m_HeroPos": {
+      "string": 156
+    },
+    "m_HeroBackground": {
+      "string": 156
+    },
+    "m_card": {
+      "string": 156
+    },
+    "m_figure": {
+      "string": 156
+    },
+    "m_friendShow": {
+      "string": 156
+    },
+    "m_theAuthor": {
+      "int": 156
+    },
+    "m_groupNameId": {
+      "int": 967
+    },
+    "m_subNameId": {
+      "int": 547
+    },
+    "m_equipmentId": {
+      "int": 310
+    },
+    "m_forgingResult": {
+      "string": 310
+    },
+    "m_activityForgingResult": {
+      "string": 310
+    },
+    "m_missionId1": {
+      "string": 7
+    },
+    "m_missionId2": {
+      "string": 7
+    },
+    "m_missionId3": {
+      "string": 7
+    },
+    "m_missionId4": {
+      "string": 7
+    },
+    "m_missionId5": {
+      "string": 7
+    },
+    "m_distinguish": {
+      "string": 68
+    },
+    "m_repeat": {
+      "int": 68
+    },
+    "m_channel": {
+      "string": 68
+    },
+    "m_itemId": {
+      "string": 3310,
+      "int": 2714
+    },
+    "m_beginTime": {
+      "string": 1287
+    },
+    "m_endTime": {
+      "string": 1415
+    },
+    "m_accountStart": {
+      "string": 1287
+    },
+    "m_accountEnd": {
+      "string": 1287
+    },
+    "m_mailTempId": {
+      "int": 1287
+    },
+    "m_isOpen": {
+      "int": 117,
+      "string": 952
+    },
+    "m_succ": {
+      "int": 117
+    },
+    "m_bootType": {
+      "int": 117
+    },
+    "m_uiName": {
+      "string": 117
+    },
+    "m_clickName": {
+      "string": 117
+    },
+    "m_priority": {
+      "int": 13230
+    },
+    "m_trigger": {
+      "string": 117,
+      "int": 11557
+    },
+    "m_content": {
+      "string": 117
+    },
+    "m_triggerPoint": {
+      "int": 117
+    },
+    "m_aperture": {
+      "string": 117
+    },
+    "m_pictureName": {
+      "string": 117
+    },
+    "m_guideAudio": {
+      "int": 117
+    },
+    "m_waitType": {
+      "int": 117
+    },
+    "m_appearInterface": {
+      "string": 18
+    },
+    "m_picture": {
+      "string": 18
+    },
+    "m_textID": {
+      "string": 18
+    },
+    "m_icon1": {
+      "string": 108
+    },
+    "m_itemWeight": {
+      "string": 2028
+    },
+    "m_tabs": {
+      "int": 952
+    },
+    "m_parameter": {
+      "int": 952
+    },
+    "m_max": {
+      "int": 952,
+      "string": 237
+    },
+    "m_jump": {
+      "int": 952
+    },
+    "m_model": {
+      "string": 952
+    },
+    "m_maxSpirit": {
+      "int": 500
+    },
+    "m_upgradeSpirit": {
+      "int": 500
+    },
+    "m_openWordId": {
+      "int": 500
+    },
+    "m_nextWordId": {
+      "int": 500
+    },
+    "m_logo": {
+      "float": 27
+    },
+    "m_logoIcon": {
+      "string": 27
+    },
+    "m_exhibition": {
+      "string": 27
+    },
+    "m_cn": {
+      "string": 37823
+    },
+    "m_battlefieldTIM": {
+      "int": 682
+    },
+    "m_chapter": {
+      "int": 682
+    },
+    "m_lastCombat": {
+      "int": 682
+    },
+    "m_monsterLevel": {
+      "int": 682
+    },
+    "m_attributes": {
+      "string": 682
+    },
+    "m_tollgateId": {
+      "string": 1414
+    },
+    "m_consume": {
+      "int": 682
+    },
+    "m_sweepItemPackageId": {
+      "string": 682
+    },
+    "m_captainPackageId": {
+      "string": 682
+    },
+    "m_gold": {
+      "int": 682
+    },
+    "m_partPreview": {
+      "string": 682
+    },
+    "m_preview": {
+      "string": 682
+    },
+    "m_weaponShow": {
+      "int": 682
+    },
+    "m_first": {
+      "string": 682
+    },
+    "m_challengeIds": {
+      "string": 682
+    },
+    "m_whetherItRaids": {
+      "int": 682
+    },
+    "m_eventPoint": {
+      "int": 682
+    },
+    "m_chaos": {
+      "float": 682
+    },
+    "m_subtitleId": {
+      "string": 682
+    },
+    "m_backGround": {
+      "string": 682
+    },
+    "m_weatherId": {
+      "string": 682
+    },
+    "m_allowTeam": {
+      "int": 682
+    },
+    "m_openDialogId": {
+      "int": 682
+    },
+    "m_openShow": {
+      "string": 682
+    },
+    "m_endDialogId": {
+      "int": 682
+    },
+    "m_endshow": {
+      "string": 682
+    },
+    "m_settlementType": {
+      "int": 682
+    },
+    "m_search": {
+      "int": 682
+    },
+    "m_playerAttrPro": {
+      "string": 682
+    },
+    "m_monsterAttrPro": {
+      "string": 682
+    },
+    "m_SkillRandId": {
+      "string": 682
+    },
+    "m_ShowAvatar": {
+      "string": 682
+    },
+    "m_triggerCamp": {
+      "int": 30
+    },
+    "m_friendlyParty": {
+      "int": 30
+    },
+    "m_enemy": {
+      "int": 30
+    },
+    "m_parent": {
+      "int": 216
+    },
+    "m_liveRound": {
+      "int": 30
+    },
+    "m_actionType": {
+      "int": 11401
+    },
+    "m_skilleff": {
+      "string": 30
+    },
+    "m_refreshMax": {
+      "int": 30
+    },
+    "m_actionEffId": {
+      "int": 30
+    },
+    "m_isStop": {
+      "int": 216
+    },
+    "m_effId": {
+      "int": 30
+    },
+    "m_comeEffId": {
+      "int": 30
+    },
+    "m_weight": {
+      "int": 4841
+    },
+    "m_desc1": {
+      "string": 1395
+    },
+    "m_randomNum": {
+      "float": 997
+    },
+    "m_purchaseTips": {
+      "int": 390
+    },
+    "m_openDay": {
+      "string": 390
+    },
+    "m_quantity": {
+      "int": 390
+    },
+    "m_firstCharge": {
+      "int": 390
+    },
+    "m_extraDiamonds": {
+      "int": 390
+    },
+    "m_item": {
+      "string": 390
+    },
+    "m_sort": {
+      "int": 390
+    },
+    "m_frequency": {
+      "int": 390
+    },
+    "m_rice": {
+      "float": 390
+    },
+    "m_CurrencyType": {
+      "int": 390
+    },
+    "m_IosProductId": {
+      "string": 390
+    },
+    "m_GoogleProductId": {
+      "string": 390
+    },
+    "m_OnestoreProductId": {
+      "string": 390
+    },
+    "m_MailTempla": {
+      "string": 390
+    },
+    "m_chinese": {
+      "string": 11
+    },
+    "m_traditionalChinese": {
+      "string": 11
+    },
+    "m_english": {
+      "string": 11
+    },
+    "m_spanish": {
+      "string": 11
+    },
+    "m_german": {
+      "string": 11
+    },
+    "m_french": {
+      "string": 11
+    },
+    "m_arabic": {
+      "string": 11
+    },
+    "m_italian": {
+      "string": 11
+    },
+    "m_portuguese": {
+      "string": 11
+    },
+    "m_russian": {
+      "string": 11
+    },
+    "m_japanese": {
+      "string": 11
+    },
+    "m_korean": {
+      "string": 11
+    },
+    "m_stage": {
+      "int": 128
+    },
+    "m_sign": {
+      "int": 128
+    },
+    "m_result": {
+      "float": 128
+    },
+    "m_AdjustGoogleIOS": {
+      "string": 101
+    },
+    "m_AdjustOneStore": {
+      "string": 101
+    },
+    "m_key": {
+      "string": 310
+    },
+    "m_AdjustJP": {
+      "string": 101
+    },
+    "m_AdjustJPios": {
+      "string": 101
+    },
+    "m_AdjustJPgoogle": {
+      "string": 101
+    },
+    "m_sensitiveChar": {
+      "string": 11548
+    },
+    "m_seqencing1": {
+      "int": 2714
+    },
+    "m_itemNum": {
+      "int": 2714
+    },
+    "m_item1Id": {
+      "string": 2714
+    },
+    "m_costId": {
+      "int": 2714
+    },
+    "m_costNum": {
+      "int": 2714
+    },
+    "m_upperLimit": {
+      "int": 2714
+    },
+    "m_limitNum": {
+      "int": 2714
+    },
+    "m_productDescription": {
+      "int": 2714
+    },
+    "m_mallIcon": {
+      "string": 2714
+    },
+    "m_shopType": {
+      "int": 154
+    },
+    "m_sysId": {
+      "int": 154
+    },
+    "m_week": {
+      "int": 154
+    },
+    "m_currency": {
+      "string": 154
+    },
+    "m_suitDescription": {
+      "int": 154
+    },
+    "m_refreshCycle": {
+      "int": 154
+    },
+    "m_drawPreviewGroup": {
+      "string": 154
+    },
+    "m_itemIcon": {
+      "string": 154
+    },
+    "m_context": {
+      "string": 154
+    },
+    "m_backgroundName": {
+      "int": 154
+    },
+    "m_promotionalVideo": {
+      "string": 154
+    },
+    "m_promotionalPic": {
+      "string": 154
+    },
+    "m_headIconId": {
+      "int": 210
+    },
+    "m_matchingLevel": {
+      "int": 210
+    },
+    "m_actorId1": {
+      "string": 210
+    },
+    "m_equipmentId1": {
+      "string": 210
+    },
+    "m_stigmataId1": {
+      "string": 210
+    },
+    "m_actorId2": {
+      "string": 210
+    },
+    "m_equipmentId2": {
+      "string": 210
+    },
+    "m_stigmataId2": {
+      "string": 210
+    },
+    "m_actorId3": {
+      "string": 210
+    },
+    "m_equipmentId3": {
+      "string": 210
+    },
+    "m_stigmataId3": {
+      "string": 210
+    },
+    "m_actorId4": {
+      "string": 210
+    },
+    "m_equipmentId4": {
+      "string": 210
+    },
+    "m_stigmataId4": {
+      "string": 210
+    },
+    "m_parameterA": {
+      "float": 1694,
+      "string": 1742,
+      "object": 11371
+    },
+    "m_parameterB": {
+      "float": 3436,
+      "object": 11371
+    },
+    "m_parameterC": {
+      "float": 3436
+    },
+    "m_parameterD": {
+      "float": 3436
+    },
+    "m_parameterE": {
+      "float": 1694,
+      "int": 1742
+    },
+    "m_parameterF": {
+      "float": 1694,
+      "int": 1742
+    },
+    "m_parameterG": {
+      "float": 1694,
+      "int": 1742
+    },
+    "m_parameterH": {
+      "float": 1694,
+      "int": 1742
+    },
+    "m_parameterI": {
+      "float": 1694
+    },
+    "m_parameterJ": {
+      "float": 1694
+    },
+    "m_parameterL": {
+      "float": 1694
+    },
+    "m_parameterN": {
+      "float": 1694
+    },
+    "m_parameterM": {
+      "float": 1694
+    },
+    "m_parameterO": {
+      "float": 1694
+    },
+    "m_parameterK": {
+      "string": 1694
+    },
+    "m_changeIsClear": {
+      "int": 1742
+    },
+    "m_stackedSystem": {
+      "int": 1742
+    },
+    "m_buffMarker": {
+      "int": 1742
+    },
+    "m_hitEffects": {
+      "int": 5030
+    },
+    "m_longEffId": {
+      "int": 1742
+    },
+    "m_buffIcon": {
+      "string": 1742
+    },
+    "m_source": {
+      "string": 11371
+    },
+    "m_targetType": {
+      "string": 11371
+    },
+    "m_triggerRound": {
+      "string": 11371
+    },
+    "m_hpPer": {
+      "string": 11371
+    },
+    "m_triggerSkillType": {
+      "int": 11371
+    },
+    "m_dodge": {
+      "int": 11371
+    },
+    "m_didden": {
+      "int": 11371
+    },
+    "m_effTime": {
+      "int": 11371
+    },
+    "m_userIds": {
+      "string": 11371
+    },
+    "m_targetIds": {
+      "string": 11371
+    },
+    "m_userGroup": {
+      "string": 11371
+    },
+    "m_targetGroup": {
+      "string": 11371
+    },
+    "m_partExist": {
+      "string": 11371
+    },
+    "m_partLost": {
+      "string": 11371
+    },
+    "m_criticalLevel": {
+      "int": 11371
+    },
+    "m_dodgeLevel": {
+      "int": 11371
+    },
+    "m_skilleffPre": {
+      "string": 11371
+    },
+    "m_skilleffNeg": {
+      "string": 11371
+    },
+    "m_buffLevel": {
+      "string": 11371
+    },
+    "m_targetBuffLevel": {
+      "string": 11371
+    },
+    "m_isTarget": {
+      "int": 11371
+    },
+    "m_failureTips": {
+      "int": 11371
+    },
+    "m_breakType": {
+      "object": 11371
+    },
+    "m_speciality1": {
+      "int": 11371
+    },
+    "m_skillShowId": {
+      "int": 11371
+    },
+    "m_displayStatus": {
+      "int": 11371
+    },
+    "m_frontRange": {
+      "string": 11371
+    },
+    "m_backRange": {
+      "string": 11371
+    },
+    "m_effectTarget": {
+      "int": 101
+    },
+    "m_skilleffId": {
+      "string": 101
+    },
+    "m_show": {
+      "int": 101,
+      "string": 732
+    },
+    "m_skillId": {
+      "int": 6293
+    },
+    "m_showEff": {
+      "int": 5274
+    },
+    "m_CD": {
+      "object": 5274
+    },
+    "m_mainSkillEff": {
+      "int": 5274
+    },
+    "m_tendency": {
+      "int": 5274
+    },
+    "m_pathfinding": {
+      "int": 5274
+    },
+    "m_skillEff": {
+      "string": 5460
+    },
+    "m_specialEff": {
+      "int": 3288
+    },
+    "m_speedId": {
+      "int": 3288
+    },
+    "m_speedRetain": {
+      "int": 3288
+    },
+    "m_skillLight": {
+      "string": 3288
+    },
+    "m_passiveSkin": {
+      "string": 3288
+    },
+    "m_desSkin": {
+      "string": 3288
+    },
+    "m_fireAni": {
+      "string": 3288
+    },
+    "m_enterAni": {
+      "string": 3288
+    },
+    "m_fireEffId": {
+      "int": 3288
+    },
+    "m_atkEffId": {
+      "int": 3288
+    },
+    "m_eventEffects": {
+      "int": 3288
+    },
+    "m_triggerEffects": {
+      "int": 3288
+    },
+    "m_passiveEffid": {
+      "int": 3288
+    },
+    "m_passiveDestroy": {
+      "int": 3288
+    },
+    "m_eventGroup": {
+      "string": 3288
+    },
+    "m_totalFrame": {
+      "int": 3288
+    },
+    "m_effEventGroup": {
+      "string": 3288
+    },
+    "m_ghost": {
+      "int": 3288
+    },
+    "m_skillsound": {
+      "string": 3288
+    },
+    "m_ActorSound": {
+      "int": 3288
+    },
+    "m_Tllight": {
+      "string": 3288
+    },
+    "m_volume": {
+      "float": 3306
+    },
+    "m_stigmataId": {
+      "int": 420
+    },
+    "m_combinationNum": {
+      "int": 420
+    },
+    "m_combinationContent": {
+      "string": 420
+    },
+    "m_precious": {
+      "int": 237
+    },
+    "m_demand": {
+      "string": 237
+    },
+    "m_breakDown": {
+      "string": 237
+    },
+    "m_ico": {
+      "string": 237
+    },
+    "m_skillEffId": {
+      "string": 299
+    },
+    "m_ornamentId": {
+      "string": 299
+    },
+    "m_clothesId": {
+      "string": 299
+    },
+    "m_badgeId": {
+      "string": 299
+    },
+    "m_suitIcon": {
+      "string": 299
+    },
+    "m_initialGrade": {
+      "int": 20
+    },
+    "m_limitLevel": {
+      "int": 20
+    },
+    "m_talentLevel": {
+      "int": 20
+    },
+    "m_frontward": {
+      "string": 20
+    },
+    "m_backward": {
+      "string": 20
+    },
+    "m_attType": {
+      "string": 20
+    },
+    "m_attParameter": {
+      "string": 20
+    },
+    "m_consumeTalentPoint": {
+      "string": 20
+    },
+    "m_consumeCurrency": {
+      "string": 20
+    },
+    "m_remarks1": {
+      "string": 44
+    },
+    "m_remarks2": {
+      "string": 44
+    },
+    "m_position1": {
+      "int": 24
+    },
+    "m_position2": {
+      "int": 24
+    },
+    "m_position3": {
+      "int": 24
+    },
+    "m_position4": {
+      "int": 24
+    },
+    "m_position5": {
+      "int": 24
+    },
+    "m_position6": {
+      "int": 24
+    },
+    "m_position7": {
+      "int": 24
+    },
+    "m_position8": {
+      "int": 24
+    },
+    "m_position9": {
+      "int": 24
+    },
+    "m_position10": {
+      "int": 24
+    },
+    "m_position11": {
+      "int": 24
+    },
+    "m_refreshtype": {
+      "int": 732
+    },
+    "m_displayPanel": {
+      "int": 732
+    },
+    "m_clearData": {
+      "int": 732
+    },
+    "m_unlock": {
+      "string": 732
+    },
+    "m_lockCondition": {
+      "string": 732
+    },
+    "m_loginDetection": {
+      "int": 732
+    },
+    "m_taskType": {
+      "int": 732
+    },
+    "m_totalProgress": {
+      "int": 732
+    },
+    "m_retain": {
+      "int": 732
+    },
+    "m_automatic": {
+      "int": 732
+    },
+    "m_dialog1Id": {
+      "int": 732
+    },
+    "m_dialog2Id": {
+      "int": 732
+    },
+    "m_terrainAI": {
+      "int": 186
+    },
+    "m_stay": {
+      "int": 186
+    },
+    "m_shoot": {
+      "int": 186
+    },
+    "m_change": {
+      "int": 186
+    },
+    "m_loginEffId": {
+      "int": 186
+    },
+    "m_terrainEffId": {
+      "int": 186
+    },
+    "m_artEffect": {
+      "string": 186
+    },
+    "m_terrianType": {
+      "int": 1507
+    },
+    "m_playerPosition": {
+      "string": 1507
+    },
+    "m_friendlyPosition": {
+      "string": 1507
+    },
+    "m_neutralPosition": {
+      "string": 1507
+    },
+    "m_sceneMonitor": {
+      "string": 1507
+    },
+    "m_monsterPosition": {
+      "string": 1507
+    },
+    "m_terrianIDs": {
+      "string": 1507
+    },
+    "m_terrianProp": {
+      "string": 1507
+    },
+    "m_randProp": {
+      "string": 1507
+    },
+    "m_victoryCondition": {
+      "string": 1507
+    },
+    "m_fail": {
+      "string": 1507
+    },
+    "m_round": {
+      "int": 1507
+    },
+    "m_roundResults": {
+      "int": 1507
+    },
+    "m_sceneSkilleff": {
+      "string": 1507
+    },
+    "m_backgroundMusic": {
+      "int": 1507
+    },
+    "m_bossBurstPointPicture": {
+      "string": 1507
+    },
+    "m_bossIds": {
+      "string": 1507
+    },
+    "m_F": {
+      "string": 296
+    },
+    "m_M": {
+      "string": 296
+    },
+    "m_L": {
+      "string": 296
+    },
+    "m_code": {
+      "int": 599
+    },
+    "m_user": {
+      "int": 599
+    },
+    "m_linkUser": {
+      "string": 599
+    },
+    "m_attack": {
+      "object": 599
+    },
+    "m_attack_g": {
+      "object": 599
+    },
+    "m_wayFinding": {
+      "int": 599
+    },
+    "m_unlockAttr": {
+      "string": 599
+    },
+    "m_MaxWeaponSkillLevel": {
+      "string": 599
+    },
+    "m_skillCost": {
+      "string": 599
+    },
+    "m_development": {
+      "string": 599
+    },
+    "m_line": {
+      "string": 599
+    },
+    "m_notUnlocked": {
+      "string": 599
+    },
+    "m_tips": {
+      "int": 599
+    }
+  }
+}

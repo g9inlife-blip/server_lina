@@ -1,0 +1,1143 @@
+================================================================================
+### FILE: 008d4140_bsearch.txt
+================================================================================
+Function: bsearch @ 008d4140
+
+--- Calls OUT ---
+  -> bsearch @ 037991e8
+
+--- Calls IN ---
+  <- FUN_00b31a9c @ 00b31a9c
+  <- FUN_00af9ff4 @ 00af9ff4
+  <- FUN_00b31644 @ 00b31644
+  <- FUN_00afa984 @ 00afa984
+  <- FUN_00b30c20 @ 00b30c20
+  <- FUN_00ab40bc @ 00ab40bc
+  <- FUN_00afaa08 @ 00afaa08
+  <- FUN_00b3142c @ 00b3142c
+  <- FUN_00afaf1c @ 00afaf1c
+  <- FUN_00ab74e4 @ 00ab74e4
+  <- FUN_00afaff4 @ 00afaff4
+  <- FUN_00afa924 @ 00afa924
+
+--- Listing ---
+008d4140  adrp x16,0x3307000
+008d4144  ldr x17,[x16, #0xa60]
+008d4148  add x16,x16,#0xa60
+008d414c  br x17
+
+
+================================================================================
+### FILE: 00da09c8_BSGameSdk__showToast.txt
+================================================================================
+Function: BSGameSdk$$showToast @ 00da09c8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+  <- BiliSDKManager$$OnGetUserInfoCallback @ 00d9fe84
+  <- BiliSDKManager$$OnRegisterCallback @ 00da02c4
+  <- BiliSDKManager$$OnAccountInvalidCallback @ 00da0778
+  <- BiliSDKManager$$OnIsLoginCallback @ 00d9fc18
+  <- BiliSDKManager$$OnPayCallback @ 00da03b8
+  <- BiliSDKManager$$OnLogoutCallback @ 00d9fd90
+  <- BiliSDKManager$$OnIsRealNameAuthCallback @ 00da0850
+  <- BiliSDKManager$$OnInitCallback @ 00da0aec
+  <- BiliSDKManager$$OnLoginCallback @ 00d9f7d8
+
+--- Listing ---
+00da09c8  stp x21,x20,[sp, #-0x20]!
+00da09cc  stp x19,x30,[sp, #0x10]
+00da09d0  adrp x20,0x3572000
+00da09d4  adrp x21,0x3370000
+00da09d8  ldrb w8,[x20, #0x53]
+00da09dc  ldr x21,[x21, #0x778]
+00da09e0  mov x19,x0
+00da09e4  tbnz w8,#0x0,0x00da0a08
+00da09e8  adrp x0,0x3370000
+00da09ec  ldr x0,[x0, #0x778]
+00da09f0  bl 0x00b0789c
+00da09f4  adrp x0,0x333d000
+00da09f8  ldr x0,[x0, #0x100]
+00da09fc  bl 0x00b0789c
+00da0a00  mov w8,#0x1
+00da0a04  strb w8,[x20, #0x53]
+00da0a08  ldr x0,[x21]
+00da0a0c  mov w1,#0x1
+00da0a10  bl 0x00b078f8
+00da0a14  cbz x0,0x00da0a68
+00da0a18  mov x20,x0
+00da0a1c  cbz x19,0x00da0a34
+00da0a20  ldr x8,[x20]
+00da0a24  mov x0,x19
+00da0a28  ldr x1,[x8, #0x40]
+00da0a2c  bl 0x00b07990
+00da0a30  cbz x0,0x00da0a70
+00da0a34  ldr w8,[x20, #0x18]
+00da0a38  cbz w8,0x00da0a6c
+00da0a3c  adrp x21,0x333d000
+00da0a40  ldr x21,[x21, #0x100]
+00da0a44  mov x0,x20
+00da0a48  str x19,[x0, #0x20]!
+00da0a4c  mov x1,x19
+00da0a50  bl 0x00b07850
+00da0a54  ldr x0,[x21]
+00da0a58  ldp x19,x30,[sp, #0x10]
+00da0a5c  mov x1,x20
+00da0a60  ldp x21,x20,[sp], #0x20
+00da0a64  b 0x00da1f40
+00da0a68  bl 0x00b079b0
+00da0a6c  bl 0x00b079b8
+00da0a70  bl 0x00b079d4
+00da0a74  mov x1,xzr
+00da0a78  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00da0fb4_BSGameSdk__init.txt
+================================================================================
+Function: BSGameSdk$$init @ 00da0fb4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+  <- BiliSDKManager$$Awake @ 00da0eb4
+
+--- Listing ---
+00da0fb4  str x26,[sp, #-0x50]!
+00da0fb8  stp x25,x24,[sp, #0x10]
+00da0fbc  stp x23,x22,[sp, #0x20]
+00da0fc0  stp x21,x20,[sp, #0x30]
+00da0fc4  stp x19,x30,[sp, #0x40]
+00da0fc8  adrp x21,0x3572000
+00da0fcc  adrp x26,0x3370000
+00da0fd0  adrp x25,0x337c000
+00da0fd4  ldrb w8,[x21, #0x52]
+00da0fd8  ldr x26,[x26, #0x778]
+00da0fdc  ldr x25,[x25, #0xf70]
+00da0fe0  mov x19,x4
+00da0fe4  mov x20,x3
+00da0fe8  mov x22,x2
+00da0fec  mov x23,x1
+00da0ff0  and w24,w0,#0x1
+00da0ff4  tbnz w8,#0x0,0x00da1024
+00da0ff8  adrp x0,0x337c000
+00da0ffc  ldr x0,[x0, #0xf70]
+00da1000  bl 0x00b0789c
+00da1004  adrp x0,0x3370000
+00da1008  ldr x0,[x0, #0x778]
+00da100c  bl 0x00b0789c
+00da1010  adrp x0,0x3350000
+00da1014  ldr x0,[x0, #0xda0]
+00da1018  bl 0x00b0789c
+00da101c  mov w8,#0x1
+00da1020  strb w8,[x21, #0x52]
+00da1024  ldr x0,[x26]
+00da1028  mov w1,#0x5
+00da102c  bl 0x00b078f8
+00da1030  mov x21,x0
+00da1034  ldr x0,[x25]
+00da1038  add x1,sp,#0xc
+00da103c  strb w24,[sp, #0xc]
+00da1040  bl 0x00b07994
+00da1044  cbz x21,0x00da1188
+00da1048  mov x24,x0
+00da104c  cbz x0,0x00da1064
+00da1050  ldr x8,[x21]
+00da1054  mov x0,x24
+00da1058  ldr x1,[x8, #0x40]
+00da105c  bl 0x00b07990
+00da1060  cbz x0,0x00da117c
+00da1064  ldr w8,[x21, #0x18]
+00da1068  cbz w8,0x00da1178
+00da106c  mov x0,x21
+00da1070  str x24,[x0, #0x20]!
+00da1074  mov x1,x24
+00da1078  bl 0x00b07850
+00da107c  cbz x23,0x00da1094
+00da1080  ldr x8,[x21]
+00da1084  mov x0,x23
+00da1088  ldr x1,[x8, #0x40]
+00da108c  bl 0x00b07990
+00da1090  cbz x0,0x00da117c
+00da1094  ldr w8,[x21, #0x18]
+00da1098  cmp w8,#0x1
+00da109c  b.ls 0x00da1178
+00da10a0  mov x0,x21
+00da10a4  str x23,[x0, #0x28]!
+00da10a8  mov x1,x23
+00da10ac  bl 0x00b07850
+00da10b0  cbz x22,0x00da10c8
+00da10b4  ldr x8,[x21]
+00da10b8  mov x0,x22
+00da10bc  ldr x1,[x8, #0x40]
+00da10c0  bl 0x00b07990
+00da10c4  cbz x0,0x00da117c
+00da10c8  ldr w8,[x21, #0x18]
+00da10cc  cmp w8,#0x2
+00da10d0  b.ls 0x00da1178
+00da10d4  mov x0,x21
+00da10d8  str x22,[x0, #0x30]!
+00da10dc  mov x1,x22
+00da10e0  bl 0x00b07850
+00da10e4  cbz x20,0x00da10fc
+00da10e8  ldr x8,[x21]
+00da10ec  mov x0,x20
+00da10f0  ldr x1,[x8, #0x40]
+00da10f4  bl 0x00b07990
+00da10f8  cbz x0,0x00da117c
+00da10fc  ldr w8,[x21, #0x18]
+00da1100  cmp w8,#0x3
+00da1104  b.ls 0x00da1178
+00da1108  mov x0,x21
+00da110c  str x20,[x0, #0x38]!
+00da1110  mov x1,x20
+00da1114  bl 0x00b07850
+00da1118  cbz x19,0x00da1130
+00da111c  ldr x8,[x21]
+00da1120  mov x0,x19
+00da1124  ldr x1,[x8, #0x40]
+00da1128  bl 0x00b07990
+00da112c  cbz x0,0x00da117c
+00da1130  ldr w8,[x21, #0x18]
+00da1134  cmp w8,#0x4
+00da1138  b.ls 0x00da1178
+00da113c  adrp x20,0x3350000
+00da1140  ldr x20,[x20, #0xda0]
+00da1144  mov x0,x21
+00da1148  str x19,[x0, #0x40]!
+00da114c  mov x1,x19
+00da1150  bl 0x00b07850
+00da1154  ldr x0,[x20]
+00da1158  mov x1,x21
+00da115c  bl 0x00da1f40
+00da1160  ldp x19,x30,[sp, #0x40]
+00da1164  ldp x21,x20,[sp, #0x30]
+00da1168  ldp x23,x22,[sp, #0x20]
+00da116c  ldp x25,x24,[sp, #0x10]
+00da1170  ldr x26,[sp], #0x50
+00da1174  ret
+00da1178  bl 0x00b079b8
+00da117c  bl 0x00b079d4
+00da1180  mov x1,xzr
+00da1184  bl 0x00b07978
+00da1188  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da1268_BSGameSdk__pay.txt
+================================================================================
+Function: BSGameSdk$$pay @ 00da1268
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+  <- BiliSDKManager$$Purchase @ 00da118c
+
+--- Listing ---
+00da1268  sub sp,sp,#0x70
+00da126c  stp x28,x27,[sp, #0x10]
+00da1270  stp x26,x25,[sp, #0x20]
+00da1274  stp x24,x23,[sp, #0x30]
+00da1278  stp x22,x21,[sp, #0x40]
+00da127c  stp x20,x19,[sp, #0x50]
+00da1280  stp x29,x30,[sp, #0x60]
+00da1284  adrp x19,0x3572000
+00da1288  adrp x29,0x3370000
+00da128c  adrp x28,0x3332000
+00da1290  ldrb w8,[x19, #0x51]
+00da1294  ldr x29,[x29, #0x778]
+00da1298  ldr x28,[x28, #0x38]
+00da129c  mov x20,x7
+00da12a0  mov x21,x6
+00da12a4  mov w22,w5
+00da12a8  mov w23,w4
+00da12ac  mov x24,x3
+00da12b0  mov x25,x2
+00da12b4  mov x26,x1
+00da12b8  mov w27,w0
+00da12bc  tbnz w8,#0x0,0x00da12ec
+00da12c0  adrp x0,0x3332000
+00da12c4  ldr x0,[x0, #0x38]
+00da12c8  bl 0x00b0789c
+00da12cc  adrp x0,0x3370000
+00da12d0  ldr x0,[x0, #0x778]
+00da12d4  bl 0x00b0789c
+00da12d8  adrp x0,0x331a000
+00da12dc  ldr x0,[x0, #0x510]
+00da12e0  bl 0x00b0789c
+00da12e4  mov w8,#0x1
+00da12e8  strb w8,[x19, #0x51]
+00da12ec  ldr x0,[x29]
+00da12f0  mov w1,#0xc
+00da12f4  bl 0x00b078f8
+00da12f8  mov x19,x0
+00da12fc  ldr x0,[x28]
+00da1300  add x1,sp,#0xc
+00da1304  str w27,[sp, #0xc]
+00da1308  bl 0x00b07994
+00da130c  cbz x19,0x00da15fc
+00da1310  mov x27,x0
+00da1314  cbz x0,0x00da132c
+00da1318  ldr x8,[x19]
+00da131c  mov x0,x27
+00da1320  ldr x1,[x8, #0x40]
+00da1324  bl 0x00b07990
+00da1328  cbz x0,0x00da15f0
+00da132c  ldr w8,[x19, #0x18]
+00da1330  cbz w8,0x00da15ec
+00da1334  mov x0,x19
+00da1338  str x27,[x0, #0x20]!
+00da133c  mov x1,x27
+00da1340  bl 0x00b07850
+00da1344  cbz x26,0x00da135c
+00da1348  ldr x8,[x19]
+00da134c  mov x0,x26
+00da1350  ldr x1,[x8, #0x40]
+00da1354  bl 0x00b07990
+00da1358  cbz x0,0x00da15f0
+00da135c  ldr w8,[x19, #0x18]
+00da1360  cmp w8,#0x1
+00da1364  b.ls 0x00da15ec
+00da1368  mov x0,x19
+00da136c  str x26,[x0, #0x28]!
+00da1370  mov x1,x26
+00da1374  bl 0x00b07850
+00da1378  cbz x25,0x00da1390
+00da137c  ldr x8,[x19]
+00da1380  mov x0,x25
+00da1384  ldr x1,[x8, #0x40]
+00da1388  bl 0x00b07990
+00da138c  cbz x0,0x00da15f0
+00da1390  ldr w8,[x19, #0x18]
+00da1394  cmp w8,#0x2
+00da1398  b.ls 0x00da15ec
+00da139c  mov x0,x19
+00da13a0  str x25,[x0, #0x30]!
+00da13a4  mov x1,x25
+00da13a8  bl 0x00b07850
+00da13ac  cbz x24,0x00da13c4
+00da13b0  ldr x8,[x19]
+00da13b4  mov x0,x24
+00da13b8  ldr x1,[x8, #0x40]
+00da13bc  bl 0x00b07990
+00da13c0  cbz x0,0x00da15f0
+00da13c4  ldr w8,[x19, #0x18]
+00da13c8  cmp w8,#0x3
+00da13cc  b.ls 0x00da15ec
+00da13d0  mov x0,x19
+00da13d4  str x24,[x0, #0x38]!
+00da13d8  mov x1,x24
+00da13dc  bl 0x00b07850
+00da13e0  ldr x0,[x28]
+00da13e4  add x1,sp,#0x8
+00da13e8  str w23,[sp, #0x8]
+00da13ec  bl 0x00b07994
+00da13f0  mov x23,x0
+00da13f4  cbz x0,0x00da140c
+00da13f8  ldr x8,[x19]
+00da13fc  mov x0,x23
+00da1400  ldr x1,[x8, #0x40]
+00da1404  bl 0x00b07990
+00da1408  cbz x0,0x00da15f0
+00da140c  ldr w8,[x19, #0x18]
+00da1410  cmp w8,#0x4
+00da1414  b.ls 0x00da15ec
+00da1418  mov x0,x19
+00da141c  str x23,[x0, #0x40]!
+00da1420  mov x1,x23
+00da1424  bl 0x00b07850
+00da1428  ldr x0,[x28]
+00da142c  add x1,sp,#0x4
+00da1430  str w22,[sp, #0x4]
+00da1434  bl 0x00b07994
+00da1438  mov x22,x0
+00da143c  cbz x0,0x00da1454
+00da1440  ldr x8,[x19]
+00da1444  mov x0,x22
+00da1448  ldr x1,[x8, #0x40]
+00da144c  bl 0x00b07990
+00da1450  cbz x0,0x00da15f0
+00da1454  ldr w8,[x19, #0x18]
+00da1458  cmp w8,#0x5
+00da145c  b.ls 0x00da15ec
+00da1460  mov x0,x19
+00da1464  str x22,[x0, #0x48]!
+00da1468  mov x1,x22
+00da146c  bl 0x00b07850
+00da1470  cbz x21,0x00da1488
+00da1474  ldr x8,[x19]
+00da1478  mov x0,x21
+00da147c  ldr x1,[x8, #0x40]
+00da1480  bl 0x00b07990
+00da1484  cbz x0,0x00da15f0
+00da1488  ldr w8,[x19, #0x18]
+00da148c  cmp w8,#0x6
+00da1490  b.ls 0x00da15ec
+00da1494  mov x0,x19
+00da1498  str x21,[x0, #0x50]!
+00da149c  mov x1,x21
+00da14a0  bl 0x00b07850
+00da14a4  cbz x20,0x00da14bc
+00da14a8  ldr x8,[x19]
+00da14ac  mov x0,x20
+00da14b0  ldr x1,[x8, #0x40]
+00da14b4  bl 0x00b07990
+00da14b8  cbz x0,0x00da15f0
+00da14bc  ldr w8,[x19, #0x18]
+00da14c0  cmp w8,#0x7
+00da14c4  b.ls 0x00da15ec
+00da14c8  ldr x21,[sp, #0x70]
+00da14cc  mov x0,x19
+00da14d0  str x20,[x0, #0x58]!
+00da14d4  mov x1,x20
+00da14d8  bl 0x00b07850
+00da14dc  cbz x21,0x00da14f4
+00da14e0  ldr x8,[x19]
+00da14e4  mov x0,x21
+00da14e8  ldr x1,[x8, #0x40]
+00da14ec  bl 0x00b07990
+00da14f0  cbz x0,0x00da15f0
+00da14f4  ldr w8,[x19, #0x18]
+00da14f8  cmp w8,#0x8
+00da14fc  b.ls 0x00da15ec
+00da1500  ldr x20,[sp, #0x78]
+00da1504  mov x0,x19
+00da1508  str x21,[x0, #0x60]!
+00da150c  mov x1,x21
+00da1510  bl 0x00b07850
+00da1514  cbz x20,0x00da152c
+00da1518  ldr x8,[x19]
+00da151c  mov x0,x20
+00da1520  ldr x1,[x8, #0x40]
+00da1524  bl 0x00b07990
+00da1528  cbz x0,0x00da15f0
+00da152c  ldr w8,[x19, #0x18]
+00da1530  cmp w8,#0x9
+00da1534  b.ls 0x00da15ec
+00da1538  ldr x21,[sp, #0x80]
+00da153c  mov x0,x19
+00da1540  str x20,[x0, #0x68]!
+00da1544  mov x1,x20
+00da1548  bl 0x00b07850
+00da154c  cbz x21,0x00da1564
+00da1550  ldr x8,[x19]
+00da1554  mov x0,x21
+00da1558  ldr x1,[x8, #0x40]
+00da155c  bl 0x00b07990
+00da1560  cbz x0,0x00da15f0
+00da1564  ldr w8,[x19, #0x18]
+00da1568  cmp w8,#0xa
+00da156c  b.ls 0x00da15ec
+00da1570  ldr x20,[sp, #0x88]
+00da1574  mov x0,x19
+00da1578  str x21,[x0, #0x70]!
+00da157c  mov x1,x21
+00da1580  bl 0x00b07850
+00da1584  cbz x20,0x00da159c
+00da1588  ldr x8,[x19]
+00da158c  mov x0,x20
+00da1590  ldr x1,[x8, #0x40]
+00da1594  bl 0x00b07990
+00da1598  cbz x0,0x00da15f0
+00da159c  ldr w8,[x19, #0x18]
+00da15a0  cmp w8,#0xb
+00da15a4  b.ls 0x00da15ec
+00da15a8  adrp x21,0x331a000
+00da15ac  ldr x21,[x21, #0x510]
+00da15b0  mov x0,x19
+00da15b4  str x20,[x0, #0x78]!
+00da15b8  mov x1,x20
+00da15bc  bl 0x00b07850
+00da15c0  ldr x0,[x21]
+00da15c4  mov x1,x19
+00da15c8  bl 0x00da1f40
+00da15cc  ldp x29,x30,[sp, #0x60]
+00da15d0  ldp x20,x19,[sp, #0x50]
+00da15d4  ldp x22,x21,[sp, #0x40]
+00da15d8  ldp x24,x23,[sp, #0x30]
+00da15dc  ldp x26,x25,[sp, #0x20]
+00da15e0  ldp x28,x27,[sp, #0x10]
+00da15e4  add sp,sp,#0x70
+00da15e8  ret
+00da15ec  bl 0x00b079b8
+00da15f0  bl 0x00b079d4
+00da15f4  mov x1,xzr
+00da15f8  bl 0x00b07978
+00da15fc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da1604_BSGameSdk__login.txt
+================================================================================
+Function: BSGameSdk$$login @ 00da1604
+
+--- Calls OUT ---
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- BiliSDKManager$$Login @ 00da1600
+
+--- Listing ---
+00da1604  str x20,[sp, #-0x20]!
+00da1608  stp x19,x30,[sp, #0x10]
+00da160c  adrp x19,0x3572000
+00da1610  adrp x20,0x335b000
+00da1614  ldrb w8,[x19, #0x49]
+00da1618  ldr x20,[x20, #0x650]
+00da161c  tbnz w8,#0x0,0x00da1640
+00da1620  adrp x0,0x335b000
+00da1624  ldr x0,[x0, #0x650]
+00da1628  bl 0x00b0789c
+00da162c  adrp x0,0x3330000
+00da1630  ldr x0,[x0, #0x5e0]
+00da1634  bl 0x00b0789c
+00da1638  mov w8,#0x1
+00da163c  strb w8,[x19, #0x49]
+00da1640  ldr x19,[x20]
+00da1644  ldr x8,[x19, #0x38]
+00da1648  ldr x0,[x8]
+00da164c  ldrb w8,[x0, #0x132]
+00da1650  tbnz w8,#0x0,0x00da1658
+00da1654  bl 0x00b2ac40
+00da1658  ldr w8,[x0, #0xe0]
+00da165c  cbnz w8,0x00da1664
+00da1660  bl 0x00b0798c
+00da1664  ldr x8,[x19, #0x38]
+00da1668  adrp x19,0x3330000
+00da166c  ldr x0,[x8]
+00da1670  ldrb w8,[x0, #0x132]
+00da1674  ldr x19,[x19, #0x5e0]
+00da1678  tbnz w8,#0x0,0x00da1680
+00da167c  bl 0x00b2ac40
+00da1680  ldr x8,[x0, #0xb8]
+00da1684  ldr x0,[x19]
+00da1688  ldp x19,x30,[sp, #0x10]
+00da168c  ldr x1,[x8]
+00da1690  ldr x20,[sp], #0x20
+00da1694  b 0x00da1f40
+
+
+================================================================================
+### FILE: 00da169c_BSGameSdk__logout.txt
+================================================================================
+Function: BSGameSdk$$logout @ 00da169c
+
+--- Calls OUT ---
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- BiliSDKManager$$Logout @ 00da1698
+
+--- Listing ---
+00da169c  str x20,[sp, #-0x20]!
+00da16a0  stp x19,x30,[sp, #0x10]
+00da16a4  adrp x19,0x3572000
+00da16a8  adrp x20,0x335b000
+00da16ac  ldrb w8,[x19, #0x4c]
+00da16b0  ldr x20,[x20, #0x650]
+00da16b4  tbnz w8,#0x0,0x00da16d8
+00da16b8  adrp x0,0x335b000
+00da16bc  ldr x0,[x0, #0x650]
+00da16c0  bl 0x00b0789c
+00da16c4  adrp x0,0x3338000
+00da16c8  ldr x0,[x0, #0x1c8]
+00da16cc  bl 0x00b0789c
+00da16d0  mov w8,#0x1
+00da16d4  strb w8,[x19, #0x4c]
+00da16d8  ldr x19,[x20]
+00da16dc  ldr x8,[x19, #0x38]
+00da16e0  ldr x0,[x8]
+00da16e4  ldrb w8,[x0, #0x132]
+00da16e8  tbnz w8,#0x0,0x00da16f0
+00da16ec  bl 0x00b2ac40
+00da16f0  ldr w8,[x0, #0xe0]
+00da16f4  cbnz w8,0x00da16fc
+00da16f8  bl 0x00b0798c
+00da16fc  ldr x8,[x19, #0x38]
+00da1700  adrp x19,0x3338000
+00da1704  ldr x0,[x8]
+00da1708  ldrb w8,[x0, #0x132]
+00da170c  ldr x19,[x19, #0x1c8]
+00da1710  tbnz w8,#0x0,0x00da1718
+00da1714  bl 0x00b2ac40
+00da1718  ldr x8,[x0, #0xb8]
+00da171c  ldr x0,[x19]
+00da1720  ldp x19,x30,[sp, #0x10]
+00da1724  ldr x1,[x8]
+00da1728  ldr x20,[sp], #0x20
+00da172c  b 0x00da1f40
+
+
+================================================================================
+### FILE: 00da1914_BSGameSdk__notifyZone.txt
+================================================================================
+Function: BSGameSdk$$notifyZone @ 00da1914
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+  <- BiliSDKManager$$NotifyZone @ 00da1730
+
+--- Listing ---
+00da1914  str x24,[sp, #-0x40]!
+00da1918  stp x23,x22,[sp, #0x10]
+00da191c  stp x21,x20,[sp, #0x20]
+00da1920  stp x19,x30,[sp, #0x30]
+00da1924  adrp x20,0x3572000
+00da1928  adrp x24,0x3370000
+00da192c  ldrb w8,[x20, #0x4f]
+00da1930  ldr x24,[x24, #0x778]
+00da1934  mov x19,x3
+00da1938  mov x21,x2
+00da193c  mov x22,x1
+00da1940  mov x23,x0
+00da1944  tbnz w8,#0x0,0x00da1968
+00da1948  adrp x0,0x3370000
+00da194c  ldr x0,[x0, #0x778]
+00da1950  bl 0x00b0789c
+00da1954  adrp x0,0x333c000
+00da1958  ldr x0,[x0, #0xde8]
+00da195c  bl 0x00b0789c
+00da1960  mov w8,#0x1
+00da1964  strb w8,[x20, #0x4f]
+00da1968  ldr x0,[x24]
+00da196c  mov w1,#0x4
+00da1970  bl 0x00b078f8
+00da1974  cbz x0,0x00da1a7c
+00da1978  mov x20,x0
+00da197c  cbz x23,0x00da1994
+00da1980  ldr x8,[x20]
+00da1984  mov x0,x23
+00da1988  ldr x1,[x8, #0x40]
+00da198c  bl 0x00b07990
+00da1990  cbz x0,0x00da1a70
+00da1994  ldr w8,[x20, #0x18]
+00da1998  cbz w8,0x00da1a6c
+00da199c  mov x0,x20
+00da19a0  str x23,[x0, #0x20]!
+00da19a4  mov x1,x23
+00da19a8  bl 0x00b07850
+00da19ac  cbz x22,0x00da19c4
+00da19b0  ldr x8,[x20]
+00da19b4  mov x0,x22
+00da19b8  ldr x1,[x8, #0x40]
+00da19bc  bl 0x00b07990
+00da19c0  cbz x0,0x00da1a70
+00da19c4  ldr w8,[x20, #0x18]
+00da19c8  cmp w8,#0x1
+00da19cc  b.ls 0x00da1a6c
+00da19d0  mov x0,x20
+00da19d4  str x22,[x0, #0x28]!
+00da19d8  mov x1,x22
+00da19dc  bl 0x00b07850
+00da19e0  cbz x21,0x00da19f8
+00da19e4  ldr x8,[x20]
+00da19e8  mov x0,x21
+00da19ec  ldr x1,[x8, #0x40]
+00da19f0  bl 0x00b07990
+00da19f4  cbz x0,0x00da1a70
+00da19f8  ldr w8,[x20, #0x18]
+00da19fc  cmp w8,#0x2
+00da1a00  b.ls 0x00da1a6c
+00da1a04  mov x0,x20
+00da1a08  str x21,[x0, #0x30]!
+00da1a0c  mov x1,x21
+00da1a10  bl 0x00b07850
+00da1a14  cbz x19,0x00da1a2c
+00da1a18  ldr x8,[x20]
+00da1a1c  mov x0,x19
+00da1a20  ldr x1,[x8, #0x40]
+00da1a24  bl 0x00b07990
+00da1a28  cbz x0,0x00da1a70
+00da1a2c  ldr w8,[x20, #0x18]
+00da1a30  cmp w8,#0x3
+00da1a34  b.ls 0x00da1a6c
+00da1a38  adrp x21,0x333c000
+00da1a3c  ldr x21,[x21, #0xde8]
+00da1a40  mov x0,x20
+00da1a44  str x19,[x0, #0x38]!
+00da1a48  mov x1,x19
+00da1a4c  bl 0x00b07850
+00da1a50  ldr x0,[x21]
+00da1a54  mov x1,x20
+00da1a58  ldp x19,x30,[sp, #0x30]
+00da1a5c  ldp x21,x20,[sp, #0x20]
+00da1a60  ldp x23,x22,[sp, #0x10]
+00da1a64  ldr x24,[sp], #0x40
+00da1a68  b 0x00da1f40
+00da1a6c  bl 0x00b079b8
+00da1a70  bl 0x00b079d4
+00da1a74  mov x1,xzr
+00da1a78  bl 0x00b07978
+00da1a7c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da1c2c_BSGameSdk__createRole.txt
+================================================================================
+Function: BSGameSdk$$createRole @ 00da1c2c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+
+--- Calls IN ---
+  <- BiliSDKManager$$CreateRole @ 00da1a80
+
+--- Listing ---
+00da1c2c  str x22,[sp, #-0x30]!
+00da1c30  stp x21,x20,[sp, #0x10]
+00da1c34  stp x19,x30,[sp, #0x20]
+00da1c38  adrp x20,0x3572000
+00da1c3c  adrp x22,0x3370000
+00da1c40  ldrb w8,[x20, #0x50]
+00da1c44  ldr x22,[x22, #0x778]
+00da1c48  mov x19,x1
+00da1c4c  mov x21,x0
+00da1c50  tbnz w8,#0x0,0x00da1c74
+00da1c54  adrp x0,0x3370000
+00da1c58  ldr x0,[x0, #0x778]
+00da1c5c  bl 0x00b0789c
+00da1c60  adrp x0,0x330f000
+00da1c64  ldr x0,[x0, #0xe60]
+00da1c68  bl 0x00b0789c
+00da1c6c  mov w8,#0x1
+00da1c70  strb w8,[x20, #0x50]
+00da1c74  ldr x0,[x22]
+00da1c78  mov w1,#0x2
+00da1c7c  bl 0x00b078f8
+00da1c80  cbz x0,0x00da1d1c
+00da1c84  mov x20,x0
+00da1c88  cbz x21,0x00da1ca0
+00da1c8c  ldr x8,[x20]
+00da1c90  mov x0,x21
+00da1c94  ldr x1,[x8, #0x40]
+00da1c98  bl 0x00b07990
+00da1c9c  cbz x0,0x00da1d10
+00da1ca0  ldr w8,[x20, #0x18]
+00da1ca4  cbz w8,0x00da1d0c
+00da1ca8  mov x0,x20
+00da1cac  str x21,[x0, #0x20]!
+00da1cb0  mov x1,x21
+00da1cb4  bl 0x00b07850
+00da1cb8  cbz x19,0x00da1cd0
+00da1cbc  ldr x8,[x20]
+00da1cc0  mov x0,x19
+00da1cc4  ldr x1,[x8, #0x40]
+00da1cc8  bl 0x00b07990
+00da1ccc  cbz x0,0x00da1d10
+00da1cd0  ldr w8,[x20, #0x18]
+00da1cd4  cmp w8,#0x1
+00da1cd8  b.ls 0x00da1d0c
+00da1cdc  adrp x21,0x330f000
+00da1ce0  ldr x21,[x21, #0xe60]
+00da1ce4  mov x0,x20
+00da1ce8  str x19,[x0, #0x28]!
+00da1cec  mov x1,x19
+00da1cf0  bl 0x00b07850
+00da1cf4  ldr x0,[x21]
+00da1cf8  mov x1,x20
+00da1cfc  ldp x19,x30,[sp, #0x20]
+00da1d00  ldp x21,x20,[sp, #0x10]
+00da1d04  ldr x22,[sp], #0x30
+00da1d08  b 0x00da1f40
+00da1d0c  bl 0x00b079b8
+00da1d10  bl 0x00b079d4
+00da1d14  mov x1,xzr
+00da1d18  bl 0x00b07978
+00da1d1c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00da1f40_BSGameSdk__callSdkApi.txt
+================================================================================
+Function: BSGameSdk$$callSdkApi @ 00da1f40
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_00aaac8c @ 00aaac8c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> UnityEngine.AndroidJavaClass$$.ctor @ 024aa2ec
+  -> UnityEngine.AndroidJavaObject$$CallStatic @ 024acfe8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- BSGameSdk$$isRealNameAuth @ 00da2180
+  <- BSGameSdk$$notifyZone @ 00da1914
+  <- BSGameSdk$$login @ 00da1604
+  <- BSGameSdk$$init @ 00da0fb4
+  <- BSGameSdk$$checkLogin @ 00da20ec
+  <- BSGameSdk$$showToast @ 00da09c8
+  <- BSGameSdk$$pay @ 00da1268
+  <- BSGameSdk$$getUserInfo @ 00da2214
+  <- BSGameSdk$$createRole @ 00da1c2c
+  <- BSGameSdk$$register @ 00da22a8
+  <- BSGameSdk$$logout @ 00da169c
+
+--- Listing ---
+00da1f40  str x22,[sp, #-0x30]!
+00da1f44  stp x21,x20,[sp, #0x10]
+00da1f48  stp x19,x30,[sp, #0x20]
+00da1f4c  adrp x19,0x3572000
+00da1f50  adrp x22,0x3364000
+00da1f54  ldrb w8,[x19, #0x54]
+00da1f58  ldr x22,[x22, #0x98]
+00da1f5c  mov x20,x1
+00da1f60  mov x21,x0
+00da1f64  tbnz w8,#0x0,0x00da1f94
+00da1f68  adrp x0,0x3364000
+00da1f6c  ldr x0,[x0, #0x98]
+00da1f70  bl 0x00b0789c
+00da1f74  adrp x0,0x337d000
+00da1f78  ldr x0,[x0, #0x848]
+00da1f7c  bl 0x00b0789c
+00da1f80  adrp x0,0x3333000
+00da1f84  ldr x0,[x0, #0x698]
+00da1f88  bl 0x00b0789c
+00da1f8c  mov w8,#0x1
+00da1f90  strb w8,[x19, #0x54]
+00da1f94  ldr x0,[x22]
+00da1f98  bl 0x00b079a0
+00da1f9c  cbz x0,0x00da2044
+00da1fa0  adrp x8,0x3333000
+00da1fa4  ldr x8,[x8, #0x698]
+00da1fa8  adrp x22,0x337d000
+00da1fac  mov x2,xzr
+00da1fb0  mov x19,x0
+00da1fb4  ldr x1,[x8]
+00da1fb8  ldr x22,[x22, #0x848]
+00da1fbc  bl 0x024aa2ec
+00da1fc0  mov x0,x19
+    ; [PRE] try { // try from 00da1fc0 to 00da1fd3 has its CatchHandler @ 00da2050
+00da1fc4  mov x1,x21
+00da1fc8  mov x2,x20
+00da1fcc  mov x3,xzr
+00da1fd0  bl 0x024acfe8
+    ; [POST] } // end try from 00da1fc0 to 00da1fd3
+00da1fd4  mov x20,xzr
+00da1fd8  ldr x8,[x19]
+00da1fdc  ldr x1,[x22]
+00da1fe0  ldrh w9,[x8, #0x12a]
+00da1fe4  cbz x9,0x00da2008
+00da1fe8  ldr x10,[x8, #0xb0]
+00da1fec  add x10,x10,#0x8
+00da1ff0  ldur x11,[x10, #-0x8]
+00da1ff4  cmp x11,x1
+00da1ff8  b.eq 0x00da2018
+00da1ffc  subs x9,x9,#0x1
+00da2000  add x10,x10,#0x10
+00da2004  b.ne 0x00da1ff0
+00da2008  mov x0,x19
+00da200c  mov w2,wzr
+00da2010  bl 0x00b2ae24
+00da2014  b 0x00da2024
+00da2018  ldrsw x9,[x10]
+00da201c  add x8,x8,x9, LSL #0x4
+00da2020  add x0,x8,#0x138
+00da2024  ldp x8,x1,[x0]
+00da2028  mov x0,x19
+00da202c  blr x8
+00da2030  cbnz x20,0x00da2048
+00da2034  ldp x19,x30,[sp, #0x20]
+00da2038  ldp x21,x20,[sp, #0x10]
+00da203c  ldr x22,[sp], #0x30
+00da2040  ret
+00da2044  bl 0x00b079b0
+00da2048  mov x0,x20
+00da204c  bl 0x00aaac8c
+
+
+================================================================================
+### FILE: 00da20ec_BSGameSdk__checkLogin.txt
+================================================================================
+Function: BSGameSdk$$checkLogin @ 00da20ec
+
+--- Calls OUT ---
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00da20ec  str x20,[sp, #-0x20]!
+00da20f0  stp x19,x30,[sp, #0x10]
+00da20f4  adrp x19,0x3572000
+00da20f8  adrp x20,0x335b000
+00da20fc  ldrb w8,[x19, #0x4a]
+00da2100  ldr x20,[x20, #0x650]
+00da2104  tbnz w8,#0x0,0x00da2128
+00da2108  adrp x0,0x335b000
+00da210c  ldr x0,[x0, #0x650]
+00da2110  bl 0x00b0789c
+00da2114  adrp x0,0x331b000
+00da2118  ldr x0,[x0, #0xd70]
+00da211c  bl 0x00b0789c
+00da2120  mov w8,#0x1
+00da2124  strb w8,[x19, #0x4a]
+00da2128  ldr x19,[x20]
+00da212c  ldr x8,[x19, #0x38]
+00da2130  ldr x0,[x8]
+00da2134  ldrb w8,[x0, #0x132]
+00da2138  tbnz w8,#0x0,0x00da2140
+00da213c  bl 0x00b2ac40
+00da2140  ldr w8,[x0, #0xe0]
+00da2144  cbnz w8,0x00da214c
+00da2148  bl 0x00b0798c
+00da214c  ldr x8,[x19, #0x38]
+00da2150  adrp x19,0x331b000
+00da2154  ldr x0,[x8]
+00da2158  ldrb w8,[x0, #0x132]
+00da215c  ldr x19,[x19, #0xd70]
+00da2160  tbnz w8,#0x0,0x00da2168
+00da2164  bl 0x00b2ac40
+00da2168  ldr x8,[x0, #0xb8]
+00da216c  ldr x0,[x19]
+00da2170  ldp x19,x30,[sp, #0x10]
+00da2174  ldr x1,[x8]
+00da2178  ldr x20,[sp], #0x20
+00da217c  b 0x00da1f40
+
+
+================================================================================
+### FILE: 00da2180_BSGameSdk__isRealNameAuth.txt
+================================================================================
+Function: BSGameSdk$$isRealNameAuth @ 00da2180
+
+--- Calls OUT ---
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00da2180  str x20,[sp, #-0x20]!
+00da2184  stp x19,x30,[sp, #0x10]
+00da2188  adrp x19,0x3572000
+00da218c  adrp x20,0x335b000
+00da2190  ldrb w8,[x19, #0x4b]
+00da2194  ldr x20,[x20, #0x650]
+00da2198  tbnz w8,#0x0,0x00da21bc
+00da219c  adrp x0,0x335b000
+00da21a0  ldr x0,[x0, #0x650]
+00da21a4  bl 0x00b0789c
+00da21a8  adrp x0,0x3354000
+00da21ac  ldr x0,[x0, #0x358]
+00da21b0  bl 0x00b0789c
+00da21b4  mov w8,#0x1
+00da21b8  strb w8,[x19, #0x4b]
+00da21bc  ldr x19,[x20]
+00da21c0  ldr x8,[x19, #0x38]
+00da21c4  ldr x0,[x8]
+00da21c8  ldrb w8,[x0, #0x132]
+00da21cc  tbnz w8,#0x0,0x00da21d4
+00da21d0  bl 0x00b2ac40
+00da21d4  ldr w8,[x0, #0xe0]
+00da21d8  cbnz w8,0x00da21e0
+00da21dc  bl 0x00b0798c
+00da21e0  ldr x8,[x19, #0x38]
+00da21e4  adrp x19,0x3354000
+00da21e8  ldr x0,[x8]
+00da21ec  ldrb w8,[x0, #0x132]
+00da21f0  ldr x19,[x19, #0x358]
+00da21f4  tbnz w8,#0x0,0x00da21fc
+00da21f8  bl 0x00b2ac40
+00da21fc  ldr x8,[x0, #0xb8]
+00da2200  ldr x0,[x19]
+00da2204  ldp x19,x30,[sp, #0x10]
+00da2208  ldr x1,[x8]
+00da220c  ldr x20,[sp], #0x20
+00da2210  b 0x00da1f40
+
+
+================================================================================
+### FILE: 00da2214_BSGameSdk__getUserInfo.txt
+================================================================================
+Function: BSGameSdk$$getUserInfo @ 00da2214
+
+--- Calls OUT ---
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00da2214  str x20,[sp, #-0x20]!
+00da2218  stp x19,x30,[sp, #0x10]
+00da221c  adrp x19,0x3572000
+00da2220  adrp x20,0x335b000
+00da2224  ldrb w8,[x19, #0x4d]
+00da2228  ldr x20,[x20, #0x650]
+00da222c  tbnz w8,#0x0,0x00da2250
+00da2230  adrp x0,0x335b000
+00da2234  ldr x0,[x0, #0x650]
+00da2238  bl 0x00b0789c
+00da223c  adrp x0,0x330d000
+00da2240  ldr x0,[x0, #0x320]
+00da2244  bl 0x00b0789c
+00da2248  mov w8,#0x1
+00da224c  strb w8,[x19, #0x4d]
+00da2250  ldr x19,[x20]
+00da2254  ldr x8,[x19, #0x38]
+00da2258  ldr x0,[x8]
+00da225c  ldrb w8,[x0, #0x132]
+00da2260  tbnz w8,#0x0,0x00da2268
+00da2264  bl 0x00b2ac40
+00da2268  ldr w8,[x0, #0xe0]
+00da226c  cbnz w8,0x00da2274
+00da2270  bl 0x00b0798c
+00da2274  ldr x8,[x19, #0x38]
+00da2278  adrp x19,0x330d000
+00da227c  ldr x0,[x8]
+00da2280  ldrb w8,[x0, #0x132]
+00da2284  ldr x19,[x19, #0x320]
+00da2288  tbnz w8,#0x0,0x00da2290
+00da228c  bl 0x00b2ac40
+00da2290  ldr x8,[x0, #0xb8]
+00da2294  ldr x0,[x19]
+00da2298  ldp x19,x30,[sp, #0x10]
+00da229c  ldr x1,[x8]
+00da22a0  ldr x20,[sp], #0x20
+00da22a4  b 0x00da1f40
+
+
+================================================================================
+### FILE: 00da22a8_BSGameSdk__register.txt
+================================================================================
+Function: BSGameSdk$$register @ 00da22a8
+
+--- Calls OUT ---
+  -> BSGameSdk$$callSdkApi @ 00da1f40
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00da22a8  str x20,[sp, #-0x20]!
+00da22ac  stp x19,x30,[sp, #0x10]
+00da22b0  adrp x19,0x3572000
+00da22b4  adrp x20,0x335b000
+00da22b8  ldrb w8,[x19, #0x4e]
+00da22bc  ldr x20,[x20, #0x650]
+00da22c0  tbnz w8,#0x0,0x00da22e4
+00da22c4  adrp x0,0x335b000
+00da22c8  ldr x0,[x0, #0x650]
+00da22cc  bl 0x00b0789c
+00da22d0  adrp x0,0x333c000
+00da22d4  ldr x0,[x0, #0x6e8]
+00da22d8  bl 0x00b0789c
+00da22dc  mov w8,#0x1
+00da22e0  strb w8,[x19, #0x4e]
+00da22e4  ldr x19,[x20]
+00da22e8  ldr x8,[x19, #0x38]
+00da22ec  ldr x0,[x8]
+00da22f0  ldrb w8,[x0, #0x132]
+00da22f4  tbnz w8,#0x0,0x00da22fc
+00da22f8  bl 0x00b2ac40
+00da22fc  ldr w8,[x0, #0xe0]
+00da2300  cbnz w8,0x00da2308
+00da2304  bl 0x00b0798c
+00da2308  ldr x8,[x19, #0x38]
+00da230c  adrp x19,0x333c000
+00da2310  ldr x0,[x8]
+00da2314  ldrb w8,[x0, #0x132]
+00da2318  ldr x19,[x19, #0x6e8]
+00da231c  tbnz w8,#0x0,0x00da2324
+00da2320  bl 0x00b2ac40
+00da2324  ldr x8,[x0, #0xb8]
+00da2328  ldr x0,[x19]
+00da232c  ldp x19,x30,[sp, #0x10]
+00da2330  ldr x1,[x8]
+00da2334  ldr x20,[sp], #0x20
+00da2338  b 0x00da1f40
+
+
+================================================================================
+### FILE: 00da233c_BSGameSdk__.ctor.txt
+================================================================================
+Function: BSGameSdk$$.ctor @ 00da233c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00da233c  mov x1,xzr
+00da2340  b 0x024e45bc
+
+
+================================================================================
+### FILE: 037991e8_bsearch.txt
+================================================================================
+Function: bsearch @ 037991e8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- bsearch @ 008d4140
+
+--- Listing ---
+037991e8  ?? ??
+
+

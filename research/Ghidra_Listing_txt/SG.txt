@@ -1,0 +1,2187 @@
+================================================================================
+### FILE: 00b47b2c_sgetc.txt
+================================================================================
+Function: sgetc @ 00b47b2c
+FuncComment: std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::sgetc()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47b2c  ldp x8,x9,[x0, #0x18]
+    ; [PLATE] std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::sgetc()
+00b47b30  cmp x8,x9
+00b47b34  b.eq 0x00b47b40
+00b47b38  ldrb w0,[x8]
+00b47b3c  ret
+00b47b40  ldr x8,[x0]
+00b47b44  ldr x1,[x8, #0x48]
+00b47b48  br x1
+
+
+================================================================================
+### FILE: 00b47b4c_sgetn.txt
+================================================================================
+Function: sgetn @ 00b47b4c
+FuncComment: std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::sgetn(char*, long)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47b4c  ldr x8,[x0]
+    ; [PLATE] std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::sgetn(char*, long)
+00b47b50  ldr x3,[x8, #0x40]
+00b47b54  br x3
+
+
+================================================================================
+### FILE: 00b47f90_sgetc.txt
+================================================================================
+Function: sgetc @ 00b47f90
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::sgetc()
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47f90  ldp x8,x9,[x0, #0x18]
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::sgetc()
+00b47f94  cmp x8,x9
+00b47f98  b.eq 0x00b47fa4
+00b47f9c  ldr w0,[x8]
+00b47fa0  ret
+00b47fa4  ldr x8,[x0]
+00b47fa8  ldr x1,[x8, #0x48]
+00b47fac  br x1
+
+
+================================================================================
+### FILE: 00b47fb0_sgetn.txt
+================================================================================
+Function: sgetn @ 00b47fb0
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::sgetn(wchar_t*, long)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47fb0  ldr x8,[x0]
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::sgetn(wchar_t*, long)
+00b47fb4  ldr x3,[x8, #0x40]
+00b47fb8  br x3
+
+
+================================================================================
+### FILE: 015a861c_SG.PoolObject__OnDestory.txt
+================================================================================
+Function: SG.PoolObject$$OnDestory @ 015a861c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SG.PoolTools$$DestoryReturnObjectToPool @ 015a86d0
+
+--- Calls IN ---
+
+--- Listing ---
+015a861c  stp x21,x20,[sp, #-0x20]!
+015a8620  stp x19,x30,[sp, #0x10]
+015a8624  adrp x20,0x3577000
+015a8628  adrp x21,0x3343000
+015a862c  ldrb w8,[x20, #0x64]
+015a8630  ldr x21,[x21, #0x920]
+015a8634  mov x19,x0
+015a8638  tbnz w8,#0x0,0x015a865c
+015a863c  adrp x0,0x3343000
+015a8640  ldr x0,[x0, #0x920]
+015a8644  bl 0x00b0789c
+015a8648  adrp x0,0x334e000
+015a864c  ldr x0,[x0, #0x228]
+015a8650  bl 0x00b0789c
+015a8654  mov w8,#0x1
+015a8658  strb w8,[x20, #0x64]
+015a865c  ldr x8,[x21]
+015a8660  ldr x8,[x8, #0xb8]
+015a8664  ldr x0,[x8]
+015a8668  cbz x0,0x015a8680
+015a866c  mov x1,x19
+015a8670  ldp x19,x30,[sp, #0x10]
+015a8674  mov x2,xzr
+015a8678  ldp x21,x20,[sp], #0x20
+015a867c  b 0x01060dac
+015a8680  ldrb w8,[x19, #0x20]
+015a8684  cbz w8,0x015a8694
+015a8688  ldp x19,x30,[sp, #0x10]
+015a868c  ldp x21,x20,[sp], #0x20
+015a8690  ret
+015a8694  adrp x20,0x334e000
+015a8698  ldr x20,[x20, #0x228]
+015a869c  ldr x0,[x20]
+015a86a0  ldr w8,[x0, #0xe0]
+015a86a4  cbnz w8,0x015a86b0
+015a86a8  bl 0x00b0798c
+015a86ac  ldr x0,[x20]
+015a86b0  ldr x8,[x0, #0xb8]
+015a86b4  ldr x0,[x8]
+015a86b8  cbz x0,0x015a86cc
+015a86bc  mov x1,x19
+015a86c0  ldp x19,x30,[sp, #0x10]
+015a86c4  ldp x21,x20,[sp], #0x20
+015a86c8  b 0x015a86d0
+015a86cc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a86d0_SG.PoolTools__DestoryReturnObjectToPool.txt
+================================================================================
+Function: SG.PoolTools$$DestoryReturnObjectToPool @ 015a86d0
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> System.Collections.Generic.Dictionary<object,-object>$$TryGetValue @ 0196fd30
+  -> SG.Pool$$DestoryRetun @ 015a8fbc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- SG.PoolObject$$OnDestory @ 015a861c
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$_m_DestoryReturnObjectToPool @ 013cb304
+
+--- Listing ---
+015a86d0  str x22,[sp, #-0x30]!
+015a86d4  stp x21,x20,[sp, #0x10]
+015a86d8  stp x19,x30,[sp, #0x20]
+015a86dc  adrp x22,0x3577000
+015a86e0  adrp x21,0x334e000
+015a86e4  ldrb w8,[x22, #0x71]
+015a86e8  ldr x21,[x21, #0x228]
+015a86ec  mov x19,x1
+015a86f0  mov x20,x0
+015a86f4  tbnz w8,#0x0,0x015a8724
+015a86f8  adrp x0,0x333e000
+015a86fc  ldr x0,[x0, #0x678]
+015a8700  bl 0x00b0789c
+015a8704  adrp x0,0x3321000
+015a8708  ldr x0,[x0, #0xca8]
+015a870c  bl 0x00b0789c
+015a8710  adrp x0,0x334e000
+015a8714  ldr x0,[x0, #0x228]
+015a8718  bl 0x00b0789c
+015a871c  mov w8,#0x1
+015a8720  strb w8,[x22, #0x71]
+015a8724  ldr x0,[x21]
+015a8728  str xzr,[sp, #0x8]
+015a872c  ldr w8,[x0, #0xe0]
+015a8730  cbnz w8,0x015a873c
+015a8734  bl 0x00b0798c
+015a8738  ldr x0,[x21]
+015a873c  ldr x8,[x0, #0xb8]
+015a8740  ldr x0,[x8, #0x38]
+015a8744  cbz x0,0x015a875c
+015a8748  mov x1,x20
+015a874c  mov x2,x19
+015a8750  mov x3,xzr
+015a8754  bl 0x0106125c
+015a8758  b 0x015a87c4
+015a875c  adrp x8,0x3321000
+015a8760  ldr x8,[x8, #0xca8]
+015a8764  ldr x0,[x8]
+015a8768  ldr w8,[x0, #0xe0]
+015a876c  cbnz w8,0x015a8774
+015a8770  bl 0x00b0798c
+015a8774  mov x0,x19
+015a8778  mov x1,xzr
+015a877c  mov x2,xzr
+015a8780  bl 0x024c8180
+015a8784  tbnz w0,#0x0,0x015a87c4
+015a8788  str xzr,[sp, #0x8]
+015a878c  cbz x19,0x015a87d4
+015a8790  ldr x0,[x20, #0x10]
+015a8794  cbz x0,0x015a87d4
+015a8798  adrp x8,0x333e000
+015a879c  ldr x8,[x8, #0x678]
+015a87a0  ldr x1,[x19, #0x18]
+015a87a4  add x2,sp,#0x8
+015a87a8  ldr x3,[x8]
+015a87ac  bl 0x0196fd30
+015a87b0  tbz w0,#0x0,0x015a87c4
+015a87b4  ldr x0,[sp, #0x8]
+015a87b8  cbz x0,0x015a87d4
+015a87bc  mov x1,x19
+015a87c0  bl 0x015a8fbc
+015a87c4  ldp x19,x30,[sp, #0x20]
+015a87c8  ldp x21,x20,[sp, #0x10]
+015a87cc  ldr x22,[sp], #0x30
+015a87d0  ret
+015a87d4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a87d8_SG.PoolObject__.ctor.txt
+================================================================================
+Function: SG.PoolObject$$.ctor @ 015a87d8
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.SGPoolObjectWrap$$__CreateInstance @ 013c96d4
+
+--- Listing ---
+015a87d8  stp x21,x20,[sp, #-0x20]!
+015a87dc  stp x19,x30,[sp, #0x10]
+015a87e0  adrp x21,0x3577000
+015a87e4  adrp x20,0x3343000
+015a87e8  ldrb w8,[x21, #0x65]
+015a87ec  ldr x20,[x20, #0x920]
+015a87f0  mov x19,x0
+015a87f4  tbnz w8,#0x0,0x015a880c
+015a87f8  adrp x0,0x3343000
+015a87fc  ldr x0,[x0, #0x920]
+015a8800  bl 0x00b0789c
+015a8804  mov w8,#0x1
+015a8808  strb w8,[x21, #0x65]
+015a880c  mov x0,x19
+015a8810  mov x1,xzr
+015a8814  bl 0x024e45bc
+015a8818  ldr x8,[x20]
+015a881c  ldr x8,[x8, #0xb8]
+015a8820  ldr x0,[x8, #0x8]
+015a8824  cbz x0,0x015a883c
+015a8828  mov x1,x19
+015a882c  ldp x19,x30,[sp, #0x10]
+015a8830  mov x2,xzr
+015a8834  ldp x21,x20,[sp], #0x20
+015a8838  b 0x01060dac
+015a883c  ldp x19,x30,[sp, #0x10]
+015a8840  ldp x21,x20,[sp], #0x20
+015a8844  ret
+
+
+================================================================================
+### FILE: 015a8848_SG.Pool__.ctor.txt
+================================================================================
+Function: SG.Pool$$.ctor @ 015a8848
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> UnityEngine.Object$$Instantiate<object> @ 017a970c
+  -> System.String$$Concat @ 01fd2850
+  -> UnityEngine.GameObject$$AddComponent<object> @ 01794da8
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> UnityEngine.Transform$$SetParent @ 024f44fc
+  -> AssetCount$$UseAsset @ 00e19a04
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SG.Pool$$AddObjectToPool @ 015a8b38
+  -> SG.Pool$$populatePool @ 015a8db4
+  -> AliothExtensions$$GetOrAddComponent<object> @ 017372ac
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.Stack<object>$$.ctor @ 01e185bc
+  -> UnityEngine.GameObject$$.ctor @ 024ded14
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+
+--- Calls IN ---
+  <- SG.PoolTools$$InitPool @ 015a9698
+  <- SG.PoolTools$$InitPool @ 015a93ec
+
+--- Listing ---
+015a8848  stp x28,x27,[sp, #-0x60]!
+015a884c  stp x26,x25,[sp, #0x10]
+015a8850  stp x24,x23,[sp, #0x20]
+015a8854  stp x22,x21,[sp, #0x30]
+015a8858  stp x20,x19,[sp, #0x40]
+015a885c  stp x29,x30,[sp, #0x50]
+015a8860  adrp x26,0x3577000
+015a8864  adrp x27,0x3317000
+015a8868  ldrb w8,[x26, #0x66]
+015a886c  ldr x27,[x27, #0x3a8]
+015a8870  mov x23,x6
+015a8874  mov w25,w5
+015a8878  mov w19,w4
+015a887c  mov x24,x3
+015a8880  mov x22,x2
+015a8884  mov x21,x1
+015a8888  mov x20,x0
+015a888c  tbnz w8,#0x0,0x015a8910
+015a8890  adrp x0,0x3323000
+015a8894  ldr x0,[x0, #0xea0]
+015a8898  bl 0x00b0789c
+015a889c  adrp x0,0x3348000
+015a88a0  ldr x0,[x0, #0x138]
+015a88a4  bl 0x00b0789c
+015a88a8  adrp x0,0x333b000
+015a88ac  ldr x0,[x0, #0x48]
+015a88b0  bl 0x00b0789c
+015a88b4  adrp x0,0x333d000
+015a88b8  ldr x0,[x0, #0x8e8]
+015a88bc  bl 0x00b0789c
+015a88c0  adrp x0,0x3310000
+015a88c4  ldr x0,[x0, #0xe40]
+015a88c8  bl 0x00b0789c
+015a88cc  adrp x0,0x333f000
+015a88d0  ldr x0,[x0, #0x1b8]
+015a88d4  bl 0x00b0789c
+015a88d8  adrp x0,0x3321000
+015a88dc  ldr x0,[x0, #0xca8]
+015a88e0  bl 0x00b0789c
+015a88e4  adrp x0,0x336f000
+015a88e8  ldr x0,[x0, #0x180]
+015a88ec  bl 0x00b0789c
+015a88f0  adrp x0,0x3317000
+015a88f4  ldr x0,[x0, #0x3a8]
+015a88f8  bl 0x00b0789c
+015a88fc  adrp x0,0x3333000
+015a8900  ldr x0,[x0, #0xd8]
+015a8904  bl 0x00b0789c
+015a8908  mov w8,#0x1
+015a890c  strb w8,[x26, #0x66]
+015a8910  ldr x0,[x27]
+015a8914  bl 0x00b079a0
+015a8918  cbz x0,0x015a8b34
+015a891c  adrp x8,0x336f000
+015a8920  ldr x8,[x8, #0x180]
+015a8924  adrp x27,0x3321000
+015a8928  mov x26,x0
+015a892c  ldr x1,[x8]
+015a8930  ldr x27,[x27, #0xca8]
+015a8934  bl 0x01e185bc
+015a8938  mov x0,x20
+015a893c  str x26,[x0, #0x10]!
+015a8940  mov x1,x26
+015a8944  bl 0x00b07850
+015a8948  mov x0,x20
+015a894c  mov x1,xzr
+015a8950  bl 0x02194104
+015a8954  ldr x0,[x27]
+015a8958  ldr w8,[x0, #0xe0]
+015a895c  cbnz w8,0x015a8964
+015a8960  bl 0x00b0798c
+015a8964  mov x0,x22
+015a8968  mov x1,xzr
+015a896c  mov x2,xzr
+015a8970  bl 0x024c8180
+015a8974  tbz w0,#0x0,0x015a8994
+015a8978  ldp x29,x30,[sp, #0x50]
+015a897c  ldp x20,x19,[sp, #0x40]
+015a8980  ldp x22,x21,[sp, #0x30]
+015a8984  ldp x24,x23,[sp, #0x20]
+015a8988  ldp x26,x25,[sp, #0x10]
+015a898c  ldp x28,x27,[sp], #0x60
+015a8990  ret
+015a8994  adrp x28,0x3333000
+015a8998  adrp x29,0x3310000
+015a899c  ldr x28,[x28, #0xd8]
+015a89a0  ldr x29,[x29, #0xe40]
+015a89a4  mov x26,x20
+015a89a8  str x21,[x26, #0x28]!
+015a89ac  mov x0,x26
+015a89b0  mov x1,x21
+015a89b4  bl 0x00b07850
+015a89b8  stur w25,[x26, #-0x8]
+015a89bc  ldr x1,[x28]
+015a89c0  mov x0,x21
+015a89c4  mov x2,xzr
+015a89c8  bl 0x01fd2850
+015a89cc  ldr x8,[x29]
+015a89d0  mov x25,x0
+015a89d4  mov x0,x8
+015a89d8  bl 0x00b079a0
+015a89dc  cbz x0,0x015a8b34
+015a89e0  mov x1,x25
+015a89e4  mov x2,xzr
+015a89e8  mov x26,x0
+015a89ec  bl 0x024ded14
+015a89f0  mov x25,x20
+015a89f4  str x26,[x25, #0x18]!
+015a89f8  mov x0,x25
+015a89fc  mov x1,x26
+015a8a00  bl 0x00b07850
+015a8a04  ldr x0,[x25]
+015a8a08  cbz x0,0x015a8b34
+015a8a0c  mov x1,xzr
+015a8a10  bl 0x024de730
+015a8a14  cbz x24,0x015a8b34
+015a8a18  mov x26,x0
+015a8a1c  mov x0,x24
+015a8a20  mov x1,xzr
+015a8a24  bl 0x024de730
+015a8a28  cbz x26,0x015a8b34
+015a8a2c  mov x1,x0
+015a8a30  mov x0,x26
+015a8a34  mov w2,wzr
+015a8a38  mov x3,xzr
+015a8a3c  bl 0x024f44fc
+015a8a40  cbz x23,0x015a8a84
+015a8a44  adrp x8,0x3348000
+015a8a48  ldr x8,[x8, #0x138]
+015a8a4c  ldr x24,[x25]
+015a8a50  adrp x25,0x3323000
+015a8a54  ldr x0,[x8]
+015a8a58  ldr w8,[x0, #0xe0]
+015a8a5c  ldr x25,[x25, #0xea0]
+015a8a60  cbnz w8,0x015a8a68
+015a8a64  bl 0x00b0798c
+015a8a68  ldr x1,[x25]
+015a8a6c  mov x0,x24
+015a8a70  bl 0x017372ac
+015a8a74  cbz x0,0x015a8b34
+015a8a78  mov x1,x23
+015a8a7c  mov x2,xzr
+015a8a80  bl 0x00e19a04
+015a8a84  ldr x0,[x27]
+015a8a88  adrp x23,0x333f000
+015a8a8c  ldr w8,[x0, #0xe0]
+015a8a90  ldr x23,[x23, #0x1b8]
+015a8a94  cbnz w8,0x015a8a9c
+015a8a98  bl 0x00b0798c
+015a8a9c  ldr x1,[x23]
+015a8aa0  mov x0,x22
+015a8aa4  bl 0x017a970c
+015a8aa8  cbz x0,0x015a8b34
+015a8aac  adrp x8,0x333d000
+015a8ab0  ldr x8,[x8, #0x8e8]
+015a8ab4  mov x23,x0
+015a8ab8  ldr x1,[x8]
+015a8abc  bl 0x01794e94
+015a8ac0  mov x1,xzr
+015a8ac4  mov x2,xzr
+015a8ac8  mov x22,x0
+015a8acc  bl 0x024c8180
+015a8ad0  tbz w0,#0x0,0x015a8aec
+015a8ad4  adrp x8,0x333b000
+015a8ad8  ldr x8,[x8, #0x48]
+015a8adc  mov x0,x23
+015a8ae0  ldr x1,[x8]
+015a8ae4  bl 0x01794da8
+015a8ae8  mov x22,x0
+015a8aec  cbz x22,0x015a8b34
+015a8af0  mov x0,x22
+015a8af4  str x21,[x0, #0x18]!
+015a8af8  mov x1,x21
+015a8afc  bl 0x00b07850
+015a8b00  mov x0,x20
+015a8b04  mov x1,x22
+015a8b08  bl 0x015a8b38
+015a8b0c  cmp w19,#0x1
+015a8b10  csinc w1,w19,wzr,gt
+015a8b14  mov x0,x20
+015a8b18  ldp x29,x30,[sp, #0x50]
+015a8b1c  ldp x20,x19,[sp, #0x40]
+015a8b20  ldp x22,x21,[sp, #0x30]
+015a8b24  ldp x24,x23,[sp, #0x20]
+015a8b28  ldp x26,x25,[sp, #0x10]
+015a8b2c  ldp x28,x27,[sp], #0x60
+015a8b30  b 0x015a8db4
+015a8b34  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a8b38_SG.Pool__AddObjectToPool.txt
+================================================================================
+Function: SG.Pool$$AddObjectToPool @ 015a8b38
+
+--- Calls OUT ---
+  -> UnityEngine.Transform$$get_parent @ 024f42ec
+  -> UnityEngine.Transform$$SetParent @ 024f44b4
+  -> System.Collections.Generic.Stack<object>$$Push @ 01e18c68
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> UnityEngine.GameObject$$GetComponentsInChildren<object> @ 0179526c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> UnityEngine.Transform$$SetParent @ 024f44fc
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$get_transform @ 024e4e98
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> AssetCount$$UnLoadImage @ 00e19f58
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.Object$$Destroy @ 024dfed4
+  -> FUN_00b079b8 @ 00b079b8
+  -> UnityEngine.Object$$set_name @ 024df584
+
+--- Calls IN ---
+  <- SG.Pool$$populatePool @ 015a8db4
+  <- SG.Pool$$.ctor @ 015a8848
+  <- SG.Pool$$ReturnObjectToPool @ 015a8ff8
+
+--- Listing ---
+015a8b38  str x24,[sp, #-0x40]!
+015a8b3c  stp x23,x22,[sp, #0x10]
+015a8b40  stp x21,x20,[sp, #0x20]
+015a8b44  stp x19,x30,[sp, #0x30]
+015a8b48  adrp x21,0x3577000
+015a8b4c  adrp x22,0x3321000
+015a8b50  ldrb w8,[x21, #0x67]
+015a8b54  ldr x22,[x22, #0xca8]
+015a8b58  mov x19,x1
+015a8b5c  mov x20,x0
+015a8b60  tbnz w8,#0x0,0x015a8b90
+015a8b64  adrp x0,0x3328000
+015a8b68  ldr x0,[x0, #0x878]
+015a8b6c  bl 0x00b0789c
+015a8b70  adrp x0,0x3321000
+015a8b74  ldr x0,[x0, #0xca8]
+015a8b78  bl 0x00b0789c
+015a8b7c  adrp x0,0x3364000
+015a8b80  ldr x0,[x0, #0xee8]
+015a8b84  bl 0x00b0789c
+015a8b88  mov w8,#0x1
+015a8b8c  strb w8,[x21, #0x67]
+015a8b90  ldr x0,[x22]
+015a8b94  ldr w8,[x0, #0xe0]
+015a8b98  cbnz w8,0x015a8ba0
+015a8b9c  bl 0x00b0798c
+015a8ba0  mov x0,x19
+015a8ba4  mov x1,xzr
+015a8ba8  mov x2,xzr
+015a8bac  bl 0x024c8180
+015a8bb0  tbz w0,#0x0,0x015a8bc8
+015a8bb4  ldp x19,x30,[sp, #0x30]
+015a8bb8  ldp x21,x20,[sp, #0x20]
+015a8bbc  ldp x23,x22,[sp, #0x10]
+015a8bc0  ldr x24,[sp], #0x40
+015a8bc4  ret
+015a8bc8  ldr x0,[x22]
+015a8bcc  ldr x21,[x20, #0x18]
+015a8bd0  ldr w8,[x0, #0xe0]
+015a8bd4  cbnz w8,0x015a8bdc
+015a8bd8  bl 0x00b0798c
+015a8bdc  mov x0,x21
+015a8be0  mov x1,xzr
+015a8be4  mov x2,xzr
+015a8be8  bl 0x024c8180
+015a8bec  cbz x19,0x015a8dac
+015a8bf0  tbz w0,#0x0,0x015a8c8c
+015a8bf4  mov x0,x19
+015a8bf8  mov x1,xzr
+015a8bfc  bl 0x024e4e98
+015a8c00  cbz x0,0x015a8dac
+015a8c04  mov x1,xzr
+015a8c08  bl 0x024f42ec
+015a8c0c  ldr x8,[x22]
+015a8c10  mov x20,x0
+015a8c14  ldr w9,[x8, #0xe0]
+015a8c18  cbnz w9,0x015a8c24
+015a8c1c  mov x0,x8
+015a8c20  bl 0x00b0798c
+015a8c24  mov x0,x20
+015a8c28  mov x1,xzr
+015a8c2c  mov x2,xzr
+015a8c30  bl 0x024de30c
+015a8c34  tbz w0,#0x0,0x015a8c60
+015a8c38  mov x0,x19
+015a8c3c  mov x1,xzr
+015a8c40  bl 0x024e4e98
+015a8c44  cbz x0,0x015a8dac
+015a8c48  mov x1,xzr
+015a8c4c  bl 0x024f42ec
+015a8c50  cbz x0,0x015a8dac
+015a8c54  mov x1,xzr
+015a8c58  mov x2,xzr
+015a8c5c  bl 0x024f44b4
+015a8c60  ldr x0,[x22]
+015a8c64  ldr w8,[x0, #0xe0]
+015a8c68  cbnz w8,0x015a8c70
+015a8c6c  bl 0x00b0798c
+015a8c70  mov x0,x19
+015a8c74  ldp x19,x30,[sp, #0x30]
+015a8c78  ldp x21,x20,[sp, #0x20]
+015a8c7c  ldp x23,x22,[sp, #0x10]
+015a8c80  mov x1,xzr
+015a8c84  ldr x24,[sp], #0x40
+015a8c88  b 0x024dfed4
+015a8c8c  mov x0,x19
+015a8c90  mov x1,xzr
+015a8c94  bl 0x024e4ed4
+015a8c98  cbz x0,0x015a8dac
+015a8c9c  mov w1,wzr
+015a8ca0  mov x2,xzr
+015a8ca4  bl 0x024de86c
+015a8ca8  mov x0,x19
+015a8cac  mov x1,xzr
+015a8cb0  bl 0x024e4ed4
+015a8cb4  cbz x0,0x015a8dac
+015a8cb8  ldr x1,[x20, #0x28]
+015a8cbc  mov x2,xzr
+015a8cc0  bl 0x024df584
+015a8cc4  mov x0,x19
+015a8cc8  mov x1,xzr
+015a8ccc  bl 0x024e4ed4
+015a8cd0  cbz x0,0x015a8dac
+015a8cd4  adrp x8,0x3328000
+015a8cd8  ldr x8,[x8, #0x878]
+015a8cdc  mov w1,#0x1
+015a8ce0  mov w22,#0x1
+015a8ce4  ldr x2,[x8]
+015a8ce8  bl 0x0179526c
+015a8cec  cbz x0,0x015a8d34
+015a8cf0  ldr x8,[x0, #0x18]
+015a8cf4  mov x21,x0
+015a8cf8  cbz x8,0x015a8d34
+015a8cfc  cmp w8,#0x1
+015a8d00  b.lt 0x015a8d34
+015a8d04  mov x23,xzr
+015a8d08  add x24,x21,#0x20
+015a8d0c  cmp w23,w8
+015a8d10  b.cs 0x015a8db0
+015a8d14  ldr x0,[x24, x23, LSL #0x3]
+015a8d18  cbz x0,0x015a8dac
+015a8d1c  mov x1,xzr
+015a8d20  bl 0x00e19f58
+015a8d24  ldr w8,[x21, #0x18]
+015a8d28  add x23,x23,#0x1
+015a8d2c  cmp w23,w8
+015a8d30  b.lt 0x015a8d0c
+015a8d34  strb w22,[x19, #0x20]
+015a8d38  ldr x0,[x20, #0x10]
+015a8d3c  cbz x0,0x015a8dac
+015a8d40  adrp x8,0x3364000
+015a8d44  ldr x8,[x8, #0xee8]
+015a8d48  mov x1,x19
+015a8d4c  ldr x2,[x8]
+015a8d50  bl 0x01e18c68
+015a8d54  mov x0,x19
+015a8d58  mov x1,xzr
+015a8d5c  bl 0x024e4ed4
+015a8d60  cbz x0,0x015a8dac
+015a8d64  mov x1,xzr
+015a8d68  bl 0x024de730
+015a8d6c  ldr x8,[x20, #0x18]
+015a8d70  cbz x8,0x015a8dac
+015a8d74  mov x19,x0
+015a8d78  mov x0,x8
+015a8d7c  mov x1,xzr
+015a8d80  bl 0x024de730
+015a8d84  cbz x19,0x015a8dac
+015a8d88  mov x1,x0
+015a8d8c  mov x0,x19
+015a8d90  ldp x19,x30,[sp, #0x30]
+015a8d94  ldp x21,x20,[sp, #0x20]
+015a8d98  ldp x23,x22,[sp, #0x10]
+015a8d9c  mov w2,wzr
+015a8da0  mov x3,xzr
+015a8da4  ldr x24,[sp], #0x40
+015a8da8  b 0x024f44fc
+015a8dac  bl 0x00b079b0
+015a8db0  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 015a8db4_SG.Pool__populatePool.txt
+================================================================================
+Function: SG.Pool$$populatePool @ 015a8db4
+
+--- Calls OUT ---
+  -> SG.Pool$$AddObjectToPool @ 015a8b38
+  -> System.Collections.Generic.Stack<object>$$Peek @ 01e18b84
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Object$$Instantiate<object> @ 017a970c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- SG.Pool$$NextAvailableObject @ 015a8e84
+  <- SG.Pool$$.ctor @ 015a8848
+
+--- Listing ---
+015a8db4  str x24,[sp, #-0x40]!
+015a8db8  stp x23,x22,[sp, #0x10]
+015a8dbc  stp x21,x20,[sp, #0x20]
+015a8dc0  stp x19,x30,[sp, #0x30]
+015a8dc4  adrp x21,0x3577000
+015a8dc8  ldrb w8,[x21, #0x68]
+015a8dcc  mov w19,w1
+015a8dd0  mov x20,x0
+015a8dd4  tbnz w8,#0x0,0x015a8e04
+015a8dd8  adrp x0,0x330d000
+015a8ddc  ldr x0,[x0, #0x880]
+015a8de0  bl 0x00b0789c
+015a8de4  adrp x0,0x3321000
+015a8de8  ldr x0,[x0, #0xca8]
+015a8dec  bl 0x00b0789c
+015a8df0  adrp x0,0x333b000
+015a8df4  ldr x0,[x0, #0x890]
+015a8df8  bl 0x00b0789c
+015a8dfc  mov w8,#0x1
+015a8e00  strb w8,[x21, #0x68]
+015a8e04  cmp w19,#0x1
+015a8e08  b.lt 0x015a8e6c
+015a8e0c  adrp x22,0x333b000
+015a8e10  adrp x23,0x3321000
+015a8e14  adrp x24,0x330d000
+015a8e18  ldr x22,[x22, #0x890]
+015a8e1c  ldr x23,[x23, #0xca8]
+015a8e20  ldr x24,[x24, #0x880]
+015a8e24  ldr x0,[x20, #0x10]
+015a8e28  cbz x0,0x015a8e80
+015a8e2c  ldr x1,[x22]
+015a8e30  bl 0x01e18b84
+015a8e34  ldr x8,[x23]
+015a8e38  mov x21,x0
+015a8e3c  ldr w9,[x8, #0xe0]
+015a8e40  cbnz w9,0x015a8e4c
+015a8e44  mov x0,x8
+015a8e48  bl 0x00b0798c
+015a8e4c  ldr x1,[x24]
+015a8e50  mov x0,x21
+015a8e54  bl 0x017a970c
+015a8e58  mov x1,x0
+015a8e5c  mov x0,x20
+015a8e60  bl 0x015a8b38
+015a8e64  subs w19,w19,#0x1
+015a8e68  b.ne 0x015a8e24
+015a8e6c  ldp x19,x30,[sp, #0x30]
+015a8e70  ldp x21,x20,[sp, #0x20]
+015a8e74  ldp x23,x22,[sp, #0x10]
+015a8e78  ldr x24,[sp], #0x40
+015a8e7c  ret
+015a8e80  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a8e84_SG.Pool__NextAvailableObject.txt
+================================================================================
+Function: SG.Pool$$NextAvailableObject @ 015a8e84
+
+--- Calls OUT ---
+  -> SG.Pool$$populatePool @ 015a8db4
+  -> System.Collections.Generic.Stack<object>$$Pop @ 01e18be4
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- SG.PoolTools$$GetObjectFromPool @ 015a9804
+
+--- Listing ---
+015a8e84  str x22,[sp, #-0x30]!
+015a8e88  stp x21,x20,[sp, #0x10]
+015a8e8c  stp x19,x30,[sp, #0x20]
+015a8e90  adrp x21,0x3577000
+015a8e94  ldrb w8,[x21, #0x69]
+015a8e98  mov w19,w1
+015a8e9c  mov x20,x0
+015a8ea0  tbnz w8,#0x0,0x015a8ed0
+015a8ea4  adrp x0,0x3321000
+015a8ea8  ldr x0,[x0, #0xca8]
+015a8eac  bl 0x00b0789c
+015a8eb0  adrp x0,0x3352000
+015a8eb4  ldr x0,[x0, #0xcb0]
+015a8eb8  bl 0x00b0789c
+015a8ebc  adrp x0,0x3324000
+015a8ec0  ldr x0,[x0, #0x860]
+015a8ec4  bl 0x00b0789c
+015a8ec8  mov w8,#0x1
+015a8ecc  strb w8,[x21, #0x69]
+015a8ed0  ldr x0,[x20, #0x10]
+015a8ed4  cbz x0,0x015a8fb8
+015a8ed8  ldr w8,[x0, #0x18]
+015a8edc  adrp x21,0x3352000
+015a8ee0  ldr x21,[x21, #0xcb0]
+015a8ee4  cmp w8,#0x2
+015a8ee8  b.ge 0x015a8f2c
+015a8eec  ldr w9,[x20, #0x20]
+015a8ef0  cbz w9,0x015a8f18
+015a8ef4  cmp w9,#0x1
+015a8ef8  b.ne 0x015a8f10
+015a8efc  ldr w9,[x20, #0x30]
+015a8f00  bic w9,w9,w9, ASR #0x1f
+015a8f04  add w1,w9,w8
+015a8f08  cmp w1,#0x1
+015a8f0c  b.ge 0x015a8f1c
+015a8f10  mov x21,xzr
+015a8f14  b 0x015a8f38
+015a8f18  mov w1,#0x1
+015a8f1c  mov x0,x20
+015a8f20  bl 0x015a8db4
+015a8f24  ldr x0,[x20, #0x10]
+015a8f28  cbz x0,0x015a8fb8
+015a8f2c  ldr x1,[x21]
+015a8f30  bl 0x01e18be4
+015a8f34  mov x21,x0
+015a8f38  adrp x8,0x3321000
+015a8f3c  ldr x8,[x8, #0xca8]
+015a8f40  ldr x0,[x8]
+015a8f44  ldr w8,[x0, #0xe0]
+015a8f48  cbnz w8,0x015a8f50
+015a8f4c  bl 0x00b0798c
+015a8f50  mov x0,x21
+015a8f54  mov x1,xzr
+015a8f58  mov x2,xzr
+015a8f5c  bl 0x024de30c
+015a8f60  mov x22,xzr
+015a8f64  tbz w0,#0x0,0x015a8fa4
+015a8f68  ldr w8,[x20, #0x30]
+015a8f6c  add w8,w8,#0x1
+015a8f70  str w8,[x20, #0x30]
+015a8f74  cbz x21,0x015a8fb8
+015a8f78  mov x0,x21
+015a8f7c  mov x1,xzr
+015a8f80  strb wzr,[x21, #0x20]
+015a8f84  bl 0x024e4ed4
+015a8f88  mov x22,x0
+015a8f8c  tbz w19,#0x0,0x015a8fa4
+015a8f90  cbz x22,0x015a8fb8
+015a8f94  mov w1,#0x1
+015a8f98  mov x0,x22
+015a8f9c  mov x2,xzr
+015a8fa0  bl 0x024de86c
+015a8fa4  ldp x19,x30,[sp, #0x20]
+015a8fa8  ldp x21,x20,[sp, #0x10]
+015a8fac  mov x0,x22
+015a8fb0  ldr x22,[sp], #0x30
+015a8fb4  ret
+015a8fb8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a8fbc_SG.Pool__DestoryRetun.txt
+================================================================================
+Function: SG.Pool$$DestoryRetun @ 015a8fbc
+
+--- Calls OUT ---
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$Equals @ 01fde08c
+
+--- Calls IN ---
+  <- SG.PoolTools$$DestoryReturnObjectToPool @ 015a86d0
+
+--- Listing ---
+015a8fbc  stp x19,x30,[sp, #-0x10]!
+015a8fc0  cbz x1,0x015a8ff4
+015a8fc4  mov x19,x0
+015a8fc8  ldr x0,[x0, #0x28]
+015a8fcc  cbz x0,0x015a8ff4
+015a8fd0  ldr x1,[x1, #0x18]
+015a8fd4  mov x2,xzr
+015a8fd8  bl 0x01fde08c
+015a8fdc  tbz w0,#0x0,0x015a8fec
+015a8fe0  ldr w8,[x19, #0x30]
+015a8fe4  sub w8,w8,#0x1
+015a8fe8  str w8,[x19, #0x30]
+015a8fec  ldp x19,x30,[sp], #0x10
+015a8ff0  ret
+015a8ff4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a8ff8_SG.Pool__ReturnObjectToPool.txt
+================================================================================
+Function: SG.Pool$$ReturnObjectToPool @ 015a8ff8
+
+--- Calls OUT ---
+  -> SG.Pool$$AddObjectToPool @ 015a8b38
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$Equals @ 01fde08c
+
+--- Calls IN ---
+  <- SG.PoolTools$$ReturnObjectToPool @ 015a9954
+
+--- Listing ---
+015a8ff8  str x20,[sp, #-0x20]!
+015a8ffc  stp x19,x30,[sp, #0x10]
+015a9000  cbz x1,0x015a9058
+015a9004  mov x20,x0
+015a9008  ldr x0,[x0, #0x28]
+015a900c  cbz x0,0x015a9058
+015a9010  mov x19,x1
+015a9014  ldr x1,[x1, #0x18]
+015a9018  mov x2,xzr
+015a901c  bl 0x01fde08c
+015a9020  tbz w0,#0x0,0x015a9038
+015a9024  ldr w8,[x20, #0x30]
+015a9028  sub w8,w8,#0x1
+015a902c  str w8,[x20, #0x30]
+015a9030  ldrb w8,[x19, #0x20]
+015a9034  cbz w8,0x015a9044
+015a9038  ldp x19,x30,[sp, #0x10]
+015a903c  ldr x20,[sp], #0x20
+015a9040  ret
+015a9044  mov x1,x19
+015a9048  ldp x19,x30,[sp, #0x10]
+015a904c  mov x0,x20
+015a9050  ldr x20,[sp], #0x20
+015a9054  b 0x015a8b38
+015a9058  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a905c_SG.Pool__Clear.txt
+================================================================================
+Function: SG.Pool$$Clear @ 015a905c
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Stack<object>$$Pop @ 01e18be4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.Object$$Destroy @ 024dfed4
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- SG.PoolTools$$Remove @ 015a9c48
+
+--- Listing ---
+015a905c  stp x23,x22,[sp, #-0x30]!
+015a9060  stp x21,x20,[sp, #0x10]
+015a9064  stp x19,x30,[sp, #0x20]
+015a9068  adrp x20,0x3577000
+015a906c  adrp x21,0x3321000
+015a9070  ldrb w8,[x20, #0x6a]
+015a9074  ldr x21,[x21, #0xca8]
+015a9078  mov x19,x0
+015a907c  tbnz w8,#0x0,0x015a90ac
+015a9080  adrp x0,0x3321000
+015a9084  ldr x0,[x0, #0xca8]
+015a9088  bl 0x00b0789c
+015a908c  adrp x0,0x3352000
+015a9090  ldr x0,[x0, #0xcb0]
+015a9094  bl 0x00b0789c
+015a9098  adrp x0,0x3324000
+015a909c  ldr x0,[x0, #0x860]
+015a90a0  bl 0x00b0789c
+015a90a4  mov w8,#0x1
+015a90a8  strb w8,[x20, #0x6a]
+015a90ac  ldr x0,[x21]
+015a90b0  ldr x20,[x19, #0x18]
+015a90b4  ldr w8,[x0, #0xe0]
+015a90b8  cbnz w8,0x015a90c0
+015a90bc  bl 0x00b0798c
+015a90c0  mov x0,x20
+015a90c4  mov x1,xzr
+015a90c8  mov x2,xzr
+015a90cc  bl 0x024c8180
+015a90d0  tbz w0,#0x0,0x015a90dc
+015a90d4  mov w0,#0x1
+015a90d8  b 0x015a90ec
+015a90dc  ldr w8,[x19, #0x30]
+015a90e0  cmp w8,#0x0
+015a90e4  b.le 0x015a90fc
+015a90e8  mov w0,wzr
+015a90ec  ldp x19,x30,[sp, #0x20]
+015a90f0  ldp x21,x20,[sp, #0x10]
+015a90f4  ldp x23,x22,[sp], #0x30
+015a90f8  ret
+015a90fc  ldr x0,[x19, #0x10]
+015a9100  cbz x0,0x015a9160
+015a9104  adrp x22,0x3352000
+015a9108  ldr x22,[x22, #0xcb0]
+015a910c  mov w23,#0x1
+015a9110  ldr w8,[x0, #0x18]
+015a9114  cmp w8,#0x0
+015a9118  b.le 0x015a9160
+015a911c  ldr x1,[x22]
+015a9120  bl 0x01e18be4
+015a9124  cbz x0,0x015a91ac
+015a9128  mov x1,xzr
+015a912c  strb w23,[x0, #0x20]
+015a9130  bl 0x024e4ed4
+015a9134  ldr x8,[x21]
+015a9138  mov x20,x0
+015a913c  ldr w9,[x8, #0xe0]
+015a9140  cbnz w9,0x015a914c
+015a9144  mov x0,x8
+015a9148  bl 0x00b0798c
+015a914c  mov x0,x20
+015a9150  mov x1,xzr
+015a9154  bl 0x024dfed4
+015a9158  ldr x0,[x19, #0x10]
+015a915c  cbnz x0,0x015a9110
+015a9160  ldr x0,[x21]
+015a9164  ldr x20,[x19, #0x18]
+015a9168  ldr w8,[x0, #0xe0]
+015a916c  cbnz w8,0x015a9174
+015a9170  bl 0x00b0798c
+015a9174  mov x0,x20
+015a9178  mov x1,xzr
+015a917c  mov x2,xzr
+015a9180  bl 0x024de30c
+015a9184  tbz w0,#0x0,0x015a90d4
+015a9188  ldr x0,[x21]
+015a918c  ldr x19,[x19, #0x18]
+015a9190  ldr w8,[x0, #0xe0]
+015a9194  cbnz w8,0x015a919c
+015a9198  bl 0x00b0798c
+015a919c  mov x0,x19
+015a91a0  mov x1,xzr
+015a91a4  bl 0x024dfed4
+015a91a8  b 0x015a90d4
+015a91ac  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a91b0_SG.PoolTools__get_gameObject.txt
+================================================================================
+Function: SG.PoolTools$$get_gameObject @ 015a91b0
+
+--- Calls OUT ---
+  -> UnityEngine.Debug$$LogWarning @ 024c0f2c
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp8 @ 0106088c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Application$$get_isPlaying @ 024f2968
+  -> UnityEngine.GameObject$$.ctor @ 024ded14
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Object$$DontDestroyOnLoad @ 024e00c4
+
+--- Calls IN ---
+  <- SG.PoolTools$$InitPool @ 015a9698
+  <- SG.PoolTools$$InitPool @ 015a93ec
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$_g_get_gameObject @ 013cb9d4
+
+--- Listing ---
+015a91b0  stp x21,x20,[sp, #-0x20]!
+015a91b4  stp x19,x30,[sp, #0x10]
+015a91b8  adrp x21,0x3577000
+015a91bc  adrp x20,0x334e000
+015a91c0  ldrb w8,[x21, #0x6b]
+015a91c4  ldr x20,[x20, #0x228]
+015a91c8  mov x19,x0
+015a91cc  tbnz w8,#0x0,0x015a9220
+015a91d0  adrp x0,0x336b000
+015a91d4  ldr x0,[x0, #0x7d0]
+015a91d8  bl 0x00b0789c
+015a91dc  adrp x0,0x3310000
+015a91e0  ldr x0,[x0, #0xe40]
+015a91e4  bl 0x00b0789c
+015a91e8  adrp x0,0x3321000
+015a91ec  ldr x0,[x0, #0xca8]
+015a91f0  bl 0x00b0789c
+015a91f4  adrp x0,0x334e000
+015a91f8  ldr x0,[x0, #0x228]
+015a91fc  bl 0x00b0789c
+015a9200  adrp x0,0x3316000
+015a9204  ldr x0,[x0, #0xe00]
+015a9208  bl 0x00b0789c
+015a920c  adrp x0,0x3310000
+015a9210  ldr x0,[x0, #0x968]
+015a9214  bl 0x00b0789c
+015a9218  mov w8,#0x1
+015a921c  strb w8,[x21, #0x6b]
+015a9220  ldr x0,[x20]
+015a9224  ldr w8,[x0, #0xe0]
+015a9228  cbnz w8,0x015a9234
+015a922c  bl 0x00b0798c
+015a9230  ldr x0,[x20]
+015a9234  ldr x8,[x0, #0xb8]
+015a9238  ldr x0,[x8, #0x8]
+015a923c  cbz x0,0x015a9254
+015a9240  mov x1,x19
+015a9244  ldp x19,x30,[sp, #0x10]
+015a9248  mov x2,xzr
+015a924c  ldp x21,x20,[sp], #0x20
+015a9250  b 0x0106088c
+015a9254  adrp x21,0x3321000
+015a9258  ldr x21,[x21, #0xca8]
+015a925c  ldr x20,[x19, #0x18]!
+015a9260  ldr x0,[x21]
+015a9264  ldr w8,[x0, #0xe0]
+015a9268  cbnz w8,0x015a9270
+015a926c  bl 0x00b0798c
+015a9270  mov x0,x20
+015a9274  mov x1,xzr
+015a9278  mov x2,xzr
+015a927c  bl 0x024c8180
+015a9280  tbz w0,#0x0,0x015a931c
+015a9284  adrp x8,0x3310000
+015a9288  ldr x8,[x8, #0xe40]
+015a928c  ldr x0,[x8]
+015a9290  bl 0x00b079a0
+015a9294  cbz x0,0x015a932c
+015a9298  adrp x8,0x3316000
+015a929c  ldr x8,[x8, #0xe00]
+015a92a0  mov x2,xzr
+015a92a4  mov x20,x0
+015a92a8  ldr x1,[x8]
+015a92ac  bl 0x024ded14
+015a92b0  mov x0,x19
+015a92b4  mov x1,x20
+015a92b8  str x20,[x19]
+015a92bc  bl 0x00b07850
+015a92c0  mov x0,xzr
+015a92c4  bl 0x024f2968
+015a92c8  tbz w0,#0x0,0x015a92f0
+015a92cc  ldr x0,[x21]
+015a92d0  ldr x20,[x19]
+015a92d4  ldr w8,[x0, #0xe0]
+015a92d8  cbnz w8,0x015a92e0
+015a92dc  bl 0x00b0798c
+015a92e0  mov x0,x20
+015a92e4  mov x1,xzr
+015a92e8  bl 0x024e00c4
+015a92ec  b 0x015a931c
+015a92f0  adrp x8,0x336b000
+015a92f4  ldr x8,[x8, #0x7d0]
+015a92f8  adrp x20,0x3310000
+015a92fc  ldr x0,[x8]
+015a9300  ldr w8,[x0, #0xe0]
+015a9304  ldr x20,[x20, #0x968]
+015a9308  cbnz w8,0x015a9310
+015a930c  bl 0x00b0798c
+015a9310  ldr x0,[x20]
+015a9314  mov x1,xzr
+015a9318  bl 0x024c0f2c
+015a931c  ldr x0,[x19]
+015a9320  ldp x19,x30,[sp, #0x10]
+015a9324  ldp x21,x20,[sp], #0x20
+015a9328  ret
+015a932c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9330_SG.PoolTools__PoolIsInited.txt
+================================================================================
+Function: SG.PoolTools$$PoolIsInited @ 015a9330
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp51 @ 01065a14
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Collections.Generic.Dictionary<object,-object>$$ContainsKey @ 0196e6d8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- BattleCache$$GetBattleHitNum @ 00ecf370
+  <- UnityEngine.UI.LoopScrollPrefabSource$$GetObject @ 015bcd30
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$_m_PoolIsInited @ 013ca404
+
+--- Listing ---
+015a9330  str x22,[sp, #-0x30]!
+015a9334  stp x21,x20,[sp, #0x10]
+015a9338  stp x19,x30,[sp, #0x20]
+015a933c  adrp x22,0x3577000
+015a9340  adrp x21,0x334e000
+015a9344  ldrb w8,[x22, #0x6c]
+015a9348  ldr x21,[x21, #0x228]
+015a934c  mov x19,x1
+015a9350  mov x20,x0
+015a9354  tbnz w8,#0x0,0x015a9378
+015a9358  adrp x0,0x337a000
+015a935c  ldr x0,[x0, #0x8c0]
+015a9360  bl 0x00b0789c
+015a9364  adrp x0,0x334e000
+015a9368  ldr x0,[x0, #0x228]
+015a936c  bl 0x00b0789c
+015a9370  mov w8,#0x1
+015a9374  strb w8,[x22, #0x6c]
+015a9378  ldr x0,[x21]
+015a937c  ldr w8,[x0, #0xe0]
+015a9380  cbnz w8,0x015a938c
+015a9384  bl 0x00b0798c
+015a9388  ldr x0,[x21]
+015a938c  ldr x8,[x0, #0xb8]
+015a9390  ldr x0,[x8, #0x10]
+015a9394  cbz x0,0x015a93b4
+015a9398  mov x1,x20
+015a939c  mov x2,x19
+015a93a0  ldp x19,x30,[sp, #0x20]
+015a93a4  ldp x21,x20,[sp, #0x10]
+015a93a8  mov x3,xzr
+015a93ac  ldr x22,[sp], #0x30
+015a93b0  b 0x01065a14
+015a93b4  ldr x0,[x20, #0x10]
+015a93b8  cbz x0,0x015a93dc
+015a93bc  adrp x8,0x337a000
+015a93c0  ldr x8,[x8, #0x8c0]
+015a93c4  mov x1,x19
+015a93c8  ldp x19,x30,[sp, #0x20]
+015a93cc  ldp x21,x20,[sp, #0x10]
+015a93d0  ldr x2,[x8]
+015a93d4  ldr x22,[sp], #0x30
+015a93d8  b 0x0196e6d8
+015a93dc  ldp x19,x30,[sp, #0x20]
+015a93e0  ldp x21,x20,[sp, #0x10]
+015a93e4  ldr x22,[sp], #0x30
+015a93e8  ret
+
+
+================================================================================
+### FILE: 015a93ec_SG.PoolTools__InitPool.txt
+================================================================================
+Function: SG.PoolTools$$InitPool @ 015a93ec
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> Ali$$get_resManager @ 00e02500
+  -> SG.PoolTools$$get_gameObject @ 015a91b0
+  -> ResManager$$GetLoadedAssetHolder @ 00e298c0
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> SG.Pool$$.ctor @ 015a8848
+  -> ResManager$$IsLoaded @ 00e29ee4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp742 @ 010c16e0
+  -> System.Collections.Generic.Dictionary<object,-object>$$ContainsKey @ 0196e6d8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.AssetHolder$$get_asset @ 01662150
+  -> System.Collections.Generic.Dictionary<object,-object>$$set_Item @ 0196e4c0
+
+--- Calls IN ---
+  <- BattleCache$$GetBattleHitNum @ 00ecf370
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$_m_InitPool @ 013ca5e4
+  <- SG.PoolTools$$GetObjectFromPool @ 015a9804
+  <- UnityEngine.UI.LoopScrollPrefabSource$$GetObject @ 015bcd30
+
+--- Listing ---
+015a93ec  str x26,[sp, #-0x50]!
+015a93f0  stp x25,x24,[sp, #0x10]
+015a93f4  stp x23,x22,[sp, #0x20]
+015a93f8  stp x21,x20,[sp, #0x30]
+015a93fc  stp x19,x30,[sp, #0x40]
+015a9400  adrp x24,0x3577000
+015a9404  adrp x23,0x334e000
+015a9408  ldrb w8,[x24, #0x6d]
+015a940c  ldr x23,[x23, #0x228]
+015a9410  mov w20,w3
+015a9414  mov w21,w2
+015a9418  mov x19,x1
+015a941c  mov x22,x0
+015a9420  tbnz w8,#0x0,0x015a9480
+015a9424  adrp x0,0x335f000
+015a9428  ldr x0,[x0, #0x20]
+015a942c  bl 0x00b0789c
+015a9430  adrp x0,0x337a000
+015a9434  ldr x0,[x0, #0x8c0]
+015a9438  bl 0x00b0789c
+015a943c  adrp x0,0x336c000
+015a9440  ldr x0,[x0, #0xf28]
+015a9444  bl 0x00b0789c
+015a9448  adrp x0,0x3310000
+015a944c  ldr x0,[x0, #0xe40]
+015a9450  bl 0x00b0789c
+015a9454  adrp x0,0x3321000
+015a9458  ldr x0,[x0, #0xca8]
+015a945c  bl 0x00b0789c
+015a9460  adrp x0,0x334e000
+015a9464  ldr x0,[x0, #0x228]
+015a9468  bl 0x00b0789c
+015a946c  adrp x0,0x332b000
+015a9470  ldr x0,[x0, #0xb40]
+015a9474  bl 0x00b0789c
+015a9478  mov w8,#0x1
+015a947c  strb w8,[x24, #0x6d]
+015a9480  ldr x0,[x23]
+015a9484  ldr w8,[x0, #0xe0]
+015a9488  cbnz w8,0x015a9494
+015a948c  bl 0x00b0798c
+015a9490  ldr x0,[x23]
+015a9494  ldr x8,[x0, #0xb8]
+015a9498  ldr x0,[x8, #0x18]
+015a949c  cbz x0,0x015a94cc
+015a94a0  mov x1,x22
+015a94a4  mov x2,x19
+015a94a8  mov w3,w21
+015a94ac  mov w4,w20
+015a94b0  ldp x19,x30,[sp, #0x40]
+015a94b4  ldp x21,x20,[sp, #0x30]
+015a94b8  ldp x23,x22,[sp, #0x20]
+015a94bc  ldp x25,x24,[sp, #0x10]
+015a94c0  mov x5,xzr
+015a94c4  ldr x26,[sp], #0x50
+015a94c8  b 0x010c16e0
+015a94cc  ldr x0,[x22, #0x10]
+015a94d0  cbz x0,0x015a9694
+015a94d4  adrp x8,0x337a000
+015a94d8  ldr x8,[x8, #0x8c0]
+015a94dc  mov x1,x19
+015a94e0  ldr x2,[x8]
+015a94e4  bl 0x0196e6d8
+015a94e8  tbnz w0,#0x0,0x015a9600
+015a94ec  adrp x23,0x335f000
+015a94f0  ldr x23,[x23, #0x20]
+015a94f4  ldr x0,[x23]
+015a94f8  ldr w8,[x0, #0xe0]
+015a94fc  cbnz w8,0x015a9508
+015a9500  bl 0x00b0798c
+015a9504  ldr x0,[x23]
+015a9508  ldr x8,[x0, #0xb8]
+015a950c  ldr x0,[x8, #0x10]
+015a9510  cbz x0,0x015a9694
+015a9514  mov x1,xzr
+015a9518  bl 0x00e02500
+015a951c  cbz x0,0x015a9694
+015a9520  mov x1,x19
+015a9524  mov x2,xzr
+015a9528  bl 0x00e29ee4
+015a952c  tbz w0,#0x0,0x015a9600
+015a9530  ldr x0,[x23]
+015a9534  ldr w8,[x0, #0xe0]
+015a9538  cbnz w8,0x015a9544
+015a953c  bl 0x00b0798c
+015a9540  ldr x0,[x23]
+015a9544  ldr x8,[x0, #0xb8]
+015a9548  ldr x0,[x8, #0x10]
+015a954c  cbz x0,0x015a9694
+015a9550  mov x1,xzr
+015a9554  bl 0x00e02500
+015a9558  cbz x0,0x015a9694
+015a955c  mov x1,x19
+015a9560  mov x2,xzr
+015a9564  bl 0x00e298c0
+015a9568  cbz x0,0x015a9600
+015a956c  adrp x25,0x3321000
+015a9570  ldr x25,[x25, #0xca8]
+015a9574  mov x1,xzr
+015a9578  mov x23,x0
+015a957c  bl 0x01662150
+015a9580  ldr x8,[x25]
+015a9584  mov x24,x0
+015a9588  ldr w9,[x8, #0xe0]
+015a958c  cbnz w9,0x015a9598
+015a9590  mov x0,x8
+015a9594  bl 0x00b0798c
+015a9598  mov x0,x24
+015a959c  mov x1,xzr
+015a95a0  mov x2,xzr
+015a95a4  bl 0x024c8180
+015a95a8  tbnz w0,#0x0,0x015a9600
+015a95ac  mov x0,x23
+015a95b0  mov x1,xzr
+015a95b4  bl 0x01662150
+015a95b8  cbz x0,0x015a95d8
+015a95bc  adrp x8,0x3310000
+015a95c0  ldr x8,[x8, #0xe40]
+015a95c4  ldr x9,[x0]
+015a95c8  ldr x8,[x8]
+015a95cc  cmp x9,x8
+015a95d0  csel x24,x0,xzr,eq
+015a95d4  b 0x015a95dc
+015a95d8  mov x24,xzr
+015a95dc  ldr x0,[x25]
+015a95e0  ldr w8,[x0, #0xe0]
+015a95e4  cbnz w8,0x015a95ec
+015a95e8  bl 0x00b0798c
+015a95ec  mov x0,x24
+015a95f0  mov x1,xzr
+015a95f4  mov x2,xzr
+015a95f8  bl 0x024c8180
+015a95fc  tbz w0,#0x0,0x015a9618
+015a9600  ldp x19,x30,[sp, #0x40]
+015a9604  ldp x21,x20,[sp, #0x30]
+015a9608  ldp x23,x22,[sp, #0x20]
+015a960c  ldp x25,x24,[sp, #0x10]
+015a9610  ldr x26,[sp], #0x50
+015a9614  ret
+015a9618  adrp x26,0x332b000
+015a961c  ldr x25,[x22, #0x10]
+015a9620  ldr x26,[x26, #0xb40]
+015a9624  mov x0,x22
+015a9628  bl 0x015a91b0
+015a962c  ldr x8,[x26]
+015a9630  mov x26,x0
+015a9634  mov x0,x8
+015a9638  bl 0x00b079a0
+015a963c  cbz x0,0x015a9694
+015a9640  mov x1,x19
+015a9644  mov x2,x24
+015a9648  mov x3,x26
+015a964c  mov w4,w21
+015a9650  mov w5,w20
+015a9654  mov x6,x23
+015a9658  mov x22,x0
+015a965c  bl 0x015a8848
+015a9660  cbz x25,0x015a9694
+015a9664  adrp x8,0x336c000
+015a9668  ldr x8,[x8, #0xf28]
+015a966c  mov x0,x25
+015a9670  mov x1,x19
+015a9674  mov x2,x22
+015a9678  ldr x3,[x8]
+015a967c  ldp x19,x30,[sp, #0x40]
+015a9680  ldp x21,x20,[sp, #0x30]
+015a9684  ldp x23,x22,[sp, #0x20]
+015a9688  ldp x25,x24,[sp, #0x10]
+015a968c  ldr x26,[sp], #0x50
+015a9690  b 0x0196e4c0
+015a9694  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9698_SG.PoolTools__InitPool.txt
+================================================================================
+Function: SG.PoolTools$$InitPool @ 015a9698
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.Collections.Generic.Dictionary<object,-object>$$ContainsKey @ 0196e6d8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp743 @ 010c18dc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.Dictionary<object,-object>$$set_Item @ 0196e4c0
+  -> SG.PoolTools$$get_gameObject @ 015a91b0
+  -> FUN_00b079b0 @ 00b079b0
+  -> SG.Pool$$.ctor @ 015a8848
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$_m_InitPool @ 013ca5e4
+  <- UnityEngine.UI.LoopScrollPrefabSource$$GetObject @ 015bcd30
+
+--- Listing ---
+015a9698  stp x25,x24,[sp, #-0x40]!
+015a969c  stp x23,x22,[sp, #0x10]
+015a96a0  stp x21,x20,[sp, #0x20]
+015a96a4  stp x19,x30,[sp, #0x30]
+015a96a8  adrp x25,0x3577000
+015a96ac  adrp x24,0x334e000
+015a96b0  ldrb w8,[x25, #0x6e]
+015a96b4  ldr x24,[x24, #0x228]
+015a96b8  mov w20,w4
+015a96bc  mov w21,w3
+015a96c0  mov x22,x2
+015a96c4  mov x19,x1
+015a96c8  mov x23,x0
+015a96cc  tbnz w8,#0x0,0x015a9708
+015a96d0  adrp x0,0x337a000
+015a96d4  ldr x0,[x0, #0x8c0]
+015a96d8  bl 0x00b0789c
+015a96dc  adrp x0,0x336c000
+015a96e0  ldr x0,[x0, #0xf28]
+015a96e4  bl 0x00b0789c
+015a96e8  adrp x0,0x334e000
+015a96ec  ldr x0,[x0, #0x228]
+015a96f0  bl 0x00b0789c
+015a96f4  adrp x0,0x332b000
+015a96f8  ldr x0,[x0, #0xb40]
+015a96fc  bl 0x00b0789c
+015a9700  mov w8,#0x1
+015a9704  strb w8,[x25, #0x6e]
+015a9708  ldr x0,[x24]
+015a970c  ldr w8,[x0, #0xe0]
+015a9710  cbnz w8,0x015a971c
+015a9714  bl 0x00b0798c
+015a9718  ldr x0,[x24]
+015a971c  ldr x8,[x0, #0xb8]
+015a9720  ldr x0,[x8, #0x20]
+015a9724  cbz x0,0x015a9754
+015a9728  mov x1,x23
+015a972c  mov x2,x19
+015a9730  mov x3,x22
+015a9734  mov w4,w21
+015a9738  mov w5,w20
+015a973c  ldp x19,x30,[sp, #0x30]
+015a9740  ldp x21,x20,[sp, #0x20]
+015a9744  ldp x23,x22,[sp, #0x10]
+015a9748  mov x6,xzr
+015a974c  ldp x25,x24,[sp], #0x40
+015a9750  b 0x010c18dc
+015a9754  ldr x0,[x23, #0x10]
+015a9758  cbz x0,0x015a9800
+015a975c  adrp x8,0x337a000
+015a9760  ldr x8,[x8, #0x8c0]
+015a9764  mov x1,x19
+015a9768  ldr x2,[x8]
+015a976c  bl 0x0196e6d8
+015a9770  tbz w0,#0x0,0x015a9788
+015a9774  ldp x19,x30,[sp, #0x30]
+015a9778  ldp x21,x20,[sp, #0x20]
+015a977c  ldp x23,x22,[sp, #0x10]
+015a9780  ldp x25,x24,[sp], #0x40
+015a9784  ret
+015a9788  adrp x25,0x332b000
+015a978c  ldr x24,[x23, #0x10]
+015a9790  ldr x25,[x25, #0xb40]
+015a9794  mov x0,x23
+015a9798  bl 0x015a91b0
+015a979c  ldr x8,[x25]
+015a97a0  mov x25,x0
+015a97a4  mov x0,x8
+015a97a8  bl 0x00b079a0
+015a97ac  cbz x0,0x015a9800
+015a97b0  mov x1,x19
+015a97b4  mov x2,x22
+015a97b8  mov x3,x25
+015a97bc  mov w4,w21
+015a97c0  mov w5,w20
+015a97c4  mov x6,xzr
+015a97c8  mov x23,x0
+015a97cc  bl 0x015a8848
+015a97d0  cbz x24,0x015a9800
+015a97d4  adrp x8,0x336c000
+015a97d8  ldr x8,[x8, #0xf28]
+015a97dc  mov x1,x19
+015a97e0  mov x2,x23
+015a97e4  ldp x19,x30,[sp, #0x30]
+015a97e8  ldr x3,[x8]
+015a97ec  ldp x21,x20,[sp, #0x20]
+015a97f0  ldp x23,x22,[sp, #0x10]
+015a97f4  mov x0,x24
+015a97f8  ldp x25,x24,[sp], #0x40
+015a97fc  b 0x0196e4c0
+015a9800  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9804_SG.PoolTools__GetObjectFromPool.txt
+================================================================================
+Function: SG.PoolTools$$GetObjectFromPool @ 015a9804
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<object,-object>$$ContainsKey @ 0196e6d8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.Collections.Generic.Dictionary<object,-object>$$get_Item @ 0196e450
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp744 @ 010c1af4
+  -> SG.Pool$$NextAvailableObject @ 015a8e84
+  -> FUN_00b079b0 @ 00b079b0
+  -> SG.PoolTools$$InitPool @ 015a93ec
+
+--- Calls IN ---
+  <- BattleCache$$GetBattleHitNum @ 00ecf370
+  <- UnityEngine.UI.LoopScrollPrefabSource$$GetObject @ 015bcd30
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$_m_GetObjectFromPool @ 013cac70
+
+--- Listing ---
+015a9804  str x24,[sp, #-0x40]!
+015a9808  stp x23,x22,[sp, #0x10]
+015a980c  stp x21,x20,[sp, #0x20]
+015a9810  stp x19,x30,[sp, #0x30]
+015a9814  adrp x24,0x3577000
+015a9818  adrp x23,0x334e000
+015a981c  ldrb w8,[x24, #0x6f]
+015a9820  ldr x23,[x23, #0x228]
+015a9824  mov w22,w3
+015a9828  mov w19,w2
+015a982c  mov x20,x1
+015a9830  mov x21,x0
+015a9834  tbnz w8,#0x0,0x015a9864
+015a9838  adrp x0,0x337a000
+015a983c  ldr x0,[x0, #0x8c0]
+015a9840  bl 0x00b0789c
+015a9844  adrp x0,0x3318000
+015a9848  ldr x0,[x0, #0x40]
+015a984c  bl 0x00b0789c
+015a9850  adrp x0,0x334e000
+015a9854  ldr x0,[x0, #0x228]
+015a9858  bl 0x00b0789c
+015a985c  mov w8,#0x1
+015a9860  strb w8,[x24, #0x6f]
+015a9864  ldr x0,[x23]
+015a9868  ldr w8,[x0, #0xe0]
+015a986c  cbnz w8,0x015a9878
+015a9870  bl 0x00b0798c
+015a9874  ldr x0,[x23]
+015a9878  ldr x8,[x0, #0xb8]
+015a987c  ldr x0,[x8, #0x28]
+015a9880  cbz x0,0x015a98ac
+015a9884  and w3,w19,#0x1
+015a9888  mov x1,x21
+015a988c  mov x2,x20
+015a9890  mov w4,w22
+015a9894  ldp x19,x30,[sp, #0x30]
+015a9898  ldp x21,x20,[sp, #0x20]
+015a989c  ldp x23,x22,[sp, #0x10]
+015a98a0  mov x5,xzr
+015a98a4  ldr x24,[sp], #0x40
+015a98a8  b 0x010c1af4
+015a98ac  ldr x0,[x21, #0x10]
+015a98b0  cbz x0,0x015a9950
+015a98b4  adrp x23,0x337a000
+015a98b8  ldr x23,[x23, #0x8c0]
+015a98bc  mov x1,x20
+015a98c0  ldr x2,[x23]
+015a98c4  bl 0x0196e6d8
+015a98c8  cmp w22,#0x1
+015a98cc  b.lt 0x015a98e8
+015a98d0  tbnz w0,#0x0,0x015a98e8
+015a98d4  mov x0,x21
+015a98d8  mov x1,x20
+015a98dc  mov w2,w22
+015a98e0  mov w3,wzr
+015a98e4  bl 0x015a93ec
+015a98e8  ldr x0,[x21, #0x10]
+015a98ec  cbz x0,0x015a9950
+015a98f0  ldr x2,[x23]
+015a98f4  mov x1,x20
+015a98f8  bl 0x0196e6d8
+015a98fc  tbz w0,#0x0,0x015a9938
+015a9900  ldr x0,[x21, #0x10]
+015a9904  cbz x0,0x015a9950
+015a9908  adrp x8,0x3318000
+015a990c  ldr x8,[x8, #0x40]
+015a9910  mov x1,x20
+015a9914  ldr x2,[x8]
+015a9918  bl 0x0196e450
+015a991c  cbz x0,0x015a9950
+015a9920  and w1,w19,#0x1
+015a9924  ldp x19,x30,[sp, #0x30]
+015a9928  ldp x21,x20,[sp, #0x20]
+015a992c  ldp x23,x22,[sp, #0x10]
+015a9930  ldr x24,[sp], #0x40
+015a9934  b 0x015a8e84
+015a9938  ldp x19,x30,[sp, #0x30]
+015a993c  ldp x21,x20,[sp, #0x20]
+015a9940  ldp x23,x22,[sp, #0x10]
+015a9944  mov x0,xzr
+015a9948  ldr x24,[sp], #0x40
+015a994c  ret
+015a9950  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9954_SG.PoolTools__ReturnObjectToPool.txt
+================================================================================
+Function: SG.PoolTools$$ReturnObjectToPool @ 015a9954
+
+--- Calls OUT ---
+  -> UnityEngine.Transform$$get_parent @ 024f42ec
+  -> UnityEngine.Transform$$SetParent @ 024f44b4
+  -> UnityEngine.GameObject$$get_transform @ 024de730
+  -> System.Collections.Generic.Dictionary<object,-object>$$TryGetValue @ 0196fd30
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> UnityEngine.Object$$Destroy @ 024dfed4
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> SG.Pool$$ReturnObjectToPool @ 015a8ff8
+
+--- Calls IN ---
+  <- BattleCache$$ReturnBattleHitNum @ 00ecf538
+  <- SG.PoolTools$$ReturnTransformToPool @ 015a9b2c
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$_m_ReturnObjectToPool @ 013cb09c
+  <- UnityEngine.UI.LoopScrollPrefabSource$$ReturnObject @ 015bcef4
+
+--- Listing ---
+015a9954  str x22,[sp, #-0x30]!
+015a9958  stp x21,x20,[sp, #0x10]
+015a995c  stp x19,x30,[sp, #0x20]
+015a9960  adrp x22,0x3577000
+015a9964  adrp x21,0x334e000
+015a9968  ldrb w8,[x22, #0x70]
+015a996c  ldr x21,[x21, #0x228]
+015a9970  mov x19,x1
+015a9974  mov x20,x0
+015a9978  tbnz w8,#0x0,0x015a99b4
+015a997c  adrp x0,0x333e000
+015a9980  ldr x0,[x0, #0x678]
+015a9984  bl 0x00b0789c
+015a9988  adrp x0,0x333d000
+015a998c  ldr x0,[x0, #0x8e8]
+015a9990  bl 0x00b0789c
+015a9994  adrp x0,0x3321000
+015a9998  ldr x0,[x0, #0xca8]
+015a999c  bl 0x00b0789c
+015a99a0  adrp x0,0x334e000
+015a99a4  ldr x0,[x0, #0x228]
+015a99a8  bl 0x00b0789c
+015a99ac  mov w8,#0x1
+015a99b0  strb w8,[x22, #0x70]
+015a99b4  ldr x0,[x21]
+015a99b8  str xzr,[sp, #0x8]
+015a99bc  ldr w8,[x0, #0xe0]
+015a99c0  cbnz w8,0x015a99cc
+015a99c4  bl 0x00b0798c
+015a99c8  ldr x0,[x21]
+015a99cc  ldr x8,[x0, #0xb8]
+015a99d0  ldr x0,[x8, #0x30]
+015a99d4  cbz x0,0x015a99ec
+015a99d8  mov x1,x20
+015a99dc  mov x2,x19
+015a99e0  mov x3,xzr
+015a99e4  bl 0x0106125c
+015a99e8  b 0x015a9b18
+015a99ec  adrp x22,0x3321000
+015a99f0  ldr x22,[x22, #0xca8]
+015a99f4  ldr x0,[x22]
+015a99f8  ldr w8,[x0, #0xe0]
+015a99fc  cbnz w8,0x015a9a04
+015a9a00  bl 0x00b0798c
+015a9a04  mov x0,x19
+015a9a08  mov x1,xzr
+015a9a0c  mov x2,xzr
+015a9a10  bl 0x024c8180
+015a9a14  tbnz w0,#0x0,0x015a9b18
+015a9a18  cbz x19,0x015a9b28
+015a9a1c  adrp x8,0x333d000
+015a9a20  ldr x8,[x8, #0x8e8]
+015a9a24  mov x0,x19
+015a9a28  ldr x1,[x8]
+015a9a2c  bl 0x01794e94
+015a9a30  ldr x8,[x22]
+015a9a34  str xzr,[sp, #0x8]
+015a9a38  mov x21,x0
+015a9a3c  ldr w9,[x8, #0xe0]
+015a9a40  cbnz w9,0x015a9a4c
+015a9a44  mov x0,x8
+015a9a48  bl 0x00b0798c
+015a9a4c  mov x0,x21
+015a9a50  mov x1,xzr
+015a9a54  mov x2,xzr
+015a9a58  bl 0x024de30c
+015a9a5c  tbz w0,#0x0,0x015a9a9c
+015a9a60  cbz x21,0x015a9b28
+015a9a64  ldr x0,[x20, #0x10]
+015a9a68  cbz x0,0x015a9b28
+015a9a6c  adrp x8,0x333e000
+015a9a70  ldr x8,[x8, #0x678]
+015a9a74  ldr x1,[x21, #0x18]
+015a9a78  add x2,sp,#0x8
+015a9a7c  ldr x3,[x8]
+015a9a80  bl 0x0196fd30
+015a9a84  tbz w0,#0x0,0x015a9a9c
+015a9a88  ldr x0,[sp, #0x8]
+015a9a8c  cbz x0,0x015a9b28
+015a9a90  mov x1,x21
+015a9a94  bl 0x015a8ff8
+015a9a98  b 0x015a9b18
+015a9a9c  mov x0,x19
+015a9aa0  mov x1,xzr
+015a9aa4  bl 0x024de730
+015a9aa8  cbz x0,0x015a9b28
+015a9aac  mov x1,xzr
+015a9ab0  bl 0x024f42ec
+015a9ab4  ldr x8,[x22]
+015a9ab8  mov x20,x0
+015a9abc  ldr w9,[x8, #0xe0]
+015a9ac0  cbnz w9,0x015a9acc
+015a9ac4  mov x0,x8
+015a9ac8  bl 0x00b0798c
+015a9acc  mov x0,x20
+015a9ad0  mov x1,xzr
+015a9ad4  mov x2,xzr
+015a9ad8  bl 0x024de30c
+015a9adc  tbz w0,#0x0,0x015a9afc
+015a9ae0  mov x0,x19
+015a9ae4  mov x1,xzr
+015a9ae8  bl 0x024de730
+015a9aec  cbz x0,0x015a9b28
+015a9af0  mov x1,xzr
+015a9af4  mov x2,xzr
+015a9af8  bl 0x024f44b4
+015a9afc  ldr x0,[x22]
+015a9b00  ldr w8,[x0, #0xe0]
+015a9b04  cbnz w8,0x015a9b0c
+015a9b08  bl 0x00b0798c
+015a9b0c  mov x0,x19
+015a9b10  mov x1,xzr
+015a9b14  bl 0x024dfed4
+015a9b18  ldp x19,x30,[sp, #0x20]
+015a9b1c  ldp x21,x20,[sp, #0x10]
+015a9b20  ldr x22,[sp], #0x30
+015a9b24  ret
+015a9b28  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9b2c_SG.PoolTools__ReturnTransformToPool.txt
+================================================================================
+Function: SG.PoolTools$$ReturnTransformToPool @ 015a9b2c
+
+--- Calls OUT ---
+  -> SG.PoolTools$$ReturnObjectToPool @ 015a9954
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> UnityEngine.Transform$$SetParent @ 024f44fc
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$SetActive @ 024de86c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$_m_ReturnTransformToPool @ 013cb588
+
+--- Listing ---
+015a9b2c  str x22,[sp, #-0x30]!
+015a9b30  stp x21,x20,[sp, #0x10]
+015a9b34  stp x19,x30,[sp, #0x20]
+015a9b38  adrp x22,0x3577000
+015a9b3c  adrp x21,0x334e000
+015a9b40  ldrb w8,[x22, #0x72]
+015a9b44  ldr x21,[x21, #0x228]
+015a9b48  mov x20,x1
+015a9b4c  mov x19,x0
+015a9b50  tbnz w8,#0x0,0x015a9b74
+015a9b54  adrp x0,0x3321000
+015a9b58  ldr x0,[x0, #0xca8]
+015a9b5c  bl 0x00b0789c
+015a9b60  adrp x0,0x334e000
+015a9b64  ldr x0,[x0, #0x228]
+015a9b68  bl 0x00b0789c
+015a9b6c  mov w8,#0x1
+015a9b70  strb w8,[x22, #0x72]
+015a9b74  ldr x0,[x21]
+015a9b78  ldr w8,[x0, #0xe0]
+015a9b7c  cbnz w8,0x015a9b88
+015a9b80  bl 0x00b0798c
+015a9b84  ldr x0,[x21]
+015a9b88  ldr x8,[x0, #0xb8]
+015a9b8c  ldr x0,[x8, #0x40]
+015a9b90  cbz x0,0x015a9bb0
+015a9b94  mov x1,x19
+015a9b98  mov x2,x20
+015a9b9c  ldp x19,x30,[sp, #0x20]
+015a9ba0  ldp x21,x20,[sp, #0x10]
+015a9ba4  mov x3,xzr
+015a9ba8  ldr x22,[sp], #0x30
+015a9bac  b 0x0106125c
+015a9bb0  adrp x8,0x3321000
+015a9bb4  ldr x8,[x8, #0xca8]
+015a9bb8  ldr x0,[x8]
+015a9bbc  ldr w8,[x0, #0xe0]
+015a9bc0  cbnz w8,0x015a9bc8
+015a9bc4  bl 0x00b0798c
+015a9bc8  mov x0,x20
+015a9bcc  mov x1,xzr
+015a9bd0  mov x2,xzr
+015a9bd4  bl 0x024c8180
+015a9bd8  tbz w0,#0x0,0x015a9bec
+015a9bdc  ldp x19,x30,[sp, #0x20]
+015a9be0  ldp x21,x20,[sp, #0x10]
+015a9be4  ldr x22,[sp], #0x30
+015a9be8  ret
+015a9bec  cbz x20,0x015a9c44
+015a9bf0  mov x0,x20
+015a9bf4  mov x1,xzr
+015a9bf8  bl 0x024e4ed4
+015a9bfc  cbz x0,0x015a9c44
+015a9c00  mov w1,wzr
+015a9c04  mov x2,xzr
+015a9c08  bl 0x024de86c
+015a9c0c  mov x0,x20
+015a9c10  mov x1,xzr
+015a9c14  mov w2,wzr
+015a9c18  mov x3,xzr
+015a9c1c  bl 0x024f44fc
+015a9c20  mov x0,x20
+015a9c24  mov x1,xzr
+015a9c28  bl 0x024e4ed4
+015a9c2c  mov x1,x0
+015a9c30  mov x0,x19
+015a9c34  ldp x19,x30,[sp, #0x20]
+015a9c38  ldp x21,x20,[sp, #0x10]
+015a9c3c  ldr x22,[sp], #0x30
+015a9c40  b 0x015a9954
+015a9c44  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9c48_SG.PoolTools__Remove.txt
+================================================================================
+Function: SG.PoolTools$$Remove @ 015a9c48
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SG.Pool$$Clear @ 015a905c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.Collections.Generic.Dictionary<object,-object>$$TryGetValue @ 0196fd30
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary<object,-object>$$Remove @ 0196fa1c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$_m_Remove @ 013cb80c
+  <- YingyuanPanelMono$$OnDestroyBefore @ 01055a8c
+  <- RankCVCPanelMono$$OnDestroyBefore @ 00ef16fc
+  <- BattleCache$$RemoveBattleHitNum @ 00ecf65c
+
+--- Listing ---
+015a9c48  str x22,[sp, #-0x30]!
+015a9c4c  stp x21,x20,[sp, #0x10]
+015a9c50  stp x19,x30,[sp, #0x20]
+015a9c54  adrp x22,0x3577000
+015a9c58  adrp x21,0x334e000
+015a9c5c  ldrb w8,[x22, #0x73]
+015a9c60  ldr x21,[x21, #0x228]
+015a9c64  mov x19,x1
+015a9c68  mov x20,x0
+015a9c6c  tbnz w8,#0x0,0x015a9c9c
+015a9c70  adrp x0,0x3379000
+015a9c74  ldr x0,[x0, #0x768]
+015a9c78  bl 0x00b0789c
+015a9c7c  adrp x0,0x333e000
+015a9c80  ldr x0,[x0, #0x678]
+015a9c84  bl 0x00b0789c
+015a9c88  adrp x0,0x334e000
+015a9c8c  ldr x0,[x0, #0x228]
+015a9c90  bl 0x00b0789c
+015a9c94  mov w8,#0x1
+015a9c98  strb w8,[x22, #0x73]
+015a9c9c  ldr x0,[x21]
+015a9ca0  str xzr,[sp, #0x8]
+015a9ca4  ldr w8,[x0, #0xe0]
+015a9ca8  cbnz w8,0x015a9cb4
+015a9cac  bl 0x00b0798c
+015a9cb0  ldr x0,[x21]
+015a9cb4  ldr x8,[x0, #0xb8]
+015a9cb8  ldr x0,[x8, #0x48]
+015a9cbc  cbz x0,0x015a9cd4
+015a9cc0  mov x1,x20
+015a9cc4  mov x2,x19
+015a9cc8  mov x3,xzr
+015a9ccc  bl 0x0106125c
+015a9cd0  b 0x015a9d28
+015a9cd4  str xzr,[sp, #0x8]
+015a9cd8  ldr x0,[x20, #0x10]
+015a9cdc  cbz x0,0x015a9d38
+015a9ce0  adrp x8,0x333e000
+015a9ce4  ldr x8,[x8, #0x678]
+015a9ce8  add x2,sp,#0x8
+015a9cec  mov x1,x19
+015a9cf0  ldr x3,[x8]
+015a9cf4  bl 0x0196fd30
+015a9cf8  tbz w0,#0x0,0x015a9d28
+015a9cfc  ldr x0,[sp, #0x8]
+015a9d00  cbz x0,0x015a9d38
+015a9d04  bl 0x015a905c
+015a9d08  tbz w0,#0x0,0x015a9d28
+015a9d0c  ldr x0,[x20, #0x10]
+015a9d10  cbz x0,0x015a9d38
+015a9d14  adrp x8,0x3379000
+015a9d18  ldr x8,[x8, #0x768]
+015a9d1c  mov x1,x19
+015a9d20  ldr x2,[x8]
+015a9d24  bl 0x0196fa1c
+015a9d28  ldp x19,x30,[sp, #0x20]
+015a9d2c  ldp x21,x20,[sp, #0x10]
+015a9d30  ldr x22,[sp], #0x30
+015a9d34  ret
+015a9d38  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9d3c_SG.PoolTools__.ctor.txt
+================================================================================
+Function: SG.PoolTools$$.ctor @ 015a9d3c
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<object,-object>$$.ctor @ 0196dbb0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- SG.PoolTools$$.cctor @ 015a9e10
+  <- XLua.CSObjectWrap.SGPoolToolsWrap$$__CreateInstance @ 013ca24c
+
+--- Listing ---
+015a9d3c  stp x21,x20,[sp, #-0x20]!
+015a9d40  stp x19,x30,[sp, #0x10]
+015a9d44  adrp x20,0x3577000
+015a9d48  adrp x21,0x331d000
+015a9d4c  ldrb w8,[x20, #0x74]
+015a9d50  ldr x21,[x21, #0x2b0]
+015a9d54  mov x19,x0
+015a9d58  tbnz w8,#0x0,0x015a9d88
+015a9d5c  adrp x0,0x332e000
+015a9d60  ldr x0,[x0, #0x448]
+015a9d64  bl 0x00b0789c
+015a9d68  adrp x0,0x331d000
+015a9d6c  ldr x0,[x0, #0x2b0]
+015a9d70  bl 0x00b0789c
+015a9d74  adrp x0,0x334e000
+015a9d78  ldr x0,[x0, #0x228]
+015a9d7c  bl 0x00b0789c
+015a9d80  mov w8,#0x1
+015a9d84  strb w8,[x20, #0x74]
+015a9d88  ldr x0,[x21]
+015a9d8c  bl 0x00b079a0
+015a9d90  cbz x0,0x015a9e0c
+015a9d94  adrp x8,0x332e000
+015a9d98  ldr x8,[x8, #0x448]
+015a9d9c  adrp x21,0x334e000
+015a9da0  mov x20,x0
+015a9da4  ldr x1,[x8]
+015a9da8  ldr x21,[x21, #0x228]
+015a9dac  bl 0x0196dbb0
+015a9db0  mov x0,x19
+015a9db4  str x20,[x0, #0x10]!
+015a9db8  mov x1,x20
+015a9dbc  bl 0x00b07850
+015a9dc0  mov x0,x19
+015a9dc4  mov x1,xzr
+015a9dc8  bl 0x02194104
+015a9dcc  ldr x0,[x21]
+015a9dd0  ldr w8,[x0, #0xe0]
+015a9dd4  cbnz w8,0x015a9de0
+015a9dd8  bl 0x00b0798c
+015a9ddc  ldr x0,[x21]
+015a9de0  ldr x8,[x0, #0xb8]
+015a9de4  ldr x0,[x8, #0x50]
+015a9de8  cbz x0,0x015a9e00
+015a9dec  mov x1,x19
+015a9df0  ldp x19,x30,[sp, #0x10]
+015a9df4  mov x2,xzr
+015a9df8  ldp x21,x20,[sp], #0x20
+015a9dfc  b 0x01060dac
+015a9e00  ldp x19,x30,[sp, #0x10]
+015a9e04  ldp x21,x20,[sp], #0x20
+015a9e08  ret
+015a9e0c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9e10_SG.PoolTools__.cctor.txt
+================================================================================
+Function: SG.PoolTools$$.cctor @ 015a9e10
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SG.PoolTools$$.ctor @ 015a9d3c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+015a9e10  str x20,[sp, #-0x20]!
+015a9e14  stp x19,x30,[sp, #0x10]
+015a9e18  adrp x19,0x3577000
+015a9e1c  adrp x20,0x334e000
+015a9e20  ldrb w8,[x19, #0x75]
+015a9e24  ldr x20,[x20, #0x228]
+015a9e28  tbnz w8,#0x0,0x015a9e40
+015a9e2c  adrp x0,0x334e000
+015a9e30  ldr x0,[x0, #0x228]
+015a9e34  bl 0x00b0789c
+015a9e38  mov w8,#0x1
+015a9e3c  strb w8,[x19, #0x75]
+015a9e40  ldr x0,[x20]
+015a9e44  bl 0x00b079a0
+015a9e48  cbz x0,0x015a9e78
+015a9e4c  mov x19,x0
+015a9e50  bl 0x015a9d3c
+015a9e54  ldr x8,[x20]
+015a9e58  mov x1,x19
+015a9e5c  ldr x8,[x8, #0xb8]
+015a9e60  str x19,[x8]
+015a9e64  ldr x8,[x20]
+015a9e68  ldp x19,x30,[sp, #0x10]
+015a9e6c  ldr x0,[x8, #0xb8]
+015a9e70  ldr x20,[sp], #0x20
+015a9e74  b 0x00b07850
+015a9e78  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9e7c_SG.InitOnStart__Start.txt
+================================================================================
+Function: SG.InitOnStart$$Start @ 015a9e7c
+
+--- Calls OUT ---
+  -> UnityEngine.UI.LoopScrollRect$$RefillCells @ 015bf090
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+015a9e7c  stp x21,x20,[sp, #-0x20]!
+015a9e80  stp x19,x30,[sp, #0x10]
+015a9e84  adrp x20,0x3577000
+015a9e88  adrp x21,0x3324000
+015a9e8c  ldrb w8,[x20, #0x76]
+015a9e90  ldr x21,[x21, #0x720]
+015a9e94  mov x19,x0
+015a9e98  tbnz w8,#0x0,0x015a9ebc
+015a9e9c  adrp x0,0x3309000
+015a9ea0  ldr x0,[x0, #0x80]
+015a9ea4  bl 0x00b0789c
+015a9ea8  adrp x0,0x3324000
+015a9eac  ldr x0,[x0, #0x720]
+015a9eb0  bl 0x00b0789c
+015a9eb4  mov w8,#0x1
+015a9eb8  strb w8,[x20, #0x76]
+015a9ebc  ldr x8,[x21]
+015a9ec0  ldr x8,[x8, #0xb8]
+015a9ec4  ldr x0,[x8]
+015a9ec8  cbz x0,0x015a9ee0
+015a9ecc  mov x1,x19
+015a9ed0  ldp x19,x30,[sp, #0x10]
+015a9ed4  mov x2,xzr
+015a9ed8  ldp x21,x20,[sp], #0x20
+015a9edc  b 0x01060dac
+015a9ee0  adrp x8,0x3309000
+015a9ee4  ldr x8,[x8, #0x80]
+015a9ee8  mov x0,x19
+015a9eec  ldr x1,[x8]
+015a9ef0  bl 0x0176cbf8
+015a9ef4  cbz x0,0x015a9f14
+015a9ef8  ldr w8,[x19, #0x18]
+015a9efc  mov w1,wzr
+015a9f00  mov x2,xzr
+015a9f04  str w8,[x0, #0x20]
+015a9f08  ldp x19,x30,[sp, #0x10]
+015a9f0c  ldp x21,x20,[sp], #0x20
+015a9f10  b 0x015bf090
+015a9f14  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 015a9f18_SG.InitOnStart__.ctor.txt
+================================================================================
+Function: SG.InitOnStart$$.ctor @ 015a9f18
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- FUN_013c9004 @ 013c9004
+
+--- Listing ---
+015a9f18  stp x21,x20,[sp, #-0x20]!
+015a9f1c  stp x19,x30,[sp, #0x10]
+015a9f20  adrp x21,0x3577000
+015a9f24  adrp x20,0x3324000
+015a9f28  ldrb w8,[x21, #0x77]
+015a9f2c  ldr x20,[x20, #0x720]
+015a9f30  mov x19,x0
+015a9f34  tbnz w8,#0x0,0x015a9f4c
+015a9f38  adrp x0,0x3324000
+015a9f3c  ldr x0,[x0, #0x720]
+015a9f40  bl 0x00b0789c
+015a9f44  mov w8,#0x1
+015a9f48  strb w8,[x21, #0x77]
+015a9f4c  mov w8,#0xffffffff
+015a9f50  mov x0,x19
+015a9f54  mov x1,xzr
+015a9f58  str w8,[x19, #0x18]
+015a9f5c  bl 0x024e45bc
+015a9f60  ldr x8,[x20]
+015a9f64  ldr x8,[x8, #0xb8]
+015a9f68  ldr x0,[x8, #0x8]
+015a9f6c  cbz x0,0x015a9f84
+015a9f70  mov x1,x19
+015a9f74  ldp x19,x30,[sp, #0x10]
+015a9f78  mov x2,xzr
+015a9f7c  ldp x21,x20,[sp], #0x20
+015a9f80  b 0x01060dac
+015a9f84  ldp x19,x30,[sp, #0x10]
+015a9f88  ldp x21,x20,[sp], #0x20
+015a9f8c  ret
+
+

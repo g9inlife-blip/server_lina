@@ -1,0 +1,21 @@
+{
+  "stage": "7.1",
+  "json_file_count": 74,
+  "parsed_file_count": 74,
+  "unique_record_ids": 118015,
+  "package_values_found": 422,
+  "package_values_with_exact_record_definition": 416,
+  "package_values_without_exact_record_definition": 6,
+  "package_records_analyzed": 416,
+  "incoming_reference_rows": 464,
+  "package_records_with_incoming_refs": 416,
+  "package_records_with_multiple_system_contexts": 33,
+  "package_member_reference_rows": 0,
+  "parse_errors": 0,
+  "rules": {
+    "package_semantics": "generic candidate; not fixed to gacha",
+    "record_fk": "exact logical-ID equality only",
+    "probability_quantity_price": "not inferred",
+    "server_only": "not inferable from JSON alone"
+  }
+}

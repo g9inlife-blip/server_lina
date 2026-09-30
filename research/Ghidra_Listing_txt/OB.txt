@@ -1,0 +1,311 @@
+================================================================================
+### FILE: 00d33f70_ObjectCreatePackage__.ctor.txt
+================================================================================
+Function: ObjectCreatePackage$$.ctor @ 00d33f70
+
+--- Calls OUT ---
+  -> BasePackage$$.ctor @ 00d34f84
+  -> BasePackage$$initWriter @ 00d34e94
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ClickManagerExample$$Update @ 00d33c60
+
+--- Listing ---
+00d33f70  stp d9,d8,[sp, #-0x20]!
+00d33f74  stp x19,x30,[sp, #0x10]
+00d33f78  mov v8.16B,v1.16B
+00d33f7c  mov v9.16B,v0.16B
+00d33f80  mov x19,x0
+00d33f84  bl 0x00d34f84
+00d33f88  mov x0,x19
+00d33f8c  bl 0x00d34e94
+00d33f90  ldr x0,[x19, #0x18]
+00d33f94  cbz x0,0x00d33fd0
+00d33f98  ldr x8,[x0]
+00d33f9c  mov v0.16B,v9.16B
+00d33fa0  ldr x9,[x8, #0x278]
+00d33fa4  ldr x1,[x8, #0x280]
+00d33fa8  blr x9
+00d33fac  ldr x0,[x19, #0x18]
+00d33fb0  cbz x0,0x00d33fd0
+00d33fb4  ldr x8,[x0]
+00d33fb8  ldp x19,x30,[sp, #0x10]
+00d33fbc  mov v0.16B,v8.16B
+00d33fc0  ldr x2,[x8, #0x278]
+00d33fc4  ldr x1,[x8, #0x280]
+00d33fc8  ldp d9,d8,[sp], #0x20
+00d33fcc  br x2
+00d33fd0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d35000_ObjectCreatePackage__getId.txt
+================================================================================
+Function: ObjectCreatePackage$$getId @ 00d35000
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d35000  mov w0,#0x1
+00d35004  ret
+
+
+================================================================================
+### FILE: 00d98150_ObserveAttribute__.ctor.txt
+================================================================================
+Function: ObserveAttribute$$.ctor @ 00d98150
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.PropertyAttribute$$.ctor @ 024dbdd8
+
+--- Calls IN ---
+
+--- Listing ---
+00d98150  str x20,[sp, #-0x20]!
+00d98154  stp x19,x30,[sp, #0x10]
+00d98158  mov x19,x1
+00d9815c  mov x1,xzr
+00d98160  mov x20,x0
+00d98164  bl 0x024dbdd8
+00d98168  str x19,[x20, #0x18]!
+00d9816c  mov x1,x19
+00d98170  ldp x19,x30,[sp, #0x10]
+00d98174  mov x0,x20
+00d98178  ldr x20,[sp], #0x20
+00d9817c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d98180_ObserveExample__Callback.txt
+================================================================================
+Function: ObserveExample$$Callback @ 00d98180
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00d98180  str x20,[sp, #-0x20]!
+00d98184  stp x19,x30,[sp, #0x10]
+00d98188  adrp x20,0x3571000
+00d9818c  adrp x19,0x336b000
+00d98190  ldrb w8,[x20, #0xfdb]
+00d98194  ldr x19,[x19, #0x7d0]
+00d98198  tbnz w8,#0x0,0x00d981bc
+00d9819c  adrp x0,0x336b000
+00d981a0  ldr x0,[x0, #0x7d0]
+00d981a4  bl 0x00b0789c
+00d981a8  adrp x0,0x334a000
+00d981ac  ldr x0,[x0, #0xd98]
+00d981b0  bl 0x00b0789c
+00d981b4  mov w8,#0x1
+00d981b8  strb w8,[x20, #0xfdb]
+00d981bc  ldr x0,[x19]
+00d981c0  adrp x19,0x334a000
+00d981c4  ldr w8,[x0, #0xe0]
+00d981c8  ldr x19,[x19, #0xd98]
+00d981cc  cbnz w8,0x00d981d4
+00d981d0  bl 0x00b0798c
+00d981d4  ldr x0,[x19]
+00d981d8  ldp x19,x30,[sp, #0x10]
+00d981dc  mov x1,xzr
+00d981e0  ldr x20,[sp], #0x20
+00d981e4  b 0x024c0104
+
+
+================================================================================
+### FILE: 00d981e8_ObserveExample__Callback2.txt
+================================================================================
+Function: ObserveExample$$Callback2 @ 00d981e8
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00d981e8  str x20,[sp, #-0x20]!
+00d981ec  stp x19,x30,[sp, #0x10]
+00d981f0  adrp x20,0x3571000
+00d981f4  adrp x19,0x336b000
+00d981f8  ldrb w8,[x20, #0xfdc]
+00d981fc  ldr x19,[x19, #0x7d0]
+00d98200  tbnz w8,#0x0,0x00d98224
+00d98204  adrp x0,0x336b000
+00d98208  ldr x0,[x0, #0x7d0]
+00d9820c  bl 0x00b0789c
+00d98210  adrp x0,0x3375000
+00d98214  ldr x0,[x0, #0x930]
+00d98218  bl 0x00b0789c
+00d9821c  mov w8,#0x1
+00d98220  strb w8,[x20, #0xfdc]
+00d98224  ldr x0,[x19]
+00d98228  adrp x19,0x3375000
+00d9822c  ldr w8,[x0, #0xe0]
+00d98230  ldr x19,[x19, #0x930]
+00d98234  cbnz w8,0x00d9823c
+00d98238  bl 0x00b0798c
+00d9823c  ldr x0,[x19]
+00d98240  ldp x19,x30,[sp, #0x10]
+00d98244  mov x1,xzr
+00d98248  ldr x20,[sp], #0x20
+00d9824c  b 0x024c0104
+
+
+================================================================================
+### FILE: 00d98250_ObserveExample__.ctor.txt
+================================================================================
+Function: ObserveExample$$.ctor @ 00d98250
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d98250  mov x1,xzr
+00d98254  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00da7e3c_ObjectMetadata__get_ElementType.txt
+================================================================================
+Function: ObjectMetadata$$get_ElementType @ 00da7e3c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Type$$GetTypeFromHandle @ 0215f900
+  -> System.Type$$op_Equality @ 02168d68
+
+--- Calls IN ---
+  <- FUN_008db91c @ 008db91c
+  <- JsonMapper$$ReadValue @ 00dab9e8
+
+--- Listing ---
+00da7e3c  stp x21,x20,[sp, #-0x20]!
+00da7e40  stp x19,x30,[sp, #0x10]
+00da7e44  adrp x20,0x3572000
+00da7e48  adrp x21,0x3347000
+00da7e4c  ldrb w8,[x20, #0x92]
+00da7e50  ldr x21,[x21, #0xd68]
+00da7e54  mov x19,x0
+00da7e58  tbnz w8,#0x0,0x00da7e7c
+00da7e5c  adrp x0,0x337c000
+00da7e60  ldr x0,[x0, #0x460]
+00da7e64  bl 0x00b0789c
+00da7e68  adrp x0,0x3347000
+00da7e6c  ldr x0,[x0, #0xd68]
+00da7e70  bl 0x00b0789c
+00da7e74  mov w8,#0x1
+00da7e78  strb w8,[x20, #0x92]
+00da7e7c  ldr x0,[x21]
+00da7e80  ldr x20,[x19]
+00da7e84  ldr w8,[x0, #0xe0]
+00da7e88  cbnz w8,0x00da7e90
+00da7e8c  bl 0x00b0798c
+00da7e90  mov x0,x20
+00da7e94  mov x1,xzr
+00da7e98  mov x2,xzr
+00da7e9c  bl 0x02168d68
+00da7ea0  tbz w0,#0x0,0x00da7ed4
+00da7ea4  adrp x8,0x337c000
+00da7ea8  ldr x0,[x21]
+00da7eac  ldr x8,[x8, #0x460]
+00da7eb0  ldr w9,[x0, #0xe0]
+00da7eb4  ldr x19,[x8]
+00da7eb8  cbnz w9,0x00da7ec0
+00da7ebc  bl 0x00b0798c
+00da7ec0  mov x0,x19
+00da7ec4  ldp x19,x30,[sp, #0x10]
+00da7ec8  mov x1,xzr
+00da7ecc  ldp x21,x20,[sp], #0x20
+00da7ed0  b 0x0215f900
+00da7ed4  ldr x0,[x19]
+00da7ed8  ldp x19,x30,[sp, #0x10]
+00da7edc  ldp x21,x20,[sp], #0x20
+00da7ee0  ret
+
+
+================================================================================
+### FILE: 00da7ee4_ObjectMetadata__set_ElementType.txt
+================================================================================
+Function: ObjectMetadata$$set_ElementType @ 00da7ee4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+00da7ee4  str x1,[x0]
+00da7ee8  b 0x00b07850
+
+
+================================================================================
+### FILE: 00da7eec_ObjectMetadata__get_IsDictionary.txt
+================================================================================
+Function: ObjectMetadata$$get_IsDictionary @ 00da7eec
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da7eec  ldrb w0,[x0, #0x8]
+00da7ef0  ret
+
+
+================================================================================
+### FILE: 00da7ef4_ObjectMetadata__set_IsDictionary.txt
+================================================================================
+Function: ObjectMetadata$$set_IsDictionary @ 00da7ef4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da7ef4  and w8,w1,#0x1
+00da7ef8  strb w8,[x0, #0x8]
+00da7efc  ret
+
+
+================================================================================
+### FILE: 00da7f00_ObjectMetadata__get_Properties.txt
+================================================================================
+Function: ObjectMetadata$$get_Properties @ 00da7f00
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00da7f00  ldr x0,[x0, #0x10]
+00da7f04  ret
+
+
+================================================================================
+### FILE: 00da7f08_ObjectMetadata__set_Properties.txt
+================================================================================
+Function: ObjectMetadata$$set_Properties @ 00da7f08
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+00da7f08  str x1,[x0, #0x10]!
+00da7f0c  b 0x00b07850
+
+

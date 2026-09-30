@@ -1,0 +1,24 @@
+{
+  "player": {
+    "accountId": 0, "uid": "", "name": "KingBug", "castleName": "BugCastle",
+    "accountType": 1, "level": 100, "exp": 9999999,
+    "gold": 290909, "cash": 290909, "paidCash": 0, "heart": 290909,
+    "bestClearedStage": 10, "bestClearedTheme": 10,
+    "bestClearedHardStage": 10, "bestClearedHardTheme": 65,
+    "currentDeckPreset": 0, "playedCount": 0, "winCount": 0,
+    "hasFreeRename": true, "buildingPoints": 25
+  },
+  "cardTemplate": {
+    "level": 20, "exp": 0, "potentialTier": 0,
+    "skins": [], "favoriteSkinIds": [], "currentSkin": 0,
+    "randomSkinApply": false, "soul": 0
+  },
+  "invCount": 0,
+  "decks": [
+    {"deck": [10000, 10010, 10020, 10030, 10040, 10050], "potential": [0, 0, 0, 0, 0, 0], "firstComerIndex": 0},
+    {"deck": [10000, 10010, 10020, 10030, 10040, 10050], "potential": [0, 0, 0, 0, 0, 0], "firstComerIndex": 0},
+    {"deck": [10000, 10010, 10020, 10030, 10040, 10050], "potential": [0, 0, 0, 0, 0, 0], "firstComerIndex": 0},
+    {"deck": [10000, 10010, 10020, 10030, 10040, 10050], "potential": [0, 0, 0, 0, 0, 0], "firstComerIndex": 0},
+    {"deck": [10000, 10010, 10020, 10030, 10040, 10050], "potential": [0, 0, 0, 0, 0, 0], "firstComerIndex": 0}
+  ]
+}

@@ -1,0 +1,676 @@
+================================================================================
+### FILE: 008d46b0_btowc.txt
+================================================================================
+Function: btowc @ 008d46b0
+
+--- Calls OUT ---
+  -> btowc @ 03799350
+
+--- Calls IN ---
+  <- do_widen @ 00b73200
+  <- do_widen @ 00b7319c
+
+--- Listing ---
+008d46b0  adrp x16,0x3307000
+008d46b4  ldr x17,[x16, #0xd18]
+008d46b8  add x16,x16,#0xd18
+008d46bc  br x17
+
+
+================================================================================
+### FILE: 00e22c38_BtnImageState__ActiveShow.txt
+================================================================================
+Function: BtnImageState$$ActiveShow @ 00e22c38
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.UI.Image$$set_sprite @ 0257059c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp15 @ 010613e4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.BtnImageStateWrap$$_m_ActiveShow @ 01225bec
+  <- HeroPanelMono$$RefreshBtnState @ 00f3cc00
+
+--- Listing ---
+00e22c38  str x22,[sp, #-0x30]!
+00e22c3c  stp x21,x20,[sp, #0x10]
+00e22c40  stp x19,x30,[sp, #0x20]
+00e22c44  adrp x21,0x3572000
+00e22c48  adrp x22,0x335b000
+00e22c4c  ldrb w8,[x21, #0x66f]
+00e22c50  ldr x22,[x22, #0x7b8]
+00e22c54  mov w20,w1
+00e22c58  mov x19,x0
+00e22c5c  tbnz w8,#0x0,0x00e22c80
+00e22c60  adrp x0,0x335b000
+00e22c64  ldr x0,[x0, #0x7b8]
+00e22c68  bl 0x00b0789c
+00e22c6c  adrp x0,0x3321000
+00e22c70  ldr x0,[x0, #0xca8]
+00e22c74  bl 0x00b0789c
+00e22c78  mov w8,#0x1
+00e22c7c  strb w8,[x21, #0x66f]
+00e22c80  ldr x8,[x22]
+00e22c84  ldr x8,[x8, #0xb8]
+00e22c88  ldr x0,[x8]
+00e22c8c  cbz x0,0x00e22cac
+00e22c90  and w2,w20,#0x1
+00e22c94  mov x1,x19
+00e22c98  ldp x19,x30,[sp, #0x20]
+00e22c9c  ldp x21,x20,[sp, #0x10]
+00e22ca0  mov x3,xzr
+00e22ca4  ldr x22,[sp], #0x30
+00e22ca8  b 0x010613e4
+00e22cac  adrp x22,0x3321000
+00e22cb0  ldr x22,[x22, #0xca8]
+00e22cb4  ldr x21,[x19, #0x38]
+00e22cb8  ldr x0,[x22]
+00e22cbc  ldr w8,[x0, #0xe0]
+00e22cc0  cbnz w8,0x00e22cc8
+00e22cc4  bl 0x00b0798c
+00e22cc8  mov x0,x21
+00e22ccc  mov x1,xzr
+00e22cd0  mov x2,xzr
+00e22cd4  bl 0x024c8180
+00e22cd8  tbz w0,#0x0,0x00e22cec
+00e22cdc  ldp x19,x30,[sp, #0x20]
+00e22ce0  ldp x21,x20,[sp, #0x10]
+00e22ce4  ldr x22,[sp], #0x30
+00e22ce8  ret
+00e22cec  tbz w20,#0x0,0x00e22d28
+00e22cf0  ldr x0,[x22]
+00e22cf4  ldr x20,[x19, #0x48]
+00e22cf8  ldr w8,[x0, #0xe0]
+00e22cfc  cbnz w8,0x00e22d04
+00e22d00  bl 0x00b0798c
+00e22d04  mov x0,x20
+00e22d08  mov x1,xzr
+00e22d0c  mov x2,xzr
+00e22d10  bl 0x024de30c
+00e22d14  tbz w0,#0x0,0x00e22cdc
+00e22d18  ldr x0,[x19, #0x38]
+00e22d1c  cbz x0,0x00e22d70
+00e22d20  ldr x1,[x19, #0x48]
+00e22d24  b 0x00e22d5c
+00e22d28  ldr x0,[x22]
+00e22d2c  ldr x20,[x19, #0x40]
+00e22d30  ldr w8,[x0, #0xe0]
+00e22d34  cbnz w8,0x00e22d3c
+00e22d38  bl 0x00b0798c
+00e22d3c  mov x0,x20
+00e22d40  mov x1,xzr
+00e22d44  mov x2,xzr
+00e22d48  bl 0x024de30c
+00e22d4c  tbz w0,#0x0,0x00e22cdc
+00e22d50  ldr x0,[x19, #0x38]
+00e22d54  cbz x0,0x00e22d70
+00e22d58  ldr x1,[x19, #0x40]
+00e22d5c  ldp x19,x30,[sp, #0x20]
+00e22d60  ldp x21,x20,[sp, #0x10]
+00e22d64  mov x2,xzr
+00e22d68  ldr x22,[sp], #0x30
+00e22d6c  b 0x0257059c
+00e22d70  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e22d74_BtnImageState__Lock.txt
+================================================================================
+Function: BtnImageState$$Lock @ 00e22d74
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.UI.Image$$set_sprite @ 0257059c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.BtnImageStateWrap$$_m_Lock @ 01225db0
+  <- HeroPanelMono$$RefreshBtnState @ 00f3cc00
+
+--- Listing ---
+00e22d74  stp x21,x20,[sp, #-0x20]!
+00e22d78  stp x19,x30,[sp, #0x10]
+00e22d7c  adrp x20,0x3572000
+00e22d80  adrp x21,0x335b000
+00e22d84  ldrb w8,[x20, #0x670]
+00e22d88  ldr x21,[x21, #0x7b8]
+00e22d8c  mov x19,x0
+00e22d90  tbnz w8,#0x0,0x00e22db4
+00e22d94  adrp x0,0x335b000
+00e22d98  ldr x0,[x0, #0x7b8]
+00e22d9c  bl 0x00b0789c
+00e22da0  adrp x0,0x3321000
+00e22da4  ldr x0,[x0, #0xca8]
+00e22da8  bl 0x00b0789c
+00e22dac  mov w8,#0x1
+00e22db0  strb w8,[x20, #0x670]
+00e22db4  ldr x8,[x21]
+00e22db8  ldr x8,[x8, #0xb8]
+00e22dbc  ldr x0,[x8, #0x8]
+00e22dc0  cbz x0,0x00e22dd8
+00e22dc4  mov x1,x19
+00e22dc8  ldp x19,x30,[sp, #0x10]
+00e22dcc  mov x2,xzr
+00e22dd0  ldp x21,x20,[sp], #0x20
+00e22dd4  b 0x01060dac
+00e22dd8  adrp x21,0x3321000
+00e22ddc  ldr x21,[x21, #0xca8]
+00e22de0  ldr x20,[x19, #0x38]
+00e22de4  ldr x0,[x21]
+00e22de8  ldr w8,[x0, #0xe0]
+00e22dec  cbnz w8,0x00e22df4
+00e22df0  bl 0x00b0798c
+00e22df4  mov x0,x20
+00e22df8  mov x1,xzr
+00e22dfc  mov x2,xzr
+00e22e00  bl 0x024c8180
+00e22e04  tbnz w0,#0x0,0x00e22e4c
+00e22e08  ldr x0,[x21]
+00e22e0c  ldr x20,[x19, #0x50]
+00e22e10  ldr w8,[x0, #0xe0]
+00e22e14  cbnz w8,0x00e22e1c
+00e22e18  bl 0x00b0798c
+00e22e1c  mov x0,x20
+00e22e20  mov x1,xzr
+00e22e24  mov x2,xzr
+00e22e28  bl 0x024de30c
+00e22e2c  tbz w0,#0x0,0x00e22e4c
+00e22e30  ldr x0,[x19, #0x38]
+00e22e34  cbz x0,0x00e22e58
+00e22e38  ldr x1,[x19, #0x50]
+00e22e3c  ldp x19,x30,[sp, #0x10]
+00e22e40  mov x2,xzr
+00e22e44  ldp x21,x20,[sp], #0x20
+00e22e48  b 0x0257059c
+00e22e4c  ldp x19,x30,[sp, #0x10]
+00e22e50  ldp x21,x20,[sp], #0x20
+00e22e54  ret
+00e22e58  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e22e5c_BtnImageState__.ctor.txt
+================================================================================
+Function: BtnImageState$$.ctor @ 00e22e5c
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> BaseMono$$.ctor @ 00e1c6b4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.BtnImageStateWrap$$__CreateInstance @ 01225a34
+
+--- Listing ---
+00e22e5c  stp x21,x20,[sp, #-0x20]!
+00e22e60  stp x19,x30,[sp, #0x10]
+00e22e64  adrp x21,0x3572000
+00e22e68  adrp x20,0x335b000
+00e22e6c  ldrb w8,[x21, #0x671]
+00e22e70  ldr x20,[x20, #0x7b8]
+00e22e74  mov x19,x0
+00e22e78  tbnz w8,#0x0,0x00e22e90
+00e22e7c  adrp x0,0x335b000
+00e22e80  ldr x0,[x0, #0x7b8]
+00e22e84  bl 0x00b0789c
+00e22e88  mov w8,#0x1
+00e22e8c  strb w8,[x21, #0x671]
+00e22e90  mov x0,x19
+00e22e94  bl 0x00e1c6b4
+00e22e98  ldr x8,[x20]
+00e22e9c  ldr x8,[x8, #0xb8]
+00e22ea0  ldr x0,[x8, #0x10]
+00e22ea4  cbz x0,0x00e22ebc
+00e22ea8  mov x1,x19
+00e22eac  ldp x19,x30,[sp, #0x10]
+00e22eb0  mov x2,xzr
+00e22eb4  ldp x21,x20,[sp], #0x20
+00e22eb8  b 0x01060dac
+00e22ebc  ldp x19,x30,[sp, #0x10]
+00e22ec0  ldp x21,x20,[sp], #0x20
+00e22ec4  ret
+
+
+================================================================================
+### FILE: 00e22ec8_BtnState__Awake.txt
+================================================================================
+Function: BtnState$$Awake @ 00e22ec8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+
+--- Calls IN ---
+
+--- Listing ---
+00e22ec8  stp x21,x20,[sp, #-0x20]!
+00e22ecc  stp x19,x30,[sp, #0x10]
+00e22ed0  adrp x20,0x3572000
+00e22ed4  adrp x21,0x3346000
+00e22ed8  ldrb w8,[x20, #0x672]
+00e22edc  ldr x21,[x21, #0xd48]
+00e22ee0  mov x19,x0
+00e22ee4  tbnz w8,#0x0,0x00e22f08
+00e22ee8  adrp x0,0x3346000
+00e22eec  ldr x0,[x0, #0xd48]
+00e22ef0  bl 0x00b0789c
+00e22ef4  adrp x0,0x3372000
+00e22ef8  ldr x0,[x0, #0x2a0]
+00e22efc  bl 0x00b0789c
+00e22f00  mov w8,#0x1
+00e22f04  strb w8,[x20, #0x672]
+00e22f08  ldr x8,[x21]
+00e22f0c  ldr x8,[x8, #0xb8]
+00e22f10  ldr x0,[x8]
+00e22f14  cbz x0,0x00e22f2c
+00e22f18  mov x1,x19
+00e22f1c  ldp x19,x30,[sp, #0x10]
+00e22f20  mov x2,xzr
+00e22f24  ldp x21,x20,[sp], #0x20
+00e22f28  b 0x01060dac
+00e22f2c  mov x0,x19
+00e22f30  mov x1,xzr
+00e22f34  bl 0x024e4ed4
+00e22f38  cbz x0,0x00e22f64
+00e22f3c  adrp x8,0x3372000
+00e22f40  ldr x8,[x8, #0x2a0]
+00e22f44  ldr x1,[x8]
+00e22f48  bl 0x01794e94
+00e22f4c  str x0,[x19, #0x18]!
+00e22f50  mov x1,x0
+00e22f54  mov x0,x19
+00e22f58  ldp x19,x30,[sp, #0x10]
+00e22f5c  ldp x21,x20,[sp], #0x20
+00e22f60  b 0x00b07850
+00e22f64  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e22f68_BtnState__Start.txt
+================================================================================
+Function: BtnState$$Start @ 00e22f68
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00e22f68  stp x21,x20,[sp, #-0x20]!
+00e22f6c  stp x19,x30,[sp, #0x10]
+00e22f70  adrp x20,0x3572000
+00e22f74  adrp x21,0x3346000
+00e22f78  ldrb w8,[x20, #0x673]
+00e22f7c  ldr x21,[x21, #0xd48]
+00e22f80  mov x19,x0
+00e22f84  tbnz w8,#0x0,0x00e22f9c
+00e22f88  adrp x0,0x3346000
+00e22f8c  ldr x0,[x0, #0xd48]
+00e22f90  bl 0x00b0789c
+00e22f94  mov w8,#0x1
+00e22f98  strb w8,[x20, #0x673]
+00e22f9c  ldr x8,[x21]
+00e22fa0  ldr x8,[x8, #0xb8]
+00e22fa4  ldr x0,[x8, #0x8]
+00e22fa8  cbz x0,0x00e22fc0
+00e22fac  mov x1,x19
+00e22fb0  ldp x19,x30,[sp, #0x10]
+00e22fb4  mov x2,xzr
+00e22fb8  ldp x21,x20,[sp], #0x20
+00e22fbc  b 0x01060dac
+00e22fc0  ldp x19,x30,[sp, #0x10]
+00e22fc4  ldp x21,x20,[sp], #0x20
+00e22fc8  ret
+
+
+================================================================================
+### FILE: 00e22fcc_BtnState__ActiveShow.txt
+================================================================================
+Function: BtnState$$ActiveShow @ 00e22fcc
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp15 @ 010613e4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.BtnStateWrap$$_m_ActiveShow @ 01227824
+
+--- Listing ---
+00e22fcc  str x22,[sp, #-0x30]!
+00e22fd0  stp x21,x20,[sp, #0x10]
+00e22fd4  stp x19,x30,[sp, #0x20]
+00e22fd8  adrp x21,0x3572000
+00e22fdc  adrp x22,0x3346000
+00e22fe0  ldrb w8,[x21, #0x674]
+00e22fe4  ldr x22,[x22, #0xd48]
+00e22fe8  mov w19,w1
+00e22fec  mov x20,x0
+00e22ff0  tbnz w8,#0x0,0x00e23020
+00e22ff4  adrp x0,0x3348000
+00e22ff8  ldr x0,[x0, #0x138]
+00e22ffc  bl 0x00b0789c
+00e23000  adrp x0,0x3346000
+00e23004  ldr x0,[x0, #0xd48]
+00e23008  bl 0x00b0789c
+00e2300c  adrp x0,0x3321000
+00e23010  ldr x0,[x0, #0xca8]
+00e23014  bl 0x00b0789c
+00e23018  mov w8,#0x1
+00e2301c  strb w8,[x21, #0x674]
+00e23020  ldr x8,[x22]
+00e23024  ldr x8,[x8, #0xb8]
+00e23028  ldr x0,[x8, #0x10]
+00e2302c  cbz x0,0x00e2304c
+00e23030  and w2,w19,#0x1
+00e23034  mov x1,x20
+00e23038  ldp x19,x30,[sp, #0x20]
+00e2303c  ldp x21,x20,[sp, #0x10]
+00e23040  mov x3,xzr
+00e23044  ldr x22,[sp], #0x30
+00e23048  b 0x010613e4
+00e2304c  adrp x22,0x3321000
+00e23050  ldr x22,[x22, #0xca8]
+00e23054  ldr x21,[x20, #0x18]
+00e23058  ldr x0,[x22]
+00e2305c  ldr w8,[x0, #0xe0]
+00e23060  cbnz w8,0x00e23068
+00e23064  bl 0x00b0798c
+00e23068  mov x0,x21
+00e2306c  mov x1,xzr
+00e23070  mov x2,xzr
+00e23074  bl 0x024de30c
+00e23078  tbz w0,#0x0,0x00e2309c
+00e2307c  ldr x0,[x20, #0x18]
+00e23080  cbz x0,0x00e2310c
+00e23084  ldr x8,[x0]
+00e23088  ldr x9,[x8, #0x2c8]
+00e2308c  ldr x2,[x8, #0x2d0]
+00e23090  mvn w8,w19
+00e23094  and w1,w8,#0x1
+00e23098  blr x9
+00e2309c  ldr x0,[x22]
+00e230a0  ldr x21,[x20, #0x20]
+00e230a4  ldr w8,[x0, #0xe0]
+00e230a8  cbnz w8,0x00e230b0
+00e230ac  bl 0x00b0798c
+00e230b0  mov x0,x21
+00e230b4  mov x1,xzr
+00e230b8  mov x2,xzr
+00e230bc  bl 0x024de30c
+00e230c0  tbz w0,#0x0,0x00e230fc
+00e230c4  adrp x8,0x3348000
+00e230c8  ldr x8,[x8, #0x138]
+00e230cc  ldr x20,[x20, #0x20]
+00e230d0  ldr x0,[x8]
+00e230d4  ldr w8,[x0, #0xe0]
+00e230d8  cbnz w8,0x00e230e0
+00e230dc  bl 0x00b0798c
+00e230e0  and w1,w19,#0x1
+00e230e4  mov x0,x20
+00e230e8  ldp x19,x30,[sp, #0x20]
+00e230ec  ldp x21,x20,[sp, #0x10]
+00e230f0  mov x2,xzr
+00e230f4  ldr x22,[sp], #0x30
+00e230f8  b 0x00e13880
+00e230fc  ldp x19,x30,[sp, #0x20]
+00e23100  ldp x21,x20,[sp, #0x10]
+00e23104  ldr x22,[sp], #0x30
+00e23108  ret
+00e2310c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e23110_BtnState__.ctor.txt
+================================================================================
+Function: BtnState$$.ctor @ 00e23110
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.BtnStateWrap$$__CreateInstance @ 0122766c
+
+--- Listing ---
+00e23110  stp x21,x20,[sp, #-0x20]!
+00e23114  stp x19,x30,[sp, #0x10]
+00e23118  adrp x21,0x3572000
+00e2311c  adrp x20,0x3346000
+00e23120  ldrb w8,[x21, #0x675]
+00e23124  ldr x20,[x20, #0xd48]
+00e23128  mov x19,x0
+00e2312c  tbnz w8,#0x0,0x00e23144
+00e23130  adrp x0,0x3346000
+00e23134  ldr x0,[x0, #0xd48]
+00e23138  bl 0x00b0789c
+00e2313c  mov w8,#0x1
+00e23140  strb w8,[x21, #0x675]
+00e23144  mov x0,x19
+00e23148  mov x1,xzr
+00e2314c  bl 0x024e45bc
+00e23150  ldr x8,[x20]
+00e23154  ldr x8,[x8, #0xb8]
+00e23158  ldr x0,[x8, #0x18]
+00e2315c  cbz x0,0x00e23174
+00e23160  mov x1,x19
+00e23164  ldp x19,x30,[sp, #0x10]
+00e23168  mov x2,xzr
+00e2316c  ldp x21,x20,[sp], #0x20
+00e23170  b 0x01060dac
+00e23174  ldp x19,x30,[sp, #0x10]
+00e23178  ldp x21,x20,[sp], #0x20
+00e2317c  ret
+
+
+================================================================================
+### FILE: 00faa580_BtngroupitemNode__get_btn_choose.txt
+================================================================================
+Function: BtngroupitemNode$$get_btn_choose @ 00faa580
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00faa580  stp x21,x20,[sp, #-0x20]!
+00faa584  stp x19,x30,[sp, #0x10]
+00faa588  adrp x20,0x3573000
+00faa58c  adrp x21,0x3312000
+00faa590  ldrb w8,[x20, #0x736]
+00faa594  ldr x21,[x21, #0x5c8]
+00faa598  mov x19,x0
+00faa59c  tbnz w8,#0x0,0x00faa5b4
+00faa5a0  adrp x0,0x3312000
+00faa5a4  ldr x0,[x0, #0x5c8]
+00faa5a8  bl 0x00b0789c
+00faa5ac  mov w8,#0x1
+00faa5b0  strb w8,[x20, #0x736]
+00faa5b4  ldr x1,[x21]
+00faa5b8  mov x0,x19
+00faa5bc  ldp x19,x30,[sp, #0x10]
+00faa5c0  mov x2,xzr
+00faa5c4  ldp x21,x20,[sp], #0x20
+00faa5c8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa5cc_BtngroupitemNode__get_lbl_choose_gray.txt
+================================================================================
+Function: BtngroupitemNode$$get_lbl_choose_gray @ 00faa5cc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00faa5cc  stp x21,x20,[sp, #-0x20]!
+00faa5d0  stp x19,x30,[sp, #0x10]
+00faa5d4  adrp x20,0x3573000
+00faa5d8  adrp x21,0x333c000
+00faa5dc  ldrb w8,[x20, #0x737]
+00faa5e0  ldr x21,[x21, #0x328]
+00faa5e4  mov x19,x0
+00faa5e8  tbnz w8,#0x0,0x00faa600
+00faa5ec  adrp x0,0x333c000
+00faa5f0  ldr x0,[x0, #0x328]
+00faa5f4  bl 0x00b0789c
+00faa5f8  mov w8,#0x1
+00faa5fc  strb w8,[x20, #0x737]
+00faa600  ldr x1,[x21]
+00faa604  mov x0,x19
+00faa608  ldp x19,x30,[sp, #0x10]
+00faa60c  mov x2,xzr
+00faa610  ldp x21,x20,[sp], #0x20
+00faa614  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa618_BtngroupitemNode__get_btn_choose_active.txt
+================================================================================
+Function: BtngroupitemNode$$get_btn_choose_active @ 00faa618
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00faa618  stp x21,x20,[sp, #-0x20]!
+00faa61c  stp x19,x30,[sp, #0x10]
+00faa620  adrp x20,0x3573000
+00faa624  adrp x21,0x3345000
+00faa628  ldrb w8,[x20, #0x738]
+00faa62c  ldr x21,[x21, #0xdc8]
+00faa630  mov x19,x0
+00faa634  tbnz w8,#0x0,0x00faa64c
+00faa638  adrp x0,0x3345000
+00faa63c  ldr x0,[x0, #0xdc8]
+00faa640  bl 0x00b0789c
+00faa644  mov w8,#0x1
+00faa648  strb w8,[x20, #0x738]
+00faa64c  ldr x1,[x21]
+00faa650  mov x0,x19
+00faa654  ldp x19,x30,[sp, #0x10]
+00faa658  mov x2,xzr
+00faa65c  ldp x21,x20,[sp], #0x20
+00faa660  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa664_BtngroupitemNode__get_lbl_choose.txt
+================================================================================
+Function: BtngroupitemNode$$get_lbl_choose @ 00faa664
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00faa664  stp x21,x20,[sp, #-0x20]!
+00faa668  stp x19,x30,[sp, #0x10]
+00faa66c  adrp x20,0x3573000
+00faa670  adrp x21,0x3312000
+00faa674  ldrb w8,[x20, #0x739]
+00faa678  ldr x21,[x21, #0x850]
+00faa67c  mov x19,x0
+00faa680  tbnz w8,#0x0,0x00faa698
+00faa684  adrp x0,0x3312000
+00faa688  ldr x0,[x0, #0x850]
+00faa68c  bl 0x00b0789c
+00faa690  mov w8,#0x1
+00faa694  strb w8,[x20, #0x739]
+00faa698  ldr x1,[x21]
+00faa69c  mov x0,x19
+00faa6a0  ldp x19,x30,[sp, #0x10]
+00faa6a4  mov x2,xzr
+00faa6a8  ldp x21,x20,[sp], #0x20
+00faa6ac  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa6b0_BtngroupitemNode__get_btn_menu_actTips.txt
+================================================================================
+Function: BtngroupitemNode$$get_btn_menu_actTips @ 00faa6b0
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00faa6b0  stp x21,x20,[sp, #-0x20]!
+00faa6b4  stp x19,x30,[sp, #0x10]
+00faa6b8  adrp x20,0x3573000
+00faa6bc  adrp x21,0x3337000
+00faa6c0  ldrb w8,[x20, #0x73a]
+00faa6c4  ldr x21,[x21, #0xd40]
+00faa6c8  mov x19,x0
+00faa6cc  tbnz w8,#0x0,0x00faa6e4
+00faa6d0  adrp x0,0x3337000
+00faa6d4  ldr x0,[x0, #0xd40]
+00faa6d8  bl 0x00b0789c
+00faa6dc  mov w8,#0x1
+00faa6e0  strb w8,[x20, #0x73a]
+00faa6e4  ldr x1,[x21]
+00faa6e8  mov x0,x19
+00faa6ec  ldp x19,x30,[sp, #0x10]
+00faa6f0  mov x2,xzr
+00faa6f4  ldp x21,x20,[sp], #0x20
+00faa6f8  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00faa6fc_BtngroupitemNode__.ctor.txt
+================================================================================
+Function: BtngroupitemNode$$.ctor @ 00faa6fc
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00faa6fc  mov x1,xzr
+00faa700  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 03799350_btowc.txt
+================================================================================
+Function: btowc @ 03799350
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- btowc @ 008d46b0
+
+--- Listing ---
+03799350  ?? ??
+
+

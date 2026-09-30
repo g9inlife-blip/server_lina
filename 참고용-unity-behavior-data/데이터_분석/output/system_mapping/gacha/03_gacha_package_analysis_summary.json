@@ -1,0 +1,22 @@
+{
+  "stage": "6.5",
+  "json_file_count": 0,
+  "parsed_file_count": 0,
+  "unique_record_ids": 118015,
+  "draw_records": 2922,
+  "unique_item_package_ids": 214,
+  "package_ids_with_exact_record_definition": 0,
+  "package_ids_with_member_references": 0,
+  "package_ids_reused_across_multiple_groups": 6,
+  "packages_with_multiple_evidence_types": 0,
+  "incoming_reference_rows": 1463,
+  "member_reference_rows": 0,
+  "parse_errors": 0,
+  "rules": {
+    "package_model": "generic related-data collection; no fixed Character/Weapon/Item package type",
+    "package_resolution": "exact logical Record ID first; all-field reverse search",
+    "member_resolution": "exact logical Record ID where possible",
+    "compound_values": "ID|ID, comma, semicolon, and CODE*VALUE-left-ID candidates preserved",
+    "semantic_inference": false
+  }
+}

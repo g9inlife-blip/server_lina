@@ -1,0 +1,2536 @@
+================================================================================
+### FILE: 00c54498_XUPorterJSON.MiniJSON__jsonDecode.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$jsonDecode @ 00c54498
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.String$$ToCharArray @ 01fe4eec
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJsonExtensions$$arrayListFromJson @ 00c5ed68
+  <- XUPorterJSON.MiniJsonExtensions$$hashtableFromJson @ 00c5ee0c
+  <- UnityEditor.XCodeEditor.XCMod$$.ctor @ 00c54144
+
+--- Listing ---
+00c54498  sub sp,sp,#0x30
+00c5449c  stp x21,x20,[sp, #0x10]
+00c544a0  stp x19,x30,[sp, #0x20]
+00c544a4  adrp x21,0x3571000
+00c544a8  adrp x20,0x3378000
+00c544ac  ldrb w8,[x21, #0x34b]
+00c544b0  ldr x20,[x20, #0x208]
+00c544b4  mov x19,x0
+00c544b8  tbnz w8,#0x0,0x00c544d0
+00c544bc  adrp x0,0x3378000
+00c544c0  ldr x0,[x0, #0x208]
+00c544c4  bl 0x00b0789c
+00c544c8  mov w8,#0x1
+00c544cc  strb w8,[x21, #0x34b]
+00c544d0  ldr x0,[x20]
+00c544d4  str wzr,[sp, #0xc]
+00c544d8  strb wzr,[sp, #0x8]
+00c544dc  ldr w8,[x0, #0xe0]
+00c544e0  cbnz w8,0x00c544ec
+00c544e4  bl 0x00b0798c
+00c544e8  ldr x0,[x20]
+00c544ec  ldr x0,[x0, #0xb8]
+00c544f0  mov x1,x19
+00c544f4  str x19,[x0, #0x8]!
+00c544f8  bl 0x00b07850
+00c544fc  cbz x19,0x00c54588
+00c54500  mov x0,x19
+00c54504  mov x1,xzr
+00c54508  bl 0x01fe4eec
+00c5450c  ldr x8,[x20]
+00c54510  mov w9,#0x1
+00c54514  str wzr,[sp, #0xc]
+00c54518  strb w9,[sp, #0x8]
+00c5451c  ldr w9,[x8, #0xe0]
+00c54520  mov x19,x0
+00c54524  cbnz w9,0x00c54530
+00c54528  mov x0,x8
+00c5452c  bl 0x00b0798c
+00c54530  add x1,sp,#0xc
+00c54534  add x2,sp,#0x8
+00c54538  mov x0,x19
+00c5453c  bl 0x00c5cc08
+00c54540  ldrb w8,[sp, #0x8]
+00c54544  mov x19,x0
+00c54548  cbz w8,0x00c54568
+00c5454c  ldr x0,[x20]
+00c54550  ldr w8,[x0, #0xe0]
+00c54554  cbnz w8,0x00c54560
+00c54558  bl 0x00b0798c
+00c5455c  ldr x0,[x20]
+00c54560  mov w21,#0xffffffff
+00c54564  b 0x00c54580
+00c54568  ldr x0,[x20]
+00c5456c  ldr w21,[sp, #0xc]
+00c54570  ldr w8,[x0, #0xe0]
+00c54574  cbnz w8,0x00c54580
+00c54578  bl 0x00b0798c
+00c5457c  ldr x0,[x20]
+00c54580  ldr x8,[x0, #0xb8]
+00c54584  str w21,[x8]
+00c54588  mov x0,x19
+00c5458c  ldp x19,x30,[sp, #0x20]
+00c54590  ldp x21,x20,[sp, #0x10]
+00c54594  add sp,sp,#0x30
+00c54598  ret
+
+
+================================================================================
+### FILE: 00c5cc08_XUPorterJSON.MiniJSON__parseValue.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+
+--- Calls OUT ---
+  -> XUPorterJSON.MiniJSON$$nextToken @ 00c5d73c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$parseString @ 00c5da50
+  -> XUPorterJSON.MiniJSON$$lookAhead @ 00c5d9e4
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> XUPorterJSON.MiniJSON$$parseArray @ 00c5dddc
+  -> XUPorterJSON.MiniJSON$$parseObject @ 00c5d590
+  -> XUPorterJSON.MiniJSON$$parseNumber @ 00c5df48
+  -> System.Boolean$$Parse @ 020d9174
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$parseArray @ 00c5dddc
+  <- XUPorterJSON.MiniJSON$$jsonDecode @ 00c54498
+  <- XUPorterJSON.MiniJSON$$parseObject @ 00c5d590
+
+--- Listing ---
+00c5cc08  sub sp,sp,#0x40
+00c5cc0c  stp x23,x22,[sp, #0x10]
+00c5cc10  stp x21,x20,[sp, #0x20]
+00c5cc14  stp x19,x30,[sp, #0x30]
+00c5cc18  adrp x22,0x3571000
+00c5cc1c  adrp x23,0x3378000
+00c5cc20  ldrb w8,[x22, #0x352]
+00c5cc24  ldr x23,[x23, #0x208]
+00c5cc28  mov x21,x2
+00c5cc2c  mov x19,x1
+00c5cc30  mov x20,x0
+00c5cc34  tbnz w8,#0x0,0x00c5cc7c
+00c5cc38  adrp x0,0x337c000
+00c5cc3c  ldr x0,[x0, #0xf70]
+00c5cc40  bl 0x00b0789c
+00c5cc44  adrp x0,0x3310000
+00c5cc48  ldr x0,[x0, #0x6f0]
+00c5cc4c  bl 0x00b0789c
+00c5cc50  adrp x0,0x3378000
+00c5cc54  ldr x0,[x0, #0x208]
+00c5cc58  bl 0x00b0789c
+00c5cc5c  adrp x0,0x335f000
+00c5cc60  ldr x0,[x0, #0x300]
+00c5cc64  bl 0x00b0789c
+00c5cc68  adrp x0,0x3383000
+00c5cc6c  ldr x0,[x0, #0xfe8]
+00c5cc70  bl 0x00b0789c
+00c5cc74  mov w8,#0x1
+00c5cc78  strb w8,[x22, #0x352]
+00c5cc7c  ldr x0,[x23]
+00c5cc80  ldr w22,[x19]
+00c5cc84  ldr w8,[x0, #0xe0]
+00c5cc88  cbnz w8,0x00c5cc90
+00c5cc8c  bl 0x00b0798c
+00c5cc90  mov x0,x20
+00c5cc94  mov w1,w22
+00c5cc98  bl 0x00c5d9e4
+00c5cc9c  sub w8,w0,#0x1
+00c5cca0  cmp w8,#0xa
+00c5cca4  b.hi 0x00c5ccf4
+00c5cca8  adrp x9,0x26db000
+00c5ccac  add x9,x9,#0x4c0
+00c5ccb0  adrp x22,0x337c000
+00c5ccb4  adr x10,0xc5ccc8
+00c5ccb8  ldrb w11,[x9, x8, LSL ]
+00c5ccbc  add x10,x10,x11, LSL #0x2
+00c5ccc0  ldr x22,[x22, #0xf70]
+00c5ccc4  br x10
+00c5ccc8  ldr x0,[x23]
+00c5cccc  ldr w8,[x0, #0xe0]
+00c5ccd0  cbnz w8,0x00c5ccd8
+00c5ccd4  bl 0x00b0798c
+00c5ccd8  mov x0,x20
+00c5ccdc  mov x1,x19
+00c5cce0  ldp x19,x30,[sp, #0x30]
+00c5cce4  ldp x21,x20,[sp, #0x20]
+00c5cce8  ldp x23,x22,[sp, #0x10]
+00c5ccec  add sp,sp,#0x40
+00c5ccf0  b 0x00c5d590
+00c5ccf4  mov x0,xzr
+00c5ccf8  strb wzr,[x21]
+00c5ccfc  b 0x00c5ce5c
+00c5cd00  ldr x0,[x23]
+00c5cd04  ldr w8,[x0, #0xe0]
+00c5cd08  cbnz w8,0x00c5cd10
+00c5cd0c  bl 0x00b0798c
+00c5cd10  mov x0,x20
+00c5cd14  mov x1,x19
+00c5cd18  ldp x19,x30,[sp, #0x30]
+00c5cd1c  ldp x21,x20,[sp, #0x20]
+00c5cd20  ldp x23,x22,[sp, #0x10]
+00c5cd24  add sp,sp,#0x40
+00c5cd28  b 0x00c5dddc
+00c5cd2c  ldr x0,[x23]
+00c5cd30  ldr w8,[x0, #0xe0]
+00c5cd34  cbnz w8,0x00c5cd3c
+00c5cd38  bl 0x00b0798c
+00c5cd3c  mov x0,x20
+00c5cd40  mov x1,x19
+00c5cd44  ldp x19,x30,[sp, #0x30]
+00c5cd48  ldp x21,x20,[sp, #0x20]
+00c5cd4c  ldp x23,x22,[sp, #0x10]
+00c5cd50  add sp,sp,#0x40
+00c5cd54  b 0x00c5da50
+00c5cd58  ldr x0,[x23]
+00c5cd5c  adrp x21,0x3310000
+00c5cd60  ldr w8,[x0, #0xe0]
+00c5cd64  ldr x21,[x21, #0x6f0]
+00c5cd68  cbnz w8,0x00c5cd70
+00c5cd6c  bl 0x00b0798c
+00c5cd70  mov x0,x20
+00c5cd74  mov x1,x19
+00c5cd78  bl 0x00c5df48
+00c5cd7c  ldr x0,[x21]
+00c5cd80  add x1,sp,#0x8
+00c5cd84  str d0,[sp, #0x8]
+00c5cd88  b 0x00c5ce34
+00c5cd8c  ldr x0,[x23]
+00c5cd90  ldr w8,[x0, #0xe0]
+00c5cd94  cbnz w8,0x00c5cd9c
+00c5cd98  bl 0x00b0798c
+00c5cd9c  adrp x21,0x3383000
+00c5cda0  ldr x21,[x21, #0xfe8]
+00c5cda4  mov x0,x20
+00c5cda8  mov x1,x19
+00c5cdac  bl 0x00c5d73c
+00c5cdb0  ldr x0,[x22]
+00c5cdb4  ldr w8,[x0, #0xe0]
+00c5cdb8  cbnz w8,0x00c5cdc0
+00c5cdbc  bl 0x00b0798c
+00c5cdc0  ldr x0,[x21]
+00c5cdc4  mov x1,xzr
+00c5cdc8  bl 0x020d9174
+00c5cdcc  ldr x8,[x22]
+00c5cdd0  and w9,w0,#0x1
+00c5cdd4  add x1,sp,#0x4
+00c5cdd8  strb w9,[sp, #0x4]
+00c5cddc  b 0x00c5ce30
+00c5cde0  ldr x0,[x23]
+00c5cde4  ldr w8,[x0, #0xe0]
+00c5cde8  cbnz w8,0x00c5cdf0
+00c5cdec  bl 0x00b0798c
+00c5cdf0  adrp x21,0x335f000
+00c5cdf4  ldr x21,[x21, #0x300]
+00c5cdf8  mov x0,x20
+00c5cdfc  mov x1,x19
+00c5ce00  bl 0x00c5d73c
+00c5ce04  ldr x0,[x22]
+00c5ce08  ldr w8,[x0, #0xe0]
+00c5ce0c  cbnz w8,0x00c5ce14
+00c5ce10  bl 0x00b0798c
+00c5ce14  ldr x0,[x21]
+00c5ce18  mov x1,xzr
+00c5ce1c  bl 0x020d9174
+00c5ce20  ldr x8,[x22]
+00c5ce24  and w9,w0,#0x1
+00c5ce28  strb w9,[sp]
+00c5ce2c  mov x1,sp
+00c5ce30  mov x0,x8
+00c5ce34  bl 0x00b07994
+00c5ce38  b 0x00c5ce5c
+00c5ce3c  ldr x0,[x23]
+00c5ce40  ldr w8,[x0, #0xe0]
+00c5ce44  cbnz w8,0x00c5ce4c
+00c5ce48  bl 0x00b0798c
+00c5ce4c  mov x0,x20
+00c5ce50  mov x1,x19
+00c5ce54  bl 0x00c5d73c
+00c5ce58  mov x0,xzr
+00c5ce5c  ldp x19,x30,[sp, #0x30]
+00c5ce60  ldp x21,x20,[sp, #0x20]
+00c5ce64  ldp x23,x22,[sp, #0x10]
+00c5ce68  add sp,sp,#0x40
+00c5ce6c  ret
+
+
+================================================================================
+### FILE: 00c5ce70_XUPorterJSON.MiniJSON__jsonEncode.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$jsonEncode @ 00c5ce70
+
+--- Calls OUT ---
+  -> System.Text.StringBuilder$$.ctor @ 01fe7f4c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$serializeValue @ 00c5cf20
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJsonExtensions$$toJson @ 00c5ecc0
+  <- XUPorterJSON.MiniJsonExtensions$$toJson @ 00c5ed14
+
+--- Listing ---
+00c5ce70  stp x21,x20,[sp, #-0x20]!
+00c5ce74  stp x19,x30,[sp, #0x10]
+00c5ce78  adrp x20,0x3571000
+00c5ce7c  adrp x21,0x3332000
+00c5ce80  ldrb w8,[x20, #0x34c]
+00c5ce84  ldr x21,[x21, #0xaf0]
+00c5ce88  mov x19,x0
+00c5ce8c  tbnz w8,#0x0,0x00c5ceb0
+00c5ce90  adrp x0,0x3378000
+00c5ce94  ldr x0,[x0, #0x208]
+00c5ce98  bl 0x00b0789c
+00c5ce9c  adrp x0,0x3332000
+00c5cea0  ldr x0,[x0, #0xaf0]
+00c5cea4  bl 0x00b0789c
+00c5cea8  mov w8,#0x1
+00c5ceac  strb w8,[x20, #0x34c]
+00c5ceb0  ldr x0,[x21]
+00c5ceb4  bl 0x00b079a0
+00c5ceb8  cbz x0,0x00c5cf1c
+00c5cebc  adrp x21,0x3378000
+00c5cec0  ldr x21,[x21, #0x208]
+00c5cec4  mov w1,#0x7d0
+00c5cec8  mov x2,xzr
+00c5cecc  mov x20,x0
+00c5ced0  bl 0x01fe7f4c
+00c5ced4  ldr x0,[x21]
+00c5ced8  ldr w8,[x0, #0xe0]
+00c5cedc  cbnz w8,0x00c5cee4
+00c5cee0  bl 0x00b0798c
+00c5cee4  mov x0,x19
+00c5cee8  mov x1,x20
+00c5ceec  bl 0x00c5cf20
+00c5cef0  tbz w0,#0x0,0x00c5cf0c
+00c5cef4  ldr x8,[x20]
+00c5cef8  ldp x19,x30,[sp, #0x10]
+00c5cefc  mov x0,x20
+00c5cf00  ldp x2,x1,[x8, #0x168]
+00c5cf04  ldp x21,x20,[sp], #0x20
+00c5cf08  br x2
+00c5cf0c  ldp x19,x30,[sp, #0x10]
+00c5cf10  mov x0,xzr
+00c5cf14  ldp x21,x20,[sp], #0x20
+00c5cf18  ret
+00c5cf1c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5cf20_XUPorterJSON.MiniJSON__serializeValue.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$serializeValue @ 00c5cf20
+
+--- Calls OUT ---
+  -> FUN_00c60aa0 @ 00c60aa0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Object$$GetType @ 021948fc
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$serializeArray @ 00c5e594
+  <- XUPorterJSON.MiniJSON$$serializeObject @ 00c5e2e0
+  <- XUPorterJSON.MiniJSON$$jsonEncode @ 00c5ce70
+
+--- Listing ---
+00c5cf20  str d8,[sp, #-0x40]!
+00c5cf24  str x24,[sp, #0x8]
+00c5cf28  stp x23,x22,[sp, #0x10]
+00c5cf2c  stp x21,x20,[sp, #0x20]
+00c5cf30  stp x19,x30,[sp, #0x30]
+00c5cf34  adrp x21,0x3571000
+00c5cf38  ldrb w8,[x21, #0x35d]
+00c5cf3c  mov x19,x1
+00c5cf40  mov x20,x0
+00c5cf44  tbnz w8,#0x0,0x00c5cfe0
+00c5cf48  adrp x0,0x330b000
+00c5cf4c  ldr x0,[x0, #0xe28]
+00c5cf50  bl 0x00b0789c
+00c5cf54  adrp x0,0x337c000
+00c5cf58  ldr x0,[x0, #0xf70]
+00c5cf5c  bl 0x00b0789c
+00c5cf60  adrp x0,0x3329000
+00c5cf64  ldr x0,[x0, #0xc30]
+00c5cf68  bl 0x00b0789c
+00c5cf6c  adrp x0,0x3362000
+00c5cf70  ldr x0,[x0, #0xe28]
+00c5cf74  bl 0x00b0789c
+00c5cf78  adrp x0,0x337d000
+00c5cf7c  ldr x0,[x0, #0x240]
+00c5cf80  bl 0x00b0789c
+00c5cf84  adrp x0,0x330e000
+00c5cf88  ldr x0,[x0, #0xb48]
+00c5cf8c  bl 0x00b0789c
+00c5cf90  adrp x0,0x3327000
+00c5cf94  ldr x0,[x0, #0xea8]
+00c5cf98  bl 0x00b0789c
+00c5cf9c  adrp x0,0x3378000
+00c5cfa0  ldr x0,[x0, #0x208]
+00c5cfa4  bl 0x00b0789c
+00c5cfa8  adrp x0,0x331b000
+00c5cfac  ldr x0,[x0, #0x6c8]
+00c5cfb0  bl 0x00b0789c
+00c5cfb4  adrp x0,0x3339000
+00c5cfb8  ldr x0,[x0, #0xd90]
+00c5cfbc  bl 0x00b0789c
+00c5cfc0  adrp x0,0x332a000
+00c5cfc4  ldr x0,[x0, #0x148]
+00c5cfc8  bl 0x00b0789c
+00c5cfcc  adrp x0,0x3316000
+00c5cfd0  ldr x0,[x0, #0xc28]
+00c5cfd4  bl 0x00b0789c
+00c5cfd8  mov w8,#0x1
+00c5cfdc  strb w8,[x21, #0x35d]
+00c5cfe0  cbz x20,0x00c5d06c
+00c5cfe4  mov x0,x20
+00c5cfe8  mov x1,xzr
+00c5cfec  bl 0x021948fc
+00c5cff0  cbz x0,0x00c5d38c
+00c5cff4  adrp x23,0x3378000
+00c5cff8  adrp x22,0x330b000
+00c5cffc  ldr x23,[x23, #0x208]
+00c5d000  b 0x00c60aa0
+00c5d06c  cbz x19,0x00c5d38c
+00c5d070  adrp x8,0x3339000
+00c5d074  ldr x8,[x8, #0xd90]
+
+
+================================================================================
+### FILE: 00c5d3a4_XUPorterJSON.MiniJSON__lastDecodeSuccessful.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$lastDecodeSuccessful @ 00c5d3a4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00c5d3a4  str x20,[sp, #-0x20]!
+00c5d3a8  stp x19,x30,[sp, #0x10]
+00c5d3ac  adrp x20,0x3571000
+00c5d3b0  adrp x19,0x3378000
+00c5d3b4  ldrb w8,[x20, #0x34d]
+00c5d3b8  ldr x19,[x19, #0x208]
+00c5d3bc  tbnz w8,#0x0,0x00c5d3d4
+00c5d3c0  adrp x0,0x3378000
+00c5d3c4  ldr x0,[x0, #0x208]
+00c5d3c8  bl 0x00b0789c
+00c5d3cc  mov w8,#0x1
+00c5d3d0  strb w8,[x20, #0x34d]
+00c5d3d4  ldr x0,[x19]
+00c5d3d8  ldr w8,[x0, #0xe0]
+00c5d3dc  cbnz w8,0x00c5d3e8
+00c5d3e0  bl 0x00b0798c
+00c5d3e4  ldr x0,[x19]
+00c5d3e8  ldr x8,[x0, #0xb8]
+00c5d3ec  ldp x19,x30,[sp, #0x10]
+00c5d3f0  ldr w8,[x8]
+00c5d3f4  cmn w8,#0x1
+00c5d3f8  cset w0,eq
+00c5d3fc  ldr x20,[sp], #0x20
+00c5d400  ret
+
+
+================================================================================
+### FILE: 00c5d404_XUPorterJSON.MiniJSON__getLastErrorIndex.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$getLastErrorIndex @ 00c5d404
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00c5d404  str x20,[sp, #-0x20]!
+00c5d408  stp x19,x30,[sp, #0x10]
+00c5d40c  adrp x20,0x3571000
+00c5d410  adrp x19,0x3378000
+00c5d414  ldrb w8,[x20, #0x34e]
+00c5d418  ldr x19,[x19, #0x208]
+00c5d41c  tbnz w8,#0x0,0x00c5d434
+00c5d420  adrp x0,0x3378000
+00c5d424  ldr x0,[x0, #0x208]
+00c5d428  bl 0x00b0789c
+00c5d42c  mov w8,#0x1
+00c5d430  strb w8,[x20, #0x34e]
+00c5d434  ldr x0,[x19]
+00c5d438  ldr w8,[x0, #0xe0]
+00c5d43c  cbnz w8,0x00c5d448
+00c5d440  bl 0x00b0798c
+00c5d444  ldr x0,[x19]
+00c5d448  ldr x8,[x0, #0xb8]
+00c5d44c  ldp x19,x30,[sp, #0x10]
+00c5d450  ldr w0,[x8]
+00c5d454  ldr x20,[sp], #0x20
+00c5d458  ret
+
+
+================================================================================
+### FILE: 00c5d45c_XUPorterJSON.MiniJSON__getLastErrorSnippet.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$getLastErrorSnippet @ 00c5d45c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Substring @ 01fe0458
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00c5d45c  stp x21,x20,[sp, #-0x20]!
+00c5d460  stp x19,x30,[sp, #0x10]
+00c5d464  adrp x19,0x3571000
+00c5d468  adrp x20,0x3378000
+00c5d46c  ldrb w8,[x19, #0x34f]
+00c5d470  ldr x20,[x20, #0x208]
+00c5d474  tbnz w8,#0x0,0x00c5d498
+00c5d478  adrp x0,0x3378000
+00c5d47c  ldr x0,[x0, #0x208]
+00c5d480  bl 0x00b0789c
+00c5d484  adrp x0,0x332c000
+00c5d488  ldr x0,[x0, #0x2c0]
+00c5d48c  bl 0x00b0789c
+00c5d490  mov w8,#0x1
+00c5d494  strb w8,[x19, #0x34f]
+00c5d498  ldr x0,[x20]
+00c5d49c  ldr w8,[x0, #0xe0]
+00c5d4a0  cbnz w8,0x00c5d4ac
+00c5d4a4  bl 0x00b0798c
+00c5d4a8  ldr x0,[x20]
+00c5d4ac  ldr x8,[x0, #0xb8]
+00c5d4b0  ldr w9,[x8]
+00c5d4b4  cmn w9,#0x1
+00c5d4b8  b.eq 0x00c5d4d4
+00c5d4bc  ldr w10,[x0, #0xe0]
+00c5d4c0  cbz w10,0x00c5d4ec
+00c5d4c4  sub w10,w9,#0x5
+00c5d4c8  add w21,w9,#0xf
+00c5d4cc  bic w19,w10,w10, ASR #0x1f
+00c5d4d0  b 0x00c5d51c
+00c5d4d4  adrp x8,0x332c000
+00c5d4d8  ldr x8,[x8, #0x2c0]
+00c5d4dc  ldp x19,x30,[sp, #0x10]
+00c5d4e0  ldr x0,[x8]
+00c5d4e4  ldp x21,x20,[sp], #0x20
+00c5d4e8  ret
+00c5d4ec  bl 0x00b0798c
+00c5d4f0  ldr x0,[x20]
+00c5d4f4  ldr x8,[x0, #0xb8]
+00c5d4f8  ldr w10,[x0, #0xe0]
+00c5d4fc  ldr w9,[x8]
+00c5d500  sub w11,w9,#0x5
+00c5d504  add w21,w9,#0xf
+00c5d508  bic w19,w11,w11, ASR #0x1f
+00c5d50c  cbnz w10,0x00c5d51c
+00c5d510  bl 0x00b0798c
+00c5d514  ldr x0,[x20]
+00c5d518  ldr x8,[x0, #0xb8]
+00c5d51c  ldr x9,[x8, #0x8]
+00c5d520  cbz x9,0x00c5d58c
+00c5d524  ldr w9,[x9, #0x10]
+00c5d528  cmp w21,w9
+00c5d52c  b.lt 0x00c5d554
+00c5d530  ldr w9,[x0, #0xe0]
+00c5d534  cbnz w9,0x00c5d544
+00c5d538  bl 0x00b0798c
+00c5d53c  ldr x0,[x20]
+00c5d540  ldr x8,[x0, #0xb8]
+00c5d544  ldr x8,[x8, #0x8]
+00c5d548  cbz x8,0x00c5d58c
+00c5d54c  ldr w8,[x8, #0x10]
+00c5d550  sub w21,w8,#0x1
+00c5d554  ldr w8,[x0, #0xe0]
+00c5d558  cbnz w8,0x00c5d564
+00c5d55c  bl 0x00b0798c
+00c5d560  ldr x0,[x20]
+00c5d564  ldr x8,[x0, #0xb8]
+00c5d568  ldr x0,[x8, #0x8]
+00c5d56c  cbz x0,0x00c5d58c
+00c5d570  sub w8,w21,w19
+00c5d574  mov w1,w19
+00c5d578  ldp x19,x30,[sp, #0x10]
+00c5d57c  add w2,w8,#0x1
+00c5d580  mov x3,xzr
+00c5d584  ldp x21,x20,[sp], #0x20
+00c5d588  b 0x01fe0458
+00c5d58c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5d590_XUPorterJSON.MiniJSON__parseObject.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$parseObject @ 00c5d590
+
+--- Calls OUT ---
+  -> XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+  -> XUPorterJSON.MiniJSON$$nextToken @ 00c5d73c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$parseString @ 00c5da50
+  -> XUPorterJSON.MiniJSON$$lookAhead @ 00c5d9e4
+  -> System.Collections.Hashtable$$.ctor @ 0212c680
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+
+--- Listing ---
+00c5d590  str x24,[sp, #-0x40]!
+00c5d594  stp x23,x22,[sp, #0x10]
+00c5d598  stp x21,x20,[sp, #0x20]
+00c5d59c  stp x19,x30,[sp, #0x30]
+00c5d5a0  adrp x22,0x3571000
+00c5d5a4  adrp x21,0x330e000
+00c5d5a8  ldrb w8,[x22, #0x350]
+00c5d5ac  ldr x21,[x21, #0xb48]
+00c5d5b0  mov x19,x1
+00c5d5b4  mov x20,x0
+00c5d5b8  tbnz w8,#0x0,0x00c5d5dc
+00c5d5bc  adrp x0,0x330e000
+00c5d5c0  ldr x0,[x0, #0xb48]
+00c5d5c4  bl 0x00b0789c
+00c5d5c8  adrp x0,0x3378000
+00c5d5cc  ldr x0,[x0, #0x208]
+00c5d5d0  bl 0x00b0789c
+00c5d5d4  mov w8,#0x1
+00c5d5d8  strb w8,[x22, #0x350]
+00c5d5dc  ldr x0,[x21]
+00c5d5e0  strb wzr,[sp, #0xc]
+00c5d5e4  bl 0x00b079a0
+00c5d5e8  cbz x0,0x00c5d738
+00c5d5ec  adrp x23,0x3378000
+00c5d5f0  ldr x23,[x23, #0x208]
+00c5d5f4  mov x1,xzr
+00c5d5f8  mov x21,x0
+00c5d5fc  bl 0x0212c680
+00c5d600  ldr x0,[x23]
+00c5d604  ldr w8,[x0, #0xe0]
+00c5d608  cbnz w8,0x00c5d610
+00c5d60c  bl 0x00b0798c
+00c5d610  mov x0,x20
+00c5d614  mov x1,x19
+00c5d618  bl 0x00c5d73c
+00c5d61c  mov w24,#0x1
+00c5d620  ldr x0,[x23]
+00c5d624  ldr w22,[x19]
+00c5d628  ldr w8,[x0, #0xe0]
+00c5d62c  cbnz w8,0x00c5d634
+00c5d630  bl 0x00b0798c
+00c5d634  mov x0,x20
+00c5d638  mov w1,w22
+00c5d63c  bl 0x00c5d9e4
+00c5d640  cmp w0,#0x6
+00c5d644  b.eq 0x00c5d6ec
+00c5d648  mov w22,w0
+00c5d64c  cbz w0,0x00c5d70c
+00c5d650  ldr x0,[x23]
+00c5d654  ldr w8,[x0, #0xe0]
+00c5d658  cbnz w8,0x00c5d660
+00c5d65c  bl 0x00b0798c
+00c5d660  cmp w22,#0x2
+00c5d664  b.eq 0x00c5d728
+00c5d668  mov x0,x20
+00c5d66c  mov x1,x19
+00c5d670  bl 0x00c5da50
+00c5d674  cbz x0,0x00c5d70c
+00c5d678  mov x22,x0
+00c5d67c  ldr x0,[x23]
+00c5d680  ldr w8,[x0, #0xe0]
+00c5d684  cbnz w8,0x00c5d68c
+00c5d688  bl 0x00b0798c
+00c5d68c  mov x0,x20
+00c5d690  mov x1,x19
+00c5d694  bl 0x00c5d73c
+00c5d698  cmp w0,#0x5
+00c5d69c  b.ne 0x00c5d70c
+00c5d6a0  ldr x0,[x23]
+00c5d6a4  strb w24,[sp, #0xc]
+00c5d6a8  ldr w8,[x0, #0xe0]
+00c5d6ac  cbnz w8,0x00c5d6b4
+00c5d6b0  bl 0x00b0798c
+00c5d6b4  add x2,sp,#0xc
+00c5d6b8  mov x0,x20
+00c5d6bc  mov x1,x19
+00c5d6c0  bl 0x00c5cc08
+00c5d6c4  ldrb w8,[sp, #0xc]
+00c5d6c8  cbz w8,0x00c5d70c
+00c5d6cc  ldr x8,[x21]
+00c5d6d0  mov x2,x0
+00c5d6d4  mov x0,x21
+00c5d6d8  mov x1,x22
+00c5d6dc  ldr x9,[x8, #0x318]
+00c5d6e0  ldr x3,[x8, #0x320]
+00c5d6e4  blr x9
+00c5d6e8  b 0x00c5d620
+00c5d6ec  ldr x0,[x23]
+00c5d6f0  ldr w8,[x0, #0xe0]
+00c5d6f4  cbnz w8,0x00c5d6fc
+00c5d6f8  bl 0x00b0798c
+00c5d6fc  mov x0,x20
+00c5d700  mov x1,x19
+00c5d704  bl 0x00c5d73c
+00c5d708  b 0x00c5d620
+00c5d70c  mov x21,xzr
+00c5d710  mov x0,x21
+00c5d714  ldp x19,x30,[sp, #0x30]
+00c5d718  ldp x21,x20,[sp, #0x20]
+00c5d71c  ldp x23,x22,[sp, #0x10]
+00c5d720  ldr x24,[sp], #0x40
+00c5d724  ret
+00c5d728  mov x0,x20
+00c5d72c  mov x1,x19
+00c5d730  bl 0x00c5d73c
+00c5d734  b 0x00c5d710
+00c5d738  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5d73c_XUPorterJSON.MiniJSON__nextToken.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$nextToken @ 00c5d73c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+  -> XUPorterJSON.MiniJSON$$eatWhitespace @ 00c5e02c
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+  <- XUPorterJSON.MiniJSON$$lookAhead @ 00c5d9e4
+  <- XUPorterJSON.MiniJSON$$parseArray @ 00c5dddc
+  <- XUPorterJSON.MiniJSON$$parseObject @ 00c5d590
+
+--- Listing ---
+00c5d73c  str x22,[sp, #-0x30]!
+00c5d740  stp x21,x20,[sp, #0x10]
+00c5d744  stp x19,x30,[sp, #0x20]
+00c5d748  adrp x21,0x3571000
+00c5d74c  adrp x22,0x3378000
+00c5d750  ldrb w8,[x21, #0x358]
+00c5d754  ldr x22,[x22, #0x208]
+00c5d758  mov x19,x1
+00c5d75c  mov x20,x0
+00c5d760  tbnz w8,#0x0,0x00c5d778
+00c5d764  adrp x0,0x3378000
+00c5d768  ldr x0,[x0, #0x208]
+00c5d76c  bl 0x00b0789c
+00c5d770  mov w8,#0x1
+00c5d774  strb w8,[x21, #0x358]
+00c5d778  ldr x0,[x22]
+00c5d77c  ldr w8,[x0, #0xe0]
+00c5d780  cbnz w8,0x00c5d788
+00c5d784  bl 0x00b0798c
+00c5d788  mov x0,x20
+00c5d78c  mov x1,x19
+00c5d790  bl 0x00c5e02c
+00c5d794  cbz x20,0x00c5d9dc
+00c5d798  ldr w8,[x19]
+00c5d79c  ldr w9,[x20, #0x18]
+00c5d7a0  cmp w8,w9
+00c5d7a4  b.ne 0x00c5d7b0
+00c5d7a8  mov w0,wzr
+00c5d7ac  b 0x00c5d9cc
+00c5d7b0  b.cs 0x00c5d9e0
+00c5d7b4  sxtw x10,w8
+00c5d7b8  add x10,x20,x10, LSL #0x1
+00c5d7bc  ldrh w11,[x10, #0x20]
+00c5d7c0  add w10,w8,#0x1
+00c5d7c4  str w10,[x19]
+00c5d7c8  cmp w11,#0x5b
+00c5d7cc  b.hi 0x00c5d800
+00c5d7d0  sub w12,w11,#0x22
+00c5d7d4  cmp w12,#0x18
+00c5d7d8  b.hi 0x00c5d830
+00c5d7dc  adrp x13,0x26db000
+00c5d7e0  add x13,x13,#0x4cb
+00c5d7e4  adr x14,0xc5d7f8
+00c5d7e8  ldrb w15,[x13, x12, LSL ]
+00c5d7ec  add x14,x14,x15, LSL #0x2
+00c5d7f0  mov w0,#0x7
+00c5d7f4  br x14
+00c5d7f8  mov w0,#0x8
+00c5d7fc  b 0x00c5d9cc
+00c5d800  cmp w11,#0x5d
+00c5d804  b.eq 0x00c5d828
+00c5d808  cmp w11,#0x7b
+00c5d80c  b.eq 0x00c5d820
+00c5d810  cmp w11,#0x7d
+00c5d814  b.ne 0x00c5d840
+00c5d818  mov w0,#0x2
+00c5d81c  b 0x00c5d9cc
+00c5d820  mov w0,#0x1
+00c5d824  b 0x00c5d9cc
+00c5d828  mov w0,#0x4
+00c5d82c  b 0x00c5d9cc
+00c5d830  cmp w11,#0x5b
+00c5d834  b.ne 0x00c5d840
+00c5d838  mov w0,#0x3
+00c5d83c  b 0x00c5d9cc
+00c5d840  sub w12,w9,w8
+00c5d844  cmp w12,#0x5
+00c5d848  str w8,[x19]
+00c5d84c  b.ge 0x00c5d86c
+00c5d850  cmp w12,#0x4
+00c5d854  b.ne 0x00c5d7a8
+00c5d858  cmp w11,#0x6e
+00c5d85c  b.eq 0x00c5d960
+00c5d860  cmp w11,#0x74
+00c5d864  b.eq 0x00c5d900
+00c5d868  b 0x00c5d7a8
+00c5d86c  cmp w11,#0x74
+00c5d870  b.eq 0x00c5d900
+00c5d874  cmp w11,#0x6e
+00c5d878  b.eq 0x00c5d960
+00c5d87c  cmp w11,#0x66
+00c5d880  b.ne 0x00c5d7a8
+00c5d884  cmp w10,w9
+00c5d888  b.cs 0x00c5d9e0
+00c5d88c  add x10,x20,w10, SXTW  #0x1
+00c5d890  ldrh w10,[x10, #0x20]
+00c5d894  cmp w10,#0x61
+00c5d898  b.ne 0x00c5d7a8
+00c5d89c  add w10,w8,#0x2
+00c5d8a0  cmp w10,w9
+00c5d8a4  b.cs 0x00c5d9e0
+00c5d8a8  add x10,x20,w10, SXTW  #0x1
+00c5d8ac  ldrh w10,[x10, #0x20]
+00c5d8b0  cmp w10,#0x6c
+00c5d8b4  b.ne 0x00c5d7a8
+00c5d8b8  add w10,w8,#0x3
+00c5d8bc  cmp w10,w9
+00c5d8c0  b.cs 0x00c5d9e0
+00c5d8c4  add x10,x20,w10, SXTW  #0x1
+00c5d8c8  ldrh w10,[x10, #0x20]
+00c5d8cc  cmp w10,#0x73
+00c5d8d0  b.ne 0x00c5d7a8
+00c5d8d4  add w10,w8,#0x4
+00c5d8d8  cmp w10,w9
+00c5d8dc  b.cs 0x00c5d9e0
+00c5d8e0  add x9,x20,w10, SXTW  #0x1
+00c5d8e4  ldrh w9,[x9, #0x20]
+00c5d8e8  cmp w9,#0x65
+00c5d8ec  b.ne 0x00c5d7a8
+00c5d8f0  add w8,w8,#0x5
+00c5d8f4  str w8,[x19]
+00c5d8f8  mov w0,#0xa
+00c5d8fc  b 0x00c5d9cc
+00c5d900  cmp w10,w9
+00c5d904  b.cs 0x00c5d9e0
+00c5d908  add x10,x20,w10, SXTW  #0x1
+00c5d90c  ldrh w10,[x10, #0x20]
+00c5d910  cmp w10,#0x72
+00c5d914  b.ne 0x00c5d7a8
+00c5d918  add w10,w8,#0x2
+00c5d91c  cmp w10,w9
+00c5d920  b.cs 0x00c5d9e0
+00c5d924  add x10,x20,w10, SXTW  #0x1
+00c5d928  ldrh w10,[x10, #0x20]
+00c5d92c  cmp w10,#0x75
+00c5d930  b.ne 0x00c5d7a8
+00c5d934  add w10,w8,#0x3
+00c5d938  cmp w10,w9
+00c5d93c  b.cs 0x00c5d9e0
+00c5d940  add x9,x20,w10, SXTW  #0x1
+00c5d944  ldrh w9,[x9, #0x20]
+00c5d948  cmp w9,#0x65
+00c5d94c  b.ne 0x00c5d7a8
+00c5d950  add w8,w8,#0x4
+00c5d954  str w8,[x19]
+00c5d958  mov w0,#0x9
+00c5d95c  b 0x00c5d9cc
+00c5d960  cmp w10,w9
+00c5d964  b.cs 0x00c5d9e0
+00c5d968  add x10,x20,w10, SXTW  #0x1
+00c5d96c  ldrh w10,[x10, #0x20]
+00c5d970  cmp w10,#0x75
+00c5d974  b.ne 0x00c5d7a8
+00c5d978  add w10,w8,#0x2
+00c5d97c  cmp w10,w9
+00c5d980  b.cs 0x00c5d9e0
+00c5d984  add x10,x20,w10, SXTW  #0x1
+00c5d988  ldrh w10,[x10, #0x20]
+00c5d98c  cmp w10,#0x6c
+00c5d990  b.ne 0x00c5d7a8
+00c5d994  add w10,w8,#0x3
+00c5d998  cmp w10,w9
+00c5d99c  b.cs 0x00c5d9e0
+00c5d9a0  add x9,x20,w10, SXTW  #0x1
+00c5d9a4  ldrh w9,[x9, #0x20]
+00c5d9a8  cmp w9,#0x6c
+00c5d9ac  b.ne 0x00c5d7a8
+00c5d9b0  add w8,w8,#0x4
+00c5d9b4  str w8,[x19]
+00c5d9b8  mov w0,#0xb
+00c5d9bc  b 0x00c5d9cc
+00c5d9c0  mov w0,#0x5
+00c5d9c4  b 0x00c5d9cc
+00c5d9c8  mov w0,#0x6
+00c5d9cc  ldp x19,x30,[sp, #0x20]
+00c5d9d0  ldp x21,x20,[sp, #0x10]
+00c5d9d4  ldr x22,[sp], #0x30
+00c5d9d8  ret
+00c5d9dc  bl 0x00b079b0
+00c5d9e0  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00c5d9e4_XUPorterJSON.MiniJSON__lookAhead.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$lookAhead @ 00c5d9e4
+
+--- Calls OUT ---
+  -> XUPorterJSON.MiniJSON$$nextToken @ 00c5d73c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+  <- XUPorterJSON.MiniJSON$$parseArray @ 00c5dddc
+  <- XUPorterJSON.MiniJSON$$parseObject @ 00c5d590
+
+--- Listing ---
+00c5d9e4  str x22,[sp, #-0x30]!
+00c5d9e8  stp x21,x20,[sp, #0x10]
+00c5d9ec  stp x19,x30,[sp, #0x20]
+00c5d9f0  adrp x22,0x3571000
+00c5d9f4  adrp x21,0x3378000
+00c5d9f8  ldrb w8,[x22, #0x357]
+00c5d9fc  ldr x21,[x21, #0x208]
+00c5da00  mov w20,w1
+00c5da04  mov x19,x0
+00c5da08  tbnz w8,#0x0,0x00c5da20
+00c5da0c  adrp x0,0x3378000
+00c5da10  ldr x0,[x0, #0x208]
+00c5da14  bl 0x00b0789c
+00c5da18  mov w8,#0x1
+00c5da1c  strb w8,[x22, #0x357]
+00c5da20  ldr x0,[x21]
+00c5da24  str w20,[sp, #0xc]
+00c5da28  ldr w8,[x0, #0xe0]
+00c5da2c  cbnz w8,0x00c5da34
+00c5da30  bl 0x00b0798c
+00c5da34  add x1,sp,#0xc
+00c5da38  mov x0,x19
+00c5da3c  bl 0x00c5d73c
+00c5da40  ldp x19,x30,[sp, #0x20]
+00c5da44  ldp x21,x20,[sp, #0x10]
+00c5da48  ldr x22,[sp], #0x30
+00c5da4c  ret
+
+
+================================================================================
+### FILE: 00c5da50_XUPorterJSON.MiniJSON__parseString.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$parseString @ 00c5da50
+
+--- Calls OUT ---
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$CreateString @ 01fdcf88
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b078f8 @ 00b078f8
+  -> System.String$$Concat @ 01fd2850
+  -> System.Array$$Copy @ 02173e94
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Char$$ToString @ 020cbf14
+  -> XUPorterJSON.MiniJSON$$eatWhitespace @ 00c5e02c
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+  <- XUPorterJSON.MiniJSON$$parseObject @ 00c5d590
+
+--- Listing ---
+00c5da50  sub sp,sp,#0x70
+00c5da54  stp x28,x27,[sp, #0x10]
+00c5da58  stp x26,x25,[sp, #0x20]
+00c5da5c  stp x24,x23,[sp, #0x30]
+00c5da60  stp x22,x21,[sp, #0x40]
+00c5da64  stp x20,x19,[sp, #0x50]
+00c5da68  stp x29,x30,[sp, #0x60]
+00c5da6c  adrp x23,0x3571000
+00c5da70  adrp x21,0x332c000
+00c5da74  adrp x22,0x3378000
+00c5da78  ldrb w8,[x23, #0x353]
+00c5da7c  ldr x21,[x21, #0x2c0]
+00c5da80  ldr x22,[x22, #0x208]
+00c5da84  mov x19,x1
+00c5da88  mov x20,x0
+00c5da8c  tbnz w8,#0x0,0x00c5db34
+00c5da90  adrp x0,0x335a000
+00c5da94  ldr x0,[x0, #0x340]
+00c5da98  bl 0x00b0789c
+00c5da9c  adrp x0,0x3378000
+00c5daa0  ldr x0,[x0, #0x208]
+00c5daa4  bl 0x00b0789c
+00c5daa8  adrp x0,0x3308000
+00c5daac  ldr x0,[x0, #0xe78]
+00c5dab0  bl 0x00b0789c
+00c5dab4  adrp x0,0x3315000
+00c5dab8  ldr x0,[x0, #0xbe0]
+00c5dabc  bl 0x00b0789c
+00c5dac0  adrp x0,0x334a000
+00c5dac4  ldr x0,[x0, #0xa0]
+00c5dac8  bl 0x00b0789c
+00c5dacc  adrp x0,0x3377000
+00c5dad0  ldr x0,[x0, #0x1c8]
+00c5dad4  bl 0x00b0789c
+00c5dad8  adrp x0,0x3321000
+00c5dadc  ldr x0,[x0, #0x9e0]
+00c5dae0  bl 0x00b0789c
+00c5dae4  adrp x0,0x3328000
+00c5dae8  ldr x0,[x0, #0x568]
+00c5daec  bl 0x00b0789c
+00c5daf0  adrp x0,0x3337000
+00c5daf4  ldr x0,[x0, #0x8d8]
+00c5daf8  bl 0x00b0789c
+00c5dafc  adrp x0,0x334b000
+00c5db00  ldr x0,[x0, #0xd88]
+00c5db04  bl 0x00b0789c
+00c5db08  adrp x0,0x332c000
+00c5db0c  ldr x0,[x0, #0x2c0]
+00c5db10  bl 0x00b0789c
+00c5db14  adrp x0,0x337d000
+00c5db18  ldr x0,[x0, #0x5f0]
+00c5db1c  bl 0x00b0789c
+00c5db20  adrp x0,0x334c000
+00c5db24  ldr x0,[x0, #0x118]
+00c5db28  bl 0x00b0789c
+00c5db2c  mov w8,#0x1
+00c5db30  strb w8,[x23, #0x353]
+00c5db34  ldr x0,[x22]
+00c5db38  strh wzr,[sp, #0xc]
+00c5db3c  ldr x21,[x21]
+00c5db40  ldr w8,[x0, #0xe0]
+00c5db44  cbnz w8,0x00c5db4c
+00c5db48  bl 0x00b0798c
+00c5db4c  mov x0,x20
+00c5db50  mov x1,x19
+00c5db54  bl 0x00c5e02c
+00c5db58  ldrsw x10,[x19]
+00c5db5c  add w9,w10,#0x1
+00c5db60  str w9,[x19]
+00c5db64  cbz x20,0x00c5ddd8
+00c5db68  ldr w8,[x20, #0x18]
+00c5db6c  cmp w10,w8
+00c5db70  b.cs 0x00c5ddd4
+00c5db74  add x10,x20,x10, LSL #0x1
+00c5db78  ldrh w10,[x10, #0x20]
+00c5db7c  cmp w9,w8
+00c5db80  strh w10,[sp, #0xc]
+00c5db84  b.eq 0x00c5ddac
+00c5db88  adrp x23,0x3337000
+00c5db8c  adrp x24,0x3321000
+00c5db90  adrp x25,0x334a000
+00c5db94  adrp x22,0x3315000
+00c5db98  adrp x28,0x334c000
+00c5db9c  adrp x26,0x3308000
+00c5dba0  adrp x27,0x337d000
+00c5dba4  adrp x29,0x3377000
+00c5dba8  ldr x23,[x23, #0x8d8]
+00c5dbac  ldr x24,[x24, #0x9e0]
+00c5dbb0  ldr x25,[x25, #0xa0]
+00c5dbb4  ldr x22,[x22, #0xbe0]
+00c5dbb8  ldr x28,[x28, #0x118]
+00c5dbbc  ldr x26,[x26, #0xe78]
+00c5dbc0  ldr x27,[x27, #0x5f0]
+00c5dbc4  ldr x29,[x29, #0x1c8]
+00c5dbc8  add w11,w9,#0x1
+00c5dbcc  cmp w9,w8
+00c5dbd0  str w11,[x19]
+00c5dbd4  b.cs 0x00c5ddd4
+00c5dbd8  add x10,x20,w9, SXTW  #0x1
+00c5dbdc  ldrh w10,[x10, #0x20]
+00c5dbe0  cmp w10,#0x5c
+00c5dbe4  strh w10,[sp, #0xc]
+00c5dbe8  b.eq 0x00c5dc28
+00c5dbec  cmp w10,#0x22
+00c5dbf0  b.eq 0x00c5ddb0
+00c5dbf4  add x0,sp,#0xc
+00c5dbf8  mov x1,xzr
+00c5dbfc  bl 0x020cbf14
+00c5dc00  mov x1,x0
+00c5dc04  mov x0,x21
+00c5dc08  mov x2,xzr
+00c5dc0c  bl 0x01fd2850
+00c5dc10  mov x21,x0
+00c5dc14  ldr w9,[x19]
+00c5dc18  ldr w8,[x20, #0x18]
+00c5dc1c  cmp w9,w8
+00c5dc20  b.ne 0x00c5dbc8
+00c5dc24  b 0x00c5ddac
+00c5dc28  cmp w11,w8
+00c5dc2c  b.eq 0x00c5ddac
+00c5dc30  add w10,w9,#0x2
+00c5dc34  cmp w11,w8
+00c5dc38  str w10,[x19]
+00c5dc3c  b.cs 0x00c5ddd4
+00c5dc40  add x9,x20,w11, SXTW  #0x1
+00c5dc44  ldrh w9,[x9, #0x20]
+00c5dc48  cmp w9,#0x61
+00c5dc4c  strh w9,[sp, #0xc]
+00c5dc50  b.gt 0x00c5dc74
+00c5dc54  cmp w9,#0x22
+00c5dc58  b.eq 0x00c5dca0
+00c5dc5c  cmp w9,#0x2f
+00c5dc60  b.eq 0x00c5dca8
+00c5dc64  cmp w9,#0x5c
+00c5dc68  b.ne 0x00c5dc14
+00c5dc6c  ldr x1,[x25]
+00c5dc70  b 0x00c5dc04
+00c5dc74  sub w11,w9,#0x6e
+00c5dc78  cmp w11,#0x7
+00c5dc7c  b.hi 0x00c5dcb0
+00c5dc80  adrp x13,0x26db000
+00c5dc84  add x13,x13,#0x4e4
+00c5dc88  adr x9,0xc5dc14
+00c5dc8c  ldrb w12,[x13, x11, LSL ]
+00c5dc90  add x9,x9,x12, LSL #0x2
+00c5dc94  br x9
+00c5dc98  ldr x1,[x26]
+00c5dc9c  b 0x00c5dc04
+00c5dca0  ldr x1,[x23]
+00c5dca4  b 0x00c5dc04
+00c5dca8  ldr x1,[x24]
+00c5dcac  b 0x00c5dc04
+00c5dcb0  cmp w9,#0x62
+00c5dcb4  b.eq 0x00c5dda4
+00c5dcb8  cmp w9,#0x66
+00c5dcbc  b.ne 0x00c5dc14
+00c5dcc0  ldr x1,[x28]
+00c5dcc4  b 0x00c5dc04
+00c5dcc8  sub w8,w8,w10
+00c5dccc  cmp w8,#0x4
+00c5dcd0  b.lt 0x00c5ddac
+00c5dcd4  adrp x8,0x335a000
+00c5dcd8  ldr x8,[x8, #0x340]
+00c5dcdc  mov w1,#0x4
+00c5dce0  ldr x0,[x8]
+00c5dce4  bl 0x00b078f8
+00c5dce8  ldr w1,[x19]
+00c5dcec  mov x29,x25
+00c5dcf0  mov x25,x24
+00c5dcf4  mov x24,x23
+00c5dcf8  mov x23,x27
+00c5dcfc  mov x27,x26
+00c5dd00  mov x26,x28
+00c5dd04  mov x28,x22
+00c5dd08  mov x22,x0
+00c5dd0c  mov w4,#0x4
+00c5dd10  mov x0,x20
+00c5dd14  mov x2,x22
+00c5dd18  mov w3,wzr
+00c5dd1c  mov x5,xzr
+00c5dd20  bl 0x02173e94
+00c5dd24  mov x1,x22
+00c5dd28  mov x22,x28
+00c5dd2c  mov x28,x26
+00c5dd30  mov x26,x27
+00c5dd34  mov x27,x23
+00c5dd38  mov x23,x24
+00c5dd3c  mov x24,x25
+00c5dd40  mov x25,x29
+00c5dd44  adrp x29,0x3377000
+00c5dd48  ldr x29,[x29, #0x1c8]
+00c5dd4c  mov x0,xzr
+00c5dd50  mov x2,xzr
+00c5dd54  bl 0x01fdcf88
+00c5dd58  adrp x8,0x334b000
+00c5dd5c  ldr x8,[x8, #0xd88]
+00c5dd60  mov x2,x0
+00c5dd64  mov x0,x21
+00c5dd68  mov x4,xzr
+00c5dd6c  ldr x1,[x8]
+00c5dd70  adrp x8,0x3328000
+00c5dd74  ldr x8,[x8, #0x568]
+00c5dd78  ldr x3,[x8]
+00c5dd7c  bl 0x01fdf3bc
+00c5dd80  ldr w8,[x19]
+00c5dd84  mov x21,x0
+00c5dd88  add w8,w8,#0x4
+00c5dd8c  str w8,[x19]
+00c5dd90  b 0x00c5dc14
+00c5dd94  ldr x1,[x27]
+00c5dd98  b 0x00c5dc04
+00c5dd9c  ldr x1,[x29]
+00c5dda0  b 0x00c5dc04
+00c5dda4  ldr x1,[x22]
+00c5dda8  b 0x00c5dc04
+00c5ddac  mov x21,xzr
+00c5ddb0  mov x0,x21
+00c5ddb4  ldp x29,x30,[sp, #0x60]
+00c5ddb8  ldp x20,x19,[sp, #0x50]
+00c5ddbc  ldp x22,x21,[sp, #0x40]
+00c5ddc0  ldp x24,x23,[sp, #0x30]
+00c5ddc4  ldp x26,x25,[sp, #0x20]
+00c5ddc8  ldp x28,x27,[sp, #0x10]
+00c5ddcc  add sp,sp,#0x70
+00c5ddd0  ret
+00c5ddd4  bl 0x00b079b8
+00c5ddd8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5dddc_XUPorterJSON.MiniJSON__parseArray.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$parseArray @ 00c5dddc
+
+--- Calls OUT ---
+  -> XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+  -> XUPorterJSON.MiniJSON$$nextToken @ 00c5d73c
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$lookAhead @ 00c5d9e4
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.ArrayList$$.ctor @ 02122dd0
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+
+--- Listing ---
+00c5dddc  str x24,[sp, #-0x40]!
+00c5dde0  stp x23,x22,[sp, #0x10]
+00c5dde4  stp x21,x20,[sp, #0x20]
+00c5dde8  stp x19,x30,[sp, #0x30]
+00c5ddec  adrp x22,0x3571000
+00c5ddf0  adrp x21,0x330b000
+00c5ddf4  ldrb w8,[x22, #0x351]
+00c5ddf8  ldr x21,[x21, #0xe28]
+00c5ddfc  mov x19,x1
+00c5de00  mov x20,x0
+00c5de04  tbnz w8,#0x0,0x00c5de28
+00c5de08  adrp x0,0x330b000
+00c5de0c  ldr x0,[x0, #0xe28]
+00c5de10  bl 0x00b0789c
+00c5de14  adrp x0,0x3378000
+00c5de18  ldr x0,[x0, #0x208]
+00c5de1c  bl 0x00b0789c
+00c5de20  mov w8,#0x1
+00c5de24  strb w8,[x22, #0x351]
+00c5de28  ldr x0,[x21]
+00c5de2c  strb wzr,[sp, #0xc]
+00c5de30  bl 0x00b079a0
+00c5de34  cbz x0,0x00c5df44
+00c5de38  adrp x23,0x3378000
+00c5de3c  ldr x23,[x23, #0x208]
+00c5de40  mov x1,xzr
+00c5de44  mov x21,x0
+00c5de48  bl 0x02122dd0
+00c5de4c  ldr x0,[x23]
+00c5de50  ldr w8,[x0, #0xe0]
+00c5de54  cbnz w8,0x00c5de5c
+00c5de58  bl 0x00b0798c
+00c5de5c  mov x0,x20
+00c5de60  mov x1,x19
+00c5de64  bl 0x00c5d73c
+00c5de68  mov w24,#0x1
+00c5de6c  ldr x0,[x23]
+00c5de70  ldr w22,[x19]
+00c5de74  ldr w8,[x0, #0xe0]
+00c5de78  cbnz w8,0x00c5de80
+00c5de7c  bl 0x00b0798c
+00c5de80  mov x0,x20
+00c5de84  mov w1,w22
+00c5de88  bl 0x00c5d9e4
+00c5de8c  cmp w0,#0x6
+00c5de90  b.eq 0x00c5dee8
+00c5de94  cmp w0,#0x4
+00c5de98  b.eq 0x00c5df10
+00c5de9c  cbz w0,0x00c5df08
+00c5dea0  ldr x0,[x23]
+00c5dea4  strb w24,[sp, #0xc]
+00c5dea8  ldr w8,[x0, #0xe0]
+00c5deac  cbnz w8,0x00c5deb4
+00c5deb0  bl 0x00b0798c
+00c5deb4  add x2,sp,#0xc
+00c5deb8  mov x0,x20
+00c5debc  mov x1,x19
+00c5dec0  bl 0x00c5cc08
+00c5dec4  ldrb w8,[sp, #0xc]
+00c5dec8  cbz w8,0x00c5df08
+00c5decc  ldr x8,[x21]
+00c5ded0  mov x1,x0
+00c5ded4  mov x0,x21
+00c5ded8  ldr x9,[x8, #0x308]
+00c5dedc  ldr x2,[x8, #0x310]
+00c5dee0  blr x9
+00c5dee4  b 0x00c5de6c
+00c5dee8  ldr x0,[x23]
+00c5deec  ldr w8,[x0, #0xe0]
+00c5def0  cbnz w8,0x00c5def8
+00c5def4  bl 0x00b0798c
+00c5def8  mov x0,x20
+00c5defc  mov x1,x19
+00c5df00  bl 0x00c5d73c
+00c5df04  b 0x00c5de6c
+00c5df08  mov x21,xzr
+00c5df0c  b 0x00c5df2c
+00c5df10  ldr x0,[x23]
+00c5df14  ldr w8,[x0, #0xe0]
+00c5df18  cbnz w8,0x00c5df20
+00c5df1c  bl 0x00b0798c
+00c5df20  mov x0,x20
+00c5df24  mov x1,x19
+00c5df28  bl 0x00c5d73c
+00c5df2c  mov x0,x21
+00c5df30  ldp x19,x30,[sp, #0x30]
+00c5df34  ldp x21,x20,[sp, #0x20]
+00c5df38  ldp x23,x22,[sp, #0x10]
+00c5df3c  ldr x24,[sp], #0x40
+00c5df40  ret
+00c5df44  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5df48_XUPorterJSON.MiniJSON__parseNumber.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$parseNumber @ 00c5df48
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$CreateString @ 01fdcf88
+  -> FUN_00b078f8 @ 00b078f8
+  -> System.Array$$Copy @ 02173e94
+  -> XUPorterJSON.MiniJSON$$getLastIndexOfNumber @ 00c5e0cc
+  -> System.Double$$Parse @ 02139128
+  -> XUPorterJSON.MiniJSON$$eatWhitespace @ 00c5e02c
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$parseValue @ 00c5cc08
+
+--- Listing ---
+00c5df48  stp x23,x22,[sp, #-0x30]!
+00c5df4c  stp x21,x20,[sp, #0x10]
+00c5df50  stp x19,x30,[sp, #0x20]
+00c5df54  adrp x22,0x3571000
+00c5df58  adrp x21,0x3378000
+00c5df5c  ldrb w8,[x22, #0x354]
+00c5df60  ldr x21,[x21, #0x208]
+00c5df64  mov x19,x1
+00c5df68  mov x20,x0
+00c5df6c  tbnz w8,#0x0,0x00c5df90
+00c5df70  adrp x0,0x335a000
+00c5df74  ldr x0,[x0, #0x340]
+00c5df78  bl 0x00b0789c
+00c5df7c  adrp x0,0x3378000
+00c5df80  ldr x0,[x0, #0x208]
+00c5df84  bl 0x00b0789c
+00c5df88  mov w8,#0x1
+00c5df8c  strb w8,[x22, #0x354]
+00c5df90  ldr x0,[x21]
+00c5df94  adrp x21,0x335a000
+00c5df98  ldr w8,[x0, #0xe0]
+00c5df9c  ldr x21,[x21, #0x340]
+00c5dfa0  cbnz w8,0x00c5dfa8
+00c5dfa4  bl 0x00b0798c
+00c5dfa8  mov x0,x20
+00c5dfac  mov x1,x19
+00c5dfb0  bl 0x00c5e02c
+00c5dfb4  ldr w1,[x19]
+00c5dfb8  mov x0,x20
+00c5dfbc  bl 0x00c5e0cc
+00c5dfc0  ldr w9,[x19]
+00c5dfc4  ldr x8,[x21]
+00c5dfc8  mov w21,w0
+00c5dfcc  sub w9,w0,w9
+00c5dfd0  add w22,w9,#0x1
+00c5dfd4  mov x0,x8
+00c5dfd8  mov w1,w22
+00c5dfdc  bl 0x00b078f8
+00c5dfe0  ldr w1,[x19]
+00c5dfe4  mov x23,x0
+00c5dfe8  mov x0,x20
+00c5dfec  mov x2,x23
+00c5dff0  mov w3,wzr
+00c5dff4  mov w4,w22
+00c5dff8  mov x5,xzr
+00c5dffc  bl 0x02173e94
+00c5e000  add w8,w21,#0x1
+00c5e004  mov x0,xzr
+00c5e008  mov x1,x23
+00c5e00c  mov x2,xzr
+00c5e010  str w8,[x19]
+00c5e014  bl 0x01fdcf88
+00c5e018  ldp x19,x30,[sp, #0x20]
+00c5e01c  ldp x21,x20,[sp, #0x10]
+00c5e020  mov x1,xzr
+00c5e024  ldp x23,x22,[sp], #0x30
+00c5e028  b 0x02139128
+
+
+================================================================================
+### FILE: 00c5e02c_XUPorterJSON.MiniJSON__eatWhitespace.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$eatWhitespace @ 00c5e02c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> System.String$$IndexOf @ 01fe3254
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$nextToken @ 00c5d73c
+  <- XUPorterJSON.MiniJSON$$parseString @ 00c5da50
+  <- XUPorterJSON.MiniJSON$$parseNumber @ 00c5df48
+
+--- Listing ---
+00c5e02c  stp x21,x20,[sp, #-0x20]!
+00c5e030  stp x19,x30,[sp, #0x10]
+00c5e034  adrp x21,0x3571000
+00c5e038  ldrb w8,[x21, #0x356]
+00c5e03c  mov x19,x1
+00c5e040  mov x20,x0
+00c5e044  tbnz w8,#0x0,0x00c5e05c
+00c5e048  adrp x0,0x334f000
+00c5e04c  ldr x0,[x0, #0xa08]
+00c5e050  bl 0x00b0789c
+00c5e054  mov w8,#0x1
+00c5e058  strb w8,[x21, #0x356]
+00c5e05c  cbz x20,0x00c5e0c8
+00c5e060  ldr w8,[x19]
+00c5e064  ldr w9,[x20, #0x18]
+00c5e068  cmp w8,w9
+00c5e06c  b.ge 0x00c5e0b8
+00c5e070  adrp x21,0x334f000
+00c5e074  ldr x21,[x21, #0xa08]
+00c5e078  cmp w8,w9
+00c5e07c  b.cs 0x00c5e0c4
+00c5e080  ldr x0,[x21]
+00c5e084  cbz x0,0x00c5e0c8
+00c5e088  add x8,x20,w8, SXTW  #0x1
+00c5e08c  ldrh w1,[x8, #0x20]
+00c5e090  mov x2,xzr
+00c5e094  bl 0x01fe3254
+00c5e098  cmn w0,#0x1
+00c5e09c  b.eq 0x00c5e0b8
+00c5e0a0  ldr w8,[x19]
+00c5e0a4  add w8,w8,#0x1
+00c5e0a8  str w8,[x19]
+00c5e0ac  ldr w9,[x20, #0x18]
+00c5e0b0  cmp w8,w9
+00c5e0b4  b.lt 0x00c5e078
+00c5e0b8  ldp x19,x30,[sp, #0x10]
+00c5e0bc  ldp x21,x20,[sp], #0x20
+00c5e0c0  ret
+00c5e0c4  bl 0x00b079b8
+00c5e0c8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5e0cc_XUPorterJSON.MiniJSON__getLastIndexOfNumber.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$getLastIndexOfNumber @ 00c5e0cc
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b8 @ 00b079b8
+  -> System.String$$IndexOf @ 01fe3254
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XUPorterJSON.MiniJSON$$parseNumber @ 00c5df48
+
+--- Listing ---
+00c5e0cc  str x22,[sp, #-0x30]!
+00c5e0d0  stp x21,x20,[sp, #0x10]
+00c5e0d4  stp x19,x30,[sp, #0x20]
+00c5e0d8  adrp x21,0x3571000
+00c5e0dc  ldrb w8,[x21, #0x355]
+00c5e0e0  mov w19,w1
+00c5e0e4  mov x20,x0
+00c5e0e8  tbnz w8,#0x0,0x00c5e100
+00c5e0ec  adrp x0,0x331a000
+00c5e0f0  ldr x0,[x0, #0x810]
+00c5e0f4  bl 0x00b0789c
+00c5e0f8  mov w8,#0x1
+00c5e0fc  strb w8,[x21, #0x355]
+00c5e100  cbz x20,0x00c5e170
+00c5e104  ldr w8,[x20, #0x18]
+00c5e108  cmp w8,w19
+00c5e10c  b.le 0x00c5e158
+00c5e110  adrp x21,0x331a000
+00c5e114  ldr x21,[x21, #0x810]
+00c5e118  add x9,x20,w19, SXTW  #0x1
+00c5e11c  add x22,x9,#0x20
+00c5e120  cmp w19,w8
+00c5e124  b.cs 0x00c5e16c
+00c5e128  ldr x0,[x21]
+00c5e12c  cbz x0,0x00c5e170
+00c5e130  ldrh w1,[x22]
+00c5e134  mov x2,xzr
+00c5e138  bl 0x01fe3254
+00c5e13c  cmn w0,#0x1
+00c5e140  b.eq 0x00c5e158
+00c5e144  ldr w8,[x20, #0x18]
+00c5e148  add w19,w19,#0x1
+00c5e14c  add x22,x22,#0x2
+00c5e150  cmp w19,w8
+00c5e154  b.lt 0x00c5e120
+00c5e158  sub w0,w19,#0x1
+00c5e15c  ldp x19,x30,[sp, #0x20]
+00c5e160  ldp x21,x20,[sp, #0x10]
+00c5e164  ldr x22,[sp], #0x30
+00c5e168  ret
+00c5e16c  bl 0x00b079b8
+00c5e170  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5e174_XUPorterJSON.MiniJSON__serializeObjectOrArray.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$serializeObjectOrArray @ 00c5e174
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> XUPorterJSON.MiniJSON$$serializeArray @ 00c5e594
+  -> XUPorterJSON.MiniJSON$$serializeObject @ 00c5e2e0
+
+--- Calls IN ---
+
+--- Listing ---
+00c5e174  stp x21,x20,[sp, #-0x20]!
+00c5e178  stp x19,x30,[sp, #0x10]
+00c5e17c  adrp x21,0x3571000
+00c5e180  ldrb w8,[x21, #0x359]
+00c5e184  mov x19,x1
+00c5e188  mov x20,x0
+00c5e18c  tbnz w8,#0x0,0x00c5e1bc
+00c5e190  adrp x0,0x330b000
+00c5e194  ldr x0,[x0, #0xe28]
+00c5e198  bl 0x00b0789c
+00c5e19c  adrp x0,0x330e000
+00c5e1a0  ldr x0,[x0, #0xb48]
+00c5e1a4  bl 0x00b0789c
+00c5e1a8  adrp x0,0x3378000
+00c5e1ac  ldr x0,[x0, #0x208]
+00c5e1b0  bl 0x00b0789c
+00c5e1b4  mov w8,#0x1
+00c5e1b8  strb w8,[x21, #0x359]
+00c5e1bc  cbz x20,0x00c5e228
+00c5e1c0  adrp x21,0x330e000
+00c5e1c4  ldr x21,[x21, #0xb48]
+00c5e1c8  ldr x8,[x20]
+00c5e1cc  adrp x11,0x3378000
+00c5e1d0  ldr x1,[x21]
+00c5e1d4  ldrb w9,[x8, #0x12c]
+00c5e1d8  ldrb w10,[x1, #0x12c]
+00c5e1dc  ldr x11,[x11, #0x208]
+00c5e1e0  cmp w9,w10
+00c5e1e4  b.cc 0x00c5e1fc
+00c5e1e8  ldr x12,[x8, #0xc8]
+00c5e1ec  add x12,x12,x10, LSL #0x3
+00c5e1f0  ldur x12,[x12, #-0x8]
+00c5e1f4  cmp x12,x1
+00c5e1f8  b.eq 0x00c5e238
+00c5e1fc  adrp x21,0x330b000
+00c5e200  ldr x21,[x21, #0xe28]
+00c5e204  ldr x1,[x21]
+00c5e208  ldrb w10,[x1, #0x12c]
+00c5e20c  cmp w9,w10
+00c5e210  b.cc 0x00c5e228
+00c5e214  ldr x12,[x8, #0xc8]
+00c5e218  add x12,x12,x10, LSL #0x3
+00c5e21c  ldur x12,[x12, #-0x8]
+00c5e220  cmp x12,x1
+00c5e224  b.eq 0x00c5e288
+00c5e228  ldp x19,x30,[sp, #0x10]
+00c5e22c  mov w0,wzr
+00c5e230  ldp x21,x20,[sp], #0x20
+00c5e234  ret
+00c5e238  ldr x0,[x11]
+00c5e23c  ldr w11,[x0, #0xe0]
+00c5e240  cbnz w11,0x00c5e258
+00c5e244  bl 0x00b0798c
+00c5e248  ldr x8,[x20]
+00c5e24c  ldr x1,[x21]
+00c5e250  ldrb w9,[x8, #0x12c]
+00c5e254  ldrb w10,[x1, #0x12c]
+00c5e258  cmp w9,w10
+00c5e25c  b.cc 0x00c5e2d8
+00c5e260  ldr x8,[x8, #0xc8]
+00c5e264  add x8,x8,w10, UXTW  #0x3
+00c5e268  ldur x8,[x8, #-0x8]
+00c5e26c  cmp x8,x1
+00c5e270  b.ne 0x00c5e2d8
+00c5e274  mov x1,x19
+00c5e278  ldp x19,x30,[sp, #0x10]
+00c5e27c  mov x0,x20
+00c5e280  ldp x21,x20,[sp], #0x20
+00c5e284  b 0x00c5e2e0
+00c5e288  ldr x0,[x11]
+00c5e28c  ldr w11,[x0, #0xe0]
+00c5e290  cbnz w11,0x00c5e2a8
+00c5e294  bl 0x00b0798c
+00c5e298  ldr x8,[x20]
+00c5e29c  ldr x1,[x21]
+00c5e2a0  ldrb w9,[x8, #0x12c]
+00c5e2a4  ldrb w10,[x1, #0x12c]
+00c5e2a8  cmp w9,w10
+00c5e2ac  b.cc 0x00c5e2d8
+00c5e2b0  ldr x8,[x8, #0xc8]
+00c5e2b4  add x8,x8,w10, UXTW  #0x3
+00c5e2b8  ldur x8,[x8, #-0x8]
+00c5e2bc  cmp x8,x1
+00c5e2c0  b.ne 0x00c5e2d8
+00c5e2c4  mov x1,x19
+00c5e2c8  ldp x19,x30,[sp, #0x10]
+00c5e2cc  mov x0,x20
+00c5e2d0  ldp x21,x20,[sp], #0x20
+00c5e2d4  b 0x00c5e594
+00c5e2d8  mov x0,x20
+00c5e2dc  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00c5e2e0_XUPorterJSON.MiniJSON__serializeObject.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$serializeObject @ 00c5e2e0
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$serializeValue @ 00c5cf20
+  -> FUN_00b079b0 @ 00b079b0
+  -> XUPorterJSON.MiniJSON$$serializeString @ 00c5e6f4
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+
+--- Calls IN ---
+  <- FUN_00c5d004 @ 00c5d004
+  <- XUPorterJSON.MiniJSON$$serializeObjectOrArray @ 00c5e174
+
+--- Listing ---
+00c5e2e0  stp x28,x27,[sp, #-0x60]!
+00c5e2e4  stp x26,x25,[sp, #0x10]
+00c5e2e8  stp x24,x23,[sp, #0x20]
+00c5e2ec  stp x22,x21,[sp, #0x30]
+00c5e2f0  stp x20,x19,[sp, #0x40]
+00c5e2f4  stp x29,x30,[sp, #0x50]
+00c5e2f8  adrp x21,0x3571000
+00c5e2fc  ldrb w8,[x21, #0x35a]
+00c5e300  mov x19,x1
+00c5e304  mov x20,x0
+00c5e308  tbnz w8,#0x0,0x00c5e368
+00c5e30c  adrp x0,0x335c000
+00c5e310  ldr x0,[x0, #0x100]
+00c5e314  bl 0x00b0789c
+00c5e318  adrp x0,0x3364000
+00c5e31c  ldr x0,[x0, #0xeb0]
+00c5e320  bl 0x00b0789c
+00c5e324  adrp x0,0x3378000
+00c5e328  ldr x0,[x0, #0x208]
+00c5e32c  bl 0x00b0789c
+00c5e330  adrp x0,0x3333000
+00c5e334  ldr x0,[x0, #0x618]
+00c5e338  bl 0x00b0789c
+00c5e33c  adrp x0,0x3318000
+00c5e340  ldr x0,[x0, #0xe20]
+00c5e344  bl 0x00b0789c
+00c5e348  adrp x0,0x3310000
+00c5e34c  ldr x0,[x0, #0xe98]
+00c5e350  bl 0x00b0789c
+00c5e354  adrp x0,0x336a000
+00c5e358  ldr x0,[x0, #0x568]
+00c5e35c  bl 0x00b0789c
+00c5e360  mov w8,#0x1
+00c5e364  strb w8,[x21, #0x35a]
+00c5e368  cbz x19,0x00c5e590
+00c5e36c  adrp x8,0x3333000
+00c5e370  ldr x8,[x8, #0x618]
+00c5e374  mov x0,x19
+00c5e378  mov x2,xzr
+00c5e37c  ldr x1,[x8]
+00c5e380  bl 0x01fe9960
+00c5e384  cbz x20,0x00c5e590
+00c5e388  ldr x8,[x20]
+00c5e38c  mov x0,x20
+00c5e390  ldr x9,[x8, #0x328]
+00c5e394  ldr x1,[x8, #0x330]
+00c5e398  blr x9
+00c5e39c  cbz x0,0x00c5e590
+00c5e3a0  adrp x23,0x3364000
+00c5e3a4  adrp x24,0x335c000
+00c5e3a8  adrp x25,0x3378000
+00c5e3ac  adrp x26,0x336a000
+00c5e3b0  adrp x28,0x3310000
+00c5e3b4  adrp x27,0x3318000
+00c5e3b8  ldr x23,[x23, #0xeb0]
+00c5e3bc  ldr x24,[x24, #0x100]
+00c5e3c0  ldr x25,[x25, #0x208]
+00c5e3c4  ldr x26,[x26, #0x568]
+00c5e3c8  ldr x28,[x28, #0xe98]
+00c5e3cc  ldr x27,[x27, #0xe20]
+00c5e3d0  mov x20,x0
+00c5e3d4  mov w29,#0x1
+00c5e3d8  ldr x8,[x20]
+00c5e3dc  ldr x1,[x23]
+00c5e3e0  ldrh w9,[x8, #0x12a]
+00c5e3e4  cbz x9,0x00c5e408
+00c5e3e8  ldr x10,[x8, #0xb0]
+00c5e3ec  add x10,x10,#0x8
+00c5e3f0  ldur x11,[x10, #-0x8]
+00c5e3f4  cmp x11,x1
+00c5e3f8  b.eq 0x00c5e418
+00c5e3fc  subs x9,x9,#0x1
+00c5e400  add x10,x10,#0x10
+00c5e404  b.ne 0x00c5e3f0
+00c5e408  mov x0,x20
+00c5e40c  mov w2,wzr
+00c5e410  bl 0x00b2ae24
+00c5e414  b 0x00c5e424
+00c5e418  ldrsw x9,[x10]
+00c5e41c  add x8,x8,x9, LSL #0x4
+00c5e420  add x0,x8,#0x138
+00c5e424  ldp x8,x1,[x0]
+00c5e428  mov x0,x20
+00c5e42c  blr x8
+00c5e430  tbz w0,#0x0,0x00c5e560
+00c5e434  ldr x8,[x20]
+00c5e438  ldr x1,[x24]
+00c5e43c  ldrh w9,[x8, #0x12a]
+00c5e440  cbz x9,0x00c5e464
+00c5e444  ldr x10,[x8, #0xb0]
+00c5e448  add x10,x10,#0x8
+00c5e44c  ldur x11,[x10, #-0x8]
+00c5e450  cmp x11,x1
+00c5e454  b.eq 0x00c5e474
+00c5e458  subs x9,x9,#0x1
+00c5e45c  add x10,x10,#0x10
+00c5e460  b.ne 0x00c5e44c
+00c5e464  mov x0,x20
+00c5e468  mov w2,wzr
+00c5e46c  bl 0x00b2ae24
+00c5e470  b 0x00c5e480
+00c5e474  ldrsw x9,[x10]
+00c5e478  add x8,x8,x9, LSL #0x4
+00c5e47c  add x0,x8,#0x138
+00c5e480  ldp x8,x1,[x0]
+00c5e484  mov x0,x20
+00c5e488  blr x8
+00c5e48c  cbz x0,0x00c5e590
+00c5e490  ldr x8,[x0]
+00c5e494  ldp x9,x1,[x8, #0x168]
+00c5e498  blr x9
+00c5e49c  ldr x8,[x20]
+00c5e4a0  ldr x1,[x24]
+00c5e4a4  mov x21,x0
+00c5e4a8  ldrh w9,[x8, #0x12a]
+00c5e4ac  cbz x9,0x00c5e4d0
+00c5e4b0  ldr x10,[x8, #0xb0]
+00c5e4b4  add x10,x10,#0x8
+00c5e4b8  ldur x11,[x10, #-0x8]
+00c5e4bc  cmp x11,x1
+00c5e4c0  b.eq 0x00c5e4e0
+00c5e4c4  subs x9,x9,#0x1
+00c5e4c8  add x10,x10,#0x10
+00c5e4cc  b.ne 0x00c5e4b8
+00c5e4d0  mov w2,#0x1
+00c5e4d4  mov x0,x20
+00c5e4d8  bl 0x00b2ae24
+00c5e4dc  b 0x00c5e4f0
+00c5e4e0  ldr w9,[x10]
+00c5e4e4  add w9,w9,#0x1
+00c5e4e8  add x8,x8,w9, SXTW  #0x4
+00c5e4ec  add x0,x8,#0x138
+00c5e4f0  ldp x8,x1,[x0]
+00c5e4f4  mov x0,x20
+00c5e4f8  blr x8
+00c5e4fc  mov x22,x0
+00c5e500  tbnz w29,#0x0,0x00c5e514
+00c5e504  ldr x1,[x28]
+00c5e508  mov x0,x19
+00c5e50c  mov x2,xzr
+00c5e510  bl 0x01fe9960
+00c5e514  ldr x0,[x25]
+00c5e518  ldr w8,[x0, #0xe0]
+00c5e51c  cbnz w8,0x00c5e524
+00c5e520  bl 0x00b0798c
+00c5e524  mov x0,x21
+00c5e528  mov x1,x19
+00c5e52c  bl 0x00c5e6f4
+00c5e530  ldr x1,[x26]
+00c5e534  mov x0,x19
+00c5e538  mov x2,xzr
+00c5e53c  bl 0x01fe9960
+00c5e540  mov x0,x22
+00c5e544  mov x1,x19
+00c5e548  bl 0x00c5cf20
+00c5e54c  mov w8,w0
+00c5e550  mov w29,wzr
+00c5e554  mov w0,wzr
+00c5e558  tbnz w8,#0x0,0x00c5e3d8
+00c5e55c  b 0x00c5e574
+00c5e560  ldr x1,[x27]
+00c5e564  mov x0,x19
+00c5e568  mov x2,xzr
+00c5e56c  bl 0x01fe9960
+00c5e570  mov w0,#0x1
+00c5e574  ldp x29,x30,[sp, #0x50]
+00c5e578  ldp x20,x19,[sp, #0x40]
+00c5e57c  ldp x22,x21,[sp, #0x30]
+00c5e580  ldp x24,x23,[sp, #0x20]
+00c5e584  ldp x26,x25,[sp, #0x10]
+00c5e588  ldp x28,x27,[sp], #0x60
+00c5e58c  ret
+00c5e590  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5e594_XUPorterJSON.MiniJSON__serializeArray.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$serializeArray @ 00c5e594
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$serializeValue @ 00c5cf20
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+
+--- Calls IN ---
+  <- FUN_00c5d004 @ 00c5d004
+  <- XUPorterJSON.MiniJSON$$serializeObjectOrArray @ 00c5e174
+
+--- Listing ---
+00c5e594  stp x25,x24,[sp, #-0x40]!
+00c5e598  stp x23,x22,[sp, #0x10]
+00c5e59c  stp x21,x20,[sp, #0x20]
+00c5e5a0  stp x19,x30,[sp, #0x30]
+00c5e5a4  adrp x21,0x3571000
+00c5e5a8  ldrb w8,[x21, #0x35c]
+00c5e5ac  mov x19,x1
+00c5e5b0  mov x20,x0
+00c5e5b4  tbnz w8,#0x0,0x00c5e5f0
+00c5e5b8  adrp x0,0x3378000
+00c5e5bc  ldr x0,[x0, #0x208]
+00c5e5c0  bl 0x00b0789c
+00c5e5c4  adrp x0,0x3310000
+00c5e5c8  ldr x0,[x0, #0xe98]
+00c5e5cc  bl 0x00b0789c
+00c5e5d0  adrp x0,0x3358000
+00c5e5d4  ldr x0,[x0, #0xcc8]
+00c5e5d8  bl 0x00b0789c
+00c5e5dc  adrp x0,0x331a000
+00c5e5e0  ldr x0,[x0, #0x5c0]
+00c5e5e4  bl 0x00b0789c
+00c5e5e8  mov w8,#0x1
+00c5e5ec  strb w8,[x21, #0x35c]
+00c5e5f0  cbz x19,0x00c5e6f0
+00c5e5f4  adrp x8,0x3358000
+00c5e5f8  ldr x8,[x8, #0xcc8]
+00c5e5fc  mov x0,x19
+00c5e600  mov x2,xzr
+00c5e604  ldr x1,[x8]
+00c5e608  bl 0x01fe9960
+00c5e60c  cbz x20,0x00c5e6f0
+00c5e610  ldr x8,[x20]
+00c5e614  mov x0,x20
+00c5e618  ldr x9,[x8, #0x298]
+00c5e61c  ldr x1,[x8, #0x2a0]
+00c5e620  blr x9
+00c5e624  cmp w0,#0x1
+00c5e628  b.lt 0x00c5e6b8
+00c5e62c  adrp x23,0x3378000
+00c5e630  adrp x24,0x3310000
+00c5e634  ldr x23,[x23, #0x208]
+00c5e638  ldr x24,[x24, #0xe98]
+00c5e63c  mov w21,wzr
+00c5e640  mov w25,#0x1
+00c5e644  ldr x8,[x20]
+00c5e648  mov x0,x20
+00c5e64c  mov w1,w21
+00c5e650  ldr x9,[x8, #0x2e8]
+00c5e654  ldr x2,[x8, #0x2f0]
+00c5e658  blr x9
+00c5e65c  mov x22,x0
+00c5e660  tbnz w25,#0x0,0x00c5e674
+00c5e664  ldr x1,[x24]
+00c5e668  mov x0,x19
+00c5e66c  mov x2,xzr
+00c5e670  bl 0x01fe9960
+00c5e674  ldr x0,[x23]
+00c5e678  ldr w8,[x0, #0xe0]
+00c5e67c  cbnz w8,0x00c5e684
+00c5e680  bl 0x00b0798c
+00c5e684  mov x0,x22
+00c5e688  mov x1,x19
+00c5e68c  bl 0x00c5cf20
+00c5e690  tbz w0,#0x0,0x00c5e6d8
+00c5e694  ldr x8,[x20]
+00c5e698  mov x0,x20
+00c5e69c  add w21,w21,#0x1
+00c5e6a0  ldr x9,[x8, #0x298]
+00c5e6a4  ldr x1,[x8, #0x2a0]
+00c5e6a8  blr x9
+00c5e6ac  cmp w21,w0
+00c5e6b0  mov w25,wzr
+00c5e6b4  b.lt 0x00c5e644
+00c5e6b8  adrp x8,0x331a000
+00c5e6bc  ldr x8,[x8, #0x5c0]
+00c5e6c0  mov x0,x19
+00c5e6c4  mov x2,xzr
+00c5e6c8  ldr x1,[x8]
+00c5e6cc  bl 0x01fe9960
+00c5e6d0  mov w0,#0x1
+00c5e6d4  b 0x00c5e6dc
+00c5e6d8  mov w0,wzr
+00c5e6dc  ldp x19,x30,[sp, #0x30]
+00c5e6e0  ldp x21,x20,[sp, #0x20]
+00c5e6e4  ldp x23,x22,[sp, #0x10]
+00c5e6e8  ldp x25,x24,[sp], #0x40
+00c5e6ec  ret
+00c5e6f0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5e6f4_XUPorterJSON.MiniJSON__serializeString.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$serializeString @ 00c5e6f4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.String$$ToCharArray @ 01fe4eec
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Convert$$ToString @ 020e3f04
+  -> System.Convert$$ToInt32 @ 020dca6c
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b8 @ 00b079b8
+  -> System.String$$PadLeft @ 01fe0028
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+  -> System.Text.StringBuilder$$Append @ 01fea30c
+
+--- Calls IN ---
+  <- FUN_00c5d004 @ 00c5d004
+  <- XUPorterJSON.MiniJSON$$serializeDictionary @ 00c5e984
+  <- XUPorterJSON.MiniJSON$$serializeObject @ 00c5e2e0
+
+--- Listing ---
+00c5e6f4  stp x28,x27,[sp, #-0x60]!
+00c5e6f8  stp x26,x25,[sp, #0x10]
+00c5e6fc  stp x24,x23,[sp, #0x20]
+00c5e700  stp x22,x21,[sp, #0x30]
+00c5e704  stp x20,x19,[sp, #0x40]
+00c5e708  stp x29,x30,[sp, #0x50]
+00c5e70c  adrp x21,0x3571000
+00c5e710  ldrb w8,[x21, #0x35e]
+00c5e714  mov x19,x1
+00c5e718  mov x20,x0
+00c5e71c  tbnz w8,#0x0,0x00c5e7a0
+00c5e720  adrp x0,0x3362000
+00c5e724  ldr x0,[x0, #0xe28]
+00c5e728  bl 0x00b0789c
+00c5e72c  adrp x0,0x335f000
+00c5e730  ldr x0,[x0, #0x118]
+00c5e734  bl 0x00b0789c
+00c5e738  adrp x0,0x3309000
+00c5e73c  ldr x0,[x0, #0x9e8]
+00c5e740  bl 0x00b0789c
+00c5e744  adrp x0,0x337b000
+00c5e748  ldr x0,[x0, #0xb78]
+00c5e74c  bl 0x00b0789c
+00c5e750  adrp x0,0x337a000
+00c5e754  ldr x0,[x0, #0x108]
+00c5e758  bl 0x00b0789c
+00c5e75c  adrp x0,0x3358000
+00c5e760  ldr x0,[x0, #0x188]
+00c5e764  bl 0x00b0789c
+00c5e768  adrp x0,0x3330000
+00c5e76c  ldr x0,[x0, #0xec0]
+00c5e770  bl 0x00b0789c
+00c5e774  adrp x0,0x3337000
+00c5e778  ldr x0,[x0, #0x8d8]
+00c5e77c  bl 0x00b0789c
+00c5e780  adrp x0,0x3341000
+00c5e784  ldr x0,[x0, #0x9f8]
+00c5e788  bl 0x00b0789c
+00c5e78c  adrp x0,0x337b000
+00c5e790  ldr x0,[x0, #0xae0]
+00c5e794  bl 0x00b0789c
+00c5e798  mov w8,#0x1
+00c5e79c  strb w8,[x21, #0x35e]
+00c5e7a0  cbz x19,0x00c5e980
+00c5e7a4  adrp x8,0x3337000
+00c5e7a8  ldr x8,[x8, #0x8d8]
+00c5e7ac  mov x0,x19
+00c5e7b0  mov x2,xzr
+00c5e7b4  ldr x1,[x8]
+00c5e7b8  bl 0x01fe9960
+00c5e7bc  cbz x20,0x00c5e980
+00c5e7c0  mov x0,x20
+00c5e7c4  mov x1,xzr
+00c5e7c8  bl 0x01fe4eec
+00c5e7cc  cbz x0,0x00c5e980
+00c5e7d0  ldr x8,[x0, #0x18]
+00c5e7d4  mov x20,x0
+00c5e7d8  cmp w8,#0x1
+00c5e7dc  b.lt 0x00c5e94c
+00c5e7e0  adrp x27,0x3362000
+00c5e7e4  adrp x23,0x3309000
+00c5e7e8  adrp x25,0x3358000
+00c5e7ec  adrp x26,0x3330000
+00c5e7f0  ldr x27,[x27, #0xe28]
+00c5e7f4  ldr x23,[x23, #0x9e8]
+00c5e7f8  ldr x25,[x25, #0x188]
+00c5e7fc  ldr x26,[x26, #0xec0]
+00c5e800  adrp x28,0x26db000
+00c5e804  mov x24,xzr
+00c5e808  and x8,x8,#0xffffffff
+00c5e80c  add x29,x20,#0x20
+00c5e810  add x28,x28,#0x4ec
+00c5e814  cmp x24,w8, UXTW 
+00c5e818  b.cs 0x00c5e97c
+00c5e81c  ldrh w21,[x29, x24, LSL #0x1]
+00c5e820  sub w8,w21,#0x8
+00c5e824  cmp w8,#0x5
+00c5e828  b.hi 0x00c5e848
+00c5e82c  adr x9,0xc5e83c
+00c5e830  ldrb w10,[x28, x8, LSL ]
+00c5e834  add x9,x9,x10, LSL #0x2
+00c5e838  br x9
+00c5e83c  adrp x8,0x335f000
+00c5e840  ldr x8,[x8, #0x118]
+00c5e844  b 0x00c5e914
+00c5e848  cmp w21,#0x5c
+00c5e84c  b.eq 0x00c5e90c
+00c5e850  cmp w21,#0x22
+00c5e854  b.ne 0x00c5e864
+00c5e858  adrp x8,0x337a000
+00c5e85c  ldr x8,[x8, #0x108]
+00c5e860  b 0x00c5e914
+00c5e864  ldr x0,[x27]
+00c5e868  ldr w8,[x0, #0xe0]
+00c5e86c  cbnz w8,0x00c5e874
+00c5e870  bl 0x00b0798c
+00c5e874  mov w0,w21
+00c5e878  mov x1,xzr
+00c5e87c  bl 0x020dca6c
+00c5e880  sub w8,w0,#0x20
+00c5e884  cmp w8,#0x5e
+00c5e888  b.ls 0x00c5e938
+00c5e88c  mov w22,w0
+00c5e890  ldr x0,[x27]
+00c5e894  ldr w8,[x0, #0xe0]
+00c5e898  cbnz w8,0x00c5e8a0
+00c5e89c  bl 0x00b0798c
+00c5e8a0  mov w1,#0x10
+00c5e8a4  mov w0,w22
+00c5e8a8  mov x2,xzr
+00c5e8ac  bl 0x020e3f04
+00c5e8b0  cbz x0,0x00c5e980
+00c5e8b4  mov w1,#0x4
+00c5e8b8  mov w2,#0x30
+00c5e8bc  mov x3,xzr
+00c5e8c0  bl 0x01fe0028
+00c5e8c4  adrp x8,0x3341000
+00c5e8c8  ldr x8,[x8, #0x9f8]
+00c5e8cc  mov x1,x0
+00c5e8d0  mov x2,xzr
+00c5e8d4  ldr x8,[x8]
+00c5e8d8  mov x0,x8
+00c5e8dc  bl 0x01fd2850
+00c5e8e0  mov x1,x0
+00c5e8e4  b 0x00c5e918
+00c5e8e8  adrp x8,0x337b000
+00c5e8ec  ldr x8,[x8, #0xb78]
+00c5e8f0  b 0x00c5e914
+00c5e8f4  ldr x1,[x23]
+00c5e8f8  b 0x00c5e918
+00c5e8fc  ldr x1,[x25]
+00c5e900  b 0x00c5e918
+00c5e904  ldr x1,[x26]
+00c5e908  b 0x00c5e918
+00c5e90c  adrp x8,0x337b000
+00c5e910  ldr x8,[x8, #0xae0]
+00c5e914  ldr x1,[x8]
+00c5e918  mov x0,x19
+00c5e91c  mov x2,xzr
+00c5e920  bl 0x01fe9960
+00c5e924  ldr w8,[x20, #0x18]
+00c5e928  add x24,x24,#0x1
+00c5e92c  cmp x24,w8, SXTW 
+00c5e930  b.lt 0x00c5e814
+00c5e934  b 0x00c5e94c
+00c5e938  mov x0,x19
+00c5e93c  mov w1,w21
+00c5e940  mov x2,xzr
+00c5e944  bl 0x01fea30c
+00c5e948  b 0x00c5e924
+00c5e94c  adrp x8,0x3337000
+00c5e950  ldr x8,[x8, #0x8d8]
+00c5e954  mov x0,x19
+00c5e958  ldp x29,x30,[sp, #0x50]
+00c5e95c  ldp x20,x19,[sp, #0x40]
+00c5e960  ldr x1,[x8]
+00c5e964  ldp x22,x21,[sp, #0x30]
+00c5e968  ldp x24,x23,[sp, #0x20]
+00c5e96c  ldp x26,x25,[sp, #0x10]
+00c5e970  mov x2,xzr
+00c5e974  ldp x28,x27,[sp], #0x60
+00c5e978  b 0x01fe9960
+00c5e97c  bl 0x00b079b8
+00c5e980  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5e984_XUPorterJSON.MiniJSON__serializeDictionary.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$serializeDictionary @ 00c5e984
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary.Enumerator<object,-object>$$MoveNext @ 01a4cb84
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$serializeString @ 00c5e6f4
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary<object,-object>$$GetEnumerator @ 0196e924
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+  -> System.Collections.Generic.Dictionary.Enumerator<object,-object>$$Dispose @ 01a4cc9c
+
+--- Calls IN ---
+  <- FUN_00c5d004 @ 00c5d004
+
+--- Listing ---
+00c5e984  sub sp,sp,#0x90
+00c5e988  str x28,[sp, #0x30]
+00c5e98c  stp x27,x26,[sp, #0x40]
+00c5e990  stp x25,x24,[sp, #0x50]
+00c5e994  stp x23,x22,[sp, #0x60]
+00c5e998  stp x21,x20,[sp, #0x70]
+00c5e99c  stp x19,x30,[sp, #0x80]
+00c5e9a0  adrp x21,0x3571000
+00c5e9a4  ldrb w8,[x21, #0x35b]
+00c5e9a8  mov x19,x1
+00c5e9ac  mov x20,x0
+00c5e9b0  tbnz w8,#0x0,0x00c5ea40
+00c5e9b4  adrp x0,0x332b000
+00c5e9b8  ldr x0,[x0, #0xb48]
+00c5e9bc  bl 0x00b0789c
+00c5e9c0  adrp x0,0x331b000
+00c5e9c4  ldr x0,[x0, #0xfd0]
+00c5e9c8  bl 0x00b0789c
+00c5e9cc  adrp x0,0x3377000
+00c5e9d0  ldr x0,[x0, #0x6d0]
+00c5e9d4  bl 0x00b0789c
+00c5e9d8  adrp x0,0x3345000
+00c5e9dc  ldr x0,[x0, #0x260]
+00c5e9e0  bl 0x00b0789c
+00c5e9e4  adrp x0,0x3340000
+00c5e9e8  ldr x0,[x0, #0x800]
+00c5e9ec  bl 0x00b0789c
+00c5e9f0  adrp x0,0x3378000
+00c5e9f4  ldr x0,[x0, #0xd58]
+00c5e9f8  bl 0x00b0789c
+00c5e9fc  adrp x0,0x3378000
+00c5ea00  ldr x0,[x0, #0x208]
+00c5ea04  bl 0x00b0789c
+00c5ea08  adrp x0,0x3333000
+00c5ea0c  ldr x0,[x0, #0x618]
+00c5ea10  bl 0x00b0789c
+00c5ea14  adrp x0,0x3318000
+00c5ea18  ldr x0,[x0, #0xe20]
+00c5ea1c  bl 0x00b0789c
+00c5ea20  adrp x0,0x3310000
+00c5ea24  ldr x0,[x0, #0xe98]
+00c5ea28  bl 0x00b0789c
+00c5ea2c  adrp x0,0x336a000
+00c5ea30  ldr x0,[x0, #0x568]
+00c5ea34  bl 0x00b0789c
+00c5ea38  mov w8,#0x1
+00c5ea3c  strb w8,[x21, #0x35b]
+00c5ea40  movi v0.2D,#0x0
+00c5ea44  str xzr,[sp, #0x20]
+00c5ea48  stp q0,q0,[sp]
+00c5ea4c  cbz x19,0x00c5eb60
+00c5ea50  adrp x8,0x3333000
+00c5ea54  ldr x8,[x8, #0x618]
+00c5ea58  mov x0,x19
+00c5ea5c  mov x2,xzr
+00c5ea60  ldr x1,[x8]
+00c5ea64  bl 0x01fe9960
+00c5ea68  cbz x20,0x00c5eb60
+00c5ea6c  adrp x8,0x332b000
+00c5ea70  ldr x8,[x8, #0xb48]
+00c5ea74  adrp x24,0x3377000
+00c5ea78  adrp x25,0x3378000
+00c5ea7c  adrp x26,0x336a000
+00c5ea80  ldr x24,[x24, #0x6d0]
+00c5ea84  ldr x25,[x25, #0x208]
+00c5ea88  ldr x26,[x26, #0x568]
+00c5ea8c  ldr x1,[x8]
+00c5ea90  adrp x27,0x3310000
+00c5ea94  adrp x22,0x3318000
+00c5ea98  adrp x23,0x331b000
+00c5ea9c  ldr x27,[x27, #0xe98]
+00c5eaa0  ldr x22,[x22, #0xe20]
+00c5eaa4  ldr x23,[x23, #0xfd0]
+00c5eaa8  mov x8,sp
+00c5eaac  mov x0,x20
+00c5eab0  bl 0x0196e924
+00c5eab4  mov w28,#0x1
+00c5eab8  ldr x1,[x24]
+00c5eabc  mov x0,sp
+    ; [PRE] try { // try from 00c5eabc to 00c5eac3 has its CatchHandler @ 00c5eb70
+00c5eac0  bl 0x01a4cb84
+    ; [POST] } // end try from 00c5eabc to 00c5eac3
+00c5eac4  tbz w0,#0x0,0x00c5eb20
+00c5eac8  ldp x21,x20,[sp, #0x10]
+00c5eacc  tbnz w28,#0x0,0x00c5eae0
+00c5ead0  ldr x1,[x27]
+00c5ead4  mov x0,x19
+    ; [PRE] try { // try from 00c5ead4 to 00c5eadf has its CatchHandler @ 00c5eb64
+00c5ead8  mov x2,xzr
+00c5eadc  bl 0x01fe9960
+    ; [POST] } // end try from 00c5ead4 to 00c5eadf
+00c5eae0  ldr x0,[x25]
+00c5eae4  ldr w8,[x0, #0xe0]
+00c5eae8  cbnz w8,0x00c5eaf0
+00c5eaec  bl 0x00b0798c
+    ; [PRE] try { // try from 00c5eaec to 00c5eafb has its CatchHandler @ 00c5eb74
+00c5eaf0  mov x0,x21
+00c5eaf4  mov x1,x19
+00c5eaf8  bl 0x00c5e6f4
+    ; [POST] } // end try from 00c5eaec to 00c5eafb
+00c5eafc  ldr x1,[x26]
+00c5eb00  mov x0,x19
+    ; [PRE] try { // try from 00c5eb00 to 00c5eb0b has its CatchHandler @ 00c5eb6c
+00c5eb04  mov x2,xzr
+00c5eb08  bl 0x01fe9960
+    ; [POST] } // end try from 00c5eb00 to 00c5eb0b
+00c5eb0c  mov x0,x20
+    ; [PRE] try { // try from 00c5eb0c to 00c5eb17 has its CatchHandler @ 00c5eb68
+00c5eb10  mov x1,x19
+00c5eb14  bl 0x00c5e6f4
+    ; [POST] } // end try from 00c5eb0c to 00c5eb17
+00c5eb18  mov w28,wzr
+00c5eb1c  b 0x00c5eab8
+00c5eb20  ldr x1,[x23]
+00c5eb24  mov x0,sp
+00c5eb28  bl 0x01a4cc9c
+00c5eb2c  ldr x1,[x22]
+00c5eb30  mov x0,x19
+00c5eb34  mov x2,xzr
+00c5eb38  bl 0x01fe9960
+00c5eb3c  ldp x19,x30,[sp, #0x80]
+00c5eb40  ldp x21,x20,[sp, #0x70]
+00c5eb44  ldp x23,x22,[sp, #0x60]
+00c5eb48  ldp x25,x24,[sp, #0x50]
+00c5eb4c  ldp x27,x26,[sp, #0x40]
+00c5eb50  ldr x28,[sp, #0x30]
+00c5eb54  mov w0,#0x1
+00c5eb58  add sp,sp,#0x90
+00c5eb5c  ret
+00c5eb60  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5ebd4_XUPorterJSON.MiniJSON__serializeNumber.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$serializeNumber @ 00c5ebd4
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Convert$$ToString @ 020e35dc
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Text.StringBuilder$$Append @ 01fe9960
+
+--- Calls IN ---
+  <- FUN_00c5d004 @ 00c5d004
+
+--- Listing ---
+00c5ebd4  str d8,[sp, #-0x30]!
+00c5ebd8  stp x21,x20,[sp, #0x10]
+00c5ebdc  stp x19,x30,[sp, #0x20]
+00c5ebe0  adrp x20,0x3571000
+00c5ebe4  adrp x21,0x3362000
+00c5ebe8  ldrb w8,[x20, #0x35f]
+00c5ebec  ldr x21,[x21, #0xe28]
+00c5ebf0  mov x19,x0
+00c5ebf4  mov v8.16B,v0.16B
+00c5ebf8  tbnz w8,#0x0,0x00c5ec10
+00c5ebfc  adrp x0,0x3362000
+00c5ec00  ldr x0,[x0, #0xe28]
+00c5ec04  bl 0x00b0789c
+00c5ec08  mov w8,#0x1
+00c5ec0c  strb w8,[x20, #0x35f]
+00c5ec10  ldr x0,[x21]
+00c5ec14  ldr w8,[x0, #0xe0]
+00c5ec18  cbnz w8,0x00c5ec20
+00c5ec1c  bl 0x00b0798c
+00c5ec20  mov v0.16B,v8.16B
+00c5ec24  mov x0,xzr
+00c5ec28  bl 0x020e35dc
+00c5ec2c  cbz x19,0x00c5ec4c
+00c5ec30  mov x1,x0
+00c5ec34  mov x0,x19
+00c5ec38  ldp x19,x30,[sp, #0x20]
+00c5ec3c  ldp x21,x20,[sp, #0x10]
+00c5ec40  mov x2,xzr
+00c5ec44  ldr d8,[sp], #0x30
+00c5ec48  b 0x01fe9960
+00c5ec4c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00c5ec50_XUPorterJSON.MiniJSON__.ctor.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$.ctor @ 00c5ec50
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00c5ec50  mov x1,xzr
+00c5ec54  b 0x02194104
+
+
+================================================================================
+### FILE: 00c5ec58_XUPorterJSON.MiniJSON__.cctor.txt
+================================================================================
+Function: XUPorterJSON.MiniJSON$$.cctor @ 00c5ec58
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00c5ec58  stp x21,x20,[sp, #-0x20]!
+00c5ec5c  stp x19,x30,[sp, #0x10]
+00c5ec60  adrp x20,0x3571000
+00c5ec64  adrp x21,0x3378000
+00c5ec68  adrp x19,0x332c000
+00c5ec6c  ldrb w8,[x20, #0x360]
+00c5ec70  ldr x21,[x21, #0x208]
+00c5ec74  ldr x19,[x19, #0x2c0]
+00c5ec78  tbnz w8,#0x0,0x00c5ec9c
+00c5ec7c  adrp x0,0x3378000
+00c5ec80  ldr x0,[x0, #0x208]
+00c5ec84  bl 0x00b0789c
+00c5ec88  adrp x0,0x332c000
+00c5ec8c  ldr x0,[x0, #0x2c0]
+00c5ec90  bl 0x00b0789c
+00c5ec94  mov w8,#0x1
+00c5ec98  strb w8,[x20, #0x360]
+00c5ec9c  ldr x8,[x21]
+00c5eca0  ldr x0,[x8, #0xb8]
+00c5eca4  mov w8,#0xffffffff
+00c5eca8  str w8,[x0]
+00c5ecac  ldr x1,[x19]
+00c5ecb0  str x1,[x0, #0x8]!
+00c5ecb4  ldp x19,x30,[sp, #0x10]
+00c5ecb8  ldp x21,x20,[sp], #0x20
+00c5ecbc  b 0x00b07850
+
+
+================================================================================
+### FILE: 00c5ecc0_XUPorterJSON.MiniJsonExtensions__toJson.txt
+================================================================================
+Function: XUPorterJSON.MiniJsonExtensions$$toJson @ 00c5ecc0
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$jsonEncode @ 00c5ce70
+
+--- Calls IN ---
+
+--- Listing ---
+00c5ecc0  stp x21,x20,[sp, #-0x20]!
+00c5ecc4  stp x19,x30,[sp, #0x10]
+00c5ecc8  adrp x20,0x3571000
+00c5eccc  adrp x21,0x3378000
+00c5ecd0  ldrb w8,[x20, #0x361]
+00c5ecd4  ldr x21,[x21, #0x208]
+00c5ecd8  mov x19,x0
+00c5ecdc  tbnz w8,#0x0,0x00c5ecf4
+00c5ece0  adrp x0,0x3378000
+00c5ece4  ldr x0,[x0, #0x208]
+00c5ece8  bl 0x00b0789c
+00c5ecec  mov w8,#0x1
+00c5ecf0  strb w8,[x20, #0x361]
+00c5ecf4  ldr x0,[x21]
+00c5ecf8  ldr w8,[x0, #0xe0]
+00c5ecfc  cbnz w8,0x00c5ed04
+00c5ed00  bl 0x00b0798c
+00c5ed04  mov x0,x19
+00c5ed08  ldp x19,x30,[sp, #0x10]
+00c5ed0c  ldp x21,x20,[sp], #0x20
+00c5ed10  b 0x00c5ce70
+
+
+================================================================================
+### FILE: 00c5ed14_XUPorterJSON.MiniJsonExtensions__toJson.txt
+================================================================================
+Function: XUPorterJSON.MiniJsonExtensions$$toJson @ 00c5ed14
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$jsonEncode @ 00c5ce70
+
+--- Calls IN ---
+
+--- Listing ---
+00c5ed14  stp x21,x20,[sp, #-0x20]!
+00c5ed18  stp x19,x30,[sp, #0x10]
+00c5ed1c  adrp x20,0x3571000
+00c5ed20  adrp x21,0x3378000
+00c5ed24  ldrb w8,[x20, #0x362]
+00c5ed28  ldr x21,[x21, #0x208]
+00c5ed2c  mov x19,x0
+00c5ed30  tbnz w8,#0x0,0x00c5ed48
+00c5ed34  adrp x0,0x3378000
+00c5ed38  ldr x0,[x0, #0x208]
+00c5ed3c  bl 0x00b0789c
+00c5ed40  mov w8,#0x1
+00c5ed44  strb w8,[x20, #0x362]
+00c5ed48  ldr x0,[x21]
+00c5ed4c  ldr w8,[x0, #0xe0]
+00c5ed50  cbnz w8,0x00c5ed58
+00c5ed54  bl 0x00b0798c
+00c5ed58  mov x0,x19
+00c5ed5c  ldp x19,x30,[sp, #0x10]
+00c5ed60  ldp x21,x20,[sp], #0x20
+00c5ed64  b 0x00c5ce70
+
+
+================================================================================
+### FILE: 00c5ed68_XUPorterJSON.MiniJsonExtensions__arrayListFromJson.txt
+================================================================================
+Function: XUPorterJSON.MiniJsonExtensions$$arrayListFromJson @ 00c5ed68
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$jsonDecode @ 00c54498
+
+--- Calls IN ---
+
+--- Listing ---
+00c5ed68  stp x21,x20,[sp, #-0x20]!
+00c5ed6c  stp x19,x30,[sp, #0x10]
+00c5ed70  adrp x20,0x3571000
+00c5ed74  adrp x21,0x3378000
+00c5ed78  ldrb w8,[x20, #0x363]
+00c5ed7c  ldr x21,[x21, #0x208]
+00c5ed80  mov x19,x0
+00c5ed84  tbnz w8,#0x0,0x00c5eda8
+00c5ed88  adrp x0,0x330b000
+00c5ed8c  ldr x0,[x0, #0xe28]
+00c5ed90  bl 0x00b0789c
+00c5ed94  adrp x0,0x3378000
+00c5ed98  ldr x0,[x0, #0x208]
+00c5ed9c  bl 0x00b0789c
+00c5eda0  mov w8,#0x1
+00c5eda4  strb w8,[x20, #0x363]
+00c5eda8  ldr x0,[x21]
+00c5edac  ldr w8,[x0, #0xe0]
+00c5edb0  cbnz w8,0x00c5edb8
+00c5edb4  bl 0x00b0798c
+00c5edb8  mov x0,x19
+00c5edbc  bl 0x00c54498
+00c5edc0  cbz x0,0x00c5ee00
+00c5edc4  adrp x8,0x330b000
+00c5edc8  ldr x8,[x8, #0xe28]
+00c5edcc  ldr x9,[x0]
+00c5edd0  ldr x8,[x8]
+00c5edd4  ldrb w11,[x9, #0x12c]
+00c5edd8  ldrb w10,[x8, #0x12c]
+00c5eddc  cmp w11,w10
+00c5ede0  b.cs 0x00c5edec
+00c5ede4  mov x0,xzr
+00c5ede8  b 0x00c5ee00
+00c5edec  ldr x9,[x9, #0xc8]
+00c5edf0  add x9,x9,x10, LSL #0x3
+00c5edf4  ldur x9,[x9, #-0x8]
+00c5edf8  cmp x9,x8
+00c5edfc  csel x0,x0,xzr,eq
+00c5ee00  ldp x19,x30,[sp, #0x10]
+00c5ee04  ldp x21,x20,[sp], #0x20
+00c5ee08  ret
+
+
+================================================================================
+### FILE: 00c5ee0c_XUPorterJSON.MiniJsonExtensions__hashtableFromJson.txt
+================================================================================
+Function: XUPorterJSON.MiniJsonExtensions$$hashtableFromJson @ 00c5ee0c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XUPorterJSON.MiniJSON$$jsonDecode @ 00c54498
+
+--- Calls IN ---
+
+--- Listing ---
+00c5ee0c  stp x21,x20,[sp, #-0x20]!
+00c5ee10  stp x19,x30,[sp, #0x10]
+00c5ee14  adrp x20,0x3571000
+00c5ee18  adrp x21,0x3378000
+00c5ee1c  ldrb w8,[x20, #0x364]
+00c5ee20  ldr x21,[x21, #0x208]
+00c5ee24  mov x19,x0
+00c5ee28  tbnz w8,#0x0,0x00c5ee4c
+00c5ee2c  adrp x0,0x330e000
+00c5ee30  ldr x0,[x0, #0xb48]
+00c5ee34  bl 0x00b0789c
+00c5ee38  adrp x0,0x3378000
+00c5ee3c  ldr x0,[x0, #0x208]
+00c5ee40  bl 0x00b0789c
+00c5ee44  mov w8,#0x1
+00c5ee48  strb w8,[x20, #0x364]
+00c5ee4c  ldr x0,[x21]
+00c5ee50  ldr w8,[x0, #0xe0]
+00c5ee54  cbnz w8,0x00c5ee5c
+00c5ee58  bl 0x00b0798c
+00c5ee5c  mov x0,x19
+00c5ee60  bl 0x00c54498
+00c5ee64  cbz x0,0x00c5eea4
+00c5ee68  adrp x8,0x330e000
+00c5ee6c  ldr x8,[x8, #0xb48]
+00c5ee70  ldr x9,[x0]
+00c5ee74  ldr x8,[x8]
+00c5ee78  ldrb w11,[x9, #0x12c]
+00c5ee7c  ldrb w10,[x8, #0x12c]
+00c5ee80  cmp w11,w10
+00c5ee84  b.cs 0x00c5ee90
+00c5ee88  mov x0,xzr
+00c5ee8c  b 0x00c5eea4
+00c5ee90  ldr x9,[x9, #0xc8]
+00c5ee94  add x9,x9,x10, LSL #0x3
+00c5ee98  ldur x9,[x9, #-0x8]
+00c5ee9c  cmp x9,x8
+00c5eea0  csel x0,x0,xzr,eq
+00c5eea4  ldp x19,x30,[sp, #0x10]
+00c5eea8  ldp x21,x20,[sp], #0x20
+00c5eeac  ret
+
+

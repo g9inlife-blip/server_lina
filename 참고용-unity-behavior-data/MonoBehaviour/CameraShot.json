@@ -1,0 +1,911 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 6186396800462956850
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -8588920802634853986
+  },
+  "m_Name": "",
+  "_startTime": 0.0,
+  "_animationData": {
+    "_animatedParameters": [
+      {
+        "_serializedData": "{\"parameterName\":\"position\",\"declaringTypeName\":\"Slate.CameraShot\",\"transformHierarchyPath\":\"\",\"parameterType\":1}",
+        "_isDisabled": 0,
+        "_curves": [
+          {
+            "m_Curve": [
+              {
+                "time": 0.5,
+                "value": 3.71,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.5,
+                "value": 3.71,
+                "inSlope": -0.006088657,
+                "outSlope": -0.006088657,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 1.0
+              },
+              {
+                "time": 1.7,
+                "value": 4.5,
+                "inSlope": 12.974996,
+                "outSlope": 12.974996,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.8000001,
+                "value": 6.7,
+                "inSlope": 2.8619963E-05,
+                "outSlope": 2.8619963E-05,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 1.0
+              },
+              {
+                "time": 2.8,
+                "value": 6.7,
+                "inSlope": 1.6557382E-05,
+                "outSlope": 1.6557382E-05,
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 1.0
+              },
+              {
+                "time": 3.3,
+                "value": 9.24,
+                "inSlope": 7.8751407,
+                "outSlope": 7.8751407,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 1.0
+              },
+              {
+                "time": 3.5123615,
+                "value": 9.24,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.8,
+                "value": 9.24,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.0,
+                "value": 9.24,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.0
+              },
+              {
+                "time": 6.3,
+                "value": 9.24,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 1.0
+              },
+              {
+                "time": 6.597504,
+                "value": 9.24,
+                "inSlope": -12.781039,
+                "outSlope": -12.781039,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 1.0
+              },
+              {
+                "time": 6.8,
+                "value": 3.84,
+                "inSlope": 0.011898219,
+                "outSlope": 0.011898219,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 1.0
+              },
+              {
+                "time": 7.3,
+                "value": 3.84,
+                "inSlope": 0.011898219,
+                "outSlope": 0.011898219,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 1.0
+              },
+              {
+                "time": 8.0,
+                "value": 6.87,
+                "inSlope": -0.00031457783,
+                "outSlope": -0.00031457783,
+                "weightedMode": 0,
+                "inWeight": 1.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 9.900001,
+                "value": 6.87,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 10.2,
+                "value": 5.72,
+                "inSlope": -0.7000008,
+                "outSlope": -0.7000008,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+          },
+          {
+            "m_Curve": [
+              {
+                "time": 0.5,
+                "value": 20.0,
+                "inSlope": 0.23833238,
+                "outSlope": 0.23833238,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 1.0
+              },
+              {
+                "time": 1.5,
+                "value": 20.24,
+                "inSlope": 0.3457604,
+                "outSlope": 0.3457604,
+                "weightedMode": 0,
+                "inWeight": 1.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.7,
+                "value": 21.0,
+                "inSlope": -1.1000011,
+                "outSlope": -1.1000011,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.8000001,
+                "value": 20.4,
+                "inSlope": -3.0000012,
+                "outSlope": -3.0000012,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 2.8,
+                "value": 20.4,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.3,
+                "value": 20.4,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.5123615,
+                "value": 20.4,
+                "inSlope": -0.57499874,
+                "outSlope": -0.57499874,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.8,
+                "value": 18.0,
+                "inSlope": -4.3457336,
+                "outSlope": -4.3457336,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.3,
+                "value": 16.8,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.597504,
+                "value": 16.8,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.8,
+                "value": 18.66,
+                "inSlope": 1.1625001,
+                "outSlope": 1.1625001,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 7.3,
+                "value": 18.66,
+                "inSlope": 1.1625001,
+                "outSlope": 1.1625001,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 8.0,
+                "value": 19.27,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 9.900001,
+                "value": 19.27,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 10.2,
+                "value": 19.27,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+          },
+          {
+            "m_Curve": [
+              {
+                "time": 0.5,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.5,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.7,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.8000001,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 2.8,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.3,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.5123615,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.8,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.0,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.3,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.597504,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.8,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 7.3,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 8.0,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 9.900001,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 10.2,
+                "value": -20.4,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+          }
+        ],
+        "_scriptExpression": ""
+      },
+      {
+        "_serializedData": "{\"parameterName\":\"rotation\",\"declaringTypeName\":\"Slate.CameraShot\",\"transformHierarchyPath\":\"\",\"parameterType\":1}",
+        "_isDisabled": 0,
+        "_curves": [
+          {
+            "m_Curve": [
+              {
+                "time": 2.8,
+                "value": 42.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.3,
+                "value": 42.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.5123615,
+                "value": 42.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.3,
+                "value": 42.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.597504,
+                "value": 42.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+          },
+          {
+            "m_Curve": [
+              {
+                "time": 2.8,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.3,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.5123615,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.3,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.597504,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+          },
+          {
+            "m_Curve": [
+              {
+                "time": 2.8,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.3,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.5123615,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.3,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.597504,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+          }
+        ],
+        "_scriptExpression": ""
+      },
+      {
+        "_serializedData": "{\"parameterName\":\"fieldOfView\",\"declaringTypeName\":\"Slate.CameraShot\",\"transformHierarchyPath\":\"\",\"parameterType\":1}",
+        "_isDisabled": 0,
+        "_curves": [
+          {
+            "m_Curve": [
+              {
+                "time": 0.5,
+                "value": 0.5,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.5,
+                "value": 1.0,
+                "inSlope": 0.25,
+                "outSlope": 0.25,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.7,
+                "value": 1.0,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.0
+              },
+              {
+                "time": 1.8000001,
+                "value": 2.0,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.0
+              },
+              {
+                "time": 2.8,
+                "value": 2.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.3,
+                "value": 2.0,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.5123615,
+                "value": 2.0,
+                "inSlope": -0.9034738,
+                "outSlope": -0.9034738,
+                "weightedMode": 0,
+                "inWeight": 1.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.3,
+                "value": 1.0,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.597504,
+                "value": 1.0,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 7.5,
+                "value": 1.0,
+                "inSlope": 2.0,
+                "outSlope": 2.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 8.0,
+                "value": 3.0,
+                "inSlope": 2.0,
+                "outSlope": 2.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 9.900001,
+                "value": 3.0,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.0,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 10.2,
+                "value": 2.0,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.0
+              },
+              {
+                "time": 38.3,
+                "value": 3.0,
+                "inSlope": 0.06802721,
+                "outSlope": 0.06802721,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+          }
+        ],
+        "_scriptExpression": ""
+      },
+      {
+        "_serializedData": "{\"parameterName\":\"focalPoint\",\"declaringTypeName\":\"Slate.CameraShot\",\"transformHierarchyPath\":\"\",\"parameterType\":1}",
+        "_isDisabled": 0,
+        "_curves": [
+          {
+            "m_Curve": [
+              {
+                "time": 2.8,
+                "value": 10.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.3,
+                "value": 10.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.5123615,
+                "value": 10.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.3,
+                "value": 10.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.597504,
+                "value": 10.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+          }
+        ],
+        "_scriptExpression": ""
+      },
+      {
+        "_serializedData": "{\"parameterName\":\"focalRange\",\"declaringTypeName\":\"Slate.CameraShot\",\"transformHierarchyPath\":\"\",\"parameterType\":1}",
+        "_isDisabled": 0,
+        "_curves": [
+          {
+            "m_Curve": [
+              {
+                "time": 2.8,
+                "value": 15.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.3,
+                "value": 15.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 3.5123615,
+                "value": 15.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.3,
+                "value": 15.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 6.597504,
+                "value": 15.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+          }
+        ],
+        "_scriptExpression": ""
+      }
+    ]
+  },
+  "_length": 42.0,
+  "_blendIn": 1.0,
+  "_blendOut": 1.0,
+  "_targetShot": {
+    "m_FileID": 0,
+    "m_PathID": -5111995581647152791
+  },
+  "blendInEffect": 1,
+  "blendOutEffect": 1,
+  "steadyCamEffect": 0.0,
+  "fadeToColor": {
+    "r": 0.0,
+    "g": 0.0,
+    "b": 0.0,
+    "a": 1.0
+  },
+  "fadeFromColor": {
+    "r": 0.0,
+    "g": 0.0,
+    "b": 0.0,
+    "a": 1.0
+  }
+}

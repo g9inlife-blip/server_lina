@@ -1,0 +1,2220 @@
+================================================================================
+### FILE: 00d1bdc0_iCloudManager__add_OnCloudInitAction.txt
+================================================================================
+Function: iCloudManager$$add_OnCloudInitAction @ 00d1bdc0
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> FUN_00b07c6c @ 00b07c6c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- iCloudUseExample$$Awake @ 00d3a748
+
+--- Listing ---
+00d1bdc0  stp x25,x24,[sp, #-0x40]!
+00d1bdc4  stp x23,x22,[sp, #0x10]
+00d1bdc8  stp x21,x20,[sp, #0x20]
+00d1bdcc  stp x19,x30,[sp, #0x30]
+00d1bdd0  adrp x20,0x3571000
+00d1bdd4  adrp x24,0x336e000
+00d1bdd8  ldrb w8,[x20, #0xbda]
+00d1bddc  ldr x24,[x24, #0xb10]
+00d1bde0  mov x19,x0
+00d1bde4  tbnz w8,#0x0,0x00d1be08
+00d1bde8  adrp x0,0x3369000
+00d1bdec  ldr x0,[x0, #0x800]
+00d1bdf0  bl 0x00b0789c
+00d1bdf4  adrp x0,0x336e000
+00d1bdf8  ldr x0,[x0, #0xb10]
+00d1bdfc  bl 0x00b0789c
+00d1be00  mov w8,#0x1
+00d1be04  strb w8,[x20, #0xbda]
+00d1be08  ldr x0,[x24]
+00d1be0c  ldr w8,[x0, #0xe0]
+00d1be10  cbnz w8,0x00d1be1c
+00d1be14  bl 0x00b0798c
+00d1be18  ldr x0,[x24]
+00d1be1c  ldr x8,[x0, #0xb8]
+00d1be20  adrp x25,0x3369000
+00d1be24  ldr x20,[x8]
+00d1be28  ldr x25,[x25, #0x800]
+00d1be2c  mov x0,x20
+00d1be30  mov x1,x19
+00d1be34  mov x2,xzr
+00d1be38  bl 0x02197810
+00d1be3c  cbz x0,0x00d1be5c
+00d1be40  ldr x23,[x25]
+00d1be44  mov x22,x0
+00d1be48  mov x1,x23
+00d1be4c  bl 0x00b07990
+00d1be50  mov x21,x0
+00d1be54  cbnz x0,0x00d1be60
+00d1be58  b 0x00d1bea4
+00d1be5c  mov x21,xzr
+00d1be60  ldr x0,[x24]
+00d1be64  ldr w8,[x0, #0xe0]
+00d1be68  cbnz w8,0x00d1be74
+00d1be6c  bl 0x00b0798c
+00d1be70  ldr x0,[x24]
+00d1be74  ldr x0,[x0, #0xb8]
+00d1be78  mov x1,x21
+00d1be7c  mov x2,x20
+00d1be80  bl 0x00ae526c
+00d1be84  cmp x20,x0
+00d1be88  mov x20,x0
+00d1be8c  b.ne 0x00d1be2c
+00d1be90  ldp x19,x30,[sp, #0x30]
+00d1be94  ldp x21,x20,[sp, #0x20]
+00d1be98  ldp x23,x22,[sp, #0x10]
+00d1be9c  ldp x25,x24,[sp], #0x40
+00d1bea0  ret
+00d1bea4  mov x0,x22
+00d1bea8  mov x1,x23
+00d1beac  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1beb0_iCloudManager__remove_OnCloudInitAction.txt
+================================================================================
+Function: iCloudManager$$remove_OnCloudInitAction @ 00d1beb0
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> FUN_00b07c6c @ 00b07c6c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- iCloudUseExample$$OnDestroy @ 00d3b02c
+
+--- Listing ---
+00d1beb0  stp x25,x24,[sp, #-0x40]!
+00d1beb4  stp x23,x22,[sp, #0x10]
+00d1beb8  stp x21,x20,[sp, #0x20]
+00d1bebc  stp x19,x30,[sp, #0x30]
+00d1bec0  adrp x20,0x3571000
+00d1bec4  adrp x24,0x336e000
+00d1bec8  ldrb w8,[x20, #0xbdb]
+00d1becc  ldr x24,[x24, #0xb10]
+00d1bed0  mov x19,x0
+00d1bed4  tbnz w8,#0x0,0x00d1bef8
+00d1bed8  adrp x0,0x3369000
+00d1bedc  ldr x0,[x0, #0x800]
+00d1bee0  bl 0x00b0789c
+00d1bee4  adrp x0,0x336e000
+00d1bee8  ldr x0,[x0, #0xb10]
+00d1beec  bl 0x00b0789c
+00d1bef0  mov w8,#0x1
+00d1bef4  strb w8,[x20, #0xbdb]
+00d1bef8  ldr x0,[x24]
+00d1befc  ldr w8,[x0, #0xe0]
+00d1bf00  cbnz w8,0x00d1bf0c
+00d1bf04  bl 0x00b0798c
+00d1bf08  ldr x0,[x24]
+00d1bf0c  ldr x8,[x0, #0xb8]
+00d1bf10  adrp x25,0x3369000
+00d1bf14  ldr x20,[x8]
+00d1bf18  ldr x25,[x25, #0x800]
+00d1bf1c  mov x0,x20
+00d1bf20  mov x1,x19
+00d1bf24  mov x2,xzr
+00d1bf28  bl 0x02197a1c
+00d1bf2c  cbz x0,0x00d1bf4c
+00d1bf30  ldr x23,[x25]
+00d1bf34  mov x22,x0
+00d1bf38  mov x1,x23
+00d1bf3c  bl 0x00b07990
+00d1bf40  mov x21,x0
+00d1bf44  cbnz x0,0x00d1bf50
+00d1bf48  b 0x00d1bf94
+00d1bf4c  mov x21,xzr
+00d1bf50  ldr x0,[x24]
+00d1bf54  ldr w8,[x0, #0xe0]
+00d1bf58  cbnz w8,0x00d1bf64
+00d1bf5c  bl 0x00b0798c
+00d1bf60  ldr x0,[x24]
+00d1bf64  ldr x0,[x0, #0xb8]
+00d1bf68  mov x1,x21
+00d1bf6c  mov x2,x20
+00d1bf70  bl 0x00ae526c
+00d1bf74  cmp x20,x0
+00d1bf78  mov x20,x0
+00d1bf7c  b.ne 0x00d1bf1c
+00d1bf80  ldp x19,x30,[sp, #0x30]
+00d1bf84  ldp x21,x20,[sp, #0x20]
+00d1bf88  ldp x23,x22,[sp, #0x10]
+00d1bf8c  ldp x25,x24,[sp], #0x40
+00d1bf90  ret
+00d1bf94  mov x0,x22
+00d1bf98  mov x1,x23
+00d1bf9c  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1bfa0_iCloudManager__add_OnCloudDataReceivedAction.txt
+================================================================================
+Function: iCloudManager$$add_OnCloudDataReceivedAction @ 00d1bfa0
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- TvOsCloudExample$$Start @ 00d46d7c
+  <- iCloudUseExample$$Awake @ 00d3a748
+
+--- Listing ---
+00d1bfa0  stp x25,x24,[sp, #-0x40]!
+00d1bfa4  stp x23,x22,[sp, #0x10]
+00d1bfa8  stp x21,x20,[sp, #0x20]
+00d1bfac  stp x19,x30,[sp, #0x30]
+00d1bfb0  adrp x20,0x3571000
+00d1bfb4  adrp x24,0x336e000
+00d1bfb8  ldrb w8,[x20, #0xbdc]
+00d1bfbc  ldr x24,[x24, #0xb10]
+00d1bfc0  mov x19,x0
+00d1bfc4  tbnz w8,#0x0,0x00d1bfe8
+00d1bfc8  adrp x0,0x3356000
+00d1bfcc  ldr x0,[x0, #0x988]
+00d1bfd0  bl 0x00b0789c
+00d1bfd4  adrp x0,0x336e000
+00d1bfd8  ldr x0,[x0, #0xb10]
+00d1bfdc  bl 0x00b0789c
+00d1bfe0  mov w8,#0x1
+00d1bfe4  strb w8,[x20, #0xbdc]
+00d1bfe8  ldr x0,[x24]
+00d1bfec  ldr w8,[x0, #0xe0]
+00d1bff0  cbnz w8,0x00d1bffc
+00d1bff4  bl 0x00b0798c
+00d1bff8  ldr x0,[x24]
+00d1bffc  ldr x8,[x0, #0xb8]
+00d1c000  adrp x25,0x3356000
+00d1c004  ldr x20,[x8, #0x8]
+00d1c008  ldr x25,[x25, #0x988]
+00d1c00c  mov x0,x20
+00d1c010  mov x1,x19
+00d1c014  mov x2,xzr
+00d1c018  bl 0x02197810
+00d1c01c  cbz x0,0x00d1c03c
+00d1c020  ldr x23,[x25]
+00d1c024  mov x22,x0
+00d1c028  mov x1,x23
+00d1c02c  bl 0x00b07990
+00d1c030  mov x21,x0
+00d1c034  cbnz x0,0x00d1c040
+00d1c038  b 0x00d1c088
+00d1c03c  mov x21,xzr
+00d1c040  ldr x0,[x24]
+00d1c044  ldr w8,[x0, #0xe0]
+00d1c048  cbnz w8,0x00d1c054
+00d1c04c  bl 0x00b0798c
+00d1c050  ldr x0,[x24]
+00d1c054  ldr x8,[x0, #0xb8]
+00d1c058  mov x1,x21
+00d1c05c  mov x2,x20
+00d1c060  add x0,x8,#0x8
+00d1c064  bl 0x00ae526c
+00d1c068  cmp x20,x0
+00d1c06c  mov x20,x0
+00d1c070  b.ne 0x00d1c00c
+00d1c074  ldp x19,x30,[sp, #0x30]
+00d1c078  ldp x21,x20,[sp, #0x20]
+00d1c07c  ldp x23,x22,[sp, #0x10]
+00d1c080  ldp x25,x24,[sp], #0x40
+00d1c084  ret
+00d1c088  mov x0,x22
+00d1c08c  mov x1,x23
+00d1c090  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1c094_iCloudManager__remove_OnCloudDataReceivedAction.txt
+================================================================================
+Function: iCloudManager$$remove_OnCloudDataReceivedAction @ 00d1c094
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- iCloudUseExample$$OnDestroy @ 00d3b02c
+
+--- Listing ---
+00d1c094  stp x25,x24,[sp, #-0x40]!
+00d1c098  stp x23,x22,[sp, #0x10]
+00d1c09c  stp x21,x20,[sp, #0x20]
+00d1c0a0  stp x19,x30,[sp, #0x30]
+00d1c0a4  adrp x20,0x3571000
+00d1c0a8  adrp x24,0x336e000
+00d1c0ac  ldrb w8,[x20, #0xbdd]
+00d1c0b0  ldr x24,[x24, #0xb10]
+00d1c0b4  mov x19,x0
+00d1c0b8  tbnz w8,#0x0,0x00d1c0dc
+00d1c0bc  adrp x0,0x3356000
+00d1c0c0  ldr x0,[x0, #0x988]
+00d1c0c4  bl 0x00b0789c
+00d1c0c8  adrp x0,0x336e000
+00d1c0cc  ldr x0,[x0, #0xb10]
+00d1c0d0  bl 0x00b0789c
+00d1c0d4  mov w8,#0x1
+00d1c0d8  strb w8,[x20, #0xbdd]
+00d1c0dc  ldr x0,[x24]
+00d1c0e0  ldr w8,[x0, #0xe0]
+00d1c0e4  cbnz w8,0x00d1c0f0
+00d1c0e8  bl 0x00b0798c
+00d1c0ec  ldr x0,[x24]
+00d1c0f0  ldr x8,[x0, #0xb8]
+00d1c0f4  adrp x25,0x3356000
+00d1c0f8  ldr x20,[x8, #0x8]
+00d1c0fc  ldr x25,[x25, #0x988]
+00d1c100  mov x0,x20
+00d1c104  mov x1,x19
+00d1c108  mov x2,xzr
+00d1c10c  bl 0x02197a1c
+00d1c110  cbz x0,0x00d1c130
+00d1c114  ldr x23,[x25]
+00d1c118  mov x22,x0
+00d1c11c  mov x1,x23
+00d1c120  bl 0x00b07990
+00d1c124  mov x21,x0
+00d1c128  cbnz x0,0x00d1c134
+00d1c12c  b 0x00d1c17c
+00d1c130  mov x21,xzr
+00d1c134  ldr x0,[x24]
+00d1c138  ldr w8,[x0, #0xe0]
+00d1c13c  cbnz w8,0x00d1c148
+00d1c140  bl 0x00b0798c
+00d1c144  ldr x0,[x24]
+00d1c148  ldr x8,[x0, #0xb8]
+00d1c14c  mov x1,x21
+00d1c150  mov x2,x20
+00d1c154  add x0,x8,#0x8
+00d1c158  bl 0x00ae526c
+00d1c15c  cmp x20,x0
+00d1c160  mov x20,x0
+00d1c164  b.ne 0x00d1c100
+00d1c168  ldp x19,x30,[sp, #0x30]
+00d1c16c  ldp x21,x20,[sp, #0x20]
+00d1c170  ldp x23,x22,[sp, #0x10]
+00d1c174  ldp x25,x24,[sp], #0x40
+00d1c178  ret
+00d1c17c  mov x0,x22
+00d1c180  mov x1,x23
+00d1c184  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1c188_iCloudManager__add_OnStoreDidChangeExternally.txt
+================================================================================
+Function: iCloudManager$$add_OnStoreDidChangeExternally @ 00d1c188
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- iCloudUseExample$$Awake @ 00d3a748
+
+--- Listing ---
+00d1c188  stp x25,x24,[sp, #-0x40]!
+00d1c18c  stp x23,x22,[sp, #0x10]
+00d1c190  stp x21,x20,[sp, #0x20]
+00d1c194  stp x19,x30,[sp, #0x30]
+00d1c198  adrp x20,0x3571000
+00d1c19c  adrp x24,0x336e000
+00d1c1a0  ldrb w8,[x20, #0xbde]
+00d1c1a4  ldr x24,[x24, #0xb10]
+00d1c1a8  mov x19,x0
+00d1c1ac  tbnz w8,#0x0,0x00d1c1d0
+00d1c1b0  adrp x0,0x337a000
+00d1c1b4  ldr x0,[x0, #0x6b8]
+00d1c1b8  bl 0x00b0789c
+00d1c1bc  adrp x0,0x336e000
+00d1c1c0  ldr x0,[x0, #0xb10]
+00d1c1c4  bl 0x00b0789c
+00d1c1c8  mov w8,#0x1
+00d1c1cc  strb w8,[x20, #0xbde]
+00d1c1d0  ldr x0,[x24]
+00d1c1d4  ldr w8,[x0, #0xe0]
+00d1c1d8  cbnz w8,0x00d1c1e4
+00d1c1dc  bl 0x00b0798c
+00d1c1e0  ldr x0,[x24]
+00d1c1e4  ldr x8,[x0, #0xb8]
+00d1c1e8  adrp x25,0x337a000
+00d1c1ec  ldr x20,[x8, #0x10]
+00d1c1f0  ldr x25,[x25, #0x6b8]
+00d1c1f4  mov x0,x20
+00d1c1f8  mov x1,x19
+00d1c1fc  mov x2,xzr
+00d1c200  bl 0x02197810
+00d1c204  cbz x0,0x00d1c224
+00d1c208  ldr x23,[x25]
+00d1c20c  mov x22,x0
+00d1c210  mov x1,x23
+00d1c214  bl 0x00b07990
+00d1c218  mov x21,x0
+00d1c21c  cbnz x0,0x00d1c228
+00d1c220  b 0x00d1c270
+00d1c224  mov x21,xzr
+00d1c228  ldr x0,[x24]
+00d1c22c  ldr w8,[x0, #0xe0]
+00d1c230  cbnz w8,0x00d1c23c
+00d1c234  bl 0x00b0798c
+00d1c238  ldr x0,[x24]
+00d1c23c  ldr x8,[x0, #0xb8]
+00d1c240  mov x1,x21
+00d1c244  mov x2,x20
+00d1c248  add x0,x8,#0x10
+00d1c24c  bl 0x00ae526c
+00d1c250  cmp x20,x0
+00d1c254  mov x20,x0
+00d1c258  b.ne 0x00d1c1f4
+00d1c25c  ldp x19,x30,[sp, #0x30]
+00d1c260  ldp x21,x20,[sp, #0x20]
+00d1c264  ldp x23,x22,[sp, #0x10]
+00d1c268  ldp x25,x24,[sp], #0x40
+00d1c26c  ret
+00d1c270  mov x0,x22
+00d1c274  mov x1,x23
+00d1c278  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1c27c_iCloudManager__remove_OnStoreDidChangeExternally.txt
+================================================================================
+Function: iCloudManager$$remove_OnStoreDidChangeExternally @ 00d1c27c
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+
+--- Listing ---
+00d1c27c  stp x25,x24,[sp, #-0x40]!
+00d1c280  stp x23,x22,[sp, #0x10]
+00d1c284  stp x21,x20,[sp, #0x20]
+00d1c288  stp x19,x30,[sp, #0x30]
+00d1c28c  adrp x20,0x3571000
+00d1c290  adrp x24,0x336e000
+00d1c294  ldrb w8,[x20, #0xbdf]
+00d1c298  ldr x24,[x24, #0xb10]
+00d1c29c  mov x19,x0
+00d1c2a0  tbnz w8,#0x0,0x00d1c2c4
+00d1c2a4  adrp x0,0x337a000
+00d1c2a8  ldr x0,[x0, #0x6b8]
+00d1c2ac  bl 0x00b0789c
+00d1c2b0  adrp x0,0x336e000
+00d1c2b4  ldr x0,[x0, #0xb10]
+00d1c2b8  bl 0x00b0789c
+00d1c2bc  mov w8,#0x1
+00d1c2c0  strb w8,[x20, #0xbdf]
+00d1c2c4  ldr x0,[x24]
+00d1c2c8  ldr w8,[x0, #0xe0]
+00d1c2cc  cbnz w8,0x00d1c2d8
+00d1c2d0  bl 0x00b0798c
+00d1c2d4  ldr x0,[x24]
+00d1c2d8  ldr x8,[x0, #0xb8]
+00d1c2dc  adrp x25,0x337a000
+00d1c2e0  ldr x20,[x8, #0x10]
+00d1c2e4  ldr x25,[x25, #0x6b8]
+00d1c2e8  mov x0,x20
+00d1c2ec  mov x1,x19
+00d1c2f0  mov x2,xzr
+00d1c2f4  bl 0x02197a1c
+00d1c2f8  cbz x0,0x00d1c318
+00d1c2fc  ldr x23,[x25]
+00d1c300  mov x22,x0
+00d1c304  mov x1,x23
+00d1c308  bl 0x00b07990
+00d1c30c  mov x21,x0
+00d1c310  cbnz x0,0x00d1c31c
+00d1c314  b 0x00d1c364
+00d1c318  mov x21,xzr
+00d1c31c  ldr x0,[x24]
+00d1c320  ldr w8,[x0, #0xe0]
+00d1c324  cbnz w8,0x00d1c330
+00d1c328  bl 0x00b0798c
+00d1c32c  ldr x0,[x24]
+00d1c330  ldr x8,[x0, #0xb8]
+00d1c334  mov x1,x21
+00d1c338  mov x2,x20
+00d1c33c  add x0,x8,#0x10
+00d1c340  bl 0x00ae526c
+00d1c344  cmp x20,x0
+00d1c348  mov x20,x0
+00d1c34c  b.ne 0x00d1c2e8
+00d1c350  ldp x19,x30,[sp, #0x30]
+00d1c354  ldp x21,x20,[sp, #0x20]
+00d1c358  ldp x23,x22,[sp, #0x10]
+00d1c35c  ldp x25,x24,[sp], #0x40
+00d1c360  ret
+00d1c364  mov x0,x22
+00d1c368  mov x1,x23
+00d1c36c  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00d1c370_iCloudManager__Awake.txt
+================================================================================
+Function: iCloudManager$$Awake @ 00d1c370
+
+--- Calls OUT ---
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$DontDestroyOnLoad @ 024e00c4
+
+--- Calls IN ---
+
+--- Listing ---
+00d1c370  stp x21,x20,[sp, #-0x20]!
+00d1c374  stp x19,x30,[sp, #0x10]
+00d1c378  adrp x21,0x3571000
+00d1c37c  adrp x20,0x3321000
+00d1c380  ldrb w8,[x21, #0xbe0]
+00d1c384  ldr x20,[x20, #0xca8]
+00d1c388  mov x19,x0
+00d1c38c  tbnz w8,#0x0,0x00d1c3a4
+00d1c390  adrp x0,0x3321000
+00d1c394  ldr x0,[x0, #0xca8]
+00d1c398  bl 0x00b0789c
+00d1c39c  mov w8,#0x1
+00d1c3a0  strb w8,[x21, #0xbe0]
+00d1c3a4  mov x0,x19
+00d1c3a8  mov x1,xzr
+00d1c3ac  bl 0x024e4ed4
+00d1c3b0  ldr x8,[x20]
+00d1c3b4  mov x19,x0
+00d1c3b8  ldr w9,[x8, #0xe0]
+00d1c3bc  cbnz w9,0x00d1c3c8
+00d1c3c0  mov x0,x8
+00d1c3c4  bl 0x00b0798c
+00d1c3c8  mov x0,x19
+00d1c3cc  ldp x19,x30,[sp, #0x10]
+00d1c3d0  mov x1,xzr
+00d1c3d4  ldp x21,x20,[sp], #0x20
+00d1c3d8  b 0x024e00c4
+
+
+================================================================================
+### FILE: 00d1c3dc_iCloudManager__setString.txt
+================================================================================
+Function: iCloudManager$$setString @ 00d1c3dc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- TvOsCloudExample$$Start @ 00d46d7c
+  <- iCloudUseExample$$OnGUI @ 00d3aa30
+
+--- Listing ---
+00d1c3dc  ret
+
+
+================================================================================
+### FILE: 00d1c3e0_iCloudManager__setFloat.txt
+================================================================================
+Function: iCloudManager$$setFloat @ 00d1c3e0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- iCloudUseExample$$OnGUI @ 00d3aa30
+
+--- Listing ---
+00d1c3e0  ret
+
+
+================================================================================
+### FILE: 00d1c3e4_iCloudManager__setData.txt
+================================================================================
+Function: iCloudManager$$setData @ 00d1c3e4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- iCloudUseExample$$OnGUI @ 00d3aa30
+
+--- Listing ---
+00d1c3e4  ret
+
+
+================================================================================
+### FILE: 00d1c3e8_iCloudManager__requestDataForKey.txt
+================================================================================
+Function: iCloudManager$$requestDataForKey @ 00d1c3e8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- TvOsCloudExample$$Start @ 00d46d7c
+  <- iCloudUseExample$$OnGUI @ 00d3aa30
+
+--- Listing ---
+00d1c3e8  ret
+
+
+================================================================================
+### FILE: 00d1c3ec_iCloudManager__OnCloudInit.txt
+================================================================================
+Function: iCloudManager$$OnCloudInit @ 00d1c3ec
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA.Common.Models.Result$$.ctor @ 00c889e0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d1c3ec  str x20,[sp, #-0x20]!
+00d1c3f0  stp x19,x30,[sp, #0x10]
+00d1c3f4  adrp x19,0x3571000
+00d1c3f8  adrp x20,0x3327000
+00d1c3fc  ldrb w8,[x19, #0xbe1]
+00d1c400  ldr x20,[x20, #0xfe8]
+00d1c404  tbnz w8,#0x0,0x00d1c428
+00d1c408  adrp x0,0x3327000
+00d1c40c  ldr x0,[x0, #0xfe8]
+00d1c410  bl 0x00b0789c
+00d1c414  adrp x0,0x336e000
+00d1c418  ldr x0,[x0, #0xb10]
+00d1c41c  bl 0x00b0789c
+00d1c420  mov w8,#0x1
+00d1c424  strb w8,[x19, #0xbe1]
+00d1c428  ldr x0,[x20]
+00d1c42c  bl 0x00b079a0
+00d1c430  cbz x0,0x00d1c484
+00d1c434  adrp x20,0x336e000
+00d1c438  ldr x20,[x20, #0xb10]
+00d1c43c  mov x1,xzr
+00d1c440  mov x19,x0
+00d1c444  bl 0x00c889e0
+00d1c448  ldr x0,[x20]
+00d1c44c  ldr w8,[x0, #0xe0]
+00d1c450  cbnz w8,0x00d1c45c
+00d1c454  bl 0x00b0798c
+00d1c458  ldr x0,[x20]
+00d1c45c  ldr x8,[x0, #0xb8]
+00d1c460  ldr x8,[x8]
+00d1c464  cbz x8,0x00d1c484
+00d1c468  ldr x3,[x8, #0x18]
+00d1c46c  ldr x0,[x8, #0x40]
+00d1c470  ldr x2,[x8, #0x28]
+00d1c474  mov x1,x19
+00d1c478  ldp x19,x30,[sp, #0x10]
+00d1c47c  ldr x20,[sp], #0x20
+00d1c480  br x3
+00d1c484  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1c488_iCloudManager__OnCloudInitFail.txt
+================================================================================
+Function: iCloudManager$$OnCloudInitFail @ 00d1c488
+
+--- Calls OUT ---
+  -> SA.Common.Models.Result$$.ctor @ 00c889e8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> SA.Common.Models.Error$$.ctor @ 00c88124
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d1c488  stp x21,x20,[sp, #-0x20]!
+00d1c48c  stp x19,x30,[sp, #0x10]
+00d1c490  adrp x19,0x3571000
+00d1c494  adrp x20,0x336f000
+00d1c498  ldrb w8,[x19, #0xbe2]
+00d1c49c  ldr x20,[x20, #0x200]
+00d1c4a0  tbnz w8,#0x0,0x00d1c4d0
+00d1c4a4  adrp x0,0x336f000
+00d1c4a8  ldr x0,[x0, #0x200]
+00d1c4ac  bl 0x00b0789c
+00d1c4b0  adrp x0,0x3327000
+00d1c4b4  ldr x0,[x0, #0xfe8]
+00d1c4b8  bl 0x00b0789c
+00d1c4bc  adrp x0,0x336e000
+00d1c4c0  ldr x0,[x0, #0xb10]
+00d1c4c4  bl 0x00b0789c
+00d1c4c8  mov w8,#0x1
+00d1c4cc  strb w8,[x19, #0xbe2]
+00d1c4d0  ldr x0,[x20]
+00d1c4d4  bl 0x00b079a0
+00d1c4d8  cbz x0,0x00d1c550
+00d1c4dc  adrp x19,0x3327000
+00d1c4e0  ldr x19,[x19, #0xfe8]
+00d1c4e4  mov x1,xzr
+00d1c4e8  mov x20,x0
+00d1c4ec  bl 0x00c88124
+00d1c4f0  ldr x0,[x19]
+00d1c4f4  bl 0x00b079a0
+00d1c4f8  cbz x0,0x00d1c550
+00d1c4fc  adrp x21,0x336e000
+00d1c500  ldr x21,[x21, #0xb10]
+00d1c504  mov x1,x20
+00d1c508  mov x2,xzr
+00d1c50c  mov x19,x0
+00d1c510  bl 0x00c889e8
+00d1c514  ldr x0,[x21]
+00d1c518  ldr w8,[x0, #0xe0]
+00d1c51c  cbnz w8,0x00d1c528
+00d1c520  bl 0x00b0798c
+00d1c524  ldr x0,[x21]
+00d1c528  ldr x8,[x0, #0xb8]
+00d1c52c  ldr x8,[x8]
+00d1c530  cbz x8,0x00d1c550
+00d1c534  ldr x3,[x8, #0x18]
+00d1c538  ldr x0,[x8, #0x40]
+00d1c53c  ldr x2,[x8, #0x28]
+00d1c540  mov x1,x19
+00d1c544  ldp x19,x30,[sp, #0x10]
+00d1c548  ldp x21,x20,[sp], #0x20
+00d1c54c  br x3
+00d1c550  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1c554_iCloudManager__OnCloudDataChanged.txt
+================================================================================
+Function: iCloudManager$$OnCloudDataChanged @ 00d1c554
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$op_Equality @ 01fd05b0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Split @ 01fe0d68
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b8 @ 00b079b8
+  -> iCloudData$$.ctor @ 00d1c770
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d1c554  str x28,[sp, #-0x60]!
+00d1c558  stp x27,x26,[sp, #0x10]
+00d1c55c  stp x25,x24,[sp, #0x20]
+00d1c560  stp x23,x22,[sp, #0x30]
+00d1c564  stp x21,x20,[sp, #0x40]
+00d1c568  stp x19,x30,[sp, #0x50]
+00d1c56c  adrp x19,0x3571000
+00d1c570  adrp x21,0x3363000
+00d1c574  ldrb w8,[x19, #0xbe3]
+00d1c578  ldr x21,[x21, #0x5c0]
+00d1c57c  mov x20,x1
+00d1c580  tbnz w8,#0x0,0x00d1c5d4
+00d1c584  adrp x0,0x3317000
+00d1c588  ldr x0,[x0, #0xc18]
+00d1c58c  bl 0x00b0789c
+00d1c590  adrp x0,0x3358000
+00d1c594  ldr x0,[x0, #0xad0]
+00d1c598  bl 0x00b0789c
+00d1c59c  adrp x0,0x3363000
+00d1c5a0  ldr x0,[x0, #0x5c0]
+00d1c5a4  bl 0x00b0789c
+00d1c5a8  adrp x0,0x335e000
+00d1c5ac  ldr x0,[x0, #0xe58]
+00d1c5b0  bl 0x00b0789c
+00d1c5b4  adrp x0,0x331f000
+00d1c5b8  ldr x0,[x0, #0xcf8]
+00d1c5bc  bl 0x00b0789c
+00d1c5c0  adrp x0,0x336e000
+00d1c5c4  ldr x0,[x0, #0xb10]
+00d1c5c8  bl 0x00b0789c
+00d1c5cc  mov w8,#0x1
+00d1c5d0  strb w8,[x19, #0xbe3]
+00d1c5d4  ldr x0,[x21]
+00d1c5d8  bl 0x00b079a0
+00d1c5dc  cbz x0,0x00d1c76c
+00d1c5e0  adrp x8,0x3358000
+00d1c5e4  ldr x8,[x8, #0xad0]
+00d1c5e8  mov x19,x0
+00d1c5ec  ldr x1,[x8]
+00d1c5f0  bl 0x01bffe10
+00d1c5f4  cbz x20,0x00d1c76c
+00d1c5f8  mov w1,#0x7c
+00d1c5fc  mov x0,x20
+00d1c600  mov w2,wzr
+00d1c604  mov x3,xzr
+00d1c608  bl 0x01fe0d68
+00d1c60c  cbz x0,0x00d1c76c
+00d1c610  ldr w8,[x0, #0x18]
+00d1c614  mov x20,x0
+00d1c618  cmp w8,#0x1
+00d1c61c  b.lt 0x00d1c714
+00d1c620  adrp x24,0x335e000
+00d1c624  adrp x25,0x331f000
+00d1c628  adrp x26,0x3317000
+00d1c62c  ldr x24,[x24, #0xe58]
+00d1c630  ldr x25,[x25, #0xcf8]
+00d1c634  ldr x26,[x26, #0xc18]
+00d1c638  mov w27,#0x1
+00d1c63c  sub w21,w27,#0x1
+00d1c640  cmp w21,w8
+00d1c644  b.cs 0x00d1c768
+00d1c648  add x22,x20,w21, SXTW  #0x3
+00d1c64c  ldr x0,[x22, #0x20]!
+00d1c650  ldr x1,[x24]
+00d1c654  mov x2,xzr
+00d1c658  bl 0x01fd05b0
+00d1c65c  tbnz w0,#0x0,0x00d1c714
+00d1c660  ldr w8,[x20, #0x18]
+00d1c664  cmp w21,w8
+00d1c668  b.cs 0x00d1c768
+00d1c66c  add w28,w21,#0x1
+00d1c670  cmp w28,w8
+00d1c674  b.cs 0x00d1c768
+00d1c678  add x8,x20,w27, SXTW  #0x3
+00d1c67c  ldr x0,[x25]
+00d1c680  ldr x22,[x22]
+00d1c684  ldr x23,[x8, #0x20]
+00d1c688  bl 0x00b079a0
+00d1c68c  cbz x0,0x00d1c76c
+00d1c690  mov x1,x22
+00d1c694  mov x2,x23
+00d1c698  mov x21,x0
+00d1c69c  bl 0x00d1c770
+00d1c6a0  ldr w10,[x19, #0x1c]
+00d1c6a4  ldr x8,[x19, #0x10]
+00d1c6a8  ldr x9,[x26]
+00d1c6ac  add w10,w10,#0x1
+00d1c6b0  str w10,[x19, #0x1c]
+00d1c6b4  cbz x8,0x00d1c76c
+00d1c6b8  ldrsw x10,[x19, #0x18]
+00d1c6bc  ldr w11,[x8, #0x18]
+00d1c6c0  cmp w10,w11
+00d1c6c4  b.cs 0x00d1c6e4
+00d1c6c8  add w9,w10,#0x1
+00d1c6cc  add x0,x8,x10, LSL #0x3
+00d1c6d0  str w9,[x19, #0x18]
+00d1c6d4  str x21,[x0, #0x20]!
+00d1c6d8  mov x1,x21
+00d1c6dc  bl 0x00b07850
+00d1c6e0  b 0x00d1c700
+00d1c6e4  ldr x8,[x9, #0x20]
+00d1c6e8  mov x0,x19
+00d1c6ec  mov x1,x21
+00d1c6f0  ldr x8,[x8, #0xc0]
+00d1c6f4  ldr x2,[x8, #0x58]
+00d1c6f8  ldr x8,[x2, #0x8]
+00d1c6fc  blr x8
+00d1c700  ldr w8,[x20, #0x18]
+00d1c704  add w9,w28,#0x1
+00d1c708  add w27,w27,#0x2
+00d1c70c  cmp w9,w8
+00d1c710  b.lt 0x00d1c63c
+00d1c714  adrp x20,0x336e000
+00d1c718  ldr x20,[x20, #0xb10]
+00d1c71c  ldr x0,[x20]
+00d1c720  ldr w8,[x0, #0xe0]
+00d1c724  cbnz w8,0x00d1c730
+00d1c728  bl 0x00b0798c
+00d1c72c  ldr x0,[x20]
+00d1c730  ldr x8,[x0, #0xb8]
+00d1c734  ldr x8,[x8, #0x10]
+00d1c738  cbz x8,0x00d1c76c
+00d1c73c  ldr x3,[x8, #0x18]
+00d1c740  ldr x0,[x8, #0x40]
+00d1c744  ldr x2,[x8, #0x28]
+00d1c748  mov x1,x19
+00d1c74c  ldp x19,x30,[sp, #0x50]
+00d1c750  ldp x21,x20,[sp, #0x40]
+00d1c754  ldp x23,x22,[sp, #0x30]
+00d1c758  ldp x25,x24,[sp, #0x20]
+00d1c75c  ldp x27,x26,[sp, #0x10]
+00d1c760  ldr x28,[sp], #0x60
+00d1c764  br x3
+00d1c768  bl 0x00b079b8
+00d1c76c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1c770_iCloudData__.ctor.txt
+================================================================================
+Function: iCloudData$$.ctor @ 00d1c770
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> ISN_Logger$$Log @ 00d198ec
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> IOSNativeSettings$$get_Instance @ 00d066ac
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$Equals @ 01fde08c
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- iCloudManager$$OnCloudData @ 00d1c848
+  <- iCloudManager$$OnCloudDataEmpty @ 00d1c928
+  <- iCloudManager$$OnCloudDataChanged @ 00d1c554
+
+--- Listing ---
+00d1c770  str x22,[sp, #-0x30]!
+00d1c774  stp x21,x20,[sp, #0x10]
+00d1c778  stp x19,x30,[sp, #0x20]
+00d1c77c  adrp x22,0x3571000
+00d1c780  ldrb w8,[x22, #0xc10]
+00d1c784  mov x20,x2
+00d1c788  mov x21,x1
+00d1c78c  mov x19,x0
+00d1c790  tbnz w8,#0x0,0x00d1c7b4
+00d1c794  adrp x0,0x335b000
+00d1c798  ldr x0,[x0, #0x310]
+00d1c79c  bl 0x00b0789c
+00d1c7a0  adrp x0,0x3339000
+00d1c7a4  ldr x0,[x0, #0xd90]
+00d1c7a8  bl 0x00b0789c
+00d1c7ac  mov w8,#0x1
+00d1c7b0  strb w8,[x22, #0xc10]
+00d1c7b4  mov x0,x19
+00d1c7b8  mov x1,xzr
+00d1c7bc  bl 0x02194104
+00d1c7c0  mov x0,x19
+00d1c7c4  str x21,[x0, #0x10]!
+00d1c7c8  mov x1,x21
+00d1c7cc  bl 0x00b07850
+00d1c7d0  mov x21,x19
+00d1c7d4  str x20,[x21, #0x18]!
+00d1c7d8  mov x0,x21
+00d1c7dc  mov x1,x20
+00d1c7e0  bl 0x00b07850
+00d1c7e4  ldr x0,[x21]
+00d1c7e8  cbz x0,0x00d1c844
+00d1c7ec  adrp x8,0x3339000
+00d1c7f0  ldr x8,[x8, #0xd90]
+00d1c7f4  mov x2,xzr
+00d1c7f8  ldr x1,[x8]
+00d1c7fc  bl 0x01fde08c
+00d1c800  tbz w0,#0x0,0x00d1c834
+00d1c804  mov x0,xzr
+00d1c808  bl 0x00d066ac
+00d1c80c  cbz x0,0x00d1c844
+00d1c810  ldrb w8,[x0, #0xc0]
+00d1c814  cbnz w8,0x00d1c82c
+00d1c818  adrp x8,0x335b000
+00d1c81c  ldr x8,[x8, #0x310]
+00d1c820  mov w1,#0x3
+00d1c824  ldr x0,[x8]
+00d1c828  bl 0x00d198ec
+00d1c82c  mov w8,#0x1
+00d1c830  strb w8,[x19, #0x20]
+00d1c834  ldp x19,x30,[sp, #0x20]
+00d1c838  ldp x21,x20,[sp, #0x10]
+00d1c83c  ldr x22,[sp], #0x30
+00d1c840  ret
+00d1c844  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1c848_iCloudManager__OnCloudData.txt
+================================================================================
+Function: iCloudManager$$OnCloudData @ 00d1c848
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> System.String$$Split @ 01fe0d68
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> iCloudData$$.ctor @ 00d1c770
+  -> FUN_00b079b8 @ 00b079b8
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d1c848  str x22,[sp, #-0x30]!
+00d1c84c  stp x21,x20,[sp, #0x10]
+00d1c850  stp x19,x30,[sp, #0x20]
+00d1c854  adrp x20,0x3571000
+00d1c858  ldrb w8,[x20, #0xbe4]
+00d1c85c  mov x19,x1
+00d1c860  tbnz w8,#0x0,0x00d1c884
+00d1c864  adrp x0,0x331f000
+00d1c868  ldr x0,[x0, #0xcf8]
+00d1c86c  bl 0x00b0789c
+00d1c870  adrp x0,0x336e000
+00d1c874  ldr x0,[x0, #0xb10]
+00d1c878  bl 0x00b0789c
+00d1c87c  mov w8,#0x1
+00d1c880  strb w8,[x20, #0xbe4]
+00d1c884  cbz x19,0x00d1c920
+00d1c888  mov w1,#0x7c
+00d1c88c  mov x0,x19
+00d1c890  mov w2,wzr
+00d1c894  mov x3,xzr
+00d1c898  bl 0x01fe0d68
+00d1c89c  cbz x0,0x00d1c920
+00d1c8a0  ldr w8,[x0, #0x18]
+00d1c8a4  cbz w8,0x00d1c924
+00d1c8a8  cmp w8,#0x1
+00d1c8ac  b.eq 0x00d1c924
+00d1c8b0  adrp x8,0x331f000
+00d1c8b4  ldr x8,[x8, #0xcf8]
+00d1c8b8  ldp x20,x21,[x0, #0x20]
+00d1c8bc  ldr x0,[x8]
+00d1c8c0  bl 0x00b079a0
+00d1c8c4  cbz x0,0x00d1c920
+00d1c8c8  adrp x22,0x336e000
+00d1c8cc  ldr x22,[x22, #0xb10]
+00d1c8d0  mov x1,x20
+00d1c8d4  mov x2,x21
+00d1c8d8  mov x19,x0
+00d1c8dc  bl 0x00d1c770
+00d1c8e0  ldr x0,[x22]
+00d1c8e4  ldr w8,[x0, #0xe0]
+00d1c8e8  cbnz w8,0x00d1c8f4
+00d1c8ec  bl 0x00b0798c
+00d1c8f0  ldr x0,[x22]
+00d1c8f4  ldr x8,[x0, #0xb8]
+00d1c8f8  ldr x8,[x8, #0x8]
+00d1c8fc  cbz x8,0x00d1c920
+00d1c900  ldr x3,[x8, #0x18]
+00d1c904  ldr x0,[x8, #0x40]
+00d1c908  ldr x2,[x8, #0x28]
+00d1c90c  mov x1,x19
+00d1c910  ldp x19,x30,[sp, #0x20]
+00d1c914  ldp x21,x20,[sp, #0x10]
+00d1c918  ldr x22,[sp], #0x30
+00d1c91c  br x3
+00d1c920  bl 0x00b079b0
+00d1c924  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00d1c928_iCloudManager__OnCloudDataEmpty.txt
+================================================================================
+Function: iCloudManager$$OnCloudDataEmpty @ 00d1c928
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Split @ 01fe0d68
+  -> FUN_00b079b8 @ 00b079b8
+  -> iCloudData$$.ctor @ 00d1c770
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d1c928  stp x21,x20,[sp, #-0x20]!
+00d1c92c  stp x19,x30,[sp, #0x10]
+00d1c930  adrp x20,0x3571000
+00d1c934  ldrb w8,[x20, #0xbe5]
+00d1c938  mov x19,x1
+00d1c93c  tbnz w8,#0x0,0x00d1c96c
+00d1c940  adrp x0,0x3339000
+00d1c944  ldr x0,[x0, #0xd90]
+00d1c948  bl 0x00b0789c
+00d1c94c  adrp x0,0x331f000
+00d1c950  ldr x0,[x0, #0xcf8]
+00d1c954  bl 0x00b0789c
+00d1c958  adrp x0,0x336e000
+00d1c95c  ldr x0,[x0, #0xb10]
+00d1c960  bl 0x00b0789c
+00d1c964  mov w8,#0x1
+00d1c968  strb w8,[x20, #0xbe5]
+00d1c96c  cbz x19,0x00d1ca04
+00d1c970  mov w1,#0x7c
+00d1c974  mov x0,x19
+00d1c978  mov w2,wzr
+00d1c97c  mov x3,xzr
+00d1c980  bl 0x01fe0d68
+00d1c984  cbz x0,0x00d1ca04
+00d1c988  ldr w8,[x0, #0x18]
+00d1c98c  cbz w8,0x00d1ca08
+00d1c990  adrp x8,0x331f000
+00d1c994  ldr x8,[x8, #0xcf8]
+00d1c998  ldr x20,[x0, #0x20]
+00d1c99c  ldr x0,[x8]
+00d1c9a0  bl 0x00b079a0
+00d1c9a4  cbz x0,0x00d1ca04
+00d1c9a8  adrp x8,0x3339000
+00d1c9ac  ldr x8,[x8, #0xd90]
+00d1c9b0  adrp x21,0x336e000
+00d1c9b4  mov x1,x20
+00d1c9b8  mov x19,x0
+00d1c9bc  ldr x2,[x8]
+00d1c9c0  ldr x21,[x21, #0xb10]
+00d1c9c4  bl 0x00d1c770
+00d1c9c8  ldr x0,[x21]
+00d1c9cc  ldr w8,[x0, #0xe0]
+00d1c9d0  cbnz w8,0x00d1c9dc
+00d1c9d4  bl 0x00b0798c
+00d1c9d8  ldr x0,[x21]
+00d1c9dc  ldr x8,[x0, #0xb8]
+00d1c9e0  ldr x8,[x8, #0x8]
+00d1c9e4  cbz x8,0x00d1ca04
+00d1c9e8  ldr x3,[x8, #0x18]
+00d1c9ec  ldr x0,[x8, #0x40]
+00d1c9f0  ldr x2,[x8, #0x28]
+00d1c9f4  mov x1,x19
+00d1c9f8  ldp x19,x30,[sp, #0x10]
+00d1c9fc  ldp x21,x20,[sp], #0x20
+00d1ca00  br x3
+00d1ca04  bl 0x00b079b0
+00d1ca08  bl 0x00b079b8
+
+
+================================================================================
+### FILE: 00d1ca0c_iCloudManager__.ctor.txt
+================================================================================
+Function: iCloudManager$$.ctor @ 00d1ca0c
+
+--- Calls OUT ---
+  -> SA.Common.Pattern.Singleton<object>$$.ctor @ 01e0a43c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ca0c  stp x21,x20,[sp, #-0x20]!
+00d1ca10  stp x19,x30,[sp, #0x10]
+00d1ca14  adrp x20,0x3571000
+00d1ca18  adrp x21,0x333b000
+00d1ca1c  ldrb w8,[x20, #0xbe6]
+00d1ca20  ldr x21,[x21, #0xce8]
+00d1ca24  mov x19,x0
+00d1ca28  tbnz w8,#0x0,0x00d1ca40
+00d1ca2c  adrp x0,0x333b000
+00d1ca30  ldr x0,[x0, #0xce8]
+00d1ca34  bl 0x00b0789c
+00d1ca38  mov w8,#0x1
+00d1ca3c  strb w8,[x20, #0xbe6]
+00d1ca40  ldr x1,[x21]
+00d1ca44  mov x0,x19
+00d1ca48  ldp x19,x30,[sp, #0x10]
+00d1ca4c  ldp x21,x20,[sp], #0x20
+00d1ca50  b 0x01e0a43c
+
+
+================================================================================
+### FILE: 00d1ca54_iCloudManager__.cctor.txt
+================================================================================
+Function: iCloudManager$$.cctor @ 00d1ca54
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d1ca54  stp x23,x22,[sp, #-0x30]!
+00d1ca58  stp x21,x20,[sp, #0x10]
+00d1ca5c  stp x19,x30,[sp, #0x20]
+00d1ca60  adrp x19,0x3571000
+00d1ca64  adrp x21,0x3326000
+00d1ca68  ldrb w8,[x19, #0xbe7]
+00d1ca6c  ldr x21,[x21, #0x8c0]
+00d1ca70  tbnz w8,#0x0,0x00d1cadc
+00d1ca74  adrp x0,0x3369000
+00d1ca78  ldr x0,[x0, #0x800]
+00d1ca7c  bl 0x00b0789c
+00d1ca80  adrp x0,0x3356000
+00d1ca84  ldr x0,[x0, #0x988]
+00d1ca88  bl 0x00b0789c
+00d1ca8c  adrp x0,0x337a000
+00d1ca90  ldr x0,[x0, #0x6b8]
+00d1ca94  bl 0x00b0789c
+00d1ca98  adrp x0,0x330d000
+00d1ca9c  ldr x0,[x0, #0xd10]
+00d1caa0  bl 0x00b0789c
+00d1caa4  adrp x0,0x336e000
+00d1caa8  ldr x0,[x0, #0x9a8]
+00d1caac  bl 0x00b0789c
+00d1cab0  adrp x0,0x335b000
+00d1cab4  ldr x0,[x0, #0x410]
+00d1cab8  bl 0x00b0789c
+00d1cabc  adrp x0,0x3326000
+00d1cac0  ldr x0,[x0, #0x8c0]
+00d1cac4  bl 0x00b0789c
+00d1cac8  adrp x0,0x336e000
+00d1cacc  ldr x0,[x0, #0xb10]
+00d1cad0  bl 0x00b0789c
+00d1cad4  mov w8,#0x1
+00d1cad8  strb w8,[x19, #0xbe7]
+00d1cadc  ldr x0,[x21]
+00d1cae0  adrp x19,0x3369000
+00d1cae4  ldr w8,[x0, #0xe0]
+00d1cae8  ldr x19,[x19, #0x800]
+00d1caec  cbnz w8,0x00d1caf8
+00d1caf0  bl 0x00b0798c
+00d1caf4  ldr x0,[x21]
+00d1caf8  ldr x8,[x0, #0xb8]
+00d1cafc  ldr x0,[x19]
+00d1cb00  ldr x20,[x8]
+00d1cb04  bl 0x00b079a0
+00d1cb08  cbz x0,0x00d1cbf8
+00d1cb0c  adrp x8,0x330d000
+00d1cb10  ldr x8,[x8, #0xd10]
+00d1cb14  adrp x22,0x336e000
+00d1cb18  adrp x23,0x3356000
+00d1cb1c  mov x1,x20
+00d1cb20  ldr x2,[x8]
+00d1cb24  ldr x22,[x22, #0xb10]
+00d1cb28  ldr x23,[x23, #0x988]
+00d1cb2c  mov x3,xzr
+00d1cb30  mov x19,x0
+00d1cb34  bl 0x01909b80
+00d1cb38  ldr x8,[x22]
+00d1cb3c  mov x1,x19
+00d1cb40  ldr x8,[x8, #0xb8]
+00d1cb44  str x19,[x8]
+00d1cb48  ldr x8,[x22]
+00d1cb4c  ldr x0,[x8, #0xb8]
+00d1cb50  bl 0x00b07850
+00d1cb54  ldr x8,[x21]
+00d1cb58  ldr x0,[x23]
+00d1cb5c  ldr x8,[x8, #0xb8]
+00d1cb60  ldr x20,[x8]
+00d1cb64  bl 0x00b079a0
+00d1cb68  cbz x0,0x00d1cbf8
+00d1cb6c  adrp x8,0x336e000
+00d1cb70  ldr x8,[x8, #0x9a8]
+00d1cb74  adrp x23,0x337a000
+00d1cb78  mov x1,x20
+00d1cb7c  mov x3,xzr
+00d1cb80  ldr x2,[x8]
+00d1cb84  ldr x23,[x23, #0x6b8]
+00d1cb88  mov x19,x0
+00d1cb8c  bl 0x01909b80
+00d1cb90  ldr x8,[x22]
+00d1cb94  mov x1,x19
+00d1cb98  ldr x0,[x8, #0xb8]
+00d1cb9c  str x19,[x0, #0x8]!
+00d1cba0  bl 0x00b07850
+00d1cba4  ldr x8,[x21]
+00d1cba8  ldr x0,[x23]
+00d1cbac  ldr x8,[x8, #0xb8]
+00d1cbb0  ldr x20,[x8]
+00d1cbb4  bl 0x00b079a0
+00d1cbb8  cbz x0,0x00d1cbf8
+00d1cbbc  adrp x8,0x335b000
+00d1cbc0  ldr x8,[x8, #0x410]
+00d1cbc4  mov x1,x20
+00d1cbc8  mov x3,xzr
+00d1cbcc  mov x19,x0
+00d1cbd0  ldr x2,[x8]
+00d1cbd4  bl 0x01909b80
+00d1cbd8  ldr x8,[x22]
+00d1cbdc  mov x1,x19
+00d1cbe0  ldr x0,[x8, #0xb8]
+00d1cbe4  str x19,[x0, #0x10]!
+00d1cbe8  ldp x19,x30,[sp, #0x20]
+00d1cbec  ldp x21,x20,[sp, #0x10]
+00d1cbf0  ldp x23,x22,[sp], #0x30
+00d1cbf4  b 0x00b07850
+00d1cbf8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1cbfc_iCloudManager.__c__.cctor.txt
+================================================================================
+Function: iCloudManager.<>c$$.cctor @ 00d1cbfc
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d1cbfc  str x20,[sp, #-0x20]!
+00d1cc00  stp x19,x30,[sp, #0x10]
+00d1cc04  adrp x19,0x3571000
+00d1cc08  adrp x20,0x3326000
+00d1cc0c  ldrb w8,[x19, #0xbe8]
+00d1cc10  ldr x20,[x20, #0x8c0]
+00d1cc14  tbnz w8,#0x0,0x00d1cc2c
+00d1cc18  adrp x0,0x3326000
+00d1cc1c  ldr x0,[x0, #0x8c0]
+00d1cc20  bl 0x00b0789c
+00d1cc24  mov w8,#0x1
+00d1cc28  strb w8,[x19, #0xbe8]
+00d1cc2c  ldr x0,[x20]
+00d1cc30  bl 0x00b079a0
+00d1cc34  cbz x0,0x00d1cc68
+00d1cc38  mov x1,xzr
+00d1cc3c  mov x19,x0
+00d1cc40  bl 0x02194104
+00d1cc44  ldr x8,[x20]
+00d1cc48  mov x1,x19
+00d1cc4c  ldr x8,[x8, #0xb8]
+00d1cc50  str x19,[x8]
+00d1cc54  ldr x8,[x20]
+00d1cc58  ldp x19,x30,[sp, #0x10]
+00d1cc5c  ldr x0,[x8, #0xb8]
+00d1cc60  ldr x20,[sp], #0x20
+00d1cc64  b 0x00b07850
+00d1cc68  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d1cc6c_iCloudManager.__c__.ctor.txt
+================================================================================
+Function: iCloudManager.<>c$$.ctor @ 00d1cc6c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d1cc6c  mov x1,xzr
+00d1cc70  b 0x02194104
+
+
+================================================================================
+### FILE: 00d1cc74_iCloudManager.__c___.cctor_b__20_0.txt
+================================================================================
+Function: iCloudManager.<>c$$<.cctor>b__20_0 @ 00d1cc74
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1cc74  ret
+
+
+================================================================================
+### FILE: 00d1cc78_iCloudManager.__c___.cctor_b__20_1.txt
+================================================================================
+Function: iCloudManager.<>c$$<.cctor>b__20_1 @ 00d1cc78
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1cc78  ret
+
+
+================================================================================
+### FILE: 00d1cc7c_iCloudManager.__c___.cctor_b__20_2.txt
+================================================================================
+Function: iCloudManager.<>c$$<.cctor>b__20_2 @ 00d1cc7c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1cc7c  ret
+
+
+================================================================================
+### FILE: 00d1f640_iCloudData__get_key.txt
+================================================================================
+Function: iCloudData$$get_key @ 00d1f640
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f640  ldr x0,[x0, #0x10]
+00d1f644  ret
+
+
+================================================================================
+### FILE: 00d1f648_iCloudData__get_stringValue.txt
+================================================================================
+Function: iCloudData$$get_stringValue @ 00d1f648
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- TvOsCloudExample$$OnCloudDataReceivedAction @ 00d46edc
+  <- iCloudUseExample$$OnCloudDataReceivedAction @ 00d3afb8
+
+--- Listing ---
+00d1f648  ldrb w8,[x0, #0x20]
+00d1f64c  cbz w8,0x00d1f658
+00d1f650  mov x0,xzr
+00d1f654  ret
+00d1f658  ldr x0,[x0, #0x18]
+00d1f65c  ret
+
+
+================================================================================
+### FILE: 00d1f660_iCloudData__get_floatValue.txt
+================================================================================
+Function: iCloudData$$get_floatValue @ 00d1f660
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Convert$$ToSingle @ 020e293c
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f660  str x20,[sp, #-0x20]!
+00d1f664  stp x19,x30,[sp, #0x10]
+00d1f668  adrp x20,0x3571000
+00d1f66c  ldrb w8,[x20, #0xc11]
+00d1f670  mov x19,x0
+00d1f674  tbnz w8,#0x0,0x00d1f68c
+00d1f678  adrp x0,0x3362000
+00d1f67c  ldr x0,[x0, #0xe28]
+00d1f680  bl 0x00b0789c
+00d1f684  mov w8,#0x1
+00d1f688  strb w8,[x20, #0xc11]
+00d1f68c  ldrb w8,[x19, #0x20]
+00d1f690  cbz w8,0x00d1f6a4
+00d1f694  ldp x19,x30,[sp, #0x10]
+00d1f698  fmov s0,wzr
+00d1f69c  ldr x20,[sp], #0x20
+00d1f6a0  ret
+00d1f6a4  adrp x8,0x3362000
+00d1f6a8  ldr x8,[x8, #0xe28]
+00d1f6ac  ldr x19,[x19, #0x18]
+00d1f6b0  ldr x0,[x8]
+00d1f6b4  ldr w8,[x0, #0xe0]
+00d1f6b8  cbnz w8,0x00d1f6c0
+00d1f6bc  bl 0x00b0798c
+00d1f6c0  mov x0,x19
+00d1f6c4  ldp x19,x30,[sp, #0x10]
+00d1f6c8  mov x1,xzr
+00d1f6cc  ldr x20,[sp], #0x20
+00d1f6d0  b 0x020e293c
+
+
+================================================================================
+### FILE: 00d1f6d4_iCloudData__get_bytesValue.txt
+================================================================================
+Function: iCloudData$$get_bytesValue @ 00d1f6d4
+
+--- Calls OUT ---
+  -> System.Convert$$FromBase64String @ 020e4acc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f6d4  str x20,[sp, #-0x20]!
+00d1f6d8  stp x19,x30,[sp, #0x10]
+00d1f6dc  adrp x20,0x3571000
+00d1f6e0  ldrb w8,[x20, #0xc12]
+00d1f6e4  mov x19,x0
+00d1f6e8  tbnz w8,#0x0,0x00d1f700
+00d1f6ec  adrp x0,0x3362000
+00d1f6f0  ldr x0,[x0, #0xe28]
+00d1f6f4  bl 0x00b0789c
+00d1f6f8  mov w8,#0x1
+00d1f6fc  strb w8,[x20, #0xc12]
+00d1f700  ldrb w8,[x19, #0x20]
+00d1f704  cbz w8,0x00d1f718
+00d1f708  ldp x19,x30,[sp, #0x10]
+00d1f70c  mov x0,xzr
+00d1f710  ldr x20,[sp], #0x20
+00d1f714  ret
+00d1f718  adrp x8,0x3362000
+00d1f71c  ldr x8,[x8, #0xe28]
+00d1f720  ldr x19,[x19, #0x18]
+00d1f724  ldr x0,[x8]
+00d1f728  ldr w8,[x0, #0xe0]
+00d1f72c  cbnz w8,0x00d1f734
+00d1f730  bl 0x00b0798c
+00d1f734  mov x0,x19
+00d1f738  ldp x19,x30,[sp, #0x10]
+00d1f73c  mov x1,xzr
+00d1f740  ldr x20,[sp], #0x20
+00d1f744  b 0x020e4acc
+
+
+================================================================================
+### FILE: 00d1f748_iCloudData__get_IsEmpty.txt
+================================================================================
+Function: iCloudData$$get_IsEmpty @ 00d1f748
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d1f748  ldrb w0,[x0, #0x20]
+00d1f74c  ret
+
+
+================================================================================
+### FILE: 00d3a748_iCloudUseExample__Awake.txt
+================================================================================
+Function: iCloudUseExample$$Awake @ 00d3a748
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> iCloudManager$$add_OnStoreDidChangeExternally @ 00d1c188
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> iCloudManager$$add_OnCloudDataReceivedAction @ 00d1bfa0
+  -> FUN_00b079b0 @ 00b079b0
+  -> iCloudManager$$add_OnCloudInitAction @ 00d1bdc0
+
+--- Calls IN ---
+
+--- Listing ---
+00d3a748  str x22,[sp, #-0x30]!
+00d3a74c  stp x21,x20,[sp, #0x10]
+00d3a750  stp x19,x30,[sp, #0x20]
+00d3a754  adrp x20,0x3571000
+00d3a758  adrp x21,0x3369000
+00d3a75c  ldrb w8,[x20, #0xd70]
+00d3a760  ldr x21,[x21, #0x800]
+00d3a764  mov x19,x0
+00d3a768  tbnz w8,#0x0,0x00d3a7c8
+00d3a76c  adrp x0,0x3369000
+00d3a770  ldr x0,[x0, #0x800]
+00d3a774  bl 0x00b0789c
+00d3a778  adrp x0,0x3356000
+00d3a77c  ldr x0,[x0, #0x988]
+00d3a780  bl 0x00b0789c
+00d3a784  adrp x0,0x337a000
+00d3a788  ldr x0,[x0, #0x6b8]
+00d3a78c  bl 0x00b0789c
+00d3a790  adrp x0,0x336e000
+00d3a794  ldr x0,[x0, #0xb10]
+00d3a798  bl 0x00b0789c
+00d3a79c  adrp x0,0x3368000
+00d3a7a0  ldr x0,[x0, #0xfd8]
+00d3a7a4  bl 0x00b0789c
+00d3a7a8  adrp x0,0x3371000
+00d3a7ac  ldr x0,[x0, #0x3e8]
+00d3a7b0  bl 0x00b0789c
+00d3a7b4  adrp x0,0x337a000
+00d3a7b8  ldr x0,[x0, #0xd18]
+00d3a7bc  bl 0x00b0789c
+00d3a7c0  mov w8,#0x1
+00d3a7c4  strb w8,[x20, #0xd70]
+00d3a7c8  ldr x0,[x21]
+00d3a7cc  bl 0x00b079a0
+00d3a7d0  cbz x0,0x00d3a898
+00d3a7d4  adrp x8,0x337a000
+00d3a7d8  ldr x8,[x8, #0xd18]
+00d3a7dc  adrp x22,0x336e000
+00d3a7e0  adrp x21,0x3356000
+00d3a7e4  mov x1,x19
+00d3a7e8  ldr x2,[x8]
+00d3a7ec  ldr x22,[x22, #0xb10]
+00d3a7f0  ldr x21,[x21, #0x988]
+00d3a7f4  mov x3,xzr
+00d3a7f8  mov x20,x0
+00d3a7fc  bl 0x01909b80
+00d3a800  ldr x0,[x22]
+00d3a804  ldr w8,[x0, #0xe0]
+00d3a808  cbnz w8,0x00d3a810
+00d3a80c  bl 0x00b0798c
+00d3a810  mov x0,x20
+00d3a814  mov x1,xzr
+00d3a818  bl 0x00d1bdc0
+00d3a81c  ldr x0,[x21]
+00d3a820  bl 0x00b079a0
+00d3a824  cbz x0,0x00d3a898
+00d3a828  adrp x8,0x3371000
+00d3a82c  ldr x8,[x8, #0x3e8]
+00d3a830  adrp x21,0x337a000
+00d3a834  mov x1,x19
+00d3a838  mov x3,xzr
+00d3a83c  ldr x2,[x8]
+00d3a840  ldr x21,[x21, #0x6b8]
+00d3a844  mov x20,x0
+00d3a848  bl 0x01909b80
+00d3a84c  mov x0,x20
+00d3a850  mov x1,xzr
+00d3a854  bl 0x00d1bfa0
+00d3a858  ldr x0,[x21]
+00d3a85c  bl 0x00b079a0
+00d3a860  cbz x0,0x00d3a898
+00d3a864  adrp x8,0x3368000
+00d3a868  ldr x8,[x8, #0xfd8]
+00d3a86c  mov x1,x19
+00d3a870  mov x3,xzr
+00d3a874  mov x20,x0
+00d3a878  ldr x2,[x8]
+00d3a87c  bl 0x01909b80
+00d3a880  mov x0,x20
+00d3a884  ldp x19,x30,[sp, #0x20]
+00d3a888  ldp x21,x20,[sp, #0x10]
+00d3a88c  mov x1,xzr
+00d3a890  ldr x22,[sp], #0x30
+00d3a894  b 0x00d1c188
+00d3a898  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d3a89c_iCloudUseExample__HandleOnStoreDidChangeExternally.txt
+================================================================================
+Function: iCloudUseExample$$HandleOnStoreDidChangeExternally @ 00d3a89c
+
+--- Calls OUT ---
+  -> ISN_Logger$$Log @ 00d198ec
+  -> System.Collections.Generic.List<object>$$GetEnumerator @ 01c01338
+  -> System.Collections.Generic.List.Enumerator<object>$$Dispose @ 01a070e8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List.Enumerator<object>$$MoveNext @ 01a070ec
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.String$$Concat @ 01fdebb8
+
+--- Calls IN ---
+
+--- Listing ---
+00d3a89c  sub sp,sp,#0x50
+00d3a8a0  stp x23,x22,[sp, #0x20]
+00d3a8a4  stp x21,x20,[sp, #0x30]
+00d3a8a8  stp x19,x30,[sp, #0x40]
+00d3a8ac  adrp x20,0x3571000
+00d3a8b0  ldrb w8,[x20, #0xd71]
+00d3a8b4  mov x19,x1
+00d3a8b8  tbnz w8,#0x0,0x00d3a90c
+00d3a8bc  adrp x0,0x3340000
+00d3a8c0  ldr x0,[x0, #0x5f8]
+00d3a8c4  bl 0x00b0789c
+00d3a8c8  adrp x0,0x331b000
+00d3a8cc  ldr x0,[x0, #0xc28]
+00d3a8d0  bl 0x00b0789c
+00d3a8d4  adrp x0,0x3352000
+00d3a8d8  ldr x0,[x0, #0xa8]
+00d3a8dc  bl 0x00b0789c
+00d3a8e0  adrp x0,0x330a000
+00d3a8e4  ldr x0,[x0, #0x7d0]
+00d3a8e8  bl 0x00b0789c
+00d3a8ec  adrp x0,0x334b000
+00d3a8f0  ldr x0,[x0, #0xa18]
+00d3a8f4  bl 0x00b0789c
+00d3a8f8  adrp x0,0x335b000
+00d3a8fc  ldr x0,[x0, #0x5d8]
+00d3a900  bl 0x00b0789c
+00d3a904  mov w8,#0x1
+00d3a908  strb w8,[x20, #0xd71]
+00d3a90c  stp xzr,xzr,[sp, #0x10]
+00d3a910  str xzr,[sp, #0x8]
+00d3a914  cbz x19,0x00d3a9b0
+00d3a918  adrp x8,0x330a000
+00d3a91c  ldr x8,[x8, #0x7d0]
+00d3a920  adrp x21,0x331b000
+00d3a924  ldr x21,[x21, #0xc28]
+00d3a928  adrp x22,0x335b000
+00d3a92c  ldr x1,[x8]
+00d3a930  adrp x23,0x334b000
+00d3a934  adrp x20,0x3340000
+00d3a938  ldr x22,[x22, #0x5d8]
+00d3a93c  ldr x23,[x23, #0xa18]
+00d3a940  ldr x20,[x20, #0x5f8]
+00d3a944  add x8,sp,#0x8
+00d3a948  mov x0,x19
+00d3a94c  bl 0x01c01338
+00d3a950  ldr x1,[x21]
+00d3a954  add x0,sp,#0x8
+    ; [PRE] try { // try from 00d3a954 to 00d3a95b has its CatchHandler @ 00d3a9b8
+00d3a958  bl 0x01a070ec
+    ; [POST] } // end try from 00d3a954 to 00d3a95b
+00d3a95c  tbz w0,#0x0,0x00d3a98c
+00d3a960  ldr x8,[sp, #0x18]
+00d3a964  cbz x8,0x00d3a9ac
+00d3a968  ldr x1,[x8, #0x10]
+00d3a96c  ldr x0,[x22]
+00d3a970  ldr x2,[x23]
+00d3a974  mov x3,xzr
+    ; [PRE] try { // try from 00d3a974 to 00d3a987 has its CatchHandler @ 00d3a9bc
+00d3a978  bl 0x01fdebb8
+00d3a97c  mov w1,#0x3
+00d3a980  mov x2,xzr
+00d3a984  bl 0x00d198ec
+    ; [POST] } // end try from 00d3a974 to 00d3a987
+00d3a988  b 0x00d3a950
+00d3a98c  ldr x1,[x20]
+00d3a990  add x0,sp,#0x8
+00d3a994  bl 0x01a070e8
+00d3a998  ldp x19,x30,[sp, #0x40]
+00d3a99c  ldp x21,x20,[sp, #0x30]
+00d3a9a0  ldp x23,x22,[sp, #0x20]
+00d3a9a4  add sp,sp,#0x50
+00d3a9a8  ret
+00d3a9ac  bl 0x00b079b0
+    ; [PRE] try { // try from 00d3a9ac to 00d3a9af has its CatchHandler @ 00d3a9b4
+    ; [POST] } // end try from 00d3a9ac to 00d3a9af
+00d3a9b0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d3aa30_iCloudUseExample__OnGUI.txt
+================================================================================
+Function: iCloudUseExample$$OnGUI @ 00d3aa30
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> iCloudManager$$setFloat @ 00d1c3e0
+  -> iCloudManager$$requestDataForKey @ 00d1c3e8
+  -> iCloudManager$$setString @ 00d1c3dc
+  -> System.Text.UTF8Encoding$$.ctor @ 01ff0dc0
+  -> UnityEngine.GUI$$Button @ 025130fc
+  -> FUN_00b079b0 @ 00b079b0
+  -> iCloudManager$$setData @ 00d1c3e4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Rect$$.ctor @ 024daef0
+  -> BaseIOSFeaturePreview$$LoadLevel @ 00d2bb80
+
+--- Calls IN ---
+
+--- Listing ---
+00d3aa30  sub sp,sp,#0x50
+00d3aa34  str x24,[sp, #0x10]
+00d3aa38  stp x23,x22,[sp, #0x20]
+00d3aa3c  stp x21,x20,[sp, #0x30]
+00d3aa40  stp x19,x30,[sp, #0x40]
+00d3aa44  adrp x20,0x3571000
+00d3aa48  adrp x22,0x3362000
+00d3aa4c  ldrb w8,[x20, #0xd72]
+00d3aa50  ldr x22,[x22, #0xe80]
+00d3aa54  mov x19,x0
+00d3aa58  tbnz w8,#0x0,0x00d3ab24
+00d3aa5c  adrp x0,0x3362000
+00d3aa60  ldr x0,[x0, #0xe80]
+00d3aa64  bl 0x00b0789c
+00d3aa68  adrp x0,0x336d000
+00d3aa6c  ldr x0,[x0, #0xdf8]
+00d3aa70  bl 0x00b0789c
+00d3aa74  adrp x0,0x3328000
+00d3aa78  ldr x0,[x0, #0x4f0]
+00d3aa7c  bl 0x00b0789c
+00d3aa80  adrp x0,0x3331000
+00d3aa84  ldr x0,[x0, #0x7c8]
+00d3aa88  bl 0x00b0789c
+00d3aa8c  adrp x0,0x332f000
+00d3aa90  ldr x0,[x0, #0xe40]
+00d3aa94  bl 0x00b0789c
+00d3aa98  adrp x0,0x337d000
+00d3aa9c  ldr x0,[x0, #0xb28]
+00d3aaa0  bl 0x00b0789c
+00d3aaa4  adrp x0,0x333f000
+00d3aaa8  ldr x0,[x0, #0xa10]
+00d3aaac  bl 0x00b0789c
+00d3aab0  adrp x0,0x3328000
+00d3aab4  ldr x0,[x0, #0x110]
+00d3aab8  bl 0x00b0789c
+00d3aabc  adrp x0,0x3360000
+00d3aac0  ldr x0,[x0, #0x60]
+00d3aac4  bl 0x00b0789c
+00d3aac8  adrp x0,0x3352000
+00d3aacc  ldr x0,[x0, #0x330]
+00d3aad0  bl 0x00b0789c
+00d3aad4  adrp x0,0x3323000
+00d3aad8  ldr x0,[x0, #0x348]
+00d3aadc  bl 0x00b0789c
+00d3aae0  adrp x0,0x3370000
+00d3aae4  ldr x0,[x0, #0x9d8]
+00d3aae8  bl 0x00b0789c
+00d3aaec  adrp x0,0x3382000
+00d3aaf0  ldr x0,[x0, #0x888]
+00d3aaf4  bl 0x00b0789c
+00d3aaf8  adrp x0,0x3363000
+00d3aafc  ldr x0,[x0, #0xbb0]
+00d3ab00  bl 0x00b0789c
+00d3ab04  adrp x0,0x333b000
+00d3ab08  ldr x0,[x0, #0x1b0]
+00d3ab0c  bl 0x00b0789c
+00d3ab10  adrp x0,0x3336000
+00d3ab14  ldr x0,[x0, #0x138]
+00d3ab18  bl 0x00b0789c
+00d3ab1c  mov w8,#0x1
+00d3ab20  strb w8,[x20, #0xd72]
+00d3ab24  adrp x20,0x333b000
+00d3ab28  ldr x20,[x20, #0x1b0]
+00d3ab2c  mov w8,#0x432a0000
+00d3ab30  mov w9,#0x428c0000
+00d3ab34  mov w10,#0x43160000
+00d3ab38  mov w11,#0x42480000
+00d3ab3c  mov x0,sp
+00d3ab40  fmov s0,w8
+00d3ab44  fmov s1,w9
+00d3ab48  fmov s2,w10
+00d3ab4c  fmov s3,w11
+00d3ab50  mov x1,xzr
+00d3ab54  stp xzr,xzr,[sp]
+00d3ab58  bl 0x024daef0
+00d3ab5c  ldr x0,[x22]
+00d3ab60  ldr w8,[x0, #0xe0]
+00d3ab64  cbnz w8,0x00d3ab6c
+00d3ab68  bl 0x00b0798c
+00d3ab6c  ldp s0,s1,[sp]
+00d3ab70  ldp s2,s3,[sp, #0x8]
+00d3ab74  ldr x0,[x20]
+00d3ab78  adrp x23,0x336d000
+00d3ab7c  adrp x20,0x3323000
+00d3ab80  ldr x23,[x23, #0xdf8]
+00d3ab84  ldr x20,[x20, #0x348]
+00d3ab88  mov x1,xzr
+00d3ab8c  bl 0x025130fc
+00d3ab90  tbz w0,#0x0,0x00d3abb8
+00d3ab94  ldr x0,[x23]
+00d3ab98  bl 0x01e09dd4
+00d3ab9c  cbz x0,0x00d3af18
+00d3aba0  adrp x8,0x3382000
+00d3aba4  ldr x8,[x8, #0x888]
+00d3aba8  ldr x1,[x20]
+00d3abac  mov x3,xzr
+00d3abb0  ldr x2,[x8]
+00d3abb4  bl 0x00d1c3dc
+00d3abb8  adrp x21,0x332f000
+00d3abbc  ldr x21,[x21, #0xe40]
+00d3abc0  mov w8,#0x432a0000
+00d3abc4  mov w9,#0x43020000
+00d3abc8  mov w10,#0x43160000
+00d3abcc  mov w11,#0x42480000
+00d3abd0  mov x0,sp
+00d3abd4  fmov s0,w8
+00d3abd8  fmov s1,w9
+00d3abdc  fmov s2,w10
+00d3abe0  fmov s3,w11
+00d3abe4  mov x1,xzr
+00d3abe8  stp xzr,xzr,[sp]
+00d3abec  bl 0x024daef0
+00d3abf0  ldr x0,[x22]
+00d3abf4  ldr w8,[x0, #0xe0]
+00d3abf8  cbnz w8,0x00d3ac00
+00d3abfc  bl 0x00b0798c
+00d3ac00  ldp s0,s1,[sp]
+00d3ac04  ldp s2,s3,[sp, #0x8]
+00d3ac08  ldr x0,[x21]
+00d3ac0c  mov x1,xzr
+00d3ac10  bl 0x025130fc
+00d3ac14  tbz w0,#0x0,0x00d3ac30
+00d3ac18  ldr x0,[x23]
+00d3ac1c  bl 0x01e09dd4
+00d3ac20  cbz x0,0x00d3af18
+00d3ac24  ldr x1,[x20]
+00d3ac28  mov x2,xzr
+00d3ac2c  bl 0x00d1c3e8
+00d3ac30  adrp x20,0x3360000
+00d3ac34  ldr x20,[x20, #0x60]
+00d3ac38  mov w8,#0x43a50000
+00d3ac3c  mov w9,#0x428c0000
+00d3ac40  mov w10,#0x43160000
+00d3ac44  mov w11,#0x42480000
+00d3ac48  mov x0,sp
+00d3ac4c  fmov s0,w8
+00d3ac50  fmov s1,w9
+00d3ac54  fmov s2,w10
+00d3ac58  fmov s3,w11
+00d3ac5c  mov x1,xzr
+00d3ac60  stp xzr,xzr,[sp]
+00d3ac64  bl 0x024daef0
+00d3ac68  ldr x0,[x22]
+00d3ac6c  ldr w8,[x0, #0xe0]
+00d3ac70  cbnz w8,0x00d3ac78
+00d3ac74  bl 0x00b0798c
+00d3ac78  ldp s0,s1,[sp]
+00d3ac7c  ldp s2,s3,[sp, #0x8]
+00d3ac80  ldr x0,[x20]
+00d3ac84  adrp x20,0x3328000
+00d3ac88  ldr x20,[x20, #0x110]
+00d3ac8c  mov x1,xzr
+00d3ac90  bl 0x025130fc
+00d3ac94  tbz w0,#0x0,0x00d3acc8
+00d3ac98  adrp x8,0x26db000
+00d3ac9c  ldr s0,[x19, #0x44]
+00d3aca0  ldr s1,[x8, #0x6e4]
+00d3aca4  fadd s0,s0,s1
+00d3aca8  str s0,[x19, #0x44]
+00d3acac  ldr x0,[x23]
+00d3acb0  bl 0x01e09dd4
+00d3acb4  cbz x0,0x00d3af18
+00d3acb8  ldr s0,[x19, #0x44]
+00d3acbc  ldr x1,[x20]
+00d3acc0  mov x2,xzr
+00d3acc4  bl 0x00d1c3e0
+00d3acc8  adrp x21,0x3331000
+00d3accc  ldr x21,[x21, #0x7c8]
+00d3acd0  mov w8,#0x43a50000
+00d3acd4  mov w9,#0x43020000
+00d3acd8  mov w10,#0x43160000
+00d3acdc  mov w11,#0x42480000
+00d3ace0  mov x0,sp
+00d3ace4  fmov s0,w8
+00d3ace8  fmov s1,w9
+00d3acec  fmov s2,w10
+00d3acf0  fmov s3,w11
+00d3acf4  mov x1,xzr
+00d3acf8  stp xzr,xzr,[sp]
+00d3acfc  bl 0x024daef0
+00d3ad00  ldr x0,[x22]
+00d3ad04  ldr w8,[x0, #0xe0]
+00d3ad08  cbnz w8,0x00d3ad10
+00d3ad0c  bl 0x00b0798c
+00d3ad10  ldp s0,s1,[sp]
+00d3ad14  ldp s2,s3,[sp, #0x8]
+00d3ad18  ldr x0,[x21]
+00d3ad1c  mov x1,xzr
+00d3ad20  bl 0x025130fc
+00d3ad24  tbz w0,#0x0,0x00d3ad40
+00d3ad28  ldr x0,[x23]
+00d3ad2c  bl 0x01e09dd4
+00d3ad30  cbz x0,0x00d3af18
+00d3ad34  ldr x1,[x20]
+00d3ad38  mov x2,xzr
+00d3ad3c  bl 0x00d1c3e8
+00d3ad40  adrp x20,0x333f000
+00d3ad44  ldr x20,[x20, #0xa10]
+00d3ad48  mov w8,#0x43f50000
+00d3ad4c  mov w9,#0x428c0000
+00d3ad50  mov w10,#0x43160000
+00d3ad54  mov w11,#0x42480000
+00d3ad58  mov x0,sp
+00d3ad5c  fmov s0,w8
+00d3ad60  fmov s1,w9
+00d3ad64  fmov s2,w10
+00d3ad68  fmov s3,w11
+00d3ad6c  mov x1,xzr
+00d3ad70  stp xzr,xzr,[sp]
+00d3ad74  bl 0x024daef0
+00d3ad78  ldr x0,[x22]
+00d3ad7c  ldr w8,[x0, #0xe0]
+00d3ad80  cbnz w8,0x00d3ad88
+00d3ad84  bl 0x00b0798c
+00d3ad88  ldp s0,s1,[sp]
+00d3ad8c  ldp s2,s3,[sp, #0x8]
+00d3ad90  ldr x0,[x20]
+00d3ad94  adrp x24,0x3336000
+00d3ad98  ldr x24,[x24, #0x138]
+00d3ad9c  mov x1,xzr
+00d3ada0  bl 0x025130fc
+00d3ada4  tbz w0,#0x0,0x00d3ae10
+00d3ada8  adrp x8,0x3352000
+00d3adac  adrp x9,0x3328000
+00d3adb0  ldr x8,[x8, #0x330]
+00d3adb4  ldr x9,[x9, #0x4f0]
+00d3adb8  ldr x20,[x8]
+00d3adbc  ldr x0,[x9]
+00d3adc0  bl 0x00b079a0
+00d3adc4  cbz x0,0x00d3af18
+00d3adc8  mov x1,xzr
+00d3adcc  mov x21,x0
+00d3add0  bl 0x01ff0dc0
+00d3add4  ldr x8,[x21]
+00d3add8  mov x0,x21
+00d3addc  mov x1,x20
+00d3ade0  ldr x9,[x8, #0x268]
+00d3ade4  ldr x2,[x8, #0x270]
+00d3ade8  blr x9
+00d3adec  ldr x8,[x23]
+00d3adf0  mov x20,x0
+00d3adf4  mov x0,x8
+00d3adf8  bl 0x01e09dd4
+00d3adfc  cbz x0,0x00d3af18
+00d3ae00  ldr x1,[x24]
+00d3ae04  mov x2,x20
+00d3ae08  mov x3,xzr
+00d3ae0c  bl 0x00d1c3e4
+00d3ae10  adrp x20,0x3363000
+00d3ae14  ldr x20,[x20, #0xbb0]
+00d3ae18  mov w8,#0x43f50000
+00d3ae1c  mov w9,#0x43020000
+00d3ae20  mov w10,#0x43160000
+00d3ae24  mov w11,#0x42480000
+00d3ae28  mov x0,sp
+00d3ae2c  fmov s0,w8
+00d3ae30  fmov s1,w9
+00d3ae34  fmov s2,w10
+00d3ae38  fmov s3,w11
+00d3ae3c  mov x1,xzr
+00d3ae40  stp xzr,xzr,[sp]
+00d3ae44  bl 0x024daef0
+00d3ae48  ldr x0,[x22]
+00d3ae4c  ldr w8,[x0, #0xe0]
+00d3ae50  cbnz w8,0x00d3ae58
+00d3ae54  bl 0x00b0798c
+00d3ae58  ldp s0,s1,[sp]
+00d3ae5c  ldp s2,s3,[sp, #0x8]
+00d3ae60  ldr x0,[x20]
+00d3ae64  mov x1,xzr
+00d3ae68  bl 0x025130fc
+00d3ae6c  tbz w0,#0x0,0x00d3ae88
+00d3ae70  ldr x0,[x23]
+00d3ae74  bl 0x01e09dd4
+00d3ae78  cbz x0,0x00d3af18
+00d3ae7c  ldr x1,[x24]
+00d3ae80  mov x2,xzr
+00d3ae84  bl 0x00d1c3e8
+00d3ae88  adrp x20,0x3370000
+00d3ae8c  ldr x20,[x20, #0x9d8]
+00d3ae90  mov w8,#0x432a0000
+00d3ae94  mov w9,#0x43fa0000
+00d3ae98  mov w10,#0x43160000
+00d3ae9c  mov w11,#0x42480000
+00d3aea0  mov x0,sp
+00d3aea4  fmov s0,w8
+00d3aea8  fmov s1,w9
+00d3aeac  fmov s2,w10
+00d3aeb0  fmov s3,w11
+00d3aeb4  mov x1,xzr
+00d3aeb8  stp xzr,xzr,[sp]
+00d3aebc  bl 0x024daef0
+00d3aec0  ldr x0,[x22]
+00d3aec4  ldr w8,[x0, #0xe0]
+00d3aec8  cbnz w8,0x00d3aed0
+00d3aecc  bl 0x00b0798c
+00d3aed0  ldp s0,s1,[sp]
+00d3aed4  ldp s2,s3,[sp, #0x8]
+00d3aed8  ldr x0,[x20]
+00d3aedc  mov x1,xzr
+00d3aee0  bl 0x025130fc
+00d3aee4  tbz w0,#0x0,0x00d3af00
+00d3aee8  adrp x8,0x337d000
+00d3aeec  ldr x8,[x8, #0xb28]
+00d3aef0  mov x0,x19
+00d3aef4  mov x2,xzr
+00d3aef8  ldr x1,[x8]
+00d3aefc  bl 0x00d2bb80
+00d3af00  ldp x19,x30,[sp, #0x40]
+00d3af04  ldp x21,x20,[sp, #0x30]
+00d3af08  ldp x23,x22,[sp, #0x20]
+00d3af0c  ldr x24,[sp, #0x10]
+00d3af10  add sp,sp,#0x50
+00d3af14  ret
+00d3af18  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d3af1c_iCloudUseExample__OnCloundInitAction.txt
+================================================================================
+Function: iCloudUseExample$$OnCloundInitAction @ 00d3af1c
+
+--- Calls OUT ---
+  -> IOSNativePopUpManager$$showMessage @ 00d25960
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> SA.Common.Models.Result$$get_IsSucceeded @ 00c88a30
+
+--- Calls IN ---
+
+--- Listing ---
+00d3af1c  str x22,[sp, #-0x30]!
+00d3af20  stp x21,x20,[sp, #0x10]
+00d3af24  stp x19,x30,[sp, #0x20]
+00d3af28  adrp x20,0x3571000
+00d3af2c  ldrb w8,[x20, #0xd73]
+00d3af30  mov x19,x1
+00d3af34  tbnz w8,#0x0,0x00d3af64
+00d3af38  adrp x0,0x3373000
+00d3af3c  ldr x0,[x0, #0x310]
+00d3af40  bl 0x00b0789c
+00d3af44  adrp x0,0x333c000
+00d3af48  ldr x0,[x0, #0x9b8]
+00d3af4c  bl 0x00b0789c
+00d3af50  adrp x0,0x3339000
+00d3af54  ldr x0,[x0, #0x368]
+00d3af58  bl 0x00b0789c
+00d3af5c  mov w8,#0x1
+00d3af60  strb w8,[x20, #0xd73]
+00d3af64  cbz x19,0x00d3afb4
+00d3af68  adrp x20,0x3373000
+00d3af6c  adrp x21,0x3339000
+00d3af70  adrp x22,0x333c000
+00d3af74  ldr x20,[x20, #0x310]
+00d3af78  ldr x21,[x21, #0x368]
+00d3af7c  ldr x22,[x22, #0x9b8]
+00d3af80  mov x0,x19
+00d3af84  mov x1,xzr
+00d3af88  bl 0x00c88a30
+00d3af8c  tst w0,#0x1
+00d3af90  ldr x8,[x20]
+00d3af94  csel x9,x21,x22,ne
+00d3af98  ldr x1,[x9]
+00d3af9c  ldp x19,x30,[sp, #0x20]
+00d3afa0  ldp x21,x20,[sp, #0x10]
+00d3afa4  mov x0,x8
+00d3afa8  mov x2,xzr
+00d3afac  ldr x22,[sp], #0x30
+00d3afb0  b 0x00d25960
+00d3afb4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d3afb8_iCloudUseExample__OnCloudDataReceivedAction.txt
+================================================================================
+Function: iCloudUseExample$$OnCloudDataReceivedAction @ 00d3afb8
+
+--- Calls OUT ---
+  -> IOSNativePopUpManager$$showMessage @ 00d25960
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> iCloudData$$get_stringValue @ 00d1f648
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d3afb8  str x20,[sp, #-0x20]!
+00d3afbc  stp x19,x30,[sp, #0x10]
+00d3afc0  adrp x19,0x3571000
+00d3afc4  ldrb w8,[x19, #0xd74]
+00d3afc8  mov x20,x1
+00d3afcc  tbnz w8,#0x0,0x00d3afe4
+00d3afd0  adrp x0,0x3348000
+00d3afd4  ldr x0,[x0, #0x108]
+00d3afd8  bl 0x00b0789c
+00d3afdc  mov w8,#0x1
+00d3afe0  strb w8,[x19, #0xd74]
+00d3afe4  cbz x20,0x00d3b028
+00d3afe8  ldrb w8,[x20, #0x20]
+00d3afec  ldr x19,[x20, #0x10]
+00d3aff0  cbz w8,0x00d3b004
+00d3aff4  adrp x8,0x3348000
+00d3aff8  ldr x8,[x8, #0x108]
+00d3affc  ldr x1,[x8]
+00d3b000  b 0x00d3b014
+00d3b004  mov x0,x20
+00d3b008  mov x1,xzr
+00d3b00c  bl 0x00d1f648
+00d3b010  mov x1,x0
+00d3b014  mov x0,x19
+00d3b018  ldp x19,x30,[sp, #0x10]
+00d3b01c  mov x2,xzr
+00d3b020  ldr x20,[sp], #0x20
+00d3b024  b 0x00d25960
+00d3b028  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d3b02c_iCloudUseExample__OnDestroy.txt
+================================================================================
+Function: iCloudUseExample$$OnDestroy @ 00d3b02c
+
+--- Calls OUT ---
+  -> System.Action<object>$$.ctor @ 01909b80
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> iCloudManager$$remove_OnCloudDataReceivedAction @ 00d1c094
+  -> iCloudManager$$remove_OnCloudInitAction @ 00d1beb0
+
+--- Calls IN ---
+
+--- Listing ---
+00d3b02c  str x22,[sp, #-0x30]!
+00d3b030  stp x21,x20,[sp, #0x10]
+00d3b034  stp x19,x30,[sp, #0x20]
+00d3b038  adrp x20,0x3571000
+00d3b03c  adrp x21,0x3369000
+00d3b040  ldrb w8,[x20, #0xd75]
+00d3b044  ldr x21,[x21, #0x800]
+00d3b048  mov x19,x0
+00d3b04c  tbnz w8,#0x0,0x00d3b094
+00d3b050  adrp x0,0x3369000
+00d3b054  ldr x0,[x0, #0x800]
+00d3b058  bl 0x00b0789c
+00d3b05c  adrp x0,0x3356000
+00d3b060  ldr x0,[x0, #0x988]
+00d3b064  bl 0x00b0789c
+00d3b068  adrp x0,0x336e000
+00d3b06c  ldr x0,[x0, #0xb10]
+00d3b070  bl 0x00b0789c
+00d3b074  adrp x0,0x3371000
+00d3b078  ldr x0,[x0, #0x3e8]
+00d3b07c  bl 0x00b0789c
+00d3b080  adrp x0,0x337a000
+00d3b084  ldr x0,[x0, #0xd18]
+00d3b088  bl 0x00b0789c
+00d3b08c  mov w8,#0x1
+00d3b090  strb w8,[x20, #0xd75]
+00d3b094  ldr x0,[x21]
+00d3b098  bl 0x00b079a0
+00d3b09c  cbz x0,0x00d3b128
+00d3b0a0  adrp x8,0x337a000
+00d3b0a4  ldr x8,[x8, #0xd18]
+00d3b0a8  adrp x22,0x336e000
+00d3b0ac  adrp x21,0x3356000
+00d3b0b0  mov x1,x19
+00d3b0b4  ldr x2,[x8]
+00d3b0b8  ldr x22,[x22, #0xb10]
+00d3b0bc  ldr x21,[x21, #0x988]
+00d3b0c0  mov x3,xzr
+00d3b0c4  mov x20,x0
+00d3b0c8  bl 0x01909b80
+00d3b0cc  ldr x0,[x22]
+00d3b0d0  ldr w8,[x0, #0xe0]
+00d3b0d4  cbnz w8,0x00d3b0dc
+00d3b0d8  bl 0x00b0798c
+00d3b0dc  mov x0,x20
+00d3b0e0  mov x1,xzr
+00d3b0e4  bl 0x00d1beb0
+00d3b0e8  ldr x0,[x21]
+00d3b0ec  bl 0x00b079a0
+00d3b0f0  cbz x0,0x00d3b128
+00d3b0f4  adrp x8,0x3371000
+00d3b0f8  ldr x8,[x8, #0x3e8]
+00d3b0fc  mov x1,x19
+00d3b100  mov x3,xzr
+00d3b104  mov x20,x0
+00d3b108  ldr x2,[x8]
+00d3b10c  bl 0x01909b80
+00d3b110  mov x0,x20
+00d3b114  ldp x19,x30,[sp, #0x20]
+00d3b118  ldp x21,x20,[sp, #0x10]
+00d3b11c  mov x1,xzr
+00d3b120  ldr x22,[sp], #0x30
+00d3b124  b 0x00d1c094
+00d3b128  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d3b12c_iCloudUseExample__.ctor.txt
+================================================================================
+Function: iCloudUseExample$$.ctor @ 00d3b12c
+
+--- Calls OUT ---
+  -> BaseIOSFeaturePreview$$.ctor @ 00d2bbd8
+
+--- Calls IN ---
+
+--- Listing ---
+00d3b12c  mov w8,#0xcccd
+00d3b130  movk w8,#0x3f8c, LSL #16
+00d3b134  mov x1,xzr
+00d3b138  str w8,[x0, #0x44]
+00d3b13c  b 0x00d2bbd8
+
+

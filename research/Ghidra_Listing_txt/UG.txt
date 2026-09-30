@@ -1,0 +1,332 @@
+================================================================================
+### FILE: 00dc3ec0_UGUISpriteAnimation__get_FrameCount.txt
+================================================================================
+Function: UGUISpriteAnimation$$get_FrameCount @ 00dc3ec0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- UGUISpriteAnimation$$Update @ 00dc401c
+
+--- Listing ---
+00dc3ec0  str x20,[sp, #-0x20]!
+00dc3ec4  stp x19,x30,[sp, #0x10]
+00dc3ec8  adrp x20,0x3572000
+00dc3ecc  ldrb w8,[x20, #0x199]
+00dc3ed0  mov x19,x0
+00dc3ed4  tbnz w8,#0x0,0x00dc3eec
+00dc3ed8  adrp x0,0x3344000
+00dc3edc  ldr x0,[x0, #0x2d8]
+00dc3ee0  bl 0x00b0789c
+00dc3ee4  mov w8,#0x1
+00dc3ee8  strb w8,[x20, #0x199]
+00dc3eec  ldr x8,[x19, #0x30]
+00dc3ef0  cbz x8,0x00dc3f04
+00dc3ef4  ldr w0,[x8, #0x18]
+00dc3ef8  ldp x19,x30,[sp, #0x10]
+00dc3efc  ldr x20,[sp], #0x20
+00dc3f00  ret
+00dc3f04  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc3f08_UGUISpriteAnimation__Awake.txt
+================================================================================
+Function: UGUISpriteAnimation$$Awake @ 00dc3f08
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00dc3f08  stp x21,x20,[sp, #-0x20]!
+00dc3f0c  stp x19,x30,[sp, #0x10]
+00dc3f10  adrp x20,0x3572000
+00dc3f14  adrp x21,0x3336000
+00dc3f18  ldrb w8,[x20, #0x19a]
+00dc3f1c  ldr x21,[x21, #0xea8]
+00dc3f20  mov x19,x0
+00dc3f24  tbnz w8,#0x0,0x00dc3f3c
+00dc3f28  adrp x0,0x3336000
+00dc3f2c  ldr x0,[x0, #0xea8]
+00dc3f30  bl 0x00b0789c
+00dc3f34  mov w8,#0x1
+00dc3f38  strb w8,[x20, #0x19a]
+00dc3f3c  ldr x1,[x21]
+00dc3f40  mov x0,x19
+00dc3f44  bl 0x0176cbf8
+00dc3f48  str x0,[x19, #0x18]!
+00dc3f4c  mov x1,x0
+00dc3f50  mov x0,x19
+00dc3f54  ldp x19,x30,[sp, #0x10]
+00dc3f58  ldp x21,x20,[sp], #0x20
+00dc3f5c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00dc3f60_UGUISpriteAnimation__Start.txt
+================================================================================
+Function: UGUISpriteAnimation$$Start @ 00dc3f60
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc3f60  ldrb w8,[x0, #0x3a]
+00dc3f64  cbz w8,0x00dc3f74
+00dc3f68  mov w8,#0x101
+00dc3f6c  strh w8,[x0, #0x38]
+00dc3f70  ret
+00dc3f74  strb wzr,[x0, #0x38]
+00dc3f78  ret
+
+
+================================================================================
+### FILE: 00dc3f7c_UGUISpriteAnimation__Play.txt
+================================================================================
+Function: UGUISpriteAnimation$$Play @ 00dc3f7c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc3f7c  mov w8,#0x101
+00dc3f80  strh w8,[x0, #0x38]
+00dc3f84  ret
+
+
+================================================================================
+### FILE: 00dc3f88_UGUISpriteAnimation__SetSprite.txt
+================================================================================
+Function: UGUISpriteAnimation$$SetSprite @ 00dc3f88
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$get_Item @ 01c00380
+  -> UnityEngine.UI.Image$$set_sprite @ 0257059c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- UGUISpriteAnimation$$Rewind @ 00dc4128
+  <- UGUISpriteAnimation$$Update @ 00dc401c
+  <- UGUISpriteAnimation$$Stop @ 00dc4108
+
+--- Listing ---
+00dc3f88  stp x21,x20,[sp, #-0x20]!
+00dc3f8c  stp x19,x30,[sp, #0x10]
+00dc3f90  adrp x21,0x3572000
+00dc3f94  ldrb w8,[x21, #0x19b]
+00dc3f98  mov w20,w1
+00dc3f9c  mov x19,x0
+00dc3fa0  tbnz w8,#0x0,0x00dc3fb8
+00dc3fa4  adrp x0,0x3327000
+00dc3fa8  ldr x0,[x0, #0xce0]
+00dc3fac  bl 0x00b0789c
+00dc3fb0  mov w8,#0x1
+00dc3fb4  strb w8,[x21, #0x19b]
+00dc3fb8  ldr x0,[x19, #0x30]
+00dc3fbc  cbz x0,0x00dc400c
+00dc3fc0  adrp x8,0x3327000
+00dc3fc4  ldr x8,[x8, #0xce0]
+00dc3fc8  ldr x21,[x19, #0x18]
+00dc3fcc  mov w1,w20
+00dc3fd0  ldr x2,[x8]
+00dc3fd4  bl 0x01c00380
+00dc3fd8  cbz x21,0x00dc400c
+00dc3fdc  mov x1,x0
+00dc3fe0  mov x0,x21
+00dc3fe4  mov x2,xzr
+00dc3fe8  bl 0x0257059c
+00dc3fec  ldr x0,[x19, #0x18]
+00dc3ff0  cbz x0,0x00dc400c
+00dc3ff4  ldr x8,[x0]
+00dc3ff8  ldp x19,x30,[sp, #0x10]
+00dc3ffc  ldr x2,[x8, #0x408]
+00dc4000  ldr x1,[x8, #0x410]
+00dc4004  ldp x21,x20,[sp], #0x20
+00dc4008  br x2
+00dc400c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00dc4010_UGUISpriteAnimation__PlayReverse.txt
+================================================================================
+Function: UGUISpriteAnimation$$PlayReverse @ 00dc4010
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc4010  mov w8,#0x1
+00dc4014  strh w8,[x0, #0x38]
+00dc4018  ret
+
+
+================================================================================
+### FILE: 00dc401c_UGUISpriteAnimation__Update.txt
+================================================================================
+Function: UGUISpriteAnimation$$Update @ 00dc401c
+
+--- Calls OUT ---
+  -> UGUISpriteAnimation$$SetSprite @ 00dc3f88
+  -> UGUISpriteAnimation$$get_FrameCount @ 00dc3ec0
+  -> UnityEngine.Time$$get_deltaTime @ 024dc048
+
+--- Calls IN ---
+
+--- Listing ---
+00dc401c  str d8,[sp, #-0x20]!
+00dc4020  str x20,[sp, #0x8]
+00dc4024  stp x19,x30,[sp, #0x10]
+00dc4028  ldrb w8,[x0, #0x38]
+00dc402c  cbz w8,0x00dc40d8
+00dc4030  mov x19,x0
+00dc4034  bl 0x00dc3ec0
+00dc4038  cbz w0,0x00dc40d8
+00dc403c  ldr s8,[x19, #0x24]
+00dc4040  mov x0,xzr
+00dc4044  bl 0x024dc048
+00dc4048  ldr s1,[x19, #0x28]
+00dc404c  fmov s2,0x3f800000
+00dc4050  fadd s0,s8,s0
+00dc4054  str s0,[x19, #0x24]
+00dc4058  fdiv s1,s2,s1
+00dc405c  fcmp s0,s1
+00dc4060  b.le 0x00dc40d8
+00dc4064  ldrb w8,[x19, #0x39]
+00dc4068  ldr w9,[x19, #0x20]
+00dc406c  mov x0,x19
+00dc4070  cmp w8,#0x0
+00dc4074  mov w8,#0xffffffff
+00dc4078  cneg w8,w8,ne
+00dc407c  add w20,w9,w8
+00dc4080  stp w20,wzr,[x19, #0x20]
+00dc4084  bl 0x00dc3ec0
+00dc4088  cmp w20,w0
+00dc408c  b.ge 0x00dc40b0
+00dc4090  ldr w1,[x19, #0x20]
+00dc4094  tbz w1,#0x1f,0x00dc40c0
+00dc4098  ldrb w8,[x19, #0x3b]
+00dc409c  cbz w8,0x00dc40d4
+00dc40a0  mov x0,x19
+00dc40a4  bl 0x00dc3ec0
+00dc40a8  sub w1,w0,#0x1
+00dc40ac  b 0x00dc40bc
+00dc40b0  ldrb w8,[x19, #0x3b]
+00dc40b4  cbz w8,0x00dc40d4
+00dc40b8  mov w1,wzr
+00dc40bc  str w1,[x19, #0x20]
+00dc40c0  mov x0,x19
+00dc40c4  ldp x19,x30,[sp, #0x10]
+00dc40c8  ldr x20,[sp, #0x8]
+00dc40cc  ldr d8,[sp], #0x20
+00dc40d0  b 0x00dc3f88
+00dc40d4  strb wzr,[x19, #0x38]
+00dc40d8  ldp x19,x30,[sp, #0x10]
+00dc40dc  ldr x20,[sp, #0x8]
+00dc40e0  ldr d8,[sp], #0x20
+00dc40e4  ret
+
+
+================================================================================
+### FILE: 00dc40e8_UGUISpriteAnimation__Pause.txt
+================================================================================
+Function: UGUISpriteAnimation$$Pause @ 00dc40e8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc40e8  strb wzr,[x0, #0x38]
+00dc40ec  ret
+
+
+================================================================================
+### FILE: 00dc40f0_UGUISpriteAnimation__Resume.txt
+================================================================================
+Function: UGUISpriteAnimation$$Resume @ 00dc40f0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dc40f0  ldrb w8,[x0, #0x38]
+00dc40f4  cbz w8,0x00dc40fc
+00dc40f8  ret
+00dc40fc  mov w8,#0x1
+00dc4100  strb w8,[x0, #0x38]
+00dc4104  ret
+
+
+================================================================================
+### FILE: 00dc4108_UGUISpriteAnimation__Stop.txt
+================================================================================
+Function: UGUISpriteAnimation$$Stop @ 00dc4108
+
+--- Calls OUT ---
+  -> UGUISpriteAnimation$$SetSprite @ 00dc3f88
+
+--- Calls IN ---
+
+--- Listing ---
+00dc4108  stp x19,x30,[sp, #-0x10]!
+00dc410c  mov w1,wzr
+00dc4110  mov x19,x0
+00dc4114  str wzr,[x0, #0x20]
+00dc4118  bl 0x00dc3f88
+00dc411c  strb wzr,[x19, #0x38]
+00dc4120  ldp x19,x30,[sp], #0x10
+00dc4124  ret
+
+
+================================================================================
+### FILE: 00dc4128_UGUISpriteAnimation__Rewind.txt
+================================================================================
+Function: UGUISpriteAnimation$$Rewind @ 00dc4128
+
+--- Calls OUT ---
+  -> UGUISpriteAnimation$$SetSprite @ 00dc3f88
+
+--- Calls IN ---
+
+--- Listing ---
+00dc4128  stp x19,x30,[sp, #-0x10]!
+00dc412c  mov w1,wzr
+00dc4130  mov x19,x0
+00dc4134  str wzr,[x0, #0x20]
+00dc4138  bl 0x00dc3f88
+00dc413c  mov w8,#0x101
+00dc4140  strh w8,[x19, #0x38]
+00dc4144  ldp x19,x30,[sp], #0x10
+00dc4148  ret
+
+
+================================================================================
+### FILE: 00dc414c_UGUISpriteAnimation__.ctor.txt
+================================================================================
+Function: UGUISpriteAnimation$$.ctor @ 00dc414c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00dc414c  mov w8,#0x40a00000
+00dc4150  mov w9,#0x1
+00dc4154  mov x1,xzr
+00dc4158  str w8,[x0, #0x28]
+00dc415c  strb w9,[x0, #0x39]
+00dc4160  b 0x024e45bc
+
+

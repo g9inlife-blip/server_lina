@@ -1,0 +1,281 @@
+================================================================================
+### FILE: 008d3bd0_runtime_error.txt
+================================================================================
+Function: runtime_error @ 008d3bd0
+
+--- Calls OUT ---
+  -> runtime_error @ 00b81f08
+
+--- Calls IN ---
+  <- __throw_runtime_error @ 00b659d4
+
+--- Listing ---
+008d3bd0  adrp x16,0x3307000
+008d3bd4  ldr x17,[x16, #0x7a8]
+008d3bd8  add x16,x16,#0x7a8
+008d3bdc  br x17
+
+
+================================================================================
+### FILE: 008d3dc0__runtime_error.txt
+================================================================================
+Function: ~runtime_error @ 008d3dc0
+
+--- Calls OUT ---
+  -> ~runtime_error @ 00b8e618
+
+--- Calls IN ---
+  <- ~system_error @ 00b89554
+  <- ~system_error @ 00b89550
+
+--- Listing ---
+008d3dc0  adrp x16,0x3307000
+008d3dc4  ldr x17,[x16, #0x8a0]
+008d3dc8  add x16,x16,#0x8a0
+008d3dcc  br x17
+
+
+================================================================================
+### FILE: 008d5320_runtime_error.txt
+================================================================================
+Function: runtime_error @ 008d5320
+
+--- Calls OUT ---
+  -> runtime_error @ 00b81e7c
+
+--- Calls IN ---
+  <- FUN_00b70e70 @ 00b70e70
+
+--- Listing ---
+008d5320  adrp x16,0x3308000
+008d5324  ldr x17,[x16, #0x350]
+008d5328  add x16,x16,#0x350
+008d532c  br x17
+
+
+================================================================================
+### FILE: 008d5570_runtime_error.txt
+================================================================================
+Function: runtime_error @ 008d5570
+
+--- Calls OUT ---
+  -> runtime_error @ 00b81e7c
+
+--- Calls IN ---
+  <- system_error @ 00b8913c
+  <- system_error @ 00b88f54
+  <- system_error @ 00b8933c
+  <- system_error @ 00b89048
+  <- system_error @ 00b89234
+  <- system_error @ 00b89444
+
+--- Listing ---
+008d5570  adrp x16,0x3308000
+008d5574  ldr x17,[x16, #0x478]
+008d5578  add x16,x16,#0x478
+008d557c  br x17
+
+
+================================================================================
+### FILE: 00b81e7c_runtime_error.txt
+================================================================================
+Function: runtime_error @ 00b81e7c
+FuncComment: std::runtime_error::runtime_error(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)
+
+--- Calls OUT ---
+  -> memcpy @ 008d4920
+  -> operator.new @ 008d4f40
+  -> strlen @ 008d39a0
+
+--- Calls IN ---
+  <- runtime_error @ 008d5570
+  <- runtime_error @ 008d5320
+
+--- Listing ---
+00b81e7c  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::runtime_error::runtime_error(std::__ndk1::basic_string<char, std::__ndk1::char_traits<char>, std::__ndk1::allocator<char> > const&)
+00b81e80  stp x20,x19,[sp, #0x10]
+00b81e84  stp x29,x30,[sp, #0x20]
+00b81e88  add x29,sp,#0x20
+00b81e8c  adrp x8,0x3383000
+00b81e90  ldr x8,[x8, #0x380]
+00b81e94  mov x19,x0
+00b81e98  add x8,x8,#0x10
+00b81e9c  str x8,[x0]
+00b81ea0  ldrb w8,[x1]
+00b81ea4  ldr x9,[x1, #0x10]
+00b81ea8  tst w8,#0x1
+00b81eac  csinc x20,x9,x1,ne
+00b81eb0  mov x0,x20
+00b81eb4  bl 0x008d39a0
+00b81eb8  mov x21,x0
+00b81ebc  add x0,x0,#0x19
+00b81ec0  bl 0x008d4f40
+    ; [PRE] try { // try from 00b81ec0 to 00b81ec3 has its CatchHandler @ 00b81ef4
+    ; [POST] } // end try from 00b81ec0 to 00b81ec3
+00b81ec4  add x22,x0,#0x18
+00b81ec8  stp x21,x21,[x0]
+00b81ecc  str wzr,[x0, #0x10]
+00b81ed0  add x2,x21,#0x1
+00b81ed4  mov x0,x22
+00b81ed8  mov x1,x20
+00b81edc  bl 0x008d4920
+00b81ee0  str x22,[x19, #0x8]
+00b81ee4  ldp x29,x30,[sp, #0x20]
+00b81ee8  ldp x20,x19,[sp, #0x10]
+00b81eec  ldp x22,x21,[sp], #0x30
+00b81ef0  ret
+
+
+================================================================================
+### FILE: 00b81f08_runtime_error.txt
+================================================================================
+Function: runtime_error @ 00b81f08
+FuncComment: std::runtime_error::runtime_error(char const*)
+
+--- Calls OUT ---
+  -> memcpy @ 008d4920
+  -> operator.new @ 008d4f40
+  -> strlen @ 008d39a0
+
+--- Calls IN ---
+  <- runtime_error @ 008d3bd0
+
+--- Listing ---
+00b81f08  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::runtime_error::runtime_error(char const*)
+00b81f0c  stp x20,x19,[sp, #0x10]
+00b81f10  stp x29,x30,[sp, #0x20]
+00b81f14  add x29,sp,#0x20
+00b81f18  adrp x8,0x3383000
+00b81f1c  ldr x8,[x8, #0x380]
+00b81f20  mov x19,x0
+00b81f24  mov x20,x1
+00b81f28  add x8,x8,#0x10
+00b81f2c  str x8,[x0]
+00b81f30  mov x0,x1
+00b81f34  bl 0x008d39a0
+00b81f38  mov x21,x0
+00b81f3c  add x0,x0,#0x19
+00b81f40  bl 0x008d4f40
+    ; [PRE] try { // try from 00b81f40 to 00b81f43 has its CatchHandler @ 00b81f74
+    ; [POST] } // end try from 00b81f40 to 00b81f43
+00b81f44  add x22,x0,#0x18
+00b81f48  stp x21,x21,[x0]
+00b81f4c  str wzr,[x0, #0x10]
+00b81f50  add x2,x21,#0x1
+00b81f54  mov x0,x22
+00b81f58  mov x1,x20
+00b81f5c  bl 0x008d4920
+00b81f60  str x22,[x19, #0x8]
+00b81f64  ldp x29,x30,[sp, #0x20]
+00b81f68  ldp x20,x19,[sp, #0x10]
+00b81f6c  ldp x22,x21,[sp], #0x30
+00b81f70  ret
+
+
+================================================================================
+### FILE: 00b81f88_runtime_error.txt
+================================================================================
+Function: runtime_error @ 00b81f88
+FuncComment: std::runtime_error::runtime_error(std::runtime_error const&)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b81f88  adrp x8,0x3383000
+    ; [PLATE] std::runtime_error::runtime_error(std::runtime_error const&)
+00b81f8c  ldr x8,[x8, #0x380]
+00b81f90  add x8,x8,#0x10
+00b81f94  str x8,[x0]
+00b81f98  ldr x8,[x1, #0x8]
+00b81f9c  str x8,[x0, #0x8]
+00b81fa0  sub x8,x8,#0x8
+00b81fa4  ldaxr w9,[x8]
+00b81fa8  add w9,w9,#0x1
+00b81fac  stlxr w10,w9,[x8]
+00b81fb0  cbnz w10,0x00b81fa4
+00b81fb4  ret
+
+
+================================================================================
+### FILE: 00b8e618__runtime_error.txt
+================================================================================
+Function: ~runtime_error @ 00b8e618
+FuncComment: std::runtime_error::~runtime_error()
+
+--- Calls OUT ---
+  -> operator.delete @ 008d3ed0
+  -> ~exception @ 008d3cf0
+
+--- Calls IN ---
+  <- FUN_00b70e70 @ 00b70e70
+  <- __throw_runtime_error @ 00b659d4
+  <- ~runtime_error @ 008d3dc0
+
+--- Listing ---
+00b8e618  str x19,[sp, #-0x20]!
+    ; [PLATE] std::runtime_error::~runtime_error()
+00b8e61c  stp x29,x30,[sp, #0x10]
+00b8e620  add x29,sp,#0x10
+00b8e624  adrp x9,0x3383000
+00b8e628  ldr x8,[x0, #0x8]
+00b8e62c  ldr x9,[x9, #0x380]
+00b8e630  mov x19,x0
+00b8e634  add x9,x9,#0x10
+00b8e638  str x9,[x0]
+00b8e63c  sub x9,x8,#0x8
+00b8e640  ldaxr w10,[x9]
+00b8e644  subs w10,w10,#0x1
+00b8e648  stlxr w11,w10,[x9]
+00b8e64c  cbnz w11,0x00b8e640
+00b8e650  b.pl 0x00b8e65c
+00b8e654  sub x0,x8,#0x18
+00b8e658  bl 0x008d3ed0
+00b8e65c  ldp x29,x30,[sp, #0x10]
+00b8e660  mov x0,x19
+00b8e664  ldr x19,[sp], #0x20
+00b8e668  b 0x008d3cf0
+
+
+================================================================================
+### FILE: 00b8e66c__runtime_error.txt
+================================================================================
+Function: ~runtime_error @ 00b8e66c
+FuncComment: std::runtime_error::~runtime_error()
+
+--- Calls OUT ---
+  -> operator.delete @ 008d3ed0
+  -> ~exception @ 008d3cf0
+
+--- Calls IN ---
+
+--- Listing ---
+00b8e66c  str x19,[sp, #-0x20]!
+    ; [PLATE] std::runtime_error::~runtime_error()
+00b8e670  stp x29,x30,[sp, #0x10]
+00b8e674  add x29,sp,#0x10
+00b8e678  adrp x9,0x3383000
+00b8e67c  ldr x8,[x0, #0x8]
+00b8e680  ldr x9,[x9, #0x380]
+00b8e684  mov x19,x0
+00b8e688  add x9,x9,#0x10
+00b8e68c  str x9,[x0]
+00b8e690  sub x9,x8,#0x8
+00b8e694  ldaxr w10,[x9]
+00b8e698  subs w10,w10,#0x1
+00b8e69c  stlxr w11,w10,[x9]
+00b8e6a0  cbnz w11,0x00b8e694
+00b8e6a4  b.pl 0x00b8e6b0
+00b8e6a8  sub x0,x8,#0x18
+00b8e6ac  bl 0x008d3ed0
+00b8e6b0  mov x0,x19
+00b8e6b4  bl 0x008d3cf0
+00b8e6b8  ldp x29,x30,[sp, #0x10]
+00b8e6bc  mov x0,x19
+00b8e6c0  ldr x19,[sp], #0x20
+00b8e6c4  b 0x008d3ed0
+
+

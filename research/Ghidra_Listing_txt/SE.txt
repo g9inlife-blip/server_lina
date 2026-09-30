@@ -1,0 +1,4333 @@
+================================================================================
+### FILE: 008d3a80_set_exception_at_thread_exit.txt
+================================================================================
+Function: set_exception_at_thread_exit @ 008d3a80
+
+--- Calls OUT ---
+  -> set_exception_at_thread_exit @ 00b8a7e0
+
+--- Calls IN ---
+  <- set_exception_at_thread_exit @ 00b8b014
+
+--- Listing ---
+008d3a80  adrp x16,0x3307000
+008d3a84  ldr x17,[x16, #0x700]
+008d3a88  add x16,x16,#0x700
+008d3a8c  br x17
+
+
+================================================================================
+### FILE: 008d3ad0_sendfile.txt
+================================================================================
+Function: sendfile @ 008d3ad0
+
+--- Calls OUT ---
+  -> sendfile @ 03799058
+
+--- Calls IN ---
+  <- SystemNative_CopyFile @ 00a99914
+
+--- Listing ---
+008d3ad0  adrp x16,0x3307000
+008d3ad4  ldr x17,[x16, #0x728]
+008d3ad8  add x16,x16,#0x728
+008d3adc  br x17
+
+
+================================================================================
+### FILE: 008d3b00_sem_getvalue.txt
+================================================================================
+Function: sem_getvalue @ 008d3b00
+
+--- Calls OUT ---
+  -> sem_getvalue @ 03799068
+
+--- Calls IN ---
+  <- FUN_00b3f858 @ 00b3f858
+
+--- Listing ---
+008d3b00  adrp x16,0x3307000
+008d3b04  ldr x17,[x16, #0x740]
+008d3b08  add x16,x16,#0x740
+008d3b0c  br x17
+
+
+================================================================================
+### FILE: 008d3d90_select.txt
+================================================================================
+Function: select @ 008d3d90
+
+--- Calls OUT ---
+  -> select @ 03799108
+
+--- Calls IN ---
+  <- FUN_00ab07a8 @ 00ab07a8
+
+--- Listing ---
+008d3d90  adrp x16,0x3307000
+008d3d94  ldr x17,[x16, #0x888]
+008d3d98  add x16,x16,#0x888
+008d3d9c  br x17
+
+
+================================================================================
+### FILE: 008d4070_send.txt
+================================================================================
+Function: send @ 008d4070
+
+--- Calls OUT ---
+  -> send @ 037991b8
+
+--- Calls IN ---
+  <- FUN_00ae6cb8 @ 00ae6cb8
+
+--- Listing ---
+008d4070  adrp x16,0x3307000
+008d4074  ldr x17,[x16, #0x9f8]
+008d4078  add x16,x16,#0x9f8
+008d407c  br x17
+
+
+================================================================================
+### FILE: 008d46c0_sem_post.txt
+================================================================================
+Function: sem_post @ 008d46c0
+
+--- Calls OUT ---
+  -> sem_post @ 03799358
+
+--- Calls IN ---
+  <- FUN_00b3ebc8 @ 00b3ebc8
+
+--- Listing ---
+008d46c0  adrp x16,0x3307000
+008d46c4  ldr x17,[x16, #0xd20]
+008d46c8  add x16,x16,#0xd20
+008d46cc  br x17
+
+
+================================================================================
+### FILE: 008d4810_sentry.txt
+================================================================================
+Function: sentry @ 008d4810
+
+--- Calls OUT ---
+  -> sentry @ 00b485fc
+
+--- Calls IN ---
+  <- FUN_00b48c10 @ 00b48c10
+  <- FUN_00b48a9c @ 00b48a9c
+  <- FUN_00b48dc4 @ 00b48dc4
+  <- FUN_00b49834 @ 00b49834
+  <- FUN_00b49264 @ 00b49264
+  <- FUN_00b493d8 @ 00b493d8
+  <- FUN_00b4954c @ 00b4954c
+  <- FUN_00b48f38 @ 00b48f38
+  <- FUN_00b496c0 @ 00b496c0
+  <- FUN_00b499a8 @ 00b499a8
+  <- FUN_00b490f0 @ 00b490f0
+  <- FUN_00b49c90 @ 00b49c90
+  <- FUN_00b49b1c @ 00b49b1c
+
+--- Listing ---
+008d4810  adrp x16,0x3307000
+008d4814  ldr x17,[x16, #0xdc8]
+008d4818  add x16,x16,#0xdc8
+008d481c  br x17
+
+
+================================================================================
+### FILE: 008d4a00_set_value_at_thread_exit.txt
+================================================================================
+Function: set_value_at_thread_exit @ 008d4a00
+
+--- Calls OUT ---
+  -> set_value_at_thread_exit @ 00b8a664
+
+--- Calls IN ---
+  <- set_value_at_thread_exit @ 00b8aff4
+
+--- Listing ---
+008d4a00  adrp x16,0x3307000
+008d4a04  ldr x17,[x16, #0xec0]
+008d4a08  add x16,x16,#0xec0
+008d4a0c  br x17
+
+
+================================================================================
+### FILE: 008d4a30__sentry.txt
+================================================================================
+Function: ~sentry @ 008d4a30
+
+--- Calls OUT ---
+  -> ~sentry @ 00b5105c
+
+--- Calls IN ---
+  <- operator<< @ 00b52324
+  <- operator<< @ 00b528ec
+  <- flush @ 00b4bb40
+  <- operator<< @ 00b51d54
+  <- put @ 00b52d58
+  <- seekp @ 00b53060
+  <- seekp @ 00b5318c
+  <- operator<< @ 00b51574
+  <- operator<< @ 00b51974
+  <- operator<< @ 00b51b64
+  <- operator<< @ 00b52134
+  <- operator<< @ 00b52704
+  <- write @ 00b52ec0
+  <- operator<< @ 00b52adc
+  <- operator<< @ 00b51364
+  <- operator<< @ 00b51764
+  <- operator<< @ 00b51174
+  <- operator<< @ 00b52514
+  <- operator<< @ 00b51f44
+
+--- Listing ---
+008d4a30  adrp x16,0x3307000
+008d4a34  ldr x17,[x16, #0xed8]
+008d4a38  add x16,x16,#0xed8
+008d4a3c  br x17
+
+
+================================================================================
+### FILE: 008d4de0_setlocale.txt
+================================================================================
+Function: setlocale @ 008d4de0
+
+--- Calls OUT ---
+  -> setlocale @ 03799518
+
+--- Calls IN ---
+  <- global @ 00b70884
+  <- il2cpp_init @ 00af29f8
+  <- FUN_00ab0e40 @ 00ab0e40
+  <- il2cpp_init_utf16 @ 00af2a24
+
+--- Listing ---
+008d4de0  adrp x16,0x3308000
+008d4de4  ldr x17,[x16, #0xb0]
+008d4de8  add x16,x16,#0xb0
+008d4dec  br x17
+
+
+================================================================================
+### FILE: 008d4e50_set_exception.txt
+================================================================================
+Function: set_exception @ 008d4e50
+
+--- Calls OUT ---
+  -> set_exception @ 00b8a71c
+
+--- Calls IN ---
+  <- ~promise @ 00b8ac98
+  <- set_exception @ 00b8af74
+
+--- Listing ---
+008d4e50  adrp x16,0x3308000
+008d4e54  ldr x17,[x16, #0xe8]
+008d4e58  add x16,x16,#0xe8
+008d4e5c  br x17
+
+
+================================================================================
+### FILE: 008d4ea0_setsockopt.txt
+================================================================================
+Function: setsockopt @ 008d4ea0
+
+--- Calls OUT ---
+  -> setsockopt @ 03799560
+
+--- Calls IN ---
+  <- FUN_00ae6168 @ 00ae6168
+  <- FUN_00ae7ac8 @ 00ae7ac8
+  <- FUN_00ae728c @ 00ae728c
+
+--- Listing ---
+008d4ea0  adrp x16,0x3308000
+008d4ea4  ldr x17,[x16, #0x110]
+008d4ea8  add x16,x16,#0x110
+008d4eac  br x17
+
+
+================================================================================
+### FILE: 008d50b0_sendmsg.txt
+================================================================================
+Function: sendmsg @ 008d50b0
+
+--- Calls OUT ---
+  -> sendmsg @ 037995c8
+
+--- Calls IN ---
+  <- FUN_00ae6d5c @ 00ae6d5c
+
+--- Listing ---
+008d50b0  adrp x16,0x3308000
+008d50b4  ldr x17,[x16, #0x218]
+008d50b8  add x16,x16,#0x218
+008d50bc  br x17
+
+
+================================================================================
+### FILE: 008d5270_set_value.txt
+================================================================================
+Function: set_value @ 008d5270
+
+--- Calls OUT ---
+  -> set_value @ 00b8a4f4
+
+--- Calls IN ---
+  <- set_value @ 00b8af54
+
+--- Listing ---
+008d5270  adrp x16,0x3308000
+008d5274  ldr x17,[x16, #0x2f8]
+008d5278  add x16,x16,#0x2f8
+008d527c  br x17
+
+
+================================================================================
+### FILE: 008d5430_sem_timedwait.txt
+================================================================================
+Function: sem_timedwait @ 008d5430
+
+--- Calls OUT ---
+  -> sem_timedwait @ 03799680
+
+--- Calls IN ---
+  <- FUN_00b3ee1c @ 00b3ee1c
+
+--- Listing ---
+008d5430  adrp x16,0x3308000
+008d5434  ldr x17,[x16, #0x3d8]
+008d5438  add x16,x16,#0x3d8
+008d543c  br x17
+
+
+================================================================================
+### FILE: 008d5540_sem_init.txt
+================================================================================
+Function: sem_init @ 008d5540
+
+--- Calls OUT ---
+  -> sem_init @ 037996e0
+
+--- Calls IN ---
+  <- FUN_00b3f07c @ 00b3f07c
+
+--- Listing ---
+008d5540  adrp x16,0x3308000
+008d5544  ldr x17,[x16, #0x460]
+008d5548  add x16,x16,#0x460
+008d554c  br x17
+
+
+================================================================================
+### FILE: 008d55d0_sentry.txt
+================================================================================
+Function: sentry @ 008d55d0
+
+--- Calls OUT ---
+  -> sentry @ 00b4b8f4
+
+--- Calls IN ---
+  <- FUN_00b4c544 @ 00b4c544
+  <- FUN_00b4c38c @ 00b4c38c
+  <- FUN_00b4cdfc @ 00b4cdfc
+  <- FUN_00b4d0e4 @ 00b4d0e4
+  <- FUN_00b4cf70 @ 00b4cf70
+  <- FUN_00b4c9a0 @ 00b4c9a0
+  <- FUN_00b4bef0 @ 00b4bef0
+  <- FUN_00b4c064 @ 00b4c064
+  <- FUN_00b4c82c @ 00b4c82c
+  <- FUN_00b4c218 @ 00b4c218
+  <- FUN_00b4c6b8 @ 00b4c6b8
+  <- FUN_00b4cc88 @ 00b4cc88
+  <- FUN_00b4cb14 @ 00b4cb14
+
+--- Listing ---
+008d55d0  adrp x16,0x3308000
+008d55d4  ldr x17,[x16, #0x4a8]
+008d55d8  add x16,x16,#0x4a8
+008d55dc  br x17
+
+
+================================================================================
+### FILE: 008d5820___set_badbit_and_consider_rethrow.txt
+================================================================================
+Function: __set_badbit_and_consider_rethrow @ 008d5820
+
+--- Calls OUT ---
+  -> __set_badbit_and_consider_rethrow @ 00b4f0a4
+
+--- Calls IN ---
+
+--- Listing ---
+008d5820  adrp x16,0x3308000
+008d5824  ldr x17,[x16, #0x5d0]
+008d5828  add x16,x16,#0x5d0
+008d582c  br x17
+
+
+================================================================================
+### FILE: 008d59f0_sem_wait.txt
+================================================================================
+Function: sem_wait @ 008d59f0
+
+--- Calls OUT ---
+  -> sem_wait @ 03799838
+
+--- Calls IN ---
+  <- FUN_00b3eef8 @ 00b3eef8
+
+--- Listing ---
+008d59f0  adrp x16,0x3308000
+008d59f4  ldr x17,[x16, #0x6b8]
+008d59f8  add x16,x16,#0x6b8
+008d59fc  br x17
+
+
+================================================================================
+### FILE: 008d5a00_setjmp.txt
+================================================================================
+Function: setjmp @ 008d5a00
+
+--- Calls OUT ---
+  -> setjmp @ 03799840
+
+--- Calls IN ---
+  <- FUN_00b3beb4 @ 00b3beb4
+
+--- Listing ---
+008d5a00  adrp x16,0x3308000
+008d5a04  ldr x17,[x16, #0x6c0]
+008d5a08  add x16,x16,#0x6c0
+008d5a0c  br x17
+
+
+================================================================================
+### FILE: 008d5ad0_setenv.txt
+================================================================================
+Function: setenv @ 008d5ad0
+
+--- Calls OUT ---
+  -> setenv @ 03799898
+
+--- Calls IN ---
+  <- FUN_00a8d57c @ 00a8d57c
+
+--- Listing ---
+008d5ad0  adrp x16,0x3308000
+008d5ad4  ldr x17,[x16, #0x728]
+008d5ad8  add x16,x16,#0x728
+008d5adc  br x17
+
+
+================================================================================
+### FILE: 00b47dcc_setg.txt
+================================================================================
+Function: setg @ 00b47dcc
+FuncComment: std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::setg(char*, char*, char*)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47dcc  stp x1,x2,[x0, #0x10]
+    ; [PLATE] std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::setg(char*, char*, char*)
+00b47dd0  str x3,[x0, #0x20]
+00b47dd4  ret
+
+
+================================================================================
+### FILE: 00b47de8_setp.txt
+================================================================================
+Function: setp @ 00b47de8
+FuncComment: std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::setp(char*, char*)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b47de8  stp x1,x1,[x0, #0x28]
+    ; [PLATE] std::__ndk1::basic_streambuf<char, std::__ndk1::char_traits<char> >::setp(char*, char*)
+00b47dec  str x2,[x0, #0x38]
+00b47df0  ret
+
+
+================================================================================
+### FILE: 00b48224_setg.txt
+================================================================================
+Function: setg @ 00b48224
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::setg(wchar_t*, wchar_t*, wchar_t*)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48224  stp x1,x2,[x0, #0x10]
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::setg(wchar_t*, wchar_t*, wchar_t*)
+00b48228  str x3,[x0, #0x20]
+00b4822c  ret
+
+
+================================================================================
+### FILE: 00b48240_setp.txt
+================================================================================
+Function: setp @ 00b48240
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::setp(wchar_t*, wchar_t*)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48240  stp x1,x1,[x0, #0x28]
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::setp(wchar_t*, wchar_t*)
+00b48244  str x2,[x0, #0x38]
+00b48248  ret
+
+
+================================================================================
+### FILE: 00b48250_setbuf.txt
+================================================================================
+Function: setbuf @ 00b48250
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::setbuf(wchar_t*, long)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48250  ret
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::setbuf(wchar_t*, long)
+
+
+================================================================================
+### FILE: 00b48254_seekoff.txt
+================================================================================
+Function: seekoff @ 00b48254
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekoff(long long, std::__ndk1::ios_base::seekdir, unsigned int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48254  mov x1,#-0x1
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekoff(long long, std::__ndk1::ios_base::seekdir, unsigned int)
+00b48258  mov x0,xzr
+00b4825c  ret
+
+
+================================================================================
+### FILE: 00b48260_seekpos.txt
+================================================================================
+Function: seekpos @ 00b48260
+FuncComment: std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekpos(std::__ndk1::fpos<mbstate_t>, unsigned int)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b48260  mov x1,#-0x1
+    ; [PLATE] std::__ndk1::basic_streambuf<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekpos(std::__ndk1::fpos<mbstate_t>, unsigned int)
+00b48264  mov x0,xzr
+00b48268  ret
+
+
+================================================================================
+### FILE: 00b485fc_sentry.txt
+================================================================================
+Function: sentry @ 00b485fc
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::sentry::sentry(std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >&, bool)
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+  -> ~locale @ 008d3a30
+  -> locale @ 008d52c0
+  -> use_facet @ 008d44d0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- sentry @ 008d4810
+
+--- Listing ---
+00b485fc  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::sentry::sentry(std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >&, bool)
+00b48600  str x23,[sp, #0x10]
+00b48604  stp x22,x21,[sp, #0x20]
+00b48608  stp x20,x19,[sp, #0x30]
+00b4860c  stp x29,x30,[sp, #0x40]
+00b48610  add x29,sp,#0x40
+00b48614  mrs x23,tpidr_el0
+00b48618  ldr x8,[x23, #0x28]
+00b4861c  str x8,[sp, #0x8]
+00b48620  strb wzr,[x0]
+00b48624  ldr x8,[x1]
+00b48628  ldur x8,[x8, #-0x18]
+00b4862c  add x8,x1,x8
+00b48630  ldr w9,[x8, #0x20]
+00b48634  cbz w9,0x00b48668
+00b48638  ldr x10,[x8, #0x28]
+00b4863c  cmp x10,#0x0
+00b48640  ldr w10,[x8, #0x24]
+00b48644  cset w11,eq
+00b48648  orr w9,w9,w11
+00b4864c  orr w9,w9,#0x4
+00b48650  tst w9,w10
+00b48654  str w9,[x8, #0x20]
+00b48658  b.eq 0x00b487ec
+00b4865c  adrp x0,0x2a07000
+00b48660  add x0,x0,#0xcf4
+00b48664  bl 0x00b53a58
+00b48668  mov x19,x0
+00b4866c  ldr x0,[x8, #0x88]
+00b48670  mov x20,x1
+00b48674  mov w21,w2
+00b48678  cbz x0,0x00b48680
+00b4867c  bl 0x00af5708
+00b48680  tbnz w21,#0x0,0x00b487d0
+00b48684  ldr x8,[x20]
+00b48688  ldur x8,[x8, #-0x18]
+00b4868c  add x8,x20,x8
+00b48690  ldrb w9,[x8, #0x9]
+00b48694  tbz w9,#0x4,0x00b487d0
+00b48698  add x1,x8,#0x30
+00b4869c  mov x0,sp
+00b486a0  bl 0x008d52c0
+00b486a4  adrp x1,0x3384000
+    ; [PRE] try { // try from 00b486a4 to 00b486b3 has its CatchHandler @ 00b48818
+00b486a8  ldr x1,[x1, #0xc8]
+00b486ac  mov x0,sp
+00b486b0  bl 0x008d44d0
+    ; [POST] } // end try from 00b486a4 to 00b486b3
+00b486b4  mov x22,x0
+00b486b8  mov x0,sp
+00b486bc  bl 0x008d3a30
+00b486c0  ldr x8,[x20]
+00b486c4  ldur x8,[x8, #-0x18]
+00b486c8  add x8,x20,x8
+00b486cc  ldr x21,[x8, #0x28]
+00b486d0  cbnz x21,0x00b486e4
+00b486d4  b 0x00b48774
+00b486d8  add x8,x8,#0x1
+00b486dc  str x8,[x21, #0x18]
+00b486e0  cbz x21,0x00b48774
+00b486e4  ldp x8,x9,[x21, #0x18]
+00b486e8  cmp x8,x9
+00b486ec  b.ne 0x00b48708
+00b486f0  ldr x8,[x21]
+00b486f4  mov x0,x21
+00b486f8  ldr x8,[x8, #0x48]
+00b486fc  blr x8
+00b48700  cmn w0,#0x1
+00b48704  b.eq 0x00b48770
+00b48708  ldp x8,x9,[x21, #0x18]
+00b4870c  cmp x8,x9
+00b48710  b.eq 0x00b48724
+00b48714  ldrb w0,[x8]
+00b48718  sxtb w8,w0
+00b4871c  tbz w8,#0x1f,0x00b4873c
+00b48720  b 0x00b48774
+00b48724  ldr x8,[x21]
+00b48728  mov x0,x21
+00b4872c  ldr x8,[x8, #0x48]
+00b48730  blr x8
+00b48734  sxtb w8,w0
+00b48738  tbnz w8,#0x1f,0x00b48774
+00b4873c  ldr x8,[x22, #0x10]
+00b48740  and w9,w0,#0xff
+00b48744  ldr x8,[x8, w9, UXTW #0x3]
+00b48748  tbz w8,#0x0,0x00b48774
+00b4874c  ldp x8,x9,[x21, #0x18]
+00b48750  cmp x8,x9
+00b48754  b.ne 0x00b486d8
+00b48758  ldr x8,[x21]
+00b4875c  mov x0,x21
+00b48760  ldr x8,[x8, #0x50]
+00b48764  blr x8
+00b48768  cbnz x21,0x00b486e4
+00b4876c  b 0x00b48774
+00b48770  mov x21,xzr
+00b48774  cbz x21,0x00b4879c
+00b48778  ldp x8,x9,[x21, #0x18]
+00b4877c  cmp x8,x9
+00b48780  b.ne 0x00b487d0
+00b48784  ldr x8,[x21]
+00b48788  mov x0,x21
+00b4878c  ldr x8,[x8, #0x48]
+00b48790  blr x8
+00b48794  cmn w0,#0x1
+00b48798  b.ne 0x00b487d0
+00b4879c  ldr x8,[x20]
+00b487a0  ldur x8,[x8, #-0x18]
+00b487a4  add x8,x20,x8
+00b487a8  ldr x9,[x8, #0x28]
+00b487ac  ldr w10,[x8, #0x20]
+00b487b0  cmp x9,#0x0
+00b487b4  ldr w9,[x8, #0x24]
+00b487b8  cset w11,eq
+00b487bc  orr w10,w10,w11
+00b487c0  orr w10,w10,#0x6
+00b487c4  tst w10,w9
+00b487c8  str w10,[x8, #0x20]
+00b487cc  b.ne 0x00b4865c
+00b487d0  ldr x8,[x20]
+00b487d4  ldur x8,[x8, #-0x18]
+00b487d8  add x8,x20,x8
+00b487dc  ldr w8,[x8, #0x20]
+00b487e0  cmp w8,#0x0
+00b487e4  cset w8,eq
+00b487e8  strb w8,[x19]
+00b487ec  ldr x8,[x23, #0x28]
+00b487f0  ldr x9,[sp, #0x8]
+00b487f4  cmp x8,x9
+00b487f8  b.ne 0x00b48814
+00b487fc  ldp x29,x30,[sp, #0x40]
+00b48800  ldp x20,x19,[sp, #0x30]
+00b48804  ldp x22,x21,[sp, #0x20]
+00b48808  ldr x23,[sp, #0x10]
+00b4880c  add sp,sp,#0x50
+00b48810  ret
+00b48814  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b4b418_seekg.txt
+================================================================================
+Function: seekg @ 00b4b418
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::seekg(std::__ndk1::fpos<mbstate_t>)
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+
+--- Calls IN ---
+
+--- Listing ---
+00b4b418  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::seekg(std::__ndk1::fpos<mbstate_t>)
+00b4b41c  stp x20,x19,[sp, #0x10]
+00b4b420  stp x29,x30,[sp, #0x20]
+00b4b424  add x29,sp,#0x20
+00b4b428  ldr x8,[x0]
+00b4b42c  ldur x8,[x8, #-0x18]
+00b4b430  add x8,x0,x8
+00b4b434  ldr x10,[x8, #0x28]
+00b4b438  ldp w9,w11,[x8, #0x20]
+00b4b43c  cmp x10,#0x0
+00b4b440  and w22,w9,#0xfffffffd
+00b4b444  cset w9,eq
+00b4b448  orr w9,w22,w9
+00b4b44c  tst w9,w11
+00b4b450  str w9,[x8, #0x20]
+00b4b454  b.ne 0x00b4b530
+00b4b458  ldr x8,[x0]
+00b4b45c  mov x19,x0
+00b4b460  ldur x8,[x8, #-0x18]
+00b4b464  add x9,x0,x8
+00b4b468  ldr w10,[x9, #0x20]
+00b4b46c  cbz w10,0x00b4b498
+00b4b470  ldr x8,[x9, #0x28]
+00b4b474  cmp x8,#0x0
+00b4b478  ldr w8,[x9, #0x24]
+00b4b47c  cset w11,eq
+00b4b480  orr w10,w10,w11
+00b4b484  orr w10,w10,#0x4
+00b4b488  tst w10,w8
+00b4b48c  str w10,[x9, #0x20]
+00b4b490  b.eq 0x00b4b51c
+00b4b494  b 0x00b4b530
+00b4b498  ldr x0,[x9, #0x88]
+00b4b49c  mov x20,x2
+00b4b4a0  mov x21,x1
+00b4b4a4  cbz x0,0x00b4b4c0
+00b4b4a8  bl 0x00af5708
+00b4b4ac  ldr x8,[x19]
+00b4b4b0  ldur x8,[x8, #-0x18]
+00b4b4b4  add x9,x19,x8
+00b4b4b8  ldr w9,[x9, #0x20]
+00b4b4bc  cbnz w9,0x00b4b51c
+00b4b4c0  add x8,x19,x8
+00b4b4c4  ldr x0,[x8, #0x28]
+00b4b4c8  ldr x8,[x0]
+00b4b4cc  ldr x8,[x8, #0x28]
+00b4b4d0  mov w3,#0x8
+    ; [PRE] try { // try from 00b4b4d0 to 00b4b4df has its CatchHandler @ 00b4b53c
+00b4b4d4  mov x1,x21
+00b4b4d8  mov x2,x20
+00b4b4dc  blr x8
+    ; [POST] } // end try from 00b4b4d0 to 00b4b4df
+00b4b4e0  orr w8,w22,#0x4
+00b4b4e4  cmn x1,#0x1
+00b4b4e8  csel w20,w8,w22,eq
+00b4b4ec  ldr x8,[x19]
+00b4b4f0  ldur x8,[x8, #-0x18]
+00b4b4f4  add x8,x19,x8
+00b4b4f8  ldr x10,[x8, #0x28]
+00b4b4fc  ldp w9,w11,[x8, #0x20]
+00b4b500  cmp x10,#0x0
+00b4b504  orr w9,w9,w20
+00b4b508  cset w10,eq
+00b4b50c  orr w9,w9,w10
+00b4b510  tst w9,w11
+00b4b514  str w9,[x8, #0x20]
+00b4b518  b.ne 0x00b4b530
+00b4b51c  mov x0,x19
+00b4b520  ldp x29,x30,[sp, #0x20]
+00b4b524  ldp x20,x19,[sp, #0x10]
+00b4b528  ldp x22,x21,[sp], #0x30
+00b4b52c  ret
+00b4b530  adrp x0,0x2a07000
+00b4b534  add x0,x0,#0xcf4
+00b4b538  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4b58c_seekg.txt
+================================================================================
+Function: seekg @ 00b4b58c
+FuncComment: std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::seekg(long long, std::__ndk1::ios_base::seekdir)
+
+--- Calls OUT ---
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+
+--- Calls IN ---
+
+--- Listing ---
+00b4b58c  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::basic_istream<char, std::__ndk1::char_traits<char> >::seekg(long long, std::__ndk1::ios_base::seekdir)
+00b4b590  stp x20,x19,[sp, #0x10]
+00b4b594  stp x29,x30,[sp, #0x20]
+00b4b598  add x29,sp,#0x20
+00b4b59c  ldr x8,[x0]
+00b4b5a0  ldur x8,[x8, #-0x18]
+00b4b5a4  add x8,x0,x8
+00b4b5a8  ldr x10,[x8, #0x28]
+00b4b5ac  ldp w9,w11,[x8, #0x20]
+00b4b5b0  cmp x10,#0x0
+00b4b5b4  and w22,w9,#0xfffffffd
+00b4b5b8  cset w9,eq
+00b4b5bc  orr w9,w22,w9
+00b4b5c0  tst w9,w11
+00b4b5c4  str w9,[x8, #0x20]
+00b4b5c8  b.ne 0x00b4b6a4
+00b4b5cc  ldr x8,[x0]
+00b4b5d0  mov x19,x0
+00b4b5d4  ldur x8,[x8, #-0x18]
+00b4b5d8  add x9,x0,x8
+00b4b5dc  ldr w10,[x9, #0x20]
+00b4b5e0  cbz w10,0x00b4b60c
+00b4b5e4  ldr x8,[x9, #0x28]
+00b4b5e8  cmp x8,#0x0
+00b4b5ec  ldr w8,[x9, #0x24]
+00b4b5f0  cset w11,eq
+00b4b5f4  orr w10,w10,w11
+00b4b5f8  orr w10,w10,#0x4
+00b4b5fc  tst w10,w8
+00b4b600  str w10,[x9, #0x20]
+00b4b604  b.eq 0x00b4b690
+00b4b608  b 0x00b4b6a4
+00b4b60c  ldr x0,[x9, #0x88]
+00b4b610  mov w20,w2
+00b4b614  mov x21,x1
+00b4b618  cbz x0,0x00b4b634
+00b4b61c  bl 0x00af5708
+00b4b620  ldr x8,[x19]
+00b4b624  ldur x8,[x8, #-0x18]
+00b4b628  add x9,x19,x8
+00b4b62c  ldr w9,[x9, #0x20]
+00b4b630  cbnz w9,0x00b4b690
+00b4b634  add x8,x19,x8
+00b4b638  ldr x0,[x8, #0x28]
+00b4b63c  ldr x8,[x0]
+00b4b640  ldr x8,[x8, #0x20]
+00b4b644  mov w3,#0x8
+    ; [PRE] try { // try from 00b4b644 to 00b4b653 has its CatchHandler @ 00b4b6b0
+00b4b648  mov x1,x21
+00b4b64c  mov w2,w20
+00b4b650  blr x8
+    ; [POST] } // end try from 00b4b644 to 00b4b653
+00b4b654  orr w8,w22,#0x4
+00b4b658  cmn x1,#0x1
+00b4b65c  csel w20,w8,w22,eq
+00b4b660  ldr x8,[x19]
+00b4b664  ldur x8,[x8, #-0x18]
+00b4b668  add x8,x19,x8
+00b4b66c  ldr x10,[x8, #0x28]
+00b4b670  ldp w9,w11,[x8, #0x20]
+00b4b674  cmp x10,#0x0
+00b4b678  orr w9,w9,w20
+00b4b67c  cset w10,eq
+00b4b680  orr w9,w9,w10
+00b4b684  tst w9,w11
+00b4b688  str w9,[x8, #0x20]
+00b4b68c  b.ne 0x00b4b6a4
+00b4b690  mov x0,x19
+00b4b694  ldp x29,x30,[sp, #0x20]
+00b4b698  ldp x20,x19,[sp, #0x10]
+00b4b69c  ldp x22,x21,[sp], #0x30
+00b4b6a0  ret
+00b4b6a4  adrp x0,0x2a07000
+00b4b6a8  add x0,x0,#0xcf4
+00b4b6ac  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4b8f4_sentry.txt
+================================================================================
+Function: sentry @ 00b4b8f4
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::sentry::sentry(std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >&, bool)
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> FUN_00b53a58 @ 00b53a58
+  -> ~locale @ 008d3a30
+  -> locale @ 008d52c0
+  -> use_facet @ 008d44d0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- sentry @ 008d55d0
+
+--- Listing ---
+00b4b8f4  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::sentry::sentry(std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >&, bool)
+00b4b8f8  stp x24,x23,[sp, #0x10]
+00b4b8fc  stp x22,x21,[sp, #0x20]
+00b4b900  stp x20,x19,[sp, #0x30]
+00b4b904  stp x29,x30,[sp, #0x40]
+00b4b908  add x29,sp,#0x40
+00b4b90c  mrs x24,tpidr_el0
+00b4b910  ldr x8,[x24, #0x28]
+00b4b914  str x8,[sp, #0x8]
+00b4b918  strb wzr,[x0]
+00b4b91c  ldr x8,[x1]
+00b4b920  ldur x8,[x8, #-0x18]
+00b4b924  add x8,x1,x8
+00b4b928  ldr w9,[x8, #0x20]
+00b4b92c  cbz w9,0x00b4b960
+00b4b930  ldr x10,[x8, #0x28]
+00b4b934  cmp x10,#0x0
+00b4b938  ldr w10,[x8, #0x24]
+00b4b93c  cset w11,eq
+00b4b940  orr w9,w9,w11
+00b4b944  orr w9,w9,#0x4
+00b4b948  tst w9,w10
+00b4b94c  str w9,[x8, #0x20]
+00b4b950  b.eq 0x00b4bb00
+00b4b954  adrp x0,0x2a07000
+00b4b958  add x0,x0,#0xcf4
+00b4b95c  bl 0x00b53a58
+00b4b960  mov x19,x0
+00b4b964  ldr x0,[x8, #0x88]
+00b4b968  mov x20,x1
+00b4b96c  mov w21,w2
+00b4b970  cbz x0,0x00b4b978
+00b4b974  bl 0x008d5a30
+00b4b978  tbnz w21,#0x0,0x00b4bae4
+00b4b97c  ldr x8,[x20]
+00b4b980  ldur x8,[x8, #-0x18]
+00b4b984  add x8,x20,x8
+00b4b988  ldrb w9,[x8, #0x9]
+00b4b98c  tbz w9,#0x4,0x00b4bae4
+00b4b990  add x1,x8,#0x30
+00b4b994  mov x0,sp
+00b4b998  bl 0x008d52c0
+00b4b99c  adrp x1,0x3360000
+    ; [PRE] try { // try from 00b4b99c to 00b4b9ab has its CatchHandler @ 00b4bb2c
+00b4b9a0  ldr x1,[x1, #0x810]
+00b4b9a4  mov x0,sp
+00b4b9a8  bl 0x008d44d0
+    ; [POST] } // end try from 00b4b99c to 00b4b9ab
+00b4b9ac  mov x22,x0
+00b4b9b0  mov x0,sp
+00b4b9b4  bl 0x008d3a30
+00b4b9b8  ldr x8,[x20]
+00b4b9bc  ldur x8,[x8, #-0x18]
+00b4b9c0  add x8,x20,x8
+00b4b9c4  ldr x21,[x8, #0x28]
+00b4b9c8  cbnz x21,0x00b4b9dc
+00b4b9cc  b 0x00b4ba74
+00b4b9d0  add x8,x8,#0x4
+00b4b9d4  str x8,[x23, #0x18]
+00b4b9d8  cbz x21,0x00b4ba74
+00b4b9dc  ldp x8,x9,[x21, #0x18]
+00b4b9e0  cmp x8,x9
+00b4b9e4  b.eq 0x00b4b9f0
+00b4b9e8  ldr w0,[x8]
+00b4b9ec  b 0x00b4ba00
+00b4b9f0  ldr x8,[x21]
+00b4b9f4  mov x0,x21
+00b4b9f8  ldr x8,[x8, #0x48]
+00b4b9fc  blr x8
+00b4ba00  cmn w0,#0x1
+00b4ba04  csel x23,xzr,x21,eq
+00b4ba08  b.eq 0x00b4ba70
+00b4ba0c  ldp x8,x9,[x23, #0x18]
+00b4ba10  cmp x8,x9
+00b4ba14  b.eq 0x00b4ba20
+00b4ba18  ldr w2,[x8]
+00b4ba1c  b 0x00b4ba34
+00b4ba20  ldr x8,[x23]
+00b4ba24  mov x0,x23
+00b4ba28  ldr x8,[x8, #0x48]
+00b4ba2c  blr x8
+00b4ba30  mov w2,w0
+00b4ba34  ldr x8,[x22]
+00b4ba38  mov w1,#0x1
+00b4ba3c  mov x0,x22
+00b4ba40  ldr x8,[x8, #0x18]
+00b4ba44  blr x8
+00b4ba48  tbz w0,#0x0,0x00b4ba78
+00b4ba4c  ldp x8,x9,[x23, #0x18]
+00b4ba50  cmp x8,x9
+00b4ba54  b.ne 0x00b4b9d0
+00b4ba58  ldr x8,[x23]
+00b4ba5c  mov x0,x23
+00b4ba60  ldr x8,[x8, #0x50]
+00b4ba64  blr x8
+00b4ba68  cbnz x21,0x00b4b9dc
+00b4ba6c  b 0x00b4ba74
+00b4ba70  mov x21,xzr
+00b4ba74  mov x23,xzr
+00b4ba78  cbz x21,0x00b4bab0
+00b4ba7c  ldp x8,x9,[x23, #0x18]
+00b4ba80  cmp x8,x9
+00b4ba84  b.eq 0x00b4ba98
+00b4ba88  ldr w0,[x8]
+00b4ba8c  cmn w0,#0x1
+00b4ba90  b.ne 0x00b4bae4
+00b4ba94  b 0x00b4bab0
+00b4ba98  ldr x8,[x21]
+00b4ba9c  mov x0,x23
+00b4baa0  ldr x8,[x8, #0x48]
+00b4baa4  blr x8
+00b4baa8  cmn w0,#0x1
+00b4baac  b.ne 0x00b4bae4
+00b4bab0  ldr x8,[x20]
+00b4bab4  ldur x8,[x8, #-0x18]
+00b4bab8  add x8,x20,x8
+00b4babc  ldr x9,[x8, #0x28]
+00b4bac0  ldr w10,[x8, #0x20]
+00b4bac4  cmp x9,#0x0
+00b4bac8  ldr w9,[x8, #0x24]
+00b4bacc  cset w11,eq
+00b4bad0  orr w10,w10,w11
+00b4bad4  orr w10,w10,#0x6
+00b4bad8  tst w10,w9
+00b4badc  str w10,[x8, #0x20]
+00b4bae0  b.ne 0x00b4b954
+00b4bae4  ldr x8,[x20]
+00b4bae8  ldur x8,[x8, #-0x18]
+00b4baec  add x8,x20,x8
+00b4baf0  ldr w8,[x8, #0x20]
+00b4baf4  cmp w8,#0x0
+00b4baf8  cset w8,eq
+00b4bafc  strb w8,[x19]
+00b4bb00  ldr x8,[x24, #0x28]
+00b4bb04  ldr x9,[sp, #0x8]
+00b4bb08  cmp x8,x9
+00b4bb0c  b.ne 0x00b4bb28
+00b4bb10  ldp x29,x30,[sp, #0x40]
+00b4bb14  ldp x20,x19,[sp, #0x30]
+00b4bb18  ldp x22,x21,[sp, #0x20]
+00b4bb1c  ldp x24,x23,[sp, #0x10]
+00b4bb20  add sp,sp,#0x50
+00b4bb24  ret
+00b4bb28  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b4e890_seekg.txt
+================================================================================
+Function: seekg @ 00b4e890
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekg(std::__ndk1::fpos<mbstate_t>)
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+
+--- Listing ---
+00b4e890  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekg(std::__ndk1::fpos<mbstate_t>)
+00b4e894  stp x20,x19,[sp, #0x10]
+00b4e898  stp x29,x30,[sp, #0x20]
+00b4e89c  add x29,sp,#0x20
+00b4e8a0  ldr x8,[x0]
+00b4e8a4  ldur x8,[x8, #-0x18]
+00b4e8a8  add x8,x0,x8
+00b4e8ac  ldr x10,[x8, #0x28]
+00b4e8b0  ldp w9,w11,[x8, #0x20]
+00b4e8b4  cmp x10,#0x0
+00b4e8b8  and w22,w9,#0xfffffffd
+00b4e8bc  cset w9,eq
+00b4e8c0  orr w9,w22,w9
+00b4e8c4  tst w9,w11
+00b4e8c8  str w9,[x8, #0x20]
+00b4e8cc  b.ne 0x00b4e9a8
+00b4e8d0  ldr x8,[x0]
+00b4e8d4  mov x19,x0
+00b4e8d8  ldur x8,[x8, #-0x18]
+00b4e8dc  add x9,x0,x8
+00b4e8e0  ldr w10,[x9, #0x20]
+00b4e8e4  cbz w10,0x00b4e910
+00b4e8e8  ldr x8,[x9, #0x28]
+00b4e8ec  cmp x8,#0x0
+00b4e8f0  ldr w8,[x9, #0x24]
+00b4e8f4  cset w11,eq
+00b4e8f8  orr w10,w10,w11
+00b4e8fc  orr w10,w10,#0x4
+00b4e900  tst w10,w8
+00b4e904  str w10,[x9, #0x20]
+00b4e908  b.eq 0x00b4e994
+00b4e90c  b 0x00b4e9a8
+00b4e910  ldr x0,[x9, #0x88]
+00b4e914  mov x20,x2
+00b4e918  mov x21,x1
+00b4e91c  cbz x0,0x00b4e938
+00b4e920  bl 0x008d5a30
+00b4e924  ldr x8,[x19]
+00b4e928  ldur x8,[x8, #-0x18]
+00b4e92c  add x9,x19,x8
+00b4e930  ldr w9,[x9, #0x20]
+00b4e934  cbnz w9,0x00b4e994
+00b4e938  add x8,x19,x8
+00b4e93c  ldr x0,[x8, #0x28]
+00b4e940  ldr x8,[x0]
+00b4e944  ldr x8,[x8, #0x28]
+00b4e948  mov w3,#0x8
+    ; [PRE] try { // try from 00b4e948 to 00b4e957 has its CatchHandler @ 00b4e9b4
+00b4e94c  mov x1,x21
+00b4e950  mov x2,x20
+00b4e954  blr x8
+    ; [POST] } // end try from 00b4e948 to 00b4e957
+00b4e958  orr w8,w22,#0x4
+00b4e95c  cmn x1,#0x1
+00b4e960  csel w20,w8,w22,eq
+00b4e964  ldr x8,[x19]
+00b4e968  ldur x8,[x8, #-0x18]
+00b4e96c  add x8,x19,x8
+00b4e970  ldr x10,[x8, #0x28]
+00b4e974  ldp w9,w11,[x8, #0x20]
+00b4e978  cmp x10,#0x0
+00b4e97c  orr w9,w9,w20
+00b4e980  cset w10,eq
+00b4e984  orr w9,w9,w10
+00b4e988  tst w9,w11
+00b4e98c  str w9,[x8, #0x20]
+00b4e990  b.ne 0x00b4e9a8
+00b4e994  mov x0,x19
+00b4e998  ldp x29,x30,[sp, #0x20]
+00b4e99c  ldp x20,x19,[sp, #0x10]
+00b4e9a0  ldp x22,x21,[sp], #0x30
+00b4e9a4  ret
+00b4e9a8  adrp x0,0x2a07000
+00b4e9ac  add x0,x0,#0xcf4
+00b4e9b0  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4ea04_seekg.txt
+================================================================================
+Function: seekg @ 00b4ea04
+FuncComment: std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekg(long long, std::__ndk1::ios_base::seekdir)
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+
+--- Listing ---
+00b4ea04  stp x22,x21,[sp, #-0x30]!
+    ; [PLATE] std::__ndk1::basic_istream<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekg(long long, std::__ndk1::ios_base::seekdir)
+00b4ea08  stp x20,x19,[sp, #0x10]
+00b4ea0c  stp x29,x30,[sp, #0x20]
+00b4ea10  add x29,sp,#0x20
+00b4ea14  ldr x8,[x0]
+00b4ea18  ldur x8,[x8, #-0x18]
+00b4ea1c  add x8,x0,x8
+00b4ea20  ldr x10,[x8, #0x28]
+00b4ea24  ldp w9,w11,[x8, #0x20]
+00b4ea28  cmp x10,#0x0
+00b4ea2c  and w22,w9,#0xfffffffd
+00b4ea30  cset w9,eq
+00b4ea34  orr w9,w22,w9
+00b4ea38  tst w9,w11
+00b4ea3c  str w9,[x8, #0x20]
+00b4ea40  b.ne 0x00b4eb1c
+00b4ea44  ldr x8,[x0]
+00b4ea48  mov x19,x0
+00b4ea4c  ldur x8,[x8, #-0x18]
+00b4ea50  add x9,x0,x8
+00b4ea54  ldr w10,[x9, #0x20]
+00b4ea58  cbz w10,0x00b4ea84
+00b4ea5c  ldr x8,[x9, #0x28]
+00b4ea60  cmp x8,#0x0
+00b4ea64  ldr w8,[x9, #0x24]
+00b4ea68  cset w11,eq
+00b4ea6c  orr w10,w10,w11
+00b4ea70  orr w10,w10,#0x4
+00b4ea74  tst w10,w8
+00b4ea78  str w10,[x9, #0x20]
+00b4ea7c  b.eq 0x00b4eb08
+00b4ea80  b 0x00b4eb1c
+00b4ea84  ldr x0,[x9, #0x88]
+00b4ea88  mov w20,w2
+00b4ea8c  mov x21,x1
+00b4ea90  cbz x0,0x00b4eaac
+00b4ea94  bl 0x008d5a30
+00b4ea98  ldr x8,[x19]
+00b4ea9c  ldur x8,[x8, #-0x18]
+00b4eaa0  add x9,x19,x8
+00b4eaa4  ldr w9,[x9, #0x20]
+00b4eaa8  cbnz w9,0x00b4eb08
+00b4eaac  add x8,x19,x8
+00b4eab0  ldr x0,[x8, #0x28]
+00b4eab4  ldr x8,[x0]
+00b4eab8  ldr x8,[x8, #0x20]
+00b4eabc  mov w3,#0x8
+    ; [PRE] try { // try from 00b4eabc to 00b4eacb has its CatchHandler @ 00b4eb28
+00b4eac0  mov x1,x21
+00b4eac4  mov w2,w20
+00b4eac8  blr x8
+    ; [POST] } // end try from 00b4eabc to 00b4eacb
+00b4eacc  orr w8,w22,#0x4
+00b4ead0  cmn x1,#0x1
+00b4ead4  csel w20,w8,w22,eq
+00b4ead8  ldr x8,[x19]
+00b4eadc  ldur x8,[x8, #-0x18]
+00b4eae0  add x8,x19,x8
+00b4eae4  ldr x10,[x8, #0x28]
+00b4eae8  ldp w9,w11,[x8, #0x20]
+00b4eaec  cmp x10,#0x0
+00b4eaf0  orr w9,w9,w20
+00b4eaf4  cset w10,eq
+00b4eaf8  orr w9,w9,w10
+00b4eafc  tst w9,w11
+00b4eb00  str w9,[x8, #0x20]
+00b4eb04  b.ne 0x00b4eb1c
+00b4eb08  mov x0,x19
+00b4eb0c  ldp x29,x30,[sp, #0x20]
+00b4eb10  ldp x20,x19,[sp, #0x10]
+00b4eb14  ldp x22,x21,[sp], #0x30
+00b4eb18  ret
+00b4eb1c  adrp x0,0x2a07000
+00b4eb20  add x0,x0,#0xcf4
+00b4eb24  bl 0x00b53a58
+
+
+================================================================================
+### FILE: 00b4ed50_sentry.txt
+================================================================================
+Function: sentry @ 00b4ed50
+FuncComment: std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&)
+
+--- Calls OUT ---
+  -> FUN_00af5708 @ 00af5708
+
+--- Calls IN ---
+
+--- Listing ---
+00b4ed50  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::sentry::sentry(std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >&)
+00b4ed54  stp x29,x30,[sp, #0x10]
+00b4ed58  add x29,sp,#0x10
+00b4ed5c  strb wzr,[x0]
+00b4ed60  str x1,[x0, #0x8]
+00b4ed64  ldr x8,[x1]
+00b4ed68  ldur x8,[x8, #-0x18]
+00b4ed6c  add x8,x1,x8
+00b4ed70  ldr w9,[x8, #0x20]
+00b4ed74  cbnz w9,0x00b4ed90
+00b4ed78  mov x19,x0
+00b4ed7c  ldr x0,[x8, #0x88]
+00b4ed80  cbz x0,0x00b4ed88
+00b4ed84  bl 0x00af5708
+00b4ed88  mov w8,#0x1
+00b4ed8c  strb w8,[x19]
+00b4ed90  ldp x29,x30,[sp, #0x10]
+00b4ed94  ldr x19,[sp], #0x20
+00b4ed98  ret
+
+
+================================================================================
+### FILE: 00b4ed9c__sentry.txt
+================================================================================
+Function: ~sentry @ 00b4ed9c
+FuncComment: std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::sentry::~sentry()
+
+--- Calls OUT ---
+  -> uncaught_exception @ 008d5b90
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+
+--- Listing ---
+00b4ed9c  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::sentry::~sentry()
+00b4eda0  stp x29,x30,[sp, #0x10]
+00b4eda4  add x29,sp,#0x10
+00b4eda8  ldr x8,[x0, #0x8]
+00b4edac  ldr x9,[x8]
+00b4edb0  ldur x9,[x9, #-0x18]
+00b4edb4  add x8,x8,x9
+00b4edb8  ldr x9,[x8, #0x28]
+00b4edbc  cbz x9,0x00b4ee28
+00b4edc0  ldr w9,[x8, #0x20]
+00b4edc4  cbnz w9,0x00b4ee28
+00b4edc8  ldrb w8,[x8, #0x9]
+00b4edcc  tbz w8,#0x5,0x00b4ee28
+00b4edd0  mov x19,x0
+00b4edd4  bl 0x008d5b90
+00b4edd8  tbnz w0,#0x0,0x00b4ee28
+00b4eddc  ldr x8,[x19, #0x8]
+00b4ede0  ldr x9,[x8]
+00b4ede4  ldur x9,[x9, #-0x18]
+00b4ede8  add x8,x8,x9
+00b4edec  ldr x0,[x8, #0x28]
+00b4edf0  ldr x8,[x0]
+00b4edf4  ldr x8,[x8, #0x30]
+00b4edf8  blr x8
+    ; [PRE] try { // try from 00b4edf8 to 00b4ee3f has its CatchHandler @ 00b4ee40
+00b4edfc  cmn w0,#0x1
+00b4ee00  b.ne 0x00b4ee28
+00b4ee04  ldr x8,[x19, #0x8]
+00b4ee08  ldr x9,[x8]
+00b4ee0c  ldur x9,[x9, #-0x18]
+00b4ee10  add x8,x8,x9
+00b4ee14  ldp w9,w10,[x8, #0x20]
+00b4ee18  orr w9,w9,#0x1
+00b4ee1c  tst w10,w9
+00b4ee20  str w9,[x8, #0x20]
+00b4ee24  b.ne 0x00b4ee34
+00b4ee28  ldp x29,x30,[sp, #0x10]
+00b4ee2c  ldr x19,[sp], #0x20
+00b4ee30  ret
+00b4ee34  adrp x0,0x2a07000
+00b4ee38  add x0,x0,#0xcf4
+00b4ee3c  bl 0x00b53a58
+    ; [POST] } // end try from 00b4edf8 to 00b4ee3f
+
+
+================================================================================
+### FILE: 00b4f0a4___set_badbit_and_consider_rethrow.txt
+================================================================================
+Function: __set_badbit_and_consider_rethrow @ 00b4f0a4
+FuncComment: std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
+
+--- Calls OUT ---
+  -> __cxa_rethrow @ 008d4680
+
+--- Calls IN ---
+  <- __set_badbit_and_consider_rethrow @ 008d5820
+
+--- Listing ---
+00b4f0a4  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::ios_base::__set_badbit_and_consider_rethrow()
+00b4f0a8  mov x29,sp
+00b4f0ac  ldr w8,[x0, #0x20]
+00b4f0b0  ldrb w9,[x0, #0x24]
+00b4f0b4  orr w8,w8,#0x1
+00b4f0b8  str w8,[x0, #0x20]
+00b4f0bc  tbnz w9,#0x0,0x00b4f0c8
+00b4f0c0  ldp x29,x30,[sp], #0x10
+00b4f0c4  ret
+00b4f0c8  bl 0x008d4680
+
+
+================================================================================
+### FILE: 00b508bc___set_failbit_and_consider_rethrow.txt
+================================================================================
+Function: __set_failbit_and_consider_rethrow @ 00b508bc
+FuncComment: std::__ndk1::ios_base::__set_failbit_and_consider_rethrow()
+
+--- Calls OUT ---
+  -> __cxa_rethrow @ 008d4680
+
+--- Calls IN ---
+
+--- Listing ---
+00b508bc  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::ios_base::__set_failbit_and_consider_rethrow()
+00b508c0  mov x29,sp
+00b508c4  ldr w8,[x0, #0x20]
+00b508c8  ldrb w9,[x0, #0x24]
+00b508cc  orr w8,w8,#0x4
+00b508d0  str w8,[x0, #0x20]
+00b508d4  tbnz w9,#0x2,0x00b508e0
+00b508d8  ldp x29,x30,[sp], #0x10
+00b508dc  ret
+00b508e0  bl 0x008d4680
+
+
+================================================================================
+### FILE: 00b50be0_seekp.txt
+================================================================================
+Function: seekp @ 00b50be0
+FuncComment: std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::seekp(std::__ndk1::fpos<mbstate_t>)
+
+--- Calls OUT ---
+  -> FUN_00af5674 @ 00af5674
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b50be0  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::seekp(std::__ndk1::fpos<mbstate_t>)
+00b50be4  stp x22,x21,[sp, #0x20]
+00b50be8  stp x20,x19,[sp, #0x30]
+00b50bec  stp x29,x30,[sp, #0x40]
+00b50bf0  add x29,sp,#0x40
+00b50bf4  mrs x22,tpidr_el0
+00b50bf8  ldr x8,[x22, #0x28]
+00b50bfc  mov x20,x2
+00b50c00  mov x19,x0
+00b50c04  mov x21,x1
+00b50c08  str x8,[sp, #0x18]
+00b50c0c  strb wzr,[sp, #0x8]
+00b50c10  str x0,[sp, #0x10]
+00b50c14  ldr x9,[x0]
+00b50c18  ldur x8,[x9, #-0x18]
+00b50c1c  add x11,x0,x8
+00b50c20  ldr w10,[x11, #0x20]
+00b50c24  cbnz w10,0x00b50c4c
+00b50c28  ldr x0,[x11, #0x88]
+00b50c2c  cbz x0,0x00b50c38
+00b50c30  bl 0x00af5708
+00b50c34  ldr x9,[x19]
+00b50c38  mov w8,#0x1
+00b50c3c  strb w8,[sp, #0x8]
+00b50c40  ldur x8,[x9, #-0x18]
+00b50c44  add x9,x19,x8
+00b50c48  ldr w10,[x9, #0x20]
+00b50c4c  mov w9,#0x5
+00b50c50  tst w10,w9
+00b50c54  b.ne 0x00b50cb4
+00b50c58  add x8,x19,x8
+00b50c5c  ldr x0,[x8, #0x28]
+00b50c60  ldr x8,[x0]
+00b50c64  ldr x8,[x8, #0x28]
+00b50c68  mov w3,#0x10
+    ; [PRE] try { // try from 00b50c68 to 00b50c77 has its CatchHandler @ 00b50cf8
+00b50c6c  mov x1,x21
+00b50c70  mov x2,x20
+00b50c74  blr x8
+    ; [POST] } // end try from 00b50c68 to 00b50c77
+00b50c78  cmn x1,#0x1
+00b50c7c  b.ne 0x00b50cb4
+00b50c80  ldr x8,[x19]
+00b50c84  ldur x8,[x8, #-0x18]
+00b50c88  add x8,x19,x8
+00b50c8c  ldr x9,[x8, #0x28]
+00b50c90  ldr w10,[x8, #0x20]
+00b50c94  cmp x9,#0x0
+00b50c98  ldr w9,[x8, #0x24]
+00b50c9c  cset w11,eq
+00b50ca0  orr w10,w10,w11
+00b50ca4  orr w10,w10,#0x4
+00b50ca8  tst w10,w9
+00b50cac  str w10,[x8, #0x20]
+00b50cb0  b.ne 0x00b50ce8
+00b50cb4  add x0,sp,#0x8
+00b50cb8  bl 0x00af5674
+00b50cbc  ldr x8,[x22, #0x28]
+00b50cc0  ldr x9,[sp, #0x18]
+00b50cc4  cmp x8,x9
+00b50cc8  b.ne 0x00b50ce4
+00b50ccc  mov x0,x19
+00b50cd0  ldp x29,x30,[sp, #0x40]
+00b50cd4  ldp x20,x19,[sp, #0x30]
+00b50cd8  ldp x22,x21,[sp, #0x20]
+00b50cdc  add sp,sp,#0x50
+00b50ce0  ret
+00b50ce4  bl 0x008d4c50
+00b50ce8  adrp x0,0x2a07000
+    ; [PRE] try { // try from 00b50ce8 to 00b50cf3 has its CatchHandler @ 00b50cf4
+00b50cec  add x0,x0,#0xcf4
+00b50cf0  bl 0x00b53a58
+    ; [POST] } // end try from 00b50ce8 to 00b50cf3
+
+
+================================================================================
+### FILE: 00b50d0c_seekp.txt
+================================================================================
+Function: seekp @ 00b50d0c
+FuncComment: std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::seekp(long long, std::__ndk1::ios_base::seekdir)
+
+--- Calls OUT ---
+  -> FUN_00af5674 @ 00af5674
+  -> FUN_00b53a58 @ 00b53a58
+  -> FUN_00af5708 @ 00af5708
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b50d0c  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_ostream<char, std::__ndk1::char_traits<char> >::seekp(long long, std::__ndk1::ios_base::seekdir)
+00b50d10  stp x22,x21,[sp, #0x20]
+00b50d14  stp x20,x19,[sp, #0x30]
+00b50d18  stp x29,x30,[sp, #0x40]
+00b50d1c  add x29,sp,#0x40
+00b50d20  mrs x22,tpidr_el0
+00b50d24  ldr x8,[x22, #0x28]
+00b50d28  mov w20,w2
+00b50d2c  mov x19,x0
+00b50d30  mov x21,x1
+00b50d34  str x8,[sp, #0x18]
+00b50d38  strb wzr,[sp, #0x8]
+00b50d3c  str x0,[sp, #0x10]
+00b50d40  ldr x9,[x0]
+00b50d44  ldur x8,[x9, #-0x18]
+00b50d48  add x11,x0,x8
+00b50d4c  ldr w10,[x11, #0x20]
+00b50d50  cbnz w10,0x00b50d78
+00b50d54  ldr x0,[x11, #0x88]
+00b50d58  cbz x0,0x00b50d64
+00b50d5c  bl 0x00af5708
+00b50d60  ldr x9,[x19]
+00b50d64  mov w8,#0x1
+00b50d68  strb w8,[sp, #0x8]
+00b50d6c  ldur x8,[x9, #-0x18]
+00b50d70  add x9,x19,x8
+00b50d74  ldr w10,[x9, #0x20]
+00b50d78  mov w9,#0x5
+00b50d7c  tst w10,w9
+00b50d80  b.ne 0x00b50de0
+00b50d84  add x8,x19,x8
+00b50d88  ldr x0,[x8, #0x28]
+00b50d8c  ldr x8,[x0]
+00b50d90  ldr x8,[x8, #0x20]
+00b50d94  mov w3,#0x10
+    ; [PRE] try { // try from 00b50d94 to 00b50da3 has its CatchHandler @ 00b50e24
+00b50d98  mov x1,x21
+00b50d9c  mov w2,w20
+00b50da0  blr x8
+    ; [POST] } // end try from 00b50d94 to 00b50da3
+00b50da4  cmn x1,#0x1
+00b50da8  b.ne 0x00b50de0
+00b50dac  ldr x8,[x19]
+00b50db0  ldur x8,[x8, #-0x18]
+00b50db4  add x8,x19,x8
+00b50db8  ldr x9,[x8, #0x28]
+00b50dbc  ldr w10,[x8, #0x20]
+00b50dc0  cmp x9,#0x0
+00b50dc4  ldr w9,[x8, #0x24]
+00b50dc8  cset w11,eq
+00b50dcc  orr w10,w10,w11
+00b50dd0  orr w10,w10,#0x4
+00b50dd4  tst w10,w9
+00b50dd8  str w10,[x8, #0x20]
+00b50ddc  b.ne 0x00b50e14
+00b50de0  add x0,sp,#0x8
+00b50de4  bl 0x00af5674
+00b50de8  ldr x8,[x22, #0x28]
+00b50dec  ldr x9,[sp, #0x18]
+00b50df0  cmp x8,x9
+00b50df4  b.ne 0x00b50e10
+00b50df8  mov x0,x19
+00b50dfc  ldp x29,x30,[sp, #0x40]
+00b50e00  ldp x20,x19,[sp, #0x30]
+00b50e04  ldp x22,x21,[sp, #0x20]
+00b50e08  add sp,sp,#0x50
+00b50e0c  ret
+00b50e10  bl 0x008d4c50
+00b50e14  adrp x0,0x2a07000
+    ; [PRE] try { // try from 00b50e14 to 00b50e1f has its CatchHandler @ 00b50e20
+00b50e18  add x0,x0,#0xcf4
+00b50e1c  bl 0x00b53a58
+    ; [POST] } // end try from 00b50e14 to 00b50e1f
+
+
+================================================================================
+### FILE: 00b51010_sentry.txt
+================================================================================
+Function: sentry @ 00b51010
+FuncComment: std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::sentry::sentry(std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >&)
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+
+--- Calls IN ---
+
+--- Listing ---
+00b51010  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::sentry::sentry(std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >&)
+00b51014  stp x29,x30,[sp, #0x10]
+00b51018  add x29,sp,#0x10
+00b5101c  strb wzr,[x0]
+00b51020  str x1,[x0, #0x8]
+00b51024  ldr x8,[x1]
+00b51028  ldur x8,[x8, #-0x18]
+00b5102c  add x8,x1,x8
+00b51030  ldr w9,[x8, #0x20]
+00b51034  cbnz w9,0x00b51050
+00b51038  mov x19,x0
+00b5103c  ldr x0,[x8, #0x88]
+00b51040  cbz x0,0x00b51048
+00b51044  bl 0x008d5a30
+00b51048  mov w8,#0x1
+00b5104c  strb w8,[x19]
+00b51050  ldp x29,x30,[sp, #0x10]
+00b51054  ldr x19,[sp], #0x20
+00b51058  ret
+
+
+================================================================================
+### FILE: 00b5105c__sentry.txt
+================================================================================
+Function: ~sentry @ 00b5105c
+FuncComment: std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::sentry::~sentry()
+
+--- Calls OUT ---
+  -> uncaught_exception @ 008d5b90
+  -> FUN_00b53a58 @ 00b53a58
+
+--- Calls IN ---
+  <- ~sentry @ 008d4a30
+
+--- Listing ---
+00b5105c  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::sentry::~sentry()
+00b51060  stp x29,x30,[sp, #0x10]
+00b51064  add x29,sp,#0x10
+00b51068  ldr x8,[x0, #0x8]
+00b5106c  ldr x9,[x8]
+00b51070  ldur x9,[x9, #-0x18]
+00b51074  add x8,x8,x9
+00b51078  ldr x9,[x8, #0x28]
+00b5107c  cbz x9,0x00b510e8
+00b51080  ldr w9,[x8, #0x20]
+00b51084  cbnz w9,0x00b510e8
+00b51088  ldrb w8,[x8, #0x9]
+00b5108c  tbz w8,#0x5,0x00b510e8
+00b51090  mov x19,x0
+00b51094  bl 0x008d5b90
+00b51098  tbnz w0,#0x0,0x00b510e8
+00b5109c  ldr x8,[x19, #0x8]
+00b510a0  ldr x9,[x8]
+00b510a4  ldur x9,[x9, #-0x18]
+00b510a8  add x8,x8,x9
+00b510ac  ldr x0,[x8, #0x28]
+00b510b0  ldr x8,[x0]
+00b510b4  ldr x8,[x8, #0x30]
+00b510b8  blr x8
+    ; [PRE] try { // try from 00b510b8 to 00b510ff has its CatchHandler @ 00b51100
+00b510bc  cmn w0,#0x1
+00b510c0  b.ne 0x00b510e8
+00b510c4  ldr x8,[x19, #0x8]
+00b510c8  ldr x9,[x8]
+00b510cc  ldur x9,[x9, #-0x18]
+00b510d0  add x8,x8,x9
+00b510d4  ldp w9,w10,[x8, #0x20]
+00b510d8  orr w9,w9,#0x1
+00b510dc  tst w10,w9
+00b510e0  str w9,[x8, #0x20]
+00b510e4  b.ne 0x00b510f4
+00b510e8  ldp x29,x30,[sp, #0x10]
+00b510ec  ldr x19,[sp], #0x20
+00b510f0  ret
+00b510f4  adrp x0,0x2a07000
+00b510f8  add x0,x0,#0xcf4
+00b510fc  bl 0x00b53a58
+    ; [POST] } // end try from 00b510b8 to 00b510ff
+
+
+================================================================================
+### FILE: 00b53060_seekp.txt
+================================================================================
+Function: seekp @ 00b53060
+FuncComment: std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekp(std::__ndk1::fpos<mbstate_t>)
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> ~sentry @ 008d4a30
+  -> FUN_00b53a58 @ 00b53a58
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b53060  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekp(std::__ndk1::fpos<mbstate_t>)
+00b53064  stp x22,x21,[sp, #0x20]
+00b53068  stp x20,x19,[sp, #0x30]
+00b5306c  stp x29,x30,[sp, #0x40]
+00b53070  add x29,sp,#0x40
+00b53074  mrs x22,tpidr_el0
+00b53078  ldr x8,[x22, #0x28]
+00b5307c  mov x20,x2
+00b53080  mov x19,x0
+00b53084  mov x21,x1
+00b53088  str x8,[sp, #0x18]
+00b5308c  strb wzr,[sp, #0x8]
+00b53090  str x0,[sp, #0x10]
+00b53094  ldr x9,[x0]
+00b53098  ldur x8,[x9, #-0x18]
+00b5309c  add x11,x0,x8
+00b530a0  ldr w10,[x11, #0x20]
+00b530a4  cbnz w10,0x00b530cc
+00b530a8  ldr x0,[x11, #0x88]
+00b530ac  cbz x0,0x00b530b8
+00b530b0  bl 0x008d5a30
+00b530b4  ldr x9,[x19]
+00b530b8  mov w8,#0x1
+00b530bc  strb w8,[sp, #0x8]
+00b530c0  ldur x8,[x9, #-0x18]
+00b530c4  add x9,x19,x8
+00b530c8  ldr w10,[x9, #0x20]
+00b530cc  mov w9,#0x5
+00b530d0  tst w10,w9
+00b530d4  b.ne 0x00b53134
+00b530d8  add x8,x19,x8
+00b530dc  ldr x0,[x8, #0x28]
+00b530e0  ldr x8,[x0]
+00b530e4  ldr x8,[x8, #0x28]
+00b530e8  mov w3,#0x10
+    ; [PRE] try { // try from 00b530e8 to 00b530f7 has its CatchHandler @ 00b53178
+00b530ec  mov x1,x21
+00b530f0  mov x2,x20
+00b530f4  blr x8
+    ; [POST] } // end try from 00b530e8 to 00b530f7
+00b530f8  cmn x1,#0x1
+00b530fc  b.ne 0x00b53134
+00b53100  ldr x8,[x19]
+00b53104  ldur x8,[x8, #-0x18]
+00b53108  add x8,x19,x8
+00b5310c  ldr x9,[x8, #0x28]
+00b53110  ldr w10,[x8, #0x20]
+00b53114  cmp x9,#0x0
+00b53118  ldr w9,[x8, #0x24]
+00b5311c  cset w11,eq
+00b53120  orr w10,w10,w11
+00b53124  orr w10,w10,#0x4
+00b53128  tst w10,w9
+00b5312c  str w10,[x8, #0x20]
+00b53130  b.ne 0x00b53168
+00b53134  add x0,sp,#0x8
+00b53138  bl 0x008d4a30
+00b5313c  ldr x8,[x22, #0x28]
+00b53140  ldr x9,[sp, #0x18]
+00b53144  cmp x8,x9
+00b53148  b.ne 0x00b53164
+00b5314c  mov x0,x19
+00b53150  ldp x29,x30,[sp, #0x40]
+00b53154  ldp x20,x19,[sp, #0x30]
+00b53158  ldp x22,x21,[sp, #0x20]
+00b5315c  add sp,sp,#0x50
+00b53160  ret
+00b53164  bl 0x008d4c50
+00b53168  adrp x0,0x2a07000
+    ; [PRE] try { // try from 00b53168 to 00b53173 has its CatchHandler @ 00b53174
+00b5316c  add x0,x0,#0xcf4
+00b53170  bl 0x00b53a58
+    ; [POST] } // end try from 00b53168 to 00b53173
+
+
+================================================================================
+### FILE: 00b5318c_seekp.txt
+================================================================================
+Function: seekp @ 00b5318c
+FuncComment: std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekp(long long, std::__ndk1::ios_base::seekdir)
+
+--- Calls OUT ---
+  -> flush @ 008d5a30
+  -> ~sentry @ 008d4a30
+  -> FUN_00b53a58 @ 00b53a58
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b5318c  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::basic_ostream<wchar_t, std::__ndk1::char_traits<wchar_t> >::seekp(long long, std::__ndk1::ios_base::seekdir)
+00b53190  stp x22,x21,[sp, #0x20]
+00b53194  stp x20,x19,[sp, #0x30]
+00b53198  stp x29,x30,[sp, #0x40]
+00b5319c  add x29,sp,#0x40
+00b531a0  mrs x22,tpidr_el0
+00b531a4  ldr x8,[x22, #0x28]
+00b531a8  mov w20,w2
+00b531ac  mov x19,x0
+00b531b0  mov x21,x1
+00b531b4  str x8,[sp, #0x18]
+00b531b8  strb wzr,[sp, #0x8]
+00b531bc  str x0,[sp, #0x10]
+00b531c0  ldr x9,[x0]
+00b531c4  ldur x8,[x9, #-0x18]
+00b531c8  add x11,x0,x8
+00b531cc  ldr w10,[x11, #0x20]
+00b531d0  cbnz w10,0x00b531f8
+00b531d4  ldr x0,[x11, #0x88]
+00b531d8  cbz x0,0x00b531e4
+00b531dc  bl 0x008d5a30
+00b531e0  ldr x9,[x19]
+00b531e4  mov w8,#0x1
+00b531e8  strb w8,[sp, #0x8]
+00b531ec  ldur x8,[x9, #-0x18]
+00b531f0  add x9,x19,x8
+00b531f4  ldr w10,[x9, #0x20]
+00b531f8  mov w9,#0x5
+00b531fc  tst w10,w9
+00b53200  b.ne 0x00b53260
+00b53204  add x8,x19,x8
+00b53208  ldr x0,[x8, #0x28]
+00b5320c  ldr x8,[x0]
+00b53210  ldr x8,[x8, #0x20]
+00b53214  mov w3,#0x10
+    ; [PRE] try { // try from 00b53214 to 00b53223 has its CatchHandler @ 00b532a4
+00b53218  mov x1,x21
+00b5321c  mov w2,w20
+00b53220  blr x8
+    ; [POST] } // end try from 00b53214 to 00b53223
+00b53224  cmn x1,#0x1
+00b53228  b.ne 0x00b53260
+00b5322c  ldr x8,[x19]
+00b53230  ldur x8,[x8, #-0x18]
+00b53234  add x8,x19,x8
+00b53238  ldr x9,[x8, #0x28]
+00b5323c  ldr w10,[x8, #0x20]
+00b53240  cmp x9,#0x0
+00b53244  ldr w9,[x8, #0x24]
+00b53248  cset w11,eq
+00b5324c  orr w10,w10,w11
+00b53250  orr w10,w10,#0x4
+00b53254  tst w10,w9
+00b53258  str w10,[x8, #0x20]
+00b5325c  b.ne 0x00b53294
+00b53260  add x0,sp,#0x8
+00b53264  bl 0x008d4a30
+00b53268  ldr x8,[x22, #0x28]
+00b5326c  ldr x9,[sp, #0x18]
+00b53270  cmp x8,x9
+00b53274  b.ne 0x00b53290
+00b53278  mov x0,x19
+00b5327c  ldp x29,x30,[sp, #0x40]
+00b53280  ldp x20,x19,[sp, #0x30]
+00b53284  ldp x22,x21,[sp, #0x20]
+00b53288  add sp,sp,#0x50
+00b5328c  ret
+00b53290  bl 0x008d4c50
+00b53294  adrp x0,0x2a07000
+    ; [PRE] try { // try from 00b53294 to 00b5329f has its CatchHandler @ 00b532a0
+00b53298  add x0,x0,#0xcf4
+00b5329c  bl 0x00b53a58
+    ; [POST] } // end try from 00b53294 to 00b5329f
+
+
+================================================================================
+### FILE: 00b8a4f4_set_value.txt
+================================================================================
+Function: set_value @ 00b8a4f4
+FuncComment: std::__ndk1::__assoc_sub_state::set_value()
+
+--- Calls OUT ---
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> unlock @ 008d5170
+  -> ~exception_ptr @ 008d4130
+  -> lock @ 008d3fc0
+  -> __stack_chk_fail @ 008d4c50
+  -> notify_all @ 008d5900
+
+--- Calls IN ---
+  <- set_value @ 008d5270
+
+--- Listing ---
+00b8a4f4  sub sp,sp,#0x40
+    ; [PLATE] std::__ndk1::__assoc_sub_state::set_value()
+00b8a4f8  stp x22,x21,[sp, #0x10]
+00b8a4fc  stp x20,x19,[sp, #0x20]
+00b8a500  stp x29,x30,[sp, #0x30]
+00b8a504  add x29,sp,#0x30
+00b8a508  mrs x21,tpidr_el0
+00b8a50c  ldr x8,[x21, #0x28]
+00b8a510  add x19,x0,#0x18
+00b8a514  mov x20,x0
+00b8a518  mov x0,x19
+00b8a51c  str x8,[sp, #0x8]
+00b8a520  bl 0x008d3fc0
+00b8a524  ldrb w8,[x20, #0x70]
+00b8a528  tbnz w8,#0x0,0x00b8a584
+00b8a52c  str xzr,[sp]
+00b8a530  ldr x22,[x20, #0x10]
+00b8a534  mov x0,sp
+00b8a538  bl 0x008d4130
+00b8a53c  cbnz x22,0x00b8a584
+00b8a540  ldr w8,[x20, #0x70]
+00b8a544  mov w9,#0x5
+00b8a548  add x0,x20,#0x40
+00b8a54c  orr w8,w8,w9
+00b8a550  str w8,[x20, #0x70]
+00b8a554  bl 0x008d5900
+00b8a558  mov x0,x19
+00b8a55c  bl 0x008d5170
+00b8a560  ldr x8,[x21, #0x28]
+00b8a564  ldr x9,[sp, #0x8]
+00b8a568  cmp x8,x9
+00b8a56c  b.ne 0x00b8a58c
+00b8a570  ldp x29,x30,[sp, #0x30]
+00b8a574  ldp x20,x19,[sp, #0x20]
+00b8a578  ldp x22,x21,[sp, #0x10]
+00b8a57c  add sp,sp,#0x40
+00b8a580  ret
+00b8a584  mov w0,#0x2
+    ; [PRE] try { // try from 00b8a584 to 00b8a58b has its CatchHandler @ 00b8a590
+00b8a588  bl 0x00b8a5a4
+    ; [POST] } // end try from 00b8a584 to 00b8a58b
+00b8a58c  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8a664_set_value_at_thread_exit.txt
+================================================================================
+Function: set_value_at_thread_exit @ 00b8a664
+FuncComment: std::__ndk1::__assoc_sub_state::set_value_at_thread_exit()
+
+--- Calls OUT ---
+  -> __make_ready_at_thread_exit @ 008d5890
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> unlock @ 008d5170
+  -> ~exception_ptr @ 008d4130
+  -> pthread_getspecific @ 008d48d0
+  -> __thread_local_data @ 008d5790
+  -> lock @ 008d3fc0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- set_value_at_thread_exit @ 008d4a00
+
+--- Listing ---
+00b8a664  sub sp,sp,#0x40
+    ; [PLATE] std::__ndk1::__assoc_sub_state::set_value_at_thread_exit()
+00b8a668  stp x22,x21,[sp, #0x10]
+00b8a66c  stp x20,x19,[sp, #0x20]
+00b8a670  stp x29,x30,[sp, #0x30]
+00b8a674  add x29,sp,#0x30
+00b8a678  mrs x21,tpidr_el0
+00b8a67c  ldr x8,[x21, #0x28]
+00b8a680  add x19,x0,#0x18
+00b8a684  mov x20,x0
+00b8a688  mov x0,x19
+00b8a68c  str x8,[sp, #0x8]
+00b8a690  bl 0x008d3fc0
+00b8a694  ldrb w8,[x20, #0x70]
+00b8a698  tbnz w8,#0x0,0x00b8a6fc
+00b8a69c  str xzr,[sp]
+00b8a6a0  ldr x22,[x20, #0x10]
+00b8a6a4  mov x0,sp
+00b8a6a8  bl 0x008d4130
+00b8a6ac  cbnz x22,0x00b8a6fc
+00b8a6b0  ldr w8,[x20, #0x70]
+00b8a6b4  orr w8,w8,#0x1
+00b8a6b8  str w8,[x20, #0x70]
+00b8a6bc  bl 0x008d5790
+    ; [PRE] try { // try from 00b8a6bc to 00b8a703 has its CatchHandler @ 00b8a708
+00b8a6c0  ldr w0,[x0]
+00b8a6c4  bl 0x008d48d0
+00b8a6c8  mov x1,x20
+00b8a6cc  bl 0x008d5890
+00b8a6d0  mov x0,x19
+00b8a6d4  bl 0x008d5170
+00b8a6d8  ldr x8,[x21, #0x28]
+00b8a6dc  ldr x9,[sp, #0x8]
+00b8a6e0  cmp x8,x9
+00b8a6e4  b.ne 0x00b8a704
+00b8a6e8  ldp x29,x30,[sp, #0x30]
+00b8a6ec  ldp x20,x19,[sp, #0x20]
+00b8a6f0  ldp x22,x21,[sp, #0x10]
+00b8a6f4  add sp,sp,#0x40
+00b8a6f8  ret
+00b8a6fc  mov w0,#0x2
+00b8a700  bl 0x00b8a5a4
+00b8a704  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8a71c_set_exception.txt
+================================================================================
+Function: set_exception @ 00b8a71c
+FuncComment: std::__ndk1::__assoc_sub_state::set_exception(std::exception_ptr)
+
+--- Calls OUT ---
+  -> operator= @ 008d45b0
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> unlock @ 008d5170
+  -> ~exception_ptr @ 008d4130
+  -> lock @ 008d3fc0
+  -> notify_all @ 008d5900
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- set_exception @ 008d4e50
+
+--- Listing ---
+00b8a71c  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::__assoc_sub_state::set_exception(std::exception_ptr)
+00b8a720  str x23,[sp, #0x10]
+00b8a724  stp x22,x21,[sp, #0x20]
+00b8a728  stp x20,x19,[sp, #0x30]
+00b8a72c  stp x29,x30,[sp, #0x40]
+00b8a730  add x29,sp,#0x40
+00b8a734  mrs x22,tpidr_el0
+00b8a738  ldr x8,[x22, #0x28]
+00b8a73c  add x19,x0,#0x18
+00b8a740  mov x20,x0
+00b8a744  mov x0,x19
+00b8a748  mov x21,x1
+00b8a74c  str x8,[sp, #0x8]
+00b8a750  bl 0x008d3fc0
+00b8a754  ldrb w8,[x20, #0x70]
+00b8a758  tbnz w8,#0x0,0x00b8a7c0
+00b8a75c  str xzr,[sp]
+00b8a760  ldr x23,[x20, #0x10]
+00b8a764  mov x0,sp
+00b8a768  bl 0x008d4130
+00b8a76c  cbnz x23,0x00b8a7c0
+00b8a770  add x0,x20,#0x10
+00b8a774  mov x1,x21
+00b8a778  bl 0x008d45b0
+00b8a77c  ldr w8,[x20, #0x70]
+00b8a780  add x0,x20,#0x40
+00b8a784  orr w8,w8,#0x4
+00b8a788  str w8,[x20, #0x70]
+00b8a78c  bl 0x008d5900
+00b8a790  mov x0,x19
+00b8a794  bl 0x008d5170
+00b8a798  ldr x8,[x22, #0x28]
+00b8a79c  ldr x9,[sp, #0x8]
+00b8a7a0  cmp x8,x9
+00b8a7a4  b.ne 0x00b8a7c8
+00b8a7a8  ldp x29,x30,[sp, #0x40]
+00b8a7ac  ldp x20,x19,[sp, #0x30]
+00b8a7b0  ldp x22,x21,[sp, #0x20]
+00b8a7b4  ldr x23,[sp, #0x10]
+00b8a7b8  add sp,sp,#0x50
+00b8a7bc  ret
+00b8a7c0  mov w0,#0x2
+    ; [PRE] try { // try from 00b8a7c0 to 00b8a7c7 has its CatchHandler @ 00b8a7cc
+00b8a7c4  bl 0x00b8a5a4
+    ; [POST] } // end try from 00b8a7c0 to 00b8a7c7
+00b8a7c8  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8a7e0_set_exception_at_thread_exit.txt
+================================================================================
+Function: set_exception_at_thread_exit @ 00b8a7e0
+FuncComment: std::__ndk1::__assoc_sub_state::set_exception_at_thread_exit(std::exception_ptr)
+
+--- Calls OUT ---
+  -> __make_ready_at_thread_exit @ 008d5890
+  -> operator= @ 008d45b0
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> unlock @ 008d5170
+  -> ~exception_ptr @ 008d4130
+  -> __thread_local_data @ 008d5790
+  -> pthread_getspecific @ 008d48d0
+  -> lock @ 008d3fc0
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+  <- set_exception_at_thread_exit @ 008d3a80
+
+--- Listing ---
+00b8a7e0  sub sp,sp,#0x50
+    ; [PLATE] std::__ndk1::__assoc_sub_state::set_exception_at_thread_exit(std::exception_ptr)
+00b8a7e4  str x23,[sp, #0x10]
+00b8a7e8  stp x22,x21,[sp, #0x20]
+00b8a7ec  stp x20,x19,[sp, #0x30]
+00b8a7f0  stp x29,x30,[sp, #0x40]
+00b8a7f4  add x29,sp,#0x40
+00b8a7f8  mrs x22,tpidr_el0
+00b8a7fc  ldr x8,[x22, #0x28]
+00b8a800  add x19,x0,#0x18
+00b8a804  mov x20,x0
+00b8a808  mov x0,x19
+00b8a80c  mov x21,x1
+00b8a810  str x8,[sp, #0x8]
+00b8a814  bl 0x008d3fc0
+00b8a818  ldrb w8,[x20, #0x70]
+00b8a81c  tbnz w8,#0x0,0x00b8a884
+00b8a820  str xzr,[sp]
+00b8a824  ldr x23,[x20, #0x10]
+00b8a828  mov x0,sp
+00b8a82c  bl 0x008d4130
+00b8a830  cbnz x23,0x00b8a884
+00b8a834  add x0,x20,#0x10
+00b8a838  mov x1,x21
+00b8a83c  bl 0x008d45b0
+00b8a840  bl 0x008d5790
+    ; [PRE] try { // try from 00b8a840 to 00b8a88b has its CatchHandler @ 00b8a890
+00b8a844  ldr w0,[x0]
+00b8a848  bl 0x008d48d0
+00b8a84c  mov x1,x20
+00b8a850  bl 0x008d5890
+00b8a854  mov x0,x19
+00b8a858  bl 0x008d5170
+00b8a85c  ldr x8,[x22, #0x28]
+00b8a860  ldr x9,[sp, #0x8]
+00b8a864  cmp x8,x9
+00b8a868  b.ne 0x00b8a88c
+00b8a86c  ldp x29,x30,[sp, #0x40]
+00b8a870  ldp x20,x19,[sp, #0x30]
+00b8a874  ldp x22,x21,[sp, #0x20]
+00b8a878  ldr x23,[sp, #0x10]
+00b8a87c  add sp,sp,#0x50
+00b8a880  ret
+00b8a884  mov w0,#0x2
+00b8a888  bl 0x00b8a5a4
+00b8a88c  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8af54_set_value.txt
+================================================================================
+Function: set_value @ 00b8af54
+FuncComment: std::__ndk1::promise<void>::set_value()
+
+--- Calls OUT ---
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> set_value @ 008d5270
+
+--- Calls IN ---
+
+--- Listing ---
+00b8af54  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::promise<void>::set_value()
+00b8af58  mov x29,sp
+00b8af5c  ldr x0,[x0]
+00b8af60  cbz x0,0x00b8af6c
+00b8af64  ldp x29,x30,[sp], #0x10
+00b8af68  b 0x008d5270
+00b8af6c  mov w0,#0x3
+00b8af70  bl 0x00b8a5a4
+
+
+================================================================================
+### FILE: 00b8af74_set_exception.txt
+================================================================================
+Function: set_exception @ 00b8af74
+FuncComment: std::__ndk1::promise<void>::set_exception(std::exception_ptr)
+
+--- Calls OUT ---
+  -> set_exception @ 008d4e50
+  -> exception_ptr @ 008d4eb0
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> ~exception_ptr @ 008d4130
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b8af74  sub sp,sp,#0x30
+    ; [PLATE] std::__ndk1::promise<void>::set_exception(std::exception_ptr)
+00b8af78  stp x20,x19,[sp, #0x10]
+00b8af7c  stp x29,x30,[sp, #0x20]
+00b8af80  add x29,sp,#0x20
+00b8af84  mrs x20,tpidr_el0
+00b8af88  ldr x8,[x20, #0x28]
+00b8af8c  str x8,[sp, #0x8]
+00b8af90  ldr x19,[x0]
+00b8af94  cbz x19,0x00b8afd4
+00b8af98  mov x0,sp
+00b8af9c  bl 0x008d4eb0
+00b8afa0  mov x1,sp
+    ; [PRE] try { // try from 00b8afa0 to 00b8afab has its CatchHandler @ 00b8afe0
+00b8afa4  mov x0,x19
+00b8afa8  bl 0x008d4e50
+    ; [POST] } // end try from 00b8afa0 to 00b8afab
+00b8afac  mov x0,sp
+00b8afb0  bl 0x008d4130
+00b8afb4  ldr x8,[x20, #0x28]
+00b8afb8  ldr x9,[sp, #0x8]
+00b8afbc  cmp x8,x9
+00b8afc0  b.ne 0x00b8afdc
+00b8afc4  ldp x29,x30,[sp, #0x20]
+00b8afc8  ldp x20,x19,[sp, #0x10]
+00b8afcc  add sp,sp,#0x30
+00b8afd0  ret
+00b8afd4  mov w0,#0x3
+00b8afd8  bl 0x00b8a5a4
+00b8afdc  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8aff4_set_value_at_thread_exit.txt
+================================================================================
+Function: set_value_at_thread_exit @ 00b8aff4
+FuncComment: std::__ndk1::promise<void>::set_value_at_thread_exit()
+
+--- Calls OUT ---
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> set_value_at_thread_exit @ 008d4a00
+
+--- Calls IN ---
+
+--- Listing ---
+00b8aff4  stp x29,x30,[sp, #-0x10]!
+    ; [PLATE] std::__ndk1::promise<void>::set_value_at_thread_exit()
+00b8aff8  mov x29,sp
+00b8affc  ldr x0,[x0]
+00b8b000  cbz x0,0x00b8b00c
+00b8b004  ldp x29,x30,[sp], #0x10
+00b8b008  b 0x008d4a00
+00b8b00c  mov w0,#0x3
+00b8b010  bl 0x00b8a5a4
+
+
+================================================================================
+### FILE: 00b8b014_set_exception_at_thread_exit.txt
+================================================================================
+Function: set_exception_at_thread_exit @ 00b8b014
+FuncComment: std::__ndk1::promise<void>::set_exception_at_thread_exit(std::exception_ptr)
+
+--- Calls OUT ---
+  -> exception_ptr @ 008d4eb0
+  -> FUN_00b8a5a4 @ 00b8a5a4
+  -> ~exception_ptr @ 008d4130
+  -> set_exception_at_thread_exit @ 008d3a80
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b8b014  sub sp,sp,#0x30
+    ; [PLATE] std::__ndk1::promise<void>::set_exception_at_thread_exit(std::exception_ptr)
+00b8b018  stp x20,x19,[sp, #0x10]
+00b8b01c  stp x29,x30,[sp, #0x20]
+00b8b020  add x29,sp,#0x20
+00b8b024  mrs x20,tpidr_el0
+00b8b028  ldr x8,[x20, #0x28]
+00b8b02c  str x8,[sp, #0x8]
+00b8b030  ldr x19,[x0]
+00b8b034  cbz x19,0x00b8b074
+00b8b038  mov x0,sp
+00b8b03c  bl 0x008d4eb0
+00b8b040  mov x1,sp
+    ; [PRE] try { // try from 00b8b040 to 00b8b04b has its CatchHandler @ 00b8b080
+00b8b044  mov x0,x19
+00b8b048  bl 0x008d3a80
+    ; [POST] } // end try from 00b8b040 to 00b8b04b
+00b8b04c  mov x0,sp
+00b8b050  bl 0x008d4130
+00b8b054  ldr x8,[x20, #0x28]
+00b8b058  ldr x9,[sp, #0x8]
+00b8b05c  cmp x8,x9
+00b8b060  b.ne 0x00b8b07c
+00b8b064  ldp x29,x30,[sp, #0x20]
+00b8b068  ldp x20,x19,[sp, #0x10]
+00b8b06c  add sp,sp,#0x30
+00b8b070  ret
+00b8b074  mov w0,#0x3
+00b8b078  bl 0x00b8a5a4
+00b8b07c  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8b1b0___setExceptionClass.txt
+================================================================================
+Function: __setExceptionClass @ 00b8b1b0
+FuncComment: __cxxabiv1::__setExceptionClass(_Unwind_Exception*, unsigned long)
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8b1b0  sub sp,sp,#0x10
+    ; [PLATE] __cxxabiv1::__setExceptionClass(_Unwind_Exception*, unsigned long)
+00b8b1b4  str x1,[sp, #0x8]
+00b8b1b8  str x1,[x0]
+00b8b1bc  add sp,sp,#0x10
+00b8b1c0  ret
+
+
+================================================================================
+### FILE: 00b8bda8_set_new_handler.txt
+================================================================================
+Function: set_new_handler @ 00b8bda8
+FuncComment: std::set_new_handler(void (*)())
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00b8bda8  adrp x9,0x333d000
+    ; [PLATE] std::set_new_handler(void (*)())
+00b8bdac  ldr x9,[x9, #0x678]
+00b8bdb0  ldaxr x8,[x9]
+00b8bdb4  stlxr w10,x0,[x9]
+00b8bdb8  cbnz w10,0x00b8bdb0
+00b8bdbc  mov x0,x8
+00b8bdc0  ret
+
+
+================================================================================
+### FILE: 00b8eadc_set_unexpected.txt
+================================================================================
+Function: set_unexpected @ 00b8eadc
+FuncComment: std::set_unexpected(void (*)())
+
+--- Calls OUT ---
+  -> FUN_00b8ec4c @ 00b8ec4c
+
+--- Calls IN ---
+
+--- Listing ---
+00b8eadc  adrp x9,0x337b000
+    ; [PLATE] std::set_unexpected(void (*)())
+00b8eae0  ldr x9,[x9, #0xfa0]
+00b8eae4  adrp x8,0xb8e000
+00b8eae8  add x8,x8,#0xc4c
+00b8eaec  cmp x0,#0x0
+00b8eaf0  csel x8,x8,x0,eq
+00b8eaf4  ldaxr x0,[x9]
+00b8eaf8  stlxr w10,x8,[x9]
+00b8eafc  cbnz w10,0x00b8eaf4
+00b8eb00  ret
+
+
+================================================================================
+### FILE: 00b8eb04_set_terminate.txt
+================================================================================
+Function: set_terminate @ 00b8eb04
+FuncComment: std::set_terminate(void (*)())
+
+--- Calls OUT ---
+  -> FUN_00b8eb2c @ 00b8eb2c
+
+--- Calls IN ---
+
+--- Listing ---
+00b8eb04  adrp x9,0x3382000
+    ; [PLATE] std::set_terminate(void (*)())
+00b8eb08  ldr x9,[x9, #0x1b0]
+00b8eb0c  adrp x8,0xb8e000
+00b8eb10  add x8,x8,#0xb2c
+00b8eb14  cmp x0,#0x0
+00b8eb18  csel x8,x8,x0,eq
+00b8eb1c  ldaxr x0,[x9]
+00b8eb20  stlxr w10,x8,[x9]
+00b8eb24  cbnz w10,0x00b8eb1c
+00b8eb28  ret
+
+
+================================================================================
+### FILE: 00d057a0_SendSmsExample__SendSMS.txt
+================================================================================
+Function: SendSmsExample$$SendSMS @ 00d057a0
+
+--- Calls OUT ---
+  -> AndroidSocialGate$$SendTextMessage @ 00cea500
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d057a0  str x20,[sp, #-0x20]!
+00d057a4  stp x19,x30,[sp, #0x10]
+00d057a8  adrp x20,0x3571000
+00d057ac  ldrb w8,[x20, #0xa88]
+00d057b0  mov x19,x0
+00d057b4  tbnz w8,#0x0,0x00d057cc
+00d057b8  adrp x0,0x333f000
+00d057bc  ldr x0,[x0, #0x968]
+00d057c0  bl 0x00b0789c
+00d057c4  mov w8,#0x1
+00d057c8  strb w8,[x20, #0xa88]
+00d057cc  ldr x0,[x19, #0x18]
+00d057d0  cbz x0,0x00d05864
+00d057d4  ldr x8,[x0]
+00d057d8  ldr x9,[x8, #0x5d8]
+00d057dc  ldr x1,[x8, #0x5e0]
+00d057e0  blr x9
+00d057e4  ldr x8,[x19, #0x20]
+00d057e8  cbz x8,0x00d05864
+00d057ec  ldr x9,[x8]
+00d057f0  mov x19,x0
+00d057f4  mov x0,x8
+00d057f8  ldr x10,[x9, #0x5d8]
+00d057fc  ldr x1,[x9, #0x5e0]
+00d05800  blr x10
+00d05804  cbz x19,0x00d05864
+00d05808  ldr w8,[x19, #0x10]
+00d0580c  cmp w8,#0x1
+00d05810  b.lt 0x00d05858
+00d05814  mov x20,x0
+00d05818  cbz x0,0x00d05864
+00d0581c  ldr w8,[x20, #0x10]
+00d05820  cmp w8,#0xa
+00d05824  b.ne 0x00d05858
+00d05828  adrp x8,0x333f000
+00d0582c  ldr x8,[x8, #0x968]
+00d05830  ldr x0,[x8]
+00d05834  ldr w8,[x0, #0xe0]
+00d05838  cbnz w8,0x00d05840
+00d0583c  bl 0x00b0798c
+00d05840  mov x0,x19
+00d05844  ldp x19,x30,[sp, #0x10]
+00d05848  mov x1,x20
+00d0584c  mov x2,xzr
+00d05850  ldr x20,[sp], #0x20
+00d05854  b 0x00cea500
+00d05858  ldp x19,x30,[sp, #0x10]
+00d0585c  ldr x20,[sp], #0x20
+00d05860  ret
+00d05864  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d05868_SendSmsExample__.ctor.txt
+================================================================================
+Function: SendSmsExample$$.ctor @ 00d05868
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d05868  mov x1,xzr
+00d0586c  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d98500_SelectableLabelAttribute__.ctor.txt
+================================================================================
+Function: SelectableLabelAttribute$$.ctor @ 00d98500
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.PropertyAttribute$$.ctor @ 024dbdd8
+
+--- Calls IN ---
+
+--- Listing ---
+00d98500  str x20,[sp, #-0x20]!
+00d98504  stp x19,x30,[sp, #0x10]
+00d98508  mov x19,x1
+00d9850c  mov x1,xzr
+00d98510  mov x20,x0
+00d98514  bl 0x024dbdd8
+00d98518  str x19,[x20, #0x18]!
+00d9851c  mov x1,x19
+00d98520  ldp x19,x30,[sp, #0x10]
+00d98524  mov x0,x20
+00d98528  ldr x20,[sp], #0x20
+00d9852c  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d98530_SelectableLabelExample__.ctor.txt
+================================================================================
+Function: SelectableLabelExample$$.ctor @ 00d98530
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d98530  mov x1,xzr
+00d98534  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d9869c_SetPropertyAttribute__get_Name.txt
+================================================================================
+Function: SetPropertyAttribute$$get_Name @ 00d9869c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d9869c  ldr x0,[x0, #0x18]
+00d986a0  ret
+
+
+================================================================================
+### FILE: 00d986a4_SetPropertyAttribute__set_Name.txt
+================================================================================
+Function: SetPropertyAttribute$$set_Name @ 00d986a4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+
+--- Calls IN ---
+
+--- Listing ---
+00d986a4  str x1,[x0, #0x18]!
+00d986a8  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d986ac_SetPropertyAttribute__get_IsDirty.txt
+================================================================================
+Function: SetPropertyAttribute$$get_IsDirty @ 00d986ac
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d986ac  ldrb w0,[x0, #0x20]
+00d986b0  ret
+
+
+================================================================================
+### FILE: 00d986b4_SetPropertyAttribute__set_IsDirty.txt
+================================================================================
+Function: SetPropertyAttribute$$set_IsDirty @ 00d986b4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d986b4  and w8,w1,#0x1
+00d986b8  strb w8,[x0, #0x20]
+00d986bc  ret
+
+
+================================================================================
+### FILE: 00d986c0_SetPropertyAttribute__.ctor.txt
+================================================================================
+Function: SetPropertyAttribute$$.ctor @ 00d986c0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.PropertyAttribute$$.ctor @ 024dbdd8
+
+--- Calls IN ---
+
+--- Listing ---
+00d986c0  str x20,[sp, #-0x20]!
+00d986c4  stp x19,x30,[sp, #0x10]
+00d986c8  mov x19,x1
+00d986cc  mov x1,xzr
+00d986d0  mov x20,x0
+00d986d4  bl 0x024dbdd8
+00d986d8  str x19,[x20, #0x18]!
+00d986dc  mov x1,x19
+00d986e0  ldp x19,x30,[sp, #0x10]
+00d986e4  mov x0,x20
+00d986e8  ldr x20,[sp], #0x20
+00d986ec  b 0x00b07850
+
+
+================================================================================
+### FILE: 00d986f0_SetPropertyExample__get_Number.txt
+================================================================================
+Function: SetPropertyExample$$get_Number @ 00d986f0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d986f0  ldr s0,[x0, #0x18]
+00d986f4  ret
+
+
+================================================================================
+### FILE: 00d986f8_SetPropertyExample__set_Number.txt
+================================================================================
+Function: SetPropertyExample$$set_Number @ 00d986f8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d986f8  fmov s1,0x3f800000
+00d986fc  fcmp s0,#0.0
+00d98700  fmin s0,s0,s1
+00d98704  fmov s1,wzr
+00d98708  fcsel s0,s0,s1,pl
+00d9870c  str s0,[x0, #0x18]
+00d98710  ret
+
+
+================================================================================
+### FILE: 00d98714_SetPropertyExample__get_Text.txt
+================================================================================
+Function: SetPropertyExample$$get_Text @ 00d98714
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d98714  ldr x0,[x0, #0x20]
+00d98718  ret
+
+
+================================================================================
+### FILE: 00d9871c_SetPropertyExample__set_Text.txt
+================================================================================
+Function: SetPropertyExample$$set_Text @ 00d9871c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$ToUpper @ 01fe2c90
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d9871c  stp x19,x30,[sp, #-0x10]!
+00d98720  cbz x1,0x00d98748
+00d98724  mov x19,x0
+00d98728  mov x0,x1
+00d9872c  mov x1,xzr
+00d98730  bl 0x01fe2c90
+00d98734  str x0,[x19, #0x20]!
+00d98738  mov x1,x0
+00d9873c  mov x0,x19
+00d98740  ldp x19,x30,[sp], #0x10
+00d98744  b 0x00b07850
+00d98748  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d9874c_SetPropertyExample__.ctor.txt
+================================================================================
+Function: SetPropertyExample$$.ctor @ 00d9874c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00d9874c  mov x1,xzr
+00d98750  b 0x024e45bc
+
+
+================================================================================
+### FILE: 00d98754_SetPropertyExample.VanillaClass__get_Extra.txt
+================================================================================
+Function: SetPropertyExample.VanillaClass$$get_Extra @ 00d98754
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d98754  ldr w0,[x0, #0x10]
+00d98758  ret
+
+
+================================================================================
+### FILE: 00d9875c_SetPropertyExample.VanillaClass__set_Extra.txt
+================================================================================
+Function: SetPropertyExample.VanillaClass$$set_Extra @ 00d9875c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+
+--- Listing ---
+00d9875c  str x22,[sp, #-0x30]!
+00d98760  stp x21,x20,[sp, #0x10]
+00d98764  stp x19,x30,[sp, #0x20]
+00d98768  adrp x22,0x3571000
+00d9876c  adrp x21,0x336b000
+00d98770  ldrb w8,[x22, #0xfdf]
+00d98774  ldr x21,[x21, #0x7d0]
+00d98778  mov w19,w1
+00d9877c  mov x20,x0
+00d98780  tbnz w8,#0x0,0x00d987b0
+00d98784  adrp x0,0x336b000
+00d98788  ldr x0,[x0, #0x7d0]
+00d9878c  bl 0x00b0789c
+00d98790  adrp x0,0x331e000
+00d98794  ldr x0,[x0, #0x3a8]
+00d98798  bl 0x00b0789c
+00d9879c  adrp x0,0x330d000
+00d987a0  ldr x0,[x0, #0xc10]
+00d987a4  bl 0x00b0789c
+00d987a8  mov w8,#0x1
+00d987ac  strb w8,[x22, #0xfdf]
+00d987b0  str w19,[x20, #0x10]
+00d987b4  ldr x0,[x21]
+00d987b8  adrp x20,0x330d000
+00d987bc  adrp x21,0x331e000
+00d987c0  ldr w8,[x0, #0xe0]
+00d987c4  ldr x20,[x20, #0xc10]
+00d987c8  ldr x21,[x21, #0x3a8]
+00d987cc  cbnz w8,0x00d987d4
+00d987d0  bl 0x00b0798c
+00d987d4  cmp w19,#0x0
+00d987d8  csel x8,x20,x21,eq
+00d987dc  ldr x0,[x8]
+00d987e0  ldp x19,x30,[sp, #0x20]
+00d987e4  ldp x21,x20,[sp, #0x10]
+00d987e8  mov x1,xzr
+00d987ec  ldr x22,[sp], #0x30
+00d987f0  b 0x024c0104
+
+
+================================================================================
+### FILE: 00d987f4_SetPropertyExample.VanillaClass__.ctor.txt
+================================================================================
+Function: SetPropertyExample.VanillaClass$$.ctor @ 00d987f4
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00d987f4  mov x1,xzr
+00d987f8  b 0x02194104
+
+
+================================================================================
+### FILE: 00dbacbc_SerializableColor__get_Color.txt
+================================================================================
+Function: SerializableColor$$get_Color @ 00dbacbc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbacbc  ldp s0,s1,[x0, #0x10]
+00dbacc0  ldp s2,s3,[x0, #0x18]
+00dbacc4  ret
+
+
+================================================================================
+### FILE: 00dbacc8_SerializableColor__set_Color.txt
+================================================================================
+Function: SerializableColor$$set_Color @ 00dbacc8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbacc8  stp s0,s1,[x0, #0x10]
+00dbaccc  stp s2,s3,[x0, #0x18]
+00dbacd0  ret
+
+
+================================================================================
+### FILE: 00dbacd4_SerializableColor__.ctor.txt
+================================================================================
+Function: SerializableColor$$.ctor @ 00dbacd4
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbacd4  stp d11,d10,[sp, #-0x30]!
+00dbacd8  stp d9,d8,[sp, #0x10]
+00dbacdc  stp x19,x30,[sp, #0x20]
+00dbace0  mov x1,xzr
+00dbace4  mov v8.16B,v3.16B
+00dbace8  mov v9.16B,v2.16B
+00dbacec  mov v10.16B,v1.16B
+00dbacf0  mov v11.16B,v0.16B
+00dbacf4  mov x19,x0
+00dbacf8  bl 0x02194104
+00dbacfc  stp s11,s10,[x19, #0x10]
+00dbad00  stp s9,s8,[x19, #0x18]
+00dbad04  ldp x19,x30,[sp, #0x20]
+00dbad08  ldp d9,d8,[sp, #0x10]
+00dbad0c  ldp d11,d10,[sp], #0x30
+00dbad10  ret
+
+
+================================================================================
+### FILE: 00dbad14_SerializableColor__.ctor.txt
+================================================================================
+Function: SerializableColor$$.ctor @ 00dbad14
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbad14  stp d11,d10,[sp, #-0x30]!
+00dbad18  stp d9,d8,[sp, #0x10]
+00dbad1c  stp x19,x30,[sp, #0x20]
+00dbad20  mov x1,xzr
+00dbad24  mov v8.16B,v3.16B
+00dbad28  mov v9.16B,v2.16B
+00dbad2c  mov v10.16B,v1.16B
+00dbad30  mov v11.16B,v0.16B
+00dbad34  mov x19,x0
+00dbad38  bl 0x02194104
+00dbad3c  stp s11,s10,[x19, #0x10]
+00dbad40  stp s9,s8,[x19, #0x18]
+00dbad44  ldp x19,x30,[sp, #0x20]
+00dbad48  ldp d9,d8,[sp, #0x10]
+00dbad4c  ldp d11,d10,[sp], #0x30
+00dbad50  ret
+
+
+================================================================================
+### FILE: 00dbad54_SerializableColor__.ctor.txt
+================================================================================
+Function: SerializableColor$$.ctor @ 00dbad54
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbad54  stp x19,x30,[sp, #-0x10]!
+00dbad58  mov x1,xzr
+00dbad5c  mov x19,x0
+00dbad60  bl 0x02194104
+00dbad64  adrp x8,0x26db000
+00dbad68  ldr q0,[x8, #0x460]
+00dbad6c  str q0,[x19, #0x10]
+00dbad70  ldp x19,x30,[sp], #0x10
+00dbad74  ret
+
+
+================================================================================
+### FILE: 00dbad78_SerializableColor__op_Implicit.txt
+================================================================================
+Function: SerializableColor$$op_Implicit @ 00dbad78
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00dbad78  cbz x0,0x00dbad88
+00dbad7c  ldp s0,s1,[x0, #0x10]
+00dbad80  ldp s2,s3,[x0, #0x18]
+00dbad84  ret
+00dbad88  fmov s3,0x3f800000
+00dbad8c  fmov s0,wzr
+00dbad90  fmov s1,wzr
+00dbad94  fmov s2,wzr
+00dbad98  ret
+
+
+================================================================================
+### FILE: 00dbad9c_SerializableColor__op_Implicit.txt
+================================================================================
+Function: SerializableColor$$op_Implicit @ 00dbad9c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00dbad9c  stp d11,d10,[sp, #-0x40]!
+00dbada0  stp d9,d8,[sp, #0x10]
+00dbada4  str x20,[sp, #0x20]
+00dbada8  stp x19,x30,[sp, #0x30]
+00dbadac  adrp x19,0x3572000
+00dbadb0  adrp x20,0x3381000
+00dbadb4  ldrb w8,[x19, #0x126]
+00dbadb8  ldr x20,[x20, #0x3b8]
+00dbadbc  mov v8.16B,v3.16B
+00dbadc0  mov v9.16B,v2.16B
+00dbadc4  mov v10.16B,v1.16B
+00dbadc8  mov v11.16B,v0.16B
+00dbadcc  tbnz w8,#0x0,0x00dbade4
+00dbadd0  adrp x0,0x3381000
+00dbadd4  ldr x0,[x0, #0x3b8]
+00dbadd8  bl 0x00b0789c
+00dbaddc  mov w8,#0x1
+00dbade0  strb w8,[x19, #0x126]
+00dbade4  ldr x0,[x20]
+00dbade8  bl 0x00b079a0
+00dbadec  cbz x0,0x00dbae1c
+00dbadf0  mov x1,xzr
+00dbadf4  mov x19,x0
+00dbadf8  bl 0x02194104
+00dbadfc  stp s11,s10,[x19, #0x10]
+00dbae00  stp s9,s8,[x19, #0x18]
+00dbae04  mov x0,x19
+00dbae08  ldp x19,x30,[sp, #0x30]
+00dbae0c  ldr x20,[sp, #0x20]
+00dbae10  ldp d9,d8,[sp, #0x10]
+00dbae14  ldp d11,d10,[sp], #0x40
+00dbae18  ret
+00dbae1c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00df15fc_SensitivecharData__get_sensitiveChar.txt
+================================================================================
+Function: SensitivecharData$$get_sensitiveChar @ 00df15fc
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df15fc  ldr x0,[x0, #0x78]
+00df1600  ret
+
+
+================================================================================
+### FILE: 00df1604_SensitivecharData__.ctor.txt
+================================================================================
+Function: SensitivecharData$$.ctor @ 00df1604
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.SensitivecharDataWrap$$__CreateInstance @ 013c7288
+
+--- Listing ---
+00df1604  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00df1608_SensitivecharRecord__.ctor.txt
+================================================================================
+Function: SensitivecharRecord$$.ctor @ 00df1608
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00df1608  stp x21,x20,[sp, #-0x20]!
+00df160c  stp x19,x30,[sp, #0x10]
+00df1610  adrp x20,0x3572000
+00df1614  adrp x21,0x331a000
+00df1618  ldrb w8,[x20, #0x460]
+00df161c  ldr x21,[x21, #0x700]
+00df1620  mov x19,x0
+00df1624  tbnz w8,#0x0,0x00df1648
+00df1628  adrp x0,0x3384000
+00df162c  ldr x0,[x0, #0x7e0]
+00df1630  bl 0x00b0789c
+00df1634  adrp x0,0x331a000
+00df1638  ldr x0,[x0, #0x700]
+00df163c  bl 0x00b0789c
+00df1640  mov w8,#0x1
+00df1644  strb w8,[x20, #0x460]
+00df1648  ldr x0,[x21]
+00df164c  bl 0x00b079a0
+00df1650  cbz x0,0x00df168c
+00df1654  adrp x8,0x3384000
+00df1658  ldr x8,[x8, #0x7e0]
+00df165c  mov x20,x0
+00df1660  ldr x1,[x8]
+00df1664  bl 0x01bffe10
+00df1668  mov x0,x19
+00df166c  str x20,[x0, #0x18]!
+00df1670  mov x1,x20
+00df1674  bl 0x00b07850
+00df1678  mov x0,x19
+00df167c  ldp x19,x30,[sp, #0x10]
+00df1680  mov x1,xzr
+00df1684  ldp x21,x20,[sp], #0x20
+00df1688  b 0x024e277c
+00df168c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f95bc8_SetGameNamePanelMono__get_m_node.txt
+================================================================================
+Function: SetGameNamePanelMono$$get_m_node @ 00f95bc8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GUIScreenBaseMono$$GetNode<object> @ 01794be4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp682 @ 010b9444
+
+--- Calls IN ---
+  <- SetGameNamePanelMono$$ClickDoNameChange @ 00f95e98
+  <- SetGameNamePanelMono$$Start @ 00f95cb0
+
+--- Listing ---
+00f95bc8  stp x21,x20,[sp, #-0x20]!
+00f95bcc  stp x19,x30,[sp, #0x10]
+00f95bd0  adrp x20,0x3573000
+00f95bd4  adrp x21,0x3324000
+00f95bd8  ldrb w8,[x20, #0x4b0]
+00f95bdc  ldr x21,[x21, #0xa08]
+00f95be0  mov x19,x0
+00f95be4  tbnz w8,#0x0,0x00f95c08
+00f95be8  adrp x0,0x3337000
+00f95bec  ldr x0,[x0, #0x50]
+00f95bf0  bl 0x00b0789c
+00f95bf4  adrp x0,0x3324000
+00f95bf8  ldr x0,[x0, #0xa08]
+00f95bfc  bl 0x00b0789c
+00f95c00  mov w8,#0x1
+00f95c04  strb w8,[x20, #0x4b0]
+00f95c08  ldr x8,[x21]
+00f95c0c  ldr x8,[x8, #0xb8]
+00f95c10  ldr x0,[x8]
+00f95c14  cbz x0,0x00f95c2c
+00f95c18  mov x1,x19
+00f95c1c  ldp x19,x30,[sp, #0x10]
+00f95c20  mov x2,xzr
+00f95c24  ldp x21,x20,[sp], #0x20
+00f95c28  b 0x010b9444
+00f95c2c  adrp x8,0x3337000
+00f95c30  ldr x8,[x8, #0x50]
+00f95c34  mov x0,x19
+00f95c38  ldp x19,x30,[sp, #0x10]
+00f95c3c  ldr x1,[x8]
+00f95c40  ldp x21,x20,[sp], #0x20
+00f95c44  b 0x01794be4
+
+
+================================================================================
+### FILE: 00f95c48_SetGameNamePanelMono__get_LayerType.txt
+================================================================================
+Function: SetGameNamePanelMono$$get_LayerType @ 00f95c48
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp491 @ 0109f3ac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00f95c48  stp x21,x20,[sp, #-0x20]!
+00f95c4c  stp x19,x30,[sp, #0x10]
+00f95c50  adrp x20,0x3573000
+00f95c54  adrp x21,0x3324000
+00f95c58  ldrb w8,[x20, #0x4b1]
+00f95c5c  ldr x21,[x21, #0xa08]
+00f95c60  mov x19,x0
+00f95c64  tbnz w8,#0x0,0x00f95c7c
+00f95c68  adrp x0,0x3324000
+00f95c6c  ldr x0,[x0, #0xa08]
+00f95c70  bl 0x00b0789c
+00f95c74  mov w8,#0x1
+00f95c78  strb w8,[x20, #0x4b1]
+00f95c7c  ldr x8,[x21]
+00f95c80  ldr x8,[x8, #0xb8]
+00f95c84  ldr x0,[x8, #0x8]
+00f95c88  cbz x0,0x00f95ca0
+00f95c8c  mov x1,x19
+00f95c90  ldp x19,x30,[sp, #0x10]
+00f95c94  mov x2,xzr
+00f95c98  ldp x21,x20,[sp], #0x20
+00f95c9c  b 0x0109f3ac
+00f95ca0  ldp x19,x30,[sp, #0x10]
+00f95ca4  mov w0,#0x3
+00f95ca8  ldp x21,x20,[sp], #0x20
+00f95cac  ret
+
+
+================================================================================
+### FILE: 00f95cb0_SetGameNamePanelMono__Start.txt
+================================================================================
+Function: SetGameNamePanelMono$$Start @ 00f95cb0
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> SetGameNamePanelMono$$get_m_node @ 00f95bc8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UIEventListener$$Get @ 00e34224
+  -> SetgamenamepanelNode$$get_btn_submit @ 00fcf054
+  -> UIEventListener.VoidDelegate$$.ctor @ 00e35bd0
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00f95cb0  stp x21,x20,[sp, #-0x20]!
+00f95cb4  stp x19,x30,[sp, #0x10]
+00f95cb8  adrp x20,0x3573000
+00f95cbc  adrp x21,0x3324000
+00f95cc0  ldrb w8,[x20, #0x4b2]
+00f95cc4  ldr x21,[x21, #0xa08]
+00f95cc8  mov x19,x0
+00f95ccc  tbnz w8,#0x0,0x00f95d08
+00f95cd0  adrp x0,0x334c000
+00f95cd4  ldr x0,[x0, #0x780]
+00f95cd8  bl 0x00b0789c
+00f95cdc  adrp x0,0x3324000
+00f95ce0  ldr x0,[x0, #0xa08]
+00f95ce4  bl 0x00b0789c
+00f95ce8  adrp x0,0x332d000
+00f95cec  ldr x0,[x0, #0xd38]
+00f95cf0  bl 0x00b0789c
+00f95cf4  adrp x0,0x3360000
+00f95cf8  ldr x0,[x0, #0x750]
+00f95cfc  bl 0x00b0789c
+00f95d00  mov w8,#0x1
+00f95d04  strb w8,[x20, #0x4b2]
+00f95d08  ldr x8,[x21]
+00f95d0c  ldr x8,[x8, #0xb8]
+00f95d10  ldr x0,[x8, #0x10]
+00f95d14  cbz x0,0x00f95d2c
+00f95d18  mov x1,x19
+00f95d1c  ldp x19,x30,[sp, #0x10]
+00f95d20  mov x2,xzr
+00f95d24  ldp x21,x20,[sp], #0x20
+00f95d28  b 0x01060dac
+00f95d2c  mov x0,x19
+00f95d30  bl 0x00f95bc8
+00f95d34  cbz x0,0x00f95dc8
+00f95d38  mov x1,xzr
+00f95d3c  bl 0x00fcf054
+00f95d40  cbz x0,0x00f95dc8
+00f95d44  adrp x8,0x332d000
+00f95d48  ldr x8,[x8, #0xd38]
+00f95d4c  adrp x21,0x3360000
+00f95d50  ldr x20,[x0, #0x18]
+00f95d54  ldr x8,[x8]
+00f95d58  ldr w9,[x8, #0xe0]
+00f95d5c  ldr x21,[x21, #0x750]
+00f95d60  cbnz w9,0x00f95d6c
+00f95d64  mov x0,x8
+00f95d68  bl 0x00b0798c
+00f95d6c  mov w1,#0x1
+00f95d70  mov x0,x20
+00f95d74  mov x2,xzr
+00f95d78  bl 0x00e34224
+00f95d7c  ldr x8,[x21]
+00f95d80  mov x20,x0
+00f95d84  mov x0,x8
+00f95d88  bl 0x00b079a0
+00f95d8c  cbz x0,0x00f95dc8
+00f95d90  adrp x8,0x334c000
+00f95d94  ldr x8,[x8, #0x780]
+00f95d98  mov x1,x19
+00f95d9c  mov x3,xzr
+00f95da0  mov x21,x0
+00f95da4  ldr x2,[x8]
+00f95da8  bl 0x00e35bd0
+00f95dac  cbz x20,0x00f95dc8
+00f95db0  str x21,[x20, #0x38]!
+00f95db4  ldp x19,x30,[sp, #0x10]
+00f95db8  mov x0,x20
+00f95dbc  mov x1,x21
+00f95dc0  ldp x21,x20,[sp], #0x20
+00f95dc4  b 0x00b07850
+00f95dc8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f95dcc_SetGameNamePanelMono__RegisterCallBack.txt
+================================================================================
+Function: SetGameNamePanelMono$$RegisterCallBack @ 00f95dcc
+
+--- Calls OUT ---
+  -> BaseMono$$RegisterDataProccessCallBack @ 00e1a5c0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> Ali.OnProccessRequestFinish$$.ctor @ 00e110fc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GUIScreenBaseMono$$RegisterCallBack @ 00f21d5c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00f95dcc  stp x21,x20,[sp, #-0x20]!
+00f95dd0  stp x19,x30,[sp, #0x10]
+00f95dd4  adrp x20,0x3573000
+00f95dd8  adrp x21,0x3324000
+00f95ddc  ldrb w8,[x20, #0x4b3]
+00f95de0  ldr x21,[x21, #0xa08]
+00f95de4  mov x19,x0
+00f95de8  tbnz w8,#0x0,0x00f95e18
+00f95dec  adrp x0,0x335c000
+00f95df0  ldr x0,[x0, #0x918]
+00f95df4  bl 0x00b0789c
+00f95df8  adrp x0,0x336d000
+00f95dfc  ldr x0,[x0, #0xa40]
+00f95e00  bl 0x00b0789c
+00f95e04  adrp x0,0x3324000
+00f95e08  ldr x0,[x0, #0xa08]
+00f95e0c  bl 0x00b0789c
+00f95e10  mov w8,#0x1
+00f95e14  strb w8,[x20, #0x4b3]
+00f95e18  ldr x8,[x21]
+00f95e1c  ldr x8,[x8, #0xb8]
+00f95e20  ldr x0,[x8, #0x18]
+00f95e24  cbz x0,0x00f95e3c
+00f95e28  mov x1,x19
+00f95e2c  ldp x19,x30,[sp, #0x10]
+00f95e30  mov x2,xzr
+00f95e34  ldp x21,x20,[sp], #0x20
+00f95e38  b 0x01060dac
+00f95e3c  adrp x20,0x335c000
+00f95e40  ldr x20,[x20, #0x918]
+00f95e44  mov x0,x19
+00f95e48  mov x1,xzr
+00f95e4c  bl 0x00f21d5c
+00f95e50  ldr x0,[x20]
+00f95e54  bl 0x00b079a0
+00f95e58  cbz x0,0x00f95e94
+00f95e5c  adrp x8,0x336d000
+00f95e60  ldr x8,[x8, #0xa40]
+00f95e64  mov x1,x19
+00f95e68  mov x3,xzr
+00f95e6c  mov x20,x0
+00f95e70  ldr x2,[x8]
+00f95e74  bl 0x00e110fc
+00f95e78  mov x0,x19
+00f95e7c  ldp x19,x30,[sp, #0x10]
+00f95e80  mov w1,#0x7
+00f95e84  mov x2,x20
+00f95e88  mov x3,xzr
+00f95e8c  ldp x21,x20,[sp], #0x20
+00f95e90  b 0x00e1a5c0
+00f95e94  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00f95e98_SetGameNamePanelMono__ClickDoNameChange.txt
+================================================================================
+Function: SetGameNamePanelMono$$ClickDoNameChange @ 00f95e98
+
+--- Calls OUT ---
+  -> BaseMono$$TextTips @ 00e1b538
+  -> Ali$$Notify @ 00e039c4
+  -> SetgamenamepanelNode$$get_inp_name @ 00fcf008
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> UINode$$get_InputField @ 00dc495c
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UserInfo$$get_Name @ 00dd1988
+  -> SetGameNamePanelMono$$get_m_node @ 00f95bc8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> ProtocolGame_SendRequest$$SetNickName @ 00de0354
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.String$$Replace @ 01fe06d8
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> System.String$$IsNullOrEmpty @ 01fdf3a0
+  -> System.String$$Equals @ 01fde08c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+
+--- Listing ---
+00f95e98  str x22,[sp, #-0x30]!
+00f95e9c  stp x21,x20,[sp, #0x10]
+00f95ea0  stp x19,x30,[sp, #0x20]
+00f95ea4  adrp x21,0x3573000
+00f95ea8  adrp x22,0x3324000
+00f95eac  ldrb w8,[x21, #0x4b4]
+00f95eb0  ldr x22,[x22, #0xa08]
+00f95eb4  mov x20,x1
+00f95eb8  mov x19,x0
+00f95ebc  tbnz w8,#0x0,0x00f95f34
+00f95ec0  adrp x0,0x335f000
+00f95ec4  ldr x0,[x0, #0x20]
+00f95ec8  bl 0x00b0789c
+00f95ecc  adrp x0,0x335b000
+00f95ed0  ldr x0,[x0, #0x650]
+00f95ed4  bl 0x00b0789c
+00f95ed8  adrp x0,0x3332000
+00f95edc  ldr x0,[x0, #0x38]
+00f95ee0  bl 0x00b0789c
+00f95ee4  adrp x0,0x3370000
+00f95ee8  ldr x0,[x0, #0x778]
+00f95eec  bl 0x00b0789c
+00f95ef0  adrp x0,0x3324000
+00f95ef4  ldr x0,[x0, #0xa08]
+00f95ef8  bl 0x00b0789c
+00f95efc  adrp x0,0x3347000
+00f95f00  ldr x0,[x0, #0x410]
+00f95f04  bl 0x00b0789c
+00f95f08  adrp x0,0x3370000
+00f95f0c  ldr x0,[x0, #0xe68]
+00f95f10  bl 0x00b0789c
+00f95f14  adrp x0,0x3375000
+00f95f18  ldr x0,[x0, #0x998]
+00f95f1c  bl 0x00b0789c
+00f95f20  adrp x0,0x332c000
+00f95f24  ldr x0,[x0, #0x2c0]
+00f95f28  bl 0x00b0789c
+00f95f2c  mov w8,#0x1
+00f95f30  strb w8,[x21, #0x4b4]
+00f95f34  ldr x8,[x22]
+00f95f38  ldr x8,[x8, #0xb8]
+00f95f3c  ldr x0,[x8, #0x20]
+00f95f40  cbz x0,0x00f95f60
+00f95f44  mov x1,x19
+00f95f48  mov x2,x20
+00f95f4c  ldp x19,x30,[sp, #0x20]
+00f95f50  ldp x21,x20,[sp, #0x10]
+00f95f54  mov x3,xzr
+00f95f58  ldr x22,[sp], #0x30
+00f95f5c  b 0x0106125c
+00f95f60  mov x0,x19
+00f95f64  bl 0x00f95bc8
+00f95f68  cbz x0,0x00f96158
+00f95f6c  mov x1,xzr
+00f95f70  bl 0x00fcf008
+00f95f74  cbz x0,0x00f96158
+00f95f78  mov x1,xzr
+00f95f7c  bl 0x00dc495c
+00f95f80  cbz x0,0x00f96158
+00f95f84  ldr x0,[x0, #0x218]
+00f95f88  cbz x0,0x00f96158
+00f95f8c  adrp x8,0x3370000
+00f95f90  adrp x9,0x332c000
+00f95f94  ldr x8,[x8, #0xe68]
+00f95f98  ldr x9,[x9, #0x2c0]
+00f95f9c  mov x3,xzr
+00f95fa0  ldr x1,[x8]
+00f95fa4  ldr x2,[x9]
+00f95fa8  bl 0x01fe06d8
+00f95fac  mov x20,x19
+00f95fb0  str x0,[x20, #0xc8]!
+00f95fb4  mov x1,x0
+00f95fb8  mov x0,x20
+00f95fbc  bl 0x00b07850
+00f95fc0  ldr x0,[x20]
+00f95fc4  mov x1,xzr
+00f95fc8  bl 0x01fdf3a0
+00f95fcc  tbnz w0,#0x0,0x00f96010
+00f95fd0  adrp x8,0x3347000
+00f95fd4  ldr x8,[x8, #0x410]
+00f95fd8  ldr x21,[x20]
+00f95fdc  ldr x0,[x8]
+00f95fe0  bl 0x01e0894c
+00f95fe4  cbz x0,0x00f96158
+00f95fe8  ldr x0,[x0, #0x28]
+00f95fec  cbz x0,0x00f96158
+00f95ff0  mov x1,xzr
+00f95ff4  bl 0x00dd1988
+00f95ff8  cbz x21,0x00f96158
+00f95ffc  mov x1,x0
+00f96000  mov x0,x21
+00f96004  mov x2,xzr
+00f96008  bl 0x01fde08c
+00f9600c  tbz w0,#0x0,0x00f96088
+00f96010  adrp x8,0x335b000
+00f96014  ldr x8,[x8, #0x650]
+00f96018  ldr x20,[x8]
+00f9601c  ldr x8,[x20, #0x38]
+00f96020  ldr x0,[x8]
+00f96024  ldrb w8,[x0, #0x132]
+00f96028  tbnz w8,#0x0,0x00f96030
+00f9602c  bl 0x00b2ac40
+00f96030  ldr w8,[x0, #0xe0]
+00f96034  cbnz w8,0x00f9603c
+00f96038  bl 0x00b0798c
+00f9603c  ldr x8,[x20, #0x38]
+00f96040  ldr x0,[x8]
+00f96044  ldrb w8,[x0, #0x132]
+00f96048  tbnz w8,#0x0,0x00f96050
+00f9604c  bl 0x00b2ac40
+00f96050  ldr x8,[x0, #0xb8]
+00f96054  mov x0,x19
+00f96058  ldp x19,x30,[sp, #0x20]
+00f9605c  ldp x21,x20,[sp, #0x10]
+00f96060  ldr x6,[x8]
+00f96064  mov w1,#0x84a6
+00f96068  movk w1,#0x4c8, LSL #16
+00f9606c  mov w4,#0xffffffff
+00f96070  mov w2,wzr
+00f96074  mov x3,xzr
+00f96078  mov w5,wzr
+00f9607c  mov x7,xzr
+00f96080  ldr x22,[sp], #0x30
+00f96084  b 0x00e1b538
+00f96088  adrp x19,0x335f000
+00f9608c  ldr x19,[x19, #0x20]
+00f96090  adrp x21,0x3370000
+00f96094  adrp x22,0x3332000
+00f96098  ldr x0,[x19]
+00f9609c  ldr w8,[x0, #0xe0]
+00f960a0  ldr x21,[x21, #0x778]
+00f960a4  ldr x22,[x22, #0x38]
+00f960a8  cbnz w8,0x00f960b4
+00f960ac  bl 0x00b0798c
+00f960b0  ldr x0,[x19]
+00f960b4  ldr x8,[x0, #0xb8]
+00f960b8  ldr x0,[x21]
+00f960bc  mov w1,#0x1
+00f960c0  ldr x19,[x8, #0x10]
+00f960c4  bl 0x00b078f8
+00f960c8  mov x21,x0
+00f960cc  ldr x0,[x22]
+00f960d0  mov w8,#0x6915
+00f960d4  movk w8,#0x478, LSL #16
+00f960d8  add x1,sp,#0xc
+00f960dc  str w8,[sp, #0xc]
+00f960e0  bl 0x00b07994
+00f960e4  cbz x21,0x00f96158
+00f960e8  mov x22,x0
+00f960ec  cbz x0,0x00f96104
+00f960f0  ldr x8,[x21]
+00f960f4  mov x0,x22
+00f960f8  ldr x1,[x8, #0x40]
+00f960fc  bl 0x00b07990
+00f96100  cbz x0,0x00f96160
+00f96104  ldr w8,[x21, #0x18]
+00f96108  cbz w8,0x00f9615c
+00f9610c  mov x0,x21
+00f96110  str x22,[x0, #0x20]!
+00f96114  mov x1,x22
+00f96118  bl 0x00b07850
+00f9611c  cbz x19,0x00f96158
+00f96120  adrp x8,0x3375000
+00f96124  ldr x8,[x8, #0x998]
+00f96128  mov x0,x19
+00f9612c  mov x2,x21
+00f96130  mov x3,xzr
+00f96134  ldr x1,[x8]
+00f96138  bl 0x00e039c4
+00f9613c  ldr x0,[x20]
+00f96140  mov x1,xzr
+00f96144  bl 0x00de0354
+00f96148  ldp x19,x30,[sp, #0x20]
+00f9614c  ldp x21,x20,[sp, #0x10]
+00f96150  ldr x22,[sp], #0x30
+00f96154  ret
+00f96158  bl 0x00b079b0
+00f9615c  bl 0x00b079b8
+00f96160  bl 0x00b079d4
+00f96164  mov x1,xzr
+00f96168  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00f9616c_SetGameNamePanelMono__OnNameChangeBack.txt
+================================================================================
+Function: SetGameNamePanelMono$$OnNameChangeBack @ 00f9616c
+
+--- Calls OUT ---
+  -> Ali$$Notify @ 00e039c4
+  -> UserInfo$$set_Name @ 00dd1a00
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothEngine.GUIScreenManager$$GetScreenFromName @ 016737dc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+  -> LoginGateMono$$EnterGame @ 00f92d8c
+
+--- Calls IN ---
+
+--- Listing ---
+00f9616c  sub sp,sp,#0x40
+00f96170  stp x23,x22,[sp, #0x10]
+00f96174  stp x21,x20,[sp, #0x20]
+00f96178  stp x19,x30,[sp, #0x30]
+00f9617c  adrp x21,0x3573000
+00f96180  adrp x22,0x3324000
+00f96184  ldrb w8,[x21, #0x4b5]
+00f96188  ldr x22,[x22, #0xa08]
+00f9618c  mov x20,x1
+00f96190  mov x19,x0
+00f96194  tbnz w8,#0x0,0x00f9620c
+00f96198  adrp x0,0x335f000
+00f9619c  ldr x0,[x0, #0x20]
+00f961a0  bl 0x00b0789c
+00f961a4  adrp x0,0x337b000
+00f961a8  ldr x0,[x0, #0xb98]
+00f961ac  bl 0x00b0789c
+00f961b0  adrp x0,0x3332000
+00f961b4  ldr x0,[x0, #0x38]
+00f961b8  bl 0x00b0789c
+00f961bc  adrp x0,0x3364000
+00f961c0  ldr x0,[x0, #0x618]
+00f961c4  bl 0x00b0789c
+00f961c8  adrp x0,0x3370000
+00f961cc  ldr x0,[x0, #0x778]
+00f961d0  bl 0x00b0789c
+00f961d4  adrp x0,0x3324000
+00f961d8  ldr x0,[x0, #0xa08]
+00f961dc  bl 0x00b0789c
+00f961e0  adrp x0,0x3347000
+00f961e4  ldr x0,[x0, #0x410]
+00f961e8  bl 0x00b0789c
+00f961ec  adrp x0,0x3375000
+00f961f0  ldr x0,[x0, #0x998]
+00f961f4  bl 0x00b0789c
+00f961f8  adrp x0,0x3376000
+00f961fc  ldr x0,[x0, #0x728]
+00f96200  bl 0x00b0789c
+00f96204  mov w8,#0x1
+00f96208  strb w8,[x21, #0x4b5]
+00f9620c  ldr x8,[x22]
+00f96210  ldr x8,[x8, #0xb8]
+00f96214  ldr x0,[x8, #0x28]
+00f96218  cbz x0,0x00f9623c
+00f9621c  mov x1,x19
+00f96220  mov x2,x20
+00f96224  ldp x19,x30,[sp, #0x30]
+00f96228  ldp x21,x20,[sp, #0x20]
+00f9622c  ldp x23,x22,[sp, #0x10]
+00f96230  mov x3,xzr
+00f96234  add sp,sp,#0x40
+00f96238  b 0x0106125c
+00f9623c  adrp x8,0x3347000
+00f96240  ldr x8,[x8, #0x410]
+00f96244  ldr x0,[x8]
+00f96248  bl 0x01e0894c
+00f9624c  cbz x0,0x00f96390
+00f96250  ldr x0,[x0, #0x28]
+00f96254  cbz x0,0x00f96390
+00f96258  ldr x1,[x19, #0xc8]
+00f9625c  adrp x20,0x335f000
+00f96260  adrp x21,0x3370000
+00f96264  adrp x22,0x3332000
+00f96268  ldr x20,[x20, #0x20]
+00f9626c  ldr x21,[x21, #0x778]
+00f96270  ldr x22,[x22, #0x38]
+00f96274  mov x2,xzr
+00f96278  bl 0x00dd1a00
+00f9627c  ldr x0,[x20]
+00f96280  ldr w8,[x0, #0xe0]
+00f96284  cbnz w8,0x00f96290
+00f96288  bl 0x00b0798c
+00f9628c  ldr x0,[x20]
+00f96290  ldr x8,[x0, #0xb8]
+00f96294  ldr x0,[x21]
+00f96298  mov w1,#0x1
+00f9629c  ldr x20,[x8, #0x10]
+00f962a0  bl 0x00b078f8
+00f962a4  mov x21,x0
+00f962a8  ldr x0,[x22]
+00f962ac  mov w8,#0x6923
+00f962b0  movk w8,#0x478, LSL #16
+00f962b4  add x1,sp,#0xc
+00f962b8  str w8,[sp, #0xc]
+00f962bc  bl 0x00b07994
+00f962c0  cbz x21,0x00f96390
+00f962c4  mov x22,x0
+00f962c8  cbz x0,0x00f962e0
+00f962cc  ldr x8,[x21]
+00f962d0  mov x0,x22
+00f962d4  ldr x1,[x8, #0x40]
+00f962d8  bl 0x00b07990
+00f962dc  cbz x0,0x00f96398
+00f962e0  ldr w8,[x21, #0x18]
+00f962e4  cbz w8,0x00f96394
+00f962e8  mov x0,x21
+00f962ec  str x22,[x0, #0x20]!
+00f962f0  mov x1,x22
+00f962f4  bl 0x00b07850
+00f962f8  cbz x20,0x00f96390
+00f962fc  adrp x8,0x3375000
+00f96300  ldr x8,[x8, #0x998]
+00f96304  adrp x23,0x337b000
+00f96308  adrp x22,0x3376000
+00f9630c  mov x0,x20
+00f96310  ldr x1,[x8]
+00f96314  ldr x23,[x23, #0xb98]
+00f96318  ldr x22,[x22, #0x728]
+00f9631c  mov x2,x21
+00f96320  mov x3,xzr
+00f96324  bl 0x00e039c4
+00f96328  ldr x8,[x19]
+00f9632c  mov x0,x19
+00f96330  ldr x9,[x8, #0x458]
+00f96334  ldr x1,[x8, #0x460]
+00f96338  blr x9
+00f9633c  ldr x0,[x23]
+00f96340  ldr w8,[x0, #0xe0]
+00f96344  cbnz w8,0x00f9634c
+00f96348  bl 0x00b0798c
+00f9634c  ldr x0,[x22]
+00f96350  mov x1,xzr
+00f96354  bl 0x016737dc
+00f96358  cbz x0,0x00f96390
+00f9635c  adrp x8,0x3364000
+00f96360  ldr x8,[x8, #0x618]
+00f96364  ldr x9,[x0]
+00f96368  ldr x8,[x8]
+00f9636c  cmp x9,x8
+00f96370  b.ne 0x00f96390
+00f96374  mov x1,xzr
+00f96378  bl 0x00f92d8c
+00f9637c  ldp x19,x30,[sp, #0x30]
+00f96380  ldp x21,x20,[sp, #0x20]
+00f96384  ldp x23,x22,[sp, #0x10]
+00f96388  add sp,sp,#0x40
+00f9638c  ret
+00f96390  bl 0x00b079b0
+00f96394  bl 0x00b079b8
+00f96398  bl 0x00b079d4
+00f9639c  mov x1,xzr
+00f963a0  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00f963a4_SetGameNamePanelMono__.ctor.txt
+================================================================================
+Function: SetGameNamePanelMono$$.ctor @ 00f963a4
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$.ctor @ 00f1c130
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.SetGameNamePanelMonoWrap$$__CreateInstance @ 013c8a20
+
+--- Listing ---
+00f963a4  stp x21,x20,[sp, #-0x20]!
+00f963a8  stp x19,x30,[sp, #0x10]
+00f963ac  adrp x21,0x3573000
+00f963b0  adrp x20,0x3324000
+00f963b4  ldrb w8,[x21, #0x4b6]
+00f963b8  ldr x20,[x20, #0xa08]
+00f963bc  mov x19,x0
+00f963c0  tbnz w8,#0x0,0x00f963d8
+00f963c4  adrp x0,0x3324000
+00f963c8  ldr x0,[x0, #0xa08]
+00f963cc  bl 0x00b0789c
+00f963d0  mov w8,#0x1
+00f963d4  strb w8,[x21, #0x4b6]
+00f963d8  mov x0,x19
+00f963dc  mov x1,xzr
+00f963e0  bl 0x00f1c130
+00f963e4  ldr x8,[x20]
+00f963e8  ldr x8,[x8, #0xb8]
+00f963ec  ldr x0,[x8, #0x30]
+00f963f0  cbz x0,0x00f96408
+00f963f4  mov x1,x19
+00f963f8  ldp x19,x30,[sp, #0x10]
+00f963fc  mov x2,xzr
+00f96400  ldp x21,x20,[sp], #0x20
+00f96404  b 0x01060dac
+00f96408  ldp x19,x30,[sp, #0x10]
+00f9640c  ldp x21,x20,[sp], #0x20
+00f96410  ret
+
+
+================================================================================
+### FILE: 00f96414_SetGameNamePanelMono____xLuaBaseProxy_get_LayerType.txt
+================================================================================
+Function: SetGameNamePanelMono$$<>xLuaBaseProxy_get_LayerType @ 00f96414
+
+--- Calls OUT ---
+  -> AliothEngine.GUIScreen$$get_LayerType @ 016711a8
+
+--- Calls IN ---
+
+--- Listing ---
+00f96414  mov x1,xzr
+00f96418  b 0x016711a8
+
+
+================================================================================
+### FILE: 00f9641c_SetGameNamePanelMono____xLuaBaseProxy_RegisterCallBack.txt
+================================================================================
+Function: SetGameNamePanelMono$$<>xLuaBaseProxy_RegisterCallBack @ 00f9641c
+
+--- Calls OUT ---
+  -> GUIScreenBaseMono$$RegisterCallBack @ 00f21d5c
+
+--- Calls IN ---
+
+--- Listing ---
+00f9641c  mov x1,xzr
+00f96420  b 0x00f21d5c
+
+
+================================================================================
+### FILE: 00fcefbc_SetgamenamepanelNode__get_mask.txt
+================================================================================
+Function: SetgamenamepanelNode$$get_mask @ 00fcefbc
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00fcefbc  stp x21,x20,[sp, #-0x20]!
+00fcefc0  stp x19,x30,[sp, #0x10]
+00fcefc4  adrp x20,0x3573000
+00fcefc8  adrp x21,0x337b000
+00fcefcc  ldrb w8,[x20, #0xeab]
+00fcefd0  ldr x21,[x21, #0x2b8]
+00fcefd4  mov x19,x0
+00fcefd8  tbnz w8,#0x0,0x00fceff0
+00fcefdc  adrp x0,0x337b000
+00fcefe0  ldr x0,[x0, #0x2b8]
+00fcefe4  bl 0x00b0789c
+00fcefe8  mov w8,#0x1
+00fcefec  strb w8,[x20, #0xeab]
+00fceff0  ldr x1,[x21]
+00fceff4  mov x0,x19
+00fceff8  ldp x19,x30,[sp, #0x10]
+00fceffc  mov x2,xzr
+00fcf000  ldp x21,x20,[sp], #0x20
+00fcf004  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcf008_SetgamenamepanelNode__get_inp_name.txt
+================================================================================
+Function: SetgamenamepanelNode$$get_inp_name @ 00fcf008
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- SetGameNamePanelMono$$ClickDoNameChange @ 00f95e98
+
+--- Listing ---
+00fcf008  stp x21,x20,[sp, #-0x20]!
+00fcf00c  stp x19,x30,[sp, #0x10]
+00fcf010  adrp x20,0x3573000
+00fcf014  adrp x21,0x3382000
+00fcf018  ldrb w8,[x20, #0xeac]
+00fcf01c  ldr x21,[x21, #0x1d0]
+00fcf020  mov x19,x0
+00fcf024  tbnz w8,#0x0,0x00fcf03c
+00fcf028  adrp x0,0x3382000
+00fcf02c  ldr x0,[x0, #0x1d0]
+00fcf030  bl 0x00b0789c
+00fcf034  mov w8,#0x1
+00fcf038  strb w8,[x20, #0xeac]
+00fcf03c  ldr x1,[x21]
+00fcf040  mov x0,x19
+00fcf044  ldp x19,x30,[sp, #0x10]
+00fcf048  mov x2,xzr
+00fcf04c  ldp x21,x20,[sp], #0x20
+00fcf050  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcf054_SetgamenamepanelNode__get_btn_submit.txt
+================================================================================
+Function: SetgamenamepanelNode$$get_btn_submit @ 00fcf054
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- SetGameNamePanelMono$$Start @ 00f95cb0
+
+--- Listing ---
+00fcf054  stp x21,x20,[sp, #-0x20]!
+00fcf058  stp x19,x30,[sp, #0x10]
+00fcf05c  adrp x20,0x3573000
+00fcf060  adrp x21,0x3328000
+00fcf064  ldrb w8,[x20, #0xead]
+00fcf068  ldr x21,[x21, #0xec0]
+00fcf06c  mov x19,x0
+00fcf070  tbnz w8,#0x0,0x00fcf088
+00fcf074  adrp x0,0x3328000
+00fcf078  ldr x0,[x0, #0xec0]
+00fcf07c  bl 0x00b0789c
+00fcf080  mov w8,#0x1
+00fcf084  strb w8,[x20, #0xead]
+00fcf088  ldr x1,[x21]
+00fcf08c  mov x0,x19
+00fcf090  ldp x19,x30,[sp, #0x10]
+00fcf094  mov x2,xzr
+00fcf098  ldp x21,x20,[sp], #0x20
+00fcf09c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcf0a0_SetgamenamepanelNode__.ctor.txt
+================================================================================
+Function: SetgamenamepanelNode$$.ctor @ 00fcf0a0
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fcf0a0  mov x1,xzr
+00fcf0a4  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 00fcf0a8_SettingheaditemNode__get_btn_choose.txt
+================================================================================
+Function: SettingheaditemNode$$get_btn_choose @ 00fcf0a8
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- UserInfoPanelMono$$AddHeadEnd @ 00f80448
+
+--- Listing ---
+00fcf0a8  stp x21,x20,[sp, #-0x20]!
+00fcf0ac  stp x19,x30,[sp, #0x10]
+00fcf0b0  adrp x20,0x3573000
+00fcf0b4  adrp x21,0x3312000
+00fcf0b8  ldrb w8,[x20, #0xeae]
+00fcf0bc  ldr x21,[x21, #0x5c8]
+00fcf0c0  mov x19,x0
+00fcf0c4  tbnz w8,#0x0,0x00fcf0dc
+00fcf0c8  adrp x0,0x3312000
+00fcf0cc  ldr x0,[x0, #0x5c8]
+00fcf0d0  bl 0x00b0789c
+00fcf0d4  mov w8,#0x1
+00fcf0d8  strb w8,[x20, #0xeae]
+00fcf0dc  ldr x1,[x21]
+00fcf0e0  mov x0,x19
+00fcf0e4  ldp x19,x30,[sp, #0x10]
+00fcf0e8  mov x2,xzr
+00fcf0ec  ldp x21,x20,[sp], #0x20
+00fcf0f0  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcf0f4_SettingheaditemNode__get_spr_head.txt
+================================================================================
+Function: SettingheaditemNode$$get_spr_head @ 00fcf0f4
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- UserInfoPanelMono$$AddHeadEnd @ 00f80448
+
+--- Listing ---
+00fcf0f4  stp x21,x20,[sp, #-0x20]!
+00fcf0f8  stp x19,x30,[sp, #0x10]
+00fcf0fc  adrp x20,0x3573000
+00fcf100  adrp x21,0x3327000
+00fcf104  ldrb w8,[x20, #0xeaf]
+00fcf108  ldr x21,[x21, #0xa90]
+00fcf10c  mov x19,x0
+00fcf110  tbnz w8,#0x0,0x00fcf128
+00fcf114  adrp x0,0x3327000
+00fcf118  ldr x0,[x0, #0xa90]
+00fcf11c  bl 0x00b0789c
+00fcf120  mov w8,#0x1
+00fcf124  strb w8,[x20, #0xeaf]
+00fcf128  ldr x1,[x21]
+00fcf12c  mov x0,x19
+00fcf130  ldp x19,x30,[sp, #0x10]
+00fcf134  mov x2,xzr
+00fcf138  ldp x21,x20,[sp], #0x20
+00fcf13c  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcf140_SettingheaditemNode__get_obj_useed.txt
+================================================================================
+Function: SettingheaditemNode$$get_obj_useed @ 00fcf140
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- UserInfoPanelMono$$AddHeadEnd @ 00f80448
+  <- UserInfoPanelMono$$SetHeadBack @ 00f81508
+
+--- Listing ---
+00fcf140  stp x21,x20,[sp, #-0x20]!
+00fcf144  stp x19,x30,[sp, #0x10]
+00fcf148  adrp x20,0x3573000
+00fcf14c  adrp x21,0x3327000
+00fcf150  ldrb w8,[x20, #0xeb0]
+00fcf154  ldr x21,[x21, #0x4e0]
+00fcf158  mov x19,x0
+00fcf15c  tbnz w8,#0x0,0x00fcf174
+00fcf160  adrp x0,0x3327000
+00fcf164  ldr x0,[x0, #0x4e0]
+00fcf168  bl 0x00b0789c
+00fcf16c  mov w8,#0x1
+00fcf170  strb w8,[x20, #0xeb0]
+00fcf174  ldr x1,[x21]
+00fcf178  mov x0,x19
+00fcf17c  ldp x19,x30,[sp, #0x10]
+00fcf180  mov x2,xzr
+00fcf184  ldp x21,x20,[sp], #0x20
+00fcf188  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcf18c_SettingheaditemNode__get_chooseShow.txt
+================================================================================
+Function: SettingheaditemNode$$get_chooseShow @ 00fcf18c
+
+--- Calls OUT ---
+  -> BaseNode$$GetUINode @ 00dc06f8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- UserInfoPanelMono$$AddHeadEnd @ 00f80448
+  <- UserInfoPanelMono$$OnClickHead @ 00f808f0
+
+--- Listing ---
+00fcf18c  stp x21,x20,[sp, #-0x20]!
+00fcf190  stp x19,x30,[sp, #0x10]
+00fcf194  adrp x20,0x3573000
+00fcf198  adrp x21,0x333f000
+00fcf19c  ldrb w8,[x20, #0xeb1]
+00fcf1a0  ldr x21,[x21, #0xeb0]
+00fcf1a4  mov x19,x0
+00fcf1a8  tbnz w8,#0x0,0x00fcf1c0
+00fcf1ac  adrp x0,0x333f000
+00fcf1b0  ldr x0,[x0, #0xeb0]
+00fcf1b4  bl 0x00b0789c
+00fcf1b8  mov w8,#0x1
+00fcf1bc  strb w8,[x20, #0xeb1]
+00fcf1c0  ldr x1,[x21]
+00fcf1c4  mov x0,x19
+00fcf1c8  ldp x19,x30,[sp, #0x10]
+00fcf1cc  mov x2,xzr
+00fcf1d0  ldp x21,x20,[sp], #0x20
+00fcf1d4  b 0x00dc06f8
+
+
+================================================================================
+### FILE: 00fcf1d8_SettingheaditemNode__.ctor.txt
+================================================================================
+Function: SettingheaditemNode$$.ctor @ 00fcf1d8
+
+--- Calls OUT ---
+  -> BaseNode$$.ctor @ 00dc0e00
+
+--- Calls IN ---
+
+--- Listing ---
+00fcf1d8  mov x1,xzr
+00fcf1dc  b 0x00dc0e00
+
+
+================================================================================
+### FILE: 016dbad8_ServerConst__GetURL.txt
+================================================================================
+Function: ServerConst$$GetURL @ 016dbad8
+
+--- Calls OUT ---
+  -> System.String$$op_Equality @ 01fd05b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp19 @ 01061abc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> ServerConst$$GetURLByRemote @ 016dbbf4
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.SingletonScriptableObject<object>$$get_Instance @ 01e09560
+
+--- Calls IN ---
+  <- ProtocolGame_HttpRequest$$WorldCup_Fan @ 00ddcd18
+  <- ProtocolGame_HttpRequest$$PostSteamVerify @ 00ddd3c4
+  <- ProtocolGame_HttpRequest$$POST_GetMailDescAll @ 00dda4c0
+  <- ProtocolGame_HttpRequest$$V3_POST_Anon @ 00dd6180
+  <- ProtocolGame_HttpRequest$$WorldCup_Teams @ 00ddcef8
+  <- LoginGateMono$$Start @ 00f90038
+  <- ProtocolGame_HttpRequest$$GetBindRealNameURL @ 00ddd964
+  <- ProtocolGame_HttpRequest$$POST_API_FCM @ 00ddba00
+  <- ProtocolGame_HttpRequest$$QuestionSubmit @ 00dd8818
+  <- ProtocolGame_HttpRequest$$V3_POST_Order_Create @ 00ddc2dc
+  <- ProtocolGame_HttpRequest$$GetUserinfoURL @ 00ddb8bc
+  <- ProtocolGame_HttpRequest$$GetNoticeURL @ 00dda8dc
+  <- ProtocolGame_HttpRequest$$PostOneStoreVerify @ 00dda0ac
+  <- ProtocolGame_HttpRequest$$V3_POST_Order_Create_Steam @ 00ddd064
+  <- ProtocolGame_HttpRequest$$POST_QuickRealNameAge @ 00ddbbec
+  <- ProtocolGame_HttpRequest$$GetTermURL @ 00ddaf7c
+  <- ProtocolGame_HttpRequest$$GetPrivatePolicyURL @ 00ddb060
+  <- Ali$$CheckShowReview @ 00e0f0d8
+  <- ProtocolGame_HttpRequest$$GetRegisterURL @ 00ddac14
+  <- ProtocolGame_HttpRequest$$GetChangePwdURL @ 00ddb228
+  <- ProtocolGame_HttpRequest$$V3_POST_Gift @ 00ddc70c
+  <- ProtocolGame_HttpRequest$$POST_API_SECTION_RANK @ 00dda728
+  <- ProtocolGame_HttpRequest$$WorldCup_Mine @ 00ddcb74
+  <- ProtocolGame_HttpRequest$$PostGooglePlayVerify @ 00dd9c98
+  <- GlobalUIManager$$OnClickPackUpdate @ 00f1e63c
+  <- XLua.CSObjectWrap.ServerConstWrap$$_m_GetURL_xlua_st_ @ 013c7818
+  <- ProtocolGame_HttpRequest$$V4_POST_Login @ 00dd5b48
+  <- ProtocolGame_HttpRequest$$GetBindingURL @ 00ddb610
+  <- ProtocolGame_HttpRequest$$PostSaveProp @ 00ddd714
+  <- ProtocolGame_HttpRequest$$V3_POST_AllInOne @ 00ddc5d0
+  <- ProtocolGame_HttpRequest$$POST_Binding @ 00ddc964
+  <- ProtocolGame_HttpRequest$$GetResetPwdURL @ 00ddb41c
+  <- ProtocolGame_HttpRequest$$PostApplePayVerify @ 00dd9118
+  <- ProtocolGame_HttpRequest$$GetRefundURL @ 00ddb144
+  <- ReviewPanelMono$$OnClickOK @ 0100dbe8
+
+--- Listing ---
+016dbad8  stp x21,x20,[sp, #-0x20]!
+016dbadc  stp x19,x30,[sp, #0x10]
+016dbae0  adrp x20,0x3577000
+016dbae4  adrp x21,0x333d000
+016dbae8  ldrb w8,[x20, #0xd87]
+016dbaec  ldr x21,[x21, #0x7d8]
+016dbaf0  mov x19,x0
+016dbaf4  tbnz w8,#0x0,0x016dbb48
+016dbaf8  adrp x0,0x333d000
+016dbafc  ldr x0,[x0, #0x7d8]
+016dbb00  bl 0x00b0789c
+016dbb04  adrp x0,0x333f000
+016dbb08  ldr x0,[x0, #0x50]
+016dbb0c  bl 0x00b0789c
+016dbb10  adrp x0,0x334e000
+016dbb14  ldr x0,[x0, #0xc88]
+016dbb18  bl 0x00b0789c
+016dbb1c  adrp x0,0x3378000
+016dbb20  ldr x0,[x0, #0xc90]
+016dbb24  bl 0x00b0789c
+016dbb28  adrp x0,0x334e000
+016dbb2c  ldr x0,[x0, #0x328]
+016dbb30  bl 0x00b0789c
+016dbb34  adrp x0,0x3344000
+016dbb38  ldr x0,[x0, #0xc00]
+016dbb3c  bl 0x00b0789c
+016dbb40  mov w8,#0x1
+016dbb44  strb w8,[x20, #0xd87]
+016dbb48  ldr x8,[x21]
+016dbb4c  ldr x8,[x8, #0xb8]
+016dbb50  ldr x0,[x8]
+016dbb54  cbz x0,0x016dbb6c
+016dbb58  mov x1,x19
+016dbb5c  ldp x19,x30,[sp, #0x10]
+016dbb60  mov x2,xzr
+016dbb64  ldp x21,x20,[sp], #0x20
+016dbb68  b 0x01061abc
+016dbb6c  adrp x8,0x3378000
+016dbb70  ldr x8,[x8, #0xc90]
+016dbb74  mov x0,x19
+016dbb78  mov x2,xzr
+016dbb7c  ldr x1,[x8]
+016dbb80  bl 0x01fd05b0
+016dbb84  tbz w0,#0x0,0x016dbbbc
+016dbb88  adrp x8,0x333f000
+016dbb8c  ldr x8,[x8, #0x50]
+016dbb90  ldr x0,[x8]
+016dbb94  bl 0x01e09560
+016dbb98  cbz x0,0x016dbbf0
+016dbb9c  ldr w8,[x0, #0x1c]
+016dbba0  cmp w8,#0x5
+016dbba4  b.eq 0x016dbbcc
+016dbba8  cmp w8,#0x4
+016dbbac  b.ne 0x016dbbd8
+016dbbb0  adrp x8,0x334e000
+016dbbb4  ldr x8,[x8, #0x328]
+016dbbb8  b 0x016dbbe0
+016dbbbc  mov x0,x19
+016dbbc0  ldp x19,x30,[sp, #0x10]
+016dbbc4  ldp x21,x20,[sp], #0x20
+016dbbc8  b 0x016dbbf4
+016dbbcc  adrp x8,0x334e000
+016dbbd0  ldr x8,[x8, #0xc88]
+016dbbd4  b 0x016dbbe0
+016dbbd8  adrp x8,0x3344000
+016dbbdc  ldr x8,[x8, #0xc00]
+016dbbe0  ldr x0,[x8]
+016dbbe4  ldp x19,x30,[sp, #0x10]
+016dbbe8  ldp x21,x20,[sp], #0x20
+016dbbec  ret
+016dbbf0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dbbf4_ServerConst__GetURLByRemote.txt
+================================================================================
+Function: ServerConst$$GetURLByRemote @ 016dbbf4
+
+--- Calls OUT ---
+  -> GamePlayerInfomation$$get_ResAllin1 @ 00e36988
+  -> AliothEngine.Singleton<object>$$get_Instance @ 01e09a6c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp19 @ 01061abc
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.Dictionary<object,-object>$$TryGetValue @ 0196fd30
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- ServerConst$$GetURL @ 016dbad8
+  <- XLua.CSObjectWrap.ServerConstWrap$$_m_GetURLByRemote_xlua_st_ @ 013c7934
+
+--- Listing ---
+016dbbf4  sub sp,sp,#0x30
+016dbbf8  stp x21,x20,[sp, #0x10]
+016dbbfc  stp x19,x30,[sp, #0x20]
+016dbc00  adrp x21,0x3577000
+016dbc04  adrp x20,0x333d000
+016dbc08  ldrb w8,[x21, #0xd88]
+016dbc0c  ldr x20,[x20, #0x7d8]
+016dbc10  mov x19,x0
+016dbc14  tbnz w8,#0x0,0x016dbc44
+016dbc18  adrp x0,0x3381000
+016dbc1c  ldr x0,[x0, #0x520]
+016dbc20  bl 0x00b0789c
+016dbc24  adrp x0,0x333d000
+016dbc28  ldr x0,[x0, #0x7d8]
+016dbc2c  bl 0x00b0789c
+016dbc30  adrp x0,0x332c000
+016dbc34  ldr x0,[x0, #0x2a0]
+016dbc38  bl 0x00b0789c
+016dbc3c  mov w8,#0x1
+016dbc40  strb w8,[x21, #0xd88]
+016dbc44  ldr x8,[x20]
+016dbc48  str xzr,[sp, #0x8]
+016dbc4c  ldr x8,[x8, #0xb8]
+016dbc50  ldr x0,[x8, #0x8]
+016dbc54  cbz x0,0x016dbc68
+016dbc58  mov x1,x19
+016dbc5c  mov x2,xzr
+016dbc60  bl 0x01061abc
+016dbc64  b 0x016dbccc
+016dbc68  adrp x20,0x332c000
+016dbc6c  ldr x20,[x20, #0x2a0]
+016dbc70  ldr x0,[x20]
+016dbc74  bl 0x01e09a6c
+016dbc78  cbz x0,0x016dbcdc
+016dbc7c  mov x1,xzr
+016dbc80  bl 0x00e36988
+016dbc84  cbz x0,0x016dbccc
+016dbc88  ldr x0,[x20]
+016dbc8c  bl 0x01e09a6c
+016dbc90  cbz x0,0x016dbcdc
+016dbc94  mov x1,xzr
+016dbc98  bl 0x00e36988
+016dbc9c  cbz x0,0x016dbcdc
+016dbca0  ldr x0,[x0, #0x48]
+016dbca4  cbz x0,0x016dbcdc
+016dbca8  adrp x8,0x3381000
+016dbcac  ldr x8,[x8, #0x520]
+016dbcb0  add x2,sp,#0x8
+016dbcb4  mov x1,x19
+016dbcb8  ldr x3,[x8]
+016dbcbc  bl 0x0196fd30
+016dbcc0  ldr x8,[sp, #0x8]
+016dbcc4  tst w0,#0x1
+016dbcc8  csel x0,x8,xzr,ne
+016dbccc  ldp x19,x30,[sp, #0x20]
+016dbcd0  ldp x21,x20,[sp, #0x10]
+016dbcd4  add sp,sp,#0x30
+016dbcd8  ret
+016dbcdc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 03799058_sendfile.txt
+================================================================================
+Function: sendfile @ 03799058
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- sendfile @ 008d3ad0
+
+--- Listing ---
+03799058  ?? ??
+
+
+================================================================================
+### FILE: 03799068_sem_getvalue.txt
+================================================================================
+Function: sem_getvalue @ 03799068
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- sem_getvalue @ 008d3b00
+
+--- Listing ---
+03799068  ?? ??
+
+
+================================================================================
+### FILE: 03799108_select.txt
+================================================================================
+Function: select @ 03799108
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- select @ 008d3d90
+
+--- Listing ---
+03799108  ?? ??
+
+
+================================================================================
+### FILE: 037991b8_send.txt
+================================================================================
+Function: send @ 037991b8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- send @ 008d4070
+
+--- Listing ---
+037991b8  ?? ??
+
+
+================================================================================
+### FILE: 03799358_sem_post.txt
+================================================================================
+Function: sem_post @ 03799358
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- sem_post @ 008d46c0
+
+--- Listing ---
+03799358  ?? ??
+
+
+================================================================================
+### FILE: 03799518_setlocale.txt
+================================================================================
+Function: setlocale @ 03799518
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- setlocale @ 008d4de0
+
+--- Listing ---
+03799518  ?? ??
+
+
+================================================================================
+### FILE: 03799560_setsockopt.txt
+================================================================================
+Function: setsockopt @ 03799560
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- setsockopt @ 008d4ea0
+
+--- Listing ---
+03799560  ?? ??
+
+
+================================================================================
+### FILE: 037995c8_sendmsg.txt
+================================================================================
+Function: sendmsg @ 037995c8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- sendmsg @ 008d50b0
+
+--- Listing ---
+037995c8  ?? ??
+
+
+================================================================================
+### FILE: 03799680_sem_timedwait.txt
+================================================================================
+Function: sem_timedwait @ 03799680
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- sem_timedwait @ 008d5430
+
+--- Listing ---
+03799680  ?? ??
+
+
+================================================================================
+### FILE: 037996e0_sem_init.txt
+================================================================================
+Function: sem_init @ 037996e0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- sem_init @ 008d5540
+
+--- Listing ---
+037996e0  ?? ??
+
+
+================================================================================
+### FILE: 03799838_sem_wait.txt
+================================================================================
+Function: sem_wait @ 03799838
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- sem_wait @ 008d59f0
+
+--- Listing ---
+03799838  ?? ??
+
+
+================================================================================
+### FILE: 03799840_setjmp.txt
+================================================================================
+Function: setjmp @ 03799840
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- setjmp @ 008d5a00
+
+--- Listing ---
+03799840  ?? ??
+
+
+================================================================================
+### FILE: 03799898_setenv.txt
+================================================================================
+Function: setenv @ 03799898
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- setenv @ 008d5ad0
+
+--- Listing ---
+03799898  ?? ??
+
+

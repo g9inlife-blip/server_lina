@@ -1,0 +1,1287 @@
+================================================================================
+### FILE: 00e38b6c_HttpPingManager__add_OnGetBestCDNDel.txt
+================================================================================
+Function: HttpPingManager$$add_OnGetBestCDNDel @ 00e38b6c
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HttpPingManagerWrap$$_e_OnGetBestCDNDel @ 012cb568
+
+--- Listing ---
+00e38b6c  str x24,[sp, #-0x40]!
+00e38b70  stp x23,x22,[sp, #0x10]
+00e38b74  stp x21,x20,[sp, #0x20]
+00e38b78  stp x19,x30,[sp, #0x30]
+00e38b7c  adrp x21,0x3572000
+00e38b80  adrp x22,0x3327000
+00e38b84  ldrb w8,[x21, #0x7e9]
+00e38b88  ldr x22,[x22, #0x258]
+00e38b8c  mov x19,x1
+00e38b90  mov x20,x0
+00e38b94  tbnz w8,#0x0,0x00e38bb8
+00e38b98  adrp x0,0x331a000
+00e38b9c  ldr x0,[x0, #0xb68]
+00e38ba0  bl 0x00b0789c
+00e38ba4  adrp x0,0x3327000
+00e38ba8  ldr x0,[x0, #0x258]
+00e38bac  bl 0x00b0789c
+00e38bb0  mov w8,#0x1
+00e38bb4  strb w8,[x21, #0x7e9]
+00e38bb8  ldr x8,[x22]
+00e38bbc  ldr x8,[x8, #0xb8]
+00e38bc0  ldr x0,[x8]
+00e38bc4  cbz x0,0x00e38be8
+00e38bc8  mov x1,x20
+00e38bcc  mov x2,x19
+00e38bd0  ldp x19,x30,[sp, #0x30]
+00e38bd4  ldp x21,x20,[sp, #0x20]
+00e38bd8  ldp x23,x22,[sp, #0x10]
+00e38bdc  mov x3,xzr
+00e38be0  ldr x24,[sp], #0x40
+00e38be4  b 0x0106125c
+00e38be8  adrp x24,0x331a000
+00e38bec  ldr x21,[x20, #0x30]!
+00e38bf0  ldr x24,[x24, #0xb68]
+00e38bf4  mov x0,x21
+00e38bf8  mov x1,x19
+00e38bfc  mov x2,xzr
+00e38c00  bl 0x02197810
+00e38c04  cbz x0,0x00e38c24
+00e38c08  ldr x23,[x24]
+00e38c0c  mov x22,x0
+00e38c10  mov x1,x23
+00e38c14  bl 0x00b07990
+00e38c18  mov x1,x0
+00e38c1c  cbnz x0,0x00e38c28
+00e38c20  b 0x00e38c54
+00e38c24  mov x1,xzr
+00e38c28  mov x0,x20
+00e38c2c  mov x2,x21
+00e38c30  bl 0x00ae526c
+00e38c34  cmp x21,x0
+00e38c38  mov x21,x0
+00e38c3c  b.ne 0x00e38bf4
+00e38c40  ldp x19,x30,[sp, #0x30]
+00e38c44  ldp x21,x20,[sp, #0x20]
+00e38c48  ldp x23,x22,[sp, #0x10]
+00e38c4c  ldr x24,[sp], #0x40
+00e38c50  ret
+00e38c54  mov x0,x22
+00e38c58  mov x1,x23
+00e38c5c  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00e38c60_HttpPingManager__remove_OnGetBestCDNDel.txt
+================================================================================
+Function: HttpPingManager$$remove_OnGetBestCDNDel @ 00e38c60
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HttpPingManagerWrap$$_e_OnGetBestCDNDel @ 012cb568
+
+--- Listing ---
+00e38c60  str x24,[sp, #-0x40]!
+00e38c64  stp x23,x22,[sp, #0x10]
+00e38c68  stp x21,x20,[sp, #0x20]
+00e38c6c  stp x19,x30,[sp, #0x30]
+00e38c70  adrp x21,0x3572000
+00e38c74  adrp x22,0x3327000
+00e38c78  ldrb w8,[x21, #0x7ea]
+00e38c7c  ldr x22,[x22, #0x258]
+00e38c80  mov x19,x1
+00e38c84  mov x20,x0
+00e38c88  tbnz w8,#0x0,0x00e38cac
+00e38c8c  adrp x0,0x331a000
+00e38c90  ldr x0,[x0, #0xb68]
+00e38c94  bl 0x00b0789c
+00e38c98  adrp x0,0x3327000
+00e38c9c  ldr x0,[x0, #0x258]
+00e38ca0  bl 0x00b0789c
+00e38ca4  mov w8,#0x1
+00e38ca8  strb w8,[x21, #0x7ea]
+00e38cac  ldr x8,[x22]
+00e38cb0  ldr x8,[x8, #0xb8]
+00e38cb4  ldr x0,[x8, #0x8]
+00e38cb8  cbz x0,0x00e38cdc
+00e38cbc  mov x1,x20
+00e38cc0  mov x2,x19
+00e38cc4  ldp x19,x30,[sp, #0x30]
+00e38cc8  ldp x21,x20,[sp, #0x20]
+00e38ccc  ldp x23,x22,[sp, #0x10]
+00e38cd0  mov x3,xzr
+00e38cd4  ldr x24,[sp], #0x40
+00e38cd8  b 0x0106125c
+00e38cdc  adrp x24,0x331a000
+00e38ce0  ldr x21,[x20, #0x30]!
+00e38ce4  ldr x24,[x24, #0xb68]
+00e38ce8  mov x0,x21
+00e38cec  mov x1,x19
+00e38cf0  mov x2,xzr
+00e38cf4  bl 0x02197a1c
+00e38cf8  cbz x0,0x00e38d18
+00e38cfc  ldr x23,[x24]
+00e38d00  mov x22,x0
+00e38d04  mov x1,x23
+00e38d08  bl 0x00b07990
+00e38d0c  mov x1,x0
+00e38d10  cbnz x0,0x00e38d1c
+00e38d14  b 0x00e38d48
+00e38d18  mov x1,xzr
+00e38d1c  mov x0,x20
+00e38d20  mov x2,x21
+00e38d24  bl 0x00ae526c
+00e38d28  cmp x21,x0
+00e38d2c  mov x21,x0
+00e38d30  b.ne 0x00e38ce8
+00e38d34  ldp x19,x30,[sp, #0x30]
+00e38d38  ldp x21,x20,[sp, #0x20]
+00e38d3c  ldp x23,x22,[sp, #0x10]
+00e38d40  ldr x24,[sp], #0x40
+00e38d44  ret
+00e38d48  mov x0,x22
+00e38d4c  mov x1,x23
+00e38d50  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 00e38d54_HttpPingManager__get_isGetBestCDN.txt
+================================================================================
+Function: HttpPingManager$$get_isGetBestCDN @ 00e38d54
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HttpPingManagerWrap$$_g_get_isGetBestCDN @ 012ca9e4
+  <- HttpPingManager.<RequestTimeout>d__15$$MoveNext @ 00e398f8
+  <- HttpPingManager$$OnPingDone @ 00e3901c
+  <- AliothEngine.GameUpdateService.<GetBestPingServer>d__73$$MoveNext @ 016825ac
+
+--- Listing ---
+00e38d54  stp x21,x20,[sp, #-0x20]!
+00e38d58  stp x19,x30,[sp, #0x10]
+00e38d5c  adrp x20,0x3572000
+00e38d60  adrp x21,0x3327000
+00e38d64  ldrb w8,[x20, #0x7eb]
+00e38d68  ldr x21,[x21, #0x258]
+00e38d6c  mov x19,x0
+00e38d70  tbnz w8,#0x0,0x00e38d88
+00e38d74  adrp x0,0x3327000
+00e38d78  ldr x0,[x0, #0x258]
+00e38d7c  bl 0x00b0789c
+00e38d80  mov w8,#0x1
+00e38d84  strb w8,[x20, #0x7eb]
+00e38d88  ldr x8,[x21]
+00e38d8c  ldr x8,[x8, #0xb8]
+00e38d90  ldr x0,[x8, #0x10]
+00e38d94  cbz x0,0x00e38dac
+00e38d98  mov x1,x19
+00e38d9c  ldp x19,x30,[sp, #0x10]
+00e38da0  mov x2,xzr
+00e38da4  ldp x21,x20,[sp], #0x20
+00e38da8  b 0x01060aac
+00e38dac  ldr x8,[x19, #0x38]
+00e38db0  ldp x19,x30,[sp, #0x10]
+00e38db4  cmp x8,#0x0
+00e38db8  cset w0,ne
+00e38dbc  ldp x21,x20,[sp], #0x20
+00e38dc0  ret
+
+
+================================================================================
+### FILE: 00e38dc4_HttpPingManager__get_isFinish.txt
+================================================================================
+Function: HttpPingManager$$get_isFinish @ 00e38dc4
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HttpPingManagerWrap$$_g_get_isFinish @ 012cab98
+  <- HttpPingManager$$OnPingDone @ 00e3901c
+  <- AliothEngine.GameUpdateService.<GetBestPingServer>d__73$$MoveNext @ 016825ac
+
+--- Listing ---
+00e38dc4  stp x21,x20,[sp, #-0x20]!
+00e38dc8  stp x19,x30,[sp, #0x10]
+00e38dcc  adrp x20,0x3572000
+00e38dd0  adrp x21,0x3327000
+00e38dd4  ldrb w8,[x20, #0x7ec]
+00e38dd8  ldr x21,[x21, #0x258]
+00e38ddc  mov x19,x0
+00e38de0  tbnz w8,#0x0,0x00e38df8
+00e38de4  adrp x0,0x3327000
+00e38de8  ldr x0,[x0, #0x258]
+00e38dec  bl 0x00b0789c
+00e38df0  mov w8,#0x1
+00e38df4  strb w8,[x20, #0x7ec]
+00e38df8  ldr x8,[x21]
+00e38dfc  ldr x8,[x8, #0xb8]
+00e38e00  ldr x0,[x8, #0x18]
+00e38e04  cbz x0,0x00e38e1c
+00e38e08  mov x1,x19
+00e38e0c  ldp x19,x30,[sp, #0x10]
+00e38e10  mov x2,xzr
+00e38e14  ldp x21,x20,[sp], #0x20
+00e38e18  b 0x01060aac
+00e38e1c  ldrb w0,[x19, #0x28]
+00e38e20  ldp x19,x30,[sp, #0x10]
+00e38e24  ldp x21,x20,[sp], #0x20
+00e38e28  ret
+
+
+================================================================================
+### FILE: 00e38e2c_HttpPingManager__RequestPing.txt
+================================================================================
+Function: HttpPingManager$$RequestPing @ 00e38e2c
+
+--- Calls OUT ---
+  -> AliothEngine.Net.HttpRequest$$Request @ 01694944
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> AliothEngine.Net.HttpRequestManager$$RequestNotInQuene @ 01695be4
+  -> AliothEngine.SingletonBehaviour<object>$$get_Instance @ 01e0894c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary<object,-object>$$Add @ 0196e4d8
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.Net.HttpRequest.FinishedDelegate$$.ctor @ 01694e18
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> UnityEngine.Debug$$Log @ 024c0104
+
+--- Calls IN ---
+  <- HttpPingManager$$StartRequestPing @ 00e39488
+
+--- Listing ---
+00e38e2c  stp x23,x22,[sp, #-0x30]!
+00e38e30  stp x21,x20,[sp, #0x10]
+00e38e34  stp x19,x30,[sp, #0x20]
+00e38e38  adrp x21,0x3572000
+00e38e3c  adrp x22,0x3327000
+00e38e40  ldrb w8,[x21, #0x7ed]
+00e38e44  ldr x22,[x22, #0x258]
+00e38e48  mov x20,x1
+00e38e4c  mov x19,x0
+00e38e50  tbnz w8,#0x0,0x00e38ebc
+00e38e54  adrp x0,0x336b000
+00e38e58  ldr x0,[x0, #0x7d0]
+00e38e5c  bl 0x00b0789c
+00e38e60  adrp x0,0x331c000
+00e38e64  ldr x0,[x0, #0x160]
+00e38e68  bl 0x00b0789c
+00e38e6c  adrp x0,0x3338000
+00e38e70  ldr x0,[x0, #0x418]
+00e38e74  bl 0x00b0789c
+00e38e78  adrp x0,0x336a000
+00e38e7c  ldr x0,[x0, #0x6c0]
+00e38e80  bl 0x00b0789c
+00e38e84  adrp x0,0x3327000
+00e38e88  ldr x0,[x0, #0x258]
+00e38e8c  bl 0x00b0789c
+00e38e90  adrp x0,0x3329000
+00e38e94  ldr x0,[x0, #0xf40]
+00e38e98  bl 0x00b0789c
+00e38e9c  adrp x0,0x3374000
+00e38ea0  ldr x0,[x0, #0x258]
+00e38ea4  bl 0x00b0789c
+00e38ea8  adrp x0,0x336e000
+00e38eac  ldr x0,[x0, #0x750]
+00e38eb0  bl 0x00b0789c
+00e38eb4  mov w8,#0x1
+00e38eb8  strb w8,[x21, #0x7ed]
+00e38ebc  ldr x8,[x22]
+00e38ec0  ldr x8,[x8, #0xb8]
+00e38ec4  ldr x0,[x8, #0x20]
+00e38ec8  cbz x0,0x00e38ee8
+00e38ecc  mov x1,x19
+00e38ed0  mov x2,x20
+00e38ed4  ldp x19,x30,[sp, #0x20]
+00e38ed8  ldp x21,x20,[sp, #0x10]
+00e38edc  mov x3,xzr
+00e38ee0  ldp x23,x22,[sp], #0x30
+00e38ee4  b 0x0106125c
+00e38ee8  cbz x20,0x00e39018
+00e38eec  adrp x8,0x3374000
+00e38ef0  adrp x9,0x336e000
+00e38ef4  ldr x8,[x8, #0x258]
+00e38ef8  ldr x9,[x9, #0x750]
+00e38efc  ldp x3,x1,[x20, #0x10]
+00e38f00  adrp x21,0x336b000
+00e38f04  ldr x0,[x8]
+00e38f08  ldr x2,[x9]
+00e38f0c  adrp x22,0x3329000
+00e38f10  ldr x21,[x21, #0x7d0]
+00e38f14  ldr x22,[x22, #0xf40]
+00e38f18  mov x4,xzr
+00e38f1c  bl 0x01fdf3bc
+00e38f20  ldr x8,[x21]
+00e38f24  mov x21,x0
+00e38f28  ldr w9,[x8, #0xe0]
+00e38f2c  cbnz w9,0x00e38f38
+00e38f30  mov x0,x8
+00e38f34  bl 0x00b0798c
+00e38f38  mov x0,x21
+00e38f3c  mov x1,xzr
+00e38f40  bl 0x024c0104
+00e38f44  ldr x0,[x22]
+00e38f48  bl 0x01e0894c
+00e38f4c  cbz x0,0x00e39018
+00e38f50  ldp x2,x1,[x20, #0x10]
+00e38f54  mov x3,xzr
+00e38f58  mov x4,xzr
+00e38f5c  bl 0x01695be4
+00e38f60  cbz x0,0x00e39018
+00e38f64  mov w8,#0x41000000
+00e38f68  str w8,[x0, #0x68]
+00e38f6c  mov x21,x0
+00e38f70  ldr x0,[x19, #0x20]
+00e38f74  cbz x0,0x00e39018
+00e38f78  adrp x8,0x331c000
+00e38f7c  ldr x8,[x8, #0x160]
+00e38f80  adrp x22,0x3338000
+00e38f84  mov x1,x21
+00e38f88  mov x2,x20
+00e38f8c  ldr x3,[x8]
+00e38f90  ldr x22,[x22, #0x418]
+00e38f94  bl 0x0196e4d8
+00e38f98  mov x0,x21
+00e38f9c  mov x1,xzr
+00e38fa0  bl 0x01694944
+00e38fa4  ldr x0,[x22]
+00e38fa8  bl 0x00b079a0
+00e38fac  cbz x0,0x00e39018
+00e38fb0  adrp x23,0x336a000
+00e38fb4  ldr x23,[x23, #0x6c0]
+00e38fb8  mov x1,x19
+00e38fbc  mov x3,xzr
+00e38fc0  mov x20,x0
+00e38fc4  ldr x2,[x23]
+00e38fc8  bl 0x01694e18
+00e38fcc  mov x0,x21
+00e38fd0  str x20,[x0, #0x18]!
+00e38fd4  mov x1,x20
+00e38fd8  bl 0x00b07850
+00e38fdc  ldr x0,[x22]
+00e38fe0  bl 0x00b079a0
+00e38fe4  cbz x0,0x00e39018
+00e38fe8  ldr x2,[x23]
+00e38fec  mov x1,x19
+00e38ff0  mov x3,xzr
+00e38ff4  mov x20,x0
+00e38ff8  bl 0x01694e18
+00e38ffc  str x20,[x21, #0x20]!
+00e39000  mov x0,x21
+00e39004  mov x1,x20
+00e39008  ldp x19,x30,[sp, #0x20]
+00e3900c  ldp x21,x20,[sp, #0x10]
+00e39010  ldp x23,x22,[sp], #0x30
+00e39014  b 0x00b07850
+00e39018  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e3901c_HttpPingManager__OnPingDone.txt
+================================================================================
+Function: HttpPingManager$$OnPingDone @ 00e3901c
+
+--- Calls OUT ---
+  -> HttpPingManager$$get_isFinish @ 00e38dc4
+  -> System.Collections.Generic.Dictionary<object,-object>$$TryGetValue @ 0196fd30
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Single$$ToString @ 021632b0
+  -> HttpPingManager$$OnGetBestCDNDone @ 00e39200
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> AliothEngine.Net.HttpRequest$$get_isError @ 01693d48
+  -> System.String$$Concat @ 01fdf3bc
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> HttpPingManager$$get_isGetBestCDN @ 00e38d54
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> AliothEngine.Net.HttpRequest$$Dispose @ 0169496c
+  -> System.Collections.Generic.Dictionary<object,-object>$$Remove @ 0196fa1c
+
+--- Calls IN ---
+
+--- Listing ---
+00e3901c  sub sp,sp,#0x50
+00e39020  str x24,[sp, #0x10]
+00e39024  stp x23,x22,[sp, #0x20]
+00e39028  stp x21,x20,[sp, #0x30]
+00e3902c  stp x19,x30,[sp, #0x40]
+00e39030  adrp x22,0x3572000
+00e39034  adrp x21,0x3327000
+00e39038  ldrb w8,[x22, #0x7ee]
+00e3903c  ldr x21,[x21, #0x258]
+00e39040  mov x19,x1
+00e39044  mov x20,x0
+00e39048  tbnz w8,#0x0,0x00e3909c
+00e3904c  adrp x0,0x336b000
+00e39050  ldr x0,[x0, #0x7d0]
+00e39054  bl 0x00b0789c
+00e39058  adrp x0,0x3381000
+00e3905c  ldr x0,[x0, #0x288]
+00e39060  bl 0x00b0789c
+00e39064  adrp x0,0x3341000
+00e39068  ldr x0,[x0, #0x8a0]
+00e3906c  bl 0x00b0789c
+00e39070  adrp x0,0x3327000
+00e39074  ldr x0,[x0, #0x258]
+00e39078  bl 0x00b0789c
+00e3907c  adrp x0,0x334f000
+00e39080  ldr x0,[x0, #0x500]
+00e39084  bl 0x00b0789c
+00e39088  adrp x0,0x336e000
+00e3908c  ldr x0,[x0, #0x750]
+00e39090  bl 0x00b0789c
+00e39094  mov w8,#0x1
+00e39098  strb w8,[x22, #0x7ee]
+00e3909c  ldr x8,[x21]
+00e390a0  str xzr,[sp, #0x18]
+00e390a4  str wzr,[sp, #0xc]
+00e390a8  ldr x8,[x8, #0xb8]
+00e390ac  ldr x0,[x8, #0x28]
+00e390b0  cbz x0,0x00e390c8
+00e390b4  mov x1,x20
+00e390b8  mov x2,x19
+00e390bc  mov x3,xzr
+00e390c0  bl 0x0106125c
+00e390c4  b 0x00e391e4
+00e390c8  mov x0,x20
+00e390cc  bl 0x00e38dc4
+00e390d0  tbnz w0,#0x0,0x00e391e4
+00e390d4  mov x0,x20
+00e390d8  bl 0x00e38d54
+00e390dc  tbnz w0,#0x0,0x00e391e4
+00e390e0  ldr x0,[x20, #0x20]
+00e390e4  cbz x0,0x00e391fc
+00e390e8  adrp x8,0x3341000
+00e390ec  ldr x8,[x8, #0x8a0]
+00e390f0  add x2,sp,#0x18
+00e390f4  mov x1,x19
+00e390f8  ldr x3,[x8]
+00e390fc  bl 0x0196fd30
+00e39100  tbz w0,#0x0,0x00e391e4
+00e39104  cbz x19,0x00e391fc
+00e39108  mov x0,x19
+00e3910c  mov x1,xzr
+00e39110  bl 0x01693d48
+00e39114  tbnz w0,#0x0,0x00e391bc
+00e39118  ldr x8,[sp, #0x18]
+00e3911c  cbz x8,0x00e391fc
+00e39120  adrp x22,0x334f000
+00e39124  ldr x22,[x22, #0x500]
+00e39128  ldr w9,[x19, #0x70]
+00e3912c  adrp x23,0x336e000
+00e39130  adrp x24,0x336b000
+00e39134  ldr x21,[x8, #0x18]
+00e39138  ldr x23,[x23, #0x750]
+00e3913c  ldr x24,[x24, #0x7d0]
+00e39140  add x0,sp,#0xc
+00e39144  mov x1,xzr
+00e39148  str w9,[sp, #0xc]
+00e3914c  bl 0x021632b0
+00e39150  ldr x8,[x22]
+00e39154  ldr x2,[x23]
+00e39158  mov x3,x0
+00e3915c  mov x1,x21
+00e39160  mov x0,x8
+00e39164  mov x4,xzr
+00e39168  bl 0x01fdf3bc
+00e3916c  ldr x8,[x24]
+00e39170  mov x21,x0
+00e39174  ldr w9,[x8, #0xe0]
+00e39178  cbnz w9,0x00e39184
+00e3917c  mov x0,x8
+00e39180  bl 0x00b0798c
+00e39184  mov x0,x21
+00e39188  mov x1,xzr
+00e3918c  bl 0x024c0104
+00e39190  ldr x1,[sp, #0x18]
+00e39194  cbz x1,0x00e391fc
+00e39198  ldr w8,[x19, #0x70]
+00e3919c  mov x21,x20
+00e391a0  str w8,[x1, #0x20]
+00e391a4  str x1,[x21, #0x38]!
+00e391a8  mov x0,x21
+00e391ac  bl 0x00b07850
+00e391b0  ldr x1,[x21]
+00e391b4  mov x0,x20
+00e391b8  bl 0x00e39200
+00e391bc  mov x0,x19
+00e391c0  mov x1,xzr
+00e391c4  bl 0x0169496c
+00e391c8  ldr x0,[x20, #0x20]
+00e391cc  cbz x0,0x00e391fc
+00e391d0  adrp x8,0x3381000
+00e391d4  ldr x8,[x8, #0x288]
+00e391d8  mov x1,x19
+00e391dc  ldr x2,[x8]
+00e391e0  bl 0x0196fa1c
+00e391e4  ldp x19,x30,[sp, #0x40]
+00e391e8  ldp x21,x20,[sp, #0x30]
+00e391ec  ldp x23,x22,[sp, #0x20]
+00e391f0  ldr x24,[sp, #0x10]
+00e391f4  add sp,sp,#0x50
+00e391f8  ret
+00e391fc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e39200_HttpPingManager__OnGetBestCDNDone.txt
+================================================================================
+Function: HttpPingManager$$OnGetBestCDNDone @ 00e39200
+
+--- Calls OUT ---
+  -> HttpPingManager$$ClearAllRequest @ 00e392b0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+
+--- Calls IN ---
+  <- HttpPingManager.<RequestTimeout>d__15$$MoveNext @ 00e398f8
+  <- HttpPingManager$$OnPingDone @ 00e3901c
+  <- XLua.CSObjectWrap.HttpPingManagerWrap$$_m_OnGetBestCDNDone @ 012ca760
+
+--- Listing ---
+00e39200  str x22,[sp, #-0x30]!
+00e39204  stp x21,x20,[sp, #0x10]
+00e39208  stp x19,x30,[sp, #0x20]
+00e3920c  adrp x21,0x3572000
+00e39210  adrp x22,0x3327000
+00e39214  ldrb w8,[x21, #0x7f2]
+00e39218  ldr x22,[x22, #0x258]
+00e3921c  mov x19,x1
+00e39220  mov x20,x0
+00e39224  tbnz w8,#0x0,0x00e3923c
+00e39228  adrp x0,0x3327000
+00e3922c  ldr x0,[x0, #0x258]
+00e39230  bl 0x00b0789c
+00e39234  mov w8,#0x1
+00e39238  strb w8,[x21, #0x7f2]
+00e3923c  ldr x8,[x22]
+00e39240  ldr x8,[x8, #0xb8]
+00e39244  ldr x0,[x8, #0x48]
+00e39248  cbz x0,0x00e39268
+00e3924c  mov x1,x20
+00e39250  mov x2,x19
+00e39254  ldp x19,x30,[sp, #0x20]
+00e39258  ldp x21,x20,[sp, #0x10]
+00e3925c  mov x3,xzr
+00e39260  ldr x22,[sp], #0x30
+00e39264  b 0x0106125c
+00e39268  mov x0,x20
+00e3926c  bl 0x00e392b0
+00e39270  ldr x8,[x20, #0x30]
+00e39274  mov w9,#0x1
+00e39278  strb w9,[x20, #0x28]
+00e3927c  cbz x8,0x00e392a0
+00e39280  ldr x3,[x8, #0x18]
+00e39284  ldr x0,[x8, #0x40]
+00e39288  ldr x2,[x8, #0x28]
+00e3928c  mov x1,x19
+00e39290  ldp x19,x30,[sp, #0x20]
+00e39294  ldp x21,x20,[sp, #0x10]
+00e39298  ldr x22,[sp], #0x30
+00e3929c  br x3
+00e392a0  ldp x19,x30,[sp, #0x20]
+00e392a4  ldp x21,x20,[sp, #0x10]
+00e392a8  ldr x22,[sp], #0x30
+00e392ac  ret
+
+
+================================================================================
+### FILE: 00e392b0_HttpPingManager__ClearAllRequest.txt
+================================================================================
+Function: HttpPingManager$$ClearAllRequest @ 00e392b0
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<object,-object>$$Clear @ 0196e66c
+  -> System.Collections.Generic.Dictionary.KeyCollection.Enumerator<object,-object>$$Dispose @ 01a4d628
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.Dictionary.KeyCollection<object,-object>$$GetEnumerator @ 01b86948
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.Dictionary.KeyCollection.Enumerator<object,-object>$$MoveNext @ 01a4d62c
+  -> System.Collections.Generic.Dictionary<object,-object>$$get_Keys @ 0196e240
+  -> UnityEngine.MonoBehaviour$$StopAllCoroutines @ 024e446c
+  -> AliothEngine.Net.HttpRequest$$Dispose @ 0169496c
+
+--- Calls IN ---
+  <- HttpPingManager$$StartRequestPing @ 00e39488
+  <- HttpPingManager$$OnGetBestCDNDone @ 00e39200
+
+--- Listing ---
+00e392b0  sub sp,sp,#0x50
+00e392b4  str x22,[sp, #0x20]
+00e392b8  stp x21,x20,[sp, #0x30]
+00e392bc  stp x19,x30,[sp, #0x40]
+00e392c0  adrp x21,0x3572000
+00e392c4  adrp x20,0x3327000
+00e392c8  ldrb w8,[x21, #0x7ef]
+00e392cc  ldr x20,[x20, #0x258]
+00e392d0  mov x19,x0
+00e392d4  tbnz w8,#0x0,0x00e39334
+00e392d8  adrp x0,0x332e000
+00e392dc  ldr x0,[x0, #0x430]
+00e392e0  bl 0x00b0789c
+00e392e4  adrp x0,0x3383000
+00e392e8  ldr x0,[x0, #0xd0]
+00e392ec  bl 0x00b0789c
+00e392f0  adrp x0,0x3365000
+00e392f4  ldr x0,[x0, #0xff0]
+00e392f8  bl 0x00b0789c
+00e392fc  adrp x0,0x3384000
+00e39300  ldr x0,[x0, #0xd28]
+00e39304  bl 0x00b0789c
+00e39308  adrp x0,0x3328000
+00e3930c  ldr x0,[x0, #0xc48]
+00e39310  bl 0x00b0789c
+00e39314  adrp x0,0x3327000
+00e39318  ldr x0,[x0, #0x258]
+00e3931c  bl 0x00b0789c
+00e39320  adrp x0,0x3316000
+00e39324  ldr x0,[x0, #0x6c0]
+00e39328  bl 0x00b0789c
+00e3932c  mov w8,#0x1
+00e39330  strb w8,[x21, #0x7ef]
+00e39334  ldr x8,[x20]
+00e39338  stp xzr,xzr,[sp, #0x10]
+00e3933c  str xzr,[sp, #0x8]
+00e39340  ldr x8,[x8, #0xb8]
+00e39344  ldr x0,[x8, #0x30]
+00e39348  cbz x0,0x00e3935c
+00e3934c  mov x1,x19
+00e39350  mov x2,xzr
+00e39354  bl 0x01060dac
+00e39358  b 0x00e393f0
+00e3935c  mov x0,x19
+00e39360  mov x1,xzr
+00e39364  bl 0x024e446c
+00e39368  ldr x0,[x19, #0x20]
+00e3936c  cbz x0,0x00e39408
+00e39370  adrp x8,0x3383000
+00e39374  ldr x8,[x8, #0xd0]
+00e39378  ldr x1,[x8]
+00e3937c  bl 0x0196e240
+00e39380  cbz x0,0x00e39408
+00e39384  adrp x8,0x3316000
+00e39388  ldr x8,[x8, #0x6c0]
+00e3938c  adrp x21,0x3384000
+00e39390  adrp x22,0x332e000
+00e39394  adrp x20,0x3365000
+00e39398  ldr x1,[x8]
+00e3939c  ldr x21,[x21, #0xd28]
+00e393a0  ldr x22,[x22, #0x430]
+00e393a4  ldr x20,[x20, #0xff0]
+00e393a8  add x8,sp,#0x8
+00e393ac  bl 0x01b86948
+00e393b0  ldr x1,[x21]
+00e393b4  add x0,sp,#0x8
+    ; [PRE] try { // try from 00e393b4 to 00e393bb has its CatchHandler @ 00e39414
+00e393b8  bl 0x01a4d62c
+    ; [POST] } // end try from 00e393b4 to 00e393bb
+00e393bc  tbz w0,#0x0,0x00e393d4
+00e393c0  ldr x0,[sp, #0x18]
+00e393c4  cbz x0,0x00e39404
+00e393c8  mov x1,xzr
+    ; [PRE] try { // try from 00e393c8 to 00e393cf has its CatchHandler @ 00e39410
+00e393cc  bl 0x0169496c
+    ; [POST] } // end try from 00e393c8 to 00e393cf
+00e393d0  b 0x00e393b0
+00e393d4  ldr x1,[x20]
+00e393d8  add x0,sp,#0x8
+00e393dc  bl 0x01a4d628
+00e393e0  ldr x0,[x19, #0x20]
+00e393e4  cbz x0,0x00e39408
+00e393e8  ldr x1,[x22]
+00e393ec  bl 0x0196e66c
+00e393f0  ldp x19,x30,[sp, #0x40]
+00e393f4  ldp x21,x20,[sp, #0x30]
+00e393f8  ldr x22,[sp, #0x20]
+00e393fc  add sp,sp,#0x50
+00e39400  ret
+00e39404  bl 0x00b079b0
+    ; [PRE] try { // try from 00e39404 to 00e39407 has its CatchHandler @ 00e3940c
+    ; [POST] } // end try from 00e39404 to 00e39407
+00e39408  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e39488_HttpPingManager__StartRequestPing.txt
+================================================================================
+Function: HttpPingManager$$StartRequestPing @ 00e39488
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> AliothEngine.Extensions.ListExtensions$$Shuffle<object> @ 0179fe50
+  -> FUN_008d74f8 @ 008d74f8
+  -> FUN_00b07978 @ 00b07978
+  -> FUN_00b079b0 @ 00b079b0
+  -> HttpPingManager$$RequestTimeout @ 00e39658
+  -> System.Collections.Generic.List<object>$$ToArray @ 01c02720
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> HttpPingManager$$RequestPing @ 00e38e2c
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> HttpPingManager$$ClearAllRequest @ 00e392b0
+  -> UnityEngine.MonoBehaviour$$StartCoroutine @ 024e4070
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b079b8 @ 00b079b8
+  -> System.Exception$$.ctor @ 021876ac
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bfff38
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HttpPingManagerWrap$$_m_StartRequestPing @ 012ca4e8
+  <- AliothEngine.GameUpdateService.<GetBestPingServer>d__73$$MoveNext @ 016825ac
+
+--- Listing ---
+00e39488  stp x23,x22,[sp, #-0x30]!
+00e3948c  stp x21,x20,[sp, #0x10]
+00e39490  stp x19,x30,[sp, #0x20]
+00e39494  adrp x21,0x3572000
+00e39498  adrp x22,0x3327000
+00e3949c  ldrb w8,[x21, #0x7f0]
+00e394a0  ldr x22,[x22, #0x258]
+00e394a4  mov x20,x1
+00e394a8  mov x19,x0
+00e394ac  tbnz w8,#0x0,0x00e394f4
+00e394b0  adrp x0,0x3327000
+00e394b4  ldr x0,[x0, #0x258]
+00e394b8  bl 0x00b0789c
+00e394bc  adrp x0,0x3378000
+00e394c0  ldr x0,[x0, #0x658]
+00e394c4  bl 0x00b0789c
+00e394c8  adrp x0,0x330c000
+00e394cc  ldr x0,[x0, #0xd18]
+00e394d0  bl 0x00b0789c
+00e394d4  adrp x0,0x335a000
+00e394d8  ldr x0,[x0, #0xc78]
+00e394dc  bl 0x00b0789c
+00e394e0  adrp x0,0x3330000
+00e394e4  ldr x0,[x0, #0xb8]
+00e394e8  bl 0x00b0789c
+00e394ec  mov w8,#0x1
+00e394f0  strb w8,[x21, #0x7f0]
+00e394f4  ldr x8,[x22]
+00e394f8  ldr x8,[x8, #0xb8]
+00e394fc  ldr x0,[x8, #0x38]
+00e39500  cbz x0,0x00e39520
+00e39504  mov x1,x19
+00e39508  mov x2,x20
+00e3950c  ldp x19,x30,[sp, #0x20]
+00e39510  ldp x21,x20,[sp, #0x10]
+00e39514  mov x3,xzr
+00e39518  ldp x23,x22,[sp], #0x30
+00e3951c  b 0x0106125c
+00e39520  mov x0,x19
+00e39524  strb wzr,[x19, #0x28]
+00e39528  bl 0x00e392b0
+00e3952c  mov x0,x19
+00e39530  str xzr,[x0, #0x38]!
+00e39534  mov x1,xzr
+00e39538  bl 0x00b07850
+00e3953c  cbz x20,0x00e39608
+00e39540  ldr x8,[x20, #0x18]
+00e39544  cbz x8,0x00e3960c
+00e39548  adrp x8,0x3330000
+00e3954c  ldr x8,[x8, #0xb8]
+00e39550  ldr x0,[x8]
+00e39554  bl 0x00b079a0
+00e39558  cbz x0,0x00e39608
+00e3955c  adrp x8,0x335a000
+00e39560  ldr x8,[x8, #0xc78]
+00e39564  adrp x22,0x3378000
+00e39568  adrp x23,0x330c000
+00e3956c  mov x1,x20
+00e39570  ldr x2,[x8]
+00e39574  ldr x22,[x22, #0x658]
+00e39578  ldr x23,[x23, #0xd18]
+00e3957c  mov x21,x0
+00e39580  bl 0x01bfff38
+00e39584  ldr x1,[x22]
+00e39588  mov x0,x21
+00e3958c  bl 0x0179fe50
+00e39590  ldr x1,[x23]
+00e39594  mov x0,x21
+00e39598  bl 0x01c02720
+00e3959c  cbz x0,0x00e39608
+00e395a0  ldr x8,[x0, #0x18]
+00e395a4  mov x20,x0
+00e395a8  cmp w8,#0x1
+00e395ac  b.lt 0x00e395e0
+00e395b0  mov x21,xzr
+00e395b4  and x8,x8,#0xffffffff
+00e395b8  add x22,x20,#0x20
+00e395bc  cmp x21,w8, UXTW 
+00e395c0  b.cs 0x00e39604
+00e395c4  ldr x1,[x22, x21, LSL #0x3]
+00e395c8  mov x0,x19
+00e395cc  bl 0x00e38e2c
+00e395d0  ldr w8,[x20, #0x18]
+00e395d4  add x21,x21,#0x1
+00e395d8  cmp x21,w8, SXTW 
+00e395dc  b.lt 0x00e395bc
+00e395e0  mov x0,x19
+00e395e4  bl 0x00e39658
+00e395e8  mov x1,x0
+00e395ec  mov x0,x19
+00e395f0  ldp x19,x30,[sp, #0x20]
+00e395f4  ldp x21,x20,[sp, #0x10]
+00e395f8  mov x2,xzr
+00e395fc  ldp x23,x22,[sp], #0x30
+00e39600  b 0x024e4070
+00e39604  bl 0x00b079b8
+00e39608  bl 0x00b079b0
+00e3960c  adrp x0,0x334a000
+00e39610  ldr x0,[x0, #0xbb0]
+00e39614  bl 0x00b078a0
+00e39618  bl 0x00b079a0
+00e3961c  mov x19,x0
+00e39620  bl 0x008d74f8
+00e39624  adrp x0,0x331b000
+00e39628  ldr x0,[x0, #0xaf8]
+00e3962c  bl 0x00b078a0
+00e39630  mov x1,x0
+00e39634  mov x0,x19
+00e39638  mov x2,xzr
+00e3963c  bl 0x021876ac
+00e39640  adrp x0,0x3312000
+00e39644  ldr x0,[x0, #0x4c0]
+00e39648  bl 0x00b078a0
+00e3964c  mov x1,x0
+00e39650  mov x0,x19
+00e39654  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00e39658_HttpPingManager__RequestTimeout.txt
+================================================================================
+Function: HttpPingManager$$RequestTimeout @ 00e39658
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp55 @ 01066218
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- HttpPingManager$$StartRequestPing @ 00e39488
+
+--- Listing ---
+00e39658  stp x21,x20,[sp, #-0x20]!
+00e3965c  stp x19,x30,[sp, #0x10]
+00e39660  adrp x20,0x3572000
+00e39664  adrp x21,0x3327000
+00e39668  ldrb w8,[x20, #0x7f1]
+00e3966c  ldr x21,[x21, #0x258]
+00e39670  mov x19,x0
+00e39674  tbnz w8,#0x0,0x00e39698
+00e39678  adrp x0,0x3327000
+00e3967c  ldr x0,[x0, #0x258]
+00e39680  bl 0x00b0789c
+00e39684  adrp x0,0x335a000
+00e39688  ldr x0,[x0, #0xfb8]
+00e3968c  bl 0x00b0789c
+00e39690  mov w8,#0x1
+00e39694  strb w8,[x20, #0x7f1]
+00e39698  ldr x8,[x21]
+00e3969c  ldr x8,[x8, #0xb8]
+00e396a0  ldr x0,[x8, #0x40]
+00e396a4  cbz x0,0x00e396bc
+00e396a8  mov x1,x19
+00e396ac  ldp x19,x30,[sp, #0x10]
+00e396b0  mov x2,xzr
+00e396b4  ldp x21,x20,[sp], #0x20
+00e396b8  b 0x01066218
+00e396bc  adrp x8,0x335a000
+00e396c0  ldr x8,[x8, #0xfb8]
+00e396c4  ldr x0,[x8]
+00e396c8  bl 0x00b079a0
+00e396cc  cbz x0,0x00e39700
+00e396d0  mov x1,xzr
+00e396d4  mov x20,x0
+00e396d8  bl 0x02194104
+00e396dc  mov x0,x20
+00e396e0  str wzr,[x20, #0x10]
+00e396e4  str x19,[x0, #0x20]!
+00e396e8  mov x1,x19
+00e396ec  bl 0x00b07850
+00e396f0  ldp x19,x30,[sp, #0x10]
+00e396f4  mov x0,x20
+00e396f8  ldp x21,x20,[sp], #0x20
+00e396fc  ret
+00e39700  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e39704_HttpPingManager._RequestTimeout_d__15__.ctor.txt
+================================================================================
+Function: HttpPingManager.<RequestTimeout>d__15$$.ctor @ 00e39704
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+00e39704  str x20,[sp, #-0x20]!
+00e39708  stp x19,x30,[sp, #0x10]
+00e3970c  mov w19,w1
+00e39710  mov x1,xzr
+00e39714  mov x20,x0
+00e39718  bl 0x02194104
+00e3971c  str w19,[x20, #0x10]
+00e39720  ldp x19,x30,[sp, #0x10]
+00e39724  ldr x20,[sp], #0x20
+00e39728  ret
+
+
+================================================================================
+### FILE: 00e3972c_HttpPingManager__.ctor.txt
+================================================================================
+Function: HttpPingManager$$.ctor @ 00e3972c
+
+--- Calls OUT ---
+  -> System.Collections.Generic.Dictionary<object,-object>$$.ctor @ 0196dbb0
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$.ctor @ 01e09460
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HttpPingManagerWrap$$__CreateInstance @ 012ca330
+
+--- Listing ---
+00e3972c  str x22,[sp, #-0x30]!
+00e39730  stp x21,x20,[sp, #0x10]
+00e39734  stp x19,x30,[sp, #0x20]
+00e39738  adrp x20,0x3572000
+00e3973c  adrp x21,0x334c000
+00e39740  ldrb w8,[x20, #0x7f3]
+00e39744  ldr x21,[x21, #0x8d8]
+00e39748  mov x19,x0
+00e3974c  tbnz w8,#0x0,0x00e39788
+00e39750  adrp x0,0x3336000
+00e39754  ldr x0,[x0, #0x6a0]
+00e39758  bl 0x00b0789c
+00e3975c  adrp x0,0x334c000
+00e39760  ldr x0,[x0, #0x8d8]
+00e39764  bl 0x00b0789c
+00e39768  adrp x0,0x3327000
+00e3976c  ldr x0,[x0, #0x258]
+00e39770  bl 0x00b0789c
+00e39774  adrp x0,0x3313000
+00e39778  ldr x0,[x0, #0x640]
+00e3977c  bl 0x00b0789c
+00e39780  mov w8,#0x1
+00e39784  strb w8,[x20, #0x7f3]
+00e39788  ldr x0,[x21]
+00e3978c  bl 0x00b079a0
+00e39790  cbz x0,0x00e39814
+00e39794  adrp x8,0x3336000
+00e39798  ldr x8,[x8, #0x6a0]
+00e3979c  adrp x21,0x3313000
+00e397a0  adrp x22,0x3327000
+00e397a4  mov x20,x0
+00e397a8  ldr x1,[x8]
+00e397ac  ldr x21,[x21, #0x640]
+00e397b0  ldr x22,[x22, #0x258]
+00e397b4  bl 0x0196dbb0
+00e397b8  mov x0,x19
+00e397bc  str x20,[x0, #0x20]!
+00e397c0  mov x1,x20
+00e397c4  bl 0x00b07850
+00e397c8  mov w8,#0x41200000
+00e397cc  str w8,[x19, #0x40]
+00e397d0  ldr x1,[x21]
+00e397d4  mov x0,x19
+00e397d8  bl 0x01e09460
+00e397dc  ldr x8,[x22]
+00e397e0  ldr x8,[x8, #0xb8]
+00e397e4  ldr x0,[x8, #0x50]
+00e397e8  cbz x0,0x00e39804
+00e397ec  mov x1,x19
+00e397f0  ldp x19,x30,[sp, #0x20]
+00e397f4  ldp x21,x20,[sp, #0x10]
+00e397f8  mov x2,xzr
+00e397fc  ldr x22,[sp], #0x30
+00e39800  b 0x01060dac
+00e39804  ldp x19,x30,[sp, #0x20]
+00e39808  ldp x21,x20,[sp, #0x10]
+00e3980c  ldr x22,[sp], #0x30
+00e39810  ret
+00e39814  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e39818_HttpPingManager.CDNPing__.ctor.txt
+================================================================================
+Function: HttpPingManager.CDNPing$$.ctor @ 00e39818
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.HttpPingManagerCDNPingWrap$$__CreateInstance @ 012cbd0c
+  <- AliothEngine.GameUpdateService.<>c$$<GetBestPingServer>b__73_0 @ 016818d8
+
+--- Listing ---
+00e39818  stp x21,x20,[sp, #-0x20]!
+00e3981c  stp x19,x30,[sp, #0x10]
+00e39820  mov x20,x1
+00e39824  mov x1,xzr
+00e39828  mov x19,x2
+00e3982c  mov x21,x0
+00e39830  bl 0x02194104
+00e39834  mov x0,x21
+00e39838  str x20,[x0, #0x18]!
+00e3983c  mov x1,x20
+00e39840  bl 0x00b07850
+00e39844  str x19,[x21, #0x10]!
+00e39848  mov x1,x19
+00e3984c  ldp x19,x30,[sp, #0x10]
+00e39850  mov x0,x21
+00e39854  ldp x21,x20,[sp], #0x20
+00e39858  b 0x00b07850
+
+
+================================================================================
+### FILE: 00e3985c_HttpPingManager.CDNPing__ToString.txt
+================================================================================
+Function: HttpPingManager.CDNPing$$ToString @ 00e3985c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> System.String$$Format @ 01fdf7e8
+
+--- Calls IN ---
+
+--- Listing ---
+00e3985c  sub sp,sp,#0x40
+00e39860  stp x23,x22,[sp, #0x10]
+00e39864  stp x21,x20,[sp, #0x20]
+00e39868  stp x19,x30,[sp, #0x30]
+00e3986c  adrp x20,0x3572000
+00e39870  adrp x23,0x3321000
+00e39874  adrp x22,0x3310000
+00e39878  ldrb w8,[x20, #0x7f4]
+00e3987c  ldr x23,[x23, #0xa60]
+00e39880  ldr x22,[x22, #0xf78]
+00e39884  mov x19,x0
+00e39888  tbnz w8,#0x0,0x00e398ac
+00e3988c  adrp x0,0x3321000
+00e39890  ldr x0,[x0, #0xa60]
+00e39894  bl 0x00b0789c
+00e39898  adrp x0,0x3310000
+00e3989c  ldr x0,[x0, #0xf78]
+00e398a0  bl 0x00b0789c
+00e398a4  mov w8,#0x1
+00e398a8  strb w8,[x20, #0x7f4]
+00e398ac  ldr w8,[x19, #0x20]
+00e398b0  ldr x0,[x23]
+00e398b4  ldp x20,x21,[x19, #0x10]
+00e398b8  add x1,sp,#0xc
+00e398bc  str w8,[sp, #0xc]
+00e398c0  bl 0x00b07994
+00e398c4  ldr x8,[x22]
+00e398c8  mov x3,x0
+00e398cc  mov x1,x20
+00e398d0  mov x2,x21
+00e398d4  mov x0,x8
+00e398d8  mov x4,xzr
+00e398dc  bl 0x01fdf7e8
+00e398e0  ldp x19,x30,[sp, #0x30]
+00e398e4  ldp x21,x20,[sp, #0x20]
+00e398e8  ldp x23,x22,[sp, #0x10]
+00e398ec  add sp,sp,#0x40
+00e398f0  ret
+
+
+================================================================================
+### FILE: 00e398f4_HttpPingManager._RequestTimeout_d__15__System.IDisposable.Dispose.txt
+================================================================================
+Function: HttpPingManager.<RequestTimeout>d__15$$System.IDisposable.Dispose @ 00e398f4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00e398f4  ret
+
+
+================================================================================
+### FILE: 00e398f8_HttpPingManager._RequestTimeout_d__15__MoveNext.txt
+================================================================================
+Function: HttpPingManager.<RequestTimeout>d__15$$MoveNext @ 00e398f8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Debug$$LogError @ 024c0830
+  -> UnityEngine.WaitForSeconds$$.ctor @ 024dd340
+  -> FUN_00b079b0 @ 00b079b0
+  -> HttpPingManager$$get_isGetBestCDN @ 00e38d54
+  -> HttpPingManager$$OnGetBestCDNDone @ 00e39200
+
+--- Calls IN ---
+
+--- Listing ---
+00e398f8  str d8,[sp, #-0x20]!
+00e398fc  str x20,[sp, #0x8]
+00e39900  stp x19,x30,[sp, #0x10]
+00e39904  adrp x20,0x3572000
+00e39908  ldrb w8,[x20, #0x7f5]
+00e3990c  mov x19,x0
+00e39910  tbnz w8,#0x0,0x00e39940
+00e39914  adrp x0,0x336b000
+00e39918  ldr x0,[x0, #0x7d0]
+00e3991c  bl 0x00b0789c
+00e39920  adrp x0,0x3380000
+00e39924  ldr x0,[x0, #0xea8]
+00e39928  bl 0x00b0789c
+00e3992c  adrp x0,0x3346000
+00e39930  ldr x0,[x0, #0x998]
+00e39934  bl 0x00b0789c
+00e39938  mov w8,#0x1
+00e3993c  strb w8,[x20, #0x7f5]
+00e39940  ldr w8,[x19, #0x10]
+00e39944  ldr x20,[x19, #0x20]
+00e39948  cmp w8,#0x1
+00e3994c  b.eq 0x00e399a4
+00e39950  cbnz w8,0x00e399f4
+00e39954  mov w8,#0xffffffff
+00e39958  str w8,[x19, #0x10]
+00e3995c  cbz x20,0x00e39a08
+00e39960  adrp x8,0x3380000
+00e39964  ldr x8,[x8, #0xea8]
+00e39968  ldr s8,[x20, #0x40]
+00e3996c  ldr x0,[x8]
+00e39970  bl 0x00b079a0
+00e39974  cbz x0,0x00e39a08
+00e39978  mov v0.16B,v8.16B
+00e3997c  mov x1,xzr
+00e39980  mov x20,x0
+00e39984  bl 0x024dd340
+00e39988  str x20,[x19, #0x18]!
+00e3998c  mov x0,x19
+00e39990  mov x1,x20
+00e39994  bl 0x00b07850
+00e39998  mov w0,#0x1
+00e3999c  stur w0,[x19, #-0x8]
+00e399a0  b 0x00e399f8
+00e399a4  mov w8,#0xffffffff
+00e399a8  str w8,[x19, #0x10]
+00e399ac  cbz x20,0x00e39a08
+00e399b0  adrp x19,0x336b000
+00e399b4  ldr x19,[x19, #0x7d0]
+00e399b8  mov x0,x20
+00e399bc  bl 0x00e38d54
+00e399c0  tbnz w0,#0x0,0x00e399d0
+00e399c4  mov x0,x20
+00e399c8  mov x1,xzr
+00e399cc  bl 0x00e39200
+00e399d0  ldr x0,[x19]
+00e399d4  adrp x19,0x3346000
+00e399d8  ldr w8,[x0, #0xe0]
+00e399dc  ldr x19,[x19, #0x998]
+00e399e0  cbnz w8,0x00e399e8
+00e399e4  bl 0x00b0798c
+00e399e8  ldr x0,[x19]
+00e399ec  mov x1,xzr
+00e399f0  bl 0x024c0830
+00e399f4  mov w0,wzr
+00e399f8  ldp x19,x30,[sp, #0x10]
+00e399fc  ldr x20,[sp, #0x8]
+00e39a00  ldr d8,[sp], #0x20
+00e39a04  ret
+00e39a08  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e39a0c_HttpPingManager._RequestTimeout_d__15__System.Collections.Generic.IEnumerator_System.Object_.get_Current.txt
+================================================================================
+Function: HttpPingManager.<RequestTimeout>d__15$$System.Collections.Generic.IEnumerator<System.Object>.get_Current @ 00e39a0c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00e39a0c  ldr x0,[x0, #0x18]
+00e39a10  ret
+
+
+================================================================================
+### FILE: 00e39a14_HttpPingManager._RequestTimeout_d__15__System.Collections.IEnumerator.Reset.txt
+================================================================================
+Function: HttpPingManager.<RequestTimeout>d__15$$System.Collections.IEnumerator.Reset @ 00e39a14
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> System.NotSupportedException$$.ctor @ 021525a8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_008d74f8 @ 008d74f8
+  -> FUN_00b07978 @ 00b07978
+
+--- Calls IN ---
+
+--- Listing ---
+00e39a14  stp x19,x30,[sp, #-0x10]!
+00e39a18  adrp x0,0x335a000
+00e39a1c  ldr x0,[x0, #0xb88]
+00e39a20  bl 0x00b078a0
+00e39a24  bl 0x00b079a0
+00e39a28  mov x19,x0
+00e39a2c  bl 0x008d74f8
+00e39a30  mov x0,x19
+00e39a34  mov x1,xzr
+00e39a38  bl 0x021525a8
+00e39a3c  adrp x0,0x334f000
+00e39a40  ldr x0,[x0, #0xa60]
+00e39a44  bl 0x00b078a0
+00e39a48  mov x1,x0
+00e39a4c  mov x0,x19
+00e39a50  bl 0x00b07978
+
+
+================================================================================
+### FILE: 00e39a54_HttpPingManager._RequestTimeout_d__15__System.Collections.IEnumerator.get_Current.txt
+================================================================================
+Function: HttpPingManager.<RequestTimeout>d__15$$System.Collections.IEnumerator.get_Current @ 00e39a54
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00e39a54  ldr x0,[x0, #0x18]
+00e39a58  ret
+
+

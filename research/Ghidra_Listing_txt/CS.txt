@@ -1,0 +1,3021 @@
+================================================================================
+### FILE: 00cf5890_CSharpAPIHelper__ConnectToPlaySertivce.txt
+================================================================================
+Function: CSharpAPIHelper$$ConnectToPlaySertivce @ 00cf5890
+
+--- Calls OUT ---
+  -> GooglePlayConnection$$Connect @ 00bb5868
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> CSharpAPIHelper$$OnPlayerConnected @ 00cf5a40
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> SA.Common.Pattern.Singleton<object>$$get_Instance @ 01e09dd4
+  -> GooglePlayConnection$$add_ActionPlayerConnected @ 00bb5284
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> GooglePlayConnection$$add_ActionPlayerDisconnected @ 00bb543c
+  -> FUN_00b079b0 @ 00b079b0
+  -> UnityEngine.Debug$$Log @ 024c0104
+  -> System.Action$$.ctor @ 020d5760
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5890  str x22,[sp, #-0x30]!
+00cf5894  stp x21,x20,[sp, #0x10]
+00cf5898  stp x19,x30,[sp, #0x20]
+00cf589c  adrp x20,0x3571000
+00cf58a0  adrp x21,0x3348000
+00cf58a4  ldrb w8,[x20, #0x9e3]
+00cf58a8  ldr x21,[x21, #0xcf8]
+00cf58ac  mov x19,x0
+00cf58b0  tbnz w8,#0x0,0x00cf5910
+00cf58b4  adrp x0,0x3348000
+00cf58b8  ldr x0,[x0, #0xcf8]
+00cf58bc  bl 0x00b0789c
+00cf58c0  adrp x0,0x3383000
+00cf58c4  ldr x0,[x0, #0xa30]
+00cf58c8  bl 0x00b0789c
+00cf58cc  adrp x0,0x3338000
+00cf58d0  ldr x0,[x0, #0xd00]
+00cf58d4  bl 0x00b0789c
+00cf58d8  adrp x0,0x336b000
+00cf58dc  ldr x0,[x0, #0x7d0]
+00cf58e0  bl 0x00b0789c
+00cf58e4  adrp x0,0x3310000
+00cf58e8  ldr x0,[x0, #0xd20]
+00cf58ec  bl 0x00b0789c
+00cf58f0  adrp x0,0x3322000
+00cf58f4  ldr x0,[x0, #0x1e8]
+00cf58f8  bl 0x00b0789c
+00cf58fc  adrp x0,0x3348000
+00cf5900  ldr x0,[x0, #0x2a0]
+00cf5904  bl 0x00b0789c
+00cf5908  mov w8,#0x1
+00cf590c  strb w8,[x20, #0x9e3]
+00cf5910  ldr x0,[x21]
+00cf5914  bl 0x00b079a0
+00cf5918  cbz x0,0x00cf5a3c
+00cf591c  adrp x8,0x3383000
+00cf5920  ldr x8,[x8, #0xa30]
+00cf5924  adrp x22,0x3310000
+00cf5928  mov x1,x19
+00cf592c  mov x3,xzr
+00cf5930  ldr x2,[x8]
+00cf5934  ldr x22,[x22, #0xd20]
+00cf5938  mov x20,x0
+00cf593c  bl 0x020d5760
+00cf5940  ldr x0,[x22]
+00cf5944  ldr w8,[x0, #0xe0]
+00cf5948  cbnz w8,0x00cf5950
+00cf594c  bl 0x00b0798c
+00cf5950  mov x0,x20
+00cf5954  mov x1,xzr
+00cf5958  bl 0x00bb5284
+00cf595c  ldr x0,[x21]
+00cf5960  bl 0x00b079a0
+00cf5964  cbz x0,0x00cf5a3c
+00cf5968  adrp x8,0x3338000
+00cf596c  ldr x8,[x8, #0xd00]
+00cf5970  mov x1,x19
+00cf5974  mov x3,xzr
+00cf5978  mov x20,x0
+00cf597c  ldr x2,[x8]
+00cf5980  bl 0x020d5760
+00cf5984  mov x0,x20
+00cf5988  mov x1,xzr
+00cf598c  bl 0x00bb543c
+00cf5990  adrp x20,0x3570000
+00cf5994  ldrb w8,[x20, #0xcd1]
+00cf5998  cbnz w8,0x00cf59b0
+00cf599c  adrp x0,0x3310000
+00cf59a0  ldr x0,[x0, #0xd20]
+00cf59a4  bl 0x00b0789c
+00cf59a8  mov w8,#0x1
+00cf59ac  strb w8,[x20, #0xcd1]
+00cf59b0  ldr x0,[x22]
+00cf59b4  ldr w8,[x0, #0xe0]
+00cf59b8  cbnz w8,0x00cf59c4
+00cf59bc  bl 0x00b0798c
+00cf59c0  ldr x0,[x22]
+00cf59c4  ldr x8,[x0, #0xb8]
+00cf59c8  ldr w8,[x8, #0x20]
+00cf59cc  cmp w8,#0x3
+00cf59d0  b.ne 0x00cf59e8
+00cf59d4  mov x0,x19
+00cf59d8  ldp x19,x30,[sp, #0x20]
+00cf59dc  ldp x21,x20,[sp, #0x10]
+00cf59e0  ldr x22,[sp], #0x30
+00cf59e4  b 0x00cf5a40
+00cf59e8  adrp x8,0x336b000
+00cf59ec  ldr x8,[x8, #0x7d0]
+00cf59f0  adrp x20,0x3348000
+00cf59f4  adrp x19,0x3322000
+00cf59f8  ldr x0,[x8]
+00cf59fc  ldr w8,[x0, #0xe0]
+00cf5a00  ldr x20,[x20, #0x2a0]
+00cf5a04  ldr x19,[x19, #0x1e8]
+00cf5a08  cbnz w8,0x00cf5a10
+00cf5a0c  bl 0x00b0798c
+00cf5a10  ldr x0,[x20]
+00cf5a14  mov x1,xzr
+00cf5a18  bl 0x024c0104
+00cf5a1c  ldr x0,[x19]
+00cf5a20  bl 0x01e09dd4
+00cf5a24  cbz x0,0x00cf5a3c
+00cf5a28  ldp x19,x30,[sp, #0x20]
+00cf5a2c  ldp x21,x20,[sp, #0x10]
+00cf5a30  mov x1,xzr
+00cf5a34  ldr x22,[sp], #0x30
+00cf5a38  b 0x00bb5868
+00cf5a3c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf5a40_CSharpAPIHelper__OnPlayerConnected.txt
+================================================================================
+Function: CSharpAPIHelper$$OnPlayerConnected @ 00cf5a40
+
+--- Calls OUT ---
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> UnityEngine.GameObject$$SendMessage @ 024dec24
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CSharpAPIHelper$$ConnectToPlaySertivce @ 00cf5890
+
+--- Listing ---
+00cf5a40  str x20,[sp, #-0x20]!
+00cf5a44  stp x19,x30,[sp, #0x10]
+00cf5a48  adrp x20,0x3571000
+00cf5a4c  ldrb w8,[x20, #0x9e4]
+00cf5a50  mov x19,x0
+00cf5a54  tbnz w8,#0x0,0x00cf5a6c
+00cf5a58  adrp x0,0x3334000
+00cf5a5c  ldr x0,[x0, #0xed0]
+00cf5a60  bl 0x00b0789c
+00cf5a64  mov w8,#0x1
+00cf5a68  strb w8,[x20, #0x9e4]
+00cf5a6c  mov x0,x19
+00cf5a70  mov x1,xzr
+00cf5a74  bl 0x024e4ed4
+00cf5a78  cbz x0,0x00cf5a98
+00cf5a7c  adrp x8,0x3334000
+00cf5a80  ldr x8,[x8, #0xed0]
+00cf5a84  ldp x19,x30,[sp, #0x10]
+00cf5a88  mov x2,xzr
+00cf5a8c  ldr x1,[x8]
+00cf5a90  ldr x20,[sp], #0x20
+00cf5a94  b 0x024dec24
+00cf5a98  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf5a9c_CSharpAPIHelper__OnPlayerDisconnected.txt
+================================================================================
+Function: CSharpAPIHelper$$OnPlayerDisconnected @ 00cf5a9c
+
+--- Calls OUT ---
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> UnityEngine.GameObject$$SendMessage @ 024dec24
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5a9c  str x20,[sp, #-0x20]!
+00cf5aa0  stp x19,x30,[sp, #0x10]
+00cf5aa4  adrp x20,0x3571000
+00cf5aa8  ldrb w8,[x20, #0x9e5]
+00cf5aac  mov x19,x0
+00cf5ab0  tbnz w8,#0x0,0x00cf5ac8
+00cf5ab4  adrp x0,0x331e000
+00cf5ab8  ldr x0,[x0, #0x8f0]
+00cf5abc  bl 0x00b0789c
+00cf5ac0  mov w8,#0x1
+00cf5ac4  strb w8,[x20, #0x9e5]
+00cf5ac8  mov x0,x19
+00cf5acc  mov x1,xzr
+00cf5ad0  bl 0x024e4ed4
+00cf5ad4  cbz x0,0x00cf5af4
+00cf5ad8  adrp x8,0x331e000
+00cf5adc  ldr x8,[x8, #0x8f0]
+00cf5ae0  ldp x19,x30,[sp, #0x10]
+00cf5ae4  mov x2,xzr
+00cf5ae8  ldr x1,[x8]
+00cf5aec  ldr x20,[sp], #0x20
+00cf5af0  b 0x024dec24
+00cf5af4  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00cf5af8_CSharpAPIHelper__.ctor.txt
+================================================================================
+Function: CSharpAPIHelper$$.ctor @ 00cf5af8
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+
+--- Calls IN ---
+
+--- Listing ---
+00cf5af8  mov x1,xzr
+00cf5afc  b 0x024e45bc
+
+
+================================================================================
+### FILE: 016dbef8_CSBehaviour__get_logger.txt
+================================================================================
+Function: CSBehaviour$$get_logger @ 016dbef8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp283 @ 01083dd8
+  -> AliothEngine.LogManager$$get_NetworkLogger @ 0168a4e0
+
+--- Calls IN ---
+  <- CSBehaviour$$StartNCRun @ 016dc744
+  <- CSBehaviour$$ReConnect @ 016dc9d0
+  <- CSBehaviour$$Connect @ 016dcdf4
+  <- CSBehaviour$$Disconnect @ 016dc628
+  <- CSBehaviour$$Close @ 016dcf94
+  <- CSBehaviour.<NCRun>d__30$$MoveNext @ 016ddca8
+  <- CSBehaviour$$RequestOp @ 016dcafc
+  <- CSBehaviour$$get_isValid @ 016dc230
+  <- CSBehaviour$$Connect @ 016dc350
+  <- CSBehaviour$$OnNCStatusChanged @ 016dd174
+
+--- Listing ---
+016dbef8  stp x21,x20,[sp, #-0x20]!
+016dbefc  stp x19,x30,[sp, #0x10]
+016dbf00  adrp x20,0x3577000
+016dbf04  adrp x21,0x3309000
+016dbf08  ldrb w8,[x20, #0xd8d]
+016dbf0c  ldr x21,[x21, #0x930]
+016dbf10  mov x19,x0
+016dbf14  tbnz w8,#0x0,0x016dbf2c
+016dbf18  adrp x0,0x3309000
+016dbf1c  ldr x0,[x0, #0x930]
+016dbf20  bl 0x00b0789c
+016dbf24  mov w8,#0x1
+016dbf28  strb w8,[x20, #0xd8d]
+016dbf2c  ldr x8,[x21]
+016dbf30  ldr x8,[x8, #0xb8]
+016dbf34  ldr x0,[x8]
+016dbf38  cbz x0,0x016dbf50
+016dbf3c  mov x1,x19
+016dbf40  ldp x19,x30,[sp, #0x10]
+016dbf44  mov x2,xzr
+016dbf48  ldp x21,x20,[sp], #0x20
+016dbf4c  b 0x01083dd8
+016dbf50  ldp x19,x30,[sp, #0x10]
+016dbf54  ldp x21,x20,[sp], #0x20
+016dbf58  b 0x0168a4e0
+
+
+================================================================================
+### FILE: 016dbf5c_CSBehaviour__add_OnRequestFinish.txt
+================================================================================
+Function: CSBehaviour$$add_OnRequestFinish @ 016dbf5c
+
+--- Calls OUT ---
+  -> System.Delegate$$Combine @ 02197810
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- CSBehaviour$$RegisterRequestCallBack @ 016dd854
+
+--- Listing ---
+016dbf5c  str x24,[sp, #-0x40]!
+016dbf60  stp x23,x22,[sp, #0x10]
+016dbf64  stp x21,x20,[sp, #0x20]
+016dbf68  stp x19,x30,[sp, #0x30]
+016dbf6c  adrp x21,0x3577000
+016dbf70  adrp x22,0x3309000
+016dbf74  ldrb w8,[x21, #0xd8e]
+016dbf78  ldr x22,[x22, #0x930]
+016dbf7c  mov x19,x1
+016dbf80  mov x20,x0
+016dbf84  tbnz w8,#0x0,0x016dbfa8
+016dbf88  adrp x0,0x3344000
+016dbf8c  ldr x0,[x0, #0x8a0]
+016dbf90  bl 0x00b0789c
+016dbf94  adrp x0,0x3309000
+016dbf98  ldr x0,[x0, #0x930]
+016dbf9c  bl 0x00b0789c
+016dbfa0  mov w8,#0x1
+016dbfa4  strb w8,[x21, #0xd8e]
+016dbfa8  ldr x8,[x22]
+016dbfac  ldr x8,[x8, #0xb8]
+016dbfb0  ldr x0,[x8, #0x8]
+016dbfb4  cbz x0,0x016dbfd8
+016dbfb8  mov x1,x20
+016dbfbc  mov x2,x19
+016dbfc0  ldp x19,x30,[sp, #0x30]
+016dbfc4  ldp x21,x20,[sp, #0x20]
+016dbfc8  ldp x23,x22,[sp, #0x10]
+016dbfcc  mov x3,xzr
+016dbfd0  ldr x24,[sp], #0x40
+016dbfd4  b 0x0106125c
+016dbfd8  adrp x24,0x3344000
+016dbfdc  ldr x21,[x20, #0x38]!
+016dbfe0  ldr x24,[x24, #0x8a0]
+016dbfe4  mov x0,x21
+016dbfe8  mov x1,x19
+016dbfec  mov x2,xzr
+016dbff0  bl 0x02197810
+016dbff4  cbz x0,0x016dc014
+016dbff8  ldr x23,[x24]
+016dbffc  mov x22,x0
+016dc000  mov x1,x23
+016dc004  bl 0x00b07990
+016dc008  mov x1,x0
+016dc00c  cbnz x0,0x016dc018
+016dc010  b 0x016dc044
+016dc014  mov x1,xzr
+016dc018  mov x0,x20
+016dc01c  mov x2,x21
+016dc020  bl 0x00ae526c
+016dc024  cmp x21,x0
+016dc028  mov x21,x0
+016dc02c  b.ne 0x016dbfe4
+016dc030  ldp x19,x30,[sp, #0x30]
+016dc034  ldp x21,x20,[sp, #0x20]
+016dc038  ldp x23,x22,[sp, #0x10]
+016dc03c  ldr x24,[sp], #0x40
+016dc040  ret
+016dc044  mov x0,x22
+016dc048  mov x1,x23
+016dc04c  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 016dc050_CSBehaviour__remove_OnRequestFinish.txt
+================================================================================
+Function: CSBehaviour$$remove_OnRequestFinish @ 016dc050
+
+--- Calls OUT ---
+  -> System.Delegate$$Remove @ 02197a1c
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b07c6c @ 00b07c6c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00ae526c @ 00ae526c
+
+--- Calls IN ---
+  <- CSBehaviour$$UnRegisterRequestCallBack @ 016dd978
+
+--- Listing ---
+016dc050  str x24,[sp, #-0x40]!
+016dc054  stp x23,x22,[sp, #0x10]
+016dc058  stp x21,x20,[sp, #0x20]
+016dc05c  stp x19,x30,[sp, #0x30]
+016dc060  adrp x21,0x3577000
+016dc064  adrp x22,0x3309000
+016dc068  ldrb w8,[x21, #0xd8f]
+016dc06c  ldr x22,[x22, #0x930]
+016dc070  mov x19,x1
+016dc074  mov x20,x0
+016dc078  tbnz w8,#0x0,0x016dc09c
+016dc07c  adrp x0,0x3344000
+016dc080  ldr x0,[x0, #0x8a0]
+016dc084  bl 0x00b0789c
+016dc088  adrp x0,0x3309000
+016dc08c  ldr x0,[x0, #0x930]
+016dc090  bl 0x00b0789c
+016dc094  mov w8,#0x1
+016dc098  strb w8,[x21, #0xd8f]
+016dc09c  ldr x8,[x22]
+016dc0a0  ldr x8,[x8, #0xb8]
+016dc0a4  ldr x0,[x8, #0x10]
+016dc0a8  cbz x0,0x016dc0cc
+016dc0ac  mov x1,x20
+016dc0b0  mov x2,x19
+016dc0b4  ldp x19,x30,[sp, #0x30]
+016dc0b8  ldp x21,x20,[sp, #0x20]
+016dc0bc  ldp x23,x22,[sp, #0x10]
+016dc0c0  mov x3,xzr
+016dc0c4  ldr x24,[sp], #0x40
+016dc0c8  b 0x0106125c
+016dc0cc  adrp x24,0x3344000
+016dc0d0  ldr x21,[x20, #0x38]!
+016dc0d4  ldr x24,[x24, #0x8a0]
+016dc0d8  mov x0,x21
+016dc0dc  mov x1,x19
+016dc0e0  mov x2,xzr
+016dc0e4  bl 0x02197a1c
+016dc0e8  cbz x0,0x016dc108
+016dc0ec  ldr x23,[x24]
+016dc0f0  mov x22,x0
+016dc0f4  mov x1,x23
+016dc0f8  bl 0x00b07990
+016dc0fc  mov x1,x0
+016dc100  cbnz x0,0x016dc10c
+016dc104  b 0x016dc138
+016dc108  mov x1,xzr
+016dc10c  mov x0,x20
+016dc110  mov x2,x21
+016dc114  bl 0x00ae526c
+016dc118  cmp x21,x0
+016dc11c  mov x21,x0
+016dc120  b.ne 0x016dc0d8
+016dc124  ldp x19,x30,[sp, #0x30]
+016dc128  ldp x21,x20,[sp, #0x20]
+016dc12c  ldp x23,x22,[sp, #0x10]
+016dc130  ldr x24,[sp], #0x40
+016dc134  ret
+016dc138  mov x0,x22
+016dc13c  mov x1,x23
+016dc140  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 016dc144_CSBehaviour__get_isRequesting.txt
+================================================================================
+Function: CSBehaviour$$get_isRequesting @ 016dc144
+
+--- Calls OUT ---
+  -> Alioth.S1.Net.NetworkCenter$$get_IsCached @ 015b2d18
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_g_get_isRequesting @ 0123a83c
+  <- WaitPanelMono$$Update @ 01042098
+  <- AliothEngine.GUIScreenManager$$get_isLoadingScreen @ 0167b15c
+
+--- Listing ---
+016dc144  stp x21,x20,[sp, #-0x20]!
+016dc148  stp x19,x30,[sp, #0x10]
+016dc14c  adrp x20,0x3577000
+016dc150  adrp x21,0x3309000
+016dc154  ldrb w8,[x20, #0xd90]
+016dc158  ldr x21,[x21, #0x930]
+016dc15c  mov x19,x0
+016dc160  tbnz w8,#0x0,0x016dc178
+016dc164  adrp x0,0x3309000
+016dc168  ldr x0,[x0, #0x930]
+016dc16c  bl 0x00b0789c
+016dc170  mov w8,#0x1
+016dc174  strb w8,[x20, #0xd90]
+016dc178  ldr x8,[x21]
+016dc17c  ldr x8,[x8, #0xb8]
+016dc180  ldr x0,[x8, #0x18]
+016dc184  cbz x0,0x016dc19c
+016dc188  mov x1,x19
+016dc18c  ldp x19,x30,[sp, #0x10]
+016dc190  mov x2,xzr
+016dc194  ldp x21,x20,[sp], #0x20
+016dc198  b 0x01060aac
+016dc19c  ldr x0,[x19, #0x28]
+016dc1a0  cbz x0,0x016dc1b4
+016dc1a4  ldp x19,x30,[sp, #0x10]
+016dc1a8  mov x1,xzr
+016dc1ac  ldp x21,x20,[sp], #0x20
+016dc1b0  b 0x015b2d18
+016dc1b4  ldp x19,x30,[sp, #0x10]
+016dc1b8  ldp x21,x20,[sp], #0x20
+016dc1bc  ret
+
+
+================================================================================
+### FILE: 016dc1c0_CSBehaviour__get_IsConnected.txt
+================================================================================
+Function: CSBehaviour$$get_IsConnected @ 016dc1c0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_g_get_IsConnected @ 0123a9f0
+  <- LoginManager$$isLogin @ 00dd5394
+
+--- Listing ---
+016dc1c0  stp x21,x20,[sp, #-0x20]!
+016dc1c4  stp x19,x30,[sp, #0x10]
+016dc1c8  adrp x20,0x3577000
+016dc1cc  adrp x21,0x3309000
+016dc1d0  ldrb w8,[x20, #0xd91]
+016dc1d4  ldr x21,[x21, #0x930]
+016dc1d8  mov x19,x0
+016dc1dc  tbnz w8,#0x0,0x016dc1f4
+016dc1e0  adrp x0,0x3309000
+016dc1e4  ldr x0,[x0, #0x930]
+016dc1e8  bl 0x00b0789c
+016dc1ec  mov w8,#0x1
+016dc1f0  strb w8,[x20, #0xd91]
+016dc1f4  ldr x8,[x21]
+016dc1f8  ldr x8,[x8, #0xb8]
+016dc1fc  ldr x0,[x8, #0x20]
+016dc200  cbz x0,0x016dc218
+016dc204  mov x1,x19
+016dc208  ldp x19,x30,[sp, #0x10]
+016dc20c  mov x2,xzr
+016dc210  ldp x21,x20,[sp], #0x20
+016dc214  b 0x01060aac
+016dc218  ldr x8,[x19, #0x28]
+016dc21c  ldp x19,x30,[sp, #0x10]
+016dc220  cmp x8,#0x0
+016dc224  cset w0,ne
+016dc228  ldp x21,x20,[sp], #0x20
+016dc22c  ret
+
+
+================================================================================
+### FILE: 016dc230_CSBehaviour__get_isValid.txt
+================================================================================
+Function: CSBehaviour$$get_isValid @ 016dc230
+
+--- Calls OUT ---
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp9 @ 01060aac
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_g_get_isValid @ 0123aba4
+
+--- Listing ---
+016dc230  stp x21,x20,[sp, #-0x20]!
+016dc234  stp x19,x30,[sp, #0x10]
+016dc238  adrp x19,0x3577000
+016dc23c  adrp x21,0x3309000
+016dc240  ldrb w8,[x19, #0xd92]
+016dc244  ldr x21,[x21, #0x930]
+016dc248  mov x20,x0
+016dc24c  tbnz w8,#0x0,0x016dc27c
+016dc250  adrp x0,0x3309000
+016dc254  ldr x0,[x0, #0x930]
+016dc258  bl 0x00b0789c
+016dc25c  adrp x0,0x334a000
+016dc260  ldr x0,[x0, #0xc98]
+016dc264  bl 0x00b0789c
+016dc268  adrp x0,0x336e000
+016dc26c  ldr x0,[x0, #0x770]
+016dc270  bl 0x00b0789c
+016dc274  mov w8,#0x1
+016dc278  strb w8,[x19, #0xd92]
+016dc27c  ldr x8,[x21]
+016dc280  ldr x8,[x8, #0xb8]
+016dc284  ldr x0,[x8, #0x28]
+016dc288  cbz x0,0x016dc2a0
+016dc28c  ldp x19,x30,[sp, #0x10]
+016dc290  mov x1,x20
+016dc294  mov x2,xzr
+016dc298  ldp x21,x20,[sp], #0x20
+016dc29c  b 0x01060aac
+016dc2a0  ldr x8,[x20, #0x28]
+016dc2a4  cbz x8,0x016dc2b0
+016dc2a8  mov w0,#0x1
+016dc2ac  b 0x016dc340
+016dc2b0  mov x0,x20
+016dc2b4  bl 0x016dbef8
+016dc2b8  cbz x0,0x016dc34c
+016dc2bc  adrp x9,0x334a000
+016dc2c0  adrp x10,0x336e000
+016dc2c4  ldr x9,[x9, #0xc98]
+016dc2c8  ldr x8,[x0]
+016dc2cc  ldr x10,[x10, #0x770]
+016dc2d0  ldr x20,[x20, #0x20]
+016dc2d4  ldr x1,[x9]
+016dc2d8  ldrh w9,[x8, #0x12a]
+016dc2dc  ldr x21,[x10]
+016dc2e0  mov x19,x0
+016dc2e4  cbz x9,0x016dc308
+016dc2e8  ldr x10,[x8, #0xb0]
+016dc2ec  add x10,x10,#0x8
+016dc2f0  ldur x11,[x10, #-0x8]
+016dc2f4  cmp x11,x1
+016dc2f8  b.eq 0x016dc318
+016dc2fc  subs x9,x9,#0x1
+016dc300  add x10,x10,#0x10
+016dc304  b.ne 0x016dc2f0
+016dc308  mov w2,#0xa
+016dc30c  mov x0,x19
+016dc310  bl 0x00b2ae24
+016dc314  b 0x016dc328
+016dc318  ldr w9,[x10]
+016dc31c  add w9,w9,#0xa
+016dc320  add x8,x8,w9, SXTW  #0x4
+016dc324  add x0,x8,#0x138
+016dc328  ldp x8,x3,[x0]
+016dc32c  mov x0,x19
+016dc330  mov x1,x20
+016dc334  mov x2,x21
+016dc338  blr x8
+016dc33c  mov w0,wzr
+016dc340  ldp x19,x30,[sp, #0x10]
+016dc344  ldp x21,x20,[sp], #0x20
+016dc348  ret
+016dc34c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dc350_CSBehaviour__Connect.txt
+================================================================================
+Function: CSBehaviour$$Connect @ 016dc350
+
+--- Calls OUT ---
+  -> CSBehaviour$$StartNCRun @ 016dc744
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp284 @ 01084004
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00b07978 @ 00b07978
+  -> Alioth.S1.Net.NetworkCenter$$.ctor @ 015b2f70
+  -> FUN_00b079b0 @ 00b079b0
+  -> thunk_FUN_00aedffc @ 00b079d4
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> CSBehaviour$$Disconnect @ 016dc628
+  -> thunk_FUN_00ace670 @ 00b07990
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> thunk_FUN_00ace368 @ 00b07994
+  -> FUN_00b078f8 @ 00b078f8
+  -> FUN_00b079b8 @ 00b079b8
+
+--- Calls IN ---
+  <- LoginManager$$LoginGameServer @ 00dd6910
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_Connect @ 01239508
+
+--- Listing ---
+016dc350  sub sp,sp,#0x60
+016dc354  stp x27,x26,[sp, #0x10]
+016dc358  stp x25,x24,[sp, #0x20]
+016dc35c  stp x23,x22,[sp, #0x30]
+016dc360  stp x21,x20,[sp, #0x40]
+016dc364  stp x19,x30,[sp, #0x50]
+016dc368  adrp x23,0x3577000
+016dc36c  adrp x25,0x3309000
+016dc370  ldrb w8,[x23, #0xd93]
+016dc374  ldr x25,[x25, #0x930]
+016dc378  mov w24,w4
+016dc37c  mov x20,x3
+016dc380  mov w21,w2
+016dc384  mov x22,x1
+016dc388  mov x19,x0
+016dc38c  tbnz w8,#0x0,0x016dc3e0
+016dc390  adrp x0,0x3309000
+016dc394  ldr x0,[x0, #0x930]
+016dc398  bl 0x00b0789c
+016dc39c  adrp x0,0x334a000
+016dc3a0  ldr x0,[x0, #0xc98]
+016dc3a4  bl 0x00b0789c
+016dc3a8  adrp x0,0x3332000
+016dc3ac  ldr x0,[x0, #0x38]
+016dc3b0  bl 0x00b0789c
+016dc3b4  adrp x0,0x330b000
+016dc3b8  ldr x0,[x0, #0x520]
+016dc3bc  bl 0x00b0789c
+016dc3c0  adrp x0,0x3370000
+016dc3c4  ldr x0,[x0, #0x778]
+016dc3c8  bl 0x00b0789c
+016dc3cc  adrp x0,0x3339000
+016dc3d0  ldr x0,[x0, #0xd60]
+016dc3d4  bl 0x00b0789c
+016dc3d8  mov w8,#0x1
+016dc3dc  strb w8,[x23, #0xd93]
+016dc3e0  ldr x8,[x25]
+016dc3e4  ldr x8,[x8, #0xb8]
+016dc3e8  ldr x0,[x8, #0x30]
+016dc3ec  cbz x0,0x016dc424
+016dc3f0  and w5,w24,#0x1
+016dc3f4  mov x1,x19
+016dc3f8  mov x2,x22
+016dc3fc  mov w3,w21
+016dc400  mov x4,x20
+016dc404  ldp x19,x30,[sp, #0x50]
+016dc408  ldp x21,x20,[sp, #0x40]
+016dc40c  ldp x23,x22,[sp, #0x30]
+016dc410  ldp x25,x24,[sp, #0x20]
+016dc414  ldp x27,x26,[sp, #0x10]
+016dc418  mov x6,xzr
+016dc41c  add sp,sp,#0x60
+016dc420  b 0x01084004
+016dc424  mov x23,x19
+016dc428  adrp x25,0x3370000
+016dc42c  ldr x8,[x23, #0x28]!
+016dc430  ldr x25,[x25, #0x778]
+016dc434  and w9,w24,#0x1
+016dc438  strb w9,[x23, #0x18]
+016dc43c  cbz x8,0x016dc448
+016dc440  mov x0,x19
+016dc444  bl 0x016dc628
+016dc448  mov x0,x19
+016dc44c  bl 0x016dbef8
+016dc450  ldr x8,[x25]
+016dc454  ldr x24,[x19, #0x20]
+016dc458  mov x25,x0
+016dc45c  mov w1,#0x3
+016dc460  mov x0,x8
+016dc464  bl 0x00b078f8
+016dc468  cbz x0,0x016dc618
+016dc46c  adrp x27,0x3339000
+016dc470  ldr x27,[x27, #0xd60]
+016dc474  mov x26,x0
+016dc478  ldr x1,[x27]
+016dc47c  cbz x1,0x016dc4a4
+016dc480  ldr x8,[x26]
+016dc484  mov x0,x1
+016dc488  ldr x8,[x8, #0x40]
+016dc48c  mov x1,x8
+016dc490  bl 0x00b07990
+016dc494  cbz x0,0x016dc61c
+016dc498  ldr x8,[x27]
+016dc49c  mov x1,x8
+016dc4a0  b 0x016dc4a8
+016dc4a4  mov x8,xzr
+016dc4a8  ldr w9,[x26, #0x18]
+016dc4ac  cbz w9,0x016dc614
+016dc4b0  mov x0,x26
+016dc4b4  str x8,[x0, #0x20]!
+016dc4b8  bl 0x00b07850
+016dc4bc  cbz x22,0x016dc4d4
+016dc4c0  ldr x8,[x26]
+016dc4c4  mov x0,x22
+016dc4c8  ldr x1,[x8, #0x40]
+016dc4cc  bl 0x00b07990
+016dc4d0  cbz x0,0x016dc61c
+016dc4d4  ldr w8,[x26, #0x18]
+016dc4d8  cmp w8,#0x1
+016dc4dc  b.ls 0x016dc614
+016dc4e0  adrp x27,0x3332000
+016dc4e4  ldr x27,[x27, #0x38]
+016dc4e8  mov x0,x26
+016dc4ec  str x22,[x0, #0x28]!
+016dc4f0  mov x1,x22
+016dc4f4  bl 0x00b07850
+016dc4f8  ldr x0,[x27]
+016dc4fc  add x1,sp,#0xc
+016dc500  str w21,[sp, #0xc]
+016dc504  bl 0x00b07994
+016dc508  mov x27,x0
+016dc50c  cbz x0,0x016dc524
+016dc510  ldr x8,[x26]
+016dc514  mov x0,x27
+016dc518  ldr x1,[x8, #0x40]
+016dc51c  bl 0x00b07990
+016dc520  cbz x0,0x016dc61c
+016dc524  ldr w8,[x26, #0x18]
+016dc528  cmp w8,#0x2
+016dc52c  b.ls 0x016dc614
+016dc530  mov x0,x26
+016dc534  str x27,[x0, #0x30]!
+016dc538  mov x1,x27
+016dc53c  bl 0x00b07850
+016dc540  cbz x25,0x016dc618
+016dc544  adrp x10,0x334a000
+016dc548  ldr x8,[x25]
+016dc54c  ldr x10,[x10, #0xc98]
+016dc550  adrp x27,0x330b000
+016dc554  ldrh w9,[x8, #0x12a]
+016dc558  ldr x1,[x10]
+016dc55c  ldr x27,[x27, #0x520]
+016dc560  cbz x9,0x016dc584
+016dc564  ldr x10,[x8, #0xb0]
+016dc568  add x10,x10,#0x8
+016dc56c  ldur x11,[x10, #-0x8]
+016dc570  cmp x11,x1
+016dc574  b.eq 0x016dc594
+016dc578  subs x9,x9,#0x1
+016dc57c  add x10,x10,#0x10
+016dc580  b.ne 0x016dc56c
+016dc584  mov w2,#0xc
+016dc588  mov x0,x25
+016dc58c  bl 0x00b2ae24
+016dc590  b 0x016dc5a4
+016dc594  ldr w9,[x10]
+016dc598  add w9,w9,#0xc
+016dc59c  add x8,x8,w9, SXTW  #0x4
+016dc5a0  add x0,x8,#0x138
+016dc5a4  ldp x8,x4,[x0]
+016dc5a8  mov w1,#0x3
+016dc5ac  mov x0,x25
+016dc5b0  mov x2,x24
+016dc5b4  mov x3,x26
+016dc5b8  blr x8
+016dc5bc  ldr x0,[x27]
+016dc5c0  bl 0x00b079a0
+016dc5c4  cbz x0,0x016dc618
+016dc5c8  mov x1,x22
+016dc5cc  mov w2,w21
+016dc5d0  mov x3,x20
+016dc5d4  mov x4,xzr
+016dc5d8  mov x24,x0
+016dc5dc  bl 0x015b2f70
+016dc5e0  mov x0,x23
+016dc5e4  mov x1,x24
+016dc5e8  str x24,[x19, #0x28]
+016dc5ec  bl 0x00b07850
+016dc5f0  mov x0,x19
+016dc5f4  bl 0x016dc744
+016dc5f8  ldp x19,x30,[sp, #0x50]
+016dc5fc  ldp x21,x20,[sp, #0x40]
+016dc600  ldp x23,x22,[sp, #0x30]
+016dc604  ldp x25,x24,[sp, #0x20]
+016dc608  ldp x27,x26,[sp, #0x10]
+016dc60c  add sp,sp,#0x60
+016dc610  ret
+016dc614  bl 0x00b079b8
+016dc618  bl 0x00b079b0
+016dc61c  bl 0x00b079d4
+016dc620  mov x1,xzr
+016dc624  bl 0x00b07978
+
+
+================================================================================
+### FILE: 016dc628_CSBehaviour__Disconnect.txt
+================================================================================
+Function: CSBehaviour$$Disconnect @ 016dc628
+
+--- Calls OUT ---
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> CSBehaviour$$StopNCRun @ 016dc8dc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- CSBehaviour$$ReConnect @ 016dc9d0
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_Disconnect @ 01239994
+  <- Ali$$GameRestart @ 00e0921c
+  <- CSBehaviour$$OnApplicationQuit @ 016dda9c
+  <- CSBehaviour$$Connect @ 016dc350
+
+--- Listing ---
+016dc628  str x22,[sp, #-0x30]!
+016dc62c  stp x21,x20,[sp, #0x10]
+016dc630  stp x19,x30,[sp, #0x20]
+016dc634  adrp x20,0x3577000
+016dc638  adrp x21,0x3309000
+016dc63c  ldrb w8,[x20, #0xd94]
+016dc640  ldr x21,[x21, #0x930]
+016dc644  mov x19,x0
+016dc648  tbnz w8,#0x0,0x016dc678
+016dc64c  adrp x0,0x3309000
+016dc650  ldr x0,[x0, #0x930]
+016dc654  bl 0x00b0789c
+016dc658  adrp x0,0x334a000
+016dc65c  ldr x0,[x0, #0xc98]
+016dc660  bl 0x00b0789c
+016dc664  adrp x0,0x3378000
+016dc668  ldr x0,[x0, #0xa60]
+016dc66c  bl 0x00b0789c
+016dc670  mov w8,#0x1
+016dc674  strb w8,[x20, #0xd94]
+016dc678  ldr x8,[x21]
+016dc67c  ldr x8,[x8, #0xb8]
+016dc680  ldr x0,[x8, #0x38]
+016dc684  cbz x0,0x016dc6a0
+016dc688  mov x1,x19
+016dc68c  ldp x19,x30,[sp, #0x20]
+016dc690  ldp x21,x20,[sp, #0x10]
+016dc694  mov x2,xzr
+016dc698  ldr x22,[sp], #0x30
+016dc69c  b 0x01060dac
+016dc6a0  mov x0,x19
+016dc6a4  bl 0x016dbef8
+016dc6a8  cbz x0,0x016dc740
+016dc6ac  adrp x9,0x334a000
+016dc6b0  adrp x10,0x3378000
+016dc6b4  ldr x9,[x9, #0xc98]
+016dc6b8  ldr x8,[x0]
+016dc6bc  ldr x10,[x10, #0xa60]
+016dc6c0  ldr x21,[x19, #0x20]
+016dc6c4  ldr x1,[x9]
+016dc6c8  ldrh w9,[x8, #0x12a]
+016dc6cc  ldr x22,[x10]
+016dc6d0  mov x20,x0
+016dc6d4  cbz x9,0x016dc6f8
+016dc6d8  ldr x10,[x8, #0xb0]
+016dc6dc  add x10,x10,#0x8
+016dc6e0  ldur x11,[x10, #-0x8]
+016dc6e4  cmp x11,x1
+016dc6e8  b.eq 0x016dc708
+016dc6ec  subs x9,x9,#0x1
+016dc6f0  add x10,x10,#0x10
+016dc6f4  b.ne 0x016dc6e0
+016dc6f8  mov w2,#0x9
+016dc6fc  mov x0,x20
+016dc700  bl 0x00b2ae24
+016dc704  b 0x016dc718
+016dc708  ldr w9,[x10]
+016dc70c  add w9,w9,#0x9
+016dc710  add x8,x8,w9, SXTW  #0x4
+016dc714  add x0,x8,#0x138
+016dc718  ldp x8,x3,[x0]
+016dc71c  mov x0,x20
+016dc720  mov x1,x21
+016dc724  mov x2,x22
+016dc728  blr x8
+016dc72c  mov x0,x19
+016dc730  ldp x19,x30,[sp, #0x20]
+016dc734  ldp x21,x20,[sp, #0x10]
+016dc738  ldr x22,[sp], #0x30
+016dc73c  b 0x016dc8dc
+016dc740  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dc744_CSBehaviour__StartNCRun.txt
+================================================================================
+Function: CSBehaviour$$StartNCRun @ 016dc744
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.MonoBehaviour$$StartCoroutine @ 024e4070
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> Alioth.S1.Net.NetworkCenter$$add_OnStatusChanged @ 015b2b30
+  -> FUN_00b079b0 @ 00b079b0
+  -> CSBehaviour$$NCRun @ 016dd780
+  -> System.Action<Int32Enum,-ByteEnum,-object>$$.ctor @ 01911170
+
+--- Calls IN ---
+  <- CSBehaviour$$ReConnect @ 016dc9d0
+  <- CSBehaviour$$Connect @ 016dc350
+
+--- Listing ---
+016dc744  stp x21,x20,[sp, #-0x20]!
+016dc748  stp x19,x30,[sp, #0x10]
+016dc74c  adrp x20,0x3577000
+016dc750  adrp x21,0x3309000
+016dc754  ldrb w8,[x20, #0xd9d]
+016dc758  ldr x21,[x21, #0x930]
+016dc75c  mov x19,x0
+016dc760  tbnz w8,#0x0,0x016dc7a8
+016dc764  adrp x0,0x334a000
+016dc768  ldr x0,[x0, #0x2b0]
+016dc76c  bl 0x00b0789c
+016dc770  adrp x0,0x3330000
+016dc774  ldr x0,[x0, #0xe10]
+016dc778  bl 0x00b0789c
+016dc77c  adrp x0,0x3309000
+016dc780  ldr x0,[x0, #0x930]
+016dc784  bl 0x00b0789c
+016dc788  adrp x0,0x334a000
+016dc78c  ldr x0,[x0, #0xc98]
+016dc790  bl 0x00b0789c
+016dc794  adrp x0,0x3343000
+016dc798  ldr x0,[x0, #0xee0]
+016dc79c  bl 0x00b0789c
+016dc7a0  mov w8,#0x1
+016dc7a4  strb w8,[x20, #0xd9d]
+016dc7a8  ldr x8,[x21]
+016dc7ac  ldr x8,[x8, #0xb8]
+016dc7b0  ldr x0,[x8, #0x80]
+016dc7b4  cbz x0,0x016dc7cc
+016dc7b8  mov x1,x19
+016dc7bc  ldp x19,x30,[sp, #0x10]
+016dc7c0  mov x2,xzr
+016dc7c4  ldp x21,x20,[sp], #0x20
+016dc7c8  b 0x01060dac
+016dc7cc  ldr x20,[x19, #0x28]
+016dc7d0  cbz x20,0x016dc844
+016dc7d4  adrp x8,0x334a000
+016dc7d8  ldr x8,[x8, #0x2b0]
+016dc7dc  ldr x0,[x8]
+016dc7e0  bl 0x00b079a0
+016dc7e4  cbz x0,0x016dc8d8
+016dc7e8  adrp x8,0x3330000
+016dc7ec  ldr x8,[x8, #0xe10]
+016dc7f0  mov x1,x19
+016dc7f4  mov x3,xzr
+016dc7f8  mov x21,x0
+016dc7fc  ldr x2,[x8]
+016dc800  bl 0x01911170
+016dc804  mov x0,x20
+016dc808  mov x1,x21
+016dc80c  mov x2,xzr
+016dc810  bl 0x015b2b30
+016dc814  mov x0,x19
+016dc818  bl 0x016dd780
+016dc81c  mov x1,x0
+016dc820  mov x0,x19
+016dc824  mov x2,xzr
+016dc828  bl 0x024e4070
+016dc82c  mov x1,x0
+016dc830  str x1,[x19, #0x30]!
+016dc834  mov x0,x19
+016dc838  ldp x19,x30,[sp, #0x10]
+016dc83c  ldp x21,x20,[sp], #0x20
+016dc840  b 0x00b07850
+016dc844  mov x0,x19
+016dc848  bl 0x016dbef8
+016dc84c  cbz x0,0x016dc8d8
+016dc850  adrp x9,0x334a000
+016dc854  adrp x10,0x3343000
+016dc858  ldr x9,[x9, #0xc98]
+016dc85c  ldr x8,[x0]
+016dc860  ldr x10,[x10, #0xee0]
+016dc864  ldr x19,[x19, #0x20]
+016dc868  ldr x1,[x9]
+016dc86c  ldrh w9,[x8, #0x12a]
+016dc870  ldr x21,[x10]
+016dc874  mov x20,x0
+016dc878  cbz x9,0x016dc89c
+016dc87c  ldr x10,[x8, #0xb0]
+016dc880  add x10,x10,#0x8
+016dc884  ldur x11,[x10, #-0x8]
+016dc888  cmp x11,x1
+016dc88c  b.eq 0x016dc8ac
+016dc890  subs x9,x9,#0x1
+016dc894  add x10,x10,#0x10
+016dc898  b.ne 0x016dc884
+016dc89c  mov w2,#0xa
+016dc8a0  mov x0,x20
+016dc8a4  bl 0x00b2ae24
+016dc8a8  b 0x016dc8bc
+016dc8ac  ldr w9,[x10]
+016dc8b0  add w9,w9,#0xa
+016dc8b4  add x8,x8,w9, SXTW  #0x4
+016dc8b8  add x0,x8,#0x138
+016dc8bc  ldp x4,x3,[x0]
+016dc8c0  mov x1,x19
+016dc8c4  ldp x19,x30,[sp, #0x10]
+016dc8c8  mov x0,x20
+016dc8cc  mov x2,x21
+016dc8d0  ldp x21,x20,[sp], #0x20
+016dc8d4  br x4
+016dc8d8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dc8dc_CSBehaviour__StopNCRun.txt
+================================================================================
+Function: CSBehaviour$$StopNCRun @ 016dc8dc
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$StopCoroutine @ 024e42ec
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> Alioth.S1.Net.NetworkCenter$$ManualClose @ 015b3ae4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> Alioth.S1.Net.NetworkCenter$$remove_OnStatusChanged @ 015b2c24
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Action<Int32Enum,-ByteEnum,-object>$$.ctor @ 01911170
+
+--- Calls IN ---
+  <- CSBehaviour$$Disconnect @ 016dc628
+
+--- Listing ---
+016dc8dc  stp x21,x20,[sp, #-0x20]!
+016dc8e0  stp x19,x30,[sp, #0x10]
+016dc8e4  adrp x20,0x3577000
+016dc8e8  adrp x21,0x3309000
+016dc8ec  ldrb w8,[x20, #0xd9e]
+016dc8f0  ldr x21,[x21, #0x930]
+016dc8f4  mov x19,x0
+016dc8f8  tbnz w8,#0x0,0x016dc928
+016dc8fc  adrp x0,0x334a000
+016dc900  ldr x0,[x0, #0x2b0]
+016dc904  bl 0x00b0789c
+016dc908  adrp x0,0x3330000
+016dc90c  ldr x0,[x0, #0xe10]
+016dc910  bl 0x00b0789c
+016dc914  adrp x0,0x3309000
+016dc918  ldr x0,[x0, #0x930]
+016dc91c  bl 0x00b0789c
+016dc920  mov w8,#0x1
+016dc924  strb w8,[x20, #0xd9e]
+016dc928  ldr x8,[x21]
+016dc92c  ldr x8,[x8, #0xb8]
+016dc930  ldr x0,[x8, #0x88]
+016dc934  cbz x0,0x016dc94c
+016dc938  mov x1,x19
+016dc93c  ldp x19,x30,[sp, #0x10]
+016dc940  mov x2,xzr
+016dc944  ldp x21,x20,[sp], #0x20
+016dc948  b 0x01060dac
+016dc94c  ldr x1,[x19, #0x30]
+016dc950  cbz x1,0x016dc960
+016dc954  mov x0,x19
+016dc958  mov x2,xzr
+016dc95c  bl 0x024e42ec
+016dc960  ldr x20,[x19, #0x28]
+016dc964  cbz x20,0x016dc9c0
+016dc968  adrp x8,0x334a000
+016dc96c  ldr x8,[x8, #0x2b0]
+016dc970  ldr x0,[x8]
+016dc974  bl 0x00b079a0
+016dc978  cbz x0,0x016dc9cc
+016dc97c  adrp x8,0x3330000
+016dc980  ldr x8,[x8, #0xe10]
+016dc984  mov x1,x19
+016dc988  mov x3,xzr
+016dc98c  mov x21,x0
+016dc990  ldr x2,[x8]
+016dc994  bl 0x01911170
+016dc998  mov x0,x20
+016dc99c  mov x1,x21
+016dc9a0  mov x2,xzr
+016dc9a4  bl 0x015b2c24
+016dc9a8  ldr x0,[x19, #0x28]
+016dc9ac  cbz x0,0x016dc9cc
+016dc9b0  ldp x19,x30,[sp, #0x10]
+016dc9b4  mov x1,xzr
+016dc9b8  ldp x21,x20,[sp], #0x20
+016dc9bc  b 0x015b3ae4
+016dc9c0  ldp x19,x30,[sp, #0x10]
+016dc9c4  ldp x21,x20,[sp], #0x20
+016dc9c8  ret
+016dc9cc  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dc9d0_CSBehaviour__ReConnect.txt
+================================================================================
+Function: CSBehaviour$$ReConnect @ 016dc9d0
+
+--- Calls OUT ---
+  -> CSBehaviour$$StartNCRun @ 016dc744
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> CSBehaviour$$Disconnect @ 016dc628
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_ReConnect @ 01239b30
+  <- SDKManager$$ReConnect @ 00dec21c
+
+--- Listing ---
+016dc9d0  str x22,[sp, #-0x30]!
+016dc9d4  stp x21,x20,[sp, #0x10]
+016dc9d8  stp x19,x30,[sp, #0x20]
+016dc9dc  adrp x20,0x3577000
+016dc9e0  adrp x21,0x3309000
+016dc9e4  ldrb w8,[x20, #0xd95]
+016dc9e8  ldr x21,[x21, #0x930]
+016dc9ec  mov x19,x0
+016dc9f0  tbnz w8,#0x0,0x016dca20
+016dc9f4  adrp x0,0x3309000
+016dc9f8  ldr x0,[x0, #0x930]
+016dc9fc  bl 0x00b0789c
+016dca00  adrp x0,0x334a000
+016dca04  ldr x0,[x0, #0xc98]
+016dca08  bl 0x00b0789c
+016dca0c  adrp x0,0x330f000
+016dca10  ldr x0,[x0, #0x350]
+016dca14  bl 0x00b0789c
+016dca18  mov w8,#0x1
+016dca1c  strb w8,[x20, #0xd95]
+016dca20  ldr x8,[x21]
+016dca24  ldr x8,[x8, #0xb8]
+016dca28  ldr x0,[x8, #0x40]
+016dca2c  cbz x0,0x016dca48
+016dca30  mov x1,x19
+016dca34  ldp x19,x30,[sp, #0x20]
+016dca38  ldp x21,x20,[sp, #0x10]
+016dca3c  mov x2,xzr
+016dca40  ldr x22,[sp], #0x30
+016dca44  b 0x01060dac
+016dca48  mov x0,x19
+016dca4c  bl 0x016dbef8
+016dca50  cbz x0,0x016dcaf8
+016dca54  adrp x9,0x334a000
+016dca58  adrp x10,0x330f000
+016dca5c  ldr x9,[x9, #0xc98]
+016dca60  ldr x8,[x0]
+016dca64  ldr x10,[x10, #0x350]
+016dca68  ldr x21,[x19, #0x20]
+016dca6c  ldr x1,[x9]
+016dca70  ldrh w9,[x8, #0x12a]
+016dca74  ldr x22,[x10]
+016dca78  mov x20,x0
+016dca7c  cbz x9,0x016dcaa0
+016dca80  ldr x10,[x8, #0xb0]
+016dca84  add x10,x10,#0x8
+016dca88  ldur x11,[x10, #-0x8]
+016dca8c  cmp x11,x1
+016dca90  b.eq 0x016dcab0
+016dca94  subs x9,x9,#0x1
+016dca98  add x10,x10,#0x10
+016dca9c  b.ne 0x016dca88
+016dcaa0  mov w2,#0x9
+016dcaa4  mov x0,x20
+016dcaa8  bl 0x00b2ae24
+016dcaac  b 0x016dcac0
+016dcab0  ldr w9,[x10]
+016dcab4  add w9,w9,#0x9
+016dcab8  add x8,x8,w9, SXTW  #0x4
+016dcabc  add x0,x8,#0x138
+016dcac0  ldp x8,x3,[x0]
+016dcac4  mov x0,x20
+016dcac8  mov x1,x21
+016dcacc  mov x2,x22
+016dcad0  blr x8
+016dcad4  mov x0,x19
+016dcad8  bl 0x016dc628
+016dcadc  mov x0,x19
+016dcae0  bl 0x016dc744
+016dcae4  strb wzr,[x19, #0x40]
+016dcae8  ldp x19,x30,[sp, #0x20]
+016dcaec  ldp x21,x20,[sp, #0x10]
+016dcaf0  ldr x22,[sp], #0x30
+016dcaf4  ret
+016dcaf8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dcafc_CSBehaviour__RequestOp.txt
+================================================================================
+Function: CSBehaviour$$RequestOp @ 016dcafc
+
+--- Calls OUT ---
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> Alioth.S1.Net.NetworkCenter$$Send @ 015b3764
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp285 @ 010841e0
+
+--- Calls IN ---
+  <- ProtocolGame_SendRequest$$FriendDelete @ 00de0e58
+  <- ProtocolGame_SendRequest$$UnlockFashion @ 00ddf484
+  <- ProtocolGame_SendRequest$$UpgradeWeapon @ 00ddf614
+  <- ProtocolGame_SendRequest$$WeaponLevelUp @ 00de304c
+  <- ProtocolGame_SendRequest$$SpaceBaseGetReward @ 00de1228
+  <- ProtocolGame_SendRequest$$WeaponReset @ 00de27cc
+  <- ProtocolGame_SendRequest$$MailGetReward @ 00de01c4
+  <- ProtocolGame_SendRequest$$GetBattleReport @ 00de1ab8
+  <- ProtocolGame_SendRequest$$Login @ 00dde818
+  <- ProtocolGame_SendRequest$$CreateBatle4Friend @ 00de17bc
+  <- ProtocolGame_SendRequest$$CreateBattle @ 00dded04
+  <- ProtocolGame_SendRequest$$GetSupportHeroRank @ 00de3890
+  <- ProtocolGame_SendRequest$$CreateBattle4SpaceBase @ 00de12e4
+  <- ProtocolGame_SendRequest$$SupportHeroShow @ 00de37d4
+  <- ProtocolGame_SendRequest$$GetShop4Box @ 00de1d08
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_RequestOp @ 01239ccc
+  <- ProtocolGame_SendRequest$$SwitchWeapon @ 00ddf058
+  <- ProtocolGame_SendRequest$$BuyCrusadeLevel @ 00de2dec
+  <- ProtocolGame_SendRequest$$GetExamMyGroupRank @ 00de1884
+  <- ProtocolGame_SendRequest$$GetExam @ 00de1638
+  <- ProtocolGame_SendRequest$$EquipUpgrade @ 00ddfe74
+  <- ProtocolGame_SendRequest$$GetActivities @ 00de1f68
+  <- ProtocolGame_SendRequest$$UnlockHero @ 00ddf120
+  <- ProtocolGame_SendRequest$$SpaceBaseGet @ 00de10b0
+  <- ProtocolGame_SendRequest$$EquipSplit @ 00ddfda0
+  <- FUN_00de3004 @ 00de3004
+  <- ProtocolGame_SendRequest$$GetActivitySubReward @ 00de21b4
+  <- ProtocolGame_SendRequest$$GetCrusadeAward @ 00de2eb4
+  <- ProtocolGame_SendRequest$$ExploreFloorSwapLocation @ 00de2634
+  <- ProtocolGame_SendRequest$$GetShops @ 00de1dc4
+  <- ProtocolGame_SendRequest$$SweepBattle @ 00ddede0
+  <- ProtocolGame_SendRequest$$FriendFind @ 00de0b2c
+  <- ProtocolGame_SendRequest$$FriendRecommend @ 00de0f20
+  <- ProtocolGame_SendRequest$$SpaceBaseRefresh @ 00de116c
+  <- ProtocolGame_SendRequest$$Reported @ 00de33b8
+  <- ProtocolGame_SendRequest$$StigmaLoadAndUnload @ 00ddf890
+  <- ProtocolGame_SendRequest$$Logout @ 00de3ac4
+  <- ProtocolGame_SendRequest$$ExploreFloorGet @ 00de227c
+  <- ProtocolGame_SendRequest$$AutoSignIn @ 00de08ec
+  <- ProtocolGame_SendRequest$$FriendReject @ 00de0d90
+  <- ProtocolGame_SendRequest$$SupportHeroByFree @ 00de3548
+  <- ProtocolGame_SendRequest$$LevelUpHero @ 00ddf7a4
+  <- ProtocolGame_SendRequest$$GetChapterBoxReward @ 00ddeea8
+  <- ProtocolGame_SendRequest$$CloseBattle @ 00ddef84
+  <- ProtocolGame_SendRequest$$GetExamTotalRank @ 00de1940
+  <- ProtocolGame_SendRequest$$EquipExpand @ 00de2ba0
+  <- ProtocolGame_SendRequest$$GetSupportUserHeroRank @ 00de3a08
+  <- ProtocolGame_SendRequest$$WearFashion @ 00ddf3bc
+  <- ProtocolGame_SendRequest$$StarUpHero @ 00ddf6dc
+  <- ProtocolGame_SendRequest$$SupportHeroByItem @ 00de3684
+  <- ProtocolGame_SendRequest$$SaveTeam @ 00ddeb40
+  <- ProtocolGame_SendRequest$$Equip @ 00ddf1e8
+  <- ProtocolGame_SendRequest$$UpgradeStigma @ 00ddfb34
+  <- ProtocolGame_SendRequest$$RaiseEquip @ 00de00f0
+  <- ProtocolGame_SendRequest$$GetSections @ 00ddea78
+  <- ProtocolGame_SendRequest$$AgreeCharge @ 00de156c
+  <- ProtocolGame_SendRequest$$DestroyKey @ 00de2d24
+  <- ProtocolGame_SendRequest$$OpenMisBox @ 00de05c4
+  <- ProtocolGame_SendRequest$$GetMailOlds @ 00de2ae4
+  <- ProtocolGame_SendRequest$$GetSupportUserRank @ 00de394c
+  <- ProtocolGame_SendRequest$$StigmataCompound @ 00ddf97c
+  <- ProtocolGame_SendRequest$$GetTotalReward @ 00de09a8
+  <- ProtocolGame_SendRequest$$GetFriends @ 00de0a70
+  <- ProtocolGame_SendRequest$$CreateChargeOrder @ 00de0824
+  <- ProtocolGame_SendRequest$$CreateBatle4Exam @ 00de1700
+  <- ProtocolGame_SendRequest$$FriendAgree @ 00de0cc8
+  <- ProtocolGame_SendRequest$$SignInHolidays @ 00de2024
+  <- ProtocolGame_SendRequest$$ForgeEquip @ 00ddfcd8
+  <- ProtocolGame_SendRequest$$ChangeChatChannle @ 00de3480
+  <- ProtocolGame_SendRequest$$SendWorldChat @ 00de3138
+  <- ProtocolGame_SendRequest$$WeaponForge @ 00ddf54c
+  <- ProtocolGame_SendRequest$$ShopRefresh @ 00de20ec
+  <- ProtocolGame_SendRequest$$GetExamFriendRank @ 00de19fc
+  <- ProtocolGame_SendRequest$$ShieldAdd @ 00de3228
+  <- ProtocolGame_SendRequest$$ExploreFloorReward @ 00de2578
+  <- ProtocolGame_SendRequest$$FriendChallenge @ 00de0fe8
+  <- ProtocolGame_SendRequest$$CodeExchange @ 00de0428
+  <- ProtocolGame_SendRequest$$SetHeadIcon @ 00de04fc
+  <- ProtocolGame_SendRequest$$Ping @ 00dde904
+  <- ProtocolGame_SendRequest$$GetTeam @ 00ddec48
+  <- ProtocolGame_SendRequest$$ChargeEnergy @ 00de06a0
+  <- ProtocolGame_SendRequest$$ExploreFloorRefresh @ 00de2710
+  <- ProtocolGame_SendRequest$$FriendRequest @ 00de0c00
+  <- ProtocolGame_SendRequest$$EquipBatchSplit @ 00ddff48
+  <- ProtocolGame_SendRequest$$StigmataSplit @ 00ddfa58
+  <- ProtocolGame_SendRequest$$ShieldDel @ 00de32f0
+  <- ProtocolGame_SendRequest$$QuestGetReward @ 00ddfc10
+  <- ProtocolGame_SendRequest$$CreateBattle4FC @ 00de143c
+  <- ProtocolGame_SendRequest$$CreateBattle4ExploreFloor @ 00de24bc
+  <- GlobalUIManager$$NotifyChargeSuccess @ 00f1da04
+  <- ProtocolGame_SendRequest$$HeroSaveAIStrategy @ 00de2894
+  <- ProtocolGame_SendRequest$$ExploreFloorEnter @ 00de2338
+  <- ProtocolGame_SendRequest$$CostAKey @ 00de2c5c
+  <- ProtocolGame_SendRequest$$GetRecharges @ 00de0768
+  <- ProtocolGame_SendRequest$$GetMails @ 00de0298
+  <- ProtocolGame_SendRequest$$ExploreFloorChoose @ 00de23f4
+  <- ProtocolGame_SendRequest$$SetNickName @ 00de0354
+  <- ProtocolGame_SendRequest$$SaveGuideNovice @ 00de1b74
+  <- ProtocolGame_SendRequest$$ChapterRead @ 00de2a1c
+  <- ProtocolGame_SendRequest$$EquipLockUnlock @ 00de001c
+  <- ProtocolGame_SendRequest$$Shopping @ 00de1e80
+
+--- Listing ---
+016dcafc  str x22,[sp, #-0x30]!
+016dcb00  stp x21,x20,[sp, #0x10]
+016dcb04  stp x19,x30,[sp, #0x20]
+016dcb08  adrp x19,0x3577000
+016dcb0c  adrp x22,0x3309000
+016dcb10  ldrb w8,[x19, #0xd96]
+016dcb14  ldr x22,[x22, #0x930]
+016dcb18  mov x21,x1
+016dcb1c  mov x20,x0
+016dcb20  tbnz w8,#0x0,0x016dcb50
+016dcb24  adrp x0,0x3309000
+016dcb28  ldr x0,[x0, #0x930]
+016dcb2c  bl 0x00b0789c
+016dcb30  adrp x0,0x334a000
+016dcb34  ldr x0,[x0, #0xc98]
+016dcb38  bl 0x00b0789c
+016dcb3c  adrp x0,0x3313000
+016dcb40  ldr x0,[x0, #0x180]
+016dcb44  bl 0x00b0789c
+016dcb48  mov w8,#0x1
+016dcb4c  strb w8,[x19, #0xd96]
+016dcb50  ldr x8,[x22]
+016dcb54  ldr x8,[x8, #0xb8]
+016dcb58  ldr x0,[x8, #0x48]
+016dcb5c  cbz x0,0x016dcb7c
+016dcb60  mov x1,x20
+016dcb64  mov x2,x21
+016dcb68  ldp x19,x30,[sp, #0x20]
+016dcb6c  ldp x21,x20,[sp, #0x10]
+016dcb70  mov x3,xzr
+016dcb74  ldr x22,[sp], #0x30
+016dcb78  b 0x010841e0
+016dcb7c  ldr x0,[x20, #0x28]
+016dcb80  cbz x0,0x016dcbc8
+016dcb84  adrp x22,0x3313000
+016dcb88  ldr x22,[x22, #0x180]
+016dcb8c  mov x1,x21
+016dcb90  mov x2,xzr
+016dcb94  bl 0x015b3764
+016dcb98  mov x19,x0
+016dcb9c  mov x0,x20
+016dcba0  bl 0x016dbef8
+016dcba4  ldr x22,[x22]
+016dcba8  mov x20,x0
+016dcbac  cbz x21,0x016dcbd0
+016dcbb0  ldr x8,[x21]
+016dcbb4  mov x0,x21
+016dcbb8  ldp x9,x1,[x8, #0x168]
+016dcbbc  blr x9
+016dcbc0  mov x1,x0
+016dcbc4  b 0x016dcbd4
+016dcbc8  mov x19,xzr
+016dcbcc  b 0x016dcc50
+016dcbd0  mov x1,xzr
+016dcbd4  mov x0,x22
+016dcbd8  mov x2,xzr
+016dcbdc  bl 0x01fd2850
+016dcbe0  cbz x20,0x016dcc64
+016dcbe4  adrp x10,0x334a000
+016dcbe8  ldr x8,[x20]
+016dcbec  ldr x10,[x10, #0xc98]
+016dcbf0  mov x21,x0
+016dcbf4  ldrh w9,[x8, #0x12a]
+016dcbf8  ldr x1,[x10]
+016dcbfc  cbz x9,0x016dcc20
+016dcc00  ldr x10,[x8, #0xb0]
+016dcc04  add x10,x10,#0x8
+016dcc08  ldur x11,[x10, #-0x8]
+016dcc0c  cmp x11,x1
+016dcc10  b.eq 0x016dcc30
+016dcc14  subs x9,x9,#0x1
+016dcc18  add x10,x10,#0x10
+016dcc1c  b.ne 0x016dcc08
+016dcc20  mov w2,#0x8
+016dcc24  mov x0,x20
+016dcc28  bl 0x00b2ae24
+016dcc2c  b 0x016dcc40
+016dcc30  ldr w9,[x10]
+016dcc34  add w9,w9,#0x8
+016dcc38  add x8,x8,w9, SXTW  #0x4
+016dcc3c  add x0,x8,#0x138
+016dcc40  ldp x8,x2,[x0]
+016dcc44  mov x0,x20
+016dcc48  mov x1,x21
+016dcc4c  blr x8
+016dcc50  mov x0,x19
+016dcc54  ldp x19,x30,[sp, #0x20]
+016dcc58  ldp x21,x20,[sp, #0x10]
+016dcc5c  ldr x22,[sp], #0x30
+016dcc60  ret
+016dcc64  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dcc68_CSBehaviour__SendRequest.txt
+================================================================================
+Function: CSBehaviour$$SendRequest @ 016dcc68
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp172 @ 010756d8
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+016dcc68  str x22,[sp, #-0x30]!
+016dcc6c  stp x21,x20,[sp, #0x10]
+016dcc70  stp x19,x30,[sp, #0x20]
+016dcc74  adrp x21,0x3577000
+016dcc78  adrp x22,0x3309000
+016dcc7c  ldrb w8,[x21, #0xd97]
+016dcc80  ldr x22,[x22, #0x930]
+016dcc84  mov x19,x1
+016dcc88  mov x20,x0
+016dcc8c  tbnz w8,#0x0,0x016dccb0
+016dcc90  adrp x0,0x3309000
+016dcc94  ldr x0,[x0, #0x930]
+016dcc98  bl 0x00b0789c
+016dcc9c  adrp x0,0x3312000
+016dcca0  ldr x0,[x0, #0xfc8]
+016dcca4  bl 0x00b0789c
+016dcca8  mov w8,#0x1
+016dccac  strb w8,[x21, #0xd97]
+016dccb0  ldr x8,[x22]
+016dccb4  ldr x8,[x8, #0xb8]
+016dccb8  ldr x0,[x8, #0x50]
+016dccbc  cbz x0,0x016dccdc
+016dccc0  mov x1,x20
+016dccc4  mov x2,x19
+016dccc8  ldp x19,x30,[sp, #0x20]
+016dcccc  ldp x21,x20,[sp, #0x10]
+016dccd0  mov x3,xzr
+016dccd4  ldr x22,[sp], #0x30
+016dccd8  b 0x010756d8
+016dccdc  adrp x8,0x3312000
+016dcce0  ldr x8,[x8, #0xfc8]
+016dcce4  ldr x0,[x8]
+016dcce8  bl 0x00b079a0
+016dccec  cbz x0,0x016dcd24
+016dccf0  mov x1,xzr
+016dccf4  mov x20,x0
+016dccf8  bl 0x02194104
+016dccfc  mov x0,x20
+016dcd00  str wzr,[x20, #0x10]
+016dcd04  str x19,[x0, #0x20]!
+016dcd08  mov x1,x19
+016dcd0c  bl 0x00b07850
+016dcd10  mov x0,x20
+016dcd14  ldp x19,x30,[sp, #0x20]
+016dcd18  ldp x21,x20,[sp, #0x10]
+016dcd1c  ldr x22,[sp], #0x30
+016dcd20  ret
+016dcd24  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dcd28_CSBehaviour._SendRequest_d__22__.ctor.txt
+================================================================================
+Function: CSBehaviour.<SendRequest>d__22$$.ctor @ 016dcd28
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+016dcd28  str x20,[sp, #-0x20]!
+016dcd2c  stp x19,x30,[sp, #0x10]
+016dcd30  mov w19,w1
+016dcd34  mov x1,xzr
+016dcd38  mov x20,x0
+016dcd3c  bl 0x02194104
+016dcd40  str w19,[x20, #0x10]
+016dcd44  ldp x19,x30,[sp, #0x10]
+016dcd48  ldr x20,[sp], #0x20
+016dcd4c  ret
+
+
+================================================================================
+### FILE: 016dcd50_CSBehaviour__Response.txt
+================================================================================
+Function: CSBehaviour$$Response @ 016dcd50
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.Extensions.ActionExtensions$$SafeInvoke<ByteEnum,-object> @ 017369f4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp286 @ 01084424
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_Response @ 01239f50
+  <- CSBehaviour$$OnNCStatusChanged @ 016dd174
+
+--- Listing ---
+016dcd50  stp x23,x22,[sp, #-0x30]!
+016dcd54  stp x21,x20,[sp, #0x10]
+016dcd58  stp x19,x30,[sp, #0x20]
+016dcd5c  adrp x23,0x3577000
+016dcd60  adrp x22,0x3309000
+016dcd64  ldrb w8,[x23, #0xd98]
+016dcd68  ldr x22,[x22, #0x930]
+016dcd6c  mov x19,x2
+016dcd70  mov w20,w1
+016dcd74  mov x21,x0
+016dcd78  tbnz w8,#0x0,0x016dcd9c
+016dcd7c  adrp x0,0x334f000
+016dcd80  ldr x0,[x0, #0x5a8]
+016dcd84  bl 0x00b0789c
+016dcd88  adrp x0,0x3309000
+016dcd8c  ldr x0,[x0, #0x930]
+016dcd90  bl 0x00b0789c
+016dcd94  mov w8,#0x1
+016dcd98  strb w8,[x23, #0xd98]
+016dcd9c  ldr x8,[x22]
+016dcda0  ldr x8,[x8, #0xb8]
+016dcda4  ldr x0,[x8, #0x58]
+016dcda8  cbz x0,0x016dcdcc
+016dcdac  mov x1,x21
+016dcdb0  mov w2,w20
+016dcdb4  mov x3,x19
+016dcdb8  ldp x19,x30,[sp, #0x20]
+016dcdbc  ldp x21,x20,[sp, #0x10]
+016dcdc0  mov x4,xzr
+016dcdc4  ldp x23,x22,[sp], #0x30
+016dcdc8  b 0x01084424
+016dcdcc  adrp x8,0x334f000
+016dcdd0  ldr x8,[x8, #0x5a8]
+016dcdd4  ldr x0,[x21, #0x50]
+016dcdd8  mov w1,w20
+016dcddc  mov x2,x19
+016dcde0  ldr x3,[x8]
+016dcde4  ldp x19,x30,[sp, #0x20]
+016dcde8  ldp x21,x20,[sp, #0x10]
+016dcdec  ldp x23,x22,[sp], #0x30
+016dcdf0  b 0x017369f4
+
+
+================================================================================
+### FILE: 016dcdf4_CSBehaviour__Connect.txt
+================================================================================
+Function: CSBehaviour$$Connect @ 016dcdf4
+
+--- Calls OUT ---
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp287 @ 01084600
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> System.Enum$$ToString @ 02186100
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.Extensions.ActionExtensions$$SafeInvoke<ByteEnum> @ 017369c4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_Connect @ 01239508
+  <- CSBehaviour$$OnNCStatusChanged @ 016dd174
+
+--- Listing ---
+016dcdf4  sub sp,sp,#0x60
+016dcdf8  str x24,[sp, #0x20]
+016dcdfc  stp x23,x22,[sp, #0x30]
+016dce00  stp x21,x20,[sp, #0x40]
+016dce04  stp x19,x30,[sp, #0x50]
+016dce08  adrp x22,0x3577000
+016dce0c  adrp x21,0x3309000
+016dce10  ldrb w8,[x22, #0xd99]
+016dce14  ldr x21,[x21, #0x930]
+016dce18  mov w19,w1
+016dce1c  mov x20,x0
+016dce20  tbnz w8,#0x0,0x016dce68
+016dce24  adrp x0,0x3345000
+016dce28  ldr x0,[x0, #0x910]
+016dce2c  bl 0x00b0789c
+016dce30  adrp x0,0x3309000
+016dce34  ldr x0,[x0, #0x930]
+016dce38  bl 0x00b0789c
+016dce3c  adrp x0,0x332e000
+016dce40  ldr x0,[x0, #0x1a8]
+016dce44  bl 0x00b0789c
+016dce48  adrp x0,0x334a000
+016dce4c  ldr x0,[x0, #0xc98]
+016dce50  bl 0x00b0789c
+016dce54  adrp x0,0x337a000
+016dce58  ldr x0,[x0, #0xe88]
+016dce5c  bl 0x00b0789c
+016dce60  mov w8,#0x1
+016dce64  strb w8,[x22, #0xd99]
+016dce68  ldr x8,[x21]
+016dce6c  ldr x8,[x8, #0xb8]
+016dce70  ldr x0,[x8, #0x60]
+016dce74  cbz x0,0x016dce9c
+016dce78  mov x1,x20
+016dce7c  mov w2,w19
+016dce80  ldp x19,x30,[sp, #0x50]
+016dce84  ldp x21,x20,[sp, #0x40]
+016dce88  ldp x23,x22,[sp, #0x30]
+016dce8c  ldr x24,[sp, #0x20]
+016dce90  mov x3,xzr
+016dce94  add sp,sp,#0x60
+016dce98  b 0x01084600
+016dce9c  adrp x22,0x332e000
+016dcea0  adrp x23,0x337a000
+016dcea4  ldr x22,[x22, #0x1a8]
+016dcea8  ldr x23,[x23, #0xe88]
+016dceac  mov x0,x20
+016dceb0  bl 0x016dbef8
+016dceb4  ldr x8,[x22]
+016dceb8  ldr x22,[x20, #0x20]
+016dcebc  mov x21,x0
+016dcec0  mov x9,#-0x1
+016dcec4  add x0,sp,#0x8
+016dcec8  mov x1,xzr
+016dcecc  stp x8,x9,[sp, #0x8]
+016dced0  strb w19,[sp, #0x18]
+016dced4  bl 0x02186100
+016dced8  ldr x8,[x23]
+016dcedc  mov x1,x0
+016dcee0  mov x2,xzr
+016dcee4  mov x0,x8
+016dcee8  bl 0x01fd2850
+016dceec  cbz x21,0x016dcf90
+016dcef0  adrp x10,0x334a000
+016dcef4  ldr x8,[x21]
+016dcef8  ldr x10,[x10, #0xc98]
+016dcefc  adrp x24,0x3345000
+016dcf00  mov x23,x0
+016dcf04  ldrh w9,[x8, #0x12a]
+016dcf08  ldr x1,[x10]
+016dcf0c  ldr x24,[x24, #0x910]
+016dcf10  cbz x9,0x016dcf34
+016dcf14  ldr x10,[x8, #0xb0]
+016dcf18  add x10,x10,#0x8
+016dcf1c  ldur x11,[x10, #-0x8]
+016dcf20  cmp x11,x1
+016dcf24  b.eq 0x016dcf44
+016dcf28  subs x9,x9,#0x1
+016dcf2c  add x10,x10,#0x10
+016dcf30  b.ne 0x016dcf1c
+016dcf34  mov w2,#0x9
+016dcf38  mov x0,x21
+016dcf3c  bl 0x00b2ae24
+016dcf40  b 0x016dcf54
+016dcf44  ldr w9,[x10]
+016dcf48  add w9,w9,#0x9
+016dcf4c  add x8,x8,w9, SXTW  #0x4
+016dcf50  add x0,x8,#0x138
+016dcf54  ldp x8,x3,[x0]
+016dcf58  mov x0,x21
+016dcf5c  mov x1,x22
+016dcf60  mov x2,x23
+016dcf64  blr x8
+016dcf68  ldr x0,[x20, #0x48]
+016dcf6c  ldr x2,[x24]
+016dcf70  mov w1,w19
+016dcf74  bl 0x017369c4
+016dcf78  ldp x19,x30,[sp, #0x50]
+016dcf7c  ldp x21,x20,[sp, #0x40]
+016dcf80  ldp x23,x22,[sp, #0x30]
+016dcf84  ldr x24,[sp, #0x20]
+016dcf88  add sp,sp,#0x60
+016dcf8c  ret
+016dcf90  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dcf94_CSBehaviour__Close.txt
+================================================================================
+Function: CSBehaviour$$Close @ 016dcf94
+
+--- Calls OUT ---
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp287 @ 01084600
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> System.Enum$$ToString @ 02186100
+  -> System.String$$Concat @ 01fd2850
+  -> Ali$$TipsCommandsError @ 00e0cb50
+  -> FUN_00b079b0 @ 00b079b0
+  -> AliothEngine.Extensions.ActionExtensions$$SafeInvoke<ByteEnum> @ 017369c4
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_Close @ 0123a1e4
+  <- CSBehaviour$$OnNCStatusChanged @ 016dd174
+
+--- Listing ---
+016dcf94  sub sp,sp,#0x60
+016dcf98  stp x25,x24,[sp, #0x20]
+016dcf9c  stp x23,x22,[sp, #0x30]
+016dcfa0  stp x21,x20,[sp, #0x40]
+016dcfa4  stp x19,x30,[sp, #0x50]
+016dcfa8  adrp x22,0x3577000
+016dcfac  adrp x21,0x3309000
+016dcfb0  ldrb w8,[x22, #0xd9a]
+016dcfb4  ldr x21,[x21, #0x930]
+016dcfb8  mov w19,w1
+016dcfbc  mov x20,x0
+016dcfc0  tbnz w8,#0x0,0x016dd014
+016dcfc4  adrp x0,0x3345000
+016dcfc8  ldr x0,[x0, #0x910]
+016dcfcc  bl 0x00b0789c
+016dcfd0  adrp x0,0x335f000
+016dcfd4  ldr x0,[x0, #0x20]
+016dcfd8  bl 0x00b0789c
+016dcfdc  adrp x0,0x3309000
+016dcfe0  ldr x0,[x0, #0x930]
+016dcfe4  bl 0x00b0789c
+016dcfe8  adrp x0,0x332e000
+016dcfec  ldr x0,[x0, #0x1a8]
+016dcff0  bl 0x00b0789c
+016dcff4  adrp x0,0x334a000
+016dcff8  ldr x0,[x0, #0xc98]
+016dcffc  bl 0x00b0789c
+016dd000  adrp x0,0x332d000
+016dd004  ldr x0,[x0, #0x3f8]
+016dd008  bl 0x00b0789c
+016dd00c  mov w8,#0x1
+016dd010  strb w8,[x22, #0xd9a]
+016dd014  ldr x8,[x21]
+016dd018  ldr x8,[x8, #0xb8]
+016dd01c  ldr x0,[x8, #0x68]
+016dd020  cbz x0,0x016dd048
+016dd024  mov x1,x20
+016dd028  mov w2,w19
+016dd02c  ldp x19,x30,[sp, #0x50]
+016dd030  ldp x21,x20,[sp, #0x40]
+016dd034  ldp x23,x22,[sp, #0x30]
+016dd038  ldp x25,x24,[sp, #0x20]
+016dd03c  mov x3,xzr
+016dd040  add sp,sp,#0x60
+016dd044  b 0x01084600
+016dd048  adrp x22,0x332e000
+016dd04c  adrp x23,0x332d000
+016dd050  ldr x22,[x22, #0x1a8]
+016dd054  ldr x23,[x23, #0x3f8]
+016dd058  mov x0,x20
+016dd05c  bl 0x016dbef8
+016dd060  ldr x8,[x22]
+016dd064  ldr x22,[x20, #0x20]
+016dd068  mov x21,x0
+016dd06c  mov x9,#-0x1
+016dd070  add x0,sp,#0x8
+016dd074  mov x1,xzr
+016dd078  stp x8,x9,[sp, #0x8]
+016dd07c  strb w19,[sp, #0x18]
+016dd080  bl 0x02186100
+016dd084  ldr x8,[x23]
+016dd088  mov x1,x0
+016dd08c  mov x2,xzr
+016dd090  mov x0,x8
+016dd094  bl 0x01fd2850
+016dd098  cbz x21,0x016dd170
+016dd09c  adrp x10,0x334a000
+016dd0a0  ldr x8,[x21]
+016dd0a4  ldr x10,[x10, #0xc98]
+016dd0a8  adrp x25,0x3345000
+016dd0ac  adrp x24,0x335f000
+016dd0b0  ldrh w9,[x8, #0x12a]
+016dd0b4  ldr x1,[x10]
+016dd0b8  ldr x25,[x25, #0x910]
+016dd0bc  ldr x24,[x24, #0x20]
+016dd0c0  mov x23,x0
+016dd0c4  cbz x9,0x016dd0e8
+016dd0c8  ldr x10,[x8, #0xb0]
+016dd0cc  add x10,x10,#0x8
+016dd0d0  ldur x11,[x10, #-0x8]
+016dd0d4  cmp x11,x1
+016dd0d8  b.eq 0x016dd0f8
+016dd0dc  subs x9,x9,#0x1
+016dd0e0  add x10,x10,#0x10
+016dd0e4  b.ne 0x016dd0d0
+016dd0e8  mov w2,#0xa
+016dd0ec  mov x0,x21
+016dd0f0  bl 0x00b2ae24
+016dd0f4  b 0x016dd108
+016dd0f8  ldr w9,[x10]
+016dd0fc  add w9,w9,#0xa
+016dd100  add x8,x8,w9, SXTW  #0x4
+016dd104  add x0,x8,#0x138
+016dd108  ldp x8,x3,[x0]
+016dd10c  mov x0,x21
+016dd110  mov x1,x22
+016dd114  mov x2,x23
+016dd118  blr x8
+016dd11c  ldr x0,[x20, #0x58]
+016dd120  ldr x2,[x25]
+016dd124  mov w1,w19
+016dd128  bl 0x017369c4
+016dd12c  ldr x0,[x24]
+016dd130  ldr w8,[x0, #0xe0]
+016dd134  cbnz w8,0x016dd140
+016dd138  bl 0x00b0798c
+016dd13c  ldr x0,[x24]
+016dd140  ldr x8,[x0, #0xb8]
+016dd144  ldr x0,[x8, #0x10]
+016dd148  cbz x0,0x016dd170
+016dd14c  and w1,w19,#0xff
+016dd150  mov x2,xzr
+016dd154  bl 0x00e0cb50
+016dd158  ldp x19,x30,[sp, #0x50]
+016dd15c  ldp x21,x20,[sp, #0x40]
+016dd160  ldp x23,x22,[sp, #0x30]
+016dd164  ldp x25,x24,[sp, #0x20]
+016dd168  add sp,sp,#0x60
+016dd16c  ret
+016dd170  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dd174_CSBehaviour__OnNCStatusChanged.txt
+================================================================================
+Function: CSBehaviour$$OnNCStatusChanged @ 016dd174
+
+--- Calls OUT ---
+  -> CSBehaviour$$Connect @ 016dcdf4
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp288 @ 010847c0
+  -> CSBehaviour$$ShowTimeoutTips @ 016dd61c
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> System.String$$Concat @ 01fd2850
+  -> FUN_00b079b0 @ 00b079b0
+  -> CSBehaviour$$Response @ 016dcd50
+  -> Alioth.S1.Net.Request$$IsFinished @ 015b50e0
+  -> CSBehaviour$$Close @ 016dcf94
+  -> FUN_00b07c6c @ 00b07c6c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> Alioth.S1.Net.Request$$get_Res @ 015b4f10
+
+--- Calls IN ---
+
+--- Listing ---
+016dd174  stp x25,x24,[sp, #-0x40]!
+016dd178  stp x23,x22,[sp, #0x10]
+016dd17c  stp x21,x20,[sp, #0x20]
+016dd180  stp x19,x30,[sp, #0x30]
+016dd184  adrp x24,0x3577000
+016dd188  adrp x23,0x3309000
+016dd18c  ldrb w8,[x24, #0xd9b]
+016dd190  ldr x23,[x23, #0x930]
+016dd194  mov x19,x3
+016dd198  mov w21,w2
+016dd19c  mov w22,w1
+016dd1a0  mov x20,x0
+016dd1a4  tbnz w8,#0x0,0x016dd1f8
+016dd1a8  adrp x0,0x3309000
+016dd1ac  ldr x0,[x0, #0x930]
+016dd1b0  bl 0x00b0789c
+016dd1b4  adrp x0,0x334a000
+016dd1b8  ldr x0,[x0, #0xbb0]
+016dd1bc  bl 0x00b0789c
+016dd1c0  adrp x0,0x334a000
+016dd1c4  ldr x0,[x0, #0xc98]
+016dd1c8  bl 0x00b0789c
+016dd1cc  adrp x0,0x3374000
+016dd1d0  ldr x0,[x0, #0x470]
+016dd1d4  bl 0x00b0789c
+016dd1d8  adrp x0,0x332d000
+016dd1dc  ldr x0,[x0, #0xc38]
+016dd1e0  bl 0x00b0789c
+016dd1e4  adrp x0,0x3316000
+016dd1e8  ldr x0,[x0, #0x8c8]
+016dd1ec  bl 0x00b0789c
+016dd1f0  mov w8,#0x1
+016dd1f4  strb w8,[x24, #0xd9b]
+016dd1f8  ldr x8,[x23]
+016dd1fc  ldr x8,[x8, #0xb8]
+016dd200  ldr x0,[x8, #0x70]
+016dd204  cbz x0,0x016dd230
+016dd208  mov x1,x20
+016dd20c  mov w2,w22
+016dd210  mov w3,w21
+016dd214  mov x4,x19
+016dd218  ldp x19,x30,[sp, #0x30]
+016dd21c  ldp x21,x20,[sp, #0x20]
+016dd220  ldp x23,x22,[sp, #0x10]
+016dd224  mov x5,xzr
+016dd228  ldp x25,x24,[sp], #0x40
+016dd22c  b 0x010847c0
+016dd230  cmp w22,#0x5
+016dd234  b.hi 0x016dd5b4
+016dd238  adrp x9,0x26dd000
+016dd23c  adrp x23,0x334a000
+016dd240  mov w8,w22
+016dd244  add x9,x9,#0x115
+016dd248  adrp x25,0x334a000
+016dd24c  ldr x23,[x23, #0xbb0]
+016dd250  adr x10,0x16dd264
+016dd254  ldrb w11,[x9, x8, LSL ]
+016dd258  add x10,x10,x11, LSL #0x2
+016dd25c  ldr x25,[x25, #0xc98]
+016dd260  br x10
+016dd264  mov x0,x20
+016dd268  ldp x19,x30,[sp, #0x30]
+016dd26c  ldp x21,x20,[sp, #0x20]
+016dd270  ldp x23,x22,[sp, #0x10]
+016dd274  mov w1,wzr
+016dd278  ldp x25,x24,[sp], #0x40
+016dd27c  b 0x016dcdf4
+016dd280  cbz x19,0x016dd5e8
+016dd284  ldr x9,[x19]
+016dd288  ldr x8,[x23]
+016dd28c  ldrb w11,[x9, #0x12c]
+016dd290  ldrb w10,[x8, #0x12c]
+016dd294  cmp w11,w10
+016dd298  b.cc 0x016dd5e8
+016dd29c  ldr x9,[x9, #0xc8]
+016dd2a0  add x9,x9,x10, LSL #0x3
+016dd2a4  ldur x9,[x9, #-0x8]
+016dd2a8  cmp x9,x8
+016dd2ac  b.ne 0x016dd5e8
+016dd2b0  mov x0,x20
+016dd2b4  bl 0x016dbef8
+016dd2b8  cbz x0,0x016dd604
+016dd2bc  ldr x8,[x19]
+016dd2c0  ldr x1,[x23]
+016dd2c4  ldrb w10,[x8, #0x12c]
+016dd2c8  ldrb w9,[x1, #0x12c]
+016dd2cc  cmp w10,w9
+016dd2d0  b.cc 0x016dd614
+016dd2d4  ldr x8,[x8, #0xc8]
+016dd2d8  add x8,x8,x9, LSL #0x3
+016dd2dc  ldur x8,[x8, #-0x8]
+016dd2e0  cmp x8,x1
+016dd2e4  b.ne 0x016dd614
+016dd2e8  ldr x8,[x0]
+016dd2ec  ldr x1,[x25]
+016dd2f0  mov x22,x0
+016dd2f4  ldrh w9,[x8, #0x12a]
+016dd2f8  cbz x9,0x016dd31c
+016dd2fc  ldr x10,[x8, #0xb0]
+016dd300  add x10,x10,#0x8
+016dd304  ldur x11,[x10, #-0x8]
+016dd308  cmp x11,x1
+016dd30c  b.eq 0x016dd5c8
+016dd310  subs x9,x9,#0x1
+016dd314  add x10,x10,#0x10
+016dd318  b.ne 0x016dd304
+016dd31c  mov w2,#0xd
+016dd320  mov x0,x22
+016dd324  bl 0x00b2ae24
+016dd328  b 0x016dd5d8
+016dd32c  cbz x19,0x016dd5b4
+016dd330  adrp x8,0x3374000
+016dd334  ldr x8,[x8, #0x470]
+016dd338  ldr x9,[x19]
+016dd33c  ldr x8,[x8]
+016dd340  cmp x9,x8
+016dd344  b.ne 0x016dd5b4
+016dd348  mov x0,x19
+016dd34c  mov x1,xzr
+016dd350  bl 0x015b50e0
+016dd354  tbz w0,#0x0,0x016dd5b4
+016dd358  adrp x23,0x3316000
+016dd35c  ldr x23,[x23, #0x8c8]
+016dd360  mov x0,x20
+016dd364  bl 0x016dbef8
+016dd368  ldr x8,[x19]
+016dd36c  ldr x22,[x20, #0x20]
+016dd370  ldr x24,[x23]
+016dd374  mov x23,x0
+016dd378  ldp x9,x1,[x8, #0x168]
+016dd37c  mov x0,x19
+016dd380  blr x9
+016dd384  mov x1,x0
+016dd388  mov x0,x24
+016dd38c  mov x2,xzr
+016dd390  bl 0x01fd2850
+016dd394  cbz x23,0x016dd604
+016dd398  ldr x8,[x23]
+016dd39c  ldr x1,[x25]
+016dd3a0  mov x24,x0
+016dd3a4  ldrh w9,[x8, #0x12a]
+016dd3a8  cbz x9,0x016dd3cc
+016dd3ac  ldr x10,[x8, #0xb0]
+016dd3b0  add x10,x10,#0x8
+016dd3b4  ldur x11,[x10, #-0x8]
+016dd3b8  cmp x11,x1
+016dd3bc  b.eq 0x016dd55c
+016dd3c0  subs x9,x9,#0x1
+016dd3c4  add x10,x10,#0x10
+016dd3c8  b.ne 0x016dd3b4
+016dd3cc  mov w2,#0x9
+016dd3d0  mov x0,x23
+016dd3d4  bl 0x00b2ae24
+016dd3d8  b 0x016dd56c
+016dd3dc  cbz x19,0x016dd3f8
+016dd3e0  ldr x9,[x19]
+016dd3e4  ldr x8,[x23]
+016dd3e8  ldrb w11,[x9, #0x12c]
+016dd3ec  ldrb w10,[x8, #0x12c]
+016dd3f0  cmp w11,w10
+016dd3f4  b.cs 0x016dd418
+016dd3f8  mov x21,xzr
+016dd3fc  b 0x016dd42c
+016dd400  mov x0,x20
+016dd404  ldp x19,x30,[sp, #0x30]
+016dd408  ldp x21,x20,[sp, #0x20]
+016dd40c  ldp x23,x22,[sp, #0x10]
+016dd410  ldp x25,x24,[sp], #0x40
+016dd414  b 0x016dd61c
+016dd418  ldr x9,[x9, #0xc8]
+016dd41c  add x9,x9,x10, LSL #0x3
+016dd420  ldur x9,[x9, #-0x8]
+016dd424  cmp x9,x8
+016dd428  csel x21,x19,xzr,eq
+016dd42c  mov x0,x20
+016dd430  bl 0x016dbef8
+016dd434  cbz x0,0x016dd604
+016dd438  ldr x1,[x25]
+016dd43c  mov x20,x0
+016dd440  cbz x21,0x016dd4b0
+016dd444  cbz x19,0x016dd474
+016dd448  ldr x9,[x19]
+016dd44c  ldr x8,[x23]
+016dd450  ldrb w11,[x9, #0x12c]
+016dd454  ldrb w10,[x8, #0x12c]
+016dd458  cmp w11,w10
+016dd45c  b.cc 0x016dd608
+016dd460  ldr x9,[x9, #0xc8]
+016dd464  add x9,x9,x10, LSL #0x3
+016dd468  ldur x9,[x9, #-0x8]
+016dd46c  cmp x9,x8
+016dd470  b.ne 0x016dd608
+016dd474  ldr x8,[x20]
+016dd478  ldrh w9,[x8, #0x12a]
+016dd47c  cbz x9,0x016dd4a0
+016dd480  ldr x10,[x8, #0xb0]
+016dd484  add x10,x10,#0x8
+016dd488  ldur x11,[x10, #-0x8]
+016dd48c  cmp x11,x1
+016dd490  b.eq 0x016dd4f8
+016dd494  subs x9,x9,#0x1
+016dd498  add x10,x10,#0x10
+016dd49c  b.ne 0x016dd488
+016dd4a0  mov w2,#0xd
+016dd4a4  mov x0,x20
+016dd4a8  bl 0x00b2ae24
+016dd4ac  b 0x016dd508
+016dd4b0  adrp x10,0x332d000
+016dd4b4  ldr x8,[x20]
+016dd4b8  ldr x10,[x10, #0xc38]
+016dd4bc  ldrh w9,[x8, #0x12a]
+016dd4c0  ldr x21,[x10]
+016dd4c4  cbz x9,0x016dd4e8
+016dd4c8  ldr x10,[x8, #0xb0]
+016dd4cc  add x10,x10,#0x8
+016dd4d0  ldur x11,[x10, #-0x8]
+016dd4d4  cmp x11,x1
+016dd4d8  b.eq 0x016dd528
+016dd4dc  subs x9,x9,#0x1
+016dd4e0  add x10,x10,#0x10
+016dd4e4  b.ne 0x016dd4d0
+016dd4e8  mov w2,#0x9
+016dd4ec  mov x0,x20
+016dd4f0  bl 0x00b2ae24
+016dd4f4  b 0x016dd538
+016dd4f8  ldr w9,[x10]
+016dd4fc  add w9,w9,#0xd
+016dd500  add x8,x8,w9, SXTW  #0x4
+016dd504  add x0,x8,#0x138
+016dd508  ldp x3,x2,[x0]
+016dd50c  mov x0,x20
+016dd510  mov x1,x19
+016dd514  ldp x19,x30,[sp, #0x30]
+016dd518  ldp x21,x20,[sp, #0x20]
+016dd51c  ldp x23,x22,[sp, #0x10]
+016dd520  ldp x25,x24,[sp], #0x40
+016dd524  br x3
+016dd528  ldr w9,[x10]
+016dd52c  add w9,w9,#0x9
+016dd530  add x8,x8,w9, SXTW  #0x4
+016dd534  add x0,x8,#0x138
+016dd538  ldp x4,x3,[x0]
+016dd53c  mov x0,x20
+016dd540  mov x1,x21
+016dd544  mov x2,x19
+016dd548  ldp x19,x30,[sp, #0x30]
+016dd54c  ldp x21,x20,[sp, #0x20]
+016dd550  ldp x23,x22,[sp, #0x10]
+016dd554  ldp x25,x24,[sp], #0x40
+016dd558  br x4
+016dd55c  ldr w9,[x10]
+016dd560  add w9,w9,#0x9
+016dd564  add x8,x8,w9, SXTW  #0x4
+016dd568  add x0,x8,#0x138
+016dd56c  ldp x8,x3,[x0]
+016dd570  mov x0,x23
+016dd574  mov x1,x22
+016dd578  mov x2,x24
+016dd57c  blr x8
+016dd580  mov x0,x19
+016dd584  mov x1,xzr
+016dd588  bl 0x015b4f10
+016dd58c  mov x2,x0
+016dd590  mov x0,x20
+016dd594  mov w1,w21
+016dd598  bl 0x016dcd50
+016dd59c  ldr x8,[x20, #0x38]
+016dd5a0  cbz x8,0x016dd5b4
+016dd5a4  ldr x3,[x8, #0x18]
+016dd5a8  ldr x0,[x8, #0x40]
+016dd5ac  ldr x2,[x8, #0x28]
+016dd5b0  b 0x016dd510
+016dd5b4  ldp x19,x30,[sp, #0x30]
+016dd5b8  ldp x21,x20,[sp, #0x20]
+016dd5bc  ldp x23,x22,[sp, #0x10]
+016dd5c0  ldp x25,x24,[sp], #0x40
+016dd5c4  ret
+016dd5c8  ldr w9,[x10]
+016dd5cc  add w9,w9,#0xd
+016dd5d0  add x8,x8,w9, SXTW  #0x4
+016dd5d4  add x0,x8,#0x138
+016dd5d8  ldp x8,x2,[x0]
+016dd5dc  mov x0,x22
+016dd5e0  mov x1,x19
+016dd5e4  blr x8
+016dd5e8  mov x0,x20
+016dd5ec  mov w1,w21
+016dd5f0  ldp x19,x30,[sp, #0x30]
+016dd5f4  ldp x21,x20,[sp, #0x20]
+016dd5f8  ldp x23,x22,[sp, #0x10]
+016dd5fc  ldp x25,x24,[sp], #0x40
+016dd600  b 0x016dcf94
+016dd604  bl 0x00b079b0
+016dd608  mov x0,x19
+016dd60c  mov x1,x8
+016dd610  bl 0x00b07c6c
+016dd614  mov x0,x19
+016dd618  bl 0x00b07c6c
+
+
+================================================================================
+### FILE: 016dd61c_CSBehaviour__ShowTimeoutTips.txt
+================================================================================
+Function: CSBehaviour$$ShowTimeoutTips @ 016dd61c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> Ali$$TipsText @ 00e04544
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Action$$.ctor @ 020d5760
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_ShowTimeoutTips @ 0123a3d8
+  <- CSBehaviour$$OnNCStatusChanged @ 016dd174
+
+--- Listing ---
+016dd61c  str x22,[sp, #-0x30]!
+016dd620  stp x21,x20,[sp, #0x10]
+016dd624  stp x19,x30,[sp, #0x20]
+016dd628  adrp x19,0x3577000
+016dd62c  adrp x21,0x3309000
+016dd630  ldrb w8,[x19, #0xd9c]
+016dd634  ldr x21,[x21, #0x930]
+016dd638  mov x20,x0
+016dd63c  tbnz w8,#0x0,0x016dd684
+016dd640  adrp x0,0x3348000
+016dd644  ldr x0,[x0, #0xcf8]
+016dd648  bl 0x00b0789c
+016dd64c  adrp x0,0x335f000
+016dd650  ldr x0,[x0, #0x20]
+016dd654  bl 0x00b0789c
+016dd658  adrp x0,0x335b000
+016dd65c  ldr x0,[x0, #0x650]
+016dd660  bl 0x00b0789c
+016dd664  adrp x0,0x335c000
+016dd668  ldr x0,[x0, #0x578]
+016dd66c  bl 0x00b0789c
+016dd670  adrp x0,0x3309000
+016dd674  ldr x0,[x0, #0x930]
+016dd678  bl 0x00b0789c
+016dd67c  mov w8,#0x1
+016dd680  strb w8,[x19, #0xd9c]
+016dd684  ldr x8,[x21]
+016dd688  ldr x8,[x8, #0xb8]
+016dd68c  ldr x0,[x8, #0x78]
+016dd690  cbz x0,0x016dd6ac
+016dd694  mov x1,x20
+016dd698  ldp x19,x30,[sp, #0x20]
+016dd69c  ldp x21,x20,[sp, #0x10]
+016dd6a0  mov x2,xzr
+016dd6a4  ldr x22,[sp], #0x30
+016dd6a8  b 0x01060dac
+016dd6ac  adrp x19,0x335f000
+016dd6b0  ldr x19,[x19, #0x20]
+016dd6b4  adrp x21,0x3348000
+016dd6b8  ldr x0,[x19]
+016dd6bc  ldr w8,[x0, #0xe0]
+016dd6c0  ldr x21,[x21, #0xcf8]
+016dd6c4  cbnz w8,0x016dd6d0
+016dd6c8  bl 0x00b0798c
+016dd6cc  ldr x0,[x19]
+016dd6d0  ldr x8,[x0, #0xb8]
+016dd6d4  ldr x0,[x21]
+016dd6d8  ldr x19,[x8, #0x10]
+016dd6dc  bl 0x00b079a0
+016dd6e0  cbz x0,0x016dd77c
+016dd6e4  adrp x8,0x335c000
+016dd6e8  ldr x8,[x8, #0x578]
+016dd6ec  adrp x22,0x335b000
+016dd6f0  mov x1,x20
+016dd6f4  mov x3,xzr
+016dd6f8  ldr x2,[x8]
+016dd6fc  ldr x22,[x22, #0x650]
+016dd700  mov x21,x0
+016dd704  bl 0x020d5760
+016dd708  ldr x20,[x22]
+016dd70c  ldr x8,[x20, #0x38]
+016dd710  ldr x0,[x8]
+016dd714  ldrb w8,[x0, #0x132]
+016dd718  tbnz w8,#0x0,0x016dd720
+016dd71c  bl 0x00b2ac40
+016dd720  ldr w8,[x0, #0xe0]
+016dd724  cbnz w8,0x016dd72c
+016dd728  bl 0x00b0798c
+016dd72c  ldr x8,[x20, #0x38]
+016dd730  ldr x0,[x8]
+016dd734  ldrb w8,[x0, #0x132]
+016dd738  tbnz w8,#0x0,0x016dd740
+016dd73c  bl 0x00b2ac40
+016dd740  cbz x19,0x016dd77c
+016dd744  ldr x8,[x0, #0xb8]
+016dd748  mov x0,x19
+016dd74c  mov x3,x21
+016dd750  ldp x19,x30,[sp, #0x20]
+016dd754  ldr x6,[x8]
+016dd758  ldp x21,x20,[sp, #0x10]
+016dd75c  mov w1,#0x6f04
+016dd760  movk w1,#0x4c9, LSL #16
+016dd764  mov w4,#0xffffffff
+016dd768  mov w2,wzr
+016dd76c  mov w5,wzr
+016dd770  mov x7,xzr
+016dd774  ldr x22,[sp], #0x30
+016dd778  b 0x00e04544
+016dd77c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dd780_CSBehaviour__NCRun.txt
+================================================================================
+Function: CSBehaviour$$NCRun @ 016dd780
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp55 @ 01066218
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+  <- CSBehaviour$$StartNCRun @ 016dc744
+
+--- Listing ---
+016dd780  stp x21,x20,[sp, #-0x20]!
+016dd784  stp x19,x30,[sp, #0x10]
+016dd788  adrp x20,0x3577000
+016dd78c  adrp x21,0x3309000
+016dd790  ldrb w8,[x20, #0xd9f]
+016dd794  ldr x21,[x21, #0x930]
+016dd798  mov x19,x0
+016dd79c  tbnz w8,#0x0,0x016dd7c0
+016dd7a0  adrp x0,0x3309000
+016dd7a4  ldr x0,[x0, #0x930]
+016dd7a8  bl 0x00b0789c
+016dd7ac  adrp x0,0x3313000
+016dd7b0  ldr x0,[x0, #0x1c0]
+016dd7b4  bl 0x00b0789c
+016dd7b8  mov w8,#0x1
+016dd7bc  strb w8,[x20, #0xd9f]
+016dd7c0  ldr x8,[x21]
+016dd7c4  ldr x8,[x8, #0xb8]
+016dd7c8  ldr x0,[x8, #0x90]
+016dd7cc  cbz x0,0x016dd7e4
+016dd7d0  mov x1,x19
+016dd7d4  ldp x19,x30,[sp, #0x10]
+016dd7d8  mov x2,xzr
+016dd7dc  ldp x21,x20,[sp], #0x20
+016dd7e0  b 0x01066218
+016dd7e4  adrp x8,0x3313000
+016dd7e8  ldr x8,[x8, #0x1c0]
+016dd7ec  ldr x0,[x8]
+016dd7f0  bl 0x00b079a0
+016dd7f4  cbz x0,0x016dd828
+016dd7f8  mov x1,xzr
+016dd7fc  mov x20,x0
+016dd800  bl 0x02194104
+016dd804  mov x0,x20
+016dd808  str wzr,[x20, #0x10]
+016dd80c  str x19,[x0, #0x20]!
+016dd810  mov x1,x19
+016dd814  bl 0x00b07850
+016dd818  ldp x19,x30,[sp, #0x10]
+016dd81c  mov x0,x20
+016dd820  ldp x21,x20,[sp], #0x20
+016dd824  ret
+016dd828  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dd82c_CSBehaviour._NCRun_d__30__.ctor.txt
+================================================================================
+Function: CSBehaviour.<NCRun>d__30$$.ctor @ 016dd82c
+
+--- Calls OUT ---
+  -> System.Object$$.ctor @ 02194104
+
+--- Calls IN ---
+
+--- Listing ---
+016dd82c  str x20,[sp, #-0x20]!
+016dd830  stp x19,x30,[sp, #0x10]
+016dd834  mov w19,w1
+016dd838  mov x1,xzr
+016dd83c  mov x20,x0
+016dd840  bl 0x02194104
+016dd844  str w19,[x20, #0x10]
+016dd848  ldp x19,x30,[sp, #0x10]
+016dd84c  ldr x20,[sp], #0x20
+016dd850  ret
+
+
+================================================================================
+### FILE: 016dd854_CSBehaviour__RegisterRequestCallBack.txt
+================================================================================
+Function: CSBehaviour$$RegisterRequestCallBack @ 016dd854
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> AliothEngine.SingletonBehaviour<object>$$GetInstance @ 01e08f7c
+  -> FUN_00b079b0 @ 00b079b0
+  -> CSBehaviour$$add_OnRequestFinish @ 016dbf5c
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_RegisterRequestCallBack_xlua_st_ @ 0123a574
+  <- DataCenter$$OnEnable @ 016e8a7c
+
+--- Listing ---
+016dd854  stp x21,x20,[sp, #-0x20]!
+016dd858  stp x19,x30,[sp, #0x10]
+016dd85c  adrp x20,0x3577000
+016dd860  adrp x21,0x3309000
+016dd864  ldrb w8,[x20, #0xda0]
+016dd868  ldr x21,[x21, #0x930]
+016dd86c  mov x19,x0
+016dd870  tbnz w8,#0x0,0x016dd8ac
+016dd874  adrp x0,0x3309000
+016dd878  ldr x0,[x0, #0x930]
+016dd87c  bl 0x00b0789c
+016dd880  adrp x0,0x3321000
+016dd884  ldr x0,[x0, #0xca8]
+016dd888  bl 0x00b0789c
+016dd88c  adrp x0,0x334f000
+016dd890  ldr x0,[x0, #0x780]
+016dd894  bl 0x00b0789c
+016dd898  adrp x0,0x3381000
+016dd89c  ldr x0,[x0, #0x928]
+016dd8a0  bl 0x00b0789c
+016dd8a4  mov w8,#0x1
+016dd8a8  strb w8,[x20, #0xda0]
+016dd8ac  ldr x8,[x21]
+016dd8b0  ldr x8,[x8, #0xb8]
+016dd8b4  ldr x0,[x8, #0x98]
+016dd8b8  cbz x0,0x016dd8d0
+016dd8bc  mov x1,x19
+016dd8c0  ldp x19,x30,[sp, #0x10]
+016dd8c4  mov x2,xzr
+016dd8c8  ldp x21,x20,[sp], #0x20
+016dd8cc  b 0x01060dac
+016dd8d0  adrp x8,0x3381000
+016dd8d4  ldr x8,[x8, #0x928]
+016dd8d8  ldr x8,[x8]
+016dd8dc  ldr x0,[x8, #0x20]
+016dd8e0  ldrb w8,[x0, #0x132]
+016dd8e4  tbnz w8,#0x0,0x016dd8ec
+016dd8e8  bl 0x00b2ac40
+016dd8ec  ldr x8,[x0, #0xc0]
+016dd8f0  ldr x0,[x8]
+016dd8f4  ldrb w8,[x0, #0x132]
+016dd8f8  tbnz w8,#0x0,0x016dd900
+016dd8fc  bl 0x00b2ac40
+016dd900  ldr x8,[x0, #0xb8]
+016dd904  ldrb w8,[x8, #0x8]
+016dd908  cbnz w8,0x016dd968
+016dd90c  adrp x8,0x334f000
+016dd910  ldr x8,[x8, #0x780]
+016dd914  adrp x20,0x3321000
+016dd918  ldr x0,[x8]
+016dd91c  ldr x20,[x20, #0xca8]
+016dd920  bl 0x01e08f7c
+016dd924  ldr x8,[x20]
+016dd928  mov x20,x0
+016dd92c  ldr w9,[x8, #0xe0]
+016dd930  cbnz w9,0x016dd93c
+016dd934  mov x0,x8
+016dd938  bl 0x00b0798c
+016dd93c  mov x0,x20
+016dd940  mov x1,xzr
+016dd944  mov x2,xzr
+016dd948  bl 0x024de30c
+016dd94c  tbz w0,#0x0,0x016dd968
+016dd950  cbz x20,0x016dd974
+016dd954  mov x1,x19
+016dd958  ldp x19,x30,[sp, #0x10]
+016dd95c  mov x0,x20
+016dd960  ldp x21,x20,[sp], #0x20
+016dd964  b 0x016dbf5c
+016dd968  ldp x19,x30,[sp, #0x10]
+016dd96c  ldp x21,x20,[sp], #0x20
+016dd970  ret
+016dd974  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dd978_CSBehaviour__UnRegisterRequestCallBack.txt
+================================================================================
+Function: CSBehaviour$$UnRegisterRequestCallBack @ 016dd978
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> CSBehaviour$$remove_OnRequestFinish @ 016dc050
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> AliothEngine.SingletonBehaviour<object>$$GetInstance @ 01e08f7c
+  -> FUN_00b079b0 @ 00b079b0
+  -> FUN_00b2ac40 @ 00b2ac40
+
+--- Calls IN ---
+  <- DataCenter$$OnDisable @ 016e8b30
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$_m_UnRegisterRequestCallBack_xlua_st_ @ 0123a6d8
+
+--- Listing ---
+016dd978  stp x21,x20,[sp, #-0x20]!
+016dd97c  stp x19,x30,[sp, #0x10]
+016dd980  adrp x20,0x3577000
+016dd984  adrp x21,0x3309000
+016dd988  ldrb w8,[x20, #0xda1]
+016dd98c  ldr x21,[x21, #0x930]
+016dd990  mov x19,x0
+016dd994  tbnz w8,#0x0,0x016dd9d0
+016dd998  adrp x0,0x3309000
+016dd99c  ldr x0,[x0, #0x930]
+016dd9a0  bl 0x00b0789c
+016dd9a4  adrp x0,0x3321000
+016dd9a8  ldr x0,[x0, #0xca8]
+016dd9ac  bl 0x00b0789c
+016dd9b0  adrp x0,0x334f000
+016dd9b4  ldr x0,[x0, #0x780]
+016dd9b8  bl 0x00b0789c
+016dd9bc  adrp x0,0x3381000
+016dd9c0  ldr x0,[x0, #0x928]
+016dd9c4  bl 0x00b0789c
+016dd9c8  mov w8,#0x1
+016dd9cc  strb w8,[x20, #0xda1]
+016dd9d0  ldr x8,[x21]
+016dd9d4  ldr x8,[x8, #0xb8]
+016dd9d8  ldr x0,[x8, #0xa0]
+016dd9dc  cbz x0,0x016dd9f4
+016dd9e0  mov x1,x19
+016dd9e4  ldp x19,x30,[sp, #0x10]
+016dd9e8  mov x2,xzr
+016dd9ec  ldp x21,x20,[sp], #0x20
+016dd9f0  b 0x01060dac
+016dd9f4  adrp x8,0x3381000
+016dd9f8  ldr x8,[x8, #0x928]
+016dd9fc  ldr x8,[x8]
+016dda00  ldr x0,[x8, #0x20]
+016dda04  ldrb w8,[x0, #0x132]
+016dda08  tbnz w8,#0x0,0x016dda10
+016dda0c  bl 0x00b2ac40
+016dda10  ldr x8,[x0, #0xc0]
+016dda14  ldr x0,[x8]
+016dda18  ldrb w8,[x0, #0x132]
+016dda1c  tbnz w8,#0x0,0x016dda24
+016dda20  bl 0x00b2ac40
+016dda24  ldr x8,[x0, #0xb8]
+016dda28  ldrb w8,[x8, #0x8]
+016dda2c  cbnz w8,0x016dda8c
+016dda30  adrp x8,0x334f000
+016dda34  ldr x8,[x8, #0x780]
+016dda38  adrp x20,0x3321000
+016dda3c  ldr x0,[x8]
+016dda40  ldr x20,[x20, #0xca8]
+016dda44  bl 0x01e08f7c
+016dda48  ldr x8,[x20]
+016dda4c  mov x20,x0
+016dda50  ldr w9,[x8, #0xe0]
+016dda54  cbnz w9,0x016dda60
+016dda58  mov x0,x8
+016dda5c  bl 0x00b0798c
+016dda60  mov x0,x20
+016dda64  mov x1,xzr
+016dda68  mov x2,xzr
+016dda6c  bl 0x024de30c
+016dda70  tbz w0,#0x0,0x016dda8c
+016dda74  cbz x20,0x016dda98
+016dda78  mov x1,x19
+016dda7c  ldp x19,x30,[sp, #0x10]
+016dda80  mov x0,x20
+016dda84  ldp x21,x20,[sp], #0x20
+016dda88  b 0x016dc050
+016dda8c  ldp x19,x30,[sp, #0x10]
+016dda90  ldp x21,x20,[sp], #0x20
+016dda94  ret
+016dda98  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dda9c_CSBehaviour__OnApplicationQuit.txt
+================================================================================
+Function: CSBehaviour$$OnApplicationQuit @ 016dda9c
+
+--- Calls OUT ---
+  -> CSBehaviour$$Disconnect @ 016dc628
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$OnApplicationQuit @ 01e09430
+
+--- Calls IN ---
+
+--- Listing ---
+016dda9c  stp x21,x20,[sp, #-0x20]!
+016ddaa0  stp x19,x30,[sp, #0x10]
+016ddaa4  adrp x20,0x3577000
+016ddaa8  adrp x21,0x3309000
+016ddaac  ldrb w8,[x20, #0xda2]
+016ddab0  ldr x21,[x21, #0x930]
+016ddab4  mov x19,x0
+016ddab8  tbnz w8,#0x0,0x016ddadc
+016ddabc  adrp x0,0x3309000
+016ddac0  ldr x0,[x0, #0x930]
+016ddac4  bl 0x00b0789c
+016ddac8  adrp x0,0x3376000
+016ddacc  ldr x0,[x0, #0x908]
+016ddad0  bl 0x00b0789c
+016ddad4  mov w8,#0x1
+016ddad8  strb w8,[x20, #0xda2]
+016ddadc  ldr x8,[x21]
+016ddae0  ldr x8,[x8, #0xb8]
+016ddae4  ldr x0,[x8, #0xa8]
+016ddae8  cbz x0,0x016ddb00
+016ddaec  mov x1,x19
+016ddaf0  ldp x19,x30,[sp, #0x10]
+016ddaf4  mov x2,xzr
+016ddaf8  ldp x21,x20,[sp], #0x20
+016ddafc  b 0x01060dac
+016ddb00  adrp x8,0x3376000
+016ddb04  ldr x8,[x8, #0x908]
+016ddb08  mov x0,x19
+016ddb0c  ldr x1,[x8]
+016ddb10  bl 0x01e09430
+016ddb14  mov x0,x19
+016ddb18  ldp x19,x30,[sp, #0x10]
+016ddb1c  ldp x21,x20,[sp], #0x20
+016ddb20  b 0x016dc628
+
+
+================================================================================
+### FILE: 016ddb24_CSBehaviour__.ctor.txt
+================================================================================
+Function: CSBehaviour$$.ctor @ 016ddb24
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> AliothEngine.SingletonBehaviour<object>$$.ctor @ 01e09460
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.CSBehaviourWrap$$__CreateInstance @ 01239350
+
+--- Listing ---
+016ddb24  stp x23,x22,[sp, #-0x30]!
+016ddb28  stp x21,x20,[sp, #0x10]
+016ddb2c  stp x19,x30,[sp, #0x20]
+016ddb30  adrp x22,0x3577000
+016ddb34  adrp x23,0x333e000
+016ddb38  adrp x21,0x3342000
+016ddb3c  adrp x20,0x3309000
+016ddb40  ldrb w8,[x22, #0xda3]
+016ddb44  ldr x23,[x23, #0xcd0]
+016ddb48  ldr x21,[x21, #0xcc8]
+016ddb4c  ldr x20,[x20, #0x930]
+016ddb50  mov x19,x0
+016ddb54  tbnz w8,#0x0,0x016ddb84
+016ddb58  adrp x0,0x3309000
+016ddb5c  ldr x0,[x0, #0x930]
+016ddb60  bl 0x00b0789c
+016ddb64  adrp x0,0x3342000
+016ddb68  ldr x0,[x0, #0xcc8]
+016ddb6c  bl 0x00b0789c
+016ddb70  adrp x0,0x333e000
+016ddb74  ldr x0,[x0, #0xcd0]
+016ddb78  bl 0x00b0789c
+016ddb7c  mov w8,#0x1
+016ddb80  strb w8,[x22, #0xda3]
+016ddb84  ldr x1,[x23]
+016ddb88  mov x0,x19
+016ddb8c  str x1,[x0, #0x20]!
+016ddb90  bl 0x00b07850
+016ddb94  ldr x1,[x21]
+016ddb98  mov x0,x19
+016ddb9c  bl 0x01e09460
+016ddba0  ldr x8,[x20]
+016ddba4  ldr x8,[x8, #0xb8]
+016ddba8  ldr x0,[x8, #0xb0]
+016ddbac  cbz x0,0x016ddbc8
+016ddbb0  mov x1,x19
+016ddbb4  ldp x19,x30,[sp, #0x20]
+016ddbb8  ldp x21,x20,[sp, #0x10]
+016ddbbc  mov x2,xzr
+016ddbc0  ldp x23,x22,[sp], #0x30
+016ddbc4  b 0x01060dac
+016ddbc8  ldp x19,x30,[sp, #0x20]
+016ddbcc  ldp x21,x20,[sp, #0x10]
+016ddbd0  ldp x23,x22,[sp], #0x30
+016ddbd4  ret
+
+
+================================================================================
+### FILE: 016ddbd8_CSBehaviour___ShowTimeoutTips_b__27_0.txt
+================================================================================
+Function: CSBehaviour$$<ShowTimeoutTips>b__27_0 @ 016ddbd8
+
+--- Calls OUT ---
+  -> Alioth.S1.Net.NetworkCenter$$WakeUp @ 015b3b50
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+016ddbd8  str x30,[sp, #-0x10]!
+016ddbdc  ldr x0,[x0, #0x28]
+016ddbe0  cbz x0,0x016ddbf0
+016ddbe4  mov x1,xzr
+016ddbe8  ldr x30,[sp], #0x10
+016ddbec  b 0x015b3b50
+016ddbf0  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016ddbf4_CSBehaviour._SendRequest_d__22__System.IDisposable.Dispose.txt
+================================================================================
+Function: CSBehaviour.<SendRequest>d__22$$System.IDisposable.Dispose @ 016ddbf4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+016ddbf4  ret
+
+
+================================================================================
+### FILE: 016ddbf8_CSBehaviour._SendRequest_d__22__MoveNext.txt
+================================================================================
+Function: CSBehaviour.<SendRequest>d__22$$MoveNext @ 016ddbf8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> Alioth.S1.Net.RequestExtensions$$WaitReceiveFinished @ 015b53b0
+
+--- Calls IN ---
+
+--- Listing ---
+016ddbf8  stp x19,x30,[sp, #-0x10]!
+016ddbfc  ldr w8,[x0, #0x10]
+016ddc00  mov x19,x0
+016ddc04  mov w0,wzr
+016ddc08  cmp w8,#0x1
+016ddc0c  b.eq 0x016ddc44
+016ddc10  cbnz w8,0x016ddc4c
+016ddc14  ldr x0,[x19, #0x20]
+016ddc18  mov w8,#0xffffffff
+016ddc1c  mov x1,xzr
+016ddc20  str w8,[x19, #0x10]
+016ddc24  bl 0x015b53b0
+016ddc28  mov x1,x0
+016ddc2c  mov x0,x19
+016ddc30  str x1,[x0, #0x18]!
+016ddc34  bl 0x00b07850
+016ddc38  mov w8,#0x1
+016ddc3c  mov w0,#0x1
+016ddc40  b 0x016ddc48
+016ddc44  mov w8,#0xffffffff
+016ddc48  str w8,[x19, #0x10]
+016ddc4c  ldp x19,x30,[sp], #0x10
+016ddc50  ret
+
+
+================================================================================
+### FILE: 016ddc54_CSBehaviour._SendRequest_d__22__System.Collections.Generic.IEnumerator_System.Object_.get_Current.txt
+================================================================================
+Function: CSBehaviour.<SendRequest>d__22$$System.Collections.Generic.IEnumerator<System.Object>.get_Current @ 016ddc54
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+016ddc54  ldr x0,[x0, #0x18]
+016ddc58  ret
+
+
+================================================================================
+### FILE: 016ddc5c_CSBehaviour._SendRequest_d__22__System.Collections.IEnumerator.Reset.txt
+================================================================================
+Function: CSBehaviour.<SendRequest>d__22$$System.Collections.IEnumerator.Reset @ 016ddc5c
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> System.NotSupportedException$$.ctor @ 021525a8
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> FUN_008d74f8 @ 008d74f8
+  -> FUN_00b07978 @ 00b07978
+
+--- Calls IN ---
+
+--- Listing ---
+016ddc5c  stp x19,x30,[sp, #-0x10]!
+016ddc60  adrp x0,0x335a000
+016ddc64  ldr x0,[x0, #0xb88]
+016ddc68  bl 0x00b078a0
+016ddc6c  bl 0x00b079a0
+016ddc70  mov x19,x0
+016ddc74  bl 0x008d74f8
+016ddc78  mov x0,x19
+016ddc7c  mov x1,xzr
+016ddc80  bl 0x021525a8
+016ddc84  adrp x0,0x3380000
+016ddc88  ldr x0,[x0, #0x418]
+016ddc8c  bl 0x00b078a0
+016ddc90  mov x1,x0
+016ddc94  mov x0,x19
+016ddc98  bl 0x00b07978
+
+
+================================================================================
+### FILE: 016ddc9c_CSBehaviour._SendRequest_d__22__System.Collections.IEnumerator.get_Current.txt
+================================================================================
+Function: CSBehaviour.<SendRequest>d__22$$System.Collections.IEnumerator.get_Current @ 016ddc9c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+016ddc9c  ldr x0,[x0, #0x18]
+016ddca0  ret
+
+
+================================================================================
+### FILE: 016ddca4_CSBehaviour._NCRun_d__30__System.IDisposable.Dispose.txt
+================================================================================
+Function: CSBehaviour.<NCRun>d__30$$System.IDisposable.Dispose @ 016ddca4
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+016ddca4  ret
+
+
+================================================================================
+### FILE: 016ddca8_CSBehaviour._NCRun_d__30__MoveNext.txt
+================================================================================
+Function: CSBehaviour.<NCRun>d__30$$MoveNext @ 016ddca8
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> CSBehaviour$$get_logger @ 016dbef8
+  -> UnityEngine.MonoBehaviour$$StartCoroutine @ 024e4070
+  -> FUN_00b2ae24 @ 00b2ae24
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> Alioth.S1.Net.NetworkCenter$$Run @ 015b3d24
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+016ddca8  stp x23,x22,[sp, #-0x30]!
+016ddcac  stp x21,x20,[sp, #0x10]
+016ddcb0  stp x19,x30,[sp, #0x20]
+016ddcb4  adrp x20,0x3577000
+016ddcb8  ldrb w8,[x20, #0xda4]
+016ddcbc  mov x19,x0
+016ddcc0  tbnz w8,#0x0,0x016ddcf0
+016ddcc4  adrp x0,0x334a000
+016ddcc8  ldr x0,[x0, #0xc98]
+016ddccc  bl 0x00b0789c
+016ddcd0  adrp x0,0x334d000
+016ddcd4  ldr x0,[x0, #0xc30]
+016ddcd8  bl 0x00b0789c
+016ddcdc  adrp x0,0x3320000
+016ddce0  ldr x0,[x0, #0xb98]
+016ddce4  bl 0x00b0789c
+016ddce8  mov w8,#0x1
+016ddcec  strb w8,[x20, #0xda4]
+016ddcf0  ldr w8,[x19, #0x10]
+016ddcf4  adrp x23,0x334a000
+016ddcf8  ldr x20,[x19, #0x20]
+016ddcfc  ldr x23,[x23, #0xc98]
+016ddd00  cmp w8,#0x1
+016ddd04  b.eq 0x016ddd78
+016ddd08  cbnz w8,0x016dde68
+016ddd0c  mov w8,#0xffffffff
+016ddd10  str w8,[x19, #0x10]
+016ddd14  cbz x20,0x016dde7c
+016ddd18  mov x0,x20
+016ddd1c  bl 0x016dbef8
+016ddd20  cbz x0,0x016dde7c
+016ddd24  adrp x10,0x3320000
+016ddd28  ldr x8,[x0]
+016ddd2c  ldr x10,[x10, #0xb98]
+016ddd30  ldr x22,[x20, #0x20]
+016ddd34  ldr x1,[x23]
+016ddd38  ldrh w9,[x8, #0x12a]
+016ddd3c  ldr x23,[x10]
+016ddd40  mov x21,x0
+016ddd44  cbz x9,0x016ddd68
+016ddd48  ldr x10,[x8, #0xb0]
+016ddd4c  add x10,x10,#0x8
+016ddd50  ldur x11,[x10, #-0x8]
+016ddd54  cmp x11,x1
+016ddd58  b.eq 0x016ddde4
+016ddd5c  subs x9,x9,#0x1
+016ddd60  add x10,x10,#0x10
+016ddd64  b.ne 0x016ddd50
+016ddd68  mov w2,#0x9
+016ddd6c  mov x0,x21
+016ddd70  bl 0x00b2ae24
+016ddd74  b 0x016dddf4
+016ddd78  mov w8,#0xffffffff
+016ddd7c  str w8,[x19, #0x10]
+016ddd80  cbz x20,0x016dde7c
+016ddd84  mov x0,x20
+016ddd88  bl 0x016dbef8
+016ddd8c  cbz x0,0x016dde7c
+016ddd90  adrp x10,0x334d000
+016ddd94  ldr x8,[x0]
+016ddd98  ldr x10,[x10, #0xc30]
+016ddd9c  ldr x20,[x20, #0x20]
+016ddda0  ldr x1,[x23]
+016ddda4  ldrh w9,[x8, #0x12a]
+016ddda8  ldr x21,[x10]
+016dddac  mov x19,x0
+016dddb0  cbz x9,0x016dddd4
+016dddb4  ldr x10,[x8, #0xb0]
+016dddb8  add x10,x10,#0x8
+016dddbc  ldur x11,[x10, #-0x8]
+016dddc0  cmp x11,x1
+016dddc4  b.eq 0x016dde44
+016dddc8  subs x9,x9,#0x1
+016dddcc  add x10,x10,#0x10
+016dddd0  b.ne 0x016dddbc
+016dddd4  mov w2,#0x9
+016dddd8  mov x0,x19
+016ddddc  bl 0x00b2ae24
+016ddde0  b 0x016dde54
+016ddde4  ldr w9,[x10]
+016ddde8  add w9,w9,#0x9
+016dddec  add x8,x8,w9, SXTW  #0x4
+016dddf0  add x0,x8,#0x138
+016dddf4  ldp x8,x3,[x0]
+016dddf8  mov x0,x21
+016dddfc  mov x1,x22
+016dde00  mov x2,x23
+016dde04  blr x8
+016dde08  ldr x0,[x20, #0x28]
+016dde0c  cbz x0,0x016dde7c
+016dde10  mov x1,xzr
+016dde14  bl 0x015b3d24
+016dde18  mov x1,x0
+016dde1c  mov x0,x20
+016dde20  mov x2,xzr
+016dde24  bl 0x024e4070
+016dde28  str x0,[x19, #0x18]!
+016dde2c  mov x1,x0
+016dde30  mov x0,x19
+016dde34  bl 0x00b07850
+016dde38  mov w0,#0x1
+016dde3c  stur w0,[x19, #-0x8]
+016dde40  b 0x016dde6c
+016dde44  ldr w9,[x10]
+016dde48  add w9,w9,#0x9
+016dde4c  add x8,x8,w9, SXTW  #0x4
+016dde50  add x0,x8,#0x138
+016dde54  ldp x8,x3,[x0]
+016dde58  mov x0,x19
+016dde5c  mov x1,x20
+016dde60  mov x2,x21
+016dde64  blr x8
+016dde68  mov w0,wzr
+016dde6c  ldp x19,x30,[sp, #0x20]
+016dde70  ldp x21,x20,[sp, #0x10]
+016dde74  ldp x23,x22,[sp], #0x30
+016dde78  ret
+016dde7c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 016dde80_CSBehaviour._NCRun_d__30__System.Collections.Generic.IEnumerator_System.Object_.get_Current.txt
+================================================================================
+Function: CSBehaviour.<NCRun>d__30$$System.Collections.Generic.IEnumerator<System.Object>.get_Current @ 016dde80
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+016dde80  ldr x0,[x0, #0x18]
+016dde84  ret
+
+
+================================================================================
+### FILE: 016dde88_CSBehaviour._NCRun_d__30__System.Collections.IEnumerator.Reset.txt
+================================================================================
+Function: CSBehaviour.<NCRun>d__30$$System.Collections.IEnumerator.Reset @ 016dde88
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b078a0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> System.NotSupportedException$$.ctor @ 021525a8
+  -> FUN_008d74f8 @ 008d74f8
+  -> FUN_00b07978 @ 00b07978
+
+--- Calls IN ---
+
+--- Listing ---
+016dde88  stp x19,x30,[sp, #-0x10]!
+016dde8c  adrp x0,0x335a000
+016dde90  ldr x0,[x0, #0xb88]
+016dde94  bl 0x00b078a0
+016dde98  bl 0x00b079a0
+016dde9c  mov x19,x0
+016ddea0  bl 0x008d74f8
+016ddea4  mov x0,x19
+016ddea8  mov x1,xzr
+016ddeac  bl 0x021525a8
+016ddeb0  adrp x0,0x3351000
+016ddeb4  ldr x0,[x0, #0xe0]
+016ddeb8  bl 0x00b078a0
+016ddebc  mov x1,x0
+016ddec0  mov x0,x19
+016ddec4  bl 0x00b07978
+
+
+================================================================================
+### FILE: 016ddec8_CSBehaviour._NCRun_d__30__System.Collections.IEnumerator.get_Current.txt
+================================================================================
+Function: CSBehaviour.<NCRun>d__30$$System.Collections.IEnumerator.get_Current @ 016ddec8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+016ddec8  ldr x0,[x0, #0x18]
+016ddecc  ret
+
+

@@ -1,0 +1,156 @@
+================================================================================
+### FILE: 00b78464___am_pm.txt
+================================================================================
+Function: __am_pm @ 00b78464
+FuncComment: std::__ndk1::__time_get_c_storage<char>::__am_pm() const
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> __cxa_atexit @ 008d3de0
+  -> FUN_008d6f50 @ 008d6f50
+  -> assign @ 008d4d70
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b78464  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__time_get_c_storage<char>::__am_pm() const
+00b78468  stp x29,x30,[sp, #0x10]
+00b7846c  add x29,sp,#0x10
+00b78470  adrp x8,0x3584000
+00b78474  add x8,x8,#0xdb8
+00b78478  ldarb w8,[x8]
+00b7847c  adrp x19,0x3584000
+00b78480  tbz w8,#0x0,0x00b78494
+00b78484  ldr x0,[x19, #0xdb0]
+00b78488  ldp x29,x30,[sp, #0x10]
+00b7848c  ldr x19,[sp], #0x20
+00b78490  ret
+00b78494  adrp x0,0x3584000
+00b78498  add x0,x0,#0xdb8
+00b7849c  bl 0x008d3ef0
+00b784a0  cbz w0,0x00b78484
+00b784a4  adrp x8,0x3585000
+00b784a8  add x8,x8,#0x640
+00b784ac  ldarb w8,[x8]
+00b784b0  tbz w8,#0x0,0x00b784fc
+00b784b4  adrp x19,0x3585000
+    ; [PRE] try { // try from 00b784b4 to 00b784df has its CatchHandler @ 00b78548
+00b784b8  add x19,x19,#0x610
+00b784bc  adrp x1,0x2a08000
+00b784c0  add x1,x1,#0x5de
+00b784c4  mov x0,x19
+00b784c8  bl 0x008d4d70
+00b784cc  adrp x0,0x3585000
+00b784d0  adrp x1,0x2a08000
+00b784d4  add x0,x0,#0x628
+00b784d8  add x1,x1,#0x5e1
+00b784dc  bl 0x008d4d70
+    ; [POST] } // end try from 00b784b4 to 00b784df
+00b784e0  adrp x0,0x3584000
+00b784e4  adrp x8,0x3584000
+00b784e8  add x0,x0,#0xdb8
+00b784ec  str x19,[x8, #0xdb0]
+00b784f0  mov x19,x8
+00b784f4  bl 0x008d5bc0
+00b784f8  b 0x00b78484
+00b784fc  adrp x0,0x3585000
+00b78500  add x0,x0,#0x640
+00b78504  bl 0x008d3ef0
+00b78508  cbz w0,0x00b784b4
+00b7850c  adrp x8,0x3585000
+00b78510  adrp x0,0x8d6000
+00b78514  adrp x2,0x31a4000
+00b78518  add x8,x8,#0x610
+00b7851c  movi v0.2D,#0x0
+00b78520  add x0,x0,#0xf50
+00b78524  add x2,x2,#0x660
+00b78528  mov x1,xzr
+00b7852c  stp q0,q0,[x8, #0x10]
+00b78530  str q0,[x8]
+00b78534  bl 0x008d3de0
+00b78538  adrp x0,0x3585000
+00b7853c  add x0,x0,#0x640
+00b78540  bl 0x008d5bc0
+00b78544  b 0x00b784b4
+
+
+================================================================================
+### FILE: 00b78560___am_pm.txt
+================================================================================
+Function: __am_pm @ 00b78560
+FuncComment: std::__ndk1::__time_get_c_storage<wchar_t>::__am_pm() const
+
+--- Calls OUT ---
+  -> __cxa_guard_acquire @ 008d3ef0
+  -> FUN_008d6f94 @ 008d6f94
+  -> __cxa_atexit @ 008d3de0
+  -> assign @ 008d4690
+  -> __cxa_guard_release @ 008d5bc0
+
+--- Calls IN ---
+
+--- Listing ---
+00b78560  str x19,[sp, #-0x20]!
+    ; [PLATE] std::__ndk1::__time_get_c_storage<wchar_t>::__am_pm() const
+00b78564  stp x29,x30,[sp, #0x10]
+00b78568  add x29,sp,#0x10
+00b7856c  adrp x8,0x3584000
+00b78570  add x8,x8,#0xdc8
+00b78574  ldarb w8,[x8]
+00b78578  adrp x19,0x3584000
+00b7857c  tbz w8,#0x0,0x00b78590
+00b78580  ldr x0,[x19, #0xdc0]
+00b78584  ldp x29,x30,[sp, #0x10]
+00b78588  ldr x19,[sp], #0x20
+00b7858c  ret
+00b78590  adrp x0,0x3584000
+00b78594  add x0,x0,#0xdc8
+00b78598  bl 0x008d3ef0
+00b7859c  cbz w0,0x00b78580
+00b785a0  adrp x8,0x3585000
+00b785a4  add x8,x8,#0x678
+00b785a8  ldarb w8,[x8]
+00b785ac  tbz w8,#0x0,0x00b785f8
+00b785b0  adrp x19,0x3585000
+    ; [PRE] try { // try from 00b785b0 to 00b785db has its CatchHandler @ 00b78644
+00b785b4  add x19,x19,#0x648
+00b785b8  adrp x1,0x2a09000
+00b785bc  add x1,x1,#0x378
+00b785c0  mov x0,x19
+00b785c4  bl 0x008d4690
+00b785c8  adrp x0,0x3585000
+00b785cc  adrp x1,0x2a09000
+00b785d0  add x0,x0,#0x660
+00b785d4  add x1,x1,#0x384
+00b785d8  bl 0x008d4690
+    ; [POST] } // end try from 00b785b0 to 00b785db
+00b785dc  adrp x0,0x3584000
+00b785e0  adrp x8,0x3584000
+00b785e4  add x0,x0,#0xdc8
+00b785e8  str x19,[x8, #0xdc0]
+00b785ec  mov x19,x8
+00b785f0  bl 0x008d5bc0
+00b785f4  b 0x00b78580
+00b785f8  adrp x0,0x3585000
+00b785fc  add x0,x0,#0x678
+00b78600  bl 0x008d3ef0
+00b78604  cbz w0,0x00b785b0
+00b78608  adrp x8,0x3585000
+00b7860c  adrp x0,0x8d6000
+00b78610  adrp x2,0x31a4000
+00b78614  add x8,x8,#0x648
+00b78618  movi v0.2D,#0x0
+00b7861c  add x0,x0,#0xf94
+00b78620  add x2,x2,#0x660
+00b78624  mov x1,xzr
+00b78628  stp q0,q0,[x8, #0x10]
+00b7862c  str q0,[x8]
+00b78630  bl 0x008d3de0
+00b78634  adrp x0,0x3585000
+00b78638  add x0,x0,#0x678
+00b7863c  bl 0x008d5bc0
+00b78640  b 0x00b785b0
+
+

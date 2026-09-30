@@ -1,0 +1,5074 @@
+================================================================================
+### FILE: 008d3aa0_toupper.txt
+================================================================================
+Function: toupper @ 008d3aa0
+
+--- Calls OUT ---
+  -> toupper @ 03799048
+
+--- Calls IN ---
+  <- toupper @ 00b72960
+  <- do_toupper @ 00b72948
+  <- do_toupper @ 00b72964
+
+--- Listing ---
+008d3aa0  adrp x16,0x3307000
+008d3aa4  ldr x17,[x16, #0x710]
+008d3aa8  add x16,x16,#0x710
+008d3aac  br x17
+
+
+================================================================================
+### FILE: 008d4250_towlower.txt
+================================================================================
+Function: towlower @ 008d4250
+
+--- Calls OUT ---
+  -> towlower @ 03799218
+
+--- Calls IN ---
+  <- FUN_00b310d4 @ 00b310d4
+  <- towlower @ 00b73154
+  <- do_tolower @ 00b7314c
+  <- do_tolower @ 00b73158
+
+--- Listing ---
+008d4250  adrp x16,0x3307000
+008d4254  ldr x17,[x16, #0xae8]
+008d4258  add x16,x16,#0xae8
+008d425c  br x17
+
+
+================================================================================
+### FILE: 008d4e90_tolower.txt
+================================================================================
+Function: tolower @ 008d4e90
+
+--- Calls OUT ---
+  -> tolower @ 03799558
+
+--- Calls IN ---
+  <- tolower @ 00b729c0
+  <- FUN_00b3180c @ 00b3180c
+  <- FUN_00b1ed20 @ 00b1ed20
+  <- do_tolower @ 00b729c4
+  <- do_tolower @ 00b729a8
+
+--- Listing ---
+008d4e90  adrp x16,0x3308000
+008d4e94  ldr x17,[x16, #0x108]
+008d4e98  add x16,x16,#0x108
+008d4e9c  br x17
+
+
+================================================================================
+### FILE: 008d5c40_towupper.txt
+================================================================================
+Function: towupper @ 008d5c40
+
+--- Calls OUT ---
+  -> towupper @ 037998f0
+
+--- Calls IN ---
+  <- towupper @ 00b73104
+  <- do_toupper @ 00b730fc
+  <- do_toupper @ 00b73108
+
+--- Listing ---
+008d5c40  adrp x16,0x3308000
+008d5c44  ldr x17,[x16, #0x7e0]
+008d5c48  add x16,x16,#0x7e0
+008d5c4c  br x17
+
+
+================================================================================
+### FILE: 00b72960_toupper.txt
+================================================================================
+Function: toupper @ 00b72960
+
+--- Calls OUT ---
+  -> toupper @ 008d3aa0
+
+--- Calls IN ---
+
+--- Listing ---
+00b72960  b 0x008d3aa0
+
+
+================================================================================
+### FILE: 00b729c0_tolower.txt
+================================================================================
+Function: tolower @ 00b729c0
+
+--- Calls OUT ---
+  -> tolower @ 008d4e90
+
+--- Calls IN ---
+
+--- Listing ---
+00b729c0  b 0x008d4e90
+
+
+================================================================================
+### FILE: 00b73104_towupper.txt
+================================================================================
+Function: towupper @ 00b73104
+
+--- Calls OUT ---
+  -> towupper @ 008d5c40
+
+--- Calls IN ---
+
+--- Listing ---
+00b73104  b 0x008d5c40
+
+
+================================================================================
+### FILE: 00b73154_towlower.txt
+================================================================================
+Function: towlower @ 00b73154
+
+--- Calls OUT ---
+  -> towlower @ 008d4250
+
+--- Calls IN ---
+
+--- Listing ---
+00b73154  b 0x008d4250
+
+
+================================================================================
+### FILE: 00b86fbc_to_string.txt
+================================================================================
+Function: to_string @ 00b86fbc
+FuncComment: std::__ndk1::to_string(int)
+
+--- Calls OUT ---
+  -> __u32toa @ 008d4010
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b86fbc  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_string(int)
+00b86fc0  str x23,[sp, #0x20]
+00b86fc4  stp x22,x21,[sp, #0x30]
+00b86fc8  stp x20,x19,[sp, #0x40]
+00b86fcc  stp x29,x30,[sp, #0x50]
+00b86fd0  add x29,sp,#0x50
+00b86fd4  mrs x22,tpidr_el0
+00b86fd8  mov x20,x8
+00b86fdc  ldr x8,[x22, #0x28]
+00b86fe0  add x1,sp,#0xc
+00b86fe4  add x19,x1,#0xb
+00b86fe8  str x8,[sp, #0x18]
+00b86fec  tbz w0,#0x1f,0x00b87000
+00b86ff0  orr x1,x1,#0x1
+00b86ff4  mov w8,#0x2d
+00b86ff8  neg w0,w0
+00b86ffc  strb w8,[sp, #0xc]
+00b87000  sub x8,x19,x1
+00b87004  cmp x8,#0x9
+00b87008  b.gt 0x00b8704c
+00b8700c  orr w9,w0,#0x1
+00b87010  mov w10,#0x20
+00b87014  clz w9,w9
+00b87018  mov w11,#0x4d1
+00b8701c  sub w9,w10,w9
+00b87020  mul w9,w9,w11
+00b87024  adrp x10,0x2a0a000
+00b87028  lsr w9,w9,#0xc
+00b8702c  add x10,x10,#0x2a4
+00b87030  ldr w10,[x10, w9, UXTW #0x2]
+00b87034  cmp w10,w0
+00b87038  cset w10,hi
+00b8703c  sub w9,w9,w10
+00b87040  add w9,w9,#0x1
+00b87044  cmp x8,w9, SXTW 
+00b87048  b.lt 0x00b87054
+00b8704c  bl 0x008d4010
+00b87050  mov x19,x0
+00b87054  add x8,sp,#0xc
+00b87058  sub x23,x19,x8
+00b8705c  cmn x23,#0x10
+00b87060  stp xzr,xzr,[x20]
+00b87064  str xzr,[x20, #0x10]
+00b87068  b.cs 0x00b87130
+00b8706c  cmp x23,#0x16
+00b87070  b.hi 0x00b87080
+00b87074  lsl w8,w23,#0x1
+00b87078  strb w8,[x20], #0x1
+00b8707c  b 0x00b870a0
+00b87080  add x8,x23,#0x10
+00b87084  and x21,x8,#-0x10
+00b87088  mov x0,x21
+00b8708c  bl 0x008d4f40
+00b87090  orr x8,x21,#0x1
+00b87094  stp x23,x0,[x20, #0x8]
+00b87098  str x8,[x20]
+00b8709c  mov x20,x0
+00b870a0  add x8,sp,#0xc
+00b870a4  cmp x8,x19
+00b870a8  b.eq 0x00b87104
+00b870ac  sub x9,x19,x8
+00b870b0  cmp x9,#0x20
+00b870b4  b.cc 0x00b870f4
+00b870b8  and x10,x9,#-0x20
+00b870bc  add x12,sp,#0xc
+00b870c0  add x11,x20,#0x10
+00b870c4  add x8,x12,x10
+00b870c8  add x20,x20,x10
+00b870cc  add x12,x12,#0x10
+00b870d0  mov x13,x10
+00b870d4  ldp q0,q1,[x12, #-0x10]
+00b870d8  subs x13,x13,#0x20
+00b870dc  add x12,x12,#0x20
+00b870e0  stp q0,q1,[x11, #-0x10]
+00b870e4  add x11,x11,#0x20
+00b870e8  b.ne 0x00b870d4
+00b870ec  cmp x9,x10
+00b870f0  b.eq 0x00b87104
+00b870f4  ldrb w9,[x8], #0x1
+00b870f8  cmp x19,x8
+00b870fc  strb w9,[x20], #0x1
+00b87100  b.ne 0x00b870f4
+00b87104  strb wzr,[x20]
+00b87108  ldr x8,[x22, #0x28]
+00b8710c  ldr x9,[sp, #0x18]
+00b87110  cmp x8,x9
+00b87114  b.ne 0x00b87138
+00b87118  ldp x29,x30,[sp, #0x50]
+00b8711c  ldp x20,x19,[sp, #0x40]
+00b87120  ldp x22,x21,[sp, #0x30]
+00b87124  ldr x23,[sp, #0x20]
+00b87128  add sp,sp,#0x60
+00b8712c  ret
+00b87130  mov x0,x20
+00b87134  bl 0x00a8cdb8
+00b87138  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8713c_to_string.txt
+================================================================================
+Function: to_string @ 00b8713c
+FuncComment: std::__ndk1::to_string(long)
+
+--- Calls OUT ---
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+  -> __u64toa @ 008d4530
+
+--- Calls IN ---
+
+--- Listing ---
+00b8713c  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_string(long)
+00b87140  str x23,[sp, #0x20]
+00b87144  stp x22,x21,[sp, #0x30]
+00b87148  stp x20,x19,[sp, #0x40]
+00b8714c  stp x29,x30,[sp, #0x50]
+00b87150  add x29,sp,#0x50
+00b87154  mrs x22,tpidr_el0
+00b87158  mov x20,x8
+00b8715c  ldr x8,[x22, #0x28]
+00b87160  add x1,sp,#0x4
+00b87164  add x19,x1,#0x14
+00b87168  str x8,[sp, #0x18]
+00b8716c  tbz x0,#0x3f,0x00b87180
+00b87170  orr x1,x1,#0x1
+00b87174  mov w8,#0x2d
+00b87178  neg x0,x0
+00b8717c  strb w8,[sp, #0x4]
+00b87180  sub x8,x19,x1
+00b87184  cmp x8,#0x13
+00b87188  b.gt 0x00b871cc
+00b8718c  orr x9,x0,#0x1
+00b87190  mov w10,#0x40
+00b87194  clz x9,x9
+00b87198  mov w11,#0x4d1
+00b8719c  sub w9,w10,w9
+00b871a0  mul w9,w9,w11
+00b871a4  adrp x10,0x2a0a000
+00b871a8  lsr w9,w9,#0xc
+00b871ac  add x10,x10,#0x2d0
+00b871b0  ldr x10,[x10, w9, UXTW #0x3]
+00b871b4  cmp x10,x0
+00b871b8  cset w10,hi
+00b871bc  sub w9,w9,w10
+00b871c0  add w9,w9,#0x1
+00b871c4  cmp x8,w9, SXTW 
+00b871c8  b.lt 0x00b871d4
+00b871cc  bl 0x008d4530
+00b871d0  mov x19,x0
+00b871d4  add x8,sp,#0x4
+00b871d8  sub x23,x19,x8
+00b871dc  cmn x23,#0x10
+00b871e0  stp xzr,xzr,[x20]
+00b871e4  str xzr,[x20, #0x10]
+00b871e8  b.cs 0x00b872b0
+00b871ec  cmp x23,#0x16
+00b871f0  b.hi 0x00b87200
+00b871f4  lsl w8,w23,#0x1
+00b871f8  strb w8,[x20], #0x1
+00b871fc  b 0x00b87220
+00b87200  add x8,x23,#0x10
+00b87204  and x21,x8,#-0x10
+00b87208  mov x0,x21
+00b8720c  bl 0x008d4f40
+00b87210  orr x8,x21,#0x1
+00b87214  stp x23,x0,[x20, #0x8]
+00b87218  str x8,[x20]
+00b8721c  mov x20,x0
+00b87220  add x8,sp,#0x4
+00b87224  cmp x8,x19
+00b87228  b.eq 0x00b87284
+00b8722c  sub x9,x19,x8
+00b87230  cmp x9,#0x20
+00b87234  b.cc 0x00b87274
+00b87238  and x10,x9,#-0x20
+00b8723c  add x12,sp,#0x4
+00b87240  add x11,x20,#0x10
+00b87244  add x8,x12,x10
+00b87248  add x20,x20,x10
+00b8724c  add x12,x12,#0x10
+00b87250  mov x13,x10
+00b87254  ldp q0,q1,[x12, #-0x10]
+00b87258  subs x13,x13,#0x20
+00b8725c  add x12,x12,#0x20
+00b87260  stp q0,q1,[x11, #-0x10]
+00b87264  add x11,x11,#0x20
+00b87268  b.ne 0x00b87254
+00b8726c  cmp x9,x10
+00b87270  b.eq 0x00b87284
+00b87274  ldrb w9,[x8], #0x1
+00b87278  cmp x19,x8
+00b8727c  strb w9,[x20], #0x1
+00b87280  b.ne 0x00b87274
+00b87284  strb wzr,[x20]
+00b87288  ldr x8,[x22, #0x28]
+00b8728c  ldr x9,[sp, #0x18]
+00b87290  cmp x8,x9
+00b87294  b.ne 0x00b872b8
+00b87298  ldp x29,x30,[sp, #0x50]
+00b8729c  ldp x20,x19,[sp, #0x40]
+00b872a0  ldp x22,x21,[sp, #0x30]
+00b872a4  ldr x23,[sp, #0x20]
+00b872a8  add sp,sp,#0x60
+00b872ac  ret
+00b872b0  mov x0,x20
+00b872b4  bl 0x00a8cdb8
+00b872b8  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b872bc_to_string.txt
+================================================================================
+Function: to_string @ 00b872bc
+FuncComment: std::__ndk1::to_string(long long)
+
+--- Calls OUT ---
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+  -> __u64toa @ 008d4530
+
+--- Calls IN ---
+
+--- Listing ---
+00b872bc  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_string(long long)
+00b872c0  str x23,[sp, #0x20]
+00b872c4  stp x22,x21,[sp, #0x30]
+00b872c8  stp x20,x19,[sp, #0x40]
+00b872cc  stp x29,x30,[sp, #0x50]
+00b872d0  add x29,sp,#0x50
+00b872d4  mrs x22,tpidr_el0
+00b872d8  mov x20,x8
+00b872dc  ldr x8,[x22, #0x28]
+00b872e0  add x1,sp,#0x4
+00b872e4  add x19,x1,#0x14
+00b872e8  str x8,[sp, #0x18]
+00b872ec  tbz x0,#0x3f,0x00b87300
+00b872f0  orr x1,x1,#0x1
+00b872f4  mov w8,#0x2d
+00b872f8  neg x0,x0
+00b872fc  strb w8,[sp, #0x4]
+00b87300  sub x8,x19,x1
+00b87304  cmp x8,#0x13
+00b87308  b.gt 0x00b8734c
+00b8730c  orr x9,x0,#0x1
+00b87310  mov w10,#0x40
+00b87314  clz x9,x9
+00b87318  mov w11,#0x4d1
+00b8731c  sub w9,w10,w9
+00b87320  mul w9,w9,w11
+00b87324  adrp x10,0x2a0a000
+00b87328  lsr w9,w9,#0xc
+00b8732c  add x10,x10,#0x2d0
+00b87330  ldr x10,[x10, w9, UXTW #0x3]
+00b87334  cmp x10,x0
+00b87338  cset w10,hi
+00b8733c  sub w9,w9,w10
+00b87340  add w9,w9,#0x1
+00b87344  cmp x8,w9, SXTW 
+00b87348  b.lt 0x00b87354
+00b8734c  bl 0x008d4530
+00b87350  mov x19,x0
+00b87354  add x8,sp,#0x4
+00b87358  sub x23,x19,x8
+00b8735c  cmn x23,#0x10
+00b87360  stp xzr,xzr,[x20]
+00b87364  str xzr,[x20, #0x10]
+00b87368  b.cs 0x00b87430
+00b8736c  cmp x23,#0x16
+00b87370  b.hi 0x00b87380
+00b87374  lsl w8,w23,#0x1
+00b87378  strb w8,[x20], #0x1
+00b8737c  b 0x00b873a0
+00b87380  add x8,x23,#0x10
+00b87384  and x21,x8,#-0x10
+00b87388  mov x0,x21
+00b8738c  bl 0x008d4f40
+00b87390  orr x8,x21,#0x1
+00b87394  stp x23,x0,[x20, #0x8]
+00b87398  str x8,[x20]
+00b8739c  mov x20,x0
+00b873a0  add x8,sp,#0x4
+00b873a4  cmp x8,x19
+00b873a8  b.eq 0x00b87404
+00b873ac  sub x9,x19,x8
+00b873b0  cmp x9,#0x20
+00b873b4  b.cc 0x00b873f4
+00b873b8  and x10,x9,#-0x20
+00b873bc  add x12,sp,#0x4
+00b873c0  add x11,x20,#0x10
+00b873c4  add x8,x12,x10
+00b873c8  add x20,x20,x10
+00b873cc  add x12,x12,#0x10
+00b873d0  mov x13,x10
+00b873d4  ldp q0,q1,[x12, #-0x10]
+00b873d8  subs x13,x13,#0x20
+00b873dc  add x12,x12,#0x20
+00b873e0  stp q0,q1,[x11, #-0x10]
+00b873e4  add x11,x11,#0x20
+00b873e8  b.ne 0x00b873d4
+00b873ec  cmp x9,x10
+00b873f0  b.eq 0x00b87404
+00b873f4  ldrb w9,[x8], #0x1
+00b873f8  cmp x19,x8
+00b873fc  strb w9,[x20], #0x1
+00b87400  b.ne 0x00b873f4
+00b87404  strb wzr,[x20]
+00b87408  ldr x8,[x22, #0x28]
+00b8740c  ldr x9,[sp, #0x18]
+00b87410  cmp x8,x9
+00b87414  b.ne 0x00b87438
+00b87418  ldp x29,x30,[sp, #0x50]
+00b8741c  ldp x20,x19,[sp, #0x40]
+00b87420  ldp x22,x21,[sp, #0x30]
+00b87424  ldr x23,[sp, #0x20]
+00b87428  add sp,sp,#0x60
+00b8742c  ret
+00b87430  mov x0,x20
+00b87434  bl 0x00a8cdb8
+00b87438  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8743c_to_string.txt
+================================================================================
+Function: to_string @ 00b8743c
+FuncComment: std::__ndk1::to_string(unsigned int)
+
+--- Calls OUT ---
+  -> __u32toa @ 008d4010
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b8743c  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_string(unsigned int)
+00b87440  str x23,[sp, #0x20]
+00b87444  stp x22,x21,[sp, #0x30]
+00b87448  stp x20,x19,[sp, #0x40]
+00b8744c  stp x29,x30,[sp, #0x50]
+00b87450  add x29,sp,#0x50
+00b87454  mrs x22,tpidr_el0
+00b87458  mov x20,x8
+00b8745c  ldr x8,[x22, #0x28]
+00b87460  add x1,sp,#0xc
+00b87464  add x21,sp,#0xc
+00b87468  str x8,[sp, #0x18]
+00b8746c  bl 0x008d4010
+00b87470  sub x23,x0,x21
+00b87474  cmn x23,#0x10
+00b87478  stp xzr,xzr,[x20, #0x8]
+00b8747c  str xzr,[x20]
+00b87480  b.cs 0x00b8754c
+00b87484  mov x19,x0
+00b87488  cmp x23,#0x16
+00b8748c  b.hi 0x00b8749c
+00b87490  lsl w8,w23,#0x1
+00b87494  strb w8,[x20], #0x1
+00b87498  b 0x00b874bc
+00b8749c  add x8,x23,#0x10
+00b874a0  and x21,x8,#-0x10
+00b874a4  mov x0,x21
+00b874a8  bl 0x008d4f40
+00b874ac  orr x8,x21,#0x1
+00b874b0  stp x23,x0,[x20, #0x8]
+00b874b4  str x8,[x20]
+00b874b8  mov x20,x0
+00b874bc  add x8,sp,#0xc
+00b874c0  cmp x8,x19
+00b874c4  b.eq 0x00b87520
+00b874c8  sub x9,x19,x8
+00b874cc  cmp x9,#0x20
+00b874d0  b.cc 0x00b87510
+00b874d4  and x10,x9,#-0x20
+00b874d8  add x12,sp,#0xc
+00b874dc  add x11,x20,#0x10
+00b874e0  add x8,x12,x10
+00b874e4  add x20,x20,x10
+00b874e8  add x12,x12,#0x10
+00b874ec  mov x13,x10
+00b874f0  ldp q0,q1,[x12, #-0x10]
+00b874f4  subs x13,x13,#0x20
+00b874f8  add x12,x12,#0x20
+00b874fc  stp q0,q1,[x11, #-0x10]
+00b87500  add x11,x11,#0x20
+00b87504  b.ne 0x00b874f0
+00b87508  cmp x9,x10
+00b8750c  b.eq 0x00b87520
+00b87510  ldrb w9,[x8], #0x1
+00b87514  cmp x19,x8
+00b87518  strb w9,[x20], #0x1
+00b8751c  b.ne 0x00b87510
+00b87520  strb wzr,[x20]
+00b87524  ldr x8,[x22, #0x28]
+00b87528  ldr x9,[sp, #0x18]
+00b8752c  cmp x8,x9
+00b87530  b.ne 0x00b87554
+00b87534  ldp x29,x30,[sp, #0x50]
+00b87538  ldp x20,x19,[sp, #0x40]
+00b8753c  ldp x22,x21,[sp, #0x30]
+00b87540  ldr x23,[sp, #0x20]
+00b87544  add sp,sp,#0x60
+00b87548  ret
+00b8754c  mov x0,x20
+00b87550  bl 0x00a8cdb8
+00b87554  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b87558_to_string.txt
+================================================================================
+Function: to_string @ 00b87558
+FuncComment: std::__ndk1::to_string(unsigned long)
+
+--- Calls OUT ---
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __u64toa @ 008d4530
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b87558  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_string(unsigned long)
+00b8755c  str x23,[sp, #0x20]
+00b87560  stp x22,x21,[sp, #0x30]
+00b87564  stp x20,x19,[sp, #0x40]
+00b87568  stp x29,x30,[sp, #0x50]
+00b8756c  add x29,sp,#0x50
+00b87570  mrs x22,tpidr_el0
+00b87574  mov x20,x8
+00b87578  ldr x8,[x22, #0x28]
+00b8757c  mov x1,sp
+00b87580  mov x21,sp
+00b87584  str x8,[sp, #0x18]
+00b87588  bl 0x008d4530
+00b8758c  sub x23,x0,x21
+00b87590  cmn x23,#0x10
+00b87594  stp xzr,xzr,[x20, #0x8]
+00b87598  str xzr,[x20]
+00b8759c  b.cs 0x00b87668
+00b875a0  mov x19,x0
+00b875a4  cmp x23,#0x16
+00b875a8  b.hi 0x00b875b8
+00b875ac  lsl w8,w23,#0x1
+00b875b0  strb w8,[x20], #0x1
+00b875b4  b 0x00b875d8
+00b875b8  add x8,x23,#0x10
+00b875bc  and x21,x8,#-0x10
+00b875c0  mov x0,x21
+00b875c4  bl 0x008d4f40
+00b875c8  orr x8,x21,#0x1
+00b875cc  stp x23,x0,[x20, #0x8]
+00b875d0  str x8,[x20]
+00b875d4  mov x20,x0
+00b875d8  mov x8,sp
+00b875dc  cmp x8,x19
+00b875e0  b.eq 0x00b8763c
+00b875e4  sub x9,x19,x8
+00b875e8  cmp x9,#0x20
+00b875ec  b.cc 0x00b8762c
+00b875f0  and x10,x9,#-0x20
+00b875f4  mov x12,sp
+00b875f8  add x11,x20,#0x10
+00b875fc  add x8,x12,x10
+00b87600  add x20,x20,x10
+00b87604  add x12,x12,#0x10
+00b87608  mov x13,x10
+00b8760c  ldp q0,q1,[x12, #-0x10]
+00b87610  subs x13,x13,#0x20
+00b87614  add x12,x12,#0x20
+00b87618  stp q0,q1,[x11, #-0x10]
+00b8761c  add x11,x11,#0x20
+00b87620  b.ne 0x00b8760c
+00b87624  cmp x9,x10
+00b87628  b.eq 0x00b8763c
+00b8762c  ldrb w9,[x8], #0x1
+00b87630  cmp x19,x8
+00b87634  strb w9,[x20], #0x1
+00b87638  b.ne 0x00b8762c
+00b8763c  strb wzr,[x20]
+00b87640  ldr x8,[x22, #0x28]
+00b87644  ldr x9,[sp, #0x18]
+00b87648  cmp x8,x9
+00b8764c  b.ne 0x00b87670
+00b87650  ldp x29,x30,[sp, #0x50]
+00b87654  ldp x20,x19,[sp, #0x40]
+00b87658  ldp x22,x21,[sp, #0x30]
+00b8765c  ldr x23,[sp, #0x20]
+00b87660  add sp,sp,#0x60
+00b87664  ret
+00b87668  mov x0,x20
+00b8766c  bl 0x00a8cdb8
+00b87670  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b87674_to_string.txt
+================================================================================
+Function: to_string @ 00b87674
+FuncComment: std::__ndk1::to_string(unsigned long long)
+
+--- Calls OUT ---
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __u64toa @ 008d4530
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b87674  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_string(unsigned long long)
+00b87678  str x23,[sp, #0x20]
+00b8767c  stp x22,x21,[sp, #0x30]
+00b87680  stp x20,x19,[sp, #0x40]
+00b87684  stp x29,x30,[sp, #0x50]
+00b87688  add x29,sp,#0x50
+00b8768c  mrs x22,tpidr_el0
+00b87690  mov x20,x8
+00b87694  ldr x8,[x22, #0x28]
+00b87698  mov x1,sp
+00b8769c  mov x21,sp
+00b876a0  str x8,[sp, #0x18]
+00b876a4  bl 0x008d4530
+00b876a8  sub x23,x0,x21
+00b876ac  cmn x23,#0x10
+00b876b0  stp xzr,xzr,[x20, #0x8]
+00b876b4  str xzr,[x20]
+00b876b8  b.cs 0x00b87784
+00b876bc  mov x19,x0
+00b876c0  cmp x23,#0x16
+00b876c4  b.hi 0x00b876d4
+00b876c8  lsl w8,w23,#0x1
+00b876cc  strb w8,[x20], #0x1
+00b876d0  b 0x00b876f4
+00b876d4  add x8,x23,#0x10
+00b876d8  and x21,x8,#-0x10
+00b876dc  mov x0,x21
+00b876e0  bl 0x008d4f40
+00b876e4  orr x8,x21,#0x1
+00b876e8  stp x23,x0,[x20, #0x8]
+00b876ec  str x8,[x20]
+00b876f0  mov x20,x0
+00b876f4  mov x8,sp
+00b876f8  cmp x8,x19
+00b876fc  b.eq 0x00b87758
+00b87700  sub x9,x19,x8
+00b87704  cmp x9,#0x20
+00b87708  b.cc 0x00b87748
+00b8770c  and x10,x9,#-0x20
+00b87710  mov x12,sp
+00b87714  add x11,x20,#0x10
+00b87718  add x8,x12,x10
+00b8771c  add x20,x20,x10
+00b87720  add x12,x12,#0x10
+00b87724  mov x13,x10
+00b87728  ldp q0,q1,[x12, #-0x10]
+00b8772c  subs x13,x13,#0x20
+00b87730  add x12,x12,#0x20
+00b87734  stp q0,q1,[x11, #-0x10]
+00b87738  add x11,x11,#0x20
+00b8773c  b.ne 0x00b87728
+00b87740  cmp x9,x10
+00b87744  b.eq 0x00b87758
+00b87748  ldrb w9,[x8], #0x1
+00b8774c  cmp x19,x8
+00b87750  strb w9,[x20], #0x1
+00b87754  b.ne 0x00b87748
+00b87758  strb wzr,[x20]
+00b8775c  ldr x8,[x22, #0x28]
+00b87760  ldr x9,[sp, #0x18]
+00b87764  cmp x8,x9
+00b87768  b.ne 0x00b8778c
+00b8776c  ldp x29,x30,[sp, #0x50]
+00b87770  ldp x20,x19,[sp, #0x40]
+00b87774  ldp x22,x21,[sp, #0x30]
+00b87778  ldr x23,[sp, #0x20]
+00b8777c  add sp,sp,#0x60
+00b87780  ret
+00b87784  mov x0,x20
+00b87788  bl 0x00a8cdb8
+00b8778c  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b87790_to_wstring.txt
+================================================================================
+Function: to_wstring @ 00b87790
+FuncComment: std::__ndk1::to_wstring(int)
+
+--- Calls OUT ---
+  -> FUN_00a8cdc8 @ 00a8cdc8
+  -> __u32toa @ 008d4010
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b87790  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_wstring(int)
+00b87794  str x23,[sp, #0x20]
+00b87798  stp x22,x21,[sp, #0x30]
+00b8779c  stp x20,x19,[sp, #0x40]
+00b877a0  stp x29,x30,[sp, #0x50]
+00b877a4  add x29,sp,#0x50
+00b877a8  mrs x21,tpidr_el0
+00b877ac  mov x20,x8
+00b877b0  ldr x8,[x21, #0x28]
+00b877b4  add x1,sp,#0xc
+00b877b8  add x19,x1,#0xb
+00b877bc  str x8,[sp, #0x18]
+00b877c0  tbz w0,#0x1f,0x00b877d4
+00b877c4  orr x1,x1,#0x1
+00b877c8  mov w8,#0x2d
+00b877cc  neg w0,w0
+00b877d0  strb w8,[sp, #0xc]
+00b877d4  sub x8,x19,x1
+00b877d8  cmp x8,#0x9
+00b877dc  b.gt 0x00b87820
+00b877e0  orr w9,w0,#0x1
+00b877e4  mov w10,#0x20
+00b877e8  clz w9,w9
+00b877ec  mov w11,#0x4d1
+00b877f0  sub w9,w10,w9
+00b877f4  mul w9,w9,w11
+00b877f8  adrp x10,0x2a0a000
+00b877fc  lsr w9,w9,#0xc
+00b87800  add x10,x10,#0x2a4
+00b87804  ldr w10,[x10, w9, UXTW #0x2]
+00b87808  cmp w10,w0
+00b8780c  cset w10,hi
+00b87810  sub w9,w9,w10
+00b87814  add w9,w9,#0x1
+00b87818  cmp x8,w9, SXTW 
+00b8781c  b.lt 0x00b87828
+00b87820  bl 0x008d4010
+00b87824  mov x19,x0
+00b87828  add x8,sp,#0xc
+00b8782c  sub x22,x19,x8
+00b87830  orr x8,xzr,#0x3ffffffffffffff0
+00b87834  cmp x22,x8
+00b87838  stp xzr,xzr,[x20]
+00b8783c  str xzr,[x20, #0x10]
+00b87840  b.cs 0x00b87910
+00b87844  cmp x22,#0x4
+00b87848  b.hi 0x00b87858
+00b8784c  lsl w8,w22,#0x1
+00b87850  strb w8,[x20], #0x4
+00b87854  b 0x00b87880
+00b87858  add x8,x22,#0x4
+00b8785c  lsr x9,x8,#0x3e
+00b87860  cbnz x9,0x00b8791c
+00b87864  and x23,x8,#-0x4
+00b87868  lsl x0,x23,#0x2
+00b8786c  bl 0x008d4f40
+00b87870  orr x8,x23,#0x1
+00b87874  stp x22,x0,[x20, #0x8]
+00b87878  str x8,[x20]
+00b8787c  mov x20,x0
+00b87880  add x8,sp,#0xc
+00b87884  cmp x8,x19
+00b87888  b.eq 0x00b878e4
+00b8788c  sub x9,x19,x8
+00b87890  cmp x9,#0x2
+00b87894  b.cc 0x00b878d4
+00b87898  and x10,x9,#-0x2
+00b8789c  add x12,sp,#0xc
+00b878a0  add x11,x20,#0x4
+00b878a4  add x8,x12,x10
+00b878a8  add x20,x20,x10, LSL #0x2
+00b878ac  orr x12,x12,#0x1
+00b878b0  mov x13,x10
+00b878b4  ldurb w14,[x12, #-0x1]
+00b878b8  ldrb w15,[x12], #0x2
+00b878bc  subs x13,x13,#0x2
+00b878c0  stp w14,w15,[x11, #-0x4]
+00b878c4  add x11,x11,#0x8
+00b878c8  b.ne 0x00b878b4
+00b878cc  cmp x9,x10
+00b878d0  b.eq 0x00b878e4
+00b878d4  ldrb w9,[x8], #0x1
+00b878d8  cmp x19,x8
+00b878dc  str w9,[x20], #0x4
+00b878e0  b.ne 0x00b878d4
+00b878e4  str wzr,[x20]
+00b878e8  ldr x8,[x21, #0x28]
+00b878ec  ldr x9,[sp, #0x18]
+00b878f0  cmp x8,x9
+00b878f4  b.ne 0x00b87918
+00b878f8  ldp x29,x30,[sp, #0x50]
+00b878fc  ldp x20,x19,[sp, #0x40]
+00b87900  ldp x22,x21,[sp, #0x30]
+00b87904  ldr x23,[sp, #0x20]
+00b87908  add sp,sp,#0x60
+00b8790c  ret
+00b87910  mov x0,x20
+00b87914  bl 0x00a8cdb8
+00b87918  bl 0x008d4c50
+00b8791c  adrp x0,0x293c000
+00b87920  add x0,x0,#0xc4
+00b87924  bl 0x00a8cdc8
+
+
+================================================================================
+### FILE: 00b87928_to_wstring.txt
+================================================================================
+Function: to_wstring @ 00b87928
+FuncComment: std::__ndk1::to_wstring(long)
+
+--- Calls OUT ---
+  -> FUN_00a8cdc8 @ 00a8cdc8
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+  -> __u64toa @ 008d4530
+
+--- Calls IN ---
+
+--- Listing ---
+00b87928  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_wstring(long)
+00b8792c  str x23,[sp, #0x20]
+00b87930  stp x22,x21,[sp, #0x30]
+00b87934  stp x20,x19,[sp, #0x40]
+00b87938  stp x29,x30,[sp, #0x50]
+00b8793c  add x29,sp,#0x50
+00b87940  mrs x21,tpidr_el0
+00b87944  mov x20,x8
+00b87948  ldr x8,[x21, #0x28]
+00b8794c  add x1,sp,#0x4
+00b87950  add x19,x1,#0x14
+00b87954  str x8,[sp, #0x18]
+00b87958  tbz x0,#0x3f,0x00b8796c
+00b8795c  orr x1,x1,#0x1
+00b87960  mov w8,#0x2d
+00b87964  neg x0,x0
+00b87968  strb w8,[sp, #0x4]
+00b8796c  sub x8,x19,x1
+00b87970  cmp x8,#0x13
+00b87974  b.gt 0x00b879b8
+00b87978  orr x9,x0,#0x1
+00b8797c  mov w10,#0x40
+00b87980  clz x9,x9
+00b87984  mov w11,#0x4d1
+00b87988  sub w9,w10,w9
+00b8798c  mul w9,w9,w11
+00b87990  adrp x10,0x2a0a000
+00b87994  lsr w9,w9,#0xc
+00b87998  add x10,x10,#0x2d0
+00b8799c  ldr x10,[x10, w9, UXTW #0x3]
+00b879a0  cmp x10,x0
+00b879a4  cset w10,hi
+00b879a8  sub w9,w9,w10
+00b879ac  add w9,w9,#0x1
+00b879b0  cmp x8,w9, SXTW 
+00b879b4  b.lt 0x00b879c0
+00b879b8  bl 0x008d4530
+00b879bc  mov x19,x0
+00b879c0  add x8,sp,#0x4
+00b879c4  sub x22,x19,x8
+00b879c8  orr x8,xzr,#0x3ffffffffffffff0
+00b879cc  cmp x22,x8
+00b879d0  stp xzr,xzr,[x20]
+00b879d4  str xzr,[x20, #0x10]
+00b879d8  b.cs 0x00b87aa8
+00b879dc  cmp x22,#0x4
+00b879e0  b.hi 0x00b879f0
+00b879e4  lsl w8,w22,#0x1
+00b879e8  strb w8,[x20], #0x4
+00b879ec  b 0x00b87a18
+00b879f0  add x8,x22,#0x4
+00b879f4  lsr x9,x8,#0x3e
+00b879f8  cbnz x9,0x00b87ab4
+00b879fc  and x23,x8,#-0x4
+00b87a00  lsl x0,x23,#0x2
+00b87a04  bl 0x008d4f40
+00b87a08  orr x8,x23,#0x1
+00b87a0c  stp x22,x0,[x20, #0x8]
+00b87a10  str x8,[x20]
+00b87a14  mov x20,x0
+00b87a18  add x8,sp,#0x4
+00b87a1c  cmp x8,x19
+00b87a20  b.eq 0x00b87a7c
+00b87a24  sub x9,x19,x8
+00b87a28  cmp x9,#0x2
+00b87a2c  b.cc 0x00b87a6c
+00b87a30  and x10,x9,#-0x2
+00b87a34  add x12,sp,#0x4
+00b87a38  add x11,x20,#0x4
+00b87a3c  add x8,x12,x10
+00b87a40  add x20,x20,x10, LSL #0x2
+00b87a44  orr x12,x12,#0x1
+00b87a48  mov x13,x10
+00b87a4c  ldurb w14,[x12, #-0x1]
+00b87a50  ldrb w15,[x12], #0x2
+00b87a54  subs x13,x13,#0x2
+00b87a58  stp w14,w15,[x11, #-0x4]
+00b87a5c  add x11,x11,#0x8
+00b87a60  b.ne 0x00b87a4c
+00b87a64  cmp x9,x10
+00b87a68  b.eq 0x00b87a7c
+00b87a6c  ldrb w9,[x8], #0x1
+00b87a70  cmp x19,x8
+00b87a74  str w9,[x20], #0x4
+00b87a78  b.ne 0x00b87a6c
+00b87a7c  str wzr,[x20]
+00b87a80  ldr x8,[x21, #0x28]
+00b87a84  ldr x9,[sp, #0x18]
+00b87a88  cmp x8,x9
+00b87a8c  b.ne 0x00b87ab0
+00b87a90  ldp x29,x30,[sp, #0x50]
+00b87a94  ldp x20,x19,[sp, #0x40]
+00b87a98  ldp x22,x21,[sp, #0x30]
+00b87a9c  ldr x23,[sp, #0x20]
+00b87aa0  add sp,sp,#0x60
+00b87aa4  ret
+00b87aa8  mov x0,x20
+00b87aac  bl 0x00a8cdb8
+00b87ab0  bl 0x008d4c50
+00b87ab4  adrp x0,0x293c000
+00b87ab8  add x0,x0,#0xc4
+00b87abc  bl 0x00a8cdc8
+
+
+================================================================================
+### FILE: 00b87ac0_to_wstring.txt
+================================================================================
+Function: to_wstring @ 00b87ac0
+FuncComment: std::__ndk1::to_wstring(long long)
+
+--- Calls OUT ---
+  -> FUN_00a8cdc8 @ 00a8cdc8
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+  -> __u64toa @ 008d4530
+
+--- Calls IN ---
+
+--- Listing ---
+00b87ac0  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_wstring(long long)
+00b87ac4  str x23,[sp, #0x20]
+00b87ac8  stp x22,x21,[sp, #0x30]
+00b87acc  stp x20,x19,[sp, #0x40]
+00b87ad0  stp x29,x30,[sp, #0x50]
+00b87ad4  add x29,sp,#0x50
+00b87ad8  mrs x21,tpidr_el0
+00b87adc  mov x20,x8
+00b87ae0  ldr x8,[x21, #0x28]
+00b87ae4  add x1,sp,#0x4
+00b87ae8  add x19,x1,#0x14
+00b87aec  str x8,[sp, #0x18]
+00b87af0  tbz x0,#0x3f,0x00b87b04
+00b87af4  orr x1,x1,#0x1
+00b87af8  mov w8,#0x2d
+00b87afc  neg x0,x0
+00b87b00  strb w8,[sp, #0x4]
+00b87b04  sub x8,x19,x1
+00b87b08  cmp x8,#0x13
+00b87b0c  b.gt 0x00b87b50
+00b87b10  orr x9,x0,#0x1
+00b87b14  mov w10,#0x40
+00b87b18  clz x9,x9
+00b87b1c  mov w11,#0x4d1
+00b87b20  sub w9,w10,w9
+00b87b24  mul w9,w9,w11
+00b87b28  adrp x10,0x2a0a000
+00b87b2c  lsr w9,w9,#0xc
+00b87b30  add x10,x10,#0x2d0
+00b87b34  ldr x10,[x10, w9, UXTW #0x3]
+00b87b38  cmp x10,x0
+00b87b3c  cset w10,hi
+00b87b40  sub w9,w9,w10
+00b87b44  add w9,w9,#0x1
+00b87b48  cmp x8,w9, SXTW 
+00b87b4c  b.lt 0x00b87b58
+00b87b50  bl 0x008d4530
+00b87b54  mov x19,x0
+00b87b58  add x8,sp,#0x4
+00b87b5c  sub x22,x19,x8
+00b87b60  orr x8,xzr,#0x3ffffffffffffff0
+00b87b64  cmp x22,x8
+00b87b68  stp xzr,xzr,[x20]
+00b87b6c  str xzr,[x20, #0x10]
+00b87b70  b.cs 0x00b87c40
+00b87b74  cmp x22,#0x4
+00b87b78  b.hi 0x00b87b88
+00b87b7c  lsl w8,w22,#0x1
+00b87b80  strb w8,[x20], #0x4
+00b87b84  b 0x00b87bb0
+00b87b88  add x8,x22,#0x4
+00b87b8c  lsr x9,x8,#0x3e
+00b87b90  cbnz x9,0x00b87c4c
+00b87b94  and x23,x8,#-0x4
+00b87b98  lsl x0,x23,#0x2
+00b87b9c  bl 0x008d4f40
+00b87ba0  orr x8,x23,#0x1
+00b87ba4  stp x22,x0,[x20, #0x8]
+00b87ba8  str x8,[x20]
+00b87bac  mov x20,x0
+00b87bb0  add x8,sp,#0x4
+00b87bb4  cmp x8,x19
+00b87bb8  b.eq 0x00b87c14
+00b87bbc  sub x9,x19,x8
+00b87bc0  cmp x9,#0x2
+00b87bc4  b.cc 0x00b87c04
+00b87bc8  and x10,x9,#-0x2
+00b87bcc  add x12,sp,#0x4
+00b87bd0  add x11,x20,#0x4
+00b87bd4  add x8,x12,x10
+00b87bd8  add x20,x20,x10, LSL #0x2
+00b87bdc  orr x12,x12,#0x1
+00b87be0  mov x13,x10
+00b87be4  ldurb w14,[x12, #-0x1]
+00b87be8  ldrb w15,[x12], #0x2
+00b87bec  subs x13,x13,#0x2
+00b87bf0  stp w14,w15,[x11, #-0x4]
+00b87bf4  add x11,x11,#0x8
+00b87bf8  b.ne 0x00b87be4
+00b87bfc  cmp x9,x10
+00b87c00  b.eq 0x00b87c14
+00b87c04  ldrb w9,[x8], #0x1
+00b87c08  cmp x19,x8
+00b87c0c  str w9,[x20], #0x4
+00b87c10  b.ne 0x00b87c04
+00b87c14  str wzr,[x20]
+00b87c18  ldr x8,[x21, #0x28]
+00b87c1c  ldr x9,[sp, #0x18]
+00b87c20  cmp x8,x9
+00b87c24  b.ne 0x00b87c48
+00b87c28  ldp x29,x30,[sp, #0x50]
+00b87c2c  ldp x20,x19,[sp, #0x40]
+00b87c30  ldp x22,x21,[sp, #0x30]
+00b87c34  ldr x23,[sp, #0x20]
+00b87c38  add sp,sp,#0x60
+00b87c3c  ret
+00b87c40  mov x0,x20
+00b87c44  bl 0x00a8cdb8
+00b87c48  bl 0x008d4c50
+00b87c4c  adrp x0,0x293c000
+00b87c50  add x0,x0,#0xc4
+00b87c54  bl 0x00a8cdc8
+
+
+================================================================================
+### FILE: 00b87c58_to_wstring.txt
+================================================================================
+Function: to_wstring @ 00b87c58
+FuncComment: std::__ndk1::to_wstring(unsigned int)
+
+--- Calls OUT ---
+  -> FUN_00a8cdc8 @ 00a8cdc8
+  -> __u32toa @ 008d4010
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b87c58  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_wstring(unsigned int)
+00b87c5c  str x23,[sp, #0x20]
+00b87c60  stp x22,x21,[sp, #0x30]
+00b87c64  stp x20,x19,[sp, #0x40]
+00b87c68  stp x29,x30,[sp, #0x50]
+00b87c6c  add x29,sp,#0x50
+00b87c70  mrs x21,tpidr_el0
+00b87c74  mov x20,x8
+00b87c78  ldr x8,[x21, #0x28]
+00b87c7c  add x1,sp,#0xc
+00b87c80  add x22,sp,#0xc
+00b87c84  str x8,[sp, #0x18]
+00b87c88  bl 0x008d4010
+00b87c8c  sub x22,x0,x22
+00b87c90  orr x8,xzr,#0x3ffffffffffffff0
+00b87c94  cmp x22,x8
+00b87c98  stp xzr,xzr,[x20, #0x8]
+00b87c9c  str xzr,[x20]
+00b87ca0  b.cs 0x00b87d74
+00b87ca4  mov x19,x0
+00b87ca8  cmp x22,#0x4
+00b87cac  b.hi 0x00b87cbc
+00b87cb0  lsl w8,w22,#0x1
+00b87cb4  strb w8,[x20], #0x4
+00b87cb8  b 0x00b87ce4
+00b87cbc  add x8,x22,#0x4
+00b87cc0  lsr x9,x8,#0x3e
+00b87cc4  cbnz x9,0x00b87d80
+00b87cc8  and x23,x8,#-0x4
+00b87ccc  lsl x0,x23,#0x2
+00b87cd0  bl 0x008d4f40
+00b87cd4  orr x8,x23,#0x1
+00b87cd8  stp x22,x0,[x20, #0x8]
+00b87cdc  str x8,[x20]
+00b87ce0  mov x20,x0
+00b87ce4  add x8,sp,#0xc
+00b87ce8  cmp x8,x19
+00b87cec  b.eq 0x00b87d48
+00b87cf0  sub x9,x19,x8
+00b87cf4  cmp x9,#0x2
+00b87cf8  b.cc 0x00b87d38
+00b87cfc  and x10,x9,#-0x2
+00b87d00  add x12,sp,#0xc
+00b87d04  add x11,x20,#0x4
+00b87d08  add x8,x12,x10
+00b87d0c  add x20,x20,x10, LSL #0x2
+00b87d10  orr x12,x12,#0x1
+00b87d14  mov x13,x10
+00b87d18  ldurb w14,[x12, #-0x1]
+00b87d1c  ldrb w15,[x12], #0x2
+00b87d20  subs x13,x13,#0x2
+00b87d24  stp w14,w15,[x11, #-0x4]
+00b87d28  add x11,x11,#0x8
+00b87d2c  b.ne 0x00b87d18
+00b87d30  cmp x9,x10
+00b87d34  b.eq 0x00b87d48
+00b87d38  ldrb w9,[x8], #0x1
+00b87d3c  cmp x19,x8
+00b87d40  str w9,[x20], #0x4
+00b87d44  b.ne 0x00b87d38
+00b87d48  str wzr,[x20]
+00b87d4c  ldr x8,[x21, #0x28]
+00b87d50  ldr x9,[sp, #0x18]
+00b87d54  cmp x8,x9
+00b87d58  b.ne 0x00b87d7c
+00b87d5c  ldp x29,x30,[sp, #0x50]
+00b87d60  ldp x20,x19,[sp, #0x40]
+00b87d64  ldp x22,x21,[sp, #0x30]
+00b87d68  ldr x23,[sp, #0x20]
+00b87d6c  add sp,sp,#0x60
+00b87d70  ret
+00b87d74  mov x0,x20
+00b87d78  bl 0x00a8cdb8
+00b87d7c  bl 0x008d4c50
+00b87d80  adrp x0,0x293c000
+00b87d84  add x0,x0,#0xc4
+00b87d88  bl 0x00a8cdc8
+
+
+================================================================================
+### FILE: 00b87d8c_to_wstring.txt
+================================================================================
+Function: to_wstring @ 00b87d8c
+FuncComment: std::__ndk1::to_wstring(unsigned long)
+
+--- Calls OUT ---
+  -> FUN_00a8cdc8 @ 00a8cdc8
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+  -> __u64toa @ 008d4530
+
+--- Calls IN ---
+
+--- Listing ---
+00b87d8c  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_wstring(unsigned long)
+00b87d90  str x23,[sp, #0x20]
+00b87d94  stp x22,x21,[sp, #0x30]
+00b87d98  stp x20,x19,[sp, #0x40]
+00b87d9c  stp x29,x30,[sp, #0x50]
+00b87da0  add x29,sp,#0x50
+00b87da4  mrs x21,tpidr_el0
+00b87da8  mov x20,x8
+00b87dac  ldr x8,[x21, #0x28]
+00b87db0  mov x1,sp
+00b87db4  mov x22,sp
+00b87db8  str x8,[sp, #0x18]
+00b87dbc  bl 0x008d4530
+00b87dc0  sub x22,x0,x22
+00b87dc4  orr x8,xzr,#0x3ffffffffffffff0
+00b87dc8  cmp x22,x8
+00b87dcc  stp xzr,xzr,[x20, #0x8]
+00b87dd0  str xzr,[x20]
+00b87dd4  b.cs 0x00b87ea8
+00b87dd8  mov x19,x0
+00b87ddc  cmp x22,#0x4
+00b87de0  b.hi 0x00b87df0
+00b87de4  lsl w8,w22,#0x1
+00b87de8  strb w8,[x20], #0x4
+00b87dec  b 0x00b87e18
+00b87df0  add x8,x22,#0x4
+00b87df4  lsr x9,x8,#0x3e
+00b87df8  cbnz x9,0x00b87eb4
+00b87dfc  and x23,x8,#-0x4
+00b87e00  lsl x0,x23,#0x2
+00b87e04  bl 0x008d4f40
+00b87e08  orr x8,x23,#0x1
+00b87e0c  stp x22,x0,[x20, #0x8]
+00b87e10  str x8,[x20]
+00b87e14  mov x20,x0
+00b87e18  mov x8,sp
+00b87e1c  cmp x8,x19
+00b87e20  b.eq 0x00b87e7c
+00b87e24  sub x9,x19,x8
+00b87e28  cmp x9,#0x2
+00b87e2c  b.cc 0x00b87e6c
+00b87e30  and x10,x9,#-0x2
+00b87e34  mov x12,sp
+00b87e38  add x11,x20,#0x4
+00b87e3c  add x8,x12,x10
+00b87e40  add x20,x20,x10, LSL #0x2
+00b87e44  orr x12,x12,#0x1
+00b87e48  mov x13,x10
+00b87e4c  ldurb w14,[x12, #-0x1]
+00b87e50  ldrb w15,[x12], #0x2
+00b87e54  subs x13,x13,#0x2
+00b87e58  stp w14,w15,[x11, #-0x4]
+00b87e5c  add x11,x11,#0x8
+00b87e60  b.ne 0x00b87e4c
+00b87e64  cmp x9,x10
+00b87e68  b.eq 0x00b87e7c
+00b87e6c  ldrb w9,[x8], #0x1
+00b87e70  cmp x19,x8
+00b87e74  str w9,[x20], #0x4
+00b87e78  b.ne 0x00b87e6c
+00b87e7c  str wzr,[x20]
+00b87e80  ldr x8,[x21, #0x28]
+00b87e84  ldr x9,[sp, #0x18]
+00b87e88  cmp x8,x9
+00b87e8c  b.ne 0x00b87eb0
+00b87e90  ldp x29,x30,[sp, #0x50]
+00b87e94  ldp x20,x19,[sp, #0x40]
+00b87e98  ldp x22,x21,[sp, #0x30]
+00b87e9c  ldr x23,[sp, #0x20]
+00b87ea0  add sp,sp,#0x60
+00b87ea4  ret
+00b87ea8  mov x0,x20
+00b87eac  bl 0x00a8cdb8
+00b87eb0  bl 0x008d4c50
+00b87eb4  adrp x0,0x293c000
+00b87eb8  add x0,x0,#0xc4
+00b87ebc  bl 0x00a8cdc8
+
+
+================================================================================
+### FILE: 00b87ec0_to_wstring.txt
+================================================================================
+Function: to_wstring @ 00b87ec0
+FuncComment: std::__ndk1::to_wstring(unsigned long long)
+
+--- Calls OUT ---
+  -> FUN_00a8cdc8 @ 00a8cdc8
+  -> operator.new @ 008d4f40
+  -> FUN_00a8cdb8 @ 00a8cdb8
+  -> __stack_chk_fail @ 008d4c50
+  -> __u64toa @ 008d4530
+
+--- Calls IN ---
+
+--- Listing ---
+00b87ec0  sub sp,sp,#0x60
+    ; [PLATE] std::__ndk1::to_wstring(unsigned long long)
+00b87ec4  str x23,[sp, #0x20]
+00b87ec8  stp x22,x21,[sp, #0x30]
+00b87ecc  stp x20,x19,[sp, #0x40]
+00b87ed0  stp x29,x30,[sp, #0x50]
+00b87ed4  add x29,sp,#0x50
+00b87ed8  mrs x21,tpidr_el0
+00b87edc  mov x20,x8
+00b87ee0  ldr x8,[x21, #0x28]
+00b87ee4  mov x1,sp
+00b87ee8  mov x22,sp
+00b87eec  str x8,[sp, #0x18]
+00b87ef0  bl 0x008d4530
+00b87ef4  sub x22,x0,x22
+00b87ef8  orr x8,xzr,#0x3ffffffffffffff0
+00b87efc  cmp x22,x8
+00b87f00  stp xzr,xzr,[x20, #0x8]
+00b87f04  str xzr,[x20]
+00b87f08  b.cs 0x00b87fdc
+00b87f0c  mov x19,x0
+00b87f10  cmp x22,#0x4
+00b87f14  b.hi 0x00b87f24
+00b87f18  lsl w8,w22,#0x1
+00b87f1c  strb w8,[x20], #0x4
+00b87f20  b 0x00b87f4c
+00b87f24  add x8,x22,#0x4
+00b87f28  lsr x9,x8,#0x3e
+00b87f2c  cbnz x9,0x00b87fe8
+00b87f30  and x23,x8,#-0x4
+00b87f34  lsl x0,x23,#0x2
+00b87f38  bl 0x008d4f40
+00b87f3c  orr x8,x23,#0x1
+00b87f40  stp x22,x0,[x20, #0x8]
+00b87f44  str x8,[x20]
+00b87f48  mov x20,x0
+00b87f4c  mov x8,sp
+00b87f50  cmp x8,x19
+00b87f54  b.eq 0x00b87fb0
+00b87f58  sub x9,x19,x8
+00b87f5c  cmp x9,#0x2
+00b87f60  b.cc 0x00b87fa0
+00b87f64  and x10,x9,#-0x2
+00b87f68  mov x12,sp
+00b87f6c  add x11,x20,#0x4
+00b87f70  add x8,x12,x10
+00b87f74  add x20,x20,x10, LSL #0x2
+00b87f78  orr x12,x12,#0x1
+00b87f7c  mov x13,x10
+00b87f80  ldurb w14,[x12, #-0x1]
+00b87f84  ldrb w15,[x12], #0x2
+00b87f88  subs x13,x13,#0x2
+00b87f8c  stp w14,w15,[x11, #-0x4]
+00b87f90  add x11,x11,#0x8
+00b87f94  b.ne 0x00b87f80
+00b87f98  cmp x9,x10
+00b87f9c  b.eq 0x00b87fb0
+00b87fa0  ldrb w9,[x8], #0x1
+00b87fa4  cmp x19,x8
+00b87fa8  str w9,[x20], #0x4
+00b87fac  b.ne 0x00b87fa0
+00b87fb0  str wzr,[x20]
+00b87fb4  ldr x8,[x21, #0x28]
+00b87fb8  ldr x9,[sp, #0x18]
+00b87fbc  cmp x8,x9
+00b87fc0  b.ne 0x00b87fe4
+00b87fc4  ldp x29,x30,[sp, #0x50]
+00b87fc8  ldp x20,x19,[sp, #0x40]
+00b87fcc  ldp x22,x21,[sp, #0x30]
+00b87fd0  ldr x23,[sp, #0x20]
+00b87fd4  add sp,sp,#0x60
+00b87fd8  ret
+00b87fdc  mov x0,x20
+00b87fe0  bl 0x00a8cdb8
+00b87fe4  bl 0x008d4c50
+00b87fe8  adrp x0,0x293c000
+00b87fec  add x0,x0,#0xc4
+00b87ff0  bl 0x00a8cdc8
+
+
+================================================================================
+### FILE: 00b87ff4_to_string.txt
+================================================================================
+Function: to_string @ 00b87ff4
+FuncComment: std::__ndk1::to_string(float)
+
+--- Calls OUT ---
+  -> FUN_00aab6dc @ 00aab6dc
+  -> snprintf @ 008d5610
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b87ff4  sub sp,sp,#0x70
+    ; [PLATE] std::__ndk1::to_string(float)
+00b87ff8  str d8,[sp, #0x20]
+00b87ffc  stp x24,x23,[sp, #0x30]
+00b88000  stp x22,x21,[sp, #0x40]
+00b88004  stp x20,x19,[sp, #0x50]
+00b88008  stp x29,x30,[sp, #0x60]
+00b8800c  add x29,sp,#0x60
+00b88010  mrs x21,tpidr_el0
+00b88014  mov x19,x8
+00b88018  ldr x8,[x21, #0x28]
+00b8801c  mov v8.16B,v0.16B
+00b88020  str x8,[sp, #0x18]
+00b88024  stp xzr,xzr,[sp]
+00b88028  str xzr,[sp, #0x10]
+00b8802c  mov x0,sp
+    ; [PRE] try { // try from 00b8802c to 00b8803f has its CatchHandler @ 00b88198
+00b88030  mov w1,#0x16
+00b88034  mov w2,wzr
+00b88038  mov x22,sp
+00b8803c  bl 0x00aab6dc
+    ; [POST] } // end try from 00b8802c to 00b8803f
+00b88040  ldrb w8,[sp]
+00b88044  ldr x9,[sp, #0x8]
+00b88048  adrp x20,0x2a0a000
+00b8804c  orr x23,x22,#0x1
+00b88050  lsr x10,x8,#0x1
+00b88054  tst w8,#0x1
+00b88058  fcvt d8,s8
+00b8805c  csel x24,x10,x9,eq
+00b88060  add x20,x20,#0x23d
+00b88064  b 0x00b88078
+00b88068  mov x0,sp
+    ; [PRE] try { // try from 00b88068 to 00b88073 has its CatchHandler @ 00b8819c
+00b8806c  mov w2,wzr
+00b88070  bl 0x00aab6dc
+    ; [POST] } // end try from 00b88068 to 00b88073
+00b88074  ldrb w8,[sp]
+00b88078  ldr x9,[sp, #0x10]
+00b8807c  tst w8,#0x1
+00b88080  add x1,x24,#0x1
+00b88084  mov x2,x20
+00b88088  csel x0,x23,x9,eq
+00b8808c  mov v0.16B,v8.16B
+00b88090  bl 0x008d5610
+00b88094  tbnz w0,#0x1f,0x00b880a8
+00b88098  sxtw x8,w0
+00b8809c  cmp x24,x8
+00b880a0  b.cc 0x00b880b0
+00b880a4  b 0x00b880fc
+00b880a8  mov w8,#0x1
+00b880ac  bfm x8,x24,#0x3f,#0x3e
+00b880b0  mov x24,x8
+00b880b4  ldrb w8,[sp]
+00b880b8  ldr x9,[sp, #0x8]
+00b880bc  lsr x10,x8,#0x1
+00b880c0  tst w8,#0x1
+00b880c4  csel x9,x10,x9,eq
+00b880c8  subs x1,x24,x9
+00b880cc  b.hi 0x00b88068
+00b880d0  tbnz w8,#0x0,0x00b880e8
+00b880d4  add x8,x22,x24
+00b880d8  lsl w9,w24,#0x1
+00b880dc  strb wzr,[x8, #0x1]
+00b880e0  strb w9,[sp]
+00b880e4  b 0x00b88074
+00b880e8  ldr x8,[sp, #0x10]
+00b880ec  strb wzr,[x8, x24, LSL ]
+00b880f0  ldrb w8,[sp]
+00b880f4  str x24,[sp, #0x8]
+00b880f8  b 0x00b88078
+00b880fc  ldrb w9,[sp]
+00b88100  ldr x10,[sp, #0x8]
+00b88104  lsr x11,x9,#0x1
+00b88108  tst w9,#0x1
+00b8810c  csel x10,x11,x10,eq
+00b88110  cmp x10,x8
+00b88114  b.cs 0x00b8812c
+00b88118  sub x1,x8,x10
+00b8811c  mov x0,sp
+    ; [PRE] try { // try from 00b8811c to 00b88127 has its CatchHandler @ 00b88194
+00b88120  mov w2,wzr
+00b88124  bl 0x00aab6dc
+    ; [POST] } // end try from 00b8811c to 00b88127
+00b88128  b 0x00b88154
+00b8812c  tbnz w9,#0x0,0x00b88148
+00b88130  mov x9,sp
+00b88134  lsl w10,w0,#0x1
+00b88138  add x8,x9,x8
+00b8813c  strb wzr,[x8, #0x1]
+00b88140  strb w10,[sp]
+00b88144  b 0x00b88154
+00b88148  ldr x9,[sp, #0x10]
+00b8814c  strb wzr,[x9, x8, LSL ]
+00b88150  str x8,[sp, #0x8]
+00b88154  ldr x8,[sp, #0x10]
+00b88158  ldr q0,[sp]
+00b8815c  str x8,[x19, #0x10]
+00b88160  str q0,[x19]
+00b88164  ldr x8,[x21, #0x28]
+00b88168  ldr x9,[sp, #0x18]
+00b8816c  cmp x8,x9
+00b88170  b.ne 0x00b88190
+00b88174  ldp x29,x30,[sp, #0x60]
+00b88178  ldp x20,x19,[sp, #0x50]
+00b8817c  ldp x22,x21,[sp, #0x40]
+00b88180  ldp x24,x23,[sp, #0x30]
+00b88184  ldr d8,[sp, #0x20]
+00b88188  add sp,sp,#0x70
+00b8818c  ret
+00b88190  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b881b8_to_string.txt
+================================================================================
+Function: to_string @ 00b881b8
+FuncComment: std::__ndk1::to_string(double)
+
+--- Calls OUT ---
+  -> FUN_00aab6dc @ 00aab6dc
+  -> snprintf @ 008d5610
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b881b8  sub sp,sp,#0x70
+    ; [PLATE] std::__ndk1::to_string(double)
+00b881bc  str d8,[sp, #0x20]
+00b881c0  stp x24,x23,[sp, #0x30]
+00b881c4  stp x22,x21,[sp, #0x40]
+00b881c8  stp x20,x19,[sp, #0x50]
+00b881cc  stp x29,x30,[sp, #0x60]
+00b881d0  add x29,sp,#0x60
+00b881d4  mrs x21,tpidr_el0
+00b881d8  mov x19,x8
+00b881dc  ldr x8,[x21, #0x28]
+00b881e0  mov v8.16B,v0.16B
+00b881e4  str x8,[sp, #0x18]
+00b881e8  stp xzr,xzr,[sp]
+00b881ec  str xzr,[sp, #0x10]
+00b881f0  mov x0,sp
+    ; [PRE] try { // try from 00b881f0 to 00b88203 has its CatchHandler @ 00b88358
+00b881f4  mov w1,#0x16
+00b881f8  mov w2,wzr
+00b881fc  mov x22,sp
+00b88200  bl 0x00aab6dc
+    ; [POST] } // end try from 00b881f0 to 00b88203
+00b88204  ldrb w8,[sp]
+00b88208  ldr x9,[sp, #0x8]
+00b8820c  adrp x20,0x2a0a000
+00b88210  orr x23,x22,#0x1
+00b88214  lsr x10,x8,#0x1
+00b88218  tst w8,#0x1
+00b8821c  csel x24,x10,x9,eq
+00b88220  add x20,x20,#0x23d
+00b88224  b 0x00b88238
+00b88228  mov x0,sp
+    ; [PRE] try { // try from 00b88228 to 00b88233 has its CatchHandler @ 00b8835c
+00b8822c  mov w2,wzr
+00b88230  bl 0x00aab6dc
+    ; [POST] } // end try from 00b88228 to 00b88233
+00b88234  ldrb w8,[sp]
+00b88238  ldr x9,[sp, #0x10]
+00b8823c  tst w8,#0x1
+00b88240  add x1,x24,#0x1
+00b88244  mov x2,x20
+00b88248  csel x0,x23,x9,eq
+00b8824c  mov v0.16B,v8.16B
+00b88250  bl 0x008d5610
+00b88254  tbnz w0,#0x1f,0x00b88268
+00b88258  sxtw x8,w0
+00b8825c  cmp x24,x8
+00b88260  b.cc 0x00b88270
+00b88264  b 0x00b882bc
+00b88268  mov w8,#0x1
+00b8826c  bfm x8,x24,#0x3f,#0x3e
+00b88270  mov x24,x8
+00b88274  ldrb w8,[sp]
+00b88278  ldr x9,[sp, #0x8]
+00b8827c  lsr x10,x8,#0x1
+00b88280  tst w8,#0x1
+00b88284  csel x9,x10,x9,eq
+00b88288  subs x1,x24,x9
+00b8828c  b.hi 0x00b88228
+00b88290  tbnz w8,#0x0,0x00b882a8
+00b88294  add x8,x22,x24
+00b88298  lsl w9,w24,#0x1
+00b8829c  strb wzr,[x8, #0x1]
+00b882a0  strb w9,[sp]
+00b882a4  b 0x00b88234
+00b882a8  ldr x8,[sp, #0x10]
+00b882ac  strb wzr,[x8, x24, LSL ]
+00b882b0  ldrb w8,[sp]
+00b882b4  str x24,[sp, #0x8]
+00b882b8  b 0x00b88238
+00b882bc  ldrb w9,[sp]
+00b882c0  ldr x10,[sp, #0x8]
+00b882c4  lsr x11,x9,#0x1
+00b882c8  tst w9,#0x1
+00b882cc  csel x10,x11,x10,eq
+00b882d0  cmp x10,x8
+00b882d4  b.cs 0x00b882ec
+00b882d8  sub x1,x8,x10
+00b882dc  mov x0,sp
+    ; [PRE] try { // try from 00b882dc to 00b882e7 has its CatchHandler @ 00b88354
+00b882e0  mov w2,wzr
+00b882e4  bl 0x00aab6dc
+    ; [POST] } // end try from 00b882dc to 00b882e7
+00b882e8  b 0x00b88314
+00b882ec  tbnz w9,#0x0,0x00b88308
+00b882f0  mov x9,sp
+00b882f4  lsl w10,w0,#0x1
+00b882f8  add x8,x9,x8
+00b882fc  strb wzr,[x8, #0x1]
+00b88300  strb w10,[sp]
+00b88304  b 0x00b88314
+00b88308  ldr x9,[sp, #0x10]
+00b8830c  strb wzr,[x9, x8, LSL ]
+00b88310  str x8,[sp, #0x8]
+00b88314  ldr x8,[sp, #0x10]
+00b88318  ldr q0,[sp]
+00b8831c  str x8,[x19, #0x10]
+00b88320  str q0,[x19]
+00b88324  ldr x8,[x21, #0x28]
+00b88328  ldr x9,[sp, #0x18]
+00b8832c  cmp x8,x9
+00b88330  b.ne 0x00b88350
+00b88334  ldp x29,x30,[sp, #0x60]
+00b88338  ldp x20,x19,[sp, #0x50]
+00b8833c  ldp x22,x21,[sp, #0x40]
+00b88340  ldp x24,x23,[sp, #0x30]
+00b88344  ldr d8,[sp, #0x20]
+00b88348  add sp,sp,#0x70
+00b8834c  ret
+00b88350  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b88378_to_string.txt
+================================================================================
+Function: to_string @ 00b88378
+FuncComment: std::__ndk1::to_string(long double)
+
+--- Calls OUT ---
+  -> FUN_00aab6dc @ 00aab6dc
+  -> snprintf @ 008d5610
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b88378  sub sp,sp,#0x70
+    ; [PLATE] std::__ndk1::to_string(long double)
+00b8837c  stp x24,x23,[sp, #0x30]
+00b88380  stp x22,x21,[sp, #0x40]
+00b88384  stp x20,x19,[sp, #0x50]
+00b88388  stp x29,x30,[sp, #0x60]
+00b8838c  add x29,sp,#0x60
+00b88390  str q0,[sp]
+00b88394  mrs x21,tpidr_el0
+00b88398  mov x19,x8
+00b8839c  ldr x8,[x21, #0x28]
+00b883a0  str x8,[sp, #0x28]
+00b883a4  stp xzr,xzr,[sp, #0x10]
+00b883a8  str xzr,[sp, #0x20]
+00b883ac  add x0,sp,#0x10
+    ; [PRE] try { // try from 00b883ac to 00b883bf has its CatchHandler @ 00b88510
+00b883b0  mov w1,#0x16
+00b883b4  mov w2,wzr
+00b883b8  add x22,sp,#0x10
+00b883bc  bl 0x00aab6dc
+    ; [POST] } // end try from 00b883ac to 00b883bf
+00b883c0  ldrb w8,[sp, #0x10]
+00b883c4  ldr x9,[sp, #0x18]
+00b883c8  adrp x20,0x2a08000
+00b883cc  orr x23,x22,#0x1
+00b883d0  lsr x10,x8,#0x1
+00b883d4  tst w8,#0x1
+00b883d8  csel x24,x10,x9,eq
+00b883dc  add x20,x20,#0x217
+00b883e0  b 0x00b883f4
+00b883e4  add x0,sp,#0x10
+    ; [PRE] try { // try from 00b883e4 to 00b883ef has its CatchHandler @ 00b88514
+00b883e8  mov w2,wzr
+00b883ec  bl 0x00aab6dc
+    ; [POST] } // end try from 00b883e4 to 00b883ef
+00b883f0  ldrb w8,[sp, #0x10]
+00b883f4  ldr x9,[sp, #0x20]
+00b883f8  ldr q0,[sp]
+00b883fc  tst w8,#0x1
+00b88400  add x1,x24,#0x1
+00b88404  csel x0,x23,x9,eq
+00b88408  mov x2,x20
+00b8840c  bl 0x008d5610
+00b88410  tbnz w0,#0x1f,0x00b88424
+00b88414  sxtw x8,w0
+00b88418  cmp x24,x8
+00b8841c  b.cc 0x00b8842c
+00b88420  b 0x00b88478
+00b88424  mov w8,#0x1
+00b88428  bfm x8,x24,#0x3f,#0x3e
+00b8842c  mov x24,x8
+00b88430  ldrb w8,[sp, #0x10]
+00b88434  ldr x9,[sp, #0x18]
+00b88438  lsr x10,x8,#0x1
+00b8843c  tst w8,#0x1
+00b88440  csel x9,x10,x9,eq
+00b88444  subs x1,x24,x9
+00b88448  b.hi 0x00b883e4
+00b8844c  tbnz w8,#0x0,0x00b88464
+00b88450  add x8,x22,x24
+00b88454  lsl w9,w24,#0x1
+00b88458  strb wzr,[x8, #0x1]
+00b8845c  strb w9,[sp, #0x10]
+00b88460  b 0x00b883f0
+00b88464  ldr x8,[sp, #0x20]
+00b88468  strb wzr,[x8, x24, LSL ]
+00b8846c  ldrb w8,[sp, #0x10]
+00b88470  str x24,[sp, #0x18]
+00b88474  b 0x00b883f4
+00b88478  ldrb w9,[sp, #0x10]
+00b8847c  ldr x10,[sp, #0x18]
+00b88480  lsr x11,x9,#0x1
+00b88484  tst w9,#0x1
+00b88488  csel x10,x11,x10,eq
+00b8848c  cmp x10,x8
+00b88490  b.cs 0x00b884a8
+00b88494  sub x1,x8,x10
+00b88498  add x0,sp,#0x10
+    ; [PRE] try { // try from 00b88498 to 00b884a3 has its CatchHandler @ 00b8850c
+00b8849c  mov w2,wzr
+00b884a0  bl 0x00aab6dc
+    ; [POST] } // end try from 00b88498 to 00b884a3
+00b884a4  b 0x00b884d0
+00b884a8  tbnz w9,#0x0,0x00b884c4
+00b884ac  add x9,sp,#0x10
+00b884b0  lsl w10,w0,#0x1
+00b884b4  add x8,x9,x8
+00b884b8  strb wzr,[x8, #0x1]
+00b884bc  strb w10,[sp, #0x10]
+00b884c0  b 0x00b884d0
+00b884c4  ldr x9,[sp, #0x20]
+00b884c8  strb wzr,[x9, x8, LSL ]
+00b884cc  str x8,[sp, #0x18]
+00b884d0  ldr x8,[sp, #0x20]
+00b884d4  ldr q0,[sp, #0x10]
+00b884d8  str x8,[x19, #0x10]
+00b884dc  str q0,[x19]
+00b884e0  ldr x8,[x21, #0x28]
+00b884e4  ldr x9,[sp, #0x28]
+00b884e8  cmp x8,x9
+00b884ec  b.ne 0x00b88508
+00b884f0  ldp x29,x30,[sp, #0x60]
+00b884f4  ldp x20,x19,[sp, #0x50]
+00b884f8  ldp x22,x21,[sp, #0x40]
+00b884fc  ldp x24,x23,[sp, #0x30]
+00b88500  add sp,sp,#0x70
+00b88504  ret
+00b88508  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b88530_to_wstring.txt
+================================================================================
+Function: to_wstring @ 00b88530
+FuncComment: std::__ndk1::to_wstring(float)
+
+--- Calls OUT ---
+  -> append @ 008d5960
+  -> swprintf @ 008d4e30
+  -> operator.new @ 008d4f40
+  -> wmemset @ 008d5b30
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b88530  sub sp,sp,#0x70
+    ; [PLATE] std::__ndk1::to_wstring(float)
+00b88534  str d8,[sp, #0x20]
+00b88538  stp x24,x23,[sp, #0x30]
+00b8853c  stp x22,x21,[sp, #0x40]
+00b88540  stp x20,x19,[sp, #0x50]
+00b88544  stp x29,x30,[sp, #0x60]
+00b88548  add x29,sp,#0x60
+00b8854c  mrs x21,tpidr_el0
+00b88550  mov x19,x8
+00b88554  ldr x8,[x21, #0x28]
+00b88558  mov w0,#0x60
+00b8855c  mov v8.16B,v0.16B
+00b88560  str x8,[sp, #0x18]
+00b88564  bl 0x008d4f40
+00b88568  adrp x8,0x2a0a000
+00b8856c  ldr q0,[x8, #0x200]
+00b88570  mov x20,x0
+00b88574  str x0,[sp, #0x10]
+00b88578  str q0,[sp]
+00b8857c  mov w2,#0x14
+    ; [PRE] try { // try from 00b8857c to 00b88587 has its CatchHandler @ 00b886fc
+00b88580  mov w1,wzr
+00b88584  bl 0x008d5b30
+    ; [POST] } // end try from 00b8857c to 00b88587
+00b88588  str wzr,[x20, #0x50]
+00b8858c  mov x0,sp
+    ; [PRE] try { // try from 00b8858c to 00b8859f has its CatchHandler @ 00b886f8
+00b88590  mov w1,#0x3
+00b88594  mov w2,wzr
+00b88598  mov x22,sp
+00b8859c  bl 0x008d5960
+    ; [POST] } // end try from 00b8858c to 00b8859f
+00b885a0  ldrb w8,[sp]
+00b885a4  ldr x9,[sp, #0x8]
+00b885a8  adrp x20,0x2a0a000
+00b885ac  orr x23,x22,#0x4
+00b885b0  lsr x10,x8,#0x1
+00b885b4  tst w8,#0x1
+00b885b8  fcvt d8,s8
+00b885bc  csel x24,x10,x9,eq
+00b885c0  add x20,x20,#0x288
+00b885c4  b 0x00b885d8
+00b885c8  mov x0,sp
+    ; [PRE] try { // try from 00b885c8 to 00b885f3 has its CatchHandler @ 00b88700
+00b885cc  mov w2,wzr
+00b885d0  bl 0x008d5960
+00b885d4  ldrb w8,[sp]
+00b885d8  ldr x9,[sp, #0x10]
+00b885dc  tst w8,#0x1
+00b885e0  add x1,x24,#0x1
+00b885e4  csel x0,x23,x9,eq
+00b885e8  mov x2,x20
+00b885ec  mov v0.16B,v8.16B
+00b885f0  bl 0x008d4e30
+    ; [POST] } // end try from 00b885c8 to 00b885f3
+00b885f4  tbnz w0,#0x1f,0x00b88608
+00b885f8  sxtw x8,w0
+00b885fc  cmp x24,x8
+00b88600  b.cc 0x00b88610
+00b88604  b 0x00b8865c
+00b88608  mov w8,#0x1
+00b8860c  bfm x8,x24,#0x3f,#0x3e
+00b88610  mov x24,x8
+00b88614  ldrb w8,[sp]
+00b88618  ldr x9,[sp, #0x8]
+00b8861c  lsr x10,x8,#0x1
+00b88620  tst w8,#0x1
+00b88624  csel x9,x10,x9,eq
+00b88628  subs x1,x24,x9
+00b8862c  b.hi 0x00b885c8
+00b88630  tbnz w8,#0x0,0x00b88648
+00b88634  add x8,x22,x24, LSL #0x2
+00b88638  lsl w9,w24,#0x1
+00b8863c  str wzr,[x8, #0x4]
+00b88640  strb w9,[sp]
+00b88644  b 0x00b885d4
+00b88648  ldr x8,[sp, #0x10]
+00b8864c  str wzr,[x8, x24, LSL #0x2]
+00b88650  ldrb w8,[sp]
+00b88654  str x24,[sp, #0x8]
+00b88658  b 0x00b885d8
+00b8865c  ldrb w9,[sp]
+00b88660  ldr x10,[sp, #0x8]
+00b88664  lsr x11,x9,#0x1
+00b88668  tst w9,#0x1
+00b8866c  csel x10,x11,x10,eq
+00b88670  cmp x10,x8
+00b88674  b.cs 0x00b8868c
+00b88678  sub x1,x8,x10
+00b8867c  mov x0,sp
+    ; [PRE] try { // try from 00b8867c to 00b88687 has its CatchHandler @ 00b886f4
+00b88680  mov w2,wzr
+00b88684  bl 0x008d5960
+    ; [POST] } // end try from 00b8867c to 00b88687
+00b88688  b 0x00b886b4
+00b8868c  tbnz w9,#0x0,0x00b886a8
+00b88690  mov x9,sp
+00b88694  lsl w10,w0,#0x1
+00b88698  add x8,x9,x8, LSL #0x2
+00b8869c  str wzr,[x8, #0x4]
+00b886a0  strb w10,[sp]
+00b886a4  b 0x00b886b4
+00b886a8  ldr x9,[sp, #0x10]
+00b886ac  str wzr,[x9, x8, LSL #0x2]
+00b886b0  str x8,[sp, #0x8]
+00b886b4  ldr x8,[sp, #0x10]
+00b886b8  ldr q0,[sp]
+00b886bc  str x8,[x19, #0x10]
+00b886c0  str q0,[x19]
+00b886c4  ldr x8,[x21, #0x28]
+00b886c8  ldr x9,[sp, #0x18]
+00b886cc  cmp x8,x9
+00b886d0  b.ne 0x00b886f0
+00b886d4  ldp x29,x30,[sp, #0x60]
+00b886d8  ldp x20,x19,[sp, #0x50]
+00b886dc  ldp x22,x21,[sp, #0x40]
+00b886e0  ldp x24,x23,[sp, #0x30]
+00b886e4  ldr d8,[sp, #0x20]
+00b886e8  add sp,sp,#0x70
+00b886ec  ret
+00b886f0  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b8871c_to_wstring.txt
+================================================================================
+Function: to_wstring @ 00b8871c
+FuncComment: std::__ndk1::to_wstring(double)
+
+--- Calls OUT ---
+  -> append @ 008d5960
+  -> swprintf @ 008d4e30
+  -> operator.new @ 008d4f40
+  -> wmemset @ 008d5b30
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b8871c  sub sp,sp,#0x70
+    ; [PLATE] std::__ndk1::to_wstring(double)
+00b88720  str d8,[sp, #0x20]
+00b88724  stp x24,x23,[sp, #0x30]
+00b88728  stp x22,x21,[sp, #0x40]
+00b8872c  stp x20,x19,[sp, #0x50]
+00b88730  stp x29,x30,[sp, #0x60]
+00b88734  add x29,sp,#0x60
+00b88738  mrs x21,tpidr_el0
+00b8873c  mov x19,x8
+00b88740  ldr x8,[x21, #0x28]
+00b88744  mov w0,#0x60
+00b88748  mov v8.16B,v0.16B
+00b8874c  str x8,[sp, #0x18]
+00b88750  bl 0x008d4f40
+00b88754  adrp x8,0x2a0a000
+00b88758  ldr q0,[x8, #0x200]
+00b8875c  mov x20,x0
+00b88760  str x0,[sp, #0x10]
+00b88764  str q0,[sp]
+00b88768  mov w2,#0x14
+    ; [PRE] try { // try from 00b88768 to 00b88773 has its CatchHandler @ 00b888e4
+00b8876c  mov w1,wzr
+00b88770  bl 0x008d5b30
+    ; [POST] } // end try from 00b88768 to 00b88773
+00b88774  str wzr,[x20, #0x50]
+00b88778  mov x0,sp
+    ; [PRE] try { // try from 00b88778 to 00b8878b has its CatchHandler @ 00b888e0
+00b8877c  mov w1,#0x3
+00b88780  mov w2,wzr
+00b88784  mov x22,sp
+00b88788  bl 0x008d5960
+    ; [POST] } // end try from 00b88778 to 00b8878b
+00b8878c  ldrb w8,[sp]
+00b88790  ldr x9,[sp, #0x8]
+00b88794  adrp x20,0x2a0a000
+00b88798  orr x23,x22,#0x4
+00b8879c  lsr x10,x8,#0x1
+00b887a0  tst w8,#0x1
+00b887a4  csel x24,x10,x9,eq
+00b887a8  add x20,x20,#0x288
+00b887ac  b 0x00b887c0
+00b887b0  mov x0,sp
+    ; [PRE] try { // try from 00b887b0 to 00b887db has its CatchHandler @ 00b888e8
+00b887b4  mov w2,wzr
+00b887b8  bl 0x008d5960
+00b887bc  ldrb w8,[sp]
+00b887c0  ldr x9,[sp, #0x10]
+00b887c4  tst w8,#0x1
+00b887c8  add x1,x24,#0x1
+00b887cc  csel x0,x23,x9,eq
+00b887d0  mov x2,x20
+00b887d4  mov v0.16B,v8.16B
+00b887d8  bl 0x008d4e30
+    ; [POST] } // end try from 00b887b0 to 00b887db
+00b887dc  tbnz w0,#0x1f,0x00b887f0
+00b887e0  sxtw x8,w0
+00b887e4  cmp x24,x8
+00b887e8  b.cc 0x00b887f8
+00b887ec  b 0x00b88844
+00b887f0  mov w8,#0x1
+00b887f4  bfm x8,x24,#0x3f,#0x3e
+00b887f8  mov x24,x8
+00b887fc  ldrb w8,[sp]
+00b88800  ldr x9,[sp, #0x8]
+00b88804  lsr x10,x8,#0x1
+00b88808  tst w8,#0x1
+00b8880c  csel x9,x10,x9,eq
+00b88810  subs x1,x24,x9
+00b88814  b.hi 0x00b887b0
+00b88818  tbnz w8,#0x0,0x00b88830
+00b8881c  add x8,x22,x24, LSL #0x2
+00b88820  lsl w9,w24,#0x1
+00b88824  str wzr,[x8, #0x4]
+00b88828  strb w9,[sp]
+00b8882c  b 0x00b887bc
+00b88830  ldr x8,[sp, #0x10]
+00b88834  str wzr,[x8, x24, LSL #0x2]
+00b88838  ldrb w8,[sp]
+00b8883c  str x24,[sp, #0x8]
+00b88840  b 0x00b887c0
+00b88844  ldrb w9,[sp]
+00b88848  ldr x10,[sp, #0x8]
+00b8884c  lsr x11,x9,#0x1
+00b88850  tst w9,#0x1
+00b88854  csel x10,x11,x10,eq
+00b88858  cmp x10,x8
+00b8885c  b.cs 0x00b88874
+00b88860  sub x1,x8,x10
+00b88864  mov x0,sp
+    ; [PRE] try { // try from 00b88864 to 00b8886f has its CatchHandler @ 00b888dc
+00b88868  mov w2,wzr
+00b8886c  bl 0x008d5960
+    ; [POST] } // end try from 00b88864 to 00b8886f
+00b88870  b 0x00b8889c
+00b88874  tbnz w9,#0x0,0x00b88890
+00b88878  mov x9,sp
+00b8887c  lsl w10,w0,#0x1
+00b88880  add x8,x9,x8, LSL #0x2
+00b88884  str wzr,[x8, #0x4]
+00b88888  strb w10,[sp]
+00b8888c  b 0x00b8889c
+00b88890  ldr x9,[sp, #0x10]
+00b88894  str wzr,[x9, x8, LSL #0x2]
+00b88898  str x8,[sp, #0x8]
+00b8889c  ldr x8,[sp, #0x10]
+00b888a0  ldr q0,[sp]
+00b888a4  str x8,[x19, #0x10]
+00b888a8  str q0,[x19]
+00b888ac  ldr x8,[x21, #0x28]
+00b888b0  ldr x9,[sp, #0x18]
+00b888b4  cmp x8,x9
+00b888b8  b.ne 0x00b888d8
+00b888bc  ldp x29,x30,[sp, #0x60]
+00b888c0  ldp x20,x19,[sp, #0x50]
+00b888c4  ldp x22,x21,[sp, #0x40]
+00b888c8  ldp x24,x23,[sp, #0x30]
+00b888cc  ldr d8,[sp, #0x20]
+00b888d0  add sp,sp,#0x70
+00b888d4  ret
+00b888d8  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00b88904_to_wstring.txt
+================================================================================
+Function: to_wstring @ 00b88904
+FuncComment: std::__ndk1::to_wstring(long double)
+
+--- Calls OUT ---
+  -> swprintf @ 008d4e30
+  -> append @ 008d5960
+  -> operator.new @ 008d4f40
+  -> wmemset @ 008d5b30
+  -> __stack_chk_fail @ 008d4c50
+
+--- Calls IN ---
+
+--- Listing ---
+00b88904  sub sp,sp,#0x70
+    ; [PLATE] std::__ndk1::to_wstring(long double)
+00b88908  stp x24,x23,[sp, #0x30]
+00b8890c  stp x22,x21,[sp, #0x40]
+00b88910  stp x20,x19,[sp, #0x50]
+00b88914  stp x29,x30,[sp, #0x60]
+00b88918  add x29,sp,#0x60
+00b8891c  str q0,[sp]
+00b88920  mrs x21,tpidr_el0
+00b88924  mov x19,x8
+00b88928  ldr x8,[x21, #0x28]
+00b8892c  mov w0,#0x60
+00b88930  str x8,[sp, #0x28]
+00b88934  bl 0x008d4f40
+00b88938  adrp x8,0x2a0a000
+00b8893c  ldr q0,[x8, #0x200]
+00b88940  mov x20,x0
+00b88944  str x0,[sp, #0x20]
+00b88948  str q0,[sp, #0x10]
+00b8894c  mov w2,#0x14
+    ; [PRE] try { // try from 00b8894c to 00b88957 has its CatchHandler @ 00b88ac4
+00b88950  mov w1,wzr
+00b88954  bl 0x008d5b30
+    ; [POST] } // end try from 00b8894c to 00b88957
+00b88958  str wzr,[x20, #0x50]
+00b8895c  add x0,sp,#0x10
+    ; [PRE] try { // try from 00b8895c to 00b8896f has its CatchHandler @ 00b88ac0
+00b88960  mov w1,#0x3
+00b88964  mov w2,wzr
+00b88968  add x22,sp,#0x10
+00b8896c  bl 0x008d5960
+    ; [POST] } // end try from 00b8895c to 00b8896f
+00b88970  ldrb w8,[sp, #0x10]
+00b88974  ldr x9,[sp, #0x18]
+00b88978  adrp x20,0x2a0a000
+00b8897c  orr x23,x22,#0x4
+00b88980  lsr x10,x8,#0x1
+00b88984  tst w8,#0x1
+00b88988  csel x24,x10,x9,eq
+00b8898c  add x20,x20,#0x294
+00b88990  b 0x00b889a4
+00b88994  add x0,sp,#0x10
+    ; [PRE] try { // try from 00b88994 to 00b889bf has its CatchHandler @ 00b88ac8
+00b88998  mov w2,wzr
+00b8899c  bl 0x008d5960
+00b889a0  ldrb w8,[sp, #0x10]
+00b889a4  ldr x9,[sp, #0x20]
+00b889a8  tst w8,#0x1
+00b889ac  add x1,x24,#0x1
+00b889b0  csel x0,x23,x9,eq
+00b889b4  ldr q0,[sp]
+00b889b8  mov x2,x20
+00b889bc  bl 0x008d4e30
+    ; [POST] } // end try from 00b88994 to 00b889bf
+00b889c0  tbnz w0,#0x1f,0x00b889d4
+00b889c4  sxtw x8,w0
+00b889c8  cmp x24,x8
+00b889cc  b.cc 0x00b889dc
+00b889d0  b 0x00b88a28
+00b889d4  mov w8,#0x1
+00b889d8  bfm x8,x24,#0x3f,#0x3e
+00b889dc  mov x24,x8
+00b889e0  ldrb w8,[sp, #0x10]
+00b889e4  ldr x9,[sp, #0x18]
+00b889e8  lsr x10,x8,#0x1
+00b889ec  tst w8,#0x1
+00b889f0  csel x9,x10,x9,eq
+00b889f4  subs x1,x24,x9
+00b889f8  b.hi 0x00b88994
+00b889fc  tbnz w8,#0x0,0x00b88a14
+00b88a00  add x8,x22,x24, LSL #0x2
+00b88a04  lsl w9,w24,#0x1
+00b88a08  str wzr,[x8, #0x4]
+00b88a0c  strb w9,[sp, #0x10]
+00b88a10  b 0x00b889a0
+00b88a14  ldr x8,[sp, #0x20]
+00b88a18  str wzr,[x8, x24, LSL #0x2]
+00b88a1c  ldrb w8,[sp, #0x10]
+00b88a20  str x24,[sp, #0x18]
+00b88a24  b 0x00b889a4
+00b88a28  ldrb w9,[sp, #0x10]
+00b88a2c  ldr x10,[sp, #0x18]
+00b88a30  lsr x11,x9,#0x1
+00b88a34  tst w9,#0x1
+00b88a38  csel x10,x11,x10,eq
+00b88a3c  cmp x10,x8
+00b88a40  b.cs 0x00b88a58
+00b88a44  sub x1,x8,x10
+00b88a48  add x0,sp,#0x10
+    ; [PRE] try { // try from 00b88a48 to 00b88a53 has its CatchHandler @ 00b88abc
+00b88a4c  mov w2,wzr
+00b88a50  bl 0x008d5960
+    ; [POST] } // end try from 00b88a48 to 00b88a53
+00b88a54  b 0x00b88a80
+00b88a58  tbnz w9,#0x0,0x00b88a74
+00b88a5c  add x9,sp,#0x10
+00b88a60  lsl w10,w0,#0x1
+00b88a64  add x8,x9,x8, LSL #0x2
+00b88a68  str wzr,[x8, #0x4]
+00b88a6c  strb w10,[sp, #0x10]
+00b88a70  b 0x00b88a80
+00b88a74  ldr x9,[sp, #0x20]
+00b88a78  str wzr,[x9, x8, LSL #0x2]
+00b88a7c  str x8,[sp, #0x18]
+00b88a80  ldr x8,[sp, #0x20]
+00b88a84  ldr q0,[sp, #0x10]
+00b88a88  str x8,[x19, #0x10]
+00b88a8c  str q0,[x19]
+00b88a90  ldr x8,[x21, #0x28]
+00b88a94  ldr x9,[sp, #0x28]
+00b88a98  cmp x8,x9
+00b88a9c  b.ne 0x00b88ab8
+00b88aa0  ldp x29,x30,[sp, #0x60]
+00b88aa4  ldp x20,x19,[sp, #0x50]
+00b88aa8  ldp x22,x21,[sp, #0x40]
+00b88aac  ldp x24,x23,[sp, #0x30]
+00b88ab0  add sp,sp,#0x70
+00b88ab4  ret
+00b88ab8  bl 0x008d4c50
+
+
+================================================================================
+### FILE: 00d58950_ToJOutline__.ctor.txt
+================================================================================
+Function: ToJOutline$$.ctor @ 00d58950
+
+--- Calls OUT ---
+  -> UnityEngine.UI.Shadow$$.ctor @ 025afe10
+
+--- Calls IN ---
+
+--- Listing ---
+00d58950  mov x1,xzr
+00d58954  b 0x025afe10
+
+
+================================================================================
+### FILE: 00d58958_ToJOutline__ModifyMesh.txt
+================================================================================
+Function: ToJOutline$$ModifyMesh @ 00d58958
+
+--- Calls OUT ---
+  -> UnityEngine.UI.VertexHelper$$AddUIVertexTriangleStream @ 025aeb8c
+  -> modf @ 008d41a0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.UI.VertexHelper$$GetUIVertexStream @ 025aebdc
+  -> UnityEngine.UI.VertexHelper$$Clear @ 0259d54c
+  -> System.Collections.Generic.List<UIVertex>$$set_Capacity @ 01c896dc
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.List<UIVertex>$$set_Item @ 01c898f4
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> System.Collections.Generic.List<UIVertex>$$get_Capacity @ 01c896c0
+  -> System.Collections.Generic.List<UIVertex>$$.ctor @ 01c89320
+  -> UnityEngine.UI.Shadow$$ApplyShadowZeroAlloc @ 025b00e4
+  -> System.Collections.Generic.List<UIVertex>$$get_Item @ 01c89890
+  -> UnityEngine.Material$$get_shader @ 024d2d38
+  -> UnityEngine.Shader$$Find @ 024d2900
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00d58958  sub sp,sp,#0x180
+00d5895c  stp d15,d14,[sp, #0xe0]
+00d58960  stp d13,d12,[sp, #0xf0]
+00d58964  stp d11,d10,[sp, #0x100]
+00d58968  stp d9,d8,[sp, #0x110]
+00d5896c  str x28,[sp, #0x120]
+00d58970  stp x27,x26,[sp, #0x130]
+00d58974  stp x25,x24,[sp, #0x140]
+00d58978  stp x23,x22,[sp, #0x150]
+00d5897c  stp x21,x20,[sp, #0x160]
+00d58980  stp x19,x30,[sp, #0x170]
+00d58984  adrp x20,0x3571000
+00d58988  ldrb w8,[x20, #0xe73]
+00d5898c  mov x19,x1
+00d58990  mov x21,x0
+00d58994  tbnz w8,#0x0,0x00d58a18
+00d58998  adrp x0,0x3378000
+00d5899c  ldr x0,[x0, #0x1e8]
+00d589a0  bl 0x00b0789c
+00d589a4  adrp x0,0x331a000
+00d589a8  ldr x0,[x0, #0x450]
+00d589ac  bl 0x00b0789c
+00d589b0  adrp x0,0x334e000
+00d589b4  ldr x0,[x0, #0x788]
+00d589b8  bl 0x00b0789c
+00d589bc  adrp x0,0x3343000
+00d589c0  ldr x0,[x0, #0x138]
+00d589c4  bl 0x00b0789c
+00d589c8  adrp x0,0x3352000
+00d589cc  ldr x0,[x0, #0x130]
+00d589d0  bl 0x00b0789c
+00d589d4  adrp x0,0x335d000
+00d589d8  ldr x0,[x0, #0x9b0]
+00d589dc  bl 0x00b0789c
+00d589e0  adrp x0,0x335b000
+00d589e4  ldr x0,[x0, #0x138]
+00d589e8  bl 0x00b0789c
+00d589ec  adrp x0,0x3311000
+00d589f0  ldr x0,[x0, #0x9f8]
+00d589f4  bl 0x00b0789c
+00d589f8  adrp x0,0x3321000
+00d589fc  ldr x0,[x0, #0xca8]
+00d58a00  bl 0x00b0789c
+00d58a04  adrp x0,0x335d000
+00d58a08  ldr x0,[x0, #0xf38]
+00d58a0c  bl 0x00b0789c
+00d58a10  mov w8,#0x1
+00d58a14  strb w8,[x20, #0xe73]
+00d58a18  movi v0.2D,#0x0
+00d58a1c  stp q0,q0,[sp, #0x30]
+00d58a20  str q0,[sp, #0x50]
+00d58a24  stur q0,[sp, #0x5c]
+00d58a28  stp q0,q0,[sp, #0x10]
+00d58a2c  ldr x8,[x21]
+00d58a30  mov x0,x21
+00d58a34  ldp x9,x1,[x8, #0x1c8]
+00d58a38  blr x9
+00d58a3c  tbz w0,#0x0,0x00d596e4
+00d58a40  adrp x8,0x3311000
+00d58a44  ldr x8,[x8, #0x9f8]
+00d58a48  ldr x0,[x8]
+00d58a4c  bl 0x00b079a0
+00d58a50  cbz x0,0x00d59714
+00d58a54  adrp x8,0x331a000
+00d58a58  ldr x8,[x8, #0x450]
+00d58a5c  mov x20,x0
+00d58a60  ldr x1,[x8]
+00d58a64  bl 0x01c89320
+00d58a68  cbz x19,0x00d59714
+00d58a6c  adrp x22,0x334e000
+00d58a70  ldr x22,[x22, #0x788]
+00d58a74  mov x0,x19
+00d58a78  mov x1,x20
+00d58a7c  mov x2,xzr
+00d58a80  bl 0x025aebdc
+00d58a84  ldr w24,[x20, #0x18]
+00d58a88  ldr x1,[x22]
+00d58a8c  mov x0,x20
+00d58a90  add w22,w24,w24, LSL #0x2
+00d58a94  bl 0x01c896c0
+00d58a98  cmp w0,w22
+00d58a9c  b.ge 0x00d58ab8
+00d58aa0  adrp x8,0x335d000
+00d58aa4  ldr x8,[x8, #0x9b0]
+00d58aa8  mov x0,x20
+00d58aac  mov w1,w22
+00d58ab0  ldr x2,[x8]
+00d58ab4  bl 0x01c896dc
+00d58ab8  ldp s0,s9,[x21, #0x20]
+00d58abc  mov w8,#0x437f0000
+00d58ac0  fmov s8,0x3f800000
+00d58ac4  fmov s1,w8
+00d58ac8  fmin s2,s0,s8
+00d58acc  ldr w22,[x20, #0x18]
+00d58ad0  ldp s11,s15,[x21, #0x28]
+00d58ad4  fcmp s0,#0.0
+00d58ad8  fmul s0,s2,s1
+00d58adc  fmov s1,wzr
+00d58ae0  fcsel s14,s0,s1,pl
+00d58ae4  fcvt d0,s14
+00d58ae8  add x0,sp,#0x70
+00d58aec  bl 0x008d41a0
+00d58af0  fcmp s14,#0.0
+00d58af4  fmov d12,0x3fe0000000000000
+00d58af8  fmov d13,-0x4020000000000000
+00d58afc  fmov s10,0xbf800000
+00d58b00  b.ge 0x00d58b20
+00d58b04  fcmp d0,d13
+00d58b08  b.ne 0x00d58b44
+00d58b0c  ldr d0,[sp, #0x70]
+00d58b10  fcvtzs x8,d0
+00d58b14  fcvt s0,d0
+00d58b18  fadd s1,s0,s10
+00d58b1c  b 0x00d58b38
+00d58b20  fcmp d0,d12
+00d58b24  b.ne 0x00d58b54
+00d58b28  ldr d0,[sp, #0x70]
+00d58b2c  fcvtzs x8,d0
+00d58b30  fcvt s0,d0
+00d58b34  fadd s1,s0,s8
+00d58b38  tst x8,#0x1
+00d58b3c  fcsel s14,s0,s1,eq
+00d58b40  b 0x00d58b60
+00d58b44  fmov s0,0xbf000000
+00d58b48  fadd s0,s14,s0
+00d58b4c  frintp s14,s0
+00d58b50  b 0x00d58b60
+00d58b54  fmov s0,0x3f000000
+00d58b58  fadd s0,s14,s0
+00d58b5c  frintm s14,s0
+00d58b60  mov w8,#0x437f0000
+00d58b64  fmin s0,s9,s8
+00d58b68  fmov s1,w8
+00d58b6c  fcmp s9,#0.0
+00d58b70  fmul s0,s0,s1
+00d58b74  fmov s1,wzr
+00d58b78  fcsel s9,s0,s1,pl
+00d58b7c  fcvt d0,s9
+00d58b80  add x0,sp,#0x70
+00d58b84  bl 0x008d41a0
+00d58b88  fcmp s9,#0.0
+00d58b8c  b.ge 0x00d58bac
+00d58b90  fcmp d0,d13
+00d58b94  b.ne 0x00d58bd0
+00d58b98  ldr d0,[sp, #0x70]
+00d58b9c  fcvtzs x8,d0
+00d58ba0  fcvt s0,d0
+00d58ba4  fadd s1,s0,s10
+00d58ba8  b 0x00d58bc4
+00d58bac  fcmp d0,d12
+00d58bb0  b.ne 0x00d58be0
+00d58bb4  ldr d0,[sp, #0x70]
+00d58bb8  fcvtzs x8,d0
+00d58bbc  fcvt s0,d0
+00d58bc0  fadd s1,s0,s8
+00d58bc4  tst x8,#0x1
+00d58bc8  fcsel s9,s0,s1,eq
+00d58bcc  b 0x00d58bec
+00d58bd0  fmov s0,0xbf000000
+00d58bd4  fadd s0,s9,s0
+00d58bd8  frintp s9,s0
+00d58bdc  b 0x00d58bec
+00d58be0  fmov s0,0x3f000000
+00d58be4  fadd s0,s9,s0
+00d58be8  frintm s9,s0
+00d58bec  mov w8,#0x437f0000
+00d58bf0  fmin s0,s11,s8
+00d58bf4  fmov s1,w8
+00d58bf8  fcmp s11,#0.0
+00d58bfc  fmul s0,s0,s1
+00d58c00  fmov s1,wzr
+00d58c04  fcsel s11,s0,s1,pl
+00d58c08  fcvt d0,s11
+00d58c0c  add x0,sp,#0x70
+00d58c10  bl 0x008d41a0
+00d58c14  fcmp s11,#0.0
+00d58c18  b.ge 0x00d58c38
+00d58c1c  fcmp d0,d13
+00d58c20  b.ne 0x00d58c5c
+00d58c24  ldr d0,[sp, #0x70]
+00d58c28  fcvtzs x8,d0
+00d58c2c  fcvt s0,d0
+00d58c30  fadd s1,s0,s10
+00d58c34  b 0x00d58c50
+00d58c38  fcmp d0,d12
+00d58c3c  b.ne 0x00d58c6c
+00d58c40  ldr d0,[sp, #0x70]
+00d58c44  fcvtzs x8,d0
+00d58c48  fcvt s0,d0
+00d58c4c  fadd s1,s0,s8
+00d58c50  tst x8,#0x1
+00d58c54  fcsel s11,s0,s1,eq
+00d58c58  b 0x00d58c78
+00d58c5c  fmov s0,0xbf000000
+00d58c60  fadd s0,s11,s0
+00d58c64  frintp s11,s0
+00d58c68  b 0x00d58c78
+00d58c6c  fmov s0,0x3f000000
+00d58c70  fadd s0,s11,s0
+00d58c74  frintm s11,s0
+00d58c78  mov w8,#0x437f0000
+00d58c7c  fmin s0,s15,s8
+00d58c80  fmov s1,w8
+00d58c84  fcmp s15,#0.0
+00d58c88  fmul s0,s0,s1
+00d58c8c  fmov s1,wzr
+00d58c90  fcsel s15,s0,s1,pl
+00d58c94  fcvt d0,s15
+00d58c98  add x0,sp,#0x70
+00d58c9c  bl 0x008d41a0
+00d58ca0  fcmp s15,#0.0
+00d58ca4  b.ge 0x00d58cc4
+00d58ca8  fcmp d0,d13
+00d58cac  b.ne 0x00d58ce8
+00d58cb0  ldr d0,[sp, #0x70]
+00d58cb4  fcvtzs x8,d0
+00d58cb8  fcvt s0,d0
+00d58cbc  fadd s1,s0,s10
+00d58cc0  b 0x00d58cdc
+00d58cc4  fcmp d0,d12
+00d58cc8  b.ne 0x00d58cf8
+00d58ccc  ldr d0,[sp, #0x70]
+00d58cd0  fcvtzs x8,d0
+00d58cd4  fcvt s0,d0
+00d58cd8  fadd s1,s0,s8
+00d58cdc  tst x8,#0x1
+00d58ce0  fcsel s2,s0,s1,eq
+00d58ce4  b 0x00d58d04
+00d58ce8  fmov s0,0xbf000000
+00d58cec  fadd s0,s15,s0
+00d58cf0  frintp s2,s0
+00d58cf4  b 0x00d58d04
+00d58cf8  fmov s0,0x3f000000
+00d58cfc  fadd s0,s15,s0
+00d58d00  frintm s2,s0
+00d58d04  fcvtzs w8,s14
+00d58d08  fcmp s14,#0.0
+00d58d0c  fcvtzs w9,s9
+00d58d10  csel w8,w8,w8,mi
+00d58d14  fcmp s9,#0.0
+00d58d18  and x2,x8,#0xff
+00d58d1c  csel w8,w9,w9,mi
+00d58d20  fcvtzs w10,s11
+00d58d24  and x8,x8,#0xff
+00d58d28  fcmp s11,#0.0
+00d58d2c  fcvtzs w11,s2
+00d58d30  bfm x2,x8,#0x38,#0x7
+00d58d34  ldr w4,[x20, #0x18]
+00d58d38  ldp s0,s1,[x21, #0x30]
+00d58d3c  csel w8,w10,w10,mi
+00d58d40  fcmp s2,#0.0
+00d58d44  and x8,x8,#0xff
+00d58d48  csel w9,w11,w11,mi
+00d58d4c  and x9,x9,#0xff
+00d58d50  bfm x2,x8,#0x30,#0x7
+00d58d54  bfm x2,x9,#0x28,#0x7
+00d58d58  mov x0,x21
+00d58d5c  mov x1,x20
+00d58d60  mov w3,wzr
+00d58d64  mov x5,xzr
+00d58d68  bl 0x025b00e4
+00d58d6c  ldp s0,s9,[x21, #0x20]
+00d58d70  mov w8,#0x437f0000
+00d58d74  fmov s1,w8
+00d58d78  ldr w23,[x20, #0x18]
+00d58d7c  fmin s2,s0,s8
+00d58d80  ldp s11,s15,[x21, #0x28]
+00d58d84  fcmp s0,#0.0
+00d58d88  fmul s0,s2,s1
+00d58d8c  fmov s1,wzr
+00d58d90  fcsel s14,s0,s1,pl
+00d58d94  fcvt d0,s14
+00d58d98  add x0,sp,#0x70
+00d58d9c  bl 0x008d41a0
+00d58da0  fcmp s14,#0.0
+00d58da4  b.ge 0x00d58dc4
+00d58da8  fcmp d0,d13
+00d58dac  b.ne 0x00d58de8
+00d58db0  ldr d0,[sp, #0x70]
+00d58db4  fcvtzs x8,d0
+00d58db8  fcvt s0,d0
+00d58dbc  fadd s1,s0,s10
+00d58dc0  b 0x00d58ddc
+00d58dc4  fcmp d0,d12
+00d58dc8  b.ne 0x00d58df8
+00d58dcc  ldr d0,[sp, #0x70]
+00d58dd0  fcvtzs x8,d0
+00d58dd4  fcvt s0,d0
+00d58dd8  fadd s1,s0,s8
+00d58ddc  tst x8,#0x1
+00d58de0  fcsel s14,s0,s1,eq
+00d58de4  b 0x00d58e04
+00d58de8  fmov s0,0xbf000000
+00d58dec  fadd s0,s14,s0
+00d58df0  frintp s14,s0
+00d58df4  b 0x00d58e04
+00d58df8  fmov s0,0x3f000000
+00d58dfc  fadd s0,s14,s0
+00d58e00  frintm s14,s0
+00d58e04  mov w8,#0x437f0000
+00d58e08  fmin s0,s9,s8
+00d58e0c  fmov s1,w8
+00d58e10  fcmp s9,#0.0
+00d58e14  fmul s0,s0,s1
+00d58e18  fmov s1,wzr
+00d58e1c  fcsel s9,s0,s1,pl
+00d58e20  fcvt d0,s9
+00d58e24  add x0,sp,#0x70
+00d58e28  bl 0x008d41a0
+00d58e2c  fcmp s9,#0.0
+00d58e30  b.ge 0x00d58e50
+00d58e34  fcmp d0,d13
+00d58e38  b.ne 0x00d58e74
+00d58e3c  ldr d0,[sp, #0x70]
+00d58e40  fcvtzs x8,d0
+00d58e44  fcvt s0,d0
+00d58e48  fadd s1,s0,s10
+00d58e4c  b 0x00d58e68
+00d58e50  fcmp d0,d12
+00d58e54  b.ne 0x00d58e84
+00d58e58  ldr d0,[sp, #0x70]
+00d58e5c  fcvtzs x8,d0
+00d58e60  fcvt s0,d0
+00d58e64  fadd s1,s0,s8
+00d58e68  tst x8,#0x1
+00d58e6c  fcsel s9,s0,s1,eq
+00d58e70  b 0x00d58e90
+00d58e74  fmov s0,0xbf000000
+00d58e78  fadd s0,s9,s0
+00d58e7c  frintp s9,s0
+00d58e80  b 0x00d58e90
+00d58e84  fmov s0,0x3f000000
+00d58e88  fadd s0,s9,s0
+00d58e8c  frintm s9,s0
+00d58e90  mov w8,#0x437f0000
+00d58e94  fmin s0,s11,s8
+00d58e98  fmov s1,w8
+00d58e9c  fcmp s11,#0.0
+00d58ea0  fmul s0,s0,s1
+00d58ea4  fmov s1,wzr
+00d58ea8  fcsel s11,s0,s1,pl
+00d58eac  fcvt d0,s11
+00d58eb0  add x0,sp,#0x70
+00d58eb4  bl 0x008d41a0
+00d58eb8  fcmp s11,#0.0
+00d58ebc  b.ge 0x00d58edc
+00d58ec0  fcmp d0,d13
+00d58ec4  b.ne 0x00d58f00
+00d58ec8  ldr d0,[sp, #0x70]
+00d58ecc  fcvtzs x8,d0
+00d58ed0  fcvt s0,d0
+00d58ed4  fadd s1,s0,s10
+00d58ed8  b 0x00d58ef4
+00d58edc  fcmp d0,d12
+00d58ee0  b.ne 0x00d58f10
+00d58ee4  ldr d0,[sp, #0x70]
+00d58ee8  fcvtzs x8,d0
+00d58eec  fcvt s0,d0
+00d58ef0  fadd s1,s0,s8
+00d58ef4  tst x8,#0x1
+00d58ef8  fcsel s11,s0,s1,eq
+00d58efc  b 0x00d58f1c
+00d58f00  fmov s0,0xbf000000
+00d58f04  fadd s0,s11,s0
+00d58f08  frintp s11,s0
+00d58f0c  b 0x00d58f1c
+00d58f10  fmov s0,0x3f000000
+00d58f14  fadd s0,s11,s0
+00d58f18  frintm s11,s0
+00d58f1c  mov w8,#0x437f0000
+00d58f20  fmin s0,s15,s8
+00d58f24  fmov s1,w8
+00d58f28  fcmp s15,#0.0
+00d58f2c  fmul s0,s0,s1
+00d58f30  fmov s1,wzr
+00d58f34  fcsel s15,s0,s1,pl
+00d58f38  fcvt d0,s15
+00d58f3c  add x0,sp,#0x70
+00d58f40  bl 0x008d41a0
+00d58f44  fcmp s15,#0.0
+00d58f48  b.ge 0x00d58f68
+00d58f4c  fcmp d0,d13
+00d58f50  b.ne 0x00d58f8c
+00d58f54  ldr d0,[sp, #0x70]
+00d58f58  fcvtzs x8,d0
+00d58f5c  fcvt s0,d0
+00d58f60  fadd s1,s0,s10
+00d58f64  b 0x00d58f80
+00d58f68  fcmp d0,d12
+00d58f6c  b.ne 0x00d58f9c
+00d58f70  ldr d0,[sp, #0x70]
+00d58f74  fcvtzs x8,d0
+00d58f78  fcvt s0,d0
+00d58f7c  fadd s1,s0,s8
+00d58f80  tst x8,#0x1
+00d58f84  fcsel s1,s0,s1,eq
+00d58f88  b 0x00d58fa8
+00d58f8c  fmov s0,0xbf000000
+00d58f90  fadd s0,s15,s0
+00d58f94  frintp s1,s0
+00d58f98  b 0x00d58fa8
+00d58f9c  fmov s0,0x3f000000
+00d58fa0  fadd s0,s15,s0
+00d58fa4  frintm s1,s0
+00d58fa8  fcvtzs w8,s14
+00d58fac  fcmp s14,#0.0
+00d58fb0  fcvtzs w9,s9
+00d58fb4  csel w8,w8,w8,mi
+00d58fb8  fcmp s9,#0.0
+00d58fbc  and x2,x8,#0xff
+00d58fc0  csel w8,w9,w9,mi
+00d58fc4  fcvtzs w10,s11
+00d58fc8  and x8,x8,#0xff
+00d58fcc  ldp s0,s2,[x21, #0x30]
+00d58fd0  fcmp s11,#0.0
+00d58fd4  fcvtzs w11,s1
+00d58fd8  bfm x2,x8,#0x38,#0x7
+00d58fdc  ldr w4,[x20, #0x18]
+00d58fe0  csel w8,w10,w10,mi
+00d58fe4  fcmp s1,#0.0
+00d58fe8  and x8,x8,#0xff
+00d58fec  csel w9,w11,w11,mi
+00d58ff0  and x9,x9,#0xff
+00d58ff4  bfm x2,x8,#0x30,#0x7
+00d58ff8  bfm x2,x9,#0x28,#0x7
+00d58ffc  fneg s1,s2
+00d59000  mov x0,x21
+00d59004  mov x1,x20
+00d59008  mov w3,w22
+00d5900c  mov x5,xzr
+00d59010  bl 0x025b00e4
+00d59014  ldp s0,s9,[x21, #0x20]
+00d59018  mov w8,#0x437f0000
+00d5901c  fmov s1,w8
+00d59020  ldr w22,[x20, #0x18]
+00d59024  fmin s2,s0,s8
+00d59028  ldp s11,s15,[x21, #0x28]
+00d5902c  fcmp s0,#0.0
+00d59030  fmul s0,s2,s1
+00d59034  fmov s1,wzr
+00d59038  fcsel s14,s0,s1,pl
+00d5903c  fcvt d0,s14
+00d59040  add x0,sp,#0x70
+00d59044  bl 0x008d41a0
+00d59048  fcmp s14,#0.0
+00d5904c  b.ge 0x00d5906c
+00d59050  fcmp d0,d13
+00d59054  b.ne 0x00d59090
+00d59058  ldr d0,[sp, #0x70]
+00d5905c  fcvtzs x8,d0
+00d59060  fcvt s0,d0
+00d59064  fadd s1,s0,s10
+00d59068  b 0x00d59084
+00d5906c  fcmp d0,d12
+00d59070  b.ne 0x00d590a0
+00d59074  ldr d0,[sp, #0x70]
+00d59078  fcvtzs x8,d0
+00d5907c  fcvt s0,d0
+00d59080  fadd s1,s0,s8
+00d59084  tst x8,#0x1
+00d59088  fcsel s14,s0,s1,eq
+00d5908c  b 0x00d590ac
+00d59090  fmov s0,0xbf000000
+00d59094  fadd s0,s14,s0
+00d59098  frintp s14,s0
+00d5909c  b 0x00d590ac
+00d590a0  fmov s0,0x3f000000
+00d590a4  fadd s0,s14,s0
+00d590a8  frintm s14,s0
+00d590ac  mov w8,#0x437f0000
+00d590b0  fmin s0,s9,s8
+00d590b4  fmov s1,w8
+00d590b8  fcmp s9,#0.0
+00d590bc  fmul s0,s0,s1
+00d590c0  fmov s1,wzr
+00d590c4  fcsel s9,s0,s1,pl
+00d590c8  fcvt d0,s9
+00d590cc  add x0,sp,#0x70
+00d590d0  bl 0x008d41a0
+00d590d4  fcmp s9,#0.0
+00d590d8  b.ge 0x00d590f8
+00d590dc  fcmp d0,d13
+00d590e0  b.ne 0x00d5911c
+00d590e4  ldr d0,[sp, #0x70]
+00d590e8  fcvtzs x8,d0
+00d590ec  fcvt s0,d0
+00d590f0  fadd s1,s0,s10
+00d590f4  b 0x00d59110
+00d590f8  fcmp d0,d12
+00d590fc  b.ne 0x00d5912c
+00d59100  ldr d0,[sp, #0x70]
+00d59104  fcvtzs x8,d0
+00d59108  fcvt s0,d0
+00d5910c  fadd s1,s0,s8
+00d59110  tst x8,#0x1
+00d59114  fcsel s9,s0,s1,eq
+00d59118  b 0x00d59138
+00d5911c  fmov s0,0xbf000000
+00d59120  fadd s0,s9,s0
+00d59124  frintp s9,s0
+00d59128  b 0x00d59138
+00d5912c  fmov s0,0x3f000000
+00d59130  fadd s0,s9,s0
+00d59134  frintm s9,s0
+00d59138  mov w8,#0x437f0000
+00d5913c  fmin s0,s11,s8
+00d59140  fmov s1,w8
+00d59144  fcmp s11,#0.0
+00d59148  fmul s0,s0,s1
+00d5914c  fmov s1,wzr
+00d59150  fcsel s11,s0,s1,pl
+00d59154  fcvt d0,s11
+00d59158  add x0,sp,#0x70
+00d5915c  bl 0x008d41a0
+00d59160  fcmp s11,#0.0
+00d59164  b.ge 0x00d59184
+00d59168  fcmp d0,d13
+00d5916c  b.ne 0x00d591a8
+00d59170  ldr d0,[sp, #0x70]
+00d59174  fcvtzs x8,d0
+00d59178  fcvt s0,d0
+00d5917c  fadd s1,s0,s10
+00d59180  b 0x00d5919c
+00d59184  fcmp d0,d12
+00d59188  b.ne 0x00d591b8
+00d5918c  ldr d0,[sp, #0x70]
+00d59190  fcvtzs x8,d0
+00d59194  fcvt s0,d0
+00d59198  fadd s1,s0,s8
+00d5919c  tst x8,#0x1
+00d591a0  fcsel s11,s0,s1,eq
+00d591a4  b 0x00d591c4
+00d591a8  fmov s0,0xbf000000
+00d591ac  fadd s0,s11,s0
+00d591b0  frintp s11,s0
+00d591b4  b 0x00d591c4
+00d591b8  fmov s0,0x3f000000
+00d591bc  fadd s0,s11,s0
+00d591c0  frintm s11,s0
+00d591c4  mov w8,#0x437f0000
+00d591c8  fmin s0,s15,s8
+00d591cc  fmov s1,w8
+00d591d0  fcmp s15,#0.0
+00d591d4  fmul s0,s0,s1
+00d591d8  fmov s1,wzr
+00d591dc  fcsel s15,s0,s1,pl
+00d591e0  fcvt d0,s15
+00d591e4  add x0,sp,#0x70
+00d591e8  bl 0x008d41a0
+00d591ec  fcmp s15,#0.0
+00d591f0  b.ge 0x00d59210
+00d591f4  fcmp d0,d13
+00d591f8  b.ne 0x00d59234
+00d591fc  ldr d0,[sp, #0x70]
+00d59200  fcvtzs x8,d0
+00d59204  fcvt s0,d0
+00d59208  fadd s1,s0,s10
+00d5920c  b 0x00d59228
+00d59210  fcmp d0,d12
+00d59214  b.ne 0x00d59244
+00d59218  ldr d0,[sp, #0x70]
+00d5921c  fcvtzs x8,d0
+00d59220  fcvt s0,d0
+00d59224  fadd s1,s0,s8
+00d59228  tst x8,#0x1
+00d5922c  fcsel s0,s0,s1,eq
+00d59230  b 0x00d59250
+00d59234  fmov s0,0xbf000000
+00d59238  fadd s0,s15,s0
+00d5923c  frintp s0,s0
+00d59240  b 0x00d59250
+00d59244  fmov s0,0x3f000000
+00d59248  fadd s0,s15,s0
+00d5924c  frintm s0,s0
+00d59250  fcvtzs w8,s14
+00d59254  fcmp s14,#0.0
+00d59258  fcvtzs w9,s9
+00d5925c  csel w8,w8,w8,mi
+00d59260  fcmp s9,#0.0
+00d59264  and x2,x8,#0xff
+00d59268  csel w8,w9,w9,mi
+00d5926c  fcvtzs w10,s11
+00d59270  and x8,x8,#0xff
+00d59274  ldp s2,s1,[x21, #0x30]
+00d59278  fcmp s11,#0.0
+00d5927c  fcvtzs w11,s0
+00d59280  bfm x2,x8,#0x38,#0x7
+00d59284  ldr w4,[x20, #0x18]
+00d59288  csel w8,w10,w10,mi
+00d5928c  fcmp s0,#0.0
+00d59290  and x8,x8,#0xff
+00d59294  csel w9,w11,w11,mi
+00d59298  and x9,x9,#0xff
+00d5929c  bfm x2,x8,#0x30,#0x7
+00d592a0  bfm x2,x9,#0x28,#0x7
+00d592a4  fneg s0,s2
+00d592a8  mov x0,x21
+00d592ac  mov x1,x20
+00d592b0  mov w3,w23
+00d592b4  mov x5,xzr
+00d592b8  bl 0x025b00e4
+00d592bc  ldp s0,s9,[x21, #0x20]
+00d592c0  mov w8,#0x437f0000
+00d592c4  fmov s1,w8
+00d592c8  ldp s11,s15,[x21, #0x28]
+00d592cc  fmin s2,s0,s8
+00d592d0  fcmp s0,#0.0
+00d592d4  fmul s0,s2,s1
+00d592d8  fmov s1,wzr
+00d592dc  fcsel s14,s0,s1,pl
+00d592e0  fcvt d0,s14
+00d592e4  add x0,sp,#0x70
+00d592e8  bl 0x008d41a0
+00d592ec  fcmp s14,#0.0
+00d592f0  b.ge 0x00d59310
+00d592f4  fcmp d0,d13
+00d592f8  b.ne 0x00d59334
+00d592fc  ldr d0,[sp, #0x70]
+00d59300  fcvtzs x8,d0
+00d59304  fcvt s0,d0
+00d59308  fadd s1,s0,s10
+00d5930c  b 0x00d59328
+00d59310  fcmp d0,d12
+00d59314  b.ne 0x00d59344
+00d59318  ldr d0,[sp, #0x70]
+00d5931c  fcvtzs x8,d0
+00d59320  fcvt s0,d0
+00d59324  fadd s1,s0,s8
+00d59328  tst x8,#0x1
+00d5932c  fcsel s14,s0,s1,eq
+00d59330  b 0x00d59350
+00d59334  fmov s0,0xbf000000
+00d59338  fadd s0,s14,s0
+00d5933c  frintp s14,s0
+00d59340  b 0x00d59350
+00d59344  fmov s0,0x3f000000
+00d59348  fadd s0,s14,s0
+00d5934c  frintm s14,s0
+00d59350  mov w8,#0x437f0000
+00d59354  fmin s0,s9,s8
+00d59358  fmov s1,w8
+00d5935c  fcmp s9,#0.0
+00d59360  fmul s0,s0,s1
+00d59364  fmov s1,wzr
+00d59368  fcsel s9,s0,s1,pl
+00d5936c  fcvt d0,s9
+00d59370  add x0,sp,#0x70
+00d59374  bl 0x008d41a0
+00d59378  fcmp s9,#0.0
+00d5937c  b.ge 0x00d5939c
+00d59380  fcmp d0,d13
+00d59384  b.ne 0x00d593c0
+00d59388  ldr d0,[sp, #0x70]
+00d5938c  fcvtzs x8,d0
+00d59390  fcvt s0,d0
+00d59394  fadd s1,s0,s10
+00d59398  b 0x00d593b4
+00d5939c  fcmp d0,d12
+00d593a0  b.ne 0x00d593d0
+00d593a4  ldr d0,[sp, #0x70]
+00d593a8  fcvtzs x8,d0
+00d593ac  fcvt s0,d0
+00d593b0  fadd s1,s0,s8
+00d593b4  tst x8,#0x1
+00d593b8  fcsel s9,s0,s1,eq
+00d593bc  b 0x00d593dc
+00d593c0  fmov s0,0xbf000000
+00d593c4  fadd s0,s9,s0
+00d593c8  frintp s9,s0
+00d593cc  b 0x00d593dc
+00d593d0  fmov s0,0x3f000000
+00d593d4  fadd s0,s9,s0
+00d593d8  frintm s9,s0
+00d593dc  mov w8,#0x437f0000
+00d593e0  fmin s0,s11,s8
+00d593e4  fmov s1,w8
+00d593e8  fcmp s11,#0.0
+00d593ec  fmul s0,s0,s1
+00d593f0  fmov s1,wzr
+00d593f4  fcsel s11,s0,s1,pl
+00d593f8  fcvt d0,s11
+00d593fc  add x0,sp,#0x70
+00d59400  bl 0x008d41a0
+00d59404  fcmp s11,#0.0
+00d59408  b.ge 0x00d59428
+00d5940c  fcmp d0,d13
+00d59410  b.ne 0x00d5944c
+00d59414  ldr d0,[sp, #0x70]
+00d59418  fcvtzs x8,d0
+00d5941c  fcvt s0,d0
+00d59420  fadd s1,s0,s10
+00d59424  b 0x00d59440
+00d59428  fcmp d0,d12
+00d5942c  b.ne 0x00d5945c
+00d59430  ldr d0,[sp, #0x70]
+00d59434  fcvtzs x8,d0
+00d59438  fcvt s0,d0
+00d5943c  fadd s1,s0,s8
+00d59440  tst x8,#0x1
+00d59444  fcsel s11,s0,s1,eq
+00d59448  b 0x00d59468
+00d5944c  fmov s0,0xbf000000
+00d59450  fadd s0,s11,s0
+00d59454  frintp s11,s0
+00d59458  b 0x00d59468
+00d5945c  fmov s0,0x3f000000
+00d59460  fadd s0,s11,s0
+00d59464  frintm s11,s0
+00d59468  mov w8,#0x437f0000
+00d5946c  adrp x25,0x3378000
+00d59470  adrp x23,0x3321000
+00d59474  fmin s0,s15,s8
+00d59478  fmov s1,w8
+00d5947c  ldr x25,[x25, #0x1e8]
+00d59480  ldr x23,[x23, #0xca8]
+00d59484  fcmp s15,#0.0
+00d59488  fmul s0,s0,s1
+00d5948c  fmov s1,wzr
+00d59490  fcsel s15,s0,s1,pl
+00d59494  fcvt d0,s15
+00d59498  add x0,sp,#0x70
+00d5949c  bl 0x008d41a0
+00d594a0  fcmp s15,#0.0
+00d594a4  b.ge 0x00d594c4
+00d594a8  fcmp d0,d13
+00d594ac  b.ne 0x00d594e8
+00d594b0  ldr d0,[sp, #0x70]
+00d594b4  fcvtzs x8,d0
+00d594b8  fcvt s0,d0
+00d594bc  fadd s1,s0,s10
+00d594c0  b 0x00d594dc
+00d594c4  fcmp d0,d12
+00d594c8  b.ne 0x00d594f8
+00d594cc  ldr d0,[sp, #0x70]
+00d594d0  fcvtzs x8,d0
+00d594d4  fcvt s0,d0
+00d594d8  fadd s1,s0,s8
+00d594dc  tst x8,#0x1
+00d594e0  fcsel s0,s0,s1,eq
+00d594e4  b 0x00d59504
+00d594e8  fmov s0,0xbf000000
+00d594ec  fadd s0,s15,s0
+00d594f0  frintp s0,s0
+00d594f4  b 0x00d59504
+00d594f8  fmov s0,0x3f000000
+00d594fc  fadd s0,s15,s0
+00d59500  frintm s0,s0
+00d59504  fcvtzs w8,s14
+00d59508  fcmp s14,#0.0
+00d5950c  fcvtzs w9,s9
+00d59510  csel w8,w8,w8,mi
+00d59514  fcmp s9,#0.0
+00d59518  and x2,x8,#0xff
+00d5951c  csel w8,w9,w9,mi
+00d59520  fcvtzs w10,s11
+00d59524  and x8,x8,#0xff
+00d59528  ldp s1,s2,[x21, #0x30]
+00d5952c  fcmp s11,#0.0
+00d59530  fcvtzs w11,s0
+00d59534  bfm x2,x8,#0x38,#0x7
+00d59538  ldr w4,[x20, #0x18]
+00d5953c  csel w8,w10,w10,mi
+00d59540  fcmp s0,#0.0
+00d59544  and x8,x8,#0xff
+00d59548  csel w9,w11,w11,mi
+00d5954c  and x9,x9,#0xff
+00d59550  bfm x2,x8,#0x30,#0x7
+00d59554  fneg s0,s1
+00d59558  bfm x2,x9,#0x28,#0x7
+00d5955c  fneg s1,s2
+00d59560  mov x0,x21
+00d59564  mov x1,x20
+00d59568  mov w3,w22
+00d5956c  mov x5,xzr
+00d59570  bl 0x025b00e4
+00d59574  ldr x1,[x25]
+00d59578  mov x0,x21
+00d5957c  bl 0x0176cbf8
+00d59580  ldr x8,[x23]
+00d59584  mov x21,x0
+00d59588  ldr w9,[x8, #0xe0]
+00d5958c  cbnz w9,0x00d59598
+00d59590  mov x0,x8
+00d59594  bl 0x00b0798c
+00d59598  mov x0,x21
+00d5959c  mov x1,xzr
+00d595a0  mov x2,xzr
+00d595a4  bl 0x024de30c
+00d595a8  tbz w0,#0x0,0x00d596c8
+00d595ac  cbz x21,0x00d59714
+00d595b0  ldr x8,[x21]
+00d595b4  mov x0,x21
+00d595b8  ldr x9,[x8, #0x338]
+00d595bc  ldr x1,[x8, #0x340]
+00d595c0  blr x9
+00d595c4  cbz x0,0x00d59714
+00d595c8  adrp x21,0x335d000
+00d595cc  ldr x21,[x21, #0xf38]
+00d595d0  mov x1,xzr
+00d595d4  bl 0x024d2d38
+00d595d8  ldr x8,[x21]
+00d595dc  mov x21,x0
+00d595e0  mov x1,xzr
+00d595e4  mov x0,x8
+00d595e8  bl 0x024d2900
+00d595ec  ldr x8,[x23]
+00d595f0  mov x22,x0
+00d595f4  ldr w9,[x8, #0xe0]
+00d595f8  cbnz w9,0x00d59604
+00d595fc  mov x0,x8
+00d59600  bl 0x00b0798c
+00d59604  mov x0,x21
+00d59608  mov x1,x22
+00d5960c  mov x2,xzr
+00d59610  bl 0x024c8180
+00d59614  tbz w0,#0x0,0x00d596c8
+00d59618  ldr w8,[x20, #0x18]
+00d5961c  sub w8,w8,w24
+00d59620  cmp w8,#0x1
+00d59624  b.lt 0x00d596c8
+00d59628  adrp x23,0x3352000
+00d5962c  adrp x25,0x335b000
+00d59630  ldr x23,[x23, #0x130]
+00d59634  ldr x25,[x25, #0x138]
+00d59638  add x8,sp,#0x70
+00d5963c  mov w21,wzr
+00d59640  add x22,sp,#0x70
+00d59644  add x26,x8,#0x4c
+00d59648  add x27,x8,#0x3c
+00d5964c  ldr x2,[x23]
+00d59650  add x8,sp,#0x70
+00d59654  mov x0,x20
+00d59658  mov w1,w21
+00d5965c  bl 0x01c89890
+00d59660  ldur q0,[x22, #0x2c]
+00d59664  ldp q2,q1,[sp, #0x80]
+00d59668  ldr q3,[sp, #0x70]
+00d5966c  ldr x3,[x25]
+00d59670  stur q0,[sp, #0x5c]
+00d59674  ldp q0,q4,[x26]
+00d59678  stp q2,q1,[sp, #0x40]
+00d5967c  stp q3,q2,[sp, #0x70]
+00d59680  ldur q1,[sp, #0x5c]
+00d59684  stp q4,q3,[sp, #0x20]
+00d59688  str q0,[sp, #0x10]
+00d5968c  ldr q0,[sp, #0x50]
+00d59690  ldp q4,q3,[sp, #0x10]
+00d59694  add x2,sp,#0x70
+00d59698  mov x0,x20
+00d5969c  mov w1,w21
+00d596a0  str q0,[sp, #0x90]
+00d596a4  stur q1,[x22, #0x2c]
+00d596a8  stp xzr,xzr,[x27]
+00d596ac  stp q4,q3,[x26]
+00d596b0  bl 0x01c898f4
+00d596b4  ldr w8,[x20, #0x18]
+00d596b8  add w21,w21,#0x1
+00d596bc  sub w8,w8,w24
+00d596c0  cmp w21,w8
+00d596c4  b.lt 0x00d5964c
+00d596c8  mov x0,x19
+00d596cc  mov x1,xzr
+00d596d0  bl 0x0259d54c
+00d596d4  mov x0,x19
+00d596d8  mov x1,x20
+00d596dc  mov x2,xzr
+00d596e0  bl 0x025aeb8c
+00d596e4  ldp x19,x30,[sp, #0x170]
+00d596e8  ldp x21,x20,[sp, #0x160]
+00d596ec  ldp x23,x22,[sp, #0x150]
+00d596f0  ldp x25,x24,[sp, #0x140]
+00d596f4  ldp x27,x26,[sp, #0x130]
+00d596f8  ldr x28,[sp, #0x120]
+00d596fc  ldp d9,d8,[sp, #0x110]
+00d59700  ldp d11,d10,[sp, #0x100]
+00d59704  ldp d13,d12,[sp, #0xf0]
+00d59708  ldp d15,d14,[sp, #0xe0]
+00d5970c  add sp,sp,#0x180
+00d59710  ret
+00d59714  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d59718_ToJShadow__.ctor.txt
+================================================================================
+Function: ToJShadow$$.ctor @ 00d59718
+
+--- Calls OUT ---
+  -> UnityEngine.UI.BaseMeshEffect$$.ctor @ 025af0fc
+
+--- Calls IN ---
+
+--- Listing ---
+00d59718  adrp x8,0x26db000
+00d5971c  adrp x9,0x26db000
+00d59720  ldr q0,[x8, #0x710]
+00d59724  ldr d1,[x9, #0x720]
+00d59728  mov w8,#0x1
+00d5972c  mov x1,xzr
+00d59730  str q0,[x0, #0x20]
+00d59734  str d1,[x0, #0x30]
+00d59738  strb w8,[x0, #0x38]
+00d5973c  b 0x025af0fc
+
+
+================================================================================
+### FILE: 00d59740_ToJShadow__get_effectColor.txt
+================================================================================
+Function: ToJShadow$$get_effectColor @ 00d59740
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d59740  ldp s0,s1,[x0, #0x20]
+00d59744  ldp s2,s3,[x0, #0x28]
+00d59748  ret
+
+
+================================================================================
+### FILE: 00d5974c_ToJShadow__set_effectColor.txt
+================================================================================
+Function: ToJShadow$$set_effectColor @ 00d5974c
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d5974c  stp d11,d10,[sp, #-0x40]!
+00d59750  stp d9,d8,[sp, #0x10]
+00d59754  stp x21,x20,[sp, #0x20]
+00d59758  stp x19,x30,[sp, #0x30]
+00d5975c  adrp x21,0x3571000
+00d59760  adrp x20,0x3321000
+00d59764  ldrb w8,[x21, #0xe74]
+00d59768  ldr x20,[x20, #0xca8]
+00d5976c  mov v8.16B,v3.16B
+00d59770  mov v9.16B,v2.16B
+00d59774  mov v10.16B,v1.16B
+00d59778  mov v11.16B,v0.16B
+00d5977c  mov x19,x0
+00d59780  tbnz w8,#0x0,0x00d59798
+00d59784  adrp x0,0x3321000
+00d59788  ldr x0,[x0, #0xca8]
+00d5978c  bl 0x00b0789c
+00d59790  mov w8,#0x1
+00d59794  strb w8,[x21, #0xe74]
+00d59798  mov x0,x19
+00d5979c  mov x1,xzr
+00d597a0  stp s11,s10,[x19, #0x20]
+00d597a4  stp s9,s8,[x19, #0x28]
+00d597a8  bl 0x025aeccc
+00d597ac  ldr x8,[x20]
+00d597b0  mov x20,x0
+00d597b4  ldr w9,[x8, #0xe0]
+00d597b8  cbnz w9,0x00d597c4
+00d597bc  mov x0,x8
+00d597c0  bl 0x00b0798c
+00d597c4  mov x0,x20
+00d597c8  mov x1,xzr
+00d597cc  mov x2,xzr
+00d597d0  bl 0x024de30c
+00d597d4  tbz w0,#0x0,0x00d59808
+00d597d8  mov x0,x19
+00d597dc  mov x1,xzr
+00d597e0  bl 0x025aeccc
+00d597e4  cbz x0,0x00d5981c
+00d597e8  ldr x8,[x0]
+00d597ec  ldp x19,x30,[sp, #0x30]
+00d597f0  ldp x21,x20,[sp, #0x20]
+00d597f4  ldp d9,d8,[sp, #0x10]
+00d597f8  ldr x2,[x8, #0x2f8]
+00d597fc  ldr x1,[x8, #0x300]
+00d59800  ldp d11,d10,[sp], #0x40
+00d59804  br x2
+00d59808  ldp x19,x30,[sp, #0x30]
+00d5980c  ldp x21,x20,[sp, #0x20]
+00d59810  ldp d9,d8,[sp, #0x10]
+00d59814  ldp d11,d10,[sp], #0x40
+00d59818  ret
+00d5981c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d59820_ToJShadow__get_effectDistance.txt
+================================================================================
+Function: ToJShadow$$get_effectDistance @ 00d59820
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d59820  ldp s0,s1,[x0, #0x30]
+00d59824  ret
+
+
+================================================================================
+### FILE: 00d59828_ToJShadow__set_effectDistance.txt
+================================================================================
+Function: ToJShadow$$set_effectDistance @ 00d59828
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d59828  stp d9,d8,[sp, #-0x30]!
+00d5982c  str x20,[sp, #0x10]
+00d59830  stp x19,x30,[sp, #0x20]
+00d59834  adrp x20,0x3571000
+00d59838  ldrb w8,[x20, #0xe75]
+00d5983c  mov v8.16B,v1.16B
+00d59840  mov v9.16B,v0.16B
+00d59844  mov x19,x0
+00d59848  tbnz w8,#0x0,0x00d59860
+00d5984c  adrp x0,0x3321000
+00d59850  ldr x0,[x0, #0xca8]
+00d59854  bl 0x00b0789c
+00d59858  mov w8,#0x1
+00d5985c  strb w8,[x20, #0xe75]
+00d59860  mov w8,#0x44160000
+00d59864  ldp s2,s3,[x19, #0x30]
+00d59868  fmov s0,w8
+00d5986c  mov w8,#0xc4160000
+00d59870  fmin s1,s9,s0
+00d59874  fmin s0,s8,s0
+00d59878  fmov s4,w8
+00d5987c  adrp x8,0x26db000
+00d59880  fmax s1,s1,s4
+00d59884  fmax s0,s0,s4
+00d59888  ldr s4,[x8, #0x294]
+00d5988c  fsub s2,s2,s1
+00d59890  fsub s3,s3,s0
+00d59894  fmul s2,s2,s2
+00d59898  fmul s3,s3,s3
+00d5989c  fadd s2,s2,s3
+00d598a0  fcmp s2,s4
+00d598a4  b.mi 0x00d59918
+00d598a8  adrp x20,0x3321000
+00d598ac  ldr x20,[x20, #0xca8]
+00d598b0  mov x0,x19
+00d598b4  mov x1,xzr
+00d598b8  stp s1,s0,[x19, #0x30]
+00d598bc  bl 0x025aeccc
+00d598c0  ldr x8,[x20]
+00d598c4  mov x20,x0
+00d598c8  ldr w9,[x8, #0xe0]
+00d598cc  cbnz w9,0x00d598d8
+00d598d0  mov x0,x8
+00d598d4  bl 0x00b0798c
+00d598d8  mov x0,x20
+00d598dc  mov x1,xzr
+00d598e0  mov x2,xzr
+00d598e4  bl 0x024de30c
+00d598e8  tbz w0,#0x0,0x00d59918
+00d598ec  mov x0,x19
+00d598f0  mov x1,xzr
+00d598f4  bl 0x025aeccc
+00d598f8  cbz x0,0x00d59928
+00d598fc  ldr x8,[x0]
+00d59900  ldp x19,x30,[sp, #0x20]
+00d59904  ldr x20,[sp, #0x10]
+00d59908  ldr x2,[x8, #0x2f8]
+00d5990c  ldr x1,[x8, #0x300]
+00d59910  ldp d9,d8,[sp], #0x30
+00d59914  br x2
+00d59918  ldp x19,x30,[sp, #0x20]
+00d5991c  ldr x20,[sp, #0x10]
+00d59920  ldp d9,d8,[sp], #0x30
+00d59924  ret
+00d59928  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d5992c_ToJShadow__get_useGraphicAlpha.txt
+================================================================================
+Function: ToJShadow$$get_useGraphicAlpha @ 00d5992c
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00d5992c  ldrb w0,[x0, #0x38]
+00d59930  ret
+
+
+================================================================================
+### FILE: 00d59934_ToJShadow__set_useGraphicAlpha.txt
+================================================================================
+Function: ToJShadow$$set_useGraphicAlpha @ 00d59934
+
+--- Calls OUT ---
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> UnityEngine.UI.BaseMeshEffect$$get_graphic @ 025aeccc
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00d59934  str x22,[sp, #-0x30]!
+00d59938  stp x21,x20,[sp, #0x10]
+00d5993c  stp x19,x30,[sp, #0x20]
+00d59940  adrp x22,0x3571000
+00d59944  adrp x20,0x3321000
+00d59948  ldrb w8,[x22, #0xe76]
+00d5994c  ldr x20,[x20, #0xca8]
+00d59950  mov x19,x0
+00d59954  and w21,w1,#0x1
+00d59958  tbnz w8,#0x0,0x00d59970
+00d5995c  adrp x0,0x3321000
+00d59960  ldr x0,[x0, #0xca8]
+00d59964  bl 0x00b0789c
+00d59968  mov w8,#0x1
+00d5996c  strb w8,[x22, #0xe76]
+00d59970  mov x0,x19
+00d59974  mov x1,xzr
+00d59978  strb w21,[x19, #0x38]
+00d5997c  bl 0x025aeccc
+00d59980  ldr x8,[x20]
+00d59984  mov x20,x0
+00d59988  ldr w9,[x8, #0xe0]
+00d5998c  cbnz w9,0x00d59998
+00d59990  mov x0,x8
+00d59994  bl 0x00b0798c
+00d59998  mov x0,x20
+00d5999c  mov x1,xzr
+00d599a0  mov x2,xzr
+00d599a4  bl 0x024de30c
+00d599a8  tbz w0,#0x0,0x00d599d8
+00d599ac  mov x0,x19
+00d599b0  mov x1,xzr
+00d599b4  bl 0x025aeccc
+00d599b8  cbz x0,0x00d599e8
+00d599bc  ldr x8,[x0]
+00d599c0  ldp x19,x30,[sp, #0x20]
+00d599c4  ldp x21,x20,[sp, #0x10]
+00d599c8  ldr x2,[x8, #0x2f8]
+00d599cc  ldr x1,[x8, #0x300]
+00d599d0  ldr x22,[sp], #0x30
+00d599d4  br x2
+00d599d8  ldp x19,x30,[sp, #0x20]
+00d599dc  ldp x21,x20,[sp, #0x10]
+00d599e0  ldr x22,[sp], #0x30
+00d599e4  ret
+00d599e8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d599ec_ToJShadow__ApplyShadowZeroAlloc.txt
+================================================================================
+Function: ToJShadow$$ApplyShadowZeroAlloc @ 00d599ec
+
+--- Calls OUT ---
+  -> System.Collections.Generic.List<UIVertex>$$set_Item @ 01c898f4
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<UIVertex>$$get_Capacity @ 01c896c0
+  -> System.Collections.Generic.List<UIVertex>$$set_Capacity @ 01c896dc
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.List<UIVertex>$$get_Item @ 01c89890
+
+--- Calls IN ---
+  <- ToJShadow$$ApplyShadow @ 00d59cf0
+
+--- Listing ---
+00d599ec  sub sp,sp,#0x1c0
+00d599f0  stp d11,d10,[sp, #0x140]
+00d599f4  stp d9,d8,[sp, #0x150]
+00d599f8  stp x28,x27,[sp, #0x160]
+00d599fc  stp x26,x25,[sp, #0x170]
+00d59a00  stp x24,x23,[sp, #0x180]
+00d59a04  stp x22,x21,[sp, #0x190]
+00d59a08  stp x20,x19,[sp, #0x1a0]
+00d59a0c  stp x29,x30,[sp, #0x1b0]
+00d59a10  adrp x24,0x3571000
+00d59a14  ldrb w8,[x24, #0xe77]
+00d59a18  mov v8.16B,v1.16B
+00d59a1c  mov v9.16B,v0.16B
+00d59a20  mov w19,w4
+00d59a24  mov w20,w3
+00d59a28  mov x23,x2
+00d59a2c  mov x21,x1
+00d59a30  mov x22,x0
+00d59a34  tbnz w8,#0x0,0x00d59a88
+00d59a38  adrp x0,0x330e000
+00d59a3c  ldr x0,[x0, #0xc68]
+00d59a40  bl 0x00b0789c
+00d59a44  adrp x0,0x334e000
+00d59a48  ldr x0,[x0, #0x788]
+00d59a4c  bl 0x00b0789c
+00d59a50  adrp x0,0x3343000
+00d59a54  ldr x0,[x0, #0x138]
+00d59a58  bl 0x00b0789c
+00d59a5c  adrp x0,0x3352000
+00d59a60  ldr x0,[x0, #0x130]
+00d59a64  bl 0x00b0789c
+00d59a68  adrp x0,0x335d000
+00d59a6c  ldr x0,[x0, #0x9b0]
+00d59a70  bl 0x00b0789c
+00d59a74  adrp x0,0x335b000
+00d59a78  ldr x0,[x0, #0x138]
+00d59a7c  bl 0x00b0789c
+00d59a80  mov w8,#0x1
+00d59a84  strb w8,[x24, #0xe77]
+00d59a88  movi v0.2D,#0x0
+00d59a8c  stp xzr,xzr,[sp, #0x50]
+00d59a90  str xzr,[sp, #0x60]
+00d59a94  str wzr,[sp, #0x68]
+00d59a98  stp q0,q0,[sp, #0x10]
+00d59a9c  stp q0,q0,[sp, #0x30]
+00d59aa0  cbz x21,0x00d59cec
+00d59aa4  adrp x8,0x334e000
+00d59aa8  ldr x8,[x8, #0x788]
+00d59aac  ldr w24,[x21, #0x18]
+00d59ab0  mov x0,x21
+00d59ab4  ldr x1,[x8]
+00d59ab8  bl 0x01c896c0
+00d59abc  cmp w0,w24, LSL #0x1
+00d59ac0  b.ge 0x00d59adc
+00d59ac4  adrp x8,0x335d000
+00d59ac8  ldr x8,[x8, #0x9b0]
+00d59acc  lsl w1,w24,#0x1
+00d59ad0  mov x0,x21
+00d59ad4  ldr x2,[x8]
+00d59ad8  bl 0x01c896dc
+00d59adc  cmp w20,w19
+00d59ae0  b.ge 0x00d59cc4
+00d59ae4  adrp x25,0x3352000
+00d59ae8  ldr x25,[x25, #0x130]
+00d59aec  add x8,sp,#0xd0
+00d59af0  add x24,sp,#0xb0
+00d59af4  lsr w28,w23,#0x18
+00d59af8  and w23,w23,#0xffffff
+00d59afc  add x29,x8,#0xc
+00d59b00  add x26,x8,#0x2c
+00d59b04  ldr x2,[x25]
+00d59b08  add x8,sp,#0xd0
+00d59b0c  mov x0,x21
+00d59b10  mov w1,w20
+00d59b14  bl 0x01c89890
+00d59b18  ldur q0,[x29, #0xc]
+00d59b1c  ldr q1,[x29]
+00d59b20  ldp q2,q3,[x26]
+00d59b24  adrp x10,0x330e000
+00d59b28  stur q0,[sp, #0x5c]
+00d59b2c  str q1,[sp, #0x50]
+00d59b30  ldp q0,q1,[x26, #0x20]
+00d59b34  stp q2,q3,[sp, #0x10]
+00d59b38  ldp q2,q3,[sp, #0x10]
+00d59b3c  ldp s11,s10,[sp, #0xd0]
+00d59b40  stp q0,q1,[sp, #0x30]
+00d59b44  ldr q0,[sp, #0x50]
+00d59b48  ldur q1,[sp, #0x5c]
+00d59b4c  stp q2,q3,[sp, #0x70]
+00d59b50  ldr w8,[sp, #0xf8]
+00d59b54  str q0,[sp, #0xb0]
+00d59b58  stur q1,[x24, #0xc]
+00d59b5c  ldp q1,q0,[sp, #0x30]
+00d59b60  ldr w27,[sp, #0xd8]
+00d59b64  stp q1,q0,[sp, #0x90]
+00d59b68  ldr w11,[x21, #0x1c]
+00d59b6c  ldr x9,[x21, #0x10]
+00d59b70  ldr x10,[x10, #0xc68]
+00d59b74  add w11,w11,#0x1
+00d59b78  ldr x10,[x10]
+00d59b7c  str w11,[x21, #0x1c]
+00d59b80  cbz x9,0x00d59cec
+00d59b84  ldrsw x11,[x21, #0x18]
+00d59b88  ldr w12,[x9, #0x18]
+00d59b8c  cmp w11,w12
+00d59b90  b.cs 0x00d59bdc
+00d59b94  mov w12,#0x6c
+00d59b98  add w10,w11,#0x1
+00d59b9c  madd x9,x11,x12,x9
+00d59ba0  str w10,[x21, #0x18]
+00d59ba4  stp s11,s10,[x9, #0x20]
+00d59ba8  str w27,[x9, #0x28]
+00d59bac  ldur q0,[x24, #0xc]
+00d59bb0  ldr q1,[sp, #0xb0]
+00d59bb4  str w8,[x9, #0x48]
+00d59bb8  stur q0,[x9, #0x38]
+00d59bbc  stur q1,[x9, #0x2c]
+00d59bc0  ldp q1,q0,[sp, #0x90]
+00d59bc4  ldp q3,q2,[sp, #0x70]
+00d59bc8  stur q0,[x9, #0x7c]
+00d59bcc  stur q1,[x9, #0x6c]
+00d59bd0  stur q2,[x9, #0x5c]
+00d59bd4  stur q3,[x9, #0x4c]
+00d59bd8  b 0x00d59c28
+00d59bdc  ldr x9,[x10, #0x20]
+00d59be0  ldp q2,q0,[sp, #0xa0]
+00d59be4  ldur q1,[x24, #0xc]
+00d59be8  add x1,sp,#0xd0
+00d59bec  ldr x9,[x9, #0xc0]
+00d59bf0  mov x0,x21
+00d59bf4  ldr x10,[x9, #0x58]
+00d59bf8  ldr x10,[x10, #0x8]
+00d59bfc  stp s11,s10,[sp, #0xd0]
+00d59c00  str w27,[sp, #0xd8]
+00d59c04  stur q1,[x29, #0xc]
+00d59c08  str q0,[x29]
+00d59c0c  ldp q0,q3,[sp, #0x80]
+00d59c10  ldr q1,[sp, #0x70]
+00d59c14  str w8,[sp, #0xf8]
+00d59c18  stp q3,q2,[x26, #0x20]
+00d59c1c  stp q1,q0,[x26]
+00d59c20  ldr x2,[x9, #0x58]
+00d59c24  blr x10
+00d59c28  ldrb w9,[x22, #0x38]
+00d59c2c  fadd s11,s11,s9
+00d59c30  fadd s10,s10,s8
+00d59c34  mov w8,w28
+00d59c38  cbz w9,0x00d59c68
+00d59c3c  ldr x2,[x25]
+00d59c40  add x8,sp,#0xd0
+00d59c44  mov x0,x21
+00d59c48  mov w1,w20
+00d59c4c  bl 0x01c89890
+00d59c50  ldrb w8,[sp, #0xfb]
+00d59c54  mov w9,#0x8081
+00d59c58  movk w9,#0x8080, LSL #16
+00d59c5c  mul w8,w28,w8
+00d59c60  umull x8,w8,w9
+00d59c64  lsr x8,x8,#0x27
+00d59c68  str w27,[sp, #0xd8]
+00d59c6c  adrp x10,0x335b000
+00d59c70  ldr x10,[x10, #0x138]
+00d59c74  ldur q0,[sp, #0x5c]
+00d59c78  ldp q2,q1,[sp, #0x40]
+00d59c7c  stp s11,s10,[sp, #0xd0]
+00d59c80  ldr x3,[x10]
+00d59c84  stur q0,[x29, #0xc]
+00d59c88  str q1,[x29]
+00d59c8c  ldp q0,q3,[sp, #0x20]
+00d59c90  ldr q1,[sp, #0x10]
+00d59c94  mov w9,w23
+00d59c98  bfm w9,w8,#0x8,#0x7
+00d59c9c  add x2,sp,#0xd0
+00d59ca0  mov x0,x21
+00d59ca4  mov w1,w20
+00d59ca8  str w9,[sp, #0xf8]
+00d59cac  stp q3,q2,[x26, #0x20]
+00d59cb0  stp q1,q0,[x26]
+00d59cb4  bl 0x01c898f4
+00d59cb8  add w20,w20,#0x1
+00d59cbc  cmp w19,w20
+00d59cc0  b.ne 0x00d59b04
+00d59cc4  ldp x29,x30,[sp, #0x1b0]
+00d59cc8  ldp x20,x19,[sp, #0x1a0]
+00d59ccc  ldp x22,x21,[sp, #0x190]
+00d59cd0  ldp x24,x23,[sp, #0x180]
+00d59cd4  ldp x26,x25,[sp, #0x170]
+00d59cd8  ldp x28,x27,[sp, #0x160]
+00d59cdc  ldp d9,d8,[sp, #0x150]
+00d59ce0  ldp d11,d10,[sp, #0x140]
+00d59ce4  add sp,sp,#0x1c0
+00d59ce8  ret
+00d59cec  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d59cf0_ToJShadow__ApplyShadow.txt
+================================================================================
+Function: ToJShadow$$ApplyShadow @ 00d59cf0
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<UIVertex>$$get_Capacity @ 01c896c0
+  -> System.Collections.Generic.List<UIVertex>$$set_Capacity @ 01c896dc
+  -> FUN_00b079b0 @ 00b079b0
+  -> ToJShadow$$ApplyShadowZeroAlloc @ 00d599ec
+
+--- Calls IN ---
+  <- ToJShadow$$ModifyMesh @ 00d59dcc
+
+--- Listing ---
+00d59cf0  stp d9,d8,[sp, #-0x50]!
+00d59cf4  str x24,[sp, #0x10]
+00d59cf8  stp x23,x22,[sp, #0x20]
+00d59cfc  stp x21,x20,[sp, #0x30]
+00d59d00  stp x19,x30,[sp, #0x40]
+00d59d04  adrp x24,0x3571000
+00d59d08  ldrb w8,[x24, #0xe78]
+00d59d0c  mov v8.16B,v1.16B
+00d59d10  mov v9.16B,v0.16B
+00d59d14  mov w19,w4
+00d59d18  mov w20,w3
+00d59d1c  mov x22,x2
+00d59d20  mov x21,x1
+00d59d24  mov x23,x0
+00d59d28  tbnz w8,#0x0,0x00d59d58
+00d59d2c  adrp x0,0x334e000
+00d59d30  ldr x0,[x0, #0x788]
+00d59d34  bl 0x00b0789c
+00d59d38  adrp x0,0x3343000
+00d59d3c  ldr x0,[x0, #0x138]
+00d59d40  bl 0x00b0789c
+00d59d44  adrp x0,0x335d000
+00d59d48  ldr x0,[x0, #0x9b0]
+00d59d4c  bl 0x00b0789c
+00d59d50  mov w8,#0x1
+00d59d54  strb w8,[x24, #0xe78]
+00d59d58  cbz x21,0x00d59dc8
+00d59d5c  adrp x8,0x334e000
+00d59d60  ldr x8,[x8, #0x788]
+00d59d64  ldr w24,[x21, #0x18]
+00d59d68  mov x0,x21
+00d59d6c  ldr x1,[x8]
+00d59d70  bl 0x01c896c0
+00d59d74  cmp w0,w24, LSL #0x1
+00d59d78  b.ge 0x00d59d94
+00d59d7c  adrp x8,0x335d000
+00d59d80  ldr x8,[x8, #0x9b0]
+00d59d84  lsl w1,w24,#0x1
+00d59d88  mov x0,x21
+00d59d8c  ldr x2,[x8]
+00d59d90  bl 0x01c896dc
+00d59d94  and x2,x22,#0xffffffff
+00d59d98  mov x0,x23
+00d59d9c  mov x1,x21
+00d59da0  mov w3,w20
+00d59da4  mov w4,w19
+00d59da8  ldp x19,x30,[sp, #0x40]
+00d59dac  ldp x21,x20,[sp, #0x30]
+00d59db0  ldp x23,x22,[sp, #0x20]
+00d59db4  ldr x24,[sp, #0x10]
+00d59db8  mov v0.16B,v9.16B
+00d59dbc  mov v1.16B,v8.16B
+00d59dc0  ldp d9,d8,[sp], #0x50
+00d59dc4  b 0x00d599ec
+00d59dc8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00d59dcc_ToJShadow__ModifyMesh.txt
+================================================================================
+Function: ToJShadow$$ModifyMesh @ 00d59dcc
+
+--- Calls OUT ---
+  -> UnityEngine.UI.VertexHelper$$AddUIVertexTriangleStream @ 025aeb8c
+  -> modf @ 008d41a0
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> UnityEngine.UI.VertexHelper$$GetUIVertexStream @ 025aebdc
+  -> UnityEngine.UI.VertexHelper$$Clear @ 0259d54c
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+  -> System.Collections.Generic.List<UIVertex>$$set_Item @ 01c898f4
+  -> ToJShadow$$ApplyShadow @ 00d59cf0
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> System.Collections.Generic.List<UIVertex>$$.ctor @ 01c89320
+  -> System.Collections.Generic.List<UIVertex>$$get_Item @ 01c89890
+  -> UnityEngine.Material$$get_shader @ 024d2d38
+  -> UnityEngine.Shader$$Find @ 024d2900
+  -> UnityEngine.Component$$GetComponent<object> @ 0176cbf8
+
+--- Calls IN ---
+
+--- Listing ---
+00d59dcc  sub sp,sp,#0x180
+00d59dd0  stp d15,d14,[sp, #0xe0]
+00d59dd4  stp d13,d12,[sp, #0xf0]
+00d59dd8  stp d11,d10,[sp, #0x100]
+00d59ddc  stp d9,d8,[sp, #0x110]
+00d59de0  str x28,[sp, #0x120]
+00d59de4  stp x27,x26,[sp, #0x130]
+00d59de8  stp x25,x24,[sp, #0x140]
+00d59dec  stp x23,x22,[sp, #0x150]
+00d59df0  stp x21,x20,[sp, #0x160]
+00d59df4  stp x19,x30,[sp, #0x170]
+00d59df8  adrp x20,0x3571000
+00d59dfc  ldrb w8,[x20, #0xe79]
+00d59e00  mov x19,x1
+00d59e04  mov x21,x0
+00d59e08  tbnz w8,#0x0,0x00d59e74
+00d59e0c  adrp x0,0x3378000
+00d59e10  ldr x0,[x0, #0x1e8]
+00d59e14  bl 0x00b0789c
+00d59e18  adrp x0,0x331a000
+00d59e1c  ldr x0,[x0, #0x450]
+00d59e20  bl 0x00b0789c
+00d59e24  adrp x0,0x3343000
+00d59e28  ldr x0,[x0, #0x138]
+00d59e2c  bl 0x00b0789c
+00d59e30  adrp x0,0x3352000
+00d59e34  ldr x0,[x0, #0x130]
+00d59e38  bl 0x00b0789c
+00d59e3c  adrp x0,0x335b000
+00d59e40  ldr x0,[x0, #0x138]
+00d59e44  bl 0x00b0789c
+00d59e48  adrp x0,0x3311000
+00d59e4c  ldr x0,[x0, #0x9f8]
+00d59e50  bl 0x00b0789c
+00d59e54  adrp x0,0x3321000
+00d59e58  ldr x0,[x0, #0xca8]
+00d59e5c  bl 0x00b0789c
+00d59e60  adrp x0,0x335d000
+00d59e64  ldr x0,[x0, #0xf38]
+00d59e68  bl 0x00b0789c
+00d59e6c  mov w8,#0x1
+00d59e70  strb w8,[x20, #0xe79]
+00d59e74  movi v0.2D,#0x0
+00d59e78  stp q0,q0,[sp, #0x30]
+00d59e7c  str q0,[sp, #0x50]
+00d59e80  stur q0,[sp, #0x5c]
+00d59e84  stp q0,q0,[sp, #0x10]
+00d59e88  ldr x8,[x21]
+00d59e8c  mov x0,x21
+00d59e90  ldp x9,x1,[x8, #0x1c8]
+00d59e94  blr x9
+00d59e98  tbz w0,#0x0,0x00d5a308
+00d59e9c  adrp x8,0x3311000
+00d59ea0  ldr x8,[x8, #0x9f8]
+00d59ea4  ldr x0,[x8]
+00d59ea8  bl 0x00b079a0
+00d59eac  cbz x0,0x00d5a338
+00d59eb0  adrp x8,0x331a000
+00d59eb4  ldr x8,[x8, #0x450]
+00d59eb8  mov x20,x0
+00d59ebc  ldr x1,[x8]
+00d59ec0  bl 0x01c89320
+00d59ec4  cbz x19,0x00d5a338
+00d59ec8  mov x0,x19
+00d59ecc  mov x1,x20
+00d59ed0  mov x2,xzr
+00d59ed4  bl 0x025aebdc
+00d59ed8  ldp s0,s11,[x21, #0x20]
+00d59edc  mov w8,#0x437f0000
+00d59ee0  fmov s8,0x3f800000
+00d59ee4  fmov s1,w8
+00d59ee8  fmin s2,s0,s8
+00d59eec  ldr w23,[x20, #0x18]
+00d59ef0  ldp s13,s10,[x21, #0x28]
+00d59ef4  fcmp s0,#0.0
+00d59ef8  fmul s0,s2,s1
+00d59efc  fmov s1,wzr
+00d59f00  fcsel s9,s0,s1,pl
+00d59f04  fcvt d0,s9
+00d59f08  add x0,sp,#0x70
+00d59f0c  bl 0x008d41a0
+00d59f10  fcmp s9,#0.0
+00d59f14  fmov d14,0x3fe0000000000000
+00d59f18  fmov d15,-0x4020000000000000
+00d59f1c  fmov s12,0xbf800000
+00d59f20  b.ge 0x00d59f40
+00d59f24  fcmp d0,d15
+00d59f28  b.ne 0x00d59f64
+00d59f2c  ldr d0,[sp, #0x70]
+00d59f30  fcvtzs x8,d0
+00d59f34  fcvt s0,d0
+00d59f38  fadd s1,s0,s12
+00d59f3c  b 0x00d59f58
+00d59f40  fcmp d0,d14
+00d59f44  b.ne 0x00d59f74
+00d59f48  ldr d0,[sp, #0x70]
+00d59f4c  fcvtzs x8,d0
+00d59f50  fcvt s0,d0
+00d59f54  fadd s1,s0,s8
+00d59f58  tst x8,#0x1
+00d59f5c  fcsel s9,s0,s1,eq
+00d59f60  b 0x00d59f80
+00d59f64  fmov s0,0xbf000000
+00d59f68  fadd s0,s9,s0
+00d59f6c  frintp s9,s0
+00d59f70  b 0x00d59f80
+00d59f74  fmov s0,0x3f000000
+00d59f78  fadd s0,s9,s0
+00d59f7c  frintm s9,s0
+00d59f80  mov w8,#0x437f0000
+00d59f84  fmin s0,s11,s8
+00d59f88  fmov s1,w8
+00d59f8c  fcmp s11,#0.0
+00d59f90  fmul s0,s0,s1
+00d59f94  fmov s1,wzr
+00d59f98  fcsel s11,s0,s1,pl
+00d59f9c  fcvt d0,s11
+00d59fa0  add x0,sp,#0x70
+00d59fa4  bl 0x008d41a0
+00d59fa8  fcmp s11,#0.0
+00d59fac  b.ge 0x00d59fcc
+00d59fb0  fcmp d0,d15
+00d59fb4  b.ne 0x00d59ff0
+00d59fb8  ldr d0,[sp, #0x70]
+00d59fbc  fcvtzs x8,d0
+00d59fc0  fcvt s0,d0
+00d59fc4  fadd s1,s0,s12
+00d59fc8  b 0x00d59fe4
+00d59fcc  fcmp d0,d14
+00d59fd0  b.ne 0x00d5a000
+00d59fd4  ldr d0,[sp, #0x70]
+00d59fd8  fcvtzs x8,d0
+00d59fdc  fcvt s0,d0
+00d59fe0  fadd s1,s0,s8
+00d59fe4  tst x8,#0x1
+00d59fe8  fcsel s11,s0,s1,eq
+00d59fec  b 0x00d5a00c
+00d59ff0  fmov s0,0xbf000000
+00d59ff4  fadd s0,s11,s0
+00d59ff8  frintp s11,s0
+00d59ffc  b 0x00d5a00c
+00d5a000  fmov s0,0x3f000000
+00d5a004  fadd s0,s11,s0
+00d5a008  frintm s11,s0
+00d5a00c  mov w8,#0x437f0000
+00d5a010  fmin s0,s13,s8
+00d5a014  fmov s1,w8
+00d5a018  fcmp s13,#0.0
+00d5a01c  fmul s0,s0,s1
+00d5a020  fmov s1,wzr
+00d5a024  fcsel s13,s0,s1,pl
+00d5a028  fcvt d0,s13
+00d5a02c  add x0,sp,#0x70
+00d5a030  bl 0x008d41a0
+00d5a034  fcmp s13,#0.0
+00d5a038  b.ge 0x00d5a058
+00d5a03c  fcmp d0,d15
+00d5a040  b.ne 0x00d5a07c
+00d5a044  ldr d0,[sp, #0x70]
+00d5a048  fcvtzs x8,d0
+00d5a04c  fcvt s0,d0
+00d5a050  fadd s1,s0,s12
+00d5a054  b 0x00d5a070
+00d5a058  fcmp d0,d14
+00d5a05c  b.ne 0x00d5a08c
+00d5a060  ldr d0,[sp, #0x70]
+00d5a064  fcvtzs x8,d0
+00d5a068  fcvt s0,d0
+00d5a06c  fadd s1,s0,s8
+00d5a070  tst x8,#0x1
+00d5a074  fcsel s13,s0,s1,eq
+00d5a078  b 0x00d5a098
+00d5a07c  fmov s0,0xbf000000
+00d5a080  fadd s0,s13,s0
+00d5a084  frintp s13,s0
+00d5a088  b 0x00d5a098
+00d5a08c  fmov s0,0x3f000000
+00d5a090  fadd s0,s13,s0
+00d5a094  frintm s13,s0
+00d5a098  mov w8,#0x437f0000
+00d5a09c  adrp x24,0x3378000
+00d5a0a0  adrp x22,0x3321000
+00d5a0a4  fmin s0,s10,s8
+00d5a0a8  fmov s1,w8
+00d5a0ac  ldr x24,[x24, #0x1e8]
+00d5a0b0  ldr x22,[x22, #0xca8]
+00d5a0b4  fcmp s10,#0.0
+00d5a0b8  fmul s0,s0,s1
+00d5a0bc  fmov s1,wzr
+00d5a0c0  fcsel s10,s0,s1,pl
+00d5a0c4  fcvt d0,s10
+00d5a0c8  add x0,sp,#0x70
+00d5a0cc  bl 0x008d41a0
+00d5a0d0  fcmp s10,#0.0
+00d5a0d4  b.ge 0x00d5a0f4
+00d5a0d8  fcmp d0,d15
+00d5a0dc  b.ne 0x00d5a118
+00d5a0e0  ldr d0,[sp, #0x70]
+00d5a0e4  fcvtzs x8,d0
+00d5a0e8  fcvt s0,d0
+00d5a0ec  fadd s1,s0,s12
+00d5a0f0  b 0x00d5a10c
+00d5a0f4  fcmp d0,d14
+00d5a0f8  b.ne 0x00d5a128
+00d5a0fc  ldr d0,[sp, #0x70]
+00d5a100  fcvtzs x8,d0
+00d5a104  fcvt s0,d0
+00d5a108  fadd s1,s0,s8
+00d5a10c  tst x8,#0x1
+00d5a110  fcsel s2,s0,s1,eq
+00d5a114  b 0x00d5a134
+00d5a118  fmov s0,0xbf000000
+00d5a11c  fadd s0,s10,s0
+00d5a120  frintp s2,s0
+00d5a124  b 0x00d5a134
+00d5a128  fmov s0,0x3f000000
+00d5a12c  fadd s0,s10,s0
+00d5a130  frintm s2,s0
+00d5a134  fcvtzs w8,s9
+00d5a138  fcmp s9,#0.0
+00d5a13c  fcvtzs w9,s11
+00d5a140  csel w8,w8,w8,mi
+00d5a144  fcmp s11,#0.0
+00d5a148  and x2,x8,#0xff
+00d5a14c  csel w8,w9,w9,mi
+00d5a150  fcvtzs w10,s13
+00d5a154  and x8,x8,#0xff
+00d5a158  fcmp s13,#0.0
+00d5a15c  fcvtzs w11,s2
+00d5a160  bfm x2,x8,#0x38,#0x7
+00d5a164  ldr w4,[x20, #0x18]
+00d5a168  ldp s0,s1,[x21, #0x30]
+00d5a16c  csel w8,w10,w10,mi
+00d5a170  fcmp s2,#0.0
+00d5a174  and x8,x8,#0xff
+00d5a178  csel w9,w11,w11,mi
+00d5a17c  and x9,x9,#0xff
+00d5a180  bfm x2,x8,#0x30,#0x7
+00d5a184  bfm x2,x9,#0x28,#0x7
+00d5a188  mov x0,x21
+00d5a18c  mov x1,x20
+00d5a190  mov w3,wzr
+00d5a194  bl 0x00d59cf0
+00d5a198  ldr x1,[x24]
+00d5a19c  mov x0,x21
+00d5a1a0  bl 0x0176cbf8
+00d5a1a4  ldr x8,[x22]
+00d5a1a8  mov x21,x0
+00d5a1ac  ldr w9,[x8, #0xe0]
+00d5a1b0  cbnz w9,0x00d5a1bc
+00d5a1b4  mov x0,x8
+00d5a1b8  bl 0x00b0798c
+00d5a1bc  mov x0,x21
+00d5a1c0  mov x1,xzr
+00d5a1c4  mov x2,xzr
+00d5a1c8  bl 0x024de30c
+00d5a1cc  tbz w0,#0x0,0x00d5a2ec
+00d5a1d0  cbz x21,0x00d5a338
+00d5a1d4  ldr x8,[x21]
+00d5a1d8  mov x0,x21
+00d5a1dc  ldr x9,[x8, #0x338]
+00d5a1e0  ldr x1,[x8, #0x340]
+00d5a1e4  blr x9
+00d5a1e8  cbz x0,0x00d5a338
+00d5a1ec  adrp x21,0x335d000
+00d5a1f0  ldr x21,[x21, #0xf38]
+00d5a1f4  mov x1,xzr
+00d5a1f8  bl 0x024d2d38
+00d5a1fc  ldr x8,[x21]
+00d5a200  mov x21,x0
+00d5a204  mov x1,xzr
+00d5a208  mov x0,x8
+00d5a20c  bl 0x024d2900
+00d5a210  ldr x8,[x22]
+00d5a214  mov x22,x0
+00d5a218  ldr w9,[x8, #0xe0]
+00d5a21c  cbnz w9,0x00d5a228
+00d5a220  mov x0,x8
+00d5a224  bl 0x00b0798c
+00d5a228  mov x0,x21
+00d5a22c  mov x1,x22
+00d5a230  mov x2,xzr
+00d5a234  bl 0x024c8180
+00d5a238  tbz w0,#0x0,0x00d5a2ec
+00d5a23c  ldr w8,[x20, #0x18]
+00d5a240  sub w8,w8,w23
+00d5a244  cmp w8,#0x1
+00d5a248  b.lt 0x00d5a2ec
+00d5a24c  adrp x24,0x3352000
+00d5a250  adrp x25,0x335b000
+00d5a254  ldr x24,[x24, #0x130]
+00d5a258  ldr x25,[x25, #0x138]
+00d5a25c  add x8,sp,#0x70
+00d5a260  mov w21,wzr
+00d5a264  add x22,sp,#0x70
+00d5a268  add x26,x8,#0x4c
+00d5a26c  add x27,x8,#0x3c
+00d5a270  ldr x2,[x24]
+00d5a274  add x8,sp,#0x70
+00d5a278  mov x0,x20
+00d5a27c  mov w1,w21
+00d5a280  bl 0x01c89890
+00d5a284  ldur q0,[x22, #0x2c]
+00d5a288  ldp q2,q1,[sp, #0x80]
+00d5a28c  ldr q3,[sp, #0x70]
+00d5a290  ldr x3,[x25]
+00d5a294  stur q0,[sp, #0x5c]
+00d5a298  ldp q0,q4,[x26]
+00d5a29c  stp q2,q1,[sp, #0x40]
+00d5a2a0  stp q3,q2,[sp, #0x70]
+00d5a2a4  ldur q1,[sp, #0x5c]
+00d5a2a8  stp q4,q3,[sp, #0x20]
+00d5a2ac  str q0,[sp, #0x10]
+00d5a2b0  ldr q0,[sp, #0x50]
+00d5a2b4  ldp q4,q3,[sp, #0x10]
+00d5a2b8  add x2,sp,#0x70
+00d5a2bc  mov x0,x20
+00d5a2c0  mov w1,w21
+00d5a2c4  str q0,[sp, #0x90]
+00d5a2c8  stur q1,[x22, #0x2c]
+00d5a2cc  stp xzr,xzr,[x27]
+00d5a2d0  stp q4,q3,[x26]
+00d5a2d4  bl 0x01c898f4
+00d5a2d8  ldr w8,[x20, #0x18]
+00d5a2dc  add w21,w21,#0x1
+00d5a2e0  sub w8,w8,w23
+00d5a2e4  cmp w21,w8
+00d5a2e8  b.lt 0x00d5a270
+00d5a2ec  mov x0,x19
+00d5a2f0  mov x1,xzr
+00d5a2f4  bl 0x0259d54c
+00d5a2f8  mov x0,x19
+00d5a2fc  mov x1,x20
+00d5a300  mov x2,xzr
+00d5a304  bl 0x025aeb8c
+00d5a308  ldp x19,x30,[sp, #0x170]
+00d5a30c  ldp x21,x20,[sp, #0x160]
+00d5a310  ldp x23,x22,[sp, #0x150]
+00d5a314  ldp x25,x24,[sp, #0x140]
+00d5a318  ldp x27,x26,[sp, #0x130]
+00d5a31c  ldr x28,[sp, #0x120]
+00d5a320  ldp d9,d8,[sp, #0x110]
+00d5a324  ldp d11,d10,[sp, #0x100]
+00d5a328  ldp d13,d12,[sp, #0xf0]
+00d5a32c  ldp d15,d14,[sp, #0xe0]
+00d5a330  add sp,sp,#0x180
+00d5a334  ret
+00d5a338  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00df2c20_TollgateData__get_terrianType.txt
+================================================================================
+Function: TollgateData$$get_terrianType @ 00df2c20
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c20  ldr w0,[x0, #0x74]
+00df2c24  ret
+
+
+================================================================================
+### FILE: 00df2c28_TollgateData__get_playerPosition.txt
+================================================================================
+Function: TollgateData$$get_playerPosition @ 00df2c28
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c28  ldr x0,[x0, #0x78]
+00df2c2c  ret
+
+
+================================================================================
+### FILE: 00df2c30_TollgateData__get_friendlyPosition.txt
+================================================================================
+Function: TollgateData$$get_friendlyPosition @ 00df2c30
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c30  ldr x0,[x0, #0x80]
+00df2c34  ret
+
+
+================================================================================
+### FILE: 00df2c38_TollgateData__get_neutralPosition.txt
+================================================================================
+Function: TollgateData$$get_neutralPosition @ 00df2c38
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c38  ldr x0,[x0, #0x88]
+00df2c3c  ret
+
+
+================================================================================
+### FILE: 00df2c40_TollgateData__get_sceneMonitor.txt
+================================================================================
+Function: TollgateData$$get_sceneMonitor @ 00df2c40
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c40  ldr x0,[x0, #0x90]
+00df2c44  ret
+
+
+================================================================================
+### FILE: 00df2c48_TollgateData__get_monsterPosition.txt
+================================================================================
+Function: TollgateData$$get_monsterPosition @ 00df2c48
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c48  ldr x0,[x0, #0x98]
+00df2c4c  ret
+
+
+================================================================================
+### FILE: 00df2c50_TollgateData__get_terrianIDs.txt
+================================================================================
+Function: TollgateData$$get_terrianIDs @ 00df2c50
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c50  ldr x0,[x0, #0xa0]
+00df2c54  ret
+
+
+================================================================================
+### FILE: 00df2c58_TollgateData__get_terrianProp.txt
+================================================================================
+Function: TollgateData$$get_terrianProp @ 00df2c58
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c58  ldr x0,[x0, #0xa8]
+00df2c5c  ret
+
+
+================================================================================
+### FILE: 00df2c60_TollgateData__get_randProp.txt
+================================================================================
+Function: TollgateData$$get_randProp @ 00df2c60
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c60  ldr x0,[x0, #0xb0]
+00df2c64  ret
+
+
+================================================================================
+### FILE: 00df2c68_TollgateData__get_victoryCondition.txt
+================================================================================
+Function: TollgateData$$get_victoryCondition @ 00df2c68
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c68  ldr x0,[x0, #0xb8]
+00df2c6c  ret
+
+
+================================================================================
+### FILE: 00df2c70_TollgateData__get_fail.txt
+================================================================================
+Function: TollgateData$$get_fail @ 00df2c70
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c70  ldr x0,[x0, #0xc0]
+00df2c74  ret
+
+
+================================================================================
+### FILE: 00df2c78_TollgateData__get_round.txt
+================================================================================
+Function: TollgateData$$get_round @ 00df2c78
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c78  ldr w0,[x0, #0xc8]
+00df2c7c  ret
+
+
+================================================================================
+### FILE: 00df2c80_TollgateData__get_roundResults.txt
+================================================================================
+Function: TollgateData$$get_roundResults @ 00df2c80
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c80  ldr w0,[x0, #0xcc]
+00df2c84  ret
+
+
+================================================================================
+### FILE: 00df2c88_TollgateData__get_sceneSkilleff.txt
+================================================================================
+Function: TollgateData$$get_sceneSkilleff @ 00df2c88
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c88  ldr x0,[x0, #0xd0]
+00df2c8c  ret
+
+
+================================================================================
+### FILE: 00df2c90_TollgateData__get_backgroundMusic.txt
+================================================================================
+Function: TollgateData$$get_backgroundMusic @ 00df2c90
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c90  ldr w0,[x0, #0xd8]
+00df2c94  ret
+
+
+================================================================================
+### FILE: 00df2c98_TollgateData__get_itemPackageId.txt
+================================================================================
+Function: TollgateData$$get_itemPackageId @ 00df2c98
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2c98  ldr x0,[x0, #0xe0]
+00df2c9c  ret
+
+
+================================================================================
+### FILE: 00df2ca0_TollgateData__get_bossBurstPointPicture.txt
+================================================================================
+Function: TollgateData$$get_bossBurstPointPicture @ 00df2ca0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2ca0  ldr x0,[x0, #0xe8]
+00df2ca4  ret
+
+
+================================================================================
+### FILE: 00df2ca8_TollgateData__get_bossIds.txt
+================================================================================
+Function: TollgateData$$get_bossIds @ 00df2ca8
+
+--- Calls OUT ---
+
+--- Calls IN ---
+
+--- Listing ---
+00df2ca8  ldr x0,[x0, #0xf0]
+00df2cac  ret
+
+
+================================================================================
+### FILE: 00df2cb0_TollgateData__.ctor.txt
+================================================================================
+Function: TollgateData$$.ctor @ 00df2cb0
+
+--- Calls OUT ---
+  -> BaseData$$.ctor @ 00ded6c8
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.TollgateDataWrap$$__CreateInstance @ 0144712c
+
+--- Listing ---
+00df2cb0  b 0x00ded6c8
+
+
+================================================================================
+### FILE: 00df2cb4_TollgateRecord__.ctor.txt
+================================================================================
+Function: TollgateRecord$$.ctor @ 00df2cb4
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> UnityEngine.ScriptableObject$$.ctor @ 024e277c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+
+--- Listing ---
+00df2cb4  stp x21,x20,[sp, #-0x20]!
+00df2cb8  stp x19,x30,[sp, #0x10]
+00df2cbc  adrp x20,0x3572000
+00df2cc0  adrp x21,0x3347000
+00df2cc4  ldrb w8,[x20, #0x47c]
+00df2cc8  ldr x21,[x21, #0x4d8]
+00df2ccc  mov x19,x0
+00df2cd0  tbnz w8,#0x0,0x00df2cf4
+00df2cd4  adrp x0,0x3373000
+00df2cd8  ldr x0,[x0, #0x260]
+00df2cdc  bl 0x00b0789c
+00df2ce0  adrp x0,0x3347000
+00df2ce4  ldr x0,[x0, #0x4d8]
+00df2ce8  bl 0x00b0789c
+00df2cec  mov w8,#0x1
+00df2cf0  strb w8,[x20, #0x47c]
+00df2cf4  ldr x0,[x21]
+00df2cf8  bl 0x00b079a0
+00df2cfc  cbz x0,0x00df2d38
+00df2d00  adrp x8,0x3373000
+00df2d04  ldr x8,[x8, #0x260]
+00df2d08  mov x20,x0
+00df2d0c  ldr x1,[x8]
+00df2d10  bl 0x01bffe10
+00df2d14  mov x0,x19
+00df2d18  str x20,[x0, #0x18]!
+00df2d1c  mov x1,x20
+00df2d20  bl 0x00b07850
+00df2d24  mov x0,x19
+00df2d28  ldp x19,x30,[sp, #0x10]
+00df2d2c  mov x1,xzr
+00df2d30  ldp x21,x20,[sp], #0x20
+00df2d34  b 0x024e277c
+00df2d38  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e33868_ToggleChildExt__Awake.txt
+================================================================================
+Function: ToggleChildExt$$Awake @ 00e33868
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.GameObject$$GetComponent<object> @ 01794e94
+  -> FUN_00b079b0 @ 00b079b0
+  -> ToggleExt$$Reg @ 00e3391c
+
+--- Calls IN ---
+
+--- Listing ---
+00e33868  stp x21,x20,[sp, #-0x20]!
+00e3386c  stp x19,x30,[sp, #0x10]
+00e33870  adrp x20,0x3572000
+00e33874  adrp x21,0x3362000
+00e33878  ldrb w8,[x20, #0x78e]
+00e3387c  ldr x21,[x21, #0x7d8]
+00e33880  mov x19,x0
+00e33884  tbnz w8,#0x0,0x00e338a8
+00e33888  adrp x0,0x3372000
+00e3388c  ldr x0,[x0, #0x2a0]
+00e33890  bl 0x00b0789c
+00e33894  adrp x0,0x3362000
+00e33898  ldr x0,[x0, #0x7d8]
+00e3389c  bl 0x00b0789c
+00e338a0  mov w8,#0x1
+00e338a4  strb w8,[x20, #0x78e]
+00e338a8  ldr x8,[x21]
+00e338ac  ldr x8,[x8, #0xb8]
+00e338b0  ldr x0,[x8]
+00e338b4  cbz x0,0x00e338cc
+00e338b8  mov x1,x19
+00e338bc  ldp x19,x30,[sp, #0x10]
+00e338c0  mov x2,xzr
+00e338c4  ldp x21,x20,[sp], #0x20
+00e338c8  b 0x01060dac
+00e338cc  mov x0,x19
+00e338d0  mov x1,xzr
+00e338d4  bl 0x024e4ed4
+00e338d8  cbz x0,0x00e33918
+00e338dc  adrp x8,0x3372000
+00e338e0  ldr x8,[x8, #0x2a0]
+00e338e4  ldr x1,[x8]
+00e338e8  bl 0x01794e94
+00e338ec  mov x20,x19
+00e338f0  str x0,[x20, #0x28]!
+00e338f4  mov x1,x0
+00e338f8  mov x0,x20
+00e338fc  bl 0x00b07850
+00e33900  ldur x0,[x20, #-0x10]
+00e33904  cbz x0,0x00e33918
+00e33908  mov x1,x19
+00e3390c  ldp x19,x30,[sp, #0x10]
+00e33910  ldp x21,x20,[sp], #0x20
+00e33914  b 0x00e3391c
+00e33918  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e3391c_ToggleExt__Reg.txt
+================================================================================
+Function: ToggleExt$$Reg @ 00e3391c
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> System.Collections.Generic.List<object>$$Contains @ 01c00a80
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ToggleExtWrap$$_m_Reg @ 014469e4
+  <- ToggleChildExt$$Awake @ 00e33868
+
+--- Listing ---
+00e3391c  str x22,[sp, #-0x30]!
+00e33920  stp x21,x20,[sp, #0x10]
+00e33924  stp x19,x30,[sp, #0x20]
+00e33928  adrp x21,0x3572000
+00e3392c  adrp x22,0x3337000
+00e33930  ldrb w8,[x21, #0x794]
+00e33934  ldr x22,[x22, #0xf48]
+00e33938  mov x19,x1
+00e3393c  mov x20,x0
+00e33940  tbnz w8,#0x0,0x00e33970
+00e33944  adrp x0,0x3335000
+00e33948  ldr x0,[x0, #0x190]
+00e3394c  bl 0x00b0789c
+00e33950  adrp x0,0x334b000
+00e33954  ldr x0,[x0, #0x850]
+00e33958  bl 0x00b0789c
+00e3395c  adrp x0,0x3337000
+00e33960  ldr x0,[x0, #0xf48]
+00e33964  bl 0x00b0789c
+00e33968  mov w8,#0x1
+00e3396c  strb w8,[x21, #0x794]
+00e33970  ldr x8,[x22]
+00e33974  ldr x8,[x8, #0xb8]
+00e33978  ldr x0,[x8, #0x8]
+00e3397c  cbz x0,0x00e3399c
+00e33980  mov x1,x20
+00e33984  mov x2,x19
+00e33988  ldp x19,x30,[sp, #0x20]
+00e3398c  ldp x21,x20,[sp, #0x10]
+00e33990  mov x3,xzr
+00e33994  ldr x22,[sp], #0x30
+00e33998  b 0x0106125c
+00e3399c  ldr x0,[x20, #0x18]
+00e339a0  cbz x0,0x00e33a50
+00e339a4  adrp x8,0x334b000
+00e339a8  ldr x8,[x8, #0x850]
+00e339ac  mov x1,x19
+00e339b0  ldr x2,[x8]
+00e339b4  bl 0x01c00a80
+00e339b8  tbz w0,#0x0,0x00e339cc
+00e339bc  ldp x19,x30,[sp, #0x20]
+00e339c0  ldp x21,x20,[sp, #0x10]
+00e339c4  ldr x22,[sp], #0x30
+00e339c8  ret
+00e339cc  ldr x0,[x20, #0x18]
+00e339d0  cbz x0,0x00e33a50
+00e339d4  adrp x9,0x3335000
+00e339d8  ldr x9,[x9, #0x190]
+00e339dc  ldr w10,[x0, #0x1c]
+00e339e0  ldr x8,[x0, #0x10]
+00e339e4  ldr x9,[x9]
+00e339e8  add w10,w10,#0x1
+00e339ec  str w10,[x0, #0x1c]
+00e339f0  cbz x8,0x00e33a50
+00e339f4  ldrsw x10,[x0, #0x18]
+00e339f8  ldr w11,[x8, #0x18]
+00e339fc  cmp w10,w11
+00e33a00  b.cs 0x00e33a2c
+00e33a04  add w9,w10,#0x1
+00e33a08  add x8,x8,x10, LSL #0x3
+00e33a0c  str w9,[x0, #0x18]
+00e33a10  str x19,[x8, #0x20]!
+00e33a14  mov x1,x19
+00e33a18  ldp x19,x30,[sp, #0x20]
+00e33a1c  ldp x21,x20,[sp, #0x10]
+00e33a20  mov x0,x8
+00e33a24  ldr x22,[sp], #0x30
+00e33a28  b 0x00b07850
+00e33a2c  ldr x8,[x9, #0x20]
+00e33a30  mov x1,x19
+00e33a34  ldp x19,x30,[sp, #0x20]
+00e33a38  ldp x21,x20,[sp, #0x10]
+00e33a3c  ldr x8,[x8, #0xc0]
+00e33a40  ldr x2,[x8, #0x58]
+00e33a44  ldr x3,[x2, #0x8]
+00e33a48  ldr x22,[sp], #0x30
+00e33a4c  br x3
+00e33a50  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e33a54_ToggleChildExt__Start.txt
+================================================================================
+Function: ToggleChildExt$$Start @ 00e33a54
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00e33a54  stp x21,x20,[sp, #-0x20]!
+00e33a58  stp x19,x30,[sp, #0x10]
+00e33a5c  adrp x20,0x3572000
+00e33a60  adrp x21,0x3362000
+00e33a64  ldrb w8,[x20, #0x78f]
+00e33a68  ldr x21,[x21, #0x7d8]
+00e33a6c  mov x19,x0
+00e33a70  tbnz w8,#0x0,0x00e33a88
+00e33a74  adrp x0,0x3362000
+00e33a78  ldr x0,[x0, #0x7d8]
+00e33a7c  bl 0x00b0789c
+00e33a80  mov w8,#0x1
+00e33a84  strb w8,[x20, #0x78f]
+00e33a88  ldr x8,[x21]
+00e33a8c  ldr x8,[x8, #0xb8]
+00e33a90  ldr x0,[x8, #0x8]
+00e33a94  cbz x0,0x00e33aac
+00e33a98  mov x1,x19
+00e33a9c  ldp x19,x30,[sp, #0x10]
+00e33aa0  mov x2,xzr
+00e33aa4  ldp x21,x20,[sp], #0x20
+00e33aa8  b 0x01060dac
+00e33aac  ldp x19,x30,[sp, #0x10]
+00e33ab0  ldp x21,x20,[sp], #0x20
+00e33ab4  ret
+
+
+================================================================================
+### FILE: 00e33ab8_ToggleChildExt__OnPointerClick.txt
+================================================================================
+Function: ToggleChildExt$$OnPointerClick @ 00e33ab8
+
+--- Calls OUT ---
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> ToggleExt$$OnClick @ 00e33b40
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ToggleChildExtWrap$$_m_OnPointerClick @ 0144571c
+
+--- Listing ---
+00e33ab8  str x22,[sp, #-0x30]!
+00e33abc  stp x21,x20,[sp, #0x10]
+00e33ac0  stp x19,x30,[sp, #0x20]
+00e33ac4  adrp x21,0x3572000
+00e33ac8  adrp x22,0x3362000
+00e33acc  ldrb w8,[x21, #0x790]
+00e33ad0  ldr x22,[x22, #0x7d8]
+00e33ad4  mov x20,x1
+00e33ad8  mov x19,x0
+00e33adc  tbnz w8,#0x0,0x00e33af4
+00e33ae0  adrp x0,0x3362000
+00e33ae4  ldr x0,[x0, #0x7d8]
+00e33ae8  bl 0x00b0789c
+00e33aec  mov w8,#0x1
+00e33af0  strb w8,[x21, #0x790]
+00e33af4  ldr x8,[x22]
+00e33af8  ldr x8,[x8, #0xb8]
+00e33afc  ldr x0,[x8, #0x10]
+00e33b00  cbz x0,0x00e33b20
+00e33b04  mov x1,x19
+00e33b08  mov x2,x20
+00e33b0c  ldp x19,x30,[sp, #0x20]
+00e33b10  ldp x21,x20,[sp, #0x10]
+00e33b14  mov x3,xzr
+00e33b18  ldr x22,[sp], #0x30
+00e33b1c  b 0x0106125c
+00e33b20  ldr x0,[x19, #0x18]
+00e33b24  cbz x0,0x00e33b3c
+00e33b28  mov x1,x19
+00e33b2c  ldp x19,x30,[sp, #0x20]
+00e33b30  ldp x21,x20,[sp, #0x10]
+00e33b34  ldr x22,[sp], #0x30
+00e33b38  b 0x00e33b40
+00e33b3c  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e33b40_ToggleExt__OnClick.txt
+================================================================================
+Function: ToggleExt$$OnClick @ 00e33b40
+
+--- Calls OUT ---
+  -> ToggleChildExt$$ShowActive @ 00e33d38
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> UnityEngine.Component$$get_gameObject @ 024e4ed4
+  -> System.Collections.Generic.List<object>$$GetEnumerator @ 01c01338
+  -> System.Collections.Generic.List.Enumerator<object>$$Dispose @ 01a070e8
+  -> UnityEngine.GameObject$$get_activeInHierarchy @ 024de8ec
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp14 @ 0106125c
+  -> System.Collections.Generic.List.Enumerator<object>$$MoveNext @ 01a070ec
+  -> UnityEngine.Object$$op_Equality @ 024c8180
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ToggleExtWrap$$_m_OnClick @ 01446c68
+  <- ToggleChildExt$$OnPointerClick @ 00e33ab8
+
+--- Listing ---
+00e33b40  sub sp,sp,#0x70
+00e33b44  stp x23,x22,[sp, #0x40]
+00e33b48  stp x21,x20,[sp, #0x50]
+00e33b4c  stp x19,x30,[sp, #0x60]
+00e33b50  adrp x22,0x3572000
+00e33b54  adrp x21,0x3337000
+00e33b58  ldrb w8,[x22, #0x795]
+00e33b5c  ldr x21,[x21, #0xf48]
+00e33b60  mov x19,x1
+00e33b64  mov x20,x0
+00e33b68  tbnz w8,#0x0,0x00e33bbc
+00e33b6c  adrp x0,0x3367000
+00e33b70  ldr x0,[x0, #0x1a0]
+00e33b74  bl 0x00b0789c
+00e33b78  adrp x0,0x3340000
+00e33b7c  ldr x0,[x0, #0xf08]
+00e33b80  bl 0x00b0789c
+00e33b84  adrp x0,0x333d000
+00e33b88  ldr x0,[x0, #0x498]
+00e33b8c  bl 0x00b0789c
+00e33b90  adrp x0,0x3331000
+00e33b94  ldr x0,[x0, #0x468]
+00e33b98  bl 0x00b0789c
+00e33b9c  adrp x0,0x3321000
+00e33ba0  ldr x0,[x0, #0xca8]
+00e33ba4  bl 0x00b0789c
+00e33ba8  adrp x0,0x3337000
+00e33bac  ldr x0,[x0, #0xf48]
+00e33bb0  bl 0x00b0789c
+00e33bb4  mov w8,#0x1
+00e33bb8  strb w8,[x22, #0x795]
+00e33bbc  ldr x8,[x21]
+00e33bc0  stp xzr,xzr,[sp, #0x28]
+00e33bc4  str xzr,[sp, #0x20]
+00e33bc8  ldr x8,[x8, #0xb8]
+00e33bcc  ldr x0,[x8, #0x10]
+00e33bd0  cbz x0,0x00e33be8
+00e33bd4  mov x1,x20
+00e33bd8  mov x2,x19
+00e33bdc  mov x3,xzr
+00e33be0  bl 0x0106125c
+00e33be4  b 0x00e33c9c
+00e33be8  ldr x0,[x20, #0x18]
+00e33bec  cbz x0,0x00e33cb8
+00e33bf0  adrp x8,0x3331000
+00e33bf4  ldr x8,[x8, #0x468]
+00e33bf8  adrp x22,0x3340000
+00e33bfc  adrp x23,0x3321000
+00e33c00  adrp x21,0x3367000
+00e33c04  ldr x1,[x8]
+00e33c08  ldr x22,[x22, #0xf08]
+00e33c0c  ldr x23,[x23, #0xca8]
+00e33c10  ldr x21,[x21, #0x1a0]
+00e33c14  add x8,sp,#0x8
+00e33c18  bl 0x01c01338
+00e33c1c  ldur q0,[sp, #0x8]
+00e33c20  ldr x8,[sp, #0x18]
+00e33c24  str q0,[sp, #0x20]
+00e33c28  str x8,[sp, #0x30]
+00e33c2c  ldr x1,[x22]
+00e33c30  add x0,sp,#0x20
+    ; [PRE] try { // try from 00e33c30 to 00e33c37 has its CatchHandler @ 00e33cd4
+00e33c34  bl 0x01a070ec
+    ; [POST] } // end try from 00e33c30 to 00e33c37
+00e33c38  tbz w0,#0x0,0x00e33c90
+00e33c3c  ldr x20,[sp, #0x30]
+00e33c40  cbz x20,0x00e33cb0
+00e33c44  mov x0,x20
+    ; [PRE] try { // try from 00e33c44 to 00e33c4f has its CatchHandler @ 00e33cc8
+00e33c48  mov x1,xzr
+00e33c4c  bl 0x024e4ed4
+    ; [POST] } // end try from 00e33c44 to 00e33c4f
+00e33c50  cbz x0,0x00e33cb4
+00e33c54  mov x1,xzr
+    ; [PRE] try { // try from 00e33c54 to 00e33c5b has its CatchHandler @ 00e33ccc
+00e33c58  bl 0x024de8ec
+    ; [POST] } // end try from 00e33c54 to 00e33c5b
+00e33c5c  tbz w0,#0x0,0x00e33c2c
+00e33c60  ldr x0,[x23]
+00e33c64  ldr w8,[x0, #0xe0]
+00e33c68  cbnz w8,0x00e33c70
+00e33c6c  bl 0x00b0798c
+    ; [PRE] try { // try from 00e33c6c to 00e33c6f has its CatchHandler @ 00e33cc4
+    ; [POST] } // end try from 00e33c6c to 00e33c6f
+00e33c70  mov x0,x20
+    ; [PRE] try { // try from 00e33c70 to 00e33c8b has its CatchHandler @ 00e33cd0
+00e33c74  mov x1,x19
+00e33c78  mov x2,xzr
+00e33c7c  bl 0x024c8180
+00e33c80  and w1,w0,#0x1
+00e33c84  mov x0,x20
+00e33c88  bl 0x00e33d38
+    ; [POST] } // end try from 00e33c70 to 00e33c8b
+00e33c8c  b 0x00e33c2c
+00e33c90  ldr x1,[x21]
+00e33c94  add x0,sp,#0x20
+00e33c98  bl 0x01a070e8
+00e33c9c  ldp x19,x30,[sp, #0x60]
+00e33ca0  ldp x21,x20,[sp, #0x50]
+00e33ca4  ldp x23,x22,[sp, #0x40]
+00e33ca8  add sp,sp,#0x70
+00e33cac  ret
+00e33cb0  bl 0x00b079b0
+    ; [PRE] try { // try from 00e33cb0 to 00e33cb3 has its CatchHandler @ 00e33cc0
+    ; [POST] } // end try from 00e33cb0 to 00e33cb3
+00e33cb4  bl 0x00b079b0
+    ; [PRE] try { // try from 00e33cb4 to 00e33cb7 has its CatchHandler @ 00e33cbc
+    ; [POST] } // end try from 00e33cb4 to 00e33cb7
+00e33cb8  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e33d38_ToggleChildExt__ShowActive.txt
+================================================================================
+Function: ToggleChildExt$$ShowActive @ 00e33d38
+
+--- Calls OUT ---
+  -> AliothExtensions$$SetActiveCheck @ 00e13880
+  -> thunk_FUN_00aac4e0 @ 00b0798c
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> UnityEngine.Object$$op_Inequality @ 024de30c
+  -> FUN_00b079b0 @ 00b079b0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp15 @ 010613e4
+
+--- Calls IN ---
+  <- ToggleExt$$OnClick @ 00e33b40
+  <- XLua.CSObjectWrap.ToggleChildExtWrap$$_m_ShowActive @ 014459a0
+
+--- Listing ---
+00e33d38  str x22,[sp, #-0x30]!
+00e33d3c  stp x21,x20,[sp, #0x10]
+00e33d40  stp x19,x30,[sp, #0x20]
+00e33d44  adrp x21,0x3572000
+00e33d48  adrp x22,0x3362000
+00e33d4c  ldrb w8,[x21, #0x791]
+00e33d50  ldr x22,[x22, #0x7d8]
+00e33d54  mov w19,w1
+00e33d58  mov x20,x0
+00e33d5c  tbnz w8,#0x0,0x00e33d8c
+00e33d60  adrp x0,0x3348000
+00e33d64  ldr x0,[x0, #0x138]
+00e33d68  bl 0x00b0789c
+00e33d6c  adrp x0,0x3321000
+00e33d70  ldr x0,[x0, #0xca8]
+00e33d74  bl 0x00b0789c
+00e33d78  adrp x0,0x3362000
+00e33d7c  ldr x0,[x0, #0x7d8]
+00e33d80  bl 0x00b0789c
+00e33d84  mov w8,#0x1
+00e33d88  strb w8,[x21, #0x791]
+00e33d8c  ldr x8,[x22]
+00e33d90  ldr x8,[x8, #0xb8]
+00e33d94  ldr x0,[x8, #0x18]
+00e33d98  cbz x0,0x00e33db8
+00e33d9c  and w2,w19,#0x1
+00e33da0  mov x1,x20
+00e33da4  ldp x19,x30,[sp, #0x20]
+00e33da8  ldp x21,x20,[sp, #0x10]
+00e33dac  mov x3,xzr
+00e33db0  ldr x22,[sp], #0x30
+00e33db4  b 0x010613e4
+00e33db8  adrp x22,0x3321000
+00e33dbc  ldr x22,[x22, #0xca8]
+00e33dc0  ldr x21,[x20, #0x20]
+00e33dc4  ldr x0,[x22]
+00e33dc8  ldr w8,[x0, #0xe0]
+00e33dcc  cbnz w8,0x00e33dd4
+00e33dd0  bl 0x00b0798c
+00e33dd4  mov x0,x21
+00e33dd8  mov x1,xzr
+00e33ddc  mov x2,xzr
+00e33de0  bl 0x024de30c
+00e33de4  tbz w0,#0x0,0x00e33e14
+00e33de8  adrp x8,0x3348000
+00e33dec  ldr x8,[x8, #0x138]
+00e33df0  ldr x21,[x20, #0x20]
+00e33df4  ldr x0,[x8]
+00e33df8  ldr w8,[x0, #0xe0]
+00e33dfc  cbnz w8,0x00e33e04
+00e33e00  bl 0x00b0798c
+00e33e04  and w1,w19,#0x1
+00e33e08  mov x0,x21
+00e33e0c  mov x2,xzr
+00e33e10  bl 0x00e13880
+00e33e14  ldr x0,[x22]
+00e33e18  ldr x21,[x20, #0x28]
+00e33e1c  ldr w8,[x0, #0xe0]
+00e33e20  cbnz w8,0x00e33e28
+00e33e24  bl 0x00b0798c
+00e33e28  mov x0,x21
+00e33e2c  mov x1,xzr
+00e33e30  mov x2,xzr
+00e33e34  bl 0x024de30c
+00e33e38  tbz w0,#0x0,0x00e33e68
+00e33e3c  ldr x0,[x20, #0x28]
+00e33e40  cbz x0,0x00e33e78
+00e33e44  ldr x8,[x0]
+00e33e48  ldp x21,x20,[sp, #0x10]
+00e33e4c  ldr x3,[x8, #0x2c8]
+00e33e50  ldr x2,[x8, #0x2d0]
+00e33e54  mvn w8,w19
+00e33e58  ldp x19,x30,[sp, #0x20]
+00e33e5c  and w1,w8,#0x1
+00e33e60  ldr x22,[sp], #0x30
+00e33e64  br x3
+00e33e68  ldp x19,x30,[sp, #0x20]
+00e33e6c  ldp x21,x20,[sp, #0x10]
+00e33e70  ldr x22,[sp], #0x30
+00e33e74  ret
+00e33e78  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 00e33e7c_ToggleChildExt__.ctor.txt
+================================================================================
+Function: ToggleChildExt$$.ctor @ 00e33e7c
+
+--- Calls OUT ---
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ToggleChildExtWrap$$__CreateInstance @ 01445564
+
+--- Listing ---
+00e33e7c  stp x21,x20,[sp, #-0x20]!
+00e33e80  stp x19,x30,[sp, #0x10]
+00e33e84  adrp x21,0x3572000
+00e33e88  adrp x20,0x3362000
+00e33e8c  ldrb w8,[x21, #0x792]
+00e33e90  ldr x20,[x20, #0x7d8]
+00e33e94  mov x19,x0
+00e33e98  tbnz w8,#0x0,0x00e33eb0
+00e33e9c  adrp x0,0x3362000
+00e33ea0  ldr x0,[x0, #0x7d8]
+00e33ea4  bl 0x00b0789c
+00e33ea8  mov w8,#0x1
+00e33eac  strb w8,[x21, #0x792]
+00e33eb0  mov x0,x19
+00e33eb4  mov x1,xzr
+00e33eb8  bl 0x024e45bc
+00e33ebc  ldr x8,[x20]
+00e33ec0  ldr x8,[x8, #0xb8]
+00e33ec4  ldr x0,[x8, #0x20]
+00e33ec8  cbz x0,0x00e33ee0
+00e33ecc  mov x1,x19
+00e33ed0  ldp x19,x30,[sp, #0x10]
+00e33ed4  mov x2,xzr
+00e33ed8  ldp x21,x20,[sp], #0x20
+00e33edc  b 0x01060dac
+00e33ee0  ldp x19,x30,[sp, #0x10]
+00e33ee4  ldp x21,x20,[sp], #0x20
+00e33ee8  ret
+
+
+================================================================================
+### FILE: 00e33eec_ToggleExt__Start.txt
+================================================================================
+Function: ToggleExt$$Start @ 00e33eec
+
+--- Calls OUT ---
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+
+--- Calls IN ---
+
+--- Listing ---
+00e33eec  stp x21,x20,[sp, #-0x20]!
+00e33ef0  stp x19,x30,[sp, #0x10]
+00e33ef4  adrp x20,0x3572000
+00e33ef8  adrp x21,0x3337000
+00e33efc  ldrb w8,[x20, #0x793]
+00e33f00  ldr x21,[x21, #0xf48]
+00e33f04  mov x19,x0
+00e33f08  tbnz w8,#0x0,0x00e33f20
+00e33f0c  adrp x0,0x3337000
+00e33f10  ldr x0,[x0, #0xf48]
+00e33f14  bl 0x00b0789c
+00e33f18  mov w8,#0x1
+00e33f1c  strb w8,[x20, #0x793]
+00e33f20  ldr x8,[x21]
+00e33f24  ldr x8,[x8, #0xb8]
+00e33f28  ldr x0,[x8]
+00e33f2c  cbz x0,0x00e33f44
+00e33f30  mov x1,x19
+00e33f34  ldp x19,x30,[sp, #0x10]
+00e33f38  mov x2,xzr
+00e33f3c  ldp x21,x20,[sp], #0x20
+00e33f40  b 0x01060dac
+00e33f44  ldp x19,x30,[sp, #0x10]
+00e33f48  ldp x21,x20,[sp], #0x20
+00e33f4c  ret
+
+
+================================================================================
+### FILE: 00e33f50_ToggleExt__.ctor.txt
+================================================================================
+Function: ToggleExt$$.ctor @ 00e33f50
+
+--- Calls OUT ---
+  -> thunk_FUN_00b381bc @ 00b07850
+  -> UnityEngine.MonoBehaviour$$.ctor @ 024e45bc
+  -> thunk_FUN_00ace75c @ 00b079a0
+  -> XLua.DelegateBridge$$__Gen_Delegate_Imp11 @ 01060dac
+  -> thunk_FUN_00ab76dc @ 00b0789c
+  -> System.Collections.Generic.List<object>$$.ctor @ 01bffe10
+  -> FUN_00b079b0 @ 00b079b0
+
+--- Calls IN ---
+  <- XLua.CSObjectWrap.ToggleExtWrap$$__CreateInstance @ 0144682c
+
+--- Listing ---
+00e33f50  stp x21,x20,[sp, #-0x20]!
+00e33f54  stp x19,x30,[sp, #0x10]
+00e33f58  adrp x20,0x3572000
+00e33f5c  adrp x21,0x3318000
+00e33f60  ldrb w8,[x20, #0x796]
+00e33f64  ldr x21,[x21, #0xdf8]
+00e33f68  mov x19,x0
+00e33f6c  tbnz w8,#0x0,0x00e33f9c
+00e33f70  adrp x0,0x3346000
+00e33f74  ldr x0,[x0, #0x640]
+00e33f78  bl 0x00b0789c
+00e33f7c  adrp x0,0x3318000
+00e33f80  ldr x0,[x0, #0xdf8]
+00e33f84  bl 0x00b0789c
+00e33f88  adrp x0,0x3337000
+00e33f8c  ldr x0,[x0, #0xf48]
+00e33f90  bl 0x00b0789c
+00e33f94  mov w8,#0x1
+00e33f98  strb w8,[x20, #0x796]
+00e33f9c  ldr x0,[x21]
+00e33fa0  bl 0x00b079a0
+00e33fa4  cbz x0,0x00e34010
+00e33fa8  adrp x8,0x3346000
+00e33fac  ldr x8,[x8, #0x640]
+00e33fb0  adrp x21,0x3337000
+00e33fb4  mov x20,x0
+00e33fb8  ldr x1,[x8]
+00e33fbc  ldr x21,[x21, #0xf48]
+00e33fc0  bl 0x01bffe10
+00e33fc4  mov x0,x19
+00e33fc8  str x20,[x0, #0x18]!
+00e33fcc  mov x1,x20
+00e33fd0  bl 0x00b07850
+00e33fd4  mov x0,x19
+00e33fd8  mov x1,xzr
+00e33fdc  bl 0x024e45bc
+00e33fe0  ldr x8,[x21]
+00e33fe4  ldr x8,[x8, #0xb8]
+00e33fe8  ldr x0,[x8, #0x18]
+00e33fec  cbz x0,0x00e34004
+00e33ff0  mov x1,x19
+00e33ff4  ldp x19,x30,[sp, #0x10]
+00e33ff8  mov x2,xzr
+00e33ffc  ldp x21,x20,[sp], #0x20
+00e34000  b 0x01060dac
+00e34004  ldp x19,x30,[sp, #0x10]
+00e34008  ldp x21,x20,[sp], #0x20
+00e3400c  ret
+00e34010  bl 0x00b079b0
+
+
+================================================================================
+### FILE: 03799048_toupper.txt
+================================================================================
+Function: toupper @ 03799048
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- toupper @ 008d3aa0
+
+--- Listing ---
+03799048  ?? ??
+
+
+================================================================================
+### FILE: 03799218_towlower.txt
+================================================================================
+Function: towlower @ 03799218
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- towlower @ 008d4250
+
+--- Listing ---
+03799218  ?? ??
+
+
+================================================================================
+### FILE: 03799558_tolower.txt
+================================================================================
+Function: tolower @ 03799558
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- tolower @ 008d4e90
+
+--- Listing ---
+03799558  ?? ??
+
+
+================================================================================
+### FILE: 037998f0_towupper.txt
+================================================================================
+Function: towupper @ 037998f0
+
+--- Calls OUT ---
+
+--- Calls IN ---
+  <- towupper @ 008d5c40
+
+--- Listing ---
+037998f0  ?? ??
+
+
