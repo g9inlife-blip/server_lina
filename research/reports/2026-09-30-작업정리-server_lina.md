@@ -147,9 +147,13 @@ research/
 - [ ] 실제 클라이언트로 로컬 서버 테스트
 
 ### Phase 2 — URL 리다이렉트
-- [x] `ServerConst.GetURL` 후킹 코드 추가 (v4.8)
-- [ ] Frida로 URL 리다이렉트 테스트
-- [ ] 로컬 서버로 로그인 시도
+- [x] `ServerConst.GetURL` 후킹 코드 추가 (v4.9)
+- [x] Frida로 URL 리다이렉트 테스트 성공
+- [x] **로컬 서버로 로그인 성공** (2026-09-30)
+  - `API_Allin1` → 로컬 서버 (0xc8)
+  - `API_Login` → 로컬 서버 (0xc8)
+  - `SaveLoginToken` 호출 확인 (더미 토큰 저장)
+- [ ] 게임 서버 (KCP) 연결 테스트
 
 ### Phase 3 — KCP 게임 서버
 - [ ] DH64 키교환 구현 (`p=2^64-59`)
