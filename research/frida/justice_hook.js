@@ -1,7 +1,7 @@
 /**
- * JusticeSchool (com.Alioth.JusticeSchool.cn) - Login Hook Script v4.9
+ * JusticeSchool (com.Alioth.JusticeSchool.cn) - Login Hook Script v4.10
  *
- * v4.9: ServerConst.GetURL 리다이렉트 (로컬 서버로 URL 교체)
+ * v4.10: 게임 서버 연결 후킹 (CSBehaviour.Connect, RequestOp, NetworkCenter.Send)
  *
  * NO frida-il2cpp-bridge, NO frida-compile needed.
  * Resolves IL2CPP exports by parsing /proc/self/maps + ELF directly,
@@ -1061,9 +1061,64 @@ async function main() {
         }
     } catch (e) { console.log('[!] ServerConst.GetURL hook failed: ' + e.message); }
 
+    // ===== 게임 서버 연결 후킹 (KCP) =====
+    try {
+        // CSBehaviour.Connect - 게임 서버 연결
+        const connect = findMethodAnywhere('CSBehaviour', 'Connect', 3);
+        if (connect && !connect.isNull()) {
+            console.log('[+] Hooking CSBehaviour.Connect @ ' + connect);
+            Interceptor.attach(connect, {
+                onEnter(args) {
+                    try {
+                        const host = readIl2cppString(args[1]);
+                        const port = args[2].toInt32();
+                        console.log('\n[GAME_CONN] CSBehaviour.Connect');
+                        console.log('  host: ' + host);
+                        console.log('  port: ' + port);
+                        // 로컬 서버로 리다이렉트 (포트 8000)
+                        if (port === 8000) {
+                            console.log('  [REDIRECT] 게임 서버 → 127.0.0.1:8000');
+                        }
+                    } catch (e) {}
+                }
+            });
+            hookCount++;
+        }
+
+        // CSBehaviour.RequestOp - opcode 전송
+        const requestOp = findMethodAnywhere('CSBehaviour', 'RequestOp', 1);
+        if (requestOp && !requestOp.isNull()) {
+            console.log('[+] Hooking CSBehaviour.RequestOp @ ' + requestOp);
+            Interceptor.attach(requestOp, {
+                onEnter(args) {
+                    try {
+                        // OpInfo 구조 파싱 시도
+                        console.log('\n[OPCODE] CSBehaviour.RequestOp called');
+                        console.log('  args[0]: ' + args[0]);
+                    } catch (e) {}
+                }
+            });
+            hookCount++;
+        }
+
+        // NetworkCenter.Send - raw 전송
+        const netSend = findMethodAnywhere('NetworkCenter', 'Send', 1);
+        if (netSend && !netSend.isNull()) {
+            console.log('[+] Hooking NetworkCenter.Send @ ' + netSend);
+            Interceptor.attach(netSend, {
+                onEnter(args) {
+                    try {
+                        console.log('[NET_SEND] NetworkCenter.Send called');
+                    } catch (e) {}
+                }
+            });
+            hookCount++;
+        }
+    } catch (e) { console.log('[!] 게임 서버 후킹 실패: ' + e.message); }
+
     console.log(`\n[*] ${hookCount} hooks installed.`);
     console.log('[*] Trigger login, then make a real game API request after login.');
-    console.log('[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], [HTTP_SEND], [HTTP_RESP], and [SERVER_URL] lines.\n');
+    console.log('[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], [HTTP_SEND], [HTTP_RESP], [SERVER_URL], [GAME_CONN], [OPCODE] lines.\n');
 }
 
 main();

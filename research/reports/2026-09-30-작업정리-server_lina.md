@@ -209,11 +209,15 @@ research/
 - **서빙 파일**: `app/update_data/` (235MB, 업데이트분)
 - **참고**: APK 기본 1.4GB는 설치 시 포함, 업데이트분만 서빙
 
-### Frida 후킹 (v4.9)
+### Frida 후킹 (v4.10)
 - `ServerConst.GetURL(1 arg)` 후킹
 - `il2cpp_string_new`로 새 URL 문자열 생성
 - `retval.replace()`로 반환값 교체
 - `URL_MAP`에서 매핑된 키만 리다이렉트
+- **v4.10 신규**: 게임 서버 연결 후킹
+  - `CSBehaviour.Connect` — 게임 서버 연결 시도 로깅
+  - `CSBehaviour.RequestOp` — opcode 전송 로깅
+  - `NetworkCenter.Send` — raw 전송 로깅
 
 ## 9. 참고 자료
 
