@@ -144,7 +144,7 @@ research/
 - [x] HTTP 요청/응답 캡처
 - [x] 로그인 응답 mock 구현
 - [x] 서버 로컬 테스트 (sign 검증 버그 수정: `keep_blank_values=True`)
-- [ ] 실제 클라이언트로 로컬 서버 테스트
+- [x] 실제 클라이언트로 로컬 서버 테스트 성공 (2026-09-30)
 
 ### Phase 2 — URL 리다이렉트
 - [x] `ServerConst.GetURL` 후킹 코드 추가 (v4.9)
@@ -153,6 +153,10 @@ research/
   - `API_Allin1` → 로컬 서버 (0xc8)
   - `API_Login` → 로컬 서버 (0xc8)
   - `SaveLoginToken` 호출 확인 (더미 토큰 저장)
+- [x] CDN 로컬 서빙 추가 (2026-09-30)
+  - `app/routes/cdn.py` — 에셋번들 서빙
+  - AllInOne 응답에 로컬 CDN URL 포함
+  - `app/update_data/` — 업데이트 파일 235MB
 - [ ] 게임 서버 (KCP) 연결 테스트
 
 ### Phase 3 — KCP 게임 서버
@@ -180,7 +184,33 @@ research/
 - **수정**: `parse_qsl(..., keep_blank_values=True)`
 - **파일**: `app/routes/login.py`
 
-## 8. 참고 자료
+## 8. URL 리다이렉트 현황 (2026-09-30)
+
+### 리다이렉트 중 (로컬 서버)
+| 키 | 로컬 경로 |
+|----|----------|
+| API_Login | `http://127.0.0.1:8888/api/v5/account/login` |
+| API_Anon | `http://127.0.0.1:8888/api/v3/account/anon` |
+| API_Allin1 | `http://127.0.0.1:8888/api/v3/ain1` |
+
+### 실제 서버 유지
+- `NoticeURL` → `https://ac.aliother.com/v3/notice`
+- 결제 관련 (`API_Pay`, `API_ApplePayVerify` 등) → 실제 서버
+- 이유: 게임 플레이에 불필요, 나중에 목업 예정
+
+### CDN
+- **방식**: AllInOne 응답의 `Assets[0].CDN`을 로컬로 변경
+- **로컬 경로**: `http://127.0.0.1:8888/cdn/v310/202608022111/`
+- **서빙 파일**: `app/update_data/` (235MB, 업데이트분)
+- **참고**: APK 기본 1.4GB는 설치 시 포함, 업데이트분만 서빙
+
+### Frida 후킹 (v4.9)
+- `ServerConst.GetURL(1 arg)` 후킹
+- `il2cpp_string_new`로 새 URL 문자열 생성
+- `retval.replace()`로 반환값 교체
+- `URL_MAP`에서 매핑된 키만 리다이렉트
+
+## 9. 참고 자료
 
 - Sign 알고리즘: `research/reports/2026-09-29-Sign-알고리즘-런타임-검증.md`
 - GetDefaultParams: `research/reports/2026-09-29-GetDefaultParams-helper-정적분석.md`
