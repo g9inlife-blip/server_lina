@@ -1,0 +1,242 @@
+# 실제 데이터 참조 그래프 분석 결과
+
+- 분석 대상: C:\Users\USER\Documents\GitHub\arme\참고용-unity-behavior-data\MonoBehaviour
+- JSON: 74개
+- Record: 118015개
+- 고유 ID: 118015개
+- 검증된 참조: 118539개
+- 미해결 참조: 355001개
+- CODE*VALUE 구조: 21694개
+- CODE*VALUE 항목: 111187개
+- ID|ID 다중 목록: 86776개
+- ID|ID 다중 목록 항목: 375927개
+- 중복 ID: 0개
+- JSON 파싱 오류: 0개
+
+## 대용량 원본 결과
+
+- _work/records.ndjson: Record ID 목록
+- _work/references.ndjson: 검증된 참조
+- _work/unresolved.ndjson: 미해결 참조
+- _work/structured_code_values.ndjson: CODE*VALUE|CODE*VALUE 구조
+- _work/structured_multi_ids.ndjson: ID|ID|ID 다중 ID 구조
+- _work/parse_errors.ndjson: 파일별 파싱 오류
+
+## 주요 참조 필드
+
+- m_nameId : 20816
+- m_describeId : 18342
+- m_itemId : 11795
+- m_skillShowId : 11282
+- m_itemPackageId : 9563
+- m_actorID : 6203
+- m_describe1Id : 5487
+- m_parentId : 4565
+- m_nextId : 3289
+- m_costId : 2714
+- m_challengeIds : 2239
+- m_articleID : 2042
+- m_tollgateId : 1974
+- m_sweepItemPackageId : 1864
+- m_terrianIDs : 1561
+- m_soundIDs : 1344
+- m_mailTempId : 1286
+- m_actorShowId : 1058
+- m_optionId : 982
+- m_suitId : 951
+- m_skillEffId : 915
+- m_groupNameId : 810
+- m_targetIds : 800
+- m_ActivityMainId : 577
+- m_name2Id : 526
+- m_skillId : 459
+- m_subNameId : 390
+- m_equipmentId : 310
+- m_speedId : 310
+- m_skilleffId : 303
+- m_ornamentId : 294
+- m_badgeId : 277
+- m_actorId : 272
+- m_clothesId : 269
+- m_bossIds : 235
+- m_headIconId : 210
+- m_terrainEffId : 177
+- m_openDialogId : 158
+- m_sdkEventId : 153
+- m_spineID : 153
+- m_skillSpineID : 153
+- m_callID : 153
+- m_fashionID : 150
+- m_avatarId : 140
+- m_weatherId : 123
+- m_describe2Id : 93
+- m_longEffId : 90
+- m_weaponId : 83
+- m_sysconfID : 77
+- m_endDialogId : 74
+
+## 주요 CODE*VALUE 필드
+
+- m_frontRange : 6610
+- m_reward : 3145
+- m_itemId : 3058
+- m_backRange : 1733
+- m_itemPackageId : 1621
+- m_playerPosition : 1506
+- m_decompose : 911
+- m_cost : 520
+- m_luckyBonus : 366
+- m_stigmataBonus : 366
+- m_stigmataReduce : 366
+- m_stigmataCostIncrease : 366
+- m_stigmataCostReduce : 366
+- m_item : 229
+- m_skilleffId : 101
+- m_combinationContent : 86
+- m_chapterReward : 79
+- m_part : 74
+- m_formRange : 29
+- m_Award1 : 20
+- m_Award2 : 20
+- m_consumeCurrency : 20
+- m_parameterA : 16
+- m_clickName : 13
+- m_passiveRange : 12
+- m_eventGroup : 10
+- m_position : 7
+- m_missionId1 : 7
+- m_missionId2 : 7
+- m_missionId3 : 7
+- m_missionId4 : 7
+- m_missionId5 : 7
+- m_value : 5
+- m_necessaryActor : 2
+- m_desc : 1
+- m_frontward : 1
+
+## 주요 ID|ID 다중 목록 필드
+
+- m_target : 11293
+- m_source : 11286
+- m_targetType : 11286
+- m_triggerRound : 11286
+- m_versionOpen : 7077
+- m_offset1 : 3041
+- m_offset4 : 2980
+- m_skillEff : 2661
+- m_turnTo : 2341
+- m_offset2 : 1528
+- m_terrianIDs : 1310
+- m_position : 1297
+- m_parameterK : 1176
+- m_initiative : 1065
+- m_offset3 : 1026
+- m_strengthenValue : 919
+- m_strengthenCost : 915
+- m_bannerJump : 743
+- m_playerAttrPro : 678
+- m_monsterAttrPro : 678
+- m_exploreRandomId1 : 646
+- m_exploreRandomId2 : 646
+- m_exploreRandomId3 : 646
+- m_tollgateId : 514
+- m_challengeIds : 415
+- m_skillId2 : 414
+- m_actorID : 407
+- m_necessaryActor : 391
+- m_metaphysicsBonus : 366
+- m_itemPackageId : 365
+- m_Jump1 : 353
+- m_preview : 342
+- m_sweepItemPackageId : 324
+- m_skilleffNeg : 320
+- m_isOpen : 297
+- m_activityTaskWord : 268
+- m_publicityIcon : 268
+- m_MaxWeaponSkillLevel : 236
+- m_skillCost : 236
+- m_equipmentId1 : 210
+- m_stigmataId1 : 210
+- m_equipmentId2 : 210
+- m_stigmataId2 : 210
+- m_equipmentId3 : 210
+- m_stigmataId3 : 210
+- m_equipmentId4 : 210
+- m_stigmataId4 : 210
+- m_linkUser : 192
+- m_condition : 191
+- m_skilleffPre : 189
+
+## 주요 출발 파일
+
+- SkilleffRecord.json : 15421
+- ActivitydetailsRecord.json : 11692
+- SkillRecord.json : 9829
+- ItemboxRecord.json : 9081
+- ExplorerandomRecord.json : 9072
+- DialogRecord.json : 8512
+- MissionRecord.json : 8196
+- DrawRecord.json : 7217
+- ShopcommodityRecord.json : 5619
+- SkillbuffRecord.json : 4906
+- TaskRecord.json : 2970
+- ActorRecord.json : 2473
+- SuitRecord.json : 2436
+- ItemRecord.json : 2103
+- StigmatacombiRecord.json : 2084
+- TollgateRecord.json : 1808
+- EquipmentRecord.json : 1785
+- DrawpreviewRecord.json : 1441
+- GlobalrewardRecord.json : 1286
+- RechargeRecord.json : 1183
+- ActivitymainRecord.json : 1129
+- ForginglistRecord.json : 930
+- FashionRecord.json : 768
+- BroadcastRecord.json : 713
+- StigmataRecord.json : 598
+- ExplorefloorRecord.json : 577
+- TerrainRecord.json : 541
+- ChallengeRecord.json : 431
+- SkillshowRecord.json : 431
+- SimulationplayerRecord.json : 420
+
+## 주요 대상 파일
+
+- Word__krRecord.json : 46522
+- ItemRecord.json : 13820
+- SkillshowRecord.json : 11282
+- ItempackageRecord.json : 11253
+- ActorRecord.json : 7563
+- ActivitymainRecord.json : 5142
+- DialogRecord.json : 3516
+- EquipmentRecord.json : 2661
+- ChallengeRecord.json : 2239
+- TollgateRecord.json : 1974
+- TerrainRecord.json : 1575
+- EffRecord.json : 1364
+- Sound__krRecord.json : 1344
+- MailtemplateRecord.json : 1294
+- SkilleffRecord.json : 1219
+- ActorshowRecord.json : 1058
+- SkillRecord.json : 1004
+- SuitRecord.json : 951
+- StigmataRecord.json : 699
+- WeaponRecord.json : 660
+- HeadiconRecord.json : 441
+- FashionRecord.json : 248
+- MissionRecord.json : 221
+- ItemboxRecord.json : 175
+- SdkeventRecord.json : 153
+- GuidenoviceRecord.json : 79
+- RechargeRecord.json : 69
+- SysconfRecord.json : 11
+- ResourcesRecord.json : 2
+
+## 해석 주의
+
+- Python은 JSON 원본에서 기계적으로 ID, Reference, CODE*VALUE, ID|ID 구조를 추출한다.
+- ID|ID|ID 문자열은 각 항목을 개별 Reference 후보로 취급한다.
+- CODE*VALUE의 두 번째 값은 수량/확률/레벨 등으로 임의 확정하지 않고 원본 value로 보존한다.
+- 대용량 참조는 메모리에 누적하지 않고 NDJSON 파일에 순차 기록한다.
+- 필드명이 ID처럼 보여도 게임 의미가 확정되는 것은 아니다.
+- Response/API/Research 구조는 이 단계에서 생성하지 않는다.

@@ -1,0 +1,66 @@
+{
+  "stage": "gamedata_dataset_v1",
+  "source": "normalized/all_records.ndjson",
+  "semantic_inference": false,
+  "systems": {
+    "item": {
+      "record_count": 952,
+      "source_files": [
+        "ItemRecord.json"
+      ],
+      "reference_count": 4129,
+      "unresolved_reference_count": 1080,
+      "output": "item.ndjson"
+    },
+    "equipment": {
+      "record_count": 924,
+      "source_files": [
+        "EquipmentRecord.json"
+      ],
+      "reference_count": 5001,
+      "unresolved_reference_count": 2292,
+      "output": "equipment.ndjson"
+    },
+    "weapon": {
+      "record_count": 599,
+      "source_files": [
+        "WeaponRecord.json"
+      ],
+      "reference_count": 4251,
+      "unresolved_reference_count": 3265,
+      "output": "weapon.ndjson"
+    },
+    "character": {
+      "record_count": 1763,
+      "source_files": [
+        "ActorRecord.json",
+        "ActorshowRecord.json",
+        "ActorbreachRecord.json"
+      ],
+      "reference_count": 17026,
+      "unresolved_reference_count": 10989,
+      "output": "character.ndjson"
+    },
+    "skill": {
+      "record_count": 23470,
+      "source_files": [
+        "SkillRecord.json",
+        "SkilleffRecord.json",
+        "SkillattackRecord.json",
+        "SkillbuffRecord.json",
+        "SkillshowRecord.json",
+        "SkillrandRecord.json"
+      ],
+      "reference_count": 137714,
+      "unresolved_reference_count": 84330,
+      "output": "skill.ndjson"
+    }
+  },
+  "rules": {
+    "record_id": "normalized logical record_id",
+    "references": "exact local logical-ID equality only",
+    "raw": "complete normalized record preserved",
+    "unresolved": "reference candidate not found in local ID index",
+    "server_data": "not generated"
+  }
+}

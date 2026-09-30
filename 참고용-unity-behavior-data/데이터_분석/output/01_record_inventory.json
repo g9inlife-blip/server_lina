@@ -1,0 +1,1218 @@
+{
+  "summary": {
+    "data_root": "C:\\Users\\USER\\Documents\\GitHub\\arme\\참고용-unity-behavior-data\\MonoBehaviour",
+    "json_file_count": 74,
+    "parsed_file_count": 74,
+    "parse_error_count": 0,
+    "record_count": 118015,
+    "unique_id_count": 118015,
+    "duplicate_id_count": 0,
+    "reference_candidate_count": 473540,
+    "validated_reference_count": 118539,
+    "unresolved_reference_count": 355001,
+    "structured_code_value_count": 21694,
+    "structured_code_value_item_count": 111187,
+    "structured_multi_id_count": 86776,
+    "structured_multi_id_item_count": 375927,
+    "top_source_files": [
+      [
+        "SkilleffRecord.json",
+        15421
+      ],
+      [
+        "ActivitydetailsRecord.json",
+        11692
+      ],
+      [
+        "SkillRecord.json",
+        9829
+      ],
+      [
+        "ItemboxRecord.json",
+        9081
+      ],
+      [
+        "ExplorerandomRecord.json",
+        9072
+      ],
+      [
+        "DialogRecord.json",
+        8512
+      ],
+      [
+        "MissionRecord.json",
+        8196
+      ],
+      [
+        "DrawRecord.json",
+        7217
+      ],
+      [
+        "ShopcommodityRecord.json",
+        5619
+      ],
+      [
+        "SkillbuffRecord.json",
+        4906
+      ],
+      [
+        "TaskRecord.json",
+        2970
+      ],
+      [
+        "ActorRecord.json",
+        2473
+      ],
+      [
+        "SuitRecord.json",
+        2436
+      ],
+      [
+        "ItemRecord.json",
+        2103
+      ],
+      [
+        "StigmatacombiRecord.json",
+        2084
+      ],
+      [
+        "TollgateRecord.json",
+        1808
+      ],
+      [
+        "EquipmentRecord.json",
+        1785
+      ],
+      [
+        "DrawpreviewRecord.json",
+        1441
+      ],
+      [
+        "GlobalrewardRecord.json",
+        1286
+      ],
+      [
+        "RechargeRecord.json",
+        1183
+      ],
+      [
+        "ActivitymainRecord.json",
+        1129
+      ],
+      [
+        "ForginglistRecord.json",
+        930
+      ],
+      [
+        "FashionRecord.json",
+        768
+      ],
+      [
+        "BroadcastRecord.json",
+        713
+      ],
+      [
+        "StigmataRecord.json",
+        598
+      ],
+      [
+        "ExplorefloorRecord.json",
+        577
+      ],
+      [
+        "TerrainRecord.json",
+        541
+      ],
+      [
+        "ChallengeRecord.json",
+        431
+      ],
+      [
+        "SkillshowRecord.json",
+        431
+      ],
+      [
+        "SimulationplayerRecord.json",
+        420
+      ]
+    ],
+    "top_target_files": [
+      [
+        "Word__krRecord.json",
+        46522
+      ],
+      [
+        "ItemRecord.json",
+        13820
+      ],
+      [
+        "SkillshowRecord.json",
+        11282
+      ],
+      [
+        "ItempackageRecord.json",
+        11253
+      ],
+      [
+        "ActorRecord.json",
+        7563
+      ],
+      [
+        "ActivitymainRecord.json",
+        5142
+      ],
+      [
+        "DialogRecord.json",
+        3516
+      ],
+      [
+        "EquipmentRecord.json",
+        2661
+      ],
+      [
+        "ChallengeRecord.json",
+        2239
+      ],
+      [
+        "TollgateRecord.json",
+        1974
+      ],
+      [
+        "TerrainRecord.json",
+        1575
+      ],
+      [
+        "EffRecord.json",
+        1364
+      ],
+      [
+        "Sound__krRecord.json",
+        1344
+      ],
+      [
+        "MailtemplateRecord.json",
+        1294
+      ],
+      [
+        "SkilleffRecord.json",
+        1219
+      ],
+      [
+        "ActorshowRecord.json",
+        1058
+      ],
+      [
+        "SkillRecord.json",
+        1004
+      ],
+      [
+        "SuitRecord.json",
+        951
+      ],
+      [
+        "StigmataRecord.json",
+        699
+      ],
+      [
+        "WeaponRecord.json",
+        660
+      ],
+      [
+        "HeadiconRecord.json",
+        441
+      ],
+      [
+        "FashionRecord.json",
+        248
+      ],
+      [
+        "MissionRecord.json",
+        221
+      ],
+      [
+        "ItemboxRecord.json",
+        175
+      ],
+      [
+        "SdkeventRecord.json",
+        153
+      ],
+      [
+        "GuidenoviceRecord.json",
+        79
+      ],
+      [
+        "RechargeRecord.json",
+        69
+      ],
+      [
+        "SysconfRecord.json",
+        11
+      ],
+      [
+        "ResourcesRecord.json",
+        2
+      ]
+    ],
+    "top_reference_fields": [
+      [
+        "m_nameId",
+        20816
+      ],
+      [
+        "m_describeId",
+        18342
+      ],
+      [
+        "m_itemId",
+        11795
+      ],
+      [
+        "m_skillShowId",
+        11282
+      ],
+      [
+        "m_itemPackageId",
+        9563
+      ],
+      [
+        "m_actorID",
+        6203
+      ],
+      [
+        "m_describe1Id",
+        5487
+      ],
+      [
+        "m_parentId",
+        4565
+      ],
+      [
+        "m_nextId",
+        3289
+      ],
+      [
+        "m_costId",
+        2714
+      ],
+      [
+        "m_challengeIds",
+        2239
+      ],
+      [
+        "m_articleID",
+        2042
+      ],
+      [
+        "m_tollgateId",
+        1974
+      ],
+      [
+        "m_sweepItemPackageId",
+        1864
+      ],
+      [
+        "m_terrianIDs",
+        1561
+      ],
+      [
+        "m_soundIDs",
+        1344
+      ],
+      [
+        "m_mailTempId",
+        1286
+      ],
+      [
+        "m_actorShowId",
+        1058
+      ],
+      [
+        "m_optionId",
+        982
+      ],
+      [
+        "m_suitId",
+        951
+      ],
+      [
+        "m_skillEffId",
+        915
+      ],
+      [
+        "m_groupNameId",
+        810
+      ],
+      [
+        "m_targetIds",
+        800
+      ],
+      [
+        "m_ActivityMainId",
+        577
+      ],
+      [
+        "m_name2Id",
+        526
+      ],
+      [
+        "m_skillId",
+        459
+      ],
+      [
+        "m_subNameId",
+        390
+      ],
+      [
+        "m_equipmentId",
+        310
+      ],
+      [
+        "m_speedId",
+        310
+      ],
+      [
+        "m_skilleffId",
+        303
+      ],
+      [
+        "m_ornamentId",
+        294
+      ],
+      [
+        "m_badgeId",
+        277
+      ],
+      [
+        "m_actorId",
+        272
+      ],
+      [
+        "m_clothesId",
+        269
+      ],
+      [
+        "m_bossIds",
+        235
+      ],
+      [
+        "m_headIconId",
+        210
+      ],
+      [
+        "m_terrainEffId",
+        177
+      ],
+      [
+        "m_openDialogId",
+        158
+      ],
+      [
+        "m_sdkEventId",
+        153
+      ],
+      [
+        "m_spineID",
+        153
+      ],
+      [
+        "m_skillSpineID",
+        153
+      ],
+      [
+        "m_callID",
+        153
+      ],
+      [
+        "m_fashionID",
+        150
+      ],
+      [
+        "m_avatarId",
+        140
+      ],
+      [
+        "m_weatherId",
+        123
+      ],
+      [
+        "m_describe2Id",
+        93
+      ],
+      [
+        "m_longEffId",
+        90
+      ],
+      [
+        "m_weaponId",
+        83
+      ],
+      [
+        "m_sysconfID",
+        77
+      ],
+      [
+        "m_endDialogId",
+        74
+      ]
+    ],
+    "top_structured_code_value_fields": [
+      [
+        "m_frontRange",
+        6610
+      ],
+      [
+        "m_reward",
+        3145
+      ],
+      [
+        "m_itemId",
+        3058
+      ],
+      [
+        "m_backRange",
+        1733
+      ],
+      [
+        "m_itemPackageId",
+        1621
+      ],
+      [
+        "m_playerPosition",
+        1506
+      ],
+      [
+        "m_decompose",
+        911
+      ],
+      [
+        "m_cost",
+        520
+      ],
+      [
+        "m_luckyBonus",
+        366
+      ],
+      [
+        "m_stigmataBonus",
+        366
+      ],
+      [
+        "m_stigmataReduce",
+        366
+      ],
+      [
+        "m_stigmataCostIncrease",
+        366
+      ],
+      [
+        "m_stigmataCostReduce",
+        366
+      ],
+      [
+        "m_item",
+        229
+      ],
+      [
+        "m_skilleffId",
+        101
+      ],
+      [
+        "m_combinationContent",
+        86
+      ],
+      [
+        "m_chapterReward",
+        79
+      ],
+      [
+        "m_part",
+        74
+      ],
+      [
+        "m_formRange",
+        29
+      ],
+      [
+        "m_Award1",
+        20
+      ],
+      [
+        "m_Award2",
+        20
+      ],
+      [
+        "m_consumeCurrency",
+        20
+      ],
+      [
+        "m_parameterA",
+        16
+      ],
+      [
+        "m_clickName",
+        13
+      ],
+      [
+        "m_passiveRange",
+        12
+      ],
+      [
+        "m_eventGroup",
+        10
+      ],
+      [
+        "m_position",
+        7
+      ],
+      [
+        "m_missionId1",
+        7
+      ],
+      [
+        "m_missionId2",
+        7
+      ],
+      [
+        "m_missionId3",
+        7
+      ],
+      [
+        "m_missionId4",
+        7
+      ],
+      [
+        "m_missionId5",
+        7
+      ],
+      [
+        "m_value",
+        5
+      ],
+      [
+        "m_necessaryActor",
+        2
+      ],
+      [
+        "m_desc",
+        1
+      ],
+      [
+        "m_frontward",
+        1
+      ]
+    ],
+    "top_structured_multi_id_fields": [
+      [
+        "m_target",
+        11293
+      ],
+      [
+        "m_source",
+        11286
+      ],
+      [
+        "m_targetType",
+        11286
+      ],
+      [
+        "m_triggerRound",
+        11286
+      ],
+      [
+        "m_versionOpen",
+        7077
+      ],
+      [
+        "m_offset1",
+        3041
+      ],
+      [
+        "m_offset4",
+        2980
+      ],
+      [
+        "m_skillEff",
+        2661
+      ],
+      [
+        "m_turnTo",
+        2341
+      ],
+      [
+        "m_offset2",
+        1528
+      ],
+      [
+        "m_terrianIDs",
+        1310
+      ],
+      [
+        "m_position",
+        1297
+      ],
+      [
+        "m_parameterK",
+        1176
+      ],
+      [
+        "m_initiative",
+        1065
+      ],
+      [
+        "m_offset3",
+        1026
+      ],
+      [
+        "m_strengthenValue",
+        919
+      ],
+      [
+        "m_strengthenCost",
+        915
+      ],
+      [
+        "m_bannerJump",
+        743
+      ],
+      [
+        "m_playerAttrPro",
+        678
+      ],
+      [
+        "m_monsterAttrPro",
+        678
+      ],
+      [
+        "m_exploreRandomId1",
+        646
+      ],
+      [
+        "m_exploreRandomId2",
+        646
+      ],
+      [
+        "m_exploreRandomId3",
+        646
+      ],
+      [
+        "m_tollgateId",
+        514
+      ],
+      [
+        "m_challengeIds",
+        415
+      ],
+      [
+        "m_skillId2",
+        414
+      ],
+      [
+        "m_actorID",
+        407
+      ],
+      [
+        "m_necessaryActor",
+        391
+      ],
+      [
+        "m_metaphysicsBonus",
+        366
+      ],
+      [
+        "m_itemPackageId",
+        365
+      ],
+      [
+        "m_Jump1",
+        353
+      ],
+      [
+        "m_preview",
+        342
+      ],
+      [
+        "m_sweepItemPackageId",
+        324
+      ],
+      [
+        "m_skilleffNeg",
+        320
+      ],
+      [
+        "m_isOpen",
+        297
+      ],
+      [
+        "m_activityTaskWord",
+        268
+      ],
+      [
+        "m_publicityIcon",
+        268
+      ],
+      [
+        "m_MaxWeaponSkillLevel",
+        236
+      ],
+      [
+        "m_skillCost",
+        236
+      ],
+      [
+        "m_equipmentId1",
+        210
+      ],
+      [
+        "m_stigmataId1",
+        210
+      ],
+      [
+        "m_equipmentId2",
+        210
+      ],
+      [
+        "m_stigmataId2",
+        210
+      ],
+      [
+        "m_equipmentId3",
+        210
+      ],
+      [
+        "m_stigmataId3",
+        210
+      ],
+      [
+        "m_equipmentId4",
+        210
+      ],
+      [
+        "m_stigmataId4",
+        210
+      ],
+      [
+        "m_linkUser",
+        192
+      ],
+      [
+        "m_condition",
+        191
+      ],
+      [
+        "m_skilleffPre",
+        189
+      ]
+    ],
+    "reference_extraction_rules": {
+      "record_id_keys": [
+        "_id",
+        "id",
+        "m_id",
+        "record_id",
+        "recordid"
+      ],
+      "excluded_reference_keys": [
+        "_id",
+        "fileid",
+        "id",
+        "m_fileid",
+        "m_id",
+        "m_pathid",
+        "pathid",
+        "record_id",
+        "recordid"
+      ],
+      "max_refs_per_record": 100000,
+      "nested_record_boundary": true,
+      "pipe_id_list": "ID|ID|ID values are split into individual reference candidates"
+    },
+    "structured_value_rules": {
+      "code_value_format": "CODE*VALUE|CODE*VALUE",
+      "code_value_separator": "*",
+      "item_separator": "|",
+      "value_semantics": "preserve_as_value_until_semantic_analysis",
+      "output": "_work/structured_code_values.ndjson",
+      "multi_id_format": "ID|ID|ID",
+      "multi_id_output": "_work/structured_multi_ids.ndjson"
+    }
+  },
+  "files": [
+    {
+      "file": "ActivitydetailsRecord.json",
+      "json_type": "dict",
+      "record_count": 4577
+    },
+    {
+      "file": "ActivitymainRecord.json",
+      "json_type": "dict",
+      "record_count": 1491
+    },
+    {
+      "file": "ActorbreachRecord.json",
+      "json_type": "dict",
+      "record_count": 252
+    },
+    {
+      "file": "ActorRecord.json",
+      "json_type": "dict",
+      "record_count": 1100
+    },
+    {
+      "file": "ActorshowRecord.json",
+      "json_type": "dict",
+      "record_count": 411
+    },
+    {
+      "file": "AI_Boss_BT.json",
+      "json_type": "dict",
+      "record_count": 0
+    },
+    {
+      "file": "AI_Unit_Skill_Select.json",
+      "json_type": "dict",
+      "record_count": 0
+    },
+    {
+      "file": "AitendencyRecord.json",
+      "json_type": "dict",
+      "record_count": 22
+    },
+    {
+      "file": "AnimateProperties.json",
+      "json_type": "dict",
+      "record_count": 0
+    },
+    {
+      "file": "AssetFileInfoListScriptableObject.json",
+      "json_type": "dict",
+      "record_count": 0
+    },
+    {
+      "file": "BosspartRecord.json",
+      "json_type": "dict",
+      "record_count": 242
+    },
+    {
+      "file": "BroadcastRecord.json",
+      "json_type": "dict",
+      "record_count": 713
+    },
+    {
+      "file": "CameraShot.json",
+      "json_type": "dict",
+      "record_count": 0
+    },
+    {
+      "file": "ChallengeRecord.json",
+      "json_type": "dict",
+      "record_count": 431
+    },
+    {
+      "file": "ChapterRecord.json",
+      "json_type": "dict",
+      "record_count": 84
+    },
+    {
+      "file": "CheckinRecord.json",
+      "json_type": "dict",
+      "record_count": 3000
+    },
+    {
+      "file": "CostRecord.json",
+      "json_type": "dict",
+      "record_count": 101
+    },
+    {
+      "file": "CrusadeRecord.json",
+      "json_type": "dict",
+      "record_count": 505
+    },
+    {
+      "file": "CvRecord.json",
+      "json_type": "dict",
+      "record_count": 26
+    },
+    {
+      "file": "DailyadditionRecord.json",
+      "json_type": "dict",
+      "record_count": 366
+    },
+    {
+      "file": "DialogRecord.json",
+      "json_type": "dict",
+      "record_count": 3958
+    },
+    {
+      "file": "DrawpreviewRecord.json",
+      "json_type": "dict",
+      "record_count": 112
+    },
+    {
+      "file": "DrawRecord.json",
+      "json_type": "dict",
+      "record_count": 2922
+    },
+    {
+      "file": "EffRecord.json",
+      "json_type": "dict",
+      "record_count": 1292
+    },
+    {
+      "file": "EquipmentRecord.json",
+      "json_type": "dict",
+      "record_count": 924
+    },
+    {
+      "file": "ExaminationrewardRecord.json",
+      "json_type": "dict",
+      "record_count": 216
+    },
+    {
+      "file": "ExplorefloorRecord.json",
+      "json_type": "dict",
+      "record_count": 784
+    },
+    {
+      "file": "ExplorerandomRecord.json",
+      "json_type": "dict",
+      "record_count": 984
+    },
+    {
+      "file": "ExpRecord.json",
+      "json_type": "dict",
+      "record_count": 500
+    },
+    {
+      "file": "FashionRecord.json",
+      "json_type": "dict",
+      "record_count": 156
+    },
+    {
+      "file": "ForginglistRecord.json",
+      "json_type": "dict",
+      "record_count": 310
+    },
+    {
+      "file": "FriendschallengeRecord.json",
+      "json_type": "dict",
+      "record_count": 7
+    },
+    {
+      "file": "GiftcodeRecord.json",
+      "json_type": "dict",
+      "record_count": 68
+    },
+    {
+      "file": "GlobalrewardRecord.json",
+      "json_type": "dict",
+      "record_count": 1287
+    },
+    {
+      "file": "GuidenoviceRecord.json",
+      "json_type": "dict",
+      "record_count": 117
+    },
+    {
+      "file": "GuideRecord.json",
+      "json_type": "dict",
+      "record_count": 18
+    },
+    {
+      "file": "HeadiconRecord.json",
+      "json_type": "dict",
+      "record_count": 108
+    },
+    {
+      "file": "ItemboxRecord.json",
+      "json_type": "dict",
+      "record_count": 3242
+    },
+    {
+      "file": "ItempackageRecord.json",
+      "json_type": "dict",
+      "record_count": 2028
+    },
+    {
+      "file": "ItemRecord.json",
+      "json_type": "dict",
+      "record_count": 952
+    },
+    {
+      "file": "LeveleffectRecord.json",
+      "json_type": "dict",
+      "record_count": 500
+    },
+    {
+      "file": "LoginRecord.json",
+      "json_type": "dict",
+      "record_count": 27
+    },
+    {
+      "file": "MailtemplateRecord.json",
+      "json_type": "dict",
+      "record_count": 186
+    },
+    {
+      "file": "MissionRecord.json",
+      "json_type": "dict",
+      "record_count": 682
+    },
+    {
+      "file": "PropRecord.json",
+      "json_type": "dict",
+      "record_count": 30
+    },
+    {
+      "file": "RandomattrRecord.json",
+      "json_type": "dict",
+      "record_count": 1395
+    },
+    {
+      "file": "RandomnumRecord.json",
+      "json_type": "dict",
+      "record_count": 997
+    },
+    {
+      "file": "RechargeRecord.json",
+      "json_type": "dict",
+      "record_count": 390
+    },
+    {
+      "file": "ResourcesRecord.json",
+      "json_type": "dict",
+      "record_count": 11
+    },
+    {
+      "file": "ResultRecord.json",
+      "json_type": "dict",
+      "record_count": 128
+    },
+    {
+      "file": "SdkeventRecord.json",
+      "json_type": "dict",
+      "record_count": 101
+    },
+    {
+      "file": "SensitivecharRecord.json",
+      "json_type": "dict",
+      "record_count": 11548
+    },
+    {
+      "file": "ShopcommodityRecord.json",
+      "json_type": "dict",
+      "record_count": 2714
+    },
+    {
+      "file": "ShopRecord.json",
+      "json_type": "dict",
+      "record_count": 154
+    },
+    {
+      "file": "SimulationplayerRecord.json",
+      "json_type": "dict",
+      "record_count": 210
+    },
+    {
+      "file": "SkillattackRecord.json",
+      "json_type": "dict",
+      "record_count": 1694
+    },
+    {
+      "file": "SkillbuffRecord.json",
+      "json_type": "dict",
+      "record_count": 1742
+    },
+    {
+      "file": "SkilleffRecord.json",
+      "json_type": "dict",
+      "record_count": 11371
+    },
+    {
+      "file": "SkillrandRecord.json",
+      "json_type": "dict",
+      "record_count": 101
+    },
+    {
+      "file": "SkillRecord.json",
+      "json_type": "dict",
+      "record_count": 5274
+    },
+    {
+      "file": "SkillshowRecord.json",
+      "json_type": "dict",
+      "record_count": 3288
+    },
+    {
+      "file": "Sound__krRecord.json",
+      "json_type": "dict",
+      "record_count": 3306
+    },
+    {
+      "file": "StigmatacombiRecord.json",
+      "json_type": "dict",
+      "record_count": 420
+    },
+    {
+      "file": "StigmataRecord.json",
+      "json_type": "dict",
+      "record_count": 237
+    },
+    {
+      "file": "SuitRecord.json",
+      "json_type": "dict",
+      "record_count": 299
+    },
+    {
+      "file": "SysconfRecord.json",
+      "json_type": "dict",
+      "record_count": 209
+    },
+    {
+      "file": "TalentRecord.json",
+      "json_type": "dict",
+      "record_count": 20
+    },
+    {
+      "file": "TalenttreeRecord.json",
+      "json_type": "dict",
+      "record_count": 24
+    },
+    {
+      "file": "TaskRecord.json",
+      "json_type": "dict",
+      "record_count": 732
+    },
+    {
+      "file": "TerrainRecord.json",
+      "json_type": "dict",
+      "record_count": 186
+    },
+    {
+      "file": "TollgateRecord.json",
+      "json_type": "dict",
+      "record_count": 1507
+    },
+    {
+      "file": "UsernameRecord.json",
+      "json_type": "dict",
+      "record_count": 296
+    },
+    {
+      "file": "WeaponRecord.json",
+      "json_type": "dict",
+      "record_count": 599
+    },
+    {
+      "file": "Word__krRecord.json",
+      "json_type": "dict",
+      "record_count": 34331
+    }
+  ],
+  "record_data_file": "C:\\Users\\USER\\Documents\\GitHub\\arme\\참고용-unity-behavior-data\\데이터_분석\\output\\_work\\records.ndjson",
+  "reference_data_file": "C:\\Users\\USER\\Documents\\GitHub\\arme\\참고용-unity-behavior-data\\데이터_분석\\output\\_work\\references.ndjson",
+  "unresolved_data_file": "C:\\Users\\USER\\Documents\\GitHub\\arme\\참고용-unity-behavior-data\\데이터_분석\\output\\_work\\unresolved.ndjson",
+  "structured_code_value_file": "C:\\Users\\USER\\Documents\\GitHub\\arme\\참고용-unity-behavior-data\\데이터_분석\\output\\_work\\structured_code_values.ndjson",
+  "structured_multi_id_file": "C:\\Users\\USER\\Documents\\GitHub\\arme\\참고용-unity-behavior-data\\데이터_분석\\output\\_work\\structured_multi_ids.ndjson",
+  "parse_errors_file": "C:\\Users\\USER\\Documents\\GitHub\\arme\\참고용-unity-behavior-data\\데이터_분석\\output\\_work\\parse_errors.ndjson"
+}

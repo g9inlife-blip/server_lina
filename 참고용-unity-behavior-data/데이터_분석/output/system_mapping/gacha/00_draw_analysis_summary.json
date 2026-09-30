@@ -1,0 +1,24 @@
+{
+  "json_file_count": 74,
+  "parsed_file_count": 74,
+  "unique_record_ids": 118015,
+  "draw_record_candidates": 2922,
+  "draw_preview_candidates": 112,
+  "draw_total_entries": 3034,
+  "resolved_draw_entries": 3034,
+  "unresolved_draw_entries": 0,
+  "target_type_counts": {
+    "DrawPreviewRecord": 112,
+    "Item": 316,
+    "DrawRecord": 2922
+  },
+  "probability_field_occurrences": 3034,
+  "cost_field_occurrences": 0,
+  "period_field_occurrences": 3034,
+  "parse_errors": 0,
+  "rules": {
+    "obscured_id": "hiddenValue XOR currentCryptoKey",
+    "kr_name_field": "m_cn",
+    "semantic_inference": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "stage": "7",
+  "json_file_count": 74,
+  "parsed_file_count": 74,
+  "unique_record_ids": 118015,
+  "package_field_occurrences": 437,
+  "unique_package_values": 422,
+  "package_values_with_exact_record_definition": 416,
+  "package_values_without_exact_record_definition": 6,
+  "pool_or_reward_field_occurrences": 6939,
+  "candidate_reward_pool_records": 118015,
+  "parse_errors": 0,
+  "field_counts": {
+    "m_itemPackageId": 437
+  },
+  "context_counts": {
+    "m_itemPackageId::other": 405,
+    "m_itemPackageId::quest": 32
+  },
+  "rules": {
+    "package_is_gacha_only": false,
+    "m_itemPackageId": "opaque identifier; not assumed to be Record FK",
+    "semantic_inference": false,
+    "server_only_reward": "not inferable from JSON alone"
+  }
+}

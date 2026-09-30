@@ -1,0 +1,2585 @@
+{
+  "record_count": 118015,
+  "systems": {
+    "other": [
+      {
+        "field": "m_id",
+        "count": 77977
+      },
+      {
+        "field": "baseDataType",
+        "count": 77977
+      },
+      {
+        "field": "m_icon",
+        "count": 77977
+      },
+      {
+        "field": "m_quality",
+        "count": 77977
+      },
+      {
+        "field": "m_frame",
+        "count": 77977
+      },
+      {
+        "field": "m_surface",
+        "count": 77977
+      },
+      {
+        "field": "m_period",
+        "count": 77977
+      },
+      {
+        "field": "m_star",
+        "count": 77977
+      },
+      {
+        "field": "m_type",
+        "count": 77977
+      },
+      {
+        "field": "m_specialShow",
+        "count": 77977
+      },
+      {
+        "field": "m_nameId",
+        "count": 77977
+      },
+      {
+        "field": "m_describeId",
+        "count": 77977
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 77977
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 77977
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 77977
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 77977
+      },
+      {
+        "field": "m_iconshow",
+        "count": 77977
+      },
+      {
+        "field": "m_cn",
+        "count": 37823
+      },
+      {
+        "field": "m_name",
+        "count": 35919
+      },
+      {
+        "field": "m_sensitiveChar",
+        "count": 11548
+      },
+      {
+        "field": "m_position",
+        "count": 10518
+      },
+      {
+        "field": "m_display",
+        "count": 6300
+      },
+      {
+        "field": "m_seqencing",
+        "count": 6230
+      },
+      {
+        "field": "m_versionOpen",
+        "count": 6221
+      },
+      {
+        "field": "m_reward",
+        "count": 6093
+      },
+      {
+        "field": "m_turnTo",
+        "count": 5426
+      },
+      {
+        "field": "m_parentId",
+        "count": 4577
+      },
+      {
+        "field": "m_activityData",
+        "count": 4577
+      },
+      {
+        "field": "m_condition1",
+        "count": 4577
+      },
+      {
+        "field": "m_condition2",
+        "count": 4577
+      },
+      {
+        "field": "m_mainTemplateId",
+        "count": 4577
+      },
+      {
+        "field": "m_nextId",
+        "count": 4075
+      },
+      {
+        "field": "m_group",
+        "count": 4054
+      },
+      {
+        "field": "m_nameId1",
+        "count": 3984
+      },
+      {
+        "field": "m_soundIDs",
+        "count": 3958
+      },
+      {
+        "field": "m_flash",
+        "count": 3958
+      },
+      {
+        "field": "m_shake",
+        "count": 3958
+      },
+      {
+        "field": "m_model1",
+        "count": 3958
+      },
+      {
+        "field": "m_offset1",
+        "count": 3958
+      },
+      {
+        "field": "m_idle1",
+        "count": 3958
+      },
+      {
+        "field": "m_act1",
+        "count": 3958
+      },
+      {
+        "field": "m_scale1",
+        "count": 3958
+      },
+      {
+        "field": "m_nameId2",
+        "count": 3958
+      },
+      {
+        "field": "m_model2",
+        "count": 3958
+      },
+      {
+        "field": "m_offset2",
+        "count": 3958
+      },
+      {
+        "field": "m_idle2",
+        "count": 3958
+      },
+      {
+        "field": "m_act2",
+        "count": 3958
+      },
+      {
+        "field": "m_scale2",
+        "count": 3958
+      },
+      {
+        "field": "m_nameId3",
+        "count": 3958
+      },
+      {
+        "field": "m_model3",
+        "count": 3958
+      },
+      {
+        "field": "m_offset3",
+        "count": 3958
+      },
+      {
+        "field": "m_idle3",
+        "count": 3958
+      },
+      {
+        "field": "m_act3",
+        "count": 3958
+      },
+      {
+        "field": "m_scale3",
+        "count": 3958
+      },
+      {
+        "field": "m_nameId4",
+        "count": 3958
+      },
+      {
+        "field": "m_model4",
+        "count": 3958
+      },
+      {
+        "field": "m_offset4",
+        "count": 3958
+      },
+      {
+        "field": "m_idle4",
+        "count": 3958
+      },
+      {
+        "field": "m_act4",
+        "count": 3958
+      },
+      {
+        "field": "m_scale4",
+        "count": 3958
+      },
+      {
+        "field": "m_volume",
+        "count": 3306
+      },
+      {
+        "field": "m_order",
+        "count": 3093
+      },
+      {
+        "field": "m_days",
+        "count": 3000
+      },
+      {
+        "field": "m_signedAwards",
+        "count": 3000
+      },
+      {
+        "field": "m_grandTotal",
+        "count": 3000
+      },
+      {
+        "field": "m_location",
+        "count": 2495
+      },
+      {
+        "field": "m_weight",
+        "count": 2127
+      },
+      {
+        "field": "m_level",
+        "count": 1867
+      },
+      {
+        "field": "m_value",
+        "count": 1863
+      },
+      {
+        "field": "m_power",
+        "count": 1768
+      },
+      {
+        "field": "m_time",
+        "count": 1682
+      },
+      {
+        "field": "m_sdkEventId",
+        "count": 1607
+      },
+      {
+        "field": "m_desc",
+        "count": 1604
+      },
+      {
+        "field": "m_openDate",
+        "count": 1575
+      },
+      {
+        "field": "m_terrianType",
+        "count": 1507
+      },
+      {
+        "field": "m_playerPosition",
+        "count": 1507
+      },
+      {
+        "field": "m_friendlyPosition",
+        "count": 1507
+      },
+      {
+        "field": "m_neutralPosition",
+        "count": 1507
+      },
+      {
+        "field": "m_sceneMonitor",
+        "count": 1507
+      },
+      {
+        "field": "m_monsterPosition",
+        "count": 1507
+      },
+      {
+        "field": "m_terrianIDs",
+        "count": 1507
+      },
+      {
+        "field": "m_terrianProp",
+        "count": 1507
+      },
+      {
+        "field": "m_randProp",
+        "count": 1507
+      },
+      {
+        "field": "m_victoryCondition",
+        "count": 1507
+      },
+      {
+        "field": "m_fail",
+        "count": 1507
+      },
+      {
+        "field": "m_round",
+        "count": 1507
+      },
+      {
+        "field": "m_roundResults",
+        "count": 1507
+      },
+      {
+        "field": "m_sceneSkilleff",
+        "count": 1507
+      },
+      {
+        "field": "m_backgroundMusic",
+        "count": 1507
+      },
+      {
+        "field": "m_itemPackageId",
+        "count": 1507
+      },
+      {
+        "field": "m_bossBurstPointPicture",
+        "count": 1507
+      },
+      {
+        "field": "m_bossIds",
+        "count": 1507
+      },
+      {
+        "field": "m_showType",
+        "count": 1491
+      },
+      {
+        "field": "m_isShowTime",
+        "count": 1491
+      },
+      {
+        "field": "m_bookmark",
+        "count": 1491
+      },
+      {
+        "field": "m_sysconfID",
+        "count": 1491
+      },
+      {
+        "field": "m_endType",
+        "count": 1491
+      },
+      {
+        "field": "m_endParameters",
+        "count": 1491
+      },
+      {
+        "field": "m_preOpenDate",
+        "count": 1491
+      },
+      {
+        "field": "m_preCloseDate",
+        "count": 1491
+      },
+      {
+        "field": "m_closeDate",
+        "count": 1491
+      },
+      {
+        "field": "m_bannerJump",
+        "count": 1491
+      },
+      {
+        "field": "m_activityJump",
+        "count": 1491
+      },
+      {
+        "field": "m_activityicon",
+        "count": 1491
+      },
+      {
+        "field": "m_presentation",
+        "count": 1491
+      },
+      {
+        "field": "m_activityTaskWord",
+        "count": 1491
+      },
+      {
+        "field": "m_publicityIcon",
+        "count": 1491
+      },
+      {
+        "field": "m_button1",
+        "count": 1491
+      },
+      {
+        "field": "m_function1",
+        "count": 1491
+      },
+      {
+        "field": "m_Jump1",
+        "count": 1491
+      },
+      {
+        "field": "m_button2",
+        "count": 1491
+      },
+      {
+        "field": "m_function2",
+        "count": 1491
+      },
+      {
+        "field": "m_Jump2",
+        "count": 1491
+      },
+      {
+        "field": "m_name2Id",
+        "count": 1491
+      },
+      {
+        "field": "m_tab",
+        "count": 1491
+      },
+      {
+        "field": "m_describe2Id",
+        "count": 1490
+      },
+      {
+        "field": "m_scale",
+        "count": 1409
+      },
+      {
+        "field": "m_weaponId",
+        "count": 1399
+      },
+      {
+        "field": "m_luckyBonus",
+        "count": 1395
+      },
+      {
+        "field": "m_metaphysicsBonus",
+        "count": 1395
+      },
+      {
+        "field": "m_part",
+        "count": 1395
+      },
+      {
+        "field": "m_desc1",
+        "count": 1395
+      },
+      {
+        "field": "m_hp",
+        "count": 1352
+      },
+      {
+        "field": "m_atk",
+        "count": 1352
+      },
+      {
+        "field": "m_def",
+        "count": 1352
+      },
+      {
+        "field": "m_magicDef",
+        "count": 1352
+      },
+      {
+        "field": "m_hurtplus",
+        "count": 1352
+      },
+      {
+        "field": "m_hurtdef",
+        "count": 1352
+      },
+      {
+        "field": "m_resourcesId",
+        "count": 1292
+      },
+      {
+        "field": "m_effModel",
+        "count": 1292
+      },
+      {
+        "field": "m_effAni",
+        "count": 1292
+      },
+      {
+        "field": "m_leftEffAni",
+        "count": 1292
+      },
+      {
+        "field": "m_loopAni",
+        "count": 1292
+      },
+      {
+        "field": "m_loop",
+        "count": 1292
+      },
+      {
+        "field": "m_rotate",
+        "count": 1292
+      },
+      {
+        "field": "m_positionUp",
+        "count": 1292
+      },
+      {
+        "field": "m_positionDown",
+        "count": 1292
+      },
+      {
+        "field": "m_positionLeft",
+        "count": 1292
+      },
+      {
+        "field": "m_positionRight",
+        "count": 1292
+      },
+      {
+        "field": "m_leftPosition",
+        "count": 1292
+      },
+      {
+        "field": "m_directionType",
+        "count": 1292
+      },
+      {
+        "field": "m_angle",
+        "count": 1292
+      },
+      {
+        "field": "m_boneName",
+        "count": 1292
+      },
+      {
+        "field": "m_orderType",
+        "count": 1292
+      },
+      {
+        "field": "m_race",
+        "count": 1126
+      },
+      {
+        "field": "m_initial",
+        "count": 1100
+      },
+      {
+        "field": "m_effectLevel",
+        "count": 1100
+      },
+      {
+        "field": "m_threat",
+        "count": 1100
+      },
+      {
+        "field": "m_initiative",
+        "count": 1100
+      },
+      {
+        "field": "m_skillId1",
+        "count": 1100
+      },
+      {
+        "field": "m_skillId2",
+        "count": 1100
+      },
+      {
+        "field": "m_skillRelease",
+        "count": 1100
+      },
+      {
+        "field": "m_Isplug",
+        "count": 1100
+      },
+      {
+        "field": "m_plug",
+        "count": 1100
+      },
+      {
+        "field": "m_actionTimes",
+        "count": 1100
+      },
+      {
+        "field": "m_actorShowId",
+        "count": 1100
+      },
+      {
+        "field": "m_initialPower",
+        "count": 1100
+      },
+      {
+        "field": "m_repel",
+        "count": 1100
+      },
+      {
+        "field": "m_collision",
+        "count": 1100
+      },
+      {
+        "field": "m_takeEffect",
+        "count": 1100
+      },
+      {
+        "field": "m_hpPct",
+        "count": 1100
+      },
+      {
+        "field": "m_atkPct",
+        "count": 1100
+      },
+      {
+        "field": "m_defPct",
+        "count": 1100
+      },
+      {
+        "field": "m_magicDefPct",
+        "count": 1100
+      },
+      {
+        "field": "m_critchance",
+        "count": 1100
+      },
+      {
+        "field": "m_critcoefficient",
+        "count": 1100
+      },
+      {
+        "field": "m_critdef",
+        "count": 1100
+      },
+      {
+        "field": "m_cd",
+        "count": 1100
+      },
+      {
+        "field": "m_shield",
+        "count": 1100
+      },
+      {
+        "field": "m_hurtmin",
+        "count": 1100
+      },
+      {
+        "field": "m_phurtplus",
+        "count": 1100
+      },
+      {
+        "field": "m_phurtdef",
+        "count": 1100
+      },
+      {
+        "field": "m_mhurtplus",
+        "count": 1100
+      },
+      {
+        "field": "m_mhurtdef",
+        "count": 1100
+      },
+      {
+        "field": "m_humanplus",
+        "count": 1100
+      },
+      {
+        "field": "m_biochemistryplus",
+        "count": 1100
+      },
+      {
+        "field": "m_machineplus",
+        "count": 1100
+      },
+      {
+        "field": "m_humandef",
+        "count": 1100
+      },
+      {
+        "field": "m_biochemistrydef",
+        "count": 1100
+      },
+      {
+        "field": "m_machinedef",
+        "count": 1100
+      },
+      {
+        "field": "m_helpplus",
+        "count": 1100
+      },
+      {
+        "field": "m_bearhelpplus",
+        "count": 1100
+      },
+      {
+        "field": "m_skillplus",
+        "count": 1100
+      },
+      {
+        "field": "m_normalskillplus",
+        "count": 1100
+      },
+      {
+        "field": "m_zxcplus1",
+        "count": 1100
+      },
+      {
+        "field": "m_normalskilldef",
+        "count": 1100
+      },
+      {
+        "field": "m_zxcdef1",
+        "count": 1100
+      },
+      {
+        "field": "m_moveRange",
+        "count": 1100
+      },
+      {
+        "field": "m_passiveRange",
+        "count": 1100
+      },
+      {
+        "field": "m_passiveIcon",
+        "count": 1100
+      },
+      {
+        "field": "m_avatarId",
+        "count": 1100
+      },
+      {
+        "field": "m_cost",
+        "count": 1067
+      },
+      {
+        "field": "m_randomNum",
+        "count": 997
+      },
+      {
+        "field": "m_maxTime",
+        "count": 984
+      },
+      {
+        "field": "m_necessaryActor",
+        "count": 984
+      },
+      {
+        "field": "m_actorID",
+        "count": 984
+      },
+      {
+        "field": "m_optionId",
+        "count": 984
+      },
+      {
+        "field": "m_groupNameId",
+        "count": 967
+      },
+      {
+        "field": "m_attribute",
+        "count": 813
+      },
+      {
+        "field": "m_floor",
+        "count": 784
+      }
+    ],
+    "monster": [
+      {
+        "field": "m_id",
+        "count": 242
+      },
+      {
+        "field": "baseDataType",
+        "count": 242
+      },
+      {
+        "field": "m_icon",
+        "count": 242
+      },
+      {
+        "field": "m_quality",
+        "count": 242
+      },
+      {
+        "field": "m_frame",
+        "count": 242
+      },
+      {
+        "field": "m_surface",
+        "count": 242
+      },
+      {
+        "field": "m_period",
+        "count": 242
+      },
+      {
+        "field": "m_star",
+        "count": 242
+      },
+      {
+        "field": "m_type",
+        "count": 242
+      },
+      {
+        "field": "m_specialShow",
+        "count": 242
+      },
+      {
+        "field": "m_nameId",
+        "count": 242
+      },
+      {
+        "field": "m_describeId",
+        "count": 242
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 242
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 242
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 242
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 242
+      },
+      {
+        "field": "m_iconshow",
+        "count": 242
+      },
+      {
+        "field": "m_part",
+        "count": 242
+      },
+      {
+        "field": "m_partSort",
+        "count": 242
+      },
+      {
+        "field": "m_preCondition",
+        "count": 242
+      },
+      {
+        "field": "m_pos",
+        "count": 242
+      },
+      {
+        "field": "m_breakpart",
+        "count": 242
+      },
+      {
+        "field": "m_breakVaule",
+        "count": 242
+      },
+      {
+        "field": "m_effBone",
+        "count": 242
+      },
+      {
+        "field": "m_breakSkin",
+        "count": 242
+      },
+      {
+        "field": "m_breakProcessAni",
+        "count": 242
+      },
+      {
+        "field": "m_breakEffId",
+        "count": 242
+      },
+      {
+        "field": "m_breakSign",
+        "count": 242
+      },
+      {
+        "field": "m_itemPackageId",
+        "count": 242
+      }
+    ],
+    "daily": [
+      {
+        "field": "m_id",
+        "count": 393
+      },
+      {
+        "field": "baseDataType",
+        "count": 393
+      },
+      {
+        "field": "m_icon",
+        "count": 393
+      },
+      {
+        "field": "m_quality",
+        "count": 393
+      },
+      {
+        "field": "m_frame",
+        "count": 393
+      },
+      {
+        "field": "m_surface",
+        "count": 393
+      },
+      {
+        "field": "m_period",
+        "count": 393
+      },
+      {
+        "field": "m_star",
+        "count": 393
+      },
+      {
+        "field": "m_type",
+        "count": 393
+      },
+      {
+        "field": "m_specialShow",
+        "count": 393
+      },
+      {
+        "field": "m_nameId",
+        "count": 393
+      },
+      {
+        "field": "m_describeId",
+        "count": 393
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 393
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 393
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 393
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 393
+      },
+      {
+        "field": "m_iconshow",
+        "count": 393
+      },
+      {
+        "field": "m_day",
+        "count": 366
+      },
+      {
+        "field": "m_metaphysicsBonus",
+        "count": 366
+      },
+      {
+        "field": "m_luckyBonus",
+        "count": 366
+      },
+      {
+        "field": "m_stigmataTimes",
+        "count": 366
+      },
+      {
+        "field": "m_stigmataTimesLimit",
+        "count": 366
+      },
+      {
+        "field": "m_stigmataBonus",
+        "count": 366
+      },
+      {
+        "field": "m_stigmataReduce",
+        "count": 366
+      },
+      {
+        "field": "m_stigmataCostIncrease",
+        "count": 366
+      },
+      {
+        "field": "m_stigmataCostReduce",
+        "count": 366
+      },
+      {
+        "field": "m_offset1",
+        "count": 27
+      },
+      {
+        "field": "m_offset2",
+        "count": 27
+      },
+      {
+        "field": "m_offset3",
+        "count": 27
+      },
+      {
+        "field": "m_logo",
+        "count": 27
+      },
+      {
+        "field": "m_logoIcon",
+        "count": 27
+      },
+      {
+        "field": "m_background",
+        "count": 27
+      },
+      {
+        "field": "m_exhibition",
+        "count": 27
+      },
+      {
+        "field": "m_versionOpen",
+        "count": 27
+      }
+    ],
+    "gacha": [
+      {
+        "field": "m_id",
+        "count": 3034
+      },
+      {
+        "field": "baseDataType",
+        "count": 3034
+      },
+      {
+        "field": "m_icon",
+        "count": 3034
+      },
+      {
+        "field": "m_quality",
+        "count": 3034
+      },
+      {
+        "field": "m_frame",
+        "count": 3034
+      },
+      {
+        "field": "m_surface",
+        "count": 3034
+      },
+      {
+        "field": "m_period",
+        "count": 3034
+      },
+      {
+        "field": "m_star",
+        "count": 3034
+      },
+      {
+        "field": "m_type",
+        "count": 3034
+      },
+      {
+        "field": "m_specialShow",
+        "count": 3034
+      },
+      {
+        "field": "m_nameId",
+        "count": 3034
+      },
+      {
+        "field": "m_describeId",
+        "count": 3034
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 3034
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 3034
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 3034
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 3034
+      },
+      {
+        "field": "m_iconshow",
+        "count": 3034
+      },
+      {
+        "field": "m_group",
+        "count": 3034
+      },
+      {
+        "field": "m_probability",
+        "count": 3034
+      },
+      {
+        "field": "m_limit",
+        "count": 2922
+      },
+      {
+        "field": "m_itemPackageId",
+        "count": 2922
+      },
+      {
+        "field": "m_desc",
+        "count": 2922
+      },
+      {
+        "field": "m_articleID",
+        "count": 112
+      }
+    ],
+    "equipment": [
+      {
+        "field": "m_id",
+        "count": 1523
+      },
+      {
+        "field": "baseDataType",
+        "count": 1523
+      },
+      {
+        "field": "m_icon",
+        "count": 1523
+      },
+      {
+        "field": "m_quality",
+        "count": 1523
+      },
+      {
+        "field": "m_frame",
+        "count": 1523
+      },
+      {
+        "field": "m_surface",
+        "count": 1523
+      },
+      {
+        "field": "m_period",
+        "count": 1523
+      },
+      {
+        "field": "m_star",
+        "count": 1523
+      },
+      {
+        "field": "m_type",
+        "count": 1523
+      },
+      {
+        "field": "m_specialShow",
+        "count": 1523
+      },
+      {
+        "field": "m_nameId",
+        "count": 1523
+      },
+      {
+        "field": "m_describeId",
+        "count": 1523
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 1523
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 1523
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 1523
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 1523
+      },
+      {
+        "field": "m_iconshow",
+        "count": 1523
+      },
+      {
+        "field": "m_suitId",
+        "count": 1523
+      },
+      {
+        "field": "m_videoDisplay",
+        "count": 1523
+      },
+      {
+        "field": "m_demandLevel",
+        "count": 924
+      },
+      {
+        "field": "m_order",
+        "count": 924
+      },
+      {
+        "field": "m_attribute1",
+        "count": 924
+      },
+      {
+        "field": "m_attribute2",
+        "count": 924
+      },
+      {
+        "field": "m_attribute3",
+        "count": 924
+      },
+      {
+        "field": "m_attribute4",
+        "count": 924
+      },
+      {
+        "field": "m_decompose",
+        "count": 924
+      },
+      {
+        "field": "m_strengthenCost",
+        "count": 924
+      },
+      {
+        "field": "m_strengthenValue",
+        "count": 924
+      },
+      {
+        "field": "m_code",
+        "count": 599
+      },
+      {
+        "field": "m_seqencing",
+        "count": 599
+      },
+      {
+        "field": "m_user",
+        "count": 599
+      },
+      {
+        "field": "m_linkUser",
+        "count": 599
+      },
+      {
+        "field": "m_skillId",
+        "count": 599
+      },
+      {
+        "field": "m_skillId2",
+        "count": 599
+      },
+      {
+        "field": "m_changeAni",
+        "count": 599
+      },
+      {
+        "field": "m_attack",
+        "count": 599
+      },
+      {
+        "field": "m_attack_g",
+        "count": 599
+      },
+      {
+        "field": "m_wayFinding",
+        "count": 599
+      },
+      {
+        "field": "m_unlockAttr",
+        "count": 599
+      },
+      {
+        "field": "m_cost",
+        "count": 599
+      },
+      {
+        "field": "m_MaxWeaponSkillLevel",
+        "count": 599
+      },
+      {
+        "field": "m_skillCost",
+        "count": 599
+      },
+      {
+        "field": "m_development",
+        "count": 599
+      },
+      {
+        "field": "m_line",
+        "count": 599
+      },
+      {
+        "field": "m_notUnlocked",
+        "count": 599
+      },
+      {
+        "field": "m_sound",
+        "count": 599
+      },
+      {
+        "field": "m_tips",
+        "count": 599
+      },
+      {
+        "field": "m_versionOpen",
+        "count": 599
+      }
+    ],
+    "reward": [
+      {
+        "field": "m_id",
+        "count": 1503
+      },
+      {
+        "field": "baseDataType",
+        "count": 1503
+      },
+      {
+        "field": "m_icon",
+        "count": 1503
+      },
+      {
+        "field": "m_quality",
+        "count": 1503
+      },
+      {
+        "field": "m_frame",
+        "count": 1503
+      },
+      {
+        "field": "m_surface",
+        "count": 1503
+      },
+      {
+        "field": "m_period",
+        "count": 1503
+      },
+      {
+        "field": "m_star",
+        "count": 1503
+      },
+      {
+        "field": "m_type",
+        "count": 1503
+      },
+      {
+        "field": "m_specialShow",
+        "count": 1503
+      },
+      {
+        "field": "m_nameId",
+        "count": 1503
+      },
+      {
+        "field": "m_describeId",
+        "count": 1503
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 1503
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 1503
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 1503
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 1503
+      },
+      {
+        "field": "m_iconshow",
+        "count": 1503
+      },
+      {
+        "field": "m_reward",
+        "count": 1503
+      },
+      {
+        "field": "m_beginTime",
+        "count": 1287
+      },
+      {
+        "field": "m_endTime",
+        "count": 1287
+      },
+      {
+        "field": "m_accountStart",
+        "count": 1287
+      },
+      {
+        "field": "m_accountEnd",
+        "count": 1287
+      },
+      {
+        "field": "m_mailTempId",
+        "count": 1287
+      },
+      {
+        "field": "m_versionOpen",
+        "count": 1287
+      },
+      {
+        "field": "m_group",
+        "count": 216
+      },
+      {
+        "field": "m_rewardRange",
+        "count": 216
+      }
+    ],
+    "item": [
+      {
+        "field": "m_id",
+        "count": 6222
+      },
+      {
+        "field": "baseDataType",
+        "count": 6222
+      },
+      {
+        "field": "m_icon",
+        "count": 6222
+      },
+      {
+        "field": "m_quality",
+        "count": 6222
+      },
+      {
+        "field": "m_frame",
+        "count": 6222
+      },
+      {
+        "field": "m_surface",
+        "count": 6222
+      },
+      {
+        "field": "m_period",
+        "count": 6222
+      },
+      {
+        "field": "m_star",
+        "count": 6222
+      },
+      {
+        "field": "m_type",
+        "count": 6222
+      },
+      {
+        "field": "m_specialShow",
+        "count": 6222
+      },
+      {
+        "field": "m_nameId",
+        "count": 6222
+      },
+      {
+        "field": "m_describeId",
+        "count": 6222
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 6222
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 6222
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 6222
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 6222
+      },
+      {
+        "field": "m_iconshow",
+        "count": 6222
+      },
+      {
+        "field": "m_itemId",
+        "count": 3242
+      },
+      {
+        "field": "m_itemWeight",
+        "count": 2028
+      },
+      {
+        "field": "m_seqencing",
+        "count": 952
+      },
+      {
+        "field": "m_tabs",
+        "count": 952
+      },
+      {
+        "field": "m_isOpen",
+        "count": 952
+      },
+      {
+        "field": "m_parameter",
+        "count": 952
+      },
+      {
+        "field": "m_location",
+        "count": 952
+      },
+      {
+        "field": "m_itemPackageId",
+        "count": 952
+      },
+      {
+        "field": "m_max",
+        "count": 952
+      },
+      {
+        "field": "m_jump",
+        "count": 952
+      },
+      {
+        "field": "m_model",
+        "count": 952
+      }
+    ],
+    "item_package": [
+      {
+        "field": "m_id",
+        "count": 2028
+      },
+      {
+        "field": "baseDataType",
+        "count": 2028
+      },
+      {
+        "field": "m_icon",
+        "count": 2028
+      },
+      {
+        "field": "m_quality",
+        "count": 2028
+      },
+      {
+        "field": "m_frame",
+        "count": 2028
+      },
+      {
+        "field": "m_surface",
+        "count": 2028
+      },
+      {
+        "field": "m_period",
+        "count": 2028
+      },
+      {
+        "field": "m_star",
+        "count": 2028
+      },
+      {
+        "field": "m_type",
+        "count": 2028
+      },
+      {
+        "field": "m_specialShow",
+        "count": 2028
+      },
+      {
+        "field": "m_nameId",
+        "count": 2028
+      },
+      {
+        "field": "m_describeId",
+        "count": 2028
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 2028
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 2028
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 2028
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 2028
+      },
+      {
+        "field": "m_iconshow",
+        "count": 2028
+      },
+      {
+        "field": "m_itemWeight",
+        "count": 2028
+      }
+    ],
+    "achievement": [
+      {
+        "field": "m_id",
+        "count": 682
+      },
+      {
+        "field": "baseDataType",
+        "count": 682
+      },
+      {
+        "field": "m_icon",
+        "count": 682
+      },
+      {
+        "field": "m_quality",
+        "count": 682
+      },
+      {
+        "field": "m_frame",
+        "count": 682
+      },
+      {
+        "field": "m_surface",
+        "count": 682
+      },
+      {
+        "field": "m_period",
+        "count": 682
+      },
+      {
+        "field": "m_star",
+        "count": 682
+      },
+      {
+        "field": "m_type",
+        "count": 682
+      },
+      {
+        "field": "m_specialShow",
+        "count": 682
+      },
+      {
+        "field": "m_nameId",
+        "count": 682
+      },
+      {
+        "field": "m_describeId",
+        "count": 682
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 682
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 682
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 682
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 682
+      },
+      {
+        "field": "m_iconshow",
+        "count": 682
+      },
+      {
+        "field": "m_battlefieldTIM",
+        "count": 682
+      },
+      {
+        "field": "m_chapter",
+        "count": 682
+      },
+      {
+        "field": "m_lastCombat",
+        "count": 682
+      },
+      {
+        "field": "m_unlockCondition",
+        "count": 682
+      },
+      {
+        "field": "m_monsterLevel",
+        "count": 682
+      },
+      {
+        "field": "m_attributes",
+        "count": 682
+      },
+      {
+        "field": "m_tollgateId",
+        "count": 682
+      },
+      {
+        "field": "m_consume",
+        "count": 682
+      },
+      {
+        "field": "m_itemPackageId",
+        "count": 682
+      },
+      {
+        "field": "m_sweepItemPackageId",
+        "count": 682
+      },
+      {
+        "field": "m_captainPackageId",
+        "count": 682
+      },
+      {
+        "field": "m_userExp",
+        "count": 682
+      },
+      {
+        "field": "m_heroExp",
+        "count": 682
+      },
+      {
+        "field": "m_weaponExp",
+        "count": 682
+      },
+      {
+        "field": "m_gold",
+        "count": 682
+      },
+      {
+        "field": "m_partPreview",
+        "count": 682
+      },
+      {
+        "field": "m_preview",
+        "count": 682
+      },
+      {
+        "field": "m_weaponShow",
+        "count": 682
+      },
+      {
+        "field": "m_first",
+        "count": 682
+      },
+      {
+        "field": "m_challengeIds",
+        "count": 682
+      },
+      {
+        "field": "m_whetherItRaids",
+        "count": 682
+      },
+      {
+        "field": "m_eventPoint",
+        "count": 682
+      },
+      {
+        "field": "m_chaos",
+        "count": 682
+      },
+      {
+        "field": "m_subtitleId",
+        "count": 682
+      },
+      {
+        "field": "m_backGround",
+        "count": 682
+      },
+      {
+        "field": "m_weatherId",
+        "count": 682
+      },
+      {
+        "field": "m_allowTeam",
+        "count": 682
+      },
+      {
+        "field": "m_openDialogId",
+        "count": 682
+      },
+      {
+        "field": "m_openShow",
+        "count": 682
+      },
+      {
+        "field": "m_endDialogId",
+        "count": 682
+      },
+      {
+        "field": "m_endshow",
+        "count": 682
+      },
+      {
+        "field": "m_settlementType",
+        "count": 682
+      },
+      {
+        "field": "m_search",
+        "count": 682
+      },
+      {
+        "field": "m_playerAttrPro",
+        "count": 682
+      },
+      {
+        "field": "m_monsterAttrPro",
+        "count": 682
+      },
+      {
+        "field": "m_SkillRandId",
+        "count": 682
+      },
+      {
+        "field": "m_ShowAvatar",
+        "count": 682
+      },
+      {
+        "field": "m_sdkEventId",
+        "count": 682
+      }
+    ],
+    "event": [
+      {
+        "field": "m_id",
+        "count": 101
+      },
+      {
+        "field": "baseDataType",
+        "count": 101
+      },
+      {
+        "field": "m_icon",
+        "count": 101
+      },
+      {
+        "field": "m_quality",
+        "count": 101
+      },
+      {
+        "field": "m_frame",
+        "count": 101
+      },
+      {
+        "field": "m_surface",
+        "count": 101
+      },
+      {
+        "field": "m_period",
+        "count": 101
+      },
+      {
+        "field": "m_star",
+        "count": 101
+      },
+      {
+        "field": "m_type",
+        "count": 101
+      },
+      {
+        "field": "m_specialShow",
+        "count": 101
+      },
+      {
+        "field": "m_nameId",
+        "count": 101
+      },
+      {
+        "field": "m_describeId",
+        "count": 101
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 101
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 101
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 101
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 101
+      },
+      {
+        "field": "m_iconshow",
+        "count": 101
+      },
+      {
+        "field": "m_AdjustGoogleIOS",
+        "count": 101
+      },
+      {
+        "field": "m_AdjustOneStore",
+        "count": 101
+      },
+      {
+        "field": "m_key",
+        "count": 101
+      },
+      {
+        "field": "m_AdjustJP",
+        "count": 101
+      },
+      {
+        "field": "m_AdjustJPios",
+        "count": 101
+      },
+      {
+        "field": "m_AdjustJPgoogle",
+        "count": 101
+      }
+    ],
+    "shop": [
+      {
+        "field": "m_id",
+        "count": 2868
+      },
+      {
+        "field": "baseDataType",
+        "count": 2868
+      },
+      {
+        "field": "m_icon",
+        "count": 2868
+      },
+      {
+        "field": "m_quality",
+        "count": 2868
+      },
+      {
+        "field": "m_frame",
+        "count": 2868
+      },
+      {
+        "field": "m_surface",
+        "count": 2868
+      },
+      {
+        "field": "m_period",
+        "count": 2868
+      },
+      {
+        "field": "m_star",
+        "count": 2868
+      },
+      {
+        "field": "m_type",
+        "count": 2868
+      },
+      {
+        "field": "m_specialShow",
+        "count": 2868
+      },
+      {
+        "field": "m_nameId",
+        "count": 2868
+      },
+      {
+        "field": "m_describeId",
+        "count": 2868
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 2868
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 2868
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 2868
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 2868
+      },
+      {
+        "field": "m_iconshow",
+        "count": 2868
+      },
+      {
+        "field": "m_group",
+        "count": 2868
+      },
+      {
+        "field": "m_seqencing",
+        "count": 2868
+      },
+      {
+        "field": "m_versionOpen",
+        "count": 2868
+      },
+      {
+        "field": "m_seqencing1",
+        "count": 2714
+      },
+      {
+        "field": "m_weight",
+        "count": 2714
+      },
+      {
+        "field": "m_itemId",
+        "count": 2714
+      },
+      {
+        "field": "m_itemNum",
+        "count": 2714
+      },
+      {
+        "field": "m_item1Id",
+        "count": 2714
+      },
+      {
+        "field": "m_costId",
+        "count": 2714
+      },
+      {
+        "field": "m_costNum",
+        "count": 2714
+      },
+      {
+        "field": "m_upperLimit",
+        "count": 2714
+      },
+      {
+        "field": "m_limitNum",
+        "count": 2714
+      },
+      {
+        "field": "m_limit",
+        "count": 2714
+      },
+      {
+        "field": "m_productDescription",
+        "count": 2714
+      },
+      {
+        "field": "m_mallIcon",
+        "count": 2714
+      },
+      {
+        "field": "m_shopType",
+        "count": 154
+      },
+      {
+        "field": "m_showType",
+        "count": 154
+      },
+      {
+        "field": "m_bookmark",
+        "count": 154
+      },
+      {
+        "field": "m_sysId",
+        "count": 154
+      },
+      {
+        "field": "m_week",
+        "count": 154
+      },
+      {
+        "field": "m_currency",
+        "count": 154
+      },
+      {
+        "field": "m_suitDescription",
+        "count": 154
+      },
+      {
+        "field": "m_refreshCycle",
+        "count": 154
+      },
+      {
+        "field": "m_drawPreviewGroup",
+        "count": 154
+      },
+      {
+        "field": "m_itemIcon",
+        "count": 154
+      },
+      {
+        "field": "m_context",
+        "count": 154
+      },
+      {
+        "field": "m_backgroundName",
+        "count": 154
+      },
+      {
+        "field": "m_promotionalVideo",
+        "count": 154
+      },
+      {
+        "field": "m_promotionalPic",
+        "count": 154
+      }
+    ],
+    "skill": [
+      {
+        "field": "m_id",
+        "count": 23470
+      },
+      {
+        "field": "baseDataType",
+        "count": 23470
+      },
+      {
+        "field": "m_icon",
+        "count": 23470
+      },
+      {
+        "field": "m_quality",
+        "count": 23470
+      },
+      {
+        "field": "m_frame",
+        "count": 23470
+      },
+      {
+        "field": "m_surface",
+        "count": 23470
+      },
+      {
+        "field": "m_period",
+        "count": 23470
+      },
+      {
+        "field": "m_star",
+        "count": 23470
+      },
+      {
+        "field": "m_type",
+        "count": 23470
+      },
+      {
+        "field": "m_specialShow",
+        "count": 23470
+      },
+      {
+        "field": "m_nameId",
+        "count": 23470
+      },
+      {
+        "field": "m_describeId",
+        "count": 23470
+      },
+      {
+        "field": "m_describe1Id",
+        "count": 23470
+      },
+      {
+        "field": "m_obtainSound",
+        "count": 23470
+      },
+      {
+        "field": "m_PumpingCard1",
+        "count": 23470
+      },
+      {
+        "field": "m_PumpingCard2",
+        "count": 23470
+      },
+      {
+        "field": "m_iconshow",
+        "count": 23470
+      },
+      {
+        "field": "m_parameterA",
+        "count": 14807
+      },
+      {
+        "field": "m_parameterB",
+        "count": 14807
+      },
+      {
+        "field": "m_priority",
+        "count": 13113
+      },
+      {
+        "field": "m_actionType",
+        "count": 11371
+      },
+      {
+        "field": "m_effectLevel",
+        "count": 11371
+      },
+      {
+        "field": "m_source",
+        "count": 11371
+      },
+      {
+        "field": "m_trigger",
+        "count": 11371
+      },
+      {
+        "field": "m_target",
+        "count": 11371
+      },
+      {
+        "field": "m_targetType",
+        "count": 11371
+      },
+      {
+        "field": "m_triggerRound",
+        "count": 11371
+      },
+      {
+        "field": "m_hpPer",
+        "count": 11371
+      },
+      {
+        "field": "m_probability",
+        "count": 11371
+      },
+      {
+        "field": "m_triggerSkillType",
+        "count": 11371
+      },
+      {
+        "field": "m_dodge",
+        "count": 11371
+      },
+      {
+        "field": "m_didden",
+        "count": 11371
+      },
+      {
+        "field": "m_effTime",
+        "count": 11371
+      },
+      {
+        "field": "m_userIds",
+        "count": 11371
+      },
+      {
+        "field": "m_targetIds",
+        "count": 11371
+      },
+      {
+        "field": "m_userGroup",
+        "count": 11371
+      },
+      {
+        "field": "m_targetGroup",
+        "count": 11371
+      },
+      {
+        "field": "m_partExist",
+        "count": 11371
+      },
+      {
+        "field": "m_partLost",
+        "count": 11371
+      },
+      {
+        "field": "m_criticalLevel",
+        "count": 11371
+      },
+      {
+        "field": "m_dodgeLevel",
+        "count": 11371
+      },
+      {
+        "field": "m_skilleffPre",
+        "count": 11371
+      },
+      {
+        "field": "m_skilleffNeg",
+        "count": 11371
+      },
+      {
+        "field": "m_buffLevel",
+        "count": 11371
+      },
+      {
+        "field": "m_targetBuffLevel",
+        "count": 11371
+      },
+      {
+        "field": "m_isTarget",
+        "count": 11371
+      },
+      {
+        "field": "m_failureTips",
+        "count": 11371
+      },
+      {
+        "field": "m_breakType",
+        "count": 11371
+      },
+      {
+        "field": "m_attribute",
+        "count": 11371
+      },
+      {
+        "field": "m_speciality1",
+        "count": 11371
+      },
+      {
+        "field": "m_skillShowId",
+        "count": 11371
+      },
+      {
+        "field": "m_displayStatus",
+        "count": 11371
+      },
+      {
+        "field": "m_frontRange",
+        "count": 11371
+      },
+      {
+        "field": "m_backRange",
+        "count": 11371
+      },
+      {
+        "field": "m_power",
+        "count": 11371
+      },
+      {
+        "field": "m_skillId",
+        "count": 5274
+      },
+      {
+        "field": "m_showEff",
+        "count": 5274
+      },
+      {
+        "field": "m_level",
+        "count": 5274
+      },
+      {
+        "field": "m_CD",
+        "count": 5274
+      },
+      {
+        "field": "m_mainSkillEff",
+        "count": 5274
+      },
+      {
+        "field": "m_tendency",
+        "count": 5274
+      },
+      {
+        "field": "m_pathfinding",
+        "count": 5274
+      },
+      {
+        "field": "m_skillEff",
+        "count": 5274
+      },
+      {
+        "field": "m_hitEffects",
+        "count": 5030
+      },
+      {
+        "field": "m_sound",
+        "count": 5030
+      },
+      {
+        "field": "m_parameterC",
+        "count": 3436
+      },
+      {
+        "field": "m_parameterD",
+        "count": 3436
+      },
+      {
+        "field": "m_parameterE",
+        "count": 3436
+      },
+      {
+        "field": "m_parameterF",
+        "count": 3436
+      },
+      {
+        "field": "m_parameterG",
+        "count": 3436
+      },
+      {
+        "field": "m_parameterH",
+        "count": 3436
+      },
+      {
+        "field": "m_specialEff",
+        "count": 3288
+      },
+      {
+        "field": "m_speedId",
+        "count": 3288
+      },
+      {
+        "field": "m_speedRetain",
+        "count": 3288
+      },
+      {
+        "field": "m_skillLight",
+        "count": 3288
+      },
+      {
+        "field": "m_passiveSkin",
+        "count": 3288
+      },
+      {
+        "field": "m_desSkin",
+        "count": 3288
+      },
+      {
+        "field": "m_fireAni",
+        "count": 3288
+      },
+      {
+        "field": "m_enterAni",
+        "count": 3288
+      },
+      {
+        "field": "m_fireEffId",
+        "count": 3288
+      },
+      {
+        "field": "m_atkEffId",
+        "count": 3288
+      },
+      {
+        "field": "m_eventEffects",
+        "count": 3288
+      },
+      {
+        "field": "m_triggerEffects",
+        "count": 3288
+      },
+      {
+        "field": "m_passiveEffid",
+        "count": 3288
+      },
+      {
+        "field": "m_passiveDestroy",
+        "count": 3288
+      },
+      {
+        "field": "m_eventGroup",
+        "count": 3288
+      },
+      {
+        "field": "m_totalFrame",
+        "count": 3288
+      },
+      {
+        "field": "m_effEventGroup",
+        "count": 3288
+      },
+      {
+        "field": "m_ghost",
+        "count": 3288
+      },
+      {
+        "field": "m_skillsound",
+        "count": 3288
+      },
+      {
+        "field": "m_ActorSound",
+        "count": 3288
+      },
+      {
+        "field": "m_Tllight",
+        "count": 3288
+      },
+      {
+        "field": "m_changeIsClear",
+        "count": 1742
+      },
+      {
+        "field": "m_stackedSystem",
+        "count": 1742
+      },
+      {
+        "field": "m_buffMarker",
+        "count": 1742
+      },
+      {
+        "field": "m_longEffId",
+        "count": 1742
+      },
+      {
+        "field": "m_buffIcon",
+        "count": 1742
+      },
+      {
+        "field": "m_time",
+        "count": 1742
+      },
+      {
+        "field": "m_parameterI",
+        "count": 1694
+      },
+      {
+        "field": "m_parameterJ",
+        "count": 1694
+      },
+      {
+        "field": "m_parameterL",
+        "count": 1694
+      },
+      {
+        "field": "m_parameterN",
+        "count": 1694
+      },
+      {
+        "field": "m_parameterM",
+        "count": 1694
+      },
+      {
+        "field": "m_parameterO",
+        "count": 1694
+      },
+      {
+        "field": "m_parameterK",
+        "count": 1694
+      },
+      {
+        "field": "m_effectTarget",
+        "count": 101
+      },
+      {
+        "field": "m_skilleffId",
+        "count": 101
+      },
+      {
+        "field": "m_show",
+        "count": 101
+      },
+      {
+        "field": "m_name",
+        "count": 101
+      }
+    ]
+  }
+}

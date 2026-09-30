@@ -1,0 +1,23 @@
+{
+  "stage": 6,
+  "json_file_count": 74,
+  "parsed_file_count": 74,
+  "unique_record_ids": 118015,
+  "draw_records": 2922,
+  "draw_previews": 112,
+  "unique_draw_groups": 74,
+  "unique_item_package_ids": 214,
+  "resolved_item_package_ids": 0,
+  "unresolved_item_package_ids": 214,
+  "preview_records_with_incoming_refs": 112,
+  "probability_groups_with_values": 74,
+  "groups_probability_sum_exact_1": 0,
+  "groups_probability_sum_near_1": 0,
+  "parse_errors": 0,
+  "rules": {
+    "id_resolution": "exact logical Record ID",
+    "obscured_id": "hiddenValue XOR currentCryptoKey",
+    "grouping": "DrawRecord.m_group",
+    "probability_validation": "sum only; semantic meaning not auto-confirmed"
+  }
+}

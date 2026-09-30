@@ -1,0 +1,23 @@
+{
+  "json_file_count": 74,
+  "parsed_file_count": 74,
+  "unique_record_ids": 118015,
+  "draw_records": 2922,
+  "draw_previews": 112,
+  "draw_entries": 3034,
+  "chain_entries": 3034,
+  "edge_count": 23077,
+  "direct_target_types": {
+    "DrawPreviewRecord": 112,
+    "Item": 316,
+    "DrawRecord": 2922
+  },
+  "target_files": 7,
+  "parse_errors": 0,
+  "rules": {
+    "obscured_id": "hiddenValue XOR currentCryptoKey",
+    "kr_name_field": "m_cn",
+    "max_chain_depth": 5,
+    "semantic_inference": false
+  }
+}
