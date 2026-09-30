@@ -222,7 +222,31 @@ research/
   - `LoginManager.LoginGameServer` — 게임 서버 로그인 시작점 추적
   - `LoginManager.HandleLoginSuccess` — 로그인 성공 핸들러 추적
 
-## 9. 참고 자료
+## 9. 게임 서버 연결 추적 (2026-09-30)
+
+### Frida 후킹 현황 (v4.10.2)
+| 후크 | 상태 |
+|------|------|
+| `CSBehaviour.Connect` (1 args) | ✅ 후킹 성공 |
+| `CSBehaviour.RequestOp` | ✅ 후킹 성공 |
+| `NetworkCenter.Send` | ❌ 못 찾음 |
+| `LoginManager.LoginGameServer` | ✅ 후킹 성공 |
+| `LoginManager.HandleLoginSuccess` | 후킹 시도 중 |
+
+### 확인된 흐름
+```
+HTTP 로그인 성공
+  → SaveLoginToken (UserId: 861197)
+  → LoginManager.LoginGameServer 호출됨 ✅
+  → CSBehaviour.Connect 호출 안 됨 ❌ (아직)
+```
+
+### 현재 상태
+- 게임이 로딩 화면에서 멈춤
+- `LoginGameServer`는 호출되지만 `Connect`까지 안 감
+- 원인 파악 중: 서버 정보 파싱 문제 or 다른 연결 경로
+
+## 10. 참고 자료
 
 - Sign 알고리즘: `research/reports/2026-09-29-Sign-알고리즘-런타임-검증.md`
 - GetDefaultParams: `research/reports/2026-09-29-GetDefaultParams-helper-정적분석.md`
