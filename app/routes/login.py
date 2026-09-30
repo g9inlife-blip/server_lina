@@ -86,20 +86,28 @@ async def v3_allin1(request: Request):
 
     # 로컬 서버 URL로 변경
     base = f"http://{config.HOST}:{config.PORT}"
+    cdn_base = f"{base}/cdn/v310/202608022111/"
     resp_sign = compute_sign(config.LOGIN_CONTENT, params)
 
     return {
         "v": "3.1.0",
         "Keys": [
-            {"Key": "API_Login", "URL": f"{base}/v5/account/login"},
-            {"Key": "API_Anon", "URL": f"{base}/v3/account/anon"},
-            {"Key": "API_Allin1", "URL": f"{base}/v3/ain1"},
+            {"Key": "API_Login", "URL": f"{base}/api/v5/account/login"},
+            {"Key": "API_Anon", "URL": f"{base}/api/v3/account/anon"},
+            {"Key": "API_Allin1", "URL": f"{base}/api/v3/ain1"},
         ],
         "m": "official",
         "Desc": "成功",
         "Status": 0,
         "sign": resp_sign,
         "Servers": [{"Host": config.HOST, "Port": 8000}],
+        "Assets": [
+            {
+                "Ping": f"{cdn_base}readme.txt",
+                "CDN": cdn_base,
+                "Version": "3.1.88",
+            }
+        ],
         "n": params.get("n", ""),
         "d": params.get("d", ""),
         "r": params.get("r", "7"),
