@@ -1,7 +1,7 @@
 /**
- * JusticeSchool (com.Alioth.JusticeSchool.cn) - Login Hook Script v4.8
+ * JusticeSchool (com.Alioth.JusticeSchool.cn) - Login Hook Script v4.9
  *
- * v4.8: HTTP 응답 캡처 (DownloadHandler.get_text, get_responseCode) + ServerConst.GetURL 후킹
+ * v4.9: ServerConst.GetURL 리다이렉트 (로컬 서버로 URL 교체)
  *
  * NO frida-il2cpp-bridge, NO frida-compile needed.
  * Resolves IL2CPP exports by parsing /proc/self/maps + ELF directly,
@@ -972,6 +972,50 @@ async function main() {
     } catch (e) { console.log('[!] responseCode hook failed: ' + e.message); }
 
     // ServerConst.GetURL — 서버 URL 반환 (리다이렉트용)
+    // 로컬 서버로 리다이렉트: REDIRECT_ENABLED = true로 설정
+    const REDIRECT_ENABLED = true;
+    const LOCAL_BASE = 'http://127.0.0.1:8888';
+    // URL 매핑: 원격 키 → 로컬 경로
+    const URL_MAP = {
+        'API_Login': '/v5/account/login',
+        'API_Anon': '/v3/account/anon',
+        'API_Allin1': '/v3/ain1',
+    };
+    let il2cpp_string_new = null;
+    try {
+        // il2cpp_string_new export 찾기
+        const mods = Process.enumerateModules();
+        for (const m of mods) {
+            if (m.name.includes('il2cpp')) {
+                try {
+                    il2cpp_string_new = m.findExportByName('il2cpp_string_new');
+                    if (il2cpp_string_new) break;
+                } catch (e) {}
+            }
+        }
+        // /proc/maps 파싱 fallback
+        if (!il2cpp_string_new && il2cppBase) {
+            console.log('[*] il2cpp_string_new: enumerateModules에서 못 찾음, ELF 파싱 시도');
+        }
+        if (il2cpp_string_new) {
+            console.log('[+] il2cpp_string_new @ ' + il2cpp_string_new);
+            il2cpp_string_new = new NativeFunction(il2cpp_string_new, 'pointer', ['pointer']);
+        } else {
+            console.log('[!] il2cpp_string_new not found - URL 교체 불가, 로그만 출력');
+        }
+    } catch (e) { console.log('[!] il2cpp_string_new 찾기 실패: ' + e.message); }
+
+    function newIl2cppString(str) {
+        if (!il2cpp_string_new) return null;
+        try {
+            const utf8 = Memory.allocUtf8String(str);
+            return il2cpp_string_new(utf8);
+        } catch (e) {
+            console.log('[!] newIl2cppString 실패: ' + e.message);
+            return null;
+        }
+    }
+
     try {
         const getUrl = findMethodAnywhere('ServerConst', 'GetURL', 0);
         if (getUrl && !getUrl.isNull()) {
@@ -981,9 +1025,6 @@ async function main() {
                     try {
                         const url = readIl2cppString(retval);
                         console.log('\n[SERVER_URL] GetURL => ' + JSON.stringify(trunc(url, 2000)));
-                        // 리다이렉트 테스트용: 아래 주석을 해제하면 로컬 서버로 변경
-                        // const localUrl = 'http://127.0.0.1:8080/';
-                        // TODO: 반환값 교체는 Il2CppString 생성이 필요 — 별도 구현
                     } catch (e) {}
                 }
             });
@@ -996,12 +1037,23 @@ async function main() {
             Interceptor.attach(getUrl1, {
                 onEnter(args) {
                     try {
-                        console.log('[SERVER_URL] GetURL(1 arg) called, arg0=' + JSON.stringify(trunc(readIl2cppString(args[0]), 500)));
+                        this.apiKey = readIl2cppString(args[0]);
+                        console.log('[SERVER_URL] GetURL(1 arg) called, arg0=' + JSON.stringify(trunc(this.apiKey, 500)));
                     } catch (e) {}
                 },
                 onLeave(retval) {
                     try {
-                        console.log('[SERVER_URL] GetURL(1 arg) => ' + JSON.stringify(trunc(readIl2cppString(retval), 2000)));
+                        const origUrl = readIl2cppString(retval);
+                        console.log('[SERVER_URL] GetURL(1 arg) => ' + JSON.stringify(trunc(origUrl, 2000)));
+                        // 리다이렉트: 매핑된 키면 로컬 URL로 교체
+                        if (REDIRECT_ENABLED && this.apiKey && URL_MAP[this.apiKey]) {
+                            const localUrl = LOCAL_BASE + URL_MAP[this.apiKey];
+                            const newStr = newIl2cppString(localUrl);
+                            if (newStr && !newStr.isNull()) {
+                                retval.replace(newStr);
+                                console.log('[REDIRECT] ' + this.apiKey + ' => ' + localUrl);
+                            }
+                        }
                     } catch (e) {}
                 }
             });
