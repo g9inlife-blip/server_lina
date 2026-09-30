@@ -1121,6 +1121,30 @@ async function main() {
             }
         }
         if (!sendHooked) console.log('[!] NetworkCenter.Send not found');
+
+        // LoginManager.LoginGameServer - 게임 서버 로그인 시작점
+        const loginGS = findMethodAnywhere('LoginManager', 'LoginGameServer', 1);
+        if (loginGS && !loginGS.isNull()) {
+            console.log('[+] Hooking LoginManager.LoginGameServer @ ' + loginGS);
+            Interceptor.attach(loginGS, {
+                onEnter(args) {
+                    console.log('\n[LOGIN_GS] LoginManager.LoginGameServer called');
+                }
+            });
+            hookCount++;
+        } else console.log('[!] LoginManager.LoginGameServer not found');
+
+        // LoginManager.HandleLoginSuccess
+        const handleSuccess = findMethodAnywhere('LoginManager', 'HandleLoginSuccess', 1);
+        if (handleSuccess && !handleSuccess.isNull()) {
+            console.log('[+] Hooking LoginManager.HandleLoginSuccess @ ' + handleSuccess);
+            Interceptor.attach(handleSuccess, {
+                onEnter(args) {
+                    console.log('\n[LOGIN_OK] LoginManager.HandleLoginSuccess called');
+                }
+            });
+            hookCount++;
+        }
     } catch (e) { console.log('[!] 게임 서버 후킹 실패: ' + e.message); }
 
     console.log(`\n[*] ${hookCount} hooks installed.`);
