@@ -215,9 +215,10 @@ research/
 - `retval.replace()`로 반환값 교체
 - `URL_MAP`에서 매핑된 키만 리다이렉트
 - **v4.10 신규**: 게임 서버 연결 후킹
-  - `CSBehaviour.Connect` — 게임 서버 연결 시도 로깅
+  - `CSBehaviour.Connect` — 게임 서버 연결 시도 로깅 (1-4 args 자동 탐색)
   - `CSBehaviour.RequestOp` — opcode 전송 로깅
-  - `NetworkCenter.Send` — raw 전송 로깅
+  - `NetworkCenter.Send` — raw 전송 로깅 (1-3 args 자동 탐색)
+- **v4.10.1**: Connect/Send 시그니처 자동 탐색으로 변경 (수동 지정 시 못 찾음)
 
 ## 9. 참고 자료
 
