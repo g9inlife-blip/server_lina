@@ -1,24 +1,102 @@
-"""V4 로그인 라우트."""
-from fastapi import APIRouter, HTTPException
+"""V4 로그인 라우트.
+
+실제 캡처 기반 (2026-09-30):
+- URL: POST /v5/account/login?<random>
+- Content-Type: application/x-www-form-urlencoded
+- 응답: JSON (아래 LoginResponse 참고)
+"""
+import time
+import urllib.parse
+from fastapi import APIRouter, Request
+from fastapi.responses import JSONResponse
 
 from .. import config
-from ..crypto import verify_sign
-from ..models import LoginParams, LoginResponse
+from ..crypto import verify_sign, compute_sign
 
 router = APIRouter()
 
 
-@router.post("/login", response_model=LoginResponse)
-def v4_login(params: LoginParams):
-    # Sign 검증: content는 클라이언트가 Sign에 넘긴 값
-    # TODO: content가 요청에 포함되는지, 별도 필드인지 캡처로 확정
-    body = params.model_dump()
-    sign = body.pop("sign")
+def parse_form_body(body: bytes) -> dict[str, str]:
+    """application/x-www-form-urlencoded 파싱."""
+    return dict(urllib.parse.parse_qsl(body.decode("utf-8")))
 
-    # content 후보: 고정 MD5 (Frida 캡처)
-    # 실제 content 전달 방식이 확정되면 수정
-    if not verify_sign(config.LOGIN_CONTENT, body, sign):
-        raise HTTPException(status_code=400, detail="sign verification failed")
 
-    # TODO: 계정 검증, 토큰 발급
-    return LoginResponse(ret=0, msg="ok", token="local-dev-token")
+@router.post("/v5/account/login")
+async def v4_login(request: Request):
+    body = await request.body()
+    params = parse_form_body(body)
+
+    # sign 검증
+    sign = params.pop("sign", "")
+    # content는 고정 MD5 (Frida 캡처)
+    if not verify_sign(config.LOGIN_CONTENT, params, sign):
+        return JSONResponse(
+            status_code=400,
+            content={"Status": 1, "Desc": "sign verification failed"},
+        )
+
+    # 로그인 응답 (2026-09-30 캡처 기반)
+    # Token은 새 토큰을 발급해야 함 (여기서는 더미)
+    new_token = "local-dummy-token-" + params.get("u", "unknown")
+
+    # 응답의 sign은 요청 파라미터들로 계산 (서버도 sign을 포함)
+    resp_sign = compute_sign(config.LOGIN_CONTENT, params)
+
+    return {
+        "logout_ex_time": 0,
+        "sign": resp_sign,
+        "t": params.get("t", ""),
+        "platform": params.get("platform", "google"),
+        "UserId": 861197,  # TODO: 실제 사용자 DB 연동
+        "p2": params.get("p2", "logout"),
+        "FCMStatus": 4,
+        "v": params.get("v", "3.1.0"),
+        "RealName": True,
+        "m": params.get("m", "official"),
+        "u": params.get("u", ""),
+        "Age": 27,
+        "Status": 0,
+        "Desc": "成功",
+        "First": 0,
+        "method": params.get("method", ""),
+        "d": params.get("d", ""),
+        "p": params.get("p", ""),
+        "r": params.get("r", "7"),
+        "n": params.get("n", ""),
+        "Token": new_token,
+    }
+
+
+@router.post("/v3/ain1")
+async def v3_allin1(request: Request):
+    """AllInOne - API URL 목록 반환."""
+    body = await request.body()
+    params = parse_form_body(body)
+
+    sign = params.pop("sign", "")
+    if not verify_sign(config.LOGIN_CONTENT, params, sign):
+        return JSONResponse(
+            status_code=400,
+            content={"Status": 1, "Desc": "sign verification failed"},
+        )
+
+    # 로컬 서버 URL로 변경
+    base = f"http://{config.HOST}:{config.PORT}"
+    resp_sign = compute_sign(config.LOGIN_CONTENT, params)
+
+    return {
+        "v": "3.1.0",
+        "Keys": [
+            {"Key": "API_Login", "URL": f"{base}/v5/account/login"},
+            {"Key": "API_Anon", "URL": f"{base}/v3/account/anon"},
+            {"Key": "API_Allin1", "URL": f"{base}/v3/ain1"},
+        ],
+        "m": "official",
+        "Desc": "成功",
+        "Status": 0,
+        "sign": resp_sign,
+        "Servers": [{"Host": config.HOST, "Port": 8000}],
+        "n": params.get("n", ""),
+        "d": params.get("d", ""),
+        "r": params.get("r", "7"),
+    }
