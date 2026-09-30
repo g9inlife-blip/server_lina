@@ -1063,27 +1063,32 @@ async function main() {
 
     // ===== 게임 서버 연결 후킹 (KCP) =====
     try {
-        // CSBehaviour.Connect - 게임 서버 연결
-        const connect = findMethodAnywhere('CSBehaviour', 'Connect', 3);
-        if (connect && !connect.isNull()) {
-            console.log('[+] Hooking CSBehaviour.Connect @ ' + connect);
-            Interceptor.attach(connect, {
-                onEnter(args) {
-                    try {
-                        const host = readIl2cppString(args[1]);
-                        const port = args[2].toInt32();
-                        console.log('\n[GAME_CONN] CSBehaviour.Connect');
-                        console.log('  host: ' + host);
-                        console.log('  port: ' + port);
-                        // 로컬 서버로 리다이렉트 (포트 8000)
-                        if (port === 8000) {
-                            console.log('  [REDIRECT] 게임 서버 → 127.0.0.1:8000');
-                        }
-                    } catch (e) {}
-                }
-            });
-            hookCount++;
+        // CSBehaviour.Connect - 게임 서버 연결 (시그니처 자동 탐색, 1~4 args)
+        let connectHooked = false;
+        for (let argc = 1; argc <= 4 && !connectHooked; argc++) {
+            const connect = findMethodAnywhere('CSBehaviour', 'Connect', argc);
+            if (connect && !connect.isNull()) {
+                console.log('[+] Hooking CSBehaviour.Connect (' + argc + ' args) @ ' + connect);
+                Interceptor.attach(connect, {
+                    onEnter(args) {
+                        try {
+                            console.log('\n[GAME_CONN] CSBehaviour.Connect called (' + argc + ' args)');
+                            for (let i = 0; i < argc; i++) {
+                                try {
+                                    const s = readIl2cppString(args[i]);
+                                    if (s && s.length < 200) console.log('  arg[' + i + ']: "' + s + '"');
+                                } catch (e) {
+                                    try { console.log('  arg[' + i + ']: ' + args[i].toInt32()); } catch (e2) {}
+                                }
+                            }
+                        } catch (e) {}
+                    }
+                });
+                hookCount++;
+                connectHooked = true;
+            }
         }
+        if (!connectHooked) console.log('[!] CSBehaviour.Connect not found (1-4 args)');
 
         // CSBehaviour.RequestOp - opcode 전송
         const requestOp = findMethodAnywhere('CSBehaviour', 'RequestOp', 1);
@@ -1092,28 +1097,30 @@ async function main() {
             Interceptor.attach(requestOp, {
                 onEnter(args) {
                     try {
-                        // OpInfo 구조 파싱 시도
                         console.log('\n[OPCODE] CSBehaviour.RequestOp called');
                         console.log('  args[0]: ' + args[0]);
                     } catch (e) {}
                 }
             });
             hookCount++;
-        }
+        } else console.log('[!] CSBehaviour.RequestOp not found');
 
-        // NetworkCenter.Send - raw 전송
-        const netSend = findMethodAnywhere('NetworkCenter', 'Send', 1);
-        if (netSend && !netSend.isNull()) {
-            console.log('[+] Hooking NetworkCenter.Send @ ' + netSend);
-            Interceptor.attach(netSend, {
-                onEnter(args) {
-                    try {
+        // NetworkCenter.Send - 여러 시그니처 시도
+        let sendHooked = false;
+        for (let argc = 1; argc <= 3 && !sendHooked; argc++) {
+            const netSend = findMethodAnywhere('NetworkCenter', 'Send', argc);
+            if (netSend && !netSend.isNull()) {
+                console.log('[+] Hooking NetworkCenter.Send (' + argc + ' args) @ ' + netSend);
+                Interceptor.attach(netSend, {
+                    onEnter(args) {
                         console.log('[NET_SEND] NetworkCenter.Send called');
-                    } catch (e) {}
-                }
-            });
-            hookCount++;
+                    }
+                });
+                hookCount++;
+                sendHooked = true;
+            }
         }
+        if (!sendHooked) console.log('[!] NetworkCenter.Send not found');
     } catch (e) { console.log('[!] 게임 서버 후킹 실패: ' + e.message); }
 
     console.log(`\n[*] ${hookCount} hooks installed.`);
