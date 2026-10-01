@@ -40,24 +40,15 @@ async def v4_login(request: Request):
         )
 
     # 로그인 응답 (2026-09-30 캡처 기반)
-    # Token: 실제 서버는 344자 Base64 (368B 핸드셰이크용)
-    # 운영처럼 랜덤 바이트 사용 (null 없음)
-    import base64
-    import os
-    # 256바이트 랜덤 -> Base64 344자 (서버 재시작마다 고정)
-    # 고정값을 위해 시드 기반 생성
-    import hashlib
-    seed = b"server_lina-fixed-token-v1"
-    token_bytes = hashlib.sha256(seed).digest()  # 32B
-    # 256B로 확장 (SHA256 반복)
-    full = b""
-    counter = 0
-    while len(full) < 256:
-        full += hashlib.sha256(seed + counter.to_bytes(4, 'little')).digest()
-        counter += 1
-    token_bytes = full[:256]
-    new_token = base64.b64encode(token_bytes).decode()
-    assert len(new_token) == 344, f"토큰 길이 오류: {len(new_token)}"
+    # Token: 344자 Base64 고정값 (368B 핸드셰이크용)
+    # 운영처럼 랜덤 바이트 기반, null 없음, 서버 재시작해도 동일
+    new_token = (
+        "tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSow"
+        "PTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStA"
+        "bGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnA"
+        "daeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3"
+        "b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA=="
+    )
 
     # 응답의 sign은 요청 파라미터들로 계산 (서버도 sign을 포함)
     resp_sign = compute_sign(config.LOGIN_CONTENT, params)
