@@ -17,7 +17,7 @@ from .dh64 import DH64
 class KCPServerUDP:
     """UDP 기반 KCP 게임 서버."""
 
-    def __init__(self, host: str = "127.0.0.1", port: int = 8000):
+    def __init__(self, host: str = "0.0.0.0", port: int = 8000):
         self.host = host
         self.port = port
         self.sock: socket.socket | None = None
