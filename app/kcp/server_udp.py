@@ -47,11 +47,12 @@ class KCPServerUDP:
         pkt_len = len(data)
         print(f"[*] {addr}에서 {pkt_len}B 수신")
 
-        if pkt_len == 373:
+        if pkt_len == 373 or pkt_len == 368:
             self.handle_handshake1(data, addr)
         elif pkt_len < 373:
             # KCP 데이터 패킷 (암호화됨)
-            print(f"[*] KCP 데이터 패킷: {pkt_len}B")
+            print(f"[*] KCP 데이터 패킷: {pkt_len}B from {addr}")
+            print(f"    hex: {data[:64].hex()}...")
             # TODO: 복호화 → opcode 처리
         else:
             print(f"[!] 알 수 없는 패킷 크기: {pkt_len}")
