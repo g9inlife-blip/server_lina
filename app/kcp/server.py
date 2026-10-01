@@ -47,62 +47,84 @@ class KCPServer:
         """클라이언트 처리."""
         try:
             dh = DH64()
-            # 1. Handshake2 수신
+            # 1. Handshake 수신 (Handshake1: 373B 또는 Handshake2: 56B)
             data = conn.recv(4096)
             if not data:
                 return
 
-            print(f"[*] Handshake 패킷 수신: {len(data)} bytes")
-            print(f"    hex: {data.hex()}")
-            # 패킷 저장 (분석용)
-            import time
-            ts = int(time.time() * 1000)
-            pkt_path = f"/tmp/hs_{ts}_{addr[1]}.bin"
-            try:
-                with open(pkt_path, "wb") as f:
-                    f.write(data)
-                print(f"    저장: {pkt_path}")
-            except:
-                pass
+            pkt_len = len(data)
+            print(f"[*] Handshake 패킷 수신: {pkt_len} bytes")
 
-            # 2. Peer public 키 추출
-            try:
-                pub1, pub2 = DH64.parse_handshake2(data)
-                print(f"[*] Peer public: {pub1:#x}, {pub2:#x}")
-                session_key = dh.compute_session_key(pub1, pub2)
-                print(f"[*] 세션 키: {session_key.hex()}")
-            except Exception as e:
-                print(f"[!] Handshake 파싱 실패: {e}")
-                return
-
-            # 2.5. 서버 Handshake 응답 전송
-            # 클라이언트 패킷과 동일한 구조 (56 bytes, public 키는 0x11, 0x19)
-            try:
-                srv_pub1, srv_pub2 = dh.get_public_pair()
-                print(f"[*] Server public: {srv_pub1:#x}, {srv_pub2:#x}")
-                # 응답 패킷 구성 (클라이언트 패킷 구조 모방)
-                resp = bytearray(56)
-                # 헤더 복사 (0x00-0x10)
-                resp[0:0x11] = data[0:0x11]
-                # 서버 public 키 삽입
-                struct.pack_into("<Q", resp, 0x11, srv_pub1)
-                struct.pack_into("<Q", resp, 0x19, srv_pub2)
-                # 나머지 복사
-                resp[0x21:] = data[0x21:]
+            if pkt_len == 373:
+                # Handshake1: Base64 DH 키 교환
+                print(f"[*] Handshake1 감지")
+                # 서버 응답 (37 bytes, PCAP 형식)
+                # 0x00-0x07: zeros
+                # 0x08-0x0B: 25 (0x19)
+                # 0x0C: 0x01
+                # 0x0D-0x14: ??? (PCAP: d106000000000000)
+                # 0x15-0x1C: server public key (8B)
+                # 0x1D-0x24: ??? (PCAP: f946af9e83fde980)
+                srv_pub1, _ = dh.get_public_pair()
+                resp = bytearray(37)
+                struct.pack_into("<Q", resp, 0x00, 0)  # zeros
+                struct.pack_into("<I", resp, 0x08, 25)  # length
+                resp[0x0C] = 0x01
+                # 0x0D: PCAP 값 그대로 사용 (의미 불명)
+                resp[0x0D:0x15] = bytes.fromhex("d106000000000000")
+                struct.pack_into("<Q", resp, 0x15, srv_pub1)
+                # 0x1D: PCAP 값 그대로 사용
+                resp[0x1D:0x25] = bytes.fromhex("f946af9e83fde980")
                 conn.send(bytes(resp))
-                print(f"[*] Handshake 응답 전송: {len(resp)} bytes")
-            except Exception as e:
-                print(f"[!] Handshake 응답 실패: {e}")
-                return
+                print(f"[*] Handshake1 응답 전송: 37 bytes")
+                print(f"[*] Server public: {srv_pub1:#x}")
+
+                # Handshake2 대기
+                data = conn.recv(4096)
+                if not data:
+                    return
+                pkt_len = len(data)
+                print(f"[*] Handshake2 패킷 수신: {pkt_len} bytes")
+
+            if pkt_len == 56:
+                # Handshake2: 토큰 전송
+                print(f"[*] Handshake2 감지")
+                print(f"    hex: {data.hex()}")
+                # 토큰 추출 (0x19부터)
+                try:
+                    token_raw = data[0x19:]
+                    token = ''.join(chr(b) if 32 <= b < 127 else '' for b in token_raw)
+                    print(f"[*] 토큰: {token[:50]}")
+                except:
+                    pass
+
+                # DH public 키 (0x11)
+                try:
+                    pub1 = struct.unpack_from("<Q", data, 0x11)[0]
+                    print(f"[*] Client public: {pub1:#x}")
+                    # 세션 키 계산 (단일 DH)
+                    secret = pow(pub1, dh.private1, dh.P if hasattr(dh, 'P') else 0xFFFFFFFFFFFFFFC5)
+                    print(f"[*] Secret: {secret:#x}")
+                except Exception as e:
+                    print(f"[!] DH 계산 실패: {e}")
+
+                # Handshake2 응답 (56B, 에코)
+                resp = bytearray(56)
+                resp[0:0x11] = data[0:0x11]
+                srv_pub1, _ = dh.get_public_pair()
+                struct.pack_into("<Q", resp, 0x11, srv_pub1)
+                # 토큰 부분은 그대로
+                resp[0x19:] = data[0x19:]
+                conn.send(bytes(resp))
+                print(f"[*] Handshake2 응답 전송: 56 bytes")
 
             # 3. 이후 패킷 처리 루프
-            # TODO: KCP 패킷 구조 파악 후 구현
+            print(f"[*] 핸드셰이크 완료, 데이터 대기 중...")
             while True:
                 pkt = conn.recv(4096)
                 if not pkt:
                     break
-                print(f"[*] 패킷 수신: {len(pkt)} bytes")
-                # TODO: 복호화 → opcode 파싱 → 핸들러 호출 → 응답
+                print(f"[*] 패킷 수신: {len(pkt)} bytes, hex: {pkt[:32].hex()}...")
 
         except Exception as e:
             print(f"[!] 클라이언트 처리 실패 ({addr}): {e}")
