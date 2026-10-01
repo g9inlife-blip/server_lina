@@ -234,6 +234,20 @@ class KCPServerUDP:
             except Exception as e:
                 print(f"    Raw 실패: {e}")
 
+            # 221B에 28B 응답 시도 (PCAP의 S→C 28B)
+            # 클라이언트가 응답을 기다리는 것일 수 있음
+            try:
+                # 28B: zeros(8) + 0x02? + session ID? + ???
+                # PCAP 28B 구조를 모르므로 추측
+                resp = b'\x00' * 8  # zeros
+                resp += b'\x02'  # 타입?
+                resp += struct.pack("<Q", session_id)  # session ID
+                resp += b'\x00' * 11  # padding to 28B
+                self.sock.sendto(resp, addr)
+                print(f"[*] 28B 응답 전송 to {addr}")
+            except Exception as e:
+                print(f"[!] 28B 응답 실패: {e}")
+
         except Exception as e:
             print(f"[!] 복호화 오류: {e}")
             import traceback
