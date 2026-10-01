@@ -151,14 +151,13 @@ class KCPServerUDP:
             struct.pack_into("<Q", resp, 0x00, 0)  # zeros
             resp[0x08] = 0x01
             struct.pack_into("<Q", resp, 0x09, session_id)
-            struct.pack_into("<Q", resp, 0x11, srv_pub2)  # server public #2
-            struct.pack_into("<Q", resp, 0x19, srv_pub1)  # server public #1
+            struct.pack_into("<Q", resp, 0x11, random.getrandbits(64))  # ??? (원복)
+            struct.pack_into("<Q", resp, 0x19, srv_pub1)  # server public
 
             self.sock.sendto(bytes(resp), addr)
             print(f"[*] 33B 응답 전송 to {addr}")
             print(f"[*] Session ID: {session_id:#x}")
-            print(f"[*] Server public #1: {srv_pub1:#x}")
-            print(f"[*] Server public #2: {srv_pub2:#x}")
+            print(f"[*] Server public: {srv_pub1:#x}")
 
             # 세션 저장
             self.sessions[session_id] = (dh, session_key)
