@@ -233,42 +233,36 @@ research/
 | `LoginManager.LoginGameServer` | ✅ 후킹 성공 |
 | `LoginManager.HandleLoginSuccess` | 후킹 시도 중 |
 
-### KCP 핸드셰이크 패킷 구조 분석 (2026-10-01, 리나)
+### 56B KCP Handshake 현황 (2026-10-01 15:15, 리나)
 
-**PCAP 실제 패킷 (어플시작_로그인까지.pcap):**
+**GPT 분석 반영:**
+- 56B는 Handshake2 클라이언트→서버 입력
+- Ghidra: Handshake2 내부에 Socket.Send 없음 (구 프로토콜 기준)
+- 2중 DH 구조 확인 (public #1 @0x11, public #2 @0x19)
 
-**C→S Handshake1 (373 bytes):**
+**실제 56B 패킷 분석:**
 ```
-0x00-0x07: zeros (8B)
-0x08-0x0B: 361 (0x169, LE32)
-0x0C:      0x01
-0x0D~:     Base64 인코딩 데이터 (DH public key + ?)
+0x11 (8B): public #1 (실제 DH 키)
+0x19 (8B): 토큰과 겹침! ("loca..." 포함)
+0x1D~: 토큰 문자열 ("local-dummy-token-witchwind")
 ```
+- 0x19은 public #2가 아님! 토큰 데이터와 겹쳐
+- 56B 프로토콜에는 public #2가 없음 (단일 DH)
 
-**S→C Handshake 응답 (37 bytes):**
-```
-0x00-0x07: zeros (8B)
-0x08-0x0B: 25 (0x19, LE32)
-0x0C:      0x01
-0x0D-0x14: d106000000000000 (8B, ???)
-0x15-0x1C: 41841b7a54c80106 (8B, server public key?)
-0x1D-0x24: f946af9e83fde980 (8B, ???)
-```
-
-**라이브 캡처 (56 bytes) - Handshake2?:**
-```
-0x00-0x07: zeros (8B)
-0x08-0x0B: 44 (0x2c, LE32)
-0x0C:      0x01
-0x11-0x18: DH public key (8B)
-0x19~:     토큰 문자열
-```
+**시도한 방법 (모두 실패 - 클라이언트 재시도 루프):**
+1. 2중 DH (public #2 = 토큰 데이터로 계산) → 실패
+2. 단일 DH (secret duplicated) → 실패
+3. 56B 응답 전송 → 실패
+4. 56B 응답 미전송 → 실패
 
 **결론:**
-- Handshake가 2단계로 구성됨 (Handshake1: 373B, Handshake2: 56B)
-- Handshake1: Base64로 인코딩된 DH 키 교환
-- Handshake2: 토큰 전송
-- 서버 응답 형식 (37B) 확인됨
+- 56B 프로토콜의 실제 서버 응답 형식을 모름
+- PCAP에 56B 캡처 없음 (373B/37B만 있음)
+- 추측으로 해결 불가, 실제 서버 응답 캡처 또는 GPT 추가 분석 필요
+
+**다음 단계:**
+- GPT의 56B 프로토콜 추가 분석 대기
+- 또는 실제 서버 대상 56B 핸드셰이크 캡처
 
 ### 확인된 흐름
 ```
