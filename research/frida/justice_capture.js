@@ -1134,6 +1134,42 @@ async function main() {
             hookCount++;
         } else console.log('[!] LoginManager.LoginGameServer not found');
 
+        // UDP 소켓 후킹 - KCP 패킷 캡처 (sendto/recvfrom)
+        try {
+            const sendto = Module.findExportByName('libc.so', 'sendto');
+            const recvfrom = Module.findExportByName('libc.so', 'recvfrom');
+            if (sendto && !sendto.isNull()) {
+                console.log('[+] Hooking libc sendto @ ' + sendto);
+                Interceptor.attach(sendto, {
+                    onEnter(args) {
+                        try {
+                            const fd = args[0].toInt32();
+                            const buf = args[1];
+                            const len = args[2].toInt32();
+                            // 8000번 포트 관련만 (sockaddr 확인)
+                            // 일단 300-400B 패킷만 로그 (Handshake1 후보)
+                            if (len >= 300 && len <= 500) {
+                                const data = Memory.readByteArray(buf, Math.min(len, 64));
+                                const hex = Array.from(new Uint8Array(data)).map(b => b.toString(16).padStart(2, '0')).join('');
+                                console.log('\n[UDP_SEND] len=' + len + ' hex=' + hex + '...');
+                            }
+                        } catch (e) {}
+                    }
+                });
+                hookCount++;
+            }
+            if (recvfrom && !recvfrom.isNull()) {
+                console.log('[+] Hooking libc recvfrom @ ' + recvfrom);
+                Interceptor.attach(recvfrom, {
+                    onLeave(retval) {
+                        // recvfrom은 onEnter에서 길이를 알 수 없어 생략
+                    }
+                });
+            }
+        } catch (e) {
+            console.log('[!] UDP 소켓 후킹 실패: ' + e);
+        }
+
         // KCPTube.Handshake1 - 핸드셰이크1 찾기 (전체 메서드 스캔)
         let hs1Found = false;
         try {
