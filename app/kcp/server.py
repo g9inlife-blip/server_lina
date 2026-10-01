@@ -57,27 +57,30 @@ class KCPServer:
 
             if pkt_len == 373:
                 # Handshake1: Base64 DH 키 교환
-                print(f"[*] Handshake1 감지")
+                print(f"[*] Handshake1 감지 (373B)")
                 # 서버 응답 (37 bytes, PCAP 형식)
                 # 0x00-0x07: zeros
                 # 0x08-0x0B: 25 (0x19)
                 # 0x0C: 0x01
-                # 0x0D-0x14: ??? (PCAP: d106000000000000)
-                # 0x15-0x1C: server public key (8B)
-                # 0x1D-0x24: ??? (PCAP: f946af9e83fde980)
-                srv_pub1, _ = dh.get_public_pair()
+                # 0x0D-0x14: TCPConvID (8B)
+                # 0x15-0x1C: Server DH public #1 (8B)
+                # 0x1D-0x24: Server DH public #2 (8B)
+                srv_pub1, srv_pub2 = dh.get_public_pair()
                 resp = bytearray(37)
                 struct.pack_into("<Q", resp, 0x00, 0)  # zeros
                 struct.pack_into("<I", resp, 0x08, 25)  # length
                 resp[0x0C] = 0x01
-                # 0x0D: PCAP 값 그대로 사용 (의미 불명)
-                resp[0x0D:0x15] = bytes.fromhex("d106000000000000")
+                # 0x0D: TCPConvID (랜덤 생성)
+                import random
+                conv_id = random.getrandbits(64)
+                struct.pack_into("<Q", resp, 0x0D, conv_id)
+                # 서버 public 키 #1, #2 (생성된 값 사용!)
                 struct.pack_into("<Q", resp, 0x15, srv_pub1)
-                # 0x1D: PCAP 값 그대로 사용
-                resp[0x1D:0x25] = bytes.fromhex("f946af9e83fde980")
+                struct.pack_into("<Q", resp, 0x1D, srv_pub2)
                 conn.send(bytes(resp))
                 print(f"[*] Handshake1 응답 전송: 37 bytes")
-                print(f"[*] Server public: {srv_pub1:#x}")
+                print(f"[*] Server public #1: {srv_pub1:#x}")
+                print(f"[*] Server public #2: {srv_pub2:#x}")
 
                 # Handshake2 대기
                 data = conn.recv(4096)
@@ -87,41 +90,42 @@ class KCPServer:
                 print(f"[*] Handshake2 패킷 수신: {pkt_len} bytes")
 
             if pkt_len == 56:
-                # Handshake2: 토큰 전송
-                print(f"[*] Handshake2 감지")
+                # Handshake2: 클라이언트→서버 입력 (서버 응답 없음!)
+                # Ghidra: Handshake2 내부에 Socket.Send 호출 없음
+                print(f"[*] Handshake2 감지 (56B)")
                 print(f"    hex: {data.hex()}")
-                # 토큰 추출 (ASCII 문자열 찾기)
-                try:
-                    # "local-dummy" 문자열 위치 찾기
-                    idx = data.find(b'local-dummy')
-                    if idx >= 0:
-                        token_raw = data[idx:idx+50].split(b'\x00')[0]
-                        token = token_raw.decode('utf-8', errors='ignore')
-                        print(f"[*] 토큰: {token}")
-                    else:
-                        print(f"[*] 토큰을 찾을 수 없음")
-                except Exception as e:
-                    print(f"[!] 토큰 추출 실패: {e}")
 
-                # DH public 키 (0x11)
+                # DH public #1 (0x11, 8B) + public #2 (0x19, 8B)
                 try:
                     pub1 = struct.unpack_from("<Q", data, 0x11)[0]
-                    print(f"[*] Client public: {pub1:#x}")
-                    # 세션 키 계산 (단일 DH)
-                    secret = pow(pub1, dh.private1, dh.P if hasattr(dh, 'P') else 0xFFFFFFFFFFFFFFC5)
-                    print(f"[*] Secret: {secret:#x}")
+                    pub2 = struct.unpack_from("<Q", data, 0x19)[0]
+                    print(f"[*] Client public #1: {pub1:#x}")
+                    print(f"[*] Client public #2: {pub2:#x}")
+
+                    # 2중 DH secret 계산
+                    secret1 = pow(pub1, dh.private1, 0xFFFFFFFFFFFFFFC5)
+                    secret2 = pow(pub2, dh.private2, 0xFFFFFFFFFFFFFFC5)
+                    print(f"[*] Secret #1: {secret1:#x}")
+                    print(f"[*] Secret #2: {secret2:#x}")
+
+                    # 16B 세션 키: LE64(secret1) || LE64(secret2)
+                    session_key = struct.pack("<Q", secret1) + struct.pack("<Q", secret2)
+                    print(f"[*] 세션 키: {session_key.hex()}")
+
+                    # 토큰 추출 (참고용)
+                    idx = data.find(b'local-dummy')
+                    if idx >= 0:
+                        token = data[idx:idx+40].split(b'\x00')[0].decode('utf-8', errors='ignore')
+                        print(f"[*] 토큰: {token}")
                 except Exception as e:
                     print(f"[!] DH 계산 실패: {e}")
+                    import traceback
+                    traceback.print_exc()
 
-                # Handshake2 응답 (56B, 에코)
-                resp = bytearray(56)
-                resp[0:0x11] = data[0:0x11]
-                srv_pub1, _ = dh.get_public_pair()
-                struct.pack_into("<Q", resp, 0x11, srv_pub1)
-                # 토큰 부분은 그대로
-                resp[0x19:] = data[0x19:]
-                conn.send(bytes(resp))
-                print(f"[*] Handshake2 응답 전송: 56 bytes")
+                # Handshake2에는 서버 응답을 보내지 않음!
+                # Ghidra 확인: Handshake2 내부에 Socket.Send 없음
+                # KCP State=3으로 전환 후 첫 KCP 패킷 대기
+                print(f"[*] Handshake2 처리 완료 (응답 없음), KCP 패킷 대기 중...")
 
             # 3. 이후 패킷 처리 루프
             print(f"[*] 핸드셰이크 완료, 데이터 대기 중...")
