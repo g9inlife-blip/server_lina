@@ -128,7 +128,13 @@ class KCPServerUDP:
             traceback.print_exc()
             return
 
+        # 서버 응답은 보내지 않음 (클라이언트가 재시도하는 원인 파악 중)
+        # 일단 DH 계산만 하고 응답 생략
+        print(f"[*] 51B 처리 완료 (응답 생략), 다음 패킷 대기...")
+        return
+
         # 서버 응답 (51B 에코 + 서버 public)
+        # (현재 비활성화 - 응답이 재시도를 유발하는지 테스트)
         try:
             srv_pub1, srv_pub2 = dh.get_public_pair()
             resp = bytearray(51)
