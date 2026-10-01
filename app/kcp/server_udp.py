@@ -122,8 +122,11 @@ class KCPServerUDP:
             print(f"[*] Secret #1: {secret1:#x}")
             print(f"[*] Secret #2: {secret2:#x}")
 
-            session_key = struct.pack("<Q", secret1) + struct.pack("<Q", secret2)
-            print(f"[*] 세션 키: {session_key.hex()}")
+            # 세션 키: SHA256(LE64(s1) || LE64(s2))[:16]
+            import hashlib
+            raw = struct.pack("<Q", secret1) + struct.pack("<Q", secret2)
+            session_key = hashlib.sha256(raw).digest()[:16]
+            print(f"[*] 세션 키 (SHA256): {session_key.hex()}")
 
             # 토큰 (0x18~)
             token = data[0x18:0x18+40].split(b'\x00')[0].decode('utf-8', errors='ignore')
