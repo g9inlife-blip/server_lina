@@ -238,7 +238,8 @@ research/
 - ✅ Handshake2 패킷 파싱 (56 bytes, public 키 추출)
 - ✅ 세션 키 계산 (DH64)
 - ✅ 서버 Handshake 응답 전송 구현 (g=5)
-- ⏳ 클라이언트 응답 대기 중
+- ⚠️ **문제 발견**: public #2가 ASCII ("acol...") — DH 키가 아님
+- ⏳ 패킷 구조 재확인 필요 (GPT 분석 대기)
 
 ### 확인된 흐름
 ```
@@ -246,8 +247,8 @@ HTTP 로그인 성공
   → SaveLoginToken (UserId: 861197)
   → LoginManager.LoginGameServer 호출됨 ✅
   → KCP 연결 시도 ✅
-  → Handshake2 교환 ✅
-  → (다음: 암호화 통신)
+  → Handshake2 교환 ✅ (서버 응답 전송)
+  → 클라이언트가 연결 종료 ❌ (응답 형식 문제 추정)
 ```
 
 ### 현재 상태
