@@ -90,13 +90,18 @@ class KCPServer:
                 # Handshake2: 토큰 전송
                 print(f"[*] Handshake2 감지")
                 print(f"    hex: {data.hex()}")
-                # 토큰 추출 (0x19부터)
+                # 토큰 추출 (ASCII 문자열 찾기)
                 try:
-                    token_raw = data[0x19:]
-                    token = ''.join(chr(b) if 32 <= b < 127 else '' for b in token_raw)
-                    print(f"[*] 토큰: {token[:50]}")
-                except:
-                    pass
+                    # "local-dummy" 문자열 위치 찾기
+                    idx = data.find(b'local-dummy')
+                    if idx >= 0:
+                        token_raw = data[idx:idx+50].split(b'\x00')[0]
+                        token = token_raw.decode('utf-8', errors='ignore')
+                        print(f"[*] 토큰: {token}")
+                    else:
+                        print(f"[*] 토큰을 찾을 수 없음")
+                except Exception as e:
+                    print(f"[!] 토큰 추출 실패: {e}")
 
                 # DH public 키 (0x11)
                 try:
