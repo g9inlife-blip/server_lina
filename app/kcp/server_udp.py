@@ -29,8 +29,11 @@ class KCPServerUDP:
         """서버 시작."""
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.sock.bind((self.host, self.port))
+        # 타임아웃 설정 (CTRL+C 종료 가능하도록)
+        self.sock.settimeout(1.0)
         self.running = True
         print(f"[*] KCP UDP 서버 시작: {self.host}:{self.port}")
+        print(f"[*] 종료: CTRL+C (또는 CTRL+Break)")
 
         while self.running:
             try:
@@ -38,6 +41,8 @@ class KCPServerUDP:
                 t = threading.Thread(target=self.handle_packet, args=(data, addr))
                 t.daemon = True
                 t.start()
+            except socket.timeout:
+                continue
             except Exception as e:
                 if self.running:
                     print(f"[!] 수신 실패: {e}")
