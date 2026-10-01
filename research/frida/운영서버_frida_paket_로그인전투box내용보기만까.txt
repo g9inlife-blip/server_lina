@@ -1,0 +1,267 @@
+C:\Users\USER\Documents\GitHub\server_lina>frida -H 127.0.0.1:27042 -n Gadget -l research/frida/justice_capture.js
+     ____
+    / _  |   Frida 17.18.0 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   Prefer a GUI? Luma is the official Frida app, with a live REPL,
+   . . . .   persistent sessions & collaboration. https://luma.frida.re/
+   . . . .
+   . . . .   Connected to 127.0.0.1:27042 (id=socket@127.0.0.1:27042)
+Attaching...
+[*] justice_hook v4.9 starting...
+[Remote::Gadget ]-> [*] libil2cpp.so base @ 0x74b4d46000 (/data/app/~~acGHcXDuzoy-4IQ0vBH08A==/com.Alioth.JusticeSchool.cn-PwJah3_uT1udhfBv7HS3Yw==/lib/arm64/libil2cpp.so)
+[*] IL2CPP domain ready.
+[*] Waiting for Assembly-CSharp (enter the game world on the phone)...
+[*] Assembly-CSharp found (52 assemblies loaded).
+[*] Installing hooks...
+
+[+] Found UnityEngine.Networking.UnityWebRequest.get_url() -> System.String @ 0x74b731c1e8
+[+] Found UnityEngine.Networking.UnityWebRequest.get_uploadHandler() -> UnityEngine.Networking.UploadHandler @ 0x74b731bb78
+[*] UnityWebRequest accessors ready.
+[+] Found UnityEngine.Networking.UnityWebRequest..ctor(System.String, System.String) -> System.Void @ 0x74b731b538
+[+] Found UnityEngine.Networking.UnityWebRequest.SetRequestHeader(System.String, System.String) -> System.Void @ 0x74b731c788
+[+] Found UnityEngine.Networking.UploadHandlerRaw..ctor(System.Byte[]) -> System.Void @ 0x74b731d0fc
+[+] Found UnityEngine.Networking.UnityWebRequest.set_uploadHandler(UnityEngine.Networking.UploadHandler) -> System.Void @ 0x74b731b8f4
+[+] Found UnityEngine.Networking.UnityWebRequest.set_method(System.String) -> System.Void @ 0x74b731b5b4
+[HTTPREQUEST] AliothEngine.Net.HttpRequest methods:
+  get_isError() -> System.Boolean @ 0x74b62d9d48
+  get_PingTime() -> System.Single @ 0x74b62d9dc0
+  set_PingTime(System.Single) -> System.Void @ 0x74b62d9dc8
+  RequestCoroutine() -> System.Collections.IEnumerator @ 0x74b62d9dd0
+  CheckTimeout() -> System.Collections.IEnumerator @ 0x74b62d9e6c
+  get_IsDone() -> System.Boolean @ 0x74b62d9f08
+  set_Headers(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b62d9f10
+  get_Headers() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x74b62d9f18
+  set_Timeout(System.Single) -> System.Void @ 0x74b62d9f20
+  get_Timeout() -> System.Single @ 0x74b62d9f28
+  set_OnDone(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x74b62d9f30
+  set_OnFail(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x74b62d9f38
+  set_OnDisposed(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x74b62d9f40
+  .ctor(UnityEngine.MonoBehaviour, System.String) -> System.Void @ 0x74b62d9f48
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.String) -> System.Void @ 0x74b62da078
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.Single) -> System.Void @ 0x74b62da1bc
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b62da2f4
+  AddHeader(System.String, System.String) -> System.Void @ 0x74b62da704
+  AddData(System.String, System.String) -> System.Void @ 0x74b62da76c
+  AddRangeData(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b62da788
+  AddBinaryData(System.String, System.Byte[]) -> System.Void @ 0x74b62da8f0
+  AddBinaryData(System.String, System.Byte[], System.String) -> System.Void @ 0x74b62da90c
+  AddBinaryData(System.String, System.Byte[], System.String, System.String) -> System.Void @ 0x74b62da928
+  Request() -> System.Void @ 0x74b62da944
+  Dispose() -> System.Void @ 0x74b62da96c
+  CheckConnection(System.String, System.Action<System.Boolean>) -> System.Collections.IEnumerator @ 0x74b62da99c
+  CreateURL(System.Collections.Generic.List<System.String>, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.String @ 0x74b62daa54
+  ResetCache(System.String) -> System.String @ 0x74b62dad60
+[+] Found UnityEngine.Networking.UnityWebRequest.SendWebRequest() -> UnityEngine.Networking.UnityWebRequestAsyncOperation @ 0x74b731bc58
+[?] ProtocolGame_HttpRequest.V4_POST_Login overload: (System.String, System.String, System.String) @ 0x74b5a1bb48
+[+] Found ProtocolGame_HttpRequest.V4_POST_Login(System.String, System.String, System.String) -> AliothEngine.Net.HttpRequest @ 0x74b5a1bb48
+[?] ProtocolGame_HttpRequest.Sign overload: (System.String, System.Collections.Generic.Dictionary<System.String,System.String>) @ 0x74b5a1f5c0
+[+] Found ProtocolGame_HttpRequest.Sign(System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b5a1f5c0 (first match)
+[*] Sign return type: System.Void
+[?] ProtocolGame_HttpRequest.GetDefaultParams overload: () @ 0x74b5a21f58
+[+] Found ProtocolGame_HttpRequest.GetDefaultParams() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x74b5a21f58
+[?] ProtocolGame_HttpRequest.V3_POST_AllInOne overload: (System.String) @ 0x74b5a225d0
+[+] Found ProtocolGame_HttpRequest.V3_POST_AllInOne(System.String) -> AliothEngine.Net.HttpRequest @ 0x74b5a225d0
+[?] LoginManager.SaveLoginToken overload: (System.String, System.String, System.Int32, System.Boolean, SDKLoginType) -> System.Void @ 0x74b5a1c4a0
+[+] Hooking LoginManager.SaveLoginToken(System.String, System.String, System.Int32, System.Boolean, SDKLoginType) @ 0x74b5a1c4a0
+[+] Found ProtocolGame_HttpRequest.get_Token() -> System.String @ 0x74b5a1f534
+[+] Hooking ProtocolGame_HttpRequest.get_Token() @ 0x74b5a1f534
+[?] System.String.Join overload: (System.String, System.String[]) -> System.String @ 0x74b6c25b84
+[+] Hooking System.String.Join(System.String, System.String[]) @ 0x74b6c25b84
+[?] AliothEngine.Encrypt.MD5HashString overload: (System.String) -> System.String @ 0x74b62cf66c
+[+] Hooking AliothEngine.Encrypt.MD5HashString(System.String) @ 0x74b62cf66c
+[+] Hooking System.Convert.ToBase64String @ 0x74b6d29f88
+[+] Found UnityEngine.Networking.DownloadHandler.get_text() -> System.String @ 0x74b731d308
+[+] Hooking DownloadHandler.get_text @ 0x74b731d308
+[+] Found UnityEngine.Networking.UnityWebRequest.get_responseCode() -> System.Int64 @ 0x74b731c1ac
+[+] Hooking UnityWebRequest.get_responseCode @ 0x74b731c1ac
+[+] il2cpp_string_new @ 0x74b573957c
+[!] ServerConst.GetURL not found (0 args)
+[+] Hooking ServerConst.GetURL (1 arg) @ 0x74b6321ad8
+[+] Hooking CSBehaviour.Connect (1 args) @ 0x74b6322df4
+[+] Hooking CSBehaviour.RequestOp @ 0x74b6322afc
+[!] NetworkCenter.Send not found
+[+] Hooking LoginManager.LoginGameServer @ 0x74b5a1c910
+
+[*] 21 hooks installed.
+[*] Trigger login, then make a real game API request after login.
+[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], [HTTP_SEND], [HTTP_RESP], [SERVER_URL], [GAME_CONN], [OPCODE] lines.
+
+[HTTP_RESP] responseCode: 0xc8
+[HTTP_RESP] responseCode: 0xc8
+
+[HTTP_RESP] DownloadHandler.text (len=2327)
+  body: "{\"m\":\"official\",\"n\":\"639264650005874520\",\"Status\":0,\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"Keys\":[{\"Key\":\"API_ApplePayVerify\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/pay\\/apple\"},{\"Key\":\"API_ApplePayVerify_client\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/pay\\/apple_client\"},{\"Key\":\"API_GooglePlayVerify\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/pay\\/google\"},{\"Key\":\"API_Pay\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/pay\\/create\"},{\"Key\":\"API_Anon\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/account\\/anon\"},{\"Key\":\"API_QUICKSDK_AUTH\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v4\\/quicksdk\\/auth\"},{\"Key\":\"API_Login\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v5\\/account\\/login\"},{\"Key\":\"HTML_Register\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/prereg\"},{\"Key\":\"HTML_Auth\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_b_rz_.html\"},{\"Key\":\"HTML_Userinfo\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_i_0.html\"},{\"Key\":\"HTML_Binding\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_ab_1_u.html\"},{\"Key\":\"HTML_ChangePwd\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_m_0_pwd.html\"},{\"Key\":\"HTML_ResetPwd\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_m_0.html\"},{\"Key\":\"API_Mail\",\"URL\":\"https:\\/\\/gm.aliother.com\\/mail\"},{\"Key\":\"MAIL_DESC\",\"URL\":\"https:\\/\\/gm.aliother.com\\/game\\/mailtemplate\\/pick\"},{\"Key\":\"API_GIFT\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/gift\"},{\"Key\":\"API_SECTION_RANK\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/section\\/rank\"},{\"Key\":\"API_Steam_Pay\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v4\\/steam\\/create\"},{\"Key\":\"API_SteamVerify\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v4\\/steam\\/finish\"},{\"Key\":\"API_SaveProps\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/data\\/save\\/props\"},{\"Key\":\"API_FCM\",\"URL\":\"https:\\/\\/ac.aliother.com\\/\\/v3\\/account\\/bind\\/idcard\"},{\"Key\":\"HTML_Term\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/license.html\"},{\"Key\":\"HTML_Policy\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/privacypolicy.html\"},{\"Key\":\"NoticeURL\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/notice\"},{\"Key\":\"ReviewURL\",\"URL\":\"https:\\/\\/www.taptap.com\\/app\\/57464\\/review\"}],\"r\":\"7\",\"sign\":\"806944e6a1fb63d9b19bdbe0670f7acd\",\"Desc\":\"成功\",\"IP\":\"211.234.200.18\",\"v\":\"3.1.0\",\"NoticeStatus\":1,\"NoticeTime\":\"20200806\",\"Servers\":[{\"Port\":8000,\"Host\":\"ac.aliother.com\"}],\"Assets\":[{\"CDN\":\"https:\\/\\/oss01.aliother.com\\/v310\\/202608022111\\/\",\"Ping\":\"https:\\/\\/oss01.aliother.com\\/readme.txt\",\"Version\":\"3.1.88\"}]}\n"
+[HTTP_RESP] responseCode: 0xc8
+[SERVER_URL] GetURL(1 arg) called, arg0="NoticeURL"
+[SERVER_URL] GetURL(1 arg) => "https://ac.aliother.com/v3/notice"
+
+========== V3_POST_AllInOne called ==========
+  app_key: official
+[SERVER_URL] GetURL(1 arg) called, arg0="API_Allin1"
+[SERVER_URL] GetURL(1 arg) => "https://ac.aliother.com/v3/ain1"
+
+---------- GetDefaultParams called ----------
+[TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [(null)]
+  [return] {"n":"639264650161841470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
+----------------------------------
+
+
+---------- Sign called ----------
+  content: 90f04cb7a1fa5c2f58ca19cde2a2b128
+  dict: {"n":"639264650161841470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
+
+[JOIN_DATA] String.Join called inside Sign
+  separator: "."
+  count: 6
+  value[0]: "cbcfdf10d56e57a89f7cb19a491d139e"
+  value[1]: "official"
+  value[2]: "639264650161841470"
+  value[3]: "7"
+  value[4]: "3.1.0"
+  value[5]: "90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official.639264650161841470.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official.639264650161841470.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  [JOIN_DATA END]
+[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official.639264650161841470.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+[MD5_DATA] output: "cc2011a52f237cdc739ef91484a14e06"
+  => SIGN OUTPUT: void (dict modified in-place?)
+  => dict after: {"n":"639264650161841470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"cc2011a52f237cdc739ef91484a14e06"}
+  (2ms)
+----------------------------------
+
+[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639264650161841470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"} dict_after={"n":"639264650161841470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"cc2011a52f237cdc739ef91484a14e06"}
+============================================
+
+[HTTP_RESP] responseCode: 0xc8
+[HTTP_RESP] responseCode: 0xc8
+
+[HTTP_RESP] DownloadHandler.text (len=2327)
+  body: "{\"m\":\"official\",\"n\":\"639264650161841470\",\"Status\":0,\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"Keys\":[{\"Key\":\"API_ApplePayVerify\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/pay\\/apple\"},{\"Key\":\"API_ApplePayVerify_client\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/pay\\/apple_client\"},{\"Key\":\"API_GooglePlayVerify\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/pay\\/google\"},{\"Key\":\"API_Pay\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/pay\\/create\"},{\"Key\":\"API_Anon\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/account\\/anon\"},{\"Key\":\"API_QUICKSDK_AUTH\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v4\\/quicksdk\\/auth\"},{\"Key\":\"API_Login\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v5\\/account\\/login\"},{\"Key\":\"HTML_Register\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/prereg\"},{\"Key\":\"HTML_Auth\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_b_rz_.html\"},{\"Key\":\"HTML_Userinfo\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_i_0.html\"},{\"Key\":\"HTML_Binding\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_ab_1_u.html\"},{\"Key\":\"HTML_ChangePwd\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_m_0_pwd.html\"},{\"Key\":\"HTML_ResetPwd\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/usr_m_0.html\"},{\"Key\":\"API_Mail\",\"URL\":\"https:\\/\\/gm.aliother.com\\/mail\"},{\"Key\":\"MAIL_DESC\",\"URL\":\"https:\\/\\/gm.aliother.com\\/game\\/mailtemplate\\/pick\"},{\"Key\":\"API_GIFT\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/gift\"},{\"Key\":\"API_SECTION_RANK\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/section\\/rank\"},{\"Key\":\"API_Steam_Pay\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v4\\/steam\\/create\"},{\"Key\":\"API_SteamVerify\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v4\\/steam\\/finish\"},{\"Key\":\"API_SaveProps\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/data\\/save\\/props\"},{\"Key\":\"API_FCM\",\"URL\":\"https:\\/\\/ac.aliother.com\\/\\/v3\\/account\\/bind\\/idcard\"},{\"Key\":\"HTML_Term\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/license.html\"},{\"Key\":\"HTML_Policy\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/privacypolicy.html\"},{\"Key\":\"NoticeURL\",\"URL\":\"https:\\/\\/ac.aliother.com\\/v3\\/notice\"},{\"Key\":\"ReviewURL\",\"URL\":\"https:\\/\\/www.taptap.com\\/app\\/57464\\/review\"}],\"r\":\"7\",\"sign\":\"cc2011a52f237cdc739ef91484a14e06\",\"Desc\":\"成功\",\"IP\":\"211.234.200.18\",\"v\":\"3.1.0\",\"NoticeStatus\":1,\"NoticeTime\":\"20200806\",\"Servers\":[{\"Port\":8000,\"Host\":\"ac.aliother.com\"}],\"Assets\":[{\"CDN\":\"https:\\/\\/oss01.aliother.com\\/v310\\/202608022111\\/\",\"Ping\":\"https:\\/\\/oss01.aliother.com\\/readme.txt\",\"Version\":\"3.1.88\"}]}\n"
+
+========== V4_POST_Login called ==========
+  app_key: witchwind
+  content: g9inlife
+  apiName:
+  [HTTP_TRACE] login request trace window opened (10s)
+[SERVER_URL] GetURL(1 arg) called, arg0="API_Login"
+[SERVER_URL] GetURL(1 arg) => "https://ac.aliother.com/v5/account/login"
+
+---------- GetDefaultParams called ----------
+[TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [len=27,fnv1a32=ea3a6181]
+[TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [len=27,fnv1a32=ea3a6181]
+  [return] {"n":"639264650164913020","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"local-dummy-token-witchwind"}
+----------------------------------
+
+
+---------- Sign called ----------
+  content: 90f04cb7a1fa5c2f58ca19cde2a2b128
+  dict: {"n":"639264650164913020","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"local-dummy-token-witchwind","u":"witchwind","p":"g9inlife","method":"","platform":"google","p2":"logout"}
+
+[JOIN_DATA] String.Join called inside Sign
+  separator: "."
+  count: 12
+  value[0]: "cbcfdf10d56e57a89f7cb19a491d139e"
+  value[1]: "official"
+  value[2]: ""
+  value[3]: "639264650164913020"
+  value[4]: "g9inlife"
+  value[5]: "logout"
+  value[6]: "google"
+  value[7]: "7"
+  value[8]: "local-dummy-token-witchwind"
+  value[9]: "witchwind"
+  value[10]: "3.1.0"
+  value[11]: "90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official..639264650164913020.g9inlife.logout.google.7.local-dummy-token-witchwind.witchwind.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official..639264650164913020.g9inlife.logout.google.7.local-dummy-token-witchwind.witchwind.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  [JOIN_DATA END]
+[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official..639264650164913020.g9inlife.logout.google.7.local-dummy-token-witchwind.witchwind.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+[MD5_DATA] output: "82adb9125ef495fd05ca8f1bb1092226"
+  => SIGN OUTPUT: void (dict modified in-place?)
+  => dict after: {"n":"639264650164913020","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"local-dummy-token-witchwind","u":"witchwind","p":"g9inlife","method":"","platform":"google","p2":"logout","sign":"82adb9125ef495fd05ca8f1bb1092226"}
+  (1ms)
+----------------------------------
+
+[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639264650164913020","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"local-dummy-token-witchwind","u":"witchwind","p":"g9inlife","method":"","platform":"google","p2":"logout"} dict_after={"n":"639264650164913020","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"local-dummy-token-witchwind","u":"witchwind","p":"g9inlife","method":"","platform":"google","p2":"logout","sign":"82adb9125ef495fd05ca8f1bb1092226"}
+
+[HTTP_CREATE] UnityWebRequest #1
+  url: "https://ac.aliother.com/v5/account/login?223484"
+  method: "POST"
+  request_ptr: 0x733fd984b0
+[HTTP_METHOD_SET] #1 method="POST"
+
+[HTTP_UPLOAD] UploadHandlerRaw(byte[])
+  body_len: 203
+  body_utf8: "n=639264650164913020&d=cbcfdf10d56e57a89f7cb19a491d139e&r=7&v=3.1.0&m=official&t=local-dummy-token-witchwind&u=witchwind&p=g9inlife&method=&platform=google&p2=logout&sign=82adb9125ef495fd05ca8f1bb1092226"
+  body_hex: 6e3d36333932363436353031363439313330323026643d636263666466313064353665353761383966376362313961343931643133396526723d3726763d332e312e30266d3d6f6666696369616c26743d6c6f63616c2d64756d6d792d746f6b656e2d776974636877696e6426753d776974636877696e6426703d6739696e6c696665266d6574686f643d26706c6174666f726d3d676f6f676c652670323d6c6f676f7574267369676e3d3832616462393132356566343935666430356361386631626231303932323236
+  upload_handler: 0x741126ee80
+[HTTP_UPLOAD END]
+
+[HTTP_UPLOAD_SET] #1 uploadHandler=0x733fdc96f0
+[HTTP_HEADER] #1 Content-Type: application/x-www-form-urlencoded
+[HTTP_HEADER] #1 Cache-Control: no-cache
+[HTTP_HEADER] #1 Pragma: no-cache
+
+[HTTP_SEND] UnityWebRequest #1
+  url: "https://ac.aliother.com/v5/account/login?223484"
+  method: ""
+  headers: [{"name":"Content-Type","value":"application/x-www-form-urlencoded"},{"name":"Cache-Control","value":"no-cache"},{"name":"Pragma","value":"no-cache"}]
+  body: <none>
+  request_ptr: 0x733fd984b0
+[HTTP_SEND END]
+
+  [return after 5ms]
+========================================
+
+[HTTP_RESP] responseCode: 0xc8
+[HTTP_RESP] responseCode: 0xc8
+[HTTP_RESP] responseCode: 0xc8
+
+[HTTP_RESP] DownloadHandler.text (len=720)
+  body: "{\"Age\":27,\"FCMStatus\":4,\"platform\":\"google\",\"sign\":\"82adb9125ef495fd05ca8f1bb1092226\",\"t\":\"local-dummy-token-witchwind\",\"v\":\"3.1.0\",\"method\":\"\",\"m\":\"official\",\"p\":\"g9inlife\",\"Status\":0,\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"Desc\":\"成功\",\"r\":\"7\",\"u\":\"witchwind\",\"First\":0,\"Token\":\"tpTz8khvEXcDT2cW7z9dZE0lW7oyYjsObtOCbbF77jyODuwQbwjy0dVL\\/4k86nBLAkUx\\/NU2wcnzJSACQ0\\/mnt9S7r0OFVe6iRXTXI19tCsAfKn9u0mfd79OkPmJGHvPW3uWWQnLiAg668hXnemsW7cEo6oqTAtii5exWlOv13eUC4fjw7XvLtQ02O1VeDc2CabPuXsMz+nnl0HTyK5oFIoLdzGRlMkWi6+Zxoz7M1AVSFHXHolNVEjkMezMBRJOk9DE2jXBFsek+t6JEcntstLML+HIiJdhuib0J5wCpoqMk2Du+\\/ICJQykObyhI2a969Dcw1ccVECOzS9h0ueoaA==\",\"logout_ex_time\":0,\"p2\":\"logout\",\"n\":\"639264650164913020\",\"UserId\":861191,\"RealName\":true}\n"
+
+[HTTP_RESP] DownloadHandler.text (len=720)
+  body: "{\"Age\":27,\"FCMStatus\":4,\"platform\":\"google\",\"sign\":\"82adb9125ef495fd05ca8f1bb1092226\",\"t\":\"local-dummy-token-witchwind\",\"v\":\"3.1.0\",\"method\":\"\",\"m\":\"official\",\"p\":\"g9inlife\",\"Status\":0,\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"Desc\":\"成功\",\"r\":\"7\",\"u\":\"witchwind\",\"First\":0,\"Token\":\"tpTz8khvEXcDT2cW7z9dZE0lW7oyYjsObtOCbbF77jyODuwQbwjy0dVL\\/4k86nBLAkUx\\/NU2wcnzJSACQ0\\/mnt9S7r0OFVe6iRXTXI19tCsAfKn9u0mfd79OkPmJGHvPW3uWWQnLiAg668hXnemsW7cEo6oqTAtii5exWlOv13eUC4fjw7XvLtQ02O1VeDc2CabPuXsMz+nnl0HTyK5oFIoLdzGRlMkWi6+Zxoz7M1AVSFHXHolNVEjkMezMBRJOk9DE2jXBFsek+t6JEcntstLML+HIiJdhuib0J5wCpoqMk2Du+\\/ICJQykObyhI2a969Dcw1ccVECOzS9h0ueoaA==\",\"logout_ex_time\":0,\"p2\":\"logout\",\"n\":\"639264650164913020\",\"UserId\":861191,\"RealName\":true}\n"
+\n[TOKEN_SAVE] LoginManager.SaveLoginToken
+  arg[0] System.String: "861191"
+  arg[1] System.String: <TOKEN_REDACTED> [len=344,fnv1a32=6a2acc63]
+  arg[2] System.Int32: "0"
+  arg[3] System.Boolean: "false"
+  arg[4] SDKLoginType: "0x0"
+  [TOKEN_SAVE END]
+
+[LOGIN_GS] LoginManager.LoginGameServer called
+
+[HTTP_SEND] UnityWebRequest
+  url: "https://oss01.aliother.com/v310/202608022111/AssetBundles/Android/activityicon_001__cn.assetbundle"
+  method: ""
+  body: <none>
+  request_ptr: 0x7382133a50
+[HTTP_SEND END]
+
+
+[HTTP_SEND] UnityWebRequest
+  url: "https://oss01.aliother.com/v310/202608022111/AssetBundles/Android/yingyuanuiatlas.assetbundle"
+  method: ""
+  body: <none>
+  request_ptr: 0x73821334b0
+[HTTP_SEND END]
+
+
+[HTTP_SEND] UnityWebRequest
+  url: "https://oss01.aliother.com/v310/202608022111/AssetBundles/Android/ui_eff_mainsence.assetbundle"
+  method: ""
+  body: <none>
+  request_ptr: 0x75d45ddf50
+[HTTP_SEND END]
+
+[SERVER_URL] GetURL(1 arg) called, arg0="ReviewURL"
+[SERVER_URL] GetURL(1 arg) => "https://www.taptap.com/app/57464/review"
+
+[OPCODE] CSBehaviour.RequestOp called
+  args[0]: 0x75a7855cb0
