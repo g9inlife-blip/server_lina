@@ -233,13 +233,27 @@ research/
 | `LoginManager.LoginGameServer` | ✅ 후킹 성공 |
 | `LoginManager.HandleLoginSuccess` | 후킹 시도 중 |
 
-### KCP 핸드셰이크 진행 상황 (2026-10-01)
-- ✅ 클라이언트 연결 수신
-- ✅ Handshake2 패킷 파싱 (56 bytes, public 키 추출)
-- ✅ 세션 키 계산 (DH64)
-- ✅ 서버 Handshake 응답 전송 구현 (g=5)
-- ⚠️ **문제 발견**: public #2가 ASCII ("acol...") — DH 키가 아님
-- ⏳ 패킷 구조 재확인 필요 (GPT 분석 대기)
+### KCP 핸드셰이크 패킷 구조 분석 (2026-10-01, 리나)
+
+**실제 캡처 패킷 (56 bytes):**
+```
+0x00-0x07: zeros (8B)
+0x08-0x0B: 44 (0x2c, LE32)
+0x0C:      0x01 (핸드셰이크 타입?)
+0x0D-0x10: ??? (4B)
+0x11-0x18: DH public key (8B) ✅
+0x19-... : 토큰 문자열 ("local-dummy-token-witchwind")
+```
+
+**중요 발견:**
+- 0x19은 public 키가 아님! 토큰 문자열임
+- 보고서의 "public #2" 해석은 잘못됨
+- 실제 DH 키 교환은 1개만 패킷에 있음
+
+**미해결:**
+- 보고서의 PCAP에는 public #1, #2 두 개가 있었음
+- 현재 캡처에는 1개만 있음
+- Handshake1/Handshake2 구분 필요 (GPT 분석 대기)
 
 ### 확인된 흐름
 ```
