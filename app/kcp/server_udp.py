@@ -190,15 +190,10 @@ class KCPServerUDP:
             from Crypto.Cipher import AES
             from Crypto.Util.Padding import unpad
 
-            # 방법 1: 0x20부터 176B, IV=zeros
-            # 방법 2: 0x20부터 176B, IV=세션ID
-            # 방법 3: 다른 오프셋 시도
-
             ciphertext_full = data[0x20:]
-            print(f"[*] 전체 암호문: {len(ciphertext_full)}B")
 
-            # 16의 배수 길이들 시도
-            for ct_len in [176, 160, 144]:
+            # 16의 배수 길이들 시도 (144B가 성공함)
+            for ct_len in [144, 176, 160]:
                 if ct_len > len(ciphertext_full):
                     continue
                 ct = ciphertext_full[:ct_len]
@@ -208,49 +203,26 @@ class KCPServerUDP:
                     cipher = AES.new(session_key, AES.MODE_CBC, b'\x00'*16)
                     pt = unpad(cipher.decrypt(ct), AES.block_size)
                     print(f"[*] 복호화 성공! len={ct_len}, IV=zeros")
-                    print(f"    평문: {pt[:64].hex()}")
+                    print(f"    평문 ({len(pt)}B): {pt.hex()}")
+                    # 평문 파싱
+                    self.handle_decrypted(pt, session_id, addr, dh, session_key)
                     return
                 except:
                     pass
 
-                # IV=session_id 시도
-                try:
-                    iv = struct.pack("<Q", session_id) + b'\x00'*8
-                    cipher = AES.new(session_key, AES.MODE_CBC, iv)
-                    pt = unpad(cipher.decrypt(ct), AES.block_size)
-                    print(f"[*] 복호화 성공! len={ct_len}, IV=session_id")
-                    print(f"    평문: {pt[:64].hex()}")
-                    return
-                except:
-                    pass
-
-            print(f"[!] 복호화 실패 (모든 방법 시도)")
-            # 디버그: 첫 블록 복호화 (패딩 무시)
-            try:
-                cipher = AES.new(session_key, AES.MODE_CBC, b'\x00'*16)
-                pt_raw = cipher.decrypt(ciphertext_full[:32])
-                print(f"    Raw 복호화 (32B): {pt_raw.hex()}")
-            except Exception as e:
-                print(f"    Raw 실패: {e}")
-
-            # 221B에 28B 응답 시도 (PCAP의 S→C 28B)
-            # 클라이언트가 응답을 기다리는 것일 수 있음
-            try:
-                # 28B: zeros(8) + 0x02? + session ID? + ???
-                # PCAP 28B 구조를 모르므로 추측
-                resp = b'\x00' * 8  # zeros
-                resp += b'\x02'  # 타입?
-                resp += struct.pack("<Q", session_id)  # session ID
-                resp += b'\x00' * 11  # padding to 28B
-                self.sock.sendto(resp, addr)
-                print(f"[*] 28B 응답 전송 to {addr}")
-            except Exception as e:
-                print(f"[!] 28B 응답 실패: {e}")
-
+            print(f"[!] 복호화 실패")
         except Exception as e:
             print(f"[!] 복호화 오류: {e}")
-            import traceback
-            traceback.print_exc()
+
+    def handle_decrypted(self, pt: bytes, session_id: int, addr, dh, session_key: bytes):
+        """복호화된 KCP 패킷 처리."""
+        print(f"[*] 복호화된 패킷: {len(pt)}B")
+        # KCP 헤더 파싱 시도
+        # 앞 24B가 KCP 헤더일 가능성
+        if len(pt) >= 24:
+            print(f"    헤더: {pt[:24].hex()}")
+            print(f"    데이터: {pt[24:64].hex()}...")
+        # TODO: opcode 파싱 및 응답 구현
 
     def stop(self):
         """서버 중지."""
