@@ -122,11 +122,9 @@ class KCPServerUDP:
             print(f"[*] Secret #1: {secret1:#x}")
             print(f"[*] Secret #2: {secret2:#x}")
 
-            # 세션 키: SHA256(LE64(s1) || LE64(s2))[:16]
-            import hashlib
-            raw = struct.pack("<Q", secret1) + struct.pack("<Q", secret2)
-            session_key = hashlib.sha256(raw).digest()[:16]
-            print(f"[*] 세션 키 (SHA256): {session_key.hex()}")
+            # 세션 키: LE64(s1) || LE64(s2) (Handshake2 확인)
+            session_key = struct.pack("<Q", secret1) + struct.pack("<Q", secret2)
+            print(f"[*] 세션 키: {session_key.hex()}")
 
             # 토큰 (0x18~)
             token = data[0x18:0x18+40].split(b'\x00')[0].decode('utf-8', errors='ignore')
@@ -153,13 +151,14 @@ class KCPServerUDP:
             struct.pack_into("<Q", resp, 0x00, 0)  # zeros
             resp[0x08] = 0x01
             struct.pack_into("<Q", resp, 0x09, session_id)
-            struct.pack_into("<Q", resp, 0x11, random.getrandbits(64))  # ???
-            struct.pack_into("<Q", resp, 0x19, srv_pub1)  # server public
+            struct.pack_into("<Q", resp, 0x11, srv_pub2)  # server public #2
+            struct.pack_into("<Q", resp, 0x19, srv_pub1)  # server public #1
 
             self.sock.sendto(bytes(resp), addr)
             print(f"[*] 33B 응답 전송 to {addr}")
             print(f"[*] Session ID: {session_id:#x}")
-            print(f"[*] Server public: {srv_pub1:#x}")
+            print(f"[*] Server public #1: {srv_pub1:#x}")
+            print(f"[*] Server public #2: {srv_pub2:#x}")
 
             # 세션 저장
             self.sessions[session_id] = (dh, session_key)
