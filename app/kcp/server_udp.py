@@ -64,7 +64,8 @@ class KCPServerUDP:
 
         if pkt_len == 373 or pkt_len == 368:
             self.handle_handshake1(data, addr)
-        elif pkt_len == 51:
+        elif pkt_len == 51 or pkt_len == 364:
+            # 51B/364B: 같은 구조, 토큰 길이만 다름
             self.handle_handshake_51(data, addr)
         elif pkt_len == 221:
             self.handle_kcp_data(data, addr)
