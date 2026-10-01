@@ -90,10 +90,9 @@ class KCPServer:
                 print(f"[*] Handshake2 패킷 수신: {pkt_len} bytes")
 
             if pkt_len == 56:
-                # Handshake2: 클라이언트→서버 입력 (서버 응답 없음!)
-                # 56B 프로토콜: public #1만 있음 (0x11), 0x19는 토큰과 겹침
+                # Handshake2: 클라이언트→서버
+                # 56B 프로토콜: public #1만 있음 (0x11)
                 print(f"[*] Handshake2 감지 (56B)")
-                print(f"    hex: {data.hex()}")
 
                 # DH public #1 (0x11, 8B)만 사용 (단일 DH)
                 try:
@@ -104,23 +103,27 @@ class KCPServer:
                     secret1 = pow(pub1, dh.private1, 0xFFFFFFFFFFFFFFC5)
                     print(f"[*] Secret #1: {secret1:#x}")
 
-                    # 16B 세션 키: LE64(secret) duplicated
-                    # (단일 8B secret을 16B로 확장)
+                    # 16B 세션 키
                     session_key = struct.pack("<Q", secret1) + struct.pack("<Q", secret1)
                     print(f"[*] 세션 키: {session_key.hex()}")
-
-                    # 토큰 추출 (참고용)
-                    idx = data.find(b'local-dummy')
-                    if idx >= 0:
-                        token = data[idx:idx+40].split(b'\x00')[0].decode('utf-8', errors='ignore')
-                        print(f"[*] 토큰: {token}")
                 except Exception as e:
                     print(f"[!] DH 계산 실패: {e}")
-                    import traceback
-                    traceback.print_exc()
 
-                # Handshake2에는 서버 응답을 보내지 않음!
-                print(f"[*] Handshake2 처리 완료 (응답 없음), KCP 패킷 대기 중...")
+                # 서버 응답 전송 (56B)
+                # 클라이언트가 응답을 기다리는 것으로 보임
+                try:
+                    srv_pub1, _ = dh.get_public_pair()
+                    resp = bytearray(56)
+                    resp[0:0x11] = data[0:0x11]  # 헤더 복사
+                    struct.pack_into("<Q", resp, 0x11, srv_pub1)  # 서버 public
+                    resp[0x19:] = data[0x19:]  # 나머지 (토큰 포함) 복사
+                    conn.send(bytes(resp))
+                    print(f"[*] Handshake2 응답 전송: 56 bytes")
+                    print(f"[*] Server public #1: {srv_pub1:#x}")
+                except Exception as e:
+                    print(f"[!] 응답 전송 실패: {e}")
+
+                print(f"[*] KCP 패킷 대기 중...")
 
             # 3. 이후 패킷 처리 루프
             print(f"[*] 핸드셰이크 완료, 데이터 대기 중...")
