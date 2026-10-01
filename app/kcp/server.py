@@ -48,13 +48,22 @@ class KCPServer:
         try:
             dh = DH64()
             # 1. Handshake2 수신
-            # TODO: 실제 핸드셰이크 패킷 구조 확인
             data = conn.recv(4096)
             if not data:
                 return
 
             print(f"[*] Handshake 패킷 수신: {len(data)} bytes")
-            print(f"    hex: {data[:32].hex()}...")
+            print(f"    hex: {data.hex()}")
+            # 패킷 저장 (분석용)
+            import time
+            ts = int(time.time() * 1000)
+            pkt_path = f"/tmp/hs_{ts}_{addr[1]}.bin"
+            try:
+                with open(pkt_path, "wb") as f:
+                    f.write(data)
+                print(f"    저장: {pkt_path}")
+            except:
+                pass
 
             # 2. Peer public 키 추출
             try:
