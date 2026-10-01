@@ -57,34 +57,41 @@ class KCPServerUDP:
             print(f"[!] 알 수 없는 패킷 크기: {pkt_len}")
 
     def handle_handshake1(self, data: bytes, addr):
-        """Handshake1 (373B) 처리."""
-        print(f"[*] Handshake1 감지 (373B) from {addr}")
+        """Handshake1 (368B) 처리."""
+        print(f"[*] Handshake1 감지 ({len(data)}B) from {addr}")
 
         dh = DH64()
         self.sessions[addr] = dh
 
-        # 서버 응답 (37B)
-        # 0x00-0x07: zeros
-        # 0x08-0x0B: 25 (0x19)
-        # 0x0C: 0x01
-        # 0x0D-0x14: TCPConvID (8B, 랜덤)
-        # 0x15-0x1C: Server public #1 (8B)
-        # 0x1D-0x24: Server public #2 (8B)
+        # 세션 ID 생성 (8B 랜덤)
+        import random
+        session_id = random.getrandbits(64)
+
+        # 서버 응답 (33B, PCAP 형식)
+        # 0x00-0x07: zeros (8B)
+        # 0x08: 0x01 (1B)
+        # 0x09-0x10: session ID (8B)
+        # 0x11-0x18: ??? (8B)
+        # 0x19-0x20: server public? (8B)
         srv_pub1, srv_pub2 = dh.get_public_pair()
 
-        import random
-        resp = bytearray(37)
-        struct.pack_into("<Q", resp, 0x00, 0)
-        struct.pack_into("<I", resp, 0x08, 25)
-        resp[0x0C] = 0x01
-        struct.pack_into("<Q", resp, 0x0D, random.getrandbits(64))
-        struct.pack_into("<Q", resp, 0x15, srv_pub1)
-        struct.pack_into("<Q", resp, 0x1D, srv_pub2)
+        resp = bytearray(33)
+        struct.pack_into("<Q", resp, 0x00, 0)  # zeros
+        resp[0x08] = 0x01
+        struct.pack_into("<Q", resp, 0x09, session_id)
+        # 0x11: 8B (PCAP: bfca... - 용도 불명, 랜덤으로)
+        struct.pack_into("<Q", resp, 0x11, random.getrandbits(64))
+        # 0x19: server public #1 (8B)
+        struct.pack_into("<Q", resp, 0x19, srv_pub1)
+        # 0x21: 1B 남음 (PCAP 33B)
 
         self.sock.sendto(bytes(resp), addr)
-        print(f"[*] Handshake1 응답 전송: 37B to {addr}")
+        print(f"[*] Handshake1 응답 전송: 33B to {addr}")
+        print(f"[*] Session ID: {session_id:#x}")
         print(f"[*] Server public #1: {srv_pub1:#x}")
-        print(f"[*] Server public #2: {srv_pub2:#x}")
+
+        # 세션 저장 (session_id -> dh)
+        self.sessions[session_id] = dh
 
     def stop(self):
         """서버 중지."""
