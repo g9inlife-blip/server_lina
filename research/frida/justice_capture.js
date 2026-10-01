@@ -1134,7 +1134,44 @@ async function main() {
             hookCount++;
         } else console.log('[!] LoginManager.LoginGameServer not found');
 
-        // KCPTube.Handshake1 - 핸드셰이크1 (서버로 전송하는 버퍼)
+        // KCPTube.Handshake1 - 핸드셰이크1 찾기 (전체 메서드 스캔)
+        let hs1Found = false;
+        try {
+            console.log('[DEBUG] Handshake 메서드 검색 중...');
+            const domain = api.domain_get();
+            const countPtr = Memory.alloc(Process.pointerSize);
+            const assemblies = api.domain_get_assemblies(domain, countPtr);
+            const count = countPtr.readU32();
+            for (let ai = 0; ai < count && !hs1Found; ai++) {
+                try {
+                    const asm = assemblies.add(ai * Process.pointerSize).readPointer();
+                    const img = api.assembly_get_image(asm);
+                    // 클래스 열거
+                    const classIter = Memory.alloc(Process.pointerSize);
+                    classIter.writePointer(ptr(0));
+                    // api.image_get_class_count / get_class가 없을 수 있으므로 스킵
+                } catch (e) {}
+            }
+            // 대체: 네임스페이스 변형 시도
+            const nsVariants = ['', 'AliothEngine.Net', 'AliothEngine', 'Game'];
+            const classVariants = ['KCPTube', 'KcpTube', 'KCPtube', 'Tube'];
+            for (const ns of nsVariants) {
+                for (const cn of classVariants) {
+                    const fullName = ns ? ns + '.' + cn : cn;
+                    for (let pc = 0; pc <= 3; pc++) {
+                        const m = findMethodAnywhere(fullName, 'Handshake1', pc);
+                        if (m && !m.isNull()) {
+                            console.log('[DEBUG] Found ' + fullName + '.Handshake1(' + pc + ') @ ' + m);
+                            hs1Found = true;
+                        }
+                    }
+                }
+            }
+            if (!hs1Found) console.log('[DEBUG] Handshake1을 어떤 변형에서도 찾지 못함');
+        } catch (e) {
+            console.log('[DEBUG] 검색 중 오류: ' + e);
+        }
+
         const hs1 = findMethodAnywhere('KCPTube', 'Handshake1', 1);
         if (hs1 && !hs1.isNull()) {
             console.log('[+] Hooking KCPTube.Handshake1 @ ' + hs1);
