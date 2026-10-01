@@ -177,62 +177,26 @@ class KCPServerUDP:
         return
 
     def handle_kcp_data(self, data: bytes, addr):
-        """221B KCP 데이터 패킷 처리."""
-        # 0x00-0x07: session ID (8B)
+        """221B KCP 데이터 패킷 처리 - 구조 분석 우선 (복호화 시도 중단)."""
         session_id = struct.unpack_from("<Q", data, 0x00)[0]
-        print(f"[*] KCP 데이터: session={session_id:#x}, len={len(data)}B")
+        print(f"[*] 221B 수신: session={session_id:#x} from {addr}")
 
-        # 세션 키 조회
-        session = self.sessions.get(session_id)
-        if not session:
+        # 221B 구조 분석 (원본 훼손 없이)
+        print(f"[*] 221B 구조:")
+        print(f"    전체: {len(data)}B")
+        for offset in [0x00, 0x08, 0x10, 0x18, 0x20, 0x30, 0x40, 0x50]:
+            if offset + 16 <= len(data):
+                chunk = data[offset:offset+16]
+                ascii_repr = ''.join(chr(b) if 32 <= b < 127 else '.' for b in chunk)
+                print(f"    0x{offset:02X}: {chunk.hex()}  |{ascii_repr}|")
+
+        # 16B 배수 검사
+        from_0x20 = len(data) - 0x20
+        print(f"    0x20~끝: {from_0x20}B, 16의 배수: {from_0x20 % 16 == 0}")
+
+        # 세션 확인만
+        if session_id not in self.sessions:
             print(f"[!] 세션 없음: {session_id:#x}")
-            return
-
-        dh, session_key = session
-
-        # 암호문 추출 (0x20부터)
-        # 221B - 32B 헤더 = 189B
-        ciphertext = data[0x20:]
-        print(f"[*] 암호문 길이: {len(ciphertext)}B")
-
-        # AES-128-CBC 복호화 시도 (다양한 방법)
-        try:
-            from Crypto.Cipher import AES
-            from Crypto.Util.Padding import unpad
-
-            ciphertext_full = data[0x20:]
-
-            # 16의 배수 길이들 시도 (144B가 성공함)
-            for ct_len in [144, 176, 160]:
-                if ct_len > len(ciphertext_full):
-                    continue
-                ct = ciphertext_full[:ct_len]
-
-                # IV=zeros 시도
-                try:
-                    cipher = AES.new(session_key, AES.MODE_CBC, b'\x00'*16)
-                    pt = unpad(cipher.decrypt(ct), AES.block_size)
-                    print(f"[*] 복호화 성공! len={ct_len}, IV=zeros")
-                    print(f"    평문 ({len(pt)}B): {pt.hex()}")
-                    # 평문 파싱
-                    self.handle_decrypted(pt, session_id, addr, dh, session_key)
-                    return
-                except:
-                    pass
-
-            print(f"[!] 복호화 실패")
-        except Exception as e:
-            print(f"[!] 복호화 오류: {e}")
-
-    def handle_decrypted(self, pt: bytes, session_id: int, addr, dh, session_key: bytes):
-        """복호화된 KCP 패킷 처리."""
-        print(f"[*] 복호화된 패킷: {len(pt)}B")
-        # KCP 헤더 파싱 시도
-        # 앞 24B가 KCP 헤더일 가능성
-        if len(pt) >= 24:
-            print(f"    헤더: {pt[:24].hex()}")
-            print(f"    데이터: {pt[24:64].hex()}...")
-        # TODO: opcode 파싱 및 응답 구현
 
     def stop(self):
         """서버 중지."""
