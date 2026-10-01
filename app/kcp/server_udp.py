@@ -17,6 +17,10 @@ from .dh64 import DH64
 class KCPServerUDP:
     """UDP 기반 KCP 게임 서버."""
 
+    # 고정 서버 DH 키 (서버 재시작까지 유지)
+    # 클라이언트가 서버 공개키를 캐싱할 수 있으므로 매번 새로 생성하면 안 됨
+    _fixed_dh = None
+
     def __init__(self, host: str = "0.0.0.0", port: int = 8000):
         self.host = host
         self.port = port
@@ -24,6 +28,12 @@ class KCPServerUDP:
         self.running = False
         # addr -> DH64 매핑 (세션별)
         self.sessions: dict = {}
+        # 고정 DH 키 초기화 (최초 1회)
+        if KCPServerUDP._fixed_dh is None:
+            KCPServerUDP._fixed_dh = DH64()
+            print(f"[*] 고정 서버 DH 키 생성")
+            print(f"    Public #1: {KCPServerUDP._fixed_dh.public1:#x}")
+            print(f"    Public #2: {KCPServerUDP._fixed_dh.public2:#x}")
 
     def start(self):
         """서버 시작."""
@@ -106,8 +116,8 @@ class KCPServerUDP:
         """51B 핸드셰이크 처리 (UDP)."""
         print(f"[*] 51B 핸드셰이크 감지 from {addr}")
 
-        dh = DH64()
-        self.sessions[addr] = dh
+        # 고정 DH 키 사용 (클라이언트 캐싱 대응)
+        dh = KCPServerUDP._fixed_dh
 
         try:
             # 0x08: public #1 (8B), 0x10: public #2 (8B)
@@ -116,7 +126,7 @@ class KCPServerUDP:
             print(f"[*] Client public #1: {pub1:#x}")
             print(f"[*] Client public #2: {pub2:#x}")
 
-            # 2중 DH
+            # 2중 DH (고정 서버 키 사용)
             secret1 = pow(pub1, dh.private1, 0xFFFFFFFFFFFFFFC5)
             secret2 = pow(pub2, dh.private2, 0xFFFFFFFFFFFFFFC5)
             print(f"[*] Secret #1: {secret1:#x}")
@@ -151,13 +161,14 @@ class KCPServerUDP:
             struct.pack_into("<Q", resp, 0x00, 0)  # zeros
             resp[0x08] = 0x01
             struct.pack_into("<Q", resp, 0x09, session_id)
-            struct.pack_into("<Q", resp, 0x11, random.getrandbits(64))  # ??? (원복)
-            struct.pack_into("<Q", resp, 0x19, srv_pub1)  # server public
+            struct.pack_into("<Q", resp, 0x11, srv_pub2)  # server public #2
+            struct.pack_into("<Q", resp, 0x19, srv_pub1)  # server public #1
 
             self.sock.sendto(bytes(resp), addr)
             print(f"[*] 33B 응답 전송 to {addr}")
             print(f"[*] Session ID: {session_id:#x}")
-            print(f"[*] Server public: {srv_pub1:#x}")
+            print(f"[*] Server public #1: {srv_pub1:#x}")
+            print(f"[*] Server public #2: {srv_pub2:#x}")
 
             # 세션 저장
             self.sessions[session_id] = (dh, session_key)
