@@ -51,11 +51,12 @@ class KCPServerUDP:
             self.handle_handshake1(data, addr)
         elif pkt_len == 51:
             self.handle_handshake_51(data, addr)
+        elif pkt_len == 221:
+            self.handle_kcp_data(data, addr)
         elif pkt_len < 373:
-            # KCP 데이터 패킷 (암호화됨)
+            # 기타 KCP 데이터 패킷
             print(f"[*] KCP 데이터 패킷: {pkt_len}B from {addr}")
             print(f"    hex: {data[:64].hex()}...")
-            # TODO: 복호화 → opcode 처리
         else:
             print(f"[!] 알 수 없는 패킷 크기: {pkt_len}")
 
@@ -157,6 +158,35 @@ class KCPServerUDP:
         except Exception as e:
             print(f"[!] 응답 실패: {e}")
         return
+
+    def handle_kcp_data(self, data: bytes, addr):
+        """221B KCP 데이터 패킷 처리."""
+        # 0x00-0x07: session ID (8B)
+        session_id = struct.unpack_from("<Q", data, 0x00)[0]
+        print(f"[*] KCP 데이터: session={session_id:#x}, len={len(data)}B")
+
+        # 세션 키 조회
+        session = self.sessions.get(session_id)
+        if not session:
+            print(f"[!] 세션 없음: {session_id:#x}")
+            return
+
+        dh, session_key = session
+        print(f"[*] 세션 키: {session_key.hex()}")
+
+        # 패킷 구조 분석
+        # 0x08-0x0B: ??? (51000001)
+        # 0x0C-0x0F: ??? (2e0969f6)
+        # 0x10-0x17: zeros?
+        # 0x18-0x1B: ??? (c1000000)
+        # 0x1C~: 암호화 데이터?
+        print(f"    0x08: {data[0x08:0x10].hex()}")
+        print(f"    0x10: {data[0x10:0x18].hex()}")
+        print(f"    0x18: {data[0x18:0x20].hex()}")
+        print(f"    0x20~: {data[0x20:0x40].hex()}...")
+
+        # TODO: AES 복호화
+        # 암호화 시작 위치 파악 필요
 
     def stop(self):
         """서버 중지."""
