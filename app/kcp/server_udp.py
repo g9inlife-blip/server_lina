@@ -128,26 +128,35 @@ class KCPServerUDP:
             traceback.print_exc()
             return
 
-        # 서버 응답은 보내지 않음 (클라이언트가 재시도하는 원인 파악 중)
-        # 일단 DH 계산만 하고 응답 생략
-        print(f"[*] 51B 처리 완료 (응답 생략), 다음 패킷 대기...")
-        return
-
-        # 서버 응답 (51B 에코 + 서버 public)
-        # (현재 비활성화 - 응답이 재시도를 유발하는지 테스트)
+        # 51B에 대한 서버 응답: 33B (PCAP의 실제 서버 응답 형식)
+        # PCAP [1] S→C 33B:
+        # 0x00-0x07: zeros
+        # 0x08: 0x01
+        # 0x09-0x10: session ID (8B)
+        # 0x11-0x18: ??? (8B)
+        # 0x19-0x20: server public? (8B)
         try:
+            import random
+            session_id = random.getrandbits(64)
             srv_pub1, srv_pub2 = dh.get_public_pair()
-            resp = bytearray(51)
-            resp[0:0x08] = data[0:0x08]  # zeros
-            struct.pack_into("<Q", resp, 0x08, srv_pub1)
-            struct.pack_into("<Q", resp, 0x10, srv_pub2)
-            resp[0x18:] = data[0x18:]  # 토큰 복사
+
+            resp = bytearray(33)
+            struct.pack_into("<Q", resp, 0x00, 0)  # zeros
+            resp[0x08] = 0x01
+            struct.pack_into("<Q", resp, 0x09, session_id)
+            struct.pack_into("<Q", resp, 0x11, random.getrandbits(64))  # ???
+            struct.pack_into("<Q", resp, 0x19, srv_pub1)  # server public
+
             self.sock.sendto(bytes(resp), addr)
-            print(f"[*] 51B 응답 전송 to {addr}")
-            print(f"[*] Server public #1: {srv_pub1:#x}")
-            print(f"[*] Server public #2: {srv_pub2:#x}")
+            print(f"[*] 33B 응답 전송 to {addr}")
+            print(f"[*] Session ID: {session_id:#x}")
+            print(f"[*] Server public: {srv_pub1:#x}")
+
+            # 세션 저장
+            self.sessions[session_id] = (dh, session_key)
         except Exception as e:
             print(f"[!] 응답 실패: {e}")
+        return
 
     def stop(self):
         """서버 중지."""
