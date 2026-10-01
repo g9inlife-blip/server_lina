@@ -183,26 +183,58 @@ class KCPServerUDP:
         ciphertext = data[0x20:]
         print(f"[*] 암호문 길이: {len(ciphertext)}B")
 
-        # AES-128-CBC 복호화 시도
+        # AES-128-CBC 복호화 시도 (다양한 방법)
         try:
-            from .crypto import aes_decrypt
-            # 16의 배수로 자르기 (PKCS7 패딩 고려)
-            # 189B는 16의 배수가 아님 - 앞부분만 시도
-            for try_len in [176, 192]:
-                if try_len <= len(ciphertext):
-                    try:
-                        ct = ciphertext[:try_len]
-                        pt = aes_decrypt(session_key, ct)
-                        print(f"[*] 복호화 성공! (len={try_len})")
-                        print(f"    평문 hex: {pt[:64].hex()}")
-                        print(f"    평문 ASCII: {''.join(chr(b) if 32<=b<127 else '.' for b in pt[:64])}")
-                        break
-                    except Exception as e:
-                        continue
-            else:
-                print(f"[!] 복호화 실패 (모든 길이 시도)")
+            from Crypto.Cipher import AES
+            from Crypto.Util.Padding import unpad
+
+            # 방법 1: 0x20부터 176B, IV=zeros
+            # 방법 2: 0x20부터 176B, IV=세션ID
+            # 방법 3: 다른 오프셋 시도
+
+            ciphertext_full = data[0x20:]
+            print(f"[*] 전체 암호문: {len(ciphertext_full)}B")
+
+            # 16의 배수 길이들 시도
+            for ct_len in [176, 160, 144]:
+                if ct_len > len(ciphertext_full):
+                    continue
+                ct = ciphertext_full[:ct_len]
+
+                # IV=zeros 시도
+                try:
+                    cipher = AES.new(session_key, AES.MODE_CBC, b'\x00'*16)
+                    pt = unpad(cipher.decrypt(ct), AES.block_size)
+                    print(f"[*] 복호화 성공! len={ct_len}, IV=zeros")
+                    print(f"    평문: {pt[:64].hex()}")
+                    return
+                except:
+                    pass
+
+                # IV=session_id 시도
+                try:
+                    iv = struct.pack("<Q", session_id) + b'\x00'*8
+                    cipher = AES.new(session_key, AES.MODE_CBC, iv)
+                    pt = unpad(cipher.decrypt(ct), AES.block_size)
+                    print(f"[*] 복호화 성공! len={ct_len}, IV=session_id")
+                    print(f"    평문: {pt[:64].hex()}")
+                    return
+                except:
+                    pass
+
+            print(f"[!] 복호화 실패 (모든 방법 시도)")
+            # 디버그: 첫 블록 복호화 (패딩 무시)
+            try:
+                cipher = AES.new(session_key, AES.MODE_CBC, b'\x00'*16)
+                pt_raw = cipher.decrypt(ciphertext_full[:32])
+                print(f"    Raw 복호화 (32B): {pt_raw.hex()}")
+            except Exception as e:
+                print(f"    Raw 실패: {e}")
+
         except Exception as e:
             print(f"[!] 복호화 오류: {e}")
+            import traceback
+            traceback.print_exc()
 
     def stop(self):
         """서버 중지."""
