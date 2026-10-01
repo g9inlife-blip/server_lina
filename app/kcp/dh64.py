@@ -14,11 +14,18 @@ import struct
 
 # DH modulus: 2^64 - 59
 P = 0xFFFFFFFFFFFFFFC5
+# DH generator (Ghidra 분석 확정)
+G = 5
 
 
 def dh_secret(local_private: int, peer_public: int) -> int:
     """DH secret 계산: peerPublic ^ localPrivate mod p."""
     return pow(peer_public, local_private, P)
+
+
+def dh_public(private: int) -> int:
+    """DH public 키 계산: g ^ private mod p."""
+    return pow(G, private, P)
 
 
 def derive_key(secret1: int, secret2: int) -> bytes:
@@ -33,17 +40,14 @@ class DH64:
         # 서버 private 키 2개 생성 (64비트 랜덤)
         self.private1 = int.from_bytes(os.urandom(8), "little")
         self.private2 = int.from_bytes(os.urandom(8), "little")
+        # public 키 계산: g^private mod p
+        self.public1 = dh_public(self.private1)
+        self.public2 = dh_public(self.private2)
         self.session_key: bytes | None = None
 
     def get_public_pair(self) -> tuple[int, int]:
-        """서버 public 키 반환 (클라이언트에 전송용).
-
-        참고: 실제 DH에서는 generator g가 필요.
-        Ghidra에서 generator 확인 필요 — 현재는 placeholder.
-        """
-        # TODO: Ghidra에서 generator g 확인
-        # 일단 private를 public처럼 반환 (실제 구현 시 수정)
-        return self.private1, self.private2
+        """서버 public 키 반환 (클라이언트에 전송용)."""
+        return self.public1, self.public2
 
     def compute_session_key(self, peer_public1: int, peer_public2: int) -> bytes:
         """클라이언트 public 키로 세션 키 계산."""

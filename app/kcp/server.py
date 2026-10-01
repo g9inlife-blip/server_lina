@@ -56,7 +56,7 @@ class KCPServer:
             print(f"[*] Handshake 패킷 수신: {len(data)} bytes")
             print(f"    hex: {data[:32].hex()}...")
 
-            # 2. Peer public 키 추출 시도
+            # 2. Peer public 키 추출
             try:
                 pub1, pub2 = DH64.parse_handshake2(data)
                 print(f"[*] Peer public: {pub1:#x}, {pub2:#x}")
@@ -64,6 +64,26 @@ class KCPServer:
                 print(f"[*] 세션 키: {session_key.hex()}")
             except Exception as e:
                 print(f"[!] Handshake 파싱 실패: {e}")
+                return
+
+            # 2.5. 서버 Handshake 응답 전송
+            # 클라이언트 패킷과 동일한 구조 (56 bytes, public 키는 0x11, 0x19)
+            try:
+                srv_pub1, srv_pub2 = dh.get_public_pair()
+                print(f"[*] Server public: {srv_pub1:#x}, {srv_pub2:#x}")
+                # 응답 패킷 구성 (클라이언트 패킷 구조 모방)
+                resp = bytearray(56)
+                # 헤더 복사 (0x00-0x10)
+                resp[0:0x11] = data[0:0x11]
+                # 서버 public 키 삽입
+                struct.pack_into("<Q", resp, 0x11, srv_pub1)
+                struct.pack_into("<Q", resp, 0x19, srv_pub2)
+                # 나머지 복사
+                resp[0x21:] = data[0x21:]
+                conn.send(bytes(resp))
+                print(f"[*] Handshake 응답 전송: {len(resp)} bytes")
+            except Exception as e:
+                print(f"[!] Handshake 응답 실패: {e}")
                 return
 
             # 3. 이후 패킷 처리 루프
