@@ -172,21 +172,32 @@ class KCPServerUDP:
             return
 
         dh, session_key = session
-        print(f"[*] 세션 키: {session_key.hex()}")
 
-        # 패킷 구조 분석
-        # 0x08-0x0B: ??? (51000001)
-        # 0x0C-0x0F: ??? (2e0969f6)
-        # 0x10-0x17: zeros?
-        # 0x18-0x1B: ??? (c1000000)
-        # 0x1C~: 암호화 데이터?
-        print(f"    0x08: {data[0x08:0x10].hex()}")
-        print(f"    0x10: {data[0x10:0x18].hex()}")
-        print(f"    0x18: {data[0x18:0x20].hex()}")
-        print(f"    0x20~: {data[0x20:0x40].hex()}...")
+        # 암호문 추출 (0x20부터)
+        # 221B - 32B 헤더 = 189B
+        ciphertext = data[0x20:]
+        print(f"[*] 암호문 길이: {len(ciphertext)}B")
 
-        # TODO: AES 복호화
-        # 암호화 시작 위치 파악 필요
+        # AES-128-CBC 복호화 시도
+        try:
+            from .crypto import aes_decrypt
+            # 16의 배수로 자르기 (PKCS7 패딩 고려)
+            # 189B는 16의 배수가 아님 - 앞부분만 시도
+            for try_len in [176, 192]:
+                if try_len <= len(ciphertext):
+                    try:
+                        ct = ciphertext[:try_len]
+                        pt = aes_decrypt(session_key, ct)
+                        print(f"[*] 복호화 성공! (len={try_len})")
+                        print(f"    평문 hex: {pt[:64].hex()}")
+                        print(f"    평문 ASCII: {''.join(chr(b) if 32<=b<127 else '.' for b in pt[:64])}")
+                        break
+                    except Exception as e:
+                        continue
+            else:
+                print(f"[!] 복호화 실패 (모든 길이 시도)")
+        except Exception as e:
+            print(f"[!] 복호화 오류: {e}")
 
     def stop(self):
         """서버 중지."""
