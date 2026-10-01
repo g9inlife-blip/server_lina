@@ -235,25 +235,40 @@ research/
 
 ### KCP 핸드셰이크 패킷 구조 분석 (2026-10-01, 리나)
 
-**실제 캡처 패킷 (56 bytes):**
+**PCAP 실제 패킷 (어플시작_로그인까지.pcap):**
+
+**C→S Handshake1 (373 bytes):**
+```
+0x00-0x07: zeros (8B)
+0x08-0x0B: 361 (0x169, LE32)
+0x0C:      0x01
+0x0D~:     Base64 인코딩 데이터 (DH public key + ?)
+```
+
+**S→C Handshake 응답 (37 bytes):**
+```
+0x00-0x07: zeros (8B)
+0x08-0x0B: 25 (0x19, LE32)
+0x0C:      0x01
+0x0D-0x14: d106000000000000 (8B, ???)
+0x15-0x1C: 41841b7a54c80106 (8B, server public key?)
+0x1D-0x24: f946af9e83fde980 (8B, ???)
+```
+
+**라이브 캡처 (56 bytes) - Handshake2?:**
 ```
 0x00-0x07: zeros (8B)
 0x08-0x0B: 44 (0x2c, LE32)
-0x0C:      0x01 (핸드셰이크 타입?)
-0x0D-0x10: ??? (4B)
-0x11-0x18: DH public key (8B) ✅
-0x19-... : 토큰 문자열 ("local-dummy-token-witchwind")
+0x0C:      0x01
+0x11-0x18: DH public key (8B)
+0x19~:     토큰 문자열
 ```
 
-**중요 발견:**
-- 0x19은 public 키가 아님! 토큰 문자열임
-- 보고서의 "public #2" 해석은 잘못됨
-- 실제 DH 키 교환은 1개만 패킷에 있음
-
-**미해결:**
-- 보고서의 PCAP에는 public #1, #2 두 개가 있었음
-- 현재 캡처에는 1개만 있음
-- Handshake1/Handshake2 구분 필요 (GPT 분석 대기)
+**결론:**
+- Handshake가 2단계로 구성됨 (Handshake1: 373B, Handshake2: 56B)
+- Handshake1: Base64로 인코딩된 DH 키 교환
+- Handshake2: 토큰 전송
+- 서버 응답 형식 (37B) 확인됨
 
 ### 확인된 흐름
 ```
