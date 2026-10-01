@@ -1134,6 +1134,76 @@ async function main() {
             hookCount++;
         } else console.log('[!] LoginManager.LoginGameServer not found');
 
+        // KCPTube.Handshake1 - 핸드셰이크1 (서버로 전송하는 버퍼)
+        const hs1 = findMethodAnywhere('KCPTube', 'Handshake1', 1);
+        if (hs1 && !hs1.isNull()) {
+            console.log('[+] Hooking KCPTube.Handshake1 @ ' + hs1);
+            Interceptor.attach(hs1, {
+                onEnter(args) {
+                    console.log('\n[HS1] KCPTube.Handshake1 called');
+                    try {
+                        // 버퍼 인자 찾기 (byte[] 또는 IntPtr)
+                        for (let i = 0; i < 3; i++) {
+                            try {
+                                const ptr = args[i];
+                                if (!ptr.isNull()) {
+                                    // byte[]일 가능성 - 길이 확인 시도
+                                    console.log('  arg[' + i + ']: ' + ptr);
+                                }
+                            } catch (e) {}
+                        }
+                    } catch (e) {}
+                }
+            });
+            hookCount++;
+        } else console.log('[!] KCPTube.Handshake1 not found');
+
+        // KCPTube.Handshake2 - 핸드셰이크2 (수신 버퍼 처리)
+        const hs2 = findMethodAnywhere('KCPTube', 'Handshake2', 2);
+        if (hs2 && !hs2.isNull()) {
+            console.log('[+] Hooking KCPTube.Handshake2 @ ' + hs2);
+            Interceptor.attach(hs2, {
+                onEnter(args) {
+                    console.log('\n[HS2] KCPTube.Handshake2 called');
+                    try {
+                        for (let i = 0; i < 2; i++) {
+                            try {
+                                const ptr = args[i];
+                                if (!ptr.isNull()) console.log('  arg[' + i + ']: ' + ptr);
+                            } catch (e) {}
+                        }
+                    } catch (e) {}
+                }
+            });
+            hookCount++;
+        } else {
+            // 1 arg 버전 시도
+            const hs2_1 = findMethodAnywhere('KCPTube', 'Handshake2', 1);
+            if (hs2_1 && !hs2_1.isNull()) {
+                console.log('[+] Hooking KCPTube.Handshake2 (1 arg) @ ' + hs2_1);
+                Interceptor.attach(hs2_1, {
+                    onEnter(args) {
+                        console.log('\n[HS2] KCPTube.Handshake2 (1 arg) called');
+                    }
+                });
+                hookCount++;
+            } else console.log('[!] KCPTube.Handshake2 not found');
+        }
+
+        // KCPTube.Output - KCP 송신
+        const kcpOut = findMethodAnywhere('KCPTube', 'Output', 3);
+        if (kcpOut && !kcpOut.isNull()) {
+            console.log('[+] Hooking KCPTube.Output @ ' + kcpOut);
+            Interceptor.attach(kcpOut, {
+                onEnter(args) {
+                    try {
+                        console.log('\n[KCP_OUT] KCPTube.Output called');
+                    } catch (e) {}
+                }
+            });
+            hookCount++;
+        } else console.log('[!] KCPTube.Output not found');
+
         // LoginManager.HandleLoginSuccess
         const handleSuccess = findMethodAnywhere('LoginManager', 'HandleLoginSuccess', 1);
         if (handleSuccess && !handleSuccess.isNull()) {
