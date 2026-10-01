@@ -1134,148 +1134,92 @@ async function main() {
             hookCount++;
         } else console.log('[!] LoginManager.LoginGameServer not found');
 
-        // UDP 소켓 후킹 - KCP 패킷 캡처 (sendto/recvfrom)
+        // (UDP sendto 후킹 제거 - 주소 기반 KCPTube 후킹으로 대체)
+
+        // KCPTube 직접 주소 후킹 (Ghidra RVA + libil2cpp base)
+        // 이름 검색 실패하므로 주소로 직접 후킹
         try {
-            const sendto = Module.findExportByName('libc.so', 'sendto');
-            const recvfrom = Module.findExportByName('libc.so', 'recvfrom');
-            if (sendto && !sendto.isNull()) {
-                console.log('[+] Hooking libc sendto @ ' + sendto);
-                Interceptor.attach(sendto, {
+            // Frida 17.x: Module.findBaseAddress 없음 → enumerateModules 사용
+            const mods = Process.enumerateModules();
+            let il2cppBase = null;
+            for (const m of mods) {
+                if (m.name === 'libil2cpp.so') {
+                    il2cppBase = m.base;
+                    break;
+                }
+            }
+            if (il2cppBase && !il2cppBase.isNull()) {
+                console.log('[+] libil2cpp.so base for KCP: ' + il2cppBase);
+
+                // Ghidra RVA (libil2cpp.so 이미지 기준 오프셋)
+                const RVA_HS1 = 0x015aff18;
+                const RVA_HS2 = 0x015b1f68;
+                const RVA_OUT = 0x015b21c4;
+                const RVA_UPD = 0x015af650;
+
+                const hs1Addr = il2cppBase.add(RVA_HS1);
+                const hs2Addr = il2cppBase.add(RVA_HS2);
+                const outAddr = il2cppBase.add(RVA_OUT);
+                const updAddr = il2cppBase.add(RVA_UPD);
+
+                console.log('[+] KCPTube.Handshake1 @ ' + hs1Addr + ' (RVA 0x' + RVA_HS1.toString(16) + ')');
+                Interceptor.attach(hs1Addr, {
                     onEnter(args) {
+                        console.log('\n[KCP] Handshake1 ENTER this=' + args[0]);
+                        // 버퍼 덤프 시도 (this+오프셋 또는 인자)
                         try {
-                            const fd = args[0].toInt32();
-                            const buf = args[1];
-                            const len = args[2].toInt32();
-                            // 8000번 포트 관련만 (sockaddr 확인)
-                            // 일단 300-400B 패킷만 로그 (Handshake1 후보)
-                            if (len >= 300 && len <= 500) {
-                                const data = Memory.readByteArray(buf, Math.min(len, 64));
-                                const hex = Array.from(new Uint8Array(data)).map(b => b.toString(16).padStart(2, '0')).join('');
-                                console.log('\n[UDP_SEND] len=' + len + ' hex=' + hex + '...');
+                            for (let i = 0; i < 4; i++) {
+                                const a = args[i];
+                                if (a && !a.isNull()) {
+                                    console.log('  arg[' + i + ']=' + a);
+                                }
                             }
                         } catch (e) {}
-                    }
-                });
-                hookCount++;
-            }
-            if (recvfrom && !recvfrom.isNull()) {
-                console.log('[+] Hooking libc recvfrom @ ' + recvfrom);
-                Interceptor.attach(recvfrom, {
+                    },
                     onLeave(retval) {
-                        // recvfrom은 onEnter에서 길이를 알 수 없어 생략
-                    }
-                });
-            }
-        } catch (e) {
-            console.log('[!] UDP 소켓 후킹 실패: ' + e);
-        }
-
-        // KCPTube.Handshake1 - 핸드셰이크1 찾기 (전체 메서드 스캔)
-        let hs1Found = false;
-        try {
-            console.log('[DEBUG] Handshake 메서드 검색 중...');
-            const domain = api.domain_get();
-            const countPtr = Memory.alloc(Process.pointerSize);
-            const assemblies = api.domain_get_assemblies(domain, countPtr);
-            const count = countPtr.readU32();
-            for (let ai = 0; ai < count && !hs1Found; ai++) {
-                try {
-                    const asm = assemblies.add(ai * Process.pointerSize).readPointer();
-                    const img = api.assembly_get_image(asm);
-                    // 클래스 열거
-                    const classIter = Memory.alloc(Process.pointerSize);
-                    classIter.writePointer(ptr(0));
-                    // api.image_get_class_count / get_class가 없을 수 있으므로 스킵
-                } catch (e) {}
-            }
-            // 대체: 네임스페이스 변형 시도
-            const nsVariants = ['', 'AliothEngine.Net', 'AliothEngine', 'Game'];
-            const classVariants = ['KCPTube', 'KcpTube', 'KCPtube', 'Tube'];
-            for (const ns of nsVariants) {
-                for (const cn of classVariants) {
-                    const fullName = ns ? ns + '.' + cn : cn;
-                    for (let pc = 0; pc <= 3; pc++) {
-                        const m = findMethodAnywhere(fullName, 'Handshake1', pc);
-                        if (m && !m.isNull()) {
-                            console.log('[DEBUG] Found ' + fullName + '.Handshake1(' + pc + ') @ ' + m);
-                            hs1Found = true;
-                        }
-                    }
-                }
-            }
-            if (!hs1Found) console.log('[DEBUG] Handshake1을 어떤 변형에서도 찾지 못함');
-        } catch (e) {
-            console.log('[DEBUG] 검색 중 오류: ' + e);
-        }
-
-        const hs1 = findMethodAnywhere('KCPTube', 'Handshake1', 1);
-        if (hs1 && !hs1.isNull()) {
-            console.log('[+] Hooking KCPTube.Handshake1 @ ' + hs1);
-            Interceptor.attach(hs1, {
-                onEnter(args) {
-                    console.log('\n[HS1] KCPTube.Handshake1 called');
-                    try {
-                        // 버퍼 인자 찾기 (byte[] 또는 IntPtr)
-                        for (let i = 0; i < 3; i++) {
-                            try {
-                                const ptr = args[i];
-                                if (!ptr.isNull()) {
-                                    // byte[]일 가능성 - 길이 확인 시도
-                                    console.log('  arg[' + i + ']: ' + ptr);
-                                }
-                            } catch (e) {}
-                        }
-                    } catch (e) {}
-                }
-            });
-            hookCount++;
-        } else console.log('[!] KCPTube.Handshake1 not found');
-
-        // KCPTube.Handshake2 - 핸드셰이크2 (수신 버퍼 처리)
-        const hs2 = findMethodAnywhere('KCPTube', 'Handshake2', 2);
-        if (hs2 && !hs2.isNull()) {
-            console.log('[+] Hooking KCPTube.Handshake2 @ ' + hs2);
-            Interceptor.attach(hs2, {
-                onEnter(args) {
-                    console.log('\n[HS2] KCPTube.Handshake2 called');
-                    try {
-                        for (let i = 0; i < 2; i++) {
-                            try {
-                                const ptr = args[i];
-                                if (!ptr.isNull()) console.log('  arg[' + i + ']: ' + ptr);
-                            } catch (e) {}
-                        }
-                    } catch (e) {}
-                }
-            });
-            hookCount++;
-        } else {
-            // 1 arg 버전 시도
-            const hs2_1 = findMethodAnywhere('KCPTube', 'Handshake2', 1);
-            if (hs2_1 && !hs2_1.isNull()) {
-                console.log('[+] Hooking KCPTube.Handshake2 (1 arg) @ ' + hs2_1);
-                Interceptor.attach(hs2_1, {
-                    onEnter(args) {
-                        console.log('\n[HS2] KCPTube.Handshake2 (1 arg) called');
+                        console.log('[KCP] Handshake1 LEAVE');
                     }
                 });
                 hookCount++;
-            } else console.log('[!] KCPTube.Handshake2 not found');
+
+                console.log('[+] KCPTube.Handshake2 @ ' + hs2Addr + ' (RVA 0x' + RVA_HS2.toString(16) + ')');
+                Interceptor.attach(hs2Addr, {
+                    onEnter(args) {
+                        console.log('\n[KCP] Handshake2 ENTER this=' + args[0]);
+                        try {
+                            for (let i = 0; i < 4; i++) {
+                                const a = args[i];
+                                if (a && !a.isNull()) {
+                                    console.log('  arg[' + i + ']=' + a);
+                                }
+                            }
+                        } catch (e) {}
+                    },
+                    onLeave(retval) {
+                        console.log('[KCP] Handshake2 LEAVE');
+                    }
+                });
+                hookCount++;
+
+                console.log('[+] KCPTube.Output @ ' + outAddr + ' (RVA 0x' + RVA_OUT.toString(16) + ')');
+                Interceptor.attach(outAddr, {
+                    onEnter(args) {
+                        console.log('\n[KCP] Output ENTER this=' + args[0]);
+                    }
+                });
+                hookCount++;
+
+                console.log('[+] KCPTube.Update @ ' + updAddr + ' (RVA 0x' + RVA_UPD.toString(16) + ')');
+                // Update는 너무 자주 호출되므로 일단 후킹만 하고 로그는 최소화
+                // Interceptor.attach(updAddr, { onEnter(args) {} });
+            } else {
+                console.log('[!] libil2cpp.so base를 찾지 못함');
+            }
+        } catch (e) {
+            console.log('[!] KCPTube 주소 후킹 실패: ' + e + '\n' + e.stack);
         }
 
-        // KCPTube.Output - KCP 송신
-        const kcpOut = findMethodAnywhere('KCPTube', 'Output', 3);
-        if (kcpOut && !kcpOut.isNull()) {
-            console.log('[+] Hooking KCPTube.Output @ ' + kcpOut);
-            Interceptor.attach(kcpOut, {
-                onEnter(args) {
-                    try {
-                        console.log('\n[KCP_OUT] KCPTube.Output called');
-                    } catch (e) {}
-                }
-            });
-            hookCount++;
-        } else console.log('[!] KCPTube.Output not found');
+        // 기존 이름 기반 검색은 제거 (실패 확인됨)
 
         // LoginManager.HandleLoginSuccess
         const handleSuccess = findMethodAnywhere('LoginManager', 'HandleLoginSuccess', 1);
