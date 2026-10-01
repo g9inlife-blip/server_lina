@@ -233,18 +233,26 @@ research/
 | `LoginManager.LoginGameServer` | ✅ 후킹 성공 |
 | `LoginManager.HandleLoginSuccess` | 후킹 시도 중 |
 
+### KCP 핸드셰이크 진행 상황 (2026-10-01)
+- ✅ 클라이언트 연결 수신
+- ✅ Handshake2 패킷 파싱 (56 bytes, public 키 추출)
+- ✅ 세션 키 계산 (DH64)
+- ✅ 서버 Handshake 응답 전송 구현 (g=5)
+- ⏳ 클라이언트 응답 대기 중
+
 ### 확인된 흐름
 ```
 HTTP 로그인 성공
   → SaveLoginToken (UserId: 861197)
   → LoginManager.LoginGameServer 호출됨 ✅
-  → CSBehaviour.Connect 호출 안 됨 ❌ (아직)
+  → KCP 연결 시도 ✅
+  → Handshake2 교환 ✅
+  → (다음: 암호화 통신)
 ```
 
 ### 현재 상태
 - 게임이 로딩 화면에서 멈춤
-- `LoginGameServer`는 호출되지만 `Connect`까지 안 감
-- 원인 파악 중: 서버 정보 파싱 문제 or 다른 연결 경로
+- KCP 핸드셰이크는 진행 중, 응답 후 다음 단계 확인 필요
 
 ## 10. 참고 자료
 
