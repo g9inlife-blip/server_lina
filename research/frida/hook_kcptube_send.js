@@ -17,10 +17,10 @@ function findLibil2cppBase() {
     try {
         const maps = File.readAllText('/proc/self/maps');
         for (let line of maps.split('\n')) {
-            if (line.includes('libil2cpp.so')) {
-                const addr = line.split('-')[0].trim();
-                console.log("[*] libil2cpp.so: " + addr);
-                return ptr(addr);
+            if (line.includes('libil2cpp.so') && line.includes('r-xp')) {
+                const addrStr = line.split('-')[0].trim();
+                console.log("[*] libil2cpp.so: 0x" + addrStr);
+                return ptr('0x' + addrStr);
             }
         }
     } catch (e) {
