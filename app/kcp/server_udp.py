@@ -49,6 +49,8 @@ class KCPServerUDP:
 
         if pkt_len == 373 or pkt_len == 368:
             self.handle_handshake1(data, addr)
+        elif pkt_len == 51:
+            self.handle_handshake_51(data, addr)
         elif pkt_len < 373:
             # KCP 데이터 패킷 (암호화됨)
             print(f"[*] KCP 데이터 패킷: {pkt_len}B from {addr}")
@@ -93,6 +95,53 @@ class KCPServerUDP:
 
         # 세션 저장 (session_id -> dh)
         self.sessions[session_id] = dh
+
+    def handle_handshake_51(self, data: bytes, addr):
+        """51B 핸드셰이크 처리 (UDP)."""
+        print(f"[*] 51B 핸드셰이크 감지 from {addr}")
+
+        dh = DH64()
+        self.sessions[addr] = dh
+
+        try:
+            # 0x08: public #1 (8B), 0x10: public #2 (8B)
+            pub1 = struct.unpack_from("<Q", data, 0x08)[0]
+            pub2 = struct.unpack_from("<Q", data, 0x10)[0]
+            print(f"[*] Client public #1: {pub1:#x}")
+            print(f"[*] Client public #2: {pub2:#x}")
+
+            # 2중 DH
+            secret1 = pow(pub1, dh.private1, 0xFFFFFFFFFFFFFFC5)
+            secret2 = pow(pub2, dh.private2, 0xFFFFFFFFFFFFFFC5)
+            print(f"[*] Secret #1: {secret1:#x}")
+            print(f"[*] Secret #2: {secret2:#x}")
+
+            session_key = struct.pack("<Q", secret1) + struct.pack("<Q", secret2)
+            print(f"[*] 세션 키: {session_key.hex()}")
+
+            # 토큰 (0x18~)
+            token = data[0x18:0x18+40].split(b'\x00')[0].decode('utf-8', errors='ignore')
+            print(f"[*] 토큰: {token}")
+        except Exception as e:
+            print(f"[!] DH 실패: {e}")
+            import traceback
+            traceback.print_exc()
+            return
+
+        # 서버 응답 (51B 에코 + 서버 public)
+        try:
+            srv_pub1, srv_pub2 = dh.get_public_pair()
+            resp = bytearray(51)
+            resp[0:0x08] = data[0:0x08]  # zeros
+            struct.pack_into("<Q", resp, 0x08, srv_pub1)
+            struct.pack_into("<Q", resp, 0x10, srv_pub2)
+            resp[0x18:] = data[0x18:]  # 토큰 복사
+            self.sock.sendto(bytes(resp), addr)
+            print(f"[*] 51B 응답 전송 to {addr}")
+            print(f"[*] Server public #1: {srv_pub1:#x}")
+            print(f"[*] Server public #2: {srv_pub2:#x}")
+        except Exception as e:
+            print(f"[!] 응답 실패: {e}")
 
     def stop(self):
         """서버 중지."""
