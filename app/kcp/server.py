@@ -91,25 +91,22 @@ class KCPServer:
 
             if pkt_len == 56:
                 # Handshake2: 클라이언트→서버 입력 (서버 응답 없음!)
-                # Ghidra: Handshake2 내부에 Socket.Send 호출 없음
+                # 56B 프로토콜: public #1만 있음 (0x11), 0x19는 토큰과 겹침
                 print(f"[*] Handshake2 감지 (56B)")
                 print(f"    hex: {data.hex()}")
 
-                # DH public #1 (0x11, 8B) + public #2 (0x19, 8B)
+                # DH public #1 (0x11, 8B)만 사용 (단일 DH)
                 try:
                     pub1 = struct.unpack_from("<Q", data, 0x11)[0]
-                    pub2 = struct.unpack_from("<Q", data, 0x19)[0]
                     print(f"[*] Client public #1: {pub1:#x}")
-                    print(f"[*] Client public #2: {pub2:#x}")
 
-                    # 2중 DH secret 계산
+                    # 단일 DH secret 계산
                     secret1 = pow(pub1, dh.private1, 0xFFFFFFFFFFFFFFC5)
-                    secret2 = pow(pub2, dh.private2, 0xFFFFFFFFFFFFFFC5)
                     print(f"[*] Secret #1: {secret1:#x}")
-                    print(f"[*] Secret #2: {secret2:#x}")
 
-                    # 16B 세션 키: LE64(secret1) || LE64(secret2)
-                    session_key = struct.pack("<Q", secret1) + struct.pack("<Q", secret2)
+                    # 16B 세션 키: LE64(secret) duplicated
+                    # (단일 8B secret을 16B로 확장)
+                    session_key = struct.pack("<Q", secret1) + struct.pack("<Q", secret1)
                     print(f"[*] 세션 키: {session_key.hex()}")
 
                     # 토큰 추출 (참고용)
@@ -123,8 +120,6 @@ class KCPServer:
                     traceback.print_exc()
 
                 # Handshake2에는 서버 응답을 보내지 않음!
-                # Ghidra 확인: Handshake2 내부에 Socket.Send 없음
-                # KCP State=3으로 전환 후 첫 KCP 패킷 대기
                 print(f"[*] Handshake2 처리 완료 (응답 없음), KCP 패킷 대기 중...")
 
             # 3. 이후 패킷 처리 루프
