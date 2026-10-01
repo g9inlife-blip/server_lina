@@ -40,8 +40,15 @@ async def v4_login(request: Request):
         )
 
     # 로그인 응답 (2026-09-30 캡처 기반)
-    # Token은 새 토큰을 발급해야 함 (여기서는 더미)
-    new_token = "local-dummy-token-" + params.get("u", "unknown")
+    # Token: 실제 서버는 344자 Base64 (368B 핸드셰이크용)
+    # 51B (27자 토큰) 대신 368B를 유도하기 위해 344자로 생성
+    import base64
+    import os
+    # 고정 344자 토큰 (서버 재시작마다 변경되지 않도록 시드 고정)
+    # 실제: 256바이트 -> Base64 344자
+    token_bytes = b"local-server-token-v1" + b"\x00" * (256 - 22)
+    new_token = base64.b64encode(token_bytes).decode()
+    # new_token = "local-dummy-token-" + params.get("u", "unknown")
 
     # 응답의 sign은 요청 파라미터들로 계산 (서버도 sign을 포함)
     resp_sign = compute_sign(config.LOGIN_CONTENT, params)

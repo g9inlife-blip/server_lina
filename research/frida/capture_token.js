@@ -1,55 +1,38 @@
-// 실제 서버 로그인 토큰 캡처용
-// 운영 서버용 (리다이렉트 OFF)
+// 토큰 길이 캡처용 (운영 서버)
+// justice_hook.js의 SaveLoginToken 후크를 단순화
 
-console.log("[*] 토큰 캡처 스크립트 시작");
+'use strict';
 
-// LoginManager.SaveLoginToken 후킹
-function hookSaveToken() {
+console.log("[*] 토큰 길이 캡처 시작");
+
+// justice_hook.js의 헬퍼 함수들 필요
+// 간단히: HTTP 응답에서 Token 필드 파싱
+
+// UnityWebRequest 후킹으로 로그인 응답 캡처
+let libil2cppBase = null;
+
+function findLibil2cpp() {
+    const modules = Process.enumerateModules();
+    for (let m of modules) {
+        if (m.name === 'libil2cpp.so') {
+            return m.base;
+        }
+    }
+    // /proc/self/maps에서 찾기
     try {
-        // IL2CPP API로 메서드 찾기
-        const domain = Il2Cpp.Domain.Get();
-        const assemblies = domain.Assemblies;
-
-        for (let asm of assemblies) {
-            if (asm.Name.includes("Assembly-CSharp")) {
-                const loginManager = asm.GetType("LoginManager");
-                if (loginManager) {
-                    const saveToken = loginManager.GetMethod("SaveLoginToken");
-                    if (saveToken) {
-                        console.log("[*] SaveLoginToken 찾음");
-                        Interceptor.attach(saveToken.VirtualAddress, {
-                            onEnter(args) {
-                                // 첫 번째 인자가 토큰 문자열
-                                const token = args[1];
-                                if (token && !token.isNull()) {
-                                    const str = token.readUtf16String();
-                                    console.log("[TOKEN] 길이: " + str.length);
-                                    console.log("[TOKEN] 값: " + str.substring(0, 100));
-                                    if (str.length > 100) {
-                                        console.log("[TOKEN] 전체: " + str);
-                                    }
-                                }
-                            }
-                        });
-                        return true;
-                    }
-                }
+        const maps = File.readAllText('/proc/self/maps');
+        for (let line of maps.split('\n')) {
+            if (line.includes('libil2cpp.so')) {
+                const addr = line.split('-')[0];
+                return ptr(addr);
             }
         }
-    } catch (e) {
-        console.log("[!] 후킹 실패: " + e);
-    }
-    return false;
+    } catch (e) {}
+    return null;
 }
 
-// 도메인 준비 대기
-let attempts = 0;
-const timer = setInterval(() => {
-    attempts++;
-    if (hookSaveToken() || attempts > 30) {
-        clearInterval(timer);
-        if (attempts > 30) {
-            console.log("[!] SaveLoginToken을 찾지 못함");
-        }
-    }
-}, 1000);
+// 간단한 방법: HTTP 응답 바디에서 "Token" 찾기
+// UploadHandler 데이터를 후킹
+
+console.log("[*] 수동 방법: 게임 로그인 후 HTTP 응답 확인");
+console.log("[*] 또는 justice_capture.js 사용");
