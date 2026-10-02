@@ -1243,107 +1243,81 @@ async function main() {
 }
 
 main();
+// ================= OpInfo BOOT_STATE 덤프 (2026-10-02 최종) =================
+// v4.10 기반 + GPT 분석문서의 20개 필드 메모리 레이아웃
+// 서버의 multifrag_tag probe를 받아서 어떤 필드가 채워지는지 확인용
 
-// ================= OpInfo 필드 덤프 (2026-10-02) =================
-// justice_hook.js의 검증된 api를 그대로 사용. 별도 스크립트 아님.
-// 서버의 multifrag_tag probe를 받은 뒤 ProccessRequestRes 인자의 필드를 덤프.
-// main()이 async라서 api 초기화가 늦게 되므로, 폴링으로 대기 후 실행.
-
-function findClassAnywhere(className) {
-    const domain = api.domain_get();
-    const countPtr = Memory.alloc(Process.pointerSize);
-    const assemblies = api.domain_get_assemblies(domain, countPtr);
-    const count = countPtr.readU32();
-    const nsPtr = Memory.allocUtf8String('');
-    const classPtr = Memory.allocUtf8String(className);
-    for (let i = 0; i < count; i++) {
-        try {
-            const asm = assemblies.add(i * Process.pointerSize).readPointer();
-            if (asm.isNull()) continue;
-            const img = api.assembly_get_image(asm);
-            if (img.isNull()) continue;
-            const klass = api.class_from_name(img, nsPtr, classPtr);
-            if (!klass.isNull()) return klass;
-        } catch (e) { continue; }
-    }
-    return ptr(0);
-}
-
-function dumpOpInfoFields(objPtr) {
-    try {
-        if (objPtr.isNull()) { console.log('[OPINFO_DUMP] (null object)'); return; }
-        const klass = api.object_get_class(objPtr);
-        const className = api.class_get_name(klass).readCString();
-        console.log(`[OPINFO_DUMP] class=${className}`);
-        const iter = Memory.alloc(Process.pointerSize);
-        iter.writePointer(ptr(0));
-        let idx = 0;
-        while (true) {
-            const field = api.class_get_fields(klass, iter);
-            if (field.isNull()) break;
-            const fname = api.field_get_name(field).readCString();
-            let ftype = '?';
-            try { ftype = api.type_get_name(api.field_get_type(field)).readCString(); } catch (e) {}
-            const offset = api.field_get_offset(field);
-            let valInfo = '';
-            try {
-                if (ftype.indexOf('*') >= 0 || ftype.indexOf('string') >= 0 ||
-                    (ftype.length > 0 && ftype.charAt(0) === ftype.charAt(0).toUpperCase() && ftype.charAt(0) !== ftype.charAt(0).toLowerCase())) {
-                    const valPtr = objPtr.add(offset).readPointer();
-                    valInfo = valPtr.isNull() ? 'null' : `non-null (${valPtr})`;
-                } else {
-                    valInfo = `(valuetype)`;
-                }
-            } catch (e) { valInfo = `(read fail)`; }
-            console.log(`[OPINFO_DUMP]   field[${idx}] ${fname} : ${ftype} = ${valInfo}`);
-            idx++;
-            if (idx > 100) break;
-        }
-        console.log(`[OPINFO_DUMP] 총 ${idx}개 필드`);
-    } catch (e) {
-        console.log(`[OPINFO_DUMP] 덤프 실패: ${e.message}`);
-    }
-}
-
-function setupOpInfoDump() {
-    // api가 초기화될 때까지 폴링 (main()이 async라서 늦게 됨)
+function setupOpInfoBootState() {
     if (typeof api === 'undefined' || api === null) {
-        setTimeout(setupOpInfoDump, 500);
+        setTimeout(setupOpInfoBootState, 500);
         return;
     }
     try {
-        const dcClass = findClassAnywhere('DataCenter');
-        if (!dcClass.isNull()) {
-            const iter = Memory.alloc(Process.pointerSize);
-            iter.writePointer(ptr(0));
-            let target = ptr(0);
-            let paramCount = 0;
-            while (true) {
-                const m = api.class_get_methods(dcClass, iter);
-                if (m.isNull()) break;
-                if (api.method_get_name(m).readCString() === 'ProccessRequestRes') {
-                    target = m;
-                    paramCount = api.method_get_param_count(m);
-                    break;
-                }
+        // DataCenter 클래스 찾기
+        const domain = api.domain_get();
+        const cp = Memory.alloc(Process.pointerSize);
+        const asms = api.domain_get_assemblies(domain, cp);
+        const cnt = cp.readU32();
+        const ns = Memory.allocUtf8String('');
+        const cn = Memory.allocUtf8String('DataCenter');
+        let dcClass = ptr(0);
+        for (let i = 0; i < cnt; i++) {
+            try {
+                const asm = asms.add(i * Process.pointerSize).readPointer();
+                if (asm.isNull()) continue;
+                const img = api.assembly_get_image(asm);
+                if (img.isNull()) continue;
+                const k = api.class_from_name(img, ns, cn);
+                if (!k.isNull()) { dcClass = k; break; }
+            } catch (e) {}
+        }
+        if (dcClass.isNull()) { console.log('[BOOT] DataCenter 못 찾음'); return; }
+
+        // ProccessRequestRes 찾기
+        const iter = Memory.alloc(Process.pointerSize);
+        iter.writePointer(ptr(0));
+        let target = ptr(0);
+        while (true) {
+            const m = api.class_get_methods(dcClass, iter);
+            if (m.isNull()) break;
+            if (api.method_get_name(m).readCString() === 'ProccessRequestRes') {
+                target = m;
+                break;
             }
-            if (!target.isNull()) {
-                console.log(`[OPINFO] ProccessRequestRes 찾음 (params=${paramCount}), 후킹`);
-                Interceptor.attach(target, {
-                    onEnter(args) {
+        }
+        if (target.isNull()) { console.log('[BOOT] ProccessRequestRes 못 찾음'); return; }
+
+        console.log('[BOOT] ProccessRequestRes 후킹');
+        const FIELDS = [
+            ['User', 0x88], ['Heros', 0x90], ['Items', 0x98], ['Weapons', 0xA0],
+            ['Equiments', 0xA8], ['Mails', 0xB0], ['Olds', 0xB8], ['Chapters', 0xC0],
+            ['Sections', 0xC8], ['Teams', 0xD0], ['ViewItems', 0xD8], ['Fashions', 0xE0],
+            ['Quests', 0xE8], ['Shops', 0xF0], ['Charges', 0xF8], ['Friends', 0x100],
+            ['Exam', 0x108], ['Rival', 0x110], ['Ranks', 0x118], ['Activities', 0x120]
+        ];
+        Interceptor.attach(target, {
+            onEnter(args) {
+                try {
+                    const resp = args[1];
+                    if (resp.isNull()) return;
+                    let op = '?';
+                    try { op = String(resp.add(0x14).readU16()); } catch (e) {}
+                    console.log(`[BOOT_RESP] OpCode=${op}`);
+                    for (const [fname, off] of FIELDS) {
                         try {
-                            console.log(`[OPINFO] ProccessRequestRes 호출됨`);
-                            if (paramCount >= 1) dumpOpInfoFields(args[1]);
-                            else console.log('[OPINFO] 파라미터 없음');
-                        } catch (e) {
-                            console.log(`[OPINFO] 후크 오류: ${e.message}`);
-                        }
+                            const p = resp.add(off).readPointer();
+                            if (!p.isNull()) {
+                                console.log(`[BOOT_STATE] ${fname}=non-null`);
+                            }
+                        } catch (e) {}
                     }
-                });
-            } else console.log('[OPINFO] ProccessRequestRes 못 찾음');
-        } else console.log('[OPINFO] DataCenter 못 찾음');
+                    console.log('[BOOT_STATE] --- 덤프 끝 ---');
+                } catch (e) {}
+            }
+        });
     } catch (e) {
-        console.log('[OPINFO] 설정 실패: ' + e.message);
+        console.log('[BOOT] 설정 실패: ' + e.message);
     }
 }
-setupOpInfoDump();
+setupOpInfoBootState();
+
