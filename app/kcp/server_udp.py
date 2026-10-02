@@ -343,13 +343,19 @@ class KCPServerUDP:
                 except Exception as e:
                     print(f"    [!] Protobuf 파싱 실패: {e}")
 
-                # Bootstrap probe 응답 (실험용):
-                # 로그인 요청(OpCode=2)에 최소 protobuf로 응답해서 S→C 경로 전체
-                # (fragmentation → AES → 클라이언트 파싱 → 재시도 중단 여부)를 관측.
-                # OpInfo 실제 내용은 미확정이므로 serial/opcode만 echo.
+                # Bootstrap multi-tag probe (실험용):
+                # 로그인 요청(OpCode=2)에 응답. S→C 경로 전체가 동작하는 것은 확인됨.
+                # 남은 문제: 응답 OpInfo의 protobuf 태그 번호 미확정.
+                # field 3~64에 빈 nested message를 한 번에 담아 전송하면, 클라이언트 파서가
+                # 아는 태그는 빈 객체로라도 프로퍼티가 non-null이 되어 null 체크를 통과할 수 있다.
+                # 클라이언트가 다음 요청을 보내면 성공 신호.
                 if opcode == 2 and serial is not None:
                     probe = self._pb_varint(1, serial) + self._pb_varint(2, 2)
-                    print(f"[*] Bootstrap probe 응답 전송 (serial={serial}, {len(probe)}B)")
+                    for f in range(3, 65):
+                        if f in (4, 5, 12, 13, 14, 15):
+                            continue  # 요청에서 쓰는 태그(문자열)는 제외
+                        probe += self._pb_nested(f, b"")
+                    print(f"[*] Bootstrap multi-tag probe 전송 (serial={serial}, {len(probe)}B)")
                     self.send_kcp_message(session_id, 0x84, probe, addr)
             except Exception as e:
                 print(f"[!] 복호화 실패: {e}")
@@ -370,6 +376,31 @@ class KCPServerUDP:
             else:
                 out.append(b)
                 break
+        return bytes(out)
+
+    @staticmethod
+    def _pb_nested(field_no: int, payload: bytes) -> bytes:
+        """length-delimited 필드 인코더 (nested message / string / bytes)."""
+        out = bytearray()
+        tag = (field_no << 3) | 2
+        while True:
+            b = tag & 0x7F
+            tag >>= 7
+            if tag:
+                out.append(b | 0x80)
+            else:
+                out.append(b)
+                break
+        ln = len(payload)
+        while True:
+            b = ln & 0x7F
+            ln >>= 7
+            if ln:
+                out.append(b | 0x80)
+            else:
+                out.append(b)
+                break
+        out += payload
         return bytes(out)
 
     def _current_rx_una(self, session_id: int) -> int:
