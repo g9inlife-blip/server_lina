@@ -313,7 +313,9 @@ class KCPServerUDP:
                     struct.pack_into("<Q", ack, 0x00, session_id)  # Session ID
                     ack[0x08] = 0x52  # KCP ACK command
                     ack[0x09] = 0x00  # Fragment
-                    struct.pack_into("<H", ack, 0x0A, 0x1F00)  # Window (LE)
+                    # Window: 실제 서버 raw 바이트 = 1f 00 (LE uint16 = 31)
+                    # 주의: 0x1F00으로 pack하면 raw가 00 1f가 되어 클라이언트가 ACK를 무시함
+                    struct.pack_into("<H", ack, 0x0A, 31)  # Window = 31 (LE)
                     # Timestamp: 현재 시간 (ms의 하위 32비트)
                     ts = int(time.time() * 1000) & 0xFFFFFFFF
                     struct.pack_into("<I", ack, 0x0C, ts)
