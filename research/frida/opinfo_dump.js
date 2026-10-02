@@ -6,13 +6,16 @@
  * 서버가 보낸 태그 중 어떤 것이 실제 OpInfo 필드로 인식됐는지 확인용.
  *
  * 사용법 (폰, proot Ubuntu):
- *   frida -H 127.0.0.1:27042 -n Gadget -l research/frida/opinfo_dump.js
+ *   frida -H 127.0.0.1:27042 -n Gadget -l research/frida/justice_hook.js -l research/frida/opinfo_dump.js
+ *   (justice_hook.js의 URL 리다이렉트와 함께 로드해야 로컬 서버로 연결됨.
+ *    IIFE로 감싸서 전역 충돌 없음.)
  *   → 게임에서 로그인 → 서버 probe 수신 → [OPINFO_DUMP] 로그 확인
  *
  * v4.10.1: justice_hook.js v4.10의 검증된 IL2CPP 초기화 블록을 그대로 사용.
  * (이전 버전은 enumerateModules 기반 exp()를 새로 짜서 터졌음 — 2026-10-02)
  */
 'use strict';
+(function() {
 
 const LIB_NAME = 'libil2cpp.so';
 
@@ -299,3 +302,5 @@ try {
 } catch (e) {
     console.log(`[OPINFO] 초기화 실패: ${e.message}\n${e.stack}`);
 }
+
+})();
