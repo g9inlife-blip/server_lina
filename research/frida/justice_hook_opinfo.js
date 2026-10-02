@@ -1321,3 +1321,205 @@ function setupOpInfoBootState() {
         console.log('[BOOT] 설정 실패: ' + e.message);
     }
 }
+
+
+// ================= GPT 분석용 Transport -> Response Checkpoint (2026-10-02) =================
+// 목적:
+//   KCP DATA가 클라이언트에서 ACK된 뒤 실제 Application response 처리까지 도달하는지 확인한다.
+//   운영용 gpt전용_justice_hook_운영접속용.js의 관찰 구조를 참고하되,
+//   이 파일에서는 payload/token/serialized buffer를 출력하지 않는다.
+//
+// 판정 단계:
+//   [TRC_KCP_READ] -> [TRC_NET_RESP] -> [TRC_NET_STATUS] -> [TRC_PROC_RESP] -> [BOOT_RESP]
+//
+// 중요:
+//   - TryRead는 "KCP reassembly 이후 TryRead 함수까지 호출됐는가"를 확인하는 checkpoint다.
+//   - TryHandleResponse는 response queue/dispatch 경로 진입 checkpoint다.
+//   - ProccessRequestRes는 OpInfo response가 DataCenter 처리 단계까지 도달했다는 직접 증거다.
+//   - 마지막 fragment(SN=12, FRG=0)는 UDP 서버 로그에서 확인해야 하며 이 hook은 그 이후의 런타임 경로만 본다.
+
+function setupTransportResponseCheckpoint() {
+    try {
+        const specs = [
+            ['Alioth.S1.Net.TCPTube', 'TryRead'],
+            ['Alioth.S1.Net.KCPTube', 'TryRead']
+        ];
+
+        for (const spec of specs) {
+            const ms = findMethodsAnywhereByName(spec[0], spec[1]);
+            for (const m of ms) {
+                console.log('[+] [TRC] Hooking ' + spec[0] + '.' + spec[1] +
+                    '(' + m.typeNames.join(', ') + ') @ ' + m.fnPtr);
+
+                Interceptor.attach(m.fnPtr, {
+                    onEnter(args) {
+                        this.trcT0 = Date.now();
+                        this.trcTube = spec[0].split('.').pop();
+                        this.trcMethod = spec[1];
+
+                        // TryRead는 고빈도일 수 있으므로 enter는 rate-limit.
+                        logThrottled(
+                            'trc-read-enter:' + this.trcTube,
+                            1000,
+                            '[TRC_' + (this.trcTube === 'KCPTube' ? 'KCP' : 'TCP') +
+                            '_READ] enter this=' + describeObjectPtr(args[0])
+                        );
+                    },
+                    onLeave(retval) {
+                        try {
+                            let rv = '?';
+                            if (retval && typeof retval.toInt32 === 'function') {
+                                rv = retval.toInt32();
+                            }
+
+                            // ret=1은 실제 response 처리 대상으로 넘어갈 가능성이 있는
+                            // TryRead 성공 경로이므로 별도 로그를 남긴다.
+                            if (rv === 1) {
+                                console.log(
+                                    '[TRC_' + (this.trcTube === 'KCPTube' ? 'KCP' : 'TCP') +
+                                    '_READ_OK] ret=1 elapsed=' +
+                                    (Date.now() - this.trcT0) + 'ms'
+                                );
+                            } else {
+                                logThrottled(
+                                    'trc-read-leave:' + this.trcTube,
+                                    1500,
+                                    '[TRC_' + (this.trcTube === 'KCPTube' ? 'KCP' : 'TCP') +
+                                    '_READ] leave ret=' + rv
+                                );
+                            }
+                        } catch (e) {}
+                    }
+                });
+            }
+        }
+    } catch (e) {
+        console.log('[!] [TRC] TryRead hook setup failed: ' + e.message);
+    }
+
+    // NetworkCenter.TryHandleResponse:
+    // response queue에서 application response dispatch로 넘어가는 지점을 확인한다.
+    try {
+        const ms = findMethodsAnywhereByName(
+            'Alioth.S1.Net.NetworkCenter',
+            'TryHandleResponse'
+        );
+
+        for (const m of ms) {
+            console.log('[+] [TRC] Hooking NetworkCenter.TryHandleResponse(' +
+                m.typeNames.join(', ') + ') @ ' + m.fnPtr);
+
+            Interceptor.attach(m.fnPtr, {
+                onEnter(args) {
+                    this.trcT0 = Date.now();
+                    console.log(
+                        '[TRC_NET_RESP] TryHandleResponse enter this=' +
+                        describeObjectPtr(args[0])
+                    );
+                },
+                onLeave(retval) {
+                    try {
+                        let rv = '?';
+                        if (retval && typeof retval.toInt32 === 'function') {
+                            rv = retval.toInt32();
+                        }
+                        console.log(
+                            '[TRC_NET_RESP] TryHandleResponse leave ret=' + rv +
+                            ' elapsed=' + (Date.now() - this.trcT0) + 'ms'
+                        );
+                    } catch (e) {}
+                }
+            });
+
+            // Production hook에서 확인된 정적 branch checkpoint.
+            // status < 5 -> ProccessRequestRes route
+            // status >= 5 -> 해당 route skip
+            try {
+                const statusPc = m.fnPtr.add(0x238);
+                Interceptor.attach(statusPc, {
+                    onEnter() {
+                        try {
+                            const status = this.context.sp.add(0x44).readU8();
+                            console.log(
+                                '[TRC_NET_STATUS] status=' + status +
+                                ' route=' +
+                                (status < 5 ? 'ProccessRequestRes' : 'skip')
+                            );
+                        } catch (e) {
+                            console.log('[TRC_NET_STATUS] read failed: ' + e.message);
+                        }
+                    }
+                });
+                console.log('[+] [TRC] TryHandleResponse status branch @ ' + statusPc);
+            } catch (e) {
+                console.log('[!] [TRC] TryHandleResponse status hook failed: ' + e.message);
+            }
+        }
+
+        if (!ms.length) {
+            console.log('[!] [TRC] NetworkCenter.TryHandleResponse not found');
+        }
+    } catch (e) {
+        console.log('[!] [TRC] TryHandleResponse hook setup failed: ' + e.message);
+    }
+
+    // DataCenter.ProccessRequestRes:
+    // 최종적으로 OpInfo response가 DataCenter에 들어왔는지 확인한다.
+    try {
+        const ms = findMethodsAnywhereByName('DataCenter', 'ProccessRequestRes');
+
+        for (const m of ms) {
+            console.log('[+] [TRC] Hooking DataCenter.ProccessRequestRes(' +
+                m.typeNames.join(', ') + ') @ ' + m.fnPtr);
+
+            Interceptor.attach(m.fnPtr, {
+                onEnter(args) {
+                    try {
+                        const response = args[1];
+                        if (!response || response.isNull()) {
+                            console.log('[TRC_PROC_RESP] response=null');
+                            return;
+                        }
+
+                        let opcode = '?';
+                        let returnCode = '?';
+                        let serial = '?';
+
+                        try { serial = String(response.add(0x10).readU32()); } catch (e) {}
+                        try { opcode = String(response.add(0x14).readS32()); } catch (e) {}
+                        try { returnCode = String(response.add(0x18).readS32()); } catch (e) {}
+
+                        console.log(
+                            '[TRC_PROC_RESP] enter response=' +
+                            describeObjectPtr(response) +
+                            ' SerialNumber=' + serial +
+                            ' OpCode=' + opcode +
+                            ' ReturnCode=' + returnCode
+                        );
+                    } catch (e) {
+                        console.log('[TRC_PROC_RESP] read failed: ' + e.message);
+                    }
+                },
+                onLeave() {
+                    console.log('[TRC_PROC_RESP] leave');
+                }
+            });
+        }
+
+        if (!ms.length) {
+            console.log('[!] [TRC] DataCenter.ProccessRequestRes not found');
+        }
+    } catch (e) {
+        console.log('[!] [TRC] ProccessRequestRes hook setup failed: ' + e.message);
+    }
+
+    console.log('[+] [TRC] Transport -> Response checkpoints installed');
+}
+
+// main()이 이미 끝난 뒤 설치해도 IL2CPP API와 method lookup은 유지되므로,
+// 기존 운영/Bootstrap hook과 분리하여 실험용 checkpoint만 추가한다.
+try {
+    setupTransportResponseCheckpoint();
+} catch (e) {
+    console.log('[!] [TRC] setup failed: ' + e.message);
+}
