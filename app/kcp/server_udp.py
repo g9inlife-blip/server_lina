@@ -344,8 +344,12 @@ class KCPServerUDP:
                     print(f"    [!] Protobuf 파싱 실패: {e}")
 
                 # Bootstrap probe (실험용):
-                # PROBE_MODE="simple": field 1+2만 (파싱 안전 확인됨, 12:52)
-                # PROBE_MODE="multitag": field 3~64 빈 nested 추가 (태그 탐색용)
+                # PROBE_MODE="simple": field 1+2만 (7B, 1 fragment)
+                # PROBE_MODE="multitag": field 3~64 빈 nested 추가 (168B, 1 fragment)
+                # PROBE_MODE="multifrag": 실측과 동일한 조건으로 최소 응답
+                #   - multi-fragment (frg=11..0, 12개), 1372B chunk, 1400B UDP
+                #   - 내용: field 1+2 반복 (유효한 protobuf, last-wins) ~16KB
+                #   - flag 0x84 (0xc4는 압축 의미일 수 있어 비압축인 우리는 0x84)
                 # 2026-10-02 13:00 관측: multitag 후 클라이언트가 transport ACK조차 안 보냄.
                 # 2026-10-02 13:05 GPT 재분석: "protobuf 파서 사망"보다
                 # "S→C KCP 세그먼트 자체를 클라이언트 KCP가 거부"가 1순위 가설.
@@ -353,16 +357,25 @@ class KCPServerUDP:
                 # 12:43에 올바른 28B ACK에도 재전송이 멈추지 않은 것도 같은 맥락 —
                 # 33B 핸드셰이크(앱 계층)는 되는데 S→C KCP 세그먼트가 안 받아들여짐.)
                 # 파서 예외설은 logcat 확인 전까지 확정하지 않음.
-                PROBE_MODE = "simple"
+                # 2026-10-02 13:23: 다음 실험 = 실측과 동일한 조건의 최소 응답 (multifrag).
+                PROBE_MODE = "multifrag"
                 if opcode == 2 and serial is not None:
-                    probe = self._pb_varint(1, serial) + self._pb_varint(2, 2)
+                    base = self._pb_varint(1, serial) + self._pb_varint(2, 2)
+                    flag = 0x84
                     if PROBE_MODE == "multitag":
+                        probe = base
                         for f in range(3, 65):
                             if f in (4, 5, 12, 13, 14, 15):
                                 continue  # 요청에서 쓰는 태그(문자열)는 제외
                             probe += self._pb_nested(f, b"")
+                    elif PROBE_MODE == "multifrag":
+                        probe = base
+                        while len(probe) < 16384:
+                            probe += base
+                    else:  # simple
+                        probe = base
                     print(f"[*] Bootstrap probe 전송 [{PROBE_MODE}] (serial={serial}, {len(probe)}B)")
-                    self.send_kcp_message(session_id, 0x84, probe, addr)
+                    self.send_kcp_message(session_id, flag, probe, addr)
             except Exception as e:
                 print(f"[!] 복호화 실패: {e}")
         else:
