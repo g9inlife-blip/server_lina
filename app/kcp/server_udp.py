@@ -432,7 +432,7 @@ class KCPServerUDP:
                 # 2026-10-02 14:18: GPT 분석문서에서 OpInfo 전체 메모리 레이아웃 20개 확보.
                 #   Frida v5의 BOOT_STATE를 20개 필드로 확장. 태그 매핑을 위해
                 #   multifrag_tag로 다시 전환 (한 번에 매핑 시도).
-                PROBE_MODE = "builder"  # 자체 빌더 테스트 (2026-10-02 17:10, gold=999999)
+                PROBE_MODE = "replay"  # 실측 + gold 패치 (2026-10-02 17:17)
                 if opcode == 2 and serial is not None:
                     base = self._pb_varint(1, serial) + self._pb_varint(2, 2)
                     flag = 0x84
@@ -528,13 +528,11 @@ class KCPServerUDP:
                             raw_pb = _gzip.decompress(gz_data)
                             # field 1 (varint) 파싱: 첫 바이트 0x08, 그 다음 varint가 serial
                             if raw_pb[0] == 0x08:
-                                # 기존 varint 길이 측정
                                 p = 1
                                 while p < len(raw_pb) and (raw_pb[p] & 0x80):
                                     p += 1
-                                p += 1  # 마지막 바이트 포함
+                                p += 1
                                 old_serial_len = p - 1
-                                # 새 serial로 교체
                                 new_serial_bytes = b""
                                 v = serial
                                 while True:
@@ -542,7 +540,59 @@ class KCPServerUDP:
                                     if v: new_serial_bytes += bytes([b | 0x80])
                                     else: new_serial_bytes += bytes([b]); break
                                 raw_pb = b"\x08" + new_serial_bytes + raw_pb[p:]
-                                print(f"    [replay] serial 패치: → {serial} ({old_serial_len}B→{len(new_serial_bytes)}B)")
+                                print(f"    [replay] serial 패치: → {serial}")
+                            # gold 패치 (2026-10-02 17:17): field 35 (User) 내부의 field 7을 변경
+                            # BUILDER_GOLD 환경변수로 지정 (기본 999999)
+                            import os as _os4
+                            gold_val = int(_os4.environ.get("BUILDER_GOLD", "999999"))
+                            # field 35 찾기: 태그 (35<<3)|2 = 0x11A = b'\x9a\x02'
+                            # 간단한 바이트 검색으로 field 35 위치 찾기
+                            tag35 = b"\x9a\x02"  # field 35, wire type 2
+                            idx = raw_pb.find(tag35)
+                            if idx != -1:
+                                # length 파싱
+                                lp = idx + 2
+                                ln = 0; shift = 0
+                                while lp < len(raw_pb):
+                                    b = raw_pb[lp]; lp += 1
+                                    ln |= (b & 0x7F) << shift
+                                    if not (b & 0x80): break
+                                    shift += 7
+                                user_start = lp
+                                user_end = lp + ln
+                                user_pb = raw_pb[user_start:user_end]
+                                # User 내부에서 field 7 찾기: 태그 (7<<3)|0 = 0x38
+                                # field 7은 varint
+                                tag7 = b"\x38"
+                                uidx = user_pb.find(tag7)
+                                if uidx != -1:
+                                    # 기존 varint 길이
+                                    vp = uidx + 1
+                                    while vp < len(user_pb) and (user_pb[vp] & 0x80):
+                                        vp += 1
+                                    vp += 1
+                                    # 새 gold varint
+                                    new_gold = b""
+                                    gv = gold_val
+                                    while True:
+                                        b = gv & 0x7F; gv >>= 7
+                                        if gv: new_gold += bytes([b | 0x80])
+                                        else: new_gold += bytes([b]); break
+                                    new_user = user_pb[:uidx+1] + new_gold + user_pb[vp:]
+                                    # field 35의 length 업데이트 (길이가 바뀔 수 있음)
+                                    new_ln = len(new_user)
+                                    new_ln_bytes = b""
+                                    tl = new_ln
+                                    while True:
+                                        b = tl & 0x7F; tl >>= 7
+                                        if tl: new_ln_bytes += bytes([b | 0x80])
+                                        else: new_ln_bytes += bytes([b]); break
+                                    raw_pb = raw_pb[:idx+2] + new_ln_bytes + new_user + raw_pb[user_end:]
+                                    print(f"    [replay] gold 패치: field 35.User.field 7 → {gold_val}")
+                                else:
+                                    print(f"    [replay] User 내부 field 7을 못 찾음")
+                            else:
+                                print(f"    [replay] field 35를 못 찾음")
                             probe = _gzip.compress(raw_pb)
                             print(f"    [replay] gzip 재압축: {len(probe)}B")
                             flag = 0xC4  # 실측과 동일
