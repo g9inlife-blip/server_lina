@@ -303,6 +303,29 @@ class KCPServerUDP:
                         print(f"      {f}")
                 except Exception as e:
                     print(f"    [!] Protobuf 파싱 실패: {e}")
+
+                # 28B KCP ACK 전송 (GPT 분석: 2026-10-02)
+                # 구조:
+                # [Session 8B][0x52][0x00][Window 2B][Timestamp 4B][SN 4B][UNA 4B][Reserved 4B]
+                try:
+                    import time
+                    ack = bytearray(28)
+                    struct.pack_into("<Q", ack, 0x00, session_id)  # Session ID
+                    ack[0x08] = 0x52  # KCP ACK command
+                    ack[0x09] = 0x00  # Fragment
+                    struct.pack_into("<H", ack, 0x0A, 0x1F00)  # Window (LE)
+                    # Timestamp: 현재 시간 (ms의 하위 32비트)
+                    ts = int(time.time() * 1000) & 0xFFFFFFFF
+                    struct.pack_into("<I", ack, 0x0C, ts)
+                    struct.pack_into("<I", ack, 0x10, 0)  # SN (ACK 대상)
+                    struct.pack_into("<I", ack, 0x14, 1)  # UNA (다음 기대 SN)
+                    struct.pack_into("<I", ack, 0x18, 0)  # Reserved
+
+                    self.sock.sendto(bytes(ack), addr)
+                    print(f"[*] 28B KCP ACK 전송 to {addr}")
+                    print(f"    ACK: session={session_id:#x}, SN=0, UNA=1")
+                except Exception as e:
+                    print(f"[!] ACK 전송 실패: {e}")
             except Exception as e:
                 print(f"[!] 복호화 실패: {e}")
         else:
