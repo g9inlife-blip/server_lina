@@ -1187,3 +1187,728 @@ HomePanelMono.Start
 5. 그 결과로 Bootstrap 필수/선택 필드 최종 분리
 
 현재까지는 EquipMax를 **Main 필수 후보 → 저장 offset까지 확정** 상태로 승격한다.
+
+
+## 23. 2026-10-02 UserInfo Main 소비값 저장 위치 추가 확정
+
+### 23.1 UserInfo 직접 저장 필드
+
+Git Listing 기준 getter의 실제 fallback 저장 offset:
+
+| 값 | getter | 저장 위치 | Main 관련 |
+|---|---|---:|---|
+| Id | `00dd1884` | `UserInfo +0x10` | UserInfoPanel |
+| Name | `00dd1988` | `UserInfo +0x18` | UserInfoPanel |
+| Level | `00dd1ba0` | `UserInfo +0x28` | Main/UI 다수 |
+| Exp | `00dd1ca4` | `UserInfo +0x2C` | UserInfoPanel |
+| EquipMax | `00dd27d0` | `UserInfo +0x58` | HomePanel |
+| Energy | `00dd2ce4` | 직접 필드가 아니라 `DataCenter.GetXCount` 경로 | Main/전투 UI |
+
+Id/Name/Level/Exp/EquipMax는 모두 getter의 직접 fallback에서 저장 offset을 확인했다.
+
+### 23.2 Energy는 별도 취급
+
+`UserInfo.get_Energy @ 00dd2ce4`는 단순 `UserInfo + offset` 반환이 아니다.
+
+현재 확인된 경로:
+
+```text
+UserInfo.get_Energy
+  → DataCenter.GetXCount
+  → key = 0x29020c3 (0x20c3 + 0x290 << 16)
+```
+
+따라서 Local Server Bootstrap에서 Energy를 `UserInfo` 고정 필드로 넣는 것으로 모델링하지 않는다.
+
+### 23.3 Main Bootstrap 최소 데이터 후보 갱신
+
+현재 직접적인 Main/UI 소비 근거가 확보된 User 영역:
+
+```text
+User
+ ├─ Id       (+0x10)
+ ├─ Name     (+0x18)
+ ├─ Level    (+0x28)
+ ├─ Exp      (+0x2C)
+ └─ EquipMax (+0x58)
+
+Energy
+ └─ DataCenter.GetXCount(0x029020C3) 계열
+```
+
+### 23.4 다음 추적
+
+다음은 `DataCenter.GetXCount(0x029020C3)`의 실제 데이터 저장/병합 경로를 추적한다.
+
+동시에 `HomePanelMono.Start @ 00f67adc`의 직접 getter 호출 목록을 확정해, 위 User 값 중 실제 Bootstrap 직후 필요한 값과 단순 다른 화면 소비값을 분리한다.
+
+
+## 24. 2026-10-02 Main 재화 3종의 ItemRecord / GetXCount 연결
+
+UserInfo getter Assembly와 Unity ItemRecord 분석을 대조해 Main 재화 ID를 정리했다.
+
+| 재화 | UserInfo getter | GetXCount itemId | 10진수 ItemRecord ID |
+|---|---|---:|---:|
+| Coins | `get_Coins @ 00dd2d8c` | `0x029020C1` | `43000001` |
+| Crystals | `get_Crystals @ 00dd2e34` | `0x029020C2` | `43000002` |
+| Energy | `get_Energy @ 00dd2ce4` | `0x029020C3` | `43000003` |
+
+세 getter 모두 `DataCenter.GetXCount(itemId, 0, 0)`를 호출한다. 따라서 Coins도 UserInfo의 고정 필드가 아니라 Item 상태를 조회하는 값으로 취급한다.
+
+Git의 `09_record_samples.json`에서 세 ID 모두 `ItemRecord.json` Record이며, 아이콘은 각 ID에 대응하는 `item_4300000X`다. SysconfRecord의 개인 정보 재화 표시 설정에도 세 ID가 포함된다.
+
+`DataCenter.MergeItem @ 016e4700`와 `GetXCount @ 016defb0`는 모두 `BaseData +0x24`의 type을 기준으로 ItemType bucket을 선택한다. 현재 Listing에서 확인한 분기는 type `0x1F → bucket 2`, `0x22 → bucket 0`, `0x41 → bucket 1`이다.
+
+단, Record sample의 `baseDataType=0`과 runtime `BaseData.type`의 직접 매핑, 그리고 각 재화 ID의 실제 bucket은 아직 runtime에서 확인하지 않았다. 이 둘을 동일하다고 추정하지 않는다.
+
+따라서 Main Bootstrap fixture에서는 세 재화를 `UserInfo` 내부 숫자 필드로 별도 구성하지 않고, `OpInfo.Items → MergeItem → ItemType bucket → GetXCount` 경로로 구성한다. 실제 Bucket/Count는 다음 runtime 로그로 확정한다.
+
+
+## 21. 2026-10-02 최신 단일 Frida 로그 반영 및 Main 범위 재정렬
+
+입력 로그:
+`research/reports/Log/frida_log_static_신규로갱신되므로기존데이터없이최종본만.txt`
+사용자가 기존 로그를 누적하지 않고 이번 실행 최종본만 저장한 파일이다. 이 파일을 기준으로 분석하며 과거 로그를 섞지 않는다.
+
+### 21.1 Bootstrap OpCode 2 runtime 확인
+
+이번 로그의 최초 Bootstrap 응답:
+
+- `OpCode=2`, `ReturnCode=0`
+- `User@+0x88 = ProtoUser`
+  - Id = 871053
+  - Level = 53
+  - Exp = 1100
+- `Items@+0x98 = Dictionary`, count = 98
+- `Heros@+0x90 = Dictionary` non-null
+- `Chapters@+0xC0 = Dictionary`, count = 61
+- Items → MergeItem 진입 및 정상 종료 확인
+- HeroInfo.InitHero가 여러 ProtoHero 원본에 대해 실행됨
+
+이후 발생한 OpCode 19 및 OpCode 22 응답은 User/Items/Heros/Chapters가 null이다. 따라서 이 응답들을 Bootstrap 전체 데이터로 취급하지 않는다.
+
+### 21.2 Main 표시값 runtime 확인
+
+- UserInfo Level = 53
+- UserInfo Exp = 1100
+- Currency:
+  - Energy = 134
+  - Coins = 306095
+  - Crystals = 2700
+- Currency BaseData 3종 모두 발견, runtime type = 0x22
+- HeroInfo getter runtime 호출 확인:
+  - Level, Star, State, FashionId
+  - WeaponInfomation
+- HeroInfo.InitHero의 source class = ProtoHero 확인
+
+주의: 이 로그는 해당 getter가 호출된 사실을 확인하지만, 모든 Main 위젯의 데이터 의존성을 완성한 것은 아니다. 특히 HeroInfo getter가 다수 Hero 객체에 대해 호출된 결과이므로 개별 Hero와 화면의 대표 Hero 선택 관계는 별도 확인이 필요하다.
+
+### 21.3 Main 데이터 계약 완료도 — 미완료
+
+| 데이터 영역 | 현재 상태 | 남은 확인 |
+|---|---|---|
+| User 기본정보 | Bootstrap runtime 확인 | Main에서 실제 표시되는 필드 전체 |
+| User vary data (+0x70) | MergeVaryData 정적 경로 확인 | 이번 Bootstrap의 실제 key/value와 소비 UI |
+| Items | count 98, MergeItem runtime 확인 | Main 상단/배너/각 위젯에서 참조하는 항목 |
+| Coins/Crystals/Energy | 실제 값과 GetXCount 경로 확인 | 표시 외 별도 Main 소비처가 있는지 |
+| Heros | Dictionary 및 InitHero runtime 확인 | Main 대표 Hero 선택 및 필요한 필드 최소 집합 |
+| Weapons | MergeWeapon 및 Weapon UI 소비처 정적 확인 | Main 진입 필수 여부/실제 데이터 참조 |
+| Equiments | MergeEquip 및 Home/Warehouse 소비처 정적 확인 | Main 진입 필수 여부/필요 레코드 범위 |
+| Chapters | count 61 및 Chapter UI 정적 연결 | Main 첫 화면에서 실제 필요한 subset |
+| Sections | MergeSections 및 IsSectionClear 연결 확인 | Main 초기 로딩에서 필요한지 |
+| Teams | 병합 경로 정적 확인 | Main 표시/초기화 소비 여부 |
+| Quests | 병합 경로 정적 확인 | Main 배지/알림/퀘스트 UI 소비 여부 |
+| Shops/Charges | 병합 경로 정적 확인 | Main 상점/충전 UI 소비 여부 |
+| Mails/Friends/Activities/기타 | 일부 필드 병합 구조 확인 | Main 진입 필수 여부와 UI 소비 여부 |
+
+### 21.4 작업 범위 재설정
+
+전투 씬 내부 동작, 로컬 전투 계산/전투 데이터는 현재 Main Bootstrap 목표 범위에서 제외한다. 던전 입장 OpCode 0x16은 서버 요청/응답이 존재한다는 사실만 참고 기록으로 유지하고, 전투 씬 후속 분석은 진행하지 않는다.
+
+이후 우선순위:
+1. Main 화면 최초 표시 시점의 UI 컴포넌트별 DataCenter/UserInfo/HeroInfo getter 사용 목록 작성
+2. Main 상단 재화/프로필/대표 Hero/배너/메뉴 배지의 실제 소비 필드 확정
+3. 각 필드가 Bootstrap OpCode 2에 포함되는지 확인
+4. Bootstrap에 없는 데이터가 별도 OpCode 요청으로 채워지는지 확인
+5. Local Server가 Main 첫 화면을 표시하는 데 필요한 최소 응답 계약과, 메뉴 진입 시 추가로 필요한 응답 계약을 분리
+
+완료 기준은 모든 서버 데이터 필드를 복원하는 것이 아니라, Main 첫 화면이 정상 표시되는 데 필요한 데이터와 타입/구조/초기화 순서를 식별하는 것이다.
+
+
+## 22. 2026-10-02 v4.24 최종 단일 로그 재검토 — Main 데이터 조사로 복귀
+
+사용자가 새로 등록한 `research/reports/Log/frida_log_static_신규로갱신되므로기존데이터없이최종본만.txt`를 처음부터 다시 확인했다. 이전 로그를 누적해 해석하지 않는다.
+
+### 22.1 이번 실행의 Bootstrap 실측
+
+- Frida script: v4.24, 54 hooks installed
+- Bootstrap Request: OpCode 2, SerialNumber 139954759
+- Request가 KCPTube.Send에서 ret=1로 수락됨
+- Response: 같은 SerialNumber 139954759, OpCode 2, ReturnCode 0
+- OpInfo response envelope에서 45개 필드의 이름/타입/offset이 기록됨
+- 주요 non-null 데이터:
+  - DictI32 (+0x70)
+  - User (+0x88)
+  - Heros (+0x90)
+  - Items (+0x98)
+  - Weapons (+0xA0)
+  - Equiments (+0xA8)
+  - Chapters (+0xC0)
+  - Sections (+0xC8)
+  - Teams (+0xD0)
+  - Fashions (+0xE0)
+  - Quests (+0xE8)
+  - Charges (+0xF8)
+  - Activities (+0x120)
+  - AIStrategy (+0x138)
+- Mails, ViewItems, Exam, Rival, Msgs, BattleReport 등은 이번 응답에서 null 또는 비어 있는 값으로 관측됐다. null이 영구적으로 불필요하다는 뜻은 아니다.
+
+### 22.2 이번 실행에서 확인된 Main 표시 관련 데이터
+
+- User: Id=871053, Level=53, Exp=1100
+- Items Dictionary count=98, MergeItem 실행 확인
+- Chapters Dictionary count=61
+- HeroInfo.InitHero가 ProtoHero 원본을 받아 여러 HeroInfo를 초기화
+- HeroInfo getter runtime 호출: Level, Star, State, FashionId, WeaponInfomation
+- Currency runtime 값: Energy=134, Coins=306095, Crystals=2700
+- 세 재화의 BaseData.type은 모두 0x22
+
+이것은 Bootstrap 데이터가 실제 Client 상태로 병합된 사실과 일부 getter 사용을 증명한다. 다만 모든 Main UI 위젯이 요구하는 필드 전체를 열거한 것은 아니다.
+
+### 22.3 던전 진입 로그는 Main 범위에서 제외
+
+같은 실행에서:
+- ReadyMono.ClickEnterBattle 진입
+- CreateBattle(20000000, 21000010)
+- KCP OpCode=22 송신 수락
+- 응답 OpCode=22, ReturnCode=0
+- GoToBattleMono.CreateBattleBack 진입
+
+여기까지는 입장 Request/Response 경계 확인에 해당한다. 전투 씬 내부 동작과 전투 데이터는 사용자의 범위 결정에 따라 추가 분석하지 않는다. 기존 Dungeon 보고서는 요청/응답 참고 기록으로 유지한다.
+
+### 22.4 Main 데이터 완료도 재판정
+
+**아직 완료되지 않았다.** 현재까지 완성된 것은 Bootstrap의 공통 Response envelope와 주요 데이터의 병합 경로이며, Main 첫 화면의 모든 소비 필드/데이터 유형/초기화 순서는 미완료다.
+
+| 영역 | 현재 증거 | 완료 여부 |
+|---|---|---|
+| OpInfo envelope | 45 fields의 이름/타입/offset 실측 | 구조 확인 |
+| User 기본 프로필 | Id/Level/Exp runtime | 일부 확인 |
+| 재화 | Coins/Crystals/Energy 값 및 Item 경로 | 핵심 3종 확인 |
+| 대표 Hero | ProtoHero → HeroInfo 및 일부 getter | 선택 기준/대표 Hero 연결 미완료 |
+| 무기/장비 | Bootstrap merge 및 별도 UI 소비 정적 경로 | Main 필수 데이터 범위 미완료 |
+| Chapter/Section | 61 Chapters runtime, Sections dictionary 존재 | 첫 화면 노출 subset 및 표시 의존성 미완료 |
+| 배너/이벤트 | HomePanel 소비 함수 진입점 일부 확인 | 필요한 데이터와 배지/노출 조건 미완료 |
+| 메뉴 배지/알림 | Quest/Activity 등의 응답 필드 존재 | 실제 UI 소비와 필수성 미완료 |
+| Teams/Quests/Shops/Charges/Fashions/Activities | 응답 타입 및 merge 경로 | Main 소비 필드/필수성 미완료 |
+| AssetBundle | Main UI 리소스 URL 일부 관측 | 화면 표시용 리소스 의존성 목록 미완료 |
+
+### 22.5 분석 범위 고정
+
+다음부터는 전투 진입을 따라가지 않는다. 목표를 다음과 같이 고정한다.
+
+```
+Login 완료
+ → Bootstrap OpCode 2
+ → DataCenter/UserInfo/HeroInfo 상태 생성
+ → Main 최초 화면(HomePanel + 상단 UserInfo)
+ → 화면별 getter/데이터 소비
+ → 배너/메뉴 배지/표시 조건
+ → Main 첫 화면 최소 Bootstrap contract
+```
+
+조사 종료 기준:
+- 첫 화면에서 실제 표시되는 컴포넌트 목록
+- 각 컴포넌트가 읽는 getter/property
+- getter가 읽는 저장 객체 및 필드/자료형
+- Bootstrap OpInfo field와 DataCenter merge/cache 경로
+- Bootstrap에 포함되지 않으면 추가 Request가 필요한지
+- 필수/선택/화면 진입 후 lazy-load 항목 분리
+
+이 기준을 충족하기 전까지 Main Bootstrap 데이터 분석을 완료 처리하지 않는다.
+
+
+## 23. 2026-10-02 Main 상단 프로필 / 재화 UI 소비 정적 확인
+
+대상 Listing: `research/Ghidra_Listing_txt/US.txt`
+
+### 23.1 UserInfoPanelMono.Start @ 00f7e92c
+
+Main 상단 프로필 패널 초기화 경로에서 다음 UserInfo getter 호출이 확인된다.
+
+| Getter | 데이터 | UI 소비 |
+|---|---|---|
+| `UserInfo.get_Id @ 00dd1884` | 사용자 ID | `lbl_userId` |
+| `UserInfo.get_Name @ 00dd1988` | 닉네임 | `lbl_nickName` |
+| `UserInfo.get_Level @ 00dd1ba0` | 플레이어 레벨 | `lbl_lv`, 레벨 표시 |
+| `UserInfo.get_Exp @ 00dd1ca4` | 플레이어 경험치 | `lbl_userexpshow`, `spr_expbar.fillAmount` |
+| `DataCenter.get_HeadData @ 016e80a4` | 프로필 머리/초상 데이터 | `ShowHeadPanel` 경로 |
+
+추가로 레벨별 경험치 테이블을 위한 `BaseMono.GetLvExpdata` 호출이 존재한다. 따라서 EXP 숫자만이 아니라 현재 Level에 대응하는 필요 EXP/진행률 계산이 UI 표시 계약에 포함된다. 테이블 값은 정적 Master Data이며 플레이어 상태와 분리한다.
+
+### 23.2 UserInfoPanelMono.RefreshTopInfos @ 00f7f914
+
+- Calls OUT: `UserInfoPanelMono.ShowCoin @ 00f7e524`
+- 상단 재화 표시를 별도 ShowCoin 경로에 위임한다.
+
+### 23.3 UserInfoPanelMono.ShowCoin @ 00f7e524
+
+Calls OUT에서 확인:
+- `DataCenter.GetXCount @ 016defb0`
+- `Ali.GetBaseData @ 00e035d4`
+- `BaseData.get_icon @ 00df3224`
+- `BaseData.get_NameByQualityWord @ 00df35ac`
+- `CoinitemNode.get_lbl_item_count`
+- `CoinitemNode.get_spr_item_icon`
+- `CoinitemNode.get_lbl_item_name`
+- `Ali.GetExcelData<object> @ 01736d60`
+- `BaseData.SplitToInt32ListError @ 00df4238`
+
+따라서 상단 재화 UI는 단순 숫자 3개 고정 출력이 아니라, UI에 구성된 재화 ID 목록을 순회하면서 다음을 조합하는 구조다.
+
+```
+재화 ID 목록
+ → GetXCount(itemId)
+ → GetBaseData(itemId)
+ → Count / Icon / Name
+ → CoinitemNode UI
+```
+
+현재 runtime에서 Coins/Crystals/Energy 3종은 확인됐지만, ShowCoin이 사용하는 전체 ID 목록과 각 항목의 표시 여부는 아직 추출하지 않았다. 상단 재화 contract의 완성 조건은 이 ID 목록과 UI 순서를 확인하는 것이다.
+
+### 23.4 이번 정적 확인으로 확정된 Main 프로필 데이터 최소 집합
+
+- User.Id
+- User.Name
+- User.Level
+- User.Exp
+- HeadData
+- Level별 필요 EXP 테이블 참조
+- 상단 재화 목록의 ItemId
+- 각 ItemId에 대한 GetXCount 결과
+- 각 ItemId의 BaseData 이름/아이콘 참조
+
+단, HeadData가 Bootstrap User field 중 어느 필드에서 만들어지는지, 상단 재화 목록이 어떤 설정/테이블에서 만들어지는지, 이 패널의 모든 필드가 첫 Main 화면 진입 때 반드시 필요한지는 아직 별도 확인한다.
+
+### 23.5 다음 Main 추적 우선순위
+
+1. `ShowCoin`의 재화 ID 목록 생성부와 순회 항목을 확인해 Main 상단 재화 목록 전체를 확정한다.
+2. `HomePanelMono.Start` 및 `RefreshUIBanner`의 실제 getter/Record 참조를 정리한다.
+3. Main 첫 화면에 노출되는 배너/메뉴/알림 배지의 getter와 Quest/Activity/Shop/Charge 데이터 연결을 확인한다.
+4. 대표 Hero 표시 경로가 별도 Home 소비처인지 확인하고, 모든 Hero의 전체 속성이 아닌 화면 표시 필드만 계약에 반영한다.
+5. 각 데이터 항목을 `Bootstrap 필수`, `Main 화면 선택`, `메뉴 진입 시 추가 요청`, `정적 Master Data/Asset`로 분류한다.
+
+
+## 24. 2026-10-02 Main 최초 화면 소비처 추가 분석
+
+기준 Listing:
+- `research/Ghidra_Listing_txt/US.txt`
+- `research/Ghidra_Listing_txt/HO.txt`
+- 최신 단일 로그: `research/reports/Log/frida_log_static_신규로갱신되므로기존데이터없이최종본만.txt`
+
+### 24.1 상단 재화: 목록 기반 동적 생성
+
+`UserInfoPanelMono.ShowCoin @ 00f7e524` 본문에서 다음 순서를 확인했다.
+
+1. `Ali.GetExcelData<object>` 호출
+2. 반환 Record의 `+0x80` 값을 `BaseData.SplitToInt32ListError`로 분리
+3. 결과 `List<int>`를 순회
+4. 각 ID마다 `Ali.GetBaseData(itemId)`
+5. `BaseData.icon`, `BaseData.NameByQualityWord`로 아이콘/이름 구성
+6. `DataCenter.GetXCount(itemId)`로 수량 표시
+
+따라서 상단 재화는 Coins/Crystals/Energy 세 항목으로 하드코딩된 구조가 아니다. **정적 Excel 설정이 재화 ID 목록을 제공하고, Bootstrap 이후 DataCenter의 실제 보유량을 조회해 UI를 만든다.**
+
+현재 Ghidra Listing에서 GetExcelData 호출의 key 상수는 확인했지만, 해당 상수에 대응하는 Excel Record 명칭 및 전체 ID 목록은 아직 원본 데이터/런타임으로 대조하지 않았다. 그러므로 세 ID 외 추가 항목을 추정하지 않는다.
+
+자료형:
+- 설정 목록: Excel Record 내부 문자열/목록 → `List<int>`
+- ID: `int`
+- 보유량: `GetXCount` 반환 `int`
+- 이름/아이콘: BaseData의 문자열/Asset 참조
+
+### 24.2 상단 프로필: User + Master Data 조합
+
+`UserInfoPanelMono.Start @ 00f7e92c`에서:
+- `UserInfo.Id` → 사용자 ID Text
+- `UserInfo.Name` → 닉네임 Text
+- `UserInfo.Level` → 레벨 Text
+- `UserInfo.Exp` → 경험치 Text/ProgressBar
+- `DataCenter.get_HeadData` → 프로필 초상 표시
+- `BaseMono.GetLvExpdata` → 레벨별 필요 경험치 조회
+
+따라서 서버 상태(User)와 정적 Master Data(레벨 경험치/초상 리소스)가 결합된다. User 기본 숫자 필드만으로 프로필 패널의 표시 계약이 완성되지는 않는다.
+
+### 24.3 HomePanel.Start의 메뉴/배지 초기화
+
+`HomePanelMono.Start @ 00f67adc`의 Calls OUT에서 다음 메뉴가 직접 초기화 대상임을 확인했다.
+
+- 출석, Hero, 좌/우 이동, 지원, 개발, 상점, 보급, 전투, PVP, 탐험, 친구, 우편, 활동, 채팅, 임무, 창고, 토벌, 월드컵 등
+- `RefreshPoint_Task` → `DataCenter.QuestHaveFinished`
+- `RefreshPoint_Mail` → DataCenter cache의 `+0xC0` Dictionary 및 key `-27` 검사, 메일 숫자 표시
+- `RefreshWareHouse_Supply` → `DataCenter.get_BoxSupplyTotalCount`
+- `RefreshPoint_TaoFA` → `CheckTaskStateByID`, CrusadeAwardType 상태, Excel 설정
+- `RefreshUIBanner` → DataCache, BannerGrid, ProtoActivity 변환, Activity/WorldCup 표시
+- `DataCenter.IsActivityOver` 결과에 따라 `ProtocolGame_SendRequest.GetActivities @ 00de1f68` 또는 Banner 초기화 경로로 분기
+
+여기서 구분할 점:
+- 버튼 오브젝트/이벤트 연결은 UI 구성 데이터
+- 빨간 점/숫자 표시는 Quest/Mail/BoxSupply 등 상태 cache를 읽는 표시 로직
+- 활동 목록은 Bootstrap의 Activities와 연관될 수 있지만, Home Start에서 별도 GetActivities Request가 호출되는 분기가 있으므로 별도 응답 계약 여부를 검증해야 한다.
+
+### 24.4 Main 소비처별 데이터 유형/근거 표
+
+| 화면/요소 | Client 소비 경로 | 데이터 유형/출처 | 현재 계약 상태 |
+|---|---|---|---|
+| 프로필 ID/이름/레벨/EXP | UserInfoPanelMono.Start | ProtoUser → UserInfo 기본 필드 | 필드 표시 확인, proto 원본 필드 매핑 추가 확인 |
+| 프로필 초상 | get_HeadData / ShowHeadPanel | DataCenter 상태 + 정적 Head/Asset | 소비 확인, 원본 필드 미확정 |
+| 레벨 EXP bar | GetLvExpdata + UserInfo.Exp/Level | User 상태 + 레벨 Master Data | 계산 참조 확인 |
+| 상단 재화 | ShowCoin → GetXCount/GetBaseData | Excel의 int ID 목록 + Item count + BaseData 이름/아이콘 | 동적 목록 생성 확인, ID 전체 미확정 |
+| 창고/아이템 | MergeItem → Warehouse | Dictionary<int, ProtoItem> | runtime 확정 |
+| Hero | UpdateHeroInfo/InitHero → HeroInfo getter | Dictionary<int, ProtoHero> 및 연관 Weapon/Fashion | 초기화 확인, Home 대표 Hero 선택 미확정 |
+| Chapter/Section | Chapter/Section cache → BattleMap/Ready UI | Dictionary<int, ProtoChapter/ProtoSection> | Bootstrap merge/Chapter UI 연결 확인 |
+| 임무 배지 | RefreshPoint_Task → QuestHaveFinished | Quest cache + 완료 상태 | 호출 경로 확인, 구체적인 Quest 필드/카운트 미확정 |
+| 우편 배지 | RefreshPoint_Mail | DataCenter +0xC0 Dictionary, key -27 | cache key 검사 및 숫자 표시 확인 |
+| 보급/창고 배지 | RefreshWareHouse_Supply → get_BoxSupplyTotalCount | DataCenter 집계 값 | getter 소비 확인, 원본 필드 구성 미확정 |
+| 토벌 배지 | RefreshPoint_TaoFA → CheckTaskStateByID/CrusadeAwardType | Task/Crusade 상태 + Excel | 호출 경로 확인 |
+| 활동 배너 | RefreshUIBanner / InitBanner | DataCache + ProtoActivity + Excel + Asset | 소비 확인, 별도 GetActivities 분기 존재 |
+| 월드컵 배너 | RefreshWorldCup | DataCache/Excel/Dictionary<int,int>/BaseData | 소비 확인, 데이터 공급 요청/응답 추가 확인 |
+
+### 24.5 Bootstrap 데이터 유형 및 병합 분류
+
+Bootstrap OpInfo의 주요 컬렉션은 다음과 같이 분류한다.
+
+| OpInfo 필드 | 런타임/정적 자료형 | 병합/저장 | Main에서 확인된 소비 |
+|---|---|---|---|
+| User +0x88 | ProtoUser | UserInfo 생성/갱신 | 프로필 |
+| Heros +0x90 | Dictionary<int, ProtoHero> | UpdateHeroInfo → HeroInfo | Hero getter 호출 |
+| Items +0x98 | Dictionary<int, ProtoItem> | MergeItem → +0x78 category cache | 재화/창고 |
+| Weapons +0xA0 | Dictionary<int, ProtoWeapon> | MergeWeapon → +0x40 | Hero/Weapon 표시 연관 |
+| Equiments +0xA8 | Dictionary<string, ProtoEquipment> 관측 | MergeEquip → +0x38 | Home/Warehouse EquipMax 관련 |
+| Chapters +0xC0 | Dictionary<int, ProtoChapter> | Merge → +0x48 | Chapter UI |
+| Sections +0xC8 | Dictionary<int, ProtoSection> | MergeSections → +0x50 | Section 개방/입장 UI |
+| Teams +0xD0 | Dictionary<int, ProtoTeam> | Merge → +0x58 | Main 소비 미확정 |
+| Quests +0xE8 | Dictionary<int, ProtoQuest> | Merge → +0x80 | 임무 배지 소비 후보 |
+| Shops +0xF0 | Dictionary<int, ProtoShop> | Merge → +0x68 | Main 소비 미확정 |
+| Charges +0xF8 | Dictionary<int, ProtoCharge> | Merge → +0x70 | Main 소비 미확정 |
+| Activities +0x120 | Dictionary<int, ProtoActivity> | response merge 경로 | 배너/활동 소비 후보 |
+| AIStrategy +0x138 | 별도 객체/필드 | 조건부 set_AIStrategy | Main 필수 여부 미확정 |
+
+자료형 표기는 현재 Listing/런타임에서 확인된 선언을 기준으로 한다. 특히 Equiments의 Dictionary key type, 일부 응답 필드의 generic value type은 최종 schema 확인 전까지 확정하지 않는다.
+
+### 24.6 현재 완료도 — Main 첫 화면 계약은 미완료
+
+**완료된 범위**
+- OpInfo envelope 주요 필드/offset/type 관측
+- ProccessRequestRes의 주요 merge 호출과 DataCenter cache 연결
+- Items → Warehouse UI runtime 검증
+- UserInfo 기본 프로필 getter와 UI 연결
+- 상단 재화 ID 목록을 Excel 설정에서 분리해 순회하는 구조
+- HomePanel 메뉴 초기화 및 일부 배지 getter 연결
+- Chapter/Section/Weapon/Equipment의 주요 cache 경로
+
+**남은 범위**
+1. ShowCoin의 Excel key에 대응하는 정확한 Record 및 전체 재화 ID 목록
+2. UserInfoPanel의 HeadData 원본 필드/Head master data 연결
+3. Home 대표 Hero 선택 기준과 실제 표시 getter 집합
+4. Quest/Mail/BoxSupply/TaoFa 배지의 정확한 데이터 필드와 cache source
+5. Activities가 Bootstrap만으로 충분한지, GetActivities 별도 응답이 필요한지
+6. Main 화면에서 실제로 실행되는 별도 Request 전체 목록과 응답의 목적
+7. 각 데이터의 필수/선택/lazy-load 판정
+
+### 24.7 다음 작업 우선순위
+
+1. **ShowCoin 설정 ID 전체 복원** — GetExcelData key를 Unity Excel 원본 데이터와 대조.
+2. **Main 첫 화면 추가 Request 목록화** — HomePanel.Start에서 호출되는 GetActivities 및 RegisterData/Http callback 흐름 확인.
+3. **대표 Hero 표시 경로** — HeroInfo 전체가 아니라 Home 화면에서 선택하는 Hero와 실제 사용 필드만 추적.
+4. **메뉴 배지 데이터 source** — Quest/Mail/BoxSupply/TaoFa 각 getter의 DataCenter cache 원본을 연결.
+5. 위 항목을 Bootstrap 응답 필수 / 선택 / 별도 요청 / 정적 Master Data·Asset으로 분리해 Local Server 구현 계약에 넘긴다.
+
+전투 씬 내부 및 전투 데이터 분석은 계속 제외한다.
+
+
+## 25. 상단 재화 8개 목록 — Sysconf 원본 확인
+
+앞 절의 ShowCoin Listing을 Unity 원본 데이터와 대조했다. 분석 순서는 프로젝트 지침에 따라 다음 문서를 먼저 확인하고 원본 JSON을 읽었다.
+
+- `참고용-unity-behavior-data/데이터_파일_역할_및_계층.md`
+- `참고용-unity-behavior-data/데이터_분석/README.md`
+- `참고용-unity-behavior-data/MonoBehaviour/SysconfRecord.json`
+
+SysconfRecord에서 `m_desc = 个人信息货币显示`인 Record의 `m_value`는 다음 8개 ID다.
+
+```
+43000001
+43000002
+43000003
+43000004
+43000005
+43230000
+43600000
+43000017
+```
+
+이는 ShowCoin이 Excel 설정에서 문자열을 가져와 `SplitToInt32ListError`로 `List<int>`를 만드는 구조와 일치하는 설정 형태다. 다만 Ghidra의 GetExcelData 상수 `0x05A8AD54`와 이 Sysconf Record의 정확한 key/ID 대응은 아직 직접 확인하지 않았으므로, **목록 값은 원본에서 확인됐지만 호출 상수와 Record의 연결은 미확정**으로 남긴다.
+
+### 상단 재화 UI 데이터 계약
+
+| 순서 | ItemId | 의미 |
+|---:|---:|---|
+| 1 | 43000001 | Coins |
+| 2 | 43000002 | Crystals |
+| 3 | 43000003 | Energy |
+| 4 | 43000004 | 미확정 |
+| 5 | 43000005 | 미확정 |
+| 6 | 43230000 | 미확정 |
+| 7 | 43600000 | 미확정 |
+| 8 | 43000017 | 미확정 |
+
+ShowCoin은 이 목록을 순회해 각 항목에 대해:
+- `GetXCount(itemId)` → 현재 수량
+- `GetBaseData(itemId)` → BaseData
+- `BaseData.icon` → 아이콘
+- `BaseData.NameByQualityWord` → 이름
+
+을 UI에 바인딩한다.
+
+따라서 상단 재화 표시 계약은 **8개의 int ItemId + 각 Item의 int Count + BaseData 이름/아이콘 참조**로 구체화됐다. 4~8번 ID의 의미는 ItemRecord 및 관련 Resources/Item 데이터와 대조하기 전까지 추측하지 않는다.
+
+### 다음 확인
+1. Sysconf Record의 m_id 및 `0x05A8AD54` 연결을 확인한다.
+2. 8개 ID를 ItemRecord/ResourcesRecord와 대조해 UI 표시명·아이콘·종류를 확인한다.
+3. 최신 runtime에서 ShowCoin 실제 반복 횟수와 8개 항목의 표시 여부를 확인한다.
+
+
+### 25.1 Sysconf Record ID와 호출 key 대조 보류
+
+원본 Sysconf Record의 암호화된 `m_id.hiddenValue=95315272`, `currentCryptoKey=444444`이므로 현재 데이터 형식의 복호화 규칙을 적용한 ID는 `94870828`이다.
+
+반면 `ShowCoin`의 `Ali.GetExcelData<object>` Listing에서 전달되는 key 상수는 `0x05A8AD54 = 94940500`이다.
+
+두 값이 일치하지 않는다. 따라서 앞서 찾은 `个人信息货币显示` Sysconf 항목은 **상단 재화 표시와 값 목록이 일치하는 관련 설정**이지만, 현재 Listing의 GetExcelData가 이 Record를 직접 읽는다고 확정할 수 없다. 다른 Excel lookup 경로 또는 별도 변환이 있는지 추가 확인한다.
+
+ItemRecord 원본에서 ID 43000001/2/3은 확인됐다. 반면 43000004/5, 43230000, 43600000, 43000017은 현재 ItemRecord에서 발견되지 않았다. 이 5개는 ItemRecord에 없다는 사실만 기록하며, 다른 Record/외부 Master Data에서 제공되는지 미확정으로 둔다.
+
+
+## 23. 2026-10-02 v4.24 최종 로그 재검증 — Bootstrap 전체 필드 타입
+
+대상: `research/reports/Log/frida_log_static_신규로갱신되므로기존데이터없이최종본만.txt`
+
+이번 로그는 이전 로그가 누적되지 않은 신규 실행본으로 취급했다.
+
+### 23.1 Bootstrap 요청/응답
+
+- 요청 SerialNumber: `139954759`
+- Opcode: `2`
+- ReturnCode: `0`
+- `KCPTube.Send ret=1` 및 `KCP_SEND_ACCEPTED`
+- 응답 `ProccessRequestRes`: SerialNumber/Opcode/ReturnCode 일치
+
+따라서 이번 실행에서도 Bootstrap 요청과 응답의 상관관계가 확인됐다.
+
+### 23.2 OpInfo envelope — 45개 필드
+
+이번 실행에서 `RESP_FIELD_END count=45`로 OpInfo의 필드명/offset/type을 전부 출력했다.
+
+| Offset | Field | Runtime type | 이번 응답 관측 |
+|---:|---|---|---|
+| +0x10 | SerialNumber | UInt32 | 139954759 |
+| +0x14 | OpCode | OperationCode | 0x2 |
+| +0x18 | ReturnCode | Int32 | 0 |
+| +0x20 | Time | DateTime | 값 존재 |
+| +0x28 | S_0 | String | 참조 |
+| +0x30~+0x40 | Int32_0~4 | Int32 | 0 |
+| +0x48 | Int64_0 | Int64 | 0 |
+| +0x50~+0x68 | S_1~S_4 | String | 참조 |
+| +0x70 | DictI32 | Dictionary<int,int> | 참조 |
+| +0x78 | BattleReslut | ProtoBattleResult | null |
+| +0x80 | FC | ProtoFC | null |
+| +0x88 | User | ProtoUser | 참조 |
+| +0x90 | Heros | Dictionary<int,ProtoHero> | 참조 |
+| +0x98 | Items | Dictionary<int,ProtoItem> | 참조 |
+| +0xA0 | Weapons | Dictionary<int,ProtoWeapon> | 참조 |
+| +0xA8 | Equiments | Dictionary<string,ProtoEquipment> | 참조 |
+| +0xB0 | Mails | Dictionary<string,ProtoMail> | null |
+| +0xB8 | Olds | Dictionary<int,ProtoMailOld> | 값 0 |
+| +0xC0 | Chapters | Dictionary<int,ProtoChapter> | 참조 |
+| +0xC8 | Sections | Dictionary<int,ProtoSection> | 참조 |
+| +0xD0 | Teams | Dictionary<int,ProtoTeam> | 참조 |
+| +0xD8 | ViewItems | List<ProtoViewItem> | null |
+| +0xE0 | Fashions | Dictionary<int,ProtoFashion> | 참조 |
+| +0xE8 | Quests | Dictionary<int,ProtoQuest> | 참조 |
+| +0xF0 | Shops | Dictionary<int,ProtoShop> | 값 0 |
+| +0xF8 | Charges | Dictionary<int,ProtoCharge> | 참조 |
+| +0x100 | Friends | Dictionary<long,ProtoFriend> | 값 0 |
+| +0x108 | Exam | ProtoRank | null |
+| +0x110 | Rival | ProtoRival | null |
+| +0x118 | Ranks | Dictionary<long,ProtoRank> | 값 0 |
+| +0x120 | Activities | Dictionary<int,ProtoActivity> | 참조 |
+| +0x128 | Msgs | List<ProtoMsg> | null |
+| +0x130 | ExploreFloor | ProtoExploreFloor | null |
+| +0x138 | AIStrategy | Dictionary<int,Dictionary<int,int>> | 참조 |
+| +0x140 | BattleReport | PlayerBattleReport | null |
+| +0x148 | ShieldFriends | Dictionary<long,ProtoFriend> | 값 0 |
+| +0x150 | SupportHero | Dictionary<int,int> | 값 0 |
+| +0x158 | SupportHeroRank | Dictionary<long,ProtoSupportRank> | 값 0 |
+
+참고: 로그에서 reference가 정수 0으로 출력된 필드는 객체 null 여부를 확정한 표기가 아니다. 실제 null과 pointer/boxed value 0을 구분해야 하므로, 위 표는 로그 표현을 그대로 보존한다.
+
+### 23.3 이번 실행에서 수량까지 확인된 데이터
+
+| 데이터 | 확인 내용 | 판정 |
+|---|---|---|
+| User | Id=871053, Level=53, Exp=1100 | runtime 값 확인 |
+| Items | MergeItem 입력 Dictionary count=98 | runtime 수량 확정 |
+| Chapters | Dictionary _count=61 | runtime 수량 확정 |
+| Heros | InitHero 호출 10회 | 최소 10개 ProtoHero가 처리된 사실 확인 |
+| Coins | 306095 | getter 반환값 확인 |
+| Crystals | 2700 | getter 반환값 확인 |
+| Energy | 134 | getter 반환값 확인 |
+
+Hero 10회는 `InitHero` 호출 관측 횟수이며, 원본 Heros Dictionary 전체 count를 직접 읽은 결과와 동일시하지 않는다.
+
+### 23.4 화면 소비 경로와 현재 범위
+
+기존 정적 분석 및 이번 로그를 결합하면:
+
+- User: `UserInfoPanelMono.Start`에서 Id/Name/Level/Exp 사용. 이번 로그에서 Level/Exp getter 확인.
+- Currency: UserInfo의 Coins/Crystals/Energy getter → `GetXCount`. 이번 로그에서 세 값 반환 확인.
+- Items: Bootstrap Items 98 → MergeItem → DataCenter cache. Warehouse 목록 생성 경로까지 runtime 확인된 기존 결과 유지.
+- Heros: ProtoHero → `HeroInfo.InitHero`. 이번 로그에서 10회 처리 및 주요 Hero 필드 확인.
+- Chapters: Bootstrap Chapters 61 → DataCenter cache → Chapter UI 정적 연결 확인.
+- Weapons/Equiments: Response 필드와 Merge 경로 확인. 실제 메인 첫 화면의 소비 지점은 추가 확인 대상.
+- Sections/Teams/Fashions/Quests/Shops/Charges/Activities 등: Response field와 Merge/저장 경로는 확인했으나 Main 첫 화면에서 실제로 읽는 시점/필수 여부는 미확정.
+
+### 23.5 추가 네트워크 요청과 구분
+
+이번 로그에서 Bootstrap 이후:
+- Opcode 19 요청/응답 1건
+- Ready 화면에서 사용자가 입장 버튼을 누른 뒤 Opcode 22 요청/응답 1건
+
+이 관측은 Bootstrap 자체의 추가 필드가 아니라 별도 기능 요청이다. 메인화면 Bootstrap 필수 데이터 목록에는 합산하지 않는다. Opcode 22 전투 씬 내부 처리는 현재 분석 범위에서 제외한다.
+
+### 23.6 결론 — 메인화면 데이터 분석은 아직 전체 완료가 아님
+
+현재 확정된 것은 **Bootstrap envelope의 45개 필드 타입, 주요 State 병합 경로, Items/Chapters/User/Currency/Hero의 일부 runtime 데이터**다.
+
+아직 완성되지 않은 것은:
+1. Home 첫 화면의 각 UI 컴포넌트가 실제로 읽는 DataCenter cache 목록
+2. Weapons/Equiments/Sections/Teams/Fashions/Quests/Charges/Activities 중 Main 첫 화면에서 사용하는 필드
+3. Main 진입 직후 발생하는 별도 Opcode 요청의 전체 목록 및 Main UI와의 관계
+4. 각 Dictionary의 runtime count 및 내부 Proto 타입 필드
+5. Local Server 구현 시 null / 빈 Dictionary / 빈 List 중 어떤 표현을 재현해야 하는지
+
+따라서 지금은 Bootstrap을 최소 필드로 줄이지 않는다. **다음 단계는 전투가 아니라 Home/Main 화면의 UI 소비처와 Bootstrap cache 연결을 끝내는 것**이다.
+
+## 24. 다음 작업 — Main 화면 소비 데이터 확정
+
+1. `HomePanelMono.Start` 및 Home의 초기 Refresh 함수들이 참조하는 DataCenter/UserInfo getter를 Listing 기준으로 목록화한다.
+2. `UserInfoPanelMono.Start` 외에 상단 재화/프로필/배너/메일/퀘스트/활동 아이콘의 초기화 함수를 확인한다.
+3. v4.25 runtime hook은 Home/Main UI 초기화 함수 진입과 DataCenter getter 호출만 기록하고, 던전/전투 함수 hook은 제외한다.
+4. Bootstrap 응답의 각 필드를 `Response → Merge/Store → DataCenter cache → Main UI consumer` 표로 매핑한다.
+5. Main 화면 첫 진입에 실제 필요한 값과 메뉴를 열 때만 필요한 값을 구분한다.
+
+완료 기준은 **Main 첫 화면을 Local Server Bootstrap 응답만으로 표시하는 데 필요한 모든 데이터의 타입/저장 위치/소비처가 연결되는 것**이다.
+
+
+## 25. Main UI 소비처를 기준으로 한 추가 정적 분석
+
+이번 단계는 던전/전투 함수가 아니라 Home/Main 화면의 소비처로 범위를 되돌렸다.
+
+### 25.1 UserInfoPanel 상단 영역
+
+`UserInfoPanelMono.Start @ 00f7e92c`의 Calls OUT 및 Listing에서 확인:
+- `UserInfo.get_Id`
+- `UserInfo.get_Name`
+- `UserInfo.get_Level`
+- `UserInfo.get_Exp`
+- `DataCenter.get_HeadData`
+- `BaseMono.GetLvExpdata`
+- `UserInfoPanelMono.ShowHeadPanel`
+- 이름/ID/레벨/EXP UI 노드 접근
+
+따라서 프로필 상단은 UserInfo의 식별/성장 필드와 HeadData를 함께 사용한다.
+
+### 25.2 UserInfoPanel 재화 표시
+
+`UserInfoPanelMono.ShowCoin @ 00f7e524`:
+- `DataCenter.GetXCount`
+- `Ali.GetBaseData`
+- `Ali.GetExcelData<object>`
+- `BaseData.get_icon`
+- `BaseData.get_NameByQualityWord`
+- `CoinitemNode.lbl_item_count`
+- `CoinitemNode.spr_item_icon`
+- `CoinitemNode.lbl_item_name`
+
+재화 UI는 고정된 UserInfo 필드만 표시하는 방식이 아니라 Excel/config에서 목록을 얻고, 각 ID를 `GetXCount`로 조회해 수량·아이콘·이름을 표시하는 구조다. 따라서 재화 종류 목록(config)과 각 재화 보유량(State)을 분리해서 Bootstrap/정적 데이터 계약에 반영해야 한다.
+
+### 25.3 HomePanel 시작 함수의 기존 근거
+
+기존 Listing에서 `HomePanelMono.Start @ 00f67adc`는 다음을 호출하는 것으로 확인됐다.
+- `DataCenter.get_CurrentEquipMax`
+- `DataCenter.get_NextEquipMax`
+- `DataCenter.get_EquipMax`
+- `Ali.get_dataCache`
+- `Ali.GetExcelDic<object>`
+
+또한 HomePanel의 별도 Refresh 함수:
+- `RefreshUIBanner @ 00f6ca94`
+- `RefreshWareHouse_Supply @ 00f6a2ec`
+- `RefreshPoint_TaoFA @ 00f69924`
+- `RefreshWorldCup @ 00f6c094`
+- `UIRefreshCamp @ 00f6ac08`
+
+이 함수들은 Home 화면의 별도 표시/배너/공급/포인트/월드컵/캠프 갱신 지점으로 추적 대상으로 등록한다. 각 함수 내부의 구체적인 Response 필드 사용은 아직 모두 연결되지 않았다.
+
+### 25.4 현재 메인화면 데이터 매핑 상태
+
+| UI 영역 | 데이터/유형 | Bootstrap 또는 정적 경로 | 판정 |
+|---|---|---|---|
+| 프로필 이름/ID/레벨/EXP | UserInfo scalar | OpInfo.User → UpdateHeroInfo/UserInfo | 정적 소비 확인, runtime 일부 |
+| 상단 재화 | config ID 목록 + GetXCount 수량 + BaseData icon/name | Items → MergeItem/cache + Excel/BaseData | 구조 확인, 목록 config runtime 추가 |
+| 에너지 표시 | item ID 43000003 count | Items → MergeItem → GetXCount | runtime 확인, 서버 권한 |
+| 창고 보유 아이템 | Dictionary<int,ProtoItem> | Items → MergeItem → category cache | runtime+static 확인 |
+| Hero 대표 정보 | Dictionary<int,ProtoHero> → HeroInfo | Heros → UpdateHeroInfo | runtime InitHero 확인 |
+| Chapter 진행 | Dictionary<int,ProtoChapter> | Chapters → cache +0x48 | runtime count + static UI 연결 |
+| Equipment 확장 수치 | EquipMax 계열 getter | Equiments/cache 및 UserInfo 관련 상태 | Home Start 참조 확인, 정확한 원천 field 추가 확인 |
+| 무기/장비 표시 | ProtoWeapon / ProtoEquipment | Weapons/Equiments → Merge | 메뉴 UI 소비 확인, Home 첫 화면 사용은 추가 확인 |
+| 배너/토벌/월드컵/캠프 | config + 각 feature state | Home Refresh 함수들 | 함수 진입/필드 매핑 미확정 |
+| Quest/Shop/Charge/Activity/Mail | 각 Proto Dictionary | OpInfo 각 field → DataCenter cache | Response/merge 확인, Home 첫 화면 사용 미확정 |
+
+### 25.5 v4.25 runtime hook
+
+`research/justice_hook.js` v4.25에 Main UI 함수 진입 hook을 추가했다.
+- HomePanelMono.Start
+- HomePanelMono.RefreshUIBanner
+- HomePanelMono.RefreshWareHouse_Supply
+- HomePanelMono.RefreshPoint_TaoFA
+- HomePanelMono.RefreshWorldCup
+- HomePanelMono.UIRefreshCamp
+- UserInfoPanelMono.Start
+- UserInfoPanelMono.RefreshTopInfos
+- UserInfoPanelMono.ShowCoin
+
+던전/전투 hook은 새 Main UI 작업 범위에서 제외했다. 기존 KCP Send/Response 관찰 hook은 유지한다.
+
+Git commit: `7e7a52435507cbe14d132617af3a915df5b872ac`
+
+### 25.6 현재 판단 및 다음 단계
+
+**메인화면 데이터가 모두 끝난 상태는 아니다.** Bootstrap envelope와 핵심 State의 타입/merge는 상당 부분 확인했지만, Home 첫 화면에서 실제 읽는 데이터와 별도 기능 화면에서만 필요한 데이터를 아직 완전히 구분하지 못했다.
+
+다음 실행은 v4.25로 로그인 후 메인화면에 머문 상태에서 로그를 수집한다. 메뉴를 열거나 던전으로 이동하지 않는다. 아래 로그를 확인한다.
+
+```
+[MAIN_HOME_START]
+[MAIN_HOME_BANNER]
+[MAIN_HOME_WAREHOUSE_SUPPLY]
+[MAIN_HOME_TAOFA]
+[MAIN_HOME_WORLDCUP]
+[MAIN_HOME_CAMP]
+[MAIN_USERINFO_START]
+[MAIN_USERINFO_REFRESH]
+[MAIN_USERINFO_SHOWCOIN]
+```
+
+이 로그를 통해 Home 최초 표시에서 호출되는 함수만 먼저 확정하고, 이어서 해당 함수들이 참조하는 DataCenter getter/Excel config를 매핑한다. Main 첫 화면 데이터 계약이 끝나기 전에는 Dungeon/Battle 분석으로 범위를 확장하지 않는다.
