@@ -326,6 +326,7 @@ class KCPServerUDP:
                     self.sock.sendto(bytes(ack), addr)
                     print(f"[*] 28B KCP ACK 전송 to {addr}")
                     print(f"    ACK: session={session_id:#x}, SN=0, UNA=1")
+                    print(f"    ACK raw: {bytes(ack).hex()}")
                 except Exception as e:
                     print(f"[!] ACK 전송 실패: {e}")
             except Exception as e:
