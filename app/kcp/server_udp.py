@@ -446,7 +446,9 @@ class KCPServerUDP:
                         # 실측 protobuf 원본 재전송 (GPT 권고, 2026-10-02 16:00)
                         # 000192_s2c.bin의 gzip 데이터를 우리 세션 키로 암호화해서 전송
                         # protobuf 문제를 완전히 배제하고 파이프라인만 검증
+                        # 2026-10-02 16:05: serial 패치 추가 (클라이언트 요청과 매칭)
                         import os as _os2
+                        import gzip as _gzip
                         replay_path = _os2.path.join(
                             _os2.path.dirname(_os2.path.abspath(__file__)),
                             "..", "..", "research", "PCAP",
@@ -456,12 +458,34 @@ class KCPServerUDP:
                         replay_path = _os2.path.normpath(replay_path)
                         try:
                             with open(replay_path, "rb") as rf:
-                                probe = rf.read()  # 이미 gzip된 13KB
-                            print(f"    [replay] 실측 gzip 로드: {len(probe)}B")
-                            print(f"    [replay] gzip 매직 확인: {probe[:3].hex() == '1f8b08'}")
+                                gz_data = rf.read()  # 이미 gzip된 13KB
+                            print(f"    [replay] 실측 gzip 로드: {len(gz_data)}B")
+                            # serial 패치: gzip 해제 → field 1 교체 → gzip 재압축
+                            # 클라이언트가 응답을 자기 요청으로 인식하도록
+                            raw_pb = _gzip.decompress(gz_data)
+                            # field 1 (varint) 파싱: 첫 바이트 0x08, 그 다음 varint가 serial
+                            if raw_pb[0] == 0x08:
+                                # 기존 varint 길이 측정
+                                p = 1
+                                while p < len(raw_pb) and (raw_pb[p] & 0x80):
+                                    p += 1
+                                p += 1  # 마지막 바이트 포함
+                                old_serial_len = p - 1
+                                # 새 serial로 교체
+                                new_serial_bytes = b""
+                                v = serial
+                                while True:
+                                    b = v & 0x7F; v >>= 7
+                                    if v: new_serial_bytes += bytes([b | 0x80])
+                                    else: new_serial_bytes += bytes([b]); break
+                                raw_pb = b"\x08" + new_serial_bytes + raw_pb[p:]
+                                print(f"    [replay] serial 패치: → {serial} ({old_serial_len}B→{len(new_serial_bytes)}B)")
+                            probe = _gzip.compress(raw_pb)
+                            print(f"    [replay] gzip 재압축: {len(probe)}B")
                             flag = 0xC4  # 실측과 동일
                         except Exception as e:
                             print(f"    [replay] 파일 로드 실패: {e}")
+                            import traceback; traceback.print_exc()
                             probe = base
                             flag = 0x84
                     elif PROBE_MODE == "multifrag_tag":
