@@ -91,9 +91,13 @@ class KCPServerUDP:
             print(f"[*] Client public #1: {pub1:#x}")
             print(f"[*] Client public #2: {pub2:#x}")
 
-            # 2중 DH
-            secret1 = pow(pub1, dh.private1, 0xFFFFFFFFFFFFFFC5)
-            secret2 = pow(pub2, dh.private2, 0xFFFFFFFFFFFFFFC5)
+            # 2중 DH (크로스 페어링)
+            # 33B 응답: 0x11=srv_pub2, 0x19=srv_pub1
+            # 클라이언트는 0x11->peer#1, 0x19->peer#2로 읽음
+            # 따라서 secret1 = client_pub1 ^ server_private2
+            #         secret2 = client_pub2 ^ server_private1
+            secret1 = pow(pub1, dh.private2, 0xFFFFFFFFFFFFFFC5)
+            secret2 = pow(pub2, dh.private1, 0xFFFFFFFFFFFFFFC5)
             print(f"[*] Secret #1: {secret1:#x}")
             print(f"[*] Secret #2: {secret2:#x}")
 
@@ -148,9 +152,11 @@ class KCPServerUDP:
             print(f"[*] Client public #1: {pub1:#x}")
             print(f"[*] Client public #2: {pub2:#x}")
 
-            # 2중 DH (고정 서버 키 사용)
-            secret1 = pow(pub1, dh.private1, 0xFFFFFFFFFFFFFFC5)
-            secret2 = pow(pub2, dh.private2, 0xFFFFFFFFFFFFFFC5)
+            # 2중 DH (고정 서버 키 사용, 크로스 페어링)
+            # 33B 응답: 0x11=srv_pub2, 0x19=srv_pub1
+            # 클라이언트는 0x11->peer#1, 0x19->peer#2로 읽음
+            secret1 = pow(pub1, dh.private2, 0xFFFFFFFFFFFFFFC5)
+            secret2 = pow(pub2, dh.private1, 0xFFFFFFFFFFFFFFC5)
             print(f"[*] Secret #1: {secret1:#x}")
             print(f"[*] Secret #2: {secret2:#x}")
 
@@ -199,19 +205,57 @@ class KCPServerUDP:
         return
 
     def handle_kcp_data(self, data: bytes, addr):
-        """221B KCP 데이터 패킷 처리 - RAW hex 확보."""
+        """221B KCP 데이터 패킷 처리 - 올바른 구조 파싱 및 복호화."""
         session_id = struct.unpack_from("<Q", data, 0x00)[0]
         print(f"[*] 221B 수신: session={session_id:#x} from {addr}")
 
-        # RAW hex 출력 (GPT 분석용)
-        print(f"RAW 221B ({len(data)}B): {data.hex()}")
-        if len(data) >= 8:
-            print(f"  session: {data[:8].hex()}")
-            print(f"  after-session ({len(data)-8}B): {data[8:].hex()}")
+        # 221B 구조 (GPT 분석 확정):
+        # [Session ID 8B][Header 16B][Length 4B][Flag 1B][IV 16B][Ciphertext 176B]
+        if len(data) < 0x2D:
+            print(f"[!] 패킷이 너무 짧음: {len(data)}B")
+            return
 
-        # 세션 확인
+        header = data[0x08:0x18]  # 16B
+        app_len = struct.unpack_from("<I", data, 0x18)[0]  # 193
+        flag = data[0x1C]  # 0x80 = Encrypt, 0x40 = Compress
+        iv = data[0x1D:0x1D+16]  # 16B
+        ciphertext = data[0x1D+16:]  # 176B
+
+        print(f"[*] 221B 구조:")
+        print(f"    Session: {session_id:#x}")
+        print(f"    Header (16B): {header.hex()}")
+        print(f"    App Length: {app_len}")
+        print(f"    Flag: {flag:#x} ({'Encrypt' if flag & 0x80 else ''}{'Compress' if flag & 0x40 else ''})")
+        print(f"    IV: {iv.hex()}")
+        print(f"    Ciphertext: {len(ciphertext)}B (16의 배수: {len(ciphertext) % 16 == 0})")
+
+        # 세션 키 가져오기
         if session_id not in self.sessions:
             print(f"[!] 세션 없음: {session_id:#x}")
+            return
+
+        dh, session_key = self.sessions[session_id]
+        print(f"[*] 세션 키: {session_key.hex()}")
+
+        # 복호화 시도 (flag 0x80)
+        if flag & 0x80:
+            try:
+                from app.kcp.crypto import aes_decrypt_with_iv
+                plaintext = aes_decrypt_with_iv(session_key, iv, ciphertext)
+                print(f"[*] 복호화 성공! 평문: {len(plaintext)}B")
+                print(f"    평문 hex: {plaintext[:64].hex()}...")
+                # printable 확인
+                try:
+                    text = plaintext.decode('utf-8', errors='strict')
+                    print(f"    평문 (utf-8): {text[:200]}")
+                except:
+                    # 부분 printable
+                    printable = ''.join(chr(b) if 32 <= b < 127 else '.' for b in plaintext[:200])
+                    print(f"    평문 (부분): {printable}")
+            except Exception as e:
+                print(f"[!] 복호화 실패: {e}")
+        else:
+            print(f"[*] 암호화 플래그 없음, 평문으로 처리")
 
     def stop(self):
         """서버 중지."""
