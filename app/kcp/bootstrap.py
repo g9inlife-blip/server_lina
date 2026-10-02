@@ -54,13 +54,17 @@ def _string(field_no: int, s: str) -> bytes:
     return _nested(field_no, s.encode("utf-8"))
 
 
-def build_user(user_id: int = 861197, username: str = "witchwind3") -> bytes:
-    """Field 35 = User. 실측 구조 (33B)."""
+def build_user(user_id: int = 861197, username: str = "witchwind3", gold: int = 18100000) -> bytes:
+    """Field 35 = User. 실측 구조 (33B).
+    
+    Args:
+        gold: field 7의 값 (gold로 추정, 실측 18100000)
+    """
     inner = b""
     inner += _varint(1, user_id)
     inner += _varint(3, 4)
     inner += _varint(4, 250)
-    inner += _varint(7, 18100000)
+    inner += _varint(7, gold)  # gold 추정
     inner += _string(14, username)
     inner += _varint(20, 3)
     inner += _varint(21, 3)
@@ -99,7 +103,7 @@ def build_simple_field(field_no: int, id_value: int, nested_payload: bytes = b""
 
 
 def build_bootstrap(serial: int, user_id: int = 861197, username: str = "witchwind3",
-                    compress: bool = True) -> tuple[bytes, int]:
+                    gold: int = 18100000, compress: bool = True) -> tuple[bytes, int]:
     """Bootstrap 응답 생성.
 
     Args:
@@ -117,7 +121,7 @@ def build_bootstrap(serial: int, user_id: int = 861197, username: str = "witchwi
     probe += _varint(1, serial)
     probe += _varint(2, 2)  # OpCode=2
     probe += build_items()
-    probe += build_user(user_id, username)
+    probe += build_user(user_id, username, gold)
     # 기타 필드 (최소 1개씩, 빈 nested)
     # 실측 ID 참고: 37=10000000, 38=18100000, 39=40000000, 48=49000000,
     #              49=60001000, 51=18000001, 56=90015100

@@ -432,7 +432,7 @@ class KCPServerUDP:
                 # 2026-10-02 14:18: GPT 분석문서에서 OpInfo 전체 메모리 레이아웃 20개 확보.
                 #   Frida v5의 BOOT_STATE를 20개 필드로 확장. 태그 매핑을 위해
                 #   multifrag_tag로 다시 전환 (한 번에 매핑 시도).
-                PROBE_MODE = "replay"  # 실측 원본 재전송 (2026-10-02 16:00)
+                PROBE_MODE = "builder"  # 자체 빌더 테스트 (2026-10-02 17:10, gold=999999)
                 if opcode == 2 and serial is not None:
                     base = self._pb_varint(1, serial) + self._pb_varint(2, 2)
                     flag = 0x84
@@ -557,13 +557,16 @@ class KCPServerUDP:
                             from app.kcp.bootstrap import build_bootstrap
                             import os as _os3
                             use_compress = _os3.environ.get("BUILDER_COMPRESS", "1") == "1"
+                            # BUILDER_GOLD 환경변수로 gold 값 지정 (기본 999999, 테스트용)
+                            gold_val = int(_os3.environ.get("BUILDER_GOLD", "999999"))
                             probe, flag = build_bootstrap(
                                 serial=serial,
                                 user_id=861197,
                                 username="witchwind3",
+                                gold=gold_val,
                                 compress=use_compress,
                             )
-                            print(f"    [builder] protobuf 생성: {len(probe)}B, flag={flag:#x}")
+                            print(f"    [builder] protobuf 생성: {len(probe)}B, flag={flag:#x}, gold={gold_val}")
                         except Exception as e:
                             print(f"    [builder] 빌드 실패: {e}")
                             import traceback; traceback.print_exc()
