@@ -180,3 +180,39 @@ UDP 서버: 0.0.0.0:8000
 
 ---
 *작성: 2026-10-01, 리나*
+
+## 9. 통합 서버 실행 (`app/run_all.py`) — 사용 보류 (2026-10-02)
+
+### 배경
+사용자 질문: "나중에 최종적으로 할 때도 2개 다 켜놓아야 하나, 아니면 한 개 프로세스로 2개를 다 켜두는 건가"
+→ HTTP(8888) + UDP KCP(8000)를 하나의 프로세스로 실행하는 `app/run_all.py` 신규 생성.
+**사용자 결정 (2026-10-02): 당장은 쓰지 않고, 나중에 쓰기로. 지금은 개별 실행(터미널 2개) 유지.**
+
+### 동작
+- UDP KCP 서버(`app.kcp.server_udp.KCPServerUDP`)를 데몬 스레드로 시작.
+- HTTP 서버(uvicorn `app.main:app`)를 메인 스레드에서 실행 (로그는 `warning` 레벨로 간소화).
+- CTRL+C 한 번으로 둘 다 종료. 창 하나만 띄우면 됨.
+- 데몬 스레드라 메인(uvicorn) 종료 시 UDP도 함께 종료됨.
+
+### 사용법 (사용자 PC)
+```bash
+cd C:\Users\USER\Documents\GitHub\server_lina
+git pull
+set LINA_HOST=10.87.155.119
+python -m app.run_all
+```
+인자로 직접 지정도 가능:
+```bash
+python -m app.run_all --lina-host 10.87.155.119 --http-port 8888 --udp-port 8000
+```
+- `--host` (기본 `0.0.0.0`): 바인드 주소
+- `--http-port` (기본 `8888`), `--udp-port` (기본 `8000`)
+- `--lina-host`가 있으면 `LINA_HOST` 환경변수보다 우선
+
+### 나중에 전환하는 시점
+- 디버깅 단계가 끝나고 서버 동작이 안정화된 뒤 (최종 운용 시).
+- 개별 실행이 편한 이유 (현재): HTTP 로그와 UDP RAW hex 로그를 분리해서 볼 수 있음.
+- 전환 시 확인: `python -m app.run_all` 한 줄로 로그인→게임 진입 전 구간이 개별 실행과 동일하게 동작하는지.
+
+---
+*추가: 2026-10-02, 리나*
