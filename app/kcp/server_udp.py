@@ -366,7 +366,10 @@ class KCPServerUDP:
                 # 2026-10-02 13:57: justice_hook_local.js(GPT v4.22+리다이렉트)로 테스트.
                 #   KCP Send(OpCode=2)까지 갔으나 게임 크래시. multifrag_tag의 56개 태그가
                 #   원인일 수 있어 일단 multifrag(검증됨)로 되돌림.
-                PROBE_MODE = "multifrag"
+                # 2026-10-02 14:18: GPT 분석문서에서 OpInfo 전체 메모리 레이아웃 20개 확보.
+                #   Frida v5의 BOOT_STATE를 20개 필드로 확장. 태그 매핑을 위해
+                #   multifrag_tag로 다시 전환 (한 번에 매핑 시도).
+                PROBE_MODE = "multifrag_tag"
                 if opcode == 2 and serial is not None:
                     base = self._pb_varint(1, serial) + self._pb_varint(2, 2)
                     flag = 0x84

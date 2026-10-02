@@ -1319,7 +1319,13 @@ async function main() {
                                 try { rc = String(resp.add(0x18).readS32()); } catch (e) {}
                                 console.log(`[BOOT_RESP] OpCode=${op} ReturnCode=${rc} response=${resp}`);
                                 // BOOT_STATE: 핵심 필드 포인터
-                                const fields = [['User', 0x88], ['Heros', 0x90], ['Items', 0x98], ['Chapters', 0xc0]];
+                                const fields = [
+                                ['User', 0x88], ['Heros', 0x90], ['Items', 0x98], ['Weapons', 0xA0],
+                                ['Equiments', 0xA8], ['Mails', 0xB0], ['Olds', 0xB8], ['Chapters', 0xC0],
+                                ['Sections', 0xC8], ['Teams', 0xD0], ['ViewItems', 0xD8], ['Fashions', 0xE0],
+                                ['Quests', 0xE8], ['Shops', 0xF0], ['Charges', 0xF8], ['Friends', 0x100],
+                                ['Exam', 0x108], ['Rival', 0x110], ['Ranks', 0x118], ['Activities', 0x120]
+                            ];
                                 for (const [fname, off] of fields) {
                                     try {
                                         const p = resp.add(off).readPointer();
