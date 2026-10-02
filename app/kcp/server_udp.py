@@ -384,8 +384,19 @@ class KCPServerUDP:
                         while len(probe) < 16384:
                             probe += base
                     elif PROBE_MODE == "multifrag_tag":
+                        # TAG_RANGE 환경변수로 태그 구간 지정 (이분 탐색용)
+                        # 예: TAG_RANGE="3-20", TAG_RANGE="21-40", TAG_RANGE="41-64"
+                        # 미지정시 전체 3~64
+                        import os
+                        tag_range = os.environ.get("TAG_RANGE", "3-64")
+                        try:
+                            rs, re_ = tag_range.split("-")
+                            r_start, r_end = int(rs), int(re_)
+                        except:
+                            r_start, r_end = 3, 64
+                        print(f"    [태그구간] field {r_start}~{r_end}")
                         unit = base
-                        for f in range(3, 65):
+                        for f in range(r_start, r_end + 1):
                             if f in (4, 5, 12, 13, 14, 15):
                                 continue
                             unit += self._pb_nested(f, b"")
