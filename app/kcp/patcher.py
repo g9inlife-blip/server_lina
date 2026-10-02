@@ -74,6 +74,88 @@ def _patch_currency(raw_pb: bytes, currency_id: int, new_amount: int) -> tuple[b
     return raw_pb, False
 
 
+
+
+def _patch_item(raw_pb: bytes, item_id: int, new_count: int) -> tuple[bytes, bool]:
+    """field 21에서 item_id를 찾아 f2 (Count)를 변경.
+    
+    구조: field 21 = {f1=Item ID, f2=Count}
+    GPT 분석: ProtoItem.Id → field 1, ProtoItem.Count → field 2
+    """
+    tag21 = b"\xa8\x01"  # (21<<3)|2 = 170
+    search_pos = 0
+    while True:
+        idx = raw_pb.find(tag21, search_pos)
+        if idx == -1:
+            return raw_pb, False
+        lp = idx + 2
+        ln, lp = _parse_varint(raw_pb, lp)
+        entry_start = lp
+        entry_end = lp + ln
+        entry_pb = raw_pb[entry_start:entry_end]
+        
+        if len(entry_pb) > 1 and entry_pb[0] == 0x08:
+            fv, fp = _parse_varint(entry_pb, 1)
+            if fv == item_id:
+                # f2 찾기 (태그 0x10, varint)
+                f2_idx = entry_pb.find(b"\x10", fp)
+                if f2_idx != -1:
+                    _, vp = _parse_varint(entry_pb, f2_idx + 1)
+                    new_cnt = _encode_varint(new_count)
+                    new_entry = entry_pb[:f2_idx+1] + new_cnt + entry_pb[vp:]
+                    new_ln = _encode_varint(len(new_entry))
+                    raw_pb = raw_pb[:idx+2] + new_ln + new_entry + raw_pb[entry_end:]
+                    return raw_pb, True
+        search_pos = idx + 2
+    return raw_pb, False
+
+
+def _patch_hero(raw_pb: bytes, hero_id: int, subfield: int, new_value: int) -> tuple[bytes, bool]:
+    """field 37에서 hero_id를 찾아 ProtoHero의 subfield를 변경.
+    
+    구조: field 37 = {f1=Hero ID, f2=ProtoHero}
+    ProtoHero: f1=Id, f3=Level, f4=Exp, f5=Star, f8=Belt, f14=Hole1Stigmata...
+    GPT 분석: 강한 확정
+    """
+    tag37 = b"\xaa\x02"  # (37<<3)|2 = 298
+    # subfield 태그 (varint wire type)
+    sub_tag = bytes([(subfield << 3) | 0])
+    search_pos = 0
+    while True:
+        idx = raw_pb.find(tag37, search_pos)
+        if idx == -1:
+            return raw_pb, False
+        lp = idx + 2
+        ln, lp = _parse_varint(raw_pb, lp)
+        entry_start = lp
+        entry_end = lp + ln
+        entry_pb = raw_pb[entry_start:entry_end]
+        
+        if len(entry_pb) > 1 and entry_pb[0] == 0x08:
+            fv, fp = _parse_varint(entry_pb, 1)
+            if fv == hero_id:
+                # f2 (ProtoHero) 찾기
+                f2_idx = entry_pb.find(b"\x12", fp)
+                if f2_idx != -1:
+                    f2_lp = f2_idx + 1
+                    f2_ln, f2_lp = _parse_varint(entry_pb, f2_lp)
+                    f2_start = f2_lp
+                    f2_end = f2_lp + f2_ln
+                    f2_pb = entry_pb[f2_start:f2_end]
+                    # subfield 찾기
+                    sf_idx = f2_pb.find(sub_tag)
+                    if sf_idx != -1:
+                        _, vp = _parse_varint(f2_pb, sf_idx + 1)
+                        new_val = _encode_varint(new_value)
+                        new_f2 = f2_pb[:sf_idx+1] + new_val + f2_pb[vp:]
+                        new_f2_ln = _encode_varint(len(new_f2))
+                        new_entry = entry_pb[:f2_idx+1] + new_f2_ln + new_f2 + entry_pb[f2_end:]
+                        new_ln = _encode_varint(len(new_entry))
+                        raw_pb = raw_pb[:idx+2] + new_ln + new_entry + raw_pb[entry_end:]
+                        return raw_pb, True
+        search_pos = idx + 2
+    return raw_pb, False
+
 def apply_patches(raw_pb: bytes, config_path: str = None) -> tuple[bytes, list[str]]:
     """patches.json의 모든 패치를 적용.
     
@@ -98,6 +180,30 @@ def apply_patches(raw_pb: bytes, config_path: str = None) -> tuple[bytes, list[s
             applied.append(f"currency[{cid}] ({name}) → {amt}")
         else:
             applied.append(f"currency[{cid}] ({name}) → 실패 (못 찾음)")
+    
+    # Item 패치 (field 21)
+    for item in config.get("items", []):
+        iid = item["id"]
+        cnt = item["count"]
+        name = item.get("name", f"item_{iid}")
+        raw_pb, ok = _patch_item(raw_pb, iid, cnt)
+        if ok:
+            applied.append(f"item[{iid}] ({name}) count → {cnt}")
+        else:
+            applied.append(f"item[{iid}] ({name}) → 실패 (못 찾음)")
+    
+    # Hero 패치 (field 37)
+    for hero in config.get("heroes", []):
+        hid = hero["id"]
+        sf = hero["field"]
+        val = hero["value"]
+        name = hero.get("name", f"hero_{hid}")
+        fname = hero.get("field_name", f"f{sf}")
+        raw_pb, ok = _patch_hero(raw_pb, hid, sf, val)
+        if ok:
+            applied.append(f"hero[{hid}] ({name}) {fname} → {val}")
+        else:
+            applied.append(f"hero[{hid}] ({name}) → 실패 (못 찾음)")
     
     return raw_pb, applied
 
