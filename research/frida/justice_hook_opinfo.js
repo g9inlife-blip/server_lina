@@ -1281,7 +1281,7 @@ function setupOpInfoBootState() {
             const m = api.class_get_methods(dcClass, iter);
             if (m.isNull()) break;
             if (api.method_get_name(m).readCString() === 'ProccessRequestRes') {
-                target = m;
+                target = m.readPointer();  // MethodInfo*가 아니라 실제 함수 주소
                 break;
             }
         }
