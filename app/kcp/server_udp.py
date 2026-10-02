@@ -77,8 +77,68 @@ class KCPServerUDP:
         elif pkt_len == 221:
             self.handle_kcp_data(data, addr)
         elif pkt_len < 373:
-            # 기타 KCP 데이터 패킷
+            # 기타 KCP 데이터 패킷 (전투 등 2차 마일스톤)
+            # 구조: [Session 8B][KCP 16B][ChunkLen 4B][chunk]
+            # chunk: [Flag 1B][IV 16B][Ciphertext]
             print(f"[*] KCP 데이터 패킷: {pkt_len}B from {addr}")
+            try:
+                session_id = struct.unpack_from("<Q", data, 0x00)[0]
+                kcp_cmd = data[0x08]
+                kcp_frg = data[0x09]
+                kcp_sn = struct.unpack_from("<I", data, 0x10)[0]
+                chunklen = struct.unpack_from("<I", data, 0x18)[0]
+                chunk = data[0x1C:0x1C+chunklen]
+                print(f"    Session: {session_id:#x}, CMD={kcp_cmd:#x} FRG={kcp_frg} SN={kcp_sn}")
+                if len(chunk) >= 17 and chunk[0] & 0x80:
+                    # 암호화된 앱 메시지 복호화 시도
+                    if session_id in self.sessions:
+                        _, session_key = self.sessions[session_id]
+                        from app.kcp.crypto import aes_decrypt
+                        enc_data = chunk[1:]  # [IV 16B][ciphertext]
+                        try:
+                            plain = aes_decrypt(session_key, enc_data)
+                            print(f"    복호화 성공! 평문 {len(plain)}B: {plain[:48].hex()}...")
+                            # OpCode 추출 (field 2, varint)
+                            p = 0
+                            opcode = None
+                            serial = None
+                            while p < len(plain):
+                                # varint 태그 파싱
+                                tag = 0; shift = 0
+                                while p < len(plain):
+                                    b = plain[p]; p += 1
+                                    tag |= (b & 0x7F) << shift
+                                    if not (b & 0x80): break
+                                    shift += 7
+                                fn = tag >> 3; wt = tag & 0x7
+                                if wt == 0:
+                                    v = 0; shift = 0
+                                    while p < len(plain):
+                                        b = plain[p]; p += 1
+                                        v |= (b & 0x7F) << shift
+                                        if not (b & 0x80): break
+                                        shift += 7
+                                    if fn == 1: serial = v
+                                    elif fn == 2: opcode = v
+                                elif wt == 2:
+                                    ln = 0; shift = 0
+                                    while p < len(plain):
+                                        b = plain[p]; p += 1
+                                        ln |= (b & 0x7F) << shift
+                                        if not (b & 0x80): break
+                                        shift += 7
+                                    p += ln
+                                else:
+                                    break
+                                if opcode is not None and serial is not None:
+                                    break
+                            print(f"    >>> OpCode={opcode}, Serial={serial} <<<")
+                        except Exception as e:
+                            print(f"    복호화 실패: {e}")
+                    else:
+                        print(f"    세션 없음: {session_id:#x}")
+            except Exception as e:
+                print(f"    파싱 실패: {e}")
             print(f"    hex: {data[:64].hex()}...")
         else:
             print(f"[!] 알 수 없는 패킷 크기: {pkt_len}")
