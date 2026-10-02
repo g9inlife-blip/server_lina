@@ -1,0 +1,269 @@
+[*] 고정 서버 DH 키 생성
+    Public #1: 0xec02193630504739
+    Public #2: 0x49f425be2eefe738
+[*] KCP UDP 서버 시작: 0.0.0.0:8000
+[*] 종료: CTRL+C (또는 CTRL+Break)
+[*] ('10.87.155.108', 34466)에서 368B 수신
+[*] Handshake1 감지 (368B) from ('10.87.155.108', 34466)
+[*] Client public #1: 0x4cd9e1c3cad6e0cb
+[*] Client public #2: 0xc96854481e277c2c
+[*] Secret #1: 0x6b26ddd3ca7ad90f
+[*] Secret #2: 0x25483c18c5ce42da
+[*] 세션 키: 0fd97acad3dd266bda42cec5183c4825
+[*] 토큰 앞 40자: b'tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR'
+[*] Handshake1 응답 전송: 33B to ('10.87.155.108', 34466)
+[*] Session ID: 0x3f2fdda272b4953
+[*] Server public #1: 0xec02193630504739
+[*] Server public #2: 0x49f425be2eefe738
+[*] ('10.87.155.108', 34466)에서 221B 수신
+[*] 221B 수신: session=0x3f2fdda272b4953 from ('10.87.155.108', 34466)
+[*] 221B 구조:
+    Session: 0x3f2fdda272b4953
+    Header (16B): 510000018c8a72fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: c0221911bb7fea5aaf99d47225a9f49d
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 0fd97acad3dd266bda42cec5183c4825
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] ('10.87.155.108', 34466)에서 221B 수신
+[*] 221B 수신: session=0x3f2fdda272b4953 from ('10.87.155.108', 34466)
+[*] 221B 구조:
+    Session: 0x3f2fdda272b4953
+    Header (16B): 51000001548b72fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: c0221911bb7fea5aaf99d47225a9f49d
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 0fd97acad3dd266bda42cec5183c4825
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] ('10.87.155.108', 34466)에서 221B 수신
+[*] 221B 수신: session=0x3f2fdda272b4953 from ('10.87.155.108', 34466)
+[*] 221B 구조:
+    Session: 0x3f2fdda272b4953
+    Header (16B): 51000001e58c72fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: c0221911bb7fea5aaf99d47225a9f49d
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 0fd97acad3dd266bda42cec5183c4825
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] ('10.87.155.108', 34466)에서 221B 수신
+[*] 221B 수신: session=0x3f2fdda272b4953 from ('10.87.155.108', 34466)
+[*] 221B 구조:
+    Session: 0x3f2fdda272b4953
+    Header (16B): 51000001778e72fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: c0221911bb7fea5aaf99d47225a9f49d
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 0fd97acad3dd266bda42cec5183c4825
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] ('10.87.155.108', 34466)에서 221B 수신
+[*] 221B 수신: session=0x3f2fdda272b4953 from ('10.87.155.108', 34466)
+[*] 221B 구조:
+    Session: 0x3f2fdda272b4953
+    Header (16B): 51000001d19072fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: c0221911bb7fea5aaf99d47225a9f49d
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 0fd97acad3dd266bda42cec5183c4825
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] ('10.87.155.108', 34466)에서 221B 수신
+[*] 221B 수신: session=0x3f2fdda272b4953 from ('10.87.155.108', 34466)
+[*] 221B 구조:
+    Session: 0x3f2fdda272b4953
+    Header (16B): 510000012b9372fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: c0221911bb7fea5aaf99d47225a9f49d
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 0fd97acad3dd266bda42cec5183c4825
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] ('10.87.155.108', 38900)에서 368B 수신
+[*] Handshake1 감지 (368B) from ('10.87.155.108', 38900)
+[*] Client public #1: 0xfe8a06fcfa6e82f1
+[*] Client public #2: 0x683afd1c45df1028
+[*] Secret #1: 0x9002b1b251d05952
+[*] Secret #2: 0xdc3bc6a4f54df203
+[*] 세션 키: 5259d051b2b1029003f24df5a4c63bdc
+[*] 토큰 앞 40자: b'tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR'
+[*] Handshake1 응답 전송: 33B to ('10.87.155.108', 38900)
+[*] Session ID: 0xf653ff5b58fe0799
+[*] Server public #1: 0xec02193630504739
+[*] Server public #2: 0x49f425be2eefe738
+[*] ('10.87.155.108', 38900)에서 221B 수신
+[*] 221B 수신: session=0xf653ff5b58fe0799 from ('10.87.155.108', 38900)
+[*] 221B 구조:
+    Session: 0xf653ff5b58fe0799
+    Header (16B): 51000001f49672fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: 1806fbdb40f466e00e657efa1be052f6
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 5259d051b2b1029003f24df5a4c63bdc
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] ('10.87.155.108', 38900)에서 221B 수신
+[*] 221B 수신: session=0xf653ff5b58fe0799 from ('10.87.155.108', 38900)
+[*] 221B 구조:
+    Session: 0xf653ff5b58fe0799
+    Header (16B): 51000001bc9772fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: 1806fbdb40f466e00e657efa1be052f6
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 5259d051b2b1029003f24df5a4c63bdc
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] ('10.87.155.108', 38900)에서 221B 수신
+[*] 221B 수신: session=0xf653ff5b58fe0799 from ('10.87.155.108', 38900)
+[*] 221B 구조:
+    Session: 0xf653ff5b58fe0799
+    Header (16B): 510000014d9972fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: 1806fbdb40f466e00e657efa1be052f6
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 5259d051b2b1029003f24df5a4c63bdc
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] ('10.87.155.108', 38900)에서 221B 수신
+[*] 221B 수신: session=0xf653ff5b58fe0799 from ('10.87.155.108', 38900)
+[*] 221B 구조:
+    Session: 0xf653ff5b58fe0799
+    Header (16B): 51000001de9a72fa0000000000000000
+    App Length: 193
+    Flag: 0x80 (Encrypt)
+    IV: 1806fbdb40f466e00e657efa1be052f6
+    Ciphertext: 176B (16의 배수: True)
+[*] 세션 키: 5259d051b2b1029003f24df5a4c63bdc
+[*] 복호화 성공! 평문: 172B
+    평문 전체 hex (172B):
+    08edcff83c1002220b0898d4fe9fd1a0d03f10052a1073616d73756e6720534d2d533933364e622065383962313538653462636639383865626430396562383366353337386538376a206362636664663130643536653537613839663763623139613439316431333965720848616e6468656c647a36416e64726f6964204f53203137202f204150492d33372028435032412e3236303630352e3031362f533933364e4b535543445a494629
+    평문 (부분): ....<..".........?..*.samsung SM-S936Nb e89b158e4bcf988ebd09eb83f5378e87j cbcfdf10d56e57a89f7cb19a491d139er.Handheldz6Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
+[*] Protobuf 파싱 시도...
+    Protobuf 필드:
+      field 1 (varint): 127805421
+      field 2 (varint): 2
+      field 4 (bytes 11B): 0898d4fe9fd1a0d03f1005...
+      field 5 (string): samsung SM-S936N
+      field 12 (string): e89b158e4bcf988ebd09eb83f5378e87
+      field 13 (string): cbcfdf10d56e57a89f7cb19a491d139e
+      field 14 (string): Handheld
+      field 15 (string): Android OS 17 / API-37 (CP2A.260605.016/S936NKSUCDZIF)
