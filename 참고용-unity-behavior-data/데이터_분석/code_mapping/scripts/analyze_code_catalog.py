@@ -42,7 +42,7 @@ def code_family(network_id: int) -> dict[str, Any]:
     s = str(network_id)
     # Known mapping convention: 1xxxxxxx, 2xxxxxxx, 3xxxxxxx ... -> base xxxxxxx.
     # Only treat a leading family digit as such for IDs with at least 2 digits.
-    if len(s) >= 2 and s[0].isdigit() and s[0] in "123456789":
+    if len(s) >= 9 and s[0].isdigit() and s[0] in "123456789":
         return {
             "family": int(s[0]),
             "base_code": int(s[1:]),
