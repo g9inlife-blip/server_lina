@@ -1,0 +1,2044 @@
+    ____
+    / _  |   Frida 17.18.0 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   Prefer a GUI? Luma is the official Frida app, with a live REPL,
+   . . . .   persistent sessions & collaboration. https://luma.frida.re/
+   . . . .
+   . . . .   Connected to 127.0.0.1:27042 (id=socket@127.0.0.1:27042)
+Attaching...
+[*] justice_hook v4.22 starting...
+[Remote::Gadget ]-> [*] libil2cpp.so base @ 0x749c645000 (/data/app/~~acGHcXDuzoy-4IQ0vBH08A==/com.Alioth.JusticeSchool.cn-PwJah3_uT1udhfBv7HS3Yw==/lib/arm64/libil2cpp.so)
+[*] IL2CPP domain ready.
+[*] Waiting for Assembly-CSharp (enter the game world on the phone)...
+[*] Assembly-CSharp found (52 assemblies loaded).
+[*] Installing hooks...
+
+[+] Found UnityEngine.Networking.UnityWebRequest.get_url() -> System.String @ 0x749ec1b1e8
+[+] Found UnityEngine.Networking.UnityWebRequest.get_uploadHandler() -> UnityEngine.Networking.UploadHandler @ 0x749ec1ab78
+[*] UnityWebRequest accessors ready.
+[+] Found UnityEngine.Networking.UnityWebRequest..ctor(System.String, System.String) -> System.Void @ 0x749ec1a538
+[+] Found UnityEngine.Networking.UnityWebRequest.SetRequestHeader(System.String, System.String) -> System.Void @ 0x749ec1b788
+[+] Found UnityEngine.Networking.UploadHandlerRaw..ctor(System.Byte[]) -> System.Void @ 0x749ec1c0fc
+[+] Found UnityEngine.Networking.UnityWebRequest.set_uploadHandler(UnityEngine.Networking.UploadHandler) -> System.Void @ 0x749ec1a8f4
+[+] Found UnityEngine.Networking.UnityWebRequest.set_method(System.String) -> System.Void @ 0x749ec1a5b4
+[HTTPREQUEST] AliothEngine.Net.HttpRequest methods:
+  get_isError() -> System.Boolean @ 0x749dbd8d48
+  get_PingTime() -> System.Single @ 0x749dbd8dc0
+  set_PingTime(System.Single) -> System.Void @ 0x749dbd8dc8
+  RequestCoroutine() -> System.Collections.IEnumerator @ 0x749dbd8dd0
+  CheckTimeout() -> System.Collections.IEnumerator @ 0x749dbd8e6c
+  get_IsDone() -> System.Boolean @ 0x749dbd8f08
+  set_Headers(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x749dbd8f10
+  get_Headers() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x749dbd8f18
+  set_Timeout(System.Single) -> System.Void @ 0x749dbd8f20
+  get_Timeout() -> System.Single @ 0x749dbd8f28
+  set_OnDone(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x749dbd8f30
+  set_OnFail(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x749dbd8f38
+  set_OnDisposed(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x749dbd8f40
+  .ctor(UnityEngine.MonoBehaviour, System.String) -> System.Void @ 0x749dbd8f48
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.String) -> System.Void @ 0x749dbd9078
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.Single) -> System.Void @ 0x749dbd91bc
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x749dbd92f4
+  AddHeader(System.String, System.String) -> System.Void @ 0x749dbd9704
+  AddData(System.String, System.String) -> System.Void @ 0x749dbd976c
+  AddRangeData(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x749dbd9788
+  AddBinaryData(System.String, System.Byte[]) -> System.Void @ 0x749dbd98f0
+  AddBinaryData(System.String, System.Byte[], System.String) -> System.Void @ 0x749dbd990c
+  AddBinaryData(System.String, System.Byte[], System.String, System.String) -> System.Void @ 0x749dbd9928
+  Request() -> System.Void @ 0x749dbd9944
+  Dispose() -> System.Void @ 0x749dbd996c
+  CheckConnection(System.String, System.Action<System.Boolean>) -> System.Collections.IEnumerator @ 0x749dbd999c
+  CreateURL(System.Collections.Generic.List<System.String>, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.String @ 0x749dbd9a54
+  ResetCache(System.String) -> System.String @ 0x749dbd9d60
+[+] Found UnityEngine.Networking.UnityWebRequest.SendWebRequest() -> UnityEngine.Networking.UnityWebRequestAsyncOperation @ 0x749ec1ac58
+[?] ProtocolGame_HttpRequest.V4_POST_Login overload: (System.String, System.String, System.String) @ 0x749d31ab48
+[+] Found ProtocolGame_HttpRequest.V4_POST_Login(System.String, System.String, System.String) -> AliothEngine.Net.HttpRequest @ 0x749d31ab48
+[?] ProtocolGame_HttpRequest.Sign overload: (System.String, System.Collections.Generic.Dictionary<System.String,System.String>) @ 0x749d31e5c0
+[+] Found ProtocolGame_HttpRequest.Sign(System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x749d31e5c0 (first match)
+[*] Sign return type: System.Void
+[?] ProtocolGame_HttpRequest.GetDefaultParams overload: () @ 0x749d320f58
+[+] Found ProtocolGame_HttpRequest.GetDefaultParams() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x749d320f58
+[?] ProtocolGame_HttpRequest.V3_POST_AllInOne overload: (System.String) @ 0x749d3215d0
+[+] Found ProtocolGame_HttpRequest.V3_POST_AllInOne(System.String) -> AliothEngine.Net.HttpRequest @ 0x749d3215d0
+[?] LoginManager.SaveLoginToken overload: (System.String, System.String, System.Int32, System.Boolean, SDKLoginType) -> System.Void @ 0x749d31b4a0
+[+] Hooking LoginManager.SaveLoginToken(System.String, System.String, System.Int32, System.Boolean, SDKLoginType) @ 0x749d31b4a0
+[+] Found ProtocolGame_HttpRequest.get_Token() -> System.String @ 0x749d31e534
+[+] Hooking ProtocolGame_HttpRequest.get_Token() @ 0x749d31e534
+[?] System.String.Join overload: (System.String, System.String[]) -> System.String @ 0x749e524b84
+[+] Hooking System.String.Join(System.String, System.String[]) @ 0x749e524b84
+[?] AliothEngine.Encrypt.MD5HashString overload: (System.String) -> System.String @ 0x749dbce66c
+[+] Hooking AliothEngine.Encrypt.MD5HashString(System.String) @ 0x749dbce66c
+[+] Hooking System.Convert.ToBase64String @ 0x749e628f88
+[+] Hooking TRANSPORT Alioth.S1.Net.TCPTube.TryRead(System.IO.MemoryStream, System.IO.MemoryStream, Alioth.S1.Common.Commands&, Alioth.S1.Common.OpInfo&) @ 0x749dafbd54
+[+] Hooking TRANSPORT Alioth.S1.Net.TCPTube.TryOutput() @ 0x749dafc1b0
+[+] Hooking TRANSPORT Alioth.S1.Net.TCPTube.Update() @ 0x749dafb4a4
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.TryRead(System.IO.MemoryStream, System.IO.MemoryStream, Alioth.S1.Common.Commands&, Alioth.S1.Common.OpInfo&) @ 0x749daf58bc
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.TryOutput() @ 0x749daf65c4
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.Update() @ 0x749daf4650
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.Send(System.Byte[], System.Int32, System.Int32) @ 0x749daf3b18
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.Send(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) @ 0x749daf3ddc
+[+] Hooking NetworkCenter.TryHandleResponse() @ 0x749daf91e0
+[+] Hooking TryHandleResponse status branch @ 0x749daf9418
+[+] Hooking DataCenter.ProccessRequestRes(Alioth.S1.Common.OpInfo) @ 0x749dc2703c
+[+] Hooking UserInfo.get_Coins @ 0x749d317d8c
+[+] Hooking UserInfo.get_Energy @ 0x749d317ce4
+[+] Hooking UserInfo.get_Exp @ 0x749d316ca4
+[+] Hooking UserInfo.get_Level @ 0x749d316ba0
+[+] Hooking HeroInfo.InitHero(Alioth.S1.Common.ProtoHero) @ 0x749dc2afd4
+[+] Hooking HeroInfo.get_Level @ 0x749dc2f018
+[+] Hooking HeroInfo.get_Star @ 0x749dc24ad4
+[+] Hooking HeroInfo.get_State @ 0x749dc24754
+[+] Hooking HeroInfo.get_FashionId @ 0x749dc339d4
+[+] Hooking HeroInfo.get_Weapon @ 0x749dc3362c
+[+] Hooking HeroInfo.get_WeaponInfomation @ 0x749dc343b0
+[+] Hooking WAREHOUSE DemandOpen(System.String) @ 0x749d593508
+[+] Hooking WAREHOUSE RefreshWareHouse(System.Object[]) @ 0x749d5911f8
+[+] Hooking WAREHOUSE InitData() @ 0x749d58fce0
+[+] Hooking WAREHOUSE ShowGoods() @ 0x749d5926e8
+[+] Hooking WAREHOUSE RefreshScroll() @ 0x749d592990
+[+] Hooking WAREHOUSE SetGoodsItemByInfo(UnityEngine.GameObject, System.Object) @ 0x749d592d38
+[+] Hooking WAREHOUSE RefreshEquipItem(System.Object[]) @ 0x749d5935a0
+[+] Hooking DataCenter.MergeItem(System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoItem>) @ 0x749dc29700
+[+] Found Alioth.S1.Common.ProtoChapter.get_BoxStatus() -> Alioth.S1.Common.BoxState @ 0x749daf1f84
+[+] Hooking ProtoChapter.get_BoxStatus @ 0x749daf1f84
+[!] ProtoChapter.set_BoxStatus not found
+[+] Found Alioth.S1.Common.OpInfo.get_Chapters() -> System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoChapter> @ 0x749daefdec
+[+] Hooking OpInfo.get_Chapters @ 0x749daefdec
+[*] justice_hook v4.21
+
+[*] 48 hooks installed.
+[*] Trigger login, then make a real game API request after login.
+[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], and [HTTP_SEND] lines.
+
+[HERO_GET] Star=1 HeroInfo=0x75d6314640
+[HERO_GET] Weapon=(no klass @ 0x2625a00) HeroInfo=0x75d6314640
+[HERO_GET] Level=1 HeroInfo=0x75d6314640
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d8867b90 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 00 5a 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6314640
+[HERO_GET] Star=1 HeroInfo=0x75d63145a0
+[HERO_GET] Weapon=(no klass @ 0x2625a64) HeroInfo=0x75d63145a0
+[HERO_GET] Level=1 HeroInfo=0x75d63145a0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6243aa0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 64 5a 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d63145a0
+[HERO_GET] Star=1 HeroInfo=0x75d6314500
+[HERO_GET] Weapon=(no klass @ 0x2625ac8) HeroInfo=0x75d6314500
+[HERO_GET] Level=1 HeroInfo=0x75d6314500
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d62739b0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 c8 5a 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6314500
+[HERO_GET] Star=1 HeroInfo=0x75d6314460
+[HERO_GET] Weapon=(no klass @ 0x2625b2c) HeroInfo=0x75d6314460
+[HERO_GET] Level=1 HeroInfo=0x75d6314460
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6bff8c0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 2c 5b 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6314460
+[HERO_GET] Star=1 HeroInfo=0x75d63143c0
+[HERO_GET] Weapon=(no klass @ 0x2625b90) HeroInfo=0x75d63143c0
+[HERO_GET] Level=1 HeroInfo=0x75d63143c0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6c317d0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 90 5b 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d63143c0
+[HERO_GET] Star=1 HeroInfo=0x75d6314320
+[HERO_GET] Weapon=(no klass @ 0x2625bf4) HeroInfo=0x75d6314320
+[HERO_GET] Level=1 HeroInfo=0x75d6314320
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6c616e0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 f4 5b 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6314320
+[HERO_GET] Star=1 HeroInfo=0x75d6314280
+[HERO_GET] Weapon=(no klass @ 0x2625c58) HeroInfo=0x75d6314280
+[HERO_GET] Level=1 HeroInfo=0x75d6314280
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6c925f0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 58 5c 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6314280
+[HERO_GET] Star=1 HeroInfo=0x75d63141e0
+[HERO_GET] Weapon=(no klass @ 0x2625cbc) HeroInfo=0x75d63141e0
+[HERO_GET] Level=1 HeroInfo=0x75d63141e0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6cc1500 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 bc 5c 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d63141e0
+[HERO_GET] Star=1 HeroInfo=0x75d6314140
+[HERO_GET] Weapon=(no klass @ 0x2625d20) HeroInfo=0x75d6314140
+[HERO_GET] Level=1 HeroInfo=0x75d6314140
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6cf3410 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 20 5d 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6314140
+[HERO_GET] Star=1 HeroInfo=0x75d63140a0
+[HERO_GET] Weapon=(no klass @ 0x2625d84) HeroInfo=0x75d63140a0
+[HERO_GET] Level=1 HeroInfo=0x75d63140a0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6d25320 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 84 5d 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d63140a0
+[HERO_GET] Star=1 HeroInfo=0x75d6314000
+[HERO_GET] Weapon=(no klass @ 0x2625de8) HeroInfo=0x75d6314000
+[HERO_GET] Level=1 HeroInfo=0x75d6314000
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6d56230 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 e8 5d 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6314000
+[HERO_GET] Star=1 HeroInfo=0x75d6d89f00
+[HERO_GET] Weapon=(no klass @ 0x2625e4c) HeroInfo=0x75d6d89f00
+[HERO_GET] Level=1 HeroInfo=0x75d6d89f00
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6d85140 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 4c 5e 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6d89f00
+[HERO_GET] Star=1 HeroInfo=0x75d6d89e60
+[HERO_GET] Weapon=(no klass @ 0x2625eb0) HeroInfo=0x75d6d89e60
+[HERO_GET] Level=1 HeroInfo=0x75d6d89e60
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6db9050 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 b0 5e 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6d89e60
+[HERO_GET] Star=1 HeroInfo=0x75d6d89dc0
+[HERO_GET] Weapon=(no klass @ 0x2625f17) HeroInfo=0x75d6d89dc0
+[HERO_GET] Level=1 HeroInfo=0x75d6d89dc0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d5218f50 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 17 5f 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6d89dc0
+[HERO_GET] Star=1 HeroInfo=0x75d6d89d20
+[HERO_GET] Weapon=(no klass @ 0x2625f78) HeroInfo=0x75d6d89d20
+[HERO_GET] Level=1 HeroInfo=0x75d6d89d20
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d524ae60 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 78 5f 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6d89d20
+[HERO_GET] Star=1 HeroInfo=0x75d6d89c80
+[HERO_GET] Weapon=(no klass @ 0x2625fdc) HeroInfo=0x75d6d89c80
+[HERO_GET] Level=1 HeroInfo=0x75d6d89c80
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d527cd70 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 dc 5f 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6d89c80
+[HERO_GET] Star=1 HeroInfo=0x75d6d89be0
+[HERO_GET] Weapon=(no klass @ 0x2626040) HeroInfo=0x75d6d89be0
+[HERO_GET] Level=1 HeroInfo=0x75d6d89be0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d52acc80 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 40 60 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6d89be0
+[HERO_GET] Star=1 HeroInfo=0x75d6d89b40
+[HERO_GET] Weapon=(no klass @ 0x26261d3) HeroInfo=0x75d6d89b40
+[HERO_GET] Level=1 HeroInfo=0x75d6d89b40
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d52dcb90 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 d3 61 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6d89b40
+
+========== V3_POST_AllInOne called ==========
+  app_key: official
+
+---------- GetDefaultParams called ----------
+[TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [(null)]
+  [return] {"n":"639265433517524750","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
+----------------------------------
+
+
+---------- Sign called ----------
+  content: 90f04cb7a1fa5c2f58ca19cde2a2b128
+  dict: {"n":"639265433517524750","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
+
+[JOIN_DATA] String.Join called inside Sign
+  separator: "."
+  count: 6
+  value[0]: "cbcfdf10d56e57a89f7cb19a491d139e"
+  value[1]: "official"
+  value[2]: "639265433517524750"
+  value[3]: "7"
+  value[4]: "3.1.0"
+  value[5]: "90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265433517524750.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265433517524750.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  [JOIN_DATA END]
+[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265433517524750.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+[MD5_DATA] output: "763a81159a06f7dcf7f2dfd5b9fcefad"
+  => SIGN OUTPUT: void (dict modified in-place?)
+  => dict after: {"n":"639265433517524750","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"763a81159a06f7dcf7f2dfd5b9fcefad"}
+  (1ms)
+----------------------------------
+
+[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639265433517524750","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"} dict_after={"n":"639265433517524750","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"763a81159a06f7dcf7f2dfd5b9fcefad"}
+============================================
+
+
+========== V4_POST_Login called ==========
+  app_key: witchwind3
+  content: witchwind3
+  apiName:
+  [HTTP_TRACE] login request trace window opened (10s)
+
+---------- GetDefaultParams called ----------
+[TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [len=344,fnv1a32=6e1b2445]
+[TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [len=344,fnv1a32=6e1b2445]
+  [return] {"n":"639265433520641300","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA=="}
+----------------------------------
+
+
+---------- Sign called ----------
+  content: 90f04cb7a1fa5c2f58ca19cde2a2b128
+  dict: {"n":"639265433520641300","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout"}
+
+[JOIN_DATA] String.Join called inside Sign
+  separator: "."
+  count: 12
+  value[0]: "cbcfdf10d56e57a89f7cb19a491d139e"
+  value[1]: "official"
+  value[2]: ""
+  value[3]: "639265433520641300"
+  value[4]: "witchwind3"
+  value[5]: "logout"
+  value[6]: "google"
+  value[7]: "7"
+  value[8]: "tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA=="
+  value[9]: "witchwind3"
+  value[10]: "3.1.0"
+  value[11]: "90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265433520641300.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265433520641300.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  [JOIN_DATA END]
+[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265433520641300.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+[MD5_DATA] output: "e66aa804b9511f67a4561761788a865e"
+  => SIGN OUTPUT: void (dict modified in-place?)
+  => dict after: {"n":"639265433520641300","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout","sign":"e66aa804b9511f67a4561761788a865e"}
+  (1ms)
+----------------------------------
+
+[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639265433520641300","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout"} dict_after={"n":"639265433520641300","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout","sign":"e66aa804b9511f67a4561761788a865e"}
+
+[HTTP_CREATE] UnityWebRequest #1
+  url: "https://ac.aliother.com/v5/account/login?202967"
+  method: "POST"
+  request_ptr: 0x75d2325500
+[HTTP_METHOD_SET] #1 method="POST"
+
+[HTTP_UPLOAD] UploadHandlerRaw(byte[])
+  body_len: 549
+  body_utf8: "n=639265433520641300&d=cbcfdf10d56e57a89f7cb19a491d139e&r=7&v=3.1.0&m=official&t=tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T%2bvY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G%2bUwJZ%2f%2fRPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97%2bcJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas%2f3qLNWJXEeAFJhfwTmegEly%2fwem%2fM13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl%2b%2b%2bvo6PljA%3d%3d&u=witchwind3&p=witchwind3&method=&platform=google&p2=logout&sign=e66aa804b9511f67a4561761788a865e"
+  body_hex: 6e3d36333932363534333335323036343133303026643d636263666466313064353665353761383966376362313961343931643133396526723d3726763d332e312e30266d3d6f6666696369616c26743d747141326f51724e35507668754d64723878353768547830554a747134514c6e6c694862306f465233542532627659355a47784738704759696d43756e4679787936634b3078536f7750545a6d306c47704f4e53344725326255774a5a25326625326652504e71487633317659624e674b317078487a667a55564c417174586e617a566d413937253262634a5773413676706e5253744162474d424a5872787957516674617a46486f766f4e705159765548696468595950765379466437374951453145703268533567754b72364141325a5468656178776a626e416461655541425265617325326633714c4e574a58456541464a686677546d6567456c7925326677656d2532664d31334c336677434e564e5a39564f5370514b6558367a6130766e4d3255336234586677484e6a323576357975333946526a736b4d7a567177684e4144395350415a375565466533554261467a42656857484c6c253262253262253262766f36506c6a4125336425336426753d776974636877696e643326703d776974636877696e6433266d6574686f643d26706c6174666f726d3d676f6f676c652670323d6c6f676f7574267369676e3d6536366161383034623935313166363761343536313736313738386138363565
+  upload_handler: 0x741126ec90
+[HTTP_UPLOAD END]
+
+[HTTP_UPLOAD_SET] #1 uploadHandler=0x75d235d7e0
+[HTTP_HEADER] #1 Content-Type: application/x-www-form-urlencoded
+[HTTP_HEADER] #1 Cache-Control: no-cache
+[HTTP_HEADER] #1 Pragma: no-cache
+
+[HTTP_SEND] UnityWebRequest #1
+  url: "https://ac.aliother.com/v5/account/login?202967"
+  method: ""
+  headers: [{"name":"Content-Type","value":"application/x-www-form-urlencoded"},{"name":"Cache-Control","value":"no-cache"},{"name":"Pragma","value":"no-cache"}]
+  body: <none>
+  request_ptr: 0x75d2325500
+[HTTP_SEND END]
+
+  [return after 7ms]
+========================================
+
+\n[TOKEN_SAVE] LoginManager.SaveLoginToken
+  arg[0] System.String: "861203"
+  arg[1] System.String: <TOKEN_REDACTED> [len=344,fnv1a32=e04b6cd5]
+  arg[2] System.Int32: "0"
+  arg[3] System.Boolean: "false"
+  arg[4] SDKLoginType: "0x0"
+  [TOKEN_SAVE END]
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500
+[TRANSPORT] KCPTube.Update leave ret=-714046064 4ms
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0
+[TRANSPORT] TCPTube.Update leave ret=-676168104 0ms
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x75d5708500
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x75d2369e60 SerialNumber=133752224 OpCode=2 ReturnCode=0 arg2=MemoryStream@0x75d2357000 arg3=MemoryStream@0x75d2357060
+[TRANSPORT] KCPTube.Send leave ret=0 0ms
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500
+[TRANSPORT] KCPTube.TryRead leave ret=0 1ms
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms
+[NET_RESP] TryHandleResponse leave 1ms
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x75d5708500
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x75d2369e60 SerialNumber=133752224 OpCode=2 ReturnCode=0 arg2=MemoryStream@0x75d2357000 arg3=MemoryStream@0x75d2357060
+[TRANSPORT] KCPTube.Send leave ret=0 0ms
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x75d5708500
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x75d2369e60 SerialNumber=133752224 OpCode=2 ReturnCode=0 arg2=MemoryStream@0x75d2357000 arg3=MemoryStream@0x75d2357060
+[TRANSPORT] KCPTube.Send leave ret=0 0ms
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x75d5708500
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x75d2369e60 SerialNumber=133752224 OpCode=2 ReturnCode=0 arg2=MemoryStream@0x75d2357000 arg3=MemoryStream@0x75d2357060
+[TRANSPORT] KCPTube.Send leave ret=0 1ms
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x75d5708500
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x75d2369e60 SerialNumber=133752224 OpCode=2 ReturnCode=0 arg2=MemoryStream@0x75d2357000 arg3=MemoryStream@0x75d2357060
+[CHAPTERS_GET] OpInfo=0x75d2369e60 ret=null
+[TRANSPORT] KCPTube.Send leave ret=1 37ms
+[KCP_SEND_ACCEPTED] request=OpInfo@0x75d2369e60 SerialNumber=133752224 OpCode=2 ReturnCode=0
+[TRANSPORT] TCPTube.TryOutput enter this=TCPTube@0x75d7b27dc0
+[TRANSPORT] TCPTube.TryOutput leave ret=0 0ms
+[TRANSPORT] KCPTube.TryOutput enter this=KCPTube@0x75d5708500
+[TRANSPORT] KCPTube.TryOutput leave ret=-1 0ms
+[CHAPTERS_GET] OpInfo=0x75d23695c0 ret=null
+[NET_RESP_STATUS] status=4 route=ProccessRequestRes
+[NET_RESP] ProccessRequestRes enter this=DataCenter@0x75a7c907e0 response=OpInfo@0x75d23695c0 arg2=0x0
+[RESP_CLASS] obj=0x75d23695c0 class=OpInfo
+[RESP_FIELD] <SerialNumber>k__BackingField @+0x10 type=System.UInt32 value=133752224
+[RESP_FIELD] <OpCode>k__BackingField @+0x14 type=Alioth.S1.Common.OperationCode value=0x2
+[RESP_FIELD] <ReturnCode>k__BackingField @+0x18 type=System.Int32 value=0
+[RESP_FIELD] <Time>k__BackingField @+0x20 type=System.DateTime value=0x8df207df8bdb982
+[RESP_FIELD] <S_0>k__BackingField @+0x28 type=System.String value=0x75d2567bc0
+[RESP_FIELD] <Int32_0>k__BackingField @+0x30 type=System.Int32 value=0
+[RESP_FIELD] <Int32_1>k__BackingField @+0x34 type=System.Int32 value=0
+[RESP_FIELD] <Int32_2>k__BackingField @+0x38 type=System.Int32 value=0
+[RESP_FIELD] <Int32_3>k__BackingField @+0x3c type=System.Int32 value=0
+[RESP_FIELD] <Int32_4>k__BackingField @+0x40 type=System.Int32 value=0
+[RESP_FIELD] <Int64_0>k__BackingField @+0x48 type=System.Int64 value=0
+[RESP_FIELD] <S_1>k__BackingField @+0x50 type=System.String value=0x75d2495240
+[RESP_FIELD] <S_2>k__BackingField @+0x58 type=System.String value=0x75d24951e0
+[RESP_FIELD] <S_3>k__BackingField @+0x60 type=System.String value=0x75d254b420
+[RESP_FIELD] <S_4>k__BackingField @+0x68 type=System.String value=0x75d2530b40
+[RESP_FIELD] <DictI32>k__BackingField @+0x70 type=System.Collections.Generic.Dictionary<System.Int32,System.Int32> value=-768186112
+[RESP_FIELD] <BattleReslut>k__BackingField @+0x78 type=Alioth.S1.Common.ProtoBattleResult value=null
+[RESP_FIELD] <FC>k__BackingField @+0x80 type=Alioth.S1.Common.ProtoFC value=null
+[RESP_FIELD] <User>k__BackingField @+0x88 type=Alioth.S1.Common.ProtoUser value=0x75d23f5af0
+[RESP_FIELD] <Heros>k__BackingField @+0x90 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoHero> value=-768186304
+[RESP_FIELD] <Items>k__BackingField @+0x98 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoItem> value=-768186496
+[RESP_FIELD] <Weapons>k__BackingField @+0xa0 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoWeapon> value=-768186688
+[RESP_FIELD] <Equiments>k__BackingField @+0xa8 type=System.Collections.Generic.Dictionary<System.String,Alioth.S1.Common.ProtoEquipment> value=0x75d2366600
+[RESP_FIELD] <Mails>k__BackingField @+0xb0 type=System.Collections.Generic.Dictionary<System.String,Alioth.S1.Common.ProtoMail> value=null
+[RESP_FIELD] <Olds>k__BackingField @+0xb8 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoMailOld> value=0
+[RESP_FIELD] <Chapters>k__BackingField @+0xc0 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoChapter> value=-768187072
+[RESP_FIELD] <Sections>k__BackingField @+0xc8 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoSection> value=-768187264
+[RESP_FIELD] <Teams>k__BackingField @+0xd0 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoTeam> value=-768187456
+[RESP_FIELD] <ViewItems>k__BackingField @+0xd8 type=System.Collections.Generic.List<Alioth.S1.Common.ProtoViewItem> value=null
+[RESP_FIELD] <Fashions>k__BackingField @+0xe0 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoFashion> value=-768187648
+[RESP_FIELD] <Quests>k__BackingField @+0xe8 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoQuest> value=-768187840
+[RESP_FIELD] <Shops>k__BackingField @+0xf0 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoShop> value=0
+[RESP_FIELD] <Charges>k__BackingField @+0xf8 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoCharge> value=-768188032
+[RESP_FIELD] <Friends>k__BackingField @+0x100 type=System.Collections.Generic.Dictionary<System.Int64,Alioth.S1.Common.ProtoFriend> value=0
+[RESP_FIELD] <Exam>k__BackingField @+0x108 type=Alioth.S1.Common.ProtoRank value=null
+[RESP_FIELD] <Rival>k__BackingField @+0x110 type=Alioth.S1.Common.ProtoRival value=null
+[RESP_FIELD] <Ranks>k__BackingField @+0x118 type=System.Collections.Generic.Dictionary<System.Int64,Alioth.S1.Common.ProtoRank> value=0
+[RESP_FIELD] <Activities>k__BackingField @+0x120 type=System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoActivity> value=-768188224
+[RESP_FIELD] <Msgs>k__BackingField @+0x128 type=System.Collections.Generic.List<Alioth.S1.Common.ProtoMsg> value=null
+[RESP_FIELD] <ExploreFloor>k__BackingField @+0x130 type=Alioth.S1.Common.ProtoExploreFloor value=null
+[RESP_FIELD] <AIStrategy>k__BackingField @+0x138 type=System.Collections.Generic.Dictionary<System.Int32,System.Collections.Generic.Dictionary<System.Int32,System.Int32>> value=-759898560
+[RESP_FIELD] <BattleReport>k__BackingField @+0x140 type=Alioth.S1.Common.PlayerBattleReport value=null
+[RESP_FIELD] <ShieldFriends>k__BackingField @+0x148 type=System.Collections.Generic.Dictionary<System.Int64,Alioth.S1.Common.ProtoFriend> value=0
+[RESP_FIELD] <SupportHero>k__BackingField @+0x150 type=System.Collections.Generic.Dictionary<System.Int32,System.Int32> value=0
+[RESP_FIELD] <SupportHeroRank>k__BackingField @+0x158 type=System.Collections.Generic.Dictionary<System.Int64,Alioth.S1.Common.ProtoSupportRank> value=0
+[RESP_FIELD_END] class=OpInfo count=45
+[CHAPTERS_RAW] response=0x75d23695c0 +0xc0=Dictionary`2@0x75d2366540
+[CHAPTERS_ENUM] type=Dictionary`2 ptr=0x75d2366540
+[CHAPTERS_ENUM] _count@+0x20=61 _entries@+0x18=0x75d26a9000
+[CHAPTERS_ENUM] entries.length=89
+[CHAPTER_ENTRY] idx=0 key=20300000 hash=20300000 value=0x75d2671e60 class=ProtoChapter ChapterId=20300000 BoxStatus=3
+[CHAPTER_ENTRY] idx=1 key=20301000 hash=20301000 value=0x75d2671c80 class=ProtoChapter ChapterId=20301000 BoxStatus=3
+[CHAPTER_ENTRY] idx=2 key=20505000 hash=20505000 value=0x75d2671c30 class=ProtoChapter ChapterId=20505000 BoxStatus=3
+[CHAPTER_ENTRY] idx=3 key=20506000 hash=20506000 value=0x75d2671be0 class=ProtoChapter ChapterId=20506000 BoxStatus=1
+[CHAPTER_ENTRY] idx=4 key=20507000 hash=20507000 value=0x75d2671b90 class=ProtoChapter ChapterId=20507000 BoxStatus=1
+[CHAPTER_ENTRY] idx=5 key=20705000 hash=20705000 value=0x75d2671b40 class=ProtoChapter ChapterId=20705000 BoxStatus=0
+[CHAPTER_ENTRY] idx=6 key=20706000 hash=20706000 value=0x75d2671af0 class=ProtoChapter ChapterId=20706000 BoxStatus=0
+[CHAPTER_ENTRY] idx=7 key=20704000 hash=20704000 value=0x75d2671aa0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=8 key=20201000 hash=20201000 value=0x75d2671a00 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=9 key=20502000 hash=20502000 value=0x75d26719b0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=10 key=20503000 hash=20503000 value=0x75d2671960 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=11 key=20504000 hash=20504000 value=0x75d2671910 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=12 key=20508000 hash=20508000 value=0x75d26718c0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=13 key=20700000 hash=20700000 value=0x75d2671870 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=14 key=20701000 hash=20701000 value=0x75d2671820 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=15 key=20702000 hash=20702000 value=0x75d26717d0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=16 key=20703000 hash=20703000 value=0x75d2671780 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=17 key=20510000 hash=20510000 value=0x75d2671730 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=18 key=20700100 hash=20700100 value=0x75d26716e0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=19 key=20700200 hash=20700200 value=0x75d2671690 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=20 key=20700300 hash=20700300 value=0x75d2671640 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=21 key=20700400 hash=20700400 value=0x75d26715f0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=22 key=20707000 hash=20707000 value=0x75d26715a0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=23 key=20708000 hash=20708000 value=0x75d2671550 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=24 key=20709000 hash=20709000 value=0x75d2671500 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=25 key=20709100 hash=20709100 value=0x75d26714b0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=26 key=20704100 hash=20704100 value=0x75d2671460 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=27 key=20702100 hash=20702100 value=0x75d2671410 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=28 key=20702200 hash=20702200 value=0x75d26713c0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=29 key=20702300 hash=20702300 value=0x75d2671370 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=30 key=20702400 hash=20702400 value=0x75d2671320 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=31 key=20709200 hash=20709200 value=0x75d26712d0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=32 key=20709300 hash=20709300 value=0x75d2671280 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=33 key=20709400 hash=20709400 value=0x75d2671230 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=34 key=20709500 hash=20709500 value=0x75d26711e0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=35 key=20702500 hash=20702500 value=0x75d2671190 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=36 key=20709800 hash=20709800 value=0x75d2671140 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=37 key=20709900 hash=20709900 value=0x75d26710f0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=38 key=20710000 hash=20710000 value=0x75d26710a0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=39 key=20710100 hash=20710100 value=0x75d2671050 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=40 key=20710200 hash=20710200 value=0x75d2671000 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=41 key=20710300 hash=20710300 value=0x75d26abfa0 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=42 key=20710400 hash=20710400 value=0x75d26abf50 class=ProtoChapter ChapterId=0 BoxStatus=0
+[CHAPTER_ENTRY] idx=43 key=20000000 hash=20000000 value=0x75d26abf00 class=ProtoChapter ChapterId=20000000 BoxStatus=7
+[CHAPTER_ENTRY] idx=44 key=20000100 hash=20000100 value=0x75d26abe60 class=ProtoChapter ChapterId=20000100 BoxStatus=7
+[CHAPTER_ENTRY] idx=45 key=20001000 hash=20001000 value=0x75d26abe10 class=ProtoChapter ChapterId=20001000 BoxStatus=7
+[CHAPTER_ENTRY] idx=46 key=20002000 hash=20002000 value=0x75d26abdc0 class=ProtoChapter ChapterId=20002000 BoxStatus=7
+[CHAPTER_ENTRY] idx=47 key=20003000 hash=20003000 value=0x75d26abd70 class=ProtoChapter ChapterId=20003000 BoxStatus=7
+[CHAPTER_ENTRY] idx=48 key=20004000 hash=20004000 value=0x75d26abd20 class=ProtoChapter ChapterId=20004000 BoxStatus=3
+[CHAPTER_ENTRY] idx=49 key=20005000 hash=20005000 value=0x75d26abcd0 class=ProtoChapter ChapterId=20005000 BoxStatus=1
+[CHAPTER_ENTRY] idx=50 key=20006000 hash=20006000 value=0x75d26abc80 class=ProtoChapter ChapterId=20006000 BoxStatus=1
+[CHAPTER_ENTRY] idx=51 key=20007000 hash=20007000 value=0x75d26abc30 class=ProtoChapter ChapterId=20007000 BoxStatus=0
+[CHAPTER_ENTRY] idx=52 key=20008000 hash=20008000 value=0x75d26abbe0 class=ProtoChapter ChapterId=20008000 BoxStatus=0
+[CHAPTER_ENTRY] idx=53 key=20009000 hash=20009000 value=0x75d26abb90 class=ProtoChapter ChapterId=20009000 BoxStatus=0
+[CHAPTER_ENTRY] idx=54 key=20011000 hash=20011000 value=0x75d26abb40 class=ProtoChapter ChapterId=20011000 BoxStatus=0
+[CHAPTER_ENTRY] idx=55 key=20012000 hash=20012000 value=0x75d26abaf0 class=ProtoChapter ChapterId=20012000 BoxStatus=0
+[CHAPTER_ENTRY] idx=56 key=20010000 hash=20010000 value=0x75d26abaa0 class=ProtoChapter ChapterId=20010000 BoxStatus=0
+[CHAPTER_ENTRY] idx=57 key=20010100 hash=20010100 value=0x75d26aba50 class=ProtoChapter ChapterId=20010100 BoxStatus=0
+[CHAPTER_ENTRY] idx=58 key=20010200 hash=20010200 value=0x75d26aba00 class=ProtoChapter ChapterId=20010200 BoxStatus=0
+[CHAPTER_ENTRY] idx=59 key=20010300 hash=20010300 value=0x75d26ab9b0 class=ProtoChapter ChapterId=20010300 BoxStatus=0
+[CHAPTER_ENTRY] idx=60 key=20010400 hash=20010400 value=0x75d26ab960 class=ProtoChapter ChapterId=20010400 BoxStatus=0
+[CHAPTERS_ENUM_END] scanned=89 matches=61
+[BOOT_RESP] seq=1 response=0x75d23695c0 class=OpInfo@0x75d23695c0 OpCode=2 ReturnCode=0
+[BOOT_STATE] User@+0x88=ProtoUser@0x75d23f5af0
+[BOOT_USER] Id=871053 Level=53 Exp=1100
+[BOOT_STATE] Items@+0x98=Dictionary`2@0x75d2366780
+[BOOT_STATE] Heros@+0x90=Dictionary`2@0x75d2366840
+[BOOT_STATE] Chapters@+0xc0=Dictionary`2@0x75d2366540
+[ITEM_MERGE] enter this=DataCenter@0x75a7c907e0 incoming=Dictionary`2@0x75d2366780 count=98
+[ITEM_MERGE] leave 0ms
+[HERO_INIT] this=HeroInfo@0x75d6314640 source=ProtoHero@0x75d23f5230 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d23f5230
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000000
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x3200000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=50
+  <Exp>k__BackingField @0x1c type=System.Int32 value=845
+  <Star>k__BackingField @0x20 type=System.Int32 value=3
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40000004
+  <Armor>k__BackingField @0x28 type=System.String value=g
+  <Belt>k__BackingField @0x30 type=System.String value=_
+  <Emblem>k__BackingField @0x38 type=System.String value=j
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000000
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=52000002
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=52000002
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=52000006
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_GET] Level=50 HeroInfo=0x75d6314640
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d6314640
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x7366ef1640
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000000
+  <Level>k__BackingField @0x1c type=System.Int32 value=50
+  <Exp>k__BackingField @0x20 type=System.Int32 value=845
+  <Star>k__BackingField @0x24 type=System.Int32 value=3
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625a0400000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40000004
+  <Armor>k__BackingField @0x30 type=System.String value=g
+  <Belt>k__BackingField @0x38 type=System.String value=_
+  <Emblem>k__BackingField @0x40 type=System.String value=j
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000000
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d7d1ab80
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=845
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=50
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d8867b90
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-643061168
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x7366ef1640
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x3200989680
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x30000034d
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625a0400000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75d26245c0
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75d26245a0
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75d2624580
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d7d1ab80
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0x34d00000001
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x32
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d8867b90
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x75d9abaa50
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d8a7ecc0
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=0�QXw@0xb4000076b84e0310
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=ExposedList`1@0x736489d240
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=ExposedList`1@0x736489d1e0
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=ExposedList`1@0x736489d1b0
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=ExposedList`1@0x736489d180
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=SkeletonClipping@0x75d8107f60
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=Single[]@0x75d6dd91e0
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=Int32[]@0x75d7b38d80
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=0�QXw@0xb4000076b84e0310
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=ExposedList`1@0x73671071e0
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=ExposedList`1@0x73671071b0
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=ExposedList`1@0x7367107180
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=ExposedList`1@0x7367107150
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=SkeletonClipping@0x75d8a7e1e0
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=Single[]@0x75d7c62640
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=Int32[]@0x75d6210d40
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=null
+[HERO_GET] Star=3 HeroInfo=0x75d6314640
+[HERO_GET] Weapon=(no klass @ 0x2625a04) HeroInfo=0x75d6314640
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d27dc2d0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 04 5a 62 02 03 00 00 00 ec 18 00 00 01 00 00 00 ] HeroInfo=0x75d6314640
+[HERO_INIT] this=HeroInfo@0x75d63145a0 source=ProtoHero@0x75d23f51c0 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d23f51c0
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000001
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x2800000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=40
+  <Exp>k__BackingField @0x1c type=System.Int32 value=475
+  <Star>k__BackingField @0x20 type=System.Int32 value=2
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40000101
+  <Armor>k__BackingField @0x28 type=System.String value=(
+  <Belt>k__BackingField @0x30 type=System.String value=G
+  <Emblem>k__BackingField @0x38 type=System.String value==
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000100
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=0
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=0
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=0
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_GET] Level=40 HeroInfo=0x75d63145a0
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d63145a0
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x734ad25640
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000001
+  <Level>k__BackingField @0x1c type=System.Int32 value=40
+  <Exp>k__BackingField @0x20 type=System.Int32 value=475
+  <Star>k__BackingField @0x24 type=System.Int32 value=2
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625a6500000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40000101
+  <Armor>k__BackingField @0x30 type=System.String value=(
+  <Belt>k__BackingField @0x38 type=System.String value=G
+  <Emblem>k__BackingField @0x40 type=System.String value==
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000100
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d6232ac0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=475
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=40
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d6243aa0
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-643062224
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x734ad25640
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x2800989681
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x2000001db
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625a6500000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75d2624400
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75d26243e0
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75d26243c0
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6232ac0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0x1db00000001
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6243aa0
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x75d9aba630
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6242cc0
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x7366ef1640
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x3200989680
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x30000034d
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625a0400000001
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=String@0x75d26245c0
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=String@0x75d26245a0
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=String@0x75d2624580
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d7d1ab80
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=describe-failed@0x34d00000001
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=describe-failed@0x32
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d27dc2d0
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x75d9abaa50
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d8a7ecc0
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=0�QXw@0xb4000076b84e0310
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=ExposedList`1@0x736489d240
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=ExposedList`1@0x736489d1e0
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=ExposedList`1@0x736489d1b0
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=ExposedList`1@0x736489d180
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=SkeletonClipping@0x75d8107f60
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=Single[]@0x75d6dd91e0
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=Int32[]@0x75d7b38d80
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=null
+[HERO_GET] Star=2 HeroInfo=0x75d63145a0
+[HERO_GET] Weapon=(no klass @ 0x2625a65) HeroInfo=0x75d63145a0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d27dc280 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 65 5a 62 02 07 00 00 00 72 06 00 00 01 00 00 00 ] HeroInfo=0x75d63145a0
+[HERO_INIT] this=HeroInfo@0x75d6314500 source=ProtoHero@0x75d23f5150 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d23f5150
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000002
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x2800000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=40
+  <Exp>k__BackingField @0x1c type=System.Int32 value=0
+  <Star>k__BackingField @0x20 type=System.Int32 value=2
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40000200
+  <Armor>k__BackingField @0x28 type=System.String value=$
+  <Belt>k__BackingField @0x30 type=System.String value=#
+  <Emblem>k__BackingField @0x38 type=System.String value=,
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000200
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=0
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=0
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=0
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_GET] Level=40 HeroInfo=0x75d6314500
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d6314500
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x734ad25320
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000002
+  <Level>k__BackingField @0x1c type=System.Int32 value=40
+  <Exp>k__BackingField @0x20 type=System.Int32 value=0
+  <Star>k__BackingField @0x24 type=System.Int32 value=2
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625ac800000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40000200
+  <Armor>k__BackingField @0x30 type=System.String value=$
+  <Belt>k__BackingField @0x38 type=System.String value=#
+  <Emblem>k__BackingField @0x40 type=System.String value=,
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000200
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d62495c0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=0
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=40
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d62739b0
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-643062992
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x734ad25320
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x2800989682
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x200000000
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625ac800000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75d26242c0
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75d26242a0
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75d2624280
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d62495c0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d62739b0
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x75d9aba330
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6272a80
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x734ad25640
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x2800989681
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x2000001db
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625a6500000001
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=String@0x75d2624400
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=String@0x75d26243e0
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=String@0x75d26243c0
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6232ac0
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=describe-failed@0x1db00000001
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=describe-failed@0x28
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d27dc280
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x75d9aba630
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6242cc0
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=ActorData@0x7366ef1640
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x3200989680
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=describe-failed@0x30000034d
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=describe-failed@0x2625a0400000001
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=String@0x75d26245c0
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=String@0x75d26245a0
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=String@0x75d2624580
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=StigmataInfo@0x75d7d1ab80
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=describe-failed@0x34d00000001
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=describe-failed@0x32
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=WeaponInfo@0x75d27dc2d0
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=List`1@0x75d9abaa50
+[HERO_GET] Star=2 HeroInfo=0x75d6314500
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d62739b0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 c8 5a 62 02 04 00 00 00 f2 03 00 00 01 00 00 00 ] HeroInfo=0x75d6314500
+[HERO_INIT] this=HeroInfo@0x75d6314460 source=ProtoHero@0x75d23f50e0 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d23f50e0
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000003
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x1e00000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=30
+  <Exp>k__BackingField @0x1c type=System.Int32 value=3570
+  <Star>k__BackingField @0x20 type=System.Int32 value=2
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40000300
+  <Armor>k__BackingField @0x28 type=System.String value=D
+  <Belt>k__BackingField @0x30 type=System.String value=B
+  <Emblem>k__BackingField @0x38 type=System.String value=H
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000300
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=0
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=0
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=0
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_GET] Level=30 HeroInfo=0x75d6314460
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d6314460
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x734ad25000
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000003
+  <Level>k__BackingField @0x1c type=System.Int32 value=30
+  <Exp>k__BackingField @0x20 type=System.Int32 value=3570
+  <Star>k__BackingField @0x24 type=System.Int32 value=2
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625b2c00000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40000300
+  <Armor>k__BackingField @0x30 type=System.String value=D
+  <Belt>k__BackingField @0x38 type=System.String value=B
+  <Emblem>k__BackingField @0x40 type=System.String value=H
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000300
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d62784c0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=3570
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=30
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d6bff8c0
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-643063568
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x734ad25000
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x1e00989683
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x200000df2
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625b2c00000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75d2624160
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75d2624140
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75d2624120
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d62784c0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0xdf200000001
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x1e
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6bff8c0
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x75d9aba0f0
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6bfe840
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x734ad25320
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x2800989682
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x200000000
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625ac800000001
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=String@0x75d26242c0
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=String@0x75d26242a0
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=String@0x75d2624280
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d62495c0
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=describe-failed@0x28
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d62739b0
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x75d9aba330
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6272a80
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=ActorData@0x734ad25640
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x2800989681
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=describe-failed@0x2000001db
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=describe-failed@0x2625a6500000001
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=String@0x75d2624400
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=String@0x75d26243e0
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=String@0x75d26243c0
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6232ac0
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=describe-failed@0x1db00000001
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=WeaponInfo@0x75d27dc280
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=List`1@0x75d9aba630
+[HERO_GET] Star=2 HeroInfo=0x75d6314460
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6bff8c0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 2c 5b 62 02 04 00 00 00 f4 01 00 00 01 00 00 00 ] HeroInfo=0x75d6314460
+[HERO_INIT] this=HeroInfo@0x75d63143c0 source=ProtoHero@0x75d23f5070 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d23f5070
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000004
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x2800000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=40
+  <Exp>k__BackingField @0x1c type=System.Int32 value=175
+  <Star>k__BackingField @0x20 type=System.Int32 value=2
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40000401
+  <Armor>k__BackingField @0x28 type=System.String value=0
+  <Belt>k__BackingField @0x30 type=System.String value=k
+  <Emblem>k__BackingField @0x38 type=System.String value=M
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000400
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=0
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=0
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=0
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_GET] Level=40 HeroInfo=0x75d63143c0
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d63143c0
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x75d8e04c80
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000004
+  <Level>k__BackingField @0x1c type=System.Int32 value=40
+  <Exp>k__BackingField @0x20 type=System.Int32 value=175
+  <Star>k__BackingField @0x24 type=System.Int32 value=2
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625b9100000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40000401
+  <Armor>k__BackingField @0x30 type=System.String value=0
+  <Belt>k__BackingField @0x38 type=System.String value=k
+  <Emblem>k__BackingField @0x40 type=System.String value=M
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000400
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d6c043c0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=175
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=40
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d6c317d0
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-1479362976
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x75d8e04c80
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x2800989684
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x2000000af
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625b9100000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75d262ffe0
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75d262ffc0
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75d262ffa0
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6c043c0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0xaf00000001
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6c317d0
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x75a7d2b660
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6c2f600
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x734ad25000
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x1e00989683
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x200000df2
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625b2c00000001
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=String@0x75d2624160
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=String@0x75d2624140
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=String@0x75d2624120
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d62784c0
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=describe-failed@0xdf200000001
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=describe-failed@0x1e
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6bff8c0
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x75d9aba0f0
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6bfe840
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=ActorData@0x734ad25320
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x2800989682
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=describe-failed@0x200000000
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=describe-failed@0x2625ac800000001
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=String@0x75d26242c0
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=String@0x75d26242a0
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=String@0x75d2624280
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=StigmataInfo@0x75d62495c0
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=WeaponInfo@0x75d62739b0
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=List`1@0x75d9aba330
+[HERO_GET] Star=2 HeroInfo=0x75d63143c0
+[HERO_GET] Weapon=(no klass @ 0x2625b91) HeroInfo=0x75d63143c0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d27dc190 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 91 5b 62 02 06 00 00 00 50 00 00 00 01 00 00 00 ] HeroInfo=0x75d63143c0
+[HERO_INIT] this=HeroInfo@0x75d6314280 source=ProtoHero@0x75d23f5000 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d23f5000
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000006
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x2800000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=40
+  <Exp>k__BackingField @0x1c type=System.Int32 value=0
+  <Star>k__BackingField @0x20 type=System.Int32 value=2
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40000600
+  <Armor>k__BackingField @0x28 type=System.String value=E
+  <Belt>k__BackingField @0x30 type=System.String value=2
+  <Emblem>k__BackingField @0x38 type=System.String value=:
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000600
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=0
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=0
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=0
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_GET] Level=40 HeroInfo=0x75d6314280
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d6314280
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x75d8e04640
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000006
+  <Level>k__BackingField @0x1c type=System.Int32 value=40
+  <Exp>k__BackingField @0x20 type=System.Int32 value=0
+  <Star>k__BackingField @0x24 type=System.Int32 value=2
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625c5800000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40000600
+  <Armor>k__BackingField @0x30 type=System.String value=E
+  <Belt>k__BackingField @0x38 type=System.String value=2
+  <Emblem>k__BackingField @0x40 type=System.String value=:
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000600
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d6c641c0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=0
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=40
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d6c925f0
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-1523491936
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x75d8e04640
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x2800989686
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x200000000
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625c5800000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75d262fea0
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75d262fe80
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75d262fe60
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6c641c0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6c925f0
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x75a5315ba0
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6c8f180
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x75d8e04960
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x100989685
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x100000000
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625bf400000000
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6c352c0
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=null
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6c616e0
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x75a7d2b090
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6c5f3c0
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=ActorData@0x75d8e04c80
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x2800989684
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=describe-failed@0x2000000af
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=describe-failed@0x2625b9100000001
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=String@0x75d262ffe0
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=String@0x75d262ffc0
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=String@0x75d262ffa0
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6c043c0
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=describe-failed@0xaf00000001
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=WeaponInfo@0x75d27dc190
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=List`1@0x75a7d2b660
+[HERO_GET] Star=2 HeroInfo=0x75d6314280
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6c925f0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 58 5c 62 02 08 00 00 00 cc 06 00 00 01 00 00 00 ] HeroInfo=0x75d6314280
+[HERO_INIT] this=HeroInfo@0x75d6314140 source=ProtoHero@0x75d2630f50 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d2630f50
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000008
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x2800000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=40
+  <Exp>k__BackingField @0x1c type=System.Int32 value=0
+  <Star>k__BackingField @0x20 type=System.Int32 value=2
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40000801
+  <Armor>k__BackingField @0x28 type=System.String value=I
+  <Belt>k__BackingField @0x30 type=System.String value=;
+  <Emblem>k__BackingField @0x38 type=System.String value=Q
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000800
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=0
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=0
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=0
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_GET] Level=40 HeroInfo=0x75d6314140
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d6314140
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x75d8e04000
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000008
+  <Level>k__BackingField @0x1c type=System.Int32 value=40
+  <Exp>k__BackingField @0x20 type=System.Int32 value=0
+  <Star>k__BackingField @0x24 type=System.Int32 value=2
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625d2100000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40000801
+  <Armor>k__BackingField @0x30 type=System.String value=I
+  <Belt>k__BackingField @0x38 type=System.String value=;
+  <Emblem>k__BackingField @0x40 type=System.String value=Q
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000800
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d6cf8fc0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=0
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=40
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d6cf3410
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-1792423248
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x75d8e04000
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x2800989688
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x200000000
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625d2100000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75d262fd60
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75d262fd40
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75d262fd20
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6cf8fc0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6cf3410
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x749529cab0
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6cf5cc0
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x75d8e04320
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x100989687
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x100000000
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625cbc00000000
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6c970c0
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=null
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6cc1500
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x75a5315060
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6cc4f00
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=ActorData@0x75d8e04640
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x2800989686
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=describe-failed@0x200000000
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=describe-failed@0x2625c5800000001
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=String@0x75d262fea0
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=String@0x75d262fe80
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=String@0x75d262fe60
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6c641c0
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6c925f0
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=List`1@0x75a5315ba0
+[HERO_GET] Star=2 HeroInfo=0x75d6314140
+[HERO_GET] Weapon=(no klass @ 0x2625d21) HeroInfo=0x75d6314140
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d27dc0f0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 21 5d 62 02 01 00 00 00 86 01 00 00 01 00 00 00 ] HeroInfo=0x75d6314140
+[HERO_INIT] this=HeroInfo@0x75d63140a0 source=ProtoHero@0x75d2630ee0 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d2630ee0
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000009
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x2400000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=36
+  <Exp>k__BackingField @0x1c type=System.Int32 value=2145
+  <Star>k__BackingField @0x20 type=System.Int32 value=1
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40000900
+  <Armor>k__BackingField @0x28 type=System.String value=1
+  <Belt>k__BackingField @0x30 type=System.String value=F
+  <Emblem>k__BackingField @0x38 type=System.String value=R
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000900
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=0
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=0
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=0
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_GET] Level=36 HeroInfo=0x75d63140a0
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d63140a0
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x75d8e0ac80
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000009
+  <Level>k__BackingField @0x1c type=System.Int32 value=36
+  <Exp>k__BackingField @0x20 type=System.Int32 value=2145
+  <Star>k__BackingField @0x24 type=System.Int32 value=1
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625d8400000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40000900
+  <Armor>k__BackingField @0x30 type=System.String value=1
+  <Belt>k__BackingField @0x38 type=System.String value=F
+  <Emblem>k__BackingField @0x40 type=System.String value=R
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000900
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d6d01ec0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=2145
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=36
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d6d25320
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-1792424208
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x75d8e0ac80
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x2400989689
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x100000861
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625d8400000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75d262fc00
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75d262fbe0
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75d262fbc0
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6d01ec0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0x86100000001
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x24
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6d25320
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x749529c6f0
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6d26a80
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x75d8e04000
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x2800989688
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x200000000
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625d2100000001
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=String@0x75d262fd60
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=String@0x75d262fd40
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=String@0x75d262fd20
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6cf8fc0
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=describe-failed@0x28
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d27dc0f0
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x749529cab0
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6cf5cc0
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=ActorData@0x75d8e04320
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x100989687
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=describe-failed@0x100000000
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=describe-failed@0x2625cbc00000000
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=null
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6c970c0
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6cc1500
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=List`1@0x75a5315060
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d6d25320 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 84 5d 62 02 07 00 00 00 de 08 00 00 01 00 00 00 ] HeroInfo=0x75d63140a0
+[HERO_INIT] this=HeroInfo@0x75d6d89e60 source=ProtoHero@0x75d2630e70 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d2630e70
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000012
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x100000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=1
+  <Exp>k__BackingField @0x1c type=System.Int32 value=0
+  <Star>k__BackingField @0x20 type=System.Int32 value=2
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40001201
+  <Armor>k__BackingField @0x28 type=System.String value=(null)
+  <Belt>k__BackingField @0x30 type=System.String value=(null)
+  <Emblem>k__BackingField @0x38 type=System.String value=(null)
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49001200
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=0
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=0
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=0
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d6d89e60
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x75d8e0a320
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000012
+  <Level>k__BackingField @0x1c type=System.Int32 value=1
+  <Exp>k__BackingField @0x20 type=System.Int32 value=0
+  <Star>k__BackingField @0x24 type=System.Int32 value=2
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625eb100000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40001201
+  <Armor>k__BackingField @0x30 type=System.String value=(null)
+  <Belt>k__BackingField @0x38 type=System.String value=(null)
+  <Emblem>k__BackingField @0x40 type=System.String value=(null)
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49001200
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d6d92bc0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=0
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=1
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d6db9050
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-1792406000
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x75d8e0a320
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x10098968c
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x200000000
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625eb100000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6d92bc0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6db9050
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x74952a0e10
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6db83c0
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x75d8e0a640
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x10098968b
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x100000000
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625e4c00000000
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6d61cc0
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=null
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d6d85140
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x749529c270
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6d84600
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=null
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=null
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=null
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=null
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=null
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=null
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=��QXw@0xb400007749c08630
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=describe-failed@0x3
+[HERO_GET] Star=2 HeroInfo=0x75d6d89e60
+[HERO_GET] Weapon=(no klass @ 0x2625eb1) HeroInfo=0x75d6d89e60
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d27dc0a0 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 b1 5e 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x75d6d89e60
+[HERO_INIT] this=HeroInfo@0x75d6d89c80 source=ProtoHero@0x75d2630e00 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x75d2630e00
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000015
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x2800000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=40
+  <Exp>k__BackingField @0x1c type=System.Int32 value=725
+  <Star>k__BackingField @0x20 type=System.Int32 value=1
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40001503
+  <Armor>k__BackingField @0x28 type=System.String value=&
+  <Belt>k__BackingField @0x30 type=System.String value=)
+  <Emblem>k__BackingField @0x38 type=System.String value=A
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49001500
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=52000001
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=52000001
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=52000005
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_GET] Level=40 HeroInfo=0x75d6d89c80
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d6d89c80
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x75d8e10960
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000015
+  <Level>k__BackingField @0x1c type=System.Int32 value=40
+  <Exp>k__BackingField @0x20 type=System.Int32 value=725
+  <Star>k__BackingField @0x24 type=System.Int32 value=1
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625fdf00000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40001503
+  <Armor>k__BackingField @0x30 type=System.String value=&
+  <Belt>k__BackingField @0x38 type=System.String value=)
+  <Emblem>k__BackingField @0x40 type=System.String value=A
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49001500
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d524f8c0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=725
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=40
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d527cd70
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=1727001344
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x75d8e10960
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x280098968f
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x1000002d5
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625fdf00000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75d262f9a0
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75d262f980
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75d262f960
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d524f8c0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0x2d500000001
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d527cd70
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x7366eff300
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d527acc0
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x75d8e10c80
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x10098968e
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x100000000
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625f7800000000
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d52219c0
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=null
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d524ae60
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x74952a0060
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d524bf00
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=ActorData@0x75d8e0a000
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x10098968d
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=describe-failed@0x100000000
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=describe-failed@0x2625f1700000000
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=null
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6dc3ac0
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=WeaponInfo@0x75d5218f50
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=List`1@0x74952a0780
+[HERO_GET] Weapon=(no klass @ 0x2625fdf) HeroInfo=0x75d6d89c80
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d27dc050 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 df 5f 62 02 06 00 00 00 ec 0e 00 00 01 00 00 00 ] HeroInfo=0x75d6d89c80
+[MAIN_CURRENCY] Exp=1100 UserInfo=0x75d25c9680
+[MAIN_CURRENCY] Level=53 UserInfo=0x75d25c9680
+[NET_RESP] ProccessRequestRes leave
+
+[HTTP_SEND] UnityWebRequest
+  url: "https://oss01.aliother.com/v310/202608022111/AssetBundles/Android/activityicon_001__cn.assetbundle"
+  method: ""
+  body: <none>
+  request_ptr: 0x75d59d0a50
+[HTTP_SEND END]
+
+
+[HTTP_SEND] UnityWebRequest
+  url: "https://oss01.aliother.com/v310/202608022111/AssetBundles/Android/yingyuanuiatlas.assetbundle"
+  method: ""
+  body: <none>
+  request_ptr: 0x75d59d0550
+[HTTP_SEND END]
+
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+41 repeats suppressed)
+[NET_RESP_STATUS] status=4 route=ProccessRequestRes
+[RESP_CLASS] obj=0x75d57e8e60 class=OpInfo
+[CHAPTERS_RAW] response=0x75d57e8e60 +0xc0=null
+[BOOT_RESP] seq=2 response=0x75d57e8e60 class=OpInfo@0x75d57e8e60 OpCode=0 ReturnCode=0
+[BOOT_STATE] User@+0x88=null
+[BOOT_STATE] Items@+0x98=null
+[BOOT_STATE] Heros@+0x90=null
+[BOOT_STATE] Chapters@+0xc0=null
+[NET_RESP] TryHandleResponse leave 1ms (+41 repeats suppressed)
+[HERO_GET] State=1 HeroInfo=0x75d6314640
+[HERO_GET] State=1 HeroInfo=0x75d63145a0
+[HERO_GET] State=1 HeroInfo=0x75d6314500
+[HERO_GET] State=1 HeroInfo=0x75d6314460
+[HERO_GET] State=1 HeroInfo=0x75d63143c0
+[HERO_GET] State=0 HeroInfo=0x75d6314320
+[HERO_GET] State=1 HeroInfo=0x75d6314280
+[HERO_GET] State=0 HeroInfo=0x75d63141e0
+[HERO_GET] State=1 HeroInfo=0x75d6314140
+[HERO_GET] State=1 HeroInfo=0x75d63140a0
+[HERO_GET] State=0 HeroInfo=0x75d6314000
+[HERO_GET] State=0 HeroInfo=0x75d6d89f00
+[HERO_GET] State=1 HeroInfo=0x75d6d89e60
+[HERO_GET] State=0 HeroInfo=0x75d6d89dc0
+[HERO_GET] State=0 HeroInfo=0x75d6d89d20
+[HERO_GET] State=1 HeroInfo=0x75d6d89c80
+[HERO_GET] State=0 HeroInfo=0x75d6d89be0
+[HERO_GET] State=0 HeroInfo=0x75d6d89b40
+[HERO_GET] FashionId=49000000 HeroInfo=0x75d6314640
+
+[HTTP_SEND] UnityWebRequest
+  url: "https://oss01.aliother.com/v310/202608022111/AssetBundles/Android/ui_eff_mainsence.assetbundle"
+  method: ""
+  body: <none>
+  request_ptr: 0x75d8867dc0
+[HTTP_SEND END]
+
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+54 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-89 0ms (+54 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+54 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+54 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+54 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+54 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+52 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+52 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+42 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 1ms (+42 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-76 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[HERO_GET] FashionId=49000100 HeroInfo=0x75d63145a0
+[HERO_GET] FashionId=49000200 HeroInfo=0x75d6314500
+[HERO_GET] FashionId=49000400 HeroInfo=0x75d63143c0
+[HERO_GET] FashionId=49000600 HeroInfo=0x75d6314280
+[HERO_GET] FashionId=49000800 HeroInfo=0x75d6314140
+[HERO_GET] FashionId=49001500 HeroInfo=0x75d6d89c80
+[HERO_GET] FashionId=49000900 HeroInfo=0x75d63140a0
+[HERO_GET] FashionId=49000300 HeroInfo=0x75d6314460
+[HERO_GET] FashionId=49001200 HeroInfo=0x75d6d89e60
+[HERO_GET] FashionId=49000500 HeroInfo=0x75d6314320
+[HERO_GET] FashionId=49000700 HeroInfo=0x75d63141e0
+[HERO_GET] FashionId=49001000 HeroInfo=0x75d6314000
+[HERO_GET] FashionId=49001100 HeroInfo=0x75d6d89f00
+[HERO_GET] FashionId=49001300 HeroInfo=0x75d6d89dc0
+[HERO_GET] FashionId=49001400 HeroInfo=0x75d6d89d20
+[HERO_GET] FashionId=49001600 HeroInfo=0x75d6d89be0
+[HERO_GET] FashionId=49002000 HeroInfo=0x75d6d89b40
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 1ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-57 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 1ms (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-52 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-49 1ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 1ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-44 1ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+43 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+43 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+57 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-30 0ms (+57 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+57 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+57 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+57 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 1ms (+57 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+57 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+57 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-27 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 1ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-21 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 1ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x75d5708500
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x73647ffcf0 SerialNumber=133752225 OpCode=21 ReturnCode=0 arg2=MemoryStream@0x75d2357000 arg3=MemoryStream@0x75d2357060
+[CHAPTERS_GET] OpInfo=0x73647ffcf0 ret=null
+[TRANSPORT] KCPTube.Send leave ret=1 1ms
+[KCP_SEND_ACCEPTED] request=OpInfo@0x73647ffcf0 SerialNumber=133752225 OpCode=21 ReturnCode=0
+[TRANSPORT] KCPTube.TryOutput enter this=KCPTube@0x75d5708500 (+22 repeats suppressed)
+[TRANSPORT] KCPTube.TryOutput leave ret=-1 0ms (+22 repeats suppressed)
+[NET_RESP_STATUS] status=4 route=ProccessRequestRes
+[NET_RESP] ProccessRequestRes enter this=DataCenter@0x75a7c907e0 response=OpInfo@0x73647ffa10 arg2=0x0 (+1 repeats suppressed)
+[RESP_CLASS] obj=0x73647ffa10 class=OpInfo
+[CHAPTERS_RAW] response=0x73647ffa10 +0xc0=null
+[BOOT_RESP] seq=3 response=0x73647ffa10 class=OpInfo@0x73647ffa10 OpCode=21 ReturnCode=0
+[BOOT_STATE] User@+0x88=null
+[BOOT_STATE] Items@+0x98=null
+[BOOT_STATE] Heros@+0x90=Dictionary`2@0x7494d56660
+[BOOT_STATE] Chapters@+0xc0=null
+[ITEM_MERGE] enter this=DataCenter@0x75a7c907e0 incoming=null (+1 repeats suppressed)
+[ITEM_MERGE] leave 0ms (+1 repeats suppressed)
+[HERO_INIT] this=HeroInfo@0x75d6314500 source=ProtoHero@0x7494d16540 arg2=describe-failed@0xb400007748c8d0d0
+[HERO_FIELDS] InitHero.source class=ProtoHero ptr=0x7494d16540
+  <Id>k__BackingField @0x10 type=System.Int32 value=10000002
+  <Status>k__BackingField @0x14 type=Alioth.S1.Common.ObjectStatus ref=describe-failed@0x2800000000
+  <Level>k__BackingField @0x18 type=System.Int32 value=40
+  <Exp>k__BackingField @0x1c type=System.Int32 value=0
+  <Star>k__BackingField @0x20 type=System.Int32 value=2
+  <Weapon>k__BackingField @0x24 type=System.Int32 value=40000201
+  <Armor>k__BackingField @0x28 type=System.String value=$
+  <Belt>k__BackingField @0x30 type=System.String value=#
+  <Emblem>k__BackingField @0x38 type=System.String value=,
+  <Talent>k__BackingField @0x40 type=System.Int32 value=0
+  <Suit>k__BackingField @0x44 type=System.Int32 value=0
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000200
+  <Strategy>k__BackingField @0x4c type=System.Int32 value=0
+  <Hole1StigmataId>k__BackingField @0x50 type=System.Int32 value=0
+  <Hole2StigmataId>k__BackingField @0x54 type=System.Int32 value=0
+  <Hole3StigmataId>k__BackingField @0x58 type=System.Int32 value=0
+  <Hole4StigmataId>k__BackingField @0x5c type=System.Int32 value=0
+  <Hole5StigmataId>k__BackingField @0x60 type=System.Int32 value=0
+  <Hole6StigmataId>k__BackingField @0x64 type=System.Int32 value=0
+[HERO_FIELDS] InitHero.result class=HeroInfo ptr=0x75d6314500
+  <Prototype>k__BackingField @0x10 type=ActorData ref=ActorData@0x734ad25320
+  <Id>k__BackingField @0x18 type=System.Int32 value=10000002
+  <Level>k__BackingField @0x1c type=System.Int32 value=40
+  <Exp>k__BackingField @0x20 type=System.Int32 value=0
+  <Star>k__BackingField @0x24 type=System.Int32 value=2
+  <State>k__BackingField @0x28 type=Alioth.S1.Common.HeroState ref=describe-failed@0x2625ac900000001
+  <Weapon>k__BackingField @0x2c type=System.Int32 value=40000201
+  <Armor>k__BackingField @0x30 type=System.String value=$
+  <Belt>k__BackingField @0x38 type=System.String value=#
+  <Emblem>k__BackingField @0x40 type=System.String value=,
+  <FashionId>k__BackingField @0x48 type=System.Int32 value=49000200
+  <StigmataInfo>k__BackingField @0x50 type=StigmataInfo ref=StigmataInfo@0x75d62495c0
+  <noInit>k__BackingField @0x58 type=System.Boolean value=true
+  <LastExp>k__BackingField @0x5c type=System.Int32 value=0
+  <LastLevel>k__BackingField @0x60 type=System.Int32 value=40
+  <exploreFloor>k__BackingField @0x68 type=Alioth.S1.Common.ProtoExploreFloorHero ref=null
+  <WeaponInfomation>k__BackingField @0x70 type=WeaponInfo ref=WeaponInfo@0x75d62739b0
+  <Suits>k__BackingField @0x78 type=System.Collections.Generic.List<System.Int32> value=-643062992
+  dic_property @0x80 type=System.Collections.Generic.Dictionary<PROPERTY,CodeStage.AntiCheat.ObscuredTypes.ObscuredFloat>
+  <AIStrage1>k__BackingField @0x88 type=System.Int32 value=0
+  <AIStrage2>k__BackingField @0x8c type=System.Int32 value=0
+  <AIStrage3>k__BackingField @0x90 type=System.Int32 value=0
+  __Hotfix0_get_Prototype @0x0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_Prototype @0x8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Id @0x10 type=XLua.DelegateBridge ref=ActorData@0x734ad25320
+  __Hotfix0_set_Id @0x18 type=XLua.DelegateBridge ref=describe-failed@0x2800989682
+  __Hotfix0_get_Level @0x20 type=XLua.DelegateBridge ref=describe-failed@0x200000000
+  __Hotfix0_set_Level @0x28 type=XLua.DelegateBridge ref=describe-failed@0x2625ac900000001
+  __Hotfix0_get_Exp @0x30 type=XLua.DelegateBridge ref=String@0x75cf1f0c80
+  __Hotfix0_set_Exp @0x38 type=XLua.DelegateBridge ref=String@0x75cf1f0c60
+  __Hotfix0_get_Star @0x40 type=XLua.DelegateBridge ref=String@0x75cf1f0c40
+  __Hotfix0_set_Star @0x48 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_State @0x50 type=XLua.DelegateBridge ref=StigmataInfo@0x75d62495c0
+  __Hotfix0_set_State @0x58 type=XLua.DelegateBridge ref=describe-failed@0x1
+  __Hotfix0_get_Weapon @0x60 type=XLua.DelegateBridge ref=describe-failed@0x28
+  __Hotfix0_set_Weapon @0x68 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Armor @0x70 type=XLua.DelegateBridge ref=WeaponInfo@0x75d62739b0
+  __Hotfix0_set_Armor @0x78 type=XLua.DelegateBridge ref=List`1@0x75d9aba330
+  __Hotfix0_get_Belt @0x80 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6272a80
+  __Hotfix0_set_Belt @0x88 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Emblem @0x90 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Emblem @0x98 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_FashionId @0xa0 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_set_FashionId @0xa8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_StigmataInfo @0xb0 type=XLua.DelegateBridge ref=ActorData@0x734ad25640
+  __Hotfix0_set_StigmataInfo @0xb8 type=XLua.DelegateBridge ref=describe-failed@0x2800989681
+  __Hotfix0_get_noInit @0xc0 type=XLua.DelegateBridge ref=describe-failed@0x2000001db
+  __Hotfix0_set_noInit @0xc8 type=XLua.DelegateBridge ref=describe-failed@0x2625a6500000001
+  __Hotfix0_get_LastExp @0xd0 type=XLua.DelegateBridge ref=String@0x75d2624400
+  __Hotfix0_set_LastExp @0xd8 type=XLua.DelegateBridge ref=String@0x75d26243e0
+  __Hotfix0_get_LastLevel @0xe0 type=XLua.DelegateBridge ref=String@0x75d26243c0
+  __Hotfix0_set_LastLevel @0xe8 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_get_exploreFloor @0xf0 type=XLua.DelegateBridge ref=StigmataInfo@0x75d6232ac0
+  __Hotfix0_set_exploreFloor @0xf8 type=XLua.DelegateBridge ref=describe-failed@0x1db00000001
+  __Hotfix0_UpdateProtoFloorHero @0x100 type=XLua.DelegateBridge ref=describe-failed@0x28
+  _c__Hotfix0_ctor @0x108 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_WeaponInfomation @0x110 type=XLua.DelegateBridge ref=WeaponInfo@0x75d27dc280
+  __Hotfix0_set_WeaponInfomation @0x118 type=XLua.DelegateBridge ref=List`1@0x75d9aba630
+  __Hotfix0_get_Suits @0x120 type=XLua.DelegateBridge ref=Dictionary`2@0x75d6242cc0
+  __Hotfix0_set_Suits @0x128 type=XLua.DelegateBridge ref=null
+  __Hotfix0_get_Item @0x130 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_Item @0x138 type=XLua.DelegateBridge ref=null
+  __Hotfix0_PropertyDicClone @0x140 type=XLua.DelegateBridge ref=��QXw@0xb4000076b85e8550
+  __Hotfix0_InitHero @0x148 type=XLua.DelegateBridge ref=null
+  __Hotfix0_SaveCurrent @0x150 type=XLua.DelegateBridge ref=ActorData@0x7366ef1640
+  __Hotfix0_FinalUpgradeHero @0x158 type=XLua.DelegateBridge ref=describe-failed@0x3200989680
+  __Hotfix0_CalculateProperty_Min @0x160 type=XLua.DelegateBridge ref=describe-failed@0x30000034d
+  __Hotfix0_CalculateProperty @0x168 type=XLua.DelegateBridge ref=describe-failed@0x2625a0400000001
+  __Hotfix0_StringToSingle @0x170 type=XLua.DelegateBridge ref=String@0x75d26245c0
+  __Hotfix0_SuitUp @0x178 type=XLua.DelegateBridge ref=String@0x75d26245a0
+  __Hotfix1_SuitUp @0x180 type=XLua.DelegateBridge ref=String@0x75d2624580
+  __Hotfix0_get_AIStrage1 @0x188 type=XLua.DelegateBridge ref=klass=null
+  __Hotfix0_set_AIStrage1 @0x190 type=XLua.DelegateBridge ref=StigmataInfo@0x75d7d1ab80
+  __Hotfix0_get_AIStrage2 @0x198 type=XLua.DelegateBridge ref=describe-failed@0x34d00000001
+  __Hotfix0_set_AIStrage2 @0x1a0 type=XLua.DelegateBridge ref=describe-failed@0x32
+  __Hotfix0_get_AIStrage3 @0x1a8 type=XLua.DelegateBridge ref=null
+  __Hotfix0_set_AIStrage3 @0x1b0 type=XLua.DelegateBridge ref=WeaponInfo@0x75d27dc2d0
+  __Hotfix0_UpdateAIStrategy @0x1b8 type=XLua.DelegateBridge ref=List`1@0x75d9abaa50
+[HERO_GET] Weapon=(no klass @ 0x2625ac9) HeroInfo=0x75d6314500
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d27dc230 hex=[90 41 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 c9 5a 62 02 02 00 00 00 6e 00 00 00 01 00 00 00 ] HeroInfo=0x75d6314500
+[NET_RESP] ProccessRequestRes leave (+1 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-19 1ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+58 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+58 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 1ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[WAREHOUSE] InitData enter this=WareHousePanelMono@0x7364677480
+[WAREHOUSE_STATE] InitData mode=0 list_d8=null list_e0=null list_e8=null list_f0=null selected_f8=null
+[WAREHOUSE_STATE] InitData leave mode=0 list_d8=List`1@0x75d16d21e0 count=76 list_e0=List`1@0x75d16d21b0 count=10 list_e8=List`1@0x75d16d2120 count=23 list_f0=List`1@0x75d16d2180 count=11 selected_f8=null
+[WAREHOUSE] InitData leave 1ms
+[WAREHOUSE] ShowGoods enter this=WareHousePanelMono@0x7364677480
+[WAREHOUSE_STATE] ShowGoods mode=1 list_d8=List`1@0x75d16d21e0 count=76 list_e0=List`1@0x75d16d21b0 count=10 list_e8=List`1@0x75d16d2120 count=23 list_f0=List`1@0x75d16d2180 count=11 selected_f8=null
+[WAREHOUSE] RefreshEquipItem enter this=WareHousePanelMono@0x7364677480
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf461ec0 arg2=ProtoItem@0x75d2638990 Id=43101301 Status=0 Count=1
+[WAREHOUSE] SetGoodsItemByInfo leave 1ms
+[WAREHOUSE] RefreshEquipItem leave 1ms
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf443640 arg2=ProtoItem@0x75d26389c0 Id=43101010 Status=0 Count=5
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf443dc0 arg2=ProtoItem@0x75d26389f0 Id=43101000 Status=0 Count=9
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf427540 arg2=ProtoItem@0x75d2638a20 Id=43100013 Status=0 Count=1
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf427cc0 arg2=ProtoItem@0x75d26388a0 Id=43200102 Status=0 Count=3
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf405440 arg2=ProtoItem@0x75d26388d0 Id=43200003 Status=0 Count=27
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf405bc0 arg2=ProtoItem@0x75d2638a80 Id=43001000 Status=0 Count=28
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3e9340 arg2=ProtoItem@0x75d2638900 Id=43200002 Status=0 Count=22
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3e9ac0 arg2=ProtoItem@0x75d2638a50 Id=43100002 Status=0 Count=5
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3c7240 arg2=ProtoItem@0x75d2638930 Id=43200001 Status=0 Count=30
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3c79c0 arg2=ProtoItem@0x75d2638960 Id=43200000 Status=0 Count=80
+[WAREHOUSE_STATE] ShowGoods leave mode=1 list_d8=List`1@0x75d16d21e0 count=76 list_e0=List`1@0x75d16d21b0 count=10 list_e8=List`1@0x75d16d2120 count=23 list_f0=List`1@0x75d16d2180 count=11 selected_f8=List`1@0x75d16d2180 count=11
+[WAREHOUSE] ShowGoods leave 11ms
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 1ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[WAREHOUSE] RefreshScroll enter this=WareHousePanelMono@0x7364677480
+[WAREHOUSE_STATE] RefreshScroll mode=4 list_d8=List`1@0x75d16d21e0 count=76 list_e0=List`1@0x75d16d21b0 count=10 list_e8=List`1@0x75d16d2120 count=23 list_f0=List`1@0x75d16d2180 count=11 selected_f8=List`1@0x75d16d2180 count=11
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf461ec0 arg2=EquipInfo@0x75d5c9d270
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf443640 arg2=EquipInfo@0x75d2b80dd0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf443dc0 arg2=EquipInfo@0x75d5c9d4e0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf427540 arg2=EquipInfo@0x75d2b76b60
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf427cc0 arg2=EquipInfo@0x75d2b80000
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf405440 arg2=EquipInfo@0x75d2b809c0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf405bc0 arg2=EquipInfo@0x75d2b80750
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3e9340 arg2=EquipInfo@0x75d2b76340
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3e9ac0 arg2=EquipInfo@0x75d2b800d0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3c7240 arg2=EquipInfo@0x75d2b80a90
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3c79c0 arg2=EquipInfo@0x75d2b76a90
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3ab140 arg2=EquipInfo@0x75d2b76410
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3ab8c0 arg2=EquipInfo@0x75d2b919c0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf37e040 arg2=EquipInfo@0x75d2b76c30
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf37e7c0 arg2=EquipInfo@0x75d2b80410
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf37ef40 arg2=EquipInfo@0x75d2b80820
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf35f6c0 arg2=EquipInfo@0x75d2b80b60
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf35fe40 arg2=EquipInfo@0x75d2b80d00
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3415c0 arg2=EquipInfo@0x75d5c9d000
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf341d40 arg2=EquipInfo@0x75d5c9d680
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3214c0 arg2=EquipInfo@0x75d5c9d750
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf321c40 arg2=EquipInfo@0x75d5c9d340
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3053c0 arg2=EquipInfo@0x75d2b808f0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf305b40 arg2=EquipInfo@0x75d2b761a0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf2e62c0 arg2=EquipInfo@0x75d2b91a90
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf2e6a40 arg2=EquipInfo@0x75d2b91d00
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d17dac60 arg2=EquipInfo@0x75d2b8a410
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d17da1a0 arg2=EquipInfo@0x75d2b76dd0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d180c760 arg2=EquipInfo@0x75d2b76d00
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d1824d20 arg2=EquipInfo@0x75d2b769c0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d18242e0 arg2=EquipInfo@0x75d2b8ac30
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d18498a0 arg2=EquipInfo@0x75d2b8ab60
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d1865e80 arg2=EquipInfo@0x75d2b8a9c0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d1865460 arg2=EquipInfo@0x75d2b8a8f0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d1888a40 arg2=EquipInfo@0x75d2b918f0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d1888000 arg2=EquipInfo@0x75d2b91b60
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d18b15c0 arg2=EquipInfo@0x75d2b765b0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d18c9ba0 arg2=EquipInfo@0x75d5c9d5b0
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d18c9180 arg2=EquipInfo@0x75d2b76270
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75d18ed760 arg2=EquipInfo@0x75d2b805b0
+[WAREHOUSE] RefreshScroll leave 58ms
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+43 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 1ms (+43 repeats suppressed)
+[WAREHOUSE] ShowGoods enter this=WareHousePanelMono@0x7364677480
+[WAREHOUSE_STATE] ShowGoods mode=3 list_d8=List`1@0x75d16d21e0 count=76 list_e0=List`1@0x75d16d21b0 count=10 list_e8=List`1@0x75d16d2120 count=23 list_f0=List`1@0x75d16d2180 count=11 selected_f8=List`1@0x75d16d2180 count=11
+[WAREHOUSE] RefreshEquipItem enter this=WareHousePanelMono@0x7364677480 (+50 repeats suppressed)
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf461ec0 arg2=ProtoItem@0x75d2646c90 Id=52000008 Status=0 Count=1
+[WAREHOUSE] SetGoodsItemByInfo leave 1ms (+50 repeats suppressed)
+[WAREHOUSE] RefreshEquipItem leave 1ms (+50 repeats suppressed)
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf443640 arg2=ProtoItem@0x75d2646cc0 Id=52000007 Status=0 Count=1
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf443dc0 arg2=ProtoItem@0x75d2646cf0 Id=52000004 Status=0 Count=2
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf427540 arg2=ProtoItem@0x75d2646d20 Id=52000003 Status=0 Count=4
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf427cc0 arg2=ProtoItem@0x75d2646d50 Id=52000002 Status=0 Count=4
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf405440 arg2=ProtoItem@0x75d2646c00 Id=52000201 Status=0 Count=1
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf405bc0 arg2=ProtoItem@0x75d2646c30 Id=52000101 Status=0 Count=1
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3e9340 arg2=ProtoItem@0x75d2646d80 Id=52000001 Status=0 Count=4
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3e9ac0 arg2=ProtoItem@0x75d2646c60 Id=52000100 Status=0 Count=1
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3c7240 arg2=ProtoItem@0x75d2646db0 Id=52000000 Status=0 Count=2
+[WAREHOUSE_STATE] ShowGoods leave mode=3 list_d8=List`1@0x75d16d21e0 count=76 list_e0=List`1@0x75d16d21b0 count=10 list_e8=List`1@0x75d16d2120 count=23 list_f0=List`1@0x75d16d2180 count=11 selected_f8=List`1@0x75d16d21b0 count=10
+[WAREHOUSE] ShowGoods leave 30ms
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+58 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-165 0ms (+58 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+58 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+58 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+58 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+58 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+58 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+58 repeats suppressed)
+[WAREHOUSE_STATE] ShowGoods mode=2 list_d8=List`1@0x75d16d21e0 count=76 list_e0=List`1@0x75d16d21b0 count=10 list_e8=List`1@0x75d16d2120 count=23 list_f0=List`1@0x75d16d2180 count=11 selected_f8=List`1@0x75d16d21b0 count=10
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf461ec0 arg2=ProtoItem@0x75d26384e0 Id=43220102 Status=0 Count=169
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf443640 arg2=ProtoItem@0x75d2638750 Id=43210200 Status=0 Count=97
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf443dc0 arg2=ProtoItem@0x75d2638720 Id=43210203 Status=0 Count=66
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf427540 arg2=ProtoItem@0x75d26386f0 Id=43210206 Status=0 Count=71
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf427cc0 arg2=ProtoItem@0x75d2638690 Id=43220001 Status=0 Count=9
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf405440 arg2=ProtoItem@0x75d2638630 Id=43220003 Status=0 Count=20
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf405bc0 arg2=ProtoItem@0x75d26385d0 Id=43220005 Status=0 Count=10
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3e9340 arg2=ProtoItem@0x75d2638570 Id=43220007 Status=0 Count=11
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3e9ac0 arg2=ProtoItem@0x75d2638510 Id=43220009 Status=0 Count=9
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3c7240 arg2=ProtoItem@0x75d2638480 Id=43220104 Status=0 Count=9
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3c79c0 arg2=ProtoItem@0x75d2638450 Id=43230000 Status=0 Count=1664
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3ab140 arg2=ProtoItem@0x75d26387e0 Id=43210100 Status=0 Count=123
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3ab8c0 arg2=ProtoItem@0x75d26387b0 Id=43210102 Status=0 Count=119
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf37e040 arg2=ProtoItem@0x75d2638780 Id=43210104 Status=0 Count=100
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf37e7c0 arg2=ProtoItem@0x75d26386c0 Id=43220000 Status=0 Count=26
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf37ef40 arg2=ProtoItem@0x75d2638660 Id=43220002 Status=0 Count=37
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf35f6c0 arg2=ProtoItem@0x75d2638600 Id=43220004 Status=0 Count=46
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf35fe40 arg2=ProtoItem@0x75d26385a0 Id=43220006 Status=0 Count=5
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3415c0 arg2=ProtoItem@0x75d2638540 Id=43220008 Status=0 Count=2
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf341d40 arg2=ProtoItem@0x75d26384b0 Id=43220103 Status=0 Count=101
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3214c0 arg2=ProtoItem@0x75d2638870 Id=43210000 Status=0 Count=128
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf321c40 arg2=ProtoItem@0x75d2638840 Id=43210001 Status=0 Count=101
+[WAREHOUSE_ITEM] enter panel=WareHousePanelMono@0x7364677480 arg1=GameObject@0x75cf3053c0 arg2=ProtoItem@0x75d2638810 Id=43210002 Status=0 Count=31
+[WAREHOUSE_STATE] ShowGoods leave mode=2 list_d8=List`1@0x75d16d21e0 count=76 list_e0=List`1@0x75d16d21b0 count=10 list_e8=List`1@0x75d16d2120 count=23 list_f0=List`1@0x75d16d2180 count=11 selected_f8=List`1@0x75d16d2120 count=23
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-156 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 1ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-151 1ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 1ms (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-146 1ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x75d5708500
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x75d1b128a0 SerialNumber=133752226 OpCode=19 ReturnCode=0 arg2=MemoryStream@0x75d2357000 arg3=MemoryStream@0x75d2357060
+[CHAPTERS_GET] OpInfo=0x75d1b128a0 ret=null
+[TRANSPORT] KCPTube.Send leave ret=1 1ms
+[KCP_SEND_ACCEPTED] request=OpInfo@0x75d1b128a0 SerialNumber=133752226 OpCode=19 ReturnCode=0
+[TRANSPORT] KCPTube.TryOutput enter this=KCPTube@0x75d5708500 (+1 repeats suppressed)
+[TRANSPORT] KCPTube.TryOutput leave ret=-1 1ms (+1 repeats suppressed)
+[NET_RESP_STATUS] status=4 route=ProccessRequestRes
+[NET_RESP] ProccessRequestRes enter this=DataCenter@0x75a7c907e0 response=OpInfo@0x75d1b12730 arg2=0x0
+[RESP_CLASS] obj=0x75d1b12730 class=OpInfo
+[CHAPTERS_RAW] response=0x75d1b12730 +0xc0=null
+[BOOT_RESP] seq=4 response=0x75d1b12730 class=OpInfo@0x75d1b12730 OpCode=19 ReturnCode=0
+[BOOT_STATE] User@+0x88=null
+[BOOT_STATE] Items@+0x98=null
+[BOOT_STATE] Heros@+0x90=null
+[BOOT_STATE] Chapters@+0xc0=null
+[ITEM_MERGE] enter this=DataCenter@0x75a7c907e0 incoming=null
+[ITEM_MERGE] leave 0ms
+[NET_RESP] ProccessRequestRes leave
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-143 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 1ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+58 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+58 repeats suppressed)
+[MAIN_CURRENCY] Energy=134 UserInfo=0x75d25c9680
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+43 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+43 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+58 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-134 0ms (+58 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+58 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+58 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+58 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 1ms (+58 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+58 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+58 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x75d5708500
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x75d57e8730 SerialNumber=133752227 OpCode=22 ReturnCode=0 arg2=MemoryStream@0x75d2357000 arg3=MemoryStream@0x75d2357060
+[CHAPTERS_GET] OpInfo=0x75d57e8730 ret=null
+[TRANSPORT] KCPTube.Send leave ret=1 1ms
+[KCP_SEND_ACCEPTED] request=OpInfo@0x75d57e8730 SerialNumber=133752227 OpCode=22 ReturnCode=0
+[TRANSPORT] KCPTube.TryOutput enter this=KCPTube@0x75d5708500 (+1 repeats suppressed)
+[TRANSPORT] KCPTube.TryOutput leave ret=-1 0ms (+1 repeats suppressed)
+[NET_RESP_STATUS] status=4 route=ProccessRequestRes
+[NET_RESP] ProccessRequestRes enter this=DataCenter@0x75a7c907e0 response=OpInfo@0x75d57e85c0 arg2=0x0
+[RESP_CLASS] obj=0x75d57e85c0 class=OpInfo
+[CHAPTERS_RAW] response=0x75d57e85c0 +0xc0=null
+[BOOT_RESP] seq=5 response=0x75d57e85c0 class=OpInfo@0x75d57e85c0 OpCode=22 ReturnCode=0
+[BOOT_STATE] User@+0x88=null
+[BOOT_STATE] Items@+0x98=null
+[BOOT_STATE] Heros@+0x90=null
+[BOOT_STATE] Chapters@+0xc0=null
+[ITEM_MERGE] enter this=DataCenter@0x75a7c907e0 incoming=null
+[ITEM_MERGE] leave 0ms
+[NET_RESP] ProccessRequestRes leave
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+44 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 1ms (+44 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+49 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-162 0ms (+49 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+49 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+49 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+49 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+49 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+48 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+48 repeats suppressed)
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x75d2355ee0 (+33 repeats suppressed)
+[NET_RESP] TryHandleResponse leave 0ms (+33 repeats suppressed)
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.Update leave ret=-134 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.Update leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x75d5708500 (+59 repeats suppressed)
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x75d7b27dc0 (+59 repeats suppressed)
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms (+59 repeats suppressed)
