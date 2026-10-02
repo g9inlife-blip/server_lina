@@ -77,41 +77,62 @@ class KCPServerUDP:
             print(f"[!] 알 수 없는 패킷 크기: {pkt_len}")
 
     def handle_handshake1(self, data: bytes, addr):
-        """Handshake1 (368B) 처리."""
+        """Handshake1 (368B) 처리 - 51B와 동일한 로직."""
         print(f"[*] Handshake1 감지 ({len(data)}B) from {addr}")
 
-        dh = DH64()
-        self.sessions[addr] = dh
+        # 고정 DH 키 사용 (51B와 동일)
+        dh = KCPServerUDP._fixed_dh
 
-        # 세션 ID 생성 (8B 랜덤)
-        import random
-        session_id = random.getrandbits(64)
+        try:
+            # 368B 구조: 0x08 public #1, 0x10 public #2, 0x18~ token
+            # 51B와 동일한 오프셋!
+            pub1 = struct.unpack_from("<Q", data, 0x08)[0]
+            pub2 = struct.unpack_from("<Q", data, 0x10)[0]
+            print(f"[*] Client public #1: {pub1:#x}")
+            print(f"[*] Client public #2: {pub2:#x}")
 
-        # 서버 응답 (33B, PCAP 형식)
-        # 0x00-0x07: zeros (8B)
-        # 0x08: 0x01 (1B)
-        # 0x09-0x10: session ID (8B)
-        # 0x11-0x18: ??? (8B)
-        # 0x19-0x20: server public? (8B)
-        srv_pub1, srv_pub2 = dh.get_public_pair()
+            # 2중 DH
+            secret1 = pow(pub1, dh.private1, 0xFFFFFFFFFFFFFFC5)
+            secret2 = pow(pub2, dh.private2, 0xFFFFFFFFFFFFFFC5)
+            print(f"[*] Secret #1: {secret1:#x}")
+            print(f"[*] Secret #2: {secret2:#x}")
 
-        resp = bytearray(33)
-        struct.pack_into("<Q", resp, 0x00, 0)  # zeros
-        resp[0x08] = 0x01
-        struct.pack_into("<Q", resp, 0x09, session_id)
-        # 0x11: 8B (PCAP: bfca... - 용도 불명, 랜덤으로)
-        struct.pack_into("<Q", resp, 0x11, random.getrandbits(64))
-        # 0x19: server public #1 (8B)
-        struct.pack_into("<Q", resp, 0x19, srv_pub1)
-        # 0x21: 1B 남음 (PCAP 33B)
+            session_key = struct.pack("<Q", secret1) + struct.pack("<Q", secret2)
+            print(f"[*] 세션 키: {session_key.hex()}")
 
-        self.sock.sendto(bytes(resp), addr)
-        print(f"[*] Handshake1 응답 전송: 33B to {addr}")
-        print(f"[*] Session ID: {session_id:#x}")
-        print(f"[*] Server public #1: {srv_pub1:#x}")
+            # 토큰 (0x18~)
+            token = data[0x18:0x18+344].split(b'\x00')[0][:40]
+            print(f"[*] 토큰 앞 40자: {token}")
+        except Exception as e:
+            print(f"[!] DH 실패: {e}")
+            import traceback
+            traceback.print_exc()
+            return
 
-        # 세션 저장 (session_id -> dh)
-        self.sessions[session_id] = dh
+        # 33B 응답 (51B와 동일: 두 공개키 모두 전송)
+        try:
+            import random
+            session_id = random.getrandbits(64)
+            srv_pub1, srv_pub2 = dh.get_public_pair()
+
+            resp = bytearray(33)
+            struct.pack_into("<Q", resp, 0x00, 0)
+            resp[0x08] = 0x01
+            struct.pack_into("<Q", resp, 0x09, session_id)
+            struct.pack_into("<Q", resp, 0x11, srv_pub2)  # server public #2
+            struct.pack_into("<Q", resp, 0x19, srv_pub1)  # server public #1
+
+            self.sock.sendto(bytes(resp), addr)
+            print(f"[*] Handshake1 응답 전송: 33B to {addr}")
+            print(f"[*] Session ID: {session_id:#x}")
+            print(f"[*] Server public #1: {srv_pub1:#x}")
+            print(f"[*] Server public #2: {srv_pub2:#x}")
+
+            # 세션 저장
+            self.sessions[session_id] = (dh, session_key)
+        except Exception as e:
+            print(f"[!] 응답 실패: {e}")
+        return
 
     def handle_handshake_51(self, data: bytes, addr):
         """51B 핸드셰이크 처리 (UDP)."""
