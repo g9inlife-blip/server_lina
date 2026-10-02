@@ -415,11 +415,18 @@ class KCPServerUDP:
                         probe += self._pb_nested(35, user_inner)
                         probe += items_part
                         probe += chapters_part
-                        # gzip 압축 (실측과 동일)
-                        probe_compressed = gzip.compress(probe)
-                        print(f"    [real] protobuf {len(probe)}B → gzip {len(probe_compressed)}B")
-                        probe = probe_compressed
-                        flag = 0xC4  # 압축 플래그 (실측과 동일)
+                        # gzip 압축 여부 (환경변수 REAL_COMPRESS=0이면 비압축)
+                        # 2026-10-02 15:53: gzip+0xC4로 ret=0 → 압축 없이 태그만 테스트
+                        import os as _os
+                        use_compress = _os.environ.get("REAL_COMPRESS", "1") == "1"
+                        if use_compress:
+                            probe_compressed = gzip.compress(probe)
+                            print(f"    [real] protobuf {len(probe)}B → gzip {len(probe_compressed)}B")
+                            probe = probe_compressed
+                            flag = 0xC4  # 압축 플래그 (실측과 동일)
+                        else:
+                            print(f"    [real] protobuf {len(probe)}B (비압축)")
+                            flag = 0x84  # 비압축
                     elif PROBE_MODE == "multifrag_tag":
                         # TAG_RANGE 환경변수로 태그 구간 지정 (이분 탐색용)
                         # 예: TAG_RANGE="3-20", TAG_RANGE="21-40", TAG_RANGE="41-64"
