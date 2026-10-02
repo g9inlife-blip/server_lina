@@ -369,7 +369,7 @@ class KCPServerUDP:
                 # 2026-10-02 14:18: GPT 분석문서에서 OpInfo 전체 메모리 레이아웃 20개 확보.
                 #   Frida v5의 BOOT_STATE를 20개 필드로 확장. 태그 매핑을 위해
                 #   multifrag_tag로 다시 전환 (한 번에 매핑 시도).
-                PROBE_MODE = "multifrag_tag"  # 태그 매핑: field 3~64
+                PROBE_MODE = "multifrag"  # 태그 실험 종료, 기본 모드로 복귀 (2026-10-02 15:24)
                 if opcode == 2 and serial is not None:
                     base = self._pb_varint(1, serial) + self._pb_varint(2, 2)
                     flag = 0x84
