@@ -12,6 +12,7 @@ import socket
 import struct
 import threading
 from .dh64 import DH64
+from .crypto import aes_encrypt
 
 
 class KCPServerUDP:
@@ -31,6 +32,9 @@ class KCPServerUDP:
         # KCP RX 상태 (세션별): {"received": set(SN), }
         # - 중복/재전송 판별, 누적 UNA 계산용 (GPT 자문 2026-10-02)
         self.kcp_rx: dict = {}
+        # KCP TX 상태 (세션별): {"snd_nxt": int}
+        # - 서버→클라이언트 DATA fragment의 SN 공간 (0부터 증가)
+        self.kcp_tx: dict = {}
         # 고정 DH 키 초기화 (최초 1회)
         if KCPServerUDP._fixed_dh is None:
             KCPServerUDP._fixed_dh = DH64()
@@ -242,13 +246,8 @@ class KCPServerUDP:
         rx = self.kcp_rx.setdefault(session_id, {"received": set()})
         is_duplicate = kcp_sn in rx["received"]
         rx["received"].add(kcp_sn)
-        # 누적 UNA: 가장 작은 미수신 SN (KCP cumulative ACK)
-        una = min(rx["received"])
-        for s in sorted(rx["received"]):
-            if s == una:
-                una += 1
-            else:
-                break
+        # 누적 UNA: 0부터 세어 가장 작은 미수신 SN (KCP cumulative ACK)
+        una = self._current_rx_una(session_id)
         if is_duplicate:
             print(f"[*] 중복 패킷 (SN={kcp_sn}), 앱 처리 생략 — ACK만 전송")
 
@@ -290,6 +289,8 @@ class KCPServerUDP:
 
                 # Protobuf 파싱 시도
                 print(f"[*] Protobuf 파싱 시도...")
+                serial = None
+                opcode = None
                 try:
                     # 간단한 protobuf wire format 파서
                     pos = 0
@@ -312,6 +313,10 @@ class KCPServerUDP:
                                     break
                                 shift += 7
                             fields.append(f"field {field_num} (varint): {val}")
+                            if field_num == 1:
+                                serial = val
+                            elif field_num == 2:
+                                opcode = val
                         elif wire_type == 2:  # length-delimited
                             length = 0
                             shift = 0
@@ -337,10 +342,90 @@ class KCPServerUDP:
                         print(f"      {f}")
                 except Exception as e:
                     print(f"    [!] Protobuf 파싱 실패: {e}")
+
+                # Bootstrap probe 응답 (실험용):
+                # 로그인 요청(OpCode=2)에 최소 protobuf로 응답해서 S→C 경로 전체
+                # (fragmentation → AES → 클라이언트 파싱 → 재시도 중단 여부)를 관측.
+                # OpInfo 실제 내용은 미확정이므로 serial/opcode만 echo.
+                if opcode == 2 and serial is not None:
+                    probe = self._pb_varint(1, serial) + self._pb_varint(2, 2)
+                    print(f"[*] Bootstrap probe 응답 전송 (serial={serial}, {len(probe)}B)")
+                    self.send_kcp_message(session_id, 0x84, probe, addr)
             except Exception as e:
                 print(f"[!] 복호화 실패: {e}")
         else:
             print(f"[*] 암호화 플래그 없음, 평문으로 처리")
+
+    @staticmethod
+    def _pb_varint(field_no: int, value: int) -> bytes:
+        """최소 protobuf varint 필드 인코더 (tag wire_type=0)."""
+        out = bytearray()
+        out.append((field_no << 3) | 0)
+        v = value
+        while True:
+            b = v & 0x7F
+            v >>= 7
+            if v:
+                out.append(b | 0x80)
+            else:
+                out.append(b)
+                break
+        return bytes(out)
+
+    def _current_rx_una(self, session_id: int) -> int:
+        """세션의 현재 누적 UNA (0부터 세어 가장 작은 미수신 SN)."""
+        rx = self.kcp_rx.get(session_id, {"received": set()})
+        una = 0
+        for s in sorted(rx["received"]):
+            if s == una:
+                una += 1
+            elif s > una:
+                break
+        return una
+
+    def send_kcp_message(self, session_id: int, flag: int, plaintext: bytes, addr):
+        """앱 메시지 1개를 AES 암호화 → KCP fragment들로 분할 전송 (S→C).
+        실측 구조 (어플시작_로그인까지.json frame 177-187):
+        - fragment: [Session 8B][KCP 16B][ChunkLen 4B][chunk]
+        - chunk들을 frg 내림차순으로 이으면 [Flag 1B][IV 16B][Ciphertext]
+        - SN은 서버 TX 공간에서 0부터 증가, frg=N-1..0, chunk ≤1372B
+        - WND=32, UNA=현재 RX 누적값, 한 메시지의 TS는 동일
+        """
+        import os
+        import time
+        if session_id not in self.sessions:
+            print(f"[!] 세션 없음, 전송 생략: {session_id:#x}")
+            return
+        tx = self.kcp_tx.setdefault(session_id, {"snd_nxt": 0})
+        _, session_key = self.sessions[session_id]
+
+        iv = os.urandom(16)
+        enc = aes_encrypt(session_key, plaintext, iv)  # [IV 16B][ciphertext]
+        msg = bytes([flag]) + enc
+
+        CHUNK = 1372
+        chunks = [msg[i:i + CHUNK] for i in range(0, len(msg), CHUNK)]
+        n = len(chunks)
+        una = self._current_rx_una(session_id)
+        ts = int(time.time() * 1000) & 0xFFFFFFFF
+
+        for i, chunk in enumerate(chunks):
+            sn = tx["snd_nxt"]
+            tx["snd_nxt"] += 1
+            frg = n - 1 - i
+            seg = bytearray(24 + 4 + len(chunk))
+            struct.pack_into("<Q", seg, 0, session_id)
+            seg[8] = 0x51  # CMD = DATA
+            seg[9] = frg
+            struct.pack_into("<H", seg, 10, 32)  # WND (실측값)
+            struct.pack_into("<I", seg, 12, ts)
+            struct.pack_into("<I", seg, 16, sn)
+            struct.pack_into("<I", seg, 20, una)
+            struct.pack_into("<I", seg, 24, len(chunk))
+            seg[28:] = chunk
+            self.sock.sendto(bytes(seg), addr)
+            print(f"[*] KCP DATA 전송: SN={sn} FRG={frg} chunk={len(chunk)}B to {addr}")
+        print(f"[*] 메시지 전송 완료: {n}개 fragment, 총 {len(msg)}B")
 
     def send_kcp_ack(self, session_id: int, sn: int, una: int, addr):
         """28B KCP ACK 전송 (GPT 분석: 2026-10-02).
