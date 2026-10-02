@@ -343,19 +343,22 @@ class KCPServerUDP:
                 except Exception as e:
                     print(f"    [!] Protobuf 파싱 실패: {e}")
 
-                # Bootstrap multi-tag probe (실험용):
-                # 로그인 요청(OpCode=2)에 응답. S→C 경로 전체가 동작하는 것은 확인됨.
-                # 남은 문제: 응답 OpInfo의 protobuf 태그 번호 미확정.
-                # field 3~64에 빈 nested message를 한 번에 담아 전송하면, 클라이언트 파서가
-                # 아는 태그는 빈 객체로라도 프로퍼티가 non-null이 되어 null 체크를 통과할 수 있다.
-                # 클라이언트가 다음 요청을 보내면 성공 신호.
+                # Bootstrap probe (실험용):
+                # PROBE_MODE="simple": field 1+2만 (파싱 안전 확인됨, 12:52)
+                # PROBE_MODE="multitag": field 3~64 빈 nested 추가 (태그 탐색용)
+                # 2026-10-02 13:00 관측: multitag 후 클라이언트가 transport ACK조차 안 보냄.
+                # 원인 추정: 3~64 중 실제 스칼라(varint) 태그에 wiretype=2(nested)로 보내서
+                # 클라이언트 protobuf 파서가 예외 → 네트워크 스레드 사망.
+                # -> simple로 되돌려 ACK 오는지 먼저 확인하는 대조 실험용 스위치.
+                PROBE_MODE = "simple"
                 if opcode == 2 and serial is not None:
                     probe = self._pb_varint(1, serial) + self._pb_varint(2, 2)
-                    for f in range(3, 65):
-                        if f in (4, 5, 12, 13, 14, 15):
-                            continue  # 요청에서 쓰는 태그(문자열)는 제외
-                        probe += self._pb_nested(f, b"")
-                    print(f"[*] Bootstrap multi-tag probe 전송 (serial={serial}, {len(probe)}B)")
+                    if PROBE_MODE == "multitag":
+                        for f in range(3, 65):
+                            if f in (4, 5, 12, 13, 14, 15):
+                                continue  # 요청에서 쓰는 태그(문자열)는 제외
+                            probe += self._pb_nested(f, b"")
+                    print(f"[*] Bootstrap probe 전송 [{PROBE_MODE}] (serial={serial}, {len(probe)}B)")
                     self.send_kcp_message(session_id, 0x84, probe, addr)
             except Exception as e:
                 print(f"[!] 복호화 실패: {e}")
