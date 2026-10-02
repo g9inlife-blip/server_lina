@@ -363,7 +363,10 @@ class KCPServerUDP:
                 # 2026-10-02 13:23: 다음 실험 = 실측과 동일한 조건의 최소 응답 (multifrag).
                 # 2026-10-02 13:27: multifrag로 transport 개통 확인 (클라이언트 ACK 번들 수신).
                 #   다음 = Frida opinfo_dump.js와 함께 multifrag_tag로 태그 매핑.
-                PROBE_MODE = "multifrag_tag"
+                # 2026-10-02 13:57: justice_hook_local.js(GPT v4.22+리다이렉트)로 테스트.
+                #   KCP Send(OpCode=2)까지 갔으나 게임 크래시. multifrag_tag의 56개 태그가
+                #   원인일 수 있어 일단 multifrag(검증됨)로 되돌림.
+                PROBE_MODE = "multifrag"
                 if opcode == 2 and serial is not None:
                     base = self._pb_varint(1, serial) + self._pb_varint(2, 2)
                     flag = 0x84
