@@ -397,3 +397,93 @@ Python은 필드명, 원본 값, 분해된 code/value, 원본 위치, Reference 
 ```
 
 Python 스크립트를 변경할 경우 이 문서의 규칙과 실제 코드가 일치하도록 유지한다.
+
+
+## 16. 서버 구축용 2차 코드데이터 가공 영역
+
+기존 범용 Unity 데이터 분석과 서버 구축용 코드데이터 가공을 분리한다.
+
+### 기존 영역
+
+\`데이터_분석/*.py\`
+
+- Unity JSON의 사실 추출
+- Record inventory
+- Reference graph
+- structured code/value 분석
+
+\`데이터_분석/output/system_mapping/\`
+
+- 기존 분석기가 생성한 Record/Reference/Localization 결과
+- **참조 입력으로 사용**
+- 서버용 가공 스크립트가 직접 수정하지 않는다.
+
+### 신규 영역
+
+\`데이터_분석/code_mapping/\`
+
+서버 구축에 필요한 2차 코드데이터 정규화/역매핑을 담당한다.
+
+구조:
+
+\`\`\`
+code_mapping/
+├─ README.md
+├─ scripts/
+│  └─ build_code_catalog.py
+└─ output/
+\`\`\`
+
+현재 첫 번째 스크립트:
+
+\`code_mapping/scripts/build_code_catalog.py\`
+
+역할:
+
+- MonoBehaviour JSON 재귀 탐색
+- hiddenValue XOR currentCryptoKey 기반 network ID 복원
+- 명시적 m_id/id 보조 탐색
+- name/describe/group/sub 코드 보존
+- 원본 파일/path 보존
+- code_catalog.json 생성
+
+### 데이터 흐름
+
+\`\`\`
+Unity 원본
+   ↓
+기존 데이터 분석
+   ↓
+output/system_mapping
+   ↓
+code_mapping/scripts
+   ↓
+code_mapping/output
+   ↓
+Bootstrap/PCAP 실측값과 crosswalk
+   ↓
+서버용 데이터
+\`\`\`
+
+### 의미 확정 원칙
+
+code_mapping Python도 기존 분석 원칙을 따른다.
+
+- Record reference와 네트워크 field 의미를 혼동하지 않는다.
+- 수량/확률/가격 등의 의미를 field명만으로 확정하지 않는다.
+- network ID는 실제 XOR 복호화 또는 Bootstrap 실측 등 근거를 별도로 기록한다.
+- Word/Localization 연결은 코드 관계와 분리하여 보존한다.
+- 기존 system_mapping 결과를 덮어쓰지 않는다.
+
+향후 주요 결과:
+
+\`\`\`
+code_catalog.json
+item_catalog.json
+hero_catalog.json
+weapon_catalog.json
+equipment_catalog.json
+bootstrap_crosswalk.json
+\`\`\`
+
+이 문서와 code_mapping/README.md를 함께 기준으로 사용한다.
