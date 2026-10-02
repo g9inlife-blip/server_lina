@@ -632,16 +632,13 @@ class KCPServerUDP:
                             from app.kcp.bootstrap import build_bootstrap
                             import os as _os3
                             use_compress = _os3.environ.get("BUILDER_COMPRESS", "1") == "1"
-                            # BUILDER_GOLD 환경변수로 gold 값 지정 (기본 999999, 테스트용)
-                            gold_val = int(_os3.environ.get("BUILDER_GOLD", "999999"))
                             probe, flag = build_bootstrap(
                                 serial=serial,
                                 user_id=861197,
                                 username="witchwind3",
-                                gold=gold_val,
                                 compress=use_compress,
                             )
-                            print(f"    [builder] protobuf 생성: {len(probe)}B, flag={flag:#x}, gold={gold_val}")
+                            print(f"    [builder] protobuf 생성: {len(probe)}B, flag={flag:#x}")
                         except Exception as e:
                             print(f"    [builder] 빌드 실패: {e}")
                             import traceback; traceback.print_exc()
