@@ -350,6 +350,9 @@ class KCPServerUDP:
                 #   - field 35=User, field 21=Items, field 43=Chapters 등 실측 태그 사용
                 #   - gzip 압축 + flag 0xC4 (실측과 동일)
                 #   - 출처: 000192_s2c.bin 분석 (research/reports/2026-10-02-Bootstrap-실측-protobuf-구조_lina.md)
+                # PROBE_MODE="replay": 실측 protobuf 원본을 그대로 재전송 (2026-10-02 16:00)
+                #   - 000192_s2c.bin (gzip 13KB)을 우리 세션 키로 재암호화해서 전송
+                #   - protobuf 변수를 완전히 제거, KCP/암호화/압축 파이프라인만 검증
                 # 2026-10-02 13:00 관측: multitag 후 클라이언트가 transport ACK조차 안 보냄.
                 # 2026-10-02 13:05 GPT 재분석: "protobuf 파서 사망"보다
                 # "S→C KCP 세그먼트 자체를 클라이언트 KCP가 거부"가 1순위 가설.
@@ -366,7 +369,7 @@ class KCPServerUDP:
                 # 2026-10-02 14:18: GPT 분석문서에서 OpInfo 전체 메모리 레이아웃 20개 확보.
                 #   Frida v5의 BOOT_STATE를 20개 필드로 확장. 태그 매핑을 위해
                 #   multifrag_tag로 다시 전환 (한 번에 매핑 시도).
-                PROBE_MODE = "real"  # 실측 구조 기반 실제 Bootstrap (2026-10-02 15:44)
+                PROBE_MODE = "replay"  # 실측 원본 재전송 (2026-10-02 16:00)
                 if opcode == 2 and serial is not None:
                     base = self._pb_varint(1, serial) + self._pb_varint(2, 2)
                     flag = 0x84
@@ -439,6 +442,28 @@ class KCPServerUDP:
                         else:
                             print(f"    [real] protobuf {len(probe)}B (비압축)")
                             flag = 0x84  # 비압축
+                    elif PROBE_MODE == "replay":
+                        # 실측 protobuf 원본 재전송 (GPT 권고, 2026-10-02 16:00)
+                        # 000192_s2c.bin의 gzip 데이터를 우리 세션 키로 암호화해서 전송
+                        # protobuf 문제를 완전히 배제하고 파이프라인만 검증
+                        import os as _os2
+                        replay_path = _os2.path.join(
+                            _os2.path.dirname(_os2.path.abspath(__file__)),
+                            "..", "..", "research", "PCAP",
+                            "로그인_출석_퀘스트_우편_토벌_던전_상자_무기제작_강화_kcp",
+                            "plaintext", "000192_s2c.bin"
+                        )
+                        replay_path = _os2.path.normpath(replay_path)
+                        try:
+                            with open(replay_path, "rb") as rf:
+                                probe = rf.read()  # 이미 gzip된 13KB
+                            print(f"    [replay] 실측 gzip 로드: {len(probe)}B")
+                            print(f"    [replay] gzip 매직 확인: {probe[:3].hex() == '1f8b08'}")
+                            flag = 0xC4  # 실측과 동일
+                        except Exception as e:
+                            print(f"    [replay] 파일 로드 실패: {e}")
+                            probe = base
+                            flag = 0x84
                     elif PROBE_MODE == "multifrag_tag":
                         # TAG_RANGE 환경변수로 태그 구간 지정 (이분 탐색용)
                         # 예: TAG_RANGE="3-20", TAG_RANGE="21-40", TAG_RANGE="41-64"
