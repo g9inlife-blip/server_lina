@@ -243,7 +243,8 @@ class KCPServerUDP:
                 from app.kcp.crypto import aes_decrypt_with_iv
                 plaintext = aes_decrypt_with_iv(session_key, iv, ciphertext)
                 print(f"[*] 복호화 성공! 평문: {len(plaintext)}B")
-                print(f"    평문 hex: {plaintext[:64].hex()}...")
+                print(f"    평문 전체 hex ({len(plaintext)}B):")
+                print(f"    {plaintext.hex()}")
                 # printable 확인
                 try:
                     text = plaintext.decode('utf-8', errors='strict')
@@ -252,6 +253,56 @@ class KCPServerUDP:
                     # 부분 printable
                     printable = ''.join(chr(b) if 32 <= b < 127 else '.' for b in plaintext[:200])
                     print(f"    평문 (부분): {printable}")
+
+                # Protobuf 파싱 시도
+                print(f"[*] Protobuf 파싱 시도...")
+                try:
+                    # 간단한 protobuf wire format 파서
+                    pos = 0
+                    fields = []
+                    while pos < len(plaintext):
+                        if pos >= len(plaintext):
+                            break
+                        tag = plaintext[pos]
+                        pos += 1
+                        field_num = tag >> 3
+                        wire_type = tag & 0x07
+                        if wire_type == 0:  # varint
+                            val = 0
+                            shift = 0
+                            while pos < len(plaintext):
+                                b = plaintext[pos]
+                                pos += 1
+                                val |= (b & 0x7F) << shift
+                                if not (b & 0x80):
+                                    break
+                                shift += 7
+                            fields.append(f"field {field_num} (varint): {val}")
+                        elif wire_type == 2:  # length-delimited
+                            length = 0
+                            shift = 0
+                            while pos < len(plaintext):
+                                b = plaintext[pos]
+                                pos += 1
+                                length |= (b & 0x7F) << shift
+                                if not (b & 0x80):
+                                    break
+                                shift += 7
+                            data = plaintext[pos:pos+length]
+                            pos += length
+                            try:
+                                s = data.decode('utf-8')
+                                fields.append(f"field {field_num} (string): {s[:100]}")
+                            except:
+                                fields.append(f"field {field_num} (bytes {length}B): {data[:32].hex()}...")
+                        else:
+                            fields.append(f"field {field_num} (wire_type {wire_type}): skip")
+                            break
+                    print(f"    Protobuf 필드:")
+                    for f in fields[:20]:
+                        print(f"      {f}")
+                except Exception as e:
+                    print(f"    [!] Protobuf 파싱 실패: {e}")
             except Exception as e:
                 print(f"[!] 복호화 실패: {e}")
         else:
