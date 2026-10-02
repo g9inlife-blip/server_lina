@@ -347,9 +347,12 @@ class KCPServerUDP:
                 # PROBE_MODE="simple": field 1+2만 (파싱 안전 확인됨, 12:52)
                 # PROBE_MODE="multitag": field 3~64 빈 nested 추가 (태그 탐색용)
                 # 2026-10-02 13:00 관측: multitag 후 클라이언트가 transport ACK조차 안 보냄.
-                # 원인 추정: 3~64 중 실제 스칼라(varint) 태그에 wiretype=2(nested)로 보내서
-                # 클라이언트 protobuf 파서가 예외 → 네트워크 스레드 사망.
-                # -> simple로 되돌려 ACK 오는지 먼저 확인하는 대조 실험용 스위치.
+                # 2026-10-02 13:05 GPT 재분석: "protobuf 파서 사망"보다
+                # "S→C KCP 세그먼트 자체를 클라이언트 KCP가 거부"가 1순위 가설.
+                # (KCP 정상 수신이면 파싱 전에 ACK가 먼저 나와야 함.
+                # 12:43에 올바른 28B ACK에도 재전송이 멈추지 않은 것도 같은 맥락 —
+                # 33B 핸드셰이크(앱 계층)는 되는데 S→C KCP 세그먼트가 안 받아들여짐.)
+                # 파서 예외설은 logcat 확인 전까지 확정하지 않음.
                 PROBE_MODE = "simple"
                 if opcode == 2 and serial is not None:
                     probe = self._pb_varint(1, serial) + self._pb_varint(2, 2)
