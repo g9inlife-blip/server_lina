@@ -303,3 +303,135 @@ Bootstrap OpInfo의 runtime 구조는 이미 상당 부분 확보되어 있으�
 - `2026-10-02-221B-이후-28B-KCP-ACK-구조-분석_GPT자문.md`
 - `2026-10-02-KCP-221B-RAW-DH-키-매핑-검증_GPT자문.md`
 - `2026-10-01-메인화면-응답-Chapter-런타임추적-후속_GPT자문.md`
+
+## 11. 2026-10-02 multifrag 실험 결과 — KCP 수신 단계 통과 확인
+
+이번 실험에서는 `PROBE_MODE="multifrag"`를 사용해 운영 Bootstrap과 유사한 12-fragment KCP DATA를 Local Server에서 직접 송신했다.
+
+서버 송신 구조:
+
+```
+SN=0  FRG=11  chunk=1372B
+SN=1  FRG=10  chunk=1372B
+SN=2  FRG=9   chunk=1372B
+SN=3  FRG=8   chunk=1372B
+SN=4  FRG=7   chunk=1372B
+SN=5  FRG=6   chunk=1372B
+SN=6  FRG=5   chunk=1372B
+SN=7  FRG=4   chunk=1372B
+SN=8  FRG=3   chunk=1372B
+SN=9  FRG=2   chunk=1372B
+SN=10 FRG=1   chunk=1372B
+SN=11 FRG=0   chunk=1325B
+```
+
+총 12개 fragment이며 마지막 조각을 제외한 11개가 1372B이다. Probe plaintext는 field 1(serial echo) + field 2(opcode=2)를 반복하여 약 16KB로 구성했고, 서버 측 재조립·복호화·Protobuf 파싱 자가 검증도 통과했다.
+
+### 11.1 Client ACK 확인
+
+서버 DATA 송신 후 Client에서 다음 KCP ACK bundle이 수신됐다.
+
+```
+140B = 28B × 5
+168B = 28B × 6
+```
+
+총 11개의 28B ACK가 관측됐다. 따라서 최소한 SN=0~10은 Client KCP가 S→C DATA fragment를 수신하고 ACK 대상으로 인정했다.
+
+이 결과로 기존의 "S→C KCP DATA 자체를 Client가 거부한다"는 가설은 1순위에서 제외한다.
+
+### 11.2 SN=11 / FRG=0은 아직 미확인
+
+마지막 fragment는:
+
+```
+SN=11
+FRG=0
+chunk=1325B
+```
+
+이며 이에 대한 ACK는 현재 로그에서 확인되지 않았다.
+
+따라서 아직 다음을 확정해서는 안 된다.
+
+```
+12개 fragment 전체 수신
+→ KCP message reassembly 완료
+→ Application decrypt
+→ protobuf parse
+```
+
+현재 정확한 상태는:
+
+```
+SN=0~10 → ACK 확인 → KCP 수신 단계 통과 확인
+SN=11 / FRG=0 → ACK 미확인 → 전체 message 완성 여부 UNKNOWN
+```
+
+### 11.3 Login 화면 정지에 대한 해석
+
+화면이 Login/Loading 상태에 남아 있다는 사실만으로 protobuf 계약 오류를 확정할 수 없다. SN=11 ACK가 아직 확인되지 않았으므로 마지막 fragment 전달·수신 또는 전체 KCP message 완성 단계가 미확정이기 때문이다.
+
+따라서 현재 단계에서는 protobuf schema 오류나 OpInfo field 부족을 원인으로 확정하지 않는다.
+
+### 11.4 다음 실험 판정
+
+**Case A — SN=11 ACK 확인**
+
+```
+SN=0~11 전체 ACK
+→ 12개 fragment 수신 확인
+→ KCP transport 계층 CONFIRMED
+→ Application / Bootstrap contract 조사
+```
+
+이 경우 다음 단계는 운영 PCAP의 실제 S→C Bootstrap fragment를 그대로 재생하여 Client 반응을 비교하는 것이다.
+
+**Case B — SN=11 ACK 없음**
+
+protobuf 분석으로 넘어가지 않고 마지막 fragment만 조사한다. 우선 확인 대상은 SN=11 packet의 실제 UDP 길이, KCP header 전체(WND/TS/SN/UNA/FRG), ChunkLen=1325, 마지막 fragment 송신 직후 Client packet, SN=11 재전송 여부다.
+
+### 11.5 원인 후보 우선순위 변경
+
+이번 결과를 반영한 현재 우선순위:
+
+```
+[1] SN=11 / FRG=0 마지막 fragment 처리 여부
+        ↓
+[2] 전체 12-fragment KCP reassembly 완료 여부
+        ↓
+[3] 실제 Bootstrap Application payload / protobuf 계약
+        ↓
+[4] OpInfo 최소 필드 부족
+```
+
+반대로 "S→C KCP DATA 기본 형식 자체가 잘못되어 Client가 전부 거부한다"는 가설은 현재 관측과 맞지 않는다. SN=0~10에 대한 ACK가 실제로 확인됐기 때문이다.
+
+## 12. 현재 실험의 최종 판정
+
+이번 multifrag 실험은 실패한 실험이 아니라 **KCP 수신 경로를 상당 부분 검증한 성공적인 분리 실험**으로 기록한다.
+
+확정 가능한 결과:
+
+```
+Server → 12-fragment KCP DATA → Client
+                         ↓
+                    SN=0~10 ACK
+```
+
+따라서 다음 분석은 KCP packet 모양을 다시 추측하는 것이 아니라:
+
+```
+SN=11 ACK 여부 확인
+        ↓
+전체 fragment reassembly 확인
+        ↓
+KCP 통과 확정 시
+실측 Bootstrap response replay
+        ↓
+실제 OpInfo protobuf 분석
+```
+
+순서로 진행한다.
+
+이번 결과만으로 protobuf 문제를 확정하지 않으며, **SN=11 ACK 여부가 다음 실험의 가장 중요한 판정점**이다.
