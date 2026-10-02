@@ -28,6 +28,9 @@ class KCPServerUDP:
         self.running = False
         # addr -> DH64 매핑 (세션별)
         self.sessions: dict = {}
+        # KCP RX 상태 (세션별): {"received": set(SN), }
+        # - 중복/재전송 판별, 누적 UNA 계산용 (GPT 자문 2026-10-02)
+        self.kcp_rx: dict = {}
         # 고정 DH 키 초기화 (최초 1회)
         if KCPServerUDP._fixed_dh is None:
             KCPServerUDP._fixed_dh = DH64()
@@ -221,9 +224,40 @@ class KCPServerUDP:
         iv = data[0x1D:0x1D+16]  # 16B
         ciphertext = data[0x1D+16:]  # 176B
 
+        # KCP 헤더 파싱 (GPT 자문 2026-10-02: SN/UNA는 하드코딩 금지, 수신 헤더에서 추출)
+        # [CMD 1B][FRG 1B][WND 2B][TS 4B][SN 4B][UNA 4B] (LE)
+        kcp_cmd = header[0x00]
+        kcp_frg = header[0x01]
+        kcp_wnd = struct.unpack_from("<H", header, 0x02)[0]
+        kcp_ts = struct.unpack_from("<I", header, 0x04)[0]
+        kcp_sn = struct.unpack_from("<I", header, 0x08)[0]
+        kcp_una = struct.unpack_from("<I", header, 0x0C)[0]
+
         print(f"[*] 221B 구조:")
         print(f"    Session: {session_id:#x}")
         print(f"    Header (16B): {header.hex()}")
+        print(f"    KCP: CMD={kcp_cmd:#x} FRG={kcp_frg} WND={kcp_wnd} TS={kcp_ts:#x} SN={kcp_sn} UNA={kcp_una}")
+
+        # KCP RX 상태 업데이트 (세션별)
+        rx = self.kcp_rx.setdefault(session_id, {"received": set()})
+        is_duplicate = kcp_sn in rx["received"]
+        rx["received"].add(kcp_sn)
+        # 누적 UNA: 가장 작은 미수신 SN (KCP cumulative ACK)
+        una = min(rx["received"])
+        for s in sorted(rx["received"]):
+            if s == una:
+                una += 1
+            else:
+                break
+        if is_duplicate:
+            print(f"[*] 중복 패킷 (SN={kcp_sn}), 앱 처리 생략 — ACK만 전송")
+
+        # 즉시 ACK (중복 패킷에도 ACK 전송이 KCP 규칙)
+        # 수신 SN을 그대로 ACK하고 UNA는 누적 수신 상태로 계산
+        self.send_kcp_ack(session_id, kcp_sn, una, addr)
+
+        if is_duplicate:
+            return
         print(f"    App Length: {app_len}")
         print(f"    Flag: {flag:#x} ({'Encrypt' if flag & 0x80 else ''}{'Compress' if flag & 0x40 else ''})")
         print(f"    IV: {iv.hex()}")
@@ -303,36 +337,38 @@ class KCPServerUDP:
                         print(f"      {f}")
                 except Exception as e:
                     print(f"    [!] Protobuf 파싱 실패: {e}")
-
-                # 28B KCP ACK 전송 (GPT 분석: 2026-10-02)
-                # 구조:
-                # [Session 8B][0x52][0x00][Window 2B][Timestamp 4B][SN 4B][UNA 4B][Reserved 4B]
-                try:
-                    import time
-                    ack = bytearray(28)
-                    struct.pack_into("<Q", ack, 0x00, session_id)  # Session ID
-                    ack[0x08] = 0x52  # KCP ACK command
-                    ack[0x09] = 0x00  # Fragment
-                    # Window: 실제 서버 raw 바이트 = 1f 00 (LE uint16 = 31)
-                    # 주의: 0x1F00으로 pack하면 raw가 00 1f가 되어 클라이언트가 ACK를 무시함
-                    struct.pack_into("<H", ack, 0x0A, 31)  # Window = 31 (LE)
-                    # Timestamp: 현재 시간 (ms의 하위 32비트)
-                    ts = int(time.time() * 1000) & 0xFFFFFFFF
-                    struct.pack_into("<I", ack, 0x0C, ts)
-                    struct.pack_into("<I", ack, 0x10, 0)  # SN (ACK 대상)
-                    struct.pack_into("<I", ack, 0x14, 1)  # UNA (다음 기대 SN)
-                    struct.pack_into("<I", ack, 0x18, 0)  # Reserved
-
-                    self.sock.sendto(bytes(ack), addr)
-                    print(f"[*] 28B KCP ACK 전송 to {addr}")
-                    print(f"    ACK: session={session_id:#x}, SN=0, UNA=1")
-                    print(f"    ACK raw: {bytes(ack).hex()}")
-                except Exception as e:
-                    print(f"[!] ACK 전송 실패: {e}")
             except Exception as e:
                 print(f"[!] 복호화 실패: {e}")
         else:
             print(f"[*] 암호화 플래그 없음, 평문으로 처리")
+
+    def send_kcp_ack(self, session_id: int, sn: int, una: int, addr):
+        """28B KCP ACK 전송 (GPT 분석: 2026-10-02).
+        구조: [Session 8B][0x52][0x00][Window 2B][Timestamp 4B][SN 4B][UNA 4B][Reserved 4B]
+        SN/UNA는 하드코딩 금지 — 수신 KCP 헤더 + 세션 RX 상태에서 도출.
+        """
+        try:
+            import time
+            ack = bytearray(28)
+            struct.pack_into("<Q", ack, 0x00, session_id)  # Session ID
+            ack[0x08] = 0x52  # KCP ACK command
+            ack[0x09] = 0x00  # Fragment
+            # Window: 실제 서버 raw 바이트 = 1f 00 (LE uint16 = 31)
+            # 주의: 0x1F00으로 pack하면 raw가 00 1f가 되어 클라이언트가 ACK를 무시함
+            struct.pack_into("<H", ack, 0x0A, 31)  # Window = 31 (LE)
+            # Timestamp: 현재 시간 (ms의 하위 32비트)
+            ts = int(time.time() * 1000) & 0xFFFFFFFF
+            struct.pack_into("<I", ack, 0x0C, ts)
+            struct.pack_into("<I", ack, 0x10, sn)  # ACK 대상 SN (수신 패킷의 SN)
+            struct.pack_into("<I", ack, 0x14, una)  # UNA (누적 확인)
+            struct.pack_into("<I", ack, 0x18, 0)  # Reserved
+
+            self.sock.sendto(bytes(ack), addr)
+            print(f"[*] 28B KCP ACK 전송 to {addr}")
+            print(f"    ACK: session={session_id:#x}, SN={sn}, UNA={una}")
+            print(f"    ACK raw: {bytes(ack).hex()}")
+        except Exception as e:
+            print(f"[!] ACK 전송 실패: {e}")
 
     def stop(self):
         """서버 중지."""
