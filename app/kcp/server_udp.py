@@ -473,6 +473,19 @@ class KCPServerUDP:
         enc = aes_encrypt(session_key, plaintext, iv)  # [IV 16B][ciphertext]
         msg = bytes([flag]) + enc
 
+        # === 자가검증: 서버가 보낸 암호문을 서버가 직접 복호화 ===
+        # 클라이언트 없이 crypto 경로 검증 (2026-10-02)
+        try:
+            from app.kcp.crypto import aes_decrypt
+            # enc = [IV 16B][ciphertext] (aes_encrypt가 IV를 앞에 붙여서 반환)
+            dec_plain = aes_decrypt(session_key, enc)
+            if dec_plain == plaintext:
+                print(f"    [자가검증] 복호화 성공 ({len(plaintext)}B 일치)")
+            else:
+                print(f"    [자가검증] ⚠ 복호화 불일치! 원본={len(plaintext)}B 복호={len(dec_plain)}B")
+        except Exception as e:
+            print(f"    [자가검증] ⚠ 복호화 실패: {e}")
+
         CHUNK = 1372
         chunks = [msg[i:i + CHUNK] for i in range(0, len(msg), CHUNK)]
         n = len(chunks)
