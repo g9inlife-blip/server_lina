@@ -541,85 +541,16 @@ class KCPServerUDP:
                                     else: new_serial_bytes += bytes([b]); break
                                 raw_pb = b"\x08" + new_serial_bytes + raw_pb[p:]
                                 print(f"    [replay] serial 패치: → {serial}")
-                            # gold 패치 (2026-10-02 17:20 정정): field 38 (currency)
-                            # currency ID 43000001의 f3 (amount)를 변경
-                            # 실측: field 38 = {f1=43000001, f2={f1=43000001, f3=35025}}
-                            import os as _os4
-                            gold_val = int(_os4.environ.get("BUILDER_GOLD", "999999"))
-                            tag38 = b"\xb2\x02"  # field 38, wire type 2
-                            cur_id = 43000001
-                            search_pos = 0
-                            patched = False
-                            while True:
-                                idx = raw_pb.find(tag38, search_pos)
-                                if idx == -1:
-                                    break
-                                lp = idx + 2
-                                ln = 0; shift = 0
-                                while lp < len(raw_pb):
-                                    b = raw_pb[lp]; lp += 1
-                                    ln |= (b & 0x7F) << shift
-                                    if not (b & 0x80): break
-                                    shift += 7
-                                entry_start = lp
-                                entry_end = lp + ln
-                                entry_pb = raw_pb[entry_start:entry_end]
-                                if len(entry_pb) > 1 and entry_pb[0] == 0x08:
-                                    fp = 1
-                                    fv = 0; fs = 0
-                                    while fp < len(entry_pb):
-                                        b = entry_pb[fp]; fp += 1
-                                        fv |= (b & 0x7F) << fs
-                                        if not (b & 0x80): break
-                                        fs += 7
-                                    if fv == cur_id:
-                                        f2_idx = entry_pb.find(b"\x12", fp)
-                                        if f2_idx != -1:
-                                            f2_lp = f2_idx + 1
-                                            f2_ln = 0; f2_shift = 0
-                                            while f2_lp < len(entry_pb):
-                                                b = entry_pb[f2_lp]; f2_lp += 1
-                                                f2_ln |= (b & 0x7F) << f2_shift
-                                                if not (b & 0x80): break
-                                                f2_shift += 7
-                                            f2_start = f2_lp
-                                            f2_end = f2_lp + f2_ln
-                                            f2_pb = entry_pb[f2_start:f2_end]
-                                            f3_idx = f2_pb.find(b"\x18")
-                                            if f3_idx != -1:
-                                                vp = f3_idx + 1
-                                                while vp < len(f2_pb) and (f2_pb[vp] & 0x80):
-                                                    vp += 1
-                                                vp += 1
-                                                new_gold = b""
-                                                gv = gold_val
-                                                while True:
-                                                    b = gv & 0x7F; gv >>= 7
-                                                    if gv: new_gold += bytes([b | 0x80])
-                                                    else: new_gold += bytes([b]); break
-                                                new_f2 = f2_pb[:f3_idx+1] + new_gold + f2_pb[vp:]
-                                                new_f2_ln_b = b""
-                                                _tl = len(new_f2)
-                                                while True:
-                                                    b = _tl & 0x7F; _tl >>= 7
-                                                    if _tl: new_f2_ln_b += bytes([b | 0x80])
-                                                    else: new_f2_ln_b += bytes([b]); break
-                                                new_entry = entry_pb[:f2_idx+1] + new_f2_ln_b + new_f2 + entry_pb[f2_end:]
-                                                new_ln_b = b""
-                                                _tl2 = len(new_entry)
-                                                while True:
-                                                    b = _tl2 & 0x7F; _tl2 >>= 7
-                                                    if _tl2: new_ln_b += bytes([b | 0x80])
-                                                    else: new_ln_b += bytes([b]); break
-                                                raw_pb = raw_pb[:idx+2] + new_ln_b + new_entry + raw_pb[entry_end:]
-                                                print(f"    [replay] gold 패치: field 38.currency[43000001].f3 → {gold_val}")
-                                                patched = True
-                                                break
-                                search_pos = idx + 2
-                            if not patched:
-                                print(f"    [replay] gold currency (43000001)를 못 찾음")
+                            # Surgical patch (2026-10-02 17:52): patcher.py 사용
+                            # patches.json의 설정을 적용 (GPT 분석 결과 반영)
+                            try:
+                                from app.kcp.patcher import apply_patches
+                                raw_pb, patch_log = apply_patches(raw_pb)
+                                for pl in patch_log:
+                                    print(f"    [replay] 패치: {pl}")
+                            except Exception as pe:
+                                print(f"    [replay] 패치 실패: {pe}")
                             probe = _gzip.compress(raw_pb)
-                            print(f"    [replay] gzip 재압축: {len(probe)}B")
                             flag = 0xC4  # 실측과 동일
                         except Exception as e:
                             print(f"    [replay] 파일 로드 실패: {e}")

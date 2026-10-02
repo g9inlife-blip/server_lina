@@ -1,0 +1,6 @@
+{
+  "_comment": "Bootstrap surgical patch 설정. GPT 분석 결과를 여기에 반영.",
+  "currency": [
+    {"id": 43000001, "amount": 999999, "name": "Gold"}
+  ]
+}
