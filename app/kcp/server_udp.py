@@ -346,10 +346,13 @@ class KCPServerUDP:
                 # Bootstrap probe (실험용):
                 # PROBE_MODE="simple": field 1+2만 (7B, 1 fragment)
                 # PROBE_MODE="multitag": field 3~64 빈 nested 추가 (168B, 1 fragment)
-                # PROBE_MODE="multifrag": 실측과 동일한 조건으로 최소 응답
+                # PROBE_MODE="multifrag": 실측과 동일한 조건으로 최소 응답 (12 fragment)
                 #   - multi-fragment (frg=11..0, 12개), 1372B chunk, 1400B UDP
                 #   - 내용: field 1+2 반복 (유효한 protobuf, last-wins) ~16KB
-                #   - flag 0x84 (0xc4는 압축 의미일 수 있어 비압축인 우리는 0x84)
+                # PROBE_MODE="multifrag_tag": multifrag 모양 + field 3~64 태그 탐색
+                #   (Frida opinfo_dump.js와 함께: 어떤 OpInfo 필드가 non-null이 되는지 확인)
+                #   - 내용: field 1+2 + field 3~64 빈 nested 반복 ~16KB (유효 protobuf)
+                # flag 0x84 (0xc4는 압축 의미일 수 있어 비압축인 우리는 0x84)
                 # 2026-10-02 13:00 관측: multitag 후 클라이언트가 transport ACK조차 안 보냄.
                 # 2026-10-02 13:05 GPT 재분석: "protobuf 파서 사망"보다
                 # "S→C KCP 세그먼트 자체를 클라이언트 KCP가 거부"가 1순위 가설.
@@ -358,7 +361,9 @@ class KCPServerUDP:
                 # 33B 핸드셰이크(앱 계층)는 되는데 S→C KCP 세그먼트가 안 받아들여짐.)
                 # 파서 예외설은 logcat 확인 전까지 확정하지 않음.
                 # 2026-10-02 13:23: 다음 실험 = 실측과 동일한 조건의 최소 응답 (multifrag).
-                PROBE_MODE = "multifrag"
+                # 2026-10-02 13:27: multifrag로 transport 개통 확인 (클라이언트 ACK 번들 수신).
+                #   다음 = Frida opinfo_dump.js와 함께 multifrag_tag로 태그 매핑.
+                PROBE_MODE = "multifrag_tag"
                 if opcode == 2 and serial is not None:
                     base = self._pb_varint(1, serial) + self._pb_varint(2, 2)
                     flag = 0x84
@@ -372,6 +377,15 @@ class KCPServerUDP:
                         probe = base
                         while len(probe) < 16384:
                             probe += base
+                    elif PROBE_MODE == "multifrag_tag":
+                        unit = base
+                        for f in range(3, 65):
+                            if f in (4, 5, 12, 13, 14, 15):
+                                continue
+                            unit += self._pb_nested(f, b"")
+                        probe = unit
+                        while len(probe) < 16384:
+                            probe += unit
                     else:  # simple
                         probe = base
                     print(f"[*] Bootstrap probe 전송 [{PROBE_MODE}] (serial={serial}, {len(probe)}B)")
