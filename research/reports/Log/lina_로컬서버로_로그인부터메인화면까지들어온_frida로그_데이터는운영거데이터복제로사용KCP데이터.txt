@@ -1,0 +1,981 @@
+[*] justice_hook v4.9 starting...
+[Remote::Gadget ]-> [*] libil2cpp.so base @ 0x74b18d5000 (/data/app/~~acGHcXDuzoy-4IQ0vBH08A==/com.Alioth.JusticeSchool.cn-PwJah3_uT1udhfBv7HS3Yw==/lib/arm64/libil2cpp.so)
+[*] IL2CPP domain ready.
+[*] Waiting for Assembly-CSharp (enter the game world on the phone)...
+[*] Assembly-CSharp found (52 assemblies loaded).
+[*] Installing hooks...
+
+[+] Found UnityEngine.Networking.UnityWebRequest.get_url() -> System.String @ 0x74b3eab1e8
+[+] Found UnityEngine.Networking.UnityWebRequest.get_uploadHandler() -> UnityEngine.Networking.UploadHandler @ 0x74b3eaab78
+[*] UnityWebRequest accessors ready.
+[+] Found UnityEngine.Networking.UnityWebRequest..ctor(System.String, System.String) -> System.Void @ 0x74b3eaa538
+[+] Found UnityEngine.Networking.UnityWebRequest.SetRequestHeader(System.String, System.String) -> System.Void @ 0x74b3eab788
+[+] Found UnityEngine.Networking.UploadHandlerRaw..ctor(System.Byte[]) -> System.Void @ 0x74b3eac0fc
+[+] Found UnityEngine.Networking.UnityWebRequest.set_uploadHandler(UnityEngine.Networking.UploadHandler) -> System.Void @ 0x74b3eaa8f4
+[+] Found UnityEngine.Networking.UnityWebRequest.set_method(System.String) -> System.Void @ 0x74b3eaa5b4
+[HTTPREQUEST] AliothEngine.Net.HttpRequest methods:
+  get_isError() -> System.Boolean @ 0x74b2e68d48
+  get_PingTime() -> System.Single @ 0x74b2e68dc0
+  set_PingTime(System.Single) -> System.Void @ 0x74b2e68dc8
+  RequestCoroutine() -> System.Collections.IEnumerator @ 0x74b2e68dd0
+  CheckTimeout() -> System.Collections.IEnumerator @ 0x74b2e68e6c
+  get_IsDone() -> System.Boolean @ 0x74b2e68f08
+  set_Headers(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b2e68f10
+  get_Headers() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x74b2e68f18
+  set_Timeout(System.Single) -> System.Void @ 0x74b2e68f20
+  get_Timeout() -> System.Single @ 0x74b2e68f28
+  set_OnDone(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x74b2e68f30
+  set_OnFail(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x74b2e68f38
+  set_OnDisposed(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x74b2e68f40
+  .ctor(UnityEngine.MonoBehaviour, System.String) -> System.Void @ 0x74b2e68f48
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.String) -> System.Void @ 0x74b2e69078
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.Single) -> System.Void @ 0x74b2e691bc
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b2e692f4
+  AddHeader(System.String, System.String) -> System.Void @ 0x74b2e69704
+  AddData(System.String, System.String) -> System.Void @ 0x74b2e6976c
+  AddRangeData(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b2e69788
+  AddBinaryData(System.String, System.Byte[]) -> System.Void @ 0x74b2e698f0
+  AddBinaryData(System.String, System.Byte[], System.String) -> System.Void @ 0x74b2e6990c
+  AddBinaryData(System.String, System.Byte[], System.String, System.String) -> System.Void @ 0x74b2e69928
+  Request() -> System.Void @ 0x74b2e69944
+  Dispose() -> System.Void @ 0x74b2e6996c
+  CheckConnection(System.String, System.Action<System.Boolean>) -> System.Collections.IEnumerator @ 0x74b2e6999c
+  CreateURL(System.Collections.Generic.List<System.String>, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.String @ 0x74b2e69a54
+  ResetCache(System.String) -> System.String @ 0x74b2e69d60
+[+] Found UnityEngine.Networking.UnityWebRequest.SendWebRequest() -> UnityEngine.Networking.UnityWebRequestAsyncOperation @ 0x74b3eaac58
+[?] ProtocolGame_HttpRequest.V4_POST_Login overload: (System.String, System.String, System.String) @ 0x74b25aab48
+[+] Found ProtocolGame_HttpRequest.V4_POST_Login(System.String, System.String, System.String) -> AliothEngine.Net.HttpRequest @ 0x74b25aab48
+[?] ProtocolGame_HttpRequest.Sign overload: (System.String, System.Collections.Generic.Dictionary<System.String,System.String>) @ 0x74b25ae5c0
+[+] Found ProtocolGame_HttpRequest.Sign(System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b25ae5c0 (first match)
+[*] Sign return type: System.Void
+[?] ProtocolGame_HttpRequest.GetDefaultParams overload: () @ 0x74b25b0f58
+[+] Found ProtocolGame_HttpRequest.GetDefaultParams() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x74b25b0f58
+[?] ProtocolGame_HttpRequest.V3_POST_AllInOne overload: (System.String) @ 0x74b25b15d0
+[+] Found ProtocolGame_HttpRequest.V3_POST_AllInOne(System.String) -> AliothEngine.Net.HttpRequest @ 0x74b25b15d0
+[?] LoginManager.SaveLoginToken overload: (System.String, System.String, System.Int32, System.Boolean, SDKLoginType) -> System.Void @ 0x74b25ab4a0
+[+] Hooking LoginManager.SaveLoginToken(System.String, System.String, System.Int32, System.Boolean, SDKLoginType) @ 0x74b25ab4a0
+[+] Found ProtocolGame_HttpRequest.get_Token() -> System.String @ 0x74b25ae534
+[+] Hooking ProtocolGame_HttpRequest.get_Token() @ 0x74b25ae534
+[?] System.String.Join overload: (System.String, System.String[]) -> System.String @ 0x74b37b4b84
+[+] Hooking System.String.Join(System.String, System.String[]) @ 0x74b37b4b84
+[?] AliothEngine.Encrypt.MD5HashString overload: (System.String) -> System.String @ 0x74b2e5e66c
+[+] Hooking AliothEngine.Encrypt.MD5HashString(System.String) @ 0x74b2e5e66c
+[+] Hooking System.Convert.ToBase64String @ 0x74b38b8f88
+[+] Found UnityEngine.Networking.DownloadHandler.get_text() -> System.String @ 0x74b3eac308
+[+] Hooking DownloadHandler.get_text @ 0x74b3eac308
+[+] Found UnityEngine.Networking.UnityWebRequest.get_responseCode() -> System.Int64 @ 0x74b3eab1ac
+[+] Hooking UnityWebRequest.get_responseCode @ 0x74b3eab1ac
+[+] il2cpp_string_new @ 0x74b22c857c
+[!] ServerConst.GetURL not found (0 args)
+[+] Hooking ServerConst.GetURL (1 arg) @ 0x74b2eb0ad8
+[+] Hooking CSBehaviour.Connect (1 args) @ 0x74b2eb1df4
+[+] Hooking CSBehaviour.RequestOp @ 0x74b2eb1afc
+[!] NetworkCenter.Send not found
+[+] Hooking LoginManager.LoginGameServer @ 0x74b25ab910
+[+] libil2cpp.so base for KCP: 0x74b18d5000
+[+] KCPTube.Handshake1 @ 0x74b2e84f18 (RVA 0x15aff18)
+[+] KCPTube.Handshake2 @ 0x74b2e86f68 (RVA 0x15b1f68)
+[+] KCPTube.Output @ 0x74b2e871c4 (RVA 0x15b21c4)
+[+] KCPTube.Update @ 0x74b2e84650 (RVA 0x15af650)
+
+[*] 24 hooks installed.
+[*] Trigger login, then make a real game API request after login.
+[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], [HTTP_SEND], [HTTP_RESP], [SERVER_URL], [GAME_CONN], [OPCODE] lines.
+
+[KCP_RX] TryRead 후킹
+[RESP] TryHandleResponse 후킹
+[BOOT] ProccessRequestRes 후킹
+[HTTP_RESP] responseCode: 0xc8
+[SERVER_URL] GetURL(1 arg) called, arg0="NoticeURL"
+[SERVER_URL] GetURL(1 arg) => "https://ac.aliother.com/v3/notice"
+
+========== V3_POST_AllInOne called ==========
+  app_key: official
+[SERVER_URL] GetURL(1 arg) called, arg0="API_Allin1"
+[SERVER_URL] GetURL(1 arg) => "https://ac.aliother.com/v3/ain1"
+[REDIRECT] API_Allin1 => http://127.0.0.1:8888/api/v3/ain1
+
+---------- GetDefaultParams called ----------
+[TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [(null)]
+  [return] {"n":"639265543364078250","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
+----------------------------------
+
+
+---------- Sign called ----------
+  content: 90f04cb7a1fa5c2f58ca19cde2a2b128
+  dict: {"n":"639265543364078250","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
+
+[JOIN_DATA] String.Join called inside Sign
+  separator: "."
+  count: 6
+  value[0]: "cbcfdf10d56e57a89f7cb19a491d139e"
+  value[1]: "official"
+  value[2]: "639265543364078250"
+  value[3]: "7"
+  value[4]: "3.1.0"
+  value[5]: "90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265543364078250.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265543364078250.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  [JOIN_DATA END]
+[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265543364078250.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+[MD5_DATA] output: "25079012aa174257401759f4dd6a19e3"
+  => SIGN OUTPUT: void (dict modified in-place?)
+  => dict after: {"n":"639265543364078250","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"25079012aa174257401759f4dd6a19e3"}
+  (2ms)
+----------------------------------
+
+[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639265543364078250","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"} dict_after={"n":"639265543364078250","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"25079012aa174257401759f4dd6a19e3"}
+============================================
+
+[HTTP_RESP] responseCode: 0xc8
+[HTTP_RESP] responseCode: 0xc8
+
+[HTTP_RESP] DownloadHandler.text (len=595)
+  body: "{\"v\":\"3.1.0\",\"Keys\":[{\"Key\":\"API_Login\",\"URL\":\"http://10.87.155.119:8888/api/v5/account/login\"},{\"Key\":\"API_Anon\",\"URL\":\"http://10.87.155.119:8888/api/v3/account/anon\"},{\"Key\":\"API_Allin1\",\"URL\":\"http://10.87.155.119:8888/api/v3/ain1\"}],\"m\":\"official\",\"Desc\":\"成功\",\"Status\":0,\"sign\":\"25079012aa174257401759f4dd6a19e3\",\"Servers\":[{\"Host\":\"10.87.155.119\",\"Port\":8000}],\"Assets\":[{\"Ping\":\"http://10.87.155.119:8888/cdn/v310/202608022111/readme.txt\",\"CDN\":\"http://10.87.155.119:8888/cdn/v310/202608022111/\",\"Version\":\"3.1.88\"}],\"n\":\"639265543364078250\",\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"r\":\"7\"}"
+
+========== V4_POST_Login called ==========
+  app_key: witchwind3
+  content: witchwind3
+  apiName:
+  [HTTP_TRACE] login request trace window opened (10s)
+[SERVER_URL] GetURL(1 arg) called, arg0="API_Login"
+[SERVER_URL] GetURL(1 arg) => "http://10.87.155.119:8888/api/v5/account/login"
+[REDIRECT] API_Login => http://127.0.0.1:8888/api/v5/account/login
+
+---------- GetDefaultParams called ----------
+[TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [len=344,fnv1a32=6e1b2445]
+[TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [len=344,fnv1a32=6e1b2445]
+  [return] {"n":"639265543366429040","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA=="}
+----------------------------------
+
+
+---------- Sign called ----------
+  content: 90f04cb7a1fa5c2f58ca19cde2a2b128
+  dict: {"n":"639265543366429040","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout"}
+
+[JOIN_DATA] String.Join called inside Sign
+  separator: "."
+  count: 12
+  value[0]: "cbcfdf10d56e57a89f7cb19a491d139e"
+  value[1]: "official"
+  value[2]: ""
+  value[3]: "639265543366429040"
+  value[4]: "witchwind3"
+  value[5]: "logout"
+  value[6]: "google"
+  value[7]: "7"
+  value[8]: "tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA=="
+  value[9]: "witchwind3"
+  value[10]: "3.1.0"
+  value[11]: "90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265543366429040.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265543366429040.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  [JOIN_DATA END]
+[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265543366429040.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+[MD5_DATA] output: "4fd768e636b8932b2b6c041f4b0709bd"
+  => SIGN OUTPUT: void (dict modified in-place?)
+  => dict after: {"n":"639265543366429040","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout","sign":"4fd768e636b8932b2b6c041f4b0709bd"}
+  (0ms)
+----------------------------------
+
+[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639265543366429040","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout"} dict_after={"n":"639265543366429040","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout","sign":"4fd768e636b8932b2b6c041f4b0709bd"}
+
+[HTTP_CREATE] UnityWebRequest #1
+  url: "http://127.0.0.1:8888/api/v5/account/login?692543"
+  method: "POST"
+  request_ptr: 0x75d4708820
+[HTTP_METHOD_SET] #1 method="POST"
+
+[HTTP_UPLOAD] UploadHandlerRaw(byte[])
+  body_len: 549
+  body_utf8: "n=639265543366429040&d=cbcfdf10d56e57a89f7cb19a491d139e&r=7&v=3.1.0&m=official&t=tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T%2bvY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G%2bUwJZ%2f%2fRPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97%2bcJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas%2f3qLNWJXEeAFJhfwTmegEly%2fwem%2fM13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl%2b%2b%2bvo6PljA%3d%3d&u=witchwind3&p=witchwind3&method=&platform=google&p2=logout&sign=4fd768e636b8932b2b6c041f4b0709bd"
+  body_hex: 6e3d36333932363535343333363634323930343026643d636263666466313064353665353761383966376362313961343931643133396526723d3726763d332e312e30266d3d6f6666696369616c26743d747141326f51724e35507668754d64723878353768547830554a747134514c6e6c694862306f465233542532627659355a47784738704759696d43756e4679787936634b3078536f7750545a6d306c47704f4e53344725326255774a5a25326625326652504e71487633317659624e674b317078487a667a55564c417174586e617a566d413937253262634a5773413676706e5253744162474d424a5872787957516674617a46486f766f4e705159765548696468595950765379466437374951453145703268533567754b72364141325a5468656178776a626e416461655541425265617325326633714c4e574a58456541464a686677546d6567456c7925326677656d2532664d31334c336677434e564e5a39564f5370514b6558367a6130766e4d3255336234586677484e6a323576357975333946526a736b4d7a567177684e4144395350415a375565466533554261467a42656857484c6c253262253262253262766f36506c6a4125336425336426753d776974636877696e643326703d776974636877696e6433266d6574686f643d26706c6174666f726d3d676f6f676c652670323d6c6f676f7574267369676e3d3466643736386536333662383933326232623663303431663462303730396264
+  upload_handler: 0x741126e100
+[HTTP_UPLOAD END]
+
+[HTTP_UPLOAD_SET] #1 uploadHandler=0x75d473ff90
+[HTTP_HEADER] #1 Content-Type: application/x-www-form-urlencoded
+[HTTP_HEADER] #1 Cache-Control: no-cache
+[HTTP_HEADER] #1 Pragma: no-cache
+
+[HTTP_SEND] UnityWebRequest #1
+  url: "http://127.0.0.1:8888/api/v5/account/login?692543"
+  method: ""
+  headers: [{"name":"Content-Type","value":"application/x-www-form-urlencoded"},{"name":"Cache-Control","value":"no-cache"},{"name":"Pragma","value":"no-cache"}]
+  body: <none>
+  request_ptr: 0x75d4708820
+[HTTP_SEND END]
+
+  [return after 4ms]
+========================================
+
+[HTTP_RESP] responseCode: 0xc8
+[HTTP_RESP] responseCode: 0xc8
+[HTTP_RESP] responseCode: 0xc8
+
+[HTTP_RESP] DownloadHandler.text (len=1035)
+  body: "{\"logout_ex_time\":0,\"sign\":\"4fd768e636b8932b2b6c041f4b0709bd\",\"t\":\"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==\",\"platform\":\"google\",\"UserId\":861197,\"p2\":\"logout\",\"FCMStatus\":4,\"v\":\"3.1.0\",\"RealName\":true,\"m\":\"official\",\"u\":\"witchwind3\",\"Age\":27,\"Status\":0,\"Desc\":\"成功\",\"First\":0,\"method\":\"\",\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"p\":\"witchwind3\",\"r\":\"7\",\"n\":\"639265543366429040\",\"Token\":\"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==\"}"
+
+[HTTP_RESP] DownloadHandler.text (len=1035)
+  body: "{\"logout_ex_time\":0,\"sign\":\"4fd768e636b8932b2b6c041f4b0709bd\",\"t\":\"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==\",\"platform\":\"google\",\"UserId\":861197,\"p2\":\"logout\",\"FCMStatus\":4,\"v\":\"3.1.0\",\"RealName\":true,\"m\":\"official\",\"u\":\"witchwind3\",\"Age\":27,\"Status\":0,\"Desc\":\"成功\",\"First\":0,\"method\":\"\",\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"p\":\"witchwind3\",\"r\":\"7\",\"n\":\"639265543366429040\",\"Token\":\"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==\"}"
+\n[TOKEN_SAVE] LoginManager.SaveLoginToken
+  arg[0] System.String: "861197"
+  arg[1] System.String: <TOKEN_REDACTED> [len=344,fnv1a32=6e1b2445]
+  arg[2] System.Int32: "0"
+  arg[3] System.Boolean: "false"
+  arg[4] SDKLoginType: "0x0"
+  [TOKEN_SAVE END]
+
+[LOGIN_GS] LoginManager.LoginGameServer called
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=1
+[BOOT_RESP] OpCode=2
+[BOOT_STATE] User=non-null
+[BOOT_STATE] Heros=non-null
+[BOOT_STATE] Items=non-null
+[BOOT_STATE] Weapons=non-null
+[BOOT_STATE] Equiments=non-null
+[BOOT_STATE] Chapters=non-null
+[BOOT_STATE] Sections=non-null
+[BOOT_STATE] Teams=non-null
+[BOOT_STATE] Fashions=non-null
+[BOOT_STATE] Quests=non-null
+[BOOT_STATE] Charges=non-null
+[BOOT_STATE] Activities=non-null
+[BOOT_STATE] --- 덤프 끝 ---
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+
+[HTTP_SEND] UnityWebRequest
+  url: "https://oss01.aliother.com/v310/202608022111/AssetBundles/Android/activityicon_001__cn.assetbundle"
+  method: ""
+  body: <none>
+  request_ptr: 0x75d58d9a00
+[HTTP_SEND END]
+
+
+[HTTP_SEND] UnityWebRequest
+  url: "https://oss01.aliother.com/v310/202608022111/AssetBundles/Android/yingyuanuiatlas.assetbundle"
+  method: ""
+  body: <none>
+  request_ptr: 0x75d58d9500
+[HTTP_SEND END]
+
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+
+[HTTP_SEND] UnityWebRequest
+  url: "https://oss01.aliother.com/v310/202608022111/AssetBundles/Android/ui_eff_mainsence.assetbundle"
+  method: ""
+  body: <none>
+  request_ptr: 0x75d61bedc0
+[HTTP_SEND END]
+
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[SERVER_URL] GetURL(1 arg) called, arg0="NoticeURL"
+[SERVER_URL] GetURL(1 arg) => "(null)"
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
+[RESP] TryHandleResponse ENTER
+[KCP_RX] TryRead ENTER
+[KCP_RX] TryRead LEAVE ret=0
+[RESP] TryHandleResponse LEAVE
