@@ -1240,6 +1240,8 @@ async function main() {
     console.log(`\n[*] ${hookCount} hooks installed.`);
     console.log('[*] Trigger login, then make a real game API request after login.');
     console.log('[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], [HTTP_SEND], [HTTP_RESP], [SERVER_URL], [GAME_CONN], [OPCODE] lines.\n');
+    // OpInfo BOOT_STATE 후크 설정 (api가 이미 초기화됨)
+    try { setupOpInfoBootState(); } catch (e) { console.log('[BOOT] 호출 실패: ' + e.message); }
 }
 
 main();
@@ -1249,7 +1251,7 @@ main();
 
 function setupOpInfoBootState() {
     if (typeof api === 'undefined' || api === null) {
-        setTimeout(setupOpInfoBootState, 500);
+        console.log('[BOOT] api가 없음, 건너뜀');
         return;
     }
     try {
@@ -1319,5 +1321,3 @@ function setupOpInfoBootState() {
         console.log('[BOOT] 설정 실패: ' + e.message);
     }
 }
-setupOpInfoBootState();
-
