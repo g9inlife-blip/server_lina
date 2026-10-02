@@ -384,10 +384,16 @@ class KCPServerUDP:
                         # 실측 구조 기반 Bootstrap 응답 (2026-10-02 15:44)
                         # 출처: 000192_s2c.bin (gzip 압축 해제 후 protobuf)
                         import gzip
+                        # --- 실측 순서: 1,2,21,35,37,38,39,40,43,44,45,48,49,51,56 ---
+                        # (4,5,12,13,14,15는 device echo로 생략 - multifrag에서 불필요 확인됨)
+                        # --- Items (field 21, 반복) ---
+                        items_part = b""
+                        for item_id in [21000010, 21000020, 21000030]:
+                            item_inner = self._pb_varint(1, item_id) + self._pb_varint(2, 1)
+                            items_part += self._pb_nested(21, item_inner)
                         # --- User (field 35) ---
-                        # 실측: field1=871047(ID), field14='g9in2'(username)
                         user_inner = b""
-                        user_inner += self._pb_varint(1, 861197)  # User ID (로컬 계정)
+                        user_inner += self._pb_varint(1, 861197)
                         user_inner += self._pb_varint(3, 4)
                         user_inner += self._pb_varint(4, 250)
                         user_inner += self._pb_varint(7, 18100000)
@@ -396,25 +402,31 @@ class KCPServerUDP:
                         user_inner += self._pb_varint(21, 3)
                         user_inner += self._pb_varint(22, 10)
                         user_inner += self._pb_varint(24, 1)
-                        # --- Items (field 21, 반복) ---
-                        # 실측: 276개, 각 {field1=ID, field2=count}
-                        items_part = b""
-                        # 테스트용 최소 아이템 5개
-                        for item_id in [21000010, 21000020, 21000030, 21000040, 21000050]:
-                            item_inner = self._pb_varint(1, item_id) + self._pb_varint(2, 1)
-                            items_part += self._pb_nested(21, item_inner)
+                        # --- 기타 필드 (최소 1개씩, 빈 nested) ---
+                        # 실측에 있는 모든 필드 타입을 순서대로 포함
+                        others_part = b""
+                        for f in [37, 38, 39, 40, 44, 45, 48, 49, 51, 56]:
+                            others_part += self._pb_nested(f, b"")
                         # --- Chapters (field 43, 반복) ---
-                        # 실측: 61개
                         chapters_part = b""
-                        # 테스트용 최소 챕터 3개
-                        for ch_id in [20000100, 20000200, 20000300]:
+                        for ch_id in [20000100, 20000200]:
                             ch_inner = self._pb_varint(1, ch_id) + self._pb_varint(2, 0)
                             chapters_part += self._pb_nested(43, ch_inner)
-                        # --- 조립 ---
-                        probe = base  # field 1 (serial) + field 2 (opcode=2)
-                        probe += self._pb_nested(35, user_inner)
-                        probe += items_part
-                        probe += chapters_part
+                        # --- 조립 (실측 순서) ---
+                        probe = base  # field 1, 2
+                        probe += items_part          # 21
+                        probe += self._pb_nested(35, user_inner)  # 35
+                        # 37,38,39,40은 others_part에서 순서대로
+                        # 43 (chapters)는 40 다음
+                        # 순서 맞추기: 21,35,37,38,39,40,43,44,45,48,49,51,56
+                        probe = base
+                        probe += items_part  # 21
+                        probe += self._pb_nested(35, user_inner)  # 35
+                        for f in [37, 38, 39, 40]:
+                            probe += self._pb_nested(f, b"")
+                        probe += chapters_part  # 43
+                        for f in [44, 45, 48, 49, 51, 56]:
+                            probe += self._pb_nested(f, b"")
                         # gzip 압축 여부 (환경변수 REAL_COMPRESS=0이면 비압축)
                         # 2026-10-02 15:53: gzip+0xC4로 ret=0 → 압축 없이 태그만 테스트
                         import os as _os
