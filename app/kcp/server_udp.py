@@ -199,52 +199,15 @@ class KCPServerUDP:
         return
 
     def handle_kcp_data(self, data: bytes, addr):
-        """221B KCP 데이터 패킷 처리 - KCP 헤더 파싱."""
+        """221B KCP 데이터 패킷 처리 - RAW hex 확보."""
         session_id = struct.unpack_from("<Q", data, 0x00)[0]
         print(f"[*] 221B 수신: session={session_id:#x} from {addr}")
 
-        # KCP 헤더 파싱 (0x08부터 24B)
-        # KCP 세그먼트 헤더 (Little Endian):
-        # +0x00~03: Conv (4B)
-        # +0x04: Cmd (1B)
-        # +0x05: Frg (1B)
-        # +0x06~07: Wnd (2B)
-        # +0x08~0B: Ts (4B)
-        # +0x0C~0F: Sn (4B)
-        # +0x10~13: Una (4B)
-        # +0x14~17: Len (4B)
-        if len(data) >= 0x08 + 24:
-            kcp = data[0x08:0x08+24]
-            conv = struct.unpack_from("<I", kcp, 0x00)[0]
-            cmd = kcp[0x04]
-            frg = kcp[0x05]
-            wnd = struct.unpack_from("<H", kcp, 0x06)[0]
-            ts = struct.unpack_from("<I", kcp, 0x08)[0]
-            sn = struct.unpack_from("<I", kcp, 0x0C)[0]
-            una = struct.unpack_from("<I", kcp, 0x10)[0]
-            length = struct.unpack_from("<I", kcp, 0x14)[0]
-
-            print(f"[*] KCP 헤더:")
-            print(f"    Conv: {conv:#x} ({conv})")
-            print(f"    Cmd: {cmd:#x} ({cmd})")
-            print(f"    Frg: {frg}")
-            print(f"    Wnd: {wnd}")
-            print(f"    Ts: {ts}")
-            print(f"    Sn: {sn}")
-            print(f"    Una: {una}")
-            print(f"    Len: {length}")
-
-            # KCP 데이터 (헤더 이후)
-            kcp_data = data[0x08+24:]
-            print(f"    KCP 데이터: {len(kcp_data)}B (예상 Len: {length}B)")
-            if len(kcp_data) >= 16:
-                print(f"    데이터 앞 32B: {kcp_data[:32].hex()}")
-
-            # TODO: Frg/Sn 기반 메시지 재조립
-            # TODO: flags 확인 (0x80: 암호화, 0x40: 압축)
-            # TODO: DecryptUnSafe 입력 추출
-        else:
-            print(f"[!] KCP 헤더 파싱 불가 (길이 부족)")
+        # RAW hex 출력 (GPT 분석용)
+        print(f"RAW 221B ({len(data)}B): {data.hex()}")
+        if len(data) >= 8:
+            print(f"  session: {data[:8].hex()}")
+            print(f"  after-session ({len(data)-8}B): {data[8:].hex()}")
 
         # 세션 확인
         if session_id not in self.sessions:
