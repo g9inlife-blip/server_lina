@@ -1,169 +1,236 @@
-C:\Users\USER\Documents\GitHub\server_lina>frida -H 127.0.0.1:27042 -n Gadget -l research/frida/justice_hook_opinfo.js
-     ____
-    / _  |   Frida 17.18.0 - A world-class dynamic instrumentation toolkit
-   | (_| |
-    > _  |   Commands:
-   /_/ |_|       help      -> Displays the help system
-   . . . .       object?   -> Display information about 'object'
-   . . . .       exit/quit -> Exit
-   . . . .
-   . . . .   Prefer a GUI? Luma is the official Frida app, with a live REPL,
-   . . . .   persistent sessions & collaboration. https://luma.frida.re/
-   . . . .
-   . . . .   Connected to 127.0.0.1:27042 (id=socket@127.0.0.1:27042)
-Attaching...
-[*] justice_hook v4.9 starting...
-[Remote::Gadget ]-> [*] libil2cpp.so base @ 0x7499d63000 (/data/app/~~acGHcXDuzoy-4IQ0vBH08A==/com.Alioth.JusticeSchool.cn-PwJah3_uT1udhfBv7HS3Yw==/lib/arm64/libil2cpp.so)
+[*] justice_hook v4.22 starting...
+[Remote::Gadget ]-> [*] libil2cpp.so base @ 0x74b0e00000 (/data/app/~~acGHcXDuzoy-4IQ0vBH08A==/com.Alioth.JusticeSchool.cn-PwJah3_uT1udhfBv7HS3Yw==/lib/arm64/libil2cpp.so)
 [*] IL2CPP domain ready.
 [*] Waiting for Assembly-CSharp (enter the game world on the phone)...
-[OPINFO] ProccessRequestRes 찾음 (params=1), 후킹
 [*] Assembly-CSharp found (52 assemblies loaded).
 [*] Installing hooks...
 
-[+] Found UnityEngine.Networking.UnityWebRequest.get_url() -> System.String @ 0x749c3391e8
-[+] Found UnityEngine.Networking.UnityWebRequest.get_uploadHandler() -> UnityEngine.Networking.UploadHandler @ 0x749c338b78
+[+] il2cpp_string_new @ 0x74b17f357c
+[+] Hooking ServerConst.GetURL (1 arg) for LOCAL redirect @ 0x74b23dbad8
+[+] Found UnityEngine.Networking.UnityWebRequest.get_url() -> System.String @ 0x74b33d61e8
+[+] Found UnityEngine.Networking.UnityWebRequest.get_uploadHandler() -> UnityEngine.Networking.UploadHandler @ 0x74b33d5b78
 [*] UnityWebRequest accessors ready.
-[+] Found UnityEngine.Networking.UnityWebRequest..ctor(System.String, System.String) -> System.Void @ 0x749c338538
-[+] Found UnityEngine.Networking.UnityWebRequest.SetRequestHeader(System.String, System.String) -> System.Void @ 0x749c339788
-[+] Found UnityEngine.Networking.UploadHandlerRaw..ctor(System.Byte[]) -> System.Void @ 0x749c33a0fc
-[+] Found UnityEngine.Networking.UnityWebRequest.set_uploadHandler(UnityEngine.Networking.UploadHandler) -> System.Void @ 0x749c3388f4
-[+] Found UnityEngine.Networking.UnityWebRequest.set_method(System.String) -> System.Void @ 0x749c3385b4
+[+] Found UnityEngine.Networking.UnityWebRequest..ctor(System.String, System.String) -> System.Void @ 0x74b33d5538
+[+] Found UnityEngine.Networking.UnityWebRequest.SetRequestHeader(System.String, System.String) -> System.Void @ 0x74b33d6788
+[+] Found UnityEngine.Networking.UploadHandlerRaw..ctor(System.Byte[]) -> System.Void @ 0x74b33d70fc
+[+] Found UnityEngine.Networking.UnityWebRequest.set_uploadHandler(UnityEngine.Networking.UploadHandler) -> System.Void @ 0x74b33d58f4
+[+] Found UnityEngine.Networking.UnityWebRequest.set_method(System.String) -> System.Void @ 0x74b33d55b4
 [HTTPREQUEST] AliothEngine.Net.HttpRequest methods:
-  get_isError() -> System.Boolean @ 0x749b2f6d48
-  get_PingTime() -> System.Single @ 0x749b2f6dc0
-  set_PingTime(System.Single) -> System.Void @ 0x749b2f6dc8
-  RequestCoroutine() -> System.Collections.IEnumerator @ 0x749b2f6dd0
-  CheckTimeout() -> System.Collections.IEnumerator @ 0x749b2f6e6c
-  get_IsDone() -> System.Boolean @ 0x749b2f6f08
-  set_Headers(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x749b2f6f10
-  get_Headers() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x749b2f6f18
-  set_Timeout(System.Single) -> System.Void @ 0x749b2f6f20
-  get_Timeout() -> System.Single @ 0x749b2f6f28
-  set_OnDone(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x749b2f6f30
-  set_OnFail(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x749b2f6f38
-  set_OnDisposed(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x749b2f6f40
-  .ctor(UnityEngine.MonoBehaviour, System.String) -> System.Void @ 0x749b2f6f48
-  .ctor(UnityEngine.MonoBehaviour, System.String, System.String) -> System.Void @ 0x749b2f7078
-  .ctor(UnityEngine.MonoBehaviour, System.String, System.Single) -> System.Void @ 0x749b2f71bc
-  .ctor(UnityEngine.MonoBehaviour, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x749b2f72f4
-  AddHeader(System.String, System.String) -> System.Void @ 0x749b2f7704
-  AddData(System.String, System.String) -> System.Void @ 0x749b2f776c
-  AddRangeData(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x749b2f7788
-  AddBinaryData(System.String, System.Byte[]) -> System.Void @ 0x749b2f78f0
-  AddBinaryData(System.String, System.Byte[], System.String) -> System.Void @ 0x749b2f790c
-  AddBinaryData(System.String, System.Byte[], System.String, System.String) -> System.Void @ 0x749b2f7928
-  Request() -> System.Void @ 0x749b2f7944
-  Dispose() -> System.Void @ 0x749b2f796c
-  CheckConnection(System.String, System.Action<System.Boolean>) -> System.Collections.IEnumerator @ 0x749b2f799c
-  CreateURL(System.Collections.Generic.List<System.String>, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.String @ 0x749b2f7a54
-  ResetCache(System.String) -> System.String @ 0x749b2f7d60
-[+] Found UnityEngine.Networking.UnityWebRequest.SendWebRequest() -> UnityEngine.Networking.UnityWebRequestAsyncOperation @ 0x749c338c58
-[?] ProtocolGame_HttpRequest.V4_POST_Login overload: (System.String, System.String, System.String) @ 0x749aa38b48
-[+] Found ProtocolGame_HttpRequest.V4_POST_Login(System.String, System.String, System.String) -> AliothEngine.Net.HttpRequest @ 0x749aa38b48
-[?] ProtocolGame_HttpRequest.Sign overload: (System.String, System.Collections.Generic.Dictionary<System.String,System.String>) @ 0x749aa3c5c0
-[+] Found ProtocolGame_HttpRequest.Sign(System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x749aa3c5c0 (first match)
+  get_isError() -> System.Boolean @ 0x74b2393d48
+  get_PingTime() -> System.Single @ 0x74b2393dc0
+  set_PingTime(System.Single) -> System.Void @ 0x74b2393dc8
+  RequestCoroutine() -> System.Collections.IEnumerator @ 0x74b2393dd0
+  CheckTimeout() -> System.Collections.IEnumerator @ 0x74b2393e6c
+  get_IsDone() -> System.Boolean @ 0x74b2393f08
+  set_Headers(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b2393f10
+  get_Headers() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x74b2393f18
+  set_Timeout(System.Single) -> System.Void @ 0x74b2393f20
+  get_Timeout() -> System.Single @ 0x74b2393f28
+  set_OnDone(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x74b2393f30
+  set_OnFail(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x74b2393f38
+  set_OnDisposed(AliothEngine.Net.HttpRequest.FinishedDelegate) -> System.Void @ 0x74b2393f40
+  .ctor(UnityEngine.MonoBehaviour, System.String) -> System.Void @ 0x74b2393f48
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.String) -> System.Void @ 0x74b2394078
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.Single) -> System.Void @ 0x74b23941bc
+  .ctor(UnityEngine.MonoBehaviour, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b23942f4
+  AddHeader(System.String, System.String) -> System.Void @ 0x74b2394704
+  AddData(System.String, System.String) -> System.Void @ 0x74b239476c
+  AddRangeData(System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b2394788
+  AddBinaryData(System.String, System.Byte[]) -> System.Void @ 0x74b23948f0
+  AddBinaryData(System.String, System.Byte[], System.String) -> System.Void @ 0x74b239490c
+  AddBinaryData(System.String, System.Byte[], System.String, System.String) -> System.Void @ 0x74b2394928
+  Request() -> System.Void @ 0x74b2394944
+  Dispose() -> System.Void @ 0x74b239496c
+  CheckConnection(System.String, System.Action<System.Boolean>) -> System.Collections.IEnumerator @ 0x74b239499c
+  CreateURL(System.Collections.Generic.List<System.String>, System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.String @ 0x74b2394a54
+  ResetCache(System.String) -> System.String @ 0x74b2394d60
+[+] Found UnityEngine.Networking.UnityWebRequest.SendWebRequest() -> UnityEngine.Networking.UnityWebRequestAsyncOperation @ 0x74b33d5c58
+[?] ProtocolGame_HttpRequest.V4_POST_Login overload: (System.String, System.String, System.String) @ 0x74b1ad5b48
+[+] Found ProtocolGame_HttpRequest.V4_POST_Login(System.String, System.String, System.String) -> AliothEngine.Net.HttpRequest @ 0x74b1ad5b48
+[?] ProtocolGame_HttpRequest.Sign overload: (System.String, System.Collections.Generic.Dictionary<System.String,System.String>) @ 0x74b1ad95c0
+[+] Found ProtocolGame_HttpRequest.Sign(System.String, System.Collections.Generic.Dictionary<System.String,System.String>) -> System.Void @ 0x74b1ad95c0 (first match)
 [*] Sign return type: System.Void
-[?] ProtocolGame_HttpRequest.GetDefaultParams overload: () @ 0x749aa3ef58
-[+] Found ProtocolGame_HttpRequest.GetDefaultParams() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x749aa3ef58
-[?] ProtocolGame_HttpRequest.V3_POST_AllInOne overload: (System.String) @ 0x749aa3f5d0
-[+] Found ProtocolGame_HttpRequest.V3_POST_AllInOne(System.String) -> AliothEngine.Net.HttpRequest @ 0x749aa3f5d0
-[?] LoginManager.SaveLoginToken overload: (System.String, System.String, System.Int32, System.Boolean, SDKLoginType) -> System.Void @ 0x749aa394a0
-[+] Hooking LoginManager.SaveLoginToken(System.String, System.String, System.Int32, System.Boolean, SDKLoginType) @ 0x749aa394a0
-[+] Found ProtocolGame_HttpRequest.get_Token() -> System.String @ 0x749aa3c534
-[+] Hooking ProtocolGame_HttpRequest.get_Token() @ 0x749aa3c534
-[?] System.String.Join overload: (System.String, System.String[]) -> System.String @ 0x749bc42b84
-[+] Hooking System.String.Join(System.String, System.String[]) @ 0x749bc42b84
-[?] AliothEngine.Encrypt.MD5HashString overload: (System.String) -> System.String @ 0x749b2ec66c
-[+] Hooking AliothEngine.Encrypt.MD5HashString(System.String) @ 0x749b2ec66c
-[+] Hooking System.Convert.ToBase64String @ 0x749bd46f88
-[+] Found UnityEngine.Networking.DownloadHandler.get_text() -> System.String @ 0x749c33a308
-[+] Hooking DownloadHandler.get_text @ 0x749c33a308
-[+] Found UnityEngine.Networking.UnityWebRequest.get_responseCode() -> System.Int64 @ 0x749c3391ac
-[+] Hooking UnityWebRequest.get_responseCode @ 0x749c3391ac
-[+] il2cpp_string_new @ 0x749a75657c
-[!] ServerConst.GetURL not found (0 args)
-[+] Hooking ServerConst.GetURL (1 arg) @ 0x749b33ead8
-[+] Hooking CSBehaviour.Connect (1 args) @ 0x749b33fdf4
-[+] Hooking CSBehaviour.RequestOp @ 0x749b33fafc
-[!] NetworkCenter.Send not found
-[+] Hooking LoginManager.LoginGameServer @ 0x749aa39910
-[+] libil2cpp.so base for KCP: 0x7499d63000
-[+] KCPTube.Handshake1 @ 0x749b312f18 (RVA 0x15aff18)
-[+] KCPTube.Handshake2 @ 0x749b314f68 (RVA 0x15b1f68)
-[+] KCPTube.Output @ 0x749b3151c4 (RVA 0x15b21c4)
-[+] KCPTube.Update @ 0x749b312650 (RVA 0x15af650)
+[?] ProtocolGame_HttpRequest.GetDefaultParams overload: () @ 0x74b1adbf58
+[+] Found ProtocolGame_HttpRequest.GetDefaultParams() -> System.Collections.Generic.Dictionary<System.String,System.String> @ 0x74b1adbf58
+[?] ProtocolGame_HttpRequest.V3_POST_AllInOne overload: (System.String) @ 0x74b1adc5d0
+[+] Found ProtocolGame_HttpRequest.V3_POST_AllInOne(System.String) -> AliothEngine.Net.HttpRequest @ 0x74b1adc5d0
+[?] LoginManager.SaveLoginToken overload: (System.String, System.String, System.Int32, System.Boolean, SDKLoginType) -> System.Void @ 0x74b1ad64a0
+[+] Hooking LoginManager.SaveLoginToken(System.String, System.String, System.Int32, System.Boolean, SDKLoginType) @ 0x74b1ad64a0
+[+] Found ProtocolGame_HttpRequest.get_Token() -> System.String @ 0x74b1ad9534
+[+] Hooking ProtocolGame_HttpRequest.get_Token() @ 0x74b1ad9534
+[?] System.String.Join overload: (System.String, System.String[]) -> System.String @ 0x74b2cdfb84
+[+] Hooking System.String.Join(System.String, System.String[]) @ 0x74b2cdfb84
+[?] AliothEngine.Encrypt.MD5HashString overload: (System.String) -> System.String @ 0x74b238966c
+[+] Hooking AliothEngine.Encrypt.MD5HashString(System.String) @ 0x74b238966c
+[+] Hooking System.Convert.ToBase64String @ 0x74b2de3f88
+[+] Hooking TRANSPORT Alioth.S1.Net.TCPTube.TryRead(System.IO.MemoryStream, System.IO.MemoryStream, Alioth.S1.Common.Commands&, Alioth.S1.Common.OpInfo&) @ 0x74b22b6d54
+[+] Hooking TRANSPORT Alioth.S1.Net.TCPTube.TryOutput() @ 0x74b22b71b0
+[+] Hooking TRANSPORT Alioth.S1.Net.TCPTube.Update() @ 0x74b22b64a4
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.TryRead(System.IO.MemoryStream, System.IO.MemoryStream, Alioth.S1.Common.Commands&, Alioth.S1.Common.OpInfo&) @ 0x74b22b08bc
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.TryOutput() @ 0x74b22b15c4
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.Update() @ 0x74b22af650
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.Send(System.Byte[], System.Int32, System.Int32) @ 0x74b22aeb18
+[+] Hooking TRANSPORT Alioth.S1.Net.KCPTube.Send(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) @ 0x74b22aeddc
+[+] Hooking NetworkCenter.TryHandleResponse() @ 0x74b22b41e0
+[+] Hooking TryHandleResponse status branch @ 0x74b22b4418
+[+] Hooking DataCenter.ProccessRequestRes(Alioth.S1.Common.OpInfo) @ 0x74b23e203c
+[+] Hooking UserInfo.get_Coins @ 0x74b1ad2d8c
+[+] Hooking UserInfo.get_Energy @ 0x74b1ad2ce4
+[+] Hooking UserInfo.get_Exp @ 0x74b1ad1ca4
+[+] Hooking UserInfo.get_Level @ 0x74b1ad1ba0
+[+] Hooking HeroInfo.InitHero(Alioth.S1.Common.ProtoHero) @ 0x74b23e5fd4
+[+] Hooking HeroInfo.get_Level @ 0x74b23ea018
+[+] Hooking HeroInfo.get_Star @ 0x74b23dfad4
+[+] Hooking HeroInfo.get_State @ 0x74b23df754
+[+] Hooking HeroInfo.get_FashionId @ 0x74b23ee9d4
+[+] Hooking HeroInfo.get_Weapon @ 0x74b23ee62c
+[+] Hooking HeroInfo.get_WeaponInfomation @ 0x74b23ef3b0
+[+] Hooking WAREHOUSE DemandOpen(System.String) @ 0x74b1d4e508
+[+] Hooking WAREHOUSE RefreshWareHouse(System.Object[]) @ 0x74b1d4c1f8
+[+] Hooking WAREHOUSE InitData() @ 0x74b1d4ace0
+[+] Hooking WAREHOUSE ShowGoods() @ 0x74b1d4d6e8
+[+] Hooking WAREHOUSE RefreshScroll() @ 0x74b1d4d990
+[+] Hooking WAREHOUSE SetGoodsItemByInfo(UnityEngine.GameObject, System.Object) @ 0x74b1d4dd38
+[+] Hooking WAREHOUSE RefreshEquipItem(System.Object[]) @ 0x74b1d4e5a0
+[+] Hooking DataCenter.MergeItem(System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoItem>) @ 0x74b23e4700
+[+] Found Alioth.S1.Common.ProtoChapter.get_BoxStatus() -> Alioth.S1.Common.BoxState @ 0x74b22acf84
+[+] Hooking ProtoChapter.get_BoxStatus @ 0x74b22acf84
+[!] ProtoChapter.set_BoxStatus not found
+[+] Found Alioth.S1.Common.OpInfo.get_Chapters() -> System.Collections.Generic.Dictionary<System.Int32,Alioth.S1.Common.ProtoChapter> @ 0x74b22aadec
+[+] Hooking OpInfo.get_Chapters @ 0x74b22aadec
+[*] justice_hook v4.21
 
-[*] 24 hooks installed.
+[*] 49 hooks installed.
 [*] Trigger login, then make a real game API request after login.
-[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], [HTTP_SEND], [HTTP_RESP], [SERVER_URL], [GAME_CONN], [OPCODE] lines.
+[*] Look for [TOKEN_SAVE], [TOKEN_GET], [TOKEN_COMPARE], [SIGN_DATA], [JOIN_DATA], [MD5_DATA], [B64], [HTTP_CREATE], [HTTP_HEADER], and [HTTP_SEND] lines.
 
-[HTTP_RESP] responseCode: 0xc8
-[SERVER_URL] GetURL(1 arg) called, arg0="NoticeURL"
-[SERVER_URL] GetURL(1 arg) => "https://ac.aliother.com/v3/notice"
+[HERO_GET] Star=1 HeroInfo=0x73673ed6e0
+[HERO_GET] Weapon=(no klass @ 0x2625a00) HeroInfo=0x73673ed6e0
+[HERO_GET] Level=1 HeroInfo=0x73673ed6e0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x75d5e18280 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 00 5a 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed6e0
+[HERO_GET] Star=1 HeroInfo=0x73673ed640
+[HERO_GET] Weapon=(no klass @ 0x2625a64) HeroInfo=0x73673ed640
+[HERO_GET] Level=1 HeroInfo=0x73673ed640
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x736cb91b40 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 64 5a 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed640
+[HERO_GET] Star=1 HeroInfo=0x73673ed5a0
+[HERO_GET] Weapon=(no klass @ 0x2625ac8) HeroInfo=0x73673ed5a0
+[HERO_GET] Level=1 HeroInfo=0x73673ed5a0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x736cbc3a50 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 c8 5a 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed5a0
+[HERO_GET] Star=1 HeroInfo=0x73673ed500
+[HERO_GET] Weapon=(no klass @ 0x2625b2c) HeroInfo=0x73673ed500
+[HERO_GET] Level=1 HeroInfo=0x73673ed500
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x7366542960 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 2c 5b 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed500
+[HERO_GET] Star=1 HeroInfo=0x73673ed460
+[HERO_GET] Weapon=(no klass @ 0x2625b90) HeroInfo=0x73673ed460
+[HERO_GET] Level=1 HeroInfo=0x73673ed460
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x7366573870 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 90 5b 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed460
+[HERO_GET] Star=1 HeroInfo=0x73673ed3c0
+[HERO_GET] Weapon=(no klass @ 0x2625bf4) HeroInfo=0x73673ed3c0
+[HERO_GET] Level=1 HeroInfo=0x73673ed3c0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73665a2780 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 f4 5b 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed3c0
+[HERO_GET] Star=1 HeroInfo=0x73673ed320
+[HERO_GET] Weapon=(no klass @ 0x2625c58) HeroInfo=0x73673ed320
+[HERO_GET] Level=1 HeroInfo=0x73673ed320
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73665d4690 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 58 5c 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed320
+[HERO_GET] Star=1 HeroInfo=0x73673ed280
+[HERO_GET] Weapon=(no klass @ 0x2625cbc) HeroInfo=0x73673ed280
+[HERO_GET] Level=1 HeroInfo=0x73673ed280
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73661005a0 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 bc 5c 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed280
+[HERO_GET] Star=1 HeroInfo=0x73673ed1e0
+[HERO_GET] Weapon=(no klass @ 0x2625d20) HeroInfo=0x73673ed1e0
+[HERO_GET] Level=1 HeroInfo=0x73673ed1e0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73661324b0 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 20 5d 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed1e0
+[HERO_GET] Star=1 HeroInfo=0x73673ed140
+[HERO_GET] Weapon=(no klass @ 0x2625d84) HeroInfo=0x73673ed140
+[HERO_GET] Level=1 HeroInfo=0x73673ed140
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73661633c0 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 84 5d 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed140
+[HERO_GET] Star=1 HeroInfo=0x73673ed0a0
+[HERO_GET] Weapon=(no klass @ 0x2625de8) HeroInfo=0x73673ed0a0
+[HERO_GET] Level=1 HeroInfo=0x73673ed0a0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73661922d0 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 e8 5d 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed0a0
+[HERO_GET] Star=1 HeroInfo=0x73673ed000
+[HERO_GET] Weapon=(no klass @ 0x2625e4c) HeroInfo=0x73673ed000
+[HERO_GET] Level=1 HeroInfo=0x73673ed000
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73661c31e0 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 4c 5e 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73673ed000
+[HERO_GET] Star=1 HeroInfo=0x73661f8f00
+[HERO_GET] Weapon=(no klass @ 0x2625eb0) HeroInfo=0x73661f8f00
+[HERO_GET] Level=1 HeroInfo=0x73661f8f00
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73661f50f0 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 b0 5e 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73661f8f00
+[HERO_GET] Star=1 HeroInfo=0x73661f8e60
+[HERO_GET] Weapon=(no klass @ 0x2625f17) HeroInfo=0x73661f8e60
+[HERO_GET] Level=1 HeroInfo=0x73661f8e60
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x7366226000 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 17 5f 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73661f8e60
+[HERO_GET] Star=1 HeroInfo=0x73661f8dc0
+[HERO_GET] Weapon=(no klass @ 0x2625f78) HeroInfo=0x73661f8dc0
+[HERO_GET] Level=1 HeroInfo=0x73661f8dc0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x736625bf00 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 78 5f 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73661f8dc0
+[HERO_GET] Star=1 HeroInfo=0x73661f8d20
+[HERO_GET] Weapon=(no klass @ 0x2625fdc) HeroInfo=0x73661f8d20
+[HERO_GET] Level=1 HeroInfo=0x73661f8d20
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x736628be10 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 dc 5f 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73661f8d20
+[HERO_GET] Star=1 HeroInfo=0x73661f8c80
+[HERO_GET] Weapon=(no klass @ 0x2626040) HeroInfo=0x73661f8c80
+[HERO_GET] Level=1 HeroInfo=0x73661f8c80
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73662bcd20 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 40 60 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73661f8c80
+[HERO_GET] Star=1 HeroInfo=0x73661f8be0
+[HERO_GET] Weapon=(no klass @ 0x26261d3) HeroInfo=0x73661f8be0
+[HERO_GET] Level=1 HeroInfo=0x73661f8be0
+[HERO_GET] WeaponInfomation=klass=WeaponInfo @ 0x73647f5c30 hex=[10 92 5d b8 76 00 00 b4 00 00 00 00 00 00 00 00 d3 61 62 02 01 00 00 00 00 00 00 00 01 00 00 00 ] HeroInfo=0x73661f8be0
 
 ========== V3_POST_AllInOne called ==========
   app_key: official
-[SERVER_URL] GetURL(1 arg) called, arg0="API_Allin1"
-[SERVER_URL] GetURL(1 arg) => "https://ac.aliother.com/v3/ain1"
 [REDIRECT] API_Allin1 => http://127.0.0.1:8888/api/v3/ain1
 
 ---------- GetDefaultParams called ----------
 [TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [(null)]
-  [return] {"n":"639265454679509100","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
+  [return] {"n":"639265462061534470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
 ----------------------------------
 
 
 ---------- Sign called ----------
   content: 90f04cb7a1fa5c2f58ca19cde2a2b128
-  dict: {"n":"639265454679509100","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
+  dict: {"n":"639265462061534470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"}
 
 [JOIN_DATA] String.Join called inside Sign
   separator: "."
   count: 6
   value[0]: "cbcfdf10d56e57a89f7cb19a491d139e"
   value[1]: "official"
-  value[2]: "639265454679509100"
+  value[2]: "639265462061534470"
   value[3]: "7"
   value[4]: "3.1.0"
   value[5]: "90f04cb7a1fa5c2f58ca19cde2a2b128"
-  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265454679509100.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
-  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265454679509100.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265462061534470.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265462061534470.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
   [JOIN_DATA END]
-[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265454679509100.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
-[MD5_DATA] output: "57c400d5ee016f00737d50885a6a77c4"
+[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official.639265462061534470.7.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+[MD5_DATA] output: "582ffeb554dcd0a8138b360c1a21c7a0"
   => SIGN OUTPUT: void (dict modified in-place?)
-  => dict after: {"n":"639265454679509100","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"57c400d5ee016f00737d50885a6a77c4"}
-  (2ms)
+  => dict after: {"n":"639265462061534470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"582ffeb554dcd0a8138b360c1a21c7a0"}
+  (1ms)
 ----------------------------------
 
-[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639265454679509100","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"} dict_after={"n":"639265454679509100","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"57c400d5ee016f00737d50885a6a77c4"}
+[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639265462061534470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official"} dict_after={"n":"639265462061534470","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","sign":"582ffeb554dcd0a8138b360c1a21c7a0"}
 ============================================
 
-[HTTP_RESP] responseCode: 0xc8
-[HTTP_RESP] responseCode: 0xc8
-
-[HTTP_RESP] DownloadHandler.text (len=595)
-  body: "{\"v\":\"3.1.0\",\"Keys\":[{\"Key\":\"API_Login\",\"URL\":\"http://10.87.155.119:8888/api/v5/account/login\"},{\"Key\":\"API_Anon\",\"URL\":\"http://10.87.155.119:8888/api/v3/account/anon\"},{\"Key\":\"API_Allin1\",\"URL\":\"http://10.87.155.119:8888/api/v3/ain1\"}],\"m\":\"official\",\"Desc\":\"成功\",\"Status\":0,\"sign\":\"57c400d5ee016f00737d50885a6a77c4\",\"Servers\":[{\"Host\":\"10.87.155.119\",\"Port\":8000}],\"Assets\":[{\"Ping\":\"http://10.87.155.119:8888/cdn/v310/202608022111/readme.txt\",\"CDN\":\"http://10.87.155.119:8888/cdn/v310/202608022111/\",\"Version\":\"3.1.88\"}],\"n\":\"639265454679509100\",\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"r\":\"7\"}"
 
 ========== V4_POST_Login called ==========
   app_key: witchwind3
   content: witchwind3
   apiName:
   [HTTP_TRACE] login request trace window opened (10s)
-[SERVER_URL] GetURL(1 arg) called, arg0="API_Login"
-[SERVER_URL] GetURL(1 arg) => "http://10.87.155.119:8888/api/v5/account/login"
 [REDIRECT] API_Login => http://127.0.0.1:8888/api/v5/account/login
 
 ---------- GetDefaultParams called ----------
 [TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [len=344,fnv1a32=6e1b2445]
 [TOKEN_GET] ProtocolGame_HttpRequest.get_Token -> <TOKEN_REDACTED> [len=344,fnv1a32=6e1b2445]
-  [return] {"n":"639265454682259680","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA=="}
+  [return] {"n":"639265462063608460","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA=="}
 ----------------------------------
 
 
 ---------- Sign called ----------
   content: 90f04cb7a1fa5c2f58ca19cde2a2b128
-  dict: {"n":"639265454682259680","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout"}
+  dict: {"n":"639265462063608460","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout"}
 
 [JOIN_DATA] String.Join called inside Sign
   separator: "."
@@ -171,7 +238,7 @@ Attaching...
   value[0]: "cbcfdf10d56e57a89f7cb19a491d139e"
   value[1]: "official"
   value[2]: ""
-  value[3]: "639265454682259680"
+  value[3]: "639265462063608460"
   value[4]: "witchwind3"
   value[5]: "logout"
   value[6]: "google"
@@ -180,56 +247,47 @@ Attaching...
   value[9]: "witchwind3"
   value[10]: "3.1.0"
   value[11]: "90f04cb7a1fa5c2f58ca19cde2a2b128"
-  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265454682259680.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
-  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265454682259680.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_preview: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265462063608460.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+  joined_actual: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265462063608460.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
   [JOIN_DATA END]
-[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265454682259680.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
-[MD5_DATA] output: "49ac1549b9d896b9d71bfde1d61c63c6"
+[MD5_DATA] input: "cbcfdf10d56e57a89f7cb19a491d139e.official..639265462063608460.witchwind3.logout.google.7.tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==.witchwind3.3.1.0.90f04cb7a1fa5c2f58ca19cde2a2b128"
+[MD5_DATA] output: "afc32654f25dc17e14837928b7d7c484"
   => SIGN OUTPUT: void (dict modified in-place?)
-  => dict after: {"n":"639265454682259680","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout","sign":"49ac1549b9d896b9d71bfde1d61c63c6"}
-  (1ms)
+  => dict after: {"n":"639265462063608460","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout","sign":"afc32654f25dc17e14837928b7d7c484"}
+  (2ms)
 ----------------------------------
 
-[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639265454682259680","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout"} dict_after={"n":"639265454682259680","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout","sign":"49ac1549b9d896b9d71bfde1d61c63c6"}
+[SIGN_DATA] input_content="90f04cb7a1fa5c2f58ca19cde2a2b128" input_dict={"n":"639265462063608460","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout"} dict_after={"n":"639265462063608460","d":"cbcfdf10d56e57a89f7cb19a491d139e","r":"7","v":"3.1.0","m":"official","t":"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==","u":"witchwind3","p":"witchwind3","method":"","platform":"google","p2":"logout","sign":"afc32654f25dc17e14837928b7d7c484"}
 
 [HTTP_CREATE] UnityWebRequest #1
-  url: "http://127.0.0.1:8888/api/v5/account/login?491117"
+  url: "http://127.0.0.1:8888/api/v5/account/login?727638"
   method: "POST"
-  request_ptr: 0x7356d7d6e0
+  request_ptr: 0x736535a5a0
 [HTTP_METHOD_SET] #1 method="POST"
 
 [HTTP_UPLOAD] UploadHandlerRaw(byte[])
   body_len: 549
-  body_utf8: "n=639265454682259680&d=cbcfdf10d56e57a89f7cb19a491d139e&r=7&v=3.1.0&m=official&t=tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T%2bvY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G%2bUwJZ%2f%2fRPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97%2bcJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas%2f3qLNWJXEeAFJhfwTmegEly%2fwem%2fM13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl%2b%2b%2bvo6PljA%3d%3d&u=witchwind3&p=witchwind3&method=&platform=google&p2=logout&sign=49ac1549b9d896b9d71bfde1d61c63c6"
-  body_hex: 6e3d36333932363534353436383232353936383026643d636263666466313064353665353761383966376362313961343931643133396526723d3726763d332e312e30266d3d6f6666696369616c26743d747141326f51724e35507668754d64723878353768547830554a747134514c6e6c694862306f465233542532627659355a47784738704759696d43756e4679787936634b3078536f7750545a6d306c47704f4e53344725326255774a5a25326625326652504e71487633317659624e674b317078487a667a55564c417174586e617a566d413937253262634a5773413676706e5253744162474d424a5872787957516674617a46486f766f4e705159765548696468595950765379466437374951453145703268533567754b72364141325a5468656178776a626e416461655541425265617325326633714c4e574a58456541464a686677546d6567456c7925326677656d2532664d31334c336677434e564e5a39564f5370514b6558367a6130766e4d3255336234586677484e6a323576357975333946526a736b4d7a567177684e4144395350415a375565466533554261467a42656857484c6c253262253262253262766f36506c6a4125336425336426753d776974636877696e643326703d776974636877696e6433266d6574686f643d26706c6174666f726d3d676f6f676c652670323d6c6f676f7574267369676e3d3439616331353439623964383936623964373162666465316436316336336336
-  upload_handler: 0x740126de70
+  body_utf8: "n=639265462063608460&d=cbcfdf10d56e57a89f7cb19a491d139e&r=7&v=3.1.0&m=official&t=tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T%2bvY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G%2bUwJZ%2f%2fRPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97%2bcJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas%2f3qLNWJXEeAFJhfwTmegEly%2fwem%2fM13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl%2b%2b%2bvo6PljA%3d%3d&u=witchwind3&p=witchwind3&method=&platform=google&p2=logout&sign=afc32654f25dc17e14837928b7d7c484"
+  body_hex: 6e3d36333932363534363230363336303834363026643d636263666466313064353665353761383966376362313961343931643133396526723d3726763d332e312e30266d3d6f6666696369616c26743d747141326f51724e35507668754d64723878353768547830554a747134514c6e6c694862306f465233542532627659355a47784738704759696d43756e4679787936634b3078536f7750545a6d306c47704f4e53344725326255774a5a25326625326652504e71487633317659624e674b317078487a667a55564c417174586e617a566d413937253262634a5773413676706e5253744162474d424a5872787957516674617a46486f766f4e705159765548696468595950765379466437374951453145703268533567754b72364141325a5468656178776a626e416461655541425265617325326633714c4e574a58456541464a686677546d6567456c7925326677656d2532664d31334c336677434e564e5a39564f5370514b6558367a6130766e4d3255336234586677484e6a323576357975333946526a736b4d7a567177684e4144395350415a375565466533554261467a42656857484c6c253262253262253262766f36506c6a4125336425336426753d776974636877696e643326703d776974636877696e6433266d6574686f643d26706c6174666f726d3d676f6f676c652670323d6c6f676f7574267369676e3d6166633332363534663235646331376531343833373932386237643763343834
+  upload_handler: 0x741126e630
 [HTTP_UPLOAD END]
 
-[HTTP_UPLOAD_SET] #1 uploadHandler=0x7356db3990
+[HTTP_UPLOAD_SET] #1 uploadHandler=0x736538c870
 [HTTP_HEADER] #1 Content-Type: application/x-www-form-urlencoded
 [HTTP_HEADER] #1 Cache-Control: no-cache
 [HTTP_HEADER] #1 Pragma: no-cache
 
 [HTTP_SEND] UnityWebRequest #1
-  url: "http://127.0.0.1:8888/api/v5/account/login?491117"
+  url: "http://127.0.0.1:8888/api/v5/account/login?727638"
   method: ""
   headers: [{"name":"Content-Type","value":"application/x-www-form-urlencoded"},{"name":"Cache-Control","value":"no-cache"},{"name":"Pragma","value":"no-cache"}]
   body: <none>
-  request_ptr: 0x7356d7d6e0
+  request_ptr: 0x736535a5a0
 [HTTP_SEND END]
 
-  [return after 7ms]
+  [return after 6ms]
 ========================================
 
-[HTTP_RESP] responseCode: 0xc8
-[HTTP_RESP] responseCode: 0xc8
-[HTTP_RESP] responseCode: 0xc8
-
-[HTTP_RESP] DownloadHandler.text (len=1035)
-  body: "{\"logout_ex_time\":0,\"sign\":\"49ac1549b9d896b9d71bfde1d61c63c6\",\"t\":\"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==\",\"platform\":\"google\",\"UserId\":861197,\"p2\":\"logout\",\"FCMStatus\":4,\"v\":\"3.1.0\",\"RealName\":true,\"m\":\"official\",\"u\":\"witchwind3\",\"Age\":27,\"Status\":0,\"Desc\":\"成功\",\"First\":0,\"method\":\"\",\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"p\":\"witchwind3\",\"r\":\"7\",\"n\":\"639265454682259680\",\"Token\":\"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==\"}"
-
-[HTTP_RESP] DownloadHandler.text (len=1035)
-  body: "{\"logout_ex_time\":0,\"sign\":\"49ac1549b9d896b9d71bfde1d61c63c6\",\"t\":\"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==\",\"platform\":\"google\",\"UserId\":861197,\"p2\":\"logout\",\"FCMStatus\":4,\"v\":\"3.1.0\",\"RealName\":true,\"m\":\"official\",\"u\":\"witchwind3\",\"Age\":27,\"Status\":0,\"Desc\":\"成功\",\"First\":0,\"method\":\"\",\"d\":\"cbcfdf10d56e57a89f7cb19a491d139e\",\"p\":\"witchwind3\",\"r\":\"7\",\"n\":\"639265454682259680\",\"Token\":\"tqA2oQrN5PvhuMdr8x57hTx0UJtq4QLnliHb0oFR3T+vY5ZGxG8pGYimCunFyxy6cK0xSowPTZm0lGpONS4G+UwJZ//RPNqHv31vYbNgK1pxHzfzUVLAqtXnazVmA97+cJWsA6vpnRStAbGMBJXrxyWQftazFHovoNpQYvUHidhYYPvSyFd77IQE1Ep2hS5guKr6AA2ZTheaxwjbnAdaeUABReas/3qLNWJXEeAFJhfwTmegEly/wem/M13L3fwCNVNZ9VOSpQKeX6za0vnM2U3b4XfwHNj25v5yu39FRjskMzVqwhNAD9SPAZ7UeFe3UBaFzBehWHLl+++vo6PljA==\"}"
 \n[TOKEN_SAVE] LoginManager.SaveLoginToken
   arg[0] System.String: "861197"
   arg[1] System.String: <TOKEN_REDACTED> [len=344,fnv1a32=6e1b2445]
@@ -237,5 +295,23 @@ Attaching...
   arg[3] System.Boolean: "false"
   arg[4] SDKLoginType: "0x0"
   [TOKEN_SAVE END]
-
-[LOGIN_GS] LoginManager.LoginGameServer called
+[TRANSPORT] KCPTube.Update enter this=KCPTube@0x7364c225a0
+[TRANSPORT] KCPTube.Update leave ret=0 4ms
+[TRANSPORT] TCPTube.Update enter this=TCPTube@0x736560cdc0
+[TRANSPORT] TCPTube.Update leave ret=0 1ms
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x7364c225a0
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x7365397e60 SerialNumber=136606420 OpCode=2 ReturnCode=0 arg2=MemoryStream@0x7365387240 arg3=MemoryStream@0x73653872a0
+[TRANSPORT] KCPTube.Send leave ret=0 0ms
+[NET_RESP] TryHandleResponse enter this=NetworkCenter@0x7365385ee0
+[TRANSPORT] KCPTube.TryRead enter this=KCPTube@0x7364c225a0
+[TRANSPORT] KCPTube.TryRead leave ret=0 0ms
+[TRANSPORT] TCPTube.TryRead enter this=TCPTube@0x736560cdc0
+[TRANSPORT] TCPTube.TryRead leave ret=0 0ms
+[NET_RESP] TryHandleResponse leave 0ms
+[TRANSPORT] KCPTube.Send enter this=KCPTube@0x7364c225a0
+[KCP_SEND_ARGS] signature=(Alioth.S1.Common.OpInfo, System.IO.MemoryStream, System.IO.MemoryStream) arg1=request=OpInfo@0x7365397e60 SerialNumber=136606420 OpCode=2 ReturnCode=0 arg2=MemoryStream@0x7365387240 arg3=MemoryStream@0x73653872a0
+[CHAPTERS_GET] OpInfo=0x7365397e60 ret=null
+[TRANSPORT] KCPTube.Send leave ret=1 37ms
+[KCP_SEND_ACCEPTED] request=OpInfo@0x7365397e60 SerialNumber=136606420 OpCode=2 ReturnCode=0
+[TRANSPORT] KCPTube.TryOutput enter this=KCPTube@0x7364c225a0
+[TRANSPORT] KCPTube.TryOutput leave ret=-1 0ms
