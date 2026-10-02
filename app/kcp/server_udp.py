@@ -413,6 +413,9 @@ class KCPServerUDP:
                 # PROBE_MODE="replay": 실측 protobuf 원본을 그대로 재전송 (2026-10-02 16:00)
                 #   - 000192_s2c.bin (gzip 13KB)을 우리 세션 키로 재암호화해서 전송
                 #   - protobuf 변수를 완전히 제거, KCP/암호화/압축 파이프라인만 검증
+                # PROBE_MODE="builder": 자체 protobuf 빌더 (2026-10-02 17:05)
+                #   - app/kcp/bootstrap.py의 build_bootstrap() 사용
+                #   - 2차 마일스톤: 운영 데이터 없이 자체 생성으로 Main 진입
                 # 2026-10-02 13:00 관측: multitag 후 클라이언트가 transport ACK조차 안 보냄.
                 # 2026-10-02 13:05 GPT 재분석: "protobuf 파서 사망"보다
                 # "S→C KCP 세그먼트 자체를 클라이언트 KCP가 거부"가 1순위 가설.
@@ -545,6 +548,24 @@ class KCPServerUDP:
                             flag = 0xC4  # 실측과 동일
                         except Exception as e:
                             print(f"    [replay] 파일 로드 실패: {e}")
+                            import traceback; traceback.print_exc()
+                            probe = base
+                            flag = 0x84
+                    elif PROBE_MODE == "builder":
+                        # 자체 protobuf 빌더 (2차 마일스톤, 2026-10-02 17:05)
+                        try:
+                            from app.kcp.bootstrap import build_bootstrap
+                            import os as _os3
+                            use_compress = _os3.environ.get("BUILDER_COMPRESS", "1") == "1"
+                            probe, flag = build_bootstrap(
+                                serial=serial,
+                                user_id=861197,
+                                username="witchwind3",
+                                compress=use_compress,
+                            )
+                            print(f"    [builder] protobuf 생성: {len(probe)}B, flag={flag:#x}")
+                        except Exception as e:
+                            print(f"    [builder] 빌드 실패: {e}")
                             import traceback; traceback.print_exc()
                             probe = base
                             flag = 0x84
