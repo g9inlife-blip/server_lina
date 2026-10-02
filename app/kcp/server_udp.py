@@ -345,14 +345,11 @@ class KCPServerUDP:
 
                 # Bootstrap probe (실험용):
                 # PROBE_MODE="simple": field 1+2만 (7B, 1 fragment)
-                # PROBE_MODE="multitag": field 3~64 빈 nested 추가 (168B, 1 fragment)
                 # PROBE_MODE="multifrag": 실측과 동일한 조건으로 최소 응답 (12 fragment)
-                #   - multi-fragment (frg=11..0, 12개), 1372B chunk, 1400B UDP
-                #   - 내용: field 1+2 반복 (유효한 protobuf, last-wins) ~16KB
-                # PROBE_MODE="multifrag_tag": multifrag 모양 + field 3~64 태그 탐색
-                #   (Frida opinfo_dump.js와 함께: 어떤 OpInfo 필드가 non-null이 되는지 확인)
-                #   - 내용: field 1+2 + field 3~64 빈 nested 반복 ~16KB (유효 protobuf)
-                # flag 0x84 (0xc4는 압축 의미일 수 있어 비압축인 우리는 0x84)
+                # PROBE_MODE="real": 실측 protobuf 구조로 실제 Bootstrap 응답 (2026-10-02 15:44)
+                #   - field 35=User, field 21=Items, field 43=Chapters 등 실측 태그 사용
+                #   - gzip 압축 + flag 0xC4 (실측과 동일)
+                #   - 출처: 000192_s2c.bin 분석 (research/reports/2026-10-02-Bootstrap-실측-protobuf-구조_lina.md)
                 # 2026-10-02 13:00 관측: multitag 후 클라이언트가 transport ACK조차 안 보냄.
                 # 2026-10-02 13:05 GPT 재분석: "protobuf 파서 사망"보다
                 # "S→C KCP 세그먼트 자체를 클라이언트 KCP가 거부"가 1순위 가설.
@@ -369,7 +366,7 @@ class KCPServerUDP:
                 # 2026-10-02 14:18: GPT 분석문서에서 OpInfo 전체 메모리 레이아웃 20개 확보.
                 #   Frida v5의 BOOT_STATE를 20개 필드로 확장. 태그 매핑을 위해
                 #   multifrag_tag로 다시 전환 (한 번에 매핑 시도).
-                PROBE_MODE = "multifrag"  # 태그 실험 종료, 기본 모드로 복귀 (2026-10-02 15:24)
+                PROBE_MODE = "real"  # 실측 구조 기반 실제 Bootstrap (2026-10-02 15:44)
                 if opcode == 2 and serial is not None:
                     base = self._pb_varint(1, serial) + self._pb_varint(2, 2)
                     flag = 0x84
@@ -383,6 +380,46 @@ class KCPServerUDP:
                         probe = base
                         while len(probe) < 16384:
                             probe += base
+                    elif PROBE_MODE == "real":
+                        # 실측 구조 기반 Bootstrap 응답 (2026-10-02 15:44)
+                        # 출처: 000192_s2c.bin (gzip 압축 해제 후 protobuf)
+                        import gzip
+                        # --- User (field 35) ---
+                        # 실측: field1=871047(ID), field14='g9in2'(username)
+                        user_inner = b""
+                        user_inner += self._pb_varint(1, 861197)  # User ID (로컬 계정)
+                        user_inner += self._pb_varint(3, 4)
+                        user_inner += self._pb_varint(4, 250)
+                        user_inner += self._pb_varint(7, 18100000)
+                        user_inner += self._pb_string(14, "witchwind3")
+                        user_inner += self._pb_varint(20, 3)
+                        user_inner += self._pb_varint(21, 3)
+                        user_inner += self._pb_varint(22, 10)
+                        user_inner += self._pb_varint(24, 1)
+                        # --- Items (field 21, 반복) ---
+                        # 실측: 276개, 각 {field1=ID, field2=count}
+                        items_part = b""
+                        # 테스트용 최소 아이템 5개
+                        for item_id in [21000010, 21000020, 21000030, 21000040, 21000050]:
+                            item_inner = self._pb_varint(1, item_id) + self._pb_varint(2, 1)
+                            items_part += self._pb_nested(21, item_inner)
+                        # --- Chapters (field 43, 반복) ---
+                        # 실측: 61개
+                        chapters_part = b""
+                        # 테스트용 최소 챕터 3개
+                        for ch_id in [20000100, 20000200, 20000300]:
+                            ch_inner = self._pb_varint(1, ch_id) + self._pb_varint(2, 0)
+                            chapters_part += self._pb_nested(43, ch_inner)
+                        # --- 조립 ---
+                        probe = base  # field 1 (serial) + field 2 (opcode=2)
+                        probe += self._pb_nested(35, user_inner)
+                        probe += items_part
+                        probe += chapters_part
+                        # gzip 압축 (실측과 동일)
+                        probe_compressed = gzip.compress(probe)
+                        print(f"    [real] protobuf {len(probe)}B → gzip {len(probe_compressed)}B")
+                        probe = probe_compressed
+                        flag = 0xC4  # 압축 플래그 (실측과 동일)
                     elif PROBE_MODE == "multifrag_tag":
                         # TAG_RANGE 환경변수로 태그 구간 지정 (이분 탐색용)
                         # 예: TAG_RANGE="3-20", TAG_RANGE="21-40", TAG_RANGE="41-64"
@@ -427,6 +464,11 @@ class KCPServerUDP:
                 out.append(b)
                 break
         return bytes(out)
+
+    @staticmethod
+    def _pb_string(field_no: int, s: str) -> bytes:
+        """string 필드 인코더 (wire type 2)."""
+        return KCPServerUDP._pb_nested(field_no, s.encode('utf-8'))
 
     @staticmethod
     def _pb_nested(field_no: int, payload: bytes) -> bytes:
