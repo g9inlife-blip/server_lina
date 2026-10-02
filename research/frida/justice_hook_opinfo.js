@@ -1247,6 +1247,7 @@ main();
 // ================= OpInfo 필드 덤프 (2026-10-02) =================
 // justice_hook.js의 검증된 api를 그대로 사용. 별도 스크립트 아님.
 // 서버의 multifrag_tag probe를 받은 뒤 ProccessRequestRes 인자의 필드를 덤프.
+// main()이 async라서 api 초기화가 늦게 되므로, 폴링으로 대기 후 실행.
 
 function findClassAnywhere(className) {
     const domain = api.domain_get();
@@ -1304,38 +1305,45 @@ function dumpOpInfoFields(objPtr) {
     }
 }
 
-try {
-    const dcClass = findClassAnywhere('DataCenter');
-    if (!dcClass.isNull()) {
-        // ProccessRequestRes 메서드 찾기 (파라미터 수 무관)
-        const iter = Memory.alloc(Process.pointerSize);
-        iter.writePointer(ptr(0));
-        let target = ptr(0);
-        let paramCount = 0;
-        while (true) {
-            const m = api.class_get_methods(dcClass, iter);
-            if (m.isNull()) break;
-            if (api.method_get_name(m).readCString() === 'ProccessRequestRes') {
-                target = m;
-                paramCount = api.method_get_param_count(m);
-                break;
-            }
-        }
-        if (!target.isNull()) {
-            console.log(`[OPINFO] ProccessRequestRes 찾음 (params=${paramCount}), 후킹`);
-            Interceptor.attach(target, {
-                onEnter(args) {
-                    try {
-                        console.log(`[OPINFO] ProccessRequestRes 호출됨`);
-                        if (paramCount >= 1) dumpOpInfoFields(args[1]);
-                        else console.log('[OPINFO] 파라미터 없음');
-                    } catch (e) {
-                        console.log(`[OPINFO] 후크 오류: ${e.message}`);
-                    }
+function setupOpInfoDump() {
+    // api가 초기화될 때까지 폴링 (main()이 async라서 늦게 됨)
+    if (typeof api === 'undefined' || api === null) {
+        setTimeout(setupOpInfoDump, 500);
+        return;
+    }
+    try {
+        const dcClass = findClassAnywhere('DataCenter');
+        if (!dcClass.isNull()) {
+            const iter = Memory.alloc(Process.pointerSize);
+            iter.writePointer(ptr(0));
+            let target = ptr(0);
+            let paramCount = 0;
+            while (true) {
+                const m = api.class_get_methods(dcClass, iter);
+                if (m.isNull()) break;
+                if (api.method_get_name(m).readCString() === 'ProccessRequestRes') {
+                    target = m;
+                    paramCount = api.method_get_param_count(m);
+                    break;
                 }
-            });
-        } else console.log('[OPINFO] ProccessRequestRes 못 찾음');
-    } else console.log('[OPINFO] DataCenter 못 찾음');
-} catch (e) {
-    console.log('[OPINFO] 설정 실패: ' + e.message);
+            }
+            if (!target.isNull()) {
+                console.log(`[OPINFO] ProccessRequestRes 찾음 (params=${paramCount}), 후킹`);
+                Interceptor.attach(target, {
+                    onEnter(args) {
+                        try {
+                            console.log(`[OPINFO] ProccessRequestRes 호출됨`);
+                            if (paramCount >= 1) dumpOpInfoFields(args[1]);
+                            else console.log('[OPINFO] 파라미터 없음');
+                        } catch (e) {
+                            console.log(`[OPINFO] 후크 오류: ${e.message}`);
+                        }
+                    }
+                });
+            } else console.log('[OPINFO] ProccessRequestRes 못 찾음');
+        } else console.log('[OPINFO] DataCenter 못 찾음');
+    } catch (e) {
+        console.log('[OPINFO] 설정 실패: ' + e.message);
+    }
 }
+setupOpInfoDump();
